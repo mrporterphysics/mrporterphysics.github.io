@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-Find [AP Daily Plans](C:\Users\nporter\Documents\GitHub\mrporterphysics.github.io\Daily Plan\apdaily2018.html).
+Find [AP Daily Plans](Daily Plan\apdaily2018.html).
 
 You can use the [editor on GitHub](https://github.com/mrporterphysics/mrporterphysics.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
