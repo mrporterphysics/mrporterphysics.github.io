@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Daily Agenda 2018</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'fira sans';
+        font-size: 3em;
+     }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: bold;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* Two-column layout */
+     .left-column {
+       color: #777;
+       width: 25%;
+       height: 92%;
+       float: left;
+     }
+       .left-column h2:last-of-type, .left-column h3:last-child {
+         color: #000;
+       }
+     .right-column {
+       width: 70%;
+       float: right;
+       padding-top: 1em;
+     }
+
+     .big-left-column {
+       color: #777;
+       width: 40%;
+       height: 92%;
+       float: left;
+     }
+
+     .small-right-column{
+       width: 55%;
+       float: right;
+       padding-top: 1em;
+
+     }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Coding Daily Plans 2018
+
+---
+
+#2018.03.06
+
+1. Welcome to Mr. Carpinello!
+2. Finish Quiz Game
+  - If you meet the minimum requirements...make it better!
+
+---
+
+#2018.03.08 Coding
+
+.small-right-column[
+
+|      Time 	    |            Block            	|
+|:-------------:	|:---------------------------:	|
+|  9:40 - 10:30 	|           Block 1           	|
+| 10:30 - 10:50 	| Advisory Period 	|
+| 10:50 - 11:40 	|           Block 2           	|
+| 11:43 - 12:05 	|           A Lunch           	|
+|  12:10 - 1:00 	|      Block 3 (A Lunch)      	|
+| 11:45 - 12:35 	|      Block 3 (B Lunch)      	|
+|  12:38 - 1:00 	|           B Lunch           	|
+|  1:05 - 1:55  	|           Block 4           	|
+
+]
+
+
+.big-left-column[
+1. Finish Quiz Game...
+1. Looping Presentation
+1. Practice with looping
+]
+
+---
+
+#2018.03.14 `\(\pi\)` Day!
+##Coding
+
+1. Work on loop practice
+2. Start Camel Game
+
+####Notes:
+- I will not be here on Friday.
+- You will be finishing/working on the above assignments
+- Mr. Carpinello will be here to help you when you have problems
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+
+    <script>
+      var slideshow = remark.create({ratio:'16:10'});
+
+      // Setup MathJax
+     MathJax.Hub.Config({
+         tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+         }
+     });
+
+     MathJax.Hub.Configured();
+
+
+    </script>
+  </body>
+</html>
