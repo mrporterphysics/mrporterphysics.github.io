@@ -1,5 +1,7 @@
 # Welcome to GitHub Pages
 
+This is a work in project. 
+
 # Presentations:
 
 You can find links to class presentations here:
