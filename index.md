@@ -1,5 +1,7 @@
-## Welcome to GitHub Pages
+# Welcome to GitHub Pages
 
-Find [AP Daily Plans](Daily Plan\apdaily2018.html).
+#Presentations:
 
-Find [Presentations](Presentations\presindex.md).
+You can find links to class presentations here:
+  - Find [AP Daily Plans](Daily Plan\apdaily2018.html).
+  - Find [Presentations](Presentations\presindex.md).
