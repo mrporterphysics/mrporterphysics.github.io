@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
       @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
@@ -13,10 +14,16 @@
         font-family: 'fira sans';
         font-size: 3em;
      }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: bold;
-      }
+     h1, h2 {
+       font-family: 'Bubblegum Sans';
+       font-weight: bold;
+
+     }
+
+     h3 {
+       font-family: 'Yanone Kaffeesatz';
+       font-weight: bold;
+     }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
       /* Two-column layout */
@@ -45,6 +52,22 @@
    text-align: center;
   }
 
+  .inverse {
+        background: #272822;
+        color: #f3f3f3;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+
     </style>
   </head>
   <body>
@@ -55,9 +78,11 @@ class: center, middle
 # Regents Physics Daily Plans 2018-2019
 
 ---
+class:inverse
 
-##2018.09.07 Regents Physics
 #WELCOME!!
+##2018.09.07 Regents Physics
+
 
 1. Grab a handout, find a sit at the big table, and answer the 3 questions on the handout.
 2. Fill out the back of your index card with your name and a phone number or numbers where you can be reached if you happen to over sleep for the midterm or final.
