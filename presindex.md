@@ -1,5 +1,6 @@
 # Presentations List:
 
+  - [Physics Skills](Presentations\Physics Skills\talks\physicsskills.html)
   - Brain Science: [How You Learn](Presentations\BrainScience\talks\BrainScience.html)
 
 ## AP Physics Presentations:
