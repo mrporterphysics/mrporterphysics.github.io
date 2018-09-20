@@ -14,22 +14,30 @@
     @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
     @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Open+Sans:600');
     @import url('https://fonts.googleapis.com/css?family=Lato');
-      body {font-family: 'Lato', sans-serif;}
+      body {
+        background-color: #666666;
+        font-family: 'Lato', sans-serif;
+
+      }
       h1, h2, h3 {
         font-family: 'Black Han Sans', sans-serif;
         font-weight: normal;
+
       }
       .remark-slide-content h1 { font-size: 2.4em; color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
       .remark-slide-content h2 { font-size: 1.55em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
       .remark-slide-content  h3 { font-size: 1.4em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content  h4 { font-size: 1.3em;color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
       .remark-slide-content p,ol,ul { font-size: 1.2em; }
-      .remark-slide-content ul ul {font-size: 95%;}
+      .remark-slide-content ul ul {font-size: 1.2em;}
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       .remark-fading { z-index: 9; }
+
 
       /* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
       .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
       .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+
 
       /* Two-column layout */
       .left-column {
@@ -60,6 +68,8 @@ color: white;
 text-align: center;
 }
 
+
+
       /* Some special classes */
       .title {font-size: 3.3em; color:#606060;font-weight:bold;letter-spacing:0.05em}
       .subtitle {font-size: 1.4em}
@@ -71,6 +81,21 @@ text-align: center;
       .cite {font-size: 0.8em; color:#33AA99;font-style: italic}
       .strike {color:salmon;text-decoration:line-through}
 
+      .quote {font-family: 'Black Han Sans', sans-serif;
+              font-size: 2.4em;
+              color:white;
+              font-weight: bold;
+              letter-spacing:0.05em;
+              margin-top:0em;
+              background-color: rgba(120,120,120,.6);
+              position:absolute;
+              width: 100%;
+              left:0%;
+              top:50%;
+
+
+            }
+
       /*Set color scheme for links.*/
       a {text-decoration: none; color: #666666;text-align:center; width: 24%}
       /*Setting link properties is particular, do not change order below*/
@@ -81,6 +106,7 @@ text-align: center;
   </head>
   <body>
     <textarea id="source">
+
 class: center, middle
 
 .title[Motion]
@@ -109,6 +135,8 @@ class: center, middle
 <!--.footnote[Created with [{Remark.js}](http://remarkjs.com/) using [{Markdown}](https://daringfireball.net/projects/markdown/) +  [{MathJax}](https://www.mathjax.org/)]-->
 
 ---
+
+
 #Lab Results:
 
 #### The buggies moved with a *constant velocity*
@@ -154,6 +182,8 @@ $$x = \bar{v}t + x_0$$
 
 $$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
 
+
+
 --
 
 ####Narrative Model:
@@ -161,6 +191,14 @@ $$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
 *"The toy car started at a position of 250 cm and moved in the positive direction at a speed of 25 cm/s."*
 
 ---
+
+---
+
+class:center, middle
+background-image: url("gausscircs.png")
+
+.quote[Tell me and I forget. Teach me and I remember. Involve me and I learn.]
+
 
    </textarea>
     <!-- This is the link to the local copy of Remark -->
