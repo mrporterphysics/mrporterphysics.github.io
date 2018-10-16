@@ -5,8 +5,8 @@
 
 ## AP Physics Presentations:
 
-  - [Motion Presentation](Presentations\APCVPM\talks\APCVPM.html)
-  - [Constant Acceleration Particle Model]
+  - [Constant Velocity Particle Motion Presentation](Presentations\APCVPM\talks\APCVPM.html)
+  - [Constant Acceleration Particle Model](Presentations\APCAPM\talks\APCAPM.html)
   - [Balanced Force Particle Model]
   - [Unbalanced Force Particle Model]
   - [Projectile Motion Particle Model]
