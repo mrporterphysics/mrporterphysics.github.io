@@ -1,6 +1,6 @@
 #AP Physics Models:
 
-1. Motion (CVPM and CAPM)
+1. [Motion (CVPM and CAPM)](AP Resource Pages\apresources.md)
 2. Force Models (BFPM and UBFPM)
 3. Projectile Motion Particle Model
 4. Central Force Particle Model
