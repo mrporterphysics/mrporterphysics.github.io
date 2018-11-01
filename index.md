@@ -10,4 +10,4 @@ You can find links to class presentations here:
   - Find [Content Presentations](presindex).
 
 # Resource Pages
-  - [AP Resource Page](AP Resource Pages\apresources.md)
+  - [AP Resource Page](AP Resource Pages\apresources)
