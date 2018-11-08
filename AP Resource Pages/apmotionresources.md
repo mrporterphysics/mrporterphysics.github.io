@@ -1,3 +1,8 @@
+---
+title: Motion - Constant Velocity and Acceleration Particle Models
+layout: posted
+---
+
 # Motion
 ## Constant Velocity and Constant Acceleration Particle Models
 
@@ -11,3 +16,6 @@
 
 
 ## Khan Academy Videos
+
+
+$$\vec{a}=\frac{\Sigma F}{m}$$
