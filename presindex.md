@@ -7,8 +7,7 @@
 
   - [Constant Velocity Particle Motion Presentation](Presentations\APCVPM\talks\APCVPM.html)
   - [Constant Acceleration Particle Model](Presentations\APCAPM\talks\APCAPM.html)
-  - [Balanced Force Particle Model]
-  - [Unbalanced Force Particle Model]
+  - [Forces](Presentations\Forces\talks\APForces.html)
   - [Projectile Motion Particle Model]
   - [Circular Motion + Universal Law of Gravitation]
   - [Energy Transfer Model]
