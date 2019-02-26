@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circular Motion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+    @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+    @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Open+Sans:600');
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+      body {
+        background-color: #666666;
+        font-family: 'Lato', sans-serif;
+
+      }
+      h1, h2, h3 {
+        font-family: 'Black Han Sans', sans-serif;
+        font-weight: normal;
+
+      }
+      .remark-slide-content h1 { font-size: 2.4em; color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content h2 { font-size: 1.55em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content  h3 { font-size: 1.4em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content  h4 { font-size: 1.3em;color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content p { font-size: 1.2em; }
+      .remark-slide-content ol { font-size: 1.2em; }
+      .remark-slide-content ul { font-size: 1.2em; }
+      .remark-slide-content ul ul {font-size: 1.2em;}
+      .remark-slide-content ol ul {font-size: 1.2em;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-fading { z-index: 9; }
+
+
+      /* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
+      .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+      .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+
+
+      /* Two-column layout */
+      .left-column {
+        width: 20%;
+        float: left;
+      }
+      .right-column {
+        width: 70%;
+        float: right;
+        padding-top: 0em;
+        margin-top: 0em;
+        text-align: left;
+        font-size: 1.2em;
+      }
+      .footnote {
+        position:absolute;
+        bottom: 1em;
+        left: 14em;
+        font-size: 0.7em;
+       }
+
+       .footer {
+        position: fixed;
+        left: 15px;
+        bottom: 15px;
+        width: 5%;
+        background-color: white;
+        color: white;
+        text-align: center;
+      }
+
+      .tom{color: tomato;}
+
+
+
+      /* Some special classes */
+      .title {font-size: 3.3em; color:#606060;font-weight:bold;letter-spacing:0.05em}
+      .subtitle {font-size: 1.4em}
+      .author {font-size: 1.4em; color:#606060;font-weight:bold;letter-spacing:0.02em}
+      .coauthor {font-size: 1.0em; color:#606060;font-weight:bold;letter-spacing:0.02em}
+      .institution {font-size: 1.0em;}
+      .date {font-size: 1.0em;}
+
+      .cite {font-size: 0.8em; color:#33AA99;font-style: italic}
+      .strike {color:salmon;text-decoration:line-through}
+
+      .quote {font-family: 'Black Han Sans', sans-serif;
+              font-size: 2.4em;
+              color:white;
+              font-weight: bold;
+              letter-spacing:0.05em;
+              margin-top:0em;
+              background-color: rgba(120,120,120,.6);
+              position:absolute;
+              width: 100%;
+              left:0%;
+              top:50%;
+            }
+      /*Set color scheme for links.*/
+      a {text-decoration: none; color: #666666;text-align:center; width: 24%}
+      /*Setting link properties is particular, do not change order below*/
+      a:visited {color:#666666}
+      a:hover {color:#33AA99}
+      a:active, a#active {color:#FF9700;}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+.title[Central Force Models]
+
+.subtitle[A Model for Circular Paths]
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+.author[👨🏻‍🏫 Nathan Porter]
+
+.institution[🏫 Maple Hill High School]
+&nbsp;
+.coauthor[]
+.institution[]
+&nbsp;
+&nbsp;
+
+.date[📅 2018-2019]
+&nbsp;
+&nbsp;
+&nbsp;
+.center[]
+
+<!--.footnote[Created with [{Remark.js}](http://remarkjs.com/) using [{Markdown}](https://daringfireball.net/projects/markdown/) +  [{MathJax}](https://www.mathjax.org/)]-->
+
+
+---
+
+#Centripetal Acceleration
+
+The acceleration of an object moving in a circular path.
+
+.center[<img src="https://cnx.org/resources/00522999e2e380cfae74a76c9e78fde4d0d76650" width = "400px"/>]
+
+
+---
+
+#Centripetal Acceleration
+
+
+#$$a_c = \frac{v^2}{r}$$
+
+- `\(a_c\)` - Centripetal acceleraiton
+- `\(v^2\)` - Speed Squared
+- `\(r\)` - radius of the circular path
+
+
+---
+
+
+#Example
+
+What is the magnitude of the centripetal acceleration of a car following a curve of radius 500 m at a speed of 25.0 m/s (about 90 km/h)? Compare the acceleration with that due to gravity for this fairly gentle curve taken at highway speed.
+
+--
+
+##$$a_c = \frac{v^2}{r} = \frac{(25.0 \text{ m/s})^2}{500 \text{ m}}$$
+
+---
+
+#Calculating Speed
+
+##$$v = \frac{d}{t}$$
+
+--
+
+##$$v = \frac{2\pi r}{t} $$
+
+---
+
+#Speed
+
+.center[<img src="http://www.physicsclassroom.com/Class/circles/u6l1a4.gif" width = "400px"/>]
+
+---
+
+#Velocity
+
+.center[<img src="http://www.physicsclassroom.com/Class/circles/u6l1a3.gif" width = "400px" />]
+
+---
+
+#Concept Check
+
+A tube is been placed upon the table and shaped into a three-quarters circle. A golf ball is pushed into the tube at one end at high speed. The ball rolls through the tube and exits at the opposite end. Describe the path of the golf ball as it exits the tube.
+
+
+.center[<img src="http://www.physicsclassroom.com/Class/circles/u6l1a6.gif" width = "400px" />]
+
+
+---
+
+#Centripetal Force
+
+- "Center Seeking Force" - The ***net force*** that causes an object to move in a circle.
+
+--
+- It is a special name for net force or the sum of all of the radial forces (forces along the radius of the circle)
+
+--
+- The net force that causes motion in a circular path
+
+--
+- Alters the direction of motion without altering the speed.
+
+---
+
+#Centripetal Force Examples...
+
+As a car makes a turn, the force of friction acting upon the turned wheels of the car provides centripetal force required for circular motion.
+
+.center[<img src="http://www.physicsclassroom.com/Class/circles/u6l1c10.gif" width = "300 px"/>]
+
+---
+
+#Centripetal Force Examples...
+
+As a bucket of water is tied to a string and spun in a circle, the tension force acting upon the bucket provides the centripetal force required for circular motion.
+
+.center[<img src="http://www.physicsclassroom.com/Class/circles/u6l1c3.gif" width = "300 px"/>]
+
+
+
+---
+
+#Centripetal Force Examples...
+
+As the moon orbits the Earth, the force of gravity acting upon the moon provides the centripetal force required for circular motion.
+
+
+.center[<img src="http://www.physicsclassroom.com/Class/circles/u6l1c4.gif" width = "300 px"/>]
+
+---
+
+##The Fake Force - Centrifugal Force - aka Inertia
+
+.center[<img src="http://www.physicsclassroom.com/mmedia/circmot/wi.gif" width = "300px"/><img src="http://www.physicsclassroom.com/mmedia/circmot/cf.gif" width = "300px"/>]
+
+---
+
+#Centripetal Force Equation
+
+##$$F_{net} = ma$$
+
+--
+
+##$$F_c = ma_c$$
+
+--
+
+##$$a_c = \frac{v^2}{r}$$
+
+--
+
+
+##$$F_c = \frac{mv^2}{r}$$
+
+
+---
+
+#Example
+
+The maximum speed with which a 945-kg car makes a 180-degree turn is 10.0 m/s. The radius of the circle through which the car is turning is 25.0 m. Determine the force of friction and the coefficient of friction acting upon the car.
+
+.center[<img src = "http://www.physicsclassroom.com/Class/circles/u6l2a3.gif" width = "300 px"/>]
+
+
+---
+
+#Example
+
+The coefficient of friction acting upon a 945-kg car is 0.850. The car is making a 180-degree turn around a curve with a radius of 35.0 m. Determine the maximum speed with which the car can make the turn.
+
+---
+
+#Some Proportions
+
+#$$F_c = \frac{mv^2}{r}$$
+
+- For constant mass and radius, how is speed related to Centripetal force?
+- For constant speed and mass, how is the radius related to the Centripetal force?
+- For constant speed and radius, how is mass related to the net force?
+
+
+   </textarea>
+    <!-- This is the link to the local copy of Remark -->
+    <script src="../javascript/remark-latest.min.js" type="text/javascript"></script>
+    <!--<script src="./javascript/remark-latest.min.js" type="text/javascript"></script>-->
+    <!-- See discussion at https://github.com/gnab/remark/issues/222-->
+    <!-- You could alternately use the libraries from remote location -->
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>-->
+
+    <script type="text/javascript">
+        var slideshow = remark.create({
+            navigation: {
+                click: false
+            },
+            properties: {
+                class: "center, middle"
+            },
+            countIncrementalSlides: false
+        ,
+        ratio:'16:9'});
+    </script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- If you want to run your presentation offline, you need to download the MathJax -->
+    <!-- libraries, then uncomment the line below and comment out the one above.-->
+    <!--<script "text/javascript" src="../../../javascript/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local"></script>-->
+</body>
+</html>
