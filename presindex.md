@@ -11,7 +11,7 @@
   - [Projectile Motion Particle Model](Presentations\Projectiles\talks\Projectiles_AP.html)
   - [Circular Motion + Universal Law of Gravitation](Presentations\Circular Motion\talks\CircMotion.html)
   - [Energy Transfer Model]
-  - [Momentum Transfer Model]
+  - [Momentum Transfer Model](Presentations\Momentum\talks\APmomentum.html)
   - [Rotating Body Model]
   - [Oscillating Particle Model]
   - [Mechanical Wave Model]
