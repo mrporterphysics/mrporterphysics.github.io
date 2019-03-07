@@ -27,12 +27,12 @@
       .remark-slide-content h1 { font-size: 2.4em; color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
       .remark-slide-content h2 { font-size: 1.55em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
       .remark-slide-content  h3 { font-size: 1.4em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
-      .remark-slide-content  h4 { font-size: 1.3em;color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
-      .remark-slide-content p { font-size: 1.2em; }
-      .remark-slide-content ol { font-size: 1.2em; }
-      .remark-slide-content ul { font-size: 1.2em; }
-      .remark-slide-content ul ul {font-size: 1.2em;}
-      .remark-slide-content ol ul {font-size: 1.2em;}
+      .remark-slide-content  h4 { font-size: 1.4em;color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:0em}
+      .remark-slide-content p { font-size: 1.35em; }
+      .remark-slide-content ol { font-size: 1.35em; }
+      .remark-slide-content ul { font-size: 1.35em; }
+      .remark-slide-content ul ul {font-size: 1.35em;}
+      .remark-slide-content ol ul {font-size: 1.35em;}
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       .remark-fading { z-index: 9; }
 
@@ -141,11 +141,183 @@ class: center, middle
 
 ---
 
-#Momentum
+#Linear Momentum
 
+The linear momenutum `\(\vec{p}\)` of a single object is the product of its
+mass `\(m\)` and velocity `\(\vec{v}\)`:
+--
+
+$$\boxed{\vec{p}=m\vec{v}}$$
+
+--
+
+Linear momentum is a vector quantity that points in the same direction as the object's
+velocity `\(\vec{v}\)`. The SI unit of momentum is (kg`\(\cdot\)`m/s). The total
+linear momentum of a system containing multiple objects is the vector sum of the momenta
+of the individual objects
+
+--
+
+$$\vec{p}\_{net} = m_1\vec{v}\_1 + m\_2\vec{v}\_2 + \ldots + m\_n\vec{v}\_n = \Sigma m \vec{v} $$
+---
+
+#Linear Momentum Notes:
+
+1. Momentum is a vector quantity. It is in the same direction as the velocity of the object.
+
+--
+2. Momentum depends on the reference frame. Example: car's momentum to a passenger vs. a person on the sidewalk.
+
+--
+3. Momentum is conserved for isolated systems (no forces from objects outside of the system).
+
+---
+
+#Momentum of an isolated system
+
+Momentum of an isolated system is constant:
+
+$$m\_1\vec{v}\_{1i} + m\_2\vec{v}\_{2i} = m\_1\vec{v}\_{1f} + m\_2\vec{v}\_{2f}$$
+
+--
+
+Because momentum is a vector quantity we can split these momenta into their components:
+
+--
+
+$$m\_1\vec{v}\_{1ix} + m\_2\vec{v}\_{2ix} = m\_1\vec{v}\_{1fx} + m\_2\vec{v}\_{2fx}$$
+
+$$m\_1\vec{v}\_{1iy} + m\_2\vec{v}\_{2iy} = m\_1\vec{v}\_{1fy} + m\_2\vec{v}\_{2fy}$$
+
+---
+
+class:center, middle
+
+#How do we change an object's momentum?
+
+---
+
+#Changing Momentum
+
+Start with Newton's 2nd Law `\(a = \frac{F_{net}}{m}\)`, and substitute into `\(a\)` tpo solve for change in momentum `\(\Delta p\)`
+
+--
+
+`\(a = \frac{F_{net}}{m}\)`
+
+--
+
+We know: `\(a = \frac{\Delta v}{\Delta t}\)`
+
+--
+Substitute in for `\(a\)`
+
+`\(\frac{\Delta v}{\Delta t} = \frac{F_{net}}{m}\)`
+
+--
+
+Cross multiply `\(m\)` and `\(t\)`
+
+`\(m \Delta v = F_{net} \Delta t = J = \Delta p\)`
+
+---
+
+#Impulse
+
+The impulse of a force is the product of the average force `\(F_{avg}\)` exerted on an object
+during a time interval and that time interval:
+
+$$\boxed{\Delta p = F\Delta t}$$
+
+---
+
+#What about a changing force?
+
+.center[<img src="https://cnx.org/resources/5bfb0f658eee649b8f414e5bc07f06c9c9955711" width = "500px"/>]
 
 
 ---
+
+#Formula vs. Real Life...
+
+.center[<img src="https://cnx.org/resources/3d50064b2e47b02d763a76db833d520e5d045aef" width = "700px"/>]
+
+---
+class:center, middle
+
+#Testing Impulse
+
+---
+
+#Impulse-momentum principle
+
+For a system containing one or more objects, the initial momentum of the system plus
+the sum of the impulses that external objects exert on the syste objects during a time interval
+`\(t_f-t_i\)` equals the final momentum of the system:
+
+$$ \underbrace{(m\_1\vec{v}\_{1i} + m\_2\vec{v}\_{2i} + \ldots)}\_{\vec{p}\_i} +
+\underbrace{\Sigma \vec{F}\_{onSys}(t\_f-t\_i)}\_{\vec{J}} =
+\underbrace{(m\_1\vec{v}\_{1f} + m\_2\vec{v}\_{2f} + \ldots)}\_{\vec{p}\_f}$$
+
+--
+
+$$\vec{p}\_i + \vec{J} = p\_f$$
+
+
+---
+
+#Types of Collisions:
+
+###Elastic Collisions
+
+###Inelastic Collisions
+
+###Totally Inelastic Collisions
+
+---
+
+#Elastic Collisions
+
+####Both the momentum and kinetic energy of the system are constant. The internal energy of the system does not change. The colliding objects never stick together.
+
+--
+
+
+Examples
+
+None in nature...but we can get close with collisions between very rigid objects like billard balls are close. Collisions between atoms are almost perfectly elastic.
+
+---
+
+#Inelastic Collisions
+
+####The momentum of the system is conserved but the kinetic energy is not. The colliding objects do not stick together. Internal energy increases during the collisions.
+
+--
+
+Examples
+
+Volleyball bouncing off your arms, basketball dribbling, you jumping on a trampoline.
+
+---
+
+#Totally Inelastic Collisions
+
+####Inelastic collisions in which the objects stick together. Typically, a large fraction of the kinetic energy of the system is turned into internal energy.
+
+--
+
+Examples
+
+You catching a football, car collisions where the cars stick together. Blow dart problem!
+
+
+
+
+
+
+
+
 
 
 
