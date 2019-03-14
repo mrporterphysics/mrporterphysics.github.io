@@ -98,6 +98,95 @@ class: center, middle
 
 ---
 
+#2019.03.14 Coding
+
+1. Complete Exercises:
+  - Make a diagonal of circles
+  - Use a second `for()` loop and create a 'X' out of circles
+  - Make a line of circles that grow in size.
+  - Use a loop to make a line of circles that gradually change color.
+  - Use a loop to make an image of circles shrinking in size, and changing color. It should be a huge bull's eye that starts with a circle the size of your canvas and draws smaller ones on top.
+  - Draw a smiley face, and then use a `for()` loop to draw multiple across the screen.
+2. Nested `for()` loops
+
+---
+
+###Making a grid
+
+```javascript
+for(x=10;width > x;x=x+20){
+  ellipse(x,10,15,15)
+}
+//create a column with x value 10 since the row begins with that x value
+for(y=10;height > y;y=y+20){
+  ellipse(10,y,15,15)}
+//create a column with x value 30 since the next ellipse in the row was incremented by 20
+for(y=10;height > y;y=y+20){
+  ellipse(30,y,15,15)}
+//create a column with x value 50 since the next ellipse in the row was incremented by 20
+for(y=10;height > y;y=y+20){
+  ellipse(50,y,15,15)}
+//create a column with x value 70 since the next ellipse in the row was incremented by 20
+for(y=10;height > y;y=y+20){
+  ellipse(70,y,15,15)}
+
+
+```
+
+---
+
+class:center, middle
+
+#Exercise: create a grid of bullseyes (with different colored circles)
+
+---
+
+#Prompt
+
+You recently have been hired by Microsoft’s design team to create 2 new wallpapers for their new line laptops. In order to boost sales and reach out to many different audiences, Microsoft would like these wallpapers to have some different color themes and use repetition. Be as creative and original as possible!
+
+---
+
+#Task
+Create 2 variations of a desktop background using repeated elements. The design should be easily altered by changing the values in the for loop to create variations in the design.
+
+---
+
+#Requirements:
+
+1. Your canvas size should be (800 x 450)
+2. The program should include at least one for loop.
+3. The for loop(s) should be used to increment values such as width, height, or color.
+4. Variations should result from changing different values in the loop. Tthe designs should not only vary in color. Play with size, number of repetitions etc.
+5. Save three different variations of the same design.
+
+
+---
+
+#Examples:
+
+.center[
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/1.6/red.png" width = "800px"/>
+
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/1.6/multicolor.png" width = "800px"/>
+]
+
+---
+
+#Extensions:
+
+###Randomize your wallpaper!
+
+###Use the random function to generate variations of your wallpaper.
+
+###It should randomize the size or color of the shapes while keeping the same design in place.
+
+
+---
+
+
 #2019.03.12 Coding
 
 1. Loops
