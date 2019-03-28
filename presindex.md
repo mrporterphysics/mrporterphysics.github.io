@@ -13,7 +13,7 @@
   - [Energy Transfer Model]
   - [Momentum Transfer Model](Presentations\Momentum\talks\APmomentum.html)
   - [Rotating Body Model]
-  - [Oscillating Particle Model]
+  - [Oscillating Particle Model](Presentations\AP SHM\talks\SHM_AP.html)
   - [Mechanical Wave Model]
   - [Circuits]
   - Find [Rotation Presentation](Presentations\AP Rotation Representation\talks\Rotation)
