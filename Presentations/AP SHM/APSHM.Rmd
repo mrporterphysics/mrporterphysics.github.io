@@ -1,0 +1,29 @@
+---
+title: "Simple Harmonic Motion"
+subtitle: "???<br/>with xaringan"
+author: "Nathan Porter"
+date: "2019/03/28"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["kunoichi", "ninjutsu" ]
+    self_contained: false
+    nature:
+      ratio: "16:9"
+      titleSlideClass: ["inverse"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+---
+
+#My First Slide
+
+---
