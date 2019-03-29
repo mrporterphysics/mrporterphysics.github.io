@@ -14,6 +14,6 @@
   - [Momentum Transfer Model](Presentations\Momentum\talks\APmomentum.html)
   - [Rotating Body Model]
   - [Oscillating Particle Model](Presentations\AP SHM\talks\SHM_AP.html)
-  - [Mechanical Wave Model]
+  - [Mechanical Wave Model](Presentations\Waves\talks\AP_Waves.html)
   - [Circuits]
   - Find [Rotation Presentation](Presentations\AP Rotation Representation\talks\Rotation)
