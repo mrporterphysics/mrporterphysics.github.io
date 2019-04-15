@@ -1,7 +1,7 @@
 # Class Presentations List:
 
   - [Physics Skills](Presentations\Physics Skills\talks\physicsskills.html)
-  - Brain Science: [How You Learn](Presentations\BrainScience\talks\BrainScience.html)
+  - Brain Science: [How You Learn]
 
 ## Physics Content Slides:
 
@@ -10,9 +10,8 @@
   - [Forces](Presentations\Forces\talks\APForces.html)
   - [Projectile Motion Particle Model](Presentations\Projectiles\talks\Projectiles_AP.html)
   - [Circular Motion + Universal Law of Gravitation](Presentations\Circular Motion\talks\CircMotion.html)
-  - [Energy Transfer Model]
+  - [Energy Transfer Model](No Presentation for this year)
   - [Momentum Transfer Model](Presentations\Momentum\talks\APmomentum.html)
-  - [Rotating Body Model]
   - [Oscillating Particle Model](Presentations\AP SHM\talks\SHM_AP.html)
   - [Mechanical Wave Model](Presentations\Waves\talks\AP_Waves.html)
   - [Electricity](Presentations\Electricity\talks\AP_Electricity.html)
