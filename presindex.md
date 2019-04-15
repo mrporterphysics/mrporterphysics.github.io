@@ -15,5 +15,5 @@
   - [Rotating Body Model]
   - [Oscillating Particle Model](Presentations\AP SHM\talks\SHM_AP.html)
   - [Mechanical Wave Model](Presentations\Waves\talks\AP_Waves.html)
-  - [Circuits]
+  - [Electricity](Presentations\Electricity\talks\AP_Electricity.html)
   - Find [Rotation Presentation](Presentations\AP Rotation Representation\talks\Rotation)
