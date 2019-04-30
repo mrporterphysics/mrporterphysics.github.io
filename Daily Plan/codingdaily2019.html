@@ -6,103 +6,129 @@
     <style>
     @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
     @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
-    @import url('https://fonts.googleapis.com/css?family=Lato:900i');
     @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
     @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
     @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
     @import url('https://fonts.googleapis.com/css?family=Creepster');
-
-
+    @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+    @import url('https://fonts.googleapis.com/css?family=Merriweather');
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
     body {
       font-family: 'fira sans';
       font-size: 3em;
    }
-    h1, h2, h3 {
+    h1, h2 {
       font-family: 'Bubblegum Sans';
-      /*font-weight: bold;*/
+      font-weight: bold;
+
     }
 
-    .remark-slide-content p,ol,ul{ font-size: 1.2em; }
-    .remark-slide-content ol ul ol { font-size: 100%; }
-    .remark-slide-content ul{font-size: 100%;}
-    .remark-code{ font-family: 'Ubuntu Mono';font-size: 1.5em;}
-    .remark-inline-code {font-family: 'Ubuntu Mono'; color: Tomato;}
+    h3 {
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: bold;
+    }
+    .remark-slide-content h4 {font-size: 1.3em}
+    .remark-slide-content p,ol,ul { font-size: 1.2em; }
+    .remark-slide-content ul ul{font-size: 100%;}
+    .remark-slide-content ol ul{font-size: 100%;}
+    .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
-      /* Two-column layout */
-     .left-column {
-       color: #777;
-       width: 45%;
-       height: 92%;
-       float: left;
+    /* Two-column layout */
+   .left-column {
+
+     width: 40%;
+     height: 92%;
+     float: left;
+   }
+     .left-column h2:last-of-type, .left-column h3:last-child {
+       color: #000000;
      }
-       .left-column h2:last-of-type, .left-column h3:last-child {
-         color: #000;
-       }
-     .right-column {
-       width: 50%;
-       float: right;
-       padding-top: 1em;
+   .right-column {
+     width: 60%;
+     float: right;
+     padding-top: 1em;
+   }
+
+
+   .left-column-short {
+     color: #000000;
+     width: 35%;
+     height: 95%;
+     float: left;
+     padding-top:-4em;
+   }
+     .left-column-short h2:last-of-type, .left-column h3:last-child {
+       color: #000;
      }
+   .right-column-long {
+     width: 65%;
+     float: right;
+     padding-top: 1em;
+     font-size: 1.4em;
+   }
 
-     .footer {
-   position: fixed;
-   left: 15px;
-   bottom: 15px;
-   width: 5%;
-   background-color: white;
-   color: white;
-   text-align: center;
-  }
+   .footer {
+ position: fixed;
+ left: 15px;
+ bottom: 15px;
+ width: 5%;
+ background-color: white;
+ color: white;
+ text-align: center;
+}
 
-  .inverse {
-        background: #272822;
-        color: #f3f3f3;
-        text-shadow: 0 0 20px #333;
-      }
-      .inverse h1 ,.inverse h2 {
-        color: 	#ffbf00;
-        line-height: 0.8em;
-      }
-      .inverse h3 {
-        color: #ffff80;
-        line-height: 0.8em;
-      }
+.checklist {list-style-type: 'none';}
+.checklist li:before{font-size:100%; content:"✅";}
+.inverse {
+      background: #272822;
+      color: #ffffff;
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .inverse h1, .inverse h2 {
+      color: #9966FF;
+      line-height: 0.8em;
+      font-family: 'Inconsolata', monospace;
+    }
 
-      .halloween {
-            background: #272822;
-            color: white;
-            text-shadow: 0 0 20px #333;
+    .halloween {
+          background: #9966FF;
+          color: white;
+          text-shadow: 0 0 20px #333;
+        }
+        .halloween h1, .halloween h2, .halloween h3 {
+          color: Orange;
+          font-family: 'Creepster', cursive;
+          line-height: 0.8em;
+        }
+
+    /* Slide-specific styling */
+    #slide-inverse .footnote {
+      bottom: 12px;
+      left: 20px;
+    }
+
+    .small-list{
+      font-size: 80%;
+    }
+
+    .photoback {
+          background-size: 100%;
+          color: Black;
+          font-family: 'Noto Sans', sans-serif;
           }
-          .halloween h1, .halloween h2, .halloween h3 {
-            color: Orange;
-            font-family: 'Creepster', cursive;
-            line-height: 0.8em;
+
+      .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                color: white;
+
+                line-height: 0.8em;
+                font-family: 'Inconsolata', monospace;
+                }
+      .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
+              color:white;
+              background-color: rgba(119,119,119,0.2);
+
           }
-
-      /* Slide-specific styling */
-      #slide-inverse .footnote {
-        bottom: 12px;
-        left: 20px;
-      }
-
-      .photoback {
-            background-size: 100%;
-            color: Black;
-            }
-
-        .photoback h1, .photoback h2, .photoback h3, .photoback h4{
-                  color: white;
-
-                  line-height: 0.8em;
-                  }
-        .photoback p, .photoback ol{
-                color:white;
-                background-color: rgba(119,119,119,0.2);
-
-            }
-
-
 
     </style>
   </head>
@@ -112,6 +138,29 @@
 class: center, middle
 
 # Coding Daily Plans 2018-2019
+
+---
+
+class:photoback
+background-image: url("https://media.giphy.com/media/6agGMtS4rEVSo/giphy.gif")
+
+#2019.04.30 Coding
+
+Create a random meme generator! This is your opportunity to make your peers and teacher laugh so get creative and silly with this project.
+
+REQUIREMENTS:
+
+Create a random meme generator: pick a collection of images and a collection of phrases from an array. Each time you run your sketch, it should select one random image and one random text, creating a (potential) meme. Think about...
+
+What font(s) you want to use?
+What is your source for your images and fonts?
+Your sketch should have:
+
+1. A random() function
+2. At least 3 images stored in an array
+3. At least 3 phrases or strings stored in an array
+4. The text has to show up on top of the image.
+
 
 ---
 

@@ -4,136 +4,131 @@
     <title>Regents Physics Daily Agenda 2018</title>
     <meta charset="utf-8">
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
-      @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-      @import url('https://fonts.googleapis.com/css?family=Creepster');
-      @import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas:400,700');
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+    @import url('https://fonts.googleapis.com/css?family=Creepster');
+    @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+    @import url('https://fonts.googleapis.com/css?family=Merriweather');
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
-      body {
-        font-family: 'fira sans';
-        font-size: 3em;
+    body {
+      font-family: 'fira sans';
+      font-size: 3em;
+   }
+    h1, h2 {
+      font-family: 'Bubblegum Sans';
+      font-weight: bold;
+
+    }
+
+    h3 {
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: bold;
+    }
+    .remark-slide-content h4 {font-size: 1.3em}
+    .remark-slide-content p,ol,ul { font-size: 1.2em; }
+    .remark-slide-content ul ul{font-size: 100%;}
+    .remark-slide-content ol ul{font-size: 100%;}
+    .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+    /* Two-column layout */
+   .left-column {
+
+     width: 40%;
+     height: 92%;
+     float: left;
+   }
+     .left-column h2:last-of-type, .left-column h3:last-child {
+       color: #000000;
      }
-     h1, h2 {
-       font-family: 'Bubblegum Sans';
-       font-weight: bold;
+   .right-column {
+     width: 60%;
+     float: right;
+     padding-top: 1em;
+   }
 
+
+   .left-column-short {
+     color: #000000;
+     width: 35%;
+     height: 95%;
+     float: left;
+     padding-top:-4em;
+   }
+     .left-column-short h2:last-of-type, .left-column h3:last-child {
+       color: #000;
      }
+   .right-column-long {
+     width: 65%;
+     float: right;
+     padding-top: 1em;
+     font-size: 1.4em;
+   }
 
-     h3 {
-       font-family: 'Yanone Kaffeesatz';
-       font-weight: bold;
-     }
+   .footer {
+ position: fixed;
+ left: 15px;
+ bottom: 15px;
+ width: 5%;
+ background-color: white;
+ color: white;
+ text-align: center;
+}
 
-     .remark-slide-content p,ol,ul { font-size: 1.2em; }
+.checklist {list-style-type: 'none';}
+.checklist li:before{font-size:100%; content:"✅";}
+.inverse {
+      background: #272822;
+      color: #ffffff;
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .inverse h1, .inverse h2 {
+      color: #9966FF;
+      line-height: 0.8em;
+      font-family: 'Inconsolata', monospace;
+    }
 
-     .remark-slide-content ul{font-size: 100%;}
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    .halloween {
+          background: #9966FF;
+          color: white;
+          text-shadow: 0 0 20px #333;
+        }
+        .halloween h1, .halloween h2, .halloween h3 {
+          color: Orange;
+          font-family: 'Creepster', cursive;
+          line-height: 0.8em;
+        }
 
-      /* Two-column layout */
-     .left-column {
-       color: #777;
-       width: 40%;
-       height: 95%;
-       float: left;
-     }
-       .left-column h2:last-of-type, .left-column h3:last-child {
-         color: #000;
-       }
-     .right-column {
-       width: 60%;
-       float: right;
-       padding-top: 1em;
-     }
+    /* Slide-specific styling */
+    #slide-inverse .footnote {
+      bottom: 12px;
+      left: 20px;
+    }
 
-     .left-column-short {
-       color: #777;
-       width: 35%;
-       height: 95%;
-       float: left;
-     }
-       .left-column-short h2:last-of-type, .left-column h3:last-child {
-         color: #000;
-       }
-     .right-column-long {
-       width: 65%;
-       float: right;
-       padding-top: 1em;
-     }
+    .small-list{
+      font-size: 80%;
+    }
 
-     .footer {
-   position: fixed;
-   left: 15px;
-   bottom: 15px;
-   width: 100%;
-   background-color: white;
-   color: black;
-   text-align: left;
-  }
-
-  .inverse {
-        background: #272822;
-        color: LightSteelBlue;
-        text-shadow: 0 0 20px #333;
-      }
-      .inverse h1, .inverse h2 {
-        color: LightSteelBlue;
-        line-height: 0.8em;
-      }
-
-      .halloween {
-            background: #272822;
-            color: white;
-            text-shadow: 0 0 20px #333;
+    .photoback {
+          background-size: 100%;
+          color: Black;
+          font-family: 'Noto Sans', sans-serif;
           }
-          .halloween h1, .halloween h2, .halloween h3 {
-            color: Orange;
-            font-family: 'Creepster', cursive;
-            line-height: 0.8em;
+
+      .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                color: white;
+
+                line-height: 0.8em;
+                font-family: 'Inconsolata', monospace;
+                }
+      .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
+              color:white;
+              background-color: rgba(119,119,119,0.2);
+
           }
-
-      .christmas {
-            background-image: url("snowflakes.png");
-            background-size: 100%;
-            color: green;
-
-            }
-      .christmas h1, .christmas h2, .christmas h3{
-            color: Red;
-            font-family: 'Mountains of Christmas', cursive, bold;
-            line-height: 0.8em;
-            background-color: rgba(255,255,255,.5);
-            }
-      .christmas p,ol,ul{
-          background-color: rgba(255,255,255,.75);
-
-      }
-
-
-      .photoback {
-            background-image: url("craterlake2.JPG");
-            background-size: 100%;
-            color: Black;
-
-            }
-      .photoback h1, .photoback h2, .photoback h3{
-            color: Black;
-
-            line-height: 0.8em;
-            background-color: rgba(255,255,255,.5);
-            }
-      .photoback p,ol,ul{
-          background-color: rgba(255,255,255,.65);
-
-      }
-
-      /* Slide-specific styling */
-      #slide-inverse .footnote {
-        bottom: 12px;
-        left: 20px;
-      }
 
 
     </style>
@@ -144,6 +139,21 @@
 class: center, middle
 
 # Regents Physics Daily Plans 2018-2019
+
+---
+class:inverse
+
+#2019.04.30
+
+**HalaQuestion**: *What would you pick as your last meal?*
+
+1. Rundown for the end of the year:
+  - Electricity, Waves, Modern
+2. Regents Practice
+3. Static Electricity Notes
+4. Static Electricty Practice
+5. Exit ticket
+
 
 ---
 
