@@ -141,6 +141,211 @@ class: center, middle
 
 ---
 
+class:inverse
+
+#2019.05.06 Coding
+
+1. Learning about animation
+2. Animating
+3. Start Animation Assignment
+
+---
+
+class:inverse
+
+#Animation
+
+<iframe src="https://editor.p5js.org/mrporterphysics/embed/CvgmYXGDq" width = "1000px" height = "200 px" style="border:none;"></iframe>
+
+--
+
+###How can you animate an ellipse? Try on your own
+
+--
+
+###How can we adjust the code to get the ball to move in two directions?
+
+--
+
+###How can we alter the code to get the ball to "bounce?"
+
+---
+
+class:inverse
+
+#Animation
+
+```javascript
+
+var x,y,vx;
+
+function setup() {
+  createCanvas(1000, 200);
+  x = 0;
+  y = height/2;
+  vx = 1;
+}
+
+function draw() {
+  background(0);
+  noStroke();
+  fill(255);
+  ellipse(x,y,20,20);
+  x+=vx;
+
+}
+```
+
+
+---
+
+class:inverse
+
+#Animation
+
+
+.center[
+
+<iframe src="https://editor.p5js.org/mrporterphysics/embed/l-Cqkk6cr" width = "1000px" height = "200 px" style="border:none;"></iframe>
+
+]
+
+---
+
+class:inverse
+
+#Animation
+
+```javascript
+
+var x,y,vx,vy;
+
+function setup() {
+  createCanvas(1000, 200);
+  x = 0;
+  y = 0;
+  vx = 1;
+  vy = 1;
+}
+
+function draw() {
+  background(0);
+  noStroke();
+  fill(255);
+  ellipse(x,y,20,20);
+  x+=vx;
+  y+=vy;
+
+  if(x > width || x < 0){
+    vx = vx*-1;
+  }
+  if(y> height || y < 0){
+     vy = vy*-1;
+     }
+
+}
+```
+---
+
+#Animation Task
+
+1. Make the ball accelerate -- try to simulate a ball falling and bouncing along the screen.
+2. Make a second ball that starts on the opposite end of the screen, but accelerates in the y-direction the same
+
+---
+
+class:inverse
+
+#Vectors...
+
+```JavaScript
+
+var p,v;
+
+function setup() {
+  createCanvas(1000, 200);
+  p = createVector(0,0);
+  v = createVector(1,1);
+}
+
+function draw() {
+  background(0);
+  noStroke();
+  fill(255);
+  ellipse(p.x,p.y,20,20);
+  p.add(v);
+
+  if(p.x > width || p.x < 0){
+    v.x = v.x*-1;
+  }
+  if(p.y> height || p.y < 0){
+     v.y = v.y*-1;
+     }
+
+}
+
+```
+
+---
+
+class:inverse
+
+#Object Notation
+
+```javascript
+var ball1;
+
+function setup() {
+  createCanvas(1000, 200);
+  ball1 = {
+    pos:createVector(0,0),
+    velo:createVector(1,1),
+    size:20
+  };
+}
+
+function draw() {
+  \\background() noStroke() and fill() stuff here...
+
+  ellipse(ball1.pos.x,ball1.pos.y,ball1.size,ball1.size);
+  ball1.pos.add(ball1.velo);
+
+  if(ball1.pos.x > width || ball1.pos.x < 0){
+    ball1.velo.x = ball1.velo.x*-1;
+  }
+
+  if(ball1.pos.y> height || ball1.pos.y < 0){
+     ball1.velo.y = ball1.velo.y*-1;
+     }
+
+}
+
+
+```
+---
+
+#Mini Animation Project
+
+Animate and model the motion of one object that would be in a group of many objects
+
+Ideas:
+
+- Bubble in a liquid (i.e. carbination)
+- Falling Snowflake
+- Falling Confetti
+- Stream of firework
+- Tree "helicopter"
+- Fish swimming
+- "Skater Bugs" on water
+- Falling Leaves
+- Leaf on a tree in the wind
+- Other
+
+
+
+
+---
+
 class:photoback
 background-image: url("https://media.giphy.com/media/6agGMtS4rEVSo/giphy.gif")
 
