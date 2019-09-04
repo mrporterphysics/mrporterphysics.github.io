@@ -2,133 +2,136 @@
 <html>
   <head>
     <title>AP Daily 2019-2020</title>
-    <meta charset="utf-8">
-    <style>
-    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-    @import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
-    @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
-    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-    @import url('https://fonts.googleapis.com/css?family=Creepster');
-    @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
-    @import url('https://fonts.googleapis.com/css?family=Merriweather');
-    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
 
-    body {
-      font-family: 'fira sans';
-      font-size: 3em;
-   }
-    h1, h2 {
-      font-family: 'Bubblegum Sans';
-      font-weight: bold;
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+      @import url('https://fonts.googleapis.com/css?family=Creepster');
+      @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+      @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+      @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
 
-    }
 
-    h3 {
-      font-family: 'Yanone Kaffeesatz';
-      font-weight: bold;
-    }
-    .remark-slide-content h4 {font-size: 1.3em}
-    .remark-slide-content p,ol,ul { font-size: 1.2em; }
-    .remark-slide-content ul ul{font-size: 100%;}
-    .remark-slide-content ol ul{font-size: 100%;}
-    .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      body {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 3em;
+     }
+      h1, h2 {
+        font-family: 'Blinker', sans-serif;
 
-    /* Two-column layout */
-   .left-column {
+      }
 
-     width: 40%;
-     height: 92%;
-     float: left;
-   }
-     .left-column h2:last-of-type, .left-column h3:last-child {
+      h3 {
+        font-family: 'Alegreya SC', serif;
+      }
+      .remark-slide-content h4 {font-size: 1.3em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-slide-content ul ul{font-size: 100%;}
+      .remark-slide-content ol ul{font-size: 100%;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* Two-column layout */
+     .left-column {
+
+       width: 40%;
+       height: 92%;
+       float: left;
+     }
+       .left-column h2:last-of-type, .left-column h3:last-child {
+         color: #000000;
+       }
+     .right-column {
+       width: 60%;
+       float: right;
+       padding-top: 1em;
+     }
+
+
+     .left-column-short {
        color: #000000;
+       width: 35%;
+       height: 95%;
+       float: left;
+       padding-top:-4em;
      }
-   .right-column {
-     width: 60%;
-     float: right;
-     padding-top: 1em;
-   }
-
-
-   .left-column-short {
-     color: #000000;
-     width: 35%;
-     height: 95%;
-     float: left;
-     padding-top:-4em;
-   }
-     .left-column-short h2:last-of-type, .left-column h3:last-child {
-       color: #000;
+       .left-column-short h2:last-of-type, .left-column h3:last-child {
+         color: #000;
+       }
+     .right-column-long {
+       width: 65%;
+       float: right;
+       padding-top: 1em;
+       font-size: 1.4em;
      }
-   .right-column-long {
-     width: 65%;
-     float: right;
-     padding-top: 1em;
-     font-size: 1.4em;
-   }
 
-   .footer {
- position: fixed;
- left: 15px;
- bottom: 15px;
- width: 5%;
- background-color: white;
- color: white;
- text-align: center;
-}
+     .footer {
+   position: fixed;
+   left: 15px;
+   bottom: 15px;
+   width: 5%;
+   background-color: white;
+   color: white;
+   text-align: center;
+  }
 
-.checklist {list-style-type: 'none';}
-.checklist li:before{font-size:100%; content:"✅";}
-.inverse {
-      background: #272822;
-      color: #ffffff;
-      font-family: 'Noto Sans', sans-serif;
-    }
-    .inverse h1, .inverse h2 {
-      color: #9966FF;
-      line-height: 0.8em;
-      font-family: 'Inconsolata', monospace;
-    }
+  .checklist {list-style-type: 'none';}
+  .checklist li:before{font-size:100%; content:"✅";}
+  .inverse {
+        background: #272822;
+        color: #ffffff;
+        font-family: 'Fira Sans', sans-serif;
+      }
+      .inverse h1, .inverse h2 {
+        color: #9966FF;
+        line-height: 0.8em;
+        font-family: 'Inconsolata', monospace;
+      }
 
-    .halloween {
-          background: #9966FF;
-          color: white;
-          text-shadow: 0 0 20px #333;
-        }
-        .halloween h1, .halloween h2, .halloween h3 {
-          color: Orange;
-          font-family: 'Creepster', cursive;
-          line-height: 0.8em;
-        }
-
-    /* Slide-specific styling */
-    #slide-inverse .footnote {
-      bottom: 12px;
-      left: 20px;
-    }
-
-    .small-list{
-      font-size: 80%;
-    }
-
-    .photoback {
-          background-size: 100%;
-          color: Black;
-          font-family: 'Noto Sans', sans-serif;
+      .halloween {
+            background: #9966FF;
+            color: white;
+            text-shadow: 0 0 20px #333;
           }
+          .halloween h1, .halloween h2, .halloween h3 {
+            color: Orange;
+            font-family: 'Creepster', cursive;
+            line-height: 0.8em;
+          }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+
+      .small-list{
+        font-size: 80%;
+      }
+
+      .photoback {
+            background-size: 100%;
+            color: Black;
+            font-family: 'Noto Sans', sans-serif;
+            }
 
       .photoback h1, .photoback h2, .photoback h3, .photoback h4{
-                color: white;
+                  color: white;
 
-                line-height: 0.8em;
-                font-family: 'Inconsolata', monospace;
-                }
+                  line-height: 0.8em;
+                  font-family: 'Inconsolata', monospace;
+                  }
       .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
-              color:white;
-              background-color: rgba(119,119,119,0.2);
+                color:white;
+                background-color: rgba(119,119,119,0.2);
 
-          }
+            }
+
+      .large h1{font-size:3em;}
 
     </style>
   </head>
@@ -140,6 +143,78 @@ class: center, middle
 # Coding Daily Plans 2019-2020
 
 ---
+class:inverse
+
+##2019.09.05 Coding
+##Welcome to Coding!
+
+1. Join Classroom - code: **88hw7r**
+2. Answer Intro Survey posted on classroom in assignments tab
+3. Intro to p5.js - watch video when you are done with survey
+4. Robot instructions
+5. How to draw using p5.js
+6. Draw your own symbol assignment
+
+
+---
+class:inverse
+
+#What is p5.js?
+
+- JavaScript Library for creating visual and interactive art (and more!)
+- Works with *three* languages: JavaScript, HTML, and CSS
+- This programming language will be used in this course to introduce basic programming concepts and apply them to create computational media by building expressive and interactive computer applications and media.
+
+
+---
+
+class:inverse
+
+##Draw a robot...
+
+Draw a robot using:
+
+- Using only rectangles, circles, and ellipses
+- Using at *least* 10 total shapes (can repeat the type of shape)
+
+---
+
+In p5 we use code to draw graphics on a canvas:
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/visualoutcome.png" width = "700px"/>
+
+
+---
+
+The coordinate system is different...
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/coordinategrid.png" width = "700px"/>
+
+---
+
+Adjust your robot's coordinates:
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/robot.png" width = "500px"/>
+
+
+
+---
+
+##Rectangles:
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/heightwidthsquare.png" width = "400px"/>
+
+##Ellipses:
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/heightwidth.png" width = "400px"/>
+
+---
+
+#Write the info for your robot....
+
+List the shapes and write down their information
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/shapeinstructions.png" width = "700px"/>
 
 
 
