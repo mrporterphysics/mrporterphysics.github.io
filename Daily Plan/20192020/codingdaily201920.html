@@ -143,6 +143,41 @@ class: center, middle
 # Coding Daily Plans 2019-2020
 
 ---
+
+class:inverse
+
+##2019.09.11 Coding
+
+1. Question of the Day: What is one weird or fun fact about yourself?
+2. Copy code below, play with it, see what happens. We will discuss.
+3. `random()` and `colorMode()`
+4. Abstract Album Art Project
+
+```javascript
+
+var radius1, radius2, theHue, sat;
+
+function setup() {
+  createCanvas(600, 600);
+  colorMode(HSB);
+}
+
+function draw() {
+  background(0);
+  theHue = map(mouseX, 0, width, 0, 360);
+  sat = map(mouseY, 0, height, 0, 100);
+  radius1 = map(mouseX, 0, width, 40, width/2);
+  radius2 = map(mouseY, 0, height, 40, height/2);
+
+  fill(theHue,sat,100);
+  ellipse(width/2, height/2, radius1, radius2);
+
+}
+
+```
+
+
+---
 class:inverse
 
 ##2019.09.09 Coding
