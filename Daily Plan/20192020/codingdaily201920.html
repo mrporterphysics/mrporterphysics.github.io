@@ -144,6 +144,182 @@ class: center, middle
 
 ---
 
+#2019.09.23 Coding
+
+1. `else()` `else if()`
+2. Adding in your own `else()`
+3. StopLight
+
+
+---
+
+#Else
+
+- `if()` you have homework {do it}
+--
+
+- `else()` {do something fun}
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_2/1.2/ifmousex.png" width = "400 px"/>]
+
+---
+
+#`if()` - `else()` Structure
+
+```javascript
+function setup() {
+  createCanvas(600, 120);
+}
+
+function draw() {
+  rectMode(CENTER);
+  background(0);
+  fill(255, 0, 0); //set the initial fill to red
+
+  if (mouseX > 300) {
+    ellipse(width / 2, height / 2, 40, 40);
+  } else {
+    rect(width / 2, height / 2, 40, 40);
+  }
+
+}
+```
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/embed/x1ETO5Smf"width="601 px" height="121 px"></iframe>]
+
+
+---
+class:middle, center
+
+##Add an `else()` statement to your own code
+
+---
+
+#`else if()`
+
+--
+
+###`if()` it is freezing cold...wear a heavy jacket
+
+--
+
+###`else if()`it is cold...wear a jacket
+
+--
+
+###`else()` wear a shirt
+
+--
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_2/1.2/ifcondition1.png" width="600 px"/>]
+
+---
+
+class: middle
+
+```JavaScript
+function setup() {
+  createCanvas(600, 120);
+}
+
+function draw() {
+  rectMode(CENTER);
+  background(0);
+  fill(255, 0, 0); //set the initial fill to red
+
+  if (mouseX > 500) { //begin with highest value
+    ellipse(550, 60, 20, 20); //draw an ellipse at 550
+  } else if (mouseX > 400) {
+    ellipse(450, 60, 20, 20); //if the mouse moves left draw an ellipse at 450
+  } else if (mouseX > 300) {
+    ellipse(350, 60, 20, 20); //if the mouse moves more draw an ellipe at 350
+  } else if (mouseX > 200) {
+    ellipse(250, 60, 20, 20); //draw an ellipse at 250
+  } else if (mouseX > 100) {
+    ellipse(150, 60, 20, 20); //draw an ellipse at 150
+  } else { //in all other cases (which means the mouseX is less than 100)
+    ellipse(50, 60, 20, 20); //draw an ellipse at 50
+  }
+}
+
+```
+
+--
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/embed/jMsgL7PHg" width="601 px" height="121 px"></iframe>
+]
+
+---
+
+Debug
+
+```javascript
+function draw() {
+	rectMode(CENTER);
+	background(0);
+	fill(255,0,0);//set the initial fill to red
+
+	if(mouseX>100){//begin with highest value
+		ellipse(150, 60, 20,20)//draw an ellipse at 550
+	}else if(mouseX>200){
+		ellipse(250, 60, 20,20)//if the mouse moves left draw an ellipse at 450
+	}else if(mouseX>300){
+		ellipse(350, 60, 20,20)//if the mouse moves more draw an ellipe at 350
+	}else if(mouseX>400){
+		ellipse(450, 60, 20,20)//draw an ellipse at 250
+	}else if(mouseX>500){
+		ellipse(550, 60, 20,20)//draw an ellipse at 150
+	}else{//in all other cases (which means the mouseX is less than 100)
+ 	 ellipse(50,60,20,20)//draw an ellipse at 50
+	}
+
+}
+```
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/embed/9F6X0Lhow" width="601 px" height="121 px"></iframe>]
+
+
+---
+
+```javascript
+function setup() {
+  createCanvas(600, 120);
+}
+
+function draw() {
+	rectMode(CENTER);
+	background(0);
+	fill(255,0,0);//set the initial fill to red
+
+	if(mouseX>100){//begin with highest value
+		ellipse(150, 60, 20,20)//draw an ellipse at 550
+	}if(mouseX>200){
+		ellipse(250, 60, 20,20)//if the mouse moves left draw an ellipse at 450
+	}if(mouseX>300){
+		ellipse(350, 60, 20,20)//if the mouse moves more draw an ellipe at 350
+	}if(mouseX>400){
+		ellipse(450, 60, 20,20)//draw an ellipse at 250
+	}if(mouseX>500){
+		ellipse(550, 60, 20,20)//draw an ellipse at 150
+	}if(mouseX > 0){//in all other cases (which means the mouseX is less than 100)
+ 	 ellipse(50,60,20,20)//draw an ellipse at 50
+	}
+}
+
+```
+
+--
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/embed/swpkqVX-9"width="601 px" height="121 px"></iframe>]
+
+
+---
+class: center, middle
+
+#Stop Light - make your own
+
+<iframe src="https://editor.p5js.org/mrporterphysics/embed/MohMf_v5H" width="601 px" height="121 px"></iframe>
+
 ---
 
 #2019.09.19 Coding
