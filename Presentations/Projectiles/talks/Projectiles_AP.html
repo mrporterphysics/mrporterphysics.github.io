@@ -74,6 +74,30 @@
 
       .tom{color: tomato;}
 
+      .reg p,ol,ul{color:black;}
+
+      .photoback {
+            background-size: 100%;
+            color: Black;
+            }
+
+        .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                  color: white;
+
+                  line-height: 0.8em;
+                  }
+        .photoback p, .photoback ol, .photoback ul{
+                color:white;
+                background-color: rgba(255,255,255,.5);
+
+            }
+
+        .phototitle {
+              background-size: 100%;
+
+              }
+
+
 
 
       /* Some special classes */
@@ -141,34 +165,115 @@ class: center, middle
 
 ---
 
-#Free Fall:
+#Demos:
 
-####When an object is in free-fall:
+1. Which Will hit the ground first?
+2. Will the ball land back in the launcher?
 
-- its VERTICAL acceleration is always 10 m/s per second.
-- its HORIZONTAL acceleration is always zero.
 
 ---
 
-#Equations for x and y directions:
+class:photoback
 
-####x direction:
+background-image:url("https://media.giphy.com/media/6Hx3iXLEBN23S/giphy.gif")
+
+#Like Woah
+
+---
+
+class:photoback
+background-image: url("https://media.wired.com/photos/5ca69fc9fc5e1d755eae9bb1/master/w_1024%2Cc_limit/projectileballshoot1.gif")
+
+
+
+---
+
+
+class:photoback
+background-image: url("https://media.wired.com/photos/5ca6a075c4db1e3ef069219d/master/w_1024%2Cc_limit/twocoinprojectile.gif")
+
+---
+
+class:photoback
+background-image: url("https://media.wired.com/photos/5ca6a0d48e72c4778d87956a/master/w_1024%2Cc_limit/vballshoot_1.gif")
+
+---
+
+
+
+class:center, middle
+
+<iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/BvekHpCBGjz/embed/captioned/?cr=1&amp;v=8&amp;wp=440&amp;rd=https%3A%2F%2Fwww.wired.com&amp;rp=%2Fstory%2F5-of-the-best-demos-of-projectile-motion-and-its-quirks%2F#%7B%22ci%22%3A0%2C%22os%22%3A5941.424999968149%2C%22ls%22%3A4216.939999954775%2C%22le%22%3A4263.3249999489635%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="1341" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background-color: white; border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"></iframe>
+
+---
+
+#What is a "projectile"?
+
+#### A thrown/launched/fired/etc object near the surface of the earth where the only *significant* force is earth's gravitational force.
+
+---
+
+#What does it mean to be a projectile?
+
+- The horizontal and vertical motion are independent of each other (except for time)
+- its VERTICAL acceleration is always -9.8 m/s/s
+- its HORIZONTAL acceleration is always zero. Meaning its horizontal velocity is constant.
+
+---
+
+#How can we represent this?
+
+####x direction (`\(a_x = 0\)`):
 
 `\(x = x_0 + v_0t\)`
 
-####y direction:
 
-`\(v_y = v_{0y} + a_yt\)`
+`\(v_x = v_{0x}=v_x = \textrm{velocity is a constant}\)`
 
-`\(y = y_0 + v_{0y}t+\frac{1}{2}a_yt^2\)`
+####y direction (`\(a_y = -g = -9.8 \textrm{m/s}^2\)`):
 
-`\(v_y^2 = v_{0y}^2 + 2a_y(y-y_0)\)`
+`\(v_y = v_{0y} + a_yt\)` or `\(v_y = v_{0y} + gt\)`
 
-`\(a_y = g = \pm 9.8 m/s^2\)`
+`\(y = y_0 + v_{0y}t+\frac{1}{2}a_yt^2\)` or `\(y = y_0 + v_{0y}t+\frac{1}{2}gt^2\)`
+
+`\(v_y^2 = v_{0y}^2 + 2a_y(y-y_0)\)` or `\(v_y^2 = v_{0y}^2 + 2g(y-y_0)\)`
+
 
 ---
 
 
+class:photoback
+background-image: url("https://media.wired.com/photos/5ca6a1263853414382cb3245/master/w_1024%2Cc_limit/waterprojectile.gif")
+
+#Path of a projectile
+
+---
+
+#Horizontally Fired Projectiles:
+
+.center[<img src="https://www.mwit.ac.th/~physicslab/applet_04/physics_classroom/mmedia/vectors/hlp.gif" width = "600 px"/>]
+
+1. How far is the cannonball displaced vertically after 12 seconds?
+2. How far is the cannonball displaced horizontally after 12 seconds?
+3. What is the velocity of the cannonball after 12 seconds?
+
+
+---
+
+#Motion Map
+
+.center[<img src="https://www.mwit.ac.th/~physicslab/applet_04/physics_classroom/Class/vectors/u3l2b3.gif" width = "600px"/>]
+
+
+---
+
+#Solving Horizontally Fired Projectile Motion Problems:
+
+1. Make a table and separate x and y information
+2. Remember that `\(v_x\)` is constant and `\(a_y=-g=-9.8 \textrm{m/s/s}\)`
+3. Find the flight time using the y-information (usually with height)
+
+---
 
 
    </textarea>
