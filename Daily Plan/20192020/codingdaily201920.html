@@ -145,12 +145,257 @@ class: center, middle
 
 ---
 
+
+#2019.10.24 Coding
+
+QotD: Do you have any weird/unique routines or superstitions? (For example: I ***have*** to put on my left sock before my right sock, and the same for shoes, left on first.)
+
+
+1. What is an array?
+
+---
+#Grocery List
+
+- Clementines
+- Raspberries
+- Cauliflower
+- Sweet Potatoes
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+#Grocery List
+
+- ~~Clementines~~
+- Raspberries
+- Cauliflower
+- Sweet Potatoes
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- Salsa
+- Wraps
+- Eggs
+
+---
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- ~~Salsa~~
+- Wraps
+- Eggs
+
+---
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- ~~Salsa~~
+- Wraps
+- Eggs
+- **Tortilla Chips**
+- **Avocados**
+
+---
+#Vocabulary
+
+- **Array** - An ordered series of data
+
+--
+- **Index** - A position within an array
+
+--
+- **Element** - A piece of data within an array
+
+--
+- **Zero-Indexed** - THe first element of an array has an index of 0, not 1
+
+---
+
+.left-column[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/2.1/image1.png" height = "600 px"/>]
+--
+
+.right-column[
+
+1-Story Building: `var building = 30;`]
+
+--
+
+.right-column[
+Our Building:
+
+`building[0] = 5;`
+]
+--
+.right-column[
+`building[1] = 0;`
+]
+--
+.right-column[
+`building[2] = 2;`]
+--
+.right-column[
+`building[3] = 4;`]
+--
+.right-column[
+`building[4] = 1;`
+]
+
+---
+
+#`colors` array
+
+.center[
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/2.1/table.png" width = "1000px"/>
+]
+
+[Example](https://editor.p5js.org/cs4all/sketches/zPPyXXzoQ)
+
+---
+
+#Test it out
+
+Make a building
+
+Your building can look any way you want – as long as it has three or more floors,
+all different colors. And how do we store these colors? In an array, of course!
+You can make each floor an ellipse, a rectangle, even a triangle.
+But when it comes to using `fill()` to color each floor, remember -- you should be
+getting the color value from your array.
+
+Extensions:
+
+1. How could you maybe use another array to make your code even easier to understand and more simple?
+2. What other values are you changing for each floor?
+3. Could you change the text used for colors to RGB values instead?
+4. Is there a way to do that using one array instead of three?
+
+---
+
+###What does this do?
+
+```javascript
+var colors = ['red', 'blue', 'green', 'orange', 'white'];
+var color1, color2;
+
+function setup() {
+  createCanvas(400, 400);
+  color1 = colors[floor(random(0, colors.length))];
+	color2 = colors[floor(random(0, colors.length))];
+}
+
+function draw() {
+  background(220);
+  rectMode(CENTER);
+  fill(color1);
+  rect(100,100,100,100);
+  fill(color2);
+  ellipse(300,250,100);
+}
+
+```
+
+---
+##Exercise - Fortune Cookie
+
+Pick 10 fortune cookie messages from this [list](https://quotes.yourdictionary.com/articles/funny-fortune-cookie-sayings.html), store them in an array, and whenever the user loads the sketch, a different text message will be displayed.
+
+##Extensions
+
+Use `random()` and multiple arrays to create one of the following:
+
+- Group pairing program - Create a program that randomly pairs students in your class in a group project.
+- Mad lib generator - Create a program that randomly inserts words in an existing sentence to make it funny, surreal, or just plain weird.
+- Bonus: Make it interactive. Update or modify the parameter(s) whenever you press play, click, or press a key.
+
+---
+
+##Looping
+
+```javascript
+var colors = ['red', 'blue', 'green']
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  for(i = 0; i < colors.length; i++){
+    // Fill with the right color
+    fill(colors[i]);
+    // draw a rectangle
+    rect(i * 100, height / 2, 75, 75);
+  }
+}
+```
+
+---
+
+#Exercise:
+
+Scientists have recently discovered a big advance in snowman-building technology.
+Gone are the days of cheery stovepipe hats and coal smiles. Gone are the days of carrot noses.
+Modern snowmen, like modern buildings, are one thing, and one thing only: tall.
+
+Scientists have developed a way of creating 7-snowball-high snowpeople that are
+colored in every shade of the rainbow. Your mission, should you choose to accept it,
+is to create a rainbow snowman using one, and only one, for loop to determine both
+the position of each ellipse, the size of each ellipse, and the color of each ellipse.
+Your snowman should come out looking something like this.
+
+###Extension:
+
+Upon clicking, randomize or reverse the order colors or the sizes!
+
+
+
+---
+
 #2019.10.22 Coding
 
 QotD: How often do you dance?
 
 1. Finish wallpaper mini project
-2. When you finish the wallpaper project make a creative drawing using the `line()` function for me to print with the Axi-Draw. Use a 700 x 700 canvas. You can look at [https://p5-demos.glitch.me/](https://p5-demos.glitch.me/) or [http://www.generative-gestaltung.de/2/](http://www.generative-gestaltung.de/2/) for inspiration. 
+2. When you finish the wallpaper project make a creative drawing using the `line()` function for me to print with the Axi-Draw. Use a 700 x 700 canvas. You can look at [https://p5-demos.glitch.me/](https://p5-demos.glitch.me/) or [http://www.generative-gestaltung.de/2/](http://www.generative-gestaltung.de/2/) for inspiration.
 
 
 ---
