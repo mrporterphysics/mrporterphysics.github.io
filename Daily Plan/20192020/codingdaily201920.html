@@ -35,7 +35,7 @@
       .remark-slide-content ul ul{font-size: 100%;}
       .remark-slide-content ol ul{font-size: 100%;}
       .remark-slide-content ol ol{font-size: 100%;}
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; color: purple;}
 
       /* Two-column layout */
      .left-column {
@@ -156,6 +156,102 @@
 class: center, middle
 
 # Coding Daily Plans 2019-2020
+
+---
+
+class:thanksgiving
+
+#2019.11.18 Coding
+
+QotD: What is the best side at Thanksgiving?
+
+1. Check in on Kinetic Type and Muscial Keyboard
+2. Motion
+
+---
+
+#Flipbook
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/la/4_1/flip_book.gif" width = "600 px"/>]
+
+
+---
+
+#p5 as a Flipbook
+
+Because it repeats the draw loop we can use it like a flipbook, where it draws something over and over again, but we change its position
+
+--
+
+Lets draw an `ellipse()` on the left side of the screen and move it to the right side
+
+--
+
+1. assign `x` as a variable and give it the value of zero
+--
+
+2. Draw the `ellipse` at `x`
+--
+
+3. add 1 to the `x` or `x+=1`
+--
+
+---
+
+#The Code...
+
+```javascript
+
+var x;
+
+function setup() {
+  createCanvas(600, 120);
+  x = 0; // Start at the left edge of the canvas
+}
+
+function draw() {
+  background(0);
+  x = x + 1;  // Move slightly to the right
+
+  ellipse(x, 60, 20, 20);
+}
+
+```
+
+---
+
+#How can we get the ellipse to come back?
+
+--
+
+#Conditionals!
+
+--
+
+```javascript
+
+if(x > width){ // if the ball has passed the left edge of the canvas
+   x = 0; //move the ball back to the right edge
+  }
+
+```
+
+
+---
+
+#Try it...
+
+Make the following...
+
+1. Something move right to left
+2. Something falling
+3. Something speeding up
+4. Something slowing down
+5. Something slowing down and then speeding up
+6. Something moving diagonally
+7. Something that bounces off the walls
+8. Something that moves in `random()` directions
+
 
 ---
 
