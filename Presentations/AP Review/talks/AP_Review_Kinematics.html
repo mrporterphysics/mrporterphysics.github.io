@@ -185,10 +185,10 @@ class: center, middle
 
 #Info/Reminders about the test:
 
-- On 5/14 at 4 pm (DOUBLE CHECK THIS PORTER)
+- On 5/14 at 4 pm
 --
 
-- Two questions: Paragraph length response, and quantitative-qualitative translation
+- Two questions: Paragraph length response, and qualitative-quantitative translation
 --
 
 - On units 1-7 (Kinematics, Dynamics, Circular Motion, Energy, Momentum, SHM, Torque + Rotational Motion)
@@ -197,11 +197,83 @@ class: center, middle
 
 #Hints + Tips on Paragraph Length Response:
 
+- "Answer in a clear, coherent, paragraph-length response:"  Five sentences, four is often enough, especially in physics 1.
+--
+
+- Use Physics Words!
+--
+
+- Avoid 'it' -- cite what it is (i.e. "it gets bigger" becomes "the velocity will increase")
+--
+
+- Cite an equation if it helps your argument
+
+---
+
+#Workbook Suggestions:
+-  First, answer the question directly and clearly so that there is no ambiguity in the
+position you are taking. Some questions ask you to mark an answer before your
+justification, so that counts as answering the question. Otherwise, answer the question!
+--
+
+- The next one or two sentences need to state laws of physics that are always true and
+pertain to this particular question. If you don’t remember the name of the law of
+physics (i.e., you can’t remember to say “Newton’s first law”), then just recite the law
+of physics (“if the net force on an object is zero, then it moves with constant velocity”).
+Saying an “if-then” statement at this point is usually a good sign.
+--
+
+-  Next, you have to connect the laws of physics you cited or recited to the situation at
+hand. If you find yourself using the words “in this situation,” you’re probably in good
+shape. These sentences need to flow logically from one point of your argument to the
+next so that you can do the last bullet point.
+--
+
+-  Answer the question again. If you did the third bullet point correctly, then it should feel
+natural to put the word “therefore” in front of your answer
+
+---
+
+#AP Reader Suggetions
+
+(Again from the workbook)
+
+- Make sure you answer the question clearly first.
+--
+
+- Read the entire question and take a couple of minutes to organize your thoughts before
+beginning to write.
+--
+
+- Write legibly. If your answer is difficult to read, then it might as well be blank.
+--
+
+- Underline key words or phrases like “increases,” “decreases,” “remains the same,”
+“is proportional to,” etc.
+--
+
+- Use simple sentence structure. “Noun-verb-direct object”. You are not being graded for
+advanced grammatical constructions.
+--
+
+- Use the nouns of physics in your answer (“velocity,” “acceleration,” “kinetic
+energy,” “force,” etc.). All other words (particularly verbs) can be simple first- or
+second-grade vocabulary.
+
+
 ---
 
 #Hints + Tips on QQT
 
+- Will have to work with multiple representations -- expect to analyze a graph here
+--
 
+- Will probably have to evaluate an equation -- like that rotational motion Workbook problem (7.K) `\(T = \frac{\mu \omega_0 R}{2g}\)`
+- This entire problem is a good example.
+--
+
+- Will not have to derive an equation -- all of your answers will be prose. That being said you *can* cite equations and type them like we have been in slack: x = x_0 + v_0x*t + 1/2at^2, can also use sqrt(2h/g) for `\(\sqrt{\frac{2h}{g}}\)`
+- Can use w or omega, but I would use alpha if you are referencing angular acceleration
 ---
 
 #Kinematics - Study of Motion
@@ -312,9 +384,12 @@ class: center, middle
 
 - Most everyday motion can be represented with straight segments on a velocity-time graph.
 
+
+
 ---
 
 #Graphical Summary:
+
 
 
 <style type="text/css">
@@ -350,69 +425,175 @@ class: center, middle
   </tr>
 </table>
 
+
+
 ---
 
 #Kinematic Equations:
 
 .center[
+`\(v_x = v_{x0} + at\)`
 
-$$v_x = v_{x0} + at$$
+`\(v_{x}^2 = v_{x0}^2 + 2a(x-x_0)\)`
 
-$$x = x_0 + v_{x0} + \frac{1}{2}at^2$$
-
-$$v_{x}^2 = v_{x0}^2 + 2a(x-x_0)$$
-
+`\(x = x_0 + v_{x0} + \frac{1}{2}at^2\)`
 ]
 
+???
+Where does each equation come from
+
+Linearized x vs t^2 --> 1/2a slope
+
+When to use each equation
+
+
+---
+
+##Rotation -- its all the same...but a little different...
+
+--
+
+Based on the radian:
+
+.center[<img src="https://openstax.org/resources/fe64292de40cb167becd9db917e61329c5522eaa" width = "400"/>]
+
+--
+
+$$\Delta \theta = \frac{2\pi r}{r} = 2 \pi$$
+
+---
+
+#Rotational Kinematics Definitions:
+
+- Angular displacement, `\(\theta\)`, indicates the angle through which an object has rotated.  It is measured in radians.
+--
+
+- Average angular velocity, `\(\omega\)`, is angular displacement divided by the time interval over which that angular displacement occurred.  It is measured in rad/s.
+--
+
+- Instantaneous angular velocity is how fast an object is rotating at a specific moment in time.
+--
+
+- Angular Acceleration, `\(\alpha \)`, tells how much an object’s angular speed changes in one second.  It is measured in rad/s per second.
+--
+
+- Angular acceleration and centripetal acceleration are independent. Angular acceleration changes an object’s rotational speed, while centripetal acceleration changes an object’s direction of motion.
+
+
+---
+
+#Rotational Kinematics and Linear:
+
+Position Translation:
+
+$$ \theta = \frac{x}{r}$$
+
+Velocity Translation:
+
+$$ \omega = \frac{v}{r}$$
+
+
+Acceleration translation:
+
+$$ \alpha = \frac{a}{r}$$
+
+---
+
+#Rotational Kinematics:
+
+$$\theta = \theta_0 + \omega_0 t + \frac{1}{2}\alpha t^2$$
+
+$$\omega = \omega_0 + \alpha t$$
+
+
+---
+
+##Two-Dimensional Motion: Projectiles
+
+- Horizontal and vertical motion happens simultaneously, but completely independently. This means no horizontal (x) information can be shared with vertical (y) information.
+- The only exception is time, which is the same for horizontal and vertical components.
+
+---
+##Two-Dimensional Motion: Projectiles
+
+- When an object is in free-fall,
+  + its VERTICAL acceleration is always 10 m/s per second.
+  + its HORIZONTAL acceleration is always zero.
+- Velocities in perpendicular directions add just like perpendicular forces.
+- The magnitude of an object’s velocity is known as its speed.
+- To approach a projectile problem, make two kinematics charts: one vertical, one horizontal.
+
+---
+
+
+---
+
+##Common Derivation: Horz. Projectile Flight Time
+
+Start with Kinematics:
+
+$$y = y_0 + v_0 t + \frac{1}{2}at^2$$
+--
+
+Initial v=0, a = g...
+
+$$0 = h + \frac{1}{2}gt^2$$
+--
+
+Algebra the heck out of it...
+
+$$t = \sqrt{\frac{2h}{g}}$$
+
+---
+
+#Horz. Projectiles:
+
+.center[<img src="http://hyperphysics.phy-astr.gsu.edu/hbase/imgmec/tra11.gif" width = "600"/>]
+
+---
+
+#General Projectile
+
+.center[<img src="http://hyperphysics.phy-astr.gsu.edu/hbase/imgmec/tra12.gif" width = "700"/>]
+
+---
+
+#Projectile into Satellite
+
+.center[<img src="https://openstax.org/resources/1d994a14b0046e53943bef7096a0677fb39aab97" width = "400"/>]
 
 
 
 
+</textarea>
+ <!-- This is the link to the local copy of Remark -->
+ <script src="../javascript/remark-latest.min.js" type="text/javascript"></script>
+ <!--<script src="./javascript/remark-latest.min.js" type="text/javascript"></script>-->
+ <!-- See discussion at https://github.com/gnab/remark/issues/222-->
+ <!-- You could alternately use the libraries from remote location -->
+ <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>-->
 
+ <script type="text/javascript">
+     var slideshow = remark.create({
+         navigation: {
+             click: false
+         },
+         properties: {
+             class: "center, middle"
+         },
+         countIncrementalSlides: false
+     ,
+     ratio:'16:9'});
+ </script>
 
-
-
-
-
-
-
-
-
-
-
-   </textarea>
-    <!-- This is the link to the local copy of Remark -->
-    <script src="../javascript/remark-latest.min.js" type="text/javascript"></script>
-    <!--<script src="./javascript/remark-latest.min.js" type="text/javascript"></script>-->
-    <!-- See discussion at https://github.com/gnab/remark/issues/222-->
-    <!-- You could alternately use the libraries from remote location -->
-    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>-->
-
-
-
-    <script type="text/javascript">
-        var slideshow = remark.create({
-            navigation: {
-                click: false
-            },
-            properties: {
-                class: "center, middle"
-            },
-            countIncrementalSlides: false
-        ,
-        ratio:'16:9'});
-    </script>
-
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-    <!-- If you want to run your presentation offline, you need to download the MathJax -->
-    <!-- libraries, then uncomment the line below and comment out the one above.-->
-    <!--<script "text/javascript" src="../../../javascript/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local"></script>-->
+ <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });
+ </script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+ </script>
+ <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ <!-- If you want to run your presentation offline, you need to download the MathJax -->
+ <!-- libraries, then uncomment the line below and comment out the one above.-->
+ <!--<script "text/javascript" src="../../../javascript/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local"></script>-->
 </body>
 </html>
