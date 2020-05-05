@@ -16,3 +16,7 @@
   - [Mechanical Wave Model](Presentations\Waves\talks\AP_Waves.html)
   - [Electricity](Presentations\Electricity\talks\AP_Electricity.html)
   - Find [Rotation Presentation](Presentations\AP Rotation Representation\talks\Rotation)
+
+## AP Review Slides:
+
+  - [Kinematics and Test Info](Presentations\AP Review\talks\AP_Review_Kinematics.html)
