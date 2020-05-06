@@ -32,9 +32,9 @@
       .remark-slide-content p { font-size: 1.3em; }
       .remark-slide-content ol { font-size: 1.3em; }
       .remark-slide-content ul { font-size: 1.3em; }
-      .remark-slide-content ul ul {font-size: 1.1em;}
-      .remark-slide-content ol ul {font-size: 1.1em;}
-      .remark-slide-content ul ol {font-size: 1.1em;}
+      .remark-slide-content ul ul {font-size: 1em;}
+      .remark-slide-content ol ul {font-size: 1em;}
+      .remark-slide-content ul ol {font-size: 1em;}
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       .remark-fading { z-index: 9; }
 
@@ -75,6 +75,26 @@
         text-align: center;
       }
 
+      .photoback {
+            background-size: 100%;
+            color: Black;
+            }
+
+        .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                  color: white;
+
+                  line-height: 0.8em;
+                  }
+        .photoback p, .photoback ol, .photoback ul{
+                color:white;
+                background-color: rgba(255,255,255,.5);
+
+            }
+
+        .phototitle {
+              background-size: 100%;
+
+              }
 
 
       /* Some special classes */
@@ -137,7 +157,7 @@ layout: true
 class: center, middle
 
 .title[AP Exam Review]
-.subtitle[*Forces*]
+.subtitle[*Forces and Torques*]
 &nbsp;
 &nbsp;
 &nbsp;
@@ -162,11 +182,191 @@ class: center, middle
 <!--.footnote[Created with [{Remark.js}](http://remarkjs.com/) using [{Markdown}](https://daringfireball.net/projects/markdown/) +  [{MathJax}](https://www.mathjax.org/)]-->
 
 ---
+class:photoback
+background-image: url("https://media.giphy.com/media/6nGE3BmUlhs3e/giphy.gif")
+
+
+#Mustache Questions:
+--
+
+##How are you doing today?
+--
+
+##Have you tried the practice test application for the AP Exam?
+--
+
+##What is the best takeout you've had during social distancing?
+
+---
+
+#Force Definitions:
+
+- A ***force*** is an interaction between two objects.
+  - Individual forces can measured with platform scales, spring scales, or force sensors (which are just fancy spring scales)
+  - Units are Netwons which are kilogram*meter/sec/sec
+--
+
+- Forces acting in the same direction add together to determine the net force.
+- Forces acting in opposite directions subtract to determine the net force.
+--
+
+- The net force is always in the direction of acceleration.
+--
+
+- The ***net force*** on an object is the single force that could replace all the individual forces acting on an object and produce the same effect.
+
+---
+
+#Different Common Forces:
+
+###Mass vs. Weight (Force of Gravity `\(F_g\)`)
+
+- Mass tells how much material is contained in an object.
+--
+
+- The units of mass are kilograms.
+--
+
+- Weight is the force of a planet acting on an object.
+--
+
+- On earth’s surface, the gravitational field is 10 N/kg.  This means that on earth, 1 kg of mass weighs 10 N.
+
+---
+
+#Different Common Forces:
+
+- Force of Grvity or Wieght: Interaction between two objects with mass. Given by `\(F_g = mg\)` or `\(F_g = G\frac{m_1 m_2}{r^2}\)`
+--
+
+- Normal Force: the perpendicular force. A force that occurs when two objects are in contact with each other and the surfaces deform.
+--
+
+- Friction Force: force of the surface on an object. Acts parellel to the surface opposite the direction that the object is moving or attempting to move:
+  - Kinetic: surfaces are sliding relative to one another.
+  - Static: surfaces aren't moving relative to one another.
+  - Coefficient of friction (`\(\mu\)`): number that tells you how sticky the two surfaces in contact are.
+--
+
+- Tension Force: String/rope/chain/etc is stretched. Force is along the stretched object.
+--
+
+- Spring Force (`\(F_s = kx\)`): Force that occurs when a spring is stretched or compressed. Force is opposite of spring displacement and proportional in magnitude to the displacement.
+
+---
+
+#Mass Types:
+
+- ***Gravitational mass*** is measured by measuring an object’s weight using `\(weight = mg\)`
+- ***Inertial mass*** is measured by measuring the net force on an object, measuring the object’s acceleration, and using `\(F_{net} = ma\)`.
+--
+
+Note: AP Wants you to know this...to this date it has not been found that gravitational mass and inertial mass differ experimentally.
+
+---
+
+#Newton's First Law
+
+- Balanced Forces (no net force) results in constant velocity (zero or non-zero)
+--
+
+- Unbalanced Forces (net force) results in Acceleration
+
+---
+
+#Newton's Second Law
+
+- Mathematical Equation for 1st law.
+
+$$ a = \frac{\Sigma F}{m} $$
+
+--
+
+or
+
+--
+
+$$\Sigma F = ma$$
+
+---
+
+#Newton's Third Law
+
+- Forces are interactions between *two* objects, therefore forces come in pairs, these pairs are equal in magnitude and opposite in direction
+--
+
+- ***Although the force pairs must be equal, the forces can have different effects based on the different masses of the objects.***
+
+---
+
+#Forces at an angle
+
+- Any diagonal force can be written in terms of two perpendicular force components, called the x- and y- components.
+--
+
+- To determine the amount of each component, you can draw the diagonal force to scale.  Draw dotted lines from the tip of the force arrow directly to the x- and y- axes.  Measure each component.
+--
+
+- When the angle `\(\theta\)` of the diagonal force is measured from the horizontal,
+  - The horizontal component of the force is  `\(F\cos\theta \)`
+  - The vertical component of the force is  `\(F\sin\theta \)`
+
+---
+
+#Forces at an angle
+
+.center[<img src="https://openstax.org/resources/c15642e59db57a9ec2349bddbf51cdccbfb01fe6" width = "700"/>]
+
+---
+
+#Representing Forces with Free Body Diagrams:
+
+A free-body diagram includes:
+
+1. A labeled arrow representing each force.  Each arrow begins on the object and points in the direction in which the force acts.
+2. A list of the forces, indicating the object applying the force and the object experiencing the force.
+
+---
+
+class:center, middle
+
+<img src="https://openstax.org/resources/47a6fe08e936fb96fdf7f7b9371c229b465c29d7" width = "700"/>
 
 
 
 ---
 
+#Inclined Planes
+
+When an object is on an inclined plane, break the object’s weight into components parallel to and perpendicular to the incline.  Do not use x and y axes.
+
+- The component of the object’s weight parallel to the incline is `\(mg\sin\theta\)`
+- The component of the object’s weight perpendicular to the incline is `\(mg\cos\theta\)`
+
+
+---
+
+#Forces on an incline
+
+
+.center[<img src="https://openstax.org/resources/3908b0dac66969a233f949f0f2b92a9652943f0a" width = "600"/>]
+
+
+
+---
+
+#Solving Force Problems:
+
+
+1. Draw a free-body diagram.
+1. If any force acts at an angle, break it into components.
+1. Determine the net force in each direction, even if that net force is an expression with unknown variables in it.
+2. Write two equations (note if the object has *constant velocity* `\(a = 0\)`):
+  - `\(\Sigma F_y = ma_y\)` in the vertical direction
+  - `\(\Sigma F_x = ma_x \)` in the the horizontal direction
+--
+
+*If you are asked to analyze forces on the exam, draw a FBD on scrap paper!*
 
 
    </textarea>
