@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AP Exam Review</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+    @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+    @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Open+Sans:600');
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+      body {
+        background-color: #666666;
+        font-family: 'Lato', sans-serif;
+
+      }
+      h1, h2, h3, h5 {
+        font-family: 'Black Han Sans', sans-serif;
+        font-weight: normal;
+
+      }
+      .remark-slide-content h1 { font-size: 2.4em; color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:.5em}
+      .remark-slide-content h1 a { font-size: 1em; color:white;text-decoration: underline;font-weight: bold;letter-spacing:0.05em;margin-top:.5em}
+      .remark-slide-content h1 a:hover { font-size: 1em; color:blue;text-decoration: underline;font-weight: bold;letter-spacing:0.05em;margin-top:.5em}
+      .remark-slide-content h5 { font-size: 5vw; color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:.5em}
+      .remark-slide-content h2 { font-size: 1.55em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:.5em}
+      .remark-slide-content  h3 { font-size: 1.4em;color:#606060;font-weight: bold;letter-spacing:0.05em;margin-top:.5em}
+      .remark-slide-content  h4 { font-size: 1.3em;color:#000000;font-weight: bold;letter-spacing:0.05em;margin-top:.5em}
+      .remark-slide-content p { font-size: 1.3em; }
+      .remark-slide-content ol { font-size: 1.3em; }
+      .remark-slide-content ul { font-size: 1.3em; }
+      .remark-slide-content ul ul {font-size: 1.0em;}
+      .remark-slide-content ol ul {font-size: 1.0em;}
+      .remark-slide-content ul ol {font-size: 1.0em;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-fading { z-index: 9; }
+
+
+      /* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
+      .remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+      .remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+
+
+      .bigtext {divcolor:#000000;font-weight: bold;}
+      /* Two-column layout */
+      .left-column {
+        width: 20%;
+        float: left;
+      }
+      .right-column {
+        width: 70%;
+        float: right;
+        padding-top: 0em;
+        margin-top: 0em;
+        text-align: left;
+        font-size: 1em;
+      }
+      .footnote {
+        position:absolute;
+        bottom: 1em;
+        left: 14em;
+        font-size: 0.7em;
+       }
+
+       .footer {
+        position: fixed;
+        left: 15px;
+        bottom: 15px;
+        width: 5%;
+        background-color: white;
+        color: white;
+        text-align: center;
+      }
+
+
+
+      /* Some special classes */
+      .title {font-size: 3.3em; color:#606060;font-weight:bold;letter-spacing:0.05em}
+      .subtitle {font-size: 1.4em}
+      .author {font-size: 1.4em; color:#606060;font-weight:bold;letter-spacing:0.02em}
+      .coauthor {font-size: 1.0em; color:#606060;font-weight:bold;letter-spacing:0.02em}
+      .institution {font-size: 1.0em;}
+      .date {font-size: 1.0em;}
+
+      .cite {font-size: 0.8em; color:#33AA99;font-style: italic}
+      .strike {color:salmon;text-decoration:line-through}
+
+      .quote {font-family: 'Black Han Sans', sans-serif;
+              font-size: 2.4em;
+              color:white;
+              font-weight: bold;
+              letter-spacing:0.05em;
+              margin-top:0em;
+              background-color: rgba(120,120,120,.6);
+              position:absolute;
+              width: 100%;
+              left:0%;
+              top:50%;
+
+
+            }
+
+
+                  .photoback {
+                        background-size: 100%;
+                        color: Black;
+                        }
+
+                    .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                              color: white;
+
+                              line-height: 0.8em;
+                              }
+                    .photoback p, .photoback ol, .photoback ul{
+                            color:white;
+                            background-color: rgba(255,255,255,.5);
+
+                        }
+
+                    .phototitle {
+                          background-size: 100%;
+
+                          }
+
+
+      /*Set color scheme for links.*/
+      a {text-decoration: none; color: #666666;text-align:center; width: 24%}
+      /*Setting link properties is particular, do not change order below*/
+      a:visited {color:#666666}
+      a:hover {color:#33AA99}
+      a:active, a#active {color:#FF9700;}
+
+
+
+
+      div.my-header {
+          position: fixed;
+          top: 3px;
+          right: 3px;
+          height: 30px;
+          width: 100%;
+          text-align: right;
+      }
+
+
+          </style>
+        </head>
+        <body>
+          <textarea id="source">
+
+
+layout: true
+<div class="my-header"><img src="../figures/scsdLogo.png" style="height: 70px;"/></div>
+
+---
+
+class: center, middle
+
+.title[AP Exam Review]
+.subtitle[*Final Review*]
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+.author[👨🏻‍🏫 Nathan Porter]
+
+.institution[🏫 Maple Hill High School]
+&nbsp;
+.coauthor[]
+.institution[]
+&nbsp;
+&nbsp;
+
+.date[📅 2019-2020]
+&nbsp;
+&nbsp;
+&nbsp;
+.center[]
+
+<!--.footnote[Created with [{Remark.js}](http://remarkjs.com/) using [{Markdown}](https://daringfireball.net/projects/markdown/) +  [{MathJax}](https://www.mathjax.org/)]-->
+
+---
+class:photoback
+background-image: url("https://media.giphy.com/media/2vlmXyWEEDm7korr7N/source.gif")
+
+#Welcome Questions
+--
+
+##How are you doing?
+
+--
+
+##Anyone have anything to share?
+
+--
+
+##Questions before we begin?
+
+
+---
+
+
+#What you will have to do:
+
+- Combine multiple concepts + models
+--
+
+- think about how the models work together/against each together
+--
+
+
+
+
+---
+
+#For Example:
+
+.center[<img src="../figures/atwoodlaunch.PNG" width = "800 px"/>]
+
+
+???
+
+Forces into kinematics into projectile motion
+
+Projectile motion, always talk about flight time!
+
+---
+
+#Paragraph
+
+.center[<img src="../figures/rampreview.PNG" width = "800 px"/>]
+
+
+???
+
+1 point is earned for any mention of energy conversion
+
+1 point is earned f or indicating that the same amount of potential energy is converted to kinetic energy in each trial
+
+1 point is earned for indicating that the kinetic energy is shared between the block and plane in trial 1
+
+1 point is earned for indicating that the block has all the kinetic energy in trial 2
+
+1 point is earned for a description of the motion of the plane in each trial
+
+1 point is earned for using momentum or forces to explain the motion in each trial
+
+1 point is earned for a coherent argument that leads to a correct conclusion
+
+
+---
+
+
+.center[<img src="../figures/pumpkin.PNG" width = "800 px"/>]
+
+
+???
+
+For using conservation of momentum
+Note: This point is earned for an indication of how momentum conservation applies to
+the situation.
+1 point
+
+For correctly stating or implying that in all three cases the magnitude of the change in
+the horizontal momentum of the arrow during the collision equals magnitude of the
+momentum gained by the pumpkin
+1 point
+
+For a valid argument explaining why the Bounce arrow must transfer the most
+momentum
+1 point
+
+For stating that the Pass arrow ends up faster than the Embedded arrow or does not
+transfer as much momentum to the pumpkin immediately after collision
+1 point
+
+For indicating (regardless of conclusion about whether the Pass or Embedded arrow
+ends up going faster after the collision) that the arrow that slowed more during the
+collision transfers more momentum to the pumpkin
+1 point
+
+For an explicit or implicit correct justification, in terms of energy conservation, that the
+angle reached by the pumpkin is related to the speed of the pumpkin just after the
+collision
+1 point
+
+For a logical, relevant, and internally consistent response that addresses the required
+argument or question asked, and follows the guidelines described in the published
+requirements for the paragraph-length response
+
+
+
+
+   </textarea>
+    <!-- This is the link to the local copy of Remark -->
+    <script src="../javascript/remark-latest.min.js" type="text/javascript"></script>
+    <!--<script src="./javascript/remark-latest.min.js" type="text/javascript"></script>-->
+    <!-- See discussion at https://github.com/gnab/remark/issues/222-->
+    <!-- You could alternately use the libraries from remote location -->
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>-->
+
+
+
+    <script type="text/javascript">
+        var slideshow = remark.create({
+            navigation: {
+                click: false
+            },
+            properties: {
+                class: "center, middle"
+            },
+            countIncrementalSlides: false
+        ,
+        ratio:'16:9'});
+    </script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'] } });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+    </script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+    <!-- If you want to run your presentation offline, you need to download the MathJax -->
+    <!-- libraries, then uncomment the line below and comment out the one above.-->
+    <!--<script "text/javascript" src="../../../javascript/MathJax/MathJax.js?config=TeX-AMS_HTML,local/local"></script>-->
+</body>
+</html>
