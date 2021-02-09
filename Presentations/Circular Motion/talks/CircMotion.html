@@ -62,6 +62,7 @@
         font-size: 0.7em;
        }
 
+
        .footer {
         position: fixed;
         left: 15px;
@@ -73,7 +74,7 @@
       }
 
       .tom{color: tomato;}
-
+      .small p{font-size: 1em;}
 
 
       /* Some special classes */
@@ -322,6 +323,70 @@ The coefficient of friction acting upon a 945-kg car is 0.850. The car is making
 - Velocity is tangent to the circle and calculated with `\(v = \frac{2\pi r}{t}\)`
 - Centripetal acceleration is towards the center of the circle and a calculated with `\(a_c = \frac{v^2}{r}\)`
 - Centripetal Force is the sum of the radial forces (net force) and is calculated with `\(F_c = ma_c = \frac{mv^2}{r}\)`
+
+---
+
+##Newton's Universal Law of Gravitation
+
+#$$F_g = G\frac{m_1 m_2}{r^2}$$
+
+--
+
+Wait what about `\(F_g = mg\)`?
+
+---
+
+##Newton's Universal Law of Gravitation
+
+#$$F_g = G\frac{m_1 m_2}{r^2}$$
+
+- `\(G\)` = Universal Gravitational Constant (`\( G = 6.67 \times 10^{-11} \textrm{ Nm}^2/\textrm{kg}^2 \)`)
+- `\(m_1\)` = Massive Object 1
+- `\(m_2\)` = Massive Object 2
+- `\(r\)` = Distance ***between the centers***
+
+--
+
+Calculate `\(G \frac{m_e}{r^2}\)` near the surface of the earth
+
+- Mass of Earth = `\(5.98 \times 10^{24}\)` kg
+- Mean radius of Earth = `\(6.37 \times 10^6\)` m
+
+--
+
+Yo! it is about 9.8 N/m! I recognize that number!
+
+---
+
+#Practice Calculation
+
+Determine the Force of gravity between the Earth and the Moon:
+
+- Earth's Mass: `\(5.98 \times 10^{24}\)` kg
+- Moon's Mass: `\(7.35 \times 10^{22}\)` kg
+- Distance Betwen Earth and Moon: `\(3.84 \times 10^8\)` m
+- Earth's Radius: `\(6.37 \times 10^6\)` m
+- Moon's Radius: `\(1.74 \times 10^6\)` m
+
+---
+
+At the instant shown, three asteroids are in a line, and the distance between A and B is twice the distance between B and C. Asteroid C has mass $M$. There is no net force on asteroid B due to the other asteroids.
+
+.center[<img src="../figures/asteroids1.jpg" width = "500px"/>]
+
+Three students are discussing how they might find the mass of asteroid A:
+
+.small[**Ari:** *"We don't really have enough information to find the mass of A. Since there's no net force on B, the force from A has to cancel the force from C. To find the force on B from C,
+we'd use Newton's law of Universal Gravitation. But since the force is proportional to the produce of the masses we'd need to know both masses."*
+
+**Bira:** *"I don't think we really need the mass of B. Asteroid A is twice as far away as C, so if it also has a mass M it will exert half has much force as C does. Since
+it has to exert the same force for the net force on B to be zero, it has to have twice the mass."*
+
+**Cole:** *"It's true that A pulls on B to the left, and C pulls on B to the right, But you can't just use Newton's law of universal gravitation, because that only allows you to calculate
+the force between the two masses. here there are three masses, and asteroid A is exerting some of its force on B and some on C."*]
+
+**With which, if any, of these students do you agree?**
+
 
    </textarea>
     <!-- This is the link to the local copy of Remark -->
