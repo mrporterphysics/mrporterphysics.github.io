@@ -204,6 +204,160 @@ class: center, middle
 
 class:inverse
 
+##2021.02.24 Coding
+
+.qotd[❓ of the 📆: Who is your favorite superhero?]
+
+### Do Now:
+- ⏳5 Minutes: Open up p5.js editor and and draw an ellipse that is ***perfectly*** centered in the canvas
+- If you finish early, add a rectangle with the same width and height behind the circle.
+
+--
+- Was this process frustrating? Why?
+
+--
+- What happens if you change the size of your canvas? (Hint: try it)
+
+---
+
+class: inverse
+
+## Variables
+
+- What is a variable?
+--
+
+  - In computer science, variables are placeholder names for actual values
+  - They are used to store data that can be used and manipulated in a program
+  - They allow us to label data with names that make our code more understandable.
+
+--
+
+### .center[Example:  `let colorOfEyes = 'green';`]
+
+---
+
+## p5.js System Variables
+
+The p5.js library has a number of system variables (built-in) that store data. Today we’re going to look at:
+
+- `width` and `height`
+
+--
+- `mouseX` and `mouseY`
+
+---
+
+###How can we use `width` and `height` to center our ellipse?
+
+--
+
+#`ellipse(width/2, height/2, 30, 30);`
+
+---
+
+#Activity 💻: Paired programming
+
+⏲ 10 minutes
+
+With your partner (randomly assiged in breakout rooms)
+
+Create an ellipse that is:
+
+- ⅓ of the way across the screen
+- ¼ of the way across the screen
+- ⅔ of the way across the screen
+- ¾ of the way across the screen
+
+**Save this file and <u>BOTH</u> of you will turn this file in!**
+
+---
+
+###Using `mouseX` and `mouseY`
+
+Why was this code helpful? (What does it do?)
+
+```
+function draw() {
+	background(100);
+	text(mouseX + ", " + mouseY, 20, 20);
+}
+
+```
+
+--
+
+- The `mouseX` variable holds the value of the x-coordinate of the current mouse location.
+- The `mouseY` variable holds the value of the y-coordinate of the current mouse location.
+- The values of these two variables will update in real-time as you move your mouse over the canvas.
+
+---
+
+##What happens?
+
+```
+function setup(){
+  createCanvas(400,400);
+}
+
+function draw(){
+  background(mouseX);
+  ellipse(width/2,height/2, mouseY);
+}
+```
+
+---
+
+#Interactivity
+
+- These two simple system variables are what p5.js is all about - they easily allow us to make our projects **interactive** and fun for the user.
+- **Interactivity** is the ability of a computer program to respond to the user’s **input**. The computer will **process** this input data to produce an **output**.
+
+---
+
+##Try It:
+
+1. Make an ellipse follow your mouse
+2. Make a rectangle follow your mouse
+
+What is similar? What is different?
+
+---
+
+#`rectMode()`
+
+`rectMode()` allows you to change the reference point for drawing rectangles to the center. You do that with `rectMode(CENTER);`
+
+
+---
+#💻 Paired Programming
+
+With your partner (randomly assiged in breakout rooms)
+
+- Use `mouseX` and/or `mouseY` to change the height or width of a rectangle
+- Use `mouseX` and/or `mouseY` to change the height or width of an ellipse
+- Use `mouseX` and/or `mouseY` to change the shade of the canvas
+- Use `mouseX` and/or `mouseY` to change the fill of a rectangle or ellipse
+- 🔌 Extension: Create a triangle that follows your mouse
+
+**Save this file and <u>BOTH</u> of you will turn this file in!**
+
+Note: You can comment out each task after you complete it so you can submit one file.
+
+For example:
+
+```javascript
+//ellipse centered
+//ellipse(width/2, height/2, 50,50);
+
+//ellipse 1/3 across the screen
+ellipse(width/3, height/2, 50,50);
+```
+
+---
+
+class:inverse
+
 ##2021.02.12 Coding
 
 .qotd[❓ of the 📆: Any big plans for break?]
