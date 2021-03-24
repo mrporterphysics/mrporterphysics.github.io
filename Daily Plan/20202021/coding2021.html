@@ -205,6 +205,139 @@ class: center, middle
 
 class:inverse
 
+##2021.03.24 Coding Do Now:
+
+- Write down the condition(s) it takes to make each of the following `TRUE`:
+    - Going to the park with your friends
+    - Going to sleep late
+    - Cutting a birthday cake
+    - Getting a 100 on a test
+    - Buying a new phone
+
+---
+class:inverse
+
+##2021.03.24 Coding
+
+.qotd[❓ of the 📆: ?]
+
+1. Do Now
+2. Discussion & Examples: Conditional Statements
+3. Try it on your own
+
+
+---
+
+
+#Conditionals
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_2/1.1/ifthen.png" width = "300px"/>]
+
+???
+
+If a button, mouse, or key is pressed, or if a mouse is moved, we want something to happen. The conditional statements that we write affect the computer's output. We are going to write a program that changes the color of a shape based on the position of the mouse but first let's discuss conditional logic or boolean expressions. The word boolean indicates that something is true or false.
+
+---
+
+
+#Conditionals
+
+We want the computer to look at an **expression** and evaluate whether it is **true** or **false**, if it's true do one thing, and if it's false do another. Let's take a look at some expressions and evaluate them as true or false.
+
+- 26>5 → 26 is greater than 5. Let's read that as a question. Is 26 greater than 5? Yes it is. This expression evaluates to "true."
+- 10=14 → Since 10 is not equal to 14. This expression evaluates to "false"
+- 4>210 → This expression is also "false"
+- 2=2 → "true"
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_2/1.1/ifboolean.png" width = "300px"/>]
+
+---
+
+class:center, middle
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_2/1.1/if56.png" width = "600px"/>
+
+???
+
+- **Using Variables in Conditional Statements**
+    - The statements we have written so far are pretty pointless. 5 will always be less than 6 and 5 will never be less than 4, so there can only be one result from these statements. These are pretty fixed.
+    - On the other hand, we've had already written expressions using values that are constantly changing. They were called variables, and while some of them don't change (like when we create variables for the size or static location of a shape), some of them are changing all the time.
+    - `mouseX` and `mouseY` are two of the built-in variables that we used. The value of the mouse location changes whenever you move your mouse. If we wrote the boolean expression `mouseX>100` it can be true or false. If the mouse were anywhere between 0 and 100 pixels on the x-axis, this expression would evaluate to false. If the mouse were anywhere between 101 and the width of the canvas, the expression would evaluate to true.
+    - Let's write a sketch that will turn the background black `if(mouseX>300)`. `300` is the center of our 600-pixel wide canvas so it will be easy to tell if our conditional is working. Based on our statement, if the value of `mouseX` is greater than `300`, the background should turn black. We are also going to set an initial color for the canvas (I set it to white.) That way when my conditional evaluates to false when `mouseX < 300`, the canvas will turn white again.
+    - Show this code to your students or have them code along and use `console.log(mouseX)` so that students can see how the condition in the if statement is satisfied. Move the mouse back and forth a few times so that the background changes color when `mouseX` increases and decreases.
+
+---
+
+##Example 1:
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/n642TDn3F" width = "1050 px" height = "450 px"></iframe>]
+
+[Link to Code](https://editor.p5js.org/mrporterphysics/sketches/n642TDn3F)
+
+
+---
+
+##Play with the Example Code
+
+[Link to Code](https://editor.p5js.org/mrporterphysics/sketches/n642TDn3F)
+
+Change this example and try turning the canvas black when the Y position of your mouse is greater than 60, or another number. See what happens when you change the variable to mouseY.
+
+
+---
+
+#Changing a `fill()`
+
+- We can use conditionals to change color, size, or any other values in our sketches. We're going to use the same conditional from the last example to change the fill of a square.
+- If the X position of the mouse passes the center of the canvas, the fill of the rectangle will turn blue.
+- It's important to remember to draw the rectangle after the conditional so that the fill() will be applied to the rect. See this example.
+
+---
+
+##Example 2:
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/Loljp2g13" width = "1050 px" height = "450 px"></iframe>]
+
+
+[Code Link](https://editor.p5js.org/mrporterphysics/sketches/Loljp2g13)
+
+---
+
+##Changing a Custom Variable with a Conditional
+
+We can also change custom variables inside conditional statements. In this example, both the width and height of the rectangle are determined by a variable called x. That variable is changed inside the conditional statement.
+
+---
+
+##Example 3:
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/T_YpxTtfH" width = "1050 px" height = "450 px"></iframe>]
+
+
+[Code Link](https://editor.p5js.org/mrporterphysics/sketches/T_YpxTtfH)
+
+---
+
+#Make Your Own Interactive Sketch:
+
+Use the mouse position to change a variable and create an interactive sketch.
+
+## **Requirements:**
+
+- Create more than two variations of this shape by writing a conditional statement using the x position and y position of your mouse.
+- You can change the color, size or position of a shape. See this example.
+
+# **Extensions**
+
+- Create a condition that will change the fill of a rectangle if the mouse is hovering over the rectangle.
+- Hint: You could use && (and) to combine conditions
+- Adapt a previous sketch and add interactivity to it.
+
+
+---
+
+class:inverse
+
 ##2021.03.09 Coding - Do Now
 
 Make a Venn Diagram centered in the middle of the canvas
