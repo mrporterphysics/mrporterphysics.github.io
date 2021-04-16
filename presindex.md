@@ -24,3 +24,6 @@
   - [Forces](Presentations\AP Review\talks\AP_Review_Forces.html)
   - [Energy](Presentations\AP Review\talks\AP_Review_Energy.html)
   - [Momentum](Presentations\AP Review\talks\AP_Review_Momentum.html)
+
+You can find links to class presentations here:
+  - Find [AP Daily Plans](mrporterphysics.github.io/Daily Plan/20202021/apdaily202021.html).
