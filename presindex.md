@@ -26,4 +26,4 @@
   - [Momentum](Presentations\AP Review\talks\AP_Review_Momentum.html)
 
 You can find links to class presentations here:
-  - Find [AP Daily Plans](mrporterphysics.github.io/Daily Plan/20202021/apdaily202021.html).
+  - Find [AP Daily Plans](Daily Plan\20202021\apdaily202021.html).
