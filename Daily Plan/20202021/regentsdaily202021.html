@@ -198,6 +198,218 @@ layout: true
 
 ---
 
+class:schodack
+
+#2021.05.16 Coding
+
+1. What is an array?
+2. `floor()` function
+3. Fortune Cookie 🥠 Assignment 
+
+---
+class:schodack
+
+#Grocery List
+
+- Clementines
+- Raspberries
+- Cauliflower
+- Sweet Potatoes
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- Raspberries
+- Cauliflower
+- Sweet Potatoes
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- Salsa
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- ~~Salsa~~
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- ~~Salsa~~
+- Wraps
+- Eggs
+- **Tortilla Chips**
+- **Avocados**
+
+---
+class:schodack
+
+
+#Vocabulary
+
+- **Array** - An ordered series of data
+
+--
+- **Index** - A position within an array
+
+--
+- **Element** - A piece of data within an array
+
+--
+- **Zero-Indexed** - THe first element of an array has an index of 0, not 1
+
+---
+class:schodack
+
+.left-column[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/2.1/image1.png" height = "600 px"/>]
+--
+
+.right-column[
+
+1-Story Building: `var building = 30;`]
+
+--
+
+.right-column[
+Our Building:
+
+`building[0] = 5;`
+]
+--
+.right-column[
+`building[1] = 0;`
+]
+--
+.right-column[
+`building[2] = 2;`]
+--
+.right-column[
+`building[3] = 4;`]
+--
+.right-column[
+`building[4] = 1;`
+]
+
+---
+
+class:schodack
+
+#`colors` array
+
+.center[
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/2.1/table.png" width = "1000px"/>
+]
+
+[Example](https://editor.p5js.org/cs4all/sketches/zPPyXXzoQ)
+
+---
+
+class:schodack
+
+#Test it out
+
+Make a building
+
+Your building can look any way you want – as long as it has three or more floors,
+all different colors. And how do we store these colors? In an array, of course!
+You can make each floor an ellipse, a rectangle, even a triangle.
+But when it comes to using `fill()` to color each floor, remember -- you should be
+getting the color value from your array.
+
+Extensions:
+
+1. How could you maybe use another array to make your code even easier to understand and more simple?
+2. What other values are you changing for each floor?
+3. Could you change the text used for colors to RGB values instead?
+4. Is there a way to do that using one array instead of three?
+
+---
+
+class:schodack
+
+###What does this do?
+
+```javascript
+var colors = ['red', 'blue', 'green', 'orange', 'white'];
+var color1, color2;
+
+function setup() {
+  createCanvas(400, 400);
+  color1 = colors[floor(random(0, colors.length))];
+	color2 = colors[floor(random(0, colors.length))];
+}
+
+function draw() {
+  background(220);
+  rectMode(CENTER);
+  fill(color1);
+  rect(100,100,100,100);
+  fill(color2);
+  ellipse(300,250,100);
+}
+
+```
+
+
+---
+
 class: schodack
 
 ##2021.05.18 Regents Physics (TF)
