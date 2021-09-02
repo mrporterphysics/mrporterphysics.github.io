@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conceptual Daily 2020-2021</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+    @import url('https://fonts.googleapis.com/css?family=Creepster');
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+    @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+    @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Teko:700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+
+      body {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 3em;
+     }
+      h1, h2 {
+        font-family: 'Blinker', sans-serif;
+
+      }
+
+      h3 {
+        font-family: 'Alegreya SC', serif;
+      }
+      .remark-slide-content h4 {font-size: 1.3em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-slide-content ul ul, ol ol {font-size: 100%;}
+      .remark-slide-content ol ul{font-size: 100%;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; font-size: 100%}
+
+      /* Two-column layout */
+     .left-column {
+
+       width: 40%;
+       height: 92%;
+       float: left;
+     }
+       .left-column h2:last-of-type, .left-column h3:last-child {
+         color: #000000;
+       }
+     .right-column {
+       width: 60%;
+       float: right;
+       padding-top: 1em;
+     }
+
+
+     .left-column-short {
+       color: #000000;
+       width: 35%;
+       height: 95%;
+       float: left;
+       padding-top:-4em;
+     }
+       .left-column-short h2:last-of-type, .left-column h3:last-child {
+         color: #000;
+       }
+     .right-column-long {
+       width: 65%;
+       float: right;
+       padding-top: 1em;
+       font-size: 1.4em;
+     }
+
+     .footer {
+   position: fixed;
+   left: 15px;
+   bottom: 15px;
+   width: 5%;
+   background-color: white;
+   color: black;
+   text-align: center;
+  }
+
+  .checklist {list-style-type: 'none';}
+  .checklist li:before{font-size:100%; content:"✅";}
+  .inverse {
+        background: #272822;
+        color: #ffffff;
+        font-family: 'Fira Sans', sans-serif;
+      }
+      .inverse h1, .inverse h2 {
+        color: #9966FF;
+        line-height: 0.8em;
+        font-family: 'Inconsolata', monospace;
+      }
+      .halloween {
+            background: #6032a8;
+            color: white;
+
+          }
+          .halloween h1, .halloween h2, .halloween h3 {
+            color: Orange;
+            font-family: 'Creepster', cursive;
+            line-height: 0.8em;
+            text-shadow: 0 0 20px #333;
+          }
+
+          .halloween a {
+            color: white;
+            text-decoration: underline;
+
+          }
+
+
+
+          .thanksgiving{
+              background:#611f00;
+              color:white;
+
+          }
+
+          .thanksgiving h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            color: #ebc934;
+
+          }
+
+          .thanksgiving a {
+            color: white;
+            text-decoration: underline;
+
+          }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+
+      .small-list{
+        font-size: 80%;
+      }
+
+      .photoback {
+            background-size: 100%;
+            color: Black;
+            font-family: 'Noto Sans', sans-serif;
+            }
+
+      .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                  color: white;
+
+                  line-height: 0.8em;
+                  font-family: 'Inconsolata', monospace;
+                  }
+      .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
+                color:white;
+                background-color: rgba(119,119,119,0.2);
+
+            }
+
+            .schodack {
+                  background: #bfc1c7;
+                  color: #1B438B;
+                  font-family: 'Fira Sans', sans-serif;
+                }
+
+            .schodack h1, .schodack h2 {
+                display:inline-block;
+                background-color: #E01D36;
+                color: #FFFEFF;
+                line-height: 1em;
+                margin-bottom: 5px;
+                font-family: 'Teko', sans-serif;
+              }
+              .schodack p {
+                margin-top: 5px;
+              }
+
+          div.my-header {
+              position: fixed;
+              top: 3px;
+              right: 3px;
+              height: 30px;
+              width: 100%;
+              text-align: right;
+          }
+
+          .qotd{
+            font-size: 1.1em;
+            font-family: 'Caveat Brush', cursive;
+          }
+
+          </style>
+        </head>
+        <body>
+          <textarea id="source">
+
+
+layout: true
+<div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
+
+
+---
+
+class: center, middle
+
+# Conceptual Physics Daily Plans 2020-2021
+
+---
+
+class: schodack
+
+#2021.04.20 Conceptual Physics
+
+.qotd[❓ of the 📆: What household chore do you actually enjoy?]
+
+1. Finish Analyzing Ramp and Puck Lab
+2. Spring Sling Shot Lab
+
+---
+
+
+class: schodack
+
+##2021.04.13 Conceptual Physics
+
+.qotd[❓ of the 📆: If you were featured on the local news, what would you most likely be on there for?]
+
+1. Do Now: Go find a ball that bounces in your house
+2. Coefficient of Restitution - what is that?
+3. Ball Bounce Lab
+
+---
+
+class:schodack
+
+#2020.12.04 Conceptual Physics
+
+.qotd[❓ of the 📆: What was your childhood dream job? Is it still your dream job?]
+
+1. Linearizing Graphs 👉🏻 turning curved graphs into lines
+  - Why?
+  - How
+2. Analyzing Linearized Graph
+3. Finding Velocity from Position vs. Time Graph
+
+
+---
+
+class: thanksgiving
+
+##2020.11.24 Conceptual Physics
+
+.qotd[❓ of the 📆: What is one skill or talent that you want to learn? 🤹‍♀️]
+
+1. 🏁 Pivot - 3 Way Race!
+
+
+---
+
+class:thanksgiving
+
+##2020.11.17 Conceptual Physics
+
+.qotd[❓ of the 📆: If you had a 🛥️ boat 🚢, what would you name it?]
+
+1. 💥 Dueling Buggies
+2. 🏁 3 Way Race!
+
+
+---
+
+class: thanksgiving
+
+##2020.11.13 Conceptual Physics
+
+
+
+.left-column[
+
+.qotd[❓ of the 📆: What is your favorite food combination?]
+
+1. 💥 Dueling Buggies!]
+
+.right-column[.center[<iframe src="https://drive.google.com/file/d/0B9dy6rwneA00bDZkWWhVcm9TLVU/preview" width="640" height="480" style="border:none;"></iframe>
+]]
+
+---
+class: thanksgiving
+
+##2020.11.10 Conceptual Physics
+
+.qotd[❓ of the 📆: You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? Me: 🌯]
+
+1. 🎳💥🎳 Pivot: Rolling Ball Challenge 3 - [Collisions](https://app.pivotinteractives.com/assignments/5faabdca840ebb00231a98b5/preview)
+
+
+---
+
+class: thanksgiving
+
+##2020.11.06 Conceptual Physics
+
+.qotd[❓ of the 📆: Donut or Bagel? What flavor?]
+
+
+1. 📥 Download Graphical Analysis (link on classroom)
+1. 🔊 Motion Sensor Lab
+
+
+---
+
+
+
+class: thanksgiving
+
+##2020.11.03 Conceptual Physics
+
+.qotd[❓ of the 📆: What is your favorite sandwich?]
+
+1. 📷 Does it move with Constant Velocity?
+  - [Jamboard](https://jamboard.google.com/d/10Llj0KZl1cEvKeU1hNNudn6eF1NGeUsrnawWfOwGsgE/viewer?f=0)
+  - Claim: Answer to the question
+  - Evidence: Features of the graph or measurements that support your claim
+  - Reasoning: Explain how the evidence supports your claim (often the physics principle)
+2. 🗺️ Introduction to Motion Maps
+3. Practice with Motion Maps
+
+
+
+---
+
+class: thanksgiving
+
+##2020.10.30 Conceptual Physics
+
+.qotd[❓ of the 📆: True or False? The only way to eat a kit kat is to break it part and eat one section at a time.]
+
+1. 📏 Review Numberline worksheet
+2. ❓ Go over 9&10
+3. 📷 Does it move with Constant Velocity?
+  - [Jamboard](https://jamboard.google.com/d/10Llj0KZl1cEvKeU1hNNudn6eF1NGeUsrnawWfOwGsgE/viewer?f=0)
+  - Claim: Answer to the question
+  - Evidence: Features of the graph or measurements that support your claim
+  - Reasoning: Explain how the evidence supports your claim (often the physics principle)
+4. 🗺️ Introduction to Motion Maps
+
+---
+
+class: halloween
+
+##🎃 2020.10.27 Conceptual Physics 🕷️
+
+.qotd[❓ of the 📆: What was your favorite halloween costume?]
+
+1. ✍️ Whiteboard Ranking Task #2
+2. 🗣️ Discussion
+3. 💨 Calculating Velocity & Speed
+
+---
+
+class:schodack
+
+##2020.10.223 Conceptual Physics
+
+.qotd[❓ of the 📆: Hanging out by a camp fire, bonfire, or fireplace??]
+
+1. Dororthy and Toto: Who went "further"?
+2. Ranking Task and Claim-Evidence-Reasoning
+
+
+---
+
+class: schodack
+
+#2020.10.16 Conceptual Physics
+
+.qotd[❓ of the 📆: If you had to delete all but 3 apps from your smartphone, which ones would you keep?]
+
+1. Write a "motion story" for someone else to draw the graph of
+2. Interpreting XT graphs (two cyclist problem)
+3. Dorthy and Toto → Distance vs. Displacement Problem
+4. Ranking Task
+
+
+---
+
+class: schodack
+
+#2020.10.16 Conceptual Physics
+
+.qotd[❓ of the 📆: What is your silliest fear? 🐍]
+
+1. 📖 Reading/Notes: Describing Motion in Words
+2. 🎯 Practice with Describing Motion in Words
+3. 🔦 Make your own position story
+4. 📈 Position vs. Time Graphs Practice
+
+
+---
+
+class:schodack
+
+#2020.10.13 Conceptual Physics
+
+.qotd[❓ of the 📆: Vacation on the beach 🏖️ or adventure in the mountains ⛰️?]
+
+1. ⬅️ Ball Rolling Left:
+  - Collect Data + Make Prediction
+2. 💬 Ball Rolling Left Discussion:
+  - Compare results to ball rolling right ➡️ What is similar? What is different? [**List on Whiteboard**]
+  - In Ball Rolling Right we said the slope represented the ***speed*** and the intercept the ***starting point***. What new information does this graph provide us with?
+3. 💭 Ava's hypothesis:
+  - Claim, Evidence, Reasoning
+
+---
+
+**Scientific Argument with Claim-Evidence-Reasoning format in physics**:
+
+**Claim:** Answer to the question
+
+--
+
+**Evidence:** Features of the graph or measurements that support your claim
+
+--
+
+**Reasoning:** Explain how the evidence supports your claim
+
+---
+
+class: schodack
+
+#2020.10.09 Conceptual Physics
+
+.qotd[❓📆: What did you do without power or internet??]
+
+1. Finish Ball Rolling Right Lab
+  - Whiteboard + Discuss
+  - *Sketch* of your graph + your physics equation
+2. Ball Rolling Left Lab
+  - What is similar?
+  - What is different?
+  - How will this affect your results?
+
+---
+
+
+class: schodack
+
+#2020.10.06 Conceptual Physics
+
+.qotd[❓of the 📆: Breakfast: most important meal of the day? Or overrated? How do you fuel up for the day?)]
+
+1. Do Now:
+  - Open Pivot "Ball Rolling Right" (through Pivot or on Google Classroom)
+  - Answer Questions 1-3 (what do you see, think, wonder)
+2. Ball Rolling Right Lab
+
+
+
+---
+
+class:schodack
+
+#2020.10.02 Conceptual Physics
+
+.qotd[❓📆: Celebrity Crush❓]
+
+💬 Discussion aka Board Meeting
+
+🎳 Ball Rolling Right
+
+---
+
+class:schodack, center, middle
+
+#How did you do your experiment?
+
+---
+
+class:schodack,  center, middle
+
+#What is similar about the boards?
+
+#What is different about the boards?
+
+---
+class:schodack
+
+##What does the slope of your graphs 📈 represent?
+
+For every statement:
+
+"The &lt; **quantity on vertical axis** &gt; goes up &lt; **slope value with vertical units** &gt; for every 1 &lt; **horizontal unit** &gt; of &lt; **quantity on horizontal axis** &gt;."
+
+---
+
+class: center, middle, schodack
+
+#What do the vertical intercepts represent?
+
+---
+
+class: schodack
+
+#2020.09.29 Conceptual Physics
+
+.qotd[QotD: What is your most used emoji? 🤷‍♂️ 🤦‍♂️]
+
+📏Finish Collecting Data
+
+📈 Graph results
+
+✍️ Whiteboard your lab
+
+💬 Discussion aka Board Meeting
+
+🎳 Ball Rolling Right
+
+
+---
+
+class: schodack
+
+#2020.09.25 Conceptual Physics
+
+.qotd[QotD: What weird quirks did you pick up from your parents?]
+
+1. Toy Buggy Lab:
+
+---
+
+class: schodack, center, middle
+
+#Observations
+
+---
+
+class: schodack, center, middle
+
+#What can we measure? How?
+
+---
+
+class: schodack, center, middle
+
+#What could we measure AND graph?
+
+---
+
+class: schodack
+
+##Collect data on the motion of your buggies. Your goal is to (eventually) represent the motion of both buggies on the same graph.
+
+.center[<img src="images/buggies.PNG" width = "500"/>]
+
+
+
+---
+
+class: schodack
+
+#2020.09.22 Conceptual Physics
+
+.qotd[QotD: What is your most recent purchase?]
+
+1. Finish up/discuss mathematical modeling at the gas pump
+2. Density Lab - Last practice with mathematical modeling (interpreting slope)
+
+---
+
+class:schodack
+
+#2020.09.18 Conceptual Physics
+
+.qotd[QotD: Pen, pencil or computer?]
+
+1. Practice with mathematical modeling -- modeling the gas pump
+
+
+---
+
+class:schodack
+
+#2020.09.15 Conceptual Physics
+
+.qotd[QotD: What slang are you really happy went out of fashion?]
+
+1. Finish Ping Pong Bazooka
+2. Talk about linear modeling
+3. Practice with mathematical modeling -- modeling the gas pump
+
+---
+
+#Linear Modeling
+
+$$ y = mx + b $$
+
+--
+
+$$m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}$$
+
+--
+
+For every statement:
+
+"The &lt; **quantity on vertical axis** &gt; goes up &lt; **slope value with vertical units** &gt; for every 1 &lt; **horizontal unit** &gt; of &lt; **quantity on horizontal axis** &gt;."
+
+---
+
+class: schodack
+
+#2020.09.11 Conceptual Physics
+
+.qotd[QotD: Sweet (sugary foods like pancakes) or savory (salty foods like bacon) for breakfast?]
+
+1. Fill out questionnaire on Google Classroom (in classwork tab)
+1. Sign up for Pivot Interactives (code and link on Google Classroom)
+2. Ping Pong Bazooka
+
+---
+
+
+    </textarea>
+    <script src="../javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://remarkjs.com/downloads/remark-0.14.0.min.js">
+    </script>
+
+    <script>
+      var slideshow = remark.create({ratio:'16:9'});
+
+      // Setup MathJax
+     MathJax.Hub.Config({
+         tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+         }
+     });
+
+     MathJax.Hub.Configured();
+
+
+    </script>
+
+
+  </body>
+</html>
