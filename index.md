@@ -3,10 +3,10 @@
 # Presentations:
 
 You can find links to class presentations here:
-  - Find [AP Daily Plans](Daily Plan\20202021\apdaily20222022.html).
-  - Find [Regents Daily Plans](Daily Plan\20202021\regentsdaily20222022.html).
-  - Find [Conceptual Physics Daily Plans](Daily Plan\20202021\conceptualdaily20222022.html).
-  - Find [Coding Daily Plans](Daily Plan\20202021\coding2022.html).
+  - Find [AP Daily Plans](Daily Plan\20212022\apdaily20222022.html).
+  - Find [Regents Daily Plans](Daily Plan\20212022\regentsdaily20222022.html).
+  - Find [Conceptual Physics Daily Plans](Daily Plan\20212022\conceptualdaily20222022.html).
+  - Find [Coding Daily Plans](Daily Plan\20212022\coding2022.html).
   - Find [Content Presentations](presindex).
   - Archived Daily Plans (Past Years)
 
