@@ -7,52 +7,82 @@
     <!-- CSS modifcations by J. M. Lilly-->
 
     <style type="text/css">
-    @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
-    @import url('https://fonts.googleapis.com/css?family=Creepster');
-    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-    @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
-    @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Teko:700&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+
+      @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+      @import url('https://fonts.googleapis.com/css?family=Creepster');
+      @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+      @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+      @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Teko:700&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
       body {
-        font-family: 'Fira Sans', sans-serif;
+        font-family: 'Gowun Dodum', sans-serif;
         font-size: 3em;
+        color:black;
      }
       h1, h2 {
-        font-family: 'Blinker', sans-serif;
-
+        font-family: 'Libre Franklin', sans-serif;
+        line-height: 1em;
       }
 
       h3 {
         font-family: 'Alegreya SC', serif;
       }
+
+      .gray{color: #989ea6;}
+      .red{color:#E01D36;}
+      .blue{color:#0c2545;}
+
       .remark-slide-content h4 {font-size: 1.3em}
       .remark-slide-content p,ol,ul { font-size: 1.2em; }
-      .remark-slide-content ul ul, ol ol {font-size: 100%;}
+      .remark-slide-content ul ul{font-size: 100%;}
+      .remark-slide-content ol ol{font-size: 100%;}
       .remark-slide-content ol ul{font-size: 100%;}
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; font-size: 100%}
+      .remark-slide-content ol ul ul{font-size: 100%;}
+      .remark-slide-content ol ol ul{font-size: 100%;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
       /* Two-column layout */
      .left-column {
 
-       width: 40%;
+       width: 50%;
        height: 92%;
        float: left;
      }
-       .left-column h2:last-of-type, .left-column h3:last-child {
-         color: #000000;
-       }
-     .right-column {
-       width: 60%;
+     .agenda {
+
+       width: 45%;
+       height: 92%;
+       float: left;
+     }
+
+     .small p{font-size: 1em;}
+
+     .goals{
+       width: 50%;
+       height: 92%;
        float: right;
-       padding-top: 1em;
+       font-family: 'Inconsolata';
+
+     }
+
+     .right-column {
+       width: 50%;
+       float: right;
+       padding-top: -4em;
      }
 
 
@@ -83,6 +113,8 @@
    text-align: center;
   }
 
+
+
   .checklist {list-style-type: 'none';}
   .checklist li:before{font-size:100%; content:"✅";}
   .inverse {
@@ -95,6 +127,7 @@
         line-height: 0.8em;
         font-family: 'Inconsolata', monospace;
       }
+
       .halloween {
             background: #6032a8;
             color: white;
@@ -107,24 +140,15 @@
             text-shadow: 0 0 20px #333;
           }
 
-          .halloween a {
-            color: white;
-            text-decoration: underline;
-
-          }
-
-
-
           .thanksgiving{
               background:#611f00;
               color:white;
 
           }
 
-          .thanksgiving h1, h2, h3 {
+          .thanksgiving h1, .thanksgiving h2, .thanksgiving h3 {
             font-family: 'Cinzel', serif;
-            color: #ebc934;
-
+            color: Orange;
           }
 
           .thanksgiving a {
@@ -153,51 +177,67 @@
                   color: white;
 
                   line-height: 0.8em;
-                  font-family: 'Inconsolata', monospace;
+                  font-family: 'Gowun Dodum', sans-serif;
                   }
       .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
                 color:white;
-                background-color: rgba(119,119,119,0.2);
+                background-color: rgba(119,119,119,0.3);
+                font-family: 'Gowun Dodum', sans-serif;
 
             }
 
-            .schodack {
-                  background: #bfc1c7;
-                  color: #1B438B;
-                  font-family: 'Fira Sans', sans-serif;
-                }
+      .large h1{font-size:3em;}
 
-            .schodack h1, .schodack h2 {
-                display:inline-block;
-                background-color: #E01D36;
-                color: #FFFEFF;
-                line-height: 1em;
-                margin-bottom: 5px;
-                font-family: 'Teko', sans-serif;
-              }
-              .schodack p {
-                margin-top: 5px;
-              }
 
-          div.my-header {
-              position: fixed;
-              top: 3px;
-              right: 3px;
-              height: 30px;
-              width: 100%;
-              text-align: right;
+      .schodack {
+            background: #bfc1c7;
+            color: #1B438B;
+            font-family: 'Gowun Dodum', sans-serif;
+            font-size: .45em;
+          }
+        .schodack h1, .schodack h2 {
+            display:inline-block;
+            background-color: #E01D36;
+            color: #FFFEFF;
+            line-height: 1.1em;
+            margin-bottom: 10px;
+            font-family: 'Libre Franklin', sans-serif;
+          }
+          .schodack p {
+            margin-top: 5px;
           }
 
-          .qotd{
-            font-size: 1.1em;
-            font-family: 'Caveat Brush', cursive;
-          }
+      div.my-header {
+          position: fixed;
+          top: 3px;
+          right: 3px;
+          height: 30px;
+          width: 100%;
+          text-align: right;
+      }
+
+      .qotd{
+        font-size: 1.1em;
+        font-family: 'Poor Story', cursive;
+
+      }
+
+      .material-icons.md-18 { font-size: 18px; }
+      .material-icons.md-24 { font-size: 24px; }
+      .material-icons.md-36 { font-size: 36px; }
+      .material-icons.md-48 { font-size: 48px; }
+      .material-icons.md-24 { font-size: 56px; }
+      .material-icons.md-36 { font-size: 64px; }
+      .material-icons.md-72 { font-size: 72px; }
+      .material-icons.md-80 { font-size: 80px; }
+      .material-icons.md-88 { font-size: 88px; }
+      .material-icons.md-96 { font-size: 96px; }
+
 
           </style>
         </head>
         <body>
           <textarea id="source">
-
 
 layout: true
 <div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
@@ -206,7 +246,7 @@ layout: true
 ---
 
 
-#.gray[2021.09.08] .blue[Regents Physics] .red[Do Now]
+#.gray[2021.09.08] .blue[Conceptual Physics] .red[Do Now]
 
 Don't get too comfortable (spoiler...you will be moving)
 
@@ -220,7 +260,7 @@ or... go to Canvas and click the link in the slides...
 ---
 
 
-#.gray[2021.09.08] .blue[Regents Physics]
+#.gray[2021.09.08] .blue[Conceptual Physics]
 ##.red[Welcome!]
 
 .qotd[Question of the Day: Sweet or savory for breakfast?]
