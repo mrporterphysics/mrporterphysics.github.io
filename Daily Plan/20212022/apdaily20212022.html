@@ -115,6 +115,27 @@
    text-align: center;
   }
 
+  .slabtexted .slabtext
+      {
+      display: -moz-inline-box;
+      display: inline-block;
+      white-space: nowrap;
+      }
+  .slabtextinactive .slabtext
+      {
+      display: inline;
+      white-space: normal;
+      font-size: 1em !important;
+      letter-spacing: inherit !important;
+      word-spacing: inherit !important;
+      *letter-spacing: normal !important;
+      *word-spacing: normal !important;
+      }
+  .slabtextdone .slabtext
+      {
+      display: block;
+      }
+
   .checklist {list-style-type: 'none';}
   .checklist li:before{font-size:100%; content:"✅";}
   .inverse {
@@ -370,6 +391,20 @@ Be prepared to share out your plan to escape the island as a group. Each of you 
 
 ---
 
+class:center, middle
+
+#.gray[Does Your Buggy]
+
+#.blue[Move in a] .red[*consistent*] .blue[manner?]
+
+---
+
+#🚗 Buggy Lab Part I
+
+
+Develop an experiment to determine if you buggy moves in a consistent manner. 
+
+---
 
 
 
@@ -378,8 +413,11 @@ Be prepared to share out your plan to escape the island as a group. Each of you 
     </textarea>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
-    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
-    </script>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">   </script>
+
+
+
+
 
     <script>
       var slideshow = remark.create({ratio:'16:9'});
@@ -395,6 +433,7 @@ Be prepared to share out your plan to escape the island as a group. Each of you 
 
 
     </script>
+
 
 
   </body>
