@@ -40,7 +40,7 @@
       .remark-slide-content ol ul{font-size: 100%;}
       .remark-slide-content ol ol{font-size: 100%;}
       .remark-slide-content ul ol{font-size: 100%;}
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; color: yellow;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; color: yellow;font-size: 110%;}
 
       /* Two-column layout */
      .left-column {
@@ -193,6 +193,175 @@
 
 layout: true
 <div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
+
+
+---
+
+
+###Coding - Do Now
+
+```
+function setup() {
+  createCanvas(560, 120);
+}
+function draw() {
+  background(220);
+	ellipse(120, 60, 60, 60);
+	ellipse(200, 60, 60, 60);
+	ellipse(280, 60, 60, 60);
+	ellipse(360, 60, 60, 60);
+	ellipse(440, 60, 60, 60);
+}
+
+```
+
+1. Enter in the code above
+2. Move *all* of the ellipses down 30 pixels
+
+--
+2. Move *all* of the ellipses up 40 pixels
+
+--
+3. Move *all* of the ellipses to the right by 30 pixels
+
+--
+
+####❓ What is frustrating about the process?
+
+--
+
+####❓ What could make this easier?
+
+
+---
+
+
+class:inverse
+
+##2021.09.21 Coding
+
+.qotd[❓of the 📅: If you had to delete all but 3 apps from your smartphone, which ones would you keep??]
+
+
+1. Do Now
+2. Custom Variables
+3. Move the Face 😐
+4. `random()`
+
+---
+
+class:inverse
+
+#Custom Variables
+
+- Creating a Variable:
+
+--
+  1. **Declare** Declaring our variable is basically just telling the program “hey! I’m creating a variable, and this is what it’s going to be called.” All you need to do when you want to declare a variable is write the term " `var variableName`"
+
+--
+  2. **Initialize** - give variableName a value. This is called an assignment operation. We are assigning a value to our variable. If I write `variableName = 50`, every time I use my variable name, the program will replace it with the number 50.
+
+--
+  3. **Use the variable** - Your code won’t break if you don’t use the variable, but then what was the point? If we add an `ellipse at ellipse(100,100,variableName,variableName)`, our ellipse will be 50px wide and 50px high.
+
+---
+
+
+#Custom Variables
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/SkZY0pIGN_declare.png" width = "500 px"/>]
+
+---
+
+#⌨ Code Along
+
+[🔗Code Link](https://editor.p5js.org/mrporterphysics/sketches/ZBGMSPC0_)
+
+Let's learn about creating and using custom variables
+
+---
+class:inverse
+
+#Do Now 2
+
+```
+
+function setup() {
+  createCanvas(400, 400);
+}
+function draw() {
+  background(220);
+  x = random(0,width);
+  ellipse( x, 100 , 100, 100 )
+  console.log(x)
+}
+```
+
+1. Move `x = random(0,width);` so that the code only picks one random location.
+2. Constrain the random number to the right half of the canvas.
+
+---
+
+class:inverse
+
+##`random()` vs. `rect()` and `ellipse()`
+
+- We can also place our ellipse at a random position each time our program runs. To do this, we use p5's random function. This function is different from other functions we have been using (like `ellipse` and `rect`) in that it returns a value. Each time they are called:
+
+--
+  - `random(50, 100)` returns a number between 50 and 100
+
+--
+  - `random(1, 5)` returns a number between 1 and 5
+
+--
+- When the first parameter is omitted, random assumes it is 0:
+
+--
+  - `random(100)` returns a number between 0 and 100
+
+--
+  - `random(5)` returns a number between 0 and 5
+
+---
+
+class:inverse
+
+##What do the following return?
+
+- `random(50, 100)`
+
+--
+- `random(1, 5)`
+
+--
+- `random(100)`
+
+--
+- `random(5)`
+
+---
+
+class:inverse
+
+##Number Types...
+
+- `int` vs `float`
+
+--
+- What does `random()` return? An `int` or a `float`?
+
+--
+- `x = int(random(0,400));`
+
+---
+
+class:inverse
+
+##Random Values in `setup()` vs. `draw()`
+
+<iframe src="https://editor.p5js.org/mrporterphysics/sketches/8I3kGgKJI" width = '1000 px' height = '500px'></iframe>
 
 
 ---
