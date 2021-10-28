@@ -45,17 +45,18 @@
       /* Two-column layout */
      .left-column {
 
-       width: 60%;
-       height: 92%;
+       width: 48%;
+
        float: left;
      }
        .left-column h2:last-of-type, .left-column h3:last-child {
          color: #000000;
        }
      .right-column {
-       width: 40%;
+       width: 48%;
+
        float: right;
-       padding-top: 1em;
+       
      }
 
 
@@ -193,6 +194,385 @@
 
 layout: true
 <div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
+
+
+---
+
+class:inverse
+
+#2021.10.28 Coding
+
+.qotd[❓of the 📅: What animal would you want for a non-traditional pet? (i.e. not a dog, fish or cat)]
+
+1. Getting Loopy
+  - `while()` loops
+  - `for()` loops
+
+---
+
+class:inverse
+
+##Task:
+
+Draw five circles on a horizontal line, 100 pixels apart from each other.
+
+---
+
+class:inverse
+
+###Now Draw them 50 pixels apart...
+
+--
+
+###Easy? Or tedious?
+
+--
+
+###There has to be a better way.
+
+---
+
+class:inverse
+
+#Loops
+
+##How we tell the computer to repeat itself, but change one aspect each time.
+
+--
+
+Look at your code for the 5 circles. What was similar and what was different about each line?
+
+--
+
+How could we simplify this code?
+
+---
+
+class:inverse
+
+#Loops
+
+1. Start at 100
+--
+
+2. If we haven't reached the edge of the screen
+--
+
+  - Draw ellipse
+--
+
+  - Move 100px to the right
+
+
+---
+
+class:inverse
+
+#The Code
+
+```javascript
+
+var x = 100;
+while (x < width){
+  ellipse(x,60,40,40);
+  x = x + 100;
+}
+
+```
+
+---
+
+class:inverse
+
+#Three Steps For A While Loop
+
+--
+
+1. We declare and initialize a variable. Initializing a variable is setting the initial value for that variable, or where you want it to start. In this case, we would like to it begin at 100 pixels.
+
+--
+2. We check whether it meets a condition. The condition is inside the parentheses. We want to execute the code in the brackets on condition that x is still less than the width of the canvas.
+
+--
+3. We change the value of that variable in a way that will eventually make it meet the condition. In the code below, 100 is added to x inside the brackets. Every time the code is run x will increase by 100 until it's value is larger than the width of the canvas. Then the loop will be completed and the program will move on in the code.
+
+---
+
+class:inverse
+
+#1. Initialize Variable
+
+```javascript
+
+*var x = 100;
+while (x < width){
+  ellipse(x,60,40,40);
+  x = x + 100;
+}
+
+```
+
+---
+
+class:inverse
+
+#2. Check Condition
+
+```javascript
+
+var x = 100;
+*while (x < width){
+  ellipse(x,60,40,40);
+  x = x + 100;
+}
+
+```
+
+---
+
+class:inverse
+
+#Do the stuff
+
+```javascript
+
+var x = 100;
+while (x < width){
+* ellipse(x,60,40,40);
+  x = x + 100;
+}
+
+```
+
+---
+class:inverse
+
+#3. Iterate Variable
+
+```javascript
+
+var x = 100;
+while (x < width){
+  ellipse(x,60,40,40);
+* x = x + 100;
+}
+
+```
+
+
+---
+class: inverse
+
+#Paired Programming 💻
+
+Work with a partner, switch "driver" for second task
+
+##Task 1:
+
+- Start a row at the left end of the canvas
+- Draw a row of ellipses 50 pixels apart
+- Draw ellipses only on the left half of the canvas
+
+##Task 2:
+
+Create a row of designs using while loops (Bullseye, smiley faces, stars, square with a circle in it, etc)
+
+
+##Extensions (if you have time)
+
+- Repeating their emoji from unit 1
+- Creating a grid of ellipses
+
+---
+
+class:inverse
+
+##`for()` Loop
+
+```javascript
+
+for (var x = 100; x < width; x = x + 100){
+  ellipse(x, 60, 40, 40);
+}
+
+```
+
+##vs. `while()` Loop
+
+```javascript
+
+var x = 100;
+while (x < width){
+  ellipse(x,60,40,40);
+  x = x + 100;
+}
+```
+
+---
+
+class: inverse
+
+# `for()` vs. `while()`
+
+.left-column[
+
+##`for()`
+
+- good for *finite* and specific number of steps
+  - i.e. "phone locks after 5 attempts of password"
+- can't do everything a `while()` loop can
+
+]
+
+.right-column[
+
+##`while()`
+
+- good for *infinite* number of steps (i.e. testing for correct passsword with unlimited attempts)
+- can be used in place of any `for()` loop, but requires extra line of code
+
+]
+
+---
+class:center, middle
+
+#Exercise: Draw two rows of any shape. Use a while loop to draw the first row and a for loop to draw the second.
+
+---
+
+class:center, middle
+
+#Exercise: Make a stack of circles (loop vertically instead of horizontally)
+
+---
+
+
+class:center, middle
+
+#Exercise: Make a diagonal of circles
+
+
+---
+
+class:center, middle
+
+#Exercise: Use a second `for()` loop and create a 'X' out of circles
+
+---
+
+class:center, middle
+
+
+###Exercise: Make a line of circles that grow in size.
+
+###Exercise: Use a loop to make a line of circles that gradually change color.
+
+###Exercise: Use a loop to make an image of circles shrinking in size, and changing color. It should be a huge bull's eye that starts with a circle the size of your canvas and draws smaller ones on top.
+
+###Exercise: Draw a smiley face, and then use a `for()` loop to draw multiple across the screen.
+
+---
+
+class:center, middle
+
+#Nested `for()` loops
+
+---
+
+class:center, middle
+
+#Exercise:
+
+##Draw a 5 x 5 grid of circles
+
+
+---
+
+##The Code
+
+```javascript
+
+function setup( ){
+	createCanvas(600,120);
+}
+
+function draw( ){
+	background(220);
+	//create a row of ellipse
+	for(x=10;width > x;x=x+20){
+		ellipse(x,10,15,15)
+	}
+	//create a column with x value 10 since the row begins with that x value
+	for(y=10;height > y;y=y+20){
+		ellipse(10,y,15,15)
+	}
+	//create a column with x value 30 since the next ellipse in the row was incremented by 20
+	for(y=10;height > y;y=y+20){
+		ellipse(30,y,15,15)
+	}
+	//create a column with x value 50 since the next ellipse in the row was incremented by 20
+	for(y=10;height > y;y=y+20){
+		ellipse(50,y,15,15)
+	}
+	//create a column with x value 70 since the next ellipse in the row was incremented by 20
+	for(y=10;height > y;y=y+20){
+		ellipse(70,y,15,15)
+	}
+}
+
+
+```
+
+
+---
+
+class:center, middle
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/1.5/rows.gif" width = "900 px"/>
+
+
+
+---
+
+#Nested Loop
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/1.5/draw.png" width = "800 px"/>]
+
+---
+
+
+#Our code changes to this...
+
+
+```javascript
+
+function setup( ){
+	createCanvas(600,120);
+}
+function draw( ){
+	background(220);
+
+	//create a row of ellipse
+	for(x=30;width > x;x=x+30){
+		//each time the loop is cycled through a column will be drawn at that x location
+		for(var y= 30;height > y;y=y+30){
+			ellipse(x,y,15,15)
+		}
+	}
+
+}
+```
+
+---
+
+class:center, middle
+
+#Exercise
+
+##Use nested `for()` loops to design a grid of bullseyes
+
+
+
 
 
 ---
