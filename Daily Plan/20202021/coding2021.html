@@ -462,6 +462,38 @@ class:schodack
 
 ##`for()` loops and arrays
 
+###Try it...
+
+Create an array and fill it with 5 different numbers ranging from 100 - 200. Then create 5 ellipses using each element from all 5 indexes.
+
+---
+
+class:schodack
+
+##`for()` loops and arrays
+
+Code Along
+
+
+```
+
+var colors = ['red', 'blue', 'green']
+function setup() {
+	createCanvas(400, 400);
+}
+function draw() {
+	background(220);
+	for(i = 0; i < colors.length; i++){
+		// Fill with the right color
+		fill(colors[i])
+		// draw a rectangle
+		rect(i * 100, height / 2, 75, 75)
+	}
+}
+
+
+```
+
 
 
 ---
