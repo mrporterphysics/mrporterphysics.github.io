@@ -410,6 +410,80 @@ function draw() {
 
 ---
 
+
+---
+
+class:schodack
+
+#`floor()`
+
+- The `random()` function does one amazing thing - it gives us a number, randomly chosen. Thankfully, it’s controlled chaos. We can tell the random function that we want a number between, say, 3 and 7. Or 5.894858 and 9.483984.
+- If I write var num = random(4, 9);, num will be equal to a number that is greater than or equal to four, and less than nine. The problem there is that that number could very well be 5.93943. If we want to be able to use this function to pick an element from an array, we need to make sure that the random() function is returning a whole number.
+
+--
+
+- `floor(5.9058588585)` will equal 5
+
+
+---
+
+class: inverse
+
+Pick 10 fortune cookie messages from this list (Links to an external site.) (or create your own), store them in an array, and whenever the user loads the sketch, a different text message will be displayed. Remember the text("Your text here", x, y); function will display text. You can also put you array item in place of the quotes (like: text(listOfThings[1], x, y);)
+Design your program to look like a fortune cookie slip.
+
+Extensions:
+
+- add a button that loads a different fortune when the user clicks it this could update the current fortune, OR
+- add a second fortune slip below
+
+
+
+---
+
+class:schodack
+
+##`for()` loops and arrays
+
+###Try it...
+
+Create an array and fill it with 5 different numbers ranging from 100 - 200. Then create 5 ellipses using each element from all 5 indexes.
+
+---
+
+class:schodack
+
+##`for()` loops and arrays
+
+Code Along
+
+
+```
+
+var colors = ['red', 'blue', 'green']
+function setup() {
+	createCanvas(400, 400);
+}
+function draw() {
+	background(220);
+	for(i = 0; i < colors.length; i++){
+		// Fill with the right color
+		fill(colors[i])
+		// draw a rectangle
+		rect(i * 100, height / 2, 75, 75)
+	}
+}
+
+
+```
+
+
+
+---
+
+
+---
+
 class:inverse
 
 #2021.11.09 Coding
