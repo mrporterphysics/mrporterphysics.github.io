@@ -2,4 +2,4 @@
 
 ## Final Projects:
 
-- [Final Projects Falls 2021-22](fall2122.md)
+- [Final Projects Falls 2021-22](fall2122)
