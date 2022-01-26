@@ -1,8 +1,3 @@
----
-title: Motion - Constant Velocity and Acceleration Particle Models
-layout: posted
----
-
 # Motion
 ## Constant Velocity and Constant Acceleration Particle Models
 
