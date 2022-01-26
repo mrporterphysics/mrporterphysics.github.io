@@ -3,4 +3,4 @@
 
 Cole
 
-<iframe src="https://editor.p5js.org/dubbeldec/full/kPHDALy-B"></iframe>
+<iframe src="https://editor.p5js.org/dubbeldec/full/kPHDALy-B" width = "600 px" height = "400px"></iframe>
