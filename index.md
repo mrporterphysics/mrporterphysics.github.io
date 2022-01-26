@@ -15,5 +15,4 @@ You can find links to class presentations here:
   - [AP Resource Page](AP Resource Pages\apresources)
 
 # Coding Pages
-
   - [Coding Final Projects](Coding\codingLanding.md)
