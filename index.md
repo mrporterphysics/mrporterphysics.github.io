@@ -13,3 +13,7 @@ You can find links to class presentations here:
 
 # Resource Pages
   - [AP Resource Page](AP Resource Pages\apresources)
+
+# Coding Pages
+
+  - [Coding Final Projects](Coding\codingLanding.md)
