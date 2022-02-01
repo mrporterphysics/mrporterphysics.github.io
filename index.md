@@ -7,6 +7,7 @@ You can find links to class presentations here:
   - Find [Regents Daily Plans](Daily Plan\20212022\regentsdaily20212022.html).
   - Find [Conceptual Physics Daily Plans](Daily Plan\20212022\conceptualdaily20212022.html).
   - Find [Coding Daily Plans](Daily Plan\20212022\coding2022.html).
+  - Find [Video Game Design Daily Plans](Daily Plan\20212022\VGD2022.html).
   - Find [Content Presentations](presindex).
   - Archived Daily Plans (Past Years)
 
