@@ -19,4 +19,4 @@ You can find links to class presentations here:
   - [Coding Final Projects](Coding\codingLanding)
 
 # Video Game Development:
-  - [2022 Final Projects](Coding\VGD2022)
+  - [2022 Final Projects](Coding\VGD2022.md)
