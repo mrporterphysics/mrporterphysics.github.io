@@ -4026,6 +4026,7 @@ self.C3_JsPropNameTable = [
 	{Torch: 0},
 	{Lit: 0},
 	{Torch2: 0},
+	{Text2: 0},
 	{Direction: 0},
 	{SlideTrue: 0},
 	{SlideTime: 0},
