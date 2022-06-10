@@ -17,3 +17,6 @@ You can find links to class presentations here:
 
 # Coding Pages
   - [Coding Final Projects](Coding\codingLanding)
+
+# Video Game Development:
+  - [2022 Final Projects](Coding\VGD2022)
