@@ -1,0 +1,3789 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>AP Daily 2021-2022</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+
+      @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+      @import url('https://fonts.googleapis.com/css?family=Creepster');
+      @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+      @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+      @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Teko:700&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+      body {
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 3em;
+        color:black;
+     }
+      h1, h2, h3 {
+        font-family: 'Libre Franklin', sans-serif;
+        line-height: 1em;
+      }
+
+
+
+      .gray{color: #989ea6;}
+      .red{color:#E01D36;}
+      .blue{color:#0c2545;}
+
+      .remark-slide-content h4 {font-size: 1.3em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-slide-content ul ul{font-size: 100%;}
+      .remark-slide-content ol ol{font-size: 100%;}
+      .remark-slide-content ol ul{font-size: 100%;}
+      .remark-slide-content ol ul ul{font-size: 100%;}
+      .remark-slide-content ol ol ul{font-size: 100%;}
+      .remark-slide-content ul ol{font-size: 100%;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* Two-column layout */
+     .left-column {
+
+       width: 50%;
+       height: 92%;
+       float: left;
+     }
+     .agenda {
+
+       width: 45%;
+       height: 92%;
+       float: left;
+     }
+
+     .small li, p{font-size: 1em;}
+
+     .goals{
+       width: 50%;
+       height: 92%;
+       float: right;
+       font-family: 'Inconsolata';
+
+     }
+
+     .right-column {
+       width: 50%;
+       height: 92%;
+       float: right;
+       padding-top: -5em;
+     }
+
+
+     .left-column-short {
+       color: #000000;
+       width: 30%;
+       height: 95%;
+       float: left;
+       padding-top:-4em;
+     }
+       .left-column-short h2:last-of-type, .left-column h3:last-child {
+         color: #000;
+       }
+     .right-column-long {
+       width: 70%;
+       float: right;
+       font-size: 1em;
+       padding-top:-4em;
+     }
+
+     .footer {
+   position: fixed;
+   left: 15px;
+   bottom: 15px;
+   width: 5%;
+   background-color: white;
+   color: black;
+   text-align: center;
+  }
+
+
+
+  .checklist {list-style-type: 'none';}
+  .checklist li:before{font-size:100%; content:"✅";}
+  .inverse {
+        background: #272822;
+        color: #ffffff;
+        font-family: 'Fira Sans', sans-serif;
+      }
+      .inverse h1, .inverse h2 {
+        color: #9966FF;
+        line-height: 0.8em;
+        font-family: 'Inconsolata', monospace;
+      }
+
+      .halloween {
+            background: #6032a8;
+            color: white;
+
+          }
+          .halloween h1, .halloween h2, .halloween h3 {
+            color: Orange;
+            font-family: 'Creepster', cursive;
+            line-height: 0.8em;
+            text-shadow: 0 0 20px #333;
+          }
+
+          .thanksgiving{
+              background:#611f00;
+              color:white;
+
+          }
+
+          .thanksgiving h1, .thanksgiving h2, .thanksgiving h3 {
+            font-family: 'Cinzel', serif;
+            color: Orange;
+          }
+
+          .thanksgiving a {
+            color: white;
+            text-decoration: underline;
+
+          }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+
+      .small-list{
+        font-size: 90%;
+      }
+
+      .small p {font-size: 100%;}
+
+      .photoback {
+            background-size: 100%;
+            color: Black;
+
+            }
+
+      .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                  color: white;
+
+                  line-height: 0.8em;
+
+                  }
+      .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
+                color:white;
+                background-color: rgba(119,119,119,0.35);
+
+
+            }
+
+      .large h1{font-size:3em;}
+
+
+      .schodack {
+            background: #bfc1c7;
+            color: #1B438B;
+            font-family: 'Gowun Dodum', sans-serif;
+            font-size: .45em;
+          }
+        .schodack h1, .schodack h2 {
+            display:inline-block;
+            background-color: #E01D36;
+            color: #FFFEFF;
+            line-height: 1.1em;
+            margin-bottom: 10px;
+            font-family: 'Libre Franklin', sans-serif;
+          }
+          .schodack p {
+            margin-top: 5px;
+          }
+
+      div.my-header {
+          position: fixed;
+          top: 3px;
+          right: 3px;
+          height: 30px;
+          width: 100%;
+          text-align: right;
+      }
+
+      .qotd{
+        font-size: 1.1em;
+        font-family: 'Poor Story', cursive;
+
+      }
+
+      .material-icons.md-18 { font-size: 18px; }
+      .material-icons.md-24 { font-size: 24px; }
+      .material-icons.md-36 { font-size: 36px; }
+      .material-icons.md-48 { font-size: 48px; }
+      .material-icons.md-24 { font-size: 56px; }
+      .material-icons.md-36 { font-size: 64px; }
+      .material-icons.md-72 { font-size: 72px; }
+      .material-icons.md-80 { font-size: 80px; }
+      .material-icons.md-88 { font-size: 88px; }
+      .material-icons.md-96 { font-size: 96px; }
+
+
+          </style>
+        </head>
+        <body>
+          <textarea id="source">
+
+
+layout: true
+<div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
+
+---
+
+##.gray[2022.06.03] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What is your funniest family vacation moment?]
+
+
+1. Learning about LaTeX - Scientific Typesetting
+    - overleaf.com - sign up for an account
+2. Writing Lab Reports & Data Analysis
+
+
+---
+
+##.gray[2022.05.24] .blue[AP Physics] .red[Agenda]
+
+1. Working on AP Physics Science Fair Project
+    + Collecting Data
+    + Analyzing Graphs
+    + Creating Figures for lab report
+
+---
+
+##.gray[2022.05.19] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: If you could be any animal in the world, what animal would you choose to be?]
+
+1. Lab & Lab Report Guide - [NCSU LabWrite](https://labwrite.ncsu.edu/)
+1. AP Physics Science Fair - Research & Lab Design
+    + Complete any necessary research - be sure to save your resources so you can cite them!
+    + Read through LabWrite InLab questions and notes
+    + Write out lab procedure
+    + Set up Notebook/Google Doc/Pivot to record data & note
+2. Start Experimenting
+
+---
+
+##.gray[2022.05.17] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What are your summer plans? Vacation? Job?]
+
+1. AP Physics Science Fair - Final Project
+2. Research & Decide on Project Idea
+3. Submit Google Form Proposal/Prelab questions (linked in Canvas)
+
+
+Notes:
+
+- AP FRQ is released, I haven't gone through it yet, but will, and if you want I am happy to go through it with individuals
+
+
+
+---
+
+##.gray[2022.05.10] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What takes up too much of your time?]
+
+1. Complete one goal-less problem of your choice
+2. Practice of your choice:
+    - More goal-less problems
+    - AP Classroom MC
+    - AP Classroom FRQ
+    - Reviewing fact sheets
+
+Note for Test:
+
+- Meet in Atrium before the exam, there is an early morning exam that will go up until 12.
+
+---
+
+##.gray[2022.05.09] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What takes a lot of time but is totally worth it?]
+
+1. AP MC Practice - 35-50 (Practice Exam 2 MC)
+2. "Goal-less" Problems
+  - What diagrams can you draw? [Draw them]
+  - What can you solve for with the given information? [Solve for them]
+  - What extension questions could they ask (i.e. "if we made this bigger how would it affect this thing?") [Ask the question and answer it]
+
+
+
+---
+
+##.gray[2022.05.04] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What smell brings back great memories?]
+
+1. AP MC Practice - 20-35 (Practice Exam 2 MC)
+2. AP Workbook Review - User Choice, Answer Key on Canvas
+3. Read "Exploring Rolling" in Canvas - Maybe something we need to add to our fact sheet?
+
+Note:
+
+- I posted 2 practice exams in AP Classroom & FRQ Answer Keys
+- All are set to self grade post exam, so you can see your score once you complete them
+
+---
+
+##.gray[2022.05.03] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: Waffles, Pancakes, or French Toast? What do you top it with?]
+
+1. AP MC Practice - 11-20 (Practice Exam 2 MC)
+2. AP Workbook Review - User Choice, Answer Key on Canvas
+
+Tomorrow: Rolling Stuff
+
+
+
+---
+
+###.gray[2022.05.02] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: Should you bite or lick your ice cream?]
+
+1. AP MC Practice - First 10 (Practice Exam 2 MC)
+2. Universal Law of Gravitation
+2. Gravitational Potential Energy
+3. AP Workbook Review - 11.H
+
+
+---
+
+###.gray[2022.04.28] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: Who would you want to be stuck on an elevator with (anyone past or present)?]
+
+1. Finish FRQ Practice From Last Class
+
+Next Week:
+
+- Monday: Gravity Stuff & MC Practice
+- Tuesday: Rolling & MC Practice
+- Wednesday: TBD
+- Friday: APUSH/Prom 👗🤵💃🕺
+
+HW:
+
+- 📖 Read & Study Fact Sheet
+- 🔎 Study Focus: Graphs - What graphs are there, what does the slope and/or area tell you?
+    - Most common: x vs. t, v vs. t, a vs. t, F vs. t, F vs. x
+    - The others: F vs. a, F vs. m, p vs. t
+
+---
+
+##.gray[2022.04.27] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: Where are you going for your birthday dinner?]
+
+1. Read through Greg Jacob's Fact sheet and compare to ours. Make any necessary changes
+2. Free Response Practice in Groups:
+  - Complete Timed problem on whiteboard, rotate and score based on rubric
+
+
+---
+
+class: photoback
+background-image: url("https://cdn.pixabay.com/photo/2020/06/05/18/53/mont-ventoux-5264149_960_720.jpg")
+
+
+##.gray[2022.04.26] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: If you could explore any part of the world, all expenses paid, where would you choose to go? Why?]
+
+1. Class Colloboration - 2022 AP Physics Fact Sheet
+  - What "facts" of physics do you need to know for the AP Physics Exam? (For Example: "Slope of velocity vs. time is acceleration" or "in freefall the acceleration of an object is `\(g\)`")
+  - Will work on a unit in your lab group for about 10 minutes and then move to another
+  - Review other groups work, add anything you think is missing in your color
+2. Font Colors:
+  - Team Frazier, Pulver, Rogers, Hoffman:
+  - Team Tino, Dom, Tyler:
+  - Lady Scientists:
+  - Destroyers:
+  - Orange is the Worst: Orange
+
+---
+
+##.gray[2022.04.13] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What was your first username?]
+
+1. Finish Disk Pivot
+2. Pivot - Rotational Collision: Dart Collides with Wooden Stick (Skip angled Part)
+3. AP Classroom Rotation FRQ with Lab Group
+
+---
+
+##.gray[2022.04.12] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What was your first username?]
+
+1. Do Now: Sign Miss Leuci's thank you card
+2. Tuesday or Wednesday for Test Practice?
+2. Angular Momentum & Angular Momentum Demos
+3. Pivot - Rotational Collisions: Disk on Disk (Make and Test Predictions)
+4. Pivot - Rotational Collision: Dart Collides with Wooden Stick
+
+
+---
+
+##Angular Momentum
+
+Linear
+
+$$ p = mv$$
+--
+
+Angular
+
+$$L = I \omega $$
+--
+
+- There is angular impulse: `\(\Delta L = \tau \Delta t\)`
+--
+
+- Angular Mometum is conserved *if there is no net torque* on the system:
+--
+
+  - `\(L_i = L_f\)` or `\(I_i \omega_i = I_f \omega_f\)`
+
+---
+
+##Angular Momentum of a Particle
+
+$$ L = I \omega$$
+
+--
+
+$$ L = (mr^2)\omega $$
+
+--
+
+$$ L = mr^2 \frac{v}{r}$$
+
+--
+
+$$\fbox{L = mvr}$$
+
+
+---
+
+##.gray[2022.04.07] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What is your favorite Stewarts Ice Cream Flavor?]
+
+1. Quiz
+2. Angular Momentum
+3. Pivot: Rotational Collisions: Disk on Disk (Make and Test Predictions)
+
+---
+
+
+
+##.gray[2022.04.07] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What recent trend are you totally on board with?]
+
+
+1. 🎯 AP Workbook 7.H, 7.J, 7.K
+2. Bonus: 7.F, 7.M & 7.N
+
+HW:
+
+- Quiz Friday, Practice available today  after school
+- Test Next Thursday, AP Classrom MC Due
+
+---
+
+##.gray[2022.04.06] .blue[AP Physics] .red[Do Now]
+
+.small[Four objects are placed in a row at the same height near the top of a ramp and are released from rest at the same time. The objects are (A) a 1-kg solid sphere; (B) a 1-kg
+hollow sphere; (C) a 2-kg solid sphere; and (D) a 1-kg thin hoop. All four objects have the same diameter, and the hoop has a width that is one-quarter its diameter. The
+time it takes the objects to reach the finish line near the bottom of the ramp is recorded. The moment of inertia for an axis passing through its center of mass for a solid
+sphere is `\(\frac{2}{5}MR^2\)`; for a hollow sphere it is `\(\frac{2}{3} MR^2\)`; and for a hoop it is `\(MR^2 \)`.]
+
+.center[<img src="images/rolling_race_kr.png" width = "300 px"/>]
+
+**Rank the four objects from fastest (shortest time) down the ramp to slowest.** **Explain your reasoning**
+
+---
+
+##.gray[2022.04.06] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: How many slices should we cut **your** birthday cake into?]
+
+1. Do Now
+2. Rotational Kinetic Energy: `\(K_R = \frac{1}{2}I\omega^2\)`
+3. AP Workbook 7.C
+3. Resolve Landing Spot for Ball with `\(K_R\)` and `\(K_T\)`
+4. AP Workbook: 7.H & 7.J
+
+
+HW:
+
+- Quiz Friday, Practice available today and tomorrow after school
+- Test Next Thursday, AP Classrom MC Due
+
+
+
+---
+
+##.gray[2022.04.01] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What fictional world or place would you like to visit?]
+
+.left-column[
+1. Practice Exam Day over break?
+1. Finish TP 🧻 Challenge
+2. Test TP Prediction
+3. AP Workbook 7.F
+4. Challenge 2 - Marble & Little Chickie
+]
+
+
+.right-column[
+Fill out form here: [https://forms.gle/YmRuP5dVSK8knWfP6](https://forms.gle/YmRuP5dVSK8knWfP6)
+
+Or Scan QR:
+
+<img src="images/practiceTestDay.png" width = "300 px"/>
+
+]
+
+HW:
+
+- Quiz Friday (For realz this week)
+- AP Classroom - Test 4/14 (Next Thursday)
+- Do you want to schedule a "practice exam date over break?"
+
+---
+
+#Marble and Little Chickie Stats:
+
+- Marble Mass: 79.2 grams
+- Ramp Height: 34 cm
+- Laptop Cart Height: 1.13 m
+--
+
+- Radius of Marble: 2.1 cm
+- Moment of Inertia of a solid sphere: `\(I = \frac{2}{5}MR^2\)`
+- Hint: `\(\omega = \frac{v}{R}\)`
+
+
+---
+
+##.gray[2022.04.01] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: If you could start a charity, what would it be for?]
+
+
+1. AP Workbook 7.G
+2. Toilet Paper Challenge 🧻
+  - If you drop two rolls of toilet paper while holding on the end of one roll, they will hit the floor at the same instant if their initial heights have a specific ratio.
+      + Find this ratio
+      + Determine the height for the unrolling TP of you drop the other from a height of 2 meters.
+
+
+---
+
+##.gray[2022.03.31] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: How many total burritos will Mr. Porter eat in Houston?]
+
+
+1. Finish up N2L Lab for Rotation
+2. AP Workbook 7.D
+  - Work through entire sheet in your group
+3. AP Workbook 7.E
+  - Complete one section at a time in sync with the class
+4. AP Workbook 7.F
+
+
+---
+
+##.gray[2022.03.29] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is the best day & food combo? Taco Tuesday? Sunday Brunch? Etc]
+
+1. N2L (Newton's Second Law) For Rotation `\(\Sigma \tau = I \alpha\)`
+2. N2L Rotation Lab
+  - Use masses 100 grams or less as your hanging mass
+  - Be sure to measure the falling distance carefully
+  - Pulley Radius: 2.4 cm (0.024 m)
+
+Moments of Inertia:
+
+- Discs: `\(1.05 \times 10^{-4}\)` `\(\textrm{kg m}^2\)`
+- Three Step Pulley: `\(2 \times 10^{-6}\)` `\(\textrm{kg m}^2\)`
+- Hallow Rod: `\(\frac{1}{12}ML^2\)`
+- Point Mass: `\(mr^2\)`
+
+
+---
+
+##.gray[2022.03.28] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Should we get rid of Mondays? What would you change about the "work week"?]
+
+1. Pivot - Exploring Factors that Affect Acceleration while Rolling on a Ramp
+  - Whiteboard your results
+2. Rotational Equivalent to Mass
+3. Workbook 7.D & 7.F
+
+HW:
+
+- Quiz Friday
+    - Practice available tomorrow (I will be there after school, the rest of the week is Miss Leuci)
+
+
+---
+
+
+##.gray[2022.03.25] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: WYR have a human butler or a robot butler?]
+
+1. Torque Quiz
+2. Ramp Rolling with Various Objects
+3. Exploring Factors that Affect Acceleration while Rolling on a Ramp
+
+
+---
+
+##.gray[2022.03.23] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Have you completed anything on your bucket list? If so what?]
+
+1. Radians & [Rotational Kinematics](https://www.mrporterphysics.com/Presentations/AP%20Rotation%20Representation/talks/Rotation#35)
+2. Workbook 7.A
+3. 🚀 Rocket Wheel Pivot
+
+---
+
+##.gray[2022.03.22] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite Dinosaur? ]
+
+1. Finish Mobile: ⏳ 60 Minutes Max
+2. Review Radians & [Rotational Kinematics](https://www.mrporterphysics.com/Presentations/AP%20Rotation%20Representation/talks/Rotation#35)
+3. Workbook 7.A
+
+HW:
+
+- Corrections Due Friday
+- Balanced Torque Quiz Friday
+
+---
+
+##.gray[2022.03.21] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is the most outrageous lie you have ever told?]
+
+1. Physics Mobile Mini Project
+
+.center[<img src="http://msquacksphysics.weebly.com/uploads/1/0/9/7/10974238/3842133.png" width = "300 px"/>]
+
+HW:
+
+- Corrections due Friday
+  - Notes: Cannot come today during school or after, Thursday I have a meeting at 2:30
+
+---
+
+##Mobile Mini Project / Lab
+
+.right-column[.center[<img src="http://msquacksphysics.weebly.com/uploads/1/0/9/7/10974238/3842133.png" width = "300 px"/>]]
+
+
+.left-column[
+1. Must have at least 3 horizontal arms (Not attached at COM)
+2. Should have a theme
+3. Submit:
+  - Photo of your finished project
+  - Scaled Drawing of your final design
+  - Calulations for each arm that verifies the conditions for equilibrium
+]
+
+
+---
+
+##.gray[2022.03.17] .blue[AP Physics] .red[Do Now]
+
+Signs are suspended from equal-length rods on the side of a building. For each case, the mass of the sign compared to the mass of the rod is small and can be ignored. The mass of the sign is given in each figure.
+In Cases B and D, the rod is horizontal; in the other cases, the angle that the rod makes with the vertical is given.
+
+.center[<img src="images/AngledTorque.jpg" width = "700 px"/>]
+
+**Rank the magnitude of the torque the signs exert about the point at which the rod is attached to the side of the building. Explain your reasoning.**
+
+
+---
+
+##.gray[2022.03.17] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Do you brush your teeth with warm or cold water?]
+
+
+1. Do Now
+2. Measuring Torque 🔧 - Pivot
+3. AP Multiple Choice Practice - AP Classroom "Torque and Angular Acceleration Quiz"
+
+
+
+---
+
+
+##.gray[2022.03.16] .blue[AP Physics] .red[Do Now]
+
+Morgan, Emmma, and Grace were able to balance their meter stick with the following set up:
+
+- 100 g mass at 9.7 cm
+- Meter stick pivot at 25 cm
+- Meter stick center-of-mass at 50.1 cm
+
+**What is the mass of the meter stick?**
+
+---
+
+##.gray[2022.03.16] .blue[AP Physics] .red[Do Now 2]
+
+
+Set up in the back. Meterstick is 62 grams. You can assume the center of mass is at 50 cm.
+
+
+What is the reading on the spring scale.
+
+---
+
+##.gray[2022.03.16] .blue[AP Physics] .red[Do Now 3]
+
+A 2-m long massless rod supports a 12-Newton weight. The left end of each rod is held in place by a frictionless pin. In each case, a vertical force `\(F\)` is holding the rods and weights at rest. The rods
+are marked at half-meter intervals.
+
+
+.center[<img src="images/rodRankEquil.jpg" width = "700 px"/>]
+
+**Rank the magnitude of the vertical force `\(F\)` applied to the rods. Explain your reasoning. **
+
+
+---
+
+##.gray[2022.03.15] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What are your thoughts on cold leftovers?]
+
+
+1. Balancing Act
+2. Torque Lab
+
+HW:
+
+- Corrections - Due Next Friday
+- They will be ready for after school time
+
+---
+
+#Balacing Act:
+
+###Task 1
+
+Add masses to each side of the rod so that the rod does not rotate, but is balanced (parallel to the table). In particular, add two masses to one side and one mass to the other side. Is there more than one arrangement that will balance the rod? Explain.
+
+###Task 2
+
+Draw a Free Body Diagram for your setup in task 1. Are the forces balanced?
+
+---
+
+#Balacing Act:
+
+###Task 3
+
+Would the diagram that Mr. Porter drew on the board rotate? (Draw a FBD for the situation...does the net force explain the situation?)
+
+###Task 4
+
+Where could we place a mass in the previous question so that the ruler would not rotate?
+
+---
+
+#Balacing Act:
+
+###Task 5
+
+Develop a method to determine the mass of your meterstick using the balance.
+
+
+
+---
+
+##.gray[2022.03.10] .blue[AP Physics] .red[Do Now]
+
+On a whiteboard...brainstorm responses
+
+.left-column[
+###Kinematics:
+- First thing we write down is usually...
+- Indicators it *might* be this type of problem
+
+
+###Forces:
+- First thing we write down is usually...
+- Indicators it *might* be this type of problem
+]
+
+
+.right-column[
+###Energy:
+- First thing we write down is usually...
+- Indicators it *might* be this type of problem
+
+###Impulse & Momentum:
+- First thing we write down is usually...
+- Indicators it *might* be this type of problem
+]
+
+
+---
+
+##.gray[2022.03.10] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Should pizza slices be triangles or squares?]
+
+1. Pick the right model
+2. Question-less Test
+
+
+
+---
+
+##.gray[2022.03.09] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is one thing you would "uninvent"?]
+
+
+1. Do Now - Workbook 5.I
+2. Workbook 5.J & 5.M
+3. Old AP Question:
+  - Skim Question (5 min)
+  - Friends No Pens (10 Min)
+  - Individual Response (10 min)
+  - Discuss response with a new group (Porter assigned)
+  - Score Yourself
+4. Workbook 6.K
+
+
+HW:
+
+- Test Friday 👉🏻 Momentum and SHM
+    + Tomorrow we will review
+
+---
+
+##.gray[2022.03.01] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Does pineapple belong on a pizza?]
+
+1. Do Now - Measure the period of your spring oscillator with a mass of 500 g and an amplitude of 20 cm.
+2. Finish Linear Spring Oscillators
+  - Whiteboard Results
+  - Board Meeting: What affects the period of a linear oscillator? How can we combine the experiments into one single mathematical relationship?
+3. Position, Velocity, and Acceleration Graphs for Linear spring oscillator
+4. AP Workbook 6.A, 6.B, 6.C
+
+Coming Up...
+
+- Quiz Friday (Will have practice ready for Wednesday or Thursday)
+- Test Next Friday (Start Review Posted in AP Classroons)
+
+---
+
+##.gray[2022.02.28] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your highlight from break?]
+
+1. Lab: Linear Spring Oscillator
+
+HW:
+
+- Start AP Classroom Momentum Review
+
+---
+
+##.gray[2022.02.18] .blue[AP Physics] .red[Do Now]
+
+.center[<img src="images/momentumspring.png" width = "400 px"/>]
+
+A block of mass `\(M\)` is resting on a horizontal, frictionless table and is attached as shown above to a relaxed
+spring of spring constant `\(k\)`. A second block of mass `\(2m\)` and initial speed `\(v_0\)` collides with and sticks to the first
+block. Develop expressions for the following quantities in terms of `\(M\)`, `\(k\)`, and `\(v_0\)`
+
+1. `\(v\)`, the speed of the blocks immediately after impact
+2. `\(x\)`, the maximum distance the spring is compressed
+
+---
+
+##.gray[2022.02.18] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What are your plans for break?]
+
+1. Do Now & Practice
+2. Quiz
+3. Happy Friday
+
+---
+
+##Practice 2
+
+Last Question in Projectiles Packet from yesterday (skip force question)
+
+**Numbers**
+
+- `\(m_1\)` = 65 kg
+- `\(m_2\)` = 25 kg
+- `\(L\)` = 15 m
+
+
+
+---
+
+##.gray[2022.02.16] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather start a colony on another planet or be a leader of a country on earth?]
+
+
+1. [Review Projectile Motion](https://www.mrporterphysics.com/Presentations/Projectiles/talks/Projectiles_AP.html#1)
+2. Projectile Motion Practice on Whiteboards (Everyone get their own (or share one but write on your side!))
+3. Porter Packet 5.4 Impulse Calculations
+
+
+HW:
+
+- Quiz tomorrow
+- Review today or tomorrow (I have a practice set prepared for people who come to review)
+
+
+
+---
+
+##.gray[2022.02.15] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What second rate super power would you want?]
+
+1. Boy on Surfboard Pivot
+2. Center of Mass
+3. AP Workbook 5.A
+4. Porter Packet Impulse Calculations 5.4
+
+
+---
+
+##.gray[2022.02.14] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Look up your scientist on your Valentine -- What are they famous for?]
+
+1. Go Over Porter Packet 5.3
+1. AP Workbook 5.D - G
+
+
+---
+
+###.gray[2022.02.10] .blue[AP Physics] .red[Agenda]
+
+
+.center[<img src="http://static1.squarespace.com/static/50c68399e4b0c1ce7044d4fd/6111b323ec286f54b50fe289/6111b010c1b8266a7c4d272e/1640021303978/efwffUntitled-3.jpg?format=1500w" width = "470 px"/>]
+
+---
+
+##.gray[2022.02.10] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Banana?]
+
+
+1. Quiz
+2. 5.3 Conceptual Impulse-Momentum Theorem Questions
+3. AP Workbook 5.B, 5.C, 5.D
+
+---
+
+##.gray[2022.02.09] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Who would win in a fight between a bear 🐻 and a gorilla 🦍?]
+
+
+1. Changing Momentum - 5.2 Porter Packet
+2. 5.3 Conceptual Impulse-Momentum Theory Questions
+3. AP Workbook 5.B, 5.C, 5.D
+
+
+HW:
+
+- Test Corrections Due Friday
+- Quiz Tomorrow (Momentum & Kinematics)
+
+---
+
+##.gray[2022.02.08] .blue[AP Physics] .red[Do Now]
+
+Two carts traveling in opposite directions are about to collide. The carts are all identical in size and shape, but they
+carry different loads and are traveling at different speeds. The carts stick together after the collision. There is no
+friction between the carts and the ground.
+
+
+.center[<img src="images/CollidingCarts.jpg" width = "900 px"/>]
+
+**Rank the speed of the two-cart system after the collision.**
+
+**Explain your reasoning**
+
+---
+
+##.gray[2022.02.08] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite thing about the Capital Region?]
+
+1. Do Now
+1. CoP with Pivot & Blowdart Part 2
+2. Porter Packet 5.1
+3. Page 162. Question 5
+
+
+HW:
+
+- Corrections Due Friday
+- Quiz Thursday (Conservation of Momentum & Kinematics)
+- From now until the AP Exam we will have a quiz on our last meeting of the week
+  - Quiz will be front and back, front - old stuff, back - new stuff
+  - I will host a review/practice session on Wednesdays
+
+---
+
+Replace Question 3 with this prompt
+
+Two brand new ice skaters have a collision on the ice. Esme, a 21 kg skater, overestimated her new abilities and was gliding across the ice at an ambitious 4.6 m/s. Octavia, a 37 kg skater, who was blissfully unaware of Esme’s presence, was gliding in the same direction at a more modest speed of 1.2 m/s. When Esme collided with the unsuspecting Octavia, she clung to her for dear life. At what speed did the pair end up traveling at together after the collision?
+
+Question 4 - Solve for speed of cart **ignore impulse**
+
+
+---
+
+##.gray[2022.02.02] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: ?]
+
+1. Finish Up Collisions Exploration
+2. [What is conserved?](https://www.mrporterphysics.com/Presentations/Momentum/talks/APmomentum.html#1)
+3. **I-F** Area Charts
+3. CoP with Pivot & Blowdart Part 2
+4. Porter Packet 5.1
+
+---
+
+##IF Charts & CoP:
+
+Train cars are coupled together by being bumped into one another. Suppose two loaded train cars are moving toward one another, the first having a mass of 150,000 kg and a velocity of 0.300 m/s, and the second having a mass of 110,000 kg and a velocity of −0.120 m/s. (The minus indicates direction of motion.) What is their final velocity?
+
+
+
+
+---
+
+
+##.gray[2022.02.02] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather move evvery month or the same place forever?]
+
+1. Exploring Collisions Further & what is conserved?
+  - [Link to Sheet](https://docs.google.com/spreadsheets/d/1LHfQyarSufFtBpniT5yg93BiV53cN9Jd7eda5hW3mso/copy)
+
+
+---
+
+#Collisions
+
+In collisions *something* is conserved, we need to figure out what that quantity is.
+
+--
+
+We will explore 4 different situations:
+
+1. Bouncy Collision, Equal Masses
+2. Bouncy Collision Unequal Masses
+3. Sticky Collision, Equal Masses
+4. Sticky Collision, Unequal Masses
+
+---
+
+#Collisions
+
+We will look at these collisions one at a time and update our model.
+
+--
+
+What are we trying to find?
+
+--
+
+**A physical quantity that is conserved before and after a collision**
+
+--
+
+For each situation you will
+
+1. Hypothesize what the conserved quantity is after **qualitative** observations
+--
+
+2. Test the situation to see if that quantity is conserved by collecting data on your carts
+--
+
+3. Continue to test until you find a conserved quantity, and then test to make sure it is **always** conserved before and after the collision
+--
+
+4. Compare with the rest of the class
+--
+
+5. Try the next situation with your findings from the previous and repeat the process
+
+---
+
+.left-column[#Collisions
+
+We will look at these collisions one at a time and update our model.
+
+For each situation you will
+
+1. Hypothesize what the conserved quantity is after **qualitative** observations
+2. Test the situation to see if that quantity is conserved by collecting data on your carts
+3. Continue to test until you find a conserved quantity, and then test to make sure it is **always** conserved before and after the collision
+4. Compare with the rest of the class
+5. Try the next situation with your findings from the previous and repeat the process]
+
+.right-column[
+#4 different situations:
+
+1. Bouncy Collision, Equal Masses
+2. Bouncy Collision Unequal Masses
+3. Sticky Collision, Equal Masses
+4. Sticky Collision, Unequal Masses]
+
+
+---
+
+
+##.gray[2022.01.31] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your favorite recess game?]
+
+1. Intro to Collisions: Blow Dart Collision Pivot
+  - Everyone at table has a different video
+  - Whiteboard the derivation for calculating velocity BEFORE checking to see if you predicted correctly
+2. Checking our Blow Dart Predictions
+3. Exploring Collisions Further & what is conserved?
+  - [Link to Sheet](https://docs.google.com/spreadsheets/d/1LHfQyarSufFtBpniT5yg93BiV53cN9Jd7eda5hW3mso/copy)
+
+
+---
+
+##.gray[2022.01.25] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your dream vacation?]
+
+
+1. Test Review:
+  - Finish Energy FRQ in AP Classroom
+  - Choice between Circ Motion FRQ (Unit 3) OR Circ Motion MC
+
+
+HW:
+
+- Finish Energy MC AP Classroom Review
+- Test Thursday
+
+
+
+---
+
+##.gray[2022.01.24] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Do you have any pets?]
+
+
+1. Test Review:
+  - Start with AP Classroom FRQ for Energy
+      + Submit Photos and score yourself/lab group
+  - If time work on AP Classroom FRQ for Circular Motion
+
+
+
+---
+
+##.gray[2022.01.21] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your current favorite song 🎶?]
+
+1. Finish Block Launcher Lab
+2. Go Over in Lab groups and Whiteboard Homework
+  - 4.C. Part A: Wolves (LP, AI, SA)
+  - 4.C Part B: Bears (CF, EC, XP)
+  - 4.C Part C: Lionesses (MD, GB, ED)
+  - 4.E Part A: Jaguars (SS, TM, DS)
+  - 4.E Part B & C: Tigers (BR, LH, RF, CP)
+3. Workbook 4.N, 4.H, 4.J
+
+HW:
+
+- Study for test with AP Classroom Problems (Due by the test on Thursday)
+
+---
+
+##.gray[2022.01.19] .blue[AP Physics] .red[Do Now]
+
+.qotd[❓of the 📅: ]
+
+
+1. POWER 💪🏻 Lab
+2. Power & Cycling
+
+---
+
+##.gray[2022.01.18] .blue[AP Physics] .red[Do Now]
+
+.qotd[❓of the 📅: Do you think you could live without your smartphone (or other technology item) for 24 hours?]
+
+1. Group "Quiz" (same as Friday)
+  - Complete as a group
+  - Whiteboard assigned parts
+  - Correct your quiz from Friday and provide yourself Feedback - rescan this to the assignment
+2. Finish Block Launcher Lab
+3. AP Problems
+
+HW:
+
+- Workbook 4.C, 4.E, 4.J
+
+---
+
+##.gray[2022.01.14] .blue[AP Physics] .red[Do Now]
+
+
+AP Workbook 4.G
+
+When you finish...on a whiteboard...
+
+Derive an experession for the normal force on the car in terms of the given variables and universal constants.
+
+---
+
+##.gray[2022.01.14] .blue[AP Physics] .red[Do Now]
+
+.qotd[❓of the 📅: What is the best way to spend a snow day?]
+
+1. Do Now
+2. Quiz
+3. Finish Lab
+4. Start Homework 👇🏻
+
+
+HW:
+
+- Workbook 4.C, 4.E, 4.J
+
+
+---
+
+##.gray[2022.01.12] .blue[AP Physics] .red[Do Now]
+
+.qotd[❓of the 📅: What emoji respresents how you are feeling today? 😴]
+
+1. Porter Packet 4.8 - Free Response Practice
+2. Rubberband & Block Lab ➡ Is your rubberband Hookean?
+3. AP Workbook 4.G
+
+---
+
+#Rubberband & Block Lab
+
+1. Derive an equation for the displacement of your block `\(d\)` in terms of the stretch of your rubberband `\(x\)`, the mass of the block `\(m\)`, the coefficient of friction `\(\mu\)`, the "spring" constant of the rubberband `\(k\)`, and any physical constants.
+2. Determine what to graph to find the numerical value of your coefficient of friction
+3. Collect your data - be sure to take the time to reduce experimental uncertainty
+
+---
+
+#Workbook 4.G
+
+[Hint: Refer back to unit 3 for the minimum speed around a loop.]
+
+Challenge - on a whiteboard:
+
+- Derive an expression for the minimum starting height to make it around the loop-de-loop.
+
+
+---
+
+##.gray[2022.01.11].blue[AP Physics] .red[Do Now]
+
+Pop up toy:
+
+- Using Energy, experimentally determine the spring constant of your toy using a meterstick and the electronic balance.
+- Start with an energy bar graph, write the energy conservation equation & and substitute in
+
+---
+
+##.blue[AP Physics] .red[Do Now - continued]
+
+How could you improve this experiment to get better results? (What could you change and what could you graph to get `\(k\)` as the slope?)
+
+
+---
+
+
+##.gray[2022.01.10] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What emoji respresents how you are feeling today? 😵]
+
+1. Do Now
+2. Porter Packet - Quantitative Problem Solving (4.5 page 125)
+3. AP Workbook:
+    + Go Over Answers 4.A & 4.B w/ your group
+    + 4.C & 4.F
+
+---
+
+##.gray[2022.01.10].blue[AP Physics] .red[Do Now]
+
+**On your own** Describe a physical situation and a system to which this energy bar chart could apply.
+
+.center[<img src="images/EnergyBar.jpg" width = "600 px"/>]
+
+***Explain your reasoning.***
+
+
+---
+
+##.gray[2022.01.10] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What everyday activity would turn into a competitive sport?]
+
+1. Do Now
+2. Tic Tac Bounce CER
+3. Energy Claim-Evidence-Reasoning Problems
+4. AP Workbook 4.A - C
+
+---
+
+#Tic Tac Bounce
+
+Drop your tic tac and observe the bounces. Is there anything interesting about the bounces?
+
+--
+
+Using Energy Bar Graphs -- explain why the second bounce is higher than the first bounce.
+
+.gray[Hint: You may need to make *careful* observations about your bouncing tic tac to answer this]
+
+---
+
+#Claim-Evidence-Reasoning
+
+Use energy bar graphs to answer the questions in your packet - Whiteboard both problems on each side of your whiteboard.
+
+
+---
+
+##.gray[2022.01.06] .blue[AP Physics] .red[Do Now]
+
+In each case below, an arrow has been shot from the top of a building either up at 45`\(^\circ\)` angle, straight out horizontally, or down at a 45`\(^\circ\)`. All arrows are identical and are shot at the same speed, and the heights of the buildings and direction the arrows are shot are given. Ignore air resistance.
+
+.center[<img src="images/arrowRank.jpg" width = "550 px"/>]
+
+**Draw an energy bar graph to help solve this problem. Rank these arrows on the basis of the magnitude of their velocites just before they hit the ground below from greatest to least.**
+
+---
+
+##.gray[2022.01.06] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: If you had a boat, what would you name it?]
+
+1. Do Now
+2. Energy Bar Graph Practice with Lab Tables
+3. AP Workbook 4.A, 4.B & 4.C
+
+HW:
+
+- Test Corrections
+- Finish Workbook problems above if we don't get to them...
+
+---
+
+##.gray[2022.01.05] .blue[AP Physics] .red[Do Now]
+
+Draw *three* pie graphs where each slice of the pie represents how much and *where* the energy is stored in that system.
+
+Do this for the cart-spring-track system from yesterday at the following three moments:
+
+1. After you have done work to compress the spring and the spring is compressed to its maximum
+2. While the spring is uncompressing, but the cart is not yet fully "launched"
+3. A moment in time after the launch while the cart is moving on the track.
+
+---
+
+##.gray[2022.01.05] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: If you had a boat, what would you name it?]
+
+1. Do Now
+2. Energy Pie Charts 🥧
+3. Energy Definitions
+4. LOL Graphs - Energy Bar Graphs 📊
+
+---
+
+#Pull-back car
+
+- Draw pie charts for where the energy is stored (in what object) at three snapshots:
+  1. when the car has been pulled back and is not yet moving
+  2. then two more when the car is moving and has not yet been stopped
+
+
+---
+
+**Kinetic Energy** - energy stored in motion
+
+---
+
+#Energy Definitions
+
+##Kinetic Energy:
+
+- **Symbol**: `\(K\)`
+--
+
+- **When is the energy stored in this way?** When you have a moving object(s)
+--
+
+- **Equation**: `\(K = \frac{1}{2}mv^2 \)`
+--
+
+- **Notes**: Depends on mass and velocity
+
+---
+
+#Energy Definitions
+
+##Spring Interaction Energy:
+
+- **Symbol**: `\(U_s\)`
+--
+
+- **When is the energy stored in this way?** object stretches or compresses a spring or another elastic material
+--
+
+- **Equation**: `\(U_s = \frac{1}{2}kx^2 \)`
+--
+
+- **Notes:** Interaction energy is energy stored in the interaction of two objects. (i.e. Loaded nerf launcher without a dart)
+
+---
+
+#Energy Definitions
+
+##Gravitational interaction energy:
+
+- **Symbol**: `\(U_g\)`
+--
+
+- **When is the energy stored in this way?**: `\(\Delta y\)` in a gravitational field
+--
+
+- **Equation**: `\(U_g = mg\Delta y \)`
+--
+
+- **Notes**: Depends on `\(\Delta y\)`, a reference line (`\(y=0\)`), and the weight of the object
+
+---
+
+#Energy Definitions
+
+##Internal Energy:
+
+- **Symbol**: `\(Q\)`
+--
+
+- **When is the energy stored in this way?** particles have a faster random motion
+--
+
+- **Equation**: None
+--
+
+- **Notes**: Often refered to as change in thermal energy, but includes sound vibrations
+
+
+---
+
+#Energy Definitions
+
+##Work:
+
+- **Symbol**: `\(W = \Delta E\)`
+--
+
+- **When is the energy stored in this way?** External force changes the energy of the system
+--
+
+- **Equation**: `\(\Delta E = W = F_\parallel d = Fd\cos\theta\)`
+--
+
+- **Notes**: Area of Force vs. Displacement Graph
+
+
+
+---
+
+###.gray[2022.01.04] .blue[AP Physics] .red[New Groups]
+
+.left-column[.small[Tigers
+  - Rogers, Brody
+  - Hoffman, Luke
+  - Frazier, Rachael
+  - Pulver, Claire
+
+Lions
+  - Delardi, Morgan
+  - Barrington, Grace
+  - Dugan, Emma]]
+
+.right-column[.small[Wolves
+  - Pearsall, Landon
+  - Isbester, Aleck
+  - Anderson, Samuel
+
+Jaguars
+  - Sterantino, Samuel
+  - Marino, Tyler
+  - Siciliano, Dominick
+
+Bears
+  - Frazier, Colby
+  - Charlebois, Eli
+  - Pearsall, Xavier]]
+
+
+
+---
+
+##.gray[2022.01.04] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your 2022 *process* goal?]
+
+1. Process Goal - "*The process is the purpose*"
+2. Cart Launching
+
+
+HW:
+
+- AP Workbook 3.I, 3.J, 3.K
+- Test Corrections (Due 1/14)
+
+---
+
+#Cart Launcher
+
+🎯: Determine the compression distance of your groups spring so that all carts in the classroom are launched at the same speed.
+
+--
+
+📝 Model the Situation:
+
+- Draw diagrams to model you cart-spring system
+- Use equations to solve for the launch speed of your cart
+- Determine what we need to measure to make the prediction
+
+---
+
+#Spring Constant
+
+How can you determine the spring constant of your spring?
+
+--
+
+- Connect cart to graphical analysis & turn on **force** and **position** sensing
+- Change graph to a Force vs. position graph
+- Reverse the direction of your cart
+- Collect data while compressing and uncompressing your cart
+- Put your best fit equation into Desmos
+
+---
+
+#Cart Launcher
+
+🎯: Determine the compression distance of your groups spring so that all carts in the classroom are launched at the same speed.
+
+--
+
+Tried:
+
+--
+
+❌ Same Force
+
+--
+
+❌ Same Distance
+
+--
+
+❓ What other graphical properties can we try?
+
+---
+
+#🔺 Area
+
+--
+
+$$Area = \frac{1}{2}Fx$$
+
+--
+
+What is the problem?
+
+--
+
+$$F_s = kx$$
+
+--
+
+Plug into Area equation
+
+---
+
+$$Area = \frac{1}{2}(kx)x$$ = \frac{1}{2}kx^2$$
+
+---
+
+class:center, middle
+
+
+#Did it work?
+
+---
+
+class:center, middle
+
+
+#What does this area quantity represent? What would the result be if the quantity was larger? Smaller? Describe in your own words.
+
+---
+
+#What is it?
+
+**Area** of a **Force vs. displacement** graph is **WORK**
+
+--
+
+💪🏻 Work is the change in energy of a system...
+
+
+---
+
+##.gray[2021.12.21] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your personal motto or slogan?]
+
+1. [Universal Law of Gravitation](https://www.mrporterphysics.com/Presentations/Circular%20Motion/talks/CircMotion.html#29)
+2. AP Question on ULG
+3. Test Review:
+  - Finish AP Classroom Work (Including Grading your own FRQ)
+  - Extra FRQ Practice
+
+---
+
+##AP Practice
+
+
+A spacecraft of mass `\(m\)` is in a clockwise circular orbit of radius `\(R\)` around Earth, as shown in the figure below. The mass of Earth is `\(M_E\)`.
+
+(a) In the figure below, draw and label the forces (not components) that act on the spacecraft. Each force must be represented by a distinct arrow starting on, and pointing away from, the spacecraft.
+
+.center[<img src="images\AP2018Q1IMG2.png" width = "400 px"/>]
+
+---
+
+##AP Practice (cont.)
+
+(b)(i) Derive an equation for the orbital period `\(T\)` of the spacecraft in terms of `\(m\)`, `\(M_E\)`, `\(R\)`, and physical
+constants, as appropriate. If you need to draw anything other than what you have shown in part (a) to
+assist in your solution, use the space below. Do NOT add anything to the figure in part (a).
+
+
+--
+
+(b)(ii) A second spacecraft of mass `\(2m\)` is placed in a circular orbit with the same radius `\(R\)`. Is the orbital
+period of the second spacecraft greater than, less than, or equal to the orbital period of the first
+spacecraft?
+
+[ ] Greater than [ ] Less than [ ] Equal to
+
+Briefly explain your reasoning.
+
+---
+
+##AP Practice (cont.)
+
+(c) The first spacecraft is moved into a new circular orbit that has a radius greater than R, as shown in the figure
+below.
+
+.center[<img src="images\AP2018Q1IMG3.png" width = "300 px"/>]
+
+Is the speed of the spacecraft in the new orbit greater than, less than, or equal to the original speed?
+
+[ ] Greater than [ ] Less than [ ] Equal to
+
+Briefly explain your reasoning.
+
+---
+
+##.gray[2021.12.17] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What book, movie read/seen recently you would recommend and why?]
+
+
+1. Flying Pigs 🐖 (and Cows 🐄 and Bats 🦇)
+2. Universal Law of Gravitation
+3. Workbook 3.N
+
+---
+
+#Flying Pigs
+
+.right-column-long[The buffalo farm has recently acquired some flying animals and needs to test the length of the flying animals' leashes. The farm is trying to find a way to predict how long it takes for
+the animals to complete one circle while attached to their loop (in physics we call this the "period" or time for one event of repeating events to happen and use the symbol `\(T\)`.) **Your goal is to predict
+the time it takes for your animal to take 10 swings based on the length of your animal's string.**
+
+1. Draw FBD for your flying animal
+2. Write N2L Equations in `\(x\)` & `\(y\)` direction
+3. Sub them into each other
+4. Solve for `\(v^2\)` & sub in for `\(v\)` in terms and distance and period
+
+Hints: You will need trig for forces. You can solve for the radius of the circle in terms of the lenght `\(L\)` of the "leash".]
+
+
+.left-column-short[<img src="https://media.giphy.com/media/AC0OyIzBpDg2le2CqA/giphy.gif" width = "300 px"/>]
+
+---
+
+#Universal Law of Gravitation:
+
+#$$F_g = \frac{Gm_1 m_2}{r^2}$$
+
+--
+
+[Slides](https://www.mrporterphysics.com/Presentations/Circular%20Motion/talks/CircMotion.html#29)
+
+
+---
+
+##.gray[2021.12.16] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your ideal burger 🍔 (or veggie burger)?]
+
+1. Pivot - Experimental Design: Gravitron
+2. AP Workbook 3.F & 3.G
+
+
+
+HW:
+
+- AP Workbook 3.H
+- AP Classroom Review
+
+---
+
+
+###.gray[2021.12.15] .blue[AP Physics] .red[Do Now]
+
+For each of the following freebody diagrams provide a physical situation that it would represent.
+
+.center[<img src="images/fbdsits.jpeg" width = "475px" />]
+
+
+---
+
+##.gray[2021.12.14] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather fight 100 duck-sized horses or 1 horse-sized duck?]
+
+1. Do Now
+2. AP Workbook 3.C (finish)
+3. AP Workbook 3.D, E, & F with rotating groups -- partner shuffle each problem
+
+HW:
+
+- Workbook 3.G & 3.H
+
+---
+
+##.gray[2021.12.13] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your weekend highlight?]
+
+
+1. Circular Motion Demos
+2. AP Workbook 3.A & 3.B ➡ Whiteboard as a group
+3. [Circular Motion Notes](https://www.mrporterphysics.com/Presentations/Circular%20Motion/talks/CircMotion.html#1)
+4. Workbook 3.C & 3.D
+
+HW:
+
+- AP Classroom Dynamics Review Question (MC & FRQ)
+
+---
+
+#Masking Tape Game
+
+1. Clear the table.
+2. Place a target on the other side of the table (i.e. an eraser, marker (a few markers together), etc)
+3. Spin a ball in the inside of the roll of masking tape and try to hit the target on the other side of the table but lifting the masking tape up vertically.
+4. Each person gets 5 tries, most hits of the target in 5 tries wins.
+
+---
+class:, center, middle
+
+#Masking Tape Game
+
+#.red[Observations?]
+
+---
+
+#Workbook 3.A
+
+- Try to connect Newton's Laws to your answers
+
+#Workbook 3.B
+
+- Use a constant velocity buggy, and determine how you can create the physical scenario
+
+---
+
+##.gray[2021.12.10] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: When the UFO 👽🚀 lands, are you more excited or frightened? Why?]
+
+1. Pivot - Forces on Objects on a Ramp
+  - Complete Part 2 & Discuss as a class
+  - Part 3
+  - Ramp Forumlas
+2. AP Workbook 2.H & 2.M
+3. AP Review - AP Classroom FRQ
+
+
+HW:
+
+- Start Working on Unit 2 Review Questions in AP Classroom
+
+
+
+---
+
+##.gray[2021.12.09] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Movie about your life, what is the song that goes with the opening credits?]
+
+1. Quiz:
+  - **10 Minutes** *Friends without Pens* - discuss quiz at table, no writing allowed
+  - Take Quiz, scan, and submit
+2. Inclined Planes Pivot - How do we figure out the forces on ramps?
+
+---
+
+
+---
+
+##.gray[2021.12.07] .blue[AP Physics] .red[Do Now]
+
+Boxes are being pulled by ropes along frictionless surfaces, accelerating toward the left. All of the boxes are identical. The pulling force applied to the left-most rope is the same in each figure.
+
+Rank the acceleration of the blocks. **Explain your reasoning.**
+
+.center[<img src="images\Boxsysrank.jpg" width = "600px"/>]
+
+---
+
+##.gray[2021.12.07] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather be Instagram famous, Tik Tok famous, or not famous at all?]
+
+1. Do Now
+2. Modified Atwood Machine
+3. Pivot - Mod Atwood
+4. Modified Atwood Machine with Friction
+
+HW:
+
+- AP Workbook 2.J & 2.K
+- Quiz Thursday - Solving N2L Problems
+
+---
+
+#Modified Atwood Machine
+
+Draw the Free Body Diagram for the cart and the hanging mass when:
+
+1. The system is at rest
+2. The system is accelerating
+
+--
+
+What happens to the tension when the system accelerates?
+
+--
+
+Write a N2L equation for each object and determine the acceleration of the system.
+
+---
+
+#Alternate Approach
+
+####Lets look at forces on the system
+
+$$\Sigma F\_{sys} = m\_{sys}a$$
+
+--
+
+$$ F\_{g} = m\_{sys}a $$
+
+--
+
+$$ mg = m_{sys}a$$
+
+--
+
+$$mg = (m+M)a $$
+
+--
+
+$$a = \frac{mg}{m+M}$$
+
+---
+
+#Pivot - Test it out + Derivation Practice
+
+Newton's Second Law Challenge: Modified Atwood's Machine
+
+.center[<img src="images\atwoodPivot.jpeg" width = "800px">]
+
+---
+
+#Lab Challenge:
+
+- Use a modified atwood set up with your block of wood in place of the cart. Use the acceleration of the cart to determine `\(\mu_k\)`, the coefficient of friction, of the wood and track surface.
+
+---
+
+##.gray[2021.12.06] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is the best fry shape? 🍟]
+
+1. Whiteboard AP Workbook 2.G Parts A - E (we will do part F later in class)
+  - Go over parts A - E with a table first then whiteboard assigned section
+2. Finish Friction Lab
+3. Friction Lab Board Meeting
+4. AP Workbook 2.G Part F
+5. Porter Packet
+
+HW: AP Workbook 2.F & 2.I
+
+---
+
+
+##.gray[2021.12.03] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: Is it OK to ask the genie for infinite wishes? AND What reality TV show would you star in?]
+
+
+1. Quiz
+2. Go Over AP Workbook HW (2.C & 2.D) at table
+2. Finish Friction Lab
+3. AP Workbook 2.F
+4. Porter Packet N2L
+
+HW:
+
+- AP Workbook 2.E & 2.G
+
+
+---
+
+##.gray[2021.12.01] .blue[AP Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What song do you put on when you want to get pumped?]
+
+
+1. Do Now - Porter Packet, Elevator Problems - Draw VT Graph at Table
+2. Elevator Problems
+3. Solving N2L Problems
+
+
+Note: We will finish the friciton lab on Friday
+
+
+HW:
+
+- AP Workbook 2.C & 2.D
+
+---
+
+##.gray[2021.11.30] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Do you have any snowday rituals/routines/traditions? ❄⛄]
+
+1. Do Now: Finish Collecting Lab Data
+2. Complete Pivot Questions
+3. Whiteboard Results
+4. Board Meeting
+5. Workbook 2.C
+
+HW:
+
+- AP Workbook 2.A & 2.B
+
+
+---
+
+
+##.gray[2021.11.29] .blue[AP Physics] .red[Do Now]
+
+Does your fan cart move with a constant acceleration? Why or why not?
+
+How could you experimentally determine the answer to this question? What evidence would you need to determiine if your cart moves with a constant acceleration?
+
+--
+
+**Experimentally determine the acceleration of your fan cart on setting 1**
+
+--
+
+Draw the free-body diagram for your fan cart. Does the unbalanced force change during the acceleration? Why or why not?
+
+---
+
+##.gray[2021.11.29] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite color 🌈?]
+
+1. Do Now: Lab Intro
+2. Fan Cart Lab - Collect Data and complete Pivot
+3. Fan Cart Lab - Whiteboard results
+3. Fan Cart Lab - Board Meeting and Conclusions
+4. N2L
+
+HW:
+
+- AP Workbook 2.A & 2.B
+
+---
+
+# Fan Cart Lab
+
+❓ What factors affect the acceleration of the fan cart? What can we change? What can we measure?
+
+
+
+
+
+---
+
+##.gray[2021.11.22] .blue[AP Physics] .red[Do Now]
+
+On a whiteboard with your group...
+
+A salt shaker is pushed so that it slides across a table. Once it is released, the salt shaker stops before reaching the edge of the table.
+
+1. Draw a velocity time graph representing the motion of the salt shaker.
+2. Draw the Free Body Diagram (FBD) for the salt shaker at the following moments:
+  1. Before the push
+  2. During the pushed
+  3. After the push, before the shaker stops sliding
+
+---
+
+##.gray[2021.11.22] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather be a superhero or super villain?]
+
+1. Do Now
+2. Friction Lab
+
+---
+class: center, middle
+
+#What is static friction?
+
+---
+class: center, middle
+
+# How do we measure static friction?
+
+---
+class: center, middle
+
+#What factors could affect how much static friction is on an object?
+
+---
+
+#Friction Lab
+
+Design a lab, or series of mini experiments to quantitiatively determine what factors affect static friction.
+
+---
+
+
+##.gray[2021.11.18] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is one destination on your bucket list?]
+
+1. **Do Now** Finish Spring Force Lab
+2. Spring Force Board Meeting
+3. Spring Force Practice Derivation
+4. Friction -- lets think about it and take quick data
+
+**HW**:
+
+- Enjoy *your* long weekend...AP Workbook returns after Thanksgiving
+- *If we don't finish the friction pivot...then that is homework...so lets be productive and finish!
+
+---
+
+#Spring Force
+
+**Essential Question**: How does the elongation (stretch) of your spring relate to the amount of force applied to the spring?
+
+1. Collect data from both springs (small spring and ceiling spring)
+2. Use different masses and your knowledge about the weight of an object to determine the force on your spring
+
+--
+
+Board Meeting:
+  - What was the mathematical relationship?
+  - What does the slope represent? (the [y-variable] changes by [slope] [y units] for every 1 [x units] of [x variable])
+  - What does the intercept represent? Is is negigible or non-negligible?
+
+---
+
+#Spring Force
+
+
+##$$|\vec{F_s}| = k|\vec{x}|$$
+
+---
+
+#Test the model:
+
+You want to use your spring as a mass measuring device. On a whiteboard...
+
+1. Derive an expression the for the mass `\(m\)` of a unknown hanging mass in terms of the stretch `\(x\)` of your spring, the spring constant `\(k\)` and any known physical constants.
+2. Hang something in the classroom of unknown mass on one of your springs, use the derivation to determine the mass of that object. (Note: use 9.8 for `\(g\)`)
+3. Check your results using the electronic balance.
+
+---
+
+##Lets think about Friction...
+
+.center[<img src="images/tractorBlock.png" width = "300 px"/>]
+
+A tractor is trying to pull a very heavy block of concrete across a rough concrete floor, but is unable to move it. **Draw a free body diagram for the concrete block.** What is the direction of the friction (resistive) force alone exerted on the block?
+
+--
+
+The Tractor increases its tension force on the block. What happens to the magnitude of the frictional force on the block?
+--
+The tractor continues to increase its frictional force, what will eventually happen?
+
+--
+
+🧠⛈️ What other factors could affect the frictional force?
+
+---
+
+##Lets think about Friction...
+
+Boxes are held at rest against rough vertical walls by forces pushing horizontally on the boxes as shown.
+
+.center[<img src="images/BlockWall.jpg" width = "400 px"/>]
+
+1. Draw a freebody diagram and vector addition diagram for situation A.
+--
+
+2. Rank the weights of the boxes.
+--
+
+3. Rank the magnitude of the normal forces exerted on the boxes by the wall.
+--
+
+4. Rank the fricitonal forces on the boxes exerted by the walls
+--
+
+5. What conditions would need to be satisified for the boxes to slide down the wall?
+
+---
+
+#Friction Simulation Lab
+
+**Essential Question**: *How does the normal force affect the static frictional force on an object on different surfaces?*
+
+
+---
+
+
+**.gray[2021.11.16] .blue[AP Physics] .red[Do Now]** .small[A student uses a string to pull a block across a table at a constant speed of 2 meters per second. The string makes an angle θ with the horizontal. A second student makes a free-body diagram of the block, and then uses this free-body diagram to generate a vector sum diagram as shown.]
+
+.center[<img src="images\Fbddonow1.jpg" width ="300 px"/><img src="images\Fbddonow2.jpg" width ="500 px"/>]
+
+.small[Three Students are comparing the magnitudes of the forces in the vector sum diagram. Determine **what is correct** in each statement.
+
+**Anja**: *The vector sum diagram allows us to compare the magnitudes of all four forces: The weight is the largest, then the tension, then friction, then the normal force.*
+
+**Barb**: *Well, the weight is definitely greater than the normal force. But there should be a net force to the right in the vector sum because that's the way the block is moving, and there isn't. I don't think we can use it to rank the other forces.*
+
+**Cole**: *I think we can use it to say that the weight is greater than the normal force. Also, the tension is greater than the friction, since the friction is the same length as the dashed line, and this is equal to the tension times the cosine of theta (θ). But we can't compare the vertical forces with the horizontal ones.*]
+
+---
+
+##.gray[2021.11.16] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite animated movie?]
+
+1. Do Now
+2. Practice FBDs (Finish page 73 & 74)
+3. Discuss Gravity Lab
+4. Spring Force Lab
+5. Practice Derivation
+
+---
+
+#Gravity Lab
+
+1. Discuss your results to your group:
+  - What was the mathematical relationship?
+  - What does the slope represent? (the [y-variable] changes by [slope] [y units] for every 1 [x units] of [x variable])
+      + Have you seen this number before? How do you think it is related to that?
+  - What does the intercept represent? Is is negigible or non-negligible?
+
+
+
+---
+
+##.gray[2021.11.15] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What are some of your favorite holiday traditions that you do?]
+
+
+
+1. Free Body Diagram Notes
+2. Free Body Diagram Card Sort
+3. FBD Problems in Porter Packet
+4. `\(\vec{F}_g\)` Pivot (Finish for Homework)
+
+
+---
+
+##.gray[2021.11.12] .blue[AP  Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What skill or talent do you most want to learn?]
+
+
+1. Interaction Stations
+2. Force Definitions
+3. Dueling Fan Carts
+4. Force Diagrams
+
+---
+
+
+#Interaction Stations
+
+##Contact Interactions
+
+Interaction between two objects that results in **compression**, **tension** or **shearing**.
+
+--
+
+
+**Compression** ➡ Squishing a material together
+
+--
+
+**Stretch** ➡ Extension of a material
+
+--
+
+**Shearing** ➡ Pulling surfaces parallel to each other
+
+---
+
+class:center, middle
+
+# A ***force*** is an interaction between two objects.
+
+---
+#Interaction types
+
+- **Gravitational Force** `\(\vec{F}_g\)` (Long Range) ➡ Attractive force between all objects with mass
+
+--
+- **Normal Force**  `\(\vec{F}_N\)` (Contact, Compression) ➡ "Perpendicular Force" occurs because atoms are compressed and want to return to original position. **Always perpendicular to surfaces in contact**
+
+--
+- **Spring Force** `\(\vec{F}_s\)` (Contact, Stretch or Compression) ➡ Spring is stretched or compressed and wants to return to "natural" length
+
+--
+- **Tension** `\(\vec{F}_T\)` (Contact, Stretch) ➡ Atomic Structure is stretched and wants to return to natural length
+
+--
+- **Friction** `\(\vec{F}_f\)` (Contact, Shear) ➡ Irregular surfaces interlock to slow or prevent sliding of two surfaces relative to eachother **Always parallel to the surfaces in contact**
+
+--
+- **Drag** `\(\vec{F}_D\)` (Contact) ➡ Fluid/gas Friction, resists objects motion through a fluid/gas
+
+--
+- **Bouyant Force** `\(\vec{F}_B\)` (Contact) ➡ Fluid/Gas Normal Force
+
+--
+- Electrostatic Force `\(\vec{F}_e\)` (Long Range) - Attractice or resistive force because objects have charge
+
+--
+- Magnetic Force `\(\vec{F}_M\)` (Long Range) - Attractive or repulsive force because of moving charge
+
+
+
+
+
+---
+
+##.gray[2021.11.10] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: How often do you dance?]
+
+1. Whiteboard Assigned Mallet Ball Situations
+2. Mallet Ball Board Meeting
+1. Tug-of-War Simulation
+1. Dueling Fan Carts
+1. Interaction Stations
+2. Defining Force
+
+**HW:**
+
+- Test Corrections Due Friday
+
+
+---
+
+#Mallet Ball
+
+- How do mallet taps affect the motion of the bowling ball?
+
+---
+
+
+###Tug-of-War Simulation
+
+[Simulation Link](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html?screens=1) Note: check all 3 boxes in the top right
+
+True/False: Determine whether each of the following statements are true. Support your claims with evidence and examples. (Remember that you can add/remove people while the cart is moving.)
+
+1. A person's location on the rope matters.
+2. Different combinations of people can produce the same sum of forces.
+3. The sum of the forces on the cart is always equal to the addition of the individual forces.
+4. It is impossible for the cart to accelerate to the left if there are people pulling it to the right.
+5. The side with the bigger person will always win.
+6. The side with more people will always win.
+7. It is impossible to make the cart decrease in speed.
+8. It is impossible to make the cart move at a steady speed.
+9. The cart will always move in the direction of the sum of the forces.
+10. If the sum of the forces is zero, the cart must be at rest.
+
+
+---
+
+##Tug-of-War Simulation Summary:
+
+- Make an argument (claim-evidence-reasoning) for how forces/combinations of force lead to:
+    + Constant Velocity
+    + Acceleration
+
+
+---
+
+#Interaction Stations
+
+##Contact Interactions
+
+Interaction between two objects that results in **compression**, **tension** or **shearing**.
+
+--
+
+
+**Compression** ➡ Squishing a material together
+
+--
+
+**Extension** ➡ Stretching a material
+
+--
+
+**Shearing** ➡ Pulling surfaces parallel to each other
+
+---
+
+class:center, middle
+
+# A ***force*** is an interaction between two objects.
+
+---
+#Interaction types
+
+- **Gravitational Force** `\(\vec{F}_g\)` (Long Range) ➡ Attractive force between all objects with mass
+
+--
+- **Normal Force**  `\(\vec{F}_N\)` (Contact, Compression) ➡ "Perpendicular Force" occurs because atoms are compressed and want to return to original position. **Always perpendicular to surfaces in contact**
+
+--
+- **Spring Force** `\(\vec{F}_s\)` (Contact, Stretch or Compression) ➡ Spring is stretched or compressed and wants to return to "natural" length
+
+--
+- **Tension** `\(\vec{F}_T\)` (Contact, Stretch) ➡ Atomic Structure is stretched and wants to return to natural length
+
+--
+- **Friction** `\(\vec{F}_f\)` (Contact, Shear) ➡ Irregular surfaces interlock to slow or prevent sliding of two surfaces relative to eachother **Always parallel to the surfaces in contact**
+
+--
+- **Drag** `\(\vec{F}_D\)` (Contact) ➡ Fluid/gas Friction, resists objects motion through a fluid/gas
+
+--
+- **Bouyant Force** `\(\vec{F}_B\)` (Contact) ➡ Fluid/Gas Normal Force
+
+--
+- Electrostatic Force `\(\vec{F}_e\)` (Long Range) - Attractice or resistive force because objects have charge
+
+--
+- Magnetic Force `\(\vec{F}_M\)` (Long Range) - Attractive or repulsive force because of moving charge
+
+
+
+---
+
+
+###.gray[2021.11.08] .blue[AP Physics] .red[Force Lab Groups]
+
+- **Hawks**:
+  - Eli C, Aleck I, Morgan D, Rachael F
+- **Eagles**:
+  - Luke H, Colby F, Landon P
+- **Buzzards**:
+  - Brody R, Sam A, Sam S
+- **Osprey**:
+  - Grace B, Tyler M, Xavier P
+- **Falcons**:
+  - Emma D, Claire P, Dom S
+
+
+---
+
+###.gray[2021.11.08] .blue[AP Physics] .red[Do Now]
+
+.center[<video preload="auto" width="75%" height="auto"  data-setup="{}"  loop controls><source src="videos/gliders.mp4" type="video/mp4" /></video>]
+
+Does the *system* move with a constant velocity? What about the individual parts? How do we get constant velocity motion vs. accelerated motion? Discuss at your table.
+
+---
+
+##.gray[2021.11.08] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your childhood dream job? Is it still your dream job?]
+
+
+1. Do Now
+2. Look at test & Correction Process (5 C's)
+3. Vectors - Questions?
+4. Bowling Ball Labs:
+
+
+
+HW:
+
+- Corrections Due Friday
+
+
+---
+
+#Test Corrections
+
+
+1. For each problem you got wrong: What type of mistake was it?
+  - Conceptual, Calculation, Comprehension, Clueless or Careless?
+2. For each problem you got wrong: What did you learn from this mistake?
+  - I.e. the concept, to be careful with signs, to read the directions etc
+3. For each problem you got wrong: Fix the mistake - solve the problem correctly. SHOW ALL WORK
+4. A summary paragraph of what you learned and how you can improve for future tests and assessments.
+
+---
+
+#Bowling Ball Physics
+
+
+####🤔 *How do mallet taps lead to different types of motion?*
+
+
+--
+
+
+
+##📏 Rules:
+
+1. No High Mallets
+2. No Destruction of school property
+3. Space out and be safe
+4. Respect other classes and halllway walkers
+
+---
+
+###.gray[2021.11.02] .blue[AP Physics] .red[Do Now]
+
+Cannonballs with different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the same vertical component of that velocity.
+
+.left-column[.center[<img src="images\cannondonow.jpg" width = "500 px"/>]]
+
+.right-column[**Rank the *time* the cannonballs are in the air.** Explain your reasoning.]
+
+---
+
+##.gray[2021.11.01] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather swim in the world's coldest water or eat the world's hottest pepper?🥶🥵]
+
+
+1. Do now
+2. AP Workbook 1.N & 1.O
+3. Porter Packet 2.4
+4. AP Classroom Test Review
+
+HW:
+
+- Test Thursday:
+  - Will be paced for 75-80 minutes. (~15-20 MC, 2-3 FRQ)
+  - Walk in and get started immediately. I will cut you off at the end of the block.
+  - You can use a calculator (including graphing calculators)
+
+---
+
+An airplane is flying 1200 m above the ground at a speed of 200 m/s. It drops a package that hits the ground after traveling a horizontal distance of 3130 m.
+
+For each of the changes below, use the choices below (A)-(E) to identify what will happen to the horizontal distance the package travels while falling compared to the situation above.
+
+- A. The horizontal distance will be ***greater than*** 3130 m.
+- B. The horizontal distance will be ***less than*** 3130 m.
+- C. The horizontal distance will be ***equal to*** 3130 m.
+- D. The horizontal distance will be ***zero***.
+- E. We ***cannot determine*** how this change will affect the horizontal distance.
+
+1. The planes speed is tripled. Explain your reasoning
+2. The plane is climbing straight up at the release point. Explain your reasoning.
+3. The plane is flying in level flight at an altitude of 1,100 m. Explain your reasoning.
+4. The mass of the package is increased. Explain your reasoning.
+4. The package is thrown from the plane with a vertical downward velocity of 15 m/s. Explain your reasoning.
+
+
+---
+
+##.gray[2021.11.01] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather live in the ocean or on the moon?]
+
+1. Do Now
+2. AP Workbook 1.M
+3. Projectiles at an Angle
+4. Porter Packet Projectiles at an Angle
+
+HW:
+
+- AP Classroom review & studying for your test
+
+
+---
+
+##.gray[2021.10.29] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Who is your celebrity crush?]
+
+1. Quiz
+2. Complete Horizontal Projectile Lab
+3. AP Workbook 1.M
+3. Solving Projectile at an angle problems
+
+
+HW:
+
++ Porter Packet 2.2 & 2.4
++ Review for test - AP Classroom Practice
+
+---
+
+#Velocity Components
+
+.center[<iframe src="https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_en.html" width = "900 px" height = "475 px"/>]
+
+
+---
+
+#Projectile at Angle - Level Ground
+
+.center[<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html" width = "900 px" height = "475 px"/>]
+
+---
+
+
+##.gray[2021.10.27] .blue[AP Physics] .red[Do Now]
+
+.center[<img src="images\rankingHorzProj.png" width = "600 px"/>]
+
+**Page 57 Porter Packet**  Rank the situations from the greatest to least time that it will take for the sphere to hit the ground. Make your ranking
+on a single line, using > and = signs. Ties are possible.
+
+---
+
+
+##.gray[2021.10.27] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is the best board game?]
+
+1. Do Now
+1. Quick thought - multiple trials for reaction time 🤜🏻🤛🏻
+2. Projectile Demo
+3. Solving Horizontal Projectile Problems
+4. Horizontal Projectile Lab
+
+HW:
+
+- **Reminder - video form for Miss Leuci**
+- Test Next Thursday 11/4
+  - Review on AP Classroom - FRQ Practice and MC Practice, due by 11/4 (forced studying...)
+
+---
+
+##Projectile Demo
+
+*Initial Thoughts* 🤔💭: Which ball, if either, will hit the ground first?
+
+--
+
+...But waits...lets slow down and think about it...
+
+Based on what we've seen in *Free Fall 5* and *Three Views of a Projectile* labs...
+
+
+--
+
+
+- What are the ramifications of each outcome for the launch? Discuss at your table
+    - Launched First
+    - Dropped First
+    - Same time
+
+---
+
+##The Launch:
+
+What was the result?
+
+What does that tell you? (What are the physics that are happening?)
+
+---
+
+
+class:photoback
+
+background-image:url("https://media.giphy.com/media/6Hx3iXLEBN23S/giphy.gif")
+
+#Like Woah
+
+---
+
+class:photoback
+background-image: url("https://media.wired.com/photos/5ca69fc9fc5e1d755eae9bb1/master/w_1024%2Cc_limit/projectileballshoot1.gif")
+
+
+
+---
+
+
+class:photoback
+background-image: url("https://media.wired.com/photos/5ca6a075c4db1e3ef069219d/master/w_1024%2Cc_limit/twocoinprojectile.gif")
+
+---
+
+class:photoback
+background-image: url("https://media.wired.com/photos/5ca6a0d48e72c4778d87956a/master/w_1024%2Cc_limit/vballshoot_1.gif")
+
+---
+
+
+
+class:center, middle
+
+<iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/BvekHpCBGjz/embed/captioned/?cr=1&amp;v=8&amp;wp=440&amp;rd=https%3A%2F%2Fwww.wired.com&amp;rp=%2Fstory%2F5-of-the-best-demos-of-projectile-motion-and-its-quirks%2F#%7B%22ci%22%3A0%2C%22os%22%3A5941.424999968149%2C%22ls%22%3A4216.939999954775%2C%22le%22%3A4263.3249999489635%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="1341" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background-color: white; border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"></iframe>
+
+
+
+---
+
+###Solving Horizontally "Fired" Projectile Problems
+
+At what height should you place the platform to hit the target?
+
+.center[<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html" width = "900 px" height = "450 px"/>]
+
+---
+
+###Solving Horizontally "Fired" Projectile Problems
+
+--
+
+1. 🪓 Split Givens into horizontal (`\(x\)`) and vertical (`\(y\)`) chart
+
+--
+2. ⏱ Find Flight Time 👉🏻 It connects your (`\(x\)`) & (`\(y\)`) information
+
+--
+3. 🏁 Solve question using CA Equations in (`\(y\)`) and CV Equation in (`\(x\)`) direction
+
+---
+
+##.gray[2021.10.26] .blue[AP Physics] .red[Do Now]
+
+
+You are standing at the edge of a cliff preparing for some cliff jumping during the summer. You remember from physics class that you could determine the height
+that you are jumping from by using some free fall kinematics. You remember you can determine the height based on the time it takes for something to fall dropped from rest.
+You drop a rock and time how long it takes to fall into the water below.
+
+1. Derive an experession for the height of the cliff `\(H\)` in terms of the time `\(t\)` it takes a rock to fall into the water
+below and any other physical constants (i.e. `\(g\)`).
+2. Assume you knew the height of the cliff and wanted to predict the time. Now derive an expression for `\(t\)` in terms of `\(H\)` and any physical constants.
+
+
+
+---
+
+##.gray[2021.10.26] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite place in the world?]
+
+1. Do Now
+2. Quiz Corrections
+2. Reaction Time - *using just a ruler develop a way to determine your reaction time and measure it*
+  - How different is your reaction time if you are distracted? (i.e. texting)
+3. Three Views of a projectile
+  - Discuss Results at your table
+    - How does the projectile move in the x-direction vs. y-direction? (CV vs. CA?)
+    - Is the x and y motion connected? Why or why not?
+4. Horizontal Projectile Motion
+5. AP Workbook 1.M
+
+HW:
+
+- <input type = "checkbox"> Finish Free Fall Problems in Porter Packet
+
+---
+
+##.gray[2021.10.25] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite place in the world?]
+
+1. Quiz
+2. Free Fall Problem Solving
+3. Three Views of a Projectile Pivot - Finish for Homework
+
+
+HW:
+
+- Finish Three Views of a Projectile ***for class--we need your results tomorrow***
+
+---
+
+##.gray[2021.10.21] .blue[AP Physics] .red[Do Now]
+
+**Photogate Station** Which fit is better (inverse vs. quadratic)? Which fit makes more physical sense? Why?
+
+.center[<img src="images\inversePivot.png" width = "525px"/><img src="images\quadPivot.png" width = "525px"/>]
+
+---
+
+##.gray[2021.10.21] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite type of apple?🍎🍏]
+
+1. Do Now
+2. Linearization - What is it? How do we do it?
+2. Linearize Graphs from Stations Lab
+3. Free Fall - Pivot
+4. Free Fall - Check Workbook solutions with table (1.J&K)
+5. Free Fall Problems in Porter Packet
+
+HW:
+
+- <input type = "checkbox"> AP Workbook 1.L - Linearizing Graphs
+- <input type = "checkbox"> Quiz Monday - I will post a practice today/tomorrow
+- <input type = "checkbox"> Hand in AP Check to guidance!  (14/16 right now...almost there!)
+
+---
+
+##.gray[2021.10.20] .blue[AP Physics] .red[Do Now]
+
+What do you think the mathematical relationship is for this graph? Linear? Quadratic? Inverse? Etc.
+
+.center[<img src="images\xtzoomedKB.png" width = "600 px"/>]
+
+---
+
+##.gray[2021.10.20] .blue[AP Physics] .red[Do Now]
+
+.center[<img src="images\xtnotzoomedKB.png" width = "900 px"/>]
+
+
+---
+
+##.gray[2021.10.20] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your favorite halloween costume?]
+
+
+1. Do Now
+2. Stations Lab Intro
+3. Collect Data
+4. New Analysis Technique w/ Miss Leuci
+
+
+**HW**
+
+- <input type = "checkbox"> AP Workbook 1.L - Linearizing Graphs
+- <input type = "checkbox"> Hand in AP Check to guidance!  (Only 6/16 right now 😑)
+
+---
+
+##.gray[2021.10.19] .blue[AP Physics] .red[Do Now]
+
+Remind yourself how you answered this question from last class:
+
+**As a space shuttle burns up its fuel after take-of, it gets lighter and lighter and its acceleration larger and larger. Between
+the moment it takes of and the time at which it has consumed nearly all of its fuel, is the magnitude of the average velocity
+larger than, equal to, or smaller than half its fnal speed? In a clear, paragraph-length response, explain why. [Hint: you can
+draw a diagram and refer to it in your paragraph. Maybe a velocity-time graph would help you visualize this answer.]**
+
+
+---
+
+
+##.gray[2021.10.19] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Taco 🌮 Tuesday -- Hard or soft shells? What do you top your tacos with?]
+
+1. Do Now
+2. Paragraph Length Response - share out
+3. Freefall -- what is the acceleration of an object in freefall?
+  - **Open this lab through Canvas!**
+  - Everyone at your table pick a different ball
+
+
+**HW**
+
+- <input type = "checkbox"> AP Workbook 1.J - Vertical Motion
+- <input type = "checkbox"> AP Workbook 1.K - Free Fall
+- <input type = "checkbox"> Hand in AP Check to guidance!  (Only 6/16 right now 😑)
+
+---
+
+##Tips for Paragraph Length Response:
+
+####ABCD: Answer, Basic Physics, Cite information, Draw it together
+
+--
+
+**Answer the Question** (Claim)
+
+- DO: State whether something increases, decreases, or stays the same.
+  - If given two or more cases to choose from, state which case answers the question, or clearly state that both cases are the same.
+- DON'T: Just say that something “changes”. We need to know how it changes. Talk about how it could be either case or both. You need to commit to an answer.
+
+---
+
+##Tips for Paragraph Length Response:
+
+####ABCD: Answer, Basic Physics, Cite information, Draw it together
+
+**Basic Physics** (Evidence)
+
+- Your explanation needs to include at least one statement of basic physics. You'll know that this is a statement of basic physics because a statement of basic physics is true all the time, every day, and in all situations. Basic physics can be the name of a law of physics, like "Newton’s Third Law", or it can be a statement of the law itself, such as "when the horse pulls the cart, the cart pulls back on the horse with the same force."
+
+---
+
+##Tips for Paragraph Length Response:
+
+####ABCD: Answer, Basic Physics, Cite information, Draw it together
+
+
+**Cite Important Information** (Evidence)
+
+- This is when you point out important aspects of this particular situation that are relevant to your explanation. The Cite Information sentence should start with the words “in this situation” or “in Case 1” or “for the small cart, ...” and proceed to say something about the particular problem you are presented with.
+
+--
+
+**Draw It All Together** (Reasoning)
+
+- This is when you take your statements of basic physics and the important information that you cited from this situation and show how it logically leads to the correct answer. Depending on how well you do your B’s and C’s, your “Draw it Together” might only be a single sentence.
+
+---
+
+##More Tips for Paragraph Length Response:
+
+- Do NOT use "it", "they", "them". Use good nouns (you know the words on your reference table)
+
+--
+- Use good verbs that talk about what the nouns are doing
+  - (Objects will speed up, slow down, change direction, gain/lose/transfer energy, gain/lose/transfer momentum, exert or experience forces, etc.)
+
+--
+- You do not need to restate the question.
+
+--
+- Don't write more than you mean to
+
+--
+- Don't write just "force" - state the specific force
+
+--
+- Don't write "it moves"!!
+
+
+
+---
+
+##.gray[2021.10.15] .blue[AP Physics] .red[Do Now]
+
+**⏰ Time - 15 Minutes**
+
+Create a whiteboard summary of what we need to know about motion in physics
+
+Your board should...
+
+- Be visible from across the room (no super tiny writing!)
+- Utilize multiple colors for clarity
+- Include diagrams and equations
+- Summarize our constant velocity and constant acceleration models
+
+
+---
+
+##.gray[2021.10.15] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather be a dragon or own a dragon? 🐲🐉]
+
+1. Do Now - Model Summary
+2. 1.11.2 Ranking Task: Constant Velocity vs. Constant Acceleration (Porter Packet page 48-49)
+3. 1.11.1 Paragraph Length Response
+
+HW:
+
+- Practice with Kinematics Equations (Practice "Quiz" -- really just a self graded assignment on Canvas)
+
+
+---
+
+##.gray[2021.10.14] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: How do you feel about clowns?]
+
+1. Quiz
+2. Finish Word Problems
+3. Deriving the kinematic equations
+
+HW:
+
+**AP Checks to Guidance!! DUE 10/22! ** ($87 Checks to: Schodack Central Schools)
+
+Note: $40 late fee
+
+---
+
+**DO NOW** A motion sensor is used to create the graph of a student’s horizontal velocity as a function of time as the student moves toward and away from the sensor, as shown above. The positive direction is defined as the direction away from the sensor.
+
+.left-column[.center[<img src="https://assets.learnosity.com/organisations/537/VH922720.g02.png" width = "500 px"/>]
+]
+
+.right-column[Which of the following describes the student’s final position  `\(x_f\)`  in relation to the starting position  `\(x_0\)`  and the student’s average horizontal acceleration  ax  between  0.0 s  and  3.0s ?
+
+1. Position  `\(x_f\)`  is farther away from the sensor than  `\(x_0\)` , and  `\(a_x\)`  is positive.
+2. Position  `\(x_f\)`  is farther away from the sensor than  `\(x_0\)` , and  `\(a_x\)`  is negative.
+3. Position  `\(x_f\)`  is closer to the sensor than  `\(x_0\)` , and  `\(a_x\)`  is positive.
+4. Position  `\(x_f\)`  is closer to the sensor than  `\(x_0\)` , and  `\(a_x\)`  is negative.
+]
+
+---
+
+##.gray[2021.10.07] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What are you best at fixing?]
+
+1. Do Now
+2. Junior Class Meeting... 9:30-9:45
+3. Problem-Solving with VT Graphs
+  - Gallery Walk to check work
+
+- Quiz Next Class ~~Tues~~ ... ~~Wed~~...Thursday... (Interpret Graphs & a word problem)
+  - **Express Motion**
+  - **Motion Graphical Analysis**
+  - **Predict Motion**
+
+
+
+
+---
+
+##.gray[2021.10.07] .blue[AP Physics] .red[Do Now 1]
+
+**First**
+
+Count your color wars score
+
+
+**Second**
+
+Use a velocity-time graph to answer the following:
+
+*A poorly tuned car accelerates from rest to a speed of 28 m/s in 20 seconds. What is the acceleration of the car? How
+far does the car travel in this time?*
+
+
+---
+
+#.gray[2021.10.07] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite podcast?]
+
+
+1. Do Now
+2. [Solving Physics Word Problems](https://mrporterphysics.github.io/Presentations/APCAPM/talks/problemsolving.html#1)
+
+---
+
+#.gray[2021.10.06] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What’s your favorite month?]
+
+1. Pivot Quiz
+2. VT Graphs and Area
+3. Applying VT Graphs to Problems
+
+HW:
+
+- AP Workbook 1.G & 1.I
+
+---
+
+###.gray[2021.10.04] .blue[AP Physics] .red[Do Now]
+
+.left-column[The position-time graph shown represents the motion of two children, Ariel and Byron, who are moving along a narrow, straight hallway.
+.center[<img src="images/Byronariel.jpg" width = "300 px"/>]
+
+**Complete this on your own in your notebook. Then compare with your table once *everyone* is finished.**
+]
+
+.right-column[1. Do either of the children ever change direction? If so when does this happen? Explain your reasoning.
+2. Are the two children ever at the same position along the hallway? If so when does this happen? Explain your reasoning.
+3. Do the two children ever have the same speed? If so when does this happen? Explain your reasoning.
+4. Doo the two children ever have the same acceleration? If so when does this happen? Explain your reasoning.]
+
+
+---
+
+#.gray[2021.10.04] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? [Don't say money...that's boring]]
+
+1. Do Now
+2. Whiteboard Stacks problems
+3. VT Graphs - Porter Packet 2.4
+
+**HW**
+
+- Quiz Wednesday - It will be a Pivot, it **will not** be autograded
+
+
+---
+
+###.gray[2021.10.01] .blue[AP Physics] .red[Do Now]
+
+
+
+.right-column[Position vs. time graphs for boats traveling along a narrow channel are shown below. The scales on both axes are the same for all of these graphs. In each graph, a point is marked with a dot. <img src="images/Xtgraphss.jpg" width = "500 px".>]
+
+.small-list[.left-column[1. For which of these cases, if any, is the position zero at the indicated point? Explain your reasoning.
+1. For which of these cases, if any, is the position negative at the indicated point? Explain your reasoning.
+1. For which of these cases, if any, is the velocity zero at the indicated point? Explain your reasoning.
+1. For which of these cases, if any, is the velocity negative at the indicated point? Explain your reasoning.
+1. For which of these cases, if any, is the acceleration zero at the indicated point? Explain your reasoning.
+1. For which of these cases, if any, is the acceleration negative at the indicated point? Explain your reasoning.]
+]
+
+
+---
+
+#.gray[2021.10.01] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What’s your favorite food combination? 🥞🧈]
+
+1. Do Now
+2. Porter Packet 1.6
+  - Complete and check with online simulation
+3. Porter Packet 1.7
+  - Try on your own, compare to table, **everyone** will whiteboard one of the problems
+
+
+---
+
+#.gray[2021.09.30] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Hanging out by a camp fire, bonfire, or fireplace?]
+
+1. Do Now ***Start ASAP***: Finish Card Sort
+2. Test & Check Card Sort with Dynamics Cart
+    1. Whiteboard Assigned Situation
+    2. Fill out summary chart
+        1. ⬆️ increasing magnitude, ⬇️ decreasing magnitude, ↔️ remaining the same
+3. Go Over AP 1.H
+
+---
+
+#.gray[2021.09.28] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: You ***have*** to sing karaoke, what song do you pick?]
+
+1. Do Now:
+  - Finish Making VT Graph
+  - Whiteboard VT graph & prepare to present results (does your toy speed up constantly? additionally...does it speed up constantly for a ***portion*** of the motion? can you identify that portion?)
+2. Card Sort, carts & ramps
+
+HW:
+
+- AP Workbook 1.H:
+  - DON'T LOOK UP THE ANSWERS!! Just do your best, we will start next class with this
+  - Submit scans to Canvas
+
+---
+
+#.gray[2021.09.27] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Who is your favorite Disney hero or heroine? Would you trade places with them?]
+
+1. New Groups
+2. Changing Speed Lab
+
+
+---
+
+#.gray[2021.09.24] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What slang are you really happy went out of fashion?]
+
+
+1. Pen and Paper Quiz
+  - Scan and submit
+2. Lab Practical: Bowling Ball Challenge (on Pivot)
+  - Complete on your own
+  - If any weirdo autograding happens call me over
+
+
+HW:
+
+- 😎 Enjoy your weekend
+
+---
+
+##.gray[2021.09.22] .blue[AP Physics] .red[Do Now]
+
+
+Each graph below shows the position of an object as a function of time.
+
+.center[<img src="images/Xtrank.jpg" width="1000 px"/> ]
+
+
+**Rank the objects from greatest to least *displacement* from 0 to 4 seconds.**
+
+**Rank the objects from greatest to least *average speed* from 0 to 4 seconds.**
+
+
+---
+
+#.gray[2021.09.22] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What household chore do you actually enjoy?]
+
+1. Do Now
+2. Dueling Buggies
+
+**HW:**
+
+- Quiz:
+  - **Express Motion** *I can express the motion of an object or system using narrative, mathematical, and graphical representations.*
+  - **Motion Graphical Analysis** *I can create mathematical models and analyze graphical relationships for accleration, velocity, and position of the center of mass of a system and use them to calculate properities of motion of the center of mass of a system.*
+- Pivot Lab Practical - ***VERY*** similar to dueling buggies
+
+
+---
+
+##.gray[2021.09.21] .blue[AP Physics] .red[Do Now]
+
+In each case shown, someone is running on a flatbed train car as the train moves. In cases C and D, the person is running
+toward the front of the train, while in cases A and B the person is running toward the rear. The speeds of the train and of each
+person relative to the train are given. An observer is standing beside the track watching each train go by. **Rank these runners on how fast they are moving relative to the observer standing beside the tracks.**
+
+
+.center[<img src="images/runnerrelative.png" width = "600 px"/>]
+
+
+---
+
+#.gray[2021.09.20] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: If you had to delete all but 3 apps from your smartphone, which ones would you keep??]
+
+
+1. Do Now - Train
+2. Relative Motion Video Clip (Legendary Video)
+3. Relative Motion Pivots 1D & 2D
+4. AP Workbook 1.E - Relative Velocity
+
+HW:
+
+- Not officially homework...but quiz corrections are ***strongly*** encouraged...
+- Quiz Friday
+
+
+---
+
+.center[<iframe width="900" height="600" src="https://www.youtube.com/embed/bJMYoj4hHqU?start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>]
+
+---
+
+.center[<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">Cool example of relative motion. Messed me up for a good while before I saw it! <a href="https://t.co/8BZ9mtaM3Q">pic.twitter.com/8BZ9mtaM3Q</a></p>&mdash; Matthew Blackman (@UniverseAndMore) <a href="https://twitter.com/UniverseAndMore/status/1350584699324919811?ref_src=twsrc%5Etfw">January 16, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]
+
+---
+
+##.gray[2021.09.20] .blue[AP Physics] .red[Do Now]
+
+.small[Six students went out for pizza to celebrate after completing their physics final. All six went directly from their residence hall to the nearby hangout,
+but they returned along the paths shown, taking different times. Values for the round-trip distances they traveled and total times they took to walk their routes are given in the figures.
+]
+
+.center[<img src ="images/PizzaRank.jpg" width = "900px"/>]
+
+**Rank these situations on the basis of the *average velocity* for the total trip.** (i.e A > B = C ... etc)
+
+
+---
+
+#.gray[2021.09.20] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather vacation on the beach 🏖️ or adventure in the mountains ⛰️?]
+
+1. Do Now
+2. Porter how the grades work in here?
+2. Interpreting XT Graphs
+  1. Each group assigned questions to whiteboard
+  2. **Everyone** will whiteboard question 12
+3. VT Graphs and what is "area under the curve"?
+
+
+HW:
+
+- AP Workbook 1.F
+- AP Checks 👉🏻 $87 to guidance by 10/22 (check to Schodack Central Schools)
+
+
+---
+
+
+#.gray[2021.09.16] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Are you more productive at night or in the morning?]
+
+1. Quiz
+2. AP Workbook 1.C Average vs. Instantaneous Velocity
+2. "How Far?"
+2. Porter Workbook:
+  - Finish 1.1 (pages 5 & 6)
+  - 1.3 Interpreting Position vs. Time Graphs
+
+HW:
+
+- AP Workbook 1.D
+
+---
+
+
+
+.center[<img src="images\position-time_1.PNG" width = "450 px"/><img src="images\position-time_2.PNG" width = "450 px"/>]
+
+.left-column[.small[Rank these position time graphs from greastest to least in terms of "how far" the object traveled.
+
+Top Left (G1): Y-axis: 0-10, X-axis: 0-5, starts at (0,10) goes to (10,0)
+
+Top Right (G2): Y-axis: 0-10, X-axis: 0-5, start (0,10), changes at (4,2) and (7,5) end at (10,8)
+
+Bottom (G3): Y-axis: 0-10, X-axis: 0-5, starts at (0,5), changes at (2,7), (4,-1), (5,-1) and ends at (7,5)]
+
+].right-column[<img src="images\position-time_3.PNG" width = "450 px"/>]
+
+---
+
+
+###Displacement
+
+- Change in position of an object
+- `\(\Delta x = x_f - x_i\)`
+- Includes direction
+
+--
+
+###Distance
+
+- the **magnitude** (or size) of displacement between two positions
+- more often referred to as ***distance traveled*** which is the total length of the path traveled between two positions
+
+--
+
+###Position
+- Where an object is at any particular time
+- "Location"
+
+
+---
+
+##.gray[2021.09.15] .blue[AP Physics] .red[Do Now]
+
+As a group, on your whiteboard, sketch a position vs. time graph and the motion maps for each of the tricyclists in the video below:
+
+.center[<video preload="auto" width="70%" height="auto"  data-setup="{}"  loop controls><source src="videos/Tricyclerace.mov" type="video/mp4" /></video>]
+
+
+
+---
+
+
+#.gray[2021.09.15] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What rule do you wish they would introduce into your favorite sport (or game)?]
+
+1. Do Now
+2. Compare Porter Workbook page 4
+  - Compare to your group
+  - Compare answer to someone at another table
+3. Motion Sensors & Walk the Graph
+
+
+---
+
+##.gray[2021.09.14] .blue[AP Physics] .red[Do Now]
+
+
+
+.center[
+<img src="https://media.giphy.com/media/xT1XGQT6XrVUECNPk4/giphy.gif" width = "400px"/>"]
+
+Scooter Dog starts scootering 3 meters from the stop sign, our reference zero position. Scooter Dog moves at 4 meters per second for 3 seconds before they are mobbed by observers in the park.
+
+1. Write the equation of motion for Scooter.
+2. Predict Scooter's position after the 3 seconds of motion.
+
+---
+
+#.gray[2021.09.14] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What would your superpower be and why?]
+
+
+1. Do Now
+2. Claim-Evidence-Reasoning w/ [Motion](https://mrporterphysics.github.io/Presentations/APCVPM/talks/APCVPM.html#1) Slides
+3. Does it move with constant velocity?
+4. Motion Maps & Multiple Representations
+5. Practice with Multiple Representations
+
+
+HW:
+
+AP Workbook 1.A & 1.B
+
+
+---
+
+#.gray[2021.09.09] .blue[AP Physics] .red[Do Now]
+
+##Join AP Classroom
+
+##[myap.collegeboard.org](myap.collegeboard.org)
+
+##3D934V
+
+
+---
+
+#.gray[2021.09.09] .blue[AP Physics] .red[Agenda]
+
+.qotd[**Question of the Day:** Do you have any weird/unique routines or superstitions? (For example: I ***have*** to put on my left sock before my right sock, and the same for shoes, left on first.)]
+
+1. Do Now - Continue taking data for your buggy lab
+3. Whiteboard Results
+4. Board Meeting
+    1. What does your slope mean? How do you know?
+    2. What does your intercept mean? How do you know?
+5. Takeaways from Buggy Lab
+
+
+HW:
+
+- Pivot Assignment on Canvas - Billard Ball Race
+
+
+---
+
+#Buggy Lab
+
+- What does the slope represent?
+  - For every statement: "The &lt; **quantity on vertical axis** &gt; goes up &lt; **slope value with vertical units** &gt; for every 1 &lt; **horizontal unit** &gt; of &lt; **quantity on horizontal axis** &gt;."
+- What does the intercept mean?
+
+---
+
+#The Models...
+
+---
+
+#The Models...
+
+
+Math: $$y = mx + b$$
+
+--
+
+Specific Model: $$position = (75\textrm{ cm/s})time + 23 \textrm{ cm}$$
+
+--
+
+Generic Model: $$x = \bar{v}t + x_0$$
+
+--
+
+Average Velocity:
+
+$$\bar{v} = \frac{\Delta x}{\Delta t}$$
+
+---
+
+#Velocity
+
+- is a ***vector*** quantity -- means it has two properties: size and direction
+- Size: how great or little the rate of position changing with time
+- Direction: the direction that the object is moving
+- is the slope of a position vs. time graph
+
+---
+
+#Speed vs. Velocity
+
+- **Speed** is a scalar quantity
+
+
+---
+
+class: center, middle
+
+#What can we do with a model?
+
+---
+
+class: center, middle
+
+#Make Predictions!
+
+---
+
+#Predicting with Models
+
+Predict your buggy's positions after 3 seconds.
+
+--
+
+- Why isn't your predicted position exactly the same as the measured position? If you think you might have made measurement mistakes, what specifically were they, and how would those mistakes affect the model?
+--
+
+- Does having a non-zero percent different mean the model was wrong? Is the model still useful, even if its predictions are off a little bit? Explain.
+--
+
+- Why might you need a better model of motion? Think of a "real world" example where it would be important to have a more accurate model of a moving object. (When does this model for motion become limited?)
+
+
+---
+
+
+
+
+
+
+#.gray[2021.09.09] .blue[AP Physics] .red[Do Now]
+
+
+In your notebook (or a scrap piece of paper if you don't have one) answer the following prompts:
+  - *What is a scientific model?*
+  - *How do you make a scientific model?*
+  - *How do you describe and quantify motion?*
+
+---
+
+#.gray[2021.09.09] .blue[AP Physics] .red[Agenda]
+
+.qotd[What is your most used emoji? 🤦🏻‍♂️]
+
+1. Question of the Day
+2. Disucss Do Now
+3. Whiteboard your Buggy Results
+4. Buggy Board Meeting
+5. Buggy Lab Part II
+
+---
+
+#.gray[2021.09.08] .blue[AP Physics] .red[Do Now]
+
+Don't get too comfortable (spoiler...you will be moving)
+
+Go to: https://forms.gle/zjAjMq8iPbjqw7MQA or... go to Canvas and click the link in the slides...or...
+
+
+.center[<img src="images/firstdayQR.png" width = "325px"/>]
+
+or... go to Canvas and click the link in the slides...
+
+---
+
+
+#.gray[2021.09.08] .blue[AP Physics]
+##.red[Welcome!]
+
+.qotd[Question of the Day: Sweet or savory for breakfast?]
+
+1. Fill out questionnaire ✅ & Index Card (Name & Phone Number)
+1. Question of the Day
+2. Lab Grouping
+2. Survival Island
+3. Does the 🚗 move in a consistent manner?
+
+---
+
+class:center, middle
+
+#Question of the Day:
+
+#.blue[Sweet or savory for breakfast?]
+
+---
+
+#Lab Grouping
+
+Arrange yourself into ***logical*** lab groups based on the word on your card.
+
+
+**Rules:**
+
+The class must have
+
+- 5 Groups
+- 4 Groups of 3 People
+- 1 Group of 4 People
+
+---
+
+class: center, middle
+
+#Why? What connections to physics class?
+
+---
+
+
+#Why?
+
+--
+
+- You may feel frustrated as you try to figure physics out. That’s okay.
+--
+
+- Physics is hard to understand until you know the “rules of the game.”
+--
+
+- But, once you discover the rules, physics often seems easy and you may be surprised that others don’t understand.
+--
+
+- However, remember that you didn’t always understand.
+--
+
+- When you discover the rules and understand without someone just telling you the “answer”, you are excited.
+--
+
+- The journey to understanding is very important. So, no one is going to tell you the answer, but we’re all here to support each other on our journeys.
+--
+
+- Being told the “answer” at most gives you one answer that you didn’t know. Learning to think critically and arrive at the answer with support develops a skill that you will use to find many answers.
+
+---
+
+class:schodack
+
+#Inquiry
+
+- make careful observations
+--
+
+- gather lots of data (need to see more cards)
+--
+
+- look for patterns, compare and contrast, look for extremes
+--
+
+- simply the problem being investigated
+--
+
+- constrain the variables (set number of groups with specific sizing)
+--
+
+- propose a hypothesis, test it, modify it based on results, repeat
+
+---
+
+#Survival Island 🏝️
+
+You and your group are stranded on an deserted island 😮!
+
+--
+
+Using *each* of your <u>unique skill's</u> develop a plan to escape the island.
+
+--
+
+Whiteboard your response (one person)
+- remember to remain physically distant when possible
+
+--
+
+Be prepared to share out your plan to escape the island as a group. Each of you should offer a part of the plan to the class.
+
+
+---
+
+
+#Pivot Interactives
+
+Create an account...or join our class...or both
+
+
+Go to [pivotinteractives.com](https://app.pivotinteractives.com/join-class?classKey=ck-2400cccf)
+
+
+Class Key:
+
+.center[#ck-2400cccf]
+
+
+
+
+---
+
+class:center, middle
+
+#.gray[Does Your Buggy]
+
+#.blue[Move in a] .red[*consistent*] .blue[manner?]
+
+---
+
+#🚗 Buggy Lab Part I
+
+
+Develop an experiment to determine if you buggy moves in a consistent manner.
+
+---
+
+
+
+
+
+    </textarea>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">   </script>
+
+
+
+
+
+    <script>
+      var slideshow = remark.create({ratio:'16:9'});
+
+      // Setup MathJax
+     MathJax.Hub.Config({
+         tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+         }
+     });
+
+     MathJax.Hub.Configured();
+
+
+    </script>
+
+
+
+  </body>
+</html>

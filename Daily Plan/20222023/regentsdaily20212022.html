@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regents Physics Daily 2021-2022</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+
+      @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+      @import url('https://fonts.googleapis.com/css?family=Creepster');
+      @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+      @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+      @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Teko:700&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+      body {
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 3em;
+        color:black;
+     }
+      h1, h2 {
+        font-family: 'Libre Franklin', sans-serif;
+        line-height: 1em;
+      }
+
+      h3 {
+        font-family: 'Alegreya SC', serif;
+      }
+
+      .gray{color: #989ea6;}
+      .red{color:#E01D36;}
+      .blue{color:#0c2545;}
+
+      .remark-slide-content h4 {font-size: 1.3em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-slide-content ul ul{font-size: 100%;}
+      .remark-slide-content ol ol{font-size: 100%;}
+      .remark-slide-content ol ul{font-size: 100%;}
+      .remark-slide-content ol ul ul{font-size: 100%;}
+      .remark-slide-content ol ol ul{font-size: 100%;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* Two-column layout */
+     .left-column {
+
+       width: 50%;
+       height: 92%;
+       float: left;
+     }
+     .agenda {
+
+       width: 45%;
+       height: 92%;
+       float: left;
+     }
+
+     .small p{font-size: 1em;}
+
+     .goals{
+       width: 50%;
+       height: 92%;
+       float: right;
+       font-family: 'Inconsolata';
+
+     }
+
+     .right-column {
+       width: 50%;
+       float: right;
+       padding-top: -4em;
+     }
+
+
+     .left-column-short {
+       color: #000000;
+       width: 35%;
+       height: 95%;
+       float: left;
+       padding-top:-4em;
+     }
+       .left-column-short h2:last-of-type, .left-column h3:last-child {
+         color: #000;
+       }
+     .right-column-long {
+       width: 65%;
+       float: right;
+       padding-top: 1em;
+       font-size: 1.4em;
+     }
+
+     .footer {
+   position: fixed;
+   left: 15px;
+   bottom: 15px;
+   width: 5%;
+   background-color: white;
+   color: black;
+   text-align: center;
+  }
+
+
+
+  .checklist {list-style-type: 'none';}
+  .checklist li:before{font-size:100%; content:"✅";}
+  .inverse {
+        background: #272822;
+        color: #ffffff;
+        font-family: 'Fira Sans', sans-serif;
+      }
+      .inverse h1, .inverse h2 {
+        color: #9966FF;
+        line-height: 0.8em;
+        font-family: 'Inconsolata', monospace;
+      }
+
+      .halloween {
+            background: #6032a8;
+            color: white;
+
+          }
+          .halloween h1, .halloween h2, .halloween h3 {
+            color: Orange;
+            font-family: 'Creepster', cursive;
+            line-height: 0.8em;
+            text-shadow: 0 0 20px #333;
+          }
+
+          .thanksgiving{
+              background:#611f00;
+              color:white;
+
+          }
+
+          .thanksgiving h1, .thanksgiving h2, .thanksgiving h3 {
+            font-family: 'Cinzel', serif;
+            color: Orange;
+          }
+
+          .thanksgiving a {
+            color: white;
+            text-decoration: underline;
+
+          }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+
+      .small-list{
+        font-size: 80%;
+      }
+
+      .photoback {
+            background-size: 100%;
+            color: Black;
+
+            }
+
+      .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                  color: white;
+
+                  line-height: 0.8em;
+
+                  }
+      .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
+                color:white;
+                background-color: rgba(119,119,119,0.3);
+
+
+            }
+
+      .large h1{font-size:3em;}
+
+
+      .schodack {
+            background: #bfc1c7;
+            color: #1B438B;
+            font-family: 'Gowun Dodum', sans-serif;
+            font-size: .45em;
+          }
+        .schodack h1, .schodack h2 {
+            display:inline-block;
+            background-color: #E01D36;
+            color: #FFFEFF;
+            line-height: 1.1em;
+            margin-bottom: 10px;
+            font-family: 'Libre Franklin', sans-serif;
+          }
+          .schodack p {
+            margin-top: 5px;
+          }
+
+      div.my-header {
+          position: fixed;
+          top: 3px;
+          right: 3px;
+          height: 30px;
+          width: 100%;
+          text-align: right;
+      }
+
+      .qotd{
+        font-size: 1.1em;
+        font-family: 'Poor Story', cursive;
+
+      }
+
+      .material-icons.md-18 { font-size: 18px; }
+      .material-icons.md-24 { font-size: 24px; }
+      .material-icons.md-36 { font-size: 36px; }
+      .material-icons.md-48 { font-size: 48px; }
+      .material-icons.md-24 { font-size: 56px; }
+      .material-icons.md-36 { font-size: 64px; }
+      .material-icons.md-72 { font-size: 72px; }
+      .material-icons.md-80 { font-size: 80px; }
+      .material-icons.md-88 { font-size: 88px; }
+      .material-icons.md-96 { font-size: 96px; }
+
+
+          </style>
+        </head>
+        <body>
+          <textarea id="source">
+
+
+layout: true
+<div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
+
+
+---
+
+
+##.gray[2022.06.09] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your question of the day?]
+
+1. Regents Review & Test Prep:
+    + Year Review Whiteboard
+    + Class Review Document
+    + Practice Questions
+
+
+
+---
+
+##.gray[2022.06.06] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Should there be a sarcasm font?]
+
+
+1. 2017 Regents: #36-50
+2. Nuclear Physics
+
+
+---
+
+##.gray[2022.06.06] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Should there be a sarcasm font?]
+
+
+
+1. 2017 Regents: #19-35
+2. Standard Model Practice
+3. Nuclear
+
+
+---
+
+##.gray[2022.06.01] .blue[Regents Physics] .red[Agenda]
+
+1. Super Ultimate Graphing Challenge
+2. Regents Review 2011 Regents Exam
+
+
+
+
+---
+
+##.gray[2022.05.26] .blue[Regents Physics] .red[Agenda]
+
+1. 2017 Regents Exam: #1-18
+2. Standard Model
+
+
+---
+
+##.gray[2022.05.24] .blue[Regents Physics] .red[Agenda]
+
+1. Regents 2018: Questions 75 - 85 [Show all work, including equation and substitution with units.]
+2. Modern - Energy Level Practice
+
+---
+
+##.gray[2022.05.23] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is the best thing you have ever bought?]
+
+1. Regents 2018: Questions 60 - 75 [Show all work, including equation and substitution with units.]
+2. Modern - Energy Level Diagrams
+
+
+---
+
+##.gray[2022.05.20] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: ]
+
+1. Regents Review
+2. Finish Photoelectric Pivot
+3. Particles and Wave Nature
+
+---
+
+##.gray[2022.05.18] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What incredibly common thing have you never done?]
+
+1. Regents 2018: Pages 5 & 6
+2. Photoelectric Effect Pivot
+3. Particles & Wave Nature
+
+
+---
+
+##.gray[2022.05.17] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather be the hero or the villain?]
+
+
+1. Do Now - Regents 2018: pages 4 & 5
+2. Wave-Particle Duality
+
+
+
+---
+
+##.gray[2022.05.16] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather be the hero or the sidekick?]
+
+
+1. Do Now - Regents 2018: pages 2 & 3
+2. Diffraction & Diffraction Practice
+3. E&M Spectrum Practice
+
+
+
+---
+
+##.gray[2022.05.12] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What’s the worst thing you’ve eaten out of politeness?]
+
+
+1. Finish Refraction Problem
+2. Regents Refraction Practice
+3. Diffraction and Diffraction Demo
+
+---
+
+##.gray[2022.05.11] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: ]
+
+1. Do Now: Finish 2019 Regents Exam
+2. Refraction & Snell's Law
+3. Refraction Practice
+
+---
+
+#Index of Refraction
+
+- Speed of a light wave is dependent on the *optical density* of the material -- called the ***index of refraction***
+--
+
+  - Optical Density is NOT dependent on the density of the material
+  - Related to the sluggish tendency of the atoms of the material to the main energy of the wave in the vibrational motion before re-emitting the light
+--
+
+- Greater index of refraction the slower the light
+--
+
+$$n_{material} = \frac{c}{v}$$
+--
+
+- n = index of refraction
+- c = speed of light in a vacuum
+- v = speed of light in the new medium
+
+---
+
+##Reference Table
+
+.center[<img src="https://aplusphysics.com/courses/regents/waves/images/Index_Refraction_Table.png" width = "375 px"/>]
+
+---
+#Which way does light bend?
+
+- Light traveling from a fast to slow medium:
+  - If light travels from a material with a low n to a higher n the light will bend towards the normal.
+  - Example: Light traveling from air to water.
+--
+
+- Light traveling from a slow medium to a fast medium:
+  - If a light travels from a medium with a high n to a lower n the light will bend away from the normal line.
+  - Example: From Diamond to water.
+
+
+---
+
+#Snell's Law
+
+##$$ n_1 \sin \theta_1 = n_2 \sin \theta_2 $$
+
+--
+
+Additionally,
+
+##$$ \frac{n_2}{n_1} = \frac{v_1}{v_2} = \frac{\lambda_1}{\lambda_2} $$
+
+---
+
+##.gray[2022.05.10] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What takes up too much of your time?]
+
+1. Do Now: Finish 2019 Regents Exam (Questions 66-80)
+1. Refraction Lab w/ Water
+2. Refraction Lab continued with Pivot video
+3. Refraction practice
+
+---
+
+##.gray[2022.05.05] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What’s the weirdest food you’ve eaten?]
+
+1. Do Now: Pages 11-13 2019 Regents Exam (Questions 51-65)
+2. Refraction
+3. Refraction Lab
+
+---
+
+##.gray[2021.05.04] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What smell brings back great memories?]
+
+1. Do Now: Page 9 & 10 of 2019 Regents Exam
+2. Pivot - Angle of Reflection
+3. Regents Reflection Practice
+4. Diffraction
+
+---
+
+##.gray[2021.05.02] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Should you bite or lick your ice cream?]
+
+1. Do Now: Page 7 & 8 of 2019 Regents Exam
+2. Waves Quiz
+3. E&M Spectrum
+
+
+---
+
+##.gray[2021.04.29] .blue[Regents Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: Who would you want to be stuck on an elevator with (anyone past or present)?]
+
+
+1. Do Now: Page 5 & 6 of 2019 Regents Exam
+2. Standing Waves
+3. Doppler Effect
+4. Regents Waves Practice
+
+QUIZ MONDAY:
+
+- Wave basics & characteristics
+- Interference
+
+---
+
+##.gray[2021.04.28] .blue[Regents Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: Who would you want to be stuck on an elevator with (anyone past or present)?]
+
+
+1. Do Now: Page 4 of 2019 Regents Exam
+1. Speed Dating - Drawing Wave Superposition
+2. Standing Waves
+3. Regents Wave Practice
+
+
+HW:
+
+- Waves Quiz Tomorrow
+
+
+---
+
+class: photoback
+background-image: url("https://cdn.pixabay.com/photo/2020/06/05/18/53/mont-ventoux-5264149_960_720.jpg")
+
+
+##.gray[2021.04.26] .blue[Regents Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: If you could explore any part of the world, all expenses paid, where would you choose to go? Why?]
+
+
+1. Do Now - Page 3 of 2019 Regents Exam
+2. Wave Terms - Review
+3. Pulse Basics Practice
+4. Speed Dating - Drawing Wave Superposition
+
+
+---
+
+##.gray[2021.04.25] .blue[Regents Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What is your favorite place in the world?]
+
+
+1. Do Now - Page 2 of 2019 Regents Exam
+1. Pivot - Wave Behaviors: Reflection and Superposition
+  - Complete with your lab group
+2. Share Results of Pivot
+3. Standing Waves
+4. Tube Resonance Results
+
+
+
+---
+
+##.gray[2021.04.14] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your first username?]
+
+1. Cookie & Questionnaire
+2. Finish Superposition Pivot
+  - When finished whiteboard answers to part 2 in CER Format
+3. Resonance
+4. Tube Resonance Lab
+
+
+
+---
+
+##.gray[2021.04.12] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your first username?]
+
+1. Whiteboard Graph from Spring Oscillator Lab
+2. Wave Formula
+3. Wave Behaviors: Reflection and Superposition
+4. Standing Waves
+
+
+---
+
+##.gray[2021.04.11] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What spring activity are you most looking forward to when the weather **finally** gets nice?]
+
+1. Do Now: Sign Card for Miss Leuci
+2. Complete "Getting Started" of Properties of Transverse Mechanical Waves
+3. Whiteboard Group Answers to 👆🏻
+4. Complete Collect Your Data & Make a Graph:
+  - Combo 1: Tension I, Amplitude E
+  - Combo 2: Tension II, Amplitude E
+  - Combo 3: Tension I, Amplitude D
+  - Combo 4: Tension III, Amplitude D
+5. Whiteboard Results & Discuss
+
+---
+
+##.gray[2021.12.20] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your personal motto or slogan? (Repeat...forgot to ask)]
+
+1. Solving Horizontal Projectile Questions (Porter Packet)
+2. Mini Lab (No Pivot involved, solve on whiteboard as a team)
+  - Determine the velocity that your ball leaves the table only using a meter stick
+  - Use this info about launch velocity to predict landing spot from a new (taller) height
+
+---
+
+
+##.gray[2021.12.20] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your personal motto or slogan?]
+
+
+1. Whiteboard Three Views of a Projectile & Discuss as a Class
+3. Ranking Task & [Simulation](https://glowscript.org/#/user/NPorter/folder/My_Programs/program/Horz.ProjectileMotionRankingTask/edit)
+4. Demos
+5. Solving Horizontally Fired Projectile Problems
+
+
+---
+
+##.gray[2021.12.17] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What book, movie read/seen recently you would recommend and why?]
+
+
+1. Free Fall Quiz
+2. Finish Three Views of a Projectile & Discuss as a Class
+3. Ranking Task & [Simulation](https://glowscript.org/#/user/NPorter/folder/My_Programs/program/Horz.ProjectileMotionRankingTask/edit)
+4. Demos
+5. Solving Horizontally Fired Projectile Problems
+
+
+---
+
+##.gray[2021.12.15] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather fight 100 duck-sized horses or 1 horse-sized duck?]
+
+1. Free Fall Problem Solving
+2. Three Views of a Projectile
+3. Horizontal Projectile Ranking Task
+4. Projectile Demos
+
+
+HW:
+
+- Free Fall Quiz on Friday
+
+
+---
+
+##.gray[2021.12.14] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?]
+
+1. Finish Free fall five and discuss
+2. Free Fall Problem Solving
+3. Three Views of a Projectile
+
+
+---
+
+##.gray[2021.12.13] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your weekend highlight?]
+
+1. Regents Friction Questions
+2. Freefall Five Lab
+
+
+---
+
+##.gray[2021.12.09] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Movie about your life, what is the song that goes with the opening credits?]
+
+
+1. Quiz
+2. Finish Friction Lab:
+  - Any more data needed?
+  - Whiteboard
+  - Board meeting
+3. Regents Problems
+
+
+
+
+---
+
+##.gray[2021.12.08] .blue[Regents Physics] .red[Do Now]
+
+Boxes are held at rest against rough vertical walls by forces pushing horizontally on the boxes as shown.
+
+.left-column[<img src="images/BlockWall.jpg" width = "500 px"/>]
+
+.right-column[1. Draw a freebody diagram and vector addition diagram for situation A.
+2. Rank the weights of the boxes.
+3. Rank the magnitude of the normal forces exerted on the boxes by the wall.
+4. Rank the fricitonal forces on the boxes exerted by the walls
+5. What conditions would need to be satisified for the boxes to slide down the wall?
+]
+
+---
+
+##.gray[2021.12.08] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Do you prefer pens or pencils? Why?
+
+1. What is static friction vs. kinetic friction?
+2. Static Friction Lab
+
+---
+
+class: center, middle
+
+#What is static friction?
+
+---
+class: center, middle
+
+# How do we measure static friction?
+
+---
+class: center, middle
+
+#What factors could affect how much static friction is on an object?
+
+---
+
+#Friction Lab
+
+Design a lab, or series of mini experiments to quantitiatively determine what factors affect static friction.
+
+---
+
+##.gray[2021.12.07] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather be Instagram famous, Tik Tok famous, or not famous at all?]
+
+1. Problem-Solving Day:
+  - Porter Packet:
+      + Finish Elevator (p. 77 & 78)
+      + 4.2 Newton's Second Law Problem Solving
+  - Regents Questions:
+      + Packet, skip friction questions
+
+Up Next:
+
+- Friction Lab Tomorrow
+
+---
+
+##.gray[2021.12.03] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What reality TV show would you star in?]
+
+1. Board Meeting Fan Cart Lab
+2. Regents Physics's Second Law of Forces
+3. Elevator Problems
+
+
+---
+
+
+
+##.gray[2021.12.02] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Is it OK to ask the genie for infinite wishes?]
+
+1. Finish Lab
+2. Whiteboard Results
+3. Board Meeting & Creating the General Model
+
+
+---
+
+##.gray[2021.12.01] .blue[Regents Physics] .red[Agenda]
+
+
+.qotd[❓of the 📅: What song do you put on when you want to get pumped?]
+
+
+1. Finish Ramp Lab
+2. Regents Ramp Problems
+3. Fan Cart Lab: Unbalanced forces
+
+---
+
+#Fan Cart Lab - Prelab
+
+Using any of our lab equipment...
+
+1. Determine if your cart accelerates constantly -- and if so, determine the acceleration.
+    - *Note Use the "Hubbs Method" - an easy method that you can repeat many times*
+
+---
+
+#Fan Cart Lab
+
+Essential Questions:
+
+1. How does mass affect the acceleration of your fan cart for a fixed constant force?
+2. How does the net force on your fan cart affect its acceleration for a fixed mass?
+
+
+---
+
+##.gray[2021.11.29] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite color 🌈?]
+
+1. Forces on a ramp pivot
+2. Inclines Regents Practice
+
+
+
+---
+
+##.gray[2021.11.23] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite food from the Thanksgiving meal?]
+
+
+1. Finish Spring Force Lab
+2. Whiteboard Spring Force Lab & Board Meeting
+3. Use a spring to predict mass of unknown object
+4. Forces on a Ramp Pivot
+
+---
+
+##Applying the Model
+
+Use one of your springs to measure the mass of a random object in the room...
+
+On your whiteboard:
+
+1. Draw the free body diagram for massive object
+2. Write Equation for Sum of the forces
+3. Substitute in equations for forces in your equation
+4. Plug-in and solve for the unknown mass
+5. Compare value to electronic scale measurement
+
+---
+
+##.gray[2021.11.22] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is one destination on your bucket list?]
+
+
+1. Finish Gravity Lab - Whiteboard and discuss
+2. Spring Force Lab
+
+
+---
+
+
+#Spring Force
+
+**Essential Question**: How does the elongation (stretch) of your spring relate to the amount of force applied to the spring?
+
+1. Collect data from both springs (small spring and ceiling spring)
+2. Use different masses and your knowledge about the weight of an object to determine the force on your spring
+
+
+---
+
+
+##.gray[2021.11.18] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather be a superhero or super villain?]
+
+
+1. Finish Card Sort
+  1. Motion maps
+  2. Select & Fill out Interaction Diagrams
+  3. Match & Label Free Body Diagrams
+  4. Match and Label Vector Addition Diagrams
+2. Gravity Lab
+3. Spring Force Lab
+
+---
+
+#Gravity Lab
+
+**Essential Question**: *How does the mass of a hanging object compare to the force of gravity acting on that object?*
+
+
+
+---
+
+#Spring Force
+
+**Essential Question**: How does the elongation (stretch) of your spring relate to the amount of force applied to the spring?
+
+1. Collect data from both springs (small spring and ceiling spring)
+2. Use different masses and your knowledge about the weight of an object to determine the force on your spring
+
+--
+
+Board Meeting:
+  - What was the mathematical relationship?
+  - What does the slope represent? (the [y-variable] changes by [slope] [y units] for every 1 [x units] of [x variable])
+  - What does the intercept represent? Is is negigible or non-negligible?
+
+---
+
+#Spring Force
+
+
+##$$|\vec{F_s}| = k|\vec{x}|$$
+
+---
+
+#Test the model:
+
+You want to use your spring as a mass measuring device. On a whiteboard...
+
+1. Derive an expression the for the mass `\(m\)` of a unknown hanging mass in terms of the stretch `\(x\)` of your spring, the spring constant `\(k\)` and any known physical constants.
+2. Hang something in the classroom of unknown mass on one of your springs, use the derivation to determine the mass of that object. (Note: use 9.8 for `\(g\)`)
+3. Check your results using the electronic balance.
+
+---
+
+##.gray[2021.11.17] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Road trip or 'staycation'?]
+
+
+1. Do Now: Vector Practice - Regents Questions
+2. Force Diagrams Notes
+3. Force Diagrams Card Sort
+
+
+---
+
+##.gray[2021.11.10] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: How often do you dance?]
+
+
+1. Tug-of-War Simulation
+2. Dueling Fan Carts
+3. Force Diagarms
+
+
+---
+
+###Tug-of-War Simulation
+
+[Simulation Link](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_en.html?screens=1) Note: check all 3 boxes in the top right
+
+True/False: Determine whether each of the following statements are true. Support your claims with evidence and examples. (Remember that you can add/remove people while the cart is moving.)
+
+1. A person's location on the rope matters.
+2. Different combinations of people can produce the same sum of forces.
+3. The sum of the forces on the cart is always equal to the addition of the individual forces.
+4. It is impossible for the cart to accelerate to the left if there are people pulling it to the right.
+5. The side with the bigger person will always win.
+6. The side with more people will always win.
+7. It is impossible to make the cart decrease in speed.
+8. It is impossible to make the cart move at a steady speed.
+9. The cart will always move in the direction of the sum of the forces.
+10. If the sum of the forces is zero, the cart must be at rest.
+
+
+---
+
+##Tug-of-War Simulation Summary:
+
+- Make an argument (claim-evidence-reasoning) for how forces/combinations of force lead to:
+    + Constant Velocity
+    + Acceleration
+
+---
+
+
+##.gray[2021.11.09] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your childhood dream job? Is it still your dream job?]
+
+1. Interaction Stations
+2. Defining Force
+3. Dueling Fan Carts
+4. Force Diagrams
+
+---
+
+#Interaction Stations
+
+##Contact Interactions
+
+Interaction between two objects that results in **compression**, **tension** or **shearing**.
+
+--
+
+
+**Compression** ➡ Squishing a material together
+
+--
+
+**Extension** ➡ Stretching a material
+
+--
+
+**Shearing** ➡ Pulling surfaces parallel to each other
+
+---
+
+class:center, middle
+
+# A ***force*** is an interaction between two objects.
+
+---
+#Interaction types
+
+- **Gravitational Force** `\(\vec{F}_g\)` (Long Range) ➡ Attractive force between all objects with mass
+
+--
+- **Normal Force**  `\(\vec{F}_N\)` (Contact, Compression) ➡ "Perpendicular Force" occurs because atoms are compressed and want to return to original position. **Always perpendicular to surfaces in contact**
+
+--
+- **Spring Force** `\(\vec{F}_s\)` (Contact, Stretch or Compression) ➡ Spring is stretched or compressed and wants to return to "natural" length
+
+--
+- **Tension** `\(\vec{F}_T\)` (Contact, Stretch) ➡ Atomic Structure is stretched and wants to return to natural length
+
+--
+- **Friction** `\(\vec{F}_f\)` (Contact, Shear) ➡ Irregular surfaces interlock to slow or prevent sliding of two surfaces relative to eachother **Always parallel to the surfaces in contact**
+
+--
+- **Drag** `\(\vec{F}_D\)` (Contact) ➡ Fluid/gas Friction, resists objects motion through a fluid/gas
+
+--
+- **Bouyant Force** `\(\vec{F}_B\)` (Contact) ➡ Fluid/Gas Normal Force
+
+--
+- Electrostatic Force `\(\vec{F}_e\)` (Long Range) - Attractice or resistive force because objects have charge
+
+--
+- Magnetic Force `\(\vec{F}_M\)` (Long Range) - Attractive or repulsive force because of moving charge
+
+
+---
+
+##.gray[2021.11.08] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What was your childhood dream job? Is it still your dream job?]
+
+1. Hand Back Test
+2. Test Corrections
+3. Dueling Fan Carts
+
+
+---
+
+#Test Corrections
+
+
+1. For each problem you got wrong: What type of mistake was it?
+  - Conceptual, Calculation, Comprehension, Clueless or Careless?
+2. For each problem you got wrong: What did you learn from this mistake?
+  - I.e. the concept, to be careful with signs, to read the directions etc
+3. For each problem you got wrong: Fix the mistake - solve the problem correctly. SHOW ALL WORK
+4. A summary paragraph of what you learned and how you can improve for future tests and assessments.
+
+---
+
+##.gray[2021.10.28] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What’s the longest trip you’ve been on?]
+
+1. Finish Bowling Ball Discussion
+2. Finish Ramp Practical with group
+3. Test Review:
+  - Worksheets:
+      + Defining motion (Skip 2D Problems)
+      + Motion Graphs
+      + Horizontal Kinemmatics (old packet)
+  - Answers Posted on Canvas: Modules 👉🏻 Motion - Kinemtics 👉🏻 Kinematics Test Review
+  - Process: Work through some problems, check answers, ask Porter Questions
+
+
+---
+
+##.gray[2021.10.28] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Who is your celebrity crush?]
+
+1. Correct Old Quiz & Ask Questions
+1. Take Today's Quiz
+2. Finish Photogate lab
+3. Finish 2.5 (page 41-42) in Porter Packet
+
+---
+
+##.gray[2021.10.28] .blue[Regents Physics] .red[Do Now]
+
+Try on your own first, then collaborate with your table
+
+*Imagine that a sprinter accelerates from rest to a maximum speed of 10.8 m/s in 1.8 s.
+In what time interval will he finish the 100-m race if he keeps his speed constant at 10.8 m/s for the last part of the race? What assumptions did you make?*
+
+
+---
+
+##.gray[2021.10.28] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What animal would you want for a non-traditional pet? (i.e. not a dog, fish or cat)]
+
+
+1. Do Now
+2. Ramp Practical
+3. Regents Practice
+
+HW:
+
+- Quiz tomorrow
+- Video Consent form for Miss Leuci
+
+Note: Motion Test 11/4
+
+
+---
+
+##Ramp Practical
+
+.center[<img src="images/rampLab.png" width = "700 px"/>]
+
+
+---
+
+##.gray[2021.10.27] .blue[Regents Physics] .red[Do Now]
+
+Solve the following using the equations on the board...
+
+1. An astronaut drops a hammer from 2.0 meters above the surface of the Moon. If the acceleration due to gravity on the Moon is 1.62 meters
+per second`\(^2\)`, how long will it take for the hammer to fall to the Moon’s surface?
+2. A car traveling at a speed of 13 meters per second accelerates uniformly to a speed of 25 meters per second in 5.0 seconds. Calculate the magnitude of the acceleration of
+the car during this 5.0-second time interval.
+3. The driver of a car moving with a velocity of 15 meters per second made an emergency stop on a straight horizontal road. The wheels locked and the car skidded to a stop.
+The marks made by the rubber tires on the dry asphalt are 16 meters long, and the car’s mass is 1200 kilograms. What is the car's acceleration while skidding to a stop?
+
+---
+
+##.gray[2021.10.27] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is the best board game?]
+
+1. Do Now
+2. Using Equations in Physics
+  - GUESS: **G**ivens, **U**nknowns, **E**quations, **S**ubstitution, **S**olve
+3. Veggie Time 🥕🥦: Regents Practice
+
+HW:
+
+**Reminders - video form for Miss Leuci**
+
+---
+
+##.gray[2021.10.25] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Where’s your favorite place to nap? 💤😴💤]
+
+1. Quiz
+  - Friends without Pens
+  - Take quiz on own
+2. Ranking Task in Packet
+
+
+---
+
+##.gray[2021.10.21] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Favorite halloween candy? 🍬🍭🍫]
+
+1. How far during "LOL"
+2. Physics Equations
+
+HW:
+
+- Quiz Monday - VT Graphs & Word Problems
+
+---
+
+##How Far?
+
+**This is a hypothetical** (because obviously none of you text and drive, or will text and drive)
+
+You are driving down Maple Hill Road when you get a text from your friend. You pick up your phone, read the text, and answer with "LOL". When you put your phone down, you see an object in the road and slam on the brakes to stop.
+
+**How far do you travel during these events?**
+
+On a whiteboard present your solution. You should include:
+
+- Assumptions
+- Diagrams
+- Calculations
+
+and your solution should be clear
+
+---
+
+###.gray[2021.10.18] .blue[AP Physics] .red[Do Now]
+
+.left-column[The position-time graph shown represents the motion of two children, Ariel and Byron, who are moving along a narrow, straight hallway.
+.center[<img src="images/Byronariel.jpg" width = "300 px"/>]
+
+**Complete this on your own in your notebook. Then compare with your table once *everyone* is finished.**
+]
+
+.right-column[1. Do either of the children ever change direction? If so when does this happen? Explain your reasoning.
+2. Are the two children ever at the same position along the hallway? If so when does this happen? Explain your reasoning.
+3. Do the two children ever have the same speed? If so when does this happen? Explain your reasoning.
+4. Doo the two children ever have the same acceleration? If so when does this happen? Explain your reasoning.]
+
+
+---
+
+##.gray[2021.10.18] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Cats 🐈 or dogs 🐕?]
+
+1. Do Now
+2. VT Graphs - Finish Porter Packet 2.3
+3. Solving Problems with VT Graphs
+
+
+---
+
+.gray[**2021.10.15**] .blue[**Regents Physics] - .red[DO NOW**] A motion sensor is used to create the graph of a student’s horizontal velocity as a function of time as the student moves toward and away from the sensor, as shown above. The positive direction is defined as the direction away from the sensor.
+
+.left-column[.center[<img src="https://assets.learnosity.com/organisations/537/VH922720.g02.png" width = "500 px"/>]
+]
+
+.right-column[Which of the following describes the student’s final position  `\(x_f\)`  in relation to the starting position  `\(x_0\)`  and the student’s average horizontal acceleration  ax  between  0.0 s  and  3.0s ?
+
+1. Position  `\(x_f\)`  is farther away from the sensor than  `\(x_0\)` , and  `\(a_x\)`  is positive.
+2. Position  `\(x_f\)`  is farther away from the sensor than  `\(x_0\)` , and  `\(a_x\)`  is negative.
+3. Position  `\(x_f\)`  is closer to the sensor than  `\(x_0\)` , and  `\(a_x\)`  is positive.
+4. Position  `\(x_f\)`  is closer to the sensor than  `\(x_0\)` , and  `\(a_x\)`  is negative.
+]
+
+
+---
+
+##.gray[2021.10.14] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather be a dragon or own a dragon? 🐲🐉]
+
+1. Do Now
+2. Finish Up Linearization Lab
+  - Writing the Equations Review
+  - Linearizing our XT Graph from Changing Speed Lab
+3. Porter Packet 2.3
+4. Problem-Solving with VT Graphs
+
+
+---
+
+#.gray[2021.10.13] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: If aliens 👽 do exist, would you want to meet them?]
+
+1. Finish Stations Labs
+2. Linearizing
+    - What is it?
+    - Why do we do it?
+3. Linearize your graphs, write equation, share
+4. Linearize XT Graph from old pivot
+
+
+
+
+---
+
+#.gray[2021.10.12] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Who is the most competitive person you know?]
+
+
+1. Stations Lab
+
+
+---
+
+#.gray[2021.10.08] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What are you best at fixing?]
+
+1. 2.1 Accelerated Motion Representations
+    1. Check answers with simulation
+    2. Try Simulation Challenges
+2. Finish Area Worksheet - Whiteboard Face off
+3. Problem-solving with VT Graphs
+
+
+---
+
+##.gray[2021.10.06] .blue[Regents Physics] .red[Do Now]
+
+The graphs below show the velocity of two objects during the same time interval.
+
+
+.center[<img src="images/Vtarea1.jpg" width = "500 px"/>]
+
+**For the 6-second time interval shown, is the displacement of Object 1 in the upper graph (i) *greater than*, (ii) *equal to*, or (iii) *less than* the displacement of Object 2 in the lower graph? Explain your reasoning.**
+
+
+---
+
+
+#.gray[2021.10.06] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite month?]
+
+1. Do Now
+2. Porter Packet 1.5 (page 15 & 16)
+3. Porter Packet 2.3 VT Graphs Changing Velocity
+
+
+---
+
+#.gray[2021.10.05] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What weird quirks did you pick up from your parents?]
+
+1. Quiz
+  - Do it
+  - Scan it into Canvas (as a PDF if you can, but if you don't know how just use the regular canvas scan option)
+  - Turn in hard copy
+2. Speed dating with 2.2  Stacks of Graphs
+3. 2.1 with lab groups -- check with online version
+4. Graphs and Tracks Challenges
+
+---
+
+#.gray[2021.10.04] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? [Don't say money...that's boring]]
+
+1. Do Now: Practice Quiz
+2. Card Sort - organize your cards in a logical way (note there is no one way to do this)
+3. Gallery walk - look at other groups representations, leave comments on whiteboards
+4. Discuss card sort quickly
+5. Porter Packet:
+    1. 2.1 Accelerated Motion Representations
+    2. 2.2 Stacks of Graphs
+
+
+**HW**
+
+- Quiz Tomorrow (same format as practice quiz)
+
+
+---
+
+#.gray[2021.09.30] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Hanging out by a camp fire, bonfire, or fireplace?]
+
+1. Whiteboard position vs. time data
+  - From this data: *does your fan cart increase its speed constantly?* How do you know?
+2. Making VT Graphs from your XT Data
+3. Whiteboard VT Graph & Board Meeting
+  - Making sense of it all
+
+
+---
+
+#.gray[2021.09.29] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: You ***have*** to sing karaoke, what song do you pick?]
+
+
+1. Finish Carts and Ramps Discussion
+2. Fan Cart Lab - does it change velocity constantly?
+    1. Video upload to answer the question
+
+---
+
+#.gray[2021.09.28] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: You ***have*** to sing karaoke, what song do you pick?]
+
+1. Finish Dueling Buggies?
+2. New Lab Groups
+3. Card Sort and Carts and Ramps
+
+
+---
+
+##.gray[2021.09.24] .blue[Regents Physics] .red[Do Now]
+
+In each case, a sphere is moving from left to right next to a tape marked in meters. A strobe (flash) photograph is taken every second, and the location of the sphere is recorded. The total time intervals shown are not the same for all spheres.
+
+.center[<img src="images/motionmaprank.jpg" width = "550 px"/>]
+
+1. Rank the average velocities of the 4 photos.
+2. Which ball is speeding up? How do you know?
+
+
+
+---
+
+#.gray[2021.09.24] .blue[AP Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What slang are you really happy went out of fashion?]
+
+1. Do Now
+2. Dueling Buggies - Can you predict where your buggies will crash?
+  1. Collect Data for your cars
+  2. Buggies go in "jail" while you calculate your prediction based on the distance they start apart (somewhere between 1.5-3 meters)
+  3. Test it!
+
+
+
+---
+
+
+##.gray[2021.09.23] .blue[Regents Physics] .red[Do Now]
+
+
+Each graph below shows the position of an object as a function of time.
+
+.center[<img src="images/Xtrank.jpg" width="1000 px"/> ]
+
+
+**Rank the objects from greatest to least *displacement* from 0 to 4 seconds.**
+
+**Rank the objects from greatest to least *distance* from 0 to 4 seconds.**
+
+---
+
+#.gray[2021.09.23] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your silliest fear?]
+
+
+1. Do Now
+2. Finish talking about XT Graphs
+3. Billiard Ball Race - Pivot
+
+HW:
+
+- Finish Billiard Ball Race
+
+---
+
+#.gray[2021.09.22] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What household chore do you actually enjoy?]
+
+1. Quiz
+2. How Far?
+3. Interpreting Position vs. Time graphs
+
+
+---
+
+
+.center[<img src="images\position-time_1.PNG" width = "450 px"/><img src="images\position-time_2.PNG" width = "450 px"/>]
+
+.left-column[.small[Rank these position time graphs from greastest to least in terms of "how far" the object traveled.
+
+Top Left (G1): Y-axis: 0-10, X-axis: 0-5, starts at (0,10) goes to (10,0)
+
+Top Right (G2): Y-axis: 0-10, X-axis: 0-5, start (0,10), changes at (4,2) and (7,5) end at (10,8)
+
+Bottom (G3): Y-axis: 0-10, X-axis: 0-5, starts at (0,5), changes at (2,7), (4,-1), (5,-1) and ends at (7,5)]
+
+].right-column[<img src="images\position-time_3.PNG" width = "450 px"/>]
+
+---
+
+
+#.gray[2021.09.20] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Would you rather vacation on the beach 🏖️ or adventure in the mountains ⛰️?]
+
+
+1. What is a motion sensor?
+2. Walk the graph lab
+3. Whiteboard assigned walk the graph situations & board meeting
+
+
+---
+
+##.gray[2021.09.17] .blue[Regents Physics] .red[Do Now]
+
+.center[<img src="images\position-time_1.PNG" width = "650 px"/>]
+
+With your table, draw a picture that represents this motion.
+
+---
+
+#.gray[2021.09.16] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What is your favorite meal to cook and why?]
+
+1. Do Now
+2. Motion Maps
+3. Practice with multiple representations of motion
+
+
+---
+
+
+#.gray[2021.09.16] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: Are you more productive at night or in the morning?]
+
+
+1. Do Now:
+  - look over your lab, and discuss in your group who will be presenting the different parts of it
+2. Buggy Lab Board Meeting
+3. Writing your Buggy Lab Results
+4. Claim-Evidence-Reasoning w/ [Motion](https://mrporterphysics.github.io/Presentations/APCVPM/talks/APCVPM.html#1) Slides
+
+---
+
+##.gray[2021.09.14] .blue[Regents Physics] .red[Do Now]
+
+Consider how you could predict the location of your buggy after a set amount of time.
+
+What would you need to know? What would you need to measure?
+
+How is predicting the **location** different than predicting **how far** the buggy traveled?
+
+---
+
+#.gray[2021.09.09] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What would your superpower be and why?]
+
+1. Do Now Discussion
+2. Buggy Lab Part 2
+
+---
+
+#Buggy Lab Part 2
+
+Predicting the ***position*** of your buggy:
+
+--
+
+1. Time should be your **independent variable** (the thing you change/decide)
+2. Position should be yoru **dependent variable** (thing you measure as a result of the thing you change/decide)
+3. Remember to set up your experiment with your assigned initial conditions
+
+
+
+---
+
+#.gray[2021.09.13] .blue[Regents Physics] .red[Agenda]
+
+.qotd[❓of the 📅: What’s your favorite sandwich and why?]
+
+1. Do now (write down in your notebook or on a scrap piece of paper)
+  - Hand in safety contract
+  - How can you describe and quantify motion?
+2. Does it move in a consistent manner? Buggy Lab Part 1
+
+---
+
+
+#.gray[2021.09.09] .blue[Regents Physics] .red[Agenda]
+
+.qotd[**Question of the Day:** Do you have any weird/unique routines or superstitions? (For example: I ***have*** to put on my left sock before my right sock, and the same for shoes, left on first.)]
+
+1. Do Now: Finish taking data on pasta bridge lab
+2. Whiteboard results as a group
+3. Board Meeting Pasta Bridge Lab:
+  - What does it all mean?
+4. Mathematical Modeling
+
+---
+
+
+#Pasta Lab
+
+- What does the slope represent?
+  - For every statement: "The &lt; **quantity on vertical axis** &gt; goes up &lt; **slope value with vertical units** &gt; for every 1 &lt; **horizontal unit** &gt; of &lt; **quantity on horizontal axis** &gt;."
+- What does the intercept mean?
+
+
+---
+
+#The Models...
+
+---
+
+#The Models...
+
+
+Math: $$y = mx + b$$
+
+--
+
+Specific Model: $$strength = (7.5\textrm{rocks/strand})strands - 12 \textrm{ rocks}$$
+
+
+---
+
+#.gray[2021.09.08] .blue[Regents Physics] .red[Do Now]
+
+Don't get too comfortable (spoiler...you will be moving)
+
+Go to: https://forms.gle/zjAjMq8iPbjqw7MQA or... go to Canvas and click the link in the slides...or...
+
+
+.center[<img src="images/firstdayQR.png" width = "325px"/>]
+
+or... go to Canvas and click the link in the slides...
+
+---
+
+
+#.gray[2021.09.08] .blue[Regents Physics]
+##.red[Welcome!]
+
+.qotd[Question of the Day: Sweet or savory for breakfast?]
+
+1. Fill out questionnaire ✅ & Index Card (Name & Phone Number)
+1. Question of the Day
+2. Lab Grouping
+2. Survival Island
+3. Does the 🚗 move in a consistent manner?
+
+---
+
+class:center, middle
+
+#Question of the Day:
+
+#.blue[Sweet or savory for breakfast?]
+
+---
+
+#Lab Grouping
+
+Arrange yourself into ***logical*** lab groups based on the word on your card.
+
+
+**Rules:**
+
+The class must have
+
+- 4 Groups of 3 People
+
+---
+
+class: center, middle
+
+#Why? What connections to physics class?
+
+---
+
+
+#Why?
+
+--
+
+- You may feel frustrated as you try to figure physics out. That’s okay.
+--
+
+- Physics is hard to understand until you know the “rules of the game.”
+--
+
+- But, once you discover the rules, physics often seems easy and you may be surprised that others don’t understand.
+--
+
+- However, remember that you didn’t always understand.
+--
+
+- When you discover the rules and understand without someone just telling you the “answer”, you are excited.
+--
+
+- The journey to understanding is very important. So, no one is going to tell you the answer, but we’re all here to support each other on our journeys.
+--
+
+- Being told the “answer” at most gives you one answer that you didn’t know. Learning to think critically and arrive at the answer with support develops a skill that you will use to find many answers.
+
+---
+
+class:schodack
+
+#Inquiry
+
+- make careful observations
+--
+
+- gather lots of data (need to see more cards)
+--
+
+- look for patterns, compare and contrast, look for extremes
+--
+
+- simply the problem being investigated
+--
+
+- constrain the variables (set number of groups with specific sizing)
+--
+
+- propose a hypothesis, test it, modify it based on results, repeat
+
+---
+
+#Survival Island 🏝️
+
+You and your group are stranded on an deserted island 😮!
+
+--
+
+Using *each* of your <u>unique skill's</u> develop a plan to escape the island.
+
+--
+
+Whiteboard your response (one person)
+- remember to remain physically distant when possible
+
+--
+
+Be prepared to share out your plan to escape the island as a group. Each of you should offer a part of the plan to the class.
+
+---
+
+#Pivot Interactives
+
+Create an account...or join our class...or both
+
+
+Go to [pivotinteractives.com](https://app.pivotinteractives.com/join-class?classKey=ck-bc3b5cde)
+
+
+Class Key:
+
+.center[#ck-bc3b5cde]
+
+
+---
+
+#🍝 Pasta Bridge Lab
+
+How strong is your pasta bridge?
+
+
+
+
+    </textarea>
+    <script src="../javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://remarkjs.com/downloads/remark-0.14.0.min.js" type="text/javascript">
+    </script>
+
+    <script>
+      var slideshow = remark.create({ratio:'16:9'});
+
+      // Setup MathJax
+     MathJax.Hub.Config({
+         tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+         }
+     });
+
+     MathJax.Hub.Configured();
+
+
+    </script>
+
+
+  </body>
+</html>

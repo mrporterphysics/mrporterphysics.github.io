@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>Video Game Design 2022</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+
+      @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+      @import url('https://fonts.googleapis.com/css?family=Creepster');
+      @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+      @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+      @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Teko:700&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+
+      @import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+
+      .remark-slide-content{
+        background: #272822;
+      }
+
+      body {
+        font-family: 'Inconsolata', sans-serif;
+        font-size: 3em;
+        color:white;
+     }
+      h1, h2, h3 {
+        font-family: 'Supermercado One', sans-serif;
+        line-height: 1em;
+      }
+
+
+
+      .gray{color: #989ea6;}
+      .green{color:#78f542;}
+      .purp{color:#9b42f5;}
+
+      .remark-slide-content h4 {font-size: 1.3em}
+      .remark-slide-content p,ol,ul { font-size: 1.4em; }
+      .remark-slide-content ul ul{font-size: 100%;}
+      .remark-slide-content ol ol{font-size: 100%;}
+      .remark-slide-content ol ul{font-size: 100%;}
+      .remark-slide-content ol ul ul{font-size: 100%;}
+      .remark-slide-content ol ol ul{font-size: 100%;}
+      .remark-slide-content ul ol{font-size: 100%;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* Two-column layout */
+     .left-column {
+
+       width: 50%;
+       height: 92%;
+       float: left;
+     }
+     .agenda {
+
+       width: 45%;
+       height: 92%;
+       float: left;
+     }
+
+     .small li, p{font-size: 1em;}
+
+     .goals{
+       width: 50%;
+       height: 92%;
+       float: right;
+       font-family: 'Inconsolata';
+
+     }
+
+     .right-column {
+       width: 50%;
+       height: 92%;
+       float: right;
+       padding-top: -5em;
+     }
+
+
+     .left-column-short {
+       color: #000000;
+       width: 30%;
+       height: 95%;
+       float: left;
+       padding-top:-4em;
+     }
+       .left-column-short h2:last-of-type, .left-column h3:last-child {
+         color: #000;
+       }
+     .right-column-long {
+       width: 70%;
+       float: right;
+       font-size: 1em;
+       padding-top:-4em;
+     }
+
+     .footer {
+   position: fixed;
+   left: 15px;
+   bottom: 15px;
+   width: 5%;
+   background-color: white;
+   color: black;
+   text-align: center;
+  }
+
+
+
+  .checklist {list-style-type: 'none';}
+  .checklist li:before{font-size:100%; content:"✅";}
+  .inverse {
+        background: #272822;
+        color: #ffffff;
+        font-family: 'Fira Sans', sans-serif;
+      }
+      .inverse h1, .inverse h2 {
+        color: #9966FF;
+        line-height: 0.8em;
+        font-family: 'Inconsolata', monospace;
+      }
+
+      .halloween {
+            background: #6032a8;
+            color: white;
+
+          }
+          .halloween h1, .halloween h2, .halloween h3 {
+            color: Orange;
+            font-family: 'Creepster', cursive;
+            line-height: 0.8em;
+            text-shadow: 0 0 20px #333;
+          }
+
+          .thanksgiving{
+              background:#611f00;
+              color:white;
+
+          }
+
+          .thanksgiving h1, .thanksgiving h2, .thanksgiving h3 {
+            font-family: 'Cinzel', serif;
+            color: Orange;
+          }
+
+          .thanksgiving a {
+            color: white;
+            text-decoration: underline;
+
+          }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+
+      .small-list{
+        font-size: 90%;
+      }
+
+      .small p {font-size: 90%;}
+
+      .photoback {
+            background-size: 100%;
+            color: Black;
+            font-family: 'Noto Sans', sans-serif;
+            }
+
+      .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                  color: white;
+
+                  line-height: 0.8em;
+                  font-family: 'Gowun Dodum', sans-serif;
+                  }
+      .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
+                color:white;
+                background-color: rgba(119,119,119,0.3);
+                font-family: 'Gowun Dodum', sans-serif;
+
+            }
+
+      .large h1{font-size:3em;}
+
+
+      .schodack {
+            background: #bfc1c7;
+            color: #1B438B;
+            font-family: 'Gowun Dodum', sans-serif;
+            font-size: .45em;
+          }
+        .schodack h1, .schodack h2 {
+            display:inline-block;
+            background-color: #E01D36;
+            color: #FFFEFF;
+            line-height: 1.1em;
+            margin-bottom: 10px;
+            font-family: 'Libre Franklin', sans-serif;
+          }
+          .schodack p {
+            margin-top: 5px;
+          }
+
+      div.my-header {
+          position: fixed;
+          top: 3px;
+          right: 3px;
+          height: 30px;
+          width: 100%;
+          text-align: right;
+      }
+
+      .qotd{
+        font-size: 1.1em;
+        font-family: 'Poor Story', cursive;
+
+      }
+
+      .material-icons.md-18 { font-size: 18px; }
+      .material-icons.md-24 { font-size: 24px; }
+      .material-icons.md-36 { font-size: 36px; }
+      .material-icons.md-48 { font-size: 48px; }
+      .material-icons.md-24 { font-size: 56px; }
+      .material-icons.md-36 { font-size: 64px; }
+      .material-icons.md-72 { font-size: 72px; }
+      .material-icons.md-80 { font-size: 80px; }
+      .material-icons.md-88 { font-size: 88px; }
+      .material-icons.md-96 { font-size: 96px; }
+
+
+          </style>
+        </head>
+        <body>
+          <textarea id="source">
+
+
+layout: true
+<div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
+
+---
+
+##.gray[2022.05.17] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: What is the best font? What is the worst font?]
+
+1. Check in on RPG
+2. Final Project Ideation
+
+---
+
+#.purp[Final Project Ideation]
+
+Take a few minutes to write down answers to the following questions?
+
+- What games do you like? Why?
+- What themes do you like?
+- What stories would you want to tell?
+- What challenges/puzzles do you want to create?
+- What skills do you want your players to have?
+- What game do you want to make?
+
+---
+
+#.green[Ideation]
+
+1. Share ideas with table
+2. Share ideas out with class "mini pitch/elevator pitch"
+3. Talk with anyone with like ideas & decide to team up or go separate ways
+
+
+---
+
+#.purp[Final Project Tentative Timeline]
+
+- 5/17 Ideation
+- 5/19 GDD Due
+- 5/23 Build Game
+- 5/25 Build Game
+- 6/1 Build Game
+- 6/2 Build Game
+- 6/6 Playtest Day (game doesn't need to be finalized but playable)
+- 6/8 Fix/Finalize Game
+- 6/10 Fix/Finalize Game
+- 6/14 Game Due - Play each other's games!
+
+
+---
+
+##.gray[2022.03.28] .purp[Video Game Design] .green[Agenda]
+
+
+1. Make Construct 3 Account:
+  - Go to: [https://www.construct.net/en](https://www.construct.net/en) and create an account with a school email address
+  - Email Mr. Porter your username
+2. Playtesting w/ Study Hall Students:
+  - Give them the directions and let them read them, if they can't make sense of them, then explain.
+  - Observe the game:
+      + What is working? What isn't working as you expected?
+      + What are the bugs?
+      + Are they having fun?
+  - Ask for feedback and take notes. Be sure to ask follow up questions to get the most out of this playtest.
+
+
+
+---
+
+
+##.gray[2022.03.02] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: What is the best font? What is the worst font?]
+
+
+1. Review your pitch
+2. Pitch Presentations
+3. Start building your board game!
+
+
+---
+
+##.gray[2022.02.17] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: Any big plans for February break?]
+
+1. Work on GCD - Goal to finish this today
+2. Start Pitch
+
+
+
+---
+
+##.gray[2022.02.15] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: What second rate super power would you want?]
+
+1. How to Pitch a Game
+2. Research & Brainstorm for your board game
+3. Start working on your board game's GCD & pitch
+
+
+---
+
+##.gray[2022.02.11] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: What roles do games play in society? Why do we have and play games?]
+
+1. Checkers Playtest Reflection:
+  - Read through your groups' feedback and reflect
+  - Share out what we learned
+2. [Creating your own board game](https://docs.google.com/presentation/d/1BmCMy81k8nmq0T4Kk4xJwtoLNkHMuguTdY5iHfuPgBA/edit#slide=id.g1121c288a9c_0_94)
+  - Intro to task
+  - Research Genre & Rating system
+  - [Game Ideation](https://jamboard.google.com/d/1KaHEs1oZH0_4ZjI_bYzbt2KaFeYZguNsxN3V48wu83I/viewer) right click to open in new tab
+
+
+---
+
+##.gray[2022.02.09] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: Who would win in a fight between a bear 🐻 and a gorilla 🦍?]
+
+1. Reflect & Review MDA
+2. Checkers Modification Documentation
+3. Playtesting - How to give effective feedback
+4. Playtest Checkers modifications and provide feedback
+
+
+
+
+---
+
+##.gray[2022.02.07] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: How did you spend your snow day?]
+
+
+1. Documenting UTR Modifications
+1. [Mechanics, Dynamics, Aestethics](https://docs.google.com/presentation/d/1OZlifTA2_tUzgG6S1IMfWWvJqQwbLA94/edit?usp=sharing&ouid=103298194982927521403&rtpof=true&sd=true)
+1. Checkers and Modifying the *Mechanics*
+
+
+---
+
+##.gray[2022.02.03] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: What is your favorite board game and why?]
+
+1. Discussing Board Games and "Fun"
+2. Up the River - Play
+3. Up the River - Modify and Observe
+4. Up the River Share out
+
+---
+
+##Whiteboards
+
+.center[<img src="images/IMG-2248.jpg" width = "500 px"/>]
+
+
+---
+
+
+##Whiteboards
+
+.center[<img src="images/IMG-2247.jpg" width = "425 px"/>]
+
+---
+
+
+##Whiteboards
+
+.center[<img src="images/IMG-2246.jpg" width = "500 px"/>]
+
+
+---
+
+class:center, middle
+
+#What does it mean for a game to be *fun*?
+
+---
+
+#.green[Up the River]
+
+Essential Question: **What does it mean for a game to be *fun***?
+
+--
+
+##⏰ 15 Minutes:
+
+- Read UTR Rules
+- Play Multiple Times to learn how the games works
+- Think about what makes the game fun, or what could be improved
+
+--
+
+##Make a *single* change
+
+- Play with your change and decide if it improved the game
+
+---
+
+#Up the River 🌊 Share Out
+
+- What change did you make?
+- Did it improve UTR? Why or why not?
+
+--
+
+
+Compare:
+
+- How was your change similar & different from the other two groups?
+
+---
+
+##.gray[2022.02.01] .purp[Video Game Design] .green[Agenda]
+
+.qotd[❓of the 📅: What is your all time favorite video game?]
+
+1. Question of the Day share out
+2. Play Board Games!
+  - Play game once to be fimilar with rules and play style
+  - Play again and note what you and your group find fun about the game ✍🏻 Record on Whiteboard (a few bullet points)
+  - Rotate Games
+  - Decide on your favorite game & be ready to explain why that game was your group's favorite (what made it the **best** and **why**?)
+3. Discuss Favorite Board Games & and elements of "Fun"
+
+---
+
+
+
+
+    </textarea>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">   </script>
+
+
+
+
+
+    <script>
+      var slideshow = remark.create({ratio:'16:9'});
+
+      // Setup MathJax
+     MathJax.Hub.Config({
+         tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+         }
+     });
+
+     MathJax.Hub.Configured();
+
+
+    </script>
+
+
+
+  </body>
+</html>

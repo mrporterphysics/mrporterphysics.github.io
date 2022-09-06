@@ -1,0 +1,1748 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Daily 2021</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+    @import url('https://fonts.googleapis.com/css?family=Creepster');
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+    @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+    @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Teko:700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+
+      body {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 3em;
+     }
+      h1, h2 {
+        font-family: 'Blinker', sans-serif;
+
+      }
+
+      h3 {
+        font-family: 'Alegreya SC', serif;
+      }
+      .remark-slide-content h4 {font-size: 1.3em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-slide-content ul ul{font-size: 100%;}
+      .remark-slide-content ol ul{font-size: 100%;}
+      .remark-slide-content ol ol{font-size: 100%;}
+      .remark-slide-content ul ol{font-size: 100%;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; color: yellow;}
+
+      /* Two-column layout */
+     .left-column {
+
+       width: 60%;
+       height: 92%;
+       float: left;
+     }
+       .left-column h2:last-of-type, .left-column h3:last-child {
+         color: #000000;
+       }
+     .right-column {
+       width: 40%;
+       float: right;
+       padding-top: 1em;
+     }
+
+
+     .left-column-short {
+       color: #000000;
+       width: 65%;
+       height: 95%;
+       float: left;
+       padding-top:-4em;
+     }
+       .left-column-short h2:last-of-type, .left-column h3:last-child {
+         color: #000;
+       }
+     .right-column-long {
+       width: 65%;
+       float: right;
+       padding-top: 1em;
+       font-size: 1.4em;
+     }
+
+     .footer {
+   position: fixed;
+   left: 15px;
+   bottom: 15px;
+   width: 5%;
+   background-color: white;
+   color: white;
+   text-align: center;
+  }
+
+  .checklist {list-style-type: 'none';}
+  .checklist li:before{font-size:100%; content:"✅";}
+  .inverse {
+        background: #272822;
+        color: #ffffff;
+        font-family: 'Fira Sans', sans-serif;
+      }
+      .inverse h1, .inverse h2 {
+        color: #9966FF;
+        line-height: 0.8em;
+        font-family: 'Inconsolata', monospace;
+      }
+
+      .halloween {
+            background: #6032a8;
+            color: white;
+
+          }
+          .halloween h1, .halloween h2, .halloween h3 {
+            color: Orange;
+            font-family: 'Creepster', cursive;
+            line-height: 0.8em;
+            text-shadow: 0 0 20px #333;
+          }
+
+          .thanksgiving{
+              background:#630d00;
+              color:white;
+
+          }
+
+          .thanksgiving h1, .thanksgiving h2, .thanksgiving h3{
+            color:#f0991f;
+            font-family: 'Satisfy', cursive;
+
+          }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+
+      .small-list{
+        font-size: 80%;
+      }
+
+      .photoback {
+            background-size: 100%;
+            color: Black;
+            font-family: 'Noto Sans', sans-serif;
+            }
+
+      .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                  color: purple;
+
+                  line-height: 0.8em;
+                  font-family: 'Inconsolata', monospace;
+                  }
+      .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
+                color:pink;
+                background-color: rgba(0,0,0,0.5);
+
+            }
+
+      .large h1{font-size:3em;}
+
+
+      .schodack {
+            background: #bfc1c7;
+            color: #1B438B;
+            font-family: 'Fira Sans', sans-serif;
+          }
+          .schodack h1, .schodack h2 {
+              display:inline-block;
+              background-color: #E01D36;
+              color: #FFFEFF;
+              line-height: 1em;
+              margin-bottom: 5px;
+              font-family: 'Teko', sans-serif;
+            }
+            .schodack p {
+              margin-top: 5px;
+            }
+
+        div.my-header {
+            position: fixed;
+            top: 3px;
+            right: 3px;
+            height: 30px;
+            width: 100%;
+            text-align: right;
+        }
+
+        .qotd{
+          font-size: 1.1em;
+          font-family: 'Caveat Brush', cursive;
+        }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+layout: true
+<div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
+
+
+---
+
+class: center, middle
+
+# Coding Daily Slides
+
+
+---
+
+class: schodack
+
+#2021.05.21 Coding
+
+1. Do Now:
+  - Create an array and fill it with 5 different numbers ranging from 100 - 200. Then create 5 ellipses using each element from all 5 indexes.
+2. `for()` loops and arrays
+3. Build a rainbow snowman
+
+
+---
+
+class:schodack
+
+#2021.05.16 Coding
+
+1. What is an array?
+2. `floor()` function
+3. Fortune Cookie 🥠 Assignment
+
+---
+class:schodack
+
+#Grocery List
+
+- Clementines
+- Raspberries
+- Cauliflower
+- Sweet Potatoes
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- Raspberries
+- Cauliflower
+- Sweet Potatoes
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- Chicken Breast
+- Pork Shoulder
+- Salsa
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- Salsa
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- ~~Salsa~~
+- Wraps
+- Eggs
+
+---
+class:schodack
+
+#Grocery List
+
+- ~~Clementines~~
+- ~~Raspberries~~
+- ~~Cauliflower~~
+- ~~Sweet Potatoes~~
+- ~~Chicken Breast~~
+- ~~Pork Shoulder~~
+- ~~Salsa~~
+- Wraps
+- Eggs
+- **Tortilla Chips**
+- **Avocados**
+
+---
+class:schodack
+
+
+#Vocabulary
+
+- **Array** - An ordered series of data
+
+--
+- **Index** - A position within an array
+
+--
+- **Element** - A piece of data within an array
+
+--
+- **Zero-Indexed** - THe first element of an array has an index of 0, not 1
+
+---
+class:schodack
+
+.left-column[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/2.1/image1.png" height = "600 px"/>]
+--
+
+.right-column[
+
+1-Story Building: `var building = 30;`]
+
+--
+
+.right-column[
+Our Building:
+
+`building[0] = 5;`
+]
+--
+.right-column[
+`building[1] = 0;`
+]
+--
+.right-column[
+`building[2] = 2;`]
+--
+.right-column[
+`building[3] = 4;`]
+--
+.right-column[
+`building[4] = 1;`
+]
+
+---
+
+class:schodack
+
+#`colors` array
+
+.center[
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/2.1/table.png" width = "1000px"/>
+]
+
+[Example](https://editor.p5js.org/cs4all/sketches/zPPyXXzoQ)
+
+---
+
+class:schodack
+
+#Test it out
+
+Make a building
+
+Your building can look any way you want – as long as it has three or more floors,
+all different colors. And how do we store these colors? In an array, of course!
+You can make each floor an ellipse, a rectangle, even a triangle.
+But when it comes to using `fill()` to color each floor, remember -- you should be
+getting the color value from your array.
+
+Extensions:
+
+1. How could you maybe use another array to make your code even easier to understand and more simple?
+2. What other values are you changing for each floor?
+3. Could you change the text used for colors to RGB values instead?
+4. Is there a way to do that using one array instead of three?
+
+---
+
+class:schodack
+
+###What does this do?
+
+```javascript
+var colors = ['red', 'blue', 'green', 'orange', 'white'];
+var color1, color2;
+
+function setup() {
+  createCanvas(400, 400);
+  color1 = colors[floor(random(0, colors.length))];
+	color2 = colors[floor(random(0, colors.length))];
+}
+
+function draw() {
+  background(220);
+  rectMode(CENTER);
+  fill(color1);
+  rect(100,100,100,100);
+  fill(color2);
+  ellipse(300,250,100);
+}
+
+```
+
+
+---
+
+---
+
+
+class:schodack
+
+#2021.05.04 Coding
+
+1. Notes on owed work:
+  - Logical Operators: 5/10
+  - Map Function: 7/10
+2. Getting Loopy
+
+---
+
+##Task:
+
+Draw five circles on a horizontal line, 100 pixels apart from each other.
+
+---
+
+###Now Draw them 50 pixels apart...
+
+--
+
+###Easy? Or tedious?
+
+--
+
+###There has to be a better way.
+
+---
+
+#Loops
+
+##How we tell the computer to repeat itself, but change one aspect each time.
+
+--
+
+Look at your code for the 5 circles. What was similar and what was different about each line?
+
+--
+
+How could we simplify this code?
+
+---
+
+#Loops
+
+1. Start at 100
+--
+
+2. If we haven't reached the edge of the screen
+--
+
+  - Draw ellipse
+--
+
+  - Move 100px to the right
+
+
+---
+
+#The Code
+
+```javascript
+
+var x = 100;
+while (x < width){
+  ellipse(x,60,40,40);
+  x = x + 100;
+}
+
+```
+
+---
+
+#Three Steps For A While Loop
+
+1. We declare and initialize a variable. Initializing a variable is setting the initial value for that variable, or where you want it to start. In this case, we would like to it begin at 100 pixels.
+2. We check whether it meets a condition. The condition is inside the parentheses. We want to execute the code in the brackets on condition that x is still less than the width of the canvas.
+3. We change the value of that variable in a way that will eventually make it meet the condition. In the code below, 100 is added to x inside the brackets. Every time the code is run x will increase by 100 until it's value is larger than the width of the canvas. Then the loop will be completed and the program will move on in the code.
+
+---
+
+#1. Initialize Variable
+
+```javascript
+
+*var x = 100;
+while (x < width){
+  ellipse(x,60,40,40);
+  x = x + 100;
+}
+
+```
+
+---
+
+#2. Check Condition
+
+```javascript
+
+var x = 100;
+*while (x < width){
+  ellipse(x,60,40,40);
+  x = x + 100;
+}
+
+```
+
+---
+
+#Do the stuff
+
+```javascript
+
+var x = 100;
+while (x < width){
+* ellipse(x,60,40,40);
+  x = x + 100;
+}
+
+```
+
+---
+
+#3. Iterate Variable
+
+```javascript
+
+var x = 100;
+while (x < width){
+  ellipse(x,60,40,40);
+* x = x + 100;
+}
+
+```
+
+
+---
+class:center, middle
+
+#Change the code to make a 10 bull's eyes across the canvas
+
+---
+
+class:center, middle
+
+#Change the code to draw  the bull's eyes up to the the position of your `mouseX`
+
+
+---
+
+##`for()` Loop
+
+```javascript
+
+for (var x = 100; x < width; x = x + 100){
+  ellipse(x, 60, 40, 40);
+}
+
+```
+
+##vs. `while()` Loop
+
+```javascript
+
+var x = 100;
+while (x < width){
+  ellipse(x,60,40,40);
+  x = x + 100;
+}
+```
+
+---
+class:center, middle
+
+#Exercise: Draw two rows of any shape. Use a while loop to draw the first row and a for loop to draw the second.
+
+---
+
+class:center, middle
+
+#Exercise: Make a stack of circles (loop vertically instead of horizontally)
+
+---
+
+
+class:center, middle
+
+#Exercise: Make a diagonal of circles
+
+
+---
+
+class:center, middle
+
+#Exercise: Use a second `for()` loop and create a 'X' out of circles
+
+---
+
+class:center, middle
+
+
+###Exercise: Make a line of circles that grow in size.
+
+###Exercise: Use a loop to make a line of circles that gradually change color.
+
+###Exercise: Use a loop to make an image of circles shrinking in size, and changing color. It should be a huge bull's eye that starts with a circle the size of your canvas and draws smaller ones on top.
+
+###Exercise: Draw a smiley face, and then use a `for()` loop to draw multiple across the screen.
+
+---
+
+class:center, middle
+
+#Nested `for()` loops
+
+---
+
+class:center, middle
+
+#Exercise:
+
+##Draw a 5 x 5 grid of circles
+
+
+---
+
+##The Code
+
+```javascript
+
+function setup( ){
+	createCanvas(600,120);
+}
+
+function draw( ){
+	background(220);
+	//create a row of ellipse
+	for(x=10;width > x;x=x+20){
+		ellipse(x,10,15,15)
+	}
+	//create a column with x value 10 since the row begins with that x value
+	for(y=10;height > y;y=y+20){
+		ellipse(10,y,15,15)
+	}
+	//create a column with x value 30 since the next ellipse in the row was incremented by 20
+	for(y=10;height > y;y=y+20){
+		ellipse(30,y,15,15)
+	}
+	//create a column with x value 50 since the next ellipse in the row was incremented by 20
+	for(y=10;height > y;y=y+20){
+		ellipse(50,y,15,15)
+	}
+	//create a column with x value 70 since the next ellipse in the row was incremented by 20
+	for(y=10;height > y;y=y+20){
+		ellipse(70,y,15,15)
+	}
+}
+
+
+```
+
+
+---
+
+class:center, middle
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/1.5/rows.gif" width = "900 px"/>
+
+
+
+---
+
+#Nested Loop
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_3/1.5/draw.png" width = "800 px"/>]
+
+---
+
+
+#Our code changes to this...
+
+
+```javascript
+
+function setup( ){
+	createCanvas(600,120);
+}
+function draw( ){
+	background(220);
+
+	//create a row of ellipse
+	for(x=30;width > x;x=x+30){
+		//each time the loop is cycled through a column will be drawn at that x location
+		for(var y= 30;height > y;y=y+30){
+			ellipse(x,y,15,15)
+		}
+	}
+
+}
+```
+
+---
+
+class:center, middle
+
+#Exercise
+
+##Use nested `for()` loops to design a grid of bullseyes
+
+
+
+
+---
+
+class:inverse
+
+##2021.04.23 Coding
+
+1. Note: I have a fire drill at 1 pm...so if I am not here that is why. I am supposed to log you off, be checking your email for when class returns.
+2. Partner Project: Light Switch Game:
+  - Aydin, Jaeden, Nate
+  - Luca, Joe, Shane
+  - Kiahn, Cameron
+  - Luc, Emma
+
+---
+
+class: photoback
+background-image: url('https://nycdoe-cs4all.github.io/images/lessons/unit_2/2.3/image3.gif')
+
+Congratulations! Your great aunt’s second cousin twice removed (on your mother’s side) has recently left you a spooky old house. This is great, because “free house”. As you can imagine, however, this does come with its fair share of problems, because spooky, and old.
+
+The biggest problem your great aunt’s second cousin twice removed’s attorney warns you about when handing over the deed is that the wiring in the house is pretty old and nonsensical. Sometimes, a light switch controls multiple lights: it might turn more than one light on at a time, and will also turn some lights off. Because the house is spooky, you need to figure out how to turn all of the lights on as quickly as possible.
+
+The attorney recommends you try to make this into a game to help you practice and to distract you from the dark foreboding shadows that definitely are not hiding anything you need to worry about (but let’s turn the lights on just in case?).
+
+Create a p5 program that will have at least 6 buttons - your light switches. Each light switch should control several other lights, and maybe also the light you clicked. Create a solvable puzzle game in which you need to find the right order to press the switches so all lights are turned on at once.
+
+
+---
+
+class: photoback
+background-image: url('https://nycdoe-cs4all.github.io/images/lessons/unit_2/2.3/image3.gif')
+
+**Requirements**: Work with a partner or alone to complete the following:
+  1. Create a game with at least six clickable buttons.
+  1. Create a flowchart of your game so you can guarantee that there is a combination of switches that you can click to turn them all on, solving the puzzle.
+  1. Create a p5 program where each switch turns a combination of lights on and/or off.
+  1. Add any necessary design elements to make this game look appealing!
+
+####Writing Prompt:
+
+Describe your design process, including stepping through the code to explain exactly how to reach a solution and why your solution works.
+
+
+####Extensions:
+
+- Figure out how to draw a new background and “scene” if you win, so that the player knows they have completed the challenge.
+- Figure out how to keep score, and make something happen if the user has clicked too many times without solving the puzzle.
+
+
+---
+
+class:inverse
+
+##2021.04.20 Coding - Do Now:
+
+- Change your canvas to 800x600.
+- In 5 minutes, create a program where the background will change as you move your mouse left and right across the screen. It should be black when you are on the left and white only when you get to the far right - in between it should be shades of grey going from dark → light.
+
+--
+
+What do you notice?
+
+--
+
+Add `console.log()`
+
+---
+
+class:inverse
+
+##2021.04.20 Coding
+
+1. Do Now
+2. `map()` function
+3. Paired programming
+
+---
+
+class:inverse
+
+#Paired Programming
+
+⌚ 10 minutes
+
+Program *anything* where you use `map()` at *least* 2 times. Be Creative!
+
+---
+
+class:inverse
+
+#Mapping Drawing Tools
+
+Return to your drawing application (from last class) and add `map()` to the code.
+
+(Note: you will be sharing this code with in an group of 3-5)
+
+(Also note: you will be handing in this iteration of your drawing program)
+
+---
+
+class:inverse
+
+##2021.04.16 Coding
+
+1. Do Now:
+  - What is the difference between `setup()` and `draw()`?
+  - Discuss with your partner in your breakout room for 2 minutes
+2. Drawing with the mouse
+3. Make your own
+4. Share and compare
+
+---
+
+class:inverse
+
+##Make your own
+
+####⌚ 15 Minutes
+
+- Make your program unique - you can draw with a line, a shape, a design. You can adjust the fill and transparency, and even try to calculate values to change how your program looks. Make the most UNIQUE program possible, as we will be looking at each other’s code!
+  - Be Creative! This is a great opportunity to experiment. You can use `mouseX` and/or `mouseY` for different values and test the output. Play with the `dist()` function and experiment with color and shapes.
+- Encourage them to do the following:
+- Draw with different shapes.
+- Change the fill or stroke based on your mouse position
+- Change the size based on your mouse position.
+- Use the `dist()` function to vary your tool based on how fast your mouse is moving
+
+**Extensions**
+- Make the drawing tool different depending on where on the canvas you're drawing
+  - Split the canvas into four.
+  - The drawing app should be different in each quadrant.
+
+---
+
+class:inverse
+
+##2021.04.13 Coding Do Now:
+
+Type your answer in the chat, BUT DO NOT SEND yet...
+
+How can Jose eat ice cream in each situation? What is different between the two images?
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/Bk8nRCVWH_Screen%20Shot%202019-07-11%20at%2012.06.31%20PM.png" width = "400 px"/> <img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/SJCj0CEZH_Screen%20Shot%202019-07-11%20at%2012.06.39%20PM.png" width = "400px"/>]
+
+---
+class:inverse
+
+##2021.04.13 Coding
+
+1. Reminder: Quarter Ends Friday -- get in your owed work!!
+2. Code Along: using AND (`&&`) and OR (`||`)
+3. Practicing with AND and OR by creating buttons
+4. Breakout rooms to talk owed work
+
+---
+
+class:inverse
+
+##2021.03.26 Coding Do Now:
+
+There are **two** things wrong with the following code. Find them and offer the fixes:
+
+```
+
+function setup() {
+  createCanvas(400, 400);
+}
+// Debug challenge
+// Find the bugs
+// Why does the rectangle not change fill?
+function draw() {
+  background(220);
+  fill(255, 0, 255); // inital fill purple
+
+  rect(width/2, height/2, 100, 100);
+
+  if (mouseY < width/2){
+  // If mouseY is less then 200
+
+    fill(0);// change fill to black
+}
+
+```
+
+---
+
+#Code Along
+
+##`if()` and `else()`
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/SkWU1J674_ifmousex.png" width = "300 px"/>]
+
+---
+
+###Example 1
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/zYTYSFkZJ" width = "1050 px" height = "500 px"></iframe>]
+
+---
+
+#Discussion: Else If
+
+We can use "else if" to add more possible outcomes to our sketches. Since there are often more than two possible conditions that we want to work with, we can instruct the program to perform different tasks based on a range of conditions.
+I might want to tell someone that if it's cold they should wear a coat, but I also may want to say:
+- "if it's freezing, wear a coat,
+- if it's cold, wear a jacket,
+- otherwise just wear a sweater."
+
+We can do this by adding "else if" to our conditionals between "if" and "else."
+
+
+---
+
+#Syntax
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/BJA541a7E_ifcondition1%20%281%29.png" width = "5  00 px"/>]
+
+- The program will test each condition in order. As soon as one condition evaluates to true, the code inside those brackets is executed and the program continues after the statement.
+--
+
+- Code along: In the following sketch we test the location of the mouse, and at every 100 pixels, we draw an ellipse close to it. Notice how we begin with the highest value.
+
+---
+
+##Code Along #2
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/MNnRWwih5" width = "1050 px" height = "500 px"></iframe>]
+
+---
+
+class:inverse
+
+##2021.03.24 Coding Do Now:
+
+- Write down the condition(s) it takes to make each of the following `TRUE`:
+    - Going to the park with your friends
+    - Going to sleep late
+    - Cutting a birthday cake
+    - Getting a 100 on a test
+    - Buying a new phone
+
+---
+class:inverse
+
+##2021.03.24 Coding
+
+.qotd[❓ of the 📆: ?]
+
+1. Do Now
+2. Discussion & Examples: Conditional Statements
+3. Try it on your own
+
+
+---
+
+
+#Conditionals
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_2/1.1/ifthen.png" width = "300px"/>]
+
+???
+
+If a button, mouse, or key is pressed, or if a mouse is moved, we want something to happen. The conditional statements that we write affect the computer's output. We are going to write a program that changes the color of a shape based on the position of the mouse but first let's discuss conditional logic or boolean expressions. The word boolean indicates that something is true or false.
+
+---
+
+
+#Conditionals
+
+We want the computer to look at an **expression** and evaluate whether it is **true** or **false**, if it's true do one thing, and if it's false do another. Let's take a look at some expressions and evaluate them as true or false.
+
+- 26>5 → 26 is greater than 5. Let's read that as a question. Is 26 greater than 5? Yes it is. This expression evaluates to "true."
+- 10=14 → Since 10 is not equal to 14. This expression evaluates to "false"
+- 4>210 → This expression is also "false"
+- 2=2 → "true"
+
+.center[<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_2/1.1/ifboolean.png" width = "300px"/>]
+
+---
+
+class:center, middle
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_2/1.1/if56.png" width = "600px"/>
+
+???
+
+- **Using Variables in Conditional Statements**
+    - The statements we have written so far are pretty pointless. 5 will always be less than 6 and 5 will never be less than 4, so there can only be one result from these statements. These are pretty fixed.
+    - On the other hand, we've had already written expressions using values that are constantly changing. They were called variables, and while some of them don't change (like when we create variables for the size or static location of a shape), some of them are changing all the time.
+    - `mouseX` and `mouseY` are two of the built-in variables that we used. The value of the mouse location changes whenever you move your mouse. If we wrote the boolean expression `mouseX>100` it can be true or false. If the mouse were anywhere between 0 and 100 pixels on the x-axis, this expression would evaluate to false. If the mouse were anywhere between 101 and the width of the canvas, the expression would evaluate to true.
+    - Let's write a sketch that will turn the background black `if(mouseX>300)`. `300` is the center of our 600-pixel wide canvas so it will be easy to tell if our conditional is working. Based on our statement, if the value of `mouseX` is greater than `300`, the background should turn black. We are also going to set an initial color for the canvas (I set it to white.) That way when my conditional evaluates to false when `mouseX < 300`, the canvas will turn white again.
+    - Show this code to your students or have them code along and use `console.log(mouseX)` so that students can see how the condition in the if statement is satisfied. Move the mouse back and forth a few times so that the background changes color when `mouseX` increases and decreases.
+
+---
+
+##Example 1:
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/n642TDn3F" width = "1050 px" height = "450 px"></iframe>]
+
+[Link to Code](https://editor.p5js.org/mrporterphysics/sketches/n642TDn3F)
+
+
+---
+
+##Play with the Example Code
+
+[Link to Code](https://editor.p5js.org/mrporterphysics/sketches/n642TDn3F)
+
+Change this example and try turning the canvas black when the Y position of your mouse is greater than 60, or another number. See what happens when you change the variable to mouseY.
+
+
+---
+
+#Changing a `fill()`
+
+- We can use conditionals to change color, size, or any other values in our sketches. We're going to use the same conditional from the last example to change the fill of a square.
+- If the X position of the mouse passes the center of the canvas, the fill of the rectangle will turn blue.
+- It's important to remember to draw the rectangle after the conditional so that the fill() will be applied to the rect. See this example.
+
+---
+
+##Example 2:
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/Loljp2g13" width = "1050 px" height = "450 px"></iframe>]
+
+
+[Code Link](https://editor.p5js.org/mrporterphysics/sketches/Loljp2g13)
+
+---
+
+##Changing a Custom Variable with a Conditional
+
+We can also change custom variables inside conditional statements. In this example, both the width and height of the rectangle are determined by a variable called x. That variable is changed inside the conditional statement.
+
+---
+
+##Example 3:
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/T_YpxTtfH" width = "1050 px" height = "450 px"></iframe>]
+
+
+[Code Link](https://editor.p5js.org/mrporterphysics/sketches/T_YpxTtfH)
+
+---
+
+#Make Your Own Interactive Sketch:
+
+Use the mouse position to change a variable and create an interactive sketch.
+
+## **Requirements:**
+
+- Create more than two variations of this shape by writing a conditional statement using the x position and y position of your mouse.
+- You can change the color, size or position of a shape. See this example.
+
+# **Extensions**
+
+- Create a condition that will change the fill of a rectangle if the mouse is hovering over the rectangle.
+- Hint: You could use && (and) to combine conditions
+- Adapt a previous sketch and add interactivity to it.
+
+---
+
+##Assignment Example:
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/GIc7wckJR" width = "1050 px" height = "450 px"></iframe>]
+
+
+---
+
+class:inverse
+
+##2021.03.09 Coding - Do Now
+
+Make a Venn Diagram centered in the middle of the canvas
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/rykwOLlm4_3_1_1.png" width = "400px"/>]
+
+---
+
+class:inverse
+
+##2021.03.09 Coding
+
+1. Do Now
+2. RBG Color Introduction with `fill()`
+3. Playing with RBG
+4. Opacity
+5. Playing with Opacity
+6. Paired Programming - working with color
+
+---
+
+class:inverse
+
+## RGB Color
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/H1IylVDz4_colormixing.png" width = "500px"/>]
+
+--
+
+## `fill(0,255,0);`
+
+Fill <span style='color:red;'>Red</span>, <span style='color:green;'>Green</span>, <span style='color:blue;'>Blue</span>
+
+--
+
+What does it mean to have 0 vs. 255?
+
+???
+
+- So far, fill has been used to accept only one number, and it's created greyscale drawings. In reality, fill accepts three values in a default color mode called RGB - or Red, Green, Blue.
+- We can use these colors to change elements of our drawing, however, we need to be aware that they work differently than colors we may have used in art classes. If you run this project, you will see three circles in red, green, and blue that overlap and mix - yet this mixing is probably different than what you are used to.
+- This is because computers use additive mixing, a process that adds different colored lights to create color. Traditional media uses subtractive mixing, which absorbs different colored lights to create color. (an in-depth explanation of the RGB color model can be found [here](http://dba.med.sc.edu/price/irf/Adobe_tg/models/rgbcmy.html) )
+
+---
+
+class:inverse
+
+
+Add the following fill lines to your Venn diagram code
+
+- `fill(255, 0, 0);`
+- `ellipse(100, 100, 100, 100);`
+- `fill(0, 255, 0);`
+- `ellipse(170, 100, 100, 100);`
+- `fill(0, 0, 255);`
+- `ellipse(145, 150, 100, 100);`
+
+What do you notice?
+
+---
+
+class:inverse
+
+##But wait! There is more!
+
+`fill()` has a 4th argument - Opacity
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/8lSbxz3w3" width = "1100 px" height = "450 px"></iframe>]
+
+???
+
+- In our mixing program, we have also adjusted the transparency (the optional fourth value in fill) to allow colors to mix. Its range is 0 (transparent: not visible) to 255 (opaque). You will notice that when we want to change fill, we call a new color before the shape we want to change. Because the draw function is a repeated loop, this presents one color from being applied to every shape.
+
+---
+
+class:inverse
+
+##Opacity Example 2
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/7Y9bQgm5E" width = "1100 px" height = "450 px"></iframe>]
+
+---
+
+class:inverse
+
+##Paired Programming
+
+1. Make a duplicate of the following program: https://editor.p5js.org/mrporterphysics/sketches/1jlHZ2ZV5 (Links to an external site.)
+1. Give each ellipse a different fill and stroke color.
+1. After completing the first five, switch driver and navigator roles.
+1. Extension: Make a ROYGBIV rainbow with stroke and fill in different shades.
+
+---
+
+class: inverse
+
+##Coding - Do Now:
+
+[🔗Code Link](https://editor.p5js.org/mrporterphysics/sketches/s8WQD7be3d)
+
+1. Go to the link (in the chat)
+2. With the code:
+  - Constrain the ellipse to only half of the canvas.
+  - If students complete this task early, ask them to modify the code so that the ellipse shows up in any random location on the canvas (on both the x and y axis.)
+3. Answer Question of the Day Poll
+
+.qotd[❓ of the 📆: Vacation on the Beach 🏖️, in the woods 🏕️, or in the mountains 🗻?]
+
+---
+
+class: inverse
+
+##Coding
+
+1. Do Now ✔
+2. Discussion: `random()`
+3. Paired Programming with `random()`
+
+---
+
+class:inverse
+
+##`random()` vs. `rect()` and `ellipse()`
+
+- We can also place our ellipse at a random position each time our program runs. To do this, we use p5's random function. This function is different from other functions we have been using (like `ellipse` and `rect`) in that it returns a value. Each time they are called:
+
+--
+  - `random(50, 100)` returns a number between 50 and 100
+
+--
+  - `random(1, 5)` returns a number between 1 and 5
+
+--
+- When the first parameter is omitted, random assumes it is 0:
+
+--
+  - `random(100)` returns a number between 0 and 100
+
+--
+  - `random(5)` returns a number between 0 and 5
+
+---
+
+class:inverse
+
+##What do the following return?
+
+- `random(50, 100)`
+
+--
+- `random(1, 5)`
+
+--
+- `random(100)`
+
+--
+- `random(5)`
+
+---
+
+class:inverse
+
+##Number Types...
+
+- `int` vs `float`
+
+--
+- What does `random()` return? An `int` or a `float`?
+
+--
+- `x = in(random(0,400));`
+
+---
+
+class:inverse
+
+##Random Values in `setup()` vs. `draw()`
+
+<iframe src="https://editor.p5js.org/mrporterphysics/sketches/8I3kGgKJI" width = '1000 px' height = '500px'></iframe>
+
+---
+
+class: inverse
+
+
+
+---
+
+class:inverse
+
+##Coding - Do Now
+
+[🔗Code Link](https://editor.p5js.org/mrporterphysics/sketches/ZBGMSPC0_)
+
+1. Go to the link (in the chat)
+2. Move *all* of the ellipses down 30 pixels
+
+--
+2. Move *all* of the ellipses up 40 pixels
+
+--
+3. Move *all* of the ellipses to the right by 30 pixels
+
+--
+
+####❓ What is frustrating about the process?
+
+--
+
+####❓ What could make this easier?
+
+---
+
+class:inverse
+
+##2021.02.26 Coding
+
+1. Do Now
+2. Custom Variables
+3. Move the Face 😐
+
+---
+
+class:inverse
+
+#Custom Variables
+
+- Creating a Variable:
+
+--
+  1. **Declare** Declaring our variable is basically just telling the program “hey! I’m creating a variable, and this is what it’s going to be called.” All you need to do when you want to declare a variable is write the term " `var variableName`"
+
+--
+  2. **Initialize** - give variableName a value. This is called an assignment operation. We are assigning a value to our variable. If I write `variableName = 50`, every time I use my variable name, the program will replace it with the number 50.
+
+--
+  3. **Use the variable** - Your code won’t break if you don’t use the variable, but then what was the point? If we add an `ellipse at ellipse(100,100,variableName,variableName)`, our ellipse will be 50px wide and 50px high.
+
+---
+
+
+#Custom Variables
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/SkZY0pIGN_declare.png" width = "500 px"/>]
+
+---
+
+#⌨ Code Along
+
+[🔗Code Link](https://editor.p5js.org/mrporterphysics/sketches/ZBGMSPC0_)
+
+Let's learn about creating and using custom variables
+
+---
+
+class:inverse
+
+##2021.02.24 Coding
+
+.qotd[❓ of the 📆: Who is your favorite superhero?]
+
+### Do Now:
+- ⏳5 Minutes: Open up p5.js editor and and draw an ellipse that is ***perfectly*** centered in the canvas
+- If you finish early, add a rectangle with the same width and height behind the circle.
+
+--
+- Was this process frustrating? Why?
+
+--
+- What happens if you change the size of your canvas? (Hint: try it)
+
+---
+
+class: inverse
+
+## Variables
+
+- What is a variable?
+--
+
+  - In computer science, variables are placeholder names for actual values
+  - They are used to store data that can be used and manipulated in a program
+  - They allow us to label data with names that make our code more understandable.
+
+--
+
+### .center[Example:  `let colorOfEyes = 'green';`]
+
+---
+
+## p5.js System Variables
+
+The p5.js library has a number of system variables (built-in) that store data. Today we’re going to look at:
+
+- `width` and `height`
+
+--
+- `mouseX` and `mouseY`
+
+---
+
+###How can we use `width` and `height` to center our ellipse?
+
+--
+
+#`ellipse(width/2, height/2, 30, 30);`
+
+---
+
+#Activity 💻: Paired programming
+
+⏲ 10 minutes
+
+With your partner (randomly assiged in breakout rooms)
+
+Create an ellipse that is:
+
+- ⅓ of the way across the screen
+- ¼ of the way across the screen
+- ⅔ of the way across the screen
+- ¾ of the way across the screen
+
+**Save this file and <u>BOTH</u> of you will turn this file in!**
+
+---
+
+###Using `mouseX` and `mouseY`
+
+Why was this code helpful? (What does it do?)
+
+```
+function draw() {
+	background(100);
+	text(mouseX + ", " + mouseY, 20, 20);
+}
+
+```
+
+--
+
+- The `mouseX` variable holds the value of the x-coordinate of the current mouse location.
+- The `mouseY` variable holds the value of the y-coordinate of the current mouse location.
+- The values of these two variables will update in real-time as you move your mouse over the canvas.
+
+---
+
+##What happens?
+
+```
+function setup(){
+  createCanvas(400,400);
+}
+
+function draw(){
+  background(mouseX);
+  ellipse(width/2,height/2, mouseY);
+}
+```
+
+---
+
+#Interactivity
+
+- These two simple system variables are what p5.js is all about - they easily allow us to make our projects **interactive** and fun for the user.
+- **Interactivity** is the ability of a computer program to respond to the user’s **input**. The computer will **process** this input data to produce an **output**.
+
+---
+
+##Try It:
+
+1. Make an ellipse follow your mouse
+2. Make a rectangle follow your mouse
+
+What is similar? What is different?
+
+---
+
+#`rectMode()`
+
+`rectMode()` allows you to change the reference point for drawing rectangles to the center. You do that with `rectMode(CENTER);`
+
+
+---
+#💻 Paired Programming
+
+With your partner (randomly assiged in breakout rooms)
+
+- Use `mouseX` and/or `mouseY` to change the height or width of a rectangle
+- Use `mouseX` and/or `mouseY` to change the height or width of an ellipse
+- Use `mouseX` and/or `mouseY` to change the shade of the canvas
+- Use `mouseX` and/or `mouseY` to change the fill of a rectangle or ellipse
+- 🔌 Extension: Create a triangle that follows your mouse
+
+**Save this file and <u>BOTH</u> of you will turn this file in!**
+
+Note: You can comment out each task after you complete it so you can submit one file.
+
+For example:
+
+```javascript
+//ellipse centered
+//ellipse(width/2, height/2, 50,50);
+
+//ellipse 1/3 across the screen
+ellipse(width/3, height/2, 50,50);
+```
+
+---
+
+class:inverse
+
+##2021.02.12 Coding
+
+.qotd[❓ of the 📆: Any big plans for break?]
+
+1. Various Shapes
+2. `stroke()`, `strokeWeight()`, and `fill()`
+2. Practice with Shapes
+3. Mini Project: Taijutu Symbol
+
+Notes:
+
+- Owed Work
+- Need to hit sumbit on draw a robot
+- Missing many 0.1.2 (points and lines)
+- Missing some 0.1.3 (shapes and Robots)
+
+---
+
+
+class:inverse
+
+##2021.02.08 Coding
+
+.qotd[❓ of the 📆: Check the google meet poll?]
+
+1. More Drawing with p5.js
+2. Return to Challenges
+3. Draw your Robot
+
+---
+
+class: inverse
+
+##2021.02.05 Coding
+
+.qotd[❓ of the 📆: What toppings are on your ideal burger 🍔?]
+
+1. Turn in your 🤖 drawing
+2. Exploring the p5.js web editor [(editor.p5js.org)](https://editor.p5js.org/)
+  - Go to the site
+  - Create an account with your school email address
+  - Tour and creating folders
+3. Drawing basic shapes ⬜⚪⚫🔳🟧🕳〽➖🔻🔷 in p5.js
+
+[Slides for Today](https://docs.google.com/presentation/d/1F_knSfL2ibxOjUWQEb0myTISYGWJpTjDkRvUGH5eY50/edit#slide=id.g5e5480712c_0_181)
+
+---
+
+class:inverse
+
+##2021.02.03 Coding
+##Welcome to Coding!
+
+👨🏻‍🏫 Mr. Porter
+
+📧 Email: nporter@schodack.k12.ny.us
+
+📅 Office Hours: by appointment, schedule through link on Canvas
+
+🤝 Google Meet Code: coding
+
+
+---
+
+class:photoback
+background-image: url("images/Gaussian Random Circles.png")
+
+---
+class:inverse
+
+#What is p5.js?
+
+[🎬What is p5.js?](http://hello.p5js.org/)
+
+- JavaScript Library for creating visual and interactive art (and more!)
+- Works with *three* languages: JavaScript, HTML, and CSS
+- This programming language will be used in this course to introduce basic programming concepts and apply them to create computational media by building expressive and interactive computer applications and media.
+
+
+---
+
+
+#[Processing](https://processing.org/)
+
+"Processing is a flexible software sketchbook and a language for learning how to code within the context of the visual arts. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. There are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning and prototyping."
+
+  - Free to download and open source
+  - Interactive programs with 2D, 3D, PDF, or SVG output
+  - OpenGL integration for accelerated 2D and 3D
+  - For GNU/Linux, Mac OS X, Windows, Android, and ARM
+  - Over 100 libraries extend the core software
+  - Well documented, with many books available
+
+---
+
+#[p5.js](https://p5js.org/)
+
+- Processing, but adapted for javascript
+- means you can run it in your internet browser
+- Also has an online editor and you can run it with your Chromebooks
+
+---
+
+class:inverse
+
+##🔌 Unplugged...Draw a robot...
+
+Draw a robot using:
+
+- Using only rectangles, circles, and ellipses
+- Using at *least* 5 total shapes
+
+##Why?
+
+We need to practice giving instructions. Coding is all about giving a computer instructions that it will understand.
+
+---
+
+In p5 we use code to draw graphics on a canvas:
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/visualoutcome.png" width = "700px"/>
+
+
+---
+
+The coordinate system is different...
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/coordinategrid.png" width = "700px"/>
+
+---
+
+Adjust your robot's coordinates:
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/robot.png" width = "500px"/>
+
+
+
+---
+
+##Rectangles:
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/heightwidthsquare.png" width = "400px"/>
+
+##Ellipses:
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/heightwidth.png" width = "400px"/>
+
+---
+
+#Write the info for your robot....
+
+List the shapes and write down their information
+
+<img src="https://nycdoe-cs4all.github.io/images/lessons/unit_1/1.1/shapeinstructions.png" width = "700px"/>
+
+---
+
+
+#The Code
+
+###Set up the windown
+```javascript
+
+function setup() {
+  createCanvas(400, 400);
+}
+```
+
+###A continuous loop
+```javascript
+function draw() {
+  background(220);
+}
+```
+
+---
+
+class:inverse
+
+#Draw your robot assignment
+
+Draw a robot using:
+
+- Using only rectangles, circles, and ellipses
+- Using at *least* 5 total shapes
+
+
+[Do this on Jamboard Linked in classroom assignment]
+
+---
+
+
+
+
+    </textarea>
+    <script src="../javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://remarkjs.com/downloads/remark-0.14.0.min.js">
+    </script>
+
+    <script>
+      var slideshow = remark.create({ratio:'16:9',
+                                     highlightLanguage: 'javascript',
+                                     highlightStyle: 'ir-black',
+                                     highlightLines:'true'});
+
+      // Setup MathJax
+     MathJax.Hub.Config({
+         tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+         }
+     });
+
+     MathJax.Hub.Configured();
+
+
+    </script>
+
+
+  </body>
+</html>
