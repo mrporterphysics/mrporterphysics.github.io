@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Daily 2021</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- This is template for http://remarkjs.com/ by Ole Petter Bang -->
+    <!-- CSS modifcations by J. M. Lilly-->
+
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic');
+    @import url('https://fonts.googleapis.com/css?family=Creepster');
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+    @import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
+    @import url('https://fonts.googleapis.com/css?family=Blinker:900&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Teko:700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+
+      body {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 3em;
+     }
+      h1, h2 {
+        font-family: 'Blinker', sans-serif;
+
+      }
+
+      h3 {
+        font-family: 'Alegreya SC', serif;
+      }
+      .remark-slide-content h4 {font-size: 1.3em}
+      .remark-slide-content p,ol,ul { font-size: 1.2em; }
+      .remark-slide-content ul ul{font-size: 100%;}
+      .remark-slide-content ol ul{font-size: 100%;}
+      .remark-slide-content ol ol{font-size: 100%;}
+      .remark-slide-content ul ol{font-size: 100%;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; color: yellow;font-size: 110%;}
+
+      /* Two-column layout */
+     .left-column {
+
+       width: 48%;
+
+       float: left;
+     }
+       .left-column h2:last-of-type, .left-column h3:last-child {
+         color: #000000;
+       }
+     .right-column {
+       width: 48%;
+
+       float: right;
+
+     }
+
+
+     .left-column-short {
+       color: #000000;
+       width: 65%;
+       height: 95%;
+       float: left;
+       padding-top:-4em;
+     }
+       .left-column-short h2:last-of-type, .left-column h3:last-child {
+         color: #000;
+       }
+     .right-column-long {
+       width: 65%;
+       float: right;
+       padding-top: 1em;
+       font-size: 1.4em;
+     }
+
+     .footer {
+   position: fixed;
+   left: 15px;
+   bottom: 15px;
+   width: 5%;
+   background-color: white;
+   color: white;
+   text-align: center;
+  }
+
+  .checklist {list-style-type: 'none';}
+  .checklist li:before{font-size:100%; content:"✅";}
+  .inverse {
+        background: #272822;
+        color: #ffffff;
+        font-family: 'Fira Sans', sans-serif;
+      }
+      .inverse h1, .inverse h2 {
+        color: #9966FF;
+        line-height: 0.8em;
+        font-family: 'Inconsolata', monospace;
+      }
+
+      .halloween {
+            background: #6032a8;
+            color: white;
+
+          }
+          .halloween h1, .halloween h2, .halloween h3 {
+            color: Orange;
+            font-family: 'Creepster', cursive;
+            line-height: 0.8em;
+            text-shadow: 0 0 20px #333;
+          }
+
+          .thanksgiving{
+              background:#630d00;
+              color:white;
+
+          }
+
+          .thanksgiving h1, .thanksgiving h2, .thanksgiving h3{
+            color:#f0991f;
+            font-family: 'Satisfy', cursive;
+
+          }
+
+      /* Slide-specific styling */
+      #slide-inverse .footnote {
+        bottom: 12px;
+        left: 20px;
+      }
+
+      .small-list{
+        font-size: 80%;
+      }
+
+      .photoback {
+            background-size: 100%;
+            color: Black;
+            font-family: 'Noto Sans', sans-serif;
+            }
+
+      .photoback h1, .photoback h2, .photoback h3, .photoback h4{
+                  color: purple;
+
+                  line-height: 0.8em;
+                  font-family: 'Inconsolata', monospace;
+                  }
+      .photoback p, .photoback ol, .photoback ul, .photoback ul ul{
+                color:pink;
+                background-color: rgba(0,0,0,0.5);
+
+            }
+
+      .large h1{font-size:3em;}
+
+
+      .schodack {
+            background: #bfc1c7;
+            color: #1B438B;
+            font-family: 'Fira Sans', sans-serif;
+          }
+          .schodack h1, .schodack h2 {
+              display:inline-block;
+              background-color: #E01D36;
+              color: #FFFEFF;
+              line-height: 1em;
+              margin-bottom: 5px;
+              font-family: 'Teko', sans-serif;
+            }
+            .schodack p {
+              margin-top: 5px;
+            }
+
+        div.my-header {
+            position: fixed;
+            top: 3px;
+            right: 3px;
+            height: 30px;
+            width: 100%;
+            text-align: right;
+        }
+
+        .qotd{
+          font-size: 1.1em;
+          font-family: 'Caveat Brush', cursive;
+        }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+
+layout: true
+<div class="my-header"><img src="images/scsdLogo.png" style="height: 70px;"/></div>
+
+
+---
+
+
+
+  
+
+
+---
+
+
+
+
+    </textarea>
+
+
+ 
+
+    <script src="../javascript/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script src="https://remarkjs.com/downloads/remark-0.14.0.min.js">
+    </script>
+
+    <script>
+      var slideshow = remark.create({ratio:'16:9',
+                                     highlightLanguage: 'javascript',
+                                     highlightStyle: 'ir-black',
+                                     highlightLines:'true'});
+
+      // Setup MathJax
+     MathJax.Hub.Config({
+         tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+         }
+     });
+
+     MathJax.Hub.Configured();
+
+
+    </script>
+
+
+  </body>
+</html>
