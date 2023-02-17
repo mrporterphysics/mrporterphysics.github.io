@@ -97,5 +97,5 @@ Work is the change in energy of a system...
 
 * Area of Force vs. displacement graph
 * $W = \Delta E_T$ 
-* For **constant** or average forces: $W = Fd$$
+* For **constant** or average forces: $W = Fd$
 * Note: only force **parallel** to displacement does work: $F \cos \theta d = W$
