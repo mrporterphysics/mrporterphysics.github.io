@@ -6,9 +6,8 @@ paginate: true
 class: invert
 ---
 
-# <!---fit---> The Tic-Tac
 
-# <!---fit---> Bounce
+# <!---fit---> The Tic-Tac <br> Bounce
 
 ---
 
@@ -36,10 +35,10 @@ Using Energy Bar Graphs -- explain why the second bounce is higher than the firs
 ---
 
 # Slow Motion
-
+<center>
 <video width="320" height="540" controls>
   <source src="IMG-0136.MOV" type="video/mp4">
-</video>
+</video> </center>
 
 ---
 
