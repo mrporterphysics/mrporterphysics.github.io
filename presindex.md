@@ -18,6 +18,7 @@
   - [Electricity](Presentations\Electricity\talks\AP_Electricity.html)
   - Find [Rotation Presentation](Presentations\AP Rotation Representation\talks\Rotation)
   - [Work](Presentations\APETM\Marp - Energy\energy.html)
+  - [Simple Harmonic Motion](Presentations\AP SHM\SHM2023.html)
 
 ## AP Review Slides:
 
