@@ -219,6 +219,83 @@ layout: true
 
 ---
 
+class:inverse 
+
+##2023.03.01 Coding
+
+.qotd[❓of the 📅: What was your highlight from break?] 
+
+1. RBG Color Introduction with `fill()`
+3. Playing with RBG
+4. Opacity
+5. Playing with Opacity
+6. Abstract Album Art
+
+---
+
+class:inverse
+
+## RGB Color
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/H1IylVDz4_colormixing.png" width = "500px"/>]
+
+--
+
+## `fill(0,255,0);`
+
+Fill <span style='color:red;'>Red</span>, <span style='color:green;'>Green</span>, <span style='color:blue;'>Blue</span>
+
+--
+
+What does it mean to have 0 vs. 255?
+
+???
+
+- So far, fill has been used to accept only one number, and it's created greyscale drawings. In reality, fill accepts three values in a default color mode called RGB - or Red, Green, Blue.
+- We can use these colors to change elements of our drawing, however, we need to be aware that they work differently than colors we may have used in art classes. If you run this project, you will see three circles in red, green, and blue that overlap and mix - yet this mixing is probably different than what you are used to.
+- This is because computers use additive mixing, a process that adds different colored lights to create color. Traditional media uses subtractive mixing, which absorbs different colored lights to create color. (an in-depth explanation of the RGB color model can be found [here](http://dba.med.sc.edu/price/irf/Adobe_tg/models/rgbcmy.html) )
+
+---
+
+class:inverse
+
+
+Add the following fill lines to your Venn diagram code
+
+- `fill(255, 0, 0);`
+- `ellipse(100, 100, 100, 100);`
+- `fill(0, 255, 0);`
+- `ellipse(170, 100, 100, 100);`
+- `fill(0, 0, 255);`
+- `ellipse(145, 150, 100, 100);`
+
+What do you notice?
+
+---
+
+class:inverse
+
+##But wait! There is more!
+
+`fill()` has a 4th argument - Opacity
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/8lSbxz3w3" width = "1100 px" height = "450 px"></iframe>]
+
+???
+
+- In our mixing program, we have also adjusted the transparency (the optional fourth value in fill) to allow colors to mix. Its range is 0 (transparent: not visible) to 255 (opaque). You will notice that when we want to change fill, we call a new color before the shape we want to change. Because the draw function is a repeated loop, this presents one color from being applied to every shape.
+
+---
+
+class:inverse
+
+##Opacity Example 2
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/7Y9bQgm5E" width = "1100 px" height = "450 px"></iframe>]
+
+
+---
+
 class:inverse
 
 ##2023.02.27 Coding
