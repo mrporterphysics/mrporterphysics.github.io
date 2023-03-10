@@ -18,6 +18,8 @@ class: invert
 
 $$P = \frac{W}{t} = \frac{Fd}{t} = F\bar{v}$$
 
+- Power is measured in Joules per second (J/s) which is equal to a Watt (W).
+
 ---
 
 # <!---fit---> Power up the stairs

@@ -219,6 +219,129 @@ layout: true
 
 ---
 
+class:inverse
+
+##Coding Do Now:
+
+There are **two** things wrong with the following code. Find them and offer the fixes:
+
+```
+
+function setup() {
+  createCanvas(400, 400);
+}
+// Debug challenge
+// Find the bugs
+// Why does the rectangle not change fill?
+function draw() {
+  background(220);
+  fill(255, 0, 255); // inital fill purple
+
+  rect(width/2, height/2, 100, 100);
+
+  if (mouseY < width/2){
+  // If mouseY is less then 200
+
+    fill(0);// change fill to black
+}
+
+```
+
+
+
+---
+
+class:inverse
+
+##2023.03.09 Coding:
+
+1. Do Now 
+2. More Conditionals `if()`, `else()`, and `else if()`
+
+
+
+
+
+
+---
+
+#Code Along
+
+##`if()` and `else()`
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/SkWU1J674_ifmousex.png" width = "300 px"/>]
+
+---
+
+###Example 1
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/zYTYSFkZJ" width = "1050 px" height = "500 px"></iframe>]
+
+---
+
+#Discussion: Else If
+
+We can use "else if" to add more possible outcomes to our sketches. Since there are often more than two possible conditions that we want to work with, we can instruct the program to perform different tasks based on a range of conditions.
+I might want to tell someone that if it's cold they should wear a coat, but I also may want to say:
+- "if it's freezing, wear a coat,
+- if it's cold, wear a jacket,
+- otherwise just wear a sweater."
+
+We can do this by adding "else if" to our conditionals between "if" and "else."
+
+
+---
+
+#Syntax
+
+.center[<img src="https://s3.amazonaws.com/peblio-files/CS4ALL/images/BJA541a7E_ifcondition1%20%281%29.png" width = "5  00 px"/>]
+
+- The program will test each condition in order. As soon as one condition evaluates to true, the code inside those brackets is executed and the program continues after the statement.
+--
+
+- Code along: In the following sketch we test the location of the mouse, and at every 100 pixels, we draw an ellipse close to it. Notice how we begin with the highest value.
+
+---
+
+##Code Along #2
+
+.center[<iframe src="https://editor.p5js.org/mrporterphysics/sketches/MNnRWwih5" width = "1050 px" height = "500 px"></iframe>]
+
+
+---
+
+class:inverse 
+
+# `map()` Function 
+
+The `map()` function will "re-map" a number from one range to another. 
+
+--
+
+- This is similar to **mapping** a quiz grade: 
+   - you scored a 29/33, what is your grade? 
+
+--
+
+`map(value, start1, stop1, start2, stop2);`
+--
+
+- `value` ➡️ number you want converted
+--
+
+- `start1`, `stop1` ➡️ lower and upper bound of value's current range
+--
+
+- `start2`, `stop2` ➡️ lower and upper bound of value's target range
+--
+
+
+`map(myScore, 0, 33, 0, 100);`
+
+Grade was 29/33 ➡️ 88/100 
+
+---
+
 
 class:inverse
 
