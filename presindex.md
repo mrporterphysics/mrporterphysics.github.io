@@ -12,6 +12,7 @@
   - [Projectile Motion Particle Model](Presentations\Projectiles\talks\Projectiles_AP.html)
   - [Circular Motion + Universal Law of Gravitation](Presentations\Circular Motion\talks\CircMotion.html)
   - [Energy Transfer Model](Presentations\APETM\talks\APETM.html)
+    - [Power](Presentations\APETM\talks\power.html)
   - [Momentum Transfer Model](Presentations\Momentum\talks\APmomentum.html)
   - [Oscillating Particle Model](Presentations\AP SHM\talks\SHM_AP_2020.html)
   - [Mechanical Wave Model](Presentations\Waves\talks\AP_Waves.html)
