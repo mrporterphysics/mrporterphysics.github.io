@@ -186,9 +186,15 @@ $$ \boxed{\Sigma \vec{F} \Delta t = \Delta p} $$
 * $J = F_{net} \Delta t$
 * Impulse is equal to the change in momentum of an object or system
 
+---
+
+# <!---fit---> I bet you cannot break 
+
+# <!---fit---> the Egg 🥚
+
 --- 
 
-#Impulse 
+# Impulse 
 
 * Can make impulse changes with large *Forces*:
 
@@ -198,11 +204,7 @@ $$ \LARGE{F} \tiny{\Delta t} \normalsize =  \Delta P $$
 
 $$ \tiny{F} \LARGE{\Delta t} \normalsize =  \Delta P $$
 
----
 
-# <!---fit---> I Bet you cannot break 
-
-# <!---fit---> the Egg 🥚
 
 ---
 
