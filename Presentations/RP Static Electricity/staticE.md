@@ -39,8 +39,6 @@ class: invert
 
 ---
 
-
-
 ![bg](https://i.ytimg.com/vi/3Ptu07enIsY/maxresdefault.jpg)
 
 # Van de Graff Generator
@@ -51,3 +49,4 @@ class: invert
 - Why does the hair stand up?
 
 ---
+
