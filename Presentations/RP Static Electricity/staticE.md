@@ -196,3 +196,32 @@ The total change in a system is constant
 
 # Coulomb's Law 
 
+$$ F_e = k\frac{q_1 q_2}{r^2} $$
+
+* $F_e$ :arrow_right: electrostatic force
+* $k$ ➡️ electrostatic constant = $8.99 \times 10^{9}$ Nm$^2$/C$^2$
+* $q$ ➡️ charge 
+* $r$ ➡️ distance between the centers
+
+---
+
+# Example:
+
+What is the electrical force between two very small objects located 0.5 m apart when the charge on one object is 4.0 $\times$ 10$^{-8}$ C and the charge on the second object is 6.0 $\times$ 10$^{-5}$ C?
+
+---
+
+# Graph Example:
+
+What shows the relationship between the electrostatics force and the distance?
+
+![width:1100px](CLGraphs.png)
+
+---
+
+# Example:
+
+Two charges attract each other with a force of F. If one charge was doubled and the other charge was tripled, how would that change the attractive force between those charges?
+
+
+---
