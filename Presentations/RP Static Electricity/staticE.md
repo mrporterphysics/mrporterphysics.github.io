@@ -57,6 +57,10 @@ class: invert
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 
 # Why does the water bend? <!---fit--->
 
@@ -207,7 +211,7 @@ $$ F_e = k\frac{q_1 q_2}{r^2} $$
 
 # Example:
 
-What is the electrical force between two very small objects located 0.5 m apart when the charge on one object is 4.0 $\times$ 10$^{-8}$ C and the charge on the second object is 6.0 $\times$ 10$^{-5}$ C?
+## What is the electrical force between two very small objects located 0.5 m apart when the charge on one object is 4.0 $\times$ 10$^{-8}$ C and the charge on the second object is 6.0 $\times$ 10$^{-5}$ C?
 
 ---
 
@@ -221,7 +225,65 @@ What shows the relationship between the electrostatics force and the distance?
 
 # Example:
 
-Two charges attract each other with a force of F. If one charge was doubled and the other charge was tripled, how would that change the attractive force between those charges?
+## Two charges attract each other with a force of F. If one charge was doubled and the other charge was tripled, how would that change the attractive force between those charges?
 
 
 ---
+
+# Mapping the Electric Field 
+
+1. Using a ruler measure the distance between the charges.
+2. Calculate the electrostatic force between the two charges.
+3. Draw a *scaled* vector starting on the test charge that represents the force between the test charge and the central charge.
+
+---
+
+# *Electric Field*
+
+## A region in space where electric forces will act on charges. 
+
+---
+
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+# Electric Field Lines 
+
+Field Lines point in the direction that a positive point charge would experience a force. 
+
+<iframe src="https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_en.html"
+        width="1100"
+        height="400"
+        allowfullscreen>
+</iframe>
+
+---
+
+# Electric Field 
+
+$$ E = \frac{F_e}{q} $$
+
+- $E$ ➡️ Electric Field Strength (N/C)
+- $F_e$ ➡️ Electrostatic Force (N)
+- $q$ ➡️ Charge of object in field (C)
+
+---
+
+# Comparison to Gravity
+
+## $E = \frac{F_e}{q}$ *vs.* $g = \frac{F_g}{m}$ <!---fit--->
+
+---
+
+# Example:
+
+## What is the magnitude of the electric field intensity at a point in the field where an electron experiences 1 N of force?
+
+
+---
+
+# Electric Potential
