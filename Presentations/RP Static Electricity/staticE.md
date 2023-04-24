@@ -286,4 +286,36 @@ $$ E = \frac{F_e}{q} $$
 
 ---
 
-# Electric Potential
+# Potential & Gravity Comparison
+
+- What is Potential?
+    - What is gravity?
+    - Where does it come from?
+    - How do you know it is present?
+    - What do you change an object's $PE_g$?
+    - What is Earth's gravitational field strength?
+
+---
+
+# Bleacher Example 
+
+![center width:500](https://sdsu-physics.org/physics180/physics180B/p180b_images/e_potentialenergy.gif)
+
+---
+
+## Electric Energy 
+
+The work needed or energy required by moving a positive charge in an electric field
+
+$$ W = Fd = (qE)d = \overbrace{qV}^{\textrm{EPE}} = \underbrace{mgh}_{\textrm{PEg}} = \frac{1}{2}mv^2$$ 
+
+![center width:500](https://sdsu-physics.org/physics180/physics180B/Topics/electromagnetism/images_em/17_potentialenergy1.jpg)
+
+---
+
+# Potential Difference (AKA *Voltage*)
+
+This is the potential energy difference per unit charge between two points. 
+
+
+$$V = \frac{W}{q}$$
