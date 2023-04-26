@@ -1,5 +1,5 @@
 ---
-title: Static Electricity
+title: Regents - Circuits Slides 
 marp: true
 theme: gaia
 math: katex
@@ -24,6 +24,14 @@ class: invert
         font-style:bold;
         color:#34b3f7; 
     }
+
+
+    img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+    }
+
+
 
 </style>
 
@@ -152,3 +160,46 @@ At 20 degrees C, four conducting wires made of different materials have the same
 
 ---
 
+# Ohm's Law 
+
+## Who is Georg Ohm?
+
+- German Physicist who stared as a high school science teacher
+- Researched the electrochemical cell and discovered the relationship between *voltage*, *current*, and *resistance*. 
+
+---
+
+# Ohm's Law Lab 
+
+### 🎯: Find the relationship between *voltage*, *current*, and *resistance*
+
+1. What is a circuit diagram?
+2. How do we measure *voltage* and *current*
+
+---
+
+# Ohm's Law 
+
+$$\boxed{R = \frac{V}{I}}$$
+
+- $R$ ➡️ Electrical Resistance (Ohms, $\Omega$)
+- $V$ ➡️ Voltage (Potential Difference) (Volts, V)
+- $I$ ➡️ Current (Amperes, A)
+
+---
+
+# Ohm's Law 
+
+$$\boxed{R = \frac{V}{I}}$$
+
+* Resistance slows current flow 
+* Voltage causes current flow 
+* So they should have a mathematical relationship
+
+---
+
+# Ohm's Law
+
+![center width:750](https://mammothmemory.net/images/user/base/Physics/Electricity/Ohms%20law/ohms-law.c1c09ec.jpg)
+
+---
