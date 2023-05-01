@@ -78,6 +78,25 @@ $$I = \frac{\Delta q}{t}$$
 2. $2.5 \times 10^{15}$ elementary charges flow per second. What is the current?
 3. Current through a light bulb is 2 amperes. How much charge flows through the light bulb in 1 minute?
 
+---
+
+# My Milkshake Brings All the Physics to the yard 🥛🥤🍨
+
+## Consider:
+
+In a speed milkshake drinking contest
+
+- What advantages does your straw provide?
+- What disadvantages does your straw provide?
+
+
+---
+
+# Straw as a Resistor
+
+- How does length affect your sip rate?
+- How does size (cross-sectional area) affect your sip rate?
+- How does your milkshake's thickness (viscosity) affect your sip rate?
 
 ---
 
@@ -111,7 +130,7 @@ $$I = \frac{\Delta q}{t}$$
 
 ---
 
-# Electrial Resistance
+# Electrical Resistance
 
 $$ R = \frac{\rho L}{A}$$
 
@@ -203,3 +222,11 @@ $$\boxed{R = \frac{V}{I}}$$
 ![center width:750](https://mammothmemory.net/images/user/base/Physics/Electricity/Ohms%20law/ohms-law.c1c09ec.jpg)
 
 ---
+
+# Circuit Diagrams 
+
+<iframe src="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html"
+        width="1120"
+        height="550"
+        allowfullscreen>
+</iframe>
