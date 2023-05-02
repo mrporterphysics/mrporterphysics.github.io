@@ -221,6 +221,36 @@ $$\boxed{R = \frac{V}{I}}$$
 
 ![center width:750](https://mammothmemory.net/images/user/base/Physics/Electricity/Ohms%20law/ohms-law.c1c09ec.jpg)
 
+
+---
+
+## Practice 
+
+1. The current in a wire is 24 amperes when connected to a 1.5 volt battery. Find the resistance of the wire.
+2. A 24 ohm resistor is connected across a 6 volt battery. What is the current in the circuit?
+
+--- 
+
+# Electrical Work & Power
+
+$$ V = \frac{W}{q}$$
+
+$$ W = Vq$$ 
+
+$$ P = VI = I^2 R = \frac{V^2}{R}$$
+
+$$ W = Pt = VIt = I^2Rt = \frac{V^2 t}{R} $$
+
+---
+
+# The Simple Circuit 
+
+1. A source of electrical potential difference or voltage. (typically a battery or electrical outlet)
+2. A conductive path which would allow for the movement of charges. (typically made of wire)
+3. An electrical resistance (resistor) which is loosely defined as any object that uses electricity to do work. (a light bulb, electric motor, heating element, speaker, etc.)
+
+![bg right:30% fit center](simplcir.gif)
+
 ---
 
 # Circuit Diagrams 
@@ -230,3 +260,63 @@ $$\boxed{R = \frac{V}{I}}$$
         height="550"
         allowfullscreen>
 </iframe>
+
+---
+
+# Kirchhoff's Laws:
+
+1. The algebraic sum of the currents flowing through a junction is zero. Currents approaching the junction are + while currents going away from the junction are -.
+    - i.e. Current in = current out 
+2. The algebraic sum of the potential differences in a circuit loop must be zero.  Potential rises are + while potential drops are -.
+    - i.e. around any loop in a circuit, the voltage rises must equal the voltage drops
+    - Whatever energy a charge starts with at the beginning of the circuit is what it loses by the end. 
+
+---
+
+# Kirchhoff's 1st Law
+
+![width:350](kircho1.gif) ![width:350](kircho2.gif) ![width:350](kircho2.gif)
+
+---
+
+# Kirchhoff's 2nd Law
+
+![width:350](kirch21.gif) ![width:350](kirch22d.gif) ![width:350](kirch22.gif)
+
+---
+
+# Kirchhoff's 2nd Law
+
+![center width:550](kirch2lp.gif)
+
+---
+
+# Series Circuit 
+
+* A ***series*** circuit has more than one resistor (anything that uses electricity to do work) and gets its name from only having one path for the charges to move along. 
+* Charges must move in "series" first going to one resistor then the next. 
+    - If one of the items in the circuit is broken then no charge will move through the circuit because there is only one path. There is no alternative route. 
+* Old style electric holiday lights were often wired in series. If one bulb burned out, the whole string of lights went off.
+
+---
+
+# Series Circuit 
+
+Animation models electrical energy as Gravitational Potential Energy, the greater change in height, the more energy used, or work done. 
+
+![center width:500](series.gif)
+
+---
+
+# Parallel Circuit 
+
+* A ***parallel*** circuit has more than one resistor (anything that uses electricity to do work) and gets its name from having multiple (*parallel*) paths to move along . 
+* Charges can move through any of several paths. 
+    - If one of the items in the circuit is broken then no charge will move through that path, but other paths will continue to have charges flow through them. 
+* Parallel circuits are found in most household electrical wiring. This is done so that lights don't stop working just because you turned your TV off.
+
+---
+
+# Parallel Circuit 
+
+![center width:500](parallel.gif)

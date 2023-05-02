@@ -61,3 +61,66 @@ Car example:
 
 ---
 
+# Torque 
+
+## When a *force* has the ability to rotate an object 
+
+* i.e. Pushing the edge a door so it rotates around its axis of rotation (the hinges)
+
+---
+
+# Torque
+
+## Depends on:
+
+* where the force is exerted
+* how large the force is 
+* what angle the force is at 
+
+---
+
+# Torque 
+
+$$ \boxed{\tau = r_\perp F = r F \sin \theta}$$
+
+* $\tau$ ➡️ torque (Newton $\cdot$ meter)
+* $r$ :arrow_right: distance between point force is exerted and axis of rotation
+* $F \sin \theta$ ➡️: Force perpendicular to axis of rotation
+
+---
+
+# Static Equilibrium 
+
+* Object remains at rest 
+* Sum of forces = zero (balanced forces)
+    * $\Sigma F = F_1 + F_2 + F_3 + \ldots = 0$
+    * $\Sigma \tau = \tau_1 + \tau_2 + \tau_3 + \ldots = 0$
+* Sum of torques = zero (balanced torques)
+
+---
+
+# AP Workbook
+
+A long rod of length L and negligible mass supports a box of mass M. The left end of each rod is held in place by a frictionless pin about which it can freely rotate. In each case, a vertical force is holding the rods and the weights at rest. The rods are marked at half-meter intervals. 
+
+![bg fit right:51%](apworkbook7b.png)
+
+---
+
+# 7.B
+
+
+**A.** Rank the magnitude of the vertical force $F$ applied to the rods to keep the rod horizontal (from greatest to least)
+
+**B.** Sketch the forces acting on the rod-box system
+
+![bg fit right:60%](apworkbook7b.png)
+
+---
+
+# 7.B
+
+
+**C.** In which cases is the force from the pin up? Down? Zero? Justify your answers. 
+
+![bg fit right:60%](apworkbook7b.png)
