@@ -124,3 +124,180 @@ A long rod of length L and negligible mass supports a box of mass M. The left en
 **C.** In which cases is the force from the pin up? Down? Zero? Justify your answers. 
 
 ![bg fit right:60%](apworkbook7b.png)
+
+---
+
+# Unbalanced Torque 
+
+
+
+---
+
+
+# Newton's Second Law Rotation
+
+$$ \alpha = \frac{\Sigma \tau}{I} $$
+
+- $\alpha$ ➡️ angular acceleration 
+- $\Sigma \tau$ ➡️ Net Torque 
+- $I$ ➡️ Moment of Inertia (rotational mass equivalent)
+
+
+---
+
+
+
+# Angular Displacement:
+
+- $\Delta \theta$: change in angle, measured in radians
+- Is equal to the arc length divided by the radius
+
+$$\Delta \theta = \frac{\Delta s}{r}$$
+
+![](https://cnx.org/resources/4bf1c18602c765189348b8e90ab8f780d6d2f128/Figure_07_01_01aa.jpg)
+
+- One revolution is equal to $2\pi$
+
+---
+
+# Angular Velocity
+
+- Measure of how fast an object is rotating.
+- Symbol: $\omega$
+- Is equal to the change in angular displacement in a time.
+
+
+$$\omega = \frac{\Delta \theta}{\Delta t}$$
+
+- measured in rad/s
+---
+
+# Angular and Linear Velocity
+
+Angular velocity is analogous to linear velocity, and we can determine their relationship.
+
+
+$$v = \frac{\Delta s}{\Delta t}$$
+
+and
+$$\Delta \theta = \frac{\Delta s}{t}$$
+
+so
+$$\Delta s = r \Delta \theta$$
+
+sub in:
+$$v = \frac{r\Delta \theta}{\Delta t} = r \omega$$
+
+---
+
+$$v = r \omega$$
+
+#$$\omega = \frac{v}{r}$$
+
+---
+
+# Can Spinning things accelerate?
+--
+
+#YES!
+
+---
+
+#Angular Acceleration
+
+$$\alpha = \frac{\Delta \omega}{\Delta t}$$
+--
+
+- measured in rad/s/s or rad/s<sup>2</sup>
+
+---
+
+##What about a bug on the end of an accelerating wheel?
+--
+
+- There is linear (or tangential) acceleration
+--
+(ugh Mr. Porter)
+--
+
+- Derivation aside...
+
+$$a_t = r\alpha$$
+
+$$\alpha = \frac{a_t}{r}$$
+---
+
+#Rotational Kinematics:
+
+The same as linear, but with their rotational twin!
+
+
+.center[
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:20px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:20px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Linear</th>
+    <th class="tg-031e">Angular</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">\(v_x = v_{0x} + a_xt\)</td>
+    <td class="tg-031e">\(\omega = \omega_0 + \alpha t\)</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">\(x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2\)</td>
+    <td class="tg-031e">\(\theta = \theta _0 + \omega_0 t + \frac{1}{2}\alpha t^2\)</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">\(v_x^2 = v_{0x}^2 = 2a_x(x-x_0)\)</td>
+    <td class="tg-031e">\(\omega^2 = \omega_0^2 + 2\alpha(\theta - \theta_0)\)</td>
+  </tr>
+</table>
+]
+--
+
+How to translate the two (not on the reference table!)
+
+.center[
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:20px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:20px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Linear</th>
+    <th class="tg-031e">Angular</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">\(x = \theta r\)</td>
+    <td class="tg-031e">\(\theta = \frac{x}{r}\)</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">\(v = \omega r\)</td>
+    <td class="tg-031e">\(\omega = \frac{v}{r}\)</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">\(a = \alpha r\)</td>
+    <td class="tg-031e">\(\alpha = \frac{a}{r}\)</td>
+  </tr>
+</table>
+
+]
+
+---
+
+class:center, middle
+
+<img style="width:100%"  src="../figures/anggraphs.png">
+
+---
+
+class:center, middle
+
+<iframe src="https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_en.html" width="800" height="600" scrolling="no" allowfullscreen></iframe>
+
+[Link](https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_en.html)
