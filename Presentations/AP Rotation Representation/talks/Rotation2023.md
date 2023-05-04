@@ -1,5 +1,5 @@
 ---
-title: Regents - Circuits Slides 
+title: AP - Rotation 2023
 marp: true
 theme: gaia
 math: katex
@@ -29,6 +29,10 @@ Car example:
 - During turn certain parts move differently
 - Modeled as a point 
 --->
+
+# Rotational Motion
+
+## _Spinning objects_
 
 ---
 
@@ -142,10 +146,43 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 - $\Sigma \tau$ ➡️ Net Torque 
 - $I$ ➡️ Moment of Inertia (rotational mass equivalent)
 
-
 ---
 
 
+
+# What is **Moment of Inertia**? <!---fit--->
+
+## Demo:
+
+- Twisting Rod (where is it easiest to hold the rod to twist it?)
+
+---
+<!---class: invert--->
+
+# Moment of Inertia 
+
+![bg](../figures/Spin_nocredit4.gif)
+
+## Why does the skater spin faster when she brings in their arms?
+
+---
+
+<!---class: --->
+
+# Moment of Inertia
+
+* the rotational analog of mass for linear motion
+* it is related to the mass and the location of the mass
+  * closer the mass is to the rotational axis, the lower the moment of inertia (easier to spin)
+* for a point like object $I=mr^2$
+* this relationship is used to build the equations for other moments of inertia
+
+
+---
+
+![bg fit](../figures/momentofI.png)
+
+---
 
 # Angular Displacement:
 
@@ -154,7 +191,7 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 
 $$\Delta \theta = \frac{\Delta s}{r}$$
 
-![](https://cnx.org/resources/4bf1c18602c765189348b8e90ab8f780d6d2f128/Figure_07_01_01aa.jpg)
+![bg right:40% fit](https://openstax.org/apps/archive/20230220.155442/resources/fe64292de40cb167becd9db917e61329c5522eaa)
 
 - One revolution is equal to $2\pi$
 
@@ -177,49 +214,33 @@ $$\omega = \frac{\Delta \theta}{\Delta t}$$
 Angular velocity is analogous to linear velocity, and we can determine their relationship.
 
 
-$$v = \frac{\Delta s}{\Delta t}$$
+$v = \frac{\Delta s}{\Delta t}$ and $\Delta \theta = \frac{\Delta s}{t}$
 
-and
-$$\Delta \theta = \frac{\Delta s}{t}$$
+so $\Delta s = r \Delta \theta$
 
-so
-$$\Delta s = r \Delta \theta$$
+sub in: $v = \frac{r\Delta \theta}{\Delta t} = r \omega$
 
-sub in:
-$$v = \frac{r\Delta \theta}{\Delta t} = r \omega$$
 
 ---
 
-$$v = r \omega$$
+# Can spinning things <br> accelerate? <!---fit--->
 
-#$$\omega = \frac{v}{r}$$
-
----
-
-# Can Spinning things accelerate?
---
-
-#YES!
 
 ---
 
-#Angular Acceleration
+# Angular Acceleration
 
 $$\alpha = \frac{\Delta \omega}{\Delta t}$$
---
+
 
 - measured in rad/s/s or rad/s<sup>2</sup>
 
 ---
 
-##What about a bug on the end of an accelerating wheel?
---
+## What about a bug on the end of an accelerating wheel?
+
 
 - There is linear (or tangential) acceleration
---
-(ugh Mr. Porter)
---
-
 - Derivation aside...
 
 $$a_t = r\alpha$$
@@ -227,77 +248,52 @@ $$a_t = r\alpha$$
 $$\alpha = \frac{a_t}{r}$$
 ---
 
-#Rotational Kinematics:
-
-The same as linear, but with their rotational twin!
-
-
-.center[
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:20px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:20px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-031e">Linear</th>
-    <th class="tg-031e">Angular</th>
-  </tr>
-  <tr>
-    <td class="tg-031e">\(v_x = v_{0x} + a_xt\)</td>
-    <td class="tg-031e">\(\omega = \omega_0 + \alpha t\)</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">\(x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2\)</td>
-    <td class="tg-031e">\(\theta = \theta _0 + \omega_0 t + \frac{1}{2}\alpha t^2\)</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">\(v_x^2 = v_{0x}^2 = 2a_x(x-x_0)\)</td>
-    <td class="tg-031e">\(\omega^2 = \omega_0^2 + 2\alpha(\theta - \theta_0)\)</td>
-  </tr>
-</table>
-]
---
-
-How to translate the two (not on the reference table!)
-
-.center[
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:20px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:20px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-031e">Linear</th>
-    <th class="tg-031e">Angular</th>
-  </tr>
-  <tr>
-    <td class="tg-031e">\(x = \theta r\)</td>
-    <td class="tg-031e">\(\theta = \frac{x}{r}\)</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">\(v = \omega r\)</td>
-    <td class="tg-031e">\(\omega = \frac{v}{r}\)</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">\(a = \alpha r\)</td>
-    <td class="tg-031e">\(\alpha = \frac{a}{r}\)</td>
-  </tr>
-</table>
-
-]
+<iframe src="https://phet.colorado.edu/sims/cheerpj/rotation/latest/rotation.html?simulation=rotation"
+        width="1100"
+        height="600"
+        allowfullscreen>
+</iframe>
 
 ---
 
-class:center, middle
+## Translating Between Linear and Angular
+
+
+How to translate the two (not on the reference table!)
+
+| Linear | Angular |
+|---|---|
+| $x = \theta r$ | $\theta = \frac{x}{r}$ |
+| $v = \omega r$ | $\omega = \frac{v}{r}$ |
+| $a = \alpha r$ | $\alpha = \frac{a}{r}$ |
+
+
+---
+
+# Rotational Kinematics:
+
+The same as linear, but with their rotational twin!
+
+| Linear | Angular | 
+|---|---|
+|$v_x = v_{0x} + a_xt$ | $\omega = \omega_0 + \alpha t$ |
+| $x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2$ |  $\theta = \theta _0 + \omega_0 t + \frac{1}{2}\alpha t^2$|
+|  $v_x^2 = v_{0x}^2 = 2a_x(x-x_0)$| $\omega^2 = \omega_0^2 + 2\alpha(\theta - \theta_0)$ | 
+
+
+---
 
 <img style="width:100%"  src="../figures/anggraphs.png">
 
 ---
 
-class:center, middle
+# Class Work:
 
-<iframe src="https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_en.html" width="800" height="600" scrolling="no" allowfullscreen></iframe>
+### On your own: 
+1. 7.D
 
-[Link](https://phet.colorado.edu/sims/html/balancing-act/latest/balancing-act_en.html)
+
+### Together: 
+
+1. 7.E
+2. 7.G
