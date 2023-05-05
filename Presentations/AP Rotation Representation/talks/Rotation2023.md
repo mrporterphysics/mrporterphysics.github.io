@@ -131,8 +131,9 @@ A long rod of length L and negligible mass supports a box of mass M. The left en
 
 ---
 
-# Unbalanced Torque 
+# Unbalanced Torque  <!---fit--->
 
+# Causes rotational (angular) acceleration!
 
 
 ---
