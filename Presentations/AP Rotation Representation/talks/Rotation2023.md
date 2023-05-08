@@ -298,3 +298,49 @@ The same as linear, but with their rotational twin!
 
 1. 7.E
 2. 7.G
+
+
+---
+
+<!---class: invert--->
+
+# Angular Momentum <!---fit--->
+
+![bg](../figures/Spin_nocredit4.gif)
+
+---
+
+<!---class: --->
+
+# Angular Momentum 
+
+* Before calculating angular momentum, it is necessary to define a rotational axis.
+* The angular momentum $L$ of an object is given by:
+  * $L = I\omega$ for an extended object
+  * $L = mvr$ for a point object, where $r$ is the “distance of closest approach”
+
+---
+
+# Conservation of Momentum 
+
+* Angular Momentum is conserved ***if there is no net torque*** on the system
+  * $\Sigma L_i = \Sigma L_f$ or $\Sigma I_i\omega_i = \Sigma I_f \omega_f$
+* Unlike energy, angular momentum is conserved *separately* from linear momentum. (Do not combine them in a single equation)
+* Angular momentum is a vector – angular momentums in the same sense add, angular momentums in opposite senses subtract.
+
+---
+
+# Conservation of angular momentum:
+
+* Conservation of Angular Momentum is used when a translating object interacts with a rotating one.
+  * Examples: Throwing a ball from a merry-go-round, bat hitting a baseball.
+* Conservation of Angular Momentum is also used for a single rotating object changing shape.
+  * Example: A figure skater pulls in her arms. Moment of inertia decreases so angular velocity must increase to keep angular momentum constant.
+
+---
+
+# Impulse
+
+* The impulse-momentum theorem can be written for angular momentum, too.
+  * $\tau \Delta t = \Delta L$
+* A change in angular momentum equals the net torque multiplied by the time the torque is applied.

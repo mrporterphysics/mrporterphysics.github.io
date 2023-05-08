@@ -320,3 +320,69 @@ Animation models electrical energy as Gravitational Potential Energy, the greate
 # Parallel Circuit 
 
 ![center width:500](parallel.gif)
+
+---
+
+# Ohm's Law in circuits 
+
+You can use the total circuit values:
+
+$$ V_{total} = I_{total}R_{total}$$
+
+OR You can use the partial values:
+
+$$ V_{part} = I_{part}R_{part}$$
+
+---
+# Series Circuit Rules 
+
+* Sum of potential drops equals the potential rise of the source:
+    - $V = V_1 + V_2 + V_3 + \ldots$
+* The current is the same **everywhere** in the circuit:
+    - $I = I_1 = I_2 = I_3 = \ldots$
+* The **equivalent resistance** or effective resistance of the circuit is equal to the sum of resistors
+    - $R_{eq} = R_1 + R_2 + R_3 + \ldots$
+
+---
+
+# Parallel Circuit Rules 
+
+* The potential drops of each branch equals the potential rise of the source.
+    - $V_T = V_1 = V_2 = V_3 = \ldots$
+* The total current is equal to the sum of the currents in the branches.
+    - $I_T = I_1 + I_2 + I_3 + \ldots$
+* The inverse of the total resistance of the circuit (also called **equivalent resistance**) is equal to the sum of the inverses of the individual resistances. $\frac{1}{R_{eq}}= \frac{1}{R_{1}} + \frac{1}{R_{2}} + \frac{1}{R_{3}} + \ldots$
+
+---
+
+# Calculator Hint for Parallel Equivalent Resistance
+
+1. Type in your 1/Rs: $1/10 + 1/25 + 1/75$
+2. Type 1/ans and hit enter 
+
+
+---
+
+# VIRP Table - Series Circuit
+
+The following table shows the values of three resistors in series with a 9V battery. Draw the circuit and calculate the missing values. 
+
+| | V | I | R | P | 
+|---|---|---|---|---|
+| $R_1$ | &ensp; &ensp; &ensp;  | &ensp; &ensp; &ensp;  | 50 $\Omega$ | &ensp; &ensp; &ensp;  |
+| $R_2$ |  |  | 75 $\Omega$ |  |
+| $R_3$ |  |  | 100 $\Omega$ |  |
+| Total|  |  |  |  | 
+
+---
+
+# VIRP Table - Parallel Circuit
+
+The following table shows the values of three resistors in series with a 9V battery. Draw the circuit and calculate the missing values. 
+
+| | V | I | R | P | 
+|---|---|---|---|---|
+| $R_1$ | &ensp;&ensp; &ensp;   | &ensp; &ensp; &ensp;  | 50 $\Omega$ | &ensp; &ensp; &ensp;  |
+| $R_2$ |  |  | 75 $\Omega$ |  |
+| $R_3$ |  |  | 100 $\Omega$ |  |
+| Total |  |  |  |  | 
