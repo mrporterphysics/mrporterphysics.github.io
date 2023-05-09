@@ -31,3 +31,9 @@
 
 You can find links to class presentations here:
   - Find [AP Daily Plans](Daily Plan\20202021\apdaily202021.html).
+
+
+## Regents Slides:
+
+- [Electrostatics](Presentations\RP Static Electricity\staticE.html)
+- [Circuits](Presentations\RP Electricity\RPCircuits2023.html)
