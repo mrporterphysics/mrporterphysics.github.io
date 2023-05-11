@@ -344,3 +344,111 @@ The same as linear, but with their rotational twin!
 * The impulse-momentum theorem can be written for angular momentum, too.
   * $\tau \Delta t = \Delta L$
 * A change in angular momentum equals the net torque multiplied by the time the torque is applied.
+
+---
+
+<br>
+<br>
+<br>
+<br>
+
+# Series of Angular Momentum Gifs <!---fit--->
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0304-com-stool-and-masses-1_4.gif)
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0304-com-stool-and-masses-2_3.gif)
+
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0305-wheel-angular-moemtum-1_3.gif)
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0310-animated-gif-1_3.gif)
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0310-animated-gif-2_3.gif)
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0310-animated-gif-3_3.gif)
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0310-animated-gif-4_3.gif)
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0310-animated-gif-5_3.gif)
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0311-animated-gif_3.gif)
+
+---
+<br>
+<br>
+<br>
+<br>
+
+# Animation for Moment of Inertia <!---fit--->
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0283-animated-gif-1_3.gif)
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0283-animated-gif-3_3.gif)
+
+---
+
+### Kinetic Energy 
+
+The kinetic energy for a moving particle: 
+$$ K = \frac{1}{2}mv^2 $$
+
+relating its linear speed and angular velocity:
+$$v =r \omega$$
+
+Thus, 
+$$K_{rotational} = \frac{1}{2}mv^2 = \frac{1}{2}m(r\omega)^2 = \frac{1}{2}(mr^2)\omega^2 = \frac{1}{2}I\omega^2$$
+
+
+
+---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0301-rolling-incline-first_3.gif)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+# Explain Using Energy
+
+---
+
+# Rolling Race 
+
+
+$$U_gi = K_f $$
+
+$$U_g = K_T + K_R$$ 
+
+$$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I \omega^2$$
+
+$$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\Big(\frac{v}{r}\Big)^2$$
