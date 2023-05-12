@@ -1,4 +1,5 @@
 ---
+title: Regents - Waves
 marp: true
 style: |
   .columns {
@@ -10,6 +11,7 @@ style: |
     display: block;
     margin: 0 auto;
     }
+paginate: true
 ---
 
 ![bg](https://i.pinimg.com/originals/1a/69/1d/1a691d35add342af8bda0d77bb9e3d8b.gif)
@@ -141,4 +143,75 @@ style: |
 
 </div>
 
+
 ---
+
+![center](/Presentations/Waves/figures/Lwave-v8.gif)
+
+![center width:900](/Presentations/Waves/figures/Twave.gif)
+
+---
+
+# Water Waves
+
+![center width:1000](/Presentations/Waves/figures/Water-2016.gif)
+
+---
+
+# Talk 🗣️ and Notes 📝 <!---fit--->
+
+---
+
+# Wave Characteristics 
+
+
+- The ***frequency*** ($f$) is the number of waves passing a point per unit time. 
+    - Frequency is measured in Hertz (Hz) or 1/s (s$^{-1}$)
+- The ***period*** of a wave ($T$) is the time for one complete cycle to pass a point
+    - It is the reciprocal of frequency. $T = \frac{1}{f}$, where $T$ is the period in second and $f$ is the frequency in hertz.
+
+---
+
+# Check Your Understanding 
+
+What is the period of a $60$ Hz electromagnetic wave traveling at $3 \times 10^8$ m/s?
+
+---
+
+# Wave Characteristics 
+
+- The ***wavelength*** ($\lambda$, greek lambda, "lamb-duh") is the distance between corresponding points in phase on successive waves. 
+    - Measured in meters. 
+
+![center](/Presentations/Waves/figures/wavelength.jpg)
+
+
+---
+
+# Wave Characteristics 
+
+The **amplitude** of a wave is related to the energy of a wave.
+
+* In a transverse wave it is defined as the maximum distance above, or below, the wave axis (or equilibrium position)
+* In a *longitudinal wave* it is determined by the *maximum displacement* of a particle.
+* As the amplitude of a *light wave* increases the *brightness* of the light increases.
+* As the amplitude of a *sound wave* increases the *loudness* increases
+
+---
+
+# Check your understanding
+
+Draw the following 4 waves: A, B, C, and D
+
+1. A has twice the amplitude of B and half the period of B. 
+2. B has twice the amplitude of C and C has 5 times the frequency of B. 
+3. D has the same period of A, but half the amplitude. 
+4. A should be drawn with 2 full waves 
+
+
+---
+
+# Pivot - Wave Speed Experiment <!---fit--->
+
+---
+
