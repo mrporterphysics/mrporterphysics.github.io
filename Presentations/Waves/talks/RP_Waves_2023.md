@@ -66,23 +66,23 @@ paginate: true
 
 ---
 
-![center width:800](/Presentations/Waves/figures/peoplewave.gif)
+![center width:800](../figures/peoplewave.gif)
 
-![center width:800](/Presentations/Waves/figures/wavepulse.gif)
+![center width:800](../figures/wavepulse.gif)
 
-![center width:800](/Presentations/Waves/figures/stringpulse.gif)
+![center width:800](../figures/stringpulse.gif)
 
 ---
 
 # A Wave 
 
-![center width:1000](/Presentations/Waves/figures/Lwave-Red-2.gif)
+![center width:1000](../figures/Lwave-Red-2.gif)
 
 ---
 
 # Another Wave 
 
-![center](/Presentations/Waves/figures/wave-x-t.gif)
+![center](../figures/wave-x-t.gif)
 
 ---
 
@@ -146,15 +146,15 @@ paginate: true
 
 ---
 
-![center](/Presentations/Waves/figures/Lwave-v8.gif)
+![center](../figures/Lwave-v8.gif)
 
-![center width:900](/Presentations/Waves/figures/Twave.gif)
+![center width:900](../figures/Twave.gif)
 
 ---
 
 # Water Waves
 
-![center width:1000](/Presentations/Waves/figures/Water-2016.gif)
+![center width:1000](../figures/Water-2016.gif)
 
 ---
 
@@ -183,7 +183,7 @@ What is the period of a $60$ Hz electromagnetic wave traveling at $3 \times 10^8
 - The ***wavelength*** ($\lambda$, greek lambda, "lamb-duh") is the distance between corresponding points in phase on successive waves. 
     - Measured in meters. 
 
-![center](/Presentations/Waves/figures/wavelength.jpg)
+![center](../figures/wavelength.jpg)
 
 
 ---
