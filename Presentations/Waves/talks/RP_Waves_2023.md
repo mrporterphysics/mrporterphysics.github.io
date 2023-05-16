@@ -215,3 +215,115 @@ Draw the following 4 waves: A, B, C, and D
 
 ---
 
+# Wave Characteristics 
+
+* The _**velocity**_ of a wave is determined by the medium it is traveling in
+    * Example: Sound waves travel faster in water and solids than it does in air 
+* Wave Equation: $v = f\lambda$ or $\lambda = \frac{v}{f}$
+* For Electromagnetic (E&M) Waves: they move at the speed of light, $c$, in a vacuum.
+    * $c = 3 \times 10^8$ m/s
+
+---
+
+# Check your understanding
+
+1. The sound produced by a trumpet has a frequency of 440 Hz. What is the distance between successive compressions in the sound wave as it travels through the air at STP?
+2. A stationary research  ship uses sonar to send a 1180 Hz sound wave down through ocean water. The reflected sound wave from the flat ocean bottom 324 meters below the ship is detected 0.425 s after it was sent from the ship
+    1. Calculate the speed of the sound wave in the ocean water
+    2. Calculate the wavelength of the sound wave in the water.
+    3. Determine the period of the sound wave in the water.
+
+---
+
+# Wave Front 
+
+- A *wave front* is the locus of adjacent points of a propogated wave that are in phase. 
+
+![center width:500](https://cdn.britannica.com/19/5019-004-83B00469/Wave-front.jpg?s=1500x700&q=85)
+
+---
+
+
+# Wave Phase
+
+- We can think of a wave cycle as 360 degrees
+- If we look at the sine graph of a wave 
+
+![center](https://upload.wikimedia.org/wikipedia/commons/d/d8/Oscillating_sine_wave.gif)
+
+---
+
+# Wave Phase
+
+![center width:700](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Phase_shift.svg/1280px-Phase_shift.svg.png)
+
+---
+
+# Wave Phase 
+
+![center](https://upload.wikimedia.org/wikipedia/commons/9/92/Phase_shifter_using_IQ_modulator.gif)
+
+
+---
+
+# Pivot - Pulse Reflections <!---fit--->
+
+---
+
+
+# Pivot - Pulse "Collisions" <!---fit--->
+
+---
+
+# Pulse Reflections 
+
+- Pulse at a fixed boundaary 
+    - The pulse is inverted (flipped), amplitude remains the same, but opposite sign.
+
+![center](../figures/hard.gif)
+
+---
+
+# Pulse Reflections 
+
+- Pulse at a free boundaary 
+    - The pulse is reflected and remains the same
+
+![center](../figures/soft.gif)
+
+---
+
+# Pulse Reflections 
+
+- From a low density to a high density:
+    - Original pulse is reflected and inverted
+    - A new pulse moves slower through the higher density medium.
+
+![center](../figures/lo-hi.gif)
+
+---
+
+# Pulse Reflections 
+
+- From a high density to a low density:
+    - Original wave is reflected and is not inverted
+    - New pulse moves with a faster velocity through the lower density medium
+
+![center](../figures/hi-lo.gif)
+
+---
+
+# Interference
+
+- ***Interference*** is the effect produced by two or more waves which are passing simultaneously through a region.
+- ***Superposition*** is the resultant disturbance at any point is the algebraic sum of displacements due to individual waves.
+
+---
+
+# Interference 
+
+![center](../figures/pulses.gif)
+
+---
+
+<iframe src="http://physics.bu.edu/~duffy/HTML5/interference_of_pulses.html" width = "1100px" height = "900px" ></iframe>
