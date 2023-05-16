@@ -1,0 +1,28 @@
+/*
+@theme schodack
+*/
+
+@import 'default';
+
+
+
+h1 {
+  font-size: 60px;
+  color: rgb(206,32,47);
+  
+}
+
+section {
+    background-color:rgb(217,228,247);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+    }

@@ -5,5 +5,9 @@
    "cSpell.words": [
       "Jamboard",
       "qotd"
-   ]
+   ],
+   "markdown.marp.themes": [
+      "./Daily Plan/20222023/CP Playground/schodack.css"
+    ]
 }
+

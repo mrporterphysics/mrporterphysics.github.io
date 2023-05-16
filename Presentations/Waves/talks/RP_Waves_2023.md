@@ -165,9 +165,9 @@ paginate: true
 # Wave Characteristics 
 
 
-- The ***frequency*** ($f$) is the number of waves passing a point per unit time. 
+* The ***frequency*** ($f$) is the number of waves passing a point per unit time. 
     - Frequency is measured in Hertz (Hz) or 1/s (s$^{-1}$)
-- The ***period*** of a wave ($T$) is the time for one complete cycle to pass a point
+* The ***period*** of a wave ($T$) is the time for one complete cycle to pass a point
     - It is the reciprocal of frequency. $T = \frac{1}{f}$, where $T$ is the period in second and $f$ is the frequency in hertz.
 
 ---
@@ -315,8 +315,8 @@ Draw the following 4 waves: A, B, C, and D
 
 # Interference
 
-- ***Interference*** is the effect produced by two or more waves which are passing simultaneously through a region.
-- ***Superposition*** is the resultant disturbance at any point is the algebraic sum of displacements due to individual waves.
+* ***Interference*** is the effect produced by two or more waves which are passing simultaneously through a region.
+* ***Superposition*** is the resultant disturbance at any point is the algebraic sum of displacements due to individual waves.
 
 ---
 
