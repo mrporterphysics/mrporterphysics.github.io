@@ -20,7 +20,7 @@ h2, h3, h4, h5, h6 {
 }
 
 section {
-    background-image: url(assets/physgraphics.png);
+    background-image: url(assets/paper.png);
     background-size: cover;
     /* background-blend-mode: color; */
     /* background-color:rgb(217,228,247); */
