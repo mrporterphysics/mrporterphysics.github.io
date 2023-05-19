@@ -1,16 +1,6 @@
 ---
 title: AP Final Project
 marp: true
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-    img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
-    }
 theme: schodack
 paginate: true
 ---
@@ -76,7 +66,7 @@ _Research and design a physics experiment explain the physics of something that 
 - Recreate an AP Exam Experimental Design Question
 
 
-</div>
+</div></div>
 
 ---
 
@@ -108,7 +98,7 @@ _Research and design a physics experiment explain the physics of something that 
 - Study a nail bed
 
 
-</div>
+</div></div>
 
 
 ---
@@ -183,3 +173,37 @@ _Research and design a physics experiment explain the physics of something that 
 1. Build or start experimenting
 
 ---
+
+<div class="columns">
+
+<div>
+
+# One 
+
+lots of stuff lots of stuff lots of stuff lots of stuff lots of stuff 
+
+</div>
+
+<div>
+
+# Two 
+
+lots of stuff lots of stuff lots of stuff lots of stuff lots of stuff lots of stuff 
+
+</div>
+
+<div>
+
+# Three
+
+lots of stuff lots of stuff lots of stuff lots of stuff 
+
+</div>
+
+<div>
+
+# four
+
+lots of stuff lots of stuff lots of stuff 
+
+</div></div>

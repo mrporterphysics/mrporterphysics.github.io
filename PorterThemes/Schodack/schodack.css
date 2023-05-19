@@ -2,6 +2,8 @@
 @theme schodack
 */
 
+
+
 @import 'default';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&display=swap');
@@ -20,7 +22,7 @@ h2, h3, h4, h5, h6 {
 }
 
 section {
-    background-image: url(assets/paper.png);
+    background-image: url(../../PorterThemes/Schodack/assets/paper.png);
     background-size: cover;
     /* background-blend-mode: color; */
     /* background-color:rgb(217,228,247); */
@@ -28,7 +30,7 @@ section {
 
 .columns {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
     gap: 1rem;
   }
 

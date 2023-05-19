@@ -7,7 +7,6 @@
       "qotd"
    ],
    "markdown.marp.themes": [
-      "./Daily Plan/20222023/CP Playground/schodack.css",
       "./PorterThemes/Schodack/schodack.css"
     ]
 }
