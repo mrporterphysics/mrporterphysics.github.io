@@ -3,17 +3,27 @@
 */
 
 @import 'default';
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&display=swap');
 
 
 h1 {
   font-size: 60px;
   color: rgb(206,32,47);
-  
+  /* background-color: rgba(217, 228, 247, 0.671); */
+  font-family: 'Hammersmith One', sans-serif;  
+}
+
+h2, h3, h4, h5, h6 {
+    font-style: italic;
+    font-family: 'Playfair Display', serif  ;
 }
 
 section {
-    background-color:rgb(217,228,247);
+    background-image: url(assets/physgraphics.png);
+    background-size: cover;
+    /* background-blend-mode: color; */
+    /* background-color:rgb(217,228,247); */
 }
 
 .columns {
