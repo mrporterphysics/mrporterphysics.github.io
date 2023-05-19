@@ -11,7 +11,7 @@ style: |
     display: block;
     margin: 0 auto;
     }
-
+theme: schodack
 paginate: true
 ---
 
@@ -154,3 +154,32 @@ _Research and design a physics experiment explain the physics of something that 
 # Poster Example
 
 ![bg fit right](../Final%20Project/poster1.png)
+
+
+---
+
+
+
+# Day 4 - Experimentdal Design & Research 
+
+##### ❓of the 📅: *If you were ruler of your own country what would be the first law you would introduce?*
+
+1. ✅ Finish Research 
+2. ✅ Finish Experimental Design 
+3. 🚧 Start Collecting Data
+    - Build Experimental Devices
+    - Set up data tables
+    - Organize Necessary Equipment 
+    - Etc
+
+---
+
+<!--- _header: 2023.05.22--->
+
+# Day 5 - Start Experimenting 
+
+##### ❓of the 📅: *QUESTION*
+
+1. Build or start experimenting
+
+---
