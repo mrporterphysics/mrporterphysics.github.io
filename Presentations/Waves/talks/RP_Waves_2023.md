@@ -327,3 +327,193 @@ Draw the following 4 waves: A, B, C, and D
 ---
 
 <iframe src="http://physics.bu.edu/~duffy/HTML5/interference_of_pulses.html" width = "1100px" height = "900px" ></iframe>
+
+---
+
+# Constructive Interferece
+
+- Occurs at points where path distances to the two different sources differ by an even number of half wavelengths.
+    - This means a phase difference of 0º or 360º for maximum constructive interference. 
+
+---
+
+# Destructive Interference 
+
+- Occurs when crests meet troughs or compressions meet rarefactions. 
+    - This is where path differences to the two sources differ by an odd number of half wavelengths.
+    - This is at 180º out of phase.
+
+--- 
+
+# Sound Wave Interference - Monopole
+
+![center width:600](../figures/monopole.gif)
+
+---
+
+# Sound Wave Interference - Dipole 
+
+![center width:600](../figures/dipole.gif)
+
+---
+
+# SWI - Lateral Quadrupole Source 
+
+![center width:600](../figures/latquad.gif)
+
+---
+
+# Standing Waves 
+
+![center width:800](../figures/string-standing-2.gif)
+
+---
+
+# Standing Waves 
+
+![center](../figures/standing-pos.gif)
+
+---
+
+# Standing Waves - Soft Boundary 
+
+![center](../figures/reflect-soft.gif)
+
+---
+
+# Standing Waves - Hard Boundary
+
+![center](../figures/reflect-hard.gif)
+
+---
+
+# Standing Waves - Sound 
+
+![center width:800](../figures/standing.gif)
+
+---
+
+# Standing Waves - Closed Tube 
+
+<div class="columns">
+<div>
+
+#### 1st Harmonic
+
+![center](../figures/harmonic-1a.gif)
+
+</div>
+<div>
+
+#### 3rd Harmonic
+
+![center](../figures/harmonic-3.gif)
+
+</div>
+</div>
+
+---
+
+# Standing Waves - Closed Tube
+
+<div class="columns">
+<div>
+
+#### 5th Harmonic
+
+![center](../figures/harmonic-5.gif)
+
+</div>
+<div>
+
+#### 7th Harmonic
+
+![center](../figures/harmonic-7.gif)
+
+</div>
+</div>
+
+---
+
+# Standing Waves 
+
+* ***Standing waves*** are produced when two waves of the same frequency and amplitude travel in opposite directions in the same medium. 
+* ***Nodes*** appear to be standing still.
+* ***Anti-nodes*** vibrate between the maximum amplitude above and below the axis.
+* Standing waves are often produced by reflection of a wave train at a fixed boundary of a medium.
+* Standing waves are the result of the interference of two waves. 
+
+---
+
+# Resonance Demo 🔊 <!---fit--->
+
+
+---
+
+
+# Resonance 
+
+* *Resonance* occurs when one vibrating body sympathetically causes another body to vibrate. 
+* *Natural frequency* is a particular frequency that a body will vibrate if disturbed. 
+* Musical instruments can change notes by making different resonant frequencies.  They do this by changing the length of the “tube” that vibrates creating standing waves of different lengths. 
+
+---
+
+# Doppler Effect Demo 🚓🚒 <!---fit--->
+
+---
+
+# The Doppler Effect
+
+* The *Doppler Effect* is observed when the source or the observer of a wave is moving.
+* When the source and observer are moving <mark>closer together</mark> the frequency of the wave is <mark>increased</mark>. 
+* When the source and observer are **moving further** apart the frequency of the wave is **decreased**. 
+
+---
+
+# Doppler Effect 
+
+<div class="columns">
+
+<div>
+
+#### Stationary Source
+
+![center](../figures/doppler1.gif)
+
+</div>
+
+<div>
+
+#### Moving Source 
+
+![center](../figures/doppler2.gif)
+
+</div>
+
+</div>
+
+---
+
+
+# Doppler Effect - Sonic Boom
+
+<div class="columns">
+
+<div>
+
+#### Mach 1 
+
+![center](../figures/doppler4.gif)
+
+</div>
+
+<div>
+
+#### Mach 1.4
+
+![center](../figures/doppler5.gif)
+
+</div>
+
+</div>

@@ -164,46 +164,18 @@ _Research and design a physics experiment explain the physics of something that 
 
 ---
 
-<!--- _header: 2023.05.22--->
+<!--- _header: 2023.05.22 - **AP Physics** --->
 
 # Day 5 - Start Experimenting 
 
-##### ❓of the 📅: *QUESTION*
+##### ❓of the 📅: What three items would you take with you on a deserted island?
 
-1. Build or start experimenting
+## 📋 Agenda
+
+1. Set up your experiment
+2. Start Taking Data
+
+## 🎯: Week Goal: Complete data collection
 
 ---
 
-<div class="columns">
-
-<div>
-
-# One 
-
-lots of stuff lots of stuff lots of stuff lots of stuff lots of stuff 
-
-</div>
-
-<div>
-
-# Two 
-
-lots of stuff lots of stuff lots of stuff lots of stuff lots of stuff lots of stuff 
-
-</div>
-
-<div>
-
-# Three
-
-lots of stuff lots of stuff lots of stuff lots of stuff 
-
-</div>
-
-<div>
-
-# four
-
-lots of stuff lots of stuff lots of stuff 
-
-</div></div>
