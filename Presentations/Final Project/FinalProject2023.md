@@ -179,3 +179,49 @@ _Research and design a physics experiment explain the physics of something that 
 
 ---
 
+<!--- _header: 2023.05.24 - **AP Physics** --->
+
+# Day 6 - Collecting Data
+
+
+
+## 📋 Agenda
+
+1. Collect Data
+2. Analyze Data 
+
+## 🎯 Week Goal: Complete data collection
+
+---
+
+<!--- _header: 2023.05.25 - **AP Physics** --->
+
+# Day 7 - Finish Data Collection 
+
+##### **❓of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+1. Finish Collecting Data
+2. Determine how to analyze data dn what figures you will make (graphs, charts, visuals, etc)
+3. Start Making any necessary lab report figures, (i.e. lab set up, results, diagrams, etc)
+
+
+</div>
+
+<div>
+
+## 🎯 Week Goal: 
+
+🥅 Complete Data Collection
+
+</div>
+
+</div>
+
+
+
+

@@ -517,3 +517,42 @@ Draw the following 4 waves: A, B, C, and D
 </div>
 
 </div>
+
+---
+
+# Electromagnetic Spectrum 🌈 <!---fit--->
+
+---
+
+# 🌈 Electromagnetic Spectrum 
+
+* Light waves are electromagnetic waves!
+* All E&M waves move through a vacuum at $3 \times 10^8$ m/s
+* The <mark>*electromagnetic spectrum*</mark> is the complete range of frequencies and wavelengths of electromagnetic waves.
+
+![center width:800px](../figures/emspect.png)
+
+---
+
+# 📏 Some Facts 
+
+* No sharp divisions between types of E&M waves.
+* Classified by the methods that are used to generate them.
+    * i.e. Radio waves are produced by charges accelerating in a wire.
+* Microwaves are used in radar systems, for transmitting long distance telephone communications in space, and to cook food.
+    * Microwaves that cook food produces a frequency that is the same as the natural rotational frequency of water molecules. 
+* Infrared waves appear as heat when absorbed by objects. This is why we use infrared lamps to keep food warm!
+
+---
+
+# 📏 More Facts
+
+* Visible light is about 1% of the E&M spectrum.
+    * Produced by the rearrangement of electrons in atoms and molecules…more to come later.
+    * The human eye can see from ~400 nm to ~700 nm
+* Ultraviolet light causes sunburn! Ouch!
+* X-rays are used as a diagnostic tool by physicians
+* Gamma rays are emitted by radioactive nuclei. It is harmful to living tissue.
+
+---
+
