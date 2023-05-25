@@ -22,7 +22,7 @@ paginate: true
 
 ---
 
-# Requirements 
+# 📋 Requirements 
 
 * Your final program is interactive - that is, when the user runs it, they provide inputs to the program that change the final outcome. These could be text inputs, mouse clicks, keyboard inputs, anything also long as the user interacts with your program.
 * You MUST add comments to your program so that your code is readable and I know what each section of code is doing for the final program. 
@@ -32,7 +32,7 @@ You must document the work that you completed each class from now until the end 
 
 --- 
 
-# Requirements Summary 
+# 📋 Requirements Summary 
 
 - Your Project should have all of the elements of computer science that we have worked with this year:
     - Variables
@@ -46,7 +46,7 @@ You must document the work that you completed each class from now until the end 
 
 ---
 
-# Some Ideas 
+# 💡 Some Ideas 
 
 <div class="columns">
 <div>
@@ -82,7 +82,7 @@ You must document the work that you completed each class from now until the end 
 
 ---
 
-# Some More Ideas 
+# 💡 Some More Ideas 
 
 <div class="columns">
 <div>
@@ -111,7 +111,7 @@ Checkers
 
 ---
 
-# Project Timeline 📆
+# 📆 Project Timeline 
 
 1. **5.25**: 🧠 Brainstorm Ideas; Start Project - Map out code blocks
 2. **6.01**: 📋 Map out code blocks & start coding 
@@ -123,7 +123,7 @@ Checkers
 
 ---
 
-# Class 1 - 2023.05.25
+# Class 1️⃣ - 2023.05.25
 
 ## 🎯 Today's Targets 
 
