@@ -224,4 +224,34 @@ _Research and design a physics experiment explain the physics of something that 
 
 
 
+---
 
+
+<!--- _header: 2023.05.31 - **AP Physics** --->
+
+# Day 8 - Data Analysis
+
+##### **❓of the 📅**: What did you do over your long weekend?
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+1. Finish Collecting Data
+2. Determine how to analyze data dn what figures you will make (graphs, charts, visuals, etc)
+3. Start Making any necessary lab report figures, (i.e. lab set up, results, diagrams, etc)
+
+
+</div>
+
+<div>
+
+## 🎯 Week Goal: 
+
+🥅 Complete Data Analysis and 
+🥅 Start Writing Lab 📝
+
+</div>
+
+</div>
