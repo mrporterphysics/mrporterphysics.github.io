@@ -255,3 +255,233 @@ _Research and design a physics experiment explain the physics of something that 
 </div>
 
 </div>
+
+---
+
+<!--- _header: 2023.06.02 - **AP Physics** --->
+
+# Day 9 - Writing Your Lab 📝
+
+##### **❓of the 📅**: If you could share a meal with any 4 individuals, living or dead, who would they be?
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+1. Discussion on Writing Lab with [LabWrite](https://labwrite.ncsu.edu/)
+2. Start writing lab in Google Docs - do not worry about adding in any images for your graphs. You will do that with [Overleaf](https://www.overleaf.com/)
+
+
+</div>
+
+<div>
+
+## 🎯 Week Goal: 
+
+🥅 Start Writing Lab 📝 (finish by Wednesday)
+
+</div>
+
+</div>
+
+--- 
+
+<!--- _header: 2023.06.05 - **AP Physics** --->
+
+# Day 10 - Writing with $\LaTeX$ 
+
+##### **❓of the 📅**: What form of public transportation do you prefer? (air, boat, train, bus, car, etc.)?
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+0. Letters of Rec
+1. What is $\LaTeX$? Why do we use it?
+2. Finish Writing Lab Report
+3. Start Tranferring to Overleaf
+
+</div>
+
+<div>
+
+## 🎯 Week Goal: 
+
+🥅 Write Lab Report 📝 (finish by Wednesday)
+
+</div>
+
+</div>
+
+---
+
+# What is $\LaTeX$?
+
+- Type setting program for professional documnets, made for scientific and mathematical documents
+- Plain text file that interspersed with LaTeX commands and complied with a *TeX engine*
+    - Sort of like a computer program 
+    - Converts commands into a PDF File
+- Not WYSIWYG like Microsoft Word or Google Docs
+
+---
+
+# Why use $\LaTeX$?
+
+- support for typesetting extremely complex mathematics, tables and technical content for the physical sciences;
+- facilities for footnotes, cross-referencing and management of bibliographies;
+- ease of producing complicated, or tedious, document elements such as indexes, glossaries, table of contents, lists of figures;
+- being highly customizable for bespoke document production due to its intrinsic programmability and extensibility through thousands of free add-on packages.
+
+---
+
+# Making your first document 
+
+```latex
+\documentclass{article}
+\begin{document}
+First document. This is a simple example, with no 
+extra parameters or packages included.
+\end{document}
+```
+
+---
+
+# Add in Titles
+
+<div class="columns">
+
+<div>
+
+```latex 
+\documentclass[12pt, letterpaper]{article}
+\title{My first LaTeX document}
+\author{Hubert Farnsworth}
+\date{August 2022}
+\begin{document}
+\maketitle
+We have now added a title, author and 
+date to our first \LaTeX{} document!
+\end{document}
+```
+
+</div>
+
+
+<div>
+
+![center h:550](https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg)
+
+</div></div>
+
+
+---
+
+# **Bold,** *Italics*, <u>Underline</u>
+
+```latex
+Some of the \textbf{greatest}
+discoveries in \underline{science} 
+were made by \textbf{\textit{accident}}.
+```
+
+---
+
+# Add Figures
+
+<div class="columns">
+
+<div>
+
+```latex 
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+ 
+\begin{document}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{mesh}
+    \caption{A nice plot.}
+    \label{fig:mesh1}
+\end{figure}
+ 
+As you can see in figure \ref{fig:mesh1}, 
+the function grows near the origin. This 
+example is on page \pageref{fig:mesh1}.
+
+\end{document}
+```
+
+</div>
+
+
+<div>
+
+![center h:550](https://images.ctfassets.net/nrgyaltdicpt/4DkAWWkQqZP6QHU2EErogQ/9aa2371f2cde0f3f8bf22aa1c0b91789/LL30Fig6r-plain.svg)
+
+</div></div>
+
+---
+
+# Adding Math
+
+## Inline Math
+
+In in the middle of a block of text:
+
+```latex
+\documentclass[12pt, letterpaper]{article}
+\begin{document}
+In physics, the mass-energy equivalence is stated 
+by the equation $E=mc^2$, discovered in 1905 by Albert Einstein.
+\end{document}
+```
+
+In physics, the mass-energy equivalence is stated by the equation $E = mc^2$
+
+---
+
+# Adding Math 
+
+### Display Math
+
+```latex
+\documentclass[12pt, letterpaper]{article}
+\begin{document}
+The mass-energy equivalence is described by the famous equation \[ E=mc^2 \] discovered in 1905 by Albert Einstein. 
+
+In natural units ($c = 1$), the formula expresses the identity
+\begin{equation}
+E=m
+\end{equation}
+\end{document}
+```
+![center](https://images.ctfassets.net/nrgyaltdicpt/6n1FPYFzmzCHPpWoEoYQZM/79b33f1096be06326bff7d2e1976c67c/LL30Fig11-plain.svg)
+
+---
+
+
+| Symbols  | and | Code||
+|---|---|---|---|
+| $\alpha A$ `\alpha A` | $\nu N$ `\nu N` |  $\eta H$ `\eta H` | $\tau T$ `\tau T` |
+| $\beta B$ `\beta B` | $\xi \Xi$ `\xi \Xi` |  $\zeta Z$ `\zeta Z` | $\sigma \Sigma$ `\sigma \Sigma` | 
+| $\gamma \Gamma$ `\gamma \Gamma` | $o O$ `o O` | $\epsilon  E$ `\epsilon E` | $\rho \varrho P$ `\rho \varrho P` |
+| $\delta \Delta$ `\delta $\Delta` | $\pi \Pi$ `\pi \Pi` |$\chi X$ `\chi X` | $\upsilon \Upsilon$ `\upsilon \Upsilon` |
+| $\iota I$ `\iota I` | $\phi \Phi$ `\phi \Phi` | $\kappa K$ `\kappa K` |$\theta \Theta$ `\theta \Theta` |
+|$\lambda \Lambda$ `\lambda \Lambda` |$\psi \Psi$ `\psi \Psi` | $\mu M$ `\mu M` |$\omega \Omega$ `\omega \Omega` |
+
+
+---
+
+# More Math Things 🧮
+
+- for sub and superscripts we use _ and ^ 
+    - $E = mc^2$ `E = mc^2`
+    - $F_N$ `F_N` or $F_{normal}$ `F_{normal}`
+- Fractions
+    - $a = \frac{\Sigma \vec{F}}{m}$ `a = \frac{\Sigma \vec{F}}{m}` `\frac{num}{dem}`
+- Trig:
+    - $\sin\theta \cos\theta \tan\theta$ `\sin\theta \cos\theta \tan\theta`

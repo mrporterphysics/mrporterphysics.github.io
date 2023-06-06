@@ -240,7 +240,7 @@ Note: $\lambda = h/p = h/mv$
 
 ---
 
-> # All science is either physics <br> or stamp collecting. <br>  -Ernest Rutherford<!---fit--->
+> # All science is either physics <br> or stamp collecting. <br>  -**Ernest Rutherford**<!---fit--->
 
 
 ---
@@ -308,3 +308,262 @@ Note: $\lambda = h/p = h/mv$
 - Negative energy levels indicate electron is bound to the atom.
 - If the electron reaches 0 eV, it is no longer bound and can be emitted as a photoelectron.
     - Any excess energy becomes the electrons kinetic energy.
+
+---
+
+
+# Hydrogen Atom
+
+An electron in a hydrogen atom drops from the n = 3 level to n = 2 state. Determine the energy of the emitted radiation.
+
+![bg left:35% fit](figures/hydrogen.png)
+
+---
+
+# Hydrogen Atom
+
+What is the frequency of a photon emitted when an electron in a hydrogen atom drops from the n = 2 to the n = 1 energy level?
+
+![bg left:35% fit](figures/hydrogen.png)
+
+
+---
+
+# Mercury Atom
+
+- Energy Levels differ by atoms
+- Levels named by letters instead of numbers 
+
+![bg left:35% fit](figures/mercury.png)
+
+
+---
+
+# Mercury Atom
+
+An electron in a mercury atom drops from energy level f to energy level c by emitting a photon of what energy?
+
+![bg left:35% fit](figures/mercury.png)
+
+---
+
+
+# Mercury Atom
+
+A mercury atom in the ground state absorbs 20 electronvolts of energy and is ionized by losing an electron. How much kinetic energy does this electron have after the  ionization?
+
+![bg left:35% fit](figures/mercury.png)
+
+---
+
+# Atomic Spectra 
+
+- Atoms can only emit and absorb photons of certain frequencies
+- Photon frequencies correspond to transitions in electron energy levels.
+- Result: unique atomic spectra
+
+---
+
+# Incandescence 
+
+Objects heated until they glow emit a continuous spectrum, described as blackbody radiation.
+
+---
+
+# Gas Discharge Lamp 💡
+
+* Gas discharge lamps excited electrons by application of high electrical potential.
+    * Electrons jump to higher energy.
+    * As they relax to lower energy levels, photons of specific frequencies are emitted.
+    * Spectrum is not continuous and is unique to the element.
+* Analysis of spectra allows determination of gas composition.
+
+---
+
+![bg fit](figures/spectras.jpg)
+
+---
+
+# The Equation:
+
+# $E = mc^2$
+
+---
+
+# Mass Energy Equivalence 
+
+- 1905: Einstein publishes “Does the Inertia of a Body Depend Upon its Energy Content?”
+    - mass is measure of the energy in an object
+    - Ultimately, the source of all energy in the universe is conversion of mass into energy. 
+
+---
+
+## Universal Conservation Laws
+
+- Conservation of Mass-Energy
+- Conservation of Charge
+- Conservation of Momentum
+
+---
+
+## Conservation of Mass Energy
+
+- Mass is conserved
+- Energy is conserved
+- Mass-Energy cannot be created or destroyed
+
+---
+
+# What is the energy equivalent of 1 kg of matter?
+
+--- 
+
+### Converting Small Masses to Energy
+
+- Universal mass unit (u) is equal in mass to 1/12 of a single atom of Carbon-12
+- $m_{proton}$, $m_{neutron}$, are approximately $1u$.
+- $m_{electron}$ is close to $5 \times 10^{-4}$ $u$.
+- $1 u$ = $1.66053885 \times 10^{-27}$ kg
+- $1 u$ = $931$ MeV
+
+---
+
+# If a deuterium nucleus has a mass of $1.53 \times 10^{-3}$ $u$ less than its components, how much energy does its mass represent?
+
+---
+
+# The Nucleus
+
+* Consists of positive protons and neutral neutrons.
+* Why does electric repulsion cause it to fly apart?
+* Strong nuclear force holds particles together.
+    * Extremely strong
+    * Very small effective range
+
+--- 
+
+# Binding Energy
+
+* Energy required to break apart the nucleus and overcome the strong nuclear force is known as the binding energy.
+* Mass of stable nucleus is actually less than the mass of component nuclear particles (nucleons)
+    * Difference in mass is known as the mass defect
+    * $E_{binding} = (\Delta m)c^2$
+
+---
+
+# Nuclear Fission
+
+* Nucleus splits into two or more nuclei
+    * For heavy (larger) nuclei, mass of original nucleus is greater than the mass of the products. 
+* Nuclear power plants
+
+---
+
+# Nuclear Fusion 
+
+* Two or more smaller nuclei form a larger nucleus. 
+    * For small nuclei, product may have smaller mass precursors.
+    * Releases energy as part of the reaction
+* Fuels sun and stars
+* Potential clean power source
+
+--- 
+
+### A tritium nucleus is formed by combining two neutrons and a proton. the mass of this nucleus is $9.106 \times 10^{-3}$ $u$ less than the combined mass of the particles which it is formed. Approximately how much energy is released when this nucleus is formed?
+
+---
+
+## After a uranium nucleus emits an alpha particle, the total mass of the new nucleus and the alpha particle is less than the mass of the original uranium nucleus. Explain what happens to the missing mass.
+
+---
+
+# The Standard Model 
+
+- An atom is the smallest part of an element that has the characteristics of that element.
+- 1930s - scientists begin to discover even smaller particles
+- This launches the Particle Physics movement.
+
+---
+
+# Antimatter
+
+* Antimatter is made up of particles with the same mass as regular particles, but opposite charges and other characteristics
+    * Antiproton - same mass a proton, negative charge
+    * Antineutron - same mass as a neutron, opposite magnetic moment.
+    * Positron - same mass as an electron, positive charge.
+
+---
+
+# Annihilation 
+
+* Matter particle corresponding to antiparticle meet to annihilate each other. 
+    * Complete conversion of both particles into energy
+    * Conservation laws still apply
+        * Mass-energy
+        * Charge
+        * Momentum
+
+---
+
+#### Structure of the Standard Model
+
+* All 4 fundamental forces act on Hadrons
+* Strong nuclear force doesn’t act on Leptons (electron is a lepton)
+* Baryons charge is always a whole number (protons and neutrons)
+* Mesons: Pion, neutral pion, Kaon, J/psi, Upsilon, Charmed meson, Bottom meson.
+
+
+![bg right:30% fit](figures/standardmodel.png)
+
+---
+
+# Quarks 
+
+- Corresponding anti-quark with opposite charge also exists. 
+- Proton = uud
+- Neutron = udd
+
+![bg right:50% fit](figures/quarks.png)
+
+---
+
+
+![bg fit](figures/morequarks.webp)
+
+---
+
+# What is the charge of the down anti-quark?
+
+---
+
+### Compared to the mass and charge of a proton, an antiproton has
+
+1. the same mass and the same charge
+1. greater mass and the same charge
+1. the same mass and the opposite charge
+1. greater mass and the opposite charge
+
+
+---
+
+# Leptons
+
+Corresponding anti-lepton with opposite charge also exists. 
+
+
+![bg fit right:50%](figures/leptons.png)
+
+
+---
+
+### A particle unaffected by an electric field could have a quark composition of
+
+1. css
+2. bbb
+3. udc
+4. uud
+
+---
+
+# What is the charge of an antistrange quark in Coulombs?
+
