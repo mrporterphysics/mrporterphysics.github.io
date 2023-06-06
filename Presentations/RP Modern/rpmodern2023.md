@@ -567,3 +567,12 @@ Corresponding anti-lepton with opposite charge also exists.
 
 # What is the charge of an antistrange quark in Coulombs?
 
+
+---
+
+<!-- class: invert--->
+
+# Proton-Proton Collision
+
+![bg](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20230220.155442/resources/76df99bdca18dd86863a1f46a12da3bcc997a834)
+
