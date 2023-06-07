@@ -317,6 +317,37 @@ _Research and design a physics experiment explain the physics of something that 
 
 ---
 
+
+<!--- _header: 2023.06.07 - **AP Physics** --->
+
+# Day 11 - Writing with $\LaTeX$ 
+
+##### **❓of the 📅**: Do you have a regular summer vacation spot? If so where?
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+0. Letters of Rec
+1. What is $\LaTeX$? Why do we use it?
+2. Finish Writing Lab Report
+3. Start Tranferring to Overleaf
+
+</div>
+
+<div>
+
+## 🎯 Week Goal: 
+
+🥅 Write Lab Report 📝 (finish by Wednesday)
+
+</div>
+
+</div>
+
+---
+
 # What is $\LaTeX$?
 
 - Type setting program for professional documnets, made for scientific and mathematical documents
