@@ -516,3 +516,32 @@ E=m
     - $a = \frac{\Sigma \vec{F}}{m}$ `a = \frac{\Sigma \vec{F}}{m}` `\frac{num}{dem}`
 - Trig:
     - $\sin\theta \cos\theta \tan\theta$ `\sin\theta \cos\theta \tan\theta`
+
+
+---
+
+
+<!--- _header: 2023.06.08 - **AP Physics** --->
+
+# Day 12 - Finish Lab Report
+##### **❓of the 📅**: What is your ideal burger 🍔 (or veggie burger)?
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+1. Finish Writing Lab Report
+2. Transfer to Latex & Overleaf
+
+</div>
+
+<div>
+
+## 🎯 Week Goal: 
+
+🥅 Write Lab Report 📝 (finish by Wednesday)
+
+</div>
+
+</div>
