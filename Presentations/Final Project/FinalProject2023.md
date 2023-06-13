@@ -545,3 +545,34 @@ E=m
 </div>
 
 </div>
+
+---
+
+<!--- _header: 2023.06.08 - **AP Physics** --->
+
+# Day 13 - Start Poster
+##### **❓of the 📅**: 
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+1. Finish Writing Lab Report
+2. Transfer to Latex & Overleaf
+3. Start Poster:    
+    - Find Template on Overleaf
+    - OR use [canva.com](www.canva.com)
+
+</div>
+
+<div>
+
+## 🎯 Week Goal: 
+
+🥅 Finish Lab Report 📝
+🥅 Start Poster
+
+</div>
+
+</div>

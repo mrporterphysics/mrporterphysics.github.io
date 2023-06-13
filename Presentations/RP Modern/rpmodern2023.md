@@ -384,98 +384,6 @@ Objects heated until they glow emit a continuous spectrum, described as blackbod
 
 ---
 
-# The Equation:
-
-# $E = mc^2$
-
----
-
-# Mass Energy Equivalence 
-
-- 1905: Einstein publishes “Does the Inertia of a Body Depend Upon its Energy Content?”
-    - mass is measure of the energy in an object
-    - Ultimately, the source of all energy in the universe is conversion of mass into energy. 
-
----
-
-## Universal Conservation Laws
-
-- Conservation of Mass-Energy
-- Conservation of Charge
-- Conservation of Momentum
-
----
-
-## Conservation of Mass Energy
-
-- Mass is conserved
-- Energy is conserved
-- Mass-Energy cannot be created or destroyed
-
----
-
-# What is the energy equivalent of 1 kg of matter?
-
---- 
-
-### Converting Small Masses to Energy
-
-- Universal mass unit (u) is equal in mass to 1/12 of a single atom of Carbon-12
-- $m_{proton}$, $m_{neutron}$, are approximately $1u$.
-- $m_{electron}$ is close to $5 \times 10^{-4}$ $u$.
-- $1 u$ = $1.66053885 \times 10^{-27}$ kg
-- $1 u$ = $931$ MeV
-
----
-
-# If a deuterium nucleus has a mass of $1.53 \times 10^{-3}$ $u$ less than its components, how much energy does its mass represent?
-
----
-
-# The Nucleus
-
-* Consists of positive protons and neutral neutrons.
-* Why does electric repulsion cause it to fly apart?
-* Strong nuclear force holds particles together.
-    * Extremely strong
-    * Very small effective range
-
---- 
-
-# Binding Energy
-
-* Energy required to break apart the nucleus and overcome the strong nuclear force is known as the binding energy.
-* Mass of stable nucleus is actually less than the mass of component nuclear particles (nucleons)
-    * Difference in mass is known as the mass defect
-    * $E_{binding} = (\Delta m)c^2$
-
----
-
-# Nuclear Fission
-
-* Nucleus splits into two or more nuclei
-    * For heavy (larger) nuclei, mass of original nucleus is greater than the mass of the products. 
-* Nuclear power plants
-
----
-
-# Nuclear Fusion 
-
-* Two or more smaller nuclei form a larger nucleus. 
-    * For small nuclei, product may have smaller mass precursors.
-    * Releases energy as part of the reaction
-* Fuels sun and stars
-* Potential clean power source
-
---- 
-
-### A tritium nucleus is formed by combining two neutrons and a proton. the mass of this nucleus is $9.106 \times 10^{-3}$ $u$ less than the combined mass of the particles which it is formed. Approximately how much energy is released when this nucleus is formed?
-
----
-
-## After a uranium nucleus emits an alpha particle, the total mass of the new nucleus and the alpha particle is less than the mass of the original uranium nucleus. Explain what happens to the missing mass.
-
----
 
 # The Standard Model 
 
@@ -576,3 +484,97 @@ Corresponding anti-lepton with opposite charge also exists.
 
 ![bg](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20230220.155442/resources/76df99bdca18dd86863a1f46a12da3bcc997a834)
 
+
+---
+
+
+# The Equation:
+
+# $E = mc^2$
+
+---
+
+# Mass Energy Equivalence 
+
+- 1905: Einstein publishes “Does the Inertia of a Body Depend Upon its Energy Content?”
+    - mass is measure of the energy in an object
+    - Ultimately, the source of all energy in the universe is conversion of mass into energy. 
+
+---
+
+## Universal Conservation Laws
+
+- Conservation of Mass-Energy
+- Conservation of Charge
+- Conservation of Momentum
+
+---
+
+## Conservation of Mass Energy
+
+- Mass is conserved
+- Energy is conserved
+- Mass-Energy cannot be created or destroyed
+
+---
+
+# What is the energy equivalent of 1 kg of matter?
+
+--- 
+
+### Converting Small Masses to Energy
+
+- Universal mass unit (u) is equal in mass to 1/12 of a single atom of Carbon-12
+- $m_{proton}$, $m_{neutron}$, are approximately $1u$.
+- $m_{electron}$ is close to $5 \times 10^{-4}$ $u$.
+- $1 u$ = $1.66053885 \times 10^{-27}$ kg
+- $1 u$ = $931$ MeV
+
+---
+
+# If a deuterium nucleus has a mass of $1.53 \times 10^{-3}$ $u$ less than its components, how much energy does its mass represent?
+
+---
+
+# The Nucleus
+
+* Consists of positive protons and neutral neutrons.
+* Why does electric repulsion cause it to fly apart?
+* Strong nuclear force holds particles together.
+    * Extremely strong
+    * Very small effective range
+
+--- 
+
+# Binding Energy
+
+* Energy required to break apart the nucleus and overcome the strong nuclear force is known as the binding energy.
+* Mass of stable nucleus is actually less than the mass of component nuclear particles (nucleons)
+    * Difference in mass is known as the mass defect
+    * $E_{binding} = (\Delta m)c^2$
+
+---
+
+# Nuclear Fission
+
+* Nucleus splits into two or more nuclei
+    * For heavy (larger) nuclei, mass of original nucleus is greater than the mass of the products. 
+* Nuclear power plants
+
+---
+
+# Nuclear Fusion 
+
+* Two or more smaller nuclei form a larger nucleus. 
+    * For small nuclei, product may have smaller mass precursors.
+    * Releases energy as part of the reaction
+* Fuels sun and stars
+* Potential clean power source
+
+--- 
+
+### A tritium nucleus is formed by combining two neutrons and a proton. the mass of this nucleus is $9.106 \times 10^{-3}$ $u$ less than the combined mass of the particles which it is formed. Approximately how much energy is released when this nucleus is formed?
+
+---
+
+## After a uranium nucleus emits an alpha particle, the total mass of the new nucleus and the alpha particle is less than the mass of the original uranium nucleus. Explain what happens to the missing mass.

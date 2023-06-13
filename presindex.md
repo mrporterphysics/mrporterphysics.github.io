@@ -38,4 +38,4 @@ You can find links to class presentations here:
 - [Electrostatics](Presentations/RP%20Static%20Electricity/staticE.html)
 - [Circuits](Presentations/RP%20Electricity/RPCircuits2023.html)
 - [Waves](Presentations/Waves/talks/RP_Waves_2023.html)
-- [Modern Physics](Presenations/RP%Modern/rpmodern2023.html)
+- [Modern Physics](/Presenations/RP%Modern/rpmodern2023.html)
