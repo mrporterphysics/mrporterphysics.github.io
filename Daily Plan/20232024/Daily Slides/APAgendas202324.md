@@ -14,64 +14,19 @@ footer: Be brave, not perfect
 
 ---
 
-|Week | Topics | Dates |
-|---|---|---| 
-|[Week 1](#week-1)| Kinematics | 09/07 - 09/08 | 
-|[Week 2](#week-2)|Kinematics| 09/11 - 09/15  | 
-
-
----
-
-# Week 1
-
-<div class= "columns">
-
-<div>
-
-## 🎯 Week Goals
-
-1. 
-
-</div>
-
-
-<div> 
-
-## 🏡 Homework 
-
-1. 
-
-</div>
-
-
-<div>
-
-## 🔗 Links
-
-
-
-</div>
-
- </div>
-
----
-
-<!--- _header: DATE--->
-
 # 2023.09.07 - 1st Day
 
-##### **❓of the 📅**: The Question of the Day?
+##### **❓of the 📅**: Sweet or Savory for Breakfast
 
 <div class="columns">
 <div>
 
 ## 📋 Agenda
 
-0. [Do Now](../Do%20Nows/APDoNow202324.html#SLIDENUMBER) - Fill out Questionnaire & Index card
 1. Question of the day
 2. Lab Grouping
-3. Survival Island
-4. Toy Buggy Lab
+3. Survival Island 
+4. Ball Bounce Lab
 
 </div>
 
@@ -79,6 +34,9 @@ footer: Be brave, not perfect
 
 ## Week 🎯: 
 
+🥅 Create a physics learning community 
+
+🥅 Start thinking like a scientist 
 
 
 </div>
@@ -120,6 +78,20 @@ footer: Be brave, not perfect
 
 ---
 
+# A Few Questions... 🤔
+### Answer on your index card 
+
+
+1. What do you like to be called?	
+2. The class is stranded on a deserted island. What special skill(s) can you bring to this dire situation?	
+3. What is unique about you that leads to your happiest times and best performances at school?	
+4. What is unique about you that allows you to work well in groups for the success of the group as a whole?	
+5. What has a teacher done for you in the past which has allowed you to learn?
+6. Write a motivation message to yourself about this school year
+
+
+---
+
 # Survival Island 🏝️
 
 You and your group are stranded on an deserted island 😮!
@@ -129,6 +101,34 @@ Using *each* of your **unique skill's** develop a plan to escape the island.
 Whiteboard your response (one person)
 
 Be prepared to share out your plan to escape the island as a group. Each of you should offer a part of the plan to the class.
+
+---
+
+# Ball Bounce Lab ⛹️‍♂️ <!--fit-->
+
+---
+
+# Observations 🔍 <!--fit--->
+
+---
+
+# What questions can we ask? 🤔 <!--fit-->
+
+---
+
+# Design and Carry out an Experiment 🥼
+
+1. What question are you asking?
+2. What is your hypothesis?
+3. Design an experiment & collect data to support or refute your hypothesis
+4. Whiteboard your results when you finish
+
+
+---
+
+
+FIN
+
 
 ---
 
@@ -268,3 +268,44 @@ Design an experiment that will allow you to support or refute the hypothesis:
 </div>
 
 </div> -->
+
+
+|Week | Topics | Dates |
+|---|---|---| 
+|[Week 1](#week-1)| Kinematics | 09/07 - 09/08 | 
+|[Week 2](#week-2)|Kinematics| 09/11 - 09/15  | 
+
+
+---
+
+# Week 1
+
+<div class= "columns">
+
+<div>
+
+## 🎯 Week Goals
+
+1. 
+
+</div>
+
+
+<div> 
+
+## 🏡 Homework 
+
+1. 
+
+</div>
+
+
+<div>
+
+## 🔗 Links
+
+
+
+</div>
+
+ </div>
