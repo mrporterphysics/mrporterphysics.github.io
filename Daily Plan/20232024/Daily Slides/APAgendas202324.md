@@ -19,7 +19,7 @@ footer: Be brave, not perfect
 1. Join AP Classroom
     - 🔗: [https://myap.collegeboard.org/](https://myap.collegeboard.org/)
     - 🔑: **2RN34Y**
-2. Join Pivot
+2. Join Pivot Interactives Class
     - Join through Canvas by opening *Ball Bounce Lab* (Modules ➡️ Kinematics ➡️ Ball Bounce Lab)
 
 
@@ -28,7 +28,7 @@ footer: Be brave, not perfect
 
 # 2023.09.08 **AP Physics** Agenda
 
-##### **❓of the 📅**: Sweet or Savory for Breakfast
+##### **❓of the 📅**: What is your most used emoji? 🤔
 
 <div class="columns">
 <div>
@@ -36,6 +36,7 @@ footer: Be brave, not perfect
 ## 📋 Agenda
 
 1. Do Now
+2. Ball Bounce Lab - Prelab Questions on Pivot 
 2. Ball Bounce Lab - Collect Data 
 3. Ball Bounce Lab - Board Meeting 
 4. Ball Bounce Lab - Using your Model 
@@ -54,6 +55,56 @@ footer: Be brave, not perfect
 </div>
 
 </div>
+
+---
+
+# Ball Bounce Lab - Prelab Questions 
+
+1. What is the problem? Describe the problem or goal of your lab in your own words. Be sure that your description includes known factors (information about the problem given to you in the lab in a problem statement, for example) and unknowns (what you need to find out to solve the problem). Then restate the problem in the form of a question or questions that will guide your research.
+
+
+---
+
+# Ball Bounce Lab - Prelab Questions 
+
+2. What do you know about the science of the problem that could help you answer your research question? 
+
+---
+
+# Ball Bounce Lab - Prelab Questions 
+
+3. What is your hypothesis for the answer to your research question?
+
+--- 
+
+# Ball Bounce Lab - Prelab Questions 
+
+4. What variables can you use to test your hypothesis? (Independent, dependent, control)
+
+---
+
+
+# Ball Bounce Lab - Prelab Questions 
+
+5. What experiment(s) could you use to test your hypothesis? Referring to the list of variables, brainstorm some experiments you could do that would allow you to manipulate variables so that you can make the measurements or observations necessary for testing the hypothesis. Briefly list the materials and outline the methods you will use for your experiment.
+
+---
+
+# Ball Bounce Lab 
+
+1. Carry out your experiment 
+2. Answer Post Lab Questions 
+3. On your whiteboard board communicate your results 
+
+---
+
+# Ball Bounce Lab - Post Lab, Models 
+
+## What can you do with your results? 
+
+## Do you results model a ball bounce?
+
+## Can you use your results to make a **prediction**? If so, use your model to make a prediction with a value *outside* of your data set. 
 
 ---
 
