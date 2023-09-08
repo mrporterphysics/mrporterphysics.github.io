@@ -14,6 +14,49 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.09 **Do Now**
+
+1. Join AP Classroom
+    - 🔗: [https://myap.collegeboard.org/](https://myap.collegeboard.org/)
+    - 🔑: **2RN34Y**
+2. Join Pivot
+    - Join through Canvas by opening *Ball Bounce Lab* (Modules ➡️ Kinematics ➡️ Ball Bounce Lab)
+
+
+
+---
+
+# 2023.09.08 **AP Physics** Agenda
+
+##### **❓of the 📅**: Sweet or Savory for Breakfast
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+1. Do Now
+2. Ball Bounce Lab - Collect Data 
+3. Ball Bounce Lab - Board Meeting 
+4. Ball Bounce Lab - Using your Model 
+
+</div>
+
+<div>
+
+## Week 🎯: 
+
+🥅 Create a physics learning community 
+
+🥅 Start thinking like a scientist 
+
+
+</div>
+
+</div>
+
+---
+
 # 2023.09.07 - 1st Day
 
 ##### **❓of the 📅**: Sweet or Savory for Breakfast
@@ -126,35 +169,6 @@ Be prepared to share out your plan to escape the island as a group. Each of you 
 
 ---
 
-
-FIN
-
-
----
-
-# What **observations** 👀 <!--fit--->
-
-# can you make about <!--fit-->
-
-# the toy buggy 🚗? <!--fit--->
-
----
-
-# Which **observations** 👀 <!--fit--->
- 
-# can you **measure** 📏? <!--fit--->
-
----
-
-# What measurements would you use and what data would you collect to support or refute the claim that **"the buggy moves in a *consistent manner*"**?
-
----
-
-# Design and Carry out an Experiment 🥼
-
-Design an experiment that will allow you to support or refute the hypothesis: 
-
-> **The buggy moves in a consistent manner.**
 
 ---
 
