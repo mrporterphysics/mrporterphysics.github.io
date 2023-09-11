@@ -24,6 +24,7 @@ footer: Be brave, not perfect
 2. Board Meeting - Present Ball Bounce Results 
 3. Join Pivot Interactives & Pasta Bridge Lab 
     - Creating mathematical models 
+4. Pasta Bridge Board Meeting 
 
 ---
 
