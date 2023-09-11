@@ -14,6 +14,19 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.11 - **Regents Physics**
+
+##### **❓of the 📅**: If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?
+
+## 📋 Agenda
+
+1. Review/Remember your Ball Bounce Lab 
+2. Board Meeting - Present Ball Bounce Results 
+3. Join Pivot Interactives & Pasta Bridge Lab 
+    - Creating mathematical models 
+
+---
+
 
 # 2023.09.07 - 1st Day
 
