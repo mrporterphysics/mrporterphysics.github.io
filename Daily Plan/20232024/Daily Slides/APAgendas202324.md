@@ -14,6 +14,52 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.12 **AP Physics** Agenda
+
+##### **❓of the 📅**: What smells bring you back to a different time? 👃 🌲
+
+<div class="columns">
+<div>
+
+## 📋 Agenda
+
+1. Whiteboard Ball Bounce Results 
+2. Ball Bounce Board Meeting 
+3. Buggy Lab - Creating a model to describe & predict motion
+
+</div>
+
+<div>
+
+## Week 🎯: 
+
+🥅 Describe motion mathematically, graphically, and narratively.
+
+🥅 Create mathematical models from data. 
+
+
+</div>
+
+</div>
+
+---
+
+
+# Linear Modeling
+
+
+### Ball Bounce Lab
+
+- What does the slope represent?
+  - For every statement: "The &lt; **quantity on vertical axis** &gt; goes up &lt; **slope value with vertical units** &gt; for every 1 &lt; **horizontal unit** &gt; of &lt; **quantity on horizontal axis** &gt;."
+- What does the intercept mean?
+
+---
+
+# 🚗 Buggy Lab <!--fit-->
+
+---
+
 # 2023.09.09 **Do Now**
 
 1. Join AP Classroom

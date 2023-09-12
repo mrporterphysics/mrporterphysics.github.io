@@ -14,6 +14,46 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.12 - **Regents Physics**
+
+##### **❓of the 📅**:  What smells bring you back to a different time? 👃 🌲
+
+## 📋 Agenda
+
+1. Pasta Bridge Lab - Collect Data 
+2. Pasta Bridge Lab - Pivot
+3. Pasta Bridge Lab - Whiteboard Results & Present 
+4. Mathematical Modeling 
+
+---
+
+
+# Pasta Lab
+
+- What does the slope represent?
+  - For every statement: "The &lt; **quantity on vertical axis** &gt; goes up &lt; **slope value with vertical units** &gt; for every 1 &lt; **horizontal unit** &gt; of &lt; **quantity on horizontal axis** &gt;."
+- What does the intercept mean? Is it of value? Is it negligible? 
+
+
+---
+
+# The Models... <!--fit-->
+
+---
+
+# The Models...
+
+
+* Math: $y = mx + b$
+
+
+* Specific Model: $strength = (7.5\textrm{rocks/strand})strands - 12 \textrm{ rocks}$
+
+* Generic Model: $marbles = (strength \textrm{ } ratio) strands - cup mass$ 
+
+
+---
+
 # 2023.09.11 - **Regents Physics**
 
 ##### **❓of the 📅**: If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?
