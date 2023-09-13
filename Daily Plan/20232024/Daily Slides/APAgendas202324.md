@@ -14,6 +14,76 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.13 **AP Physics** Do Now
+
+## Answer in your notebook, on your own, to the best of your memory...
+
+1. What is the 8 by 10 rule?
+2. How can you tell if a y-intercept has physical significance?
+3. What is one way to limit experimental uncertainty when designing an experiment?
+
+
+---
+
+# 2023.09.13 **AP Physics** Agenda
+
+##### **❓of the 📅**: Is cake better than ice cream?
+
+1. Do Now 
+2. Linear Modeling and writing Physics equations
+3. Buggy Lab
+
+---
+
+# Linear Model
+
+
+
+### Equation from Math Class:
+
+
+
+$$ y = mx + b$$ 
+
+or 
+
+$$ y = 12x + 4$$ 
+
+---
+
+# The Physics Models...
+
+
+* Math: $y = mx + b$
+
+
+* Specific Model: $strength = (7.5\textrm{rocks/strand})strands - 12 \textrm{ rocks}$
+
+* Generic Model: $marbles = (strength \textrm{ } ratio) strands - cup mass$ 
+
+* Specific Model: $bounce = (0.4 \textrm{cm/cm})drop + 4 \textrm{ cm}$ 
+
+* Generic Model: $b_h = r  d_h + d_{ball}$
+
+---
+
+# Buggy Lab 🚗 <!--fit--->
+
+---
+
+# Buggy Lab 🚗
+
+Create a descriptive (both verbal and mathematical) model of the motion of toy cars.
+    
+-  How is **position** related to **time** for your toy car?
+-  Remember to use starting positions on card situations
+-  Take data for one car at a time
+-  **Time** is your independent variable
+-  Graph the motion of both cars on the SAME graph (you can add another data set to the vertical axis that goes with the
+
+
+---
+
 # 2023.09.12 **AP Physics** Agenda
 
 ##### **❓of the 📅**: What smells bring you back to a different time? 👃 🌲

@@ -14,6 +14,65 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.13 - **Regents Physics**
+
+##### **❓of the 📅**:  Is cake 🍰 better than ice cream 🍨?
+
+## 📋 Agenda
+
+1. Board Meeting - Pasta Bridge Lab 
+    - What was your question?
+    - How did you do it?
+    - What did you find?
+2. Linear Modeling & Writing Physics Equations 
+3. Buggy Lab 🚗 
+
+---
+
+# Linear Model
+
+
+### Equation from Math Class:
+
+
+
+$$ y = mx + b$$ 
+
+or 
+
+$$ y = 12x + 4$$ 
+
+---
+
+# The Physics Models...
+
+
+* Math: $y = mx + b$
+
+
+* Specific Model: $strength = (7.5\textrm{rocks/strand})strands - 12 \textrm{ rocks}$
+
+* Generic Model: $marbles = (strength \textrm{ } ratio) strands - cup mass$ 
+
+---
+
+# Buggy Lab 🚗 <!--fit--->
+
+---
+
+# Buggy Lab 🚗
+
+Create a descriptive (both verbal and mathematical) model of the motion of toy cars.
+    
+-  How is **position** related to **time** for your toy car?
+-  Remember to use starting positions on card situations
+-  Take data for one car at a time
+-  **Time** is your independent variable
+-  Graph the motion of both cars on the SAME graph (you can add another data set to the vertical axis that goes with the
+
+
+---
+
 # 2023.09.12 - **Regents Physics**
 
 ##### **❓of the 📅**:  What smells bring you back to a different time? 👃 🌲

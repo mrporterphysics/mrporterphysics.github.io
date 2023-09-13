@@ -14,6 +14,41 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.13 **Conceptual Physics** Agenda
+
+##### **❓of the 📅**: Is cake 🍰 better than ice cream 🍨?
+
+
+1. Whiteboard Pasta Bridge Lab:
+    - Graph
+    - Equation
+2. Board Meeting
+    - What does the slope tells us? The intercept?
+3. Buggy Lab:
+
+---
+
+# Pasta Bridge Lab
+
+- What does the slope represent?
+  - For every statement: "The &lt; **quantity on vertical axis** &gt; goes up &lt; **slope value with vertical units** &gt; for every 1 &lt; **horizontal unit** &gt; of &lt; **quantity on horizontal axis** &gt;."
+- What does the intercept mean?
+    - Y-intercept: the vertical value when the horizontal value is zero. 
+
+---
+
+# 🚗 Buggy Lab  <!--fit--->
+
+---
+
+# 🚗 Buggy Lab
+
+## **Essential Question**: Does your toy car move in a consistent manner?
+
+- What evidence do you need to collect? 
+
+---
+
 # 2023.09.11 - **Conceptual Physics**
 
 ##### **❓of the 📅**: If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?
