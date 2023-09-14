@@ -58,17 +58,7 @@ $$ y = 12x + 4$$
 
 # Buggy Lab 🚗 <!--fit--->
 
----
-
-# Buggy Lab 🚗
-
-Create a descriptive (both verbal and mathematical) model of the motion of toy cars.
-    
--  How is **position** related to **time** for your toy car?
--  Remember to use starting positions on card situations
--  Take data for one car at a time
--  **Time** is your independent variable
--  Graph the motion of both cars on the SAME graph (you can add another data set to the vertical axis that goes with the
+## 🤔 Does your buggy move in a consistent manner? 
 
 
 ---
