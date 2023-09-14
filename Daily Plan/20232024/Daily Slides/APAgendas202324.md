@@ -14,6 +14,16 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.14 **AP Physics** Agenda
+
+##### **❓of the 📅**: If you had a pet parrot 🦜, what would you want it to say?
+
+1. Finish Buggy Lab 
+3. Whiteboard Results and Board Meeting 
+4. [Motion Definitions](../../../Presentations/APCVPM/talks/CVPM2023.html) from the Buggy Lab 
+
+---
+
 # 2023.09.13 **AP Physics** Do Now
 
 ## Answer in your notebook, on your own, to the best of your memory...

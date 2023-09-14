@@ -14,6 +14,116 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.14 **Coding**
+
+##### **❓of the 📅**: If you had a pet parrot 🦜, what would you want it to say?
+
+1. More shapes 
+2. `fill()`, `stroke()`
+3. `text()`
+
+---
+
+## More Shapes: `triangle()`
+
+The `triangle()` function requires four parameters: **x1**, **y1**, **x2**, **y2**, **x3** and **y3** which are the three coordinates of the points on the triangle
+
+
+![bg right 90%](../images/coding/triangle.png)
+
+---
+
+
+## More Shapes: `quad()`
+
+The `quad()` function requires four parameters: **x1**, **y1**, **x2**, **y2**, **x3**, **y3**, **x4**, and **y4** which are the three coordinates of the points on the quadrilateral.
+
+
+![bg right 90%](../images/coding/quad.png)
+
+---
+
+### More Shapes: Polygon 
+
+To draw a polygon, first call the `beginShape()`
+function, then call the `vertex(x, y)` for each vertex of
+the polygon. End the shape with `endShape(CLOSE)`.
+
+```
+beginShape();
+vertex(x, y); //Coordinate of Vertex 1
+vertex(x, y); //Coordinate of Vertex 2
+vertex(x, y); //Coordinate of Vertex 3
+vertex(x, y); //Coordinate of Vertex 4
+vertex(x, y); //Coordinate of Vertex 5
+endShape(CLOSE);
+```
+
+![bg right 90%](../images/coding/polygon.png)
+
+
+---
+
+# More Shapes: `arc()`
+
+Arcs are part of ellipses (or circles). To draw an arc, we need to specify the start angle and end angle of the portion of the ellipse that we want to draw. In p5js, angles are specified not in degrees but a unit called RADIANS. Angles are also measured in the CLOCKWISE direction.
+
+![bg right 90%](../images/coding/arc.png)
+
+---
+
+
+![bg 90%](../images/coding/arc2.png) 
+![bg 90%](../images/coding/arc.png)
+
+---
+
+# Angles 
+
+| Degrees | Radians         | p5.js        |
+| ------- | --------------- | ------------ |
+| 0°       | 0               | 0            |
+| 45°      | $\frac{\pi}{4}$ | QUARTER_PI   |
+| 90°      | $\frac{\pi}{2}$ | HALF_PI      |
+| 180°     | $\pi$           | PI           |
+| 270°     | $1.5 \pi$       | PI + HALF_PI |
+| 360°     | $2\pi$          | TWO_PI             |
+
+![bg right 90%](../images/coding/angles.png)
+
+---
+
+# `fill()` and `stroke()`
+
+
+- `fill()` determines the color of the shape
+- `stroke()` sets the color used to draw lines and borders around shapes
+- `strokeWeight()` determines the thickness of the line around the shape
+
+
+![bg right 90%](../images/coding/strokeandfill.png)
+
+---
+
+# `fill()` and `stroke()`
+
+By default the color of closed shapes is set to white and stroke to black. 
+
+![bg right 90%](../images/coding/strokeandfill2.png)
+
+---
+
+# `fill()` and `stroke()`
+
+- `noStroke()` - gets rid of the line around the shape
+- `noFill()` - gets rid of the shape color
+
+
+![bg right 95%](../images/coding/fillandstroke3.png)
+
+
+---
+
 # 2023.09.12 **Coding**
 
 ##### **❓of the 📅**: What smells bring you back to a different time? 👃 🌲
