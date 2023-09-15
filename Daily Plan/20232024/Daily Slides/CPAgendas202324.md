@@ -14,6 +14,34 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.15 - **Conceptual Physics**
+
+##### **❓of the 📅**:  Who or where would you haunt if you had to be a ghost 👻?
+
+
+1. Buggy Lab Part I - *Does it move in a consistent manner*?
+    i. Finish Collecting Data
+    ii. Whiteboard results - make a CER statement along with your evidence
+2. Buggy Lab Part II - Comparing the motion of two toy cars 
+
+---
+
+# Claim - Evidence - Reasoning 
+
+* ***Claim***:
+    * Sentence that answers the question.
+
+* ***Evidence***:
+    * Explanation of how the evidence supports the claim.
+        * Should include details!
+        * Refer back to the question, include any data, diagrams, or graphs.
+
+* Reasoning:
+    * Physics principle, such as an equation, law, or definition.
+        * This is general, do no include specific details.
+
+---
+
 # 2023.09.13 **Conceptual Physics** Agenda
 
 ##### **❓of the 📅**: Is cake 🍰 better than ice cream 🍨?

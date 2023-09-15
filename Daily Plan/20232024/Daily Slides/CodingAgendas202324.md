@@ -121,6 +121,21 @@ By default the color of closed shapes is set to white and stroke to black.
 
 ![bg right 95%](../images/coding/fillandstroke3.png)
 
+---
+
+# `fill()` and `stroke()`
+
+## Adding color is like picking up a pen to draw
+
+
+![](../images/coding/strokeoutline.png)
+
+---
+
+
+# `text(mouseX + " ," + mouseY, 20,20);` <!--fit--->
+
+## Code shows where your mouse cursor is
 
 ---
 

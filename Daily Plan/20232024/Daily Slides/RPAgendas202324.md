@@ -14,6 +14,32 @@ footer: Be brave, not perfect
 
 ---
 
+
+# 2023.09.15 - **Regents Physics**
+
+##### **❓of the 📅**:  Who or where would you haunt if you had to be a ghost 👻?
+
+
+1. Buggy Lab Part I - *Does it move in a consistent manner*?
+    i. Finish Collecting Data
+    ii. Whiteboard results - make a CER statement along with your evidence
+2. Buggy lab Part II - Comparing the motion of two Buggies 
+
+---
+
+# Buggy Lab 🚗 - Part II
+
+Create a descriptive (both verbal and mathematical) model of the motion of toy cars.
+    
+-  How is **position** related to **time** for your toy car?
+-  Remember to use starting positions on card situations
+-  Take data for one car at a time
+-  **Time** is your independent variable
+-  Graph the motion of both cars on the SAME graph (you can add another data set to the vertical axis that goes with the
+
+
+---
+
 # 2023.09.13 - **Regents Physics**
 
 ##### **❓of the 📅**:  Is cake 🍰 better than ice cream 🍨?
