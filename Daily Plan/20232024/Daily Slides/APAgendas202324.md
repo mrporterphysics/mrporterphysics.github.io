@@ -45,6 +45,20 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.19 - **AP Physics**
+
+##### **❓of the 📅**:  
+
+0. [Week Goals](#week-3)
+1. Do Now
+2. Notes 
+3. [CER & CV](../../../Presentations/APCVPM/talks/CVPM2023.html)
+4. Pictorial Representations - Motion Maps 
+5. Using CV Equation 
+
+
+---
+
 # 2023.09.18 - **AP Physics**
 
 ##### **❓of the 📅**:  Does your family have a “motto” – spoken or unspoken?
