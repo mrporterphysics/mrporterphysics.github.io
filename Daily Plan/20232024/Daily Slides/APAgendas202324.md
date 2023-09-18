@@ -28,6 +28,10 @@ footer: Be brave, not perfect
 
 ---
 
+
+
+---
+
 # 2023.09.14 **AP Physics** Agenda
 
 ##### **❓of the 📅**: If you had a pet parrot 🦜, what would you want it to say?
