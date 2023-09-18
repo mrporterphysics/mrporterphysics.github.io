@@ -14,6 +14,15 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.18 - **Regents Physics**
+
+##### **❓of the 📅**:  Does your family have a “motto” – spoken or unspoken?
+1. Finish Buggy Lab Part II
+2. Buggy Lab Part II - Board Meeting 
+3. CER and Does it Move with CV? [Slides](../../../Presentations/APCVPM/talks/CVPM2023.html#2)
+
+
+---
 
 # 2023.09.15 - **Regents Physics**
 

@@ -14,6 +14,20 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.18 - **AP Physics**
+
+##### **❓of the 📅**:  Does your family have a “motto” – spoken or unspoken?
+
+1. Review Buggy Lab - What did you do? How did you do it? What did you find?
+2. Buggy Lab Board Meeting 
+3. [Motion Definitions](../../../Presentations/APCVPM/talks/CVPM2023.html) from the Buggy Lab 
+4. CER & Does it move with CV?
+
+#### HW: 
+- You will have an assignment this week, but you will get it tomorrow
+
+---
+
 # 2023.09.14 **AP Physics** Agenda
 
 ##### **❓of the 📅**: If you had a pet parrot 🦜, what would you want it to say?
