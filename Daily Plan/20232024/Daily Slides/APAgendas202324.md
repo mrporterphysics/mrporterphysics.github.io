@@ -14,10 +14,42 @@ footer: Be brave, not perfect
 
 ---
 
+
+# Week 3
+
+<div class= "columns">
+
+<div>
+
+## 🎯 Week Goals
+
+1. Define Motion Quantities: *speed*, *velocity*, *distance*, *displacement*, *position*, *average*, *instantaneous*
+2. Use and interpret multiple representations for motion:
+    - Graphical, mathematical, pictoral
+3. Calculate *speed*, *velocity*, *average* *speed*, *average* *velocity*, and *instantaneous* *velocity*
+
+</div>
+
+
+<div> 
+
+## 🏡 Homework 
+
+1. Quiz Friday 
+2. Physics Classroom Calc Pad Practice
+    i. [Distance vs. Displacement](https://www.physicsclassroom.com/calcpad/launch/CPK1)
+    ii. [Distance Speed Time: Red Car vs. Green Car](https://www.physicsclassroom.com/calcpad/launch/CPK5)
+    iii. [Position-Time Graphs 2](https://www.physicsclassroom.com/calcpad/launch/CPK9)
+
+</div>
+
+---
+
 # 2023.09.18 - **AP Physics**
 
 ##### **❓of the 📅**:  Does your family have a “motto” – spoken or unspoken?
 
+0. [Week Goals](#week-3)
 1. Review Buggy Lab - What did you do? How did you do it? What did you find?
 2. Buggy Lab Board Meeting 
 3. [Motion Definitions](../../../Presentations/APCVPM/talks/CVPM2023.html) from the Buggy Lab 
@@ -25,9 +57,6 @@ footer: Be brave, not perfect
 
 #### HW: 
 - You will have an assignment this week, but you will get it tomorrow
-
----
-
 
 
 ---
