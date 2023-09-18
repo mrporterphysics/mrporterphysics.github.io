@@ -21,6 +21,22 @@ footer: Be brave, not perfect
 2. Buggy Lab Part II - Board Meeting 
 3. CER and Does it Move with CV? [Slides](../../../Presentations/APCVPM/talks/CVPM2023.html#2)
 
+---
+
+# Buggy Lab - Part II
+
+## **How did you do your lab? What did you find?**
+
+### Questions to consider:
+
+1. Does your buggy move "in a ***consistent*** manner"?
+2. What does your slope represent?
+    - What does a steeper slope mean?
+    - What does a negative slope mean?
+3. What does your vertical intercept represent?
+4. Do your lines intersect? What does that tell you?
+5. How could you use your results to predict the motion of your toy car? 
+
 
 ---
 

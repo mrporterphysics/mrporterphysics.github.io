@@ -58,6 +58,21 @@ footer: Be brave, not perfect
 #### HW: 
 - Week 3 in Canvas -- will mostly likely need tomorrow's class to complete some of this
 
+---
+
+# Buggy Lab 
+
+## **How did you do your lab? What did you find?**
+
+### Questions to consider:
+
+1. Does your buggy move "in a ***consistent*** manner"?
+2. What does your slope represent?
+    - What does a steeper slope mean?
+    - What does a negative slope mean?
+3. What does your vertical intercept represent?
+4. Do your lines intersect? What does that tell you?
+5. How could you use your results to predict the motion of your toy car? 
 
 ---
 
