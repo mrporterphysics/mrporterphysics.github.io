@@ -25,7 +25,7 @@ footer: Be brave, not perfect
 
 1. Define Motion Quantities: *speed*, *velocity*, *distance*, *displacement*, *position*, *average*, *instantaneous*
 2. Use and interpret multiple representations for motion:
-    - Graphical, mathematical, pictoral
+    - Graphical, mathematical, pictorial
 3. Calculate *speed*, *velocity*, *average* *speed*, *average* *velocity*, and *instantaneous* *velocity*
 
 </div>
@@ -56,7 +56,7 @@ footer: Be brave, not perfect
 4. CER & Does it move with CV?
 
 #### HW: 
-- You will have an assignment this week, but you will get it tomorrow
+- Week 3 in Canvas -- will mostly likely need tomorrow's class to complete some of this
 
 
 ---
