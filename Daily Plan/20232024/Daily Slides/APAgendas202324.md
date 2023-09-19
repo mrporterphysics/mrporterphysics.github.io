@@ -47,10 +47,9 @@ footer: Be brave, not perfect
 
 # 2023.09.19 - **AP Physics**
 
-##### **❓of the 📅**:  
+##### **❓of the 📅**: Which of the five senses would you say is your strongest?
 
 0. [Week Goals](#week-3)
-1. Do Now
 2. Notes 
 3. [CER & CV](../../../Presentations/APCVPM/talks/CVPM2023.html)
 4. Pictorial Representations - Motion Maps 
