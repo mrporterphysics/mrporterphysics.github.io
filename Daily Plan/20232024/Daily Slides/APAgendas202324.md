@@ -45,6 +45,23 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.20 - **AP Physics** Do Now
+
+## In your notebook...
+
+### 1. Describe a motion where **distance**, **displacement**, and **final position** are all ***the same***.
+### 2. Describe a motion where **distance**, **displacement**, and **final position** are all ***different***.
+### 3. Sketch a position vs. time graph for each of the examples. 
+
+---
+
+# 2023.09.20 - **AP Physics**
+
+##### **❓of the 📅**: QUESTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+
+---
+
 # 2023.09.19 - **AP Physics**
 
 ##### **❓of the 📅**: Which of the five senses would you say is your strongest?

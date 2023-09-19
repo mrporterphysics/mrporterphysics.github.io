@@ -14,6 +14,20 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.19 - **Conceptual Physics**
+
+##### **❓of the 📅**: Which of the five senses would you say is your strongest?
+
+1. Finish collecting buggy lab data
+2. Answer questions, but **DO NOT** turn in yet...
+3. Whiteboard your results (graphs and equations)
+4. Board Meeting
+    - What does the slope tell us?
+    - What does the vertical intercept tell us?
+5. Rolling Ball Challenge 1
+
+---
+
 # 2023.09.15 - **Conceptual Physics**
 
 ##### **❓of the 📅**:  Who or where would you haunt if you had to be a ghost 👻?
