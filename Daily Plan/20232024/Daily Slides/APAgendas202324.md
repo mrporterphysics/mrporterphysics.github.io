@@ -53,6 +53,8 @@ footer: Be brave, not perfect
 ### 2. Describe a motion where **distance**, **displacement**, and **final position** are all ***different***.
 ### 3. Sketch a position vs. time graph for each of the examples. 
 
+### When completed, Google "Graphical Analysis" and download the chrome extension (or version for your computer)
+
 ---
 
 # 2023.09.20 - **AP Physics**
