@@ -229,6 +229,219 @@ In our drawing exercises we placed rectangles based on their upper left corner. 
 
 # Paired Programming <!--fit--->
 
+---
+
+# Custom Variables 
+
+<div class="columns">
+
+<div>
+
+Go to [this sketch](https://editor.p5js.org/cs4all/sketches/SkSif3cXb) and do the following:
+
+- Move all ellipses 40 pixels down
+- Move all ellipses 30 pixels up
+- Move all ellipses 20 pixels to the right
+
+![center](../images/coding/fiveellipses.png)
+
+</div>
+
+
+<div>
+
+```javascript
+function setup() {
+  createCanvas(600, 120);
+}
+
+function draw() {
+  background(180);
+  ellipse(120, 60, 60, 60);
+  ellipse(200, 60, 60, 60);
+  ellipse(280, 60, 60, 60);
+  ellipse(360, 60, 60, 60);
+  ellipse(440, 60, 60, 60);
+
+}
+```
+
+</div>
+
+</div>
+
+---
+
+
+# Custom Variables 
+
+What happened when you tried to shift your ellipses 40 pixels down? You might have added “40” to the y value of each ellipse and manually changed the number “60” to “100” five times.
+
+
+![center](../images/coding/fiveellipsescode.png)
+
+---
+
+# Custom Variables 
+
+* This is a repetitive task, and error-prone. 
+* Instead of changing manually each y-value, we can use variables to change the y-location of all ellipses at once
+* So far, we have used p5 built-in variables: mouseX, mouseY, width and height. We can read their values, but not change them. 
+* Our next step is to create our own **custom variables**!
+
+---
+
+# Steps to Create a Variable
+
+![center](../images/coding/stepsvariable.png)
+
+---
+
+# Steps to Create a Variable
+
+![center](../images/coding/stepsvariable2.png)
+
+---
+
+# Steps to Create a Variable
+
+![center](../images/coding/stepsvariable3.png)
+
+---
+
+# Custom Emoji & Using Variables <!--fit-->
+
+---
+
+# Step 1: Draw a Face 
+
+## Draw a simple face by adding eyes and a mouth
+
+<div class="columns">
+
+<div>
+No matter where you place the shapes, the positions of face, eyes, and mouth, are going to be relative to the top left corner of the canvas:
+</div>
+
+<div>
+
+![center](../images/coding/face1.png)
+
+</div>
+
+</div>
+
+---
+
+# Step 2: Add Variables 
+
+## Create and initialize variables for the `x` and `y` location of the head.
+
+<div class="columns">
+
+
+![center](../images/coding/face2.png)
+
+---
+
+# Step 3: Move the Face
+
+- Change the values of `x` and `y` and see what happens. 
+  - You should notice that the head moved but the eyes and mouth are left behind. 
+- Place the eyes and mouth in relation to the position of the head.
+   - We did something similar when we placed shapes in relation to the size of the canvas. 
+  - We placed a shape at `width/2`, `height/2` so that it remains at the center of the canvas even when the canvas size changes.  
+ 
+---
+
+# Step 3: Move the Face 
+
+- Similarly, since we created variables for the `x` and `y` position of the head, we can place the other elements in relation to those variables. 
+- If the **right eye** is about 30 px higher and 30 px to the right of the center of the head (ellipse), we can write its `x` and `y` values as `xPosition-30`, yPosition-30. 
+- If we repeat that process for all of the features, we should be able to move the entire face drawing just by changing the value of `xPosition` and `yPosition`. 
+- Reference example [here](https://editor.p5js.org/cs4all/sketches/SyeznnqX-).
+
+---
+<style>
+    .headerless th {
+        display: none;
+    }
+</style>
+
+
+
+# Custom Color Variables 
+
+- It's most efficient to adjust variable values rather than calling a new function whenever something changes.
+- To control color, we can either:
+  - Use a unique variable for each color value (R, G, and B or H, S, and B)
+  - Store a variable with the data type ‘color’ to hold all three values at once.
+  
+<div class="headerless">
+
+|   |  | 
+|---|---|
+| Syntax: | `color(v1, v2, v3, [alpha]);` |
+| Example: | `myColor= color(81, 100, 200);` |
+| Use: | `fill(myColor);` | 
+
+</div>
+
+---
+
+# `random()`
+
+The `random()` function picks a random numerical value from the range of values that you put inside the parentheses. 
+
+For example, `random(5,10)` will pick a random value between 5 and 10. 
+
+If you only place one number in the parentheses, the default range starts with 0. In this case `random(255)` is a random value between 0 and 255.
+
+---
+
+# `random()`
+
+<div class="columns">
+
+<div>
+
+- Let's use `console.log()` to see what values the random function will return. 
+- You'll first need to assign the random value to a variable that will hold it.
+
+</div>
+
+
+<div>
+
+```javascript
+var x;
+
+function setup() {
+  createCanvas(400, 400);
+  x = random(0,400);
+}
+
+function draw() {
+  console.log(x)
+}
+```
+
+</div>
+
+</div>
+
+---
+
+# Practice using `random()`
+
+
+Using variables and random program a sketch that has the following:
+
+1. An ellipse that begins at a random location anywhere on the canvas after pressing play
+2. A second ellipse that begins with a random size 
+3. A rectangle that begins with a random fill
+
+
 
 ---
 
