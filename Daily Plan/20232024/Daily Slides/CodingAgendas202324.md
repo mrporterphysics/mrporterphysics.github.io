@@ -14,6 +14,224 @@ footer: Be brave, not perfect
 
 ---
 
+# Contents 
+
+
+---
+
+# 2023.09.14 **Coding**
+
+##### **❓of the 📅**: What animal would be the scariest super-sized?
+
+1. Variables 
+
+---
+
+# Pseudocode 
+
+- **Pseudocode** uses simple everyday language to describe an algorithm. The whole point of pseudocode is to make things simpler by ignoring syntax.
+- Writing pseudocode is useful because when working with complex code, it helps to have a place to start - and pseudocode is a great place to start.
+
+![](../images/coding/strokeoutline.png)
+
+
+---
+
+# Variables 
+
+* In computer science, variables are placeholder names for actual values
+
+* They are used to store data that can be used and manipulated in a program
+
+* They allow us to label data with names that make our code more understandable.
+
+# `colorOfEyes = "red"`
+
+---
+
+# p5.js System Variables 
+
+## The p5.js library has a number of system variables (built-in) that store data. Today we’re going to look at:
+
+- `mouseX` and `mouseY` - [Example](https://editor.p5js.org/cs4all/sketches/uHpIF1Ms4)
+
+- `width` and `height` - [Example](https://editor.p5js.org/cs4all/sketches/Edh2xtSqV)
+
+
+Take 5 minutes and play with the examples above. What do you notice? What do you wonder?
+
+---
+
+# Example 1
+
+```javascript
+function setup() { 
+  createCanvas(400, 400);
+}
+
+function draw() { 
+background(mouseX);
+fill(255);
+ellipse(mouseX, mouseY, 50, 50);
+
+}
+```
+
+---
+
+# Example 2
+
+```javascript
+function setup() {
+  //change this value and see what happens to the ellipses 
+  createCanvas(600, 120);
+}
+
+function draw() {
+  background(220);
+  fill(255);
+  //place the ellipse by dividing
+  //the built-in variables width and height by 2
+  ellipse(width / 2, height / 2, 20, 20);
+  noFill(); //get rid of the fill
+  //place this ellipse by dividing
+  //the width and height of the canvas
+  //without using variables
+  ellipse(300, 60, 40, 40);
+
+}
+```
+
+---
+
+# `mouseX` and `mouseY`
+
+
+* The `mouseX` variable holds the value of the x-coordinate of the current mouse location.
+
+* The `mouseY` variable holds the value of the y-coordinate of the current mouse location.
+
+* The values of these two variables will update in real-time as you move your mouse over the canvas.
+
+---
+
+# `mouseX` and `mouseY`
+
+Based on the code below, what do you think will happen in the sketch?
+
+```javascript
+
+function setup(){
+  createCanvas(400,400);
+}
+
+function draw(){
+  background(mouseX);
+  ellipse(200,200,mouseY);
+}
+```
+
+---
+
+# Interactivity 
+
+- These two simple system variables are what p5.js is all about - they easily allow us to make our projects ***interactive*** and fun for the user.
+- **Interactivity** is the ability of a computer program to respond to the user’s **input**. The computer will **process** this input data to produce an **output**.
+
+---
+
+# Input, Process, Output
+
+![center](../images/coding/inputoutput.png)
+
+---
+
+# `mouseX` and `mouseY`
+
+To display the mouse location on the canvas, you can add the following line after our background *inside* the `draw()` function:
+
+`text(mouseX + ',' + mouseY, 20,20);`
+
+This text function is receiving the values from `mouseX` and `mouseY` and showing them on the canvas at upper-left corner.
+
+---
+
+# Challenge `mouseX` and `mouseY`
+
+Remix the following [example](https://editor.p5js.org/cs4all/sketches/uHpIF1Ms4) to do one or more of the following:
+
+1. Color of ellipse changes with mouse movement.
+2. Mouse movement changes the height or width of another ellipse.
+3. Mouse movement changes the background color.
+
+```javascript
+function setup() { 
+  createCanvas(400, 400);
+}
+
+function draw() { 
+background(mouseX);
+fill(255);
+ellipse(mouseX, mouseY, 50, 50);
+}
+```
+
+---
+
+# `width` and `height`
+
+These built-in variables automatically hold the values for the **width and height of our canvas**. We can use them to place shapes on the canvas. 
+
+```javascript
+function setup(){
+  createCanvas(600,120);
+}
+
+function draw(){
+  background(220);
+  fill(255);
+  ellipse(width/2, height/2, 20, 20);
+}
+```
+
+#### If canvas is 600 x 120, what will be the x and y coordinates of the center of the ellipse?
+
+---
+
+# Hint: `rectMode()`
+
+
+There's a function called `rectMode()` that allows us to move the rect from it’s center.
+
+The two options for the `rectMode(`) are:
+
+`rectMode(CENTER);`
+`rectMode(CORNER);`
+
+Play with it [here](https://editor.p5js.org/cs4all/sketches/HkYPyi9m-).
+
+![bg right fit](../images/coding/rectmode.png)
+
+
+---
+
+# `rectMode()`
+
+In our drawing exercises we placed rectangles based on their upper left corner. If we want a rectangle to be drawn in the center of the screen we might try this, but it’ll place it using the upper left corner. 
+
+
+
+![center](../images/coding/rectmode2.png)
+
+---
+
+# **0.2.1 Intro to Variables**  <!--fit--->
+
+# Paired Programming <!--fit--->
+
+
+---
+
 # 2023.09.14 **Coding**
 
 ##### **❓of the 📅**: If you had a pet parrot 🦜, what would you want it to say?

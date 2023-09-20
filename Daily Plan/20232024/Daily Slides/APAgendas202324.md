@@ -57,7 +57,17 @@ footer: Be brave, not perfect
 
 # 2023.09.20 - **AP Physics**
 
-##### **❓of the 📅**: QUESTIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+##### **❓of the 📅**: Which animal would be the scariest super-sized?
+
+0. Do Now 
+1. [Motion Maps](../../../Presentations/APCVPM/talks/CVPM2023.html#21)
+2. Interpreting Position vs. Time Graphs 
+3. Motion Sensor Activity
+
+#### HW:
+
+- Week Assignment - Skip XT Graphs, Car Comparison - you may need help
+- Quiz Friday - Multiple Representations (i.e. given a xt graphs, motion maps, narrative descriptions)
 
 
 ---
