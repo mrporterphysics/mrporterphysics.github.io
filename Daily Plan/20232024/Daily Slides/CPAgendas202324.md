@@ -14,9 +14,24 @@ footer: Be brave, not perfect
 
 ---
 
+
 # 2023.09.19 - **Conceptual Physics**
 
-##### **❓of the 📅**: Which of the five senses would you say is your strongest?
+##### **❓of the 📅**: UPDATEME
+
+1. Using Pivot's Video Tools
+    - Stopwatch
+    - Ruler 
+    - Frame by frame controls
+1. Rolling Ball Challenge 1
+1. Rolling Ball Challenge 2
+
+
+---
+
+# 2023.09.19 - **Conceptual Physics**
+
+##### **❓of the 📅**: If animals could talk, which one do you think would be the most annoying?
 
 1. Finish collecting buggy lab data
 2. Answer questions, but **DO NOT** turn in yet...
