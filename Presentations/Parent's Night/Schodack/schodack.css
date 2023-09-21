@@ -1,0 +1,60 @@
+/*
+@theme schodack
+*/
+
+
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&display=swap');
+
+
+h1 {
+  font-size: 60px;
+  color: rgb(206,32,47);
+  /* background-color: rgba(217, 228, 247, 0.671); */
+  font-family: 'Hammersmith One', sans-serif;  
+}
+
+h2, h3, h4, h5, h6 {
+    font-style: italic;
+    font-family: 'Playfair Display', serif  ;
+}
+
+
+section blockquote {
+  color:black;
+  font-family: "ETBembo", "et-book", "Minion Pro", "Times New Roman";
+  border:none;
+  background-color:#00000009;
+  padding:20px;
+  border-radius:15px;
+}
+blockquote p {
+  margin:0;
+  padding:0;
+  line-height:1.25em;
+}
+section blockquote blockquote {
+  margin:0;
+  padding:0;
+  padding-top:0.75em;
+  background-color:unset!important;
+  font-size:97%;
+}
+blockquote blockquote strong {
+  font-variant:small-caps;
+  font-weight:normal;
+}
+
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+    gap: 1rem;
+  }
+
+img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+    }

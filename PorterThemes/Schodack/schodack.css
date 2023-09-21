@@ -39,3 +39,55 @@ img[alt~="center"] {
     display: block;
     margin: 0 auto;
     }
+
+/* blockquote h1{
+  color: white;
+  
+}
+
+blockquote{
+  background-color: rgba(139, 137, 137, 0.377);
+}
+
+blockquote::before{
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+} */
+
+
+blockquote body { 
+  background-color: #52ACFF; 
+  background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%); } 
+  
+/* center the blockquote in the page */ 
+
+blockquote-wrapper { display: flex; height: 100vh; padding: 0 20px; } 
+
+/* Blockquote main style */ 
+blockquote { position: relative; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 800; color: #ffffff; 
+  padding: 30px 0; width: 100%; max-width: 900px; 
+  z-index: 1; margin: 100px auto; align-self: center; 
+  border-top: solid 1px; border-bottom: solid 1px;
+  background-color: #ffffff3d; } 
+  /* Blockquote header */ 
+  
+  blockquote h1 { position: relative; color: #FFFFFF; font-size: 60px; 
+    font-weight: 800; line-height: 1; margin: 0; } 
+    
+  /* Blockquote right double quotes */ 
+
+  blockquote:after { position: absolute; content: "”"; 
+    color: rgba(255, 255, 255, 1); font-size: 10rem; line-height: 0; 
+    bottom: -43px; right: 30px; } 
+    
+    /* increase header size after 600px */ 
+    @media all and (min-width: 600px) { .blockquote h1 { font-size: 60px; } } 
+    /* Blockquote subheader */ 
+    
+    blockquote h4 { position: relative; color: #292a2b; font-size: 1.4rem; 
+      font-weight: normal; line-height: 1; margin: 0; padding-top: 20px; z-index: 1; }

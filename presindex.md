@@ -1,12 +1,12 @@
 # Class Presentations List:
 
-  - [Physics Skills](Presentations\Physics Skills\talks\physicsskills.html)
-  - Brain Science: [How You Learn]
+  <!-- - [Physics Skills](Presentations\Physics Skills\talks\physicsskills.html)
+  - Brain Science: [How You Learn] -->
 
 ## Physics Content Slides:
 
-  - [Constant Velocity Particle Motion Presentation](Presentations\APCVPM\talks\APCVPM.html)
-  - [Constant Acceleration Particle Model](Presentations\APCAPM\talks\APCAPM2020.html)
+  - [Constant Velocity Particle Motion Presentation](Presentations\APCVPM\talks\CVPM2023.html)
+  <!-- - [Constant Acceleration Particle Model](Presentations\APCAPM\talks\APCAPM2020.html)
     - [Problem Solving](Presentations\APCAPM\talks\problemsolving.html)
   - [Forces](Presentations\Forces\talks\APForces.html)
   - [Projectile Motion Particle Model](Presentations\Projectiles\talks\Projectiles_AP.html)
@@ -20,7 +20,7 @@
     - [Static Electricity](Presentations\RP Static Electricity\staticE.html)
   - Find [Rotation Presentation](Presentations\AP Rotation Representation\talks\Rotation)
   - [Work](Presentations\APETM\Marp - Energy\energy.html)
-  - [Simple Harmonic Motion](Presentations\AP SHM\SHM2023.html)
+  - [Simple Harmonic Motion](Presentations\AP SHM\SHM2023.html) -->
 
 ## AP Review Slides:
 
