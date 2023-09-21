@@ -12,8 +12,39 @@ footer: Be brave, not perfect
 
 ## 👨‍🏫 Mr. Porter
 
+
 ---
 
+
+
+---
+
+# 2023.09.20 - **Regents Physics** Do Now
+
+## In your notebook...
+
+#### 1. Describe a motion where **distance**, **displacement**, and **final position** are all ***the same***.
+#### 2. Describe a motion where **distance**, **displacement**, and **final position** are all ***different***.
+#### 3. Sketch a position vs. time graph for each of the examples. 
+
+#### When completed, Google "Graphical Analysis" and download the chrome extension (or version for your computer)
+
+
+
+---
+
+# 2023.09.21 - **Regents Physics**
+
+##### **❓of the 📅**: If animals could talk, which one do you think would be the most annoying?
+
+
+0. Do Now 
+1. Claim-Evidence-Reasoning: Soup Salad or Sandwich?
+2. Claim-Evidence-Reasoning: Constant or non constant velocity?
+3. Motion Maps & Multiple Representations 
+4. Walk the Graph lab 🚶 
+
+---
 
 # 2023.09.20 - **Regents Physics**
 

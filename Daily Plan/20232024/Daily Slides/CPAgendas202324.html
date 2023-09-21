@@ -18,14 +18,57 @@
 */div#\:\$p>svg>foreignObject>section :is(h1,marp-h1){font-size:60px;color:rgb(206,32,47);
   /* background-color: rgba(217, 228, 247, 0.671); */font-family:'Hammersmith One',sans-serif}div#\:\$p>svg>foreignObject>section :is(h2,marp-h2),div#\:\$p>svg>foreignObject>section :is(h3,marp-h3),div#\:\$p>svg>foreignObject>section :is(h4,marp-h4),div#\:\$p>svg>foreignObject>section :is(h5,marp-h5),div#\:\$p>svg>foreignObject>section :is(h6,marp-h6){font-style:italic;font-family:'Playfair Display',serif}div#\:\$p>svg>foreignObject>section{background-image:url(../../PorterThemes/Schodack/assets/paper.png);background-size:cover
     /* background-blend-mode: color; */
-    /* background-color:rgb(217,228,247); */}div#\:\$p>svg>foreignObject>section .columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(1px,1fr));gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p>svg>foreignObject>section img[alt~=center]{display:block;margin:0 auto}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content],div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#\:\$p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="1" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+    /* background-color:rgb(217,228,247); */}div#\:\$p>svg>foreignObject>section .columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(1px,1fr));gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p>svg>foreignObject>section img[alt~=center]{display:block;margin:0 auto}
+
+/* blockquote h1{
+  color: white;
+  
+}
+
+blockquote{
+  background-color: rgba(139, 137, 137, 0.377);
+}
+
+blockquote::before{
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+} */div#\:\$p>svg>foreignObject>section blockquote body{background-color:#52ACFF;background-image:linear-gradient(180deg,#52ACFF 25%,#FFE32C 100%)} 
+  
+/* center the blockquote in the page */div#\:\$p>svg>foreignObject>section blockquote-wrapper{display:flex;height:100vh;padding:0 20px} 
+
+/* Blockquote main style */div#\:\$p>svg>foreignObject>section blockquote{position:relative;font-family:'Montserrat',sans-serif;font-weight:800;color:#ffffff;padding:30px 0;width:100%;max-width:900px;z-index:1;margin:100px auto;align-self:center;border-top:solid 1px;border-bottom:solid 1px;background-color:#ffffff3d} 
+  /* Blockquote header */div#\:\$p>svg>foreignObject>section blockquote :is(h1,marp-h1){position:relative;color:#FFFFFF;font-size:60px;font-weight:800;line-height:1;margin:0} 
+    
+  /* Blockquote right double quotes */div#\:\$p>svg>foreignObject>section blockquote:after{position:absolute;content:"”";color:rgba(255,255,255,1);font-size:calc(var(--marpit-root-font-size, 1rem) * 10);line-height:0;bottom:-43px;right:30px} 
+    
+    /* increase header size after 600px */@media (min-width:600px){div#\:\$p>svg>foreignObject>section .blockquote :is(h1,marp-h1){font-size:60px}} 
+    /* Blockquote subheader */div#\:\$p>svg>foreignObject>section blockquote :is(h4,marp-h4){position:relative;color:#292a2b;font-size:calc(var(--marpit-root-font-size, 1rem) * 1.4);font-weight:normal;line-height:1;margin:0;padding-top:20px;z-index:1}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=content],div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#\:\$p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#\:\$p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="1" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 is="marp-h1" data-auto-scaling id="conceptual-physics-%F0%9F%94%AD">Conceptual Physics <img class="emoji" draggable="false" alt="🔭" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f52d.svg" data-marp-twemoji=""/> </h1>
 <h1 id="2023-2024-agendas"><strong>2023-2024</strong> Agendas</h1>
 <h2 id="%F0%9F%91%A8%E2%80%8D%F0%9F%8F%AB-mr-porter"><img class="emoji" draggable="false" alt="👨‍🏫" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f468-200d-1f3eb.svg" data-marp-twemoji=""/> Mr. Porter</h2>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="2" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="2" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="20230919---conceptual-physics">2023.09.19 - <strong>Conceptual Physics</strong></h1>
+<h5 id="%E2%9D%93of-the-%F0%9F%93%85-if-animals-could-talk-which-one-do-you-think-would-be-the-most-annoying"><strong><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" data-marp-twemoji=""/>of the <img class="emoji" draggable="false" alt="📅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c5.svg" data-marp-twemoji=""/></strong>: If animals could talk, which one do you think would be the most annoying?</h5>
+<ol>
+<li>Using Pivot's Video Tools
+<ul>
+<li>Stopwatch</li>
+<li>Ruler</li>
+<li>Frame by frame controls</li>
+</ul>
+</li>
+<li>Rolling Ball Challenge 1</li>
+<li>Rolling Ball Challenge 2</li>
+</ol>
+<footer>Be brave, not perfect</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="3" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+<h1 id="20230919---conceptual-physics-1">2023.09.19 - <strong>Conceptual Physics</strong></h1>
 <h5 id="%E2%9D%93of-the-%F0%9F%93%85-which-of-the-five-senses-would-you-say-is-your-strongest"><strong><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" data-marp-twemoji=""/>of the <img class="emoji" draggable="false" alt="📅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c5.svg" data-marp-twemoji=""/></strong>: Which of the five senses would you say is your strongest?</h5>
 <ol>
 <li>Finish collecting buggy lab data</li>
@@ -41,7 +84,7 @@
 </ol>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="3" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="4" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="20230915---conceptual-physics">2023.09.15 - <strong>Conceptual Physics</strong></h1>
 <h5 id="%E2%9D%93of-the-%F0%9F%93%85-who-or-where-would-you-haunt-if-you-had-to-be-a-ghost-%F0%9F%91%BB"><strong><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" data-marp-twemoji=""/>of the <img class="emoji" draggable="false" alt="📅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c5.svg" data-marp-twemoji=""/></strong>:  Who or where would you haunt if you had to be a ghost <img class="emoji" draggable="false" alt="👻" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f47b.svg" data-marp-twemoji=""/>?</h5>
 <ol>
@@ -52,7 +95,7 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ol>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-fragments="9" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="4" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-marpit-fragments="9" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="5" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="claim---evidence---reasoning">Claim - Evidence - Reasoning</h1>
 <ul>
 <li data-marpit-fragment="1">
@@ -85,7 +128,7 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ul>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="5" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="6" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="20230913-conceptual-physics-agenda">2023.09.13 <strong>Conceptual Physics</strong> Agenda</h1>
 <h5 id="%E2%9D%93of-the-%F0%9F%93%85-is-cake-%F0%9F%8D%B0-better-than-ice-cream-%F0%9F%8D%A8"><strong><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" data-marp-twemoji=""/>of the <img class="emoji" draggable="false" alt="📅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c5.svg" data-marp-twemoji=""/></strong>: Is cake <img class="emoji" draggable="false" alt="🍰" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f370.svg" data-marp-twemoji=""/> better than ice cream <img class="emoji" draggable="false" alt="🍨" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f368.svg" data-marp-twemoji=""/>?</h5>
 <ol>
@@ -104,7 +147,7 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ol>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="6" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="7" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="pasta-bridge-lab">Pasta Bridge Lab</h1>
 <ul>
 <li>What does the slope represent?
@@ -120,11 +163,11 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ul>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="7" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="8" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 is="marp-h1" data-auto-scaling id="%F0%9F%9A%97-buggy-lab"><img class="emoji" draggable="false" alt="🚗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f697.svg" data-marp-twemoji=""/> Buggy Lab  </h1>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="8" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="9" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="%F0%9F%9A%97-buggy-lab-1"><img class="emoji" draggable="false" alt="🚗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f697.svg" data-marp-twemoji=""/> Buggy Lab</h1>
 <h2 id="essential-question-does-your-toy-car-move-in-a-consistent-manner"><strong>Essential Question</strong>: Does your toy car move in a consistent manner?</h2>
 <ul>
@@ -132,7 +175,7 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ul>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="9" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="10" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="20230911---conceptual-physics">2023.09.11 - <strong>Conceptual Physics</strong></h1>
 <h5 id="%E2%9D%93of-the-%F0%9F%93%85-if-you-found-that-food-was-falling-from-the-sky-what-food-would-you-want-to-be-falling-what-food-would-you-not-want-to-be-falling"><strong><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" data-marp-twemoji=""/>of the <img class="emoji" draggable="false" alt="📅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c5.svg" data-marp-twemoji=""/></strong>: If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?</h5>
 <h2 id="%F0%9F%93%8B-agenda"><img class="emoji" draggable="false" alt="📋" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4cb.svg" data-marp-twemoji=""/> Agenda</h2>
@@ -149,7 +192,7 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ol>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="10" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="11" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="20230907---1st-day">2023.09.07 - 1st Day</h1>
 <h5 id="%E2%9D%93of-the-%F0%9F%93%85-sweet-of-savory-for-breakfast"><strong><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" data-marp-twemoji=""/>of the <img class="emoji" draggable="false" alt="📅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c5.svg" data-marp-twemoji=""/></strong>: Sweet of savory for breakfast?</h5>
 <div class="columns">
@@ -163,12 +206,12 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ol>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="11" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="12" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h2 is="marp-h2" data-auto-scaling id="%E2%9D%93quesion-of-the-day-%F0%9F%93%85"><strong><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" data-marp-twemoji=""/>Quesion of the day <img class="emoji" draggable="false" alt="📅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4c5.svg" data-marp-twemoji=""/></strong> </h2>
 <h2 is="marp-h2" data-auto-scaling id="sweet-of-savory-for-breakfast">Sweet of savory for breakfast? </h2>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="12" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="13" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="lab-grouping">Lab Grouping:</h1>
 <h2 id="arrange-yourselves-into-logical-lab-groups-based-on-the-word-on-your-index-card">Arrange yourselves into <strong>logical</strong> lab groups based on the word on your index card.</h2>
 <h3 id="rules">Rules:</h3>
@@ -179,11 +222,11 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ol>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="13" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="14" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 is="marp-h1" data-auto-scaling id="why-br-what-connection-does-br-this-grouping-game-br-have-to-physics-class"><strong>Why?</strong> <br /> What connection does <br /> this  grouping &quot;game&quot; <br /> have to physics class? </h1>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="14" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="15" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="a-few-questions-%F0%9F%A4%94">A Few Questions... <img class="emoji" draggable="false" alt="🤔" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f914.svg" data-marp-twemoji=""/></h1>
 <h3 id="answer-on-your-index-card">Answer on your index card</h3>
 <ol>
@@ -196,7 +239,7 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 </ol>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="15" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="16" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="survival-island-%F0%9F%8F%9D%EF%B8%8F">Survival Island <img class="emoji" draggable="false" alt="🏝️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f3dd.svg" data-marp-twemoji=""/></h1>
 <p>You and your group are stranded on an deserted island <img class="emoji" draggable="false" alt="😮" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f62e.svg" data-marp-twemoji=""/>!</p>
 <p>Using <em>each</em> of your <strong>unique skill's</strong> develop a plan to escape the island.</p>
@@ -204,20 +247,20 @@ ii. Whiteboard results - make a CER statement along with your evidence</li>
 <p>Be prepared to share out your plan to escape the island as a group. Each of you should offer a part of the plan to the class.</p>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="16" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="17" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 is="marp-h1" data-auto-scaling id="ball-bounce-lab-%E2%9B%B9%EF%B8%8F%E2%80%8D%E2%99%82%EF%B8%8F">Ball Bounce Lab <img class="emoji" draggable="false" alt="⛹️‍♂️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/26f9-fe0f-200d-2642-fe0f.svg" data-marp-twemoji=""/> </h1>
 <h1 is="marp-h1" data-auto-scaling id="observations-%F0%9F%94%8D">Observations <img class="emoji" draggable="false" alt="🔍" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f50d.svg" data-marp-twemoji=""/> </h1>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="17" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="18" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 is="marp-h1" data-auto-scaling id="what-can-we-measure-%F0%9F%93%8F">What can we measure? <img class="emoji" draggable="false" alt="📏" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4cf.svg" data-marp-twemoji=""/> </h1>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="18" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="19" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 is="marp-h1" data-auto-scaling id="what-questions-can-we-ask-%F0%9F%A4%94">What questions can we ask? <img class="emoji" draggable="false" alt="🤔" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f914.svg" data-marp-twemoji=""/> </h1>
 <footer>Be brave, not perfect</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="19" data-marpit-pagination-total="19" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-footer="Be brave, not perfect" data-theme="schodack" data-marpit-pagination="20" data-marpit-pagination-total="20" style="--paginate:true;--footer:Be brave, not perfect;--theme:schodack;">
 <h1 id="design-and-carry-out-an-experiment-%F0%9F%A5%BC">Design and Carry out an Experiment <img class="emoji" draggable="false" alt="🥼" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f97c.svg" data-marp-twemoji=""/></h1>
 <ol>
 <li>What question are you asking?</li>
