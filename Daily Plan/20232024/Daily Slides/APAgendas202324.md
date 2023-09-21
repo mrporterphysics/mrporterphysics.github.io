@@ -45,6 +45,18 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.22 - **AP Physics**
+
+##### **❓of the 📅**: Which animal would be the scariest super-sized?
+
+1. Do Now
+2. Finish Motion Sensor Lab (including velocity graphs)
+3. Quiz 
+4. Interpreting Position vs. time graphs 
+5. [Physics Classroom: Position-Time Graphs 2](https://www.physicsclassroom.com/calcpad/launch/CPK9) 
+
+---
+
 # 2023.09.20 - **AP Physics** Do Now
 
 ## In your notebook...
@@ -446,9 +458,6 @@ Be prepared to share out your plan to escape the island as a group. Each of you 
 2. What is your hypothesis?
 3. Design an experiment & collect data to support or refute your hypothesis
 4. Whiteboard your results when you finish
-
-
----
 
 
 ---

@@ -19,6 +19,19 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.22 **Coding**
+
+##### **❓of the 📅**: What animal would be the scariest super-sized?
+
+1. Custom Variables 
+2. Color Variables 
+3. `random()` function 
+
+
+[🔗 Slides](../../../Presentations/Coding%20Slides/HTML%20Files/CodingUnitOne.html#48)
+
+---
+
 # 2023.09.14 **Coding**
 
 ##### **❓of the 📅**: What animal would be the scariest super-sized?
