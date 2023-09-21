@@ -15,7 +15,7 @@ footer: Be brave, not perfect
 ---
 
 
-# 2023.09.19 - **Conceptual Physics**
+# 2023.09.21 - **Conceptual Physics**
 
 ##### **❓of the 📅**: If animals could talk, which one do you think would be the most annoying?
 
