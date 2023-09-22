@@ -47,13 +47,16 @@ footer: Be brave, not perfect
 
 # 2023.09.22 - **AP Physics**
 
-##### **❓of the 📅**: Which animal would be the scariest super-sized?
+##### **❓of the 📅**: What is the best thing that you have gifted?
 
-1. Do Now
-2. Finish Motion Sensor Lab (including velocity graphs)
+1. Do Now - Finish Motion Sensor Lab (including velocity graphs)
 3. Quiz 
-4. Interpreting Position vs. time graphs 
+4. [Interpreting Position vs. time graphs](../../../Presentations/APCVPM/talks/CVPM2023.html#32)
 5. [Physics Classroom: Position-Time Graphs 2](https://www.physicsclassroom.com/calcpad/launch/CPK9) 
+
+
+### 🚨 AP Exam Check Due 10/19❗ 
+- $90, checks made to Schodack Central Schools
 
 ---
 

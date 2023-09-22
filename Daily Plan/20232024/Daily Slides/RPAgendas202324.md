@@ -12,14 +12,34 @@ footer: Be brave, not perfect
 
 ## 👨‍🏫 Mr. Porter
 
+---
+
+# 2023.09.22 - **Regents Physics** Do Now
+
+
+
+Draw a picture with two objects where, 
+
+- a different colored dot represents each object
+- the motion of each object is a constant velocity
+- one object is moving faster than the other object
+- the two objects are  moving in the opposite direction
 
 ---
 
 
+# 2023.09.21 - **Regents Physics**
+
+##### **❓of the 📅**: What is the best thing that you have gifted?
+
+0. Do Now
+1. Motion Maps 
+2. Walk the graph lab 
+3. Multiple Representations 
 
 ---
 
-# 2023.09.20 - **Regents Physics** Do Now
+# 2023.09.21 - **Regents Physics** Do Now
 
 ## In your notebook...
 
