@@ -811,3 +811,120 @@ Using variables and random program a sketch that has the following:
 1. An ellipse that begins at a random location anywhere on the canvas after pressing play
 2. A second ellipse that begins with a random size 
 3. A rectangle that begins with a random fill
+
+---
+
+# `fill()` and `stroke()` - color
+
+The `fill()` and `stroke()` functions can actually take in three (and an optional fourth) arguments.
+
+### `fill(v1, v2, v3, [alpha]);`
+### `stroke(v1, v2, v3, [alpha]);`
+The combination of these values create color using the default color model: **RGB**.
+
+---
+
+# Color Values: RGB
+
+![bg right fit](../images/rgb.png)
+
+You can use numerical values, RGB, between 0 and 255 for red, green and blue values. This way you can make mix and make fine changes to your colors.
+
+![center](../images/rgblabel.png)
+
+---
+
+# Color Values: Alpha Channel
+
+An optional fourth argument known as the “alpha channel” changes the opacity of shapes. 
+
+By default, 0 is transparent and 255 is fully opaque. So using “127” as the fourth argument would mean the shape has a 50% opacity.
+
+![bg right fit](../images/alpha.png)
+
+---
+
+# Predicting RGB
+
+1. Look at the code on the right and make a prediction for every `fill()` function. 
+2. What will happen when this runs on a computer?
+3. Update your p5 sketch by adding these `fill()` functions in the right order inside `draw()`.
+
+![bg right fit](../images/predictrgb.png)
+
+---
+
+# Additive Mixing
+
+
+- Uses light to mix colors. 
+- All lights together create white, which is why 255 is white (all lights are on). 
+- Black is the absence of light.
+- It’s how p5.js mixes colors.
+
+![bg fit right](../images/addmix.png)
+
+
+---
+
+# Subtractive Mixing
+
+- Uses media like paint to make colors, which absorb different lights around them to create the illusion of color. 
+- More tones = more absorption.
+
+
+![bg right 50%](../images/subtract.png)
+
+---
+
+# Other functions: `noFill()`
+
+Gets rid of the shape color.
+
+![bg right fit](../images/nofill.png)
+
+---
+
+Other functions: `noStroke()`
+
+Gets rid of the line around the shape. 
+
+![bg right fit](../images/nostroke.png)
+
+---
+
+# Color Values: HTML Names
+
+You can use HTML named colors, like "blue", "green" or "purple" by setting the argument to the name in between single quotation marks.
+
+`fill(‘blue’);`
+
+![bg right fit](../images/htmlcols.png)
+
+---
+
+# Color Values: Hexadecimal
+
+You can also use HTML hexadecimal values to set color. Need an extension? Ask about reading HEX!
+
+`fill(‘#ff00ff’);`
+
+![bg right fit](../images/hexcolors.png)
+
+---
+
+# HSB
+
+HSB is an alternative color space to RGB. 
+
+- **Hue** is expressed in degrees, from red(0), through all the colors around the color wheel, and back to red (360).
+- **Saturation** is the amount of color, and ranges between 0 and 100.
+- **Brightness** is the amount of light, ranging between 0 and 100. 
+
+![bg right 70%](../images/hsbcolor.png)
+
+---
+
+# HSB Color Wheel
+
+![center](../images/colorwheel.png)

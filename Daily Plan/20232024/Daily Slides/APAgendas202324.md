@@ -13,6 +13,48 @@ footer: Be brave, not perfect
 ## 👨‍🏫 Mr. Porter
 
 ---
+<!--- _footer: . --->
+
+# Week 4 (09.26-09.29)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Use and interpret multiple representations for motion: Graphical, mathematical, pictorial
+2. Calculate *speed*, *velocity*, *average* *speed*, *average* *velocity*, and *instantaneous* *velocity* 
+3. Create and interpret velocity vs. time graphs 
+4. Use constant velocity equations ($x = \bar{v}t + x_0$ and $\bar{v}=\frac{\Delta x}{\Delta t}$) to solve problems
+
+</div>
+
+
+<div> 
+
+### 🏡 Homework 
+
+1. Quiz Friday
+    - Graphs, average vs. instantaneous, using CV Equation
+2. [Position-Time Graphs 2](https://www.physicsclassroom.com/calcpad/launch/CPK9)
+3. Applying the CV Model (PDF)
+
+</div>
+
+---
+
+
+# 2023.09.26 - **AP Physics**
+
+##### **❓of the 📅**: *Would you rather travel 100 years forward or back in time*?
+
+1. [Interpreting Position vs. time graphs](../../../Presentations/APCVPM/talks/CVPM2023.html#32)
+2. Using CV Equation 
+3. Working with Velocity vs. Time Graphs
+
+
+---
 
 
 # Week 3

@@ -14,7 +14,14 @@ footer: Be brave, not perfect
 
 ---
 
-# Contents 
+
+# 2023.09.26 **Coding**
+
+##### **❓of the 📅**: *Would you rather travel 100 years forward or back in time*?
+
+1. Color Modes
+2. Old Assignments 
+3. Abstract Album Art
 
 
 ---
