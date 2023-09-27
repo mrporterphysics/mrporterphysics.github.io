@@ -14,6 +14,46 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.27 - **Regents Physics** Do Now
+
+
+
+
+---
+
+# 2023.09.27 - **Regents Physics**
+
+##### **❓of the 📅**: Would you rather be a dragon or own a dragon? 🐉
+
+<div class="columns">
+
+<div>
+
+1. Finish Motion Sensor Lab 
+2. Whiteboard and present assigned problem 
+3. Multiple Reps Practice 
+4. [Working with XT Graphs](../../../Presentations/APCVPM/talks/CVPM2023.html#32)
+
+
+</div>
+
+
+<div>
+
+### HW: 
+
+- Quiz Friday:
+    - Multiple Representations
+    - Interpreting XT Graphs 
+
+</div>
+
+
+
+</div>
+
+---
+
 # 2023.09.22 - **Regents Physics** Do Now
 
 

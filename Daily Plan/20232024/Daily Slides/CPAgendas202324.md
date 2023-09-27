@@ -14,6 +14,15 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.27  **Conceptual Physics**
+
+##### **❓of the 📅**: Would you rather be a dragon or own a dragon? 🐉
+
+1. Pivot - Practicing with Position vs. Time Graphs 
+2. Rolling Ball Challenge 2: Ball Rolling Left
+
+
+---
 
 # 2023.09.21 - **Conceptual Physics**
 

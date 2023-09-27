@@ -6,6 +6,12 @@ paginate: true
 footer: Be brave, not perfect
 ---
 
+# Unit 1:
+
+# **Drawing with Code**
+
+
+---
 
 # Draw a Robot 🤖 <!--fit--->
 
