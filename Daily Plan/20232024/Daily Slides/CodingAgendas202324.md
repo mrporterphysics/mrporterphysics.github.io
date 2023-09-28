@@ -15,6 +15,18 @@ footer: Be brave, not perfect
 ---
 
 
+# 2023.09.28 **Coding**
+
+##### **❓of the 📅**: Would you rather live swim in the world's coldest water or eat the world's hottest pepper?🥶🥵
+
+
+1. Old Assignments 
+2. Abstract Album Art
+
+🚨 Yearbook Photos at **11:15 PM** 📷
+
+---
+
 # 2023.09.26 **Coding**
 
 ##### **❓of the 📅**: *Would you rather travel 100 years forward or back in time*?

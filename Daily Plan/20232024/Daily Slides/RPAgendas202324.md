@@ -14,10 +14,37 @@ footer: Be brave, not perfect
 
 ---
 
-# 2023.09.27 - **Regents Physics** Do Now
+# 2023.09.28 - **Regents Physics**
+
+##### **❓of the 📅**: Would you rather live swim in the world's coldest water or eat the world's hottest pepper?🥶🥵
+
+<div class="columns">
+
+<div>
+
+## Agenda
+
+
+1. Multiple Reps Practice 
+4. [Working with XT Graphs](../../../Presentations/APCVPM/talks/CVPM2023.html#32)
+5. VT Graphs
+
+</div>
+
+
+<div>
+
+## HW: 
+
+- Quiz Friday:
+    - Multiple Representations
+    - Interpreting XT Graphs 
+
+</div>
 
 
 
+</div>
 
 ---
 
@@ -28,6 +55,8 @@ footer: Be brave, not perfect
 <div class="columns">
 
 <div>
+
+## Agenda
 
 1. Finish Motion Sensor Lab 
 2. Whiteboard and present assigned problem 
@@ -40,7 +69,7 @@ footer: Be brave, not perfect
 
 <div>
 
-### HW: 
+## HW: 
 
 - Quiz Friday:
     - Multiple Representations
