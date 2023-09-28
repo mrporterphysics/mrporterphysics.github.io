@@ -50,7 +50,7 @@ footer: Be brave, not perfect
 
 1. [Using CV Equation](../../../Presentations/APCVPM/talks/CVPM2023.html#38)
 2. Working with VT Graphs 
-3. Changing Speed Lab
+3. [Changing Speed Lab](../../../Presentations/APCAPM/talks/CAPM2023.html)
 
 ### 🚨 AP Exam Check Due 10/19❗ 
 - $90, checks made to Schodack Central Schools
