@@ -96,3 +96,8 @@ blockquote { position: relative;
     
     blockquote h4 { position: relative; color: #292a2b; font-size: 1.4rem; 
       font-weight: normal; line-height: 1; margin: 0; padding-top: 20px; z-index: 1; }
+
+
+section.lead h1 {
+        text-align: center;
+      }
