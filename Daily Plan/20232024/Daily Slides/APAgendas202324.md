@@ -13,6 +13,50 @@ footer: Be brave, not perfect
 ## 👨‍🏫 Mr. Porter
 
 ---
+
+
+# **Week 5** (10.02-10.06)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Identify patterns in changing velocity motion. 
+2. Define Changing Velocity
+3. Translate between multiple representations for changing velocity motion. 
+4. Interpret and make calculations from Velocity vs. Time Graphs
+
+</div>
+
+
+<div> 
+
+### 🏡 Homework 
+
+1. Finish Lab in Pivot
+1. TBD - Need to see how long the lab takes
+
+</div>
+
+---
+
+# 2023.09.29 - **AP Physics**
+
+##### **❓ of the 📅**: What celebrity would you like to meet for a cup of coffee?
+
+0. New Lab Groups - Sort yourselves with the cards
+1. [Changing Speed Lab](../../../Presentations/APCAPM/talks/CAPM2023.html)
+    i. Lab Intro 
+    ii. New Lab Tools - Choose One 
+    iii. Collect Data and Whiteboard 
+    iv. Board Meeting
+2. Making VT Graphs
+3. Linearizing
+
+---
+
 <!--- _footer: . --->
 
 # Week 4 (09.26-09.29)
@@ -41,6 +85,36 @@ footer: Be brave, not perfect
 3. Applying the CV Model (PDF)
 
 </div>
+
+---
+
+### 2023.09.29 **AP Physics** Do Now
+
+![bg fit right:40%](../images/Kinematics/xtdonow.png)
+
+The position time graph below represents the motion of a car driven by a high schooler driving in a perfectly straight
+driveway.
+
+1. Draw a motion map for the driver. 
+2. Provide a written description of the motion
+3. Determine the driver's **displacement** over the 8 seconds. 
+4. Determine the driver's **average velocity**
+5. Determine the driver's **average speed**
+
+
+---
+
+# 2023.09.29 - **AP Physics**
+
+##### **❓of the 📅**: You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? You can't pick money...
+
+1. Do Now 
+2. Quiz 
+2. Working with VT Graphs - [Summary](../../../Presentations/APCVPM/talks/CVPM2023.html#43)
+3. [Changing Speed Lab](../../../Presentations/APCAPM/talks/CAPM2023.html)
+
+### 🚨 AP Exam Check Due 10/19❗ 
+- $90, checks made to Schodack Central Schools
 
 ---
 

@@ -14,6 +14,17 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.09.29 **Regents Physics**
+
+##### **❓of the 📅**: You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? You can't pick money...
+
+1. Quiz 
+2. [XT Graphs](../../../Presentations/APCVPM/talks/CVPM2023.html#32)
+3. VT Graphs
+
+
+---
+
 # 2023.09.28 - **Regents Physics**
 
 ##### **❓of the 📅**: Would you rather live swim in the world's coldest water or eat the world's hottest pepper?🥶🥵

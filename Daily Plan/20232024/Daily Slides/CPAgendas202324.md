@@ -14,6 +14,191 @@ footer: Be brave, not perfect
 
 ---
 
+
+# 2023.09.29  **Conceptual Physics**
+
+##### **❓of the 📅**: You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? You can't pick money...
+
+
+1. Describing Motion
+2. Motion Sensor Lab
+
+---
+
+# Describing Motion 
+
+1. Where does the object start?
+2. What direction is it moving in?
+3. How fast is it moving?
+
+---
+
+# Describing Motion
+
+![bg fit right](../images/Kinematics/cyclists.png)
+
+---
+
+
+# Describing Motion
+
+![bg fit right](../images/Kinematics/image.png)
+
+#### Written description of bicyclist A:
+Bicyclist A begins at a position of zero, and moves at a constant, fairly high speed (compared to cyclist B) in the positive direction for about 10 seconds, ending at a fairly far in the positive direction from zero.
+
+---
+
+
+# Describing Motion
+
+![bg fit right](../images/Kinematics/image.png)
+
+#### Written description of bicyclist B:
+Bicyclist B begins at a position in the positive direction from zero, and moves at a constant, fairly low speed
+(compared to cyclist A) in the negative direction for about 10 seconds, ending closer to zero than its starting
+position.
+
+---
+
+# Describing Motion 
+
+Each description should include:
+- Starting position
+- Direction of motion (positive direction, no motion, or negative direction)
+- Type of motion (at rest, constant velocity, speeding up, slowing down or some combination of these)
+- Relative speed (slow, medium, fast, slower, faster—this is only meaningful with there is more than
+one part of the motion or when you are comparing two or more objects)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../images/Kinematics/xt1.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../images/Kinematics/xt2.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../images/Kinematics/xt3.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../images/Kinematics/xt4.png)
+
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../images/Kinematics/xt5.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../images/Kinematics/xt6.png)
+
+
+---
+
+# Motion Maps
+
+![center width:900](https://www.intelligentdesigneronline.com/drhoades/advanced/reading/motionMap1.png)
+
+---
+
+# Motion Maps 
+
+<br>
+
+![center width:1200](../images/Kinematics/motionmapCPexample.png)
+
+
+---
+
+# Motion Maps 
+
+- Each dot represents **one unit of time**
+- The numberline is the **position** of the object
+- The separation of the dots and length of the arrow represents the **velocity** of the object 
+- Stacked dots represent an object that is motionless
+
+---
+
+# Motion Map Practice 
+
+
+![center width:1200](../images/Kinematics/mmpractice1.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../images/Kinematics/mmpractice2.png)
+
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../images/Kinematics/mmpractice3.png)
+
+
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../images/Kinematics/mmpractice4.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../images/Kinematics/mmpractice5.png)
+
+
+---
+
+# Motion Sensor Lab
+
+- Which way does the sensor treat as positive? Negative?
+- Where is position = 0?
+- How do we describe the motion?
+
+
+---
+
+
 # 2023.09.27  **Conceptual Physics**
 
 ##### **❓of the 📅**: Would you rather be a dragon or own a dragon? 🐉
