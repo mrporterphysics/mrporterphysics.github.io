@@ -42,7 +42,19 @@ footer: Be brave, not perfect
 
 ---
 
-# 2023.09.29 - **AP Physics**
+# 2023.10.04 - **AP Physics**
+
+##### **❓ of the 📅**: QUESTIONHERE
+
+1. Finish Collecting/Graphing data from Fan Cart Lab
+2. Whiteboard Results
+3. Board Meeting
+4. Additional Analysis of Fan Cart Data
+
+
+---
+
+# 2023.10.02 - **AP Physics**
 
 ##### **❓ of the 📅**: What celebrity would you like to meet for a cup of coffee?
 
