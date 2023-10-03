@@ -14,6 +14,32 @@ footer: Be brave, not perfect
 
 ---
 
+
+
+
+
+# 2023.10.03 **Regents Physics**
+
+##### **❓of the 📅**: If you had a warning label, what would yours say?
+
+1. Finish [Equation Problem](../../../Presentations/APCVPM/talks/CVPM2023.html#38) from last class
+2. Dueling Buggies 
+
+---
+
+# Dueling Buggies
+
+## 💥 **Goal:**  _Predict where your two buggies will crash_ 💥
+
+#### Procedure:
+
+1. Take any measurements you want about your two buggies
+2. Place buggies in "time out"
+3. Get _crash situation_ from Mr. Porter
+4. Make Prediction (using our models) & Test!
+
+---
+
 # 2023.09.29 **Regents Physics**
 
 ##### **❓of the 📅**: You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? You can't pick money...

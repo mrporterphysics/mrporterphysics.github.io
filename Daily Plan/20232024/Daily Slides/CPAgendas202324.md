@@ -14,6 +14,17 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.03 **Conceptual Physics**
+
+##### **❓of the 📅**: If you had a warning label, what would yours say?
+
+
+1. Finish Walk the graph
+    1. Walk the Graph Match Challenge 
+2. Rolling Ball Challenge 2 or Position vs. Time Graphs assignments
+3. Rolling Ball Challenge 3 (the last Rolling Ball Challenge
+
+---
 
 # 2023.09.29  **Conceptual Physics**
 
