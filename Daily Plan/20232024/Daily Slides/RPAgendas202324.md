@@ -19,7 +19,7 @@ footer: Be brave, not perfect
 ##### **❓of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
 
 1. Finish Dueling Buggies 
-2. Do Now Problem
+2. Practice with Equation: [Physics Classroom](https://www.physicsclassroom.com/calcpad/launch/CPK5)
 3. Making and interpreting [Velocity vs. Time Graphs](../../../Presentations/APCVPM/talks/CVPM2023.html#39) 
 
 ---
