@@ -22,7 +22,7 @@ footer: Be brave, not perfect
 1. Finish Walk the graph
     1. Walk the Graph Match Challenge 
 2. Rolling Ball Challenge 2 or Position vs. Time Graphs assignments
-3. Rolling Ball Challenge 3 (the last Rolling Ball Challenge
+3. Rolling Ball Challenge 3 (the last Rolling Ball Challenge)
 
 ---
 

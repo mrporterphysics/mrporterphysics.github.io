@@ -14,6 +14,16 @@ footer: Be brave, not perfect
 
 ---
 
+<!-- ![bg fit right:42%](../images/Kinematics/ninextgraphs.png)
+
+1. For which of these cases, if any, is the position zero at the indicated point? 
+2. For which of these cases, if any, is the position negative at teh indicated point?
+3. For which of these cases, if any, is the velocity zero at the indicated point?
+4. For chich of these cases, if any, is the velocity negative at the indicated point?
+5. For which of these cases, if any, is the acceleration zero at the indicated point?
+6. For which of these cases, if any, is the acceleration negative at the indicated point?
+
+--- -->
 
 # **Week 5** (10.02-10.06)
 

@@ -14,9 +14,23 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.04 **Regents Physics**
 
+##### **❓of the 📅**: If you had a warning label, what would yours say?
 
+1. Finish Dueling Buggies 
+2. Do Now Problem
+3. Making and interpreting [Velocity vs. Time Graphs](../../../Presentations/APCVPM/talks/CVPM2023.html#39) 
 
+---
+
+# 2023.10.04 **Regents Physics** Do Now
+
+A red car (top) and a green car (bottom) are having a race. The green car has a head start (distance a). The two cars start at the same time. The red car must travel **200.0 m** to the finish line (distance b). The red car averages a speed of **17.3 m/s**. The green car averages a speed of **12.0 m/s**. What must be the head start distance (distance a) in order for the two cars to reach the finish line at the exact same time?
+
+![center](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/Kinematics/K5Q4.png)
+
+---
 
 # 2023.10.03 **Regents Physics**
 
