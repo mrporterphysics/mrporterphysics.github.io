@@ -52,6 +52,23 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.05 - **AP Physics**
+
+##### **❓ of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
+
+1. [Linearizing](../../../Presentations/APCAPM/talks/CAPM2023.html#15) and finding the position time relationship for constant acceleration
+2. Lab Summary
+3. Carts and Ramps
+    1. Card Sort
+    2. Smart Carts to check card sort
+
+---
+
+
+
+
+---
+
 # 2023.10.04 - **AP Physics**
 
 ##### **❓ of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
@@ -59,7 +76,7 @@ footer: Be brave, not perfect
 1. Finish Collecting/Graphing data from Fan Cart Lab
 2. Whiteboard Results
 3. Board Meeting
-4. [Additional Analysis of Fan Cart Data](../../../Presentations/)
+4. [Additional Analysis of Fan Cart Data](../../../Presentations/APCAPM/talks/CAPM2023.html)
 
 
 ---
