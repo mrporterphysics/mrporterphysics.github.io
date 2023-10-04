@@ -16,7 +16,7 @@ footer: Be brave, not perfect
 
 # 2023.10.04 **Regents Physics**
 
-##### **❓of the 📅**: If you had a warning label, what would yours say?
+##### **❓of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
 
 1. Finish Dueling Buggies 
 2. Do Now Problem

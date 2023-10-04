@@ -15,6 +15,15 @@ footer: Be brave, not perfect
 ---
 
 
+# 2023.10.04 **Coding**
+
+##### **❓of the 📅**: Would you rather live swim in the world's coldest water or eat the world's hottest pepper?🥶🥵
+
+1. [Conditional Statements and Boolean Logic](../../../Presentations/Coding%20Slides/HTML%20Files/CodingUnitTwo.html)
+
+---
+
+
 # 2023.09.28 **Coding**
 
 ##### **❓of the 📅**: Would you rather live swim in the world's coldest water or eat the world's hottest pepper?🥶🥵

@@ -54,12 +54,12 @@ footer: Be brave, not perfect
 
 # 2023.10.04 - **AP Physics**
 
-##### **❓ of the 📅**: QUESTIONHERE
+##### **❓ of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
 
 1. Finish Collecting/Graphing data from Fan Cart Lab
 2. Whiteboard Results
 3. Board Meeting
-4. Additional Analysis of Fan Cart Data
+4. [Additional Analysis of Fan Cart Data](../../../Presentations/)
 
 
 ---
