@@ -54,7 +54,7 @@ footer: Be brave, not perfect
 
 # 2023.10.05 - **AP Physics**
 
-##### **❓ of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
+##### **❓ of the 📅**: What household chore do you actually enjoy?
 
 1. [Linearizing](../../../Presentations/APCAPM/talks/CAPM2023.html#15) and finding the position time relationship for constant acceleration
 2. Lab Summary

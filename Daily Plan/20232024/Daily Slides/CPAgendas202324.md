@@ -14,6 +14,20 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.05 **Conceptual Physics**
+
+##### **❓of the 📅**: What is a chore you secretly enjoy?
+
+
+1. Anything but a bag analysis
+    - Is the velocity constant? (Is the position vs. time graph linear?)
+    - What is the average velocity? ($v = \frac{d}{t}$)
+2. Rolling Ball Challenge 3: Collisions 
+    - Make sure you are measuring the correct side of the ball
+    - Practice for in person lab with the toy cars 
+
+---
+
 # 2023.10.03 **Conceptual Physics**
 
 ##### **❓of the 📅**: If you had a warning label, what would yours say?

@@ -14,6 +14,16 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.05 **Regents Physics**
+
+##### **❓of the 📅**: What is a chore you secretly enjoy?
+
+1. Practice with Equations: [Physics Classroom](https://www.physicsclassroom.com/calcpad/launch/CPK5) - Are we finished?
+2. Making and interpreting [Velocity vs. Time Graphs](../../../Presentations/APCVPM/talks/CVPM2023.html#39) 
+3. [Changing Speed Lab](../../../Presentations/APCAPM/talks/CAPM2023.html)
+
+---
+
 # 2023.10.04 **Regents Physics**
 
 ##### **❓of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
