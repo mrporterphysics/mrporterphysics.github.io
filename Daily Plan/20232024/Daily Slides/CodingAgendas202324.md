@@ -14,6 +14,18 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.06 - **Coding**
+
+##### **❓ of the 📅**: What is the number one feature you would want in your dream house?
+
+1. [Logical Operators](../../../Presentations/Coding%20Slides/HTML%20Files/CodingUnitTwo.html#22)
+2. 1.1.2 If ➡ Else if ➡ Else Statements (Exercise 1 & 2)
+2. Traffic Light Challenge - Pseudocode with partner
+3. Traffic Light Challenge - Code individually
+
+
+
+---
 
 # 2023.10.04 **Coding**
 

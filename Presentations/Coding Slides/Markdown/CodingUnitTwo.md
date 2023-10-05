@@ -238,4 +238,94 @@ We can do this by adding “else if” to our conditionals between “if” and 
 
 ---
 
-https://docs.google.com/presentation/d/1xnldRfQnPPGA9ScLKik7Ji9phr6FBsI1mQst2_SA88Q/edit#slide=id.g4016324b49_0_325 
+# Logical Operators <!--fit--->
+
+---
+
+# And 
+
+In the following [example](https://editor.p5js.org/cs4all/sketches/B1MNwN6E-), the ellipse becomes a square when mouseX is between 200 and 400. While we can’t use “between” in our conditionals, we can tell the program to draw an ellipse when mouseX is greater than 200 AND less than 400.
+
+![center](../images/and.png)
+
+---
+
+# And 
+
+The syntax to write "**and**" in p5 is two ampersands (`&&`). In this sketch, we draw an ellipse when mouseX is greater than 200, and when mouseX is less than 400. Otherwise (else) we draw a rectangle.
+
+
+`&&` is used whenever you want the bracketed code to be executed only if both conditions evaluate to true.
+
+![center](../images/andand.png)
+
+---
+
+# Or
+
+When we would like that code to be executed as long as **one of the conditions** evaluates to true, we use "or." The syntax for "or" in p5 is two pipes "`||`". 
+
+In this [example](https://editor.p5js.org/cs4all/sketches/HJFv_E6NW), we have used "or" to set two ranges. if the mouse is hovering within either of them, we’ll draw an ellipse. 
+
+![center](../images/or.png)
+
+---
+
+# What is Interactivity?
+
+
+Interactive applications are designed to respond to user input via the keyboard, mouse or other peripherals. Games, websites, and software are examples of interactive applications.
+
+In p5.js we can allow the user to make things happen when they move the mouse, press a key, or click the mouse.
+
+To do so, the use of conditional logic is very important. This is where control flow is crucial. As a programmer and designer you have to make decisions on what your application will do based on conditions and inputs.
+
+---
+
+# Traffic Light Challenge 
+
+### Draw a traffic light that changes based on the mouse position using `else if`. 
+
+You’ll be planning as group, in the next slides we’ll cover how this process is going to play out.
+
+
+![center](../images/trafficlight.png)
+
+---
+
+# Draw a traffic light
+
+
+Start by writing **pseudocode** for this program → 
+
+It’s really important to make a plan for your code. Thinking through the design before programming saves time and helps solve complex problems.
+
+![bg left:59% fit](../images/trafficpseudo.png)
+
+
+---
+
+# Planning with pseudocode
+
+* **Step 1**: Write a basic plan on paper with instructions “Turn on the red light”
+* **Step 2**: Translate the basic plan into sentences that more accurately fit the code “Add a red fill then draw an ellipse”
+* **Step 3**: Place those sentences as comments into your code
+* **Step 4**: Only then write the actual code step by step.
+
+---
+
+
+# Traffic Light Challenge 
+
+### Draw a traffic light that changes based on the mouse position using `else if`. 
+
+You’ll be planning as group, in the next slides we’ll cover how this process is going to play out.
+
+
+![center](../images/trafficlight.png)
+
+---
+
+# Draw with Mouse 🖱️ <!--fit--->
+
+---

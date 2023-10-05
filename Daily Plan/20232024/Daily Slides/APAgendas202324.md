@@ -52,6 +52,21 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.06 - **AP Physics**
+
+##### **❓ of the 📅**: What is the number one feature you would want in your dream house?
+
+
+1. Finish Carts and Ramps
+    1. Check with smart carts (check acceleration graphs)
+    2. Whiteboard assigned problem
+    3. Complete summary chart 
+2. Card Sort #2 
+3. Notes and Summaries of Constant Acceleration
+4. Stacks of graphs practice (in handout)
+
+---
+
 # 2023.10.05 - **AP Physics**
 
 ##### **❓ of the 📅**: What household chore do you actually enjoy?
