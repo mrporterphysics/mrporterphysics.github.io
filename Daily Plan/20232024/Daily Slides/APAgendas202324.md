@@ -4,6 +4,11 @@ marp: true
 theme: schodack
 paginate: true
 footer: Be brave, not perfect
+transition: dissolve
+style: |
+  @keyframes marp-transition-dissolve {
+    /* ... */
+  }
 ---
 
 # AP Physics 🔭 <!---fit--->
@@ -59,10 +64,10 @@ footer: Be brave, not perfect
 
 1. Finish Carts and Ramps
     1. Check with smart carts (check acceleration graphs)
-    2. Whiteboard assigned problem
+    2. Whiteboard assigned motion
     3. Complete summary chart 
 2. Card Sort #2 
-3. Notes and Summaries of Constant Acceleration
+3. [Notes](../../../Presentations/APCAPM/talks/CAPM2023.html#21) and Summaries of Constant Acceleration
 4. Stacks of graphs practice (in handout)
 
 ---
