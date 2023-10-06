@@ -4,11 +4,6 @@ marp: true
 theme: schodack
 paginate: true
 footer: Be brave, not perfect
-transition: dissolve
-style: |
-  @keyframes marp-transition-dissolve {
-    /* ... */
-  }
 ---
 
 # AP Physics 🔭 <!---fit--->
