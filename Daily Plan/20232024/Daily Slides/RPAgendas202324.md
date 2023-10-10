@@ -14,6 +14,25 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.11 **Regents Physics**
+
+##### **❓of the 📅**: 
+
+1. Finish Collecting/Graphing data from Fan Cart Lab
+2. Whiteboard Results
+3. Board Meeting
+4. [Additional Analysis of Fan Cart Data](../../../Presentations/APCAPM/talks/CAPM2023.html)
+
+---
+
+# 2023.10.10 **Regents Physics**
+
+##### **❓of the 📅**: What’s the number one thing on your bucket list?
+
+1. [Changing Speed Lab](../../../Presentations/APCAPM/talks/CAPM2023.html)
+
+---
+
 # 2023.10.05 **Regents Physics**
 
 ##### **❓of the 📅**: What is a chore you secretly enjoy?

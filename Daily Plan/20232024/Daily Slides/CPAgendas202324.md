@@ -16,6 +16,156 @@ footer: Be brave, not perfect
 
 # 2023.10.05 **Conceptual Physics**
 
+##### **❓of the 📅**: What’s the number one thing on your bucket list?
+
+1. Cyclist Worksheet
+2. Calculating ***Speed*** and ***Velocity***
+3. Practice with Speed and Velocity 
+
+
+---
+
+# Dorothy vs. Toto - **Who Went Further**?
+
+
+![center w:400](../images/Kinematics/dortoto.png)
+
+---
+
+# Distance, Position, & Displacement 
+
+* ***Distance*** – How far something has traveled along some path. 
+    - Symbol: $d$
+* ***Position*** – Where something is located in some reference system. 
+    - Symbol: $\vec{x}$
+* ***Displacement*** – The difference between an object’s starting position and its ending position. 
+    - Symbol: $\Delta \vec{x}$
+
+---
+
+# Number Lines 
+
+Now consider an object that takes a trip along the number line, beginning at a position of +2 meters, and ending at a position of +7 meters.
+
+![center](../images/Kinematics/numberlinetrip1.png)
+
+How would we describe the distance, position(s), and displacement associated with this trip?
+
+---
+
+# Trip 1
+
+![center](../images/Kinematics/numberlinetrip1.png)
+
+The object has a **starting position** of +2 meters.
+The object has and **ending position** of +7 meters.
+The object traveled a **distance** along the number line of 5 meters.
+The object had a **displacement** of 5 meters in the *positive direction* or +5 meters.
+
+---
+
+# Trip 2
+
+What if the object reversed its trip, starting at a position of +7 meters and ending at a position of +2 meters?
+
+Which of the quantities above have changed as a result of this new trip?
+
+![center](../images/Kinematics/numberlinetrip2.png)
+
+---
+
+# Trip 2
+
+![center](../images/Kinematics/numberlinetrip2.png)
+
+The object has a **starting position** of +7 meters.
+The object has and **ending position** of +2 meters.
+The object traveled a **distance** along the number line of 5 meters.
+The object had a **displacement** of 5 meters in the *negative direction* or -5 meters.
+
+---
+
+# Trip 3
+
+Finally, let us consider a more complicated trip along the number line in order to more fully illustrate the difference between distance and displacement. Consider an object that travels from a position of +2 meters to a position of +9 meters and then turns around and goes back to a position of +7 meters.
+
+![center](../images/Kinematics/numberlinetrip3.png)
+
+---
+
+# Trip 3
+
+![center](../images/Kinematics/numberlinetrip3.png)
+
+The object has a **starting position** of +2 meters.
+The object has an **intermediate position** of +9 meters, which is where it changed directions.
+The object has and **ending position** of +7 meters.
+The object traveled a **distance** along the number line of 9 meters.
+The object had a **displacement** of 5 meters in the *positive direction* or +5 meters.
+
+---
+
+# Speed vs. Velocity 
+
+## Speed 
+
+average speed = distance / time 
+
+$$\bar{v} = \frac{d}{\Delta t}$$
+
+## Velocity 
+
+Rate and direction, velocity = displacement / time elapsed 
+
+$$\vec{\bar{v}}=\frac{\Delta x}{\Delta t}$$
+
+---
+
+# Example Calculations 
+
+![center](../images/Kinematics/calcexampleimage.png)
+
+---
+
+# Example Calculations - Displacement
+
+![center](../images/Kinematics/calcexampleimage.png)
+
+* Initial Position ($\vec{x_i}$) = 0.0 cm
+* Final Position ($\vec{x_f}$) = 6.0 cm
+* $\Delta \vec{x} = \vec{x_f} - \vec{x_i}$
+* $\Delta \vec{x} = 6.0 \textrm{ cm} - 0.0 \textrm{ cm}$
+* $\Delta \vec{x} = 6 \textrm{ cm}$
+
+---
+
+# Example Calculations - Time
+
+![center](../images/Kinematics/calcexampleimage.png)
+
+* Initial Clock Reading ($\vec{x_i}$) = 0.0 cm
+* Final Clock Reading ($\vec{x_f}$) = 6.0 cm
+* $\Delta t = t_f - t_i$
+* $\Delta t = 3.0 \textrm{ s} - 0.0 \textrm{ cm}$
+* $\Delta t = 3.0 \textrm{ s}$
+
+---
+
+
+# Calculations - Average Velocity
+
+![center](../images/Kinematics/calcexampleimage.png)
+
+* $\textrm{average velocity} = \frac{\textrm{change in position}}{\textrm{change in time}}$
+* $\vec{\bar{v}}=\frac{\Delta x}{\Delta t}$
+* $\vec{\bar{v}}=\frac{6.0 \textrm{ cm}}{3.0 \textrm{ s}}$
+* $\vec{\bar{v}}= 2.0 \frac{\textrm{cm}}{\textrm{s}}$
+
+
+---
+
+# 2023.10.05 **Conceptual Physics**
+
 ##### **❓of the 📅**: What is a chore you secretly enjoy?
 
 

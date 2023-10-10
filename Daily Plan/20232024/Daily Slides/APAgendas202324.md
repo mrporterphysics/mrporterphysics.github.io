@@ -14,7 +14,11 @@ footer: Be brave, not perfect
 
 ---
 
-<!-- ![bg fit right:42%](../images/Kinematics/ninextgraphs.png)
+<!--- _footer: . --->
+
+### 2023.10.11 **AP PHYSICS** Do Now
+
+![bg fit right:42%](../images/Kinematics/ninextgraphs.png)
 
 1. For which of these cases, if any, is the position zero at the indicated point? 
 2. For which of these cases, if any, is the position negative at teh indicated point?
@@ -23,7 +27,47 @@ footer: Be brave, not perfect
 5. For which of these cases, if any, is the acceleration zero at the indicated point?
 6. For which of these cases, if any, is the acceleration negative at the indicated point?
 
---- -->
+---
+
+# **Week 6** (10.10-10.13)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Translate between multiple representations for changing velocity motion. 
+2. Interpret and make calculations from Velocity vs. Time Graphs
+3. Use Kinematic Equations & the Cross Diagam to make predictions about uniform motion
+
+</div>
+
+
+<div> 
+
+### 🏡 Homework 
+
+1. [Velocity Time Graphs 1](https://www.physicsclassroom.com/calcpad/launch/CPK10)
+2. [Velocity Time Graphs 2](https://www.physicsclassroom.com/calcpad/launch/CPK11)
+3. [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+4. **Quiz Friday**: Stacks of Graphs, VT Graph Calculations, Word Problems(?)
+
+</div>
+
+---
+
+# 2023.10.11 - **AP Physics**
+
+##### **❓ of the 📅**: 
+
+1. Do Now 
+2. Week Goals 
+3. Graphs Card Sort 2 & Stacks of Graphs Practice 
+3. [Graphs Review & Summary](../../../Presentations/APCAPM/talks/CAPM2023.html#21)
+4. VT Graphs 
+
+---
 
 # **Week 5** (10.02-10.06)
 
@@ -79,10 +123,6 @@ footer: Be brave, not perfect
 
 ---
 
-
-
-
----
 
 # 2023.10.04 - **AP Physics**
 
