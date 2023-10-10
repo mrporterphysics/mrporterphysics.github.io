@@ -14,7 +14,7 @@ footer: Be brave, not perfect
 
 ---
 
-# 2023.10.05 **Conceptual Physics**
+# 2023.10.10 **Conceptual Physics**
 
 ##### **❓of the 📅**: What’s the number one thing on your bucket list?
 
