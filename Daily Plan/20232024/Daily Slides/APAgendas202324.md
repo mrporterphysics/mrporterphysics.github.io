@@ -57,6 +57,17 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.12 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+1. Stacks of Graphs - Whiteboard and Review
+2. [VT Graphs](../../../Presentations/APCAPM/talks/CAPM2023.html#32)
+3. Solving word problems with VT Graphs 
+
+
+---
+
 # 2023.10.11 - **AP Physics**
 
 ##### **❓ of the 📅**: If one superhero was real, which one should it be? 🦸 🦸‍♀️
