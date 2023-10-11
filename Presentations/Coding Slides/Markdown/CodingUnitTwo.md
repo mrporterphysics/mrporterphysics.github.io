@@ -326,6 +326,63 @@ You’ll be planning as group, in the next slides we’ll cover how this process
 
 ---
 
-# Draw with Mouse 🖱️ <!--fit--->
+# `dist()` Function <!--fit--->
 
 ---
+
+# Using the `dist()` function
+
+dist()calculates the distance between points, giving a starting (x,y) and ending (x,y). 
+
+It accepts four arguments - the x and y coordinates of the first point, and the x and y coordinates of the second point. e.g. dist(x1, y1, x2, y2)
+
+How can we use the dist() function to check if our mouse is inside an ellipse?
+
+[Example](https://editor.p5js.org/cs4all/sketches/4bEb-e2OO)
+
+---
+
+# Functions that return values
+
+We can use `mouseX` and `mouseY` values to calculate the distance between the mouse and the center of the ellipse.
+
+![center w:1100](../images/distfunction.png)
+
+
+ <div class="columns">
+ 
+ <div>
+ 
+ If the distance between the mouse and the center of the ellipse is ***larger*** than its radius, the mouse is ***outside*** the ellipse.
+
+ 
+ </div>
+ 
+ 
+ <div>
+ 
+If the distance between the mouse and the center of the ellipse is ***less*** than its radius, the mouse is ***inside*** the ellipse.
+
+ </div>
+
+
+ </div>
+
+---
+
+# Code-along: make a rollover button
+
+
+* **Change the fill of a `rect()` when the mouse is hovering directly over it.** You’ll need to think about the the locations of the beginning and end of the shape on the x and y axis
+* **The `mouseX` position needs to be:**
+  - greater than the left side of the rect
+  - AND less than the right side of the rect
+* **AND `mouseY` position needs to be:**
+  - greater than the top line of the rect
+  - AND less than the bottom line of the rect
+
+
+
+---
+
+# Hover Assignment <!--fit--->

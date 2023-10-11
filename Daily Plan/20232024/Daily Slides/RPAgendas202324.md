@@ -16,7 +16,7 @@ footer: Be brave, not perfect
 
 # 2023.10.11 **Regents Physics**
 
-##### **❓of the 📅**: 
+##### **❓of the 📅**: If one superhero was real, which one should it be? 🦸 🦸‍♀️
 
 1. Finish Collecting/Graphing data from Fan Cart Lab
 2. Whiteboard Results
