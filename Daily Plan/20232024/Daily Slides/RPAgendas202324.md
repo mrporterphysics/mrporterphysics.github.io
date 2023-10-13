@@ -14,6 +14,18 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.12 **Regents Physcis**
+
+##### **❓of the 📅**: What is your favorite family recipe? 🍱
+
+1. Velocity Time Graph Analysis
+1. [Linearizing](https://www.mrporterphysics.com/Presentations/APCAPM/talks/CAPM2023.html#15) Position vs. Time Graph
+2. Carts and Ramps Card Sort
+3. Carts and Ramps Checking Answer
+
+
+---
+
 # 2023.10.11 **Regents Physics**
 
 ##### **❓of the 📅**: If one superhero was real, which one should it be? 🦸 🦸‍♀️

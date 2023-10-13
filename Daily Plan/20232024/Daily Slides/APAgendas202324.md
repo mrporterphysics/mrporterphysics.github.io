@@ -12,20 +12,6 @@ footer: Be brave, not perfect
 
 ## 👨‍🏫 Mr. Porter
 
----
-
-<!--- _footer: . --->
-
-### 2023.10.11 **AP PHYSICS** Do Now
-
-![bg fit right:42%](../images/Kinematics/ninextgraphs.png)
-
-1. For which of these cases, if any, is the position zero at the indicated point? 
-2. For which of these cases, if any, is the position negative at the indicated point?
-3. For which of these cases, if any, is the velocity zero at the indicated point?
-4. For chich of these cases, if any, is the velocity negative at the indicated point?
-5. For which of these cases, if any, is the acceleration zero at the indicated point?
-6. For which of these cases, if any, is the acceleration negative at the indicated point?
 
 ---
 
@@ -57,14 +43,55 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.13 **AP Physics**
+
+##### **❓ of the 📅**: Do you believe Friday the 13th is a bad luck day?
+
+1. Quiz
+2. [Problem-Solving with VT Graphs](../../../Presentations/APCAPM/talks/CAPM2023.html#32)
+    - Arrange desks into a rectangle/square, 3 desks per side
+
+### 🚨 AP Exam Check Due 10/19❗ 
+- $90, checks made to Schodack Central Schools
+
+---
+
+# 2023.10.12 **AP Physics** Do Now
+
+## Recall Practice...
+
+1. What is the difference between **distance** and **displacement**?
+2. What is **average speed** vs. **average velocity**?
+3. What is the slope of a **position vs. time** graph represent?
+4. What is the slope of a **velocity vs. time** graph represent?
+5. What is *area under the curve* of a **velocity vs. time** graph represent?
+
+---
+
 # 2023.10.12 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What's your favorite family recipe?
 
 1. Stacks of Graphs - Whiteboard and Review
 2. [VT Graphs](../../../Presentations/APCAPM/talks/CAPM2023.html#32)
 3. Solving word problems with VT Graphs 
 
+
+---
+
+
+<!--- _footer: . --->
+
+### 2023.10.11 **AP PHYSICS** Do Now
+
+![bg fit right:42%](../images/Kinematics/ninextgraphs.png)
+
+1. For which of these cases, if any, is the position zero at the indicated point? 
+2. For which of these cases, if any, is the position negative at the indicated point?
+3. For which of these cases, if any, is the velocity zero at the indicated point?
+4. For chich of these cases, if any, is the velocity negative at the indicated point?
+5. For which of these cases, if any, is the acceleration zero at the indicated point?
+6. For which of these cases, if any, is the acceleration negative at the indicated point?
 
 ---
 

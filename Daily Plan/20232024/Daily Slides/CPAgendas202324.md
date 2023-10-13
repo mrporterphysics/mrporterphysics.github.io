@@ -14,6 +14,17 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.12 **Conceptual Physics**
+
+##### **❓of the 📅**: What is your favorite family recipe? 🍱
+
+
+1. Finish calculating velocity worksheet 
+2. Multiple Representations Practice (Worksheet 3)
+
+
+---
+
 # 2023.10.10 **Conceptual Physics**
 
 ##### **❓of the 📅**: What’s the number one thing on your bucket list?
