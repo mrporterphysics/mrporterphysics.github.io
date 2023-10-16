@@ -14,6 +14,37 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.16 **Conceptual Physics**
+
+##### **❓of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?
+
+1. Ball Bounce Lab
+
+---
+
+# Ball Bounce Lab <!--fit--->
+
+
+## What **observations** can you make about the ball bouncing? <!--fit--->
+
+## What can we **measure** about the ball bouncing? <!--fit--->
+
+---
+
+<!-- _class: invert--->
+
+![bg blur](https://upload.wikimedia.org/wikipedia/commons/3/3c/Bouncing_ball_strobe_edit.jpg)
+
+# Ball Bounce Lab 🏀
+
+## Essential Question:
+
+### How does the **drop height** of the ball related to the **bounce height**?
+
+### Create a ***mathematical model*** that will allow you to **predict** the bounce height of the ball for a random, given drop height. 
+
+---
+
 # 2023.10.12 **Conceptual Physics**
 
 ##### **❓of the 📅**: What is your favorite family recipe? 🍱

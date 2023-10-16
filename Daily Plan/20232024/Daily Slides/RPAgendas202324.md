@@ -14,7 +14,38 @@ footer: Be brave, not perfect
 
 ---
 
-# 2023.10.12 **Regents Physcis**
+# 2023.10.17 **Regents Physics**
+
+##### **❓of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?
+
+1. [VT Graphs](https://www.mrporterphysics.com/Presentations/APCAPM/talks/CAPM2023.html#32)
+2. Problem-Solving with VT Graphs
+
+### 🚨 Quiz Tomorrow: 
+
+- Constant velocity problem solving ($x = vt + x_0$), CV Graphs, average vs. instantaneous, average speed & average velocity calculations
+
+---
+
+
+# 2023.10.16 **Regents Physics**
+
+##### **❓of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?
+
+1. Finish checking carts and ramps in packet 
+2. Present 2 of the carts and ramps problems 
+3. Carts & Ramps Summary 
+4. [Acceleration Particle Model Notes](https://www.mrporterphysics.com/Presentations/APCAPM/talks/CAPM2023.html#22)
+5. Card Sort #2 
+    - Sort Cards into logical groups (this is a ***sort*** not a ***matching***)
+
+### 🚨 Quiz Wednesday: 
+
+- Constant velocity problem solving ($x = vt + x_0$), CV Graphs, average vs. instantaneous, average speed & average velocity calculations
+
+---
+
+# 2023.10.12 **Regents Physics**
 
 ##### **❓of the 📅**: What is your favorite family recipe? 🍱
 

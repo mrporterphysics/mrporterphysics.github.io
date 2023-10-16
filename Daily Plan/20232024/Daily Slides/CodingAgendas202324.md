@@ -14,6 +14,108 @@ footer: Be brave, not perfect
 
 ---
 
+# 2023.10.13 - **Coding**
+
+##### **❓ of the 📅**: Do you believe that Friday the 13th is a day of bad luck?
+
+1. `mouseClicked()` function
+2. Creating Clickable Buttons 
+3. Light Switch Games
+
+---
+
+<!---_class: invert--->
+
+<!---_footer: .--->
+
+
+![bg](https://nycdoe-cs4all.github.io/images/lessons/unit_2/2.3/image3.gif)
+
+Congratulations! Your great aunt’s second cousin twice removed has recently left you a spooky old house. This is great, because “free house”. As you can imagine, however, this does come with its fair share of problems, because spooky, and old.
+
+The biggest problem your great aunt’s second cousin twice removed’s attorney warns you about when handing over the deed is that the wiring in the house is pretty old and nonsensical. Sometimes, a light switch controls multiple lights: it might turn more than one light on at a time, and will also turn some lights off. Because the house is spooky, you need to figure out how to turn all of the lights on as quickly as possible.
+
+The attorney recommends you try to make this into a game to help you practice and to distract you from the dark foreboding shadows that definitely are not hiding anything you need to worry about (but let’s turn the lights on just in case?).
+
+Create a p5 program that will have at least 6 buttons - your light switches. Each light switch should control several other lights, and maybe also the light you clicked. Create a solvable puzzle game in which you need to find the right order to press the switches so all lights are turned on at once.
+
+
+---
+<!---_class: invert--->
+
+<!---_footer: .--->
+
+![bg](https://nycdoe-cs4all.github.io/images/lessons/unit_2/2.3/image3.gif)
+
+# **Requirements**
+
+### Work with a partner or alone to complete the following:
+  1. Create a game with at least ***six*** clickable buttons.
+  1. Create a flowchart of your game so you can guarantee that there is a combination of switches that you can click to turn them all on, solving the puzzle.
+  1. Create a p5 program where each switch turns a combination of lights on and/or off.
+  1. Add any necessary design elements to make this game look appealing!
+
+
+---
+<!---_class: invert--->
+
+<!---_footer: .--->
+
+#### Writing Prompt:
+
+Describe your design process, including stepping through the code to explain exactly how to reach a solution and why your solution works.
+
+
+#### Extensions:
+
+- Figure out how to draw a new background and “scene” if you win, so that the player knows they have completed the challenge.
+- Figure out how to keep score, and make something happen if the user has clicked too many times without solving the puzzle.
+
+---
+
+# Examples
+
+<iframe src="https://editor.p5js.org/TheBigMac17/full/eDu8Ht9-T" height = "500px"></iframe>
+
+---
+
+# Examples
+
+
+<iframe src="https://editor.p5js.org/dubbeldec/full/GoA6B6eNs" height = "500px"></iframe>
+
+---
+
+# Examples
+
+<iframe src="https://editor.p5js.org/Aydin12345678919/full/Mv2jrE6FBH" height = "500px"></iframe>
+
+---
+
+# Examples 
+
+<iframe src="https://editor.p5js.org/marral/full/l4AQEsUuP"height = "500px"></iframe>
+
+---
+
+# Examples 
+
+<iframe src="https://editor.p5js.org/chevrierd/full/oIjpgbq3Z"height = "500px"></iframe>
+
+---
+
+# Examples 
+
+<iframe src="https://editor.p5js.org/priceg/full/T14zCtYzE"height = "500px"></iframe>
+
+---
+
+# Examples
+
+<iframe src="https://editor.p5js.org/mcgarveys/full/xhB8VsmI1"height = "500px"></iframe>
+
+---
+
 # 2023.10.06 - **Coding**
 
 ##### **❓ of the 📅**: What is the number one feature you would want in your dream house?

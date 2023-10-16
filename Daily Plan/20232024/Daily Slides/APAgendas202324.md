@@ -15,6 +15,35 @@ footer: Be brave, not perfect
 
 ---
 
+
+# **Week 7** (10.16-10.19)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Translate between multiple representations for changing velocity motion. 
+2. Interpret and make calculations from Velocity vs. Time Graphs
+3. Use Kinematic Equations & the Cross Diagam to make predictions about uniform motion
+
+</div>
+
+
+<div> 
+
+### 🏡 Homework 
+
+1. [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+2. 
+4. **Quiz Thursday**: Stacks of Graphs, Word Problems
+
+</div>
+
+
+---
+
 # **Week 6** (10.10-10.13)
 
 <div class= "columns">
