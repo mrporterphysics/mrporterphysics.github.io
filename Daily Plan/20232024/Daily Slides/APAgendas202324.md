@@ -26,7 +26,7 @@ footer: Be brave, not perfect
 
 1. Translate between multiple representations for changing velocity motion. 
 2. Interpret and make calculations from Velocity vs. Time Graphs
-3. Use Kinematic Equations & the Cross Diagam to make predictions about uniform motion
+3. Use Kinematic Equations & the Cross Diagram to make predictions about uniform motion
 
 </div>
 
@@ -35,12 +35,26 @@ footer: Be brave, not perfect
 
 ### 🏡 Homework 
 
-1. [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
-2. 
+1. [Velocity Time Graph Challenges](https://www.physicsclassroom.com/calcpad/launch/CPK12)
+2. [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+3. [Kinematic Equations 4](https://www.physicsclassroom.com/calcpad/launch/CPK16)
 4. **Quiz Thursday**: Stacks of Graphs, Word Problems
 
 </div>
 
+
+---
+
+# 2023.10.17 **AP Physics**
+
+##### **❓ of the 📅**: What are two pet peeves you have?
+
+1. Problem-Solving with VT Graphs 
+2. [The Kinematic Equations](../../../Presentations/APCAPM/talks/CAPM2023.html#47)
+3. The Cross Diagram tool
+
+### 🚨 AP Exam Check Due 10/19 ***FRIDAY***❗ 
+- $90, checks made to Schodack Central Schools
 
 ---
 

@@ -16,8 +16,10 @@ footer: Be brave, not perfect
 
 # 2023.10.17 **Regents Physics**
 
-##### **❓of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?
+##### **❓of the 📅**: What are two pet peeves you have?
 
+1. Finish Card Sort
+2. Practice with Stacks of Graphs
 1. [VT Graphs](https://www.mrporterphysics.com/Presentations/APCAPM/talks/CAPM2023.html#32)
 2. Problem-Solving with VT Graphs
 
