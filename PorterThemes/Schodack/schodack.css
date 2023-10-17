@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Creepster');
 
 
 h1 {
@@ -101,3 +102,22 @@ blockquote { position: relative;
 section.lead h1 {
         text-align: center;
       }
+
+
+section.halloween{
+  background-color: rgb(177, 13, 177);
+  background: #6032a8;
+  color: white;
+
+}
+section.halloween h1, section.halloween h2, section.halloween h3 {
+  color: Orange;
+  font-family: 'Creepster', cursive;
+  line-height: 0.8em;
+  text-shadow: 0 0 20px #333;
+}
+
+section.halloween a {
+  color: rgb(245, 162, 39);
+}
+

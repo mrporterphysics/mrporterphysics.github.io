@@ -16,6 +16,8 @@ footer: Be brave, not perfect
 ---
 
 
+<!--- _class: halloween--->
+
 # **Week 7** (10.16-10.19)
 
 <div class= "columns">
@@ -44,6 +46,8 @@ footer: Be brave, not perfect
 
 
 ---
+
+<!--- _class: halloween--->
 
 # 2023.10.17 **AP Physics**
 
