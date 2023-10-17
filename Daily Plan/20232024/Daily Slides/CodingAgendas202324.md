@@ -14,6 +14,20 @@ footer: Be brave, not perfect
 
 ---
 
+<!--- _class: halloween--->
+
+# 2023.10.17 - **Coding**
+
+##### **❓ of the 📅**: What is one pet peeve you have?
+
+## Work Day
+
+1. Past work
+2. Light Switch Game
+
+
+---
+
 # 2023.10.13 - **Coding**
 
 ##### **❓ of the 📅**: Do you believe that Friday the 13th is a day of bad luck?

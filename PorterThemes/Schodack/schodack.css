@@ -16,6 +16,7 @@ h1 {
   color: rgb(206,32,47);
   /* background-color: rgba(217, 228, 247, 0.671); */
   font-family: 'Hammersmith One', sans-serif;  
+  text-shadow: 1px 1px 2px #c2bfbf;
 }
 
 h2 {
@@ -121,3 +122,6 @@ section.halloween a {
   color: rgb(245, 162, 39);
 }
 
+section.halloween strong{
+  color: red;
+}

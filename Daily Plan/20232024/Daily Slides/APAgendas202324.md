@@ -46,10 +46,43 @@ footer: Be brave, not perfect
 
 
 ---
+<!--- _class: halloween--->
+
+## 2023.10.18 **AP Physics** 👻 Do Now
+
+![bg fit right:45%](../images/Kinematics/Bryonariel.png)
+
+The position-time graph shown represents the motion of two children, Ariel and Byron, who are moving along a narrow, straight hallway.
+
+1. Do either of the children ever change ***direction***?
+2. Are the two children ever at the same ***position*** along the hallway?
+3. Do the two children ever have the same ***speed***?
+4. Do the two children ever have the same ***acceleration***?
+
+
+---
+
 
 <!--- _class: halloween--->
 
-# 2023.10.17 **AP Physics**
+# 2023.10.18 **AP Physics** 👻
+
+##### **❓ of the 📅**: What is your favorite road trip snack?
+
+1. [The Kinematic Equations](../../../Presentations/APCAPM/talks/CAPM2023.html#47)
+3. The Cross Diagram tool
+3. Solving Word Problems with Equations
+    - [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+    - [Kinematic Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPK14)
+
+### 🚨 AP Exam Check Due 10/19 ***THURSDAY***❗ 
+- $90, checks made to Schodack Central Schools
+
+---
+
+<!--- _class: halloween--->
+
+# 2023.10.17 **AP Physics** 👻
 
 ##### **❓ of the 📅**: What are two pet peeves you have?
 

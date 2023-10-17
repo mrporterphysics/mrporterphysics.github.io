@@ -14,6 +14,20 @@ footer: Be brave, not perfect
 
 ---
 
+<!---_class: halloween--->
+
+# 2023.10.18 **Regents Physics**
+
+##### **❓of the 📅**: What is your favorite road trip snack?
+
+1. Stacks of Graphs: Present Whiteboards and Discuss
+2. [VT Graphs](https://www.mrporterphysics.com/Presentations/APCAPM/talks/CAPM2023.html#32) & Calculations we can make
+3. Quiz/Practice Quiz
+
+---
+
+<!---_class: halloween--->
+
 # 2023.10.17 **Regents Physics**
 
 ##### **❓of the 📅**: What are two pet peeves you have?

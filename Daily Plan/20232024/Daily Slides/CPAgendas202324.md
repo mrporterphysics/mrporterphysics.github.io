@@ -14,6 +14,24 @@ footer: Be brave, not perfect
 
 ---
 
+<!--- _class: halloween--->
+
+# 2023.10.18 **Conceptual Physics** 🧟
+
+##### **❓of the 📅**: What is your favorite road trip snack? 🍬🍫
+
+1. Multiple Representations 
+2. Practice with Multiple Representations 
+
+
+---
+
+# Multiple Representations 
+
+
+
+---
+
 # 2023.10.16 **Conceptual Physics**
 
 ##### **❓of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?
