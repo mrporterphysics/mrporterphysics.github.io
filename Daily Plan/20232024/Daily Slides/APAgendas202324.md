@@ -38,9 +38,7 @@ footer: Be brave, not perfect
 ### 🏡 Homework 
 
 1. [Velocity Time Graph Challenges](https://www.physicsclassroom.com/calcpad/launch/CPK12)
-2. [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
 3. [Kinematic Equations 4](https://www.physicsclassroom.com/calcpad/launch/CPK16)
-4. **Quiz Thursday**: Stacks of Graphs, Word Problems
 
 </div>
 
