@@ -74,6 +74,7 @@ The position-time graph shown represents the motion of two children, Ariel and B
 3. Solving Word Problems with Equations
     - [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
     - [Kinematic Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPK14)
+    - [Kinematic Equations 3](https://www.physicsclassroom.com/calcpad/launch/CPK15)
 
 ### 🚨 AP Exam Check Due 10/19 ***THURSDAY***❗ 
 - $90, checks made to Schodack Central Schools
