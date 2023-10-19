@@ -20,15 +20,22 @@ footer: Be brave, not perfect
 
 ##### **❓of the 📅**: What is your favorite road trip snack? 🍬🍫
 
-1. Multiple Representations 
-2. Practice with Multiple Representations 
+1. Motion - Multiple Representations 
+2. Motion - Review Postion and Time Graphs (Quiz -- ***NOT actually a quiz***)
 
 
 ---
+<!--- _class: halloween--->
+
 
 # Multiple Representations 
 
+Reminders:
 
+- Motion map shows the **position** on a number line at different **times**
+    - each dot represents a different time, the position is where you put it
+- **Velocity** is the slope of the **position vs. time** graph
+    - Slope $v = \Delta x / \Delta t$ (this is $\Delta y / \Delta x$) but **position** (**$x$**) is on the vertical axis and **time** (**$t$**) is on the horizontal axis.
 
 ---
 

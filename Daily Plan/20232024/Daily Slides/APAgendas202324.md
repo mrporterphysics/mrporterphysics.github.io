@@ -44,6 +44,60 @@ footer: Be brave, not perfect
 
 
 ---
+
+<!--- _class: halloween--->
+
+## 2023.10.19 **AP Physics** 🎃 Do Now
+
+![bg fit right:35%](../images/Kinematics/vorxgraph.png)
+
+The graph shown is for an object in one-dimensional motion. The vertical axis is not determined, so it is not labeled.
+
+1. If the vertical axis is position, does the object ever change
+direction? If so, at what time or times does this change in direction occur?
+Explain your reasoning.
+2. If the vertical axis is velocity, does the object ever change direction?
+If so, at what time or times does this change in direction occur?
+Explain your reasoning.
+
+---
+
+
+#### 2023.10.19 **AP Physics** 🎃 Do Now
+
+![bg fit right:45%](https://assets.learnosity.com/organisations/537/VH926165.g03.png)
+
+At time $t=0$, a moving cart on a horizontal track is at position $0.5 \textrm{ m}$. Using a motion sensor, students generate a graph of the cart's velocity as a function of time, as show to the right. At $t=2.5 \textrm{ s}$, the cart's position is most nearly
+
+1. $0.5 \textrm{ m}$
+2. $1.25 \textrm{ m}$
+3. $1.75 \textrm{ m}$
+4. $2 \textrm{ m}$
+
+<!---ANSWER IS C --->
+
+---
+
+
+
+<!--- _class: halloween--->
+
+# 2023.10.19 **AP Physics** 🎃
+
+##### **❓ of the 📅**: What is a dealbreaker for you on a first date?
+
+1. Do Now 
+2. Continued practice with Kinematic Equations
+    - [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+    - [Kinematic Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPK14)
+    - [Kinematic Equations 3](https://www.physicsclassroom.com/calcpad/launch/CPK15)
+3. [Two stage motion & the cross diagram](../../../Presentations/APCAPM/talks/CAPM2023.html#55)
+    - Whiteboard with lab groups, check on one person's computer:
+        - [Kinematic Equations 5](https://www.physicsclassroom.com/calcpad/launch/CPK17)
+
+
+---
+
 <!--- _class: halloween--->
 
 ## 2023.10.18 **AP Physics** 👻 Do Now
