@@ -16,6 +16,20 @@ footer: Be brave, not perfect
 
 <!--- _class: halloween--->
 
+# 2023.10.19 - **Coding**
+
+##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍🍕
+
+## Work Day 2
+
+1. Past work
+2. Light Switch Game
+
+
+---
+
+<!--- _class: halloween--->
+
 # 2023.10.17 - **Coding**
 
 ##### **❓ of the 📅**: What is one pet peeve you have?
