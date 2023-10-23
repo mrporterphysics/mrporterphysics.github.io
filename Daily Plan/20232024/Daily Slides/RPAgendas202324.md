@@ -15,6 +15,38 @@ footer: Be brave, not perfect
 ---
 
 <!---_class: halloween--->
+<!--- footer: . --->
+
+### 2023.10.23 **RP PHYSICS** Do Now
+
+![bg fit right:42%](../images/Kinematics/ninextgraphs.png)
+
+1. For which of these cases, if any, is the position zero at the indicated point? 
+2. For which of these cases, if any, is the position negative at the indicated point?
+3. For which of these cases, if any, is the velocity zero at the indicated point?
+4. For which of these cases, if any, is the velocity negative at the indicated point?
+5. For which of these cases, if any, is the acceleration zero at the indicated point?
+6. For which of these cases, if any, is the acceleration negative at the indicated point?
+7. ***AFTER*** answering draw graph stacks
+
+---
+
+<!---_class: halloween--->
+
+# 2023.10.23 **Regents Physics** 👻
+
+##### **❓of the 📅**: Who is your celebrity crush?
+
+1. [Continuing with VT Graphs](https://www.mrporterphysics.com/Presentations/APCAPM/talks/CAPM2023.html#33)
+2. Solving Word Problems with VT Graphs 
+
+## 🚨 Notes:
+- Quiz **Wednesday** - For real though this week. 
+    - Stacks of graphs, Speed vs. Velocity, Calculations from VT Graphs 
+
+---
+
+<!---_class: halloween--->
 
 # 2023.10.18 **Regents Physics**
 

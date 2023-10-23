@@ -16,6 +16,18 @@ footer: Be brave, not perfect
 
 <!--- _class: halloween--->
 
+# 2023.10.23 **Conceptual Physics** 👻
+
+##### **❓of the 📅**: What is your favorite road trip snack? 🍬🍫
+
+1. Constant Velocity Card Sort
+    - Sort cards into groups, each group should have a graph, motion map, equation, and description
+2. Multiple Representations Worksheet 
+
+---
+
+<!--- _class: halloween--->
+
 # 2023.10.18 **Conceptual Physics** 🧟
 
 ##### **❓of the 📅**: What is your favorite road trip snack? 🍬🍫
