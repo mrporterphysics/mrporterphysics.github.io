@@ -58,16 +58,21 @@ footer: Be brave, not perfect
 ---
 
 <!--- _class: halloween--->
-<!-- 
+
 # 2023.10.25 **AP Physics** 🎃
 
 ##### **❓ of the 📅**: 
 
-1. Rotational Kinematics - The Equations 
-2. Rotational Cross Diagram 
-3. [Using the Big 4 to Solve Problems](https://www.physicsclassroom.com/calcpad/launch/CPRK7)
- -->
+1. Finish Pivot
+2. Reviewing the Pivot 
+3. 
 
+
+<!-- 1. Rotational Kinematics - The Equations 
+2. Rotational Cross Diagram 
+3. [Using the Big 4 to Solve Problems](https://www.physicsclassroom.com/calcpad/launch/CPRK7) -->
+
+---
 
 <!--- _class: halloween--->
 
@@ -76,7 +81,7 @@ footer: Be brave, not perfect
 ##### **❓ of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
 
 1. Pivot - Intro to Rotating Objects & Measuring 
-2. Rotational Kinematics 
+2. [Rotational Kinematics](../../../Presentations/APCAPM/talks/Rotational_Kinematics202324.html)
 3. Determining Linear and Angular Values
     - [Practice 1](https://www.physicsclassroom.com/calcpad/launch/CPRK1)
     - [Practice 2](https://www.physicsclassroom.com/calcpad/launch/CPRK2)
