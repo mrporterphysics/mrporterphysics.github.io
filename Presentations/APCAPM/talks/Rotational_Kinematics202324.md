@@ -165,7 +165,11 @@ $$v = \frac{r \Delta s}{\Delta t} =r \omega$$
 
 # Rotational Acceleration 
 
-The ***rotational acceleration***
+The average ***rotational acceleration $\alpha$*** (alpha) of a rotating rigid body (sometimes called ***angular acceleration***) is its change in rotational velocity $\Delta \omega$ during a time interval $\Delta t$ divided by that time interval:
+
+$$a = \frac{\Delta \omega}{\Delta t}$$
+
+The unit of rotational acceleration is (rad/s)/s = rad/s$^2$
 
 ---
 

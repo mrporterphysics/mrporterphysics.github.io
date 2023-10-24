@@ -14,6 +14,19 @@ footer: Be brave, not perfect
 
 ---
 
+
+<!---_class: halloween--->
+
+# 2023.10.24 **Regents Physics** 👻
+
+##### **❓of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
+
+1. VT Problem Solving 
+2. [Kinematic Equations](../../../Presentations/APCAPM/talks/CAPM2023.html#47)
+3. Cross Diagram 
+
+---
+
 <!---_class: halloween--->
 <!--- footer: . --->
 

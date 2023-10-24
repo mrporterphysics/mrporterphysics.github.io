@@ -30,6 +30,12 @@ footer: Be brave, not perfect
 2. Use kinematics for angular values
 3. Translate between angular and linear equivalents
 
+### 🚨 Notes & Upcoming...
+
+- Test Friday 11/3 on Kinematics 
+    - **Mandatory** review will be posted on AP Classroom (some questions will be skipped)
+
+
 </div>
 
 
@@ -37,14 +43,14 @@ footer: Be brave, not perfect
 
 ### 🏡 Homework 
 
-1. [Velocity Time Graph Challenges](https://www.physicsclassroom.com/calcpad/launch/CPK12)
-3. [Kinematic Equations 4](https://www.physicsclassroom.com/calcpad/launch/CPK16)
+1. Quiz Thursday - Stacks of Graphs, Graph Calculations, Word Problems 
+2. [Velocity Time Graph Challenges (if not finished)](https://www.physicsclassroom.com/calcpad/launch/CPK12)
+3. Rotational Kinematics Practice
+	1. [Using Angular Acceleration to Calculate Values](https://www.physicsclassroom.com/calcpad/launch/CPRK5)
+	2. [Using the Big 4 to Solve Segmented Problems](https://www.physicsclassroom.com/calcpad/launch/CPRK7)
 
 
-### 🚨 Notes & Upcoming...
 
-- Test Friday 11/3 on Kinematics 
-    - **Mandatory** review will be posted on AP Classroom (some questions will be skipped)
 
 
 </div>
@@ -67,7 +73,7 @@ footer: Be brave, not perfect
 
 # 2023.10.24 **AP Physics** 🎃
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
 
 1. Pivot - Intro to Rotating Objects & Measuring 
 2. Rotational Kinematics 
