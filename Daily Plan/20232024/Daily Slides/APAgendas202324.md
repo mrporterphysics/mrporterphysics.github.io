@@ -18,6 +18,68 @@ footer: Be brave, not perfect
 
 <!--- _class: halloween--->
 
+# **Week 8** (10.24-10.27)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Identify and determine angular values
+2. Use kinematics for angular values
+3. Translate between angular and linear equivalents
+
+</div>
+
+
+<div> 
+
+### 🏡 Homework 
+
+1. [Velocity Time Graph Challenges](https://www.physicsclassroom.com/calcpad/launch/CPK12)
+3. [Kinematic Equations 4](https://www.physicsclassroom.com/calcpad/launch/CPK16)
+
+
+### 🚨 Notes & Upcoming...
+
+- Test Friday 11/3 on Kinematics 
+    - **Mandatory** review will be posted on AP Classroom (some questions will be skipped)
+
+
+</div>
+
+---
+
+<!--- _class: halloween--->
+<!-- 
+# 2023.10.25 **AP Physics** 🎃
+
+##### **❓ of the 📅**: 
+
+1. Rotational Kinematics - The Equations 
+2. Rotational Cross Diagram 
+3. [Using the Big 4 to Solve Problems](https://www.physicsclassroom.com/calcpad/launch/CPRK7)
+ -->
+
+
+<!--- _class: halloween--->
+
+# 2023.10.24 **AP Physics** 🎃
+
+##### **❓ of the 📅**: 
+
+1. Pivot - Intro to Rotating Objects & Measuring 
+2. Rotational Kinematics 
+3. Determining Linear and Angular Values
+    - [Practice 1](https://www.physicsclassroom.com/calcpad/launch/CPRK1)
+    - [Practice 2](https://www.physicsclassroom.com/calcpad/launch/CPRK2)
+    - [Using the Big 4 to Solve Problems](https://www.physicsclassroom.com/calcpad/launch/CPRK7)
+
+---
+
+<!--- _class: halloween--->
+
 # **Week 7** (10.16-10.19)
 
 <div class= "columns">
@@ -41,6 +103,7 @@ footer: Be brave, not perfect
 3. [Kinematic Equations 4](https://www.physicsclassroom.com/calcpad/launch/CPK16)
 
 </div>
+
 
 
 ---
@@ -77,8 +140,6 @@ At time $t=0$, a moving cart on a horizontal track is at position $0.5 \textrm{ 
 <!---ANSWER IS C --->
 
 ---
-
-
 
 <!--- _class: halloween--->
 
