@@ -112,14 +112,6 @@ The sign of $\omega$ (omega) is positive for counterclockwise turning and negati
 
 ---
 
-<!--- _class: inverse --->
-
-# Angular Velocity 
-
-![center](http://hyperphysics.phy-astr.gsu.edu/hbase/imgmec/avel.gif)
-
----
-
 # Angular vs. Linear (Tangential) Velocity 
 
 ![center](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20230828.164620/resources/8316d0b0d32788630b187c0bc23d144098bcb069)
@@ -189,3 +181,13 @@ The unit of rotational acceleration is (rad/s)/s = rad/s$^2$
 | | $\Delta \theta$ | |
 | $\omega_0$ | $\alpha$ | $\omega$ | 
 | | $\Delta t$ | | 
+
+
+--- 
+
+# Rotational Motion Graphs 
+
+- Same idea and concepts as Linear Motion:
+  * Position $(\theta)$ vs. Time Slope = Velocity $(\omega)$
+  * Velocity $(\omega)$ vs. Time Slope = Acceleration $(\alpha)$
+  * Area of Velocity $(\omega)$ vs. Time = Displacement $(\Delta \theta)$

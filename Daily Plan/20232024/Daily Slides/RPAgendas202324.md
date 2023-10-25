@@ -17,6 +17,56 @@ footer: Be brave, not perfect
 
 <!---_class: halloween--->
 
+# 2023.10.25 **Regents Physics** 👻
+
+##### **❓of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
+
+1. VT Problem Solving 
+    - Finish Questions 5 & 6
+2. Kinematic Equations
+3. [Cross Diagram](../../../Presentations/APCAPM/talks/CAPM2023.html#49) 
+4. Physics Classroom Practice:
+    - [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+    - [Kinematic Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPK14)
+    - [Kinematic Equations 3](https://www.physicsclassroom.com/calcpad/launch/CPK15)
+
+---
+
+<!---_class: halloween--->
+
+# Kinemmatic Equations 
+
+$$ \boxed{\bar{v} = \frac{d}{t}}$$
+
+$$\boxed{a = \frac{\Delta v}{t}}$$
+
+$$\boxed{v_f = v_i + at}$$
+
+$$\boxed{d = v_it+\frac{1}{2}at^2}$$
+
+$$\boxed{v_f^2 = v_i^2 + 2ad}$$
+
+
+---
+
+<!---_class: halloween--->
+
+# [Cross Diagram ⚔️🤞:crossed_flags:✝️](../../../Presentations/APCAPM/talks/CAPM2023.html#49)  <!--fit--->
+
+---
+
+<!---_class: halloween--->
+
+# Physics Classroom Practice <!--fit--->
+
+# 🔗 [Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+# 🔗 [Kinematic Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPK14)
+# 🔗 [Kinematic Equations 3](https://www.physicsclassroom.com/calcpad/launch/CPK15)
+
+---
+
+<!---_class: halloween--->
+
 # 2023.10.24 **Regents Physics** 👻
 
 ##### **❓of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
@@ -24,6 +74,8 @@ footer: Be brave, not perfect
 1. VT Problem Solving 
 2. [Kinematic Equations](../../../Presentations/APCAPM/talks/CAPM2023.html#47)
 3. Cross Diagram 
+
+
 
 ---
 
@@ -51,7 +103,7 @@ footer: Be brave, not perfect
 ##### **❓of the 📅**: Who is your celebrity crush?
 
 1. [Continuing with VT Graphs](https://www.mrporterphysics.com/Presentations/APCAPM/talks/CAPM2023.html#33)
-2. Solving Word Problems with VT Graphs 
+2. Solving Word Problems with VT Graphs;s 
 
 ## 🚨 Notes:
 - Quiz **Wednesday** - For real though this week. 
