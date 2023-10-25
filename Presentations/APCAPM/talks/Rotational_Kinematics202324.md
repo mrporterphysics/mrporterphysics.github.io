@@ -1,6 +1,6 @@
 ---
 marp: true
-title: CAPM 2023-24
+title: Rotational Kinematics
 theme: default
 class: invert
 paginate: true

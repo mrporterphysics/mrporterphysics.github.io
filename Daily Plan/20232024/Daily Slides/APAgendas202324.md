@@ -59,19 +59,43 @@ footer: Be brave, not perfect
 
 <!--- _class: halloween--->
 
+# 2023.10.25 **AP Do Now** 
+
+The graph shows the angular velocity as a function of time  for a point on a rotating disk. What is the magnitude of the angular acceleration of the disk?
+
+![center w:400](https://assets.learnosity.com/organisations/537/VH979129.g01.png)
+
+<!--- 1.5 rad/s--->
+
+---
+
+<!--- _class: halloween--->
+
+# AP Do Now 
+
+The figures below show hollow spheres (not drawn to scale) that are rolling at a constant rate without slipping. The spheres all have the same mass, but their radii as well as their linear and angular speeds vary.
+
+![center w:700](../images/Kinematics/rollingballs.png)
+
+**Rank the radius of the spheres from greatest to least**
+
+Explain your reasoning.
+
+<!--- B > C = D = F > A = E--->
+
+---
+
+<!--- _class: halloween--->
+
 # 2023.10.25 **AP Physics** 🍫
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Hanging out by a campfire, bonfire, or fireplace?
 
 1. Do Now
 1. Finish Pivot
 2. Reviewing the Pivot 
 3. [Rotational Kinematics - Notes](../../../Presentations/APCAPM/talks/Rotational_Kinematics202324.html)
-
-
-<!-- 1. Rotational Kinematics - The Equations 
-2. Rotational Cross Diagram 
-3. [Using the Big 4 to Solve Problems](https://www.physicsclassroom.com/calcpad/launch/CPRK7) -->
+3. [Using the Big 4 to Solve Problems](https://www.physicsclassroom.com/calcpad/launch/CPRK7)
 
 ---
 
@@ -111,34 +135,6 @@ D. ![w:200](https://assets.learnosity.com/organisations/537/VH978652.g04.png)
 </div>
 
 <!--- B & C are correct --->
-
-
----
-
-
-<!--- _class: halloween--->
-
-# AP Do Now 
-
-The graph shows the angular velocity as a function of time  for a point on a rotating disk. What is the magnitude of the angular acceleration of the disk?
-
-![center w:400](https://assets.learnosity.com/organisations/537/VH979129.g01.png)
-
-<!--- 1.5 rad/s--->
-
----
-
-<!--- _class: halloween--->
-
-# AP Do Now 
-
-The figures below show hollow spheres (not drawn to scale) that are rolling at a constant rate without slipping. The spheres all have the same mass, but their radii as well as their linear and angular speeds vary.
-
-![center w:700](../images/Kinematics/rollingballs.png)
-
-**Rank the radius of the spheres from greatest to least**
-
-Explain your reasoning.
 
 ---
 
