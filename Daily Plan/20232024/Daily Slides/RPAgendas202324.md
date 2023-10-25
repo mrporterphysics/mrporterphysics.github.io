@@ -19,7 +19,7 @@ footer: Be brave, not perfect
 
 # 2023.10.25 **Regents Physics** 👻
 
-##### **❓of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
+##### **❓of the 📅**: Hanging out by a campfire, bonfire, or fireplace? 🔥
 
 1. VT Problem Solving 
     - Finish Questions 5 & 6
