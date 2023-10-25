@@ -16,6 +16,52 @@ footer: Be brave, not perfect
 
 <!--- _class: halloween--->
 
+# 2023.10.25 **Conceptual Physics** 👻
+
+##### **❓of the 📅**: Hanging out by a campfire, bonfire, or fireplace? 🔥
+
+1. Worksheet 5 - Complete Question one (parts a - l) and 🛑
+2. Velocity vs. Time Graphs and "area under the curve"
+3. Complete Worksheet 5
+
+### 🚨 Next Week (**Thursday**):
+- Open note & group test
+    - Work on own for first half of class, work with anyone in the classroom second half
+
+---
+
+
+
+# Area of VT Graph 
+
+- Area "under the curve" represents the ***displacement*** (*change in position*) of the object. 
+- Areas can be *negative* because that represents the direction
+
+$$ \Delta x = \bar{v}{t} $$
+
+- Add multiple segments together, including the sign to get the total **displacement** of a piecewise motion
+
+
+![bg fit right](../../../Presentations/APCVPM/talks/image.png)
+
+
+
+---
+
+# Area of VT Graph
+
+1. Area = $\Delta x$ = $4$ m
+1. Area = $\Delta x$ = $-2$ m
+1. Area = $\Delta x$ =  $4$ m 
+
+![bg fit right](../../../Presentations/APCVPM/talks/image-1.png)
+
+
+
+---
+
+<!--- _class: halloween--->
+
 # 2023.10.23 **Conceptual Physics** 👻
 
 ##### **❓of the 📅**: What is your favorite road trip snack? 🍬🍫
