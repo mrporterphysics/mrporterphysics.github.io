@@ -102,7 +102,7 @@ Explain your reasoning.
 
 <!--- _class: halloween--->
 
-## AP Do Now 
+## AP **Do Now**
 
 An object revolves around a central axis of rotation. The motion of the object is described by the following equation.
 
