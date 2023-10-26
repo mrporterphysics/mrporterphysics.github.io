@@ -20,8 +20,11 @@ footer: Be brave, not perfect
 
 ##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍🍕
 
-1. Drawing in p5.js
-2. Notes
+1. [Drawing in p5.js](../../../Presentations/Coding%20Slides/HTML%20Files/CodingUnitTwo.html#36) 
+2. `map()` function
+3. Microsoft Paint Project
+
+
 
 
 ---

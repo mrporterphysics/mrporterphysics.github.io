@@ -389,3 +389,129 @@ If the distance between the mouse and the center of the ellipse is ***less*** th
 
 ---
 
+# Drawing with the Mouse 🖱️ <!--fit--->
+
+---
+
+# Once and Forever (review)
+
+The `setup()` function runs once and the `draw()` function runs repeatedly in a loop. As long as no elements on the canvas are moving, they are being redrawn in the same place over and over which makes it look like a static image. 
+
+![center](../images/setupdraw.png)
+
+---
+
+# Once and Forever
+
+Let’s use `mouseX` and `mouseY` to set the position of an ellipse. 
+
+Place the background function in `setup()`. You will see that every time the `draw()` loop runs, the ellipse is redrawn at the mouse position which is starting to look like a brush in drawing app. 
+
+[Code here.](https://editor.p5js.org/cs4all/sketches/S19N0Drn-)
+
+![bg fit left](../images/drawmouse.png)
+
+---
+
+# Draw with a line: `pmouseX` and `pmouseY`
+
+You can tell from our previous example that the program doesn’t run fast enough to draw an ellipse and there are gaps in our ellipses. We can fix this by drawing lines to fill in these gaps by using another set of system variables.. 
+
+![center ](../images/pmousex.png)
+
+---
+
+# Draw with a line: `pmouseX` and `pmouseY`
+
+
+
+Built in variables, `pmouseX` and `pmouseY`, hold the previous position of the mouse. 
+
+We can draw with a line by drawing lines between our current mouse position and previous mouse position. 
+
+
+---
+
+# The `map()` function
+
+Read the code, look at console and then the cursor. What’s the problem here? 
+
+![center](../images/map.png)
+
+
+---
+
+# The `map()` function
+
+In that example, the background color gets lighter as you move your mouse across the screen. The problem is that the canvas is already white at 255 even though your canvas is 600px wide
+
+You can solve this with the map function: 
+
+## `map(value, start1, stop1, start2, stop2)`
+
+The map function maps a value from one range to another. 
+
+---
+
+
+# The `map()` function
+
+The map function uses five arguments:
+
+- The first argument is the current value.
+- Arguments two and three are the minimum and maximum of the range the value is in.  
+- Arguments four and five are the minimum and maximum of the range the value will be converted to.
+
+## `map(value, start1, stop1, start2, stop2)`
+
+
+---
+
+# The `map()` function
+
+The solution our problem would be then to map the value of mouseX to the grayscale range.
+
+![center](../images/map2.png)
+
+---
+
+# Pair Programing Challenge
+
+Try using the map function  to  limit the range of the size of the ellipse to 20-150.
+
+![center](../images/mapchallenge.png)
+
+---
+
+# Microsoft Paint Project
+
+### Prompt
+
+- Remember the days of Microsoft Paint? When you could click a start bar, open a program that came preloaded on the computer, and just create? Those days were good. Those days were simple. Those days were internet-free and possibly came with very little in the way of design sense.
+- We are better today; we have the tools needed to build our very own, p5 Microsoft Paint that looks better than ever before. And so that’s what we are going to do!
+
+--- 
+
+# Microsoft Paint Project
+
+###  Requirements
+
+- Create a program that allows you to draw with the mouse.
+- Create at least 4 buttons that will control different aspects of the program, such as color changes.
+- Create at least 4 key press reactions that will control different aspects of the program, such as brush type.
+- Make sure the user understands how to use your program!
+
+---
+
+# Microsoft Paint Project -  **Extensions**
+
+### Level 2
+- At least 5 buttons.
+- Create a drawing pen using the mouse ONLY when the mouse is being pressed
+- Have one button be a random color
+
+### Level 3
+- Make an eraser
+- Make a way to clear the canvas
+- Make complex brush types, beyond just drawing with different shapes
+- Create a website to house your creation

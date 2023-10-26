@@ -79,8 +79,10 @@ Note: $\theta = 0$ radians is the due right (+x-axis) and counterclockwise 🔄 
 1. Do Now 
 2. Quiz 
 3. Rotational Kinematics Card Sort
-    - $\theta = 0$ radians is the due right (+x-axis) and counterclockwise 🔄 is the positive direction
-4. 
+    - **$\theta = 0$ radians is the due right (+x-axis) and counterclockwise 🔄 is the positive direction**
+4. Practice with Angular And Linear Values (semi-independent work):
+    - [Determining Angular and Linear Values 1](https://www.physicsclassroom.com/calcpad/launch/CPRK1)
+    - [Determining Angular and Linear Values 2](https://www.physicsclassroom.com/calcpad/launch/CPRK2)
 
 ---
 
