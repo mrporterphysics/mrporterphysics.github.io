@@ -123,6 +123,6 @@ section.halloween a {
 }
 
 section.halloween strong{
-  color: red;
+  color: rgb(248, 172, 73);
   text-shadow: 0 0 20px #333;
 }

@@ -20,6 +20,18 @@ footer: Be brave, not perfect
 
 ##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍🍕
 
+1. Drawing in p5.js
+2. Notes
+
+
+---
+
+<!--- _class: halloween--->
+
+# 2023.10.19 - **Coding**
+
+##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍🍕
+
 ## Work Day 2
 
 1. Past work

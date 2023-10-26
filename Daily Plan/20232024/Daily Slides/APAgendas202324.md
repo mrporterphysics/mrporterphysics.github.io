@@ -59,6 +59,33 @@ footer: Be brave, not perfect
 
 <!--- _class: halloween--->
 
+### 2023.10.26  **AP Physics** Do Now 
+
+![bg fit right](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0285-same-linear-distance_3.gif)
+
+1. ***Describe the the motion of the bicycle wheel reflector*** (the white thing below the feet of the person in the wheel) ***in terms of angular position $(\theta)$, angular velocity $(\omega)$, and angular acceleration $(\alpha)$***
+2. ***Sketch the angular graphs of motion for the reflector.***
+
+Note: $\theta = 0$ radians is the due right (+x-axis) and counterclockwise 🔄 is the positive direction
+
+---
+
+<!--- _class: halloween--->
+
+# 2023.10.26 **AP Physics** 🍫
+
+##### **❓ of the 📅**: What is the best fry shape? 🍟
+
+1. Do Now 
+2. Quiz 
+3. Rotational Kinematics Card Sort
+    - $\theta = 0$ radians is the due right (+x-axis) and counterclockwise 🔄 is the positive direction
+4. 
+
+---
+
+<!--- _class: halloween--->
+
 # 2023.10.25 **AP Do Now** 
 
 The graph shows the angular velocity as a function of time  for a point on a rotating disk. What is the magnitude of the angular acceleration of the disk?
