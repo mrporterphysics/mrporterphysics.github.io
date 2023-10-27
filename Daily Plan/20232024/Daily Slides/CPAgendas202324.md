@@ -14,6 +14,18 @@ footer: Be brave, not perfect
 
 ---
 
+
+<!--- _class: halloween--->
+
+# 2023.10.27 **Conceptual Physics** 🧙‍♀️
+
+1. [Constant Velocity Model Review & Practice](../../../Presentations/APCVPM/talks/CVPM2023CP.html)
+2. Create your own whiteboard summary:
+    - What do we need as notes to crush 💪 this test?
+3. Class Created Cheat Sheet - [Google Doc](https://docs.google.com/document/d/17AFzLUbx-vOoTEytBdsGpp4KdePnyJwbvlKWj8kerF0/edit?usp=sharing) 
+
+---
+
 <!--- _class: halloween--->
 
 # 2023.10.25 **Conceptual Physics** 👻
