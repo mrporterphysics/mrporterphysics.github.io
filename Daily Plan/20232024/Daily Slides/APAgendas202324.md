@@ -15,6 +15,79 @@ footer: Be brave, not perfect
 
 ---
 
+<!--- _class: halloween--->
+
+# **Week 9** (10.30-11.03)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Wrap up kinematics:
+    - Linear
+    - Rotational
+2. Check our understanding of kinematics
+
+### 🚨 Notes & Upcoming...
+
+- Test Friday 11/3 on Kinematics 
+    - **Mandatory** review will be posted on AP Classroom (some questions will be skipped)
+
+
+</div>
+
+
+<div> 
+
+### 🏡 Homework 
+
+1. AP Classroom Test Review (Posted in Canvas)
+
+
+</div>
+
+---
+
+### 2023.10.30  **AP Physics** Do Now 
+
+A weight is tied to a rope that is wrapped around a pulley. The pulley is initially rotating counterclockwise and is pulling the weight up. The tension in the rope creates a torque on the pulley that opposes this rotation. The weight slows down, stops momentarily, and then moves back downward. Assume uniform motion. 
+
+<div class = "columns">
+
+<div>
+
+1. **Graph of the angular velocity $(\omega)$ versus time for the period from the initial instant shown until the weight comes back down to the same height.** Take the initial angular velocity as positive.
+2. **Graph the angular acceleration $(\alpha)$ versus time for the same time period.**
+
+</div>
+
+<div>
+
+![center](../images/rotmotion/pulleyandweight.png)
+
+</div>
+
+</div>
+
+---
+
+<!--- _class: halloween--->
+
+# 2023.10.30 **AP Physics** 🕷️🕸️
+
+##### **❓ of the 📅**:  What is the funniest/most unique thing you've gotten trick or treating?
+
+1. Do Now 
+2. Complete Card Sort 
+3. Rotational Kinematics Practice
+	1. [Using Angular Acceleration to Calculate Values](https://www.physicsclassroom.com/calcpad/launch/CPRK5)
+	2. [Using the Big 4 to Solve Segmented Problems](https://www.physicsclassroom.com/calcpad/launch/CPRK6)
+    3. [Using the Big 4 Eqns and Linear Relationships](https://www.physicsclassroom.com/calcpad/launch/CPRK8)
+
+---
+
 
 <!--- _class: halloween--->
 

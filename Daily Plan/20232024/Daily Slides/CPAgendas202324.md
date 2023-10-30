@@ -19,6 +19,8 @@ footer: Be brave, not perfect
 
 # 2023.10.27 **Conceptual Physics** 🧙‍♀️
 
+##### **❓of the 📅**: What was your favorite halloween costume?
+
 1. [Constant Velocity Model Review & Practice](../../../Presentations/APCVPM/talks/CVPM2023CP.html)
 2. Create your own whiteboard summary:
     - What do we need as notes to crush 💪 this test?

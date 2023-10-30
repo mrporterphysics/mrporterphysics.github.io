@@ -14,6 +14,58 @@ footer: Be brave, not perfect
 
 ---
 
+<!---_class: halloween--->
+
+# 2023.10.30 **Regents Physics** 🕷️🕸️
+
+##### **❓of the 📅**: What is the funniest/most unique thing you've gotten trick or treating?
+
+1. Dangers of texting and driving - the physics 
+
+
+
+#### 🚨 Test Friday - Kinematics 
+- Monday - Texting and Driving 
+- Tuesday - Regents Practice/Test Practice 
+- Thursday - Test Review 
+- Friday - Test 
+
+---
+
+# The Physics of Texting and Driving:
+
+## Create a whiteboard summary of the dangers of text and driving. 
+
+_**Questions to Consider**_:
+
+1. How far do you travel while texting "LOL"?
+    - How does this differ under different speed limits?
+    - What sized things (i.e. football field) do these distances compare to?
+2. How far do you travel while reacting distracted? Non distracted? 
+3. What is your reaction time? Distracted vs. non distracted? Run a mini-experiment.
+4. Quick Reserach: How does "autobraking" work?
+
+
+***Show calculations and assumptions you are making***
+
+
+---
+
+<!---_class: halloween--->
+
+# 2023.10.25 **Regents Physics** 🧙‍♂️
+
+##### **❓of the 📅**: What was your favorite Halloween costume?
+
+1. Review time for quiz 
+    - Stacks of graphs, VT Graphs, 
+2. Quiz 
+3. Regents Specific Practice 
+    - Motion Graphs 
+    - Horizontal Kinematics 
+
+
+---
 
 <!---_class: halloween--->
 
