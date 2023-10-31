@@ -50,6 +50,244 @@ footer: Be brave, not perfect
 
 ---
 
+<!--- _class: halloween--->
+
+## 2023.10.31  **AP Physics** Do Now 
+
+Recall...
+
+<div class="columns">
+
+<div>
+
+1. What is the ***slope*** of ____ represent:
+    - Position vs. time graph?
+    - Velocity vs. time graph?
+2. What does the ***area*** of ___ represent:
+    - Velocity vs. time graph?
+    - Acceleration vs. time graph?
+3. How do you find ***instantaneous velocity*** on a XT Graph?
+4. How do you find ***final position*** from a VT Graph?
+
+
+</div>
+
+
+
+<div>
+
+5. What does a ***concave up*** XT Graph mean? ***Concave down***?
+6. When is $x_f$, $\Delta x$, and distance different? The same?
+7. What does ***uniform motion*** mean?
+8. How do the direction of ***velocity*** and ***acceleration*** compare when an object is ***slowing***? 
+9. What is ***acceleration***?
+10. How do you convert from ***rotational*** quantities to the equivalent ***linear*** quantities?
+
+</div>
+
+</div>
+
+---
+
+<!--- _class: halloween--->
+
+## 2023.10.31  **AP Physics** Do Now 
+
+In each case, a sphere is moving from left to right next to a tape marked in meters. A  strobe (flash) photograph is taken every second, and the location of the sphere is recorded. The total time intervals shown are not the same for all spheres.
+
+<div class="columns">
+ 
+<div>
+
+1. Rank the magnitude of the ***displacement*** over the first 3 seconds.
+2. Rank the magnitude of the ***average velocity*** over the first 2 seconds.
+3. What is the ***acceleration*** of ball A?
+4. What is the ***acceleration*** of ball A? (Assume starts from rest)
+5. What is ball A's ***position at 10 seconds***? (assume uniform motion)
+
+
+</div>
+
+<div>
+
+![center](../images/Kinematics/strobespheres.png)
+
+</div>
+
+</div>
+
+---
+
+<!--- _class: halloween--->
+
+# 2023.10.31 **AP Physics** 👽
+
+##### **❓ of the 📅**: Are you trick or treating tonight?
+
+1. Do Nows 
+1. Brain Dump 🧠
+2. Free Response Practice 
+
+
+### 🚨 Test Friday
+
+- Test Preview tomorrow...Each group gets 2 copies of the test **without** the question, but everything else (diagrams, situation descriptions, etc)
+ 
+
+--- 
+
+# Brain Dump 🧠
+
+## Make A Whiteboard Summary of Kinematics
+
+
+Your board should...
+
+- Be visible from across the room (no super tiny writing!)
+- Utilize multiple colors for clarity
+- Include diagrams and equations
+- Summarize our constant velocity and constant acceleration models
+
+_Try to do this from **memory** first and then refer to your notes and add to your whiteboard_
+
+---
+
+### As a space shuttle burns up its fuel after take-off, it gets lighter and lighter and its acceleration larger and larger. Between the moment it takes off and the time at which it has consumed nearly all of its fuel, is the magnitude of the average velocity larger than, equal to, or smaller than half its final speed? 
+
+### In a clear, paragraph-length response, explain why. [Hint: you can draw a diagram and refer to it in your paragraph. (Maybe a velocity-time graph would help you visualize this answer)]
+
+
+---
+
+## Tips for Paragraph Length Response:
+
+#### ABCD: ***Answer***, Basic Physics, Cite information, Draw it together
+
+**Answer the Question** (Claim)
+
+* DO: State whether something increases, decreases, or stays the same.
+  - If given two or more cases to choose from, state which case answers the question, or clearly state that both cases are the same.
+* DON'T: Just say that something “changes”. We need to know how it changes. Talk about how it could be either case or both. You need to commit to an answer.
+
+---
+
+## Tips for Paragraph Length Response:
+
+#### ABCD: Answer, ***Basic Physics***, Cite information, Draw it together
+
+**Basic Physics** (Evidence)
+
+* Your explanation needs to include at least one statement of basic physics. You'll know that this is a statement of basic physics because a statement of basic physics is true all the time, every day, and in all situations. Basic physics can be the name of a law of physics, like "Newton’s Third Law", or it can be a statement of the law itself, such as "when the horse pulls the cart, the cart pulls back on the horse with the same force."
+
+---
+
+## Tips for Paragraph Length Response:
+
+#### ABCD: Answer, Basic Physics, ***Cite information***, Draw it together
+
+
+**Cite Important Information** (Evidence)
+
+* This is when you point out important aspects of this particular situation that are relevant to your explanation. The Cite Information sentence should start with the words “in this situation” or “in Case 1” or “for the small cart, ...” and proceed to say something about the particular problem you are presented with.
+
+--- 
+
+## Tips for Paragraph Length Response:
+
+#### ABCD: Answer, Basic Physics, Cite information, ***Draw it together***
+
+**Draw It All Together** (Reasoning)
+
+* This is when you take your statements of basic physics and the important information that you cited from this situation and show how it logically leads to the correct answer. Depending on how well you do your B’s and C’s, your “Draw it Together” might only be a single sentence.
+
+---
+
+## More Tips for Paragraph Length Response:
+
+* Do NOT use "it", "they", "them". Use good nouns (you know the words on your reference table)
+* Use good verbs that talk about what the nouns are doing
+  - (Objects will speed up, slow down, change direction, gain/lose/transfer energy, gain/lose/transfer momentum, exert or experience forces, etc.)
+* You do not need to restate the question.
+* Don't write more than you mean to
+* Don't write just "force" - state the specific force
+* Don't write "it moves"!!
+
+---
+
+### As a space shuttle burns up its fuel after take-off, it gets lighter and lighter and its acceleration larger and larger. Between the moment it takes off and the time at which it has consumed nearly all of its fuel, is the magnitude of the average velocity larger than, equal to, or smaller than half its final speed? 
+
+### In a clear, paragraph-length response, explain why. [Hint: you can draw a diagram and refer to it in your paragraph. (Maybe a velocity-time graph would help you visualize this answer)]
+
+---
+
+The following situations illustrate the position of two different balls at different times. The first ball (a through f) rolls with constant velocity across a horizontal surface, while the second ball (g through l) rolls with constant acceleration down an inclined ramp. Both objects are at position zero at time = 0, and both are at position = d at time = 6 s.
+
+
+<div class = "columns">
+
+<div>
+
+![center](../images/Kinematics/screenshot002%20-%20Copy.png)
+
+1. On the graph to the right plot the velocity vs. time for each ball. Indicate where they are at position $d$.
+
+</div>
+
+<div>
+
+
+
+![center](../images/Kinematics/VTGraphRank.png)
+
+</div>
+
+</div>
+
+---
+
+The following situations illustrate the position of two different balls at different times. The first ball (a through f) rolls with constant velocity across a horizontal surface, while the second ball (g through l) rolls with constant acceleration down an inclined ramp. Both objects are at position zero at time = 0, and both are at position = d at time = 6 s.
+
+
+<div class = "columns">
+
+<div>
+
+![center](../images/Kinematics/screenshot002%20-%20Copy.png)
+
+
+
+</div>
+
+<div>
+
+2. Rank each situation (a through l...yes, all 12 together, not two separate lists) according to the position along the surface of the ball at the indicated time. Write your answer on a single line, using the > and = signs to show the relationships. NOTE: The pictures are not drawn to scale, so you cannot rely on them to show which ball is ahead.
+
+
+</div>
+
+</div>
+
+---
+
+
+# Calculated Estimation
+
+### As a lab group, on your whiteboard...
+
+How far do you travel ***if you were to hypothetically*** you text 'lol' while driving on Maple Hill Road and then react to an object in your path and slam on the brakes?
+
+Assumptions:
+
+- You have to **read** and **respond** to a text message
+- You are driving at Maple Hill Road (speed limit 18 m/s)
+- You can brake with an acceleration of 5 m/s/s
+
+Use graphs, diagrams, and equations to explain your answer.
+
+
+
+---
+
 ### 2023.10.30  **AP Physics** Do Now 
 
 A weight is tied to a rope that is wrapped around a pulley. The pulley is initially rotating counterclockwise and is pulling the weight up. The tension in the rope creates a torque on the pulley that opposes this rotation. The weight slows down, stops momentarily, and then moves back downward. Assume uniform motion. 

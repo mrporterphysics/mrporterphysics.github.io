@@ -16,6 +16,19 @@ footer: Be brave, not perfect
 
 <!---_class: halloween--->
 
+# 2023.10.30 **Regents Physics** 👽
+
+##### **❓of the 📅**: What is the best Halloween candy?
+
+1. Summary Whiteboard 
+    - What do you need to know about Kinematics? Graphs? Graphical Quantities? Diagrams? Equations? Definitions? 
+2. Regents Practice 
+
+
+---
+
+<!---_class: halloween--->
+
 # 2023.10.30 **Regents Physics** 🕷️🕸️
 
 ##### **❓of the 📅**: What is the funniest/most unique thing you've gotten trick or treating?
