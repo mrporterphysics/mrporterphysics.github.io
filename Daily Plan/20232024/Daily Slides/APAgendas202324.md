@@ -4,6 +4,7 @@ marp: true
 theme: schodack
 paginate: true
 footer: Be brave, not perfect
+math: mathjax
 ---
 
 # AP Physics 🔭 <!---fit--->

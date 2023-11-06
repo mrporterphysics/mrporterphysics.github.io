@@ -6,6 +6,7 @@ class: invert
 paginate: true
 footer: Be brave, not perfect
 transition: reveal
+math: mathjax
 ---
 
 <style>
@@ -64,8 +65,6 @@ Mr. Porter and his wife walk from Nighthawks to Troy Savings Bank Music Hall. Th
 
 # Vctor Quantities:
 
-
-
 ### A *<u>vector</u>* is a quantity with both **magnitude** (size) and **direction**.
 
 #### Examples:
@@ -81,7 +80,7 @@ Mr. Porter and his wife walk from Nighthawks to Troy Savings Bank Music Hall. Th
 ### A *<u>scalar</u>* is a quantity with just **magnitude**.
 
 
-#### Examples:
+#### Examples
 
   - The child traveled a distance of 12 meters
   - The car is moving 20 miles per hour
@@ -175,6 +174,21 @@ $$\vec{s} = \vec{a} + \vec{b}$$
 >_The **resultant** vector S is equal to the addition of vectors a and b_
 
 ![bg fit right](../figures/vecadd1.png)
+
+---
+
+# Adding Vectors 
+
+Mr. Porter's brother is on a hike. He walks:
+
+- 2 KM North
+- 3 KM East 
+- 5 KM Exactly South East 
+
+
+**Draw a the vector addition diagram** to represent this motion
+
+
 
 ---
 

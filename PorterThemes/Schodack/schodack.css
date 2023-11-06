@@ -21,20 +21,13 @@ h1 {
 
 h2 {
     font-style: italic;
-    font-family: 'Playfair Display', serif  ;
+    font-family: 'Playfair Display', serif;
 }
 
 h3, h4, h5, h6 {
   font-family: 'Roboto Slab', serif;
 }
 
-
-section {
-    background-image: url(../../PorterThemes/Schodack/assets/paper.png);
-    background-size: cover;
-    /* background-blend-mode: color; */
-    /* background-color:rgb(217,228,247); */
-}
 
 .columns {
     display: grid;

@@ -4,6 +4,7 @@ marp: true
 theme: schodack
 paginate: true
 footer: Be brave, not perfect
+math: mathjax
 ---
 
 # Conceptual Physics 🔭 <!---fit--->
@@ -11,6 +12,86 @@ footer: Be brave, not perfect
 # **2023-2024** Agendas
 
 ## 👨‍🏫 Mr. Porter
+
+---
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.02 **Conceptual Physics** 🦃
+
+##### **❓of the 📅**: Do you prefer pens or pencils? Why?
+
+1. Introduction to Fan Cart Lab
+    - Groups:
+        - Ethan, Sophia, Mason
+        - Tyler, Bryce, Patience
+        - Justin & Violet
+2. Collect Data for Fan Cart Lab
+
+
+---
+
+# Fan Carts
+
+## 1. Observations 
+## 2. Questions
+## 3. Measurements
+
+![bg](https://i.makeagif.com/media/9-15-2020/-yn2ab.gif)
+
+---
+
+# Essential Questions 🤔 <!--fit--->
+
+## *Does your object **change** its **velocity***?
+
+
+## *If it does change velocity, does the **velocity change constantly***?
+
+- What evidence do you need to collect to answer these questions?
+
+
+---
+
+# Some New Tools 🧰 🛠️ <!--fit-->
+
+---
+
+# Video Upload 📹
+
+1. Record video with you phone 📱
+2. Sign into Pivot and Upload Video 📤
+3. Scale to something in video to known size 📏
+4. Use Built in tools ⏱️
+
+## Tips:
+
+- Take video perpendicular to motion
+- Keep video device as still has possible (i.e. put on something, don't hold in hands)
+
+---
+
+# Spark Timer 🎇
+
+1. Tape spark tape to object
+2. Pick time setting 
+3. Turn on timer & object and send it 
+
+---
+
+<!--- class: invert --->
+
+# Essential Questions 🤔 
+
+## *Does your object **change** its **velocity***?
+
+### *If it does change velocity, does the **velocity change constantly***?
+
+- What evidence do you need to collect to answer these questions?
+
+### Hints
+
+- Collect Data over **even time intervals** (for example every 0.5 seconds)
 
 ---
 
