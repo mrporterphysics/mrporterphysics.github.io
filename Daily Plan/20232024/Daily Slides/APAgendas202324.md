@@ -15,6 +15,55 @@ footer: Be brave, not perfect
 
 ---
 
+<!--- _class: thanksgiving--->
+
+# **Week 10** (11.06-11.00)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Learn Vector Math
+2. Introduction to Forces 
+3. Correct Tests
+
+### 🚨 Notes & Upcoming...
+
+
+
+</div>
+
+
+<div> 
+
+### 🏡 Outside Work 
+
+1. Test Corrections 
+2. Quiz Reassessments
+
+
+</div>
+
+---
+
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.06 **AP Physics** 🦃
+
+##### **❓ of the 📅**: Should there be a sarcasm font?
+
+
+0. You will get your tests back next class. *I am not done grading, so don't ask*.
+    - About Test Corrections...
+1. [Vectors](../../../Presentations/Forces/talks/Dynamics2023.html)
+2. Vector Exploration in Pivot 
+
+
+---
+
 <!--- _class: halloween--->
 
 # **Week 9** (10.30-11.03)
