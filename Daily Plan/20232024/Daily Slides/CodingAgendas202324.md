@@ -4,6 +4,7 @@ marp: true
 theme: schodack
 paginate: true
 footer: Be brave, not perfect
+math: mathjax
 ---
 
 # Coding 💻 <!---fit--->
@@ -729,7 +730,7 @@ Arcs are part of ellipses (or circles). To draw an arc, we need to specify the s
 | 90°      | $\frac{\pi}{2}$ | HALF_PI      |
 | 180°     | $\pi$           | PI           |
 | 270°     | $1.5 \pi$       | PI + HALF_PI |
-| 360°     | $2\pi$          | TWO_PI             |
+| 360°     | $2\pi$          | TWO_PI        |
 
 ![bg right 90%](../images/coding/angles.png)
 
