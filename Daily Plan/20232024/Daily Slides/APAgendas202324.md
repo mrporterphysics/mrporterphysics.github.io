@@ -128,8 +128,6 @@ The following situations illustrate the position of two different balls at diffe
 
 <div>
 
-
-
 ![center](../images/Kinematics/VTGraphRank.png)
 
 </div>
