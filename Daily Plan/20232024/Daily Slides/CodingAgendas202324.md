@@ -14,6 +14,18 @@ footer: Be brave, not perfect
 
 ---
 
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.01 - **Coding**
+
+##### **❓ of the 📅**: 
+
+1. Check in on Paint Project:
+    - Show Porter your progress and time to ask questions 
+2. Work on past work (🚨 *Quarter Ends NEXT WEEK*!)
+
+---
 <!--- _class: halloween--->
 
 # 2023.10.19 - **Coding**

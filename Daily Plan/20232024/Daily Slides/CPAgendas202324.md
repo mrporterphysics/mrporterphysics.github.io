@@ -14,6 +14,19 @@ footer: Be brave, not perfect
 
 ---
 
+<!--- _class: thanksgiving--->
+
+# 2023.11.02 **Conceptual Physics** 🦃
+
+##### **❓of the 📅**: Would you rather be Instagram or TikTok famous?
+
+## Constant Velocities **Test Day**: 
+
+1. **On your own**: 40 minutes, complete in pen or pencil of your choice
+2. **With your classmates**: 40 minutes, make any changes or additions in the **provided 🟢 green pen**
+
+---
+
 <!--- _class: halloween--->
 
 # 2023.10.31 **Conceptual Physics** 🧙‍♀️

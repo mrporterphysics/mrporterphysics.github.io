@@ -14,12 +14,31 @@ footer: Be brave, not perfect
 
 ---
 
+<!--- _class: thanksgiving--->
+
+# 2023.11.02 **Regents Physics** 🦃
+
+##### **❓of the 📅**: Would you rather be Instagram or TikTok famous?
+
+1. Practice Quiz: _do you remember your corrections from last class?_
+    1. Complete
+    2. Check with peer
+    3. Check answer with whole class with Porter
+2. Regents Packets Practice:
+    - 🚨 Note ❗: for short answer questions be sure to:
+        1. Write the equation
+        2. Substitute **with units**
+        3. Provide the answer **with units** 
+
+---
+
 <!---_class: halloween--->
 
 # 2023.10.30 **Regents Physics** 👽
 
 ##### **❓of the 📅**: What is the best Halloween candy?
 
+1. Quiz Corrections 
 1. Summary Whiteboard 
     - What do you need to know about Kinematics? Graphs? Graphical Quantities? Diagrams? Equations? Definitions? 
 2. Regents Practice 

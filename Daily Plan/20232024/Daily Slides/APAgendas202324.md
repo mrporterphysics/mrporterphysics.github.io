@@ -50,38 +50,38 @@ footer: Be brave, not perfect
 
 ---
 
-<!--- _class: halloween--->
+<!--- _class: thanksgiving--->
 
-## 2023.10.31  **AP Physics** Do Now 
+# 2023.11.01 **AP Physics** 🦃
 
-Recall...
+##### **❓ of the 📅**: Should there be a sarcasm font?
 
-<div class="columns">
+1. Rolling Ball Ranking Task
+2. Rocket Ship Paragraph
+3. Test Preview
+4. Texting and Driving
+
+---
+
+
+The following situations illustrate the position of two different balls at different times. The first ball (a through f) rolls with constant velocity across a horizontal surface, while the second ball (g through l) rolls with constant acceleration down an inclined ramp. Both objects are at position zero at time = 0, and both are at position = d at time = 6 s.
+
+
+<div class = "columns">
 
 <div>
 
-1. What is the ***slope*** of ____ represent:
-    - Position vs. time graph?
-    - Velocity vs. time graph?
-2. What does the ***area*** of ___ represent:
-    - Velocity vs. time graph?
-    - Acceleration vs. time graph?
-3. How do you find ***instantaneous velocity*** on a XT Graph?
-4. How do you find ***final position*** from a VT Graph?
+![center](../images/Kinematics/screenshot002%20-%20Copy.png)
 
+1. On the graph to the right plot the velocity vs. time for each ball. Indicate where they are at position $d$.
 
 </div>
 
-
-
 <div>
 
-5. What does a ***concave up*** XT Graph mean? ***Concave down***?
-6. When is $x_f$, $\Delta x$, and distance different? The same?
-7. What does ***uniform motion*** mean?
-8. How do the direction of ***velocity*** and ***acceleration*** compare when an object is ***slowing***? 
-9. What is ***acceleration***?
-10. How do you convert from ***rotational*** quantities to the equivalent ***linear*** quantities?
+
+
+![center](../images/Kinematics/VTGraphRank.png)
 
 </div>
 
@@ -89,68 +89,32 @@ Recall...
 
 ---
 
-<!--- _class: halloween--->
+The following situations illustrate the position of two different balls at different times. The first ball (a through f) rolls with constant velocity across a horizontal surface, while the second ball (g through l) rolls with constant acceleration down an inclined ramp. Both objects are at position zero at time = 0, and both are at position = d at time = 6 s.
 
-## 2023.10.31  **AP Physics** Do Now 
 
-In each case, a sphere is moving from left to right next to a tape marked in meters. A  strobe (flash) photograph is taken every second, and the location of the sphere is recorded. The total time intervals shown are not the same for all spheres.
+<div class = "columns">
 
-<div class="columns">
- 
 <div>
 
-1. Rank the magnitude of the ***displacement*** over the first 3 seconds.
-2. Rank the magnitude of the ***average velocity*** over the first 2 seconds.
-3. What is the ***acceleration*** of ball A?
-4. What is the ***acceleration*** of ball A? (Assume starts from rest)
-5. What is ball A's ***position at 10 seconds***? (assume uniform motion)
+![center](../images/Kinematics/screenshot002%20-%20Copy.png)
+
 
 
 </div>
 
 <div>
 
-![center](../images/Kinematics/strobespheres.png)
+2. Rank each situation (a through l...yes, all 12 together, not two separate lists) according to the position along the surface of the ball at the indicated time. Write your answer on a single line, using the > and = signs to show the relationships. NOTE: The pictures are not drawn to scale, so you cannot rely on them to show which ball is ahead.
+
 
 </div>
 
 </div>
 
+
+
 ---
 
-<!--- _class: halloween--->
-
-# 2023.10.31 **AP Physics** 👽
-
-##### **❓ of the 📅**: Are you trick or treating tonight?
-
-1. Do Nows 
-1. Brain Dump 🧠
-2. Free Response Practice 
-
-
-### 🚨 Test Friday
-
-- Test Preview tomorrow...Each group gets 2 copies of the test **without** the question, but everything else (diagrams, situation descriptions, etc)
- 
-
---- 
-
-# Brain Dump 🧠
-
-## Make A Whiteboard Summary of Kinematics
-
-
-Your board should...
-
-- Be visible from across the room (no super tiny writing!)
-- Utilize multiple colors for clarity
-- Include diagrams and equations
-- Summarize our constant velocity and constant acceleration models
-
-_Try to do this from **memory** first and then refer to your notes and add to your whiteboard_
-
----
 
 ### As a space shuttle burns up its fuel after take-off, it gets lighter and lighter and its acceleration larger and larger. Between the moment it takes off and the time at which it has consumed nearly all of its fuel, is the magnitude of the average velocity larger than, equal to, or smaller than half its final speed? 
 
@@ -220,53 +184,6 @@ _Try to do this from **memory** first and then refer to your notes and add to yo
 
 ---
 
-The following situations illustrate the position of two different balls at different times. The first ball (a through f) rolls with constant velocity across a horizontal surface, while the second ball (g through l) rolls with constant acceleration down an inclined ramp. Both objects are at position zero at time = 0, and both are at position = d at time = 6 s.
-
-
-<div class = "columns">
-
-<div>
-
-![center](../images/Kinematics/screenshot002%20-%20Copy.png)
-
-1. On the graph to the right plot the velocity vs. time for each ball. Indicate where they are at position $d$.
-
-</div>
-
-<div>
-
-
-
-![center](../images/Kinematics/VTGraphRank.png)
-
-</div>
-
-</div>
-
----
-
-The following situations illustrate the position of two different balls at different times. The first ball (a through f) rolls with constant velocity across a horizontal surface, while the second ball (g through l) rolls with constant acceleration down an inclined ramp. Both objects are at position zero at time = 0, and both are at position = d at time = 6 s.
-
-
-<div class = "columns">
-
-<div>
-
-![center](../images/Kinematics/screenshot002%20-%20Copy.png)
-
-
-
-</div>
-
-<div>
-
-2. Rank each situation (a through l...yes, all 12 together, not two separate lists) according to the position along the surface of the ball at the indicated time. Write your answer on a single line, using the > and = signs to show the relationships. NOTE: The pictures are not drawn to scale, so you cannot rely on them to show which ball is ahead.
-
-
-</div>
-
-</div>
-
 ---
 
 
@@ -283,6 +200,113 @@ Assumptions:
 - You can brake with an acceleration of 5 m/s/s
 
 Use graphs, diagrams, and equations to explain your answer.
+
+
+
+---
+
+
+<!--- _class: halloween--->
+
+## 2023.10.31  **AP Physics** Do Now 
+
+Recall...
+
+<div class="columns">
+
+<div>
+
+1. What is the ***slope*** of ____ represent:
+    - Position vs. time graph?
+    - Velocity vs. time graph?
+2. What does the ***area*** of ___ represent:
+    - Velocity vs. time graph?
+    - Acceleration vs. time graph?
+3. How do you find ***instantaneous velocity*** on a XT Graph?
+4. How do you find ***final position*** from a VT Graph?
+
+
+</div>
+
+
+
+<div>
+
+5. What does a ***concave up*** XT Graph mean? ***Concave down***?
+6. When is $x_f$, $\Delta x$, and distance different? The same?
+7. What does ***uniform motion*** mean?
+8. How do the direction of ***velocity*** and ***acceleration*** compare when an object is ***slowing***? 
+9. What is ***acceleration***?
+10. How do you convert from ***rotational*** quantities to the equivalent ***linear*** quantities?
+
+</div>
+
+</div>
+
+---
+
+<!--- _class: halloween--->
+
+## 2023.10.31  **AP Physics** Do Now 
+
+In each case, a sphere is moving from left to right next to a tape marked in meters. A  strobe (flash) photograph is taken every second, and the location of the sphere is recorded. The total time intervals shown are not the same for all spheres.
+
+<div class="columns">
+ 
+<div>
+
+1. Rank the magnitude of the ***displacement*** over the first 3 seconds.
+2. Rank the magnitude of the ***average velocity*** over the first 2 seconds.
+3. What is the ***acceleration*** of ball A?
+4. What is the ***acceleration*** of ball B? (Assume starts from rest)
+5. What is ball B's ***position at 10 seconds***? (assume uniform motion)
+
+
+</div>
+
+<div>
+
+![center](../images/Kinematics/strobespheres.png)
+
+</div>
+
+</div>
+
+---
+
+<!--- _class: halloween--->
+
+# 2023.10.31 **AP Physics** 👽
+
+##### **❓ of the 📅**: Are you trick or treating tonight?
+
+1. Do Nows 
+1. Brain Dump 🧠
+2. Free Response Practice 
+
+
+### 🚨 Test Friday
+
+- Test Preview tomorrow...Each group gets 2 copies of the test **without** the question, but everything else (diagrams, situation descriptions, etc)
+ 
+
+--- 
+
+# Brain Dump 🧠
+
+## Make A Whiteboard Summary of Kinematics
+
+
+Your board should...
+
+- Be visible from across the room (no super tiny writing!)
+- Utilize multiple colors for clarity
+- Include diagrams and equations
+- Summarize our constant velocity and constant acceleration models
+
+_Try to do this from **memory** first and then refer to your notes and add to your whiteboard_
+
+---
 
 
 

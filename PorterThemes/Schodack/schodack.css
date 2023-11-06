@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Creepster');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 h1 {
   font-size: 60px;
@@ -125,4 +125,30 @@ section.halloween a {
 section.halloween strong{
   color: rgb(248, 172, 73);
   text-shadow: 0 0 20px #333;
+}
+
+section.thanksgiving {
+  background-color: #d35400; 
+  color:#fff;
+}
+
+
+section.thanksgiving footer{
+  color:#ffffff94;
+}
+
+/* Style the header with a Thanksgiving theme */
+section.thanksgiving h1 {
+  color: #722d12; /* White text */
+  font-family: 'Lobster', sans-serif;
+  text-shadow: 1px 1px 2px #cec8c8;
+
+}
+
+section.thanksgiving h2, h3{
+  color: #fff; /* White text */
+}
+
+section.thanksgiving strong{
+  color:#FFE32C;
 }
