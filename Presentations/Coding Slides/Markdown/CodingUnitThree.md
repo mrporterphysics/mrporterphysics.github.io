@@ -396,3 +396,138 @@ The [example](https://editor.p5js.org/cs4all/sketches/By6GNmWBW) below iterates 
 
 
 # Grid Systems <!--fit--->
+
+
+---
+
+# Create a Grid
+
+- To create a **grid**, basically we want to draw a **column** of circles for each of the circles in our **row**. 
+- When x=20, we want to draw a column at 20, when x= 40, we want to draw a column there too, and so on.
+
+![bg fit right:35%](../images/grid.png)
+
+---
+
+# Creating a grid
+
+Take a look at the animation below: each time we draw a circle in the top row (with y = 60), we also draw another two (with y = 90 and y = 120). The value x is incrementing by 30, and each time 30 is added to x, a column is created as well with y incrementing by 30 until it reaches the height of the canvas.
+
+![center](https://nycdoe-cs4all.github.io/images/lessons/unit_3/1.5/rows.gif)
+
+---
+
+# Nested Loops
+
+* There is a short and easy way to do this in code with a “nested for loop.” 
+* A **nested loop** means one loop is running inside of the other loop. 
+* We’ve been doing this all along by having for loops inside of a draw loop. The for loop repeats a block of code, and the draw loop repeats all of the code that is inside it as well. 
+* The draw loop only updates once everything inside of it has been run, including the entire for loop.
+
+![bg fit right:38%](https://nycdoe-cs4all.github.io/images/lessons/unit_3/1.5/draw.png)
+
+---
+
+# Nested `for()` Loop
+
+If we [nested a for loop](https://editor.p5js.org/cs4all/sketches/9ADXr9mSx) inside of another for loop, the same concept would apply. The inner nested loop would run until completed each time the exterior loop is run. 
+
+![center](../images/nestedloop.png)
+
+---
+
+# Nested For Loop
+
+The basic syntax:
+
+```javascript
+for(var i = 0; i<width; i++){
+  for(var j = 0; j< height; j++){
+    // Run this block of code
+  }
+}
+```
+
+---
+
+# Nested For Loop
+
+- In this [example](https://editor.p5js.org/cs4all/sketches/9ADXr9mSx), the first time the outer for loop runs, x is 30. Then the inner for loop runs. y starts at 30. A circle is drawn. y is set to 60. The second circle is drawn, 30 px below the first. 
+- Then y is set to 90, and a third circle is drawn, 30px below the previous one. 
+- Now the inner for loop is done, the outer loop sets x to 60, and the cycle continues.
+
+```javascript
+for(var i = 0; i<width; i++){
+  for(var j = 0; j< height; j++){
+    ellipse(x,y,15,15);
+  }
+}
+```
+
+
+---
+
+# Nested For Loop
+
+
+<div class="columns">
+
+<div>
+
+```javascript
+function setup() {
+	createCanvas(600, 400);
+	noStroke();
+	fill(255, 200, 100);
+}
+function draw() {
+	background(0);
+	for (var x = 25; x < mouseX; x += 50) {
+		for (var y = 25; y < height; y += 50) {
+			fill(random(255), 0, random(255));
+			ellipse(x, y, 25);
+		}
+	}
+}
+
+```
+
+</div>
+
+<div>
+
+What do you think will be the output of this [example](https://editor.p5js.org/cs4all/sketches/ByvTqlmKm)? 
+
+Source: [Dan Shiffman’s Nested Loop Tutorial](https://www.youtube.com/watch?v=1c1_TMdf8b8)
+
+</div>
+
+</div>
+
+
+---
+
+# Digital Wallpaper <!--fit--->
+
+## Today you’re going to make a digital wallpaper using for loops and the grid system
+
+---
+
+# Digital Wallpaper Inspiration
+
+## You can use the following resources as inspiration:
+
+- [Pattern 1](https://nycdoe-cs4all.github.io/units/1/final_project_examples/level_3) from curriculum
+- [Pattern 2](http://printingcode.runemadsen.com/examples/repetition/pattern_simple/) by Rune Madsen.
+- [African patterns](https://blog.yizzam.com/african-patterns-meaning-and-symbology/) and their meaning.
+- [Andean art](https://www.mosqoy.org/textile-symbols) symbols used in textiles.
+- [Islamic art](https://www.theguardian.com/science/alexs-adventures-in-numberland/2015/feb/10/muslim-rule-and-compass-the-magic-of-islamic-geometric-design) pattern tutorial.
+
+---
+
+# Digital Wallpaper
+
+
+![center](../images/wallpaperchallenge.png)
+
+---
