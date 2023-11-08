@@ -17,6 +17,31 @@ math: mathjax
 
 <!--- _class: thanksgiving--->
 
+# 2023.11.08 **Regents Physics** 🦃
+
+##### **❓of the 📅**: What’s the longest trip you’ve been on?
+
+1. Physics Classroom Vector Practice 
+	1. [Vector Components 1](https://www.physicsclassroom.com/calcpad/launch/CPVP3)
+	2. [Adding 2 Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP5)
+	3. [Vector Component Analysis 1](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
+
+---
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.06 **Regents Physics** 🦃
+
+##### **❓of the 📅**: What is your favorite Pixar Movie?
+
+1. [Vectors](../../../Presentations/Forces/talks/Dynamics2023.html)
+2. Vector Exploration in Pivot 
+
+---
+
+
+<!--- _class: thanksgiving--->
+
 # 2023.11.06 **Regents Physics** 🦃
 
 ##### **❓of the 📅**: Do you prefer pens or pencils? 🖊️ ✏️
