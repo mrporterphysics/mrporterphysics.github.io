@@ -52,6 +52,65 @@ math: mathjax
 <!--- _class: thanksgiving --->
 
 
+# 2023.11.09 **AP Physics** 🦃
+
+##### **❓ of the 📅**: What’s the longest trip you’ve been on?
+
+1. Finish Vectors Pivot 
+2. Remainder of class for test corrections
+3. If you finish both you can start Physics Classroom Vector Practice:
+	1. [Vector Components 1](https://www.physicsclassroom.com/calcpad/launch/CPVP3)
+	2. [Adding 2 Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP5)
+	3. [Vector Component Analysis 1](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
+
+
+---
+
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.07 **AP Physics** 🦃
+
+##### **❓ of the 📅**: 
+
+1. Test Corrections 
+
+---
+
+<!--- _class: thanksgiving --->
+
+# **Test Corrections**
+
+1. Determine correct answer for questions answered incorrectly
+    + For FRQ you need to correct the entire part (i.e. part (a)) if you lost *any* points
+    + No you cannot see what you put before - start from scratch
+2. For MC questions you must provide a justification for your answers
+    - Start with a fact of physics "slope of VT is acceleration" or "area of VT is displacement"
+    - Draw a diagram to help (i.e. draw a VT graph)
+    - Try to use a claim evidence reasoning format to write your justification
+4. Finally, compare your new, correct answers to your test and determine if your mistake was one of the 4 C's: clueless, careless, conceptual, or calculation.
+
+---
+
+<!--- _class: thanksgiving --->
+
+# **Test Corrections Summary**
+
+4. Look for trends about what your test performance:
+    - Were there certain types of questions you missed?
+    - Do you need to review/relearn/learn some material that was tested?
+        - What learning mastery standard do you think that material aligns with?
+    - Was there a common mistake you made?
+    - Summarize
+5. Meet with Mr. Porter to discuss the trends **before** you turn in your corrections.
+
+
+
+---
+
+<!--- _class: thanksgiving --->
+
+
 # 2023.11.06 **AP Physics** 🦃
 
 ##### **❓ of the 📅**: Should there be a sarcasm font?

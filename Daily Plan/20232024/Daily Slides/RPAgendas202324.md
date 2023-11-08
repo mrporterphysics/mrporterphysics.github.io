@@ -4,6 +4,7 @@ marp: true
 theme: schodack
 paginate: true
 footer: Be brave, not perfect
+math: mathjax
 ---
 
 # Regents Physics 🔭 <!---fit--->
@@ -11,6 +12,34 @@ footer: Be brave, not perfect
 # **2023-2024** Agendas
 
 ## 👨‍🏫 Mr. Porter
+
+---
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.06 **Regents Physics** 🦃
+
+##### **❓of the 📅**: Do you prefer pens or pencils? 🖊️ ✏️
+
+1. Test Corrections
+
+
+---
+
+# Test Corrections
+
+
+1. Determine correct answer for questions answered incorrectly
+    + For FRQ you need to correct the entire part (i.e. part (a)) if you lost *any* points
+    + No you cannot see what you put before - start from scratch
+2. For MC questions you must provide a justification for your answers
+    - Start with a fact of physics "slope of VT is acceleration" or "area of VT is displacement"
+    - Draw a diagram to help (i.e. draw a VT graph)
+    - Try to use a claim evidence reasoning format to write your justification
+4. Finally, compare your new, correct answers to your test and determine if your mistake was one of the 4 C's: clueless, careless, conceptual, or calculation.
+5. Put everything together (old test, new test, correction sheets) with a paperclip.
+
+
 
 ---
 

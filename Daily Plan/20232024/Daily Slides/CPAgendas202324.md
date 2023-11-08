@@ -15,9 +15,26 @@ math: mathjax
 
 ---
 
+
 <!--- _class: thanksgiving--->
 
-# 2023.11.02 **Conceptual Physics** 🦃
+# 2023.11.08 **Conceptual Physics** 🦃
+
+##### **❓of the 📅**: What is the longest trip you've been on?
+
+1. Finish Collecting Data 
+2. Graph Position and Time - find the **best** curve fit 
+3. Whiteboard graphs & discuss as a class
+3. Create [Velocity vs. Time Graphs](../../../Presentations/APCAPM/talks/CAPM2023.html#8)
+4. Finish and summarize the lab
+
+
+
+---
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.06 **Conceptual Physics** 🦃
 
 ##### **❓of the 📅**: Do you prefer pens or pencils? Why?
 

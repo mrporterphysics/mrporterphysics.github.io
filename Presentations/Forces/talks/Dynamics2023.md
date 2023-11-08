@@ -39,14 +39,11 @@ strong{
 # 📖 Contents:
 
 1. [Vectors](#vector-quantities)
-
-3. [Mallet Ball]()
+3. [Mallet Ball](#mallet-ball)
 4. [Dueling Fan Carts]()
 5. [Newton's Third Law]
-5. [Interactions]
+5. [Interactions & Force Names]
 6. [Force Diagrams]
-7. 
-
 
 ---
 
