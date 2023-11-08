@@ -367,3 +367,32 @@ We can [increment color](https://editor.p5js.org/cs4all/sketches/B1_Qjg_5f) the 
 
 ---
 
+
+# Repetition
+
+We can also use loops to create a specific number of elements and alter a value inside of the loop itself. 
+
+In this [example](https://editor.p5js.org/cs4all/sketches/S1azU4gEW) I wanted to draw 5 ellipses and so I wrote a loop that would run 5 times. I decreased the size of the ellipse inside of the loop so that we will get a smaller circle every time. 
+
+Play with the values to draw more circles or increase the space between them. 
+
+![bg fit right:45%](../images/bullseyeforloop.png)
+
+---
+
+# Variation in Action
+
+The [example](https://editor.p5js.org/cs4all/sketches/By6GNmWBW) below iterates on a smiley face design and added a mouth that opens a little bit more with each face that is drawn. 
+
+![center](../images/simleyloop.png)
+
+---
+
+# `for()` Loop Challenge 2
+
+![center](../images/forloopchallenge2.png)
+
+---
+
+
+# Grid Systems <!--fit--->

@@ -15,6 +15,20 @@ math: mathjax
 
 ---
 
+
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.08 - **Coding**
+
+##### **❓ of the 📅**: What is the longest trip you have been on?
+
+1. Finish `while()` loop assignment?
+2. [Introduction](../../../Presentations/Coding%20Slides/Markdown/CodingUnitThree.html#12) to `for()` loops
+
+
+---
+
 <!--- _class: thanksgiving --->
 
 
