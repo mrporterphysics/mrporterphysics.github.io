@@ -291,9 +291,6 @@ The following situations illustrate the position of two different balls at diffe
 
 ---
 
----
-
-
 # Calculated Estimation
 
 ### As a lab group, on your whiteboard...
@@ -412,10 +409,6 @@ Your board should...
 - Summarize our constant velocity and constant acceleration models
 
 _Try to do this from **memory** first and then refer to your notes and add to your whiteboard_
-
----
-
-
 
 ---
 

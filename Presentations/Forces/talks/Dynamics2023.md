@@ -40,7 +40,7 @@ strong{
 
 1. [Vectors](#vector-quantities)
 3. [Mallet Ball](#mallet-ball)
-4. [Dueling Fan Carts]()
+4. [Dueling Fan Carts](#dueling-fan-carts)
 5. [Newton's Third Law]
 5. [Interactions & Force Names]
 6. [Force Diagrams]
@@ -253,6 +253,7 @@ You can sum the components of the two vectors to find the components of the **re
 
 * First with a bowling ball,
 * then with with fan carts
+* finally by looking at a simulation
 
 ---
 
@@ -281,22 +282,28 @@ Each time we use the mallet, let it bounce. (Don’t use the mallet like a bulld
 
 ---
 
-# How do taps relate to <br> the motion of the bowling ball? <!--fit--->
+# Lab Instructions:
+
+1. Everyone in your group should _play mallet ball_ at least once. 
+2. As a group think about how you will accomplish the mallet ball task. 
+3. Attempt to accomplish task. 
+4. Record how you successfully accomplished the task
+    - Written description
+    - Drawing that models the motion and your mallet taps
+
+---
+
+<!--- _footer: <br>--->
+
+# How do **taps** relate to <!--fit--->
+# the **motion** of <!--fit--->
+# the bowling ball? <!--fit--->
 
 ---
 
 
 
 # Does our rule relating motion and taps work for the bowling ball tapping the mallet? Or in other words does the bowling ball tap the mallet? 
-
----
-
-
-
-# Rolling Chair Demo <!--fit--->
-
-# 🥼 🪑 🎳 <!--fit--->
-
 
 ---
 
@@ -308,3 +315,221 @@ Each time we use the mallet, let it bounce. (Don’t use the mallet like a bulld
 # Describe the "taps" that affect the motion of the fan cart
 
 ---
+
+
+# Dueling Fan Carts 
+
+## What happens when there are forces from both directions?
+
+
+---
+
+# [Phet Tug of War](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html)
+
+## CER
+
+On the next slide there is a list of statements. Decide if they the statement is ***true*** or ***false*** and then support that claim with evidence from the simulation and reasoning based on our models of motion and forces. 
+
+![bg fit right](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics-900.png)
+
+---
+
+<style scoped>
+{
+  font-size: 27px;
+}
+</style>
+
+# [Phet Tug of War](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html):
+
+1. A person's location on the rope matters.
+2. Different combinations of people can produce the same sum of forces.
+3. The sum of the forces on the cart is always equal to the addition of the individual forces.
+4. It is impossible for the cart to accelerate to the left if there are people pulling it to the right.
+5. The side with the bigger person will always win.
+6. The side with more people will always win.
+7. It is impossible to make the cart decrease in speed.
+8. It is impossible to make the cart move at a steady speed.
+9. The cart will always move in the direction of the sum of the forces.
+10. If the sum of the forces is zero, the cart must be at rest.
+
+---
+
+
+# ______'s First Law
+
+
+## When the forces acting on a system are **unbalanced** the system will **accelerate**. 
+
+## When forces acting on a system are **balanced** the system will maintain its **constant velocity**. 
+
+
+---
+
+# Interaction Stations <!--fit--->
+
+# and Contact Forces <!--fit--->
+
+---
+
+# A **force** is <!--fit--->
+
+# an *interaction* between two objects.  <!--fit--->
+
+---
+
+### Contact Interactions 
+
+1. ***Compression***: when two objects' surfaces are pushed together and the surfaces *deform*
+2. ***Stretch***: when two objects pull on each other and are elongated
+3. ***Shear***: When surfaces pull on each other as they slide or attempt to slide
+
+
+![bg fit right](https://image1.slideserve.com/2164865/slide14-l.jpg)
+
+
+---
+
+# Interaction Stations:
+
+### At each station...
+
+
+1. Observe the objects interacting 
+2. Identify the interactions:
+    - do you notice compression, stretching, or shear
+    - do you notice one or more than one interaction
+    - what evidence to you have for that interaction occuring?
+3. Report findings 
+
+
+---
+
+# Force Names <!--fit--->
+
+---
+
+# Gravitational Force $\vec{F}_g$ or $mg$
+
+### Type: Long Range force
+
+
+### Description 
+
+Attractive force between all objects with mass. 
+
+### Equation 
+
+TBD
+
+---
+
+# Normal Force $\vec{F}_N$ or $N$
+
+### Type: Contact, compression
+
+
+### Description 
+"Perpendicular Force" occurs because atoms are compressed and want to return to their original position. ***Always perpendicular to the surfaces in contact***
+
+### Equation 
+None 
+
+---
+
+
+# Spring Force $\vec{F}_s$
+
+### Type: Contact, stretch or compression
+
+
+### Description 
+Spring is stretched or compressed and wants to return to "natural" length
+
+### Equation 
+TBD
+
+---
+
+# Tension Force $\vec{F}_T$ or $T$
+
+### Type: Contact, stretch
+
+
+### Description 
+Atomic Structure is stretched and wants to return to natural length
+
+### Equation 
+None
+
+---
+
+
+# Friction Force $\vec{F}_f$ or $f$
+
+### Type: Contact, shear
+
+
+### Description 
+Irregular surfaces interlock to slow or prevent sliding of two surfaces relative to eachother **Always parallel to the surfaces in contact**
+
+### Equation 
+None
+
+
+---
+
+# Drag Force $\vec{F}_d$
+
+### Type: Contact
+
+
+### Description 
+Fluid/gas Friction, resists objects motion through a fluid/gas
+
+### Equation 
+None
+
+---
+
+
+# Bouyant Force $\vec{F}_B$
+
+### Type: Contact
+
+
+### Description 
+Fluid/Gas Normal Force
+
+### Equation 
+None
+
+---
+
+
+# Electrostatic Force $\vec{F}_e$
+
+### Type: Long Rance
+
+
+### Description 
+Attractice or resistive force because objects have charge
+
+### Equation 
+None 
+
+---
+
+
+
+
+# Magnetic Force $\vec{F}_M$
+
+### Type: Long Range
+
+
+### Description 
+Attractive or repulsive force because of moving charge
+
+### Equation 
+None 
