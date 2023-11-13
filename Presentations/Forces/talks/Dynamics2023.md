@@ -355,6 +355,14 @@ On the next slide there is a list of statements. Decide if they the statement is
 
 ---
 
+# ✏️ Write a Summary <!--fit--->
+
+# How do forces affect the motion of an object?
+
+You can do this in ***2 sentences***
+
+---
+
 
 # ______'s First Law
 

@@ -14,18 +14,6 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 
----
-
-<!--- _class: thanksgiving --->
-
-# AP Physics **Do Now** 2023.11.13
-
-1. Is the magnitude of the displacement of the rider (i) greater in case A, (ii) greater in case B, or (iii) the same
-in both cases? Explain your reasoning.
-2. Is the magnitude of the average velocity of the rider (i) greater in case A, (ii) greater in case B, or (iii) the same in both cases? Explain your reasoning.
-
-
-![bg fit right:45%](image-1.png)
 
 ---
 
@@ -44,7 +32,7 @@ in both cases? Explain your reasoning.
 3. Define Force Laws
 
 ### 🚨 Notes & Upcoming...
-- We need to do a rotational kinematics quiz -- when?
+- We need to do a rotational kinematics quiz -- Thursday?
 
 
 </div>
@@ -64,16 +52,73 @@ in both cases? Explain your reasoning.
 
 ---
 
+<!--- _class: thanksgiving --->
+
+# AP Physics **Do Now** 2023.11.14
+
+---
+
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.14 **AP Physics** 🦃
+
+##### **❓ of the 📅**: What is one positive character trait you own?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. [CV or CA](../../../Presentations/Forces/talks/Dynamics2023.html#17)? How?
+3. Mallet Ball
+4. Dueling Fan Carts 
+5. [PHET Simulation](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html): Tug-of-War
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define the reason(s) for constant velocity motion and constant acceleration motion_
+
+</div>
+
+</div>
+
+
+
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+<!--- _class: thanksgiving --->
+
+# AP Physics **Do Now** 2023.11.13
+
+1. Is the magnitude of the displacement of the rider (i) greater in case A, (ii) greater in case B, or (iii) the same
+in both cases? Explain your reasoning.
+2. Is the magnitude of the average velocity of the rider (i) greater in case A, (ii) greater in case B, or (iii) the same in both cases? Explain your reasoning.
+
+
+![bg fit right:45%](image-1.png)
+
+---
+
 
 <!--- _class: thanksgiving --->
 
 
 # 2023.11.13 **AP Physics** 🦃
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you could live anywhere, where would it be?
 
 1. Do Now
-2. Vector Practice 
+2. Vector Practice - rotating partners
 	1. [Vector Components 1](https://www.physicsclassroom.com/calcpad/launch/CPVP3)
 	2. [Adding 2 Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP5)
 	3. [Vector Component Analysis 1](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
