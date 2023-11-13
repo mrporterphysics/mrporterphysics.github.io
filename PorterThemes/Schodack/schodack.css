@@ -141,3 +141,8 @@ section.thanksgiving h1 {
 section.thanksgiving strong{
   color:#FFE32C;
 }
+
+section.thanksgiving a{
+  color:#FFE32C;
+  text-decoration: underline;
+}

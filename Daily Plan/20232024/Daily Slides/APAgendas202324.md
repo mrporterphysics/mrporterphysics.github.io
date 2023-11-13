@@ -16,6 +16,70 @@ math: mathjax
 
 ---
 
+<!--- _class: thanksgiving --->
+
+# AP Physics **Do Now** 2023.11.13
+
+1. Is the magnitude of the displacement of the rider (i) greater in case A, (ii) greater in case B, or (iii) the same
+in both cases? Explain your reasoning.
+2. Is the magnitude of the average velocity of the rider (i) greater in case A, (ii) greater in case B, or (iii) the same in both cases? Explain your reasoning.
+
+
+![bg fit right:45%](image-1.png)
+
+---
+
+<!--- _class: thanksgiving--->
+
+# **Week 11** (11.13-11.16)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Learn Vector Math
+2. Introduction to Forces 
+3. Define Force Laws
+
+### 🚨 Notes & Upcoming...
+- We need to do a rotational kinematics quiz -- when?
+
+
+</div>
+
+
+<div> 
+
+### 🏡 Outside Work 
+
+1. Physics Classroom Vector Practice:
+	1. [Vector Components 2](https://www.physicsclassroom.com/calcpad/launch/CPVP4)
+	2. [Adding 3 or more perpendicular vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP6)
+	3. [Vector Component Analysis 2](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
+
+
+</div>
+
+---
+
+
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.13 **AP Physics** 🦃
+
+##### **❓ of the 📅**: 
+
+1. Do Now
+2. Vector Practice 
+	1. [Vector Components 1](https://www.physicsclassroom.com/calcpad/launch/CPVP3)
+	2. [Adding 2 Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP5)
+	3. [Vector Component Analysis 1](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
+
+---
+
 <!--- _class: thanksgiving--->
 
 # **Week 10** (11.06-11.00)
