@@ -54,7 +54,63 @@ math: mathjax
 
 <!--- _class: thanksgiving --->
 
+
+# 2023.11.16 **AP Physics** 🦃
+
+##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Rotational Motion Quiz 
+3. Mallet Ball Discussion
+4. [Dueling Fan Carts](../../../Presentations/Forces/talks/Dynamics2023.html#29)
+5. [PHET Simulation](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html): Tug-of-War
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define the reason(s) for constant velocity motion and constant acceleration motion_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+<!--- _class: thanksgiving --->
+
 # AP Physics **Do Now** 2023.11.14
+
+<div class="columns">
+
+<div>
+
+The position and velocity of the moon are shown at two times, about seven
+days apart.
+
+**Find the direction of the change in velocity of the moon in this time
+interval. If the change in velocity is zero, state that explicitly.** 
+
+**Explain your reasoning _with a vector addition diagram._**
+
+Hints: $\Delta v = v-v_0$  
+
+</div>
+<div>
+
+![center](../images/Dynamics/vecsubcirc.png)
+
+</div>
+</div>
 
 ---
 
@@ -63,7 +119,7 @@ math: mathjax
 
 # 2023.11.14 **AP Physics** 🦃
 
-##### **❓ of the 📅**: What is one positive character trait you own?
+##### **❓ of the 📅**: Should you bite or lick your ice cream? 🍨 🍦
 
 <div class = "columns">
 
@@ -88,9 +144,6 @@ math: mathjax
 </div>
 
 </div>
-
-
-
 
 🤔 Did you get better at physics today? Did you help make someone else better today?
 

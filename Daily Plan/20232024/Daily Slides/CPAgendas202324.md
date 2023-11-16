@@ -15,6 +15,32 @@ math: mathjax
 
 ---
 
+<!--- _class: thanksgiving--->
+
+# 2023.11.15 **Conceptual Physics** 🦃
+
+##### **❓of the 📅**: Should you bite or lick your ice cream? 🍨 🍦
+
+1. Introduction to Acceleration Pivot 
+
+---
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.08 **Conceptual Physics** 🦃
+
+##### **❓of the 📅**: If you could live anywhere, where would it be?
+
+
+?? Finish Old Labs ??
+
+1. Finish Collecting Data 
+2. Graph Position and Time - find the **best** curve fit 
+3. Whiteboard graphs & discuss as a class
+3. Create [Velocity vs. Time Graphs](../../../Presentations/APCAPM/talks/CAPM2023.html#8)
+
+---
+
 
 <!--- _class: thanksgiving--->
 
@@ -22,11 +48,7 @@ math: mathjax
 
 ##### **❓of the 📅**: What is the longest trip you've been on?
 
-1. Finish Collecting Data 
-2. Graph Position and Time - find the **best** curve fit 
-3. Whiteboard graphs & discuss as a class
-3. Create [Velocity vs. Time Graphs](../../../Presentations/APCAPM/talks/CAPM2023.html#8)
-4. Finish and summarize the lab
+1. Complete Make Up Work
 
 
 

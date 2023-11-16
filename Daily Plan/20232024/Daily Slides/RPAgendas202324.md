@@ -15,6 +15,68 @@ math: mathjax
 
 ---
 
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.16 **Regents Physics** 🦃
+
+##### **❓of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?
+
+1. Test corrections...
+2. Vector Treasure Hunt 💎
+3. [Vector Component Analysis 1](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
+
+🚨 Upcoming...
+
+- Vector Quiz Next Week: Tuesday
+
+---
+
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.15 **Regents Physics** 🦃
+
+##### **❓of the 📅**: Should you bite or lick your ice cream? 🍨 🍦
+
+1. Test corrections...HAND THEM IN!
+2. Scaled Vector Drawings
+3. Vector Tresaure Hunt 💎
+
+---
+
+# Vector Treasure Hunt 💎
+
+1. Draw a vector treasure map on your school map. 
+2. Place _checkpoints_ on the map 
+3. Place sticky notes as your checkpoints around the school at the indicated map locations (NOT IN OCCUPIED CLASSROOMS). 
+4. Place a "treasure" at the end of the map 
+5. Write down the ***vector*** instructions for the other group
+6. Exchange instructions and draw scaled vector map
+7. Search for treasure
+8. Offer feedback to group on their map: did it work? how could it be improved?
+
+
+---
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.13 **Regents Physics** 🦃
+
+##### **❓of the 📅**: If you could live anywhere in the world where would you live?
+
+1. [Adding Vectors](https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_all.html) Demo with PHET
+2. Paired-Practice: work through problem set with partner, trade marker and computer each problem
+    1. [Adding 2 Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP5)
+    2. [Adding Three or More Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP6)
+	2. [Vector Component Analysis 1](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
+3. Scaled Vector Drawings
+
+
+🤔 Consider: Did you get better at physics today? Did you help someone else get better today?
+
+---
+
 <!--- _class: thanksgiving--->
 
 # 2023.11.08 **Regents Physics** 🦃
