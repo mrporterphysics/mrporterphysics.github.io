@@ -17,9 +17,45 @@ math: mathjax
 
 ---
 
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.20 **AP Physics** 🦃
+
+##### **❓ of the 📅**: Do you have any Thanksgiving traditions?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+3. Mallet Ball Discussion
+4. [Dueling Fan Carts](../../../Presentations/Forces/talks/Dynamics2023.html#29)
+5. [PHET Simulation](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html): Tug-of-War
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define the reason(s) for constant velocity motion and constant acceleration motion_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+
+---
+
 <!--- _class: thanksgiving--->
 
-# **Week 11** (11.13-11.16)
+# **Week 11-12** (11.13-11.21)
 
 <div class= "columns">
 

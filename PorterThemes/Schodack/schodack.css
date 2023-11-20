@@ -146,3 +146,9 @@ section.thanksgiving a{
   color:#FFE32C;
   text-decoration: underline;
 }
+
+
+section.winter {
+  color:snow;
+  background-image: url("snowy.gif");
+}

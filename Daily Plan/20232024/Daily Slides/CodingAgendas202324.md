@@ -19,6 +19,21 @@ math: mathjax
 <!--- _class: thanksgiving --->
 
 
+# 2023.11.20 - **Coding**
+
+## Thanksgiving Challenge 
+
+Make an interactive sketch with a Thanksgiving or Turkey Theme
+
+_Be prepared to share within the last 10-15 minutes of class_
+
+
+---
+
+
+<!--- _class: thanksgiving --->
+
+
 # 2023.11.08 - **Coding**
 
 ##### **❓ of the 📅**: What is the longest trip you have been on?
