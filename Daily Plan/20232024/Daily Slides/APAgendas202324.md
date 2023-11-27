@@ -17,6 +17,122 @@ math: mathjax
 
 ---
 
+
+<!--- _class: winter--->
+
+# **Week 12** (11.27-12.01)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Identify Forces
+2. Draw Force Diagrams
+3. Confidently find vector components
+3. Confidently Add Vectors
+
+### 🚨 Notes & Upcoming...
+
+_Quiz Thursday_
+
+
+</div>
+
+
+<div> 
+
+### 🏡 Outside Work 
+
+1. Vector Addition Practice 
+2. Drawing FBDs Practice 
+
+
+</div>
+
+---
+
+
+<!--- _class: winter --->
+
+
+# 2023.11.27 **AP Physics** 🦃
+
+##### **❓ of the 📅**: Do you have any Thanksgiving traditions?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+0. Leah's First Law
+1. Interaction Types
+2. Interaction Stations
+3. Force Names & Definitions 
+4. Force Diagrams 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define the reason(s) for constant velocity motion and constant acceleration motion_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+# Leah's First Law:
+
+##  **_If the sum of forces is not zero then it will accelerate in the direction of the sum of forces_** - McIntosh et al
+
+
+
+---
+
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.20 **AP Physics** 🦃
+
+## Do Now
+
+
+Javar is at the dog park with Roscoe, his Labrador Retriever. Roscoe catches a scent of interest and walks 25.4 meters south, then 24.3 meters at an angle 31.3 degree north of east, and finally 41.8 meters west.
+
+What is their displacement?
+
+---
+
+<!--- _class: thanksgiving --->
+
+
+# 2023.11.20 **AP Physics** 🦃
+
+## Do Now
+
+![bg fit right:40%](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/ForcesIn2D/F2D3Q3.png)
+
+A pack of three Artic wolves are fighting over a snack. A top view of the magnitude and direction of the three forces is shown in the diagram to the right.
+
+Force A: 226 N, West
+
+Force B: 761 N, 45° North of East
+
+Force C: 720 N, South
+
+What is the magnitude of the resultant force?
+
+
+---
+
 <!--- _class: thanksgiving --->
 
 

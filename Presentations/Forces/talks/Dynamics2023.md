@@ -407,7 +407,7 @@ You can do this in ***2 sentences***
 2. Identify the interactions:
     - do you notice compression, stretching, or shear
     - do you notice one or more than one interaction
-    - what evidence to you have for that interaction occuring?
+    - what evidence to you have for that interaction occurring?
 3. Report findings 
 
 
@@ -528,9 +528,6 @@ None
 
 ---
 
-
-
-
 # Magnetic Force $\vec{F}_M$
 
 ### Type: Long Range
@@ -541,3 +538,10 @@ Attractive or repulsive force because of moving charge
 
 ### Equation 
 None 
+
+
+---
+
+# Force Diagrams <!--fit--->
+
+# 💭 ↙️ ➡️ ⬇️ ⬆️ 🗯️ <!--fit--->

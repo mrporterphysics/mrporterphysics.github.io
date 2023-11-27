@@ -151,4 +151,9 @@ section.thanksgiving a{
 section.winter {
   color:snow;
   background-image: url("snowy.gif");
+  text-shadow: 0 0 20px #333;
+}
+
+section.winter a{
+  color:rgb(206,32,47);
 }

@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+
+<!--- _class: thanksgiving--->
+
+# 2023.11.21 **Conceptual Physics** 🦃
+
+##### **❓of the 📅**: What is the best Thanksgiving dish?
+
+1. The Universe and More - Motion Mapper Game
+    1. Control Mode
+        - Complete each level & whiteboard assigned level
+    2. Input Mode
+        - Complete each level & whiteboard assigned level
+
+---
+
+# Motion Mapper - Control Mode
+
+- What hints/tips do you have?
+- What were some challenges you ran into?
+- What was different between horizontal axis and vertical?
+
+---
+
+# Motion Mapper - Input Mode
+
+- How did you calculate velocity?
+- How did you calculate acceleration?
+    - What was challenging about this?
+
+---
+
 <!--- _class: thanksgiving--->
 
 # 2023.11.15 **Conceptual Physics** 🦃

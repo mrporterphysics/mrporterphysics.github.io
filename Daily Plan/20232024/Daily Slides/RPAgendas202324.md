@@ -15,6 +15,42 @@ math: mathjax
 
 ---
 
+<!--- _class: thanksgiving--->
+
+# 2023.11.21 **Regents Physics** 🦃
+
+##### **❓ of the 📅**: What is your favorite Thanksgiving dish?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Vectors Quiz
+2. [CV or CA](../../../Presentations/Forces/talks/Dynamics2023.html#17)? How?
+3. Mallet Ball
+5. [PHET Simulation](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html): Tug-of-War
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Show Mastery of Vector Math_
+
+🥅 _Define the reason(s) for constant velocity motion and constant acceleration motion_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+---
+
 
 <!--- _class: thanksgiving--->
 
