@@ -41,9 +41,8 @@ strong{
 1. [Vectors](#vector-quantities)
 3. [Mallet Ball](#mallet-ball)
 4. [Dueling Fan Carts](#dueling-fan-carts)
-5. [Newton's Third Law]
-5. [Interactions & Force Names]
-6. [Force Diagrams]
+5. [Interactions & Force Names](#force-names)
+6. [Force Diagrams](#force-diagrams)
 
 ---
 
@@ -398,22 +397,40 @@ You can do this in ***2 sentences***
 
 ---
 
-# Interaction Stations:
+# Interaction Diagrams 
 
-### At each station...
+1. Put all objects in bubbles 
+2. Connect objects' bubbles with a line ***for each*** interaction 
+3. Label the interactions with Compression, Shear, or Stretch
+    -  (We will eventually use different names)
 
+--- 
 
-1. Observe the objects interacting 
+# Interaction Stations 
+
+### At each station...**in your notebook**
+
+1. Sketch Situation
 2. Identify the interactions:
-    - do you notice compression, stretching, or shear
+    - do you notice compression, stretching, or shear?
     - do you notice one or more than one interaction
     - what evidence to you have for that interaction occurring?
+3. Draw Interaction Diagram
 3. Report findings 
-
 
 ---
 
 # Force Names <!--fit--->
+
+---
+
+# Make a Table 
+
+| Force Name          | Symbol | Type       | Description | Equation |
+| ------------------- | ------ | ---------- | ----------- | -------- |
+| Gravitational Force | $F_g$  | Long Range | ...         | ...         |
+| 9 total Forces  | | | 
+
 
 ---
 
@@ -545,3 +562,22 @@ None
 # Force Diagrams <!--fit--->
 
 # 💭 ↙️ ➡️ ⬇️ ⬆️ 🗯️ <!--fit--->
+
+
+---
+
+# Force Diagrams
+
+![center](../figures/FBDs.png)
+
+
+---
+
+# Vector Addition Diagrams 
+
+
+![center w:1100](../figures/VADExample.png)
+
+---
+
+# Force Labs 

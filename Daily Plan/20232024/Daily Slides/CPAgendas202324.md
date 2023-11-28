@@ -14,6 +14,62 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
+<!--- _class: winter--->
+
+# 2023.11.21 **Conceptual Physics** ⛄
+
+##### **❓of the 📅**: What was the best dessert you had over Thanksgiving?
+
+1. VT Graphs & Acceleration 
+2. Pivot - Motion Graphs: Constant Acceleration 1
+3. Pivot - Motion Graphs: Constant Acceleration 2
+
+---
+
+# Average Velocity
+
+We can calulate in two ways:
+
+
+* $v_{average} = \bar{v} = \frac{x_f-x_i}{t_f-t_i}=\frac{\Delta x}{\Delta t}$
+
+* $v_{average} = \bar{v} = \frac{v_f + v_i}{2}$
+
+---
+
+# Velocity Graphs 
+
+![center w:850](../images/Kinematics/labeledvt.png)
+
+---
+
+# Acceleration = Slope
+
+$$a = \frac{v_f-v_i}{t_f-t_i}$$
+
+---
+
+# Cheat Sheet:
+### Equations:
+
+
+$$v_{average} = \bar{v} = \frac{x_f-x_i}{t_f-t_i}=\frac{\Delta x}{\Delta t}$$
+
+$$v_{average} = \bar{v} = \frac{v_f + v_i}{2}$$
+
+$$a = \frac{v_f-v_i}{t_f-t_i}$$
+
+ 
+$$\textrm{Rectangle: } area = base * height$$
+
+
+$$\textrm{Triangle: }area = \frac{1}{2}base*height$$
+
+![bg fit right](../images/Kinematics/labeledvt.png)
+
+
+
+---
 
 
 <!--- _class: thanksgiving--->

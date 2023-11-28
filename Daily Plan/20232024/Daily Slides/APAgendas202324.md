@@ -13,10 +13,7 @@ math: mathjax
 
 ## 👨‍🏫 Mr. Porter
 
-
-
 ---
-
 
 <!--- _class: winter--->
 
@@ -35,7 +32,7 @@ math: mathjax
 
 ### 🚨 Notes & Upcoming...
 
-_Quiz Thursday_
+_Quiz Friday_: Vector addition, drawing force diagrams 
 
 
 </div>
@@ -53,13 +50,54 @@ _Quiz Thursday_
 
 ---
 
+<!--- _class: winter --->
+
+# 2023.11.28 **AP Physics** ⛄
+
+##### **❓ of the 📅**: What is your favorite winter activity?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Share out Interaction Stations
+2. [Force Definitions (Notes)](../../../Presentations/Forces/talks/Dynamics2023.html#42)
+3. Force Diagrams (How to, notes)
+4. Force Diagram Card Sort
+5. Practice Drawing your own force diagrams 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Identify Forces_
+
+🥅 _Identify FBD, VAD, and Interaction Diagrams_
+
+🥅 _Create our own Force Diagrams_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+
+
+---
+
 
 <!--- _class: winter --->
 
 
 # 2023.11.27 **AP Physics** 🦃
 
-##### **❓ of the 📅**: Do you have any Thanksgiving traditions?
+##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?
 
 <div class = "columns">
 
@@ -93,7 +131,7 @@ _Quiz Thursday_
 
 ##  **_If the sum of forces is not zero then it will accelerate in the direction of the sum of forces_** - McIntosh et al
 
-
+[Slides](../../../Presentations/Forces/talks/Dynamics2023.html#36)
 
 ---
 

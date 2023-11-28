@@ -15,6 +15,43 @@ math: mathjax
 
 ---
 
+
+<!--- _class: winter --->
+
+
+# 2023.11.28 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: What is your favorite winter activity?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+
+1. Share out: Tug-of-War
+2. [Physics Law 1]((../../../Presentations/Forces/talks/Dynamics2023.html#36))
+3. What is a force?
+4. Interactions & Interaction Stations
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define the reason(s) for constant velocity motion and constant acceleration motion_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+---
+
 <!--- _class: thanksgiving--->
 
 # 2023.11.21 **Regents Physics** 🦃
