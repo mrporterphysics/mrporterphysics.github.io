@@ -14,6 +14,116 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
+
+<!--- _class: winter--->
+
+# 2023.12.04 **Conceptual Physics** ⛄
+
+##### **❓of the 📅**: Whats the best holiday song?
+
+1. Introduction to *Beats by...* lab
+2. What is a pendulum 
+3. Lab groups and data collection 
+
+---
+
+# Beats By ...
+
+
+You have decided to make some money by starting a new business, Beats by (your name). A famous pop supergroup has approached you to devise a simple design solution that allows the stage lights behind them to swing in time with their music.
+
+![bg right](https://i.gifer.com/1uoE.gif)
+
+
+---
+
+# Beats By ....
+
+## Your Task:
+
+### Design and build a swinging light prototype that can be modified to match any tempo. 
+
+
+---
+
+# Requirements
+
+Before your clients are willing to give you their business, you must prove that you can build a pendulum to swing to the beat of two songs. 
+- Your group can choose the first song, and once you are successful, get your pendulum signed off by your teacher.  
+- Before the deal is finalized, you will need to prove your expertise by designing a product to match a song chosen by your client. Once the challenge song is revealed, you will only have 5 minutes and one attempt to set up your configuration.
+
+---
+
+# What do you still need? 
+
+### Your clients are very busy and need all questions delivered at once. Read through your task again and record everything you know from the description. As you complete your list, record any questions you still have in the Need to Know box.
+
+---
+
+## **Constraints**:
+### Make a list of the properties that your design MUST have
+
+## **Criteria**: 
+### Make a list of the properties that would be NICE to have
+
+## **Problem Statement**
+### We as (our role) seek to (our task) to (reasons for design) for (our stakeholders)
+
+---
+
+## Design Exploration - Brainstorming 🧠
+Before you dive into the materials and start building, it’s essential to take a step back and develop a game plan.
+
+| Brainstorm     | Rules   |
+|---|---|
+|Go for numbers as many ideas as possible|Don’t judge; be positive and encouraging|
+|Be visual; sketches help|Build on the ideas of others|
+|Headline your idea, then quickly move on|Stay on Topic|
+|One voice at a time. Everyone Shares|Encourage wild ideas|
+|Think independently  for the first 5 minutes… |  then compare ideas to create your group list |
+
+---
+
+# Experimental Design
+
+## What will you Change? (Independent)
+What things can you change in your design that might change how fast your system swings back and forth? Do all of these factors affect the swinging tempo? 
+
+
+
+## What will you Measure? (Dependent)
+Consider the challenge and what you can measure about different pendulum designs to test if it satisfies the task criteria.
+
+---
+
+## What should the design look like?
+Will your client be happy to implement this product for their next concert? Sketch drawings to present your ideas.
+
+---
+
+## Building, Testing, and Modeling Your Design 
+
+### Measuring Tempo
+- Song tempo is typically measured in beats per minute (bpm)
+- Measure the bpm of your song using the website http://www.all8.com/tools/bpm.htm or http://a.bestmetronome.com/ 
+### Timing your system
+- Your client desires a system that swings from one side to the other for each beat in the song
+- You will have to develop a procedure to count the number of "beats" per minute
+
+---
+
+## Building, Testing, and Modeling Your Design 
+
+### Model your system
+Your client requires that you have a complete understanding of your design and know how to adjust parameters to match their mystery song. Think about how you might utilize different trials and graphing to help you interpret your findings.
+
+---
+
+# Build & Collect <!--fit--->
+
+# 🚧 🏗️ 🥼 📏 <!--fit--->
+
+---
 <!--- _class: winter--->
 
 # 2023.11.21 **Conceptual Physics** ⛄

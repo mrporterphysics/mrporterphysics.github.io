@@ -15,6 +15,121 @@ math: mathjax
 
 ---
 
+### 2023.12.04 AP Phyiscs **Do Now**
+
+![bg fit right](image-2.png)
+
+Two blocks are stacked on a ramp with the top block being attached to the wall with a string. The system is at rest. 
+
+1. Draw the interaction diagram for the system.
+2. Draw the Free Body diagram and Vector Addition Diagram for Block 2
+2. Draw the Free Body diagram and Vector Addition Diagram for Block 1
+
+---
+
+<!--- _class: winter--->
+
+# **Week 14** (12.04-12.10)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Identify Forces
+2. Draw Force Diagrams
+3. Solve Static Force Problems
+4. Describe Force Pairs
+
+### 🚨 Notes & Upcoming...
+
+Quiz TBD
+
+
+</div>
+
+
+<div> 
+
+### 🏡 Outside Work 
+
+1. Solving Force Problems Quantitatively
+
+
+</div>
+
+---
+
+
+
+<!--- _class: winter --->
+
+# 2023.12.04 **AP Physics** ⛄
+
+##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes? 🧞
+
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Force of Gravity Lab
+2. $F_g$ Board Meeting 
+3. Spring Force Lab 
+4. Spring Force Board Meeting
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Find relationship between mass and weight ($F_g$)_
+
+🥅 _Find the relationship between $F_s$ and stretch_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+# Force of Gravity $(F_g)$ Lab 
+
+## **Essential Question:** How is **mass** related to the force of gravity?
+
+---
+
+# $F_g$ Lab 
+
+## Notes:
+
+* Weight == $F_g$ == Force of Gravity...so $F_g = mg$
+* Weight is a **FORCE**, mass is scalar quantity
+* $g$ is the gravitational field strength
+    * Measured in N/kg 
+    * changes based on planet and location on that planet
+    * _near the surface of the Earth_ $g = 9.8 \textrm{ N/kg}$
+
+---
+
+# Spring Force Lab 
+
+## **Essential Question:** How is the displacement (stretch) of the spring related to the spring force?
+
+### Notes:
+
+- Use known masses and your knowledge of the Force of gravity on those masses as your "force sensor" 
+
+---
+
+
 <!--- _class: winter--->
 
 # **Week 12** (11.27-12.01)
@@ -47,6 +162,91 @@ _Quiz Friday_: Vector addition, drawing force diagrams
 
 
 </div>
+
+---
+
+
+<!--- _class: winter --->
+
+# 2023.12.01 **AP Physics** ⛄
+
+##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes? 🧞
+
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Gravity Lab
+3. Spring Force Lab
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Identify Forces_
+
+🥅 _Identify FBD, VAD, and Interaction Diagrams_
+
+🥅 _Create our own Force Diagrams_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+
+
+
+---
+
+<!--- _class: winter --->
+
+# 2023.11.29 **AP Physics** ⛄
+
+##### **❓ of the 📅**: What superstition do you think is ridiculous?
+
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Force Diagrams: FBDs & VADs
+2. Practice with Force Diagrams 
+    - Card Sort
+    - Individual Practice - 🐒 (Assignment in Canvas, draw in your notebook)
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Identify Forces_
+
+🥅 _Identify FBD, VAD, and Interaction Diagrams_
+
+🥅 _Create our own Force Diagrams_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+
 
 ---
 

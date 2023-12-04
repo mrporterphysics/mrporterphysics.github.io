@@ -16,6 +16,119 @@ math: mathjax
 ---
 
 
+
+<!--- _class: winter --->
+
+
+# 2023.12.01 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: What is the best holiday song?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Force Diagram Card Sort
+2. Monkey 🐒 Force Diagrams
+3. Force of Gravity Lab
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Become confident in drawing the three Force Diagrams (FBD, VAD, ID)_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+
+
+
+
+---
+
+
+<!--- _class: winter --->
+
+
+# 2023.12.01 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: What is your favorite holiday cookie? 🍪
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Holiday themed force drawings 
+4. Introduction to the Force Diagrams: **Free Body Diagrams** & **Vector Addition Diagrams**
+5. Force Diagram Card Sort
+4. Monkey 🐒 Force Diagrams
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define the reason(s) for constant velocity motion and constant acceleration motion_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+
+---
+
+<!--- _class: winter --->
+
+
+# 2023.11.30 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: What is your favorite holiday cookie? 🍪
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+
+1. Interaction Station share out
+2. Force names & notes 
+3. Holiday themed force drawings 
+4. Introduction to the Force Diagrams: **Free Body Diagrams** & **Vector Addition Diagrams**
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define the reason(s) for constant velocity motion and constant acceleration motion_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+---
+
+
 <!--- _class: winter --->
 
 

@@ -566,7 +566,7 @@ None
 
 ---
 
-# Force Diagrams
+# Free Body Diagrams
 
 ![center](../figures/FBDs.png)
 
