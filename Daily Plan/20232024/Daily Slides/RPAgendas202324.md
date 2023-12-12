@@ -16,11 +16,173 @@ math: mathjax
 ---
 
 
+<!--- _class: winter --->
+
+
+# 2023.12.12 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: What is your song of the year?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. How did last class go?
+2. N3L 
+3. Force Stations 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Use force diagrams to solve equilibrium problems._
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+# Balanced Force Stations:
+
+## For Each Station...
+
+### In your notebook:
+
+1. Draw the Free Body Diagram and Vector addition diagram for the object of interest. 
+2. Use the diagrams to find the missing value (force, mass, spring constant, etc). 
+
+---
 
 <!--- _class: winter --->
 
 
-# 2023.12.01 **Regents Physics** ⛄
+# 2023.12.07 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: What are you the biggest fan of?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Spring Force Lab
+    1. Introduction 
+    2. Data, Whiteboard & Discuss
+2. Solving Force Problems Quantitatively
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Find the mathematical relationship bewteen strech and $F_s$_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+---
+
+# Spring Force Lab 
+
+## **Essential Question:** How is the displacement (stretch) of the spring related to the spring force?
+
+### Notes:
+
+- Rememeber that you are measuring how far the spring *stretches* not how long the spring is
+
+### 🤔 Consider:
+- How will you measure force? Can you use a sensor? Can you use hanging masses? You choose!
+
+---
+
+<!--- _class: winter --->
+
+
+# 2023.12.06 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: If you could be immortal, what age would you choose to stop aging at and why?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Force of Gravity Lab
+    1. Collect Data
+    2. Whiteboard & Discuss
+2. Spring Force Lab
+    1. Introduction 
+    2. Data, Whiteboard & Discuss
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Find the mathematical relationship between mass and $F_g$_
+
+🥅 _Find the mathematical relationship bewteen strech and $F_s$_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+
+# Force of Gravity $(F_g)$ Lab 
+
+## **Essential Question:** How is **mass** related to the force of gravity?
+
+---
+
+# $F_g$ Lab 
+
+## Notes:
+
+* $F_g = mg$
+* Force of gravity on an object by the Earth (or other planet) is called ***weight***
+* Weight is a **FORCE**, mass is scalar quantity
+* $g$ is the gravitational field strength
+    * Measured in N/kg 
+    * changes based on planet and location on that planet
+    * _near the surface of the Earth_ $g = 9.8 \textrm{ N/kg}$
+
+---
+
+# Spring Force Lab 
+
+## **Essential Question:** How is the displacement (stretch) of the spring related to the spring force?
+
+### Notes:
+
+- Use known masses and your knowledge of the Force of gravity on those masses as your "force sensor" 
+
+
+---
+
+
+<!--- _class: winter --->
+
+
+# 2023.12.04 **Regents Physics** ⛄
 
 ##### **❓ of the 📅**: What is the best holiday song?
 
@@ -47,11 +209,6 @@ math: mathjax
 </div>
 
 🤔 Did you get better at physics today? Did you help make someone else better today?
-
-
-
-
-
 
 ---
 

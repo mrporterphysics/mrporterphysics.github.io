@@ -17,6 +17,34 @@ math: mathjax
 
 <!--- _class: winter--->
 
+# 2023.12.12 **Conceptual Physics** ⛄
+
+##### **❓of the 📅**: What is your song of the year?
+
+1. Van de Graaff - experiments
+2. Sticky Tape Pivot 
+3. Revisit and explain Van de Graaff generator mini experiments
+
+---
+
+<!--- _class: winter--->
+
+# 2023.12.06 **Conceptual Physics** ⛄
+
+##### **❓of the 📅**: If you could be immortal, what age would you choose to stop aging at and why?
+
+1. Beats by...Pendulum Project
+    1. Design and build a swinging light prototype that can be modified to match any tempo. 
+2. Experiments you ***MUST*** test:
+    1. mass vs. swing time
+    2. length vs. swing time
+    3. starting angle vs. swing time
+3. You need data for <u>***all 3***</u> of those experiments in pivot 
+
+---
+
+<!--- _class: winter--->
+
 # 2023.12.04 **Conceptual Physics** ⛄
 
 ##### **❓of the 📅**: Whats the best holiday song?

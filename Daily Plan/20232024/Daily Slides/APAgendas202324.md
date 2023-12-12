@@ -15,6 +15,128 @@ math: mathjax
 
 ---
 
+
+<!--- _class: winter --->
+
+# 2023.12.11 **AP Physics** ⛄
+
+##### **❓ of the 📅**: What smell brings back great memories?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Questions from Friday?
+1. Plicker Check for Understanding Questions
+2. Balanced Force Stations
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Solve quantitative balanced force problems_
+
+#### 🚨 Homework:
+
+- Assignment will be posted on canvas 
+- Expect a quiz Friday, but I need to hand back old quizzes first....
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+# Balanced Force Stations:
+
+## For Each Station...
+
+### In your notebook:
+
+1. Draw the Free Body Diagram and Vector addition diagram for the object of interest. 
+2. Use the diagrams to find the missing value (force, mass, spring constant, etc). 
+
+---
+
+<!--- _class: winter --->
+
+# 2023.12.07 **AP Physics** ⛄
+
+##### **❓ of the 📅**: What smell brings back great memories?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. [Force Questions](../../../Presentations/Forces/talks/Dynamics2023.html#57) 
+2. Force Pair Demos & Discussions
+2. Pivot - Forces during collisions
+1. Solving Quantitative Force Problems
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Find the relationship between $F_s$ and stretch_
+
+🥅 _Solve quantitative balanced force problems_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+---
+
+<!--- _class: winter --->
+
+# 2023.12.05 **AP Physics** ⛄
+
+##### **❓ of the 📅**: If you had to be a villian from a movie, which movie would you pick?
+
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish $F_s$ Lab
+    - Collect Data
+    - Whiteboard & Board Meeting
+2. Solving Quantitative Force Problems
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Find the relationship between $F_s$ and stretch_
+
+🥅 _Solve quantitative balanced force problems_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
 ### 2023.12.04 AP Phyiscs **Do Now**
 
 ![bg fit right](image-2.png)

@@ -38,11 +38,32 @@ strong{
 
 # 📖 Contents:
 
+
+
+<div class='columns'>
+
+<div>
+
 1. [Vectors](#vector-quantities)
-3. [Mallet Ball](#mallet-ball)
-4. [Dueling Fan Carts](#dueling-fan-carts)
-5. [Interactions & Force Names](#force-names)
-6. [Force Diagrams](#force-diagrams)
+2. [Mallet Ball](#mallet-ball)
+3. [Dueling Fan Carts](#dueling-fan-carts)
+4. [Interactions & Force Names](#force-names)
+5. [Force Diagrams](#force-diagrams)
+5. [Force Interactions](#force-interactions)
+6. [Tension Force Problems](#solving-force-problems)
+7. [Inclined Planes](#inclined-planes)
+
+
+</div>
+
+<div>
+
+9. [Friction](#Friction)
+10. [Fan Cart Lab](#fan-cart-lab)
+
+</div>
+
+</div>
 
 ---
 
@@ -580,4 +601,263 @@ None
 
 ---
 
-# Force Labs 
+# $F_g$ Lab 
+
+## Notes:
+
+* Weight == $F_g$ == Force of Gravity...so $F_g = mg$
+* Weight is a **FORCE**, mass is scalar quantity
+* $g$ is the gravitational field strength
+    * Measured in N/kg 
+    * changes based on planet and location on that planet
+    * _near the surface of the Earth_ $g = 9.8 \textrm{ N/kg}$
+
+---
+
+<!---footer: <br>--->
+
+<div class='columns'>
+
+<div>
+Tim is in a lab on the ground floor of the school. He hangs a small box on a spring. It stretches the spring by 20 centimetres. 
+
+![center w:300](../figures/massweight1.png)
+
+He then carries the spring and box up to a classroom on the top floor of the school, two flights up. Then he repeats the experiment.
+</div>
+
+<div>
+
+1. How much would the spring stretch now?
+  a. More than 20 centimetres.
+  b. Exactly 20 centimetres again.
+  c. Less than 20 centimetres. 
+
+
+</div>
+
+</div>
+
+---
+
+<!---footer: <br>--->
+
+<div class='columns'>
+
+<div>
+Tim is in a lab on the ground floor of the school. He hangs a small box on a spring. It stretches the spring by 20 centimetres. 
+
+![center w:300](../figures/massweight1.png)
+
+He then carries the spring and box up to a classroom on the top floor of the school, two flights up. Then he repeats the experiment.
+</div>
+
+<div>
+
+2. How would you explain this?
+    a. The box is now higher above the ground.
+    b. The change in distance from the center of the Earth is too small to have any effect.
+    c. The box is now further from the center of the Earth.
+    d. The weight of an object is always the same. 
+
+
+</div>
+
+</div>
+
+---
+
+<!---footer: <br>--->
+
+<div class='columns'>
+
+<div>
+Pam is in a lab on the ground floor of the school. She hangs a small box on a spring. It stretches the spring by 35 centimetres. 
+
+![center w:300](../figures/pam.png)
+
+She then takes the spring and box up to the top of a mountain, and repeats the experiment. 
+
+</div>
+
+<div>
+
+1. How much would the spring stretch now?
+  a. More than 35 centimetres.
+  b. Exactly 35 centimetres again.
+  c. Less than 35 centimetres. 
+
+
+</div>
+
+</div>
+
+---
+
+
+How would you explain this? 
+
+  1. The box is now higher above the ground, so gravity pulls it down harder.
+  2. The box is further from the center of the Earth, so the gravity force is less.
+  3. The box is further from the center of the Earth, so the gravity force is less, but the change is much too small to see.
+  4. The weight of an object is always the same, so the spring stretches by exactly the same amount. 
+
+
+---
+
+
+<!---footer: <br>--->
+
+<div class='columns'>
+
+<div>
+An astronaut carries out an experiment. Before leaving Earth, he hangs a small box from a spring. It stretches the spring by 25 centimeters. 
+
+![center w:300](../figures/astro.png)
+
+He then takes the spring and the box to the Moon, and repeats the experiment. 
+
+</div>
+
+<div>
+
+How much would the spring stretch on the Moon?
+
+1.  More than 25 centimetres.
+1.  Exactly 25 centimetres again.
+1.  Less than 25 centimetres.
+1.  Zero - no stretch at all. 
+
+
+</div>
+
+</div>
+
+---
+
+How would you explain this? 
+
+1. The box is now higher above the ground, so gravity pulls it down harder.
+1. The Moon is smaller than the Earth, so gravity is weaker there.
+1. There is no gravity on the moon, because it has no atmosphere.
+1. The weight of an object is always the same. 
+
+
+---
+
+# $F_s$ Lab 
+
+## Notes:
+
+* $F_s$ is proportional to stretch or compression ($|x|$)
+* The proportionality constant, $k$, is called "the spring constant" (creative)
+
+$$\boxed{|\vec{F}_s| = k |\vec{x}|}$$
+
+* A spring is _Hookean_ if it follows the equation above
+
+---
+
+# Force Interactions <!--fit--->
+
+# 🚙 💥 🚚 <!--fit--->
+
+---
+
+# Newton's Third Law 
+
+## A **force** is an interaction between two objects. The two objects mutually apply this **force** on each other. The force is **always *equal in magntiude and opposite in direction***.
+
+---
+
+# Force Pairs 
+
+* Newton's Third Law describes force pairs 
+  * You can identify these pairs with an interaction diagram
+  * The line that connects each bubble or object is the force pair. 
+
+---
+
+# AP Practice <!--fit--->
+
+# 🤔 🏋️ 📖 ✍️ 🔨 <!--fit--->
+
+---
+
+# Solving Force Problems <!--fit--->
+
+# Quantitatively <!--fit--->
+
+---
+
+# Try it - Mild 🫑
+
+Two giant holiday ornaments are hanging on Mr. Porter's front porch as show in the diagram to the right. 
+
+1. Draw the FBD for each ornament. 
+2. Determine the value of **all** of the forces. 
+
+![bg fit right](../figures/tensionmild.png)
+
+---
+
+# Medium 🌶️
+
+In another episode of Don't Do This At Home, Jason secures a strong cable to two dead trees in the woods behind his home and attempts to jump-start his tight-rope walking career. His first attempt ends in the rather precarious position shown in the diagram. The rope makes an angle of 10° with the horizontal. Jason has a mass of 70 kg. Determine the tension in the cable.
+
+![bg fit right:35%](../figures/tensionmedium.png)
+
+---
+
+<!--- footer: <br>--->
+
+## Spicy 🌶️🌶️🌶️
+
+Tarzan, much to his dismay, gets his loincloth stuck on a branch. He’s left hanging with the vine pulling upward at a $40^\circ$ angle and his loincloth pulling him horizontally to the right.
+
+1. Draw FBD for Tarzan
+2. Write the equation for the vertical forces on Tarzan ($\Sigma F_y =$) and horizontal forces ($\Sigma F_x =$)
+3. Tarzan is 75 kg what is his weight?
+4. Determine the tension in the vine and his loincloth. 
+
+
+![bg fit right:22%](../figures/tarzan.png)
+
+---
+
+# Inclined Planes
+
+
+
+---
+
+# Friction
+
+
+
+---
+
+# Fan Cart Lab
+
+
+
+---
+
+An astronaut tries out an experiment on Earth before setting off on a mission. He uses a spring to pull a block along a smooth level surface. As he pulls, he keeps the spring stretched by exactly 2 centimeters all the time. The block has an acceleration of 1 unit. 
+
+![center w:450](../figures/astro2.png)
+
+He then repeats this experiment on the Moon. The Moon’s gravity is only one-sixth as strong as on Earth.
+As before, he keeps the spring stretched by exactly 2 centimetres all the time. What will the acceleration of the block be now?
+
+(1) More than 1 unit (2) less than 1 unit (3) exactly 1 unit again
+
+---
+
+How would you explain this?
+
+1. The weight of the box is less than on Earth.
+1. The weight of the box is the same as on Earth.
+1. The mass of the box is less than on Earth.
+1. The mass of the box is the same as on Earth.
+1. It takes a bigger force to make things move on the Moon. 

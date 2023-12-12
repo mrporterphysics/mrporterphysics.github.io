@@ -531,3 +531,175 @@ Source: [Dan Shiffman’s Nested Loop Tutorial](https://www.youtube.com/watch?v=
 ![center](../images/wallpaperchallenge.png)
 
 ---
+
+# Arrays [] <!--fit--->
+
+---
+
+# Arrays
+
+They are declared like any other variable, with the keyword var followed by the **name** of the variable.  
+
+We initialize an array by **1) listing its elements, separating them with commas, and 2) enclosing this list with brackets.**
+
+
+`var variableName = [ ];`
+ 
+Ex: `var years = [1920, 1972, 1980, 1996, 2010];`
+
+An array can store **different data types** (boolean, number, string, etc). In JavaScript you can** mix and match** different types of data within a single array.
+
+---
+
+
+# Arrays IRL - Let's Go Shopping 
+
+Let’s imagine that we are about to go on a trip to a store - let’s say Target.
+
+Call out things we are going to buy! We will compose a list together on the board and figure out how this list could be ordered and used.
+
+<!--- 
+Create a list about 10 items long with the group - display it on the board and then talk about one way to organize this list would be to number it, but if we are a computer and numbering, we start by counting at 0. Run through several examples of how the names and numbers can help us identify items in an array. (EX: “If I asked for item 2, what would I want you to go buy?” “If I asked you to find the headphones, where on the list are they?”)
+
+--->
+
+---
+
+# Array Structure 
+
+Each item in an array is called an element, and each item has an index value (or element number) to mark its position within the array. They start from zero and go up. The length of an array is determined by the amount of values it holds.
+
+### `var years = [1920, 1972, 1980, 1996, 2010];`
+
+
+| `years = `| 1920 | 1972 | 1980 | 1996 | 2010 | 
+|---|:---:|:---:|:---:|:---:|:---:|
+|array name | 0 | 1 | 2 | 3 | 4 |
+
+
+--- 
+
+# Introducing CRUD
+
+Arrays are a common computer science structure and there are **four main things programmers often want to do with them**. This is known through the industry as CRUD operations, and today we will focus on three of the four functions.
+
+**CREATE**: Create a new list - this could be an empty list waiting to receive information, or a list that already contains values.
+
+**READ**: View what is in a list - either the list entirely, or single items.
+
+**UPDATE**: Add items to a list.
+
+**DELETE**: Remove an item or items from a list.
+
+
+
+---
+
+# Shopping List Code Along
+
+To really get a handle on arrays, let’s turn the shopping list into something that we can use in our code. We are going to go through the following steps:
+
+- Creating our list
+- Reading our list in its entirety and for individual items. We will get these to display in the console and on the screen!
+- Updating our list with a new value when we make a user interaction happen.
+
+---
+
+# Pulling values from an array 
+
+Let’s say that we have an array with int values (numbers) and we’d like to use them to set the size of a shape. How can we pull those values from the array?
+
+You’ll need to refer to the array name and its index. 
+
+Check out this reference (read the section called Accessing the Elements) and figure out how to pull the value “35” from the following array.
+
+
+# `var nums = [100, 35, 46, 72];`
+
+---
+
+# Arrays and Length
+
+Luckily arrays can store properties about themselves such as the size or current length of the array. The length 
+
+For example `index == words.length` will give you back the current length of an array called words.
+
+---
+
+# [Example](https://editor.p5js.org/cs4all/sketches/BJwshrRNM) What Happens?
+
+```javascript
+var words = ["rainbow", "heart", "purple", "friendship", "love"];
+
+var index = 0;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(0);
+  fill(255);
+  textSize(32);
+  text(words[index], 12, 200);
+}
+
+function mousePressed() {
+  index = index + 1;
+
+  if (index == words.length) {
+    index = 0;
+  }
+}
+```
+
+---
+
+# Floor, Random, Length
+
+If we wanted to randomly select which word to display we’ll have to use…. the `random()` function! To do so we’ll need to tell the program to:
+
+1. Pick a random value, no bigger than the length of the array, and assign it to the current index position
+2. Make sure that your value is a whole number
+3. Update the index position with the new value 
+
+But there’s a problem! The `random()` function will return decimal numbers. Let’s go to our trusty `console.log()` and test `random()` to see if that’s true.
+
+---
+
+# Floor, Random, Length
+
+To get whole numbers we’ll need to also use a function called floor(). This function will take any decimal and it will round it down. Check out this example. Note the use of console.log() for debugging purposes.
+
+
+![center](../images/floorrandom.png)
+
+---
+
+<!--- footer: <br>--->
+
+# Javascript Pop Ups 
+
+`alert()`
+`alert()` pops up a window with text and asks the user to click OK. It doesn't return any information to the program, but OK must be clicked for the program to continue running.
+
+`confirm()`
+`confirm()` pops up a window with text and asks the user to click either OK or CANCEL. It returns *true* (if the user clicks okay) or *false* (if the user clicks cancel) to the program. These results can be **saved to a variable** and used later in the program.
+
+`prompt()`
+`prompt()` pops up a window with a text box the user can type into and then submit by clicking OK. *It returns whatever the user entered in the box as a **string*** and can be **saved to a variable** and used later in the program.
+
+---
+
+# Fortune Cookie 🥠 <!--fit--->
+
+
+---
+
+# Shopping List 🛒 <!--fit--->
+
+---
+
+# Shopping List 
+
+<iframe src="https://editor.p5js.org/mrporterphysics/full/jCoylnG-_" height = "500 px"></iframe>
