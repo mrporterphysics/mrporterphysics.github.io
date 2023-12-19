@@ -17,6 +17,23 @@ math: mathjax
 
 <!--- _class: winter--->
 
+# 2023.12.18 **Conceptual Physics** ⛄
+
+##### **❓of the 📅**: Did you finish you holiday shopping yet?1
+
+0. If not complete: Finish Sticky Tape Lab
+1. Ohm's Law Simulation Pivot
+    - Next calss we will be building circuits 
+
+🚨 Notes and Announcements
+
+- Almost everyone needs to finish _Ping Pong Launcher_ assignment
+- Friday (if you have your pivots completed) we will be making Light up Christmas Cards - finish your work so you can participate. 
+
+---
+
+<!--- _class: winter--->
+
 # 2023.12.12 **Conceptual Physics** ⛄
 
 ##### **❓of the 📅**: What is your song of the year?

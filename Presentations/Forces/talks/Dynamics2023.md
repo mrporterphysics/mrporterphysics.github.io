@@ -51,15 +51,16 @@ strong{
 5. [Force Diagrams](#force-diagrams)
 5. [Force Interactions](#force-interactions)
 6. [Tension Force Problems](#solving-force-problems)
-7. [Inclined Planes](#inclined-planes)
+7. [Fan Cart Lab](#fan-cart-lab)
 
 
 </div>
 
 <div>
 
+8. [Inclined Planes](#inclined-planes)
 9. [Friction](#Friction)
-10. [Fan Cart Lab](#fan-cart-lab)
+
 
 </div>
 
@@ -823,6 +824,203 @@ Tarzan, much to his dismay, gets his loincloth stuck on a branch. He’s left ha
 
 ![bg fit right:22%](../figures/tarzan.png)
 
+
+---
+
+# Fan Cart Lab
+
+Draw a FBD and vector addition diagram for the fan cart for the following three situations:
+
+1. Fan off, cart at rest 
+2. Fan on, held in place by Mr. Porter
+3. Fan on, moving on level track 
+
+---
+
+# Fan Cart Lab <!--fit--->
+
+# What variables affect the **acceleration** of the fan cart?  <!--fit--->
+
+---
+
+# Fan Cart 
+
+Design an experiment(s) to find a mathematical relationship between those variables and acceleration 
+
+Consider:
+
+- What will you measure? 
+- How will you measure it? 
+- What tools can you use to limit uncertainty?
+- How can you design your experiment to limit uncertainty?
+
+
+---
+
+# Before you begin... 
+
+## 🤔 How will you measure the fan force for each of the three settings?
+
+---
+
+# Fan Cart Lab 
+
+## Essential Questions:
+1. How is mass related to the acceleration for a *constant Net Force*?
+2. How is Net Force related to acceleration for a *constant mass*?
+
+---
+
+# Newton's Second Law <!--fit--->
+
+$$\boxed{\vec{a} = \frac{\Sigma \vec{F}}{m}}$$
+
+---
+
+# Appling Newton's Second Law 
+
+1. Draw Free Body Diagram
+1. Split Forces into x & y components 
+2. Sum forces in x & y direction ($\Sigma F_x = ... = ma_x$ and $\Sigma F_y = ... = ma_y$)
+3. Solve
+
+---
+
+# Elevator Problems <!--fit--->
+
+## Solve on **whiteboard** with your group first & then make notes for your future forgetful self **in your notebook**.
+
+---
+
+# Elevator Problem 
+
+An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
+
+
+**Draw the _velocity vs. time_ graph for the motion described above.**
+
+---
+
+<style scoped>
+{
+  font-size: 32px;
+}
+</style>
+
+## Elevator Problem: $v$ ⬆️ $a$ ⬆️
+
+An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
+
+**Consider the moment while the elevator is _speeding up_ at the start of its trip**
+
+1. Construct a free body diagram for the woman.
+2. Using N2L to find the force the floor exerts on the woman. 
+
+---
+
+
+<style scoped>
+{
+  font-size: 32px;
+}
+</style>
+
+## Elevator Problem: $v$ ⬆️ $a$ 0️⃣
+
+An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
+
+**Consider the moment while the elevator is moving upward at a _constant velocity_.**
+
+1. Construct a free body diagram for the woman.
+2. Using N2L to find the force the floor exerts on the woman. 
+
+---
+
+# How would your answer change if the woman was moving downward at a constant velocty?
+
+---
+
+
+<style scoped>
+{
+  font-size: 32px;
+}
+</style>
+
+## Elevator Problem: $v$ ⬆️ $a$ ⬇️
+
+An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
+
+**Consider the moment while the elevator is _slowing down_ at the top of its path.**
+
+1. Construct a free body diagram for the woman.
+2. Using N2L to find the force the floor exerts on the woman. 
+
+---
+
+<style scoped>
+{
+  font-size: 32px;
+}
+</style>
+
+## Elevator Problem: $v$ ⬇️ $a$ ⬇️
+
+An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
+
+**Consider the moment while the elevator is _speeding up_ downwards**
+
+1. Construct a free body diagram for the woman.
+2. Using N2L to find the force the floor exerts on the woman. 
+
+---
+
+
+<style scoped>
+{
+  font-size: 32px;
+}
+</style>
+
+## Elevator Problem: $v$ ⬇️ $a$ ⬆️
+
+An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
+
+**Consider the moment while the elevator is _speeding up_ downwards**
+
+1. Construct a free body diagram for the woman.
+2. Using N2L to find the force the floor exerts on the woman. 
+
+---
+
+
+
+# Elevator Scale Reading 
+
+<div class='columns'>
+
+<div>
+
+<style scoped>
+{
+  font-size: 30px;
+}
+</style>
+
+A person who weighs **500 N** is standing on a scale in an elevator. The elevator is identical in all cases. The velocity and acceleration of the elevators at the instant shown are given.
+
+1. List the cases where the scale reading is **greater** than 500 N.
+2. List the cases where the scale reading is **less** than 500 N.
+List the cases where the scale reading is **equal to** than 500 N.
+
+</div>
+
+<div>
+
+![center w:600](../figures/elevatorscale.png)
+
+</div></div>
+
 ---
 
 # Inclined Planes
@@ -832,12 +1030,6 @@ Tarzan, much to his dismay, gets his loincloth stuck on a branch. He’s left ha
 ---
 
 # Friction
-
-
-
----
-
-# Fan Cart Lab
 
 
 

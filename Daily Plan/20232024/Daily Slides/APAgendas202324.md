@@ -15,6 +15,187 @@ math: mathjax
 
 ---
 
+### 2023.12.19 **AP Physics** Do Now 
+
+A person pulls a block across a rough horizontal surface at a constant speed by applying a force F at a slight angle as shown. A free-body diagram is drawn for the block. The arrows in the diagram correctly indicate the directions but not necessarily the magnitudes of the various forces on the block. A student makes the following claim about this free-body diagram:
+
+_"The velocity of the block is constant, so the net force acting on the block must be zero. Thus the normal force $F_N$ equals the weight $W$, and the force of friction $f_k$ equals the applied force $F$."_
+
+**What, if anything, is wrong with this statement?**
+
+![bg fit right:32%](../images/Dynamics/boxFBD.png)
+
+
+---
+
+<!--- _class: winter --->
+
+# 2023.12.19 **AP Physics** ⛄
+
+##### **❓ of the 📅**: Would you rather have a pet dragon or a pet unicorn?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Fan Cart Lab Board Meeting 
+3. Elevator Problems 
+4. AP Workbook: 2.C, 2.D, and 2.E
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Derive N2L Experimentally_ 
+
+🥅 _Apply N2L to elevator problmes_
+
+🥅 _Use all of Newton's Laws to solve problems._
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+# Before the Board Meeting...
+
+## Find a way to measure the force of your fan for each of the three settings
+
+### List of Classroom Materials Avaiable:
+
+- Spring Scales and springs with known $k$ values
+- Electronic Force Sensors
+    - Dynamics Cart (teal smart carts)
+    - Wired Hooked Sensors
+- Force Plates
+- Electronic Balance
+
+
+---
+
+
+# 2023.12.15 **AP Physics** ⛄
+
+##### **❓ of the 📅**: Have you finished your holiday shopping yet?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Porter's notes on your Fan Cart Data 
+2. Finish Collecting Fan Cart Data
+3. Graph, Whiteboard and Discuss
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Use force diagrams to solve equilibrium problems._
+
+🥅 _Find components of forces on inclined planes._
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+## Porter Notes 📋
+
+- Why the velocity columns? What velocity are you recording? Initial? Final? Average?
+    - We are looking at the **acceleration** of the cart -- can find with *slope* of the VT graphs
+- You will need to separate out your data from **each fan setting** (i.e. an acceleration column for each fan setting)
+    - You can fix this by downloading the data and manipulating in Google Sheets with copy and paste
+- Groups with zero acceleration? We will need to discuss whats happening there (if you have zero acceleration forces are balanced and fan isn't working?)
+- You ***must include*** the *cart's mass* in your mass column
+
+---
+
+## Reminder - Linearization (This should be in your notes)
+
+- When we have curved data we need to manipulate our data to make a new plot
+- What does it look like?
+
+
+![bg fit right](../images/linearizeAP.png)
+
+---
+
+# Board Meeting 
+
+### Whiteboard results, write down equations 
+
+### Board Meeting Ideas:
+
+- What does the slope represent (what is your _for every_ statement)? What are the slope units?
+- Is the intercept negligible or non-negligible?
+- What do the different fan settings to do your slope?
+
+---
+
+# 🤔 How can you measure the **fan force**?
+
+What tools can you use?
+
+- Force Sensors?
+- Force Plates?
+- Scales?
+
+What conditions need to be met to ensure you are measuring the fan force? _(Friction/frictionless? Surface level/unlevel? String attached level? Zero the scale? etc)_
+
+---
+
+# [Newton's Second Law](../../../Presentations/Forces/talks/Dynamics2023.html#77) 
+
+---
+
+
+# 2023.12.13 **AP Physics** ⛄
+
+##### **❓ of the 📅**: What is your song of the year?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Force Stations 
+2. Fan Cart Lab
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Use force diagrams to solve equilibrium problems._
+
+🥅 _Find components of forces on inclined planes._
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+
+---
 
 <!--- _class: winter --->
 

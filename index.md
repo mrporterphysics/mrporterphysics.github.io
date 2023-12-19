@@ -12,7 +12,7 @@ You can find links to class presentations here:
 
 
 # Resource Pages
-  <!-- - [AP Resource Page](AP Resource Pages\apresources) -->
+  - [AP Extra Practice for Reassessments](/AP%20Resource%20Pages/apSBGPractice.md)
 
 # Coding Pages
   - [Coding Final Projects](Coding\codingLanding)

@@ -17,6 +17,112 @@ math: mathjax
 
 
 <!--- _class: winter --->
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2023.12.19 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: Gingerbread (house, cookies, etc) yey or ney?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Fan Cart Lab Board Meeting
+2. Elevator Problems
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Find the relationship between mass, unbalanced force, and acceleration_
+
+🥅 _Apply N2L to elevator questions_
+
+</div>
+
+</div>
+
+
+---
+
+<!--- _class: winter --->
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2023.12.18 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: Have you finished your holiday shopping yet?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish N2L 
+    - Finish Data collection (Check with Porter that you were collecting correctly)
+    - Whiteboard
+    - Board Meeting & Finish Conclusions
+2. Elevator Problems
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Find the relationship between mass, unbalanced force, and acceleration_
+
+🥅 _Apply N2L to elevator questions_
+
+</div>
+
+</div>
+
+---
+
+<!--- _class: winter --->
+
+
+# 2023.12.13 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: What is the word or phrase of the year?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Force Stations 
+2. Fan Cart Lab
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Use force diagrams to solve equilibrium problems._
+
+🥅 _Find components of forces on inclined planes._
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+---
+
+<!--- _class: winter --->
 
 
 # 2023.12.12 **Regents Physics** ⛄

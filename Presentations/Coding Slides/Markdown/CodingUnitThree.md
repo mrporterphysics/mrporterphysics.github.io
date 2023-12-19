@@ -703,3 +703,76 @@ To get whole numbers we’ll need to also use a function called floor(). This fu
 # Shopping List 
 
 <iframe src="https://editor.p5js.org/mrporterphysics/full/jCoylnG-_" height = "500 px"></iframe>
+
+---
+
+
+# Arrays and Loops <!--fit--->
+
+---
+
+# Arrays and Loops 
+
+Let's go back to a simple example:
+
+```javascript 
+var nums = [100, 35, 46, 72];
+var num = 23;
+function setup(){
+  createCanvas(400,400);
+}
+function draw(){
+  background(0);
+  ellipse(100,200,num,num);
+  ellipse(200,200,nums[2], nums[2]);
+}
+```
+
+- How many lines of code would you have to write to use all the values in the `nums` array?
+
+---
+
+# Arrays and Loops 
+
+![center](../images/nums.png)
+
+Now, what would happen if our array keeps growing, or we have a lot elements inside it? Would it be efficient to hard code all these values?
+
+---
+
+# Arrays and Loops 
+
+Luckily we have loops!
+
+---
+
+# Arrays and Loops 
+
+![center](../images/nums2.png)
+
+- But, there’s a problem with our code. All the circles have different sizes but they are being drawn at the same location.
+- What would be a possible solution?
+
+---
+
+# Arrays and Loops 
+
+Let’s break out this problem:
+
+- All shapes are in the same location
+- They should be 100 pixels apart from each other
+
+Could you use the for loop to change the “x” location every time the loop runs?
+
+Here’s a hint:
+
+`ellipse(i, 200, nums[i], nums[i]);`
+
+Perform a mathematical operation so that the variable `i` storing the the `x` location will be assigned the following values: `100, 200, 300, 400`.
+
+
+---
+
+# Arrays and `for()` Loops 
+
+![center](../images/nums3.png)
