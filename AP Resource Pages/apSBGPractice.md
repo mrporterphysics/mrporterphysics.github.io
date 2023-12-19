@@ -3,7 +3,7 @@
 The following pages have links to each of our units and the standards for that subject. 
 
 1.  [**Kinematics**](apkinsbgpractice)
-1.  [Rotational Kinematics (currently empty)]()
+1.  [Rotational Kinematics](aprotsbgpractice)
 1.  [**Dynamics**](apdynsbgpractice)
 1.  [Circular Motion (currently empty)]()
 1.  [Rotational Dynamics (currently empty)]()
