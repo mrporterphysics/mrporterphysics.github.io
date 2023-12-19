@@ -5,7 +5,7 @@
 ### KIN 0. Vector vs. Scalar 
 I can differentiate between vector and scalar quantity pairs such as distance & displacement and speed & velocity. I can represent vectors in diagrams or mathematically by appropriately labeled the vectors with magnitude, direction, and units during the analysis of a situation.
 
-[_This standard is built into questions with the other standards. It checks that you are treated vector quantities as vectors (including + and signs correctly) and scalar quantities as scalars._]{: .notice--info}
+_This standard is built into questions with the other standards. It checks that you are treated vector quantities as vectors (including + and signs correctly) and scalar quantities as scalars._{: .notice--info}
 
 ### KIN 1. Express Motion 
 I can express the motion of an object or system using narrative, mathematical, and graphical representations.
