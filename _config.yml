@@ -1,5 +1,6 @@
-theme: jekyll-theme-minimal
+theme: minimal-mistakes-jekyll
 title: Welcome to Mr. Porter's Teaching Pages!
 description: Use this to find the daily plans for physics
 plugins:
   - jekyll-paginate-v2
+  - jekyll-include-cache
