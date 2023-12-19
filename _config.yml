@@ -1,4 +1,4 @@
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 title: Welcome to Mr. Porter's Teaching Pages!
 description: Use this to find the daily plans for physics
 plugins:
