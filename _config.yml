@@ -1,6 +1,6 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-title: Welcome to Mr. Porter's Teaching Pages!
-description: Use this to find the daily plans for physics
+title: Physics with Mr. Porter
+description: This website is designed to host resources for Mr. Porter's Physics Classes
 plugins:
   - jekyll-paginate-v2
   - jekyll-include-cache

@@ -43,3 +43,6 @@ I can differentiate between average and instantaneous speed, velocity, accelerat
 
 ### KIN 5. Projectile Motion 
 I can solve problems involving objects experiencing projectile motion.
+
+
+<iframe src = "Presentations\APCAPM\talks\CAPM2023.html" width ="75%"></iframe>
