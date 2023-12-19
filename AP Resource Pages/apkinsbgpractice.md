@@ -8,7 +8,13 @@ I can differentiate between vector and scalar quantity pairs such as distance & 
 ### KIN 1. Express Motion 
 I can express the motion of an object or system using narrative, mathematical, and graphical representations.
 #### Physics Classroom Practice:
-    - 
+    - [Kinematics Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+    - [Kinematics Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPK14)
+    - [Kinematics Equations 3](https://www.physicsclassroom.com/calcpad/launch/CPK15)
+    - [Kinematics Equations 4](https://www.physicsclassroom.com/calcpad/launch/CPK17)
+    - [Kinematics Equations 5](https://www.physicsclassroom.com/calcpad/launch/CPK17)
+    - [Kinematics Equations 6](https://www.physicsclassroom.com/calcpad/launch/CPK18)
+
 
 ### KIN 2. Predict Motion 
 I can make predictions about the of a system based on the fact that acceleration is equal to the change in velocity per unit time, and velocity is equal to the change in position per unit time. I can use the kinematic equations.
