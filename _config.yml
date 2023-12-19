@@ -6,4 +6,5 @@ twitter:
   username: "mrporterphysics"
 plugins:
   - jekyll-paginate-v2
+  - jekyll-sitemap
   - jekyll-include-cache
