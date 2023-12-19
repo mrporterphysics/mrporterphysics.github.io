@@ -1,8 +1,8 @@
 # AP Additional Practice 
 
 ## [Kinematics](apkinsbgpractice)
-## [Rotational Kinematics](apdynsbgpractice)
-## [Dynamics]()
+## [Rotational Kinematics]()
+## [Dynamics](apdynsbgpractice)
 ## [Circular Motion]()
 ## [Rotational Dynamics]()
 ## [Energy]()
