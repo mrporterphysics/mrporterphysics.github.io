@@ -8,6 +8,10 @@ I can add, subtract, and find the components of vectors.
 ### DYN 1. Explain, Identify & Diagram Forces 
 I can explain contact forces (tension, friction, normal, spring) as arising from interatomic electric forces and that they therefore have certain directions. Additionally, I can identify forces and I can create and use free-body diagrams to analyze physical situations to solve problems with motion qualitatively and quantitatively.
 
+| Practice | Video Resources | 
+|---|---| 
+| - [Link](asdasd)   |    | 
+
 ### DYN 2. Mass vs. Weight 
 I know the difference between mass and weight and I can apply F = mg to calculate the gravitational force on an object with mass m in a gravitational field of strength g in the context of the effects of a net force on objects and systems.
 
