@@ -48,6 +48,6 @@ I can solve problems involving objects experiencing projectile motion.
 ## Slides from Kinematics
 
 
-<iframe src = "/Presentations/APCVPM/talks/CVPM2023.html" width ="75%" height ="100%"></iframe>
+<iframe src = "/Presentations/APCVPM/talks/CVPM2023.html" width ="700px" height ="500px"></iframe>
 
-<iframe src = "/Presentations/APCAPM/talks/CAPM2023.html" width ="75%" height ="100%"></iframe>
+<iframe src = "/Presentations/APCAPM/talks/CAPM2023.html" width ="700px" height ="500px"></iframe>
