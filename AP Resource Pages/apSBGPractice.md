@@ -1,6 +1,6 @@
 # AP Additional Practice 
 
-## [Kinematics](apkinsbgpractice.md)
+## [Kinematics](apkinsbgpractice)
 ## [Rotational Kinematics]()
 ## [Dynamics]()
 ## [Circular Motion]()
