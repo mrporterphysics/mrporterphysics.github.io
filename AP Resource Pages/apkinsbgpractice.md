@@ -39,7 +39,6 @@ I can create mathematical models and analyze graphical relationships for acceler
 I can differentiate between average and instantaneous speed, velocity, acceleration and solve problems relating to those physical quantities.
 #### Physics Classroom Practice:
 - [Velocity-Time Graphs 2](https://www.physicsclassroom.com/calcpad/launch/CPK11)
-- 
 
 
 ### KIN 5. Projectile Motion 
