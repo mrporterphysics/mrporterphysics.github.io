@@ -15,6 +15,112 @@ math: mathjax
 
 ---
 
+## 2023.12.21 Do Now 
+
+
+---
+
+
+<!--- _class: winter --->
+
+# 2023.12.21 **AP Physics** ⛄
+
+##### **❓ of the 📅**: What type of cookies do you leave out for Santa? 🎅
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Finish AP Workbook 2.D
+3. AP Workbook 2.C & 2.E
+4. Choose your practice
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _I can solve force problems using Newton's Second Law_
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+---
+
+<!--- footer: <br>--->
+
+# Leveled Practice 
+
+1. Level 1: No angles
+	1. [NL8 - Newton's Second Law Horizontal Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL8)
+	2. [NL9 - Newton's Second Law Vertical Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL9)
+	3. [NL10 - Newton's Second Law: Unknown Force](https://www.physicsclassroom.com/calcpad/launch/CPNL10)
+2. Level 2: Angled Forces
+	1. [F2D6 - Fnet = ma with Angled Forces 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D6)
+3. Level 3: Two Body Problems
+	1. [NL20 - Two-Body Problems](https://www.physicsclassroom.com/calcpad/launch/CPNL20)
+4. Level 4: New Stuff - Friction  (you will have to click the read link to learn about $F_f \le \mu F_N$)
+	1. [NL11 - Friction and Mu 1](https://www.physicsclassroom.com/calcpad/launch/CPNL11)
+	2. [F2D6 - Fnet = ma with Angled Forces 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D7)
+
+
+---
+
+## 2023.12.20 AP Do Now
+
+Various similar boxes are being pushed for 10 m across a floor by a net horizontal force as shown below. The mass of the boxes and the net horizontal force for each case are given in the indicated figures. All boxes have the same initial velocity of 10 m/s to the right.
+
+![center](../images/Dynamics/n2lboxes.png)
+
+**Rank the acceleration of the boxes.**
+
+---
+
+<!--- _class: winter --->
+
+# 2023.12.20 **AP Physics** ⛄
+
+##### **❓ of the 📅**: What is the best holiday treat?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Elevator Problems 
+3. N2L Application 
+4. AP Workbook: 2.C, 2.D, and 2.E
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Derive N2L Experimentally_ 
+
+🥅 _Apply N2L to elevator problmes_
+
+🥅 _Use all of Newton's Laws to solve problems._
+
+</div>
+
+</div>
+
+🤔 Did you get better at physics today? Did you help make someone else better today?
+
+
+---
+
 ### 2023.12.19 **AP Physics** Do Now 
 
 A person pulls a block across a rough horizontal surface at a constant speed by applying a force F at a slight angle as shown. A free-body diagram is drawn for the block. The arrows in the diagram correctly indicate the directions but not necessarily the magnitudes of the various forces on the block. A student makes the following claim about this free-body diagram:
