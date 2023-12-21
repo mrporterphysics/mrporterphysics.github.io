@@ -15,8 +15,46 @@ math: mathjax
 
 ---
 
-## 2023.12.21 Do Now 
+### 2023.12.21 AP Physics Do Now 
 
+<div class='columns'>
+
+<div>
+
+A spring is attached to the ceiling of an elevator, and a block of mass $M$ is suspended from the spring. The cases are identical except that in Case A the elevator is moving upward with a constant speed of 7 m/s, while in Case B the elevator is moving downward with a constant speed of 9 m/s.
+
+**Will the spring be stretched (i) *more* in Case A, (ii) *more* in Case B, or (iii) the *same* in both cases?** 
+
+Explain your reasoning.
+</div>
+
+<div>
+
+![center](../images/Dynamics/elevatorsprings.png)
+
+</div>
+</div>
+
+---
+
+### 2023.12.21 AP Physics Do Now #2 
+
+<div class='columns'>
+
+<div>
+
+The figure above shows the forces exerted on a block that is sliding on a rough horizontal surface: The weight of the block is $500 \textrm{ N}$, the normal force is $500 \textrm{ N}$, the frictional force is $100 \textrm{ N}$, and there is an unknown force exerted to the right. The acceleration of the block is $0.4 \textrm{ m/s}^2$.
+
+**What is the magnitude of the unknown force?**
+
+</div>
+
+<div>
+
+![center](https://assets.learnosity.com/organisations/537/VH906281.g01.png)
+
+</div>
+</div>
 
 ---
 
