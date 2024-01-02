@@ -13,6 +13,80 @@ math: mathjax
 
 ## 👨‍🏫 Mr. Porter
 
+
+
+---
+
+### 2024.01.02 **AP Physics** Do Now 
+
+A race car has a mass of $710 \textrm{ kg}$. It starts from rest and travels $40.0 \textrm{ m}$ in $3.0 \textrm{ s}$. The car is uniformly accelerated during the entire time. 
+
+1. Find the acceleration of the car using kinematics.
+1. What is the magnitude of the net force acting on the car?
+    - Make a quantitative force diagram. 
+    - Write a net force equation for the axis along which forces are not balanced.
+
+---
+
+### 2024.01.02 **AP Physics** Do Now 2 
+
+Renee is on Spring Break and pulling her $30 \textrm{-kg}$ suitcase through the airport at a constant speed of $0.4 \textrm{ m/s}$. She pulls on the strap with $120 \textrm{ N}$ of force at an angle of $40^\circ$ above the horizontal.
+
+1. Determine the normal force experienced by the suitcase.
+2. Determine the total frictional forces experienced by the suitcase
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.02 **AP Physics** 
+
+##### **❓ of the 📅**: Do you make New Year's Resolutions? If so what are yours?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. AP Workbook 2.F - with Lab Group 
+3. Choose your practice 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _I can solve force problems using Newton's Second Law_
+
+</div>
+
+</div>
+
+
+---
+
+<!--- footer: <br>--->
+
+# Leveled Practice 
+
+1. Level 1: No angles
+	1. [NL8 - Newton's Second Law Horizontal Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL8)
+	2. [NL9 - Newton's Second Law Vertical Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL9)
+	3. [NL10 - Newton's Second Law: Unknown Force](https://www.physicsclassroom.com/calcpad/launch/CPNL10)
+2. Level 2: Angled Forces
+	1. [F2D6 - Fnet = ma with Angled Forces 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D6)
+3. Level 3: Two Body Problems
+	1. [NL20 - Two-Body Problems](https://www.physicsclassroom.com/calcpad/launch/CPNL20)
+4. Level 4: New Stuff - Friction  (you will have to click the read link to learn about $F_f \le \mu F_N$)
+	1. [NL11 - Friction and Mu 1](https://www.physicsclassroom.com/calcpad/launch/CPNL11)
+	2. [F2D6 - Fnet = ma with Angled Forces 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D7)
+
+
 ---
 
 ### 2023.12.21 AP Physics Do Now 
@@ -89,25 +163,6 @@ The figure above shows the forces exerted on a block that is sliding on a rough 
 </div>
 
 🤔 Did you get better at physics today? Did you help make someone else better today?
-
----
-
-<!--- footer: <br>--->
-
-# Leveled Practice 
-
-1. Level 1: No angles
-	1. [NL8 - Newton's Second Law Horizontal Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL8)
-	2. [NL9 - Newton's Second Law Vertical Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL9)
-	3. [NL10 - Newton's Second Law: Unknown Force](https://www.physicsclassroom.com/calcpad/launch/CPNL10)
-2. Level 2: Angled Forces
-	1. [F2D6 - Fnet = ma with Angled Forces 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D6)
-3. Level 3: Two Body Problems
-	1. [NL20 - Two-Body Problems](https://www.physicsclassroom.com/calcpad/launch/CPNL20)
-4. Level 4: New Stuff - Friction  (you will have to click the read link to learn about $F_f \le \mu F_N$)
-	1. [NL11 - Friction and Mu 1](https://www.physicsclassroom.com/calcpad/launch/CPNL11)
-	2. [F2D6 - Fnet = ma with Angled Forces 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D7)
-
 
 ---
 

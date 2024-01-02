@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.02 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: Do you make New Year's Resolutions? If so what are they?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. N2L Practice in Packet
+    - Porter Review
+    - _"Individualish"_ practice
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply N2L to a variety of problems_ 
+
+</div>
+
+</div>
+
+
+---
 
 <!--- _class: winter --->
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
