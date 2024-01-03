@@ -17,6 +17,52 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.03 **AP Physics** 
+
+##### **❓ of the 📅**: Who makes the best pizza 🍕?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. [Friction Notes](../../../Presentations/Forces/talks/Dynamics2023.html#88)
+2. Practice with Friction
+    1. Porter Slide Questions
+    1. Workbook 2G, 2I, 2M
+
+#### 🚨 Upcoming:
+
+- Quiz Thursday 1.04: N2L (no angled forces), N3L
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _I can solve force problems with N2L_
+
+🥅 _I can apply friction to N2L and use the equation for Friction_
+
+
+#### 📆 Future:
+
+- Quiz 01.10 - N2L, Friction
+- Quiz 01.16 - N2L Systems 
+- Test 01.19 - All Dynamics 
+
+</div>
+
+</div>
+
+
+---
+
 ### 2024.01.02 **AP Physics** Do Now 
 
 A race car has a mass of $710 \textrm{ kg}$. It starts from rest and travels $40.0 \textrm{ m}$ in $3.0 \textrm{ s}$. The car is uniformly accelerated during the entire time. 
