@@ -55,6 +55,10 @@ Renee is on Spring Break and pulling her $30 \textrm{-kg}$ suitcase through the 
 2. AP Workbook 2.F - with Lab Group 
 3. Choose your practice 
 
+#### 🚨 Upcoming:
+
+- Quiz Thursday 1.04: N2L (no angled forces), N3L
+
 </div>
 
 <div>
@@ -62,6 +66,13 @@ Renee is on Spring Break and pulling her $30 \textrm{-kg}$ suitcase through the 
 #### 🎯 Goals 
 
 🥅 _I can solve force problems using Newton's Second Law_
+
+
+#### 📆 Future:
+
+- Quiz 01.10 - N2L, Friction
+- Quiz 01.16 - N2L Systems 
+- Test 01.19 - All Dynamics 
 
 </div>
 
