@@ -1031,7 +1031,7 @@ List the cases where the scale reading is **equal to** than 500 N.
 
 ---
 
-#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on th boxes as shown. 
+#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on the boxes as shown. 
 
 ![center](../figures/wallboxes.png)
 
@@ -1039,7 +1039,7 @@ List the cases where the scale reading is **equal to** than 500 N.
 
 ---
 
-#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on th boxes as shown. 
+#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on the boxes as shown. 
 
 ![center](../figures/wallboxes.png)
 
