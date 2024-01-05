@@ -15,6 +15,17 @@ math: mathjax
 
 ---
 
+
+# 2024.01.03 **Conceptual Physics** 
+
+##### **❓ of the 📅**: Who makes the best pizza 🍕?
+
+1. Introduction to Forces  
+    - Pivot: ***Balanced and Unbalanced Forces: Effect on motion***
+
+
+---
+
 <!--- _class: winter--->
 
 # 2023.12.18 **Conceptual Physics** ⛄

@@ -17,6 +17,49 @@ math: mathjax
 
 ---
 
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.04 **AP Physics** 
+
+##### **❓ of the 📅**: Who is excited for snow this weekend? 🎿 🏂
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz 
+2. Forces on Ramps Pivot & Notes 
+
+#### 🚨 Upcoming:
+
+- Quiz 1.10: N2L, Friction, Ramps
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _I can solve force problems with N2L_
+
+🥅 _I can apply friction to N2L and use the equation for Friction_
+
+
+#### 📆 Future:
+
+- Quiz 01.16 - N2L Systems, Friction, Ramps
+- Test 01.19 - All Dynamics 
+
+</div>
+
+</div>
+
+
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

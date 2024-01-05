@@ -18,6 +18,127 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.01.05 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Choose your own adventure practice 
+2. Quiz (1:20 start at the latest)
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply N2L to a variety of problems_ 
+
+🥅 _Use the formula for friction_
+
+#### 🚨 Upcoming...
+
+- Quiz Friday on N2L (only perpendicular forces)
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: invert --->
+
+<div class='columns'>
+
+<div>
+
+### Level 1 - Mild 🫑 :
+
+- [Newton's Second Law: Calculating Horizontal Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL8)
+- [Newton's Second Law: Calculating Vertical Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL9)
+- [Newton's Second Law: Calculating an Unknown Force](https://www.physicsclassroom.com/calcpad/launch/CPNL10)
+
+### Level 2 - Medium 🌶️: 
+- [Problem Set NL11 - Friction and Mu 1](https://www.physicsclassroom.com/calcpad/launch/CPNL11)
+- [Problem Set NL12 - Friction and Mu 2](https://www.physicsclassroom.com/calcpad/launch/CPNL12)
+- [Problem Set NL13 - Friction and Mu 3](https://www.physicsclassroom.com/calcpad/launch/CPNL13)
+
+</div>
+
+
+
+<div>
+
+### Level 3 - Spicy 🌶️🌶️: 
+
+- [Fnet = ma W/ Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPNL17)
+- [Fnet = ma W/ Kinematic Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPNL18)
+- [Fnet = ma W/ Kinematic Equations 3](https://www.physicsclassroom.com/calcpad/launch/CPNL19)
+
+### Level 4 - Fire 🔥🥵:
+
+- [Fnet = m•a with Angled Forces 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D6)
+- [Fnet = m•a with Angled Forces 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D7)
+- [Fnet = m•a with Angled Forces 3](https://www.physicsclassroom.com/calcpad/launch/CPF2D8)
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.03 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: Who makes the best pizza 🍕?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Friction 
+2. Friction Practice on Whiteboards with buddies
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply N2L to a variety of problems_ 
+
+🥅 _Use the formula for friction_
+
+#### 🚨 Upcoming...
+
+- Quiz Friday on N2L (only perpendicular forces)
+
+</div>
+
+</div>
+
+
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.01.02 **Regents Physics** ⛄
 
 ##### **❓ of the 📅**: Do you make New Year's Resolutions? If so what are they?
