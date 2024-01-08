@@ -15,6 +15,44 @@ math: mathjax
 
 ---
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.08 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do a review problem or two from [choose your own adventure practice](#choose-your-level) 
+2. Quiz 
+3. Inclined Plane Pivot 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply N2L to a variety of problems_ 
+
+🥅 _Use the formula for friction_
+
+#### 🚨 Upcoming...
+
+- Quiz Friday on N2L (only perpendicular forces)
+
+</div>
+
+</div>
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
@@ -51,6 +89,8 @@ math: mathjax
 ---
 
 <!-- _class: invert --->
+
+## Choose your level
 
 <div class='columns'>
 
