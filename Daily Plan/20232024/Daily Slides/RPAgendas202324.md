@@ -15,13 +15,54 @@ math: mathjax
 
 ---
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.09 **Regents Physics** ⛄
+
+##### **❓ of the 📅**: What is your favorite fast food chain?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Inclined Planes Pivot
+2. Discuss and Notes 
+3. Practice with Inclined Planes
+	1. [Inclined Planes: Par and Perp Components of Gravity](https://www.physicsclassroom.com/calcpad/launch/CPF2D9)
+	2. [Inclined Plane Problems 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D10)
+	3. [Inclined Plane Problems 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D11)
+	4. [Inclined Plane Problems 3](https://www.physicsclassroom.com/calcpad/launch/CPF2D12)
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Solve for componets of gravity for objects on ramps_
+
+🥅 _Apply ramps to other force problems_
+
+#### 🚨 Upcoming...
+
+- Quiz Friday on N2L (only perpendicular forces)
+
+</div>
+
+</div>
+
+---
+
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
 # 2024.01.08 **Regents Physics** ⛄
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What was the last book you read?
 
 <div class = "columns">
 
@@ -31,7 +72,7 @@ math: mathjax
 
 1. Do a review problem or two from [choose your own adventure practice](#choose-your-level) 
 2. Quiz 
-3. Inclined Plane Pivot 
+3. Inclined Plane Pivot (Forces on Objects on a Ramp)
 
 </div>
 

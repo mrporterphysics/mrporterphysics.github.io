@@ -15,6 +15,15 @@ math: mathjax
 
 ---
 
+# 2024.01.09 **Conceptual Physics** 
+
+##### **❓ of the 📅**: What is your favorite fast food chain?
+
+1. Finish Modeling Gravitational Forces Lab
+2. Finish Old/Past Work
+3. How Strong is Earth's Gravitational Field?
+
+---
 
 # 2024.01.03 **Conceptual Physics** 
 

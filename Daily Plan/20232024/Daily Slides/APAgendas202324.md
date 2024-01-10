@@ -17,6 +17,224 @@ math: mathjax
 
 ---
 
+<!--- _footer: <br> --->
+
+### 2024.01.10 **AP Physics** Do Now -  Complete ***on your own*** in your notebook. 
+
+
+<div class='columns'>
+
+<div>
+
+
+<style scoped>
+{
+  font-size: 20px;
+}
+</style>
+
+A person pushes a large block on a horizontal ice surface in a straight line to the right with constant speed, as shown above. The mass of the block is and frictional forces between the block and the ice are negligible. However, the block has a wide cross-sectional area such that air resistance acting on the block cannot be neglected. The opposite is true for the person: air resistance on the person is negligible, but the person’s shoes do not slip on the ice. The table shows the force exerted by the person on the block for several values of constant speed.
+
+1. A student claims that the data show that the magnitude of the force of air resistance is proportional to the speed of the object, within experimental uncertainty. Use physics principles to explain whether the claim is correct.
+2. As the person pushes the block, the person moves with the same constant speed as the block. Consider the scenario in which the person’s speed is 5.00 m/s. Draw and label the forces (not components) exerted on the person. Each force must be represented by a distinct arrow starting on, and pointing away from, the dot.
+
+
+</div>
+
+<div>
+
+![center w:300](https://assets.learnosity.com/organisations/537/VH906484.g01.png)
+
+| Force of person's push (N) | Constant speed of block $\pm 0.05$ |
+| ---- | ---- |
+| 20 | 1.25 |
+| 40 | 2.51 |
+| 60 | 3.73 |
+| 80 | 5.00 |
+
+3. The person now stops and releases the block. Determine the magnitude and direction of the block’s acceleration at the instant the block is released. (For scenario in which the person's speed is 5.00 m/s.)
+
+</div>
+
+</div>
+
+
+---
+
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.10 **AP Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Inclined Plane Notes
+2. Inclined Plane Calculation Practice 
+3. AP Workbook 2.H, 2.I, 2.M
+
+#### 🚨 Upcoming:
+
+- Quiz 1.10: N2L, Friction, Ramps
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _I can solve force problems with N2L_
+
+🥅 _I can find components of gravity on inclined planes and use in problems._
+
+
+#### 📆 Future:
+
+- Quiz 01.16 - N2L Systems, Friction, Ramps
+- Test 01.19 - All Dynamics 
+
+</div>
+
+</div>
+
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.09 **AP Physics** 
+
+##### **❓ of the 📅**: What's your favorite fast food chain?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Inclined Plane Notes
+2. Inclined Plane Calculation Practice 
+3. AP Workbook 2.H, 2.I, 2.M
+
+#### 🚨 Upcoming:
+
+- Quiz 1.10: N2L, Friction, Ramps
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _I can solve force problems with N2L_
+
+🥅 _I can find components of gravity on inclined planes and use in problems._
+
+
+#### 📆 Future:
+
+- Quiz 01.16 - N2L Systems, Friction, Ramps
+- Test 01.19 - All Dynamics 
+
+</div>
+
+</div>
+
+
+
+---
+
+# **Week 18** (01.08-01.12)
+
+<div class= "columns">
+
+<div>
+
+### 🎯 Week Goals
+
+1. Master Inclined Planes 
+2. Learn how to solve problems involving accelerating systems 
+3. Wrap up Forces
+
+### 📝 Assessments This Week
+
+- Quiz 1.10: N2L, Friction, Ramps
+
+
+</div>
+
+
+<div> 
+
+### 🏡 Outside Work 
+
+1. AP Classroom Dynamics Unit Review 
+    - MC Part A, MC Part B
+    - FRQ
+2. Start completing reassessments (You have two weeks!)
+
+### 🚨 Upcoming
+
+- Quiz 01.16 - N2L Systems, Friction, Ramps
+- Test 01.19 - All Dynamics 
+
+</div>
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.08 **AP Physics** 
+
+##### **❓ of the 📅**: What was the last book you read?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Forces on Ramps 
+2. Inclined Plane Notes 
+3. AP Workbook 2.H, 2.I, 2.M
+
+#### 🚨 Upcoming:
+
+- Quiz 1.10: N2L, Friction, Ramps
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _I can solve force problems with N2L_
+
+🥅 _I can apply friction to N2L and use the equation for Friction_
+
+
+#### 📆 Future:
+
+- Quiz 01.16 - N2L Systems, Friction, Ramps
+- Test 01.19 - All Dynamics 
+
+</div>
+
+</div>
+
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.01.04 **AP Physics** 
