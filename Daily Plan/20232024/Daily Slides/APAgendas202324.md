@@ -62,7 +62,6 @@ A person pushes a large block on a horizontal ice surface in a straight line to 
 ---
 
 
-
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.01.10 **AP Physics** 
@@ -75,9 +74,9 @@ A person pushes a large block on a horizontal ice surface in a straight line to 
 
 #### 📋 Agenda
 
-1. Inclined Plane Notes
-2. Inclined Plane Calculation Practice 
-3. AP Workbook 2.H, 2.I, 2.M
+1. Do Now
+2. AP Workbook 2.I, 2.M
+3. Individual Practice 
 
 #### 🚨 Upcoming:
 
@@ -103,6 +102,19 @@ A person pushes a large block on a horizontal ice surface in a straight line to 
 
 </div>
 
+---
+
+# Individual Practice 
+
+<div class='columns'>
+
+<div>
+
+### Mild 🫑 
+
+### Medium 🌶️
+
+</div><div></div></div>
 
 
 ---
