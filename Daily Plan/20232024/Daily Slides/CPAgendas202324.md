@@ -15,6 +15,20 @@ math: mathjax
 
 ---
 
+
+# 2024.01.11 **Conceptual Physics** 
+
+##### **❓ of the 📅**: Should pizza slices be triangles or squares?
+
+1. Pivot -  _How Strong is Earth's Gravitational Field?_
+2. Past due work
+
+#### Next week:
+
+- Hands on labs on spring force and friction force 
+
+---
+
 # 2024.01.09 **Conceptual Physics** 
 
 ##### **❓ of the 📅**: What is your favorite fast food chain?

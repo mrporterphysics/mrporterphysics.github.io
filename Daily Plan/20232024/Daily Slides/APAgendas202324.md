@@ -66,7 +66,7 @@ A person pushes a large block on a horizontal ice surface in a straight line to 
 
 # 2024.01.10 **AP Physics** 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Are you related or distantly related to anyone famous?
 
 <div class = "columns">
 
@@ -103,19 +103,45 @@ A person pushes a large block on a horizontal ice surface in a straight line to 
 </div>
 
 ---
+<!-- _class: invert --->
 
-# Individual Practice 
+## Choose your level
 
 <div class='columns'>
 
 <div>
 
-### Mild 🫑 
+### Level 1 - Mild 🫑 :
+- [Inclined Planes - Componets of Fg](https://www.physicsclassroom.com/calcpad/launch/CPF2D9)
+- [Friction and mu 1](https://www.physicsclassroom.com/calcpad/launch/CPNL11)
+- [Friciton and mu 2](https://www.physicsclassroom.com/calcpad/launch/CPNL12)
 
-### Medium 🌶️
 
-</div><div></div></div>
+### Level 2 - Medium 🌶️: 
+- [F = ma with Angled Forces](https://www.physicsclassroom.com/calcpad/launch/CPF2D6)
+- [Inclined Plane Problems 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D10)
+- [Inclined Plane Problems 2 CV](https://www.physicsclassroom.com/calcpad/launch/CPF2D11)
+- [Inclined Plane Problems 3 CA](https://www.physicsclassroom.com/calcpad/launch/CPF2D12)
+- [F = ma with Kinematics 2](https://www.physicsclassroom.com/calcpad/launch/CPNL18)
 
+</div>
+
+
+<div>
+
+### Level 3 - Spicy 🌶️🌶️: 
+- [F = ma with Angled Forces 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D7)
+- [F = ma with Angled Forces 3](https://www.physicsclassroom.com/calcpad/launch/CPF2D8)
+- [F = ma with kinematics 3](https://www.physicsclassroom.com/calcpad/launch/CPNL19)
+
+### Level 4 - Fire 🔥🥵:
+- Old AP Questions (see Porter for handout)
+- [Inclined Plane with Kinematics](https://www.physicsclassroom.com/calcpad/launch/CPF2D13)
+
+</div>
+
+
+</div>
 
 ---
 

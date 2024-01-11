@@ -15,6 +15,49 @@ math: mathjax
 
 ---
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.11 **Regents Physics** 
+
+##### **❓ of the 📅**: Should pizza slices be triangles or squares?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Inclined Planes Pivot
+2. Discuss and Notes 
+3. Practice with Inclined Planes
+	1. [Inclined Planes: Par and Perp Components of Gravity](https://www.physicsclassroom.com/calcpad/launch/CPF2D9)
+    1. Worksheet - Regents Questions 
+	2. [Inclined Plane Problems 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D10)
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Solve for componets of gravity for objects on ramps_
+
+🥅 _Apply ramps to other force problems_
+
+#### 🚨 Upcoming...
+
+- Quiz Friday on N2L (only perpendicular forces)
+
+</div>
+
+</div>
+
+
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 

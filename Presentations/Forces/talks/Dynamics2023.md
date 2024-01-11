@@ -1165,21 +1165,58 @@ Lab partners Anna Litical and Noah Formula placed a 0.25-kg glider on their air 
 
 ---
 
-An astronaut tries out an experiment on Earth before setting off on a mission. He uses a spring to pull a block along a smooth level surface. As he pulls, he keeps the spring stretched by exactly 2 centimeters all the time. The block has an acceleration of 1 unit. 
+### Accelerating Systems 
 
-![center w:450](../figures/astro2.png)
+![center w:385](image-2.png)
 
-He then repeats this experiment on the Moon. The Moon’s gravity is only one-sixth as strong as on Earth.
-As before, he keeps the spring stretched by exactly 2 centimetres all the time. What will the acceleration of the block be now?
+Three blocks are connected by strings and pulled to the right by a force with magnitude $F_0$, as shown in the figure above. All frictional forces are  negligible. The tension in the right and left strings have magnitudes $T_1$ and $T_2$, respectively. Taking the positive direction to be toward the right, which of the following is a correct equation of motion for the block of mass?
 
-(1) More than 1 unit (2) less than 1 unit (3) exactly 1 unit again
+***If the acceleration is $a_{sys}$ derive an expression for $F_0$, $T_1$, and $T_2$ in terms of $a_{sys}$, $m_1$, $m_2$, $m_3$ and any universal constants.***
+
 
 ---
 
-How would you explain this?
+### Acceleration Systems 
 
-1. The weight of the box is less than on Earth.
-1. The weight of the box is the same as on Earth.
-1. The mass of the box is less than on Earth.
-1. The mass of the box is the same as on Earth.
-1. It takes a bigger force to make things move on the Moon. 
+![center w:700](../figures/blocksysrank.png)
+
+Boxes are pulled by ropes along frictionless surfaces, accelerating toward the left. All of the boxes are identical, and the accelerations of all three systems are the same.
+
+**Rank the tensions in the ropes.** Explain your reasoning
+
+
+---
+
+
+#### Accelerating Systems 
+
+In both cases a spaceship is pulling two cargo pods, one empty and one full. At the instant shown, the speed of the pods and spaceships is 300 m/s, but they have different accelerations as shown. All masses are given in terms of M, the mass of an empty pod.
+
+**Will the tension at point *S* in the tow rod be (i) *greater in Case A*, (ii) *greater in Case B*, or (iii) *the same in both cases?*** Find the tension in each rope to help.
+
+![bg fit right:35%](../figures/spacerank.png)
+
+---
+
+# With your table <!--fit--->
+
+# AP Workbook **2.K** <!--fit--->
+
+---
+
+In each case shown below, a box is sliding along a horizontal surface. There is friction between the box and the horizontal surface. The box is tied to a hanging stone by a massless rope running over a massless, frictionless pulley. All these cases are identical except for the different initial velocities of the boxes.
+
+![center w:850](../figures/atwoodrank.png)
+
+**Rank the magnitudes of the accelerations of the boxes at the instant shown.** Explain your ranking
+
+---
+
+
+![center w:850](../figures/atwoodrank.png)
+
+![center](../figures/fbdrankatwood.png)
+
+
+----
+
