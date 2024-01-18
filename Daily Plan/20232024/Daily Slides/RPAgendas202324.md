@@ -16,6 +16,83 @@ math: mathjax
 ---
 
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.18 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Introduction to Projectile Motion Pivot
+2. Whiteboard and discuss
+3. Freefall questions 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+
+#### 🚨 NOTE:
+
+- We need to take a forces test - when is best?
+
+
+</div>
+
+</div>
+
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.12 **Regents Physics** 
+
+##### **❓ of the 📅**: Have you seen any good movies lately?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Regents Practice 
+    1. Inclined Plane Questions 
+    2. Friction Questions 
+2. Risky Business mini lab
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Solve for componets of gravity for objects on ramps_
+
+🥅 _Apply ramps to other force problems_
+
+
+</div>
+
+</div>
+
+
+---
+
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 

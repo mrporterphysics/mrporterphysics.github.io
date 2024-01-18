@@ -17,6 +17,85 @@ math: mathjax
 
 ---
 
+
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.17 **AP Physics** 
+
+##### **❓ of the 📅**: What did you want to be when you were in elementary school? Has that changed?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Review Quiz
+2. Test Prep - with partner of _your choice_
+    1. AP Workbook 2.J
+    1. Questions from packet on vertical whiteboard
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Prepare for test_
+
+</div>
+
+</div>
+
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.12 **AP Physics** 
+
+##### **❓ of the 📅**: Have you seen any good movies lately?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz 
+2. Systems Questions
+4. 2.K Acceleration of Systems 
+5. Modified Atwood Machine Notes & Discussion
+6. 2.J Modified Atwood Machines
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _I can solve force problems with N2L_
+
+🥅 _I can use N2L with systems of objects_
+
+
+#### 📆 Future:
+
+- Quiz 01.16 - ? Maybe
+- Test 01.19 - All Dynamics 
+
+</div>
+
+</div>
+
+---
+
 <!--- _footer: <br> --->
 
 ### 2024.01.10 **AP Physics** Do Now -  Complete ***on your own*** in your notebook. 

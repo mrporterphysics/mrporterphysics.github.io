@@ -1219,4 +1219,3 @@ In each case shown below, a box is sliding along a horizontal surface. There is 
 
 
 ----
-

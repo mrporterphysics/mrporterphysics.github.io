@@ -16,6 +16,38 @@ math: mathjax
 ---
 
 
+
+# 2024.01.18 **Conceptual Physics** 
+
+##### **❓ of the 📅**: What did you want to be when you were in elementary school? Do you still want to be that?
+
+1. Hands on Gravity Lab
+
+---
+
+# Lab 
+
+### What is the difference between the two masses and what happens with the spring?
+
+### Why does this happen?
+
+---
+
+# Force of Gravity on Earth Lab 
+
+## Essential Question:
+
+- How is the mass of an object related to its gravitational force?
+
+## Procedures:
+
+- Collect things to hang from the spring scale. 
+- Mass them with the electronic balance up front (**independent variable**)
+- Hang them from the spring scale and measure force of gravity (**dependent variable**)
+- Record the mass and Force of Gravity (spring scale reading) in your data table
+
+---
+
 # 2024.01.11 **Conceptual Physics** 
 
 ##### **❓ of the 📅**: Should pizza slices be triangles or squares?
