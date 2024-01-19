@@ -16,13 +16,56 @@ math: mathjax
 ---
 
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.19 **Regents Physics** 
+
+##### **❓ of the 📅**: Have you ever had a surprise party? (that was an actual surprise)
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Go over Pivot
+2. Introduction to Free fall problems 
+3. Practice with Freefall problems
+	1. 🫑 Mild: [Free Fall 1](https://www.physicsclassroom.com/calcpad/launch/CPK19)
+	2. 🌶️ Medium: [Free Fall 2](https://www.physicsclassroom.com/calcpad/launch/CPK20) &  [Free Fall 3](https://www.physicsclassroom.com/calcpad/launch/CPK21)
+	3. 🥵 Spicy: [Rocket Science 🚀](https://www.physicsclassroom.com/calcpad/launch/CPK23)
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+- We need to take a forces test - when is best?
+
+
+</div>
+
+</div>
+
+---
+
+
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
 # 2024.01.18 **Regents Physics** 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What is the least amount of money you would accept to swallow a dead worm?
 
 <div class = "columns">
 
