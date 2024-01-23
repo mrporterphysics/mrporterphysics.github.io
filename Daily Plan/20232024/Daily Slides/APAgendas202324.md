@@ -17,8 +17,50 @@ math: mathjax
 
 ---
 
+# Circular Motion Lab Groups 
+
+- Hawks: Sophia, Leah, Ben, Evan 
+- Eagles: Hannah, Henry, Emma, Emily
+- Buzzards: Eve, John, Kaden, Alivia
+- Osprey: Liam, Ruby, Brynn, Zach
+- Falcons: Sydney, Fiona, Ethan, Adam
 
 
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.17 **AP Physics** 
+
+##### **❓ of the 📅**: What did you want to be when you were in elementary school? Has that changed?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Review Quiz
+2. Test Prep - with partner of _your choice_
+    1. AP Workbook 2.J
+    1. Questions from packet on vertical whiteboard
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Prepare for test_
+
+</div>
+
+</div>
+
+
+
+---
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

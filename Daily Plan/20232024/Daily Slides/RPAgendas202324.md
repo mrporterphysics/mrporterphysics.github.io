@@ -16,6 +16,49 @@ math: mathjax
 ---
 
 
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.22 **Regents Physics** 
+
+##### **❓ of the 📅**: What is your ideal sandwich?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Look at notes/old quiz ⏲️ 15 minutes
+2. Quiz2. Introduction to Free fall problems 
+3. 🥵 Spicy: [Rocket Science 🚀](https://www.physicsclassroom.com/calcpad/launch/CPK23)
+4. Horizontally Fired Projectile Motion
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+- Forces Test - Thursday
+
+
+</div>
+
+</div>
+
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
