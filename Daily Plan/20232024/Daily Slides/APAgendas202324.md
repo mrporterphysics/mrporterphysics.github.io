@@ -30,9 +30,9 @@ math: mathjax
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
-# 2024.01.17 **AP Physics** 
+# 2024.01.23 **AP Physics** 
 
-##### **❓ of the 📅**: What did you want to be when you were in elementary school? Has that changed?
+##### **❓ of the 📅**: Do you like amusement park rides? Rollercoasters? Merry-go-rounds? Ferris Wheel? Scrambler?
 
 <div class = "columns">
 
@@ -40,10 +40,10 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Review Quiz
-2. Test Prep - with partner of _your choice_
-    1. AP Workbook 2.J
-    1. Questions from packet on vertical whiteboard
+1. New Lab Groups 
+2. AP Workbook 3.A & 3.B
+3. Circular Motion Notes 
+4. AP Workbook 3.C
 
 
 </div>
@@ -52,7 +52,15 @@ math: mathjax
 
 #### 🎯 Goals 
 
-🥅 _Prepare for test_
+🥅 _Learn circular motion terms_
+
+🥅 _Start considering **centripetal forces**_
+
+
+#### 🚨 Notices
+
+- Corrections due Friday 
+- Buffet Quiz Thursday 
 
 </div>
 

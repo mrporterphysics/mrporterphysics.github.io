@@ -86,10 +86,6 @@ Complete with your lab group and whiteboard
 
 ---
 
-
-
----
-
 # Velocity
 
 <iframe src="https://phet.colorado.edu/sims/html/keplers-laws/latest/keplers-laws_en.html"
@@ -185,57 +181,65 @@ $$a_c = \frac{v^2}{r} = \frac{(25.0 \text{ m/s})^2}{500 \text{ m}}$$
 
 ---
 
-#Centripetal Force
+# Centripetal Force
 
 * "Center Seeking Force" - The ***net force*** that causes an object to move in a circle.
-* It is a special name for net force or the sum of all of the radial forces (forces along the radius of the circle)
+* It is a ***special name for net force*** or the sum of all of the radial forces (forces along the radius of the circle)
 * The net force that causes motion in a circular path
 * Alters the direction of motion without altering the speed.
 
 ---
 
-# Centripetal Force Examples...
+## Centripetal Force Examples...
 
 As a car makes a turn, the force of friction acting upon the turned wheels of the car provides centripetal force required for circular motion.
 
-![](https://www.physicsclassroom.com/Class/circles/u6l1c10.gif)
+![w:500](https://www.physicsclassroom.com/Class/circles/u6l1c10.gif)
 
 ---
 
-# Centripetal Force Examples...
+## Centripetal Force Examples...
 
 As a bucket of water is tied to a string and spun in a circle, the tension force acting upon the bucket provides the centripetal force required for circular motion.
 
-![](http://www.physicsclassroom.com/Class/circles/u6l1c3.gif)
+![w:500](https://www.physicsclassroom.com/Class/circles/u6l1c3.gif)
 
 
 
 ---
 
-# Centripetal Force Examples...
+## Centripetal Force Examples...
 
 As the moon orbits the Earth, the force of gravity acting upon the moon provides the centripetal force required for circular motion.
 
 
-![](https://www.physicsclassroom.com/Class/circles/u6l1c4.gif)
+![w:300](https://www.physicsclassroom.com/Class/circles/u6l1c4.gif)
 
 ---
 
-## The Fake Force - Centrifugal Force - aka Inertia
+### The Fake Force - Centrifugal Force 
+### aka Inertia
 
-![](https://www.physicsclassroom.com/mmedia/circmot/wi.gif) ![](https://www.physicsclassroom.com/mmedia/circmot/cf.gif)
+![w:400](https://www.physicsclassroom.com/mmedia/circmot/wi.gif) ![w:400](https://www.physicsclassroom.com/mmedia/circmot/cf.gif)
+
 
 ---
 
 # Centripetal Force Equation
 
-$$F_{net} = ma$$
+* Newton's Second Law $\boxed{\Sigma F = ma}$
+* Newton's Second Law for Circular Motion $\boxed{F_c = ma_c}$
+* We know $\boxed{a_c = \frac{v^2}{r}}$, so sub in and we get:
 
-$$F_c = ma_c$$
+---
 
-$a_c = \frac{v^2}{r}$$
+# Centripetal Force Equation
 
-$$F_c = \frac{mv^2}{r}$$
+- Newton's Second Law $\boxed{\Sigma F = ma}$
+- Newton's Second Law for Circular Motion $\boxed{F_c = ma_c}$
+- We know $\boxed{a_c = \frac{v^2}{r}}$, so sub in and we get:
+
+$$\boxed{F_c = \frac{mv^2}{r}}$$
 
 
 ---
@@ -244,7 +248,7 @@ $$F_c = \frac{mv^2}{r}$$
 
 The maximum speed with which a 945-kg car makes a 180-degree turn is 10.0 m/s. The radius of the circle through which the car is turning is 25.0 m. Determine the force of friction and the coefficient of friction acting upon the car.
 
-![](https://www.physicsclassroom.com/Class/circles/u6l2a3.gif)
+![w:350](https://www.physicsclassroom.com/Class/circles/u6l2a3.gif)
 
 
 ---
@@ -252,6 +256,10 @@ The maximum speed with which a 945-kg car makes a 180-degree turn is 10.0 m/s. T
 # Example
 
 The coefficient of friction acting upon a 945-kg car is 0.850. The car is making a 180-degree turn around a curve with a radius of 35.0 m. Determine the maximum speed with which the car can make the turn.
+
+$$F_c = \frac{mv^2}{r}$$
+
+$$\mu F_N = \frac{mv^2}{r} \rightarrow (0.85)(9450\textrm{ N}) = \frac{v^2}{35\textrm{ m}}$$
 
 ---
 
