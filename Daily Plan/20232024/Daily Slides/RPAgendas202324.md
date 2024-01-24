@@ -16,7 +16,46 @@ math: mathjax
 ---
 
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
+
+# 2024.01.24 **Regents Physics** 
+
+##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Go Over Old Quiz
+3. 🥵 Spicy: [Rocket Science 🚀](https://www.physicsclassroom.com/calcpad/launch/CPK23)
+    - Solve with a partner (or group of 3) with someone you don't usually work with
+4. Horizontally Fired Projectile Motion
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+- Forces Test - Tomorrow
+
+
+</div>
+
+</div>
+
+
+
+---
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
