@@ -190,6 +190,45 @@ $$a_c = \frac{v^2}{r} = \frac{(25.0 \text{ m/s})^2}{500 \text{ m}}$$
 
 ---
 
+# Again...
+
+The word “**centripetal**” refers to a *direction* and that it is always some external force, such as the normal force, gravitational force friction, or tension, exerted centripetally that allows an object to execute circular motion.
+
+---
+
+# Why do the following move in circles?
+
+---
+
+![bg fit](https://media.giphy.com/media/FGnCkFfcHXaGk/giphy.gif)
+
+---
+
+![bg fit](https://media.giphy.com/media/uVGauGUlngnNuZX6AZ/giphy.gif)
+
+---
+
+![bg fit](https://media.giphy.com/media/OtP2Jj6IuVbhu/giphy.gif)
+
+---
+
+![bg fit](https://media.giphy.com/media/xTeVhwwJhyn6fyjwk0/giphy.gif)
+
+---
+
+![bg fit](https://media.giphy.com/media/70XsBU0T1mi9a/giphy.gif)
+
+
+---
+
+![bg fit](https://media.giphy.com/media/Dy1GtbWjPedRgCugkH/giphy.gif)
+
+---
+
+![bg fit](https://media.giphy.com/media/V8PO3o4IIPgCiIMnme/giphy.gif)
+
+---
+
 ## Centripetal Force Examples...
 
 As a car makes a turn, the force of friction acting upon the turned wheels of the car provides centripetal force required for circular motion.
@@ -203,7 +242,6 @@ As a car makes a turn, the force of friction acting upon the turned wheels of th
 As a bucket of water is tied to a string and spun in a circle, the tension force acting upon the bucket provides the centripetal force required for circular motion.
 
 ![w:500](https://www.physicsclassroom.com/Class/circles/u6l1c3.gif)
-
 
 
 ---
@@ -302,7 +340,7 @@ $$F_g = G\frac{m_1 m_2}{r^2}$$
 
 Calculate $G \frac{m_e}{r^2}$ near the surface of the earth
 
-- Mass of Earth = $5.98 \times 10^{24}\$ kg
+- Mass of Earth = $5.98 \times 10^{24}$ kg
 - Mean radius of Earth = $6.37 \times 10^6$ m
 
 ---

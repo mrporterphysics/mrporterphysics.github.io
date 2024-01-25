@@ -14,6 +14,71 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 
+---
+
+# 2024.01.26 **AP Physics** Do Now 
+
+All the trailers and cars shown are identical but the boat trailers have different loads. In each case, the car and boat trailer accelerate at $1\textrm{ m/s}^2$ from rest to the final speed shown.
+
+![center](../images/Dynamics/tiperstruckboat.png)
+
+**Rank the difference between the strength (magnitude) of the force the car exerts on the boat trailer and the strength of the force the trailer exerts on the car while the cars and trailers are accelerating.** Explain your reasoning
+
+---
+
+# 2024.01.26 **AP Physics** Do Now 
+
+A hockey puck is tied to a string that is attached to a stake in the ice. The puck is given a single push perpendicular to the string causing the puck to circle the stake at a constant speed.
+1) Draw a picture of the physical situation from the top.
+2) Sketch a free-body diagram of the puck.
+3) What forces are exerted on the puck as it circles the stake?
+
+---
+
+# To the **MUF** for a Demo <!--fit--->
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.26 **AP Physics** 
+
+##### **❓ of the 📅**: What's the longest you've gone without sleep (and why)?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Nows 
+2. Centripetal Force
+    - Demo
+    - Notes
+3. AP Workbook 3.C
+4. AP Workbook 3.D
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn circular motion terms_
+
+🥅 _Start considering **centripetal forces**_
+
+🥅 _Apply N2L to Circular Motion_
+
+
+#### 🚨 Notices
+
+
+</div>
+
+</div>
+
 
 ---
 
