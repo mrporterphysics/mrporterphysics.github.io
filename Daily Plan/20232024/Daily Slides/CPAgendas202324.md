@@ -15,6 +15,31 @@ math: mathjax
 
 ---
 
+# 2024.01.26 **Conceptual Physics** 
+
+##### **❓ of the 📅**: What fictional world or place would you like to visit?
+
+1. Introduction to Momentum 
+2. Introduction to Conservation of Momentum with Collision 
+
+---
+
+# What is momentum? <!--fit--->
+
+---
+
+# Momentum 
+
+_The quantity of motion_ 
+
+$$p = mv$$
+
+* $p$ = momentum
+* $m$ = mass 
+* $v$ = velocity 
+
+---
+
 
 
 # 2024.01.18 **Conceptual Physics** 
