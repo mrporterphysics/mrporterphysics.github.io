@@ -16,6 +16,82 @@ math: mathjax
 ---
 
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.26 **Regents Physics** 
+
+##### **❓ of the 📅**: What fictional world or place would you like to visit?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Question 
+2. Horizontal Projectile Demos
+3. How to solve Projectile Motion Problems 
+4. [Horizontally Launched Projectiles 1](https://www.physicsclassroom.com/calcpad/launch/CPVP12)
+5. Maybe? Mini Lab - Horz. Projectiles
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+</div>
+
+</div>
+
+---
+
+Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
+
+![center](../images/Kinematics/horzprojec1.png)
+
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
+
+Explain your reasoning.
+
+
+---
+
+
+Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
+
+![center w:500](../images/Kinematics/horizprojec2.png)
+
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
+
+Explain your reasoning.
+
+---
+
+![bg fit right:58%](../images/Kinematics/hprojectrank.png)
+
+Rank the situations from the ***greatest to least time*** that it will take for the sphere to hit the ground. Make your ranking on a single line, using > and = signs. Ties are possible.
+
+Rank the situations from the ***greatest to the least horizontal distance*** that the sphere will travel. Make your ranking on a single line, using only the > and = signs. Ties are possible.
+
+---
+
+# Solving Projectile Motion Problems
+
+1. Set up double cross diagram
+2. Use cross diagrams to solve!
+
+---
+
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
