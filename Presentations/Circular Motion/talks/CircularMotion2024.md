@@ -179,12 +179,22 @@ What is the magnitude of the centripetal acceleration of a car following a curve
 
 $$a_c = \frac{v^2}{r} = \frac{(25.0 \text{ m/s})^2}{500 \text{ m}}$$
 
+
+---
+
+# Spinning Stoppers 
+
+1. Twirl stopper around head
+2. Decrease/Increase radius and notice what happens to the tension. 
+3. Decrease/Increase twirling speed - what happens to the tenion?
+4. If you were to increase the mass how do you think that would impact the tension?
+
 ---
 
 # Centripetal Force
 
-* "Center Seeking Force" - The ***net force*** that causes an object to move in a circle.
-* It is a ***special name for net force*** or the sum of all of the radial forces (forces along the radius of the circle)
+* "_Center Seeking Force_" - The ***net force*** that causes an object to move in a circle.
+* It is a ***special name for net force*** or the sum of all of the radial forces (forces along the radius of the circle) ***NOT AN ACTUAL FORCE***
 * The net force that causes motion in a circular path
 * Alters the direction of motion without altering the speed.
 
@@ -196,7 +206,9 @@ The word “**centripetal**” refers to a *direction* and that it is always som
 
 ---
 
-# Why do the following move in circles?
+# Why do the following move in circles? <!--fit--->
+
+## What force or forces are keeping the object moving in a circle? <!--fit--->
 
 ---
 
@@ -253,12 +265,6 @@ As the moon orbits the Earth, the force of gravity acting upon the moon provides
 
 ![w:300](https://www.physicsclassroom.com/Class/circles/u6l1c4.gif)
 
----
-
-### The Fake Force - Centrifugal Force 
-### aka Inertia
-
-![w:400](https://www.physicsclassroom.com/mmedia/circmot/wi.gif) ![w:400](https://www.physicsclassroom.com/mmedia/circmot/cf.gif)
 
 
 ---
@@ -316,6 +322,15 @@ $$F_c = \frac{mv^2}{r}$$
 - Velocity is tangent to the circle and calculated with $v = \frac{2\pi r}{t}$
 - Centripetal acceleration is towards the center of the circle and a calculated with $a_c = \frac{v^2}{r}$
 - Centripetal Force is the sum of the radial forces (net force) and is calculated with $F_c = ma_c = \frac{mv^2}{r}$
+
+---
+
+
+### The Fake Force - Centrifugal Force 
+### aka Inertia
+
+![w:400](https://www.physicsclassroom.com/mmedia/circmot/wi.gif) ![w:400](https://www.physicsclassroom.com/mmedia/circmot/cf.gif)
+
 
 ---
 
