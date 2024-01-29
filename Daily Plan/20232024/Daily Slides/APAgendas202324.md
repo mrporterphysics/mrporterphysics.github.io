@@ -16,6 +16,49 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.29 **AP Physics** 
+
+##### **❓ of the 📅**: What's the longest you've gone without sleep (and why)?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Nows 
+2. AP Workbook 3.C - Work at Table, whiteboard & discuss
+3. AP Workbook 3.D & 3.E - Work at table and check with Mr. Porter
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn circular motion terms_
+
+🥅 _Start considering **centripetal forces**_
+
+🥅 _Apply N2L to Circular Motion_
+
+
+#### 🚨 Notices
+- ***Week 21 HW to be posted on Canvas***
+
+</div>
+
+</div>
+
+
+
+
+---
+
 # 2024.01.26 **AP Physics** Do Now 
 
 All the trailers and cars shown are identical but the boat trailers have different loads. In each case, the car and boat trailer accelerate at $1\textrm{ m/s}^2$ from rest to the final speed shown.
