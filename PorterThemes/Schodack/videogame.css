@@ -8,14 +8,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Workbench&display=swap');
+
+
+section {
+  background-color: #333;
+  color: white; 
+  font-family: 'JetBrains Mono', monospace;
+}
+
+section h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong, li strong, ul strong, ol strong, ol ul strong, a{
+  color:rgb(247, 76, 247);
+}
 
 h1 {
   font-size: 60px;
-  color: rgb(206,32,47);
+  color: rgb(30, 179, 80);
   /* background-color: rgba(217, 228, 247, 0.671); */
-  font-family: 'Hammersmith One', sans-serif;  
-  text-shadow: 1px 1px 2px #c2bfbf;
+  font-family: 'Workbench', sans-serif;
+  
 }
+
 
 h2 {
     font-style: italic;

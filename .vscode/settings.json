@@ -7,7 +7,9 @@
       "qotd"
    ],
    "markdown.marp.themes": [
-      "./PorterThemes/Schodack/schodack.css"
-    ]
+      "./PorterThemes/Schodack/schodack.css",
+      "./PorterThemes/Schodack/videogame.css",
+      "https://raw.githubusercontent.com/dracula/marp/master/dracula/dracula.css"
+   ]
 }
 

@@ -7,7 +7,7 @@ You can find links to class presentations here:
   - Find [Regents Daily Plans](/Daily%20Plan/20232024/Daily%20Slides/RPAgendas202324.html).
   - Find [Conceptual Physics Daily Plans](/Daily%20Plan/20232024/Daily%20Slides/CPAgendas202324.html).
   - Find [Coding Daily Plans](/Daily%20Plan/20232024/Daily%20Slides/CodingAgendas202324.html).
-  <!-- - Find [Video Game Design Daily Plans](). -->
+  - Find [Video Game Design Daily Plans](/Daily%20Plan/20232024/Daily%20Slides/VideoGameDesign2024.html).
   - Find [Content Presentations](presindex).
 
 
