@@ -9,9 +9,9 @@ math: mathjax
 
 # Video Game Design 🎮 <!--fit--->
 
-## Mr. Porter
+## 🧑‍🏫 Mr. Porter
 
-### Spring 2024
+### 📆 Spring 2024
 
 
 ---
