@@ -15,7 +15,57 @@ math: mathjax
 
 ---
 
+# 2024.01.30 **Regents Physics** Do Now
 
+_Complete with a partner_ 
+
+A stone is thrown horizontally to the right at a speed of 12.0 m/s from the top of a cliff that is 85 m high. Consider up and to the right positive directions.
+
+1. How long does it take the stone to reach the bottom of the cliff?
+2. How far from the base of the cliff does the stone hit the ground?
+3. What is the horizontal component of the stone's velocity just before it hits the ground?
+4. What is the vertical component of the stone's velocity just before it hits the ground?
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.30 **Regents Physics** 
+
+##### **❓ of the 📅**: What skill or talent do you most want to learn?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Question 
+2. Horizontal Projectile Demos
+3. How to solve Projectile Motion Problems 
+4. [Horizontally Launched Projectiles 1](https://www.physicsclassroom.com/calcpad/launch/CPVP12)
+5. Maybe? Mini Lab - Horz. Projectiles
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+</div>
+
+</div>
+
+
+---
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

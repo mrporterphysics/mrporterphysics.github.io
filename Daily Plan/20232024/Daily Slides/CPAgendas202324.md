@@ -17,6 +17,15 @@ math: mathjax
 
 # 2024.01.26 **Conceptual Physics** 
 
+##### **❓ of the 📅**: What skill or talent do you most want to learn?
+
+1. Complete conservation of momentum Pivot
+2. Up Next: Building Paper Cars
+
+---
+
+# 2024.01.26 **Conceptual Physics** 
+
 ##### **❓ of the 📅**: What fictional world or place would you like to visit?
 
 1. Introduction to Momentum 
