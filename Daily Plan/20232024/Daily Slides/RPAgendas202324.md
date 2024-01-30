@@ -41,11 +41,9 @@ A stone is thrown horizontally to the right at a speed of 12.0 m/s from the top 
 
 #### 📋 Agenda
 
-1. Question 
-2. Horizontal Projectile Demos
-3. How to solve Projectile Motion Problems 
-4. [Horizontally Launched Projectiles 1](https://www.physicsclassroom.com/calcpad/launch/CPVP12)
-5. Maybe? Mini Lab - Horz. Projectiles
+1. Do Now
+2. Horizontal Projectile Lab 
+3. Practice with Horizontal Projectiles 
 
 </div>
 
@@ -60,9 +58,27 @@ A stone is thrown horizontally to the right at a speed of 12.0 m/s from the top 
 
 #### 🚨 NOTE:
 
+- Free Fall & Horizontal Projectile Quiz Thursday
+
 </div>
 
 </div>
+
+---
+
+# Horizontal Projectile Lab 
+
+1. Determine Launch Speed of your ball when launching from table. 
+2. Use that information to predict where the ball will land when launched from the cabinets
+
+---
+
+# Horizontal Projectile Motion Practice:
+
+1. [Horizontally Launched Projectiles 1](https://www.physicsclassroom.com/calcpad/launch/CPVP12)
+1. [Horizontally Launched Projectiles 2](https://www.physicsclassroom.com/calcpad/launch/CPVP13)
+1. [Horizontally Launched Projectiles 3](https://www.physicsclassroom.com/calcpad/launch/CPVP14)
+
 
 
 ---
