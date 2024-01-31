@@ -81,8 +81,8 @@ When the experiment is conducted, the student uses a force probe to measure the 
 
 
 #### 🚨 Notices
-- ***Week 21 HW to be posted on Canvas***
-- Quiz Friday on Circ Motion - Similar to workbook and HW
+- ***Week 21 HW to posted on Canvas***
+- Quiz ***Friday*** on _Circular Motion _- Similar to workbook and HW
 
 </div>
 
