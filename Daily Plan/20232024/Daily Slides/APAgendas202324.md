@@ -16,6 +16,57 @@ math: mathjax
 
 ---
 
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.01 **AP Physics** 
+
+##### **❓ of the 📅**: What was (still is?) your favorite animal growing up?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Flying Animals Lab
+2. Work on W21 HW & Prep for Tomorrow's quiz
+
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn circular motion terms_
+
+🥅 _Start considering **centripetal forces**_
+
+🥅 _Apply N2L to Circular Motion_
+
+
+#### 🚨 Notices
+- ***Week 21 HW to posted on Canvas***
+- Quiz ***Friday*** on _Circular Motion _- Similar to workbook and HW
+
+</div>
+
+</div>
+
+---
+
+# Flying 🐄 🐖 🦇
+
+The buffalo farm has recently acquired some flying animals and needs to test the length of the flying animals' leashes. The farm is trying to find a way to predict how long it takes for the animals to complete one circle while attached to their loop (in physics, we call this the "period" or time for one event of repeating events to happen and use the symbol $T$.) 
+
+**Your goal is to predict the time it takes for your animal to take 10 swings based on the length of your animal's string.**
+
+
+---
+
 <!--- _footer: <br> --->
 
 <div class='columns'>
