@@ -16,6 +16,80 @@ math: mathjax
 
 ---
 
+<!--- _footer: <br> --->
+
+<div class='columns'>
+
+<div>
+
+A student conducts an experiment in which a $0.5 \textrm{ kg}$ ball is spun in a vertical circle from a string of length $1 \textrm{ m}$, as shown in the figure. The student uses the following equation to predict the force of tension exerted on the ball whenever it reaches the lowest point of its circular path at a known tangential speed for various trials.
+
+$$ F_{Tension} = m \frac{v^2}{r}$$
+
+When the experiment is conducted, the student uses a force probe to measure the actual force of tension exerted on the ball. Why is the predicted force of tension different than the actual force of tension?
+
+</div>
+<div>
+
+**2024.01.31 AP Do Now**
+
+![center w:200](https://assets.learnosity.com/organisations/537/VH932537.g02.png)
+
+| Trial | Tangential Speed ($\frac{\textrm{m}}{\textrm{s}}$) | Predicted Tension ($\textrm{N}$) | Actual Tension ($\textrm{N}$) |
+| ---- | ---- | ---- | ---- |
+| 1 | 1 | 0.5 | 5.5 |
+| 2 | 2 | 2 | 7 |
+| 3 | 3 | 4.5 | 9.5 |
+
+</div>
+</div>
+
+---
+
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.01.31 **AP Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Workbook Day:
+    - AP Workbook 3.D through 3.H
+    - Work with table/partner and check with Mr. Porter
+
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn circular motion terms_
+
+🥅 _Start considering **centripetal forces**_
+
+🥅 _Apply N2L to Circular Motion_
+
+
+#### 🚨 Notices
+- ***Week 21 HW to be posted on Canvas***
+- Quiz Friday on Circ Motion - Similar to workbook and HW
+
+</div>
+
+</div>
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

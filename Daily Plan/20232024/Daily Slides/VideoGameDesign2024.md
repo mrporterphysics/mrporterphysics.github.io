@@ -17,6 +17,41 @@ math: mathjax
 ---
 
 
+# 2024.01.31 **Video Game Desgin** 
+
+##### **❓ of the 📅**: What is your favorite video game?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about the course_ 
+
+🥅 _Play games and determine elements that make the game **fun**_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+
+
+---
+
+
 # 2024.01.29 **Video Game Desgin** 
 
 ##### **❓ of the 📅**: What is your favorite video game?

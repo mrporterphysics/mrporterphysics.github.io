@@ -15,6 +15,79 @@ math: mathjax
 
 ---
 
+<!--- _footer: <br>--->
+
+<div class='columns'>
+
+<div>
+
+
+A baseball is thrown from point S in right field to home plate. The dashed line shows the path of the ball.
+
+![center](../images/Kinematics/baseballGraphs.png)
+
+![center](../images/Kinematics/thebaseballGraphs.png)
+
+</div>
+
+<div>
+
+Treat up as the positive vertical direction and to the left as the positive horizontal direction, and with the origin at home plate.
+
+Select the graph from the choices below that best represents:
+
+1. horizontal velocity versus time graph 
+2. horizontal acceleration versus time graph
+3. vertical velocity versus time graph
+4. vertical acceleration versus time graph
+
+</div>
+</div>
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.01.31 **Regents Physics** 
+
+##### **❓ of the 📅**: What skill or talent do you most want to learn?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do now with angled projectiles 
+2. Review on finding vector components 
+3. Play with [Projectile Motion Phet](https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html)
+	1. Greatest range? Greatest height? 
+	4. Still that same when you change the height of the launcher?
+4. Solving Projectile at an angle problems 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+- Free Fall & Horizontal Projectile Quiz Thursday
+
+</div>
+
+</div>
+
+
+---
+
 # 2024.01.30 **Regents Physics** Do Now
 
 _Complete with a partner_ 
