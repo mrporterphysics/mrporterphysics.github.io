@@ -27,7 +27,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. Up the River - Play
+2. Up the River - Analyze
+3. Up the River - Modify
 
 </div>
 
@@ -42,6 +44,71 @@ math: mathjax
 #### 🚨 Notices
 
 - None
+
+</div>
+
+</div>
+
+---
+
+<!--- _footer: <br>--->
+
+# Up the River 🦆
+
+<div class='columns'>
+<div>
+
+## Contents: 
+
+- 1 Harbor Card 
+- 10 River Cards
+- 12 Sailboats (3 per 4 col)
+- 1 six-sided die
+
+## Object of the game
+
+Each player tries to get all three of his or her boats into the harbour and to earn the most points for each boat.
+
+</div>
+<div>
+
+
+
+## Game Prep
+
+Place the harbour card (goal) and the 10 River cards on the table, following the exact order shown on the bottom of the game box.
+Each player chooses a colour and takes all three boats of that colour. All players' boats begin the game on the fourth river card from
+the bottom.
+
+
+</div>
+
+</div>
+
+---
+
+# Up the River 
+
+<div class='columns'
+
+<div>
+
+## Game rules
+
+The youngest player may begin. Play proceeds in a clockwise direction.
+On your turn, roll the die and sail one of your boats toward the harbour for as many river cards as the number thrown. Unless you
+roll a 6! 
+
+## Sandbank card
+
+Every boat runs aground on the sandbank. Even though the number you roll might otherwise let you sail on, your turn ends here.
+On your next turn you may roll again and move on.
+
+</div>
+
+<div>
+
+
 
 </div>
 
