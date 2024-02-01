@@ -47,7 +47,7 @@ math: mathjax
 
 #### 🚨 Notices
 - ***Week 21 HW to posted on Canvas***
-- Quiz ***Friday*** on _Circular Motion _- Similar to workbook and HW
+- Quiz ***Friday*** on _Circular Motion_ - Similar to workbook and HW
 
 </div>
 
