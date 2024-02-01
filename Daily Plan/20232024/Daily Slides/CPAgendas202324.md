@@ -15,6 +15,46 @@ math: mathjax
 
 ---
 
+# 2024.02.01 **Conceptual Physics** 
+
+##### **❓ of the 📅**: What is the best french fry shape? 🍟
+
+1. Paper Car Crash 
+2. Research Good designs for paper car crash 
+    - Find 3 things that protect people in car crashes to present to the class
+    - Brainstorm ways you can add these protection pieces to your paper car
+
+---
+
+## Paper Car Crash - Introduction
+
+
+<iframe src="https://player.vimeo.com/video/265777735?h=ca54f8d676&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/265777735">Paper Car Crash - Introduction</a> from <a href="https://vimeo.com/iihs">IIHS</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+
+---
+
+# 🎯 Most Crashworthy Car 
+
+*Crashworthiness*: how well a car protects its occupants in a crash
+
+Your task is to make the most crashworthy paper car. It will be protecting an egg. 
+
+---
+
+# Crashworthiness 
+
+How can we measure the most crashworthy car? 
+
+- ***Momentum*** can be conisdered a measure of how difficult it is to stop an object in motion
+
+Momentum $p=mv$ (mass times velocity)
+
+
+
+---
+
 # 2024.01.26 **Conceptual Physics** 
 
 ##### **❓ of the 📅**: What skill or talent do you most want to learn?

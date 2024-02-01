@@ -15,6 +15,48 @@ math: mathjax
 
 ---
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.02.01 **Regents Physics** 
+
+##### **❓ of the 📅**: When are potatoes at their best?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Review on finding vector components 
+3. Play with [Projectile Motion Phet](https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html)
+	1. Greatest range? Greatest height? 
+	4. Still that same when you change the height of the launcher?
+4. Solving Projectile at an angle problems 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+
+---
+
 <!--- _footer: <br>--->
 
 <div class='columns'>
