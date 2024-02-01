@@ -16,8 +16,6 @@ math: mathjax
 
 ---
 
-
-
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.02.01 **AP Physics** 
@@ -32,7 +30,6 @@ math: mathjax
 
 1. Flying Animals Lab
 2. Work on W21 HW & Prep for Tomorrow's quiz
-
 
 
 </div>
