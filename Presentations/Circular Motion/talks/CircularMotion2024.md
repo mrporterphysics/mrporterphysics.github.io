@@ -376,15 +376,26 @@ Determine the Force of gravity between the Earth and the Moon:
 
 ---
 
+
+
 At the instant shown, three asteroids are in a line, and the distance between A and B is twice the distance between B and C. Asteroid C has mass $M$. There is no net force on asteroid B due to the other asteroids.
 
-![](../figures/asteroids1.jpg)
+![center w:1000](../figures/asteroids1.jpg)
 
 Three students are discussing how they might find the mass of asteroid A:
 
+---
+
 **Ari:** *"We don't really have enough information to find the mass of A. Since there's no net force on B, the force from A has to cancel the force from C. To find the force on B from C, we'd use Newton's law of Universal Gravitation. But since the force is proportional to the produce of the masses we'd need to know both masses."*
 
+
+---
+
+
 **Bira:** *"I don't think we really need the mass of B. Asteroid A is twice as far away as C, so if it also has a mass M it will exert half has much force as C does. Since it has to exert the same force for the net force on B to be zero, it has to have twice the mass."*
+
+
+---
 
 **Cole:** *"It's true that A pulls on B to the left, and C pulls on B to the right, But you can't just use Newton's law of universal gravitation, because that only allows you to calculate the force between the two masses. here there are three masses, and asteroid A is exerting some of its force on B and some on C."*
 

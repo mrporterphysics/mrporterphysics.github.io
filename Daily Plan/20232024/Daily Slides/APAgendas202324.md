@@ -16,6 +16,46 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.02 **AP Physics** 
+
+##### **❓ of the 📅**: Are you happy that Punxsutawney Phil _did not_ see his shadow?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. AP Physics FRQ Practice Problem with your table partner. 
+2. AP Quiz 
+3. Universal Law of Gravitation
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply N2L to Circular Motion_
+
+🥅 _Learn Universal Law of Gravivation_
+
+
+#### 🚨 Notices
+- ***Week 21 HW to posted on Canvas***
+- Quiz ***Friday*** on _Circular Motion_ - Similar to workbook and HW
+
+</div>
+
+</div>
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.02.01 **AP Physics** 
