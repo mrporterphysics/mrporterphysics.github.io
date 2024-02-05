@@ -16,6 +16,71 @@ math: mathjax
 
 ---
 
+# 2024.02.06 **AP Physics** Dow Now 
+
+<div class='columns'>
+
+<div>
+
+## What, if anything, is wrong in this Twitter (X) Video?
+
+</div>
+
+<div>
+
+[🔗Video🔗](https://x.com/TheFigen_/status/1754140214472151245?s=20)
+
+<iframe src = "https://x.com/TheFigen_/status/1754140214472151245?s=20" width = "500ox" height = "500px" ></iframe>
+
+</div>
+
+</div>
+
+---
+
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.05 **AP Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Artificial Gravity: AP Workbopok 3.L
+2. Universal Law of Gravitation 
+3. AP Workbook: 3.M, 3.N
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply N2L to Circular Motion_
+
+🥅 _Learn Universal Law of Gravivation_
+
+
+#### 🚨 Notices
+- ***Week 22 HW to posted on Canvas*** - AP Classroom Work Included
+- Quiz ***Thursday*** on _Circular Motion_ 
+
+</div>
+
+</div>
+
+
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

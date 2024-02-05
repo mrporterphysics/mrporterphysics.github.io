@@ -16,6 +16,55 @@ math: mathjax
 
 ---
 
+# 2024.02.02 **Video Game Desgin** 
+
+##### **❓ of the 📅**: Are you happy that Punxsutawney Phil _did not_ see his shadow?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Field Trip to the Library
+2. Play Board Games 
+3. What are _generic_ elements of board games?
+4. Identify _specific elements_ of your game
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Play games and determine elements that make the game **fun**_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+---
+
+# Group Think 🤔 
+
+## What are **generic** elements of games? 
+
+## Come up with a list 
+
+---
+
+# Specifics 
+
+## List the specific elements in your game that match with our generic list
+
+
+
+---
+
 
 # 2024.01.31 **Video Game Desgin** 
 

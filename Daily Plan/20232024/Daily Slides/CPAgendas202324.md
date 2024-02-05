@@ -15,7 +15,7 @@ math: mathjax
 
 ---
 
-# 2024.02.01 **Conceptual Physics** 
+# 2024.02.05 **Conceptual Physics** 
 
 ##### **❓ of the 📅**: What is the best french fry shape? 🍟
 
@@ -23,6 +23,7 @@ math: mathjax
 2. Research Good designs for paper car crash 
     - Find 3 things that protect people in car crashes to present to the class
     - Brainstorm ways you can add these protection pieces to your paper car
+3. Sketch Your Paper Car design
 
 ---
 

@@ -15,6 +15,57 @@ math: mathjax
 
 ---
 
+# 2024.02.05 **RP**
+
+Cannonballs of different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the horizontal component of that velocity, which is the same.
+
+**Rank the horizontal distance traveled by the cannonballs.**
+
+![bg fit right](../images/Kinematics/cannondonow.png)
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.02.01 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+1. Velocity Vector Components 
+2. Solving Projectile at an angle questions
+    - [Angle-Launched Projectiles 1](https://www.physicsclassroom.com/calcpad/launch/CPVP15)
+    - [Angle-Launched Projectiles 2](https://www.physicsclassroom.com/calcpad/launch/CPVP16)
+    - [Angle-Launched Projectiles 3](https://www.physicsclassroom.com/calcpad/launch/CPVP17)
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
