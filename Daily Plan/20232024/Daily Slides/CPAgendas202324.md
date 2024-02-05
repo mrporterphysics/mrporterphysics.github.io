@@ -17,7 +17,7 @@ math: mathjax
 
 # 2024.02.05 **Conceptual Physics** 
 
-##### **❓ of the 📅**: What is the best french fry shape? 🍟
+##### **❓ of the 📅**: Have you ever fallen for a scam? If so, what was it?
 
 1. Paper Car Crash 
 2. Research Good designs for paper car crash 

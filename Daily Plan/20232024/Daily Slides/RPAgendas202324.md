@@ -200,7 +200,7 @@ A stone is thrown horizontally to the right at a speed of 12.0 m/s from the top 
 
 # 2024.01.30 **Regents Physics** 
 
-##### **❓ of the 📅**: What skill or talent do you most want to learn?
+##### **❓ of the 📅**: Have you ever fallen for a scam? If so, what was it?
 
 <div class = "columns">
 <div>
