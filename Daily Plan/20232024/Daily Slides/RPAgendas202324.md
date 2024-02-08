@@ -15,6 +15,60 @@ math: mathjax
 
 ---
 
+# 2024.02.06 **Regents Physics** Do Now 
+
+
+A firefighter holds a hose which emits water with a velocity of $30.4\textrm{ m/s}$ at an angle of $55.5^\circ$ above the horizontal. He stands a horizontal distance of $15.1\textrm{ meters}$ from a building with the intent of projecting the water to a high window. What height on the building will the water reach?
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.02.06 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+1. Projectile Launcher Lab
+2. Test Corrections
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+---
+
+# Projectile Launcher Lab 
+
+Line up 7, evenly spaced, ring stands so the projectile launcher ball goes through each ring. 
+
+Each of you should do the math for your ring stand so that you can calculate the height to place it. 
+
+
+
+
+---
+
 # 2024.02.05 **RP**
 
 Cannonballs of different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the horizontal component of that velocity, which is the same.

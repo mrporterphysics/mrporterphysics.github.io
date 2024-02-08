@@ -16,6 +16,103 @@ math: mathjax
 
 ---
 
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.08 **AP Physics** 
+
+##### **❓ of the 📅**: What animal would you want for a non-traditional pet? (i.e. not a dog, fish or cat)
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Free-Fall
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply N2L to Circular Motion_
+
+🥅 _Learn about freefall motion & projectiles_
+
+
+#### 🚨 Notices
+- ***Week 22 HW to posted on Canvas*** - AP Classroom Work Included
+
+</div>
+
+</div>
+
+
+---
+
+# 2024.02.07 **AP Physics** Do Now 
+
+At the instant shown, three asteroids are in a line, and the distance between A and B is the same as the distance between B and C. Asteroids B and C have the same mass, while asteroid A has twice the mass.
+
+![center](../images/CircMotion/gravasteroids.png)
+
+**Rank the magnitude of the net force on each asteroid due to the other two asteroids.**
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.07 **AP Physics** 
+
+##### **❓ of the 📅**: Is your glass half full or half empty?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Universal Law of Gravitation 
+3. AP Workbook: 3.M, 3.N
+
+### 👀 Notes:
+
+- 11/20 students _did **not**_ complete AP Classroom practice last week. **Why**?
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply N2L to Circular Motion_
+
+🥅 _Learn Universal Law of Gravivation_
+
+
+#### 🚨 Notices
+- ***Week 22 HW to posted on Canvas*** - AP Classroom Work Included
+- Quiz ***Thursday*** on _Circular Motion_ 
+
+</div>
+
+</div>
+
+
+
+
+
+
+---
+
 # 2024.02.06 **AP Physics** Dow Now 
 
 <div class='columns'>
@@ -42,9 +139,9 @@ math: mathjax
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
-# 2024.02.05 **AP Physics** 
+# 2024.02.06 **AP Physics** 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you had a boat, what would you name it?
 
 <div class = "columns">
 
@@ -56,6 +153,10 @@ math: mathjax
 2. Artificial Gravity: AP Workbopok 3.L
 2. Universal Law of Gravitation 
 3. AP Workbook: 3.M, 3.N
+
+### 👀 Notes:
+
+- 11/20 students _did **not**_ complete AP Classroom practice last week. **Why**?
 
 
 </div>

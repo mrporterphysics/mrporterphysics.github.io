@@ -16,6 +16,292 @@ math: mathjax
 
 ---
 
+
+# 2024.02.08 **Video Game Desgin** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Game Design Process
+2. Board Game Genres
+3. Backwards Design - What do you enjoy?
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Play games and determine elements that make the game **fun**_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+
+
+---
+
+# 2024.02.06 **Video Game Desgin** 
+
+##### **❓ of the 📅**: If you had a boat what would you name it?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Game Design Process
+2. Board Game Genres
+3. Backwards Design - What do you enjoy?
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Play games and determine elements that make the game **fun**_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+---
+
+# Game Design **Process**
+
+1. Choose a theme of aesthetic & Research
+2. Synthesize Information 
+3. Define your game and its scope
+4. A Game is a system - MDA 
+5. Playtest, playtest, playtest. 
+6. Reflect
+
+---
+
+# Learn your **stuff** <!--fit--->
+
+## What experience do you want to create? <!--fit--->
+
+---
+
+# Learn your **stuff** <!--fit--->
+
+## Theme and aesthetics driven approach <!--fit--->
+
+### What is the core idea that drives your game forward?
+
+
+<!--- Notes:
+
+Space Captain theme 
+
+- Read and watch science fiction
+- What are the categories? Leadership, exploration, science-technology, strategy
+- What are elements of the experience? movement, attack and defense, resources?
+
+ --->
+
+---
+
+# Sythesizing Information 
+
+- Categorize:
+    - Aesthetics 
+    - Thematic Elements 
+    - Mechanics 
+    - Components 
+
+
+---
+
+# Visual **Aesthetics** <!--fit--->
+
+---
+
+# Themetic Elements
+
+What elements define the theme and genre. Not only looks but also situations, characters, emotions and actions. Everything that defines the theme, even if it’s not going to be featured in the game, like music or smells.
+
+
+---
+
+# Mechanics
+
+Looking at mechanics of other games 
+
+(Mechanics - how the game functions, rules, moves, physical space, etc)
+
+---
+
+# Components 
+
+- Board
+- Pieces
+- Driven by the visual aesthetics, theme, and mechanics 
+
+---
+
+# Defining the **Game** and its **Scope** <!--fit--->
+
+---
+
+# Define:
+
+- Purpose of the game
+- The player 
+- Design Principles 
+- Scope of the Game
+- Constraints 
+
+---
+
+![bg fit](https://miro.medium.com/v2/resize:fit:700/1*h8fwsxnL-Wvh975An8S2yA.jpeg)
+
+---
+
+# Purpose 
+
+## Why are you making this game?
+
+**Start with your purose**
+
+---
+
+# Design Principles 
+
+## Your guidelines or "rules" that define your intent and strategy
+
+Principle: "Has to be enjoyable"
+
+1. Depth of complexity 
+2. Simplicity over strict rules
+3. Avoid rigid narratives 
+4. The best strategist should win
+
+---
+
+# The Player - your audience
+
+- Age
+- Interests 
+- Motivations 
+- Habits 
+
+Who will enjoy your game?
+
+--- 
+
+# Scope and Constraints
+
+- Complexity
+- Production & Costs 
+
+---
+
+# Requirements and Constraints 
+
+Requirements: Hard limits, usually imposed by publisher or manufacturing
+
+Constraints: Soft limits, designs self-impose - i.e. card game, limit to 20 cards 
+
+--- 
+
+# A Game is a System 
+
+## Three Core Elements 
+
+### Mechanics (rules & technology & physicality)
+
+### Dynamics (choices, actions during the game)
+
+### Aesthemtics (emotional connection)
+
+---
+
+> A board game is all about creating interesting choices for the players. 
+
+---
+
+# Mechanics **create** the Dynamics <!--fit--->
+
+- Mechanics are the rules and inner workings of the game as a system. 
+- Dynamics are how the game is played, the mechanics create the dynamics
+- Aestheics are how the game is felt, how do the players feel based on their dynamics 
+
+---
+
+# Conceptualization 
+
+At the beginning of the conceptualization phase what we want to do is to take all the thematic elements we’ve identified previously and translate them to mechanics.
+
+---
+
+![bg fit](https://miro.medium.com/v2/resize:fit:700/1*cOSORSpiM6XrUtxWdgfi2g.jpeg)
+
+
+---
+
+![bg fit](https://miro.medium.com/v2/resize:fit:700/1*sZn3g9Hd_bk1_Nlb2Vo6nw.jpeg)
+
+---
+
+# Deconstructing your Game 
+
+## On a whiteboard with your group
+
+<div class='columns'>
+
+<div>
+
+Theme based
+
+1. Theme
+2. What experience is the game trying to create?
+3. What are the mechanics of the game?
+3. What are the dynamics?
+4. What are the aesthetics?
+
+</div>
+
+<div>
+
+OR...reverse engineering
+
+1. How did the game make you feel (aesthetics)
+2. What dynamics made you feel that way?
+3. What mechanics created that game?
+3. What experience was created?
+4. How does this fit the theme?
+
+</div>
+
+</div>
+
+
+
+---
+
+# Playtesting 
+
+
+---
+
 # 2024.02.02 **Video Game Desgin** 
 
 ##### **❓ of the 📅**: Are you happy that Punxsutawney Phil _did not_ see his shadow?
