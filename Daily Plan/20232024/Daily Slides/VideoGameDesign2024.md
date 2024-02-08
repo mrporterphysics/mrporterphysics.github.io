@@ -19,7 +19,7 @@ math: mathjax
 
 # 2024.02.08 **Video Game Desgin** 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What animal would you want for a non-traditional pet? (i.e. not a dog, fish or cat)
 
 <div class = "columns">
 
@@ -27,9 +27,8 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Game Design Process
-2. Board Game Genres
-3. Backwards Design - What do you enjoy?
+1. Checkers Mechanics Modifications
+2. Playtesting Checkers Modification
 
 </div>
 
@@ -47,6 +46,17 @@ math: mathjax
 
 </div>
 
+---
+
+# Checkers 
+
+1. Play Checkers with your group
+2. Decide on a mechanic to change
+3. Hypothesize how that change will affect the dynamics and aesthetics of the game
+4. Playtest other groups' checkers mod
+5. Provide Feedback to other group
+6. Reflect on the feedback you received
+7. fin. 
 
 
 ---
