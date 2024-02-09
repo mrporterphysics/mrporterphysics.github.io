@@ -169,3 +169,8 @@ section.winter {
 section.winter a{
   color:rgb(206,32,47);
 }
+
+section.inverse {
+  background-color: #FFFFFF;
+  color:#292a2b
+}

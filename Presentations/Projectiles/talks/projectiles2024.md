@@ -188,6 +188,7 @@ Blake takes this rocket to another planet. This planent has $3m_E$ and $2r_E$. W
     2. How much time does it take the ball to reach the peak of its trajectory?
 
 ---
+<!--- _class: inverse --->
 
 # Rock on Asteroid 
 
@@ -209,13 +210,14 @@ An astronaut stands on the surface of a spherical asteroid that has a weak gravi
 
 ---
 
-
+<!--- _class: inverse --->
 
 The dots below represent the rock immediately after being thrown and when it is a distance $2R$ from the asteroid’s center. On each dot, draw and label the forces (not components) exerted on the rock at the indicated time. Each force must be represented by a distinct arrow starting on, and pointing away from, the appropriate dot.
 
 ![center w:700](image-3.png)
 
 ---
+<!--- _class: inverse --->
 
 The graph at left below shows the rock’s velocity as a function of time after being thrown upward with an initial velocity $v_{01}$. The dashed line shows what the velocity would be if the rock experienced a constant acceleration, and the solid curve shows the rock’s actual velocity.
 
@@ -225,9 +227,53 @@ After the rock lands back on the surface, the astronaut then throws the rock str
 
 ---
 
+<!--- _class: inverse --->
+
 In a clear, coherent, paragraph-length response that may also contain equations and/or drawings, make claims for the following aspects of the rock’s motion.
 
 - For the first throw, state a claim for what is happening at time $t_1$.
 - State a claim about the strength of the gravitational force exerted on the rock as the rock gets farther from the asteroid.
 - For the first throw, state a claim about the relationship about the strength of the gravitational force exerted on the rock as the rock gets farther from the asteroid and the behavior indicated between time 0 and $t_1$ in the velocity-time graph.
 - For the second throw, state a claim about why there is a horizontal asymptote for the velocity.
+
+---
+
+# Horizontal **Projectiles** <!--fit--->
+
+---
+
+Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
+
+![center](../figures/horzprojec1.png)
+
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
+
+Explain your reasoning.
+
+
+---
+
+
+Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
+
+![center w:500](../figures/horizprojec2.png)
+
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
+
+Explain your reasoning.
+
+---
+
+![bg fit right:52%](../figures/hprojectrank.png)
+
+Rank the situations from the ***greatest to least time*** that it will take for the sphere to hit the ground. Make your ranking on a single line, using > and = signs. Ties are possible.
+
+Rank the situations from the ***greatest to the least horizontal distance*** that the sphere will travel. Make your ranking on a single line, using only the > and = signs. Ties are possible.
+
+---
+
+# Horizontal Projectiles 
+
+* A ***projectile*** is an object that *only* experiences a gravitational force
+* For _**horizontal projectiles**_ the $v_{0y} = 0$
+* We can separate motion in the $x$ and $y$ planes and solve separately
