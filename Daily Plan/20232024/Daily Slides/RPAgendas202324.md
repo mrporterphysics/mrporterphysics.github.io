@@ -15,6 +15,49 @@ math: mathjax
 
 ---
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.02.09 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Finish Projectile Target Shot
+2. Introduction to Circular Motion
+
+#### 🚨 NOTE:
+- Quiz Next Week on Projectiles at Angle
+- **Test Corrections Due <u>Friday 2/16</u>**
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Explain vertical and horizontal motion of a projectile with forces_
+
+🥅 _Solve Free fall problems with kinematic equations_
+
+🥅 _Learn about circular motion_
+
+
+
+</div>
+
+</div>
+
+
+
+
+---
+
 # 2024.02.06 **Regents Physics** Do Now 
 
 

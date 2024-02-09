@@ -15,6 +15,23 @@ math: mathjax
 
 ---
 
+# 2024.02.09 **Conceptual Physics**
+
+##### **❓ of the 📅**: Have you ever fallen for a scam? If so, what was it?
+
+1. Start building paper cars 
+    - you will have to **share** the hot glue gun
+    - you may also use scotch tape 
+
+**🚗 Car Supplies 📰**:
+
+- 2 pieces of copy paper
+- 1 straw to use for car axles
+- 2 axles & 4 wheels
+- scotch tape & hot glue
+
+---
+
 # 2024.02.05 **Conceptual Physics** 
 
 ##### **❓ of the 📅**: Have you ever fallen for a scam? If so, what was it?
