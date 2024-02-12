@@ -8,6 +8,7 @@
   - [Rotational Kinematics](/Presentations/APCAPM/talks/Rotational_Kinematics202324.html)
   - [Dynamics](/Presentations/Forces/talks/Dynamics2023.html)
   - [Circular Motion](/Presentations/Circular%20Motion/talks/CircularMotion2024.html)
+  - [Projectile Motion](/Presentations/Projectiles/talks/projectiles2024.html)
   
 ### AP Review Slides:
 
