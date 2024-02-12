@@ -16,7 +16,40 @@ math: mathjax
 
 ---
 
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
+# 2024.02.12 **AP Physics** 
+
+##### **❓ of the 📅**: What was your Super Bowl highlight? Halftime show? Snack? Play in the game? Commercial? Not watching?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Free-Fall
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about freefall motion & projectiles_
+
+
+#### 🚨 Notices
+
+
+</div>
+
+</div>
+
+
+
+---
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

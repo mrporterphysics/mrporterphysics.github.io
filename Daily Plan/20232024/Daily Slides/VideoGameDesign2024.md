@@ -17,6 +17,40 @@ math: mathjax
 ---
 
 
+# 2024.02.12 **Video Game Desgin** 
+
+##### **❓ of the 📅**: What was your Super Bowl highlight? Halftime show? Snack? Play in the game? Commercial? Not watching?
+
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Playtesting Checkers Modifications
+    - Play each groups modifications (2 groups)
+    - Fill out Feedback Form
+2. Fill out reflection part of checkers modification assignment
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Play games and determine elements that make the game **fun**_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+---
+
 # 2024.02.08 **Video Game Desgin** 
 
 ##### **❓ of the 📅**: What animal would you want for a non-traditional pet? (i.e. not a dog, fish or cat)

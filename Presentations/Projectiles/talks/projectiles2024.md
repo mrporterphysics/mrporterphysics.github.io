@@ -188,6 +188,14 @@ Blake takes this rocket to another planet. This planent has $3m_E$ and $2r_E$. W
     2. How much time does it take the ball to reach the peak of its trajectory?
 
 ---
+
+
+# Free Fall Derivation <!--fit--->
+
+## Derive an expression for the amount of time $t$ it takes an object to fall a vertical distance $h$ when dropped (released from rest). 
+
+
+---
 <!--- _class: inverse --->
 
 # Rock on Asteroid 
