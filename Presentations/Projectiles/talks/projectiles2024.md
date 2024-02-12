@@ -277,3 +277,38 @@ Rank the situations from the ***greatest to the least horizontal distance*** tha
 * A ***projectile*** is an object that *only* experiences a gravitational force
 * For _**horizontal projectiles**_ the $v_{0y} = 0$
 * We can separate motion in the $x$ and $y$ planes and solve separately
+
+---
+
+# Horizontal Projectils 
+
+<div class='columns'>
+
+<div>
+
+## X-Plane Motion
+
+- $v_x$ is ***constant***
+
+$$\Delta x = v_x t$$
+
+</div>
+
+<div>
+
+## Y-Plane Motion 
+
+- constant acceleration $a_y = g$
+
+$$\Delta y = \frac{1}{2}gt^2$$
+
+$$v_y = gt$$
+
+$$v_y^2 = 2g\Delta y$$
+
+</div></div>
+
+
+---
+
+# Double Cross Diagram <!--fit--->

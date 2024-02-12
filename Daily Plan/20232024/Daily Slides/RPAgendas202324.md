@@ -18,6 +18,47 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.02.11 **Regents Physics** 
+
+##### **❓ of the 📅**: How did your Super Bowl go?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Intro to circular Motion
+2. Centripetal Acceleration
+	1. [Linear Speed](https://www.physicsclassroom.com/calcpad/launch/CPCG1)
+	2. [Centripetal Acceleration 1](https://www.physicsclassroom.com/calcpad/launch/CPCG2)
+	3. [Centripetal Acceleration 2](https://www.physicsclassroom.com/calcpad/launch/CPCG3)
+3. Centripetal Net Force
+	1. [Centripetal Force](https://www.physicsclassroom.com/calcpad/launch/CPCG3)
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about circular motion_
+
+#### 🚨 NOTE:
+- Quiz Next Week on Projectiles at Angle
+- **Test Corrections Due <u>Friday 2/16</u>**
+
+</div>
+
+</div>
+
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.02.09 **Regents Physics** 
 
 ##### **❓ of the 📅**: Who is your favorite Disney hero or heroine? Would you trade places with them?
