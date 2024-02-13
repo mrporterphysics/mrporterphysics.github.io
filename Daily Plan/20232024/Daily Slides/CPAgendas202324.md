@@ -18,7 +18,7 @@ math: mathjax
 
 # 2024.02.13 **Conceptual Physics**
 
-##### **❓ of the 📅**: Have you ever fallen for a scam? If so, what was it?
+##### **❓ of the 📅**: What's the most unusual thing you've ever eaten?
 
 <div class='columns'>
 <div>
