@@ -16,6 +16,43 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.13 **AP Physics** 
+
+##### **❓ of the 📅**: What's the most unusual thing you've ever eaten?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Astro Problem - AP Classroom
+1. Horizontal Projectiles 
+2. Mini Lab
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about freefall motion & projectiles_
+
+
+#### 🚨 Notices
+
+
+</div>
+
+</div>
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.02.12 **AP Physics** 

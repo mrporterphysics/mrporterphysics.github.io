@@ -1,5 +1,5 @@
 ---
-title: Video Game Design 2024
+title: Projectiles 2024
 marp: true
 theme: vgdtheme
 paginate: true
@@ -272,6 +272,11 @@ Explain your reasoning.
 
 ---
 
+
+# **Launcher** Demo <!--fit--->
+
+---
+
 ![bg fit right:52%](../figures/hprojectrank.png)
 
 Rank the situations from the ***greatest to least time*** that it will take for the sphere to hit the ground. Make your ranking on a single line, using > and = signs. Ties are possible.
@@ -320,3 +325,40 @@ $$v_y^2 = 2g\Delta y$$
 ---
 
 # Double Cross Diagram <!--fit--->
+
+---
+
+
+# Practice 
+
+In many locations, old abandoned stone quarries have become filled with water once excavating has been completed. While standing on a quarry wall, a boy tosses a piece of granite into the water below. If he throws the rock horizontally
+with a velocity of 3.0 m/s, and it strikes the water 4.5 meters away, how high above the water is the wall?
+
+---
+
+# Practice w/ Table 
+
+Suppose that an airplane flying 60 m/s, at a height of 300 meters, dropped a sack of flour. How far from the point of release would the sack have traveled when it struck the ground? Where will the plane be in relation to the sack when it hits the ground?
+
+---
+
+# <!--fit---> Marble Mini-Experiment
+
+1. Determine the launch velocity of your marble.
+
+Equipment:
+
+- Ruler track
+- Marble
+- Carbon paper
+- Meterstick
+
+2. Use to predict landing spot from new height (like off top of cabinets)
+
+
+---
+
+# Projectiles <!--fit--->
+# Fired at an **Angle** <!--fit--->
+
+---
