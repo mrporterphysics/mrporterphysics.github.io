@@ -19,6 +19,99 @@ math: mathjax
 
 # 2024.02.12 **Video Game Desgin** 
 
+##### **❓ of the 📅**: What is the best board game?
+
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Reflect on Checkers Modifications
+    - Give Feedback
+    - Reflect on Document
+    - Share out
+2. What is a game?
+2. Research - Board Game Genres 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Play games and determine elements that make the game **fun**_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+---
+
+# What is a **game**? <!--fit--->
+
+---
+
+# A Game...
+
+## is a **play activity** with **rules** that involve **conflict**
+
+---
+
+# **Critical** Vocabulary
+
+- **Critical** means we are analyzing games by carefully considering all of their parts and how they fit together. 
+    * NOT that we are trying to find fault!
+
+---
+
+# 🤔 Ideas about Games 
+
+* A game has *ends and means*: an objective, outcome, and set of rules
+* A game is an activity that involving player decisions, seeking objectives, withing a *limiting context* 
+* A game is a ***voluntary effort to overcome unnecessary obstacles***
+
+...and many more
+
+---
+
+# Games 🧩
+
+* Games are an activity
+* Games have rules 
+* Games have conflict 
+* Games have goals 
+* Games invovle decision making
+* Games are artifical, they are safe, they are outside ordinary life
+* Games and voluntary
+* Games have uncertain outcomes 
+
+---
+
+# Games 🧩
+
+* Games are a representation or simulation of something real, but they are themselves make believe.
+* Games are inefficient. The rules impose obstacles that prevent the player from reaching their goal through the most efficient means.
+* Games have systems. Usually closed systems
+* Games are a form of art
+
+---
+
+# Board Game **Genres**
+
+1. Research Board games and come up with a list of board game genres. 
+2. Create a list of genres and their descriptions
+3. Make a list of **games you've played** for each genre
+
+---
+
+# 2024.02.12 **Video Game Desgin** 
+
 ##### **❓ of the 📅**: What was your Super Bowl highlight? Halftime show? Snack? Play in the game? Commercial? Not watching?
 
 

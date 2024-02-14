@@ -362,3 +362,15 @@ Equipment:
 # Fired at an **Angle** <!--fit--->
 
 ---
+
+# Simulation 
+
+## CER 
+
+When firing from flat ground...
+
+1. What angle gives you the max height for the projectile?
+2. What angle gives the greatest range (horizontal displacement)?
+3. What angle pairs give the same range? 
+
+

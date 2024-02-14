@@ -16,6 +16,49 @@ math: mathjax
 
 ---
 
+# Physics Valentines 💟 <!--fit--->
+
+Research your scientist and be prepared to share out a quick summary and your valentine pun
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.14 **AP Physics** 
+
+##### **❓ of the 📅**: What is the best board game?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Physics Valentine
+2. Solving Horizontal Projectile Problems
+3. AP Workbook 1.M, 1.N, 1.O
+4. Mini Lab
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about freefall motion & projectiles_
+
+
+#### 🚨 Notices
+
+
+</div>
+
+</div>
+
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
