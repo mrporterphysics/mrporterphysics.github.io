@@ -16,6 +16,125 @@ math: mathjax
 
 ---
 
+
+
+<!--- _footer: <br>--->
+
+<div class='columns'>
+
+<div>
+
+
+A baseball is thrown from point S in right field to home plate. The dashed line shows the path of the ball.
+
+![center](../images/Kinematics/baseballGraphs.png)
+
+![center](../images/Kinematics/thebaseballGraphs.png)
+
+</div>
+
+<div>
+
+Treat up as the positive vertical direction and to the left as the positive horizontal direction, and with the origin at home plate.
+
+Select the graph from the choices below that best represents:
+
+1. horizontal velocity versus time graph 
+2. horizontal acceleration versus time graph
+3. vertical velocity versus time graph
+4. vertical acceleration versus time graph
+
+</div>
+</div>
+
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.26 **AP Physics** 
+
+##### **❓ of the 📅**: How was your February Break?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Einstein Bungee Jumper
+3. Hot Wheels Demo & Discussion
+4. [Energy Notes]()
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Energy_
+
+🥅 _Represent Energy Graphically_
+
+
+#### 🚨 Notices
+
+HW: Circular Motion AP Classroom Unit Review MC 1
+
+</div>
+
+</div>
+
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.16 **AP Physics** 
+
+##### **❓ of the 📅**: What are your plans for break?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Mini Lab
+2. Projectiles at an angle
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about freefall motion & projectiles_
+
+
+#### 🚨 Notices
+
+
+</div>
+
+</div>
+
+
+---
+
+# Horizontal Projectile Lab 
+
+1. Determine Launch Speed of your ball when launching from table. 
+2. Use that information to predict where the ball will land when launched from the cabinets
+
+---
+
 # Physics Valentines 💟 <!--fit--->
 
 Research your scientist and be prepared to share out a quick summary and your valentine pun

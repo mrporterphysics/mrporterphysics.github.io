@@ -15,6 +15,15 @@ math: mathjax
 
 ---
 
+# 2024.02.15 **Conceptual Physics**
+
+##### **❓ of the 📅**: What's the best board game?
+
+1. Setup for test crash
+2. Test Cars 
+3. Write Report 
+
+---
 
 # 2024.02.13 **Conceptual Physics**
 

@@ -19,6 +19,104 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.02.16 **Regents Physics** 
+
+##### **❓ of the 📅**: What are your plans for Feb Break?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Swinging Rubber Stoppers Lab
+2. Circular Motion
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about circular motion_
+
+#### 🚨 NOTE:
+- Quiz Next Week on Projectiles at Angle
+- **Test Corrections Due <u>Friday 2/16</u>**
+
+</div>
+
+</div>
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.02.15 **Regents Physics** 
+
+##### **❓ of the 📅**: What is the best board game?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Physics Valentine 💟
+    1. Research your scientist and be prepared to share out a quick summary and your valentine pun.
+2. Swinging Rubber Stoppers Lab
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about circular motion_
+
+#### 🚨 NOTE:
+- Quiz Next Week on Projectiles at Angle
+- **Test Corrections Due <u>Friday 2/16</u>**
+
+</div>
+
+</div>
+
+---
+
+
+
+<div class='columns'>
+
+<div>
+
+# Swinging Stoppers 
+
+## 🤔 **<u>Essential Question</u>:**
+
+## How are the **radius**, **mass**, and **tension** force related to the velocity that you swing your stopper at?
+
+</div>
+
+<div>
+
+# **Notes** 📔
+
+1. Try to swing with horizontal circles
+2. Do not swing so aggressively that things will go flying 
+2. When measuring **time** be sure to time for multiple swings
+3. Do your best to control 2 of the three variables for each experiment
+
+
+</div>
+
+</div>
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.02.13 **Regents Physics** 
 
 ##### **❓ of the 📅**: What's the most unusual thing you've ever eaten?
