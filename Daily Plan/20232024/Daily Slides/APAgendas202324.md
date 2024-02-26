@@ -66,7 +66,7 @@ Select the graph from the choices below that best represents:
 1. Do Now
 2. Einstein Bungee Jumper
 3. Hot Wheels Demo & Discussion
-4. [Energy Notes]()
+4. [Energy Notes](https://www.mrporterphysics.com/Presentations/APETM/talks/energy2024.html)
 
 
 </div>
