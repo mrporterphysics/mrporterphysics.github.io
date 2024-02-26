@@ -9,6 +9,7 @@
   - [Dynamics](/Presentations/Forces/talks/Dynamics2023.html)
   - [Circular Motion](/Presentations/Circular%20Motion/talks/CircularMotion2024.html)
   - [Projectile Motion](/Presentations/Projectiles/talks/projectiles2024.html)
+  - [Energy](/Presentations/APETM/talks/energy2024.html)
   
 ### AP Review Slides:
 
