@@ -31,6 +31,17 @@ section.left h2, section.left p,{
 
 </style>
 
+---
+
+
+# Energy **Transfer** Model <!--fit--->
+
+## _A model conservation and non-uniform motion_ <!--fit--->
+
+### Mr. Porter - AP Physics 2024
+
+---
+
 # The Bungee Jumper
 
 + Represent this situation with as well as you can (with as many diagrams as you can)
