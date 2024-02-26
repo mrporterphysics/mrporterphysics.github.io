@@ -15,7 +15,6 @@ math: mathjax
 
 ---
 
-
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
