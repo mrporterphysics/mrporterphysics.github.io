@@ -19,6 +19,42 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.02.26 **Regents Physics** 
+
+##### **❓ of the 📅**: What are your plans for Feb Break?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Swinging Rubber Stoppers Lab - Whiteboard?
+2. Circular Motion Notes 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about circular motion_
+
+#### 🚨 NOTE:
+- Quiz Next Week on Projectiles at Angle
+- **Test Corrections Due <u>Friday 2/16</u>**
+
+</div>
+
+</div>
+
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.02.16 **Regents Physics** 
 
 ##### **❓ of the 📅**: What are your plans for Feb Break?
