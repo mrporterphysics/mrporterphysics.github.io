@@ -152,6 +152,13 @@ Energy is like money...
 * **Equation**: None
 * **Notes**: Often referred to as change in thermal energy, but includes sound vibrations
 
+---
+
+# Energy Definitions
+
+## Work:
+
+_Work is a transfer of energy by a mechanical process (a force exerted on an object or system as it moves through a displacement in the direction of the force)_ The amount of energy transferred in this process is referred to as the work done.
 
 ---
 
@@ -159,6 +166,8 @@ Energy is like money...
 
 ## Work:
 
+_Work is a transfer of energy by a mechanical process (a force exerted on an object or system as it moves through a displacement in the direction of the force)_ The amount of energy transferred in this process is referred to as the
+work done.
 * **Symbol**: $W = \Delta E$
 * **When is the energy stored in this way?** External force changes the energy of the system
 * **Notes**: Area of Force vs. Displacement Graph
