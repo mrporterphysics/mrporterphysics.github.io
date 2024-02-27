@@ -31,7 +31,6 @@ section.left h2, section.left p,{
 
 </style>
 
----
 
 
 # Energy **Transfer** Model <!--fit--->
