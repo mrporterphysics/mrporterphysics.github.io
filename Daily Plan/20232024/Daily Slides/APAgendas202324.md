@@ -17,6 +17,46 @@ math: mathjax
 ---
 
 
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.27 **AP Physics** 
+
+##### **❓ of the 📅**: How was your February Break?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Energy Notes 
+2. Energy Bar Graphs 📊
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Conservation of Energy_
+
+🥅 _Represent Energy Graphically_
+
+
+#### 🚨 Notices
+
+HW: Circular Motion AP Classroom Unit Review MC 1
+
+</div>
+
+</div>
+
+
+
+
+---
+
 
 <!--- _footer: <br>--->
 

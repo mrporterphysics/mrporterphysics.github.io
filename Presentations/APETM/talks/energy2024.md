@@ -185,4 +185,89 @@ work done.
 
 ---
 
-# Energy Bar Graphs
+# Conservation <!--fit--->
+
+---
+
+# Conservation and Isolated System 
+
+### **Isolated System**: System where there are no external forces
+
+---
+
+# Conservation of Cake 🍰 <!--fit--->
+
+## For Fiona's Birthday (Sat) we are cutting an imaginary birthday cake into 21 pieces
+
+
+What changes? What remains constant?
+
+<!--- Cut cake into 20 pieces:
+- Number of pieces did not remain the same
+- Average piece size changed 
+- total _mass_ remains the same --->
+
+---
+
+# Conservation of Cake 🍰 <!--fit--->
+
+Conservation of Mass:
+
+$$\{ \textrm{initial cake mass} \} + \{\textrm{new mass enerting or leaving system}\} = \{\textrm{final cake mass}\}$$
+
+* What happened to the mass of our isolated cake system?
+
+<!---
+- System lost mass
+- Environment (hungry students) removed mass from the system
+- If we expand the system to the classroom then our mass was conserved
+ --->
+
+---
+
+# Conservation of Cake 🍰 <!--fit--->
+
+![center](image.png)
+
+--- 
+
+# Conservation of **Energy** <!--fit--->
+
+---
+
+# Conservation of Energy 
+
+> Energy cannot be created or destoryed. 
+
+---
+
+# Conservation of Energy 
+
+## The energy of **an isolated system** remains constant.
+
+---
+
+# Work and Conservation
+
+## Work-Energy Theorem 
+
+* Always start by defining your object or system 
+* The **net work** done by external forces changes the system's **mechanical energy** (Sum of potential and kinetic energies)
+
+---
+
+# Work and Conservation
+
+## Work-Energy Theorem 
+
+- Always start by defining your object or system 
+- The **net work** done by external forces changes the system's **mechanical energy** (Sum of potential and kinetic energies)
+
+$$W_{ext} = \Delta K + \Delta U$$
+$$W_{ext} = (K_f - K_i) + (U_f - U_i)$$
+
+---
+
+# Energy Bar Graphs 📊  <!--fit--->
+
+---

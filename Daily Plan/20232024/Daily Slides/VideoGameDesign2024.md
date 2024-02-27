@@ -17,6 +17,37 @@ math: mathjax
 ---
 
 
+# 2024.02.26 **Video Game Desgin** 
+
+##### **❓ of the 📅**: How was your break?
+
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Board Game Brainstorming & Research
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Play games and determine elements that make the game **fun**_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+---
+
 # 2024.02.12 **Video Game Desgin** 
 
 ##### **❓ of the 📅**: What is the best board game?
