@@ -15,6 +15,70 @@ math: mathjax
 
 ---
 
+
+# 2024.02.28 **Conceptual Physics**
+
+##### **❓ of the 📅**: How did you spend the money from your very first job?
+
+1. Calculation Section of Lab Report
+2. Conservation of Energy Pivot
+
+---
+
+# Calculations:
+
+## Calculating Momentum 
+
+$$p = mv$$
+
+* $p$ 👉 momentum
+* $m$ 👉 mass (kilograms)
+* $v$ :point_right: velocity (m/s)
+
+1) Convert mass from _grams_ to _kilograms_ (divide grams by 1000)
+2) Multiply _mass_ and _velocity_
+
+---
+
+# Example
+
+<div class='columns'>
+
+<div>
+
+| Measurement | Value | 
+| --- | --- | 
+|mass | 102 grams | 
+|velocity | 3.2 m/s |
+
+</div>
+
+
+<div>
+
+### Convert mass
+
+102 grams /1000 = 0.102 kg
+
+### Write Momentum Equation
+$p = mv$
+
+### Substitute in mass and velocity 
+
+$p = (0.102\textrm{ kg})(3.2\textrm{ m/s})$
+
+### Solve
+
+$p= 0.3264 \textrm{ kg m/s}$
+
+</div></div>
+
+
+
+ 
+
+---
+
 # 2024.02.26 **Conceptual Physics**
 
 ##### **❓ of the 📅**: What's the best board game?

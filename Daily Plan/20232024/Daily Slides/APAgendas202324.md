@@ -16,6 +16,81 @@ math: mathjax
 
 ---
 
+### 2024.02.29 **AP Physics** Do Now 
+
+<div class='columns'>
+
+<div>
+
+A block of mass $M$ is released from rest at point 1, as shown in the figure. The block slides without frictional forces along the circular arc but encounters frictional forces as soon as it reaches the horizontal portion of the track at point 2. The block travels a distance $D$ along the horizontal track before coming to rest at point 3. Consider the block-Earth system. In terms of the mechanical energy of the system, which of the following claims is correct, and why?
+
+</div>
+
+<div>
+
+![center w:400](../images/energy/blockcurvedramp.png)
+
+1. The system is open, because there is a net force exerted on the block.
+2. The system is open, because the block’s velocity is zero at points 1 and 3.
+3. The system is closed, because there is a net force exerted on the block.
+4. The system is closed, because the block’s velocity is 0 at points 1 and 3.
+
+</div>
+
+</div>
+
+---
+
+### 2024.02.29 **AP Physics** Do Now 2
+
+An object is released from rest at a height $H$ near and above the surface of Earth. As the object falls toward the surface, Earth’s atmosphere exerts a resistive force on the object such that it reaches a terminal velocity before it reaches the ground. Which of the following claims is true? Select two answers.
+
+1. The system consisting of only the object is an open system.
+2. Earth’s atmosphere does negative work on the object as it falls toward the surface.
+3. The change in the object’s kinetic energy from the instant it is released from rest, to the instant it reaches terminal velocity, is zero.
+4. The total mechanical energy of the object-Earth system remains constant at all times in which the object is in motion.
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.02.29 **AP Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Conservation of Energy_
+
+🥅 _Represent Energy Graphically_
+
+
+#### 🚨 Notices
+
+HW: Circular Motion AP Classroom Unit Review MC 1
+
+</div>
+
+</div>
+
+
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

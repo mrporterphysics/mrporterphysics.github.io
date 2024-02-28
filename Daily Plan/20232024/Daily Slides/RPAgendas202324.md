@@ -15,6 +15,41 @@ math: mathjax
 
 ---
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.02.28 **Regents Physics** 
+
+##### **❓ of the 📅**: How did you spend the money from your very first job?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. [Circular Motion Notes](https://www.mrporterphysics.com/Presentations/Circular%20Motion/talks/CircularMotion2024.html):
+    1. Tangential velocity
+    2. Centripetal Acceleration
+    3. Centripetal forces 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about circular motion_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 

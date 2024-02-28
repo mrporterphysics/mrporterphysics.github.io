@@ -129,6 +129,24 @@ $$v = r\omega$$
 
 ---
 
+# Self Check <!--fit--->
+
+## Complete solo and check with table 
+
+---
+
+# Self Check 🤳 ✅
+
+During their physics field trip to the amusement park, Tyler and Maria took a ride on the Whirligig. The Whirligig ride consists of long swings which spin in a circle at relatively high speeds. As part of their lab, Tyler and Maria estimate that the riders travel through a circle with a radius of 6.67 m and make one turn every 8.21 seconds. Determine the speed of the riders on the Whirligig.
+
+---
+
+# Self Check 🤳 ✅
+
+A toy airplane makes 74 revolutions about its 91.8-cm radius circle in 1 minute. Determine the speed of the plane.
+
+---
+
 # Speed
 
 How does the distance from the center of the circle affect your speed?
@@ -165,20 +183,42 @@ $$a_c = \frac{v^2}{r}$$
 ---
 
 
-# Example
+# Self Check 🤳 ✅
 
 What is the magnitude of the centripetal acceleration of a car following a curve of radius 500 m at a speed of 25.0 m/s (about 90 km/h)? Compare the acceleration with that due to gravity for this fairly gentle curve taken at highway speed.
 
 ---
 
-
-# Example
+# Self Check 🤳 ✅
 
 What is the magnitude of the centripetal acceleration of a car following a curve of radius 500 m at a speed of 25.0 m/s (about 90 km/h)? Compare the acceleration with that due to gravity for this fairly gentle curve taken at highway speed.
 
 
 $$a_c = \frac{v^2}{r} = \frac{(25.0 \text{ m/s})^2}{500 \text{ m}}$$
 
+---
+
+# Self Check 🤳 ✅
+
+A barrel rider is moving in a circle with a speed of 8.0 m/s. The acceleration of the rider is 7.2 m/s/s. The speed of the object is somehow increased to 16.0 m/s (i.e., doubled). The new acceleration would be _____ m/s/s. (Assume that the radius of the circle is not changed.)
+
+---
+
+# Self Check 🤳 ✅
+
+Eva and Harper buy tickets for the barrel ride at the local carnival. The barrel has a radius of 7.08 m. Eva and Harper experience an acceleration of 9.65 m/s/s once they get up to speed. Calculate the …
+
+1. … the speed at which they are moving.
+2. … the time for the barrel to make one complete revolution.
+
+---
+
+## Self Check 🤳 ✅
+
+Avery plays the young David in his church's play on David and Goliath. Avery is practicing with his 0.667-m long sling and finds that he can rotate it in a circle at 8.34 revolutions/second. But if he increases the length to 0.975 m, he is able to rotate at a less impressive 5.36 revolutions/second.
+
+1. Calculate the acceleration of the sling when swung at 8.34 rev/s.
+2. Calculate the acceleration of the sling when swung at 5.36 rev/s.
 
 ---
 
