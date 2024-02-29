@@ -269,12 +269,6 @@ $$W_{ext} = (K_f - K_i) + (U_f - U_i)$$
 
 # Energy Bar Graphs 📊  <!--fit--->
 
----
-
-
-# Work 
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/72TFWvU3wUYdUuxejTTIzt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ---
 
@@ -346,6 +340,12 @@ $$F_S = kx$$
 # <!---fit---> What would the result be for larger areas? Smaller areas?
 
 # <!---fit---> Describe in your own words.
+
+---
+
+# Work 
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/72TFWvU3wUYdUuxejTTIzt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 ---
 

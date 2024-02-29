@@ -65,9 +65,9 @@ An object is released from rest at a height $H$ near and above the surface of Ea
 
 #### 📋 Agenda
 
-1. Do Now 
-2. 
-
+1. Do Now
+2. Spring Launcher Lab
+3. AP Workbook 4A & 4B
 </div>
 
 <div>
