@@ -49,7 +49,16 @@ $$p = mv$$
 | Measurement | Value | 
 | --- | --- | 
 |mass | 102 grams | 
-|velocity | 3.2 m/s |
+|time through gate | 0.05 seconds |
+
+### Calc Velocity
+
+$v = \frac{d}{t}$
+
+$v = \frac{0.04 \textrm{ m}}{0.05 \textrm{ s}}$
+
+$v = 0.8 \textrm{ m/s}$
+
 
 </div>
 
