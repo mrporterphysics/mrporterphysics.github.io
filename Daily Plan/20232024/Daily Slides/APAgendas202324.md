@@ -57,7 +57,7 @@ An object is released from rest at a height $H$ near and above the surface of Ea
 
 # 2024.02.29 **AP Physics** 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What was your worst style choice?
 
 <div class = "columns">
 
