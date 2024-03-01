@@ -16,6 +16,20 @@ math: mathjax
 ---
 
 
+
+# 2024.03.01 **Conceptual Physics**
+
+##### **❓ of the 📅**: Is tap water better than bottled water?
+
+1. Conservation of Energy Pivot
+2. Start Mouse Trap car research
+    - What is a mousetrap car?
+    - How do you build one?
+    - What materials do you need
+
+---
+
+
 # 2024.02.28 **Conceptual Physics**
 
 ##### **❓ of the 📅**: How did you spend the money from your very first job?

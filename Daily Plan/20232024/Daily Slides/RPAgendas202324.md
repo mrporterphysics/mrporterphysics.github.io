@@ -16,6 +16,43 @@ math: mathjax
 ---
 
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.02.29 **Regents Physics** 
+
+##### **❓ of the 📅**: Is tap water better than bottled water?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Pivot - Rollercoaster Loop
+1. Physics Clasroom:
+    - [Mild 🫑](https://www.physicsclassroom.com/calcpad/launch/CPCG5)
+    - [Medium 🌶️](https://www.physicsclassroom.com/calcpad/launch/CPCG6)
+    - [Spicy 🥵](https://www.physicsclassroom.com/calcpad/launch/CPCG7) 
+    - [Inferno 🔥](https://www.physicsclassroom.com/calcpad/launch/CPCG8)
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about circular motion_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

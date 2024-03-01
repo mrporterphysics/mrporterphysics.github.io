@@ -13,6 +13,62 @@ math: mathjax
 
 ## 👨‍🏫 Mr. Porter
 
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.03.01 **AP Physics** 
+
+##### **❓ of the 📅**: Is tap water better than bottled water?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now - AP Workbook 4.A
+2. Kinetic Energy Lab 
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Conservation of Energy_
+
+🥅 _Represent Energy Graphically_
+
+
+#### 🚨 Notices
+
+HW: Circular Motion AP Classroom Unit Review MC 1
+
+</div>
+
+</div>
+
+---
+
+# Kinetic Energy Lab
+
+**How is *speed* related to kinetic energy?**
+
+
+How can you use energy conservation to determine the kinetic energy? (Can you determine the energy *before* the cart starts moving?) Draw an energy bar graph to help your thinking.
+
+
+**Remember:**
+
+$$W = Fd$$
+
+$$U_s = \frac{1}{2}kx^2$$
+
+
+
 
 ---
 
