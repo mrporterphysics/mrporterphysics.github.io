@@ -363,3 +363,140 @@ Work is the change in energy of a system...
 * $W = \Delta E_T$ 
 * For **constant** or average forces: $W = Fd$
 * Note: only force **parallel** to displacement does work: $F \cos \theta d = W$
+
+---
+
+# Work 
+
+# **$\boxed{\Delta E = W = F_{\parallel}d = Fd\cos \theta}$** <!--fit--->
+
+---
+
+# Elastic (Spring) Potential Energy 
+
+# **$\boxed{U_s = \frac{1}{2}kx^2}$** <!--fit--->
+
+---
+
+# Kinetic Energy 
+
+# **$\boxed{K = \frac{1}{2}mv^2}$** <!--fit--->
+
+---
+
+# Gravitational Potential Energy 
+
+# **$\boxed{\Delta U_g = mg\Delta y }$** <!--fit--->
+
+---
+
+## Reference Table <!--fit--->
+
+## **Hide-and-seek** 👀 <!--fit--->
+
+Find the equations...
+
+
+---
+
+## A cart moving at 5 m/s collides with a spring. At the instant the cart is motionless, what is the largest amount that the spring could be compressed? Assume no friction.
+
+![center](image-1.png)
+
+---
+
+# Problem Solving Steps:
+
+1. Start with Energy Bar Graph
+2. Write Qualitative Energy Conservation Equation
+3. Solve **algebraically** BEFORE substituting in numbers
+  - this will help you with practice for derivations
+4. Plug in numbers and solve
+
+---
+
+# 1. Bar Graph
+
+![alt text](image-2.png)
+
+---
+
+## **2. Energy Conservation Equation**
+
+
+$$K = U_s$$
+
+---
+
+## **2. Energy Conservation Equation**
+
+
+$$K = U_s$$
+
+Subtitute Individual Equations 
+
+$$\frac{1}{2} mv^2 = \frac{1}{2}kx^2$$
+
+---
+
+## **2. Energy Conservation Equation**
+
+
+$$K = U_s$$
+
+Subtitute Individual Equations 
+
+$$\frac{1}{2} mv^2 = \frac{1}{2}kx^2$$
+
+## **3. Solve Algebraically for $x$**
+
+$$mv^2 = kx^2$$
+
+---
+
+## **2. Energy Conservation Equation**
+
+
+$$K = U_s$$
+
+Subtitute Individual Equations 
+
+$$\frac{1}{2} mv^2 = \frac{1}{2}kx^2$$
+
+## **3. Solve Algebraically for $x$**
+
+$$mv^2 = kx^2$$
+
+$$\frac{mv^2}{k} = x^2$$
+
+---
+
+## **2. Energy Conservation Equation**
+
+
+$$K = U_s$$
+
+Subtitute Individual Equations 
+
+$$\frac{1}{2} mv^2 = \frac{1}{2}kx^2$$
+
+## **3. Solve Algebraically for $x$**
+
+$$mv^2 = kx^2$$
+
+$$\frac{mv^2}{k} = x^2$$
+
+$$ x = \sqrt{\frac{mv^2}{k}}$$
+
+
+
+
+---
+
+# Plug in numbers and solve 
+
+$$ x = \sqrt{\frac{mv^2}{k}}$$
+
+$$ x = \sqrt{\frac{8 \textrm{ kg} \cdot (5 \textrm{ m/s})^2}{50 \frac{\textrm{ N}}{\textrm{ m}}}}$$
+
+$$ \boxed{x = 2 \textrm{ m}}$$

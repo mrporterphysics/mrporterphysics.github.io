@@ -18,6 +18,44 @@ math: mathjax
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
+# 2024.03.04 **AP Physics** 
+
+##### **❓ of the 📅**: What is the best pasta shape? 🍝
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now - AP Workbook 4.B
+2. When finished whiteboard results from lab
+3. Energy Equations 
+4. Solving Energy Problems Quantitatively
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Represent Energy Graphically_
+
+🥅 _Use Energy to make **quantitative** predictions_
+
+#### 🚨 Notices
+
+HW: Circular Motion AP Classroom Unit Review MC 2
+
+</div>
+
+</div>
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
 # 2024.03.01 **AP Physics** 
 
 ##### **❓ of the 📅**: Is tap water better than bottled water?
@@ -45,7 +83,7 @@ math: mathjax
 
 #### 🚨 Notices
 
-HW: Circular Motion AP Classroom Unit Review MC 1
+HW: Circular Motion AP Classroom Unit Review MC 2
 
 </div>
 
