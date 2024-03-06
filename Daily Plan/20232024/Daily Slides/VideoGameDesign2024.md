@@ -17,6 +17,41 @@ math: mathjax
 ---
 
 
+# 2024.03.04 **Video Game Desgin** 
+
+##### **❓ of the 📅**: What is the best pasta shape?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. [Intro to Game Concept Documents](https://docs.google.com/presentation/d/1WRTNIZ-rL4m9z7CVZj2sIK2EBINBTkcWv7njYTbG-4c/present?slide=id.p1)
+2. Working on Board Game GCD
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _What is a Game Concept Document?_
+
+🥅 _Make GCD_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+
+---
+
+
 # 2024.02.26 **Video Game Desgin** 
 
 ##### **❓ of the 📅**: How was your break?

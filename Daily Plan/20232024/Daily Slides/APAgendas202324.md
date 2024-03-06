@@ -46,8 +46,8 @@ math: mathjax
 
 #### 🚨 Notices
 
-HW: Circular Motion AP Classroom Unit Review MC 2
-
+- HW: Circular Motion AP Classroom Unit Review MC 2
+- Expect a Quiz Friday - Energy & Projectiles (I will post practice on PC)
 </div>
 
 </div>

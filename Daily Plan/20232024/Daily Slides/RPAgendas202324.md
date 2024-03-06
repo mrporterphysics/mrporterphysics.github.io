@@ -19,6 +19,92 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.03.06 **Regents Physics** 
+
+##### **❓ of the 📅**: If you could start a charity, what would it be for?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Practice for Quiz
+    1. Physics Clasroom:
+        - [Mild 🫑](https://www.physicsclassroom.com/calcpad/launch/CPCG5)
+        - [Medium 🌶️](https://www.physicsclassroom.com/calcpad/launch/CPCG6)
+        - [Spicy 🥵](https://www.physicsclassroom.com/calcpad/launch/CPCG7) 
+        - [Inferno 🔥](https://www.physicsclassroom.com/calcpad/launch/CPCG8)
+    2. Regents Questions (Packet)
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Practice Circular Motion_
+
+#### 🚨 NOTE:
+- Circular Motion Quiz Tomorrow
+
+</div>
+
+</div>
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.03.05 **Regents Physics** 
+
+##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Lab: Flying Cows! 
+1. Physics Clasroom:
+    - [Mild 🫑](https://www.physicsclassroom.com/calcpad/launch/CPCG5)
+    - [Medium 🌶️](https://www.physicsclassroom.com/calcpad/launch/CPCG6)
+    - [Spicy 🥵](https://www.physicsclassroom.com/calcpad/launch/CPCG7) 
+    - [Inferno 🔥](https://www.physicsclassroom.com/calcpad/launch/CPCG8)
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about circular motion_
+
+#### 🚨 NOTE:
+- Circular Motion Quis Thursday 
+
+</div>
+
+</div>
+
+---
+
+
+# Flying 🐄 🐖 🦇
+
+The buffalo farm has recently acquired some flying animals and needs to test the length of the flying animals' leashes. The farm is trying to find a way to predict how long it takes for the animals to complete one circle while attached to their loop (in physics, we call this the "period" or time for one event of repeating events to happen and use the symbol $T$.) 
+
+**Your goal is to predict the time it takes for your animal to take 10 swings based on the length of your animal's string.**
+
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.02.29 **Regents Physics** 
 
 ##### **❓ of the 📅**: Is tap water better than bottled water?

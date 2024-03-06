@@ -17,6 +17,84 @@ math: mathjax
 
 
 
+# 2024.03.05 **Conceptual Physics**
+
+##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
+
+1. Energy Introduction
+2. Energy Bar Graphs
+3. Mousetrap Car Research and Parts list
+
+---
+
+# Energy Notes <!--fit--->
+
+---
+
+# Kinetic Energy 
+
+* Symbol: $K$
+* *When is energy stored this way?*
+    * When object or system has objects in motion
+    * Faster the motion, the more Kinetic Energy
+
+---
+
+
+# Gravitational Potential Energy 
+
+* Symbol: $U_g$
+* *When is energy stored this way?*
+    * Earth is included in your system
+    * Objects are at a height greater than zero
+    * Greater the height, the greater the gravitational potential energy 
+
+---
+
+
+# Elastic Potential Energy 
+
+* Symbol: $U_s$
+* *When is energy stored this way?*
+    * Spring/Elastic Object is included in your system selection
+    * Spring is stretched or compressed
+
+---
+
+
+# Internal Energy 
+
+* Symbol: $Q$
+* *When is energy stored this way?*
+    * Friction is present taking energy from object/system
+    * Collision occurs
+
+---
+
+# Work 
+
+* Symbol: $W$
+* *When is energy stored this way?*
+    * ***External Force*** changes the energy of the system. 
+    * Object outside of your system selection applies a force over a distance
+
+---
+
+
+# Chemical Energy 
+
+* Symbol: $E_{chem}$
+* *When is energy stored this way?*
+    * Energy stored in chemical bonds
+    * When chemical bonds are formed or broken energy is released
+    * Gas, food, etc
+
+---
+
+# Energy Bar Graphs 📊 <!--fit--->
+
+---
+
 # 2024.03.01 **Conceptual Physics**
 
 ##### **❓ of the 📅**: Is tap water better than bottled water?
