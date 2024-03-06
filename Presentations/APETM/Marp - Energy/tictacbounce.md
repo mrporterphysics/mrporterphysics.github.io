@@ -15,22 +15,22 @@ class: invert
 
 # Tic Tac Bounce
 
-Drop your tic tac and observe the bounces. Is there anything interesting about the bounces?
+## Drop your tic tac and observe the bounces. Is there anything interesting about the bounces?
 
 ---
 
 # Tic Tac Bounce
 
 
-Using Energy Bar Graphs -- explain why the second bounce is higher than the first bounce.
+## Using Energy Bar Graphs -- explain why the second bounce is higher than the first bounce.
 
-*Hint: You may need to make **careful** observations about your bouncing tic tac to answer this*
+## *Hint: You may need to make **careful** observations about your bouncing tic tac to answer this*
 
 ---
 
 # <!---fit---> Claim-Evidence-Reasoning
 
-❓ Why does the tic tac bounce low and then high? Explain in terms of energy.
+## ❓ Why does the tic tac bounce low and then high? Explain in terms of energy.
 
 ---
 

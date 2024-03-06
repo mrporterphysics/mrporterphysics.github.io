@@ -15,6 +15,91 @@ math: mathjax
 
 ---
 
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.03.06 **AP Physics** 
+
+##### **❓ of the 📅**: If you could start a charity, what would it be for?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. [Tic Tac Bounce](../../../Presentations/APETM/Marp%20-%20Energy/tictacbounce.html)
+2. Quantitative Energy Problem Solving 
+3. Group Question - Rollercoaster
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Represent Energy Graphically_
+
+🥅 _Use Energy to make **quantitative** predictions_
+
+#### 🚨 Notices
+
+- HW: Circular Motion AP Classroom Unit Review MC 2
+- Expect a Quiz Friday - Energy & Projectiles (I will post practice on PC)
+</div>
+
+</div>
+
+---
+
+
+
+<div class='columns'>
+
+<div>
+
+![center](image-3.png)
+
+A roller coaster ride at an amusement park lifts a car of mass $700 \textrm{ kg}$ to point A at a height of $90 \textrm{ m}$ above the lowest point on the track, as shown above. The car starts from rest at point $A$, rolls with negligible friction down the incline and follows the track around a loop of radius $20 \textrm{ m}$. Point $B$, the highest point on the loop, is at a height of $50 \textrm{ m}$ above the lowest point on the track.
+
+</div>
+
+<div>
+
+1. Indicate on the figure the point $P$ at which the maximum speed of the car is attained.
+2. Calculate the value $v_{max}$ of this maximum speed.
+2. Calculate the speed $v_B$ of the car at point B.
+3. Draw and label vectors to represent the forces acting on the car when it is upside down at point B.
+4. Calculate the magnitude of all the forces identified in 4.
+
+
+</div>
+
+</div>
+
+---
+
+
+<div class='columns'>
+
+<div>
+
+![center](image-3.png)
+
+A roller coaster ride at an amusement park lifts a car of mass $700 \textrm{ kg}$ to point A at a height of $90 \textrm{ m}$ above the lowest point on the track, as shown above. The car starts from rest at point $A$, rolls with negligible friction down the incline and follows the track around a loop of radius $20 \textrm{ m}$. Point $B$, the highest point on the loop, is at a height of $50 \textrm{ m}$ above the lowest point on the track.
+
+</div>
+
+<div>
+
+6. Now suppose that friction is not negligible. How could the loop be modified to maintain the same speed at the top of the loop as found in 2? Justify your answer.
+
+</div>
+
+</div>
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
