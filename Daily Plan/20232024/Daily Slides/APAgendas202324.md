@@ -15,11 +15,24 @@ math: mathjax
 
 ---
 
+<!--- _footer: <br> --->
+
+# 2024.03.07 Do Now
+
+Shown are blocks that slide down frictionless inclines. All masses start from rest at the top of the incline.
+
+![center w:700](../images/energy/energyramps.png)
+
+**Rank the kinetic energy of the sliding masses the instant they reach the bottom of the incline.**
+
+---
+
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
-# 2024.03.06 **AP Physics** 
+# 2024.03.07 **AP Physics** 
 
-##### **❓ of the 📅**: If you could start a charity, what would it be for?
+##### **❓ of the 📅**: Have you ever completed anything on your "bucket list"?
 
 <div class = "columns">
 
@@ -27,9 +40,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. [Tic Tac Bounce](../../../Presentations/APETM/Marp%20-%20Energy/tictacbounce.html)
-2. Quantitative Energy Problem Solving 
+1. Do Now
 3. Group Question - Rollercoaster
+3. AP Question Practice w/ Partner
 
 
 </div>
@@ -51,7 +64,6 @@ math: mathjax
 </div>
 
 ---
-
 
 
 <div class='columns'>
@@ -99,6 +111,47 @@ A roller coaster ride at an amusement park lifts a car of mass $700 \textrm{ kg}
 </div>
 
 ---
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.03.06 **AP Physics** 
+
+##### **❓ of the 📅**: If you could start a charity, what would it be for?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. [Tic Tac Bounce](../../../Presentations/APETM/Marp%20-%20Energy/tictacbounce.html)
+2. Quantitative Energy Problem Solving 
+3. Group Question - Rollercoaster
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Represent Energy Graphically_
+
+🥅 _Use Energy to make **quantitative** predictions_
+
+#### 🚨 Notices
+
+- HW: Circular Motion AP Classroom Unit Review MC 2
+- Expect a Quiz Friday - Energy & Projectiles (I will post practice on PC)
+</div>
+
+</div>
+
+---
+
 
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
