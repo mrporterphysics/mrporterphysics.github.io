@@ -16,6 +16,47 @@ math: mathjax
 ---
 
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.03.12 **AP Physics** 
+
+##### **❓ of the 📅**: QUESTION
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Block Launcher Lab 
+2. Power - Intro and notes 
+3. Determine your power
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Use Energy to make **quantitative** predictions_
+
+🥅 _Define and calculate Power_
+
+
+</div>
+
+</div>
+
+#### 🚨 Notices
+
+- HW: Energy Progress Checks on AP Classroom
+- Test on 
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.03.08 **AP Physics** 
