@@ -17,6 +17,43 @@ math: mathjax
 ---
 
 
+# 2024.03.12 **Video Game Desgin** 
+
+##### **❓ of the 📅**: QUESTION
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Stand-up 
+    1. Check-in: Where are we with:
+        - GCD - complete?
+        - Pitch - ready to make pitch to class?
+    2. Assigning Tasks for remainder of week
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _What is a Game Concept Document?_
+
+🥅 _Make GCD_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+
+
+---
+
+
 # 2024.03.04 **Video Game Desgin** 
 
 ##### **❓ of the 📅**: What is the best pasta shape?
