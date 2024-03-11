@@ -14,8 +14,17 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
+# 2024.03.11 **Conceptual Physics**
+
+##### **❓ of the 📅**: What luxury is totally worth the price?
 
 
+1. Energy Bar Graphs - Review
+2. Energy Bar Graph - Packet 
+3. Whiteboard assigned problem and present to class
+
+
+---
 
 # 2024.03.05 **Conceptual Physics**
 

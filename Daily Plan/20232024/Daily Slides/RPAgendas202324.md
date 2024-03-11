@@ -19,6 +19,80 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.03.11 **Regents Physics** 
+
+##### **❓ of the 📅**: What luxury is totally worth the price?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Finish ULG Pivot
+2. Physics Classroom with ULG
+	1. **[CG9: Gravitational Force 1](https://www.physicsclassroom.com/calcpad/launch/CPCG9)**
+	2. **[CG11: Gravitational Force 3](https://www.physicsclassroom.com/calcpad/launch/CPCG11)**
+	3. **[CG12: Gravitational Field Strength](https://www.physicsclassroom.com/calcpad/launch/CPCG12)**
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Practice Circular Motion_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.03.07 **Regents Physics** 
+
+##### **❓ of the 📅**: Have you ever completed anything on your "bucket list"?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Quiz 
+2. Universal Law of Gravitation
+3. ULG Quiz 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Practice Circular Motion_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.03.06 **Regents Physics** 
 
 ##### **❓ of the 📅**: If you could start a charity, what would it be for?

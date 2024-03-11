@@ -15,6 +15,45 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.03.08 **AP Physics** 
+
+##### **❓ of the 📅**: What did your parents almost name you?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Block Launcher Lab 
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Represent Energy Graphically_
+
+🥅 _Use Energy to make **quantitative** predictions_
+
+
+</div>
+
+</div>
+
+#### 🚨 Notices
+
+- HW: Circular Motion AP Classroom Unit Review MC 2
+- Vote: Energy, Projectiles & Circular Motion Test 3/25 or 3/26 (I will not be here on 3/26)
+
+---
+
 <!--- _footer: <br> --->
 
 # 2024.03.07 Do Now
