@@ -38,8 +38,8 @@ math: mathjax
 # Rollercoaster Criteria
 - Roller coaster is made entirely of paper and tape (except for one element of your design).
 - Roller coaster is fixed securely to a base 18˝x 24˝.
+- At least 50 cm tall.
 - End point is free from obstruction.
-- Sign identifying the roller coaster is prominently displayed.
 - Roller coaster includes at least one curve, loop, and hill.
 - Roller coaster includes one element of your own design that adds to the fun and excitement of
 the roller coaster.
