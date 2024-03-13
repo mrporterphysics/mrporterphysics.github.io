@@ -2,7 +2,6 @@
 marp: true
 title: Energy 2024
 theme: vgdtheme
-class: 
 paginate: true
 footer: 
 transition: reveal
@@ -30,7 +29,6 @@ section.left h2, section.left p,{
 
 
 </style>
-
 
 
 # Energy **Transfer** Model <!--fit--->

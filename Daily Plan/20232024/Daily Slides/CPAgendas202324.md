@@ -14,6 +14,165 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
+
+# 2024.03.13 **Conceptual Physics**
+
+##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
+
+1. Paper Rollercoasters 🎢
+2. Designing your paper rollercoaster 
+
+---
+
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/r7eZmHyOTK0?si=w1WtULnPJu84ARJy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/HTGzruGE7Ds?si=BRZT4Rja-1owe2kK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+<!--- _footer: <br> --->
+
+# Rollercoaster Criteria
+- Roller coaster is made entirely of paper and tape (except for one element of your design).
+- Roller coaster is fixed securely to a base 18˝x 24˝.
+- End point is free from obstruction.
+- Sign identifying the roller coaster is prominently displayed.
+- Roller coaster includes at least one curve, loop, and hill.
+- Roller coaster includes one element of your own design that adds to the fun and excitement of
+the roller coaster.
+- A marble must successfully complete the track 3/3 times.
+- Marble maintains contact with the track throughout each run.
+- Must be sturdy and neatly put together. 
+
+--- 
+
+# Rollercoaster Parts - Columns and Beams
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/UJaq7qQMi2g?si=MzUPzFYWRLRpgAhC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+
+# Rollercoaster Parts - Diagonal Supports
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/OJhfwNAiaYc?si=yYD18VUQoDPxSi8G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Rollercoaster Parts - Curves
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/hAJvc92q-B4?si=vu57SCtSIEDvCMTv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+# Rollercoaster Parts - Loops
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/HKQUDTCG0GY?si=wz65HuepJSikZLxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Rollercoaster Parts - Funnel
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/co0kPF_Q6wE?si=8rYjEWgplyv10BEe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Rollercoaster Parts - Merge
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/GMpldlHKLHM?si=uWg7AHvXg85ogz35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Rollercoaster Parts - Switch
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/VWuBjlj2PW4?si=XUYEkgfE8nfRXquG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Rollercoaster Parts - Attaching Tracks
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/PHb9iULD3Qw?si=hcSHn7g5t28CGz-e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Rollercoaster Parts - General Tips
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/7TIJMInnKSA?si=YNeOd_tzqB7GGFc6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Box Turn 
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/EGfe4zdULw8?si=hdrAzaYjCStEBu-L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Catch
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/FV31AgcppNo?si=U-vgtTOdwCMrbGLJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Mini Funnel 
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/5HTl1GvlegE?si=jpObnylLOk3nt1HZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Half-Pipe
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/UXXK5shv7cE?si=i5jRAnMwY8G3c4Hv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Jump
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/2LHpSGOknnA?si=jeAJ0AQYpRGKQXdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Ladder
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/LdaPMFhzkpw?si=9bfmfxV-tMMA5Z2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Mega-wide turn
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/vWGHw5skJvM?si=iGZpnHA-B_oorfBa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Stairs
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/WRxzrqSTXF0?si=LxvFCCyN3uX2YGEm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Switchback 
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/J6Kczgu-Hf4?si=IJPfJRcbZ8jFmTRr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Zig Zag
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/x5ZdjN5DryI?si=7bfxwQUv7hfSSkUa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+# Advanced Templates - Tipping Switch
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/AU9Vhoqme-o?i=OvkELbjSsux_mZHe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
+# Advanced Templates - Rotating Arm
+
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/W8HS5XMcq3c?si=yJZxSpf9SjN99E0e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
 # 2024.03.11 **Conceptual Physics**
 
 ##### **❓ of the 📅**: What luxury is totally worth the price?

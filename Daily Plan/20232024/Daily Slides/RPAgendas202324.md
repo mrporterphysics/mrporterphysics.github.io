@@ -19,6 +19,39 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.03.12 **Regents Physics** 
+
+##### **❓ of the 📅**: What's your favorite movie?
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Finish ULG Pivot
+2. Sticky Tape Lab
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Learn about electrostatic force_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.03.11 **Regents Physics** 
 
 ##### **❓ of the 📅**: What luxury is totally worth the price?
