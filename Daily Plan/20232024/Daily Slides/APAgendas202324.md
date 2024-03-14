@@ -20,7 +20,7 @@ math: mathjax
 
 # 2024.03.14 **AP Physics** 
 
-##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
+##### **❓ of the 📅**: What would you sing at Karaoke night?
 
 <div class = "columns">
 
