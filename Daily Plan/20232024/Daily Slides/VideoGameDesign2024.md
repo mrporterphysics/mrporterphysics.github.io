@@ -26,6 +26,52 @@ math: mathjax
 
 #### 📋 Agenda
 
+Timeline for Board Game 
+    - GCD ✅
+    - Pitch: Tuesday 
+    - Rulebook:
+    - Board: 
+    - Game Pieces: 
+    - Playtesting & Improvements: 
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Create Board Game Timeline_
+
+🥅 _Work on parts of board game_ 
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+---
+
+# Schedule 
+
+| Monday         | Tuesday        | Wednesday      | Thursday       | Friday         |
+| -------------- | -------------- | -------------- | -------------- | -------------- |
+| 3/11           | 3/12 ==Class== | 3/13           | 3/14 ==Class== | 3/15 No School |
+| 3/18           | 3/19 ==Class== | 3/20           | 3/21 ==Class== | 3/22           |
+| 3/25 ==Class== | 3/26           | 3/27 ==Class== | 3/28           | 3/29 No School |
+
+---
+
+# 2024.03.12 **Video Game Desgin** 
+
+##### **❓ of the 📅**: QUESTION
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
 1. Stand-up 
     1. Check-in: Where are we with:
         - GCD - complete?

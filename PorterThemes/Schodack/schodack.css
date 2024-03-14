@@ -10,6 +10,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Workbench&display=swap');
 
+section {
+  font-family: 'JetBrains Mono', monospace;
+
+}
 
 h1 {
   font-size: 60px;

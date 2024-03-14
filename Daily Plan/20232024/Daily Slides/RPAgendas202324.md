@@ -16,6 +16,45 @@ math: mathjax
 ---
 
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.03.13 **Regents Physics** 
+
+##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Sticky Tape Lab
+2. Van de Graaff generator 
+3. Electrostatic Notes 
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define elementary charge_
+
+🥅 _Discuss methods of charging_
+
+🥅 _Learn about electrostatic force_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 

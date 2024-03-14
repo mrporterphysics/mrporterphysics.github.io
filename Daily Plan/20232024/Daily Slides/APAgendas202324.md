@@ -15,6 +15,44 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.03.14 **AP Physics** 
+
+##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. ⏲️ **40 min** AP Workbook: AP Workbook - 4.C, 4.E, 4.F
+2. ⏲️ **40 min** AP Classroom Progress Checks
+3. If finished start: AP Workbook 4.G, 4.M, 4.L, 4.O
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Review for Test_ 
+
+#### 🚨 Notices
+
+- HW: Energy Progress Checks on AP Classroom
+- ***Test on 3/20***
+</div>
+
+</div>
+
+
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.03.13 **AP Physics** 

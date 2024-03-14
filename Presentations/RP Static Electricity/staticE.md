@@ -10,6 +10,7 @@ class: invert
 <style>
 
     @import 'base';
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Workbench&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Roboto&display=swap');
     em{
         color: #de6266;
@@ -17,7 +18,7 @@ class: invert
 
     section{
         background-color: black;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'JetBrains Mono', monospace;
     }
 
     h1{
