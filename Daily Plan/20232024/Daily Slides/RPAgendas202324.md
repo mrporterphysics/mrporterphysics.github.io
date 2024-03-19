@@ -16,6 +16,46 @@ math: mathjax
 ---
 
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.03.19 **Regents Physics** 
+
+##### **❓ of the 📅**: Aside from necessities, what one thing could you not go a day without?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Finish Pivot?
+2. Physics Classroom
+	1. **[The Quantity of Charge 1](https://www.physicsclassroom.com/calcpad/launch/CPSE1)**
+	2. **[Coulomb's Law 1](https://www.physicsclassroom.com/calcpad/launch/CPSE3)**
+	3. **[Coulombs Law as a Guide to Thinking](https://www.physicsclassroom.com/calcpad/launch/CPSE5)**
+
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define elementary charge_
+
+🥅 _Discuss methods of charging_
+
+🥅 _Learn about electrostatic force_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+---
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
