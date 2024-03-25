@@ -16,6 +16,78 @@ math: mathjax
 ---
 
 
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.03.21 **AP Physics** 
+
+##### **❓ of the 📅**: If you had to delete all but 3 apps from your smartphone, which ones would you keep?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Lab Practical 
+2. Study for test
+    - AP Classroom
+    - AP Workbook
+    - Extra AP Workbook
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Review for Test_ 
+
+#### 🚨 Notices
+
+- ***Test on 3/25***
+</div>
+
+</div>
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.03.19 **AP Physics** 
+
+##### **❓ of the 📅**: Aside from necessities, what one thing could you not go a day without?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+Sit anywhere (only 4 at a table)
+
+1. ⏲️ **40 min** AP Workbook: AP Workbook - 4.G, ***4.M***, 4.L, ***4.O***
+2. ⏲️ **40 min** AP Classroom Progress Checks
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Review for Test_ 
+
+#### 🚨 Notices
+
+- ***Practical Tomorrow*** (Extra day to study)
+- ***Test on 3/21***
+</div>
+
+</div>
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.03.14 **AP Physics** 

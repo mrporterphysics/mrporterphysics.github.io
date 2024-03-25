@@ -19,6 +19,82 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.03.25 **Regents Physics** 
+
+##### **❓ of the 📅**: Do you collect anything?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Electric Field Notes
+2. Physics Classroom - [Electric Field 1](https://www.physicsclassroom.com/calcpad/launch/CPSE12)
+    - Complete on a **vertical** whiteboard with a partner
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Calculate Electric Forces_
+
+🥅 _Map Electric Fields_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.03.20 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Mapping the Electric Field
+    - Speadsheeting Notes
+2. Electric Field Notes
+3. Practice with Electric Fields
+
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Calculate Electric Forces_
+
+🥅 _Map Electric Fields_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.03.19 **Regents Physics** 
 
 ##### **❓ of the 📅**: Aside from necessities, what one thing could you not go a day without?

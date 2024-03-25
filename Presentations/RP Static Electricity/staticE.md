@@ -237,6 +237,9 @@ What shows the relationship between the electrostatics force and the distance?
 2. Calculate the electrostatic force between the two charges.
 3. Draw a *scaled* vector starting on the test charge that represents the force between the test charge and the central charge.
 
+
+***Note: You can make a spreadsheet to help with the calculations***
+
 ---
 
 # *Electric Field*
