@@ -19,6 +19,43 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.04.08 **Regents Physics** 
+
+##### **❓ of the 📅**: How was your break?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Energy Pie
+2. Energy Flavors
+3. Energy Bars 
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Energy_
+
+🥅 _Identify energy storage mechanisms_
+
+🥅 _Represent Energy Graphically_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+---
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.03.25 **Regents Physics** 
 
 ##### **❓ of the 📅**: Do you collect anything?

@@ -15,7 +15,88 @@ math: mathjax
 
 ---
 
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
+# 2024.04.09 **AP Physics** 
+
+##### **❓ of the 📅**: If you were ruler of your own country what would be the first law you would introduce?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Analyzing Collisions 
+2. Momentum Notes 
+3. Problem-solving with momentum
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Momentum_ 
+
+🥅 _Determine what happens to momentum in collisions_
+
+#### 🚨 Notices
+
+- Corrections Due Friday 
+- Buffet Quiz Friday
+
+</div>
+
+</div>
+
+---
+
+# Momentum Lab Groups 
+
+| Hawking | Curie  | Feynman | Einstein | Bohr  |
+| ------- | ------ | ------- | -------- | ----- |
+| Evan    | Fiona  | Ethan   | Sophia   | Brynn |
+| Ruby    | Alivia | Zach    | Hannah   | Henry |
+| Ben     | Eve    | Kaden   | Emily    | Leah  |
+| Adam    | Sydney | Emma    | Liam     | John  |
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.08 **AP Physics** 
+
+##### **❓ of the 📅**: How was your break?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. New Lab Groups
+2. Blowdart Collision - Pivot 
+3. Collisions Pivot 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Introduce Momentum_ 
+
+#### 🚨 Notices
+
+- Corrections Due Friday 
+- Buffet Quiz Friday
+
+</div>
+
+</div>
+
+---
 
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->

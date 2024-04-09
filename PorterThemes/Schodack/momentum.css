@@ -1,0 +1,71 @@
+/* 
+@theme momentum 
+*/
+
+/* General Styles */
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Slab:wght@700&family=Rubik:wght@700&display=swap');
+section {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+h1, h{
+  color: #e0e0e0;
+  font-family:  'Rubik', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  font-family: 'Roboto Slab', serif;
+}
+
+a {
+  color: #7fb3d5;
+  text-decoration: none;
+}
+
+code {
+  background-color: #333;
+  color: #e0e0e0;
+  padding: 0.2rem 0.4rem;
+  font-family: 'Source Code Pro', monospace;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* Specific Styles for Momentum Presentation */
+.momentum-formula {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7fb3d5;
+  font-family: 'Rubik', sans-serif;
+}
+
+.momentum-example {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.momentum-image {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+}
