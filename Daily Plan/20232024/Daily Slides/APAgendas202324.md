@@ -15,6 +15,44 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.10 **AP Physics** 
+
+##### **❓ of the 📅**: 
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Analyzing Collisions - Finish!
+2. [Momentum Notes](/Presentations/Momentum/talks/momentum2024.html)
+3. Problem-solving with momentum in pairs 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Momentum_ 
+
+🥅 _Determine what happens to momentum in collisions_
+
+#### 🚨 Notices
+
+- Corrections Due Friday 
+- Buffet Quiz Friday
+
+</div>
+
+</div>
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.04.09 **AP Physics** 
