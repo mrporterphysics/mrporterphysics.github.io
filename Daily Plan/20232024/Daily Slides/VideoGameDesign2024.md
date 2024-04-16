@@ -17,6 +17,41 @@ math: mathjax
 ---
 
 
+# 2024.04.16 **Video Game Desgin** 
+
+##### **❓ of the 📅**: 
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Make a construct 3 account 
+2. Explore Arcade & Play Games 
+3. Look at example projects
+4. Make a simple game
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Create Board Game Timeline_
+
+🥅 _Work on parts of board game_ 
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+
+---
+
 # 2024.03.19 **Video Game Desgin** 
 
 ##### **❓ of the 📅**: QUESTION

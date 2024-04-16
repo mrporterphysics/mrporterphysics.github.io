@@ -165,7 +165,17 @@ Two brand new ice skaters have a collision on the ice. Esme, a *$21\text{ kg}$* 
 
 ---
 
-#### It’s moving day for Keanu’s family. A small dresser is strapped onto a rolling dolly, and Keanu is supposed to push the dresser out to the moving truck. Keanu is annoyed that they have to help, so instead they throw a *$300\text{ gram}$* rubber ball at the dresser. The ball is thrown with a speed of 15 m/s and bounces straight back with a speed of *$10\text{ m/s}$*. Unfortunately, this only results in the dresser rolling at a paltry speed of *$0.21\text{ m/s}$*, and Keanu eventually decides to just push the dresser anyway. What is the mass of the dresser and dolly combo?
+#### It’s moving day for Keanu’s family. A small dresser is strapped onto a rolling dolly, and Keanu is supposed to push the dresser out to the moving truck. Keanu is annoyed that they have to help, so instead they throw a *$300\text{ gram}$* rubber ball at the dresser. The ball is thrown with a speed of *$15\text{ m/s}$* and bounces straight back with a speed of *$10\text{ m/s}$*. Unfortunately, this only results in the dresser rolling at a paltry speed of *$0.21\text{ m/s}$*, and Keanu eventually decides to just push the dresser anyway. What is the mass of the dresser and dolly combo?
+
+---
+
+#### In Case A, a metal bullet penetrates a wooden block. In Case B, a rubber bullet with the same initial speed and mass bounces off of an identical wooden block.
+
+![center](image-1.png)
+
+Will the speed of the wooden block after the collision be (i) greater in Case A, (ii) greater in Case B, or (iii) the same in both cases? _____
+
+Explain your reasoning.
 
 ---
 
@@ -181,14 +191,75 @@ Two brand new ice skaters have a collision on the ice. Esme, a *$21\text{ kg}$* 
 
 ---
 
+A bullet of mass $m$ is moving horizontally with speed vo when it hits a block of mass $100m$ that is at rest on a horizontal frictionless table. The surface of the table is a height $h$ above the floor. After the impact, the bullet and the block slide off the table and hit the floor a distance $x$ from the edge of the table. Derive expressions for the following quantities in terms of $m$, $h$, $v_0$, and appropriate constants:
 
-# <!---fit---> How do you change
+![center w:700px](image-3.png)
 
-# <!---fit---> Momentum?
+1. the speed of the block as it leaves the table
+2. the distance x
 
 ---
 
-# <!---fit---> With <br> Forces!
+Suppose that the bullet passes through the block instead of remaining in it.
+
+3. State whether the time required for the block to reach the floor from the edge of the table would now be greater,
+less, or the same. Justify your answer.
+4. State whether the distance x for the block would now be greater, less, or the same. Justify your answer.
+
+---
+
+A track consists of a frictionless arc $XY$, which is a quarter-circle of radius $R$, and a rough horizontal section $YZ$. Block $A$ of mass $M$ is released from rest at point $X$, slides down the curved section of the track, and collides instantaneously and inelastically with identical block $B$ at point $Y$. The two blocks move together to the right, sliding past point $P$, which is a distance $L$ from point $Y$. The coefficient of kinetic friction between the blocks and the horizontal part of the track is $\mu$ Express your answers in terms of $M$, $L$, $\mu$, $R$, and $g$.
+
+<div class='columns'>
+
+<div>
+
+1. Determine the speed of block A just before it hits block B.
+2. Determine the speed of the combined blocks immediately after the collision.
+
+</div>
+
+<div>
+
+![center w:450](image-4.png)
+
+</div>
+
+</div>
+
+
+---
+
+<div class='columns'>
+
+<div>
+
+3. Assuming that no energy is transferred to the track or to the air surrounding the blocks. Determine the amount of internal energy transferred in the collision.
+4. Determine the additional thermal energy that is generated as the blocks move from Y to P.
+
+
+</div>
+
+
+<div>
+
+![center w:450](image-4.png)
+
+</div></div>
+
+
+
+
+
+---
+
+# <!---fit---> How do you change
+
+# <!---fit---> **Momentum**?
+
+---
+
+# <!---fit---> With Forces!
 
 
 ---
@@ -215,24 +286,23 @@ Two brand new ice skaters have a collision on the ice. Esme, a *$21\text{ kg}$* 
 
 ---
 
-#### Change in $\vec{p}$ and Forces
+# Change in $\vec{p}$ and Forces
 
-* Start with N2L:
-$$\Sigma \vec{F} = m\vec{a}$$
+* Start with N2L: $\Sigma \vec{F} = m\vec{a}$
 
 * Sub in definition of acceleration $a = \frac{\Delta v}{\Delta t}$
 
-$$ \Sigma \vec{F} = m \frac{\Delta v}{\Delta t} \rightarrow \Sigma \vec{F} \Delta t = m \Delta v $$ 
+* $\Sigma \vec{F} = m \frac{\Delta v}{\Delta t} \rightarrow \Sigma \vec{F} \Delta t = m \Delta v$
 
 * Rearrange and sub in $\Delta \vec{p}$ for $m \Delta v$ 
-$$ \boxed{\Sigma \vec{F} \Delta t = \Delta p} $$
+* $\boxed{\Sigma \vec{F} \Delta t = \Delta p}$
 
 ---
 
 # Impulse 
 
 * Impulse is equal to the product of net force and the time interval
-* $J = F_{net} \Delta t$
+* $\Delta \vec{p} = m \Delta \vec{v}$
 * Impulse is equal to the change in momentum of an object or system
 
 ---
@@ -247,21 +317,21 @@ $$ \boxed{\Sigma \vec{F} \Delta t = \Delta p} $$
 
 * Can make impulse changes with large *Forces*:
 
-$$ \LARGE{F} \tiny{\Delta t} \normalsize =  \Delta P $$
+$$ \huge{F} \tiny{\Delta t} \normalsize =  \Delta P $$
 
 * Can make impulse changes with large *time intervals*:
 
-$$ \tiny{F} \LARGE{\Delta t} \normalsize =  \Delta P $$
+$$ \tiny{F} \huge{\Delta t} \normalsize =  \Delta P $$
 
 
 
 ---
 
-# <!---fit---> Explain using the idea of <br> impulse and momentum <br> why we couldn't <br> break the egg.
+# <!---fit---> Explain using the idea of <br> impulse and momentum <br> why we couldn't   break <br> the egg.
 
 ---
 
-## 🤔 Momentum Questions - Explain the Following with $J$ and $\vec{p}$:
+# 🤔 Momentum Questions - Explain the Following with $J$ and $\vec{p}$:
 
 - Why do baseball players wear gloves to catch baseballs?
 - Why do gymnasts practice and perform on mats?

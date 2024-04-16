@@ -15,6 +15,133 @@ math: mathjax
 
 ---
 
+<!-- _footer: <br> --->
+
+A $2$-kilogram block initially hangs at rest at the end of two 1-meter strings of negligible mass. A $0.003$-kilogram bullet, moving horizontally with a speed of $1000$ meters per second strikes the block and becomes embedded in it. After the collision, the bullet/ block combination swings upward.
+
+![center w:500px](../images/momentum/momentumBlock.png)
+
+1. Calculate the speed v of the bullet/ block combination just after the collision.
+2. Calculate the maximum vertical height above the initial rest position reached by the bullet/block combination.
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.16 **AP Physics** 
+
+##### **❓ of the 📅**: What is the proper length of a playlist? 🎵 :speaker:
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Impulse Notes
+3. AP Workbook 5A, B, & C 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply Conservation of Momentum to other models (i.e. Energy or Projectile Motion)_ 
+
+#### 🚨 Notices
+
+- ***Fact Sheet Quiz Friday*** From Kinematics 
+
+</div>
+
+</div>
+
+
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.12 **AP Physics** 
+
+##### **❓ of the 📅**: What animal do you think is the creepiest?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Buffet Quiz 
+3. Problem-solving with momentum in pairs 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply Conservation of Momentum to other models (i.e. Energy or Projectile Motion)_ 
+
+#### 🚨 Notices
+
+- Fact Sheet Quiz Friday
+
+</div>
+
+</div>
+
+
+---
+
+# AP Physics Do Now 
+
+### Complete in your notebook
+
+Ima Peode wishes to throw a $2.8\text{-kg}$ pumpkin horizontally off the top of the school roof in order to hit Mr. H's car. The car is parked a distance of $14.9\text{ m}$ away from the base of the building below the point where Ima is standing. The building's roof is $12.9\text{ m}$ high. Assuming no air resistance, with what horizontal speed must Ima toss the pumpkin in order to hit Mr. H's car.
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.12 **AP Physics** 
+
+##### **❓ of the 📅**: What animal do you think is the creepiest?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+3. Problem-solving with momentum in pairs 
+3. AP Workbook: 5.E, 5.F 
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Momentum_ 
+
+🥅 _Determine what happens to momentum in collisions_
+
+#### 🚨 Notices
+
+- Corrections Due Friday 
+- Buffet Quiz Friday
+
+</div>
+
+</div>
+
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
@@ -457,6 +584,7 @@ A roller coaster ride at an amusement park lifts a car of mass $700 \textrm{ kg}
 </div>
 
 ---
+
 
 
 ---

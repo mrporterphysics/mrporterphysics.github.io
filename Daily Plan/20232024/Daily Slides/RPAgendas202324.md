@@ -15,6 +15,82 @@ math: mathjax
 
 ---
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.04.15 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+2. Energy Equations - Notes 
+3. Quantitative Energy Problem Solving 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Energy_
+
+🥅 _Identify energy storage mechanisms_
+
+🥅 _Represent Energy Graphically_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.04.12 **Regents Physics** 
+
+##### **❓ of the 📅**: How many countries have you visited?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Energy Bar Graphs - Universe and More
+2. [Tic Tac Bounce](../../../Presentations/APETM/Marp%20-%20Energy/tictacbounce.html)
+3. CER with Bar Graphs 
+4. Energy Equations 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Energy_
+
+🥅 _Identify energy storage mechanisms_
+
+🥅 _Represent Energy Graphically_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

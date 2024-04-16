@@ -1,10 +1,9 @@
 ---
-title: AP - Rotation 2023
+title: AP - Rotation 2024
 marp: true
-theme: gaia 
+theme: claudeTheme
 math: katex
 paginate: true
-class: 
 ---
 
 
@@ -17,6 +16,8 @@ class:
 #### 📆 2023 - Physics
 
 ---
+
+
 
 # Translational Motion 
 
@@ -33,6 +34,91 @@ Car example:
 # Rotational Motion
 
 ## _Spinning objects_
+
+---
+
+# Some Reminders  <!--fit--->
+
+---
+
+
+# Angular Displacement:
+
+- $\Delta \theta$: change in angle, measured in radians
+- Is equal to the arc length divided by the radius
+
+$$\Delta \theta = \frac{\Delta s}{r}$$
+
+![bg right:40% fit](https://openstax.org/apps/archive/20230220.155442/resources/fe64292de40cb167becd9db917e61329c5522eaa)
+
+- One revolution is equal to $2\pi$
+
+---
+
+# Angular Velocity
+
+- Measure of how fast an object is rotating.
+- Symbol: $\omega$
+- Is equal to the change in angular displacement in a time.
+
+
+$$\omega = \frac{\Delta \theta}{\Delta t}$$
+
+- measured in rad/s
+---
+
+# Angular and Linear Velocity
+
+Angular velocity is analogous to linear velocity, and we can determine their relationship.
+
+
+* $v = \frac{\Delta s}{\Delta t}$ and $\Delta \theta = \frac{\Delta s}{t}$
+
+* so $\Delta s = r \Delta \theta$
+
+* sub in: $v = \frac{r\Delta \theta}{\Delta t} = r \omega$
+
+
+---
+
+# Angular Acceleration
+
+$$\alpha = \frac{\Delta \omega}{\Delta t}$$
+
+
+- measured in rad/s/s or rad/s$^2$
+
+---
+
+## Translating Between Linear and Angular
+
+
+How to translate the two (not on the reference table!)
+
+| Linear | Angular |
+|---|---|
+| $x = \theta r$ | $\theta = \frac{x}{r}$ |
+| $v = \omega r$ | $\omega = \frac{v}{r}$ |
+| $a = \alpha r$ | $\alpha = \frac{a}{r}$ |
+
+
+---
+
+# Rotational Kinematics:
+
+The same as linear, but with their rotational twin!
+
+| Linear | Angular | 
+|---|---|
+|$v_x = v_{0x} + a_xt$ | $\omega = \omega_0 + \alpha t$ |
+| $x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2$ |  $\theta = \theta _0 + \omega_0 t + \frac{1}{2}\alpha t^2$|
+|  $v_x^2 = v_{0x}^2 = 2a_x(x-x_0)$| $\omega^2 = \omega_0^2 + 2\alpha(\theta - \theta_0)$ | 
+
+
+---
+
+<img style="width:100%"  src="../figures/anggraphs.png">
+
 
 ---
 
@@ -87,9 +173,9 @@ Car example:
 
 $$ \boxed{\tau = r_\perp F = r F \sin \theta}$$
 
-* $\tau$ ➡️ torque (Newton $\cdot$ meter)
-* $r$ :arrow_right: distance between point force is exerted and axis of rotation
-* $F \sin \theta$ ➡️: Force perpendicular to axis of rotation
+* $\tau$ is  torque (Newton $\cdot$ meter)
+* $r$ is distance between point force is exerted and axis of rotation
+* $F \sin \theta$ is Force perpendicular to axis of rotation
 
 ---
 
@@ -184,107 +270,6 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 ![bg fit](../figures/momentofI.png)
 
 ---
-
-# Angular Displacement:
-
-- $\Delta \theta$: change in angle, measured in radians
-- Is equal to the arc length divided by the radius
-
-$$\Delta \theta = \frac{\Delta s}{r}$$
-
-![bg right:40% fit](https://openstax.org/apps/archive/20230220.155442/resources/fe64292de40cb167becd9db917e61329c5522eaa)
-
-- One revolution is equal to $2\pi$
-
----
-
-# Angular Velocity
-
-- Measure of how fast an object is rotating.
-- Symbol: $\omega$
-- Is equal to the change in angular displacement in a time.
-
-
-$$\omega = \frac{\Delta \theta}{\Delta t}$$
-
-- measured in rad/s
----
-
-# Angular and Linear Velocity
-
-Angular velocity is analogous to linear velocity, and we can determine their relationship.
-
-
-$v = \frac{\Delta s}{\Delta t}$ and $\Delta \theta = \frac{\Delta s}{t}$
-
-so $\Delta s = r \Delta \theta$
-
-sub in: $v = \frac{r\Delta \theta}{\Delta t} = r \omega$
-
-
----
-
-# Can spinning things <br> accelerate? <!---fit--->
-
-
----
-
-# Angular Acceleration
-
-$$\alpha = \frac{\Delta \omega}{\Delta t}$$
-
-
-- measured in rad/s/s or rad/s<sup>2</sup>
-
----
-
-## What about a bug on the end of an accelerating wheel?
-
-
-- There is linear (or tangential) acceleration
-- Derivation aside...
-
-$$a_t = r\alpha$$
-
-$$\alpha = \frac{a_t}{r}$$
----
-
-<iframe src="https://phet.colorado.edu/sims/cheerpj/rotation/latest/rotation.html?simulation=rotation"
-        width="1100"
-        height="600"
-        allowfullscreen>
-</iframe>
-
----
-
-## Translating Between Linear and Angular
-
-
-How to translate the two (not on the reference table!)
-
-| Linear | Angular |
-|---|---|
-| $x = \theta r$ | $\theta = \frac{x}{r}$ |
-| $v = \omega r$ | $\omega = \frac{v}{r}$ |
-| $a = \alpha r$ | $\alpha = \frac{a}{r}$ |
-
-
----
-
-# Rotational Kinematics:
-
-The same as linear, but with their rotational twin!
-
-| Linear | Angular | 
-|---|---|
-|$v_x = v_{0x} + a_xt$ | $\omega = \omega_0 + \alpha t$ |
-| $x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2$ |  $\theta = \theta _0 + \omega_0 t + \frac{1}{2}\alpha t^2$|
-|  $v_x^2 = v_{0x}^2 = 2a_x(x-x_0)$| $\omega^2 = \omega_0^2 + 2\alpha(\theta - \theta_0)$ | 
-
-
----
-
-<img style="width:100%"  src="../figures/anggraphs.png">
 
 ---
 
