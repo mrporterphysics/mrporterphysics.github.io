@@ -15,6 +15,47 @@ math: mathjax
 
 ---
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.04.17 **Regents Physics** 
+
+##### **❓ of the 📅**: If you could understand any animal, which would it be?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Finish Qualitative Energy Calculations
+2. Block Launcher Lab
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Represent Energy Graphically_
+
+🥅 _Make Energy Calculations_
+
+🥅 _Model work done by friction_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+
+
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 

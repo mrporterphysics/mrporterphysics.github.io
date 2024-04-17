@@ -15,6 +15,15 @@ math: mathjax
 
 ---
 
+# 2024.04.17 **Conceptual Physics**
+
+##### **❓ of the 📅**: 
+
+
+1. Introduction to "The Physics of..." Quarter 4 Projects
+
+---
+
 # 2024.03.13 **Conceptual Physics**
 
 ##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?

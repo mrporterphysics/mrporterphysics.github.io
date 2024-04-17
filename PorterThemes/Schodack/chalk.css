@@ -1,0 +1,116 @@
+/* 
+@theme chalk
+*/
+
+/* General Styles */
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Slab:wght@700&family=Rubik:wght@700&display=swap');
+section {
+  background-color: #2c2c2c;
+  background-image: linear-gradient(rgba(236, 236, 236, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(236, 236, 236, 0.05) 1px, transparent 1px),
+                    linear-gradient(rgba(211, 211, 211, 0.035) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(211, 211, 211, 0.035) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+:root {
+  --primary-color: #dbd82b;
+  --secondary-color: #FE5247;
+  --text-color: #333333;
+  --background-color: #000000;
+  --highlight-color: #FFD6A5;
+}
+
+
+h1{
+  color: #dbd82b;
+  font-family:  'Rubik', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  font-family: 'Roboto Slab', serif;
+}
+
+a {
+  color: #7fb3d5;
+  text-decoration: none;
+}
+
+code {
+  background-color: #333;
+  color: #e0e0e0;
+  padding: 0.2rem 0.4rem;
+  font-family: 'Source Code Pro', monospace;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* Specific Styles for Momentum Presentation */
+.momentum-formula {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7fb3d5;
+  font-family: 'Rubik', sans-serif;
+}
+
+.momentum-example {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.momentum-image {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+  gap: 1rem;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--text-color);
+  background-color: var(--background-color);
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+  gap: 1rem;
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+  }
