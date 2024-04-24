@@ -121,10 +121,39 @@ _Research and design a physics experiment explain the physics of something that 
 | Week 2 | 4/22-4/26   | Literature & Research Skills                          |
 | Week 3 | 4/29-5/3    | Experimental Design and Data Collection               |
 | Week 4 | 5/6-5/10    | Data Analysis                                         |
-| Week 5 | 5/13 - 5/20 | Research Paper Writing                                |
+| Week 5 | 5/13-5/20   | Research Paper Writing                                |
 | Week 6 | 5/20-5/23   | Poster Design                                         |
 | Week 7 | 5/29-5/31   | Peer Review & Revision                                |
 | Week 8 | 6/3-6/7     | Final Presentations and Poster Session                |
 | Week 9 | 6/13-6/17   | Make up Presentation Dates & Additional Revision Time |
 
 ---
+
+# Today (4/18) - Research Different Topic Ideas <!--fit--->
+
+<div class='columns'><div>
+
+1. Sports
+2. Music and Sound
+3. Transportation
+4. Natural Phenomena 
+5. Construction 
+5. Amusement Park Rides
+7. Household devices 
+8. Medical Technology 
+9. Energy production
+10. Robotics
+11. Toys and Games 
+12. Environmental Physics 
+
+</div>
+
+<div>
+
+# Hand in today: 
+#### The Physics of...
+
+1. List of 3 possible topics that you want to potential do you research on 
+2. 1 idea for ***each*** topic of what data you would collect 
+</div></div>
+

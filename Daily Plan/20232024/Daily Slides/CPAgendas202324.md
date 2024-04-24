@@ -15,7 +15,7 @@ math: mathjax
 
 ---
 
-# 2024.04.17 **Conceptual Physics**
+# 2024.04.18 **Conceptual Physics**
 
 ##### **❓ of the 📅**: 
 

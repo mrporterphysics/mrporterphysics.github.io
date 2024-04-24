@@ -15,6 +15,136 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.19 **AP Physics** 
+
+##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Ballistic Pendulum 
+2. AP Workbook 5.G, 5.M, 5.O
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply Conservation of Momentum to other models (i.e. Energy or Projectile Motion)_ 
+
+#### 🚨 Notices
+
+- ***Fact Sheet Quiz Friday*** From Kinematics & Dynamics
+
+</div>
+
+</div>
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.19 **AP Physics** 
+
+##### **❓ of the 📅**: If you could throw the world’s best party, what would you include in it?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Fact Sheet Quiz 
+2. Conservation of Momentum Quiz 
+3. Ballistic Pendulum Lab 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply Conservation of Momentum to other models (i.e. Energy or Projectile Motion)_ 
+
+#### 🚨 Notices
+
+- ***Fact Sheet Quiz Friday*** From Kinematics 
+
+</div>
+
+</div>
+
+---
+
+# Ballistic Pendulum 
+
+![center](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0426-ballistic-pendulum-wide-x4_orig.gif)
+
+---
+
+# Ballistic Pendulum Lab 
+
+## Objectives:
+
+- Use ballistic pendulum apparatus to determine the launch speed of your nerf dart
+- Determine a second way to measure/calculate the launch speed of your nerf dart and compare your two methods
+- Determine which method is better *for nerf dart* and *our setup* and compare this what method may be better for other firing devices
+
+---
+
+# Do Now - Practice Facts 
+
+1. What does the ***slope*** of a velocity vs. time graph represent?
+2. What does the ***area*** of a velocity vs. time graph represent?
+3. What does acceleration tell you about each second?
+4. On a velocity time graph how do we how ***how fast*** an object is moving?
+5. On a velocity time graph where is the graph if the object is moving ***towards the detector***?
+5. What is the equation for the displacement of an object moving at a constant speed?
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.17 **AP Physics** 
+
+##### **❓ of the 📅**: What is the name your go to playlist at the moment?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now Fact Sheet 
+2. AP Workbook 5.C, 5.D, & 5.G
+2. Momentum & Projectile Question
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply Conservation of Momentum to other models (i.e. Energy or Projectile Motion)_ 
+
+#### 🚨 Notices
+
+- ***Fact Sheet Quiz Friday*** From Kinematics 
+
+</div>
+
+</div>
+
+---
+
 <!-- _footer: <br> --->
 
 A $2$-kilogram block initially hangs at rest at the end of two 1-meter strings of negligible mass. A $0.003$-kilogram bullet, moving horizontally with a speed of $1000$ meters per second strikes the block and becomes embedded in it. After the collision, the bullet/ block combination swings upward.

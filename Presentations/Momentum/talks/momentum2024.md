@@ -191,7 +191,7 @@ Explain your reasoning.
 
 ---
 
-A bullet of mass $m$ is moving horizontally with speed vo when it hits a block of mass $100m$ that is at rest on a horizontal frictionless table. The surface of the table is a height $h$ above the floor. After the impact, the bullet and the block slide off the table and hit the floor a distance $x$ from the edge of the table. Derive expressions for the following quantities in terms of $m$, $h$, $v_0$, and appropriate constants:
+A bullet of mass $m$ is moving horizontally with speed $v_0$ when it hits a block of mass $100m$ that is at rest on a horizontal frictionless table. The surface of the table is a height $h$ above the floor. After the impact, the bullet and the block slide off the table and hit the floor a distance $x$ from the edge of the table. Derive expressions for the following quantities in terms of $m$, $h$, $v_0$, and appropriate constants:
 
 ![center w:700px](image-3.png)
 

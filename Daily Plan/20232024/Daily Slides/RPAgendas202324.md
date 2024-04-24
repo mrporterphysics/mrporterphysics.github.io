@@ -19,6 +19,84 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.04.23 **Regents Physics** 
+
+##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Power
+2. Power Lab
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Power_
+
+🥅 _Calculate Power_ 
+
+🥅 _Measure your own Power_
+
+#### 🚨 NOTE:
+
+- Quiz Friday on Energy Conservation 
+
+</div>
+
+</div>
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.04.19 **Regents Physics** 
+
+##### **❓ of the 📅**: What is your favorite season 🌱☀️🍂☃️ of the year?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Finish Block Launcher Lab 
+2. Regents Practice for Energy 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Represent Energy Graphically_
+
+🥅 _Make Energy Calculations_
+
+🥅 _Model work done by friction_
+
+#### 🚨 NOTE:
+
+- Quiz Friday on Energy Conservation 
+
+</div>
+
+</div>
+
+
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.04.17 **Regents Physics** 
 
 ##### **❓ of the 📅**: If you could understand any animal, which would it be?
@@ -49,10 +127,6 @@ math: mathjax
 </div>
 
 </div>
-
-
-
-
 
 ---
 
