@@ -26,6 +26,70 @@ math: mathjax
 
 #### 📋 Agenda
 
+1. Finish Ghost Shooter Tuturial
+2. Explore things you can change to make the game your own
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Make modifications to a template game_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+---
+
+# Ghost Shooter Mod Ideas
+
+<div class='columns'>
+
+<div>
+
+- new levels
+- additional enemies
+- walls and paths
+- change the character 
+- change the ghosts
+- add animation to your character
+- add animation to the ghost
+- add in sound/music
+
+</div>
+
+<div>
+
+- make different weapon options 
+- mutliple lives for player 
+- create a HUD
+- Add obstacles
+- Change background (create your own)
+- Make a start screen
+- Make a Game over screen
+
+</div>
+
+</div>
+
+
+---
+
+# 2024.04.16 **Video Game Desgin** 
+
+##### **❓ of the 📅**: 
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
 1. Make a construct 3 account 
 2. Explore Arcade & Play Games 
 3. Look at example projects
