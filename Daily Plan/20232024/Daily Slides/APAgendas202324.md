@@ -18,6 +18,46 @@ math: mathjax
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
+# 2024.04.25 **AP Physics** 
+
+##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now - AP Workbook 5.I - _on your own_
+2. AP Workbook 5.G, 5.M, 5.O
+3. Old AP Problems - in pairs 
+4. Practice Paragraph Length Response - individually
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply Conservation of Momentum to other models (i.e. Energy or Projectile Motion)_ 
+
+#### 🚨 Notices
+
+- ***Fact Sheet Quiz Friday*** From Kinematics & Dynamics
+
+</div>
+
+</div>
+
+
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
 # 2024.04.19 **AP Physics** 
 
 ##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
