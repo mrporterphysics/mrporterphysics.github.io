@@ -16,6 +16,47 @@ math: mathjax
 ---
 
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.26 **AP Physics** 
+
+##### **❓ of the 📅**: Hotdog, hamburger, or other at a BBQ?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Fact Sheet Quiz 
+2. Paragraph Length Response 
+    - complete  _individually_
+    - score yourself
+3. Paired Problem Solving 
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Apply Conservation of Momentum to other models (i.e. Energy or Projectile Motion)_ 
+
+#### 🚨 Notices
+
+- ***Fact Sheet Quiz Friday*** From Kinematics & Dynamics
+
+</div>
+
+</div>
+
+
+
+---
+
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.04.25 **AP Physics** 
