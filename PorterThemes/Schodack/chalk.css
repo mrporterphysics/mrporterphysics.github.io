@@ -114,3 +114,15 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
   }
+
+strong {
+  color: var(--primary-color);
+}
+
+strong h1{
+  color:  var(--secondary-color);
+}
+
+section.inverse {
+  background-color: #e0e0e0;
+}

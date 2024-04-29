@@ -1,7 +1,7 @@
 ---
 title: AP - Rotation 2024
 marp: true
-theme: claudeTheme
+theme: chalk
 math: katex
 paginate: true
 ---
@@ -122,10 +122,47 @@ The same as linear, but with their rotational twin!
 
 ---
 
+# Balacing Act:
+
+### Task 1
+
+Add masses to each side of the rod so that the rod does not rotate, but is balanced (parallel to the table). In particular, add two masses to one side and one mass to the other side. Is there more than one arrangement that will balance the rod? Explain.
+
+### Task 2
+
+Draw a Free Body Diagram for your setup in task 1. Are the forces balanced?
+
+---
+
+# Balacing Act:
+
+### Task 3
+
+Would the diagram that Mr. Porter drew on the board rotate? (Draw a FBD for the situation...does the net force explain the situation?)
+
+### Task 4
+
+Where could we place a mass in the previous question so that the ruler would not rotate?
+
+---
+
+# Balacing Act:
+
+### Task 5
+
+Develop a method to determine the mass of your meterstick using the balance.
+
+---
+
+# Notes ✏️📓 <!--fit--->
+
+---
+
 # Extended Bodies 
 
 * Rigid (parts of object do not move with respect to each other)
 * nonzero size 
+
 
 ---
 
@@ -244,7 +281,6 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 - Twisting Rod (where is it easiest to hold the rod to twist it?)
 
 ---
-<!---class: invert--->
 
 # Moment of Inertia 
 
@@ -253,8 +289,6 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 ## Why does the skater spin faster when she brings in their arms?
 
 ---
-
-<!---class: --->
 
 # Moment of Inertia
 
@@ -266,6 +300,8 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 
 
 ---
+
+<!--- _class: inverse --->
 
 ![bg fit](../figures/momentofI.png)
 

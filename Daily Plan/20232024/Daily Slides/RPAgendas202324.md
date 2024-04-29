@@ -16,6 +16,45 @@ math: mathjax
 ---
 
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.04.29 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Friday Head Count (are you leaving early for prom?)
+2. Momentum Notes and Practice
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Power_
+
+🥅 _Calculate Power_ 
+
+🥅 _Measure your own Power_
+
+#### 🚨 NOTE:
+
+- Quiz Tomorrow on Energy
+</div>
+
+</div>
+
+
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 

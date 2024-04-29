@@ -20,7 +20,7 @@ math: mathjax
 ##### **❓ of the 📅**: 
 
 
-1. Introduction to "The Physics of..." Quarter 4 Projects
+1. Introduction to ["The Physics of..."](../../../Presentations/Final%20Project/CP%20Final%20Project2024.html) Quarter 4 Projects
 
 ---
 

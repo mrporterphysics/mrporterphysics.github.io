@@ -16,6 +16,45 @@ math: mathjax
 ---
 
 
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.04.30 **AP Physics** 
+
+##### **❓ of the 📅**: What is the best Stewart's Ice Cream Flavor?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Balancing Act "Lab"
+3. Center of Mass
+4. Torque
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Center of mass_
+
+🥅 _Torque_
+
+#### 🚨 Notices
+
+- Momentum & Energy Quiz Tomorrow 
+- ***Fact Sheet Quiz <u>Thursday</u>*** Up Through Circular Motion
+
+</div>
+
+</div>
+
+
+---
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 

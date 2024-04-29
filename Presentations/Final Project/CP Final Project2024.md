@@ -157,3 +157,19 @@ _Research and design a physics experiment explain the physics of something that 
 2. 1 idea for ***each*** topic of what data you would collect 
 </div></div>
 
+---
+
+# Experimental Design -  Pre Lab Questions
+
+1. What is the problem?
+2. What do you know about the science of the problem that could help you answer your research question? (You may have to do research for this aspect)
+3. What is your hypothesis for the answer to your research question? 
+4. What variables can you use to test your hypothesis?
+5. What experiment(s) could you use to test your hypothesis?
+
+---
+
+# Hand in **Today** (4/29):
+
+1. Pre Lab Questions 
+2. ***Detailed*** Lab Procedure
