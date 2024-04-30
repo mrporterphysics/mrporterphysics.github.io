@@ -16,13 +16,60 @@ math: mathjax
 ---
 
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.04.30 **Regents Physics** 
+
+##### **❓ of the 📅**: Favorite Stewart's Ice Cream Flavor?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Energy Quiz 
+2. Momentum Mini Lab 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Momentum_ 
+
+🥅 _Discuss applications of momentum_ 
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+--- 
+
+# Momentum Mini Lab 
+
+## Task 
+
+Determine the unknown mass of Einstein using conservation of momentum
+
+## Equipment 
+
+- Scales (cannot mass Einstein)
+- Smart Carts 
+
+
+---
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
 # 2024.04.29 **Regents Physics** 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What is your Florida man story?
 
 <div class = "columns">
 <div>
@@ -38,11 +85,9 @@ math: mathjax
 
 #### 🎯 Goals 
 
-🥅 _Define Power_
+🥅 _Define Momentum_ 
 
-🥅 _Calculate Power_ 
-
-🥅 _Measure your own Power_
+🥅 _Discuss applications of momentum_ 
 
 #### 🚨 NOTE:
 

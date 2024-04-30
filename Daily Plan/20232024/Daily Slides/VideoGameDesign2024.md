@@ -17,6 +17,38 @@ math: mathjax
 ---
 
 
+# 2024.04.26 **Video Game Desgin** 
+
+##### **❓ of the 📅**: 
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Ghost Shooter Tuturial
+2. Explore things you can change to make the game your own
+3. Ghost Shooter Mods due next Thursday
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Make modifications to a template game_
+
+#### 🚨 Notices
+
+- None
+
+</div>
+
+</div>
+
+---
+
+
 # 2024.04.16 **Video Game Desgin** 
 
 ##### **❓ of the 📅**: 
