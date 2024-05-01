@@ -16,6 +16,49 @@ math: mathjax
 ---
 
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.05.01 **AP Physics** 
+
+##### **❓ of the 📅**: If you had to pick, what color would you eliminate from the rainbow? 🌈
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Notes
+2. Rotational Equilibrium 
+    - [Rotational Equilibrium 1](https://www.thephysicsaviary.com/Physics/APPrograms/RotationalEq1/)
+    - [Rotational Equilibrium 2](https://www.thephysicsaviary.com/Physics/APPrograms/RotationalEq2/)
+3. AP Workbook 7.B, 7.F
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Center of mass_
+
+🥅 _Torque_
+
+#### 🚨 Notices
+
+- Momentum & Energy Quiz Tomorrow 
+- ***Fact Sheet Quiz <u>Thursday</u>*** Up Through Circular Motion
+
+</div>
+
+</div>
+
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 # 2024.04.30 **AP Physics** 
