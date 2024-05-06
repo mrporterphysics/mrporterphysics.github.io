@@ -21,6 +21,47 @@ math: mathjax
 
 # 2024.05.01 **AP Physics** 
 
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Accelerating Systems - Atwood & Modified Atwood Machines
+2. Physics Classroom Practice
+3. Old AP Question with Mod Atwood Machine
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Center of mass_
+
+🥅 _Torque_
+
+#### 🚨 Notices
+
+- Momentum & Energy Quiz Tomorrow 
+- ***Fact Sheet Quiz <u>WEDNESDAY</u>*** Up Through ***ENERGY***
+
+</div>
+
+</div>
+
+
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.05.01 **AP Physics** 
+
 ##### **❓ of the 📅**: If you had to pick, what color would you eliminate from the rainbow? 🌈
 
 <div class = "columns">
