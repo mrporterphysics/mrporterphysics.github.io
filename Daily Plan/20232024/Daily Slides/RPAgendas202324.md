@@ -16,6 +16,73 @@ math: mathjax
 ---
 
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.05.06 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Impulse - Reminder 
+2. Impulse Example
+3. Physics Classroom Practice
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Momentum_ 
+
+🥅 _Discuss applications of momentum_ 
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+---
+
+# Impulse
+
+$$ \boxed{J = F\Delta t = \Delta p}$$ 
+
+and 
+
+$$\Delta p = m\Delta v = m(v_f - v_i)$$
+
+
+---
+
+# Lets Practice 
+
+Jennifer, who has a mass of 50.0 kg, is riding at 35.0 m/s in her red sports car when she must suddenly slam on the brakes to avoid hitting a deer crossing the road. She strikes the air bag, that brings her body to a stop in 0.500 s. What average force does the seat belt exert on her?
+
+$$F\Delta t = \Delta p$$
+
+$$F (0.5 \text{ s}) = 50\text{ kg}(0 \text{ m/s} - 35 \text{ m/s})$$
+
+$$F = 3500 \text{ N}$$
+
+---
+
+# Physics Classroom Practice 
+
+- [Mild 🫑](https://www.physicsclassroom.com/calcpad/launch/CPMC2) 
+- [Medium 🌶️](https://www.physicsclassroom.com/calcpad/launch/CPMC3) 
+- [Spicy 🥵](https://www.physicsclassroom.com/calcpad/launch/CPMC4)
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
