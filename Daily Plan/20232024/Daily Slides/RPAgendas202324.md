@@ -22,7 +22,7 @@ math: mathjax
 
 # 2024.05.06 **Regents Physics** 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: You have to sing karaoke, what song do you pick?
 
 <div class = "columns">
 <div>
