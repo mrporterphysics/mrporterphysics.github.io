@@ -254,6 +254,96 @@ A long rod of length L and negligible mass supports a box of mass M. The left en
 
 ---
 
+# Example with Angle
+
+Consider the beam below in equilibrium supported by a pin joint at A and a rope attached from the end of the beam to the pin joint at point B. The mass of the beam is 39.0 kg, the mass of the person is 43 kg, and the distance between vertical yellow marks is 1.6 meters. Pin joints can provide forces in the horizontal and vertical directions to maintain equilibrium.
+
+1. Tension in Rope
+2. Forces x, y at A
+3. Forces x, y at B
+
+![bg fit right:25%](image-3.png)
+
+
+---
+
+# Translate
+
+![bg fit right:25%](image-3.png)
+
+#### Physics Ideas:
+- Equilibrium 
+  - Balanced Torques
+  - Balanced Forces
+
+#### Givens
+- mass: $m_b = 39 \text{ kg}$, $m_p = 43 \text{ kg}$
+- levers: $r_{com} = 1.6 \text{ m}$, $r_p = 1.6 \text{ m}$, $r_T = \text{ m}$
+
+#### Unknowns
+
+- $F_T$, $F_{Ax}$, $F_{Ay}$, $F_{Bx}$, $F_{By}$
+
+---
+
+# Physics Diagrams - Force Diagram
+
+![center](image-4.png)
+
+---
+
+# Solving Process 
+
+1. Use sum of Torques to find Tension
+2. Use Tension and sum of forces to find forces at Pivot Point A
+3. Use above information for Pivot Point B
+
+---
+
+# Represent Mathematically
+
+<div class='columns'>
+
+<div>
+
+Sum Torques 
+
+$$\Sigma \tau = 0$$
+
+$$\tau_T - \tau_p - \tau_{com} = 0$$
+
+$$r_TF_t \sin30^\circ - r_pm_pg - r_{com}m_{com}g = 0$$
+
+$$F_T = \frac{r_pm_pg + r_{com}m_{com}g}{r_T \sin30^\circ}$$
+
+</div>
+
+<div>
+
+Horizontal Forces
+
+$$\Sigma F_x = 0$$
+
+$$F_{xA} - F_{Tx} = 0 $$
+
+$$F_{xA} = F_T \cos 30^\circ$$
+
+And Vertical Forces 
+
+$$\Sigma F_y = 0$$
+
+$$F_{Ty} - m_pg - m_{com}g + F_{Ay} = 0$$
+
+$$F_{T}\sin 30^\circ - m_pg - m_{com}g = F_{Ay}$$
+
+</div>
+
+
+
+</div>
+
+---
+
 # Unbalanced Torque  <!---fit--->
 
 # Causes rotational (angular) acceleration!
@@ -295,17 +385,59 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 * the rotational analog of mass for linear motion
 * it is related to the mass and the location of the mass
   * closer the mass is to the rotational axis, the lower the moment of inertia (easier to spin)
-* for a point like object $I=mr^2$
+* ***for a point like object $I=mr^2$***
 * this relationship is used to build the equations for other moments of inertia
 
 
 ---
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0283-animated-gif-1_3.gif)
+
+---
+
+
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0301-rolling-incline-first_3.gif)
+
+---
+
+
 
 <!--- _class: inverse --->
 
 ![bg fit](../figures/momentofI.png)
 
 ---
+
+# Example
+
+<div class='columns'>
+
+<div>
+
+A potter is shaping a bowl out of clay on a potter's wheel initially rotating at a constant angular speed of 22.4 rad/sec. A 1.40-N friction force between her hands and the clay slows the system to a stop. The wheel is a 11.5-kg disk with a radius of 26.2 cm. The bowl has a moment of inertia of 0.074 kg•m$^2$ around the center axis of the wheel.
+
+</div>
+
+<div>
+
+![](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/RotationDynamics/PotterWheelBowl.png)
+
+1. What is $I_{wheel}$ (hint: $I = \frac{1}{2}MR^2$)
+2. What is total $I$?
+3. What is the $\Sigma \tau$ 
+4. What is $\alpha$? Time to stop?
+
+</div>
+
+</div>
+
+---
+
+# Example 
+
+![bg fit right:22%](image-1.png)
+
+A block of unknown mass is attached to a long, lightweight string that is wrapped several turns around a pulley on a horizontal axis through its center, as shown. The pulley is a uniform solid disk of mass $M$ and radius $R$. The rotational inertia of the pulley is described by the equation $I = \frac{1}{2}MR^2$. The pulley can rotate about its center with negligible friction. The string does not slip on the pulley as the block falls. When the block is rleased from rest and as the block travels towards the ground, the magnitude of the tension exerted on the block is $F_T$. What is $\alpha_D$ of the disk as the block travels down?
 
 ---
 
@@ -323,6 +455,12 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 
 ---
 
+![bg](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0420-rocket-gif_orig.gif)
+
+# In terms of momentum, why does the water rocket increase its velocity?
+
+---
+
 <!---class: invert--->
 
 # Angular Momentum <!---fit--->
@@ -330,6 +468,8 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 ![bg](../figures/Spin_nocredit4.gif)
 
 ---
+
+
 
 <!---class: --->
 
@@ -430,6 +570,11 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 
 ---
 
+![bg fit](image-2.png)
+
+
+---
+
 ### Kinetic Energy 
 
 The kinetic energy for a moving particle: 
@@ -466,10 +611,36 @@ $$K_{rotational} = \frac{1}{2}mv^2 = \frac{1}{2}m(r\omega)^2 = \frac{1}{2}(mr^2)
 # Rolling Race 
 
 
-$$U_gi = K_f $$
+$$U_{gi} = K_f $$
 
 $$U_g = K_T + K_R$$ 
 
 $$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I \omega^2$$
 
 $$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\Big(\frac{v}{r}\Big)^2$$
+
+
+---
+
+<!--- _class: inverse--->
+
+![bg fit](image-5.png)
+
+
+---
+
+|                       | Linear Motion                 | Rotational Motion                               |                      |
+| --------------------- | ----------------------------- | ----------------------------------------------- | -------------------- |
+| Position              | $x$                           | $\theta$                                        | Angular Position     |
+| Velocity              | $v$                           | $\omega$                                        | Angular Velocity     |
+| Acceleration          | $a$                           | $\alpha$                                        | Angular Acceleration |
+| Motion Equations      | $x = \bar{v}t$                | $\theta = \bar{\omega}t$                        | Motion Equations     |
+|                       | $v= v_0 + at$                 | $\omega = \omega_0 + \alpha t$                  |                      |
+|                       | $x = v_0 t + \frac{1}{2}at^2$ | $\theta = \omega_o t + \frac{1}{2}\alpha t^2$   |                      |
+|                       | $v^2 = v_0^2 + 2a\Delta x$    | $\omega^2 = \omega_0^2 + 2\alpha \Delta \theta$ |                      |
+| Mass (linear inertia) | $m$                           | $I$                                             | Moment of Inertia    |
+| Newton's Second Law   | $F=ma$                        | $\tau = I \alpha$                               | Newton's Second Law  |
+| Momentum              | $p=mv$                        | $L = I \omega$                                  | Angular Momentum     |
+| Work                  | $W=Fd$                        | $W = \tau \theta$                               | Work                 |
+| Kinetic Energy        | $K = \frac{1}{2}mv^2$         | $K = \frac{1}{2}I\omega^2$                      | Kinetic Energy       |
+| Power                 | $P = Fv$                      | $P = \tau \omega$                               | Power                |

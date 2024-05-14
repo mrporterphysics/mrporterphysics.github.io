@@ -15,11 +15,196 @@ math: mathjax
 
 ---
 
+<!--- _footer: <br>--->
+
+# 2024.05.14 **AP Physics** Do Now 
+
+In each case, a 1-kg object is released from rest on a ramp at a height of 2 m from the bottom. All of the spheres roll without slipping, and the blocks slide without friction. The ramps are identical in Cases A and C. The ramps in Cases B and D are identical and are not as steep as the others. 
+
+![center](image-5.png)
+
+**Rank the speed of the objects when they reach the horizontal surface at the bottom of the ramp.**
+
+---
+
+<!--- _footer: <br>--->
+
+In each case, a 1-kg object is released from rest on a ramp at a height of 2 m from the bottom. All of the spheres roll without slipping, and the blocks slide without friction.
+
+![center](image-6.png)
+
+**Rank the maximum height of the objects on the other side of the ramp.**
+
+---
 
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
-# 2024.05.01 **AP Physics** 
+# 2024.05.14 **AP Physics** 
+
+##### **❓ of the 📅**: Vacation on the beach or adventure in the mountains?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Nows
+2. Angular Momentum 
+3. AP Workbook 7.I & Discuss
+4. AP Workbook 7.J & Discuss 
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Rotational KE_
+
+🥅 _Rotational Momentum_
+
+#### 🚨 Notices
+
+***AP EXAM FRIDAY MORNING!!!***
+
+</div>
+
+</div>
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.05.13 **AP Physics** 
+
+##### **❓ of the 📅**: Do you bite or lick your ice cream?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Fact Sheet Quiz
+2. Workbook 7.G - Start as soon as you finish fact sheet Quiz
+3. Rotational Kinetic Energy
+4. Workbook 7.H
+5. Rotational Momentum 
+6. Workbook 7.I
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Rotational KE_
+
+🥅 _Rotational Momentum_
+
+#### 🚨 Notices
+
+***AP EXAM FRIDAY MORNING!!!***
+
+</div>
+
+</div>
+
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.05.08 **AP Physics** 
+
+##### **❓ of the 📅**: Rock 🪨, paper 📰, or scissors ✂️?4444
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Balanced Torque Question
+2. Unbalanced Torque 
+3. AP Workbook 7.D & 7.E 
+    - 7.E Demo
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Center of mass_
+
+🥅 _Torque_
+
+#### 🚨 Notices
+
+- Momentum & Energy Quiz Tomorrow 
+- ***Fact Sheet Quiz <u>MONDAY</u>*** Up Through ***ENERGY and MOMENTUM***
+
+</div>
+
+</div>
+
+---
+
+# AP Physics Do Now 
+
+Consider the situation below where 2 vertical ropes are holding up a beam that is supporting 3 resting masses. The mass of the beam is 5.0 kg, the masses resting on the beam each are 55 kg, and the distance between parallel yellow marks is 50 cm. What is the tension in each rope?
+
+![center width:800px](image-4.png)
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.05.07 **AP Physics** 
+
+##### **❓ of the 📅**: Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+0. Quiz 
+1. Balanced Torque Question
+2. Unbalanced Torque 
+3. AP Workbook 7.D & 7.E 
+    - 7.E Demo
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Center of mass_
+
+🥅 _Torque_
+
+#### 🚨 Notices
+
+- Momentum & Energy Quiz Tomorrow 
+- ***Fact Sheet Quiz <u>WEDNESDAY</u>*** Up Through ***ENERGY and MOMENTUM***
+
+</div>
+
+</div>
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.05.06 **AP Physics** 
 
 ##### **❓ of the 📅**: 
 

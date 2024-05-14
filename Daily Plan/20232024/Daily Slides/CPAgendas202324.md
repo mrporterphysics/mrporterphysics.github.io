@@ -15,6 +15,54 @@ math: mathjax
 
 ---
 
+# 2024.05.13 **Conceptual Physics**
+
+1. Finish Collecting Data - MUST COMPELTE BY END OF ***WEDNESDAY***
+2. Start Visualizing Data:
+    - Determine if the data should be represented as a table or a graph 
+    - If you decide to use a graph to represent your data, determine which type of graph is one that best represents your data 
+    - OR modify the table you used to collect your data so that it is labeled and organized properly 
+3. Start Writing Lab Report - Posted in Canvas
+
+---
+
+
+# 2024.05.09 **Conceptual Physics**
+
+1. Collect Data
+2. Visualize Data:
+    - Determine if the data should be represented as a table or a graph 
+    - If you decide to use a graph to represent your data, determine which type of graph is one that best represents your data 
+    - OR modify the table you used to collect your data so that it is labeled and organized properly 
+3. Answer research question:
+    - Do you results match your hypothesis? Why or why not?
+ 
+
+
+
+---
+
+
+# 2024.05.07 **Conceptual Physics**
+
+##### **❓ of the 📅**: 
+
+
+1. Start experimenting
+    - If you don't have your materials then you should start writing up part of your lab report
+2. You ***MUST*** Have your materials for next class if you don't have anything today. You *will not* have enough time to finish the project if you don't start your experiment ASAP
+
+---
+
+# Your Experiment Should...
+
+
+1. Have independent, dependent and control variables
+2. Only change one variable to see how it affects another
+3. Take multiple trials to limit experimental uncertainty
+
+---
+
 # 2024.04.18 **Conceptual Physics**
 
 ##### **❓ of the 📅**: 

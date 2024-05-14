@@ -173,3 +173,7 @@ _Research and design a physics experiment explain the physics of something that 
 
 1. Pre Lab Questions 
 2. ***Detailed*** Lab Procedure
+
+
+---
+

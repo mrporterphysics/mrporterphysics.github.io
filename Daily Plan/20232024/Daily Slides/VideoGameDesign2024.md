@@ -16,6 +16,49 @@ math: mathjax
 
 ---
 
+11
+
+
+---
+
+
+
+# 2024.05.14 **Video Game Desgin** 
+
+##### **❓ of the 📅**: 
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Final Project 
+    - Brainstorm Ideas
+    - Discuss with Classmates
+    - Choose Your Project
+2. StartGame Concept Document
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Create idea for final game_
+
+🥅 _Start Final GCD_
+
+#### 🚨 Notices
+
+- Only ***11*** Video Game Classes Left!
+
+</div>
+
+</div>
+
+
+---
+
 
 # 2024.04.26 **Video Game Desgin** 
 

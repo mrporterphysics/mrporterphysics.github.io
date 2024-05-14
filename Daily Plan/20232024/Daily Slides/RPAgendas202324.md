@@ -16,6 +16,122 @@ math: mathjax
 ---
 
 
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.05.13 **Regents Physics** 
+
+##### **❓ of the 📅**: Do  you bite or lick your ice cream?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now - 2023 Regents - Page 5 (#18-25)
+2. Circuits Packet - Resistance 
+3. Review Ohm's Law
+4. Ohm's Law Practice
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Calculate Current_
+
+🥅 _Define Resistance_
+
+🥅 _Develop Ohm's Law Experimentally_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.05.09 **Regents Physics** 
+
+##### **❓ of the 📅**: What do you think people would be like if they lived to be 200 years old? Would it change us?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now - 2023 Regents Page 4 (#12-17)
+2. Circuits Packet - Current 
+3. Ohm's Law Lab
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Calculate Current_
+
+🥅 _Define Resistance_
+
+🥅 _Develop Ohm's Law Experimentally_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.05.07 **Regents Physics** 
+
+##### **❓ of the 📅**: Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now - 2023 Regents Page 1
+2. Intro to Circuits
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Define Current_ 
+
+🥅 _Calculate Current_
+
+🥅 _Define Resistance_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
 
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
