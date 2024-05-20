@@ -15,6 +15,44 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+# 2024.05.16 **AP Physics** 
+
+##### **❓ of the 📅**: What is your favorite dinosaur?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Oscillation 
+2. Studying of your choice 
+    - AP Classroom
+    - Rotation FRQ
+    - Oscillation Workbook
+    - **Make up fact sheet quiz**
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Oscillation_
+
+#### 🚨 Notices
+
+***AP EXAM FRIDAY MORNING!!!***
+
+</div>
+
+</div>
+
+
+---
+
 <!--- _footer: <br>--->
 
 # 2024.05.14 **AP Physics** Do Now 

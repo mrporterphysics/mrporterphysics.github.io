@@ -1,0 +1,60 @@
+/* 
+@theme bright
+*/
+
+/* General Styles */
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+/* General Styles */
+body {
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #fff;
+  
+
+}
+
+/* Header Styles */
+h1 {
+  font-family: "Poetsen One", sans-serif;
+  color: #ff7b72;
+  text-shadow: 3px 3px #ffc952;
+}
+
+h2 {
+  font-family: "Sriracha", cursive;
+  color: #ffc952;
+  text-shadow: 2px 2px #ff7b72;
+}
+
+h3 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #66d9ef;
+}
+
+h4 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #a770ef;
+}
+
+/* Text Styles */
+p {
+  color: #333;
+}
+
+/* Slide Styles */
+section {
+  padding: 2rem;
+  background-image: "assets/border.png";
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+  gap: 1rem;
+}

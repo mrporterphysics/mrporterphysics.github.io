@@ -16,6 +16,82 @@ math: mathjax
 ---
 
 
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.05.16 **Regents Physics** 
+
+##### **❓ of the 📅**: What is your favorite dinosaur?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now - 2023 Regents - Pages 9-11 (#40-50)
+2. Circuit Analysis VIRP Tables 
+3. Circuit Analysis
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Calculate Current_
+
+🥅 _Define Resistance_
+
+🥅 _Develop Ohm's Law Experimentally_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.05.15 **Regents Physics** 
+
+##### **❓ of the 📅**: If you were a super-hero, what powers would you have?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now - 2023 Regents - Page 6 & 7 (Questions #26-35)
+2. Ohm's Law #1-16 (24 minutes on the timer)
+3. Circuits Notes - Kirchoff's Laws 
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Calculate Current_
+
+🥅 _Define Resistance_
+
+🥅 _Develop Ohm's Law Experimentally_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 

@@ -10,7 +10,8 @@
       "./PorterThemes/Schodack/schodack.css",
       "./PorterThemes/Schodack/videogame.css",
       "https://raw.githubusercontent.com/dracula/marp/master/dracula/dracula.css",
-      "./PorterThemes/Schodack/chalk.css"
+      "./PorterThemes/Schodack/chalk.css",
+      "./PorterThemes/Schodack/brightTheme.css"
    ]
 }
 

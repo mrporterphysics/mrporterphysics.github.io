@@ -15,6 +15,20 @@ math: mathjax
 
 ---
 
+# 20204.05.15 **Conceptual Physics**
+
+## Things to Complete:
+
+1. Complete your experiment, today ***should be*** the last day of data collection
+2. Lab Report - Write these sections (individual canvas assignments) in tis order:
+    1. Methods
+    2. Results 
+    3. Introduction
+    4. Discussion
+    5. Conclusion
+
+---
+
 # 2024.05.13 **Conceptual Physics**
 
 1. Finish Collecting Data - MUST COMPELTE BY END OF ***WEDNESDAY***
