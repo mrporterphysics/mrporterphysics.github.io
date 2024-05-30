@@ -18,6 +18,38 @@ math: mathjax
 
 <!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
+# 2024.05.22 **AP Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+0. Letter of Rec PSA
+1. Background Research
+2. Experimental Design
+    - Written plan
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Procedure written_
+
+
+
+</div>
+
+</div>
+
+---
+
+<!-- _footer: 🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
 # 2024.05.16 **AP Physics** 
 
 ##### **❓ of the 📅**: What is your favorite dinosaur?

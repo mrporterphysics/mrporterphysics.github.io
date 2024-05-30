@@ -16,7 +16,38 @@ math: mathjax
 
 ---
 
-11
+
+
+# 2024.05.29 **Video Game Desgin** 
+
+##### **❓ of the 📅**: What three things would you bring if you were being sent to a desserted island?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Game Check-ins
+2. Work on Final Game
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Create idea for final game_
+
+🥅 _Working on Final Game_
+
+#### 🚨 Notices
+
+- Only ***6*** Video Game Classes Left!
+- _**Is your GCD turned in?**_
+
+</div>
+
+</div>
 
 
 ---

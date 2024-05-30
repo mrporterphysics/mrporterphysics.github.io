@@ -20,6 +20,116 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.05.30 **Regents Physics** 
+
+##### **❓ of the 📅**: What is your silliest fear? 🐍
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+1. [Waves - Behaviors: Resonance, Doppler](../../../Presentations/Waves/talks/RP_Waves_2023.html)
+3. [Waves - E&M Spectrum](../../../Presentations/Waves/talks/RP_Waves_2023.html)
+3. Reflection
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Understand Wave Behaviors_
+
+🥅 _Identify Different Types of E&M Waves_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.05.29 **Regents Physics** 
+
+##### **❓ of the 📅**: What is your silliest fear? 🐍
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now June 2022 - #16-26 (or is it 27-33?)
+1. [Waves - Behaviors: Resonance, Doppler](../../../Presentations/Waves/talks/RP_Waves_2023.html)
+4. Waves - E&M Spectrum
+1. Wave Behavior Packet
+3. [Waves - E&M Spectrum](../../../Presentations/Waves/talks/RP_Waves_2023.html)
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Understand Wave Behaviors_
+
+🥅 _Identify Different Types of E&M Waves_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.05.29 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+
+1. Do Now June 2022 - #1-7 
+    - Put answers in canvas
+2. Circuit Analysis (15 min)
+3. [Waves - Behaviors: Resonance, Doppler](../../../Presentations/Waves/talks/RP_Waves_2023.html)
+4. Waves - E&M Spectrum
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Understand Wave Behaviors_
+
+🥅 _Identify Different Types of E&M Waves_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.05.16 **Regents Physics** 
 
 ##### **❓ of the 📅**: What is your favorite dinosaur?

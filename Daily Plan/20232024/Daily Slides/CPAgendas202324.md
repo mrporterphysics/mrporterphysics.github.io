@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+
+# 20204.05.30  **Conceptual Physics**
+
+## Things to Complete:
+
+1. Discussion Section (Due today)
+2. Conclusion (Due Monday)
+3. Assesmble Lab Report into single document (Due Tuesday)
+4. Slides for final presentation (due 6/12 - date of presentation)
+
+--- 
+
+# Discussion Section
+
+🥅 Interpret your results and discuss if they agree or disagree with your hypothesis.
+
+1) **What:** A sentence or two stating if your results fully support your hypothesis, do not support the hypothesis, or support the hypothesis but with certain exceptions.
+2) **How:** Paragraph discussing your *_specific_* results that support or reject your hypothesis.
+3) **Why:** Paragraph explaining ***WHY*** and ***with scientific concepts*** why your results support or do not support 
+
+---
+
+# Discussion (cont.)
+
+4) **Summary:** In a paragraph , restate the research question and present the answer your experiment has suggested for that question. Show how the experiment has helped you to solve for the unknowns. Then restate the problem and discuss the solution to the problem suggested by the answer to the research question.
+
+
+---
+
 # 20204.05.15 **Conceptual Physics**
 
 ## Things to Complete:

@@ -12,6 +12,8 @@ style: |
     margin: 0 auto;
     }
 paginate: true
+math: mathjax
+
 ---
 
 ![bg](https://i.pinimg.com/originals/1a/69/1d/1a691d35add342af8bda0d77bb9e3d8b.gif)
@@ -21,6 +23,7 @@ paginate: true
 ## A Model For Periodic Motion
 
 ---
+
 
 # Waves
 

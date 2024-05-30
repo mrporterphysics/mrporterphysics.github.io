@@ -16,6 +16,14 @@ theme: chalk
 
 # Learning and the Brain
 
+
+MORE RESOURCES:
+
+- [Science of Learning](https://www.delmosworld.org/learning)
+- [How to Study](https://www.edutopia.org/article/teaching-students-how-study)
+- [Where is the evidence learning works](https://journals.physiology.org/doi/epdf/10.1152/advan.00053.2006)
+
+
 ---
 
 # First... what is the point?
@@ -36,10 +44,10 @@ Learning is a change to your long-term memory.
 No.
 You need to know things to be able to do things
 When you learn you can
-- 'know' new things
-- make new connections to old things
-- make new connections between old things
-- strengthen the connections between any of the things
+* 'know' new things
+* make new connections to old things
+* make new connections between old things
+* strengthen the connections between any of the things
 
 ---
 
@@ -63,10 +71,10 @@ During lessons I will talk about
 
 ---
 
-# 1. Your attention is THE most precious thing
+# 1. Your attention is THE most precious thing <!--fit--->
 
 
-![w: 400px](image-1.png)
+![center w:700px](image-1.png)
 
 ---
 
@@ -77,7 +85,7 @@ Pass the ball video with bear walking through
 
 ---
 
-# What you need to know about **attention**
+# What you need to know about **attention** <!--fit--->
 It's **evolution**. 
 You are programmed to
 - have a **wide, less focussed** view (so you don't get eaten)
@@ -92,9 +100,9 @@ You are programmed to
 
 ---
 
-# 2. Everyone's working memory is limited
+# 2. Everyone's working memory is limited <!--fit--->
 
-![w: 400px](image-1.png)
+![center w:800px](image-1.png)
 
 --- 
 
@@ -120,7 +128,7 @@ Do all of this in your head
 
 # What did we learn
 - Our **attention** is precious
-- Our **working memory**is limited
+- Our **working memory** is limited
 
 ---
 
@@ -132,9 +140,9 @@ Do all of this in your head
 
 ---
 
-# 3. **Thinking** moves things to your long-term memory
+# 3. **Thinking** moves things to your long-term memory <!--fit--->
 
-![alt text](image-2.png)
+![center w:800](image-2.png)
 
 ---
 
@@ -159,7 +167,7 @@ Why?
 
 # What did we learn
 - Our **attention** is precious
-- Our w**orking memory** is limited
+- Our **working memory** is limited
 - It's easier to put things with **meaning** into our **long-term memory**
 
 ---
@@ -187,9 +195,9 @@ Why?
 
 ---
 
-# Retrieving things upsets the forgetting curve
+# Retrieving things upsets the forgetting curve <!--fit--->
 
-![center w:400](image-4.png)
+![center w:900](image-4.png)
 
 ---
 
@@ -227,7 +235,7 @@ To get things securely in your long-term memory and upset the forgetting curve w
 
 ---
 
-# Why your phone is particularly addictive to YOU
+# Why your phone is particularly addictive to **YOU** <!--fit--->
 - Dopamine!!
 - Adolescence is the time when brain is making lots more receptors, so it takes more to register.
 
@@ -278,7 +286,7 @@ Why? There are several theories
 
 ---
 
-# Look at this for 30 seconds
+# Look at this for 30 seconds <!--fit--->
 
 ![bg right:40% 80%](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Rotating_Snakes.jpg/440px-Rotating_Snakes.jpg)
 

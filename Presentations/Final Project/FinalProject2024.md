@@ -3,6 +3,7 @@ title: AP Final Project
 marp: true
 theme: bright
 paginate: true
+math: mathjax
 backgroundImage: url("assets/border.png")
 ---
 
@@ -147,9 +148,69 @@ backgroundImage: url("assets/border.png")
 
 ---
 
+# 2024.05.22 **AP Physics** Day 2
+
+##### **❓ of the 📅**: What rule do you wish they would introduce into your favorite sport (or game)?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+0. Letter of Rec PSA
+1. Background Research
+2. Experimental Design
+    - Written plan
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Procedure written_
 
 
-# Day 4 - Experimentdal Design & Research 
+
+</div>
+
+</div>
+
+---
+
+# 2024.05.23 **AP Physics** Day 3
+
+##### **❓ of the 📅**: Any big Memorial Day Weekend Plans?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Research
+2. Data Collection - Should be completed by the end of next week
+
+
+</div>
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Continue Research_
+
+🥅 _Start Data Collection_
+
+
+
+</div>
+
+</div>
+
+---
+
+# Day 4 - Experimental Design & Research 
 
 ##### ❓of the 📅: *If you were ruler of your own country what would be the first law you would introduce?*
 
@@ -163,9 +224,9 @@ backgroundImage: url("assets/border.png")
 
 ---
 
-<!--- _header: 2023.05.22 - **AP Physics** --->
 
-# Day 5 - Start Experimenting 
+
+# 5.29: Day 5 - Start Experimenting 
 
 ##### ❓of the 📅: What three items would you take with you on a deserted island?
 
