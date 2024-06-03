@@ -20,6 +20,43 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.06.03 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+1. [Waves - Reflection](../../../Presentations/Waves/talks/RP_Waves_2023.html)
+3. Refraction
+4. Diffraction
+</div>
+
+
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Understand Wave Behaviors_
+
+🥅 _Identify Different Types of E&M Waves_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.05.30 **Regents Physics** 
 
 ##### **❓ of the 📅**: What is your silliest fear? 🐍
