@@ -642,7 +642,7 @@ E=m
 
 # Poster Day
 
-##### **❓of the 📅**: Summer time! 🏖️ or ⛰️ vacation? What do you want to learn about yourself this summer? What are yo most looking forward to this summer?
+##### **❓of the 📅**: Summer time! 🏖️ or ⛰️ vacation? What do you want to learn about yourself this summer? What are you most looking forward to this summer?
 
 ## Poster Procedures 📋:
 
@@ -650,7 +650,7 @@ E=m
 - **Visit all posters** and ask presenter questions about their project
     - "_What do you learn_" or "_What would you change if you were to do this again?_" or "_What is your most interesting fining?_"
     - Do no crowd any poster, spread out, go to posters with fewer people and rotate around the room
-- Have some snacks 
+
 
 <div class="columns"><div></div><div></div>
 

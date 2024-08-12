@@ -13,7 +13,7 @@ style: |
     }
 paginate: true
 theme: uncover
-class: 
+math: mathjax
 ---
 
 <style>

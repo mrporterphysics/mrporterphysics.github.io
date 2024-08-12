@@ -20,6 +20,156 @@ math: mathjax
 <!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
 
 
+# 2024.06.11 **Regents Physics** 
+
+##### **❓ of the 📅**: What is the best summer activity?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+1. Finish June 22 Short Answer
+2. Standard Model Practice - Page 3 (#19-31)
+2. $E = mc^2$ 
+3. Mass-Energy Equivalence Practice 
+</div>
+
+
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Mass Energy Equivalence_
+
+🥅 _Electron Energy Levels_
+
+#### 🚨 NOTE:
+
+- Rev: 6/20 & 6/21 🕗 8-10 am 
+- Test Tuesday 6/25 🕗 8-11 am
+
+</div>
+
+</div>
+
+
+
+---
+
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.06.11 **Regents Physics** 
+
+##### **❓ of the 📅**: What is the best summer activity?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+1. Energy Level Diagrams Practice 
+2. $E = mc^2$ 
+3. Mass-Energy Equivalence Practice
+</div>
+
+
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Mass Energy Equivalence_
+
+🥅 _Electron Energy Levels_
+
+#### 🚨 NOTE:
+
+- Rev: 6/20 & 6/21 🕗 8-10 am 
+- Test Tuesday 6/25 🕗 8-11 am
+
+</div>
+
+</div>
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.06.05 **Regents Physics** 
+
+##### **❓ of the 📅**: What is the best summer activity?
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+1. Diffraction & Young's Double Slit Experiment
+2. Modern Physics 
+3. Regents Practice
+</div>
+
+
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Understand Wave Behaviors_
+
+🥅 _Identify Different Types of E&M Waves_
+
+#### 🚨 NOTE:
+
+- Rev: 6/20 & 6/21 🕗 8-10 am 
+- Test Tuesday 6/25 🕗 8-11 am
+
+</div>
+
+</div>
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
+# 2024.06.04 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+<div>
+
+#### 📋 Agenda
+1. Regents Exam: 2022 #36-50
+1. Refraction Practice
+4. Diffraction
+</div>
+
+
+
+<div>
+
+#### 🎯 Goals 
+
+🥅 _Understand Wave Behaviors_
+
+🥅 _Identify Different Types of E&M Waves_
+
+#### 🚨 NOTE:
+
+
+</div>
+
+</div>
+
+---
+
+<!--- _footer:  🤔 Did you get better at physics today? Did you help make someone else better today? --->
+
+
 # 2024.06.03 **Regents Physics** 
 
 ##### **❓ of the 📅**: 

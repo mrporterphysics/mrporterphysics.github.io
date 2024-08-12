@@ -15,6 +15,24 @@ math: mathjax
 
 ---
 
+# 2024.06.10 **Conceptual Physics**
+
+1. Finish Lab Report (Due Wednesday)
+2. Finish Presentation Slides (***Present Wednesday...next class***)
+    - THIS IS YOUR FINAL - NO SHOW, SHOW PRESENTATION IS **AUTOMATIC COURSE FAILURE**
+
+---
+
+# 2024.06.04 **Conceptual Physics**
+
+1. Finish Lab Report
+2. Arrange Lab Report into a single document
+3. Start Making Slides for Presentation due on 6/12 (Next Wednesday)
+
+![bg fit right](image-7.png)
+
+---
+
 
 # 20204.05.30  **Conceptual Physics**
 
