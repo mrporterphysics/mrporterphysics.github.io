@@ -1,0 +1,160 @@
+/* 
+@theme physics2024
+*/
+
+/*General Styles */
+@import 'default';
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Slab:wght@700&family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fira+Sans:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/*General Styles */
+
+section {
+  font-family: 'JetBrains Mono', sans-serif;
+  background: url(assets/astrobackground.png) no-repeat center center;
+  background-size: cover; /* Ensure the background covers the entire slide */
+  color:white;
+}
+
+body, li, ul, ol, li li, ul ul, ol ol {
+  font-size: .9em;
+}
+
+/* Slide Title */
+h1, h2, h3 {
+  color: #ffffff; /* Deep blue for headers */
+  text-align: left;
+}
+
+/* Section Headers */
+h1 {
+  font-family: "Poetsen One", sans-serif;
+  color: #adfcf5;
+  text-shadow: 3px 3px #5977fa;
+  font-size: 2em;
+}
+
+h2 {
+  font-family: "Sriracha", cursive;
+  color: #ffc952;
+  text-shadow: 2px 2px #ff9189;
+  font-size: 1.6 em;
+}
+
+h3 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #97eeff;
+  font-size: 1.3em;
+}
+
+h4 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #b480f8;
+  font-size: 1.3em;
+}
+
+/* Subtext or Emphasized Text */
+strong {
+  color: #ff9696; /* Soft red for emphasis */
+  font-weight: bold;
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong {
+  color: #ff9696; /* Soft red for emphasis */
+  font-weight: bold;
+}
+
+/* Bullet Points */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+/* Quotes */
+blockquote {
+  border-left: 5px solid #2e86de;
+  margin-left: 0;
+  padding-left: 20px;
+  color: #555555;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.5em;
+  color: #777777;
+}
+
+/* Images */
+/* img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+} */
+
+/* Custom Slide Layouts */
+section.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Cover Slide */
+section.cover h1 {
+  font-size: 3.5em;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  
+}
+
+section.cover {
+  background-color: #2e86de;
+  background-image: "assets/watercolor.png";
+  background-size: cover;
+  background-position: center;
+}
+
+/* Custom class for important notes */
+.important-note {
+  font-family: 'Calibri', 'Helvetica', sans-serif;
+  background-color: #FFE082; /* Light orange background */
+  border-left: 5px solid #FFA000; /* Dark orange border */
+  padding: 10px 20px;
+  margin: 1em 0;
+}
+
+/* Custom class for fun facts */
+.fun-fact {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  background-color: #BBDEFB; /* Light blue background */
+  border: 2px dashed #1565C0; /* Blue dashed border */
+  padding: 10px 20px;
+  margin: 1em 0;
+  border-radius: 10px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+  gap: 1rem;
+}
