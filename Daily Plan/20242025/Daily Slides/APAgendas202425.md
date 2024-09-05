@@ -88,3 +88,114 @@ math: mathjax
 
 ---
 
+# Surivial Plan... <!--fit--->
+
+---
+
+# Buggy Lab 
+
+## Objective: 
+
+* Determine if your toy buggy moves in a <U>consistent manner</u> by developing a relationship between ***position*** and ***time***. 
+* Use ***time*** as your independent variable
+
+---
+
+# Lab Notebook
+
+* Write in **pen**
+* All mistakes get a ~~single cross through~~
+* Full Date (YYYY/MM/DD) at the beginning of each entry (for multiday labs date start of each day)
+* Enter Lab Pages into table of contents 
+
+---
+
+# Lab Notebook - Pre Lab
+
+* **Title and objective of the experiment**: 
+  - Write a clear, concise title for each experiment.
+  - State the main objective or purpose of the experiment in 1-2 sentences.
+* ***Theoretical background**: 
+  - Briefly explain the relevant scientific principles.
+  - Include key equations or concepts that will be tested or applied.
+* **Hypotheses**: 
+
+  - State your predictions about the experiment's outcome.
+  - Base these on your understanding of the theory.
+
+---
+
+# Lab Notebook - Pre Lab
+
+* **Materials and equipment list**: 
+  - Provide a detailed list of all materials and equipment used.
+  - Include model numbers and specifications where relevant.
+* **Experimental procedure outline**: 
+  - Write a step-by-step outline of the planned procedure.
+  - Be specific enough that someone could replicate your experiment.
+
+---
+
+<!--- footer: <br> --->
+
+# During the Experiment
+
+* **Raw data in tables with units**: 
+  - Create neat, organized tables for all numerical data.
+  - Always include units and uncertainty estimates.
+  - Label columns clearly and use consistent significant figures.
+* **Observations and qualitative notes**: 
+  - Record all relevant observations, even if they seem unimportant.
+  - Note any unexpected occurrences or anomalies.
+* **Any changes to the planned procedure**: 
+  - Document any deviations from the original procedure.
+  - Explain why changes were made and how they might affect results.
+* **Sketches or diagrams of experimental setup**: 
+  - Include clear, labeled diagrams of your experimental setup.
+  - Add dimensions and important details to aid in replication.
+
+---
+
+# Post Lab
+
+* **Data analysis and calculations**: 
+  - Show all steps in your calculations, including formulas used.
+  - Explain your reasoning for each step of the analysis.
+* **Graphs and charts**: 
+  - Create neat, properly labeled graphs and charts.
+  - Include titles, axis labels with units, and legends where appropriate.
+
+---
+
+# Post Lab
+
+* **Discussion of results**: 
+  - Interpret your results in the context of the experiment's objectives.
+  - Explain any patterns or trends observed in the data
+* **Comparison with hypotheses**: 
+  - Explicitly state whether your results support or refute your hypotheses.
+  - Discuss possible reasons for any discrepancies.
+* **Sources of error and uncertainty**: 
+  - Identify potential sources of experimental error.
+  - Discuss how these might have affected your results.
+  - Quantify uncertainties where possible.
+
+---
+
+# Post Lab
+
+- **Conclusions**: 
+  - Summarize the main findings of the experiment.
+  - Relate these back to the original objectives and broader scientific principles.
+  - Suggest improvements or future directions for the experiment.
+
+
+---
+
+
+# Buggy Lab 
+
+## Objective: 
+
+* Determine if your toy buggy moves in a <U>consistent manner</u> by developing a relationship between ***position*** and ***time***. 
+* Use ***time*** as your independent variable
