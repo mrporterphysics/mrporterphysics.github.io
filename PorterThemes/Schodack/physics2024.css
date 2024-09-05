@@ -15,7 +15,7 @@
 
 section {
   font-family: 'JetBrains Mono', sans-serif;
-  background: url(assets/astrobackground.png) no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0, 0, 0, 0.658)), url(assets/Mandel.jpg) no-repeat center center;
   background-size: cover; /* Ensure the background covers the entire slide */
   color:white;
 }

@@ -28,7 +28,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-0. Sit Alphabetically (For Now)
+0. Sit Anywhere
 1. Do Now (fill out questionnaire & card)
 2. Question of the Day
 3. Grouping Game
@@ -53,12 +53,12 @@ math: mathjax
 </div>
 
 ---
-
+<!--- background: black--->
 # Do **Now** 
 
 1. Fill out index card:
     1. Name
-    2. Phone number to reach your parents/guardians if you sleep through the Regents exam
+    2. Phone number to reach your parents/guardians if you sleep through the AP Exam
     3. Favorite Candy
     4. Favorite Emoji
     5. Emoji the describes your current mood
@@ -68,8 +68,8 @@ math: mathjax
 
 # Lab Grouping Game
 
-- There are 16 of you
-- Based on your cards get into ***LOGICAL*** groups
+- There are 8 of you and 8 extra cards
+- Based on your cards get into ***LOGICAL*** pairs with **two** extra cards
 - Check **whole class** answer with Mr. Porter
     - 4 Chances to Check
 - Reorganize if necessary
@@ -85,3 +85,6 @@ math: mathjax
 2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
 3. On your whiteboard present your plan (drawing, mind map, set of instructions)
     - Highlight everyone's skill
+
+---
+
