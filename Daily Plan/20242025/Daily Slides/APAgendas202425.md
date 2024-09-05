@@ -101,6 +101,50 @@ math: mathjax
 
 ---
 
+
+# 🥼 Lets Science! 🥼 <!--fit--->
+
+# 📓 Lab Notebooks 📓 <!--fit--->
+
+---
+
+# What is a Lab Notebook?
+
+* A detailed, chronological record of a scientist's research activities, experiments, and observations. 
+* Documentation of the scientific process from intial ideas to final results and conclusions. 
+
+---
+
+# Why keep lab notebooks?
+
+* Document Research
+* Develop Ideas
+* Organize Data 
+* Collaboration Tool
+* Publication Support
+* Troubleshooting 
+* Intellectual Property Protection
+* Historical Record
+
+---
+
+# Lab Notebooks can be Legal Documents 
+
+* Proof of invention in Patent Cases
+* Intellectual Property Protection
+* Admissibility in court - must be properly maintained
+* Note: Often property of the instituation where the research was conducted (i.e. Property of Regeneron, or Property of Cornell University)
+
+---
+
+# Remember
+
+* Lab notebooks are most importantly scientific documentation
+* They represent the scientific process and are record of your **thinking**
+    * This means your ideas and conclusions and hypotheses can **change** based on **new data**
+
+---
+
 # Lab Notebook
 
 * Write in **pen**
