@@ -15,6 +15,48 @@ math: mathjax
 
 ---
 
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.06 **AP Physics** 
+
+##### **❓ of the 📅**: Sweet or savory for breakfast?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+0. Sit Anywhere
+1. Do Now (fill out questionnaire & card)
+2. Question of the Day
+3. Grouping Game
+4. Survival Island
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Introductions_
+
+🥅 _Classroom Culture_
+
+
+### 🏠 Homework
+
+- Signed Safety Contract
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+
+</div>
+
+</div>
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
@@ -37,12 +79,16 @@ math: mathjax
 
 <div>
 
-#### 🎯 Goals 
+### 🎯 Goals 
 
 🥅 _Introductions_
 
 🥅 _Classroom Culture_
 
+
+### 🏠 Homework
+
+- Signed Safety Contract
 
 ### **Note**: This is a cellphone free classroom 📵
 

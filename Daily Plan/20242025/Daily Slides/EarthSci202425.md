@@ -28,7 +28,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-0. Sit Alphabetically (For Now)
+0. Sit Anywhere (For Now)
 1. Do Now (fill out questionnaire & card)
 2. Question of the Day
 3. Grouping Game
@@ -37,11 +37,16 @@ math: mathjax
 
 <div>
 
-#### 🎯 Goals 
+### 🎯 Goals 
 
 🥅 _Introductions_
 
 🥅 _Classroom Culture_
+
+
+### 🏠 Homework
+
+- Signed Safety Contract
 
 
 ### **Note**: This is a cellphone free classroom 📵
