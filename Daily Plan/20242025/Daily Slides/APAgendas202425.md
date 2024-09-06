@@ -15,11 +15,11 @@ math: mathjax
 
 ---
 
-<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+<!-- _footer: 📵 --->
 
 # 2024.09.06 **AP Physics** 
 
-##### **❓ of the 📅**: Sweet or savory for breakfast?
+##### **❓ of the 📅**: Should you bite or lick your ice cream? 🍨 🍦
 
 <div class = "columns">
 
@@ -27,29 +27,29 @@ math: mathjax
 
 #### 📋 Agenda
 
-0. Sit Anywhere
-1. Do Now (fill out questionnaire & card)
-2. Question of the Day
-3. Grouping Game
-4. Survival Island
+0. Do Now 
+1. Buggy Lab
+    1. Collect Data
+    2. Analyze and Represent Data
+    3. Present and Discuss as a class
+    4. Model Development
+    5. Conclusions in Lab Notebook
+
+
 </div>
 
 <div>
 
 ### 🎯 Goals 
 
-🥅 _Introductions_
+🥅 _Create a mathematical model for motion_ 
 
-🥅 _Classroom Culture_
+🥅 _Develop good experimental habits_
 
 
 ### 🏠 Homework
 
 - Signed Safety Contract
-
-### **Note**: This is a cellphone free classroom 📵
-
-
 
 </div>
 
