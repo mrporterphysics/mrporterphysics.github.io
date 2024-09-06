@@ -15,6 +15,21 @@ math: mathjax
 
 ---
 
+# 2024.09.06 **AP Physics** Do Now 
+
+## Join AP Classroom 
+
+[myap.collegeboard.org](https://myap.collegeboard.org/)
+
+Code: GJAXZJ
+
+
+## Join Pivot Interactives
+
+Class Key: dbe3ec21
+
+---
+
 <!-- _footer: 📵 --->
 
 # 2024.09.06 **AP Physics** 
@@ -27,12 +42,12 @@ math: mathjax
 
 #### 📋 Agenda
 
-0. Do Now 
+0. Do Now - Join AP Classroom & Pivot
 1. Buggy Lab
     1. Collect Data
     2. Analyze and Represent Data
     3. Present and Discuss as a class
-    4. Model Development
+    4. [Model Development](https://www.mrporterphysics.com/Presentations/APCVPM/talks/CVPM2024.html)
     5. Conclusions in Lab Notebook
 
 

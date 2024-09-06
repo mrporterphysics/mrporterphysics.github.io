@@ -19,7 +19,7 @@ math: mathjax
 
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
-# 2024.09.05 **Regents Physics** 
+# 2024.09.06 **Regents Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
@@ -73,8 +73,8 @@ math: mathjax
 
 # Lab Grouping Game
 
-- There are 8 of you and 8 extra cards
-- Based on your cards get into ***LOGICAL*** pairs with **two** extra cards
+- There are 14 of you, two groups of 4, two groups of 3
+- Based on your cards get into ***LOGICAL*** groups of 4 (or 3)
 - Check **whole class** answer with Mr. Porter
     - 4 Chances to Check
 - Reorganize if necessary
