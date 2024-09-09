@@ -21,9 +21,9 @@ img[alt~="center"] {
 
 ## Variable Types
 
-- **Independent Variable**: The variable that is manipulated or changed in an experiment
-- **Dependent Variable**: The variable that is measured or observed in an experiment  
-- **Controlled Variables**: Variables that are kept constant to ensure a fair test
+* **Independent Variable**: The variable that is manipulated or changed in an experiment
+* **Dependent Variable**: The variable that is measured or observed in an experiment  
+* **Controlled Variables**: Variables that are kept constant to ensure a fair test
 
 ---
 
@@ -64,13 +64,13 @@ img[alt~="center"] {
 - Shows the distribution of a variable
 - Groups data into bins or ranges
 
-![bg fight right](image-3.png)
+![bg fit right](image-3.png)
 
 
 ---
 
 ## Key Takeaways
 
-- Identify the independent, dependent, and controled variables in an experiment
-- Choose the appropriate graph type to best represent the data and relationships
-- Graphs help scientists visualize and analyze experimental results
+1) Identify the independent, dependent, and controled variables in an experiment
+2) Choose the appropriate graph type to best represent the data and relationships
+3) Graphs help scientists visualize and analyze experimental results

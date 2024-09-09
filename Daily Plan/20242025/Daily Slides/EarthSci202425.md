@@ -18,7 +18,7 @@ math: mathjax
 
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
-# 2024.09.06 **Earth Science** 
+# 2024.09.09 **Earth Science** 
 
 ##### **❓ of the 📅**: If you were to open a restaurant, what kind of food would you offer?
 
