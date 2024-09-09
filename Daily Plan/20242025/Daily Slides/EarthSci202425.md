@@ -28,18 +28,19 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Sit with your group from yesterday
-2. Survival Island
-3. Ball Bounce Lab
+1. Sit with your group 
+2. Graphing Notes 
+3. Finish Graphing Lab
+4. Graphing Practice 
+
+
 </div>
 
 <div>
 
 ### 🎯 Goals 
 
-🥅 _Introductions_
-
-🥅 _Classroom Culture_
+🥅 _Graphing Best Practices_ 
 
 
 ### 🏠 Homework

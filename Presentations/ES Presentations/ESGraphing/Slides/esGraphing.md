@@ -40,12 +40,15 @@ img[alt~="center"] {
 - Plots individual data points
 - Shows the relationship between two variables
 
+![bg fit right](image.png)
+
 ---
 
 ### Line Graph
 - Connects data points with line segments
 - Shows trends over time or the relationship between variables
 
+![bg fit right](image-1.png)
 
 ---
 
@@ -53,6 +56,7 @@ img[alt~="center"] {
 - Uses bars to represent and compare data
 - Good for categorical data or showing differences between groups
 
+![bg fit right](image-4.png)
 
 ---
 
@@ -60,11 +64,13 @@ img[alt~="center"] {
 - Shows the distribution of a variable
 - Groups data into bins or ranges
 
+![bg fight right](image-3.png)
+
 
 ---
 
 ## Key Takeaways
 
-- Identify the independent, dependent, and controlled variables in an experiment
+- Identify the independent, dependent, and controled variables in an experiment
 - Choose the appropriate graph type to best represent the data and relationships
 - Graphs help scientists visualize and analyze experimental results
