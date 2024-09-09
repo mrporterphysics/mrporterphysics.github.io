@@ -7,7 +7,7 @@
 
 ## Regents Physics 
 
-- 
+- [Experimental Methods](/mrporterphysics.github.io/Presentations/Exp Methods/slides/ExpMethods.html)
 
 ## Earth Science
 
