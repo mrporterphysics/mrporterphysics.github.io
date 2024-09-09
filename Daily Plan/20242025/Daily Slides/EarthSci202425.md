@@ -16,6 +16,47 @@ math: mathjax
 
 ---
 
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.06 **Earth Science** 
+
+##### **❓ of the 📅**: If you were to open a restaurant, what kind of food would you offer?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Sit with your group from yesterday
+2. Survival Island
+3. Ball Bounce Lab
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Introductions_
+
+🥅 _Classroom Culture_
+
+
+### 🏠 Homework
+
+- Signed Safety Contract
+
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+
+</div>
+
+</div>
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 

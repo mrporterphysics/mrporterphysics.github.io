@@ -16,6 +16,85 @@ math: mathjax
 
 ---
 
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.09 **Regents Physics** 
+
+##### **❓ of the 📅**: If you were to open a restaurant, what kind of food would you offer?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Pasta Bridge Lab - Reminder of Goals 
+2. [Experimental Methods](https://www.mrporterphysics.com/Presentations/Exp%20Methods/slides/ExpMethods.html#1)
+2. Pasta Bridge Lab - Collect & Analyze Data
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 Experimental Basics_ 
+
+🥅 _Linear Modeling_ 
+
+### 🏠 Homework
+
+- Signed Safety Contract
+
+### **Note**: This is a cellphone free classroom 📵
+
+</div>
+
+</div>
+
+---
+
+# Pasta Bridge Lab 🍝
+
+## Objective: 
+
+* Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
+* Compare bridge strength of two varieties of pasta
+
+<div class='columns'>
+
+<div>
+
+### Reminders...
+
+- Notebook in ***pen***
+- Date start of your entry
+
+</div>
+
+
+<div>
+
+
+### Goals...
+
+1. Collect Data
+2. Graph & Analyze Data
+3. Put Graph(s) on Whiteboard to present
+
+</div></div>
+
+---
+
+# A Few Requests 
+
+1) Please make sure all broken pasta strands end up in the trash 
+2) Please have someone in your group ready to catch the cup ***BEFORE*** the strands of pasta break
+    * there is always one group who forgets...***don't be that group***
+
+
+---
+
 
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
