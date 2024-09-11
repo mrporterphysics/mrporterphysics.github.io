@@ -16,6 +16,101 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: <br> --->
+
+# 2024.09.10 **Regents Physics** 
+
+##### **❓ of the 📅**: Do you have any phobias? 🐍 🕷️ 🚁
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now: Finish Collecting Data & Graphing Lab
+2. Whiteboard Graph(s)
+3. Pasta Bridge Lab Board Meeting
+4. Writing your Discussion & Conclusion Sections of your lab
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Experimental Basics_ 
+
+🥅 _Linear Modeling_ 
+
+### 🏠 Homework
+
+- Signed Safety Contract
+
+### **Note**: This is a cellphone free classroom 📵
+
+</div>
+
+</div>
+
+---
+
+# Pasta Bridge Lab 🍝
+
+## Objective: 
+
+* Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
+* Compare bridge strength of two varieties of pasta
+
+---
+
+# Presenting:
+
+1. How you ran your lab (what was your procedure)
+2. What you found:
+    - Does your data confirm or deny your hypothesis? How so?
+3. Anything else interesting you found
+
+---
+
+# Pasta Bridge Lab 🍝
+
+- What does the slope represent?
+  - Can you write a "for each" statment?
+- What does the intercept represent?
+- How do the slope and/or intercept help support or refute your hypothesis?
+  - Do other groups' data agree with yours?
+
+---
+
+# Post Lab
+
+* **Discussion of results**: 
+  - Interpret your results in the context of the experiment's objectives.
+  - Explain any patterns or trends observed in the data
+* **Comparison with hypotheses**: 
+  - Explicitly state whether your results support or refute your hypotheses.
+  - Discuss possible reasons for any discrepancies.
+* **Sources of error and uncertainty**: 
+  - Identify potential sources of experimental error.
+  - Discuss how these might have affected your results.
+  - Quantify uncertainties where possible.
+
+---
+
+# Post Lab
+
+- **Conclusions**: 
+  - Summarize the main findings of the experiment.
+  - Relate these back to the original objectives and broader scientific principles.
+  - Suggest improvements or future directions for the experiment.
+
+
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
 # 2024.09.09 **Regents Physics** 
@@ -54,12 +149,7 @@ math: mathjax
 
 ---
 
-# Pasta Bridge Lab 🍝
 
-## Objective: 
-
-* Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
-* Compare bridge strength of two varieties of pasta
 
 <div class='columns'>
 

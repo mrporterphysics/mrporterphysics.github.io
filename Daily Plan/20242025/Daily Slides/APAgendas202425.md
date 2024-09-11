@@ -15,6 +15,112 @@ math: mathjax
 
 ---
 
+
+<!-- _footer: 📵 --->
+
+# 2024.09.11 **AP Physics** 
+
+##### **❓ of the 📅**: What would you name your pirate ship?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. [Modeling Motion](https://www.mrporterphysics.com/Presentations/APCVPM/talks/CVPM2024.html)
+2. Physical Quantity Types
+3. AP Workbook: 1.A - 1.D
+4. Complete Conclusion for Buggy Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Create a mathematical model for motion_ 
+
+🥅 _Describe different physical quantities_
+
+🥅 _Apply constant velocity particle motion_
+
+
+### 🏠 Homework
+
+
+
+</div>
+
+</div>
+
+
+
+---
+
+# 2024.09.10  **AP Physics** Do Now 
+
+<div class='columns'>
+
+<div>
+
+![](image.png)
+
+</div>
+
+<div>
+
+1. Which ball(s) are moving in a *consistent manner*?
+2. Which ball(s) is the fastest? Slowest? How do you know?
+3. Which ball travels the furthest? The least? How do you know?
+
+
+</div></div>
+
+---
+
+
+<!-- _footer: 📵 --->
+
+# 2024.09.10 **AP Physics** 
+
+##### **❓ of the 📅**: Do you have any phobias? 🐍 🕷️ 🚁
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+0. Do Now - Join AP Classroom & Pivot
+1. Buggy Lab
+4. [Modeling Motion](https://www.mrporterphysics.com/Presentations/APCVPM/talks/CVPM2024.html)
+2. Physical Quantity Types
+3. AP Workbook: 1.A, B, and D
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Create a mathematical model for motion_ 
+
+🥅 _Develop good experimental habits_
+
+
+### 🏠 Homework
+
+- Signed Safety Contract
+
+</div>
+
+</div>
+
+
+
+---
+
 # 2024.09.06 **AP Physics** Do Now 
 
 ## Join AP Classroom 
@@ -64,7 +170,7 @@ Class Key: dbe3ec21
 
 ### 🏠 Homework
 
-- Signed Safety Contract
+- Week 1 Problem Set
 
 </div>
 
