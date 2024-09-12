@@ -15,6 +15,55 @@ math: mathjax
 
 ---
 
+# 2024.09.12  **AP Physics** Do Now 
+
+1. Describe a motion that has
+    - the **same** distance, displacement, and final position
+    - **different** distance, displacement, and final position
+2. Describe a real-life situation where it is important to consider velocity as a vector
+
+---
+
+
+<!-- _footer: 📵 --->
+
+# 2024.09.12 **AP Physics** 
+
+##### **❓ of the 📅**: Do you have any weird/unique routines or superstitions? (For example: I ***have*** to put on my left sock before my right sock, and the same for shoes, left on first.)
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now  
+2. [Average vs. Instantaneous; Speed vs. Velocity](https://www.mrporterphysics.com/Presentations/APCVPM/talks/CVPM2024.html#11)
+3. Fan Cart Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Create a mathematical model for motion_ 
+
+🥅 _Describe different physical quantities_
+
+🥅 _Apply constant velocity particle motion_
+
+
+### 🏠 Homework
+
+
+
+</div>
+
+</div>
+
+
+
+---
 
 <!-- _footer: 📵 --->
 

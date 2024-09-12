@@ -19,6 +19,46 @@ math: mathjax
 
 <!-- _footer: <br> --->
 
+# 2024.09.12 **Regents Physics** 
+
+##### **❓ of the 📅**: 
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now: Finish Pasta Lab Conclusions
+2. Do Now: Join Pivot Interactives
+    - Code: **fee8f6b2**
+3. Buggy Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Experimental Basics_ 
+
+🥅 _Linear Modeling_ 
+
+### 🏠 Homework
+
+- Signed Safety Contract
+
+### **Note**: This is a cellphone free classroom 📵
+
+</div>
+
+</div>
+
+---
+
+
+<!-- _footer: <br> --->
+
 # 2024.09.10 **Regents Physics** 
 
 ##### **❓ of the 📅**: Do you have any phobias? 🐍 🕷️ 🚁

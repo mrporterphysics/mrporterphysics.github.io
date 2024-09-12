@@ -1,6 +1,6 @@
 ---
 marp: true
-title: Motion 2024-25
+title: RP Motion 2024-25
 theme: default
 paginate: true
 footer: Be brave, not perfect
@@ -29,7 +29,17 @@ img[alt~="center"] {
 
 ## A Descriptive *Model* for Particles 
 
-### AP Physics 2024-25 with Mr. Porter
+### Regents Physics 2024-25 with Mr. Porter
+
+
+---
+
+# Toy Buggy Observations 🚗 
+
+## In your lab notebook write down... 
+
+- ### 2 ***observations*** about the toy buggy
+- ### 2 ***questions*** you can ask and design experiments around 
 
 
 ---
@@ -39,12 +49,35 @@ img[alt~="center"] {
 ## Objective: 
 
 * Determine if your toy buggy moves in a <U>consistent manner</u> by developing a relationship between ***position*** and ***time***. 
+
+## Notes
 * Use ***time*** as your independent variable
+* Your Lab Setup is based on an assigned initial set up
 
 ---
 
-![bg fit](image-6.png)
+![bg fit](buggies.png)
 
+---
+
+# Buggy Lab 🚗
+
+## Objective: 
+
+* Determine if your toy buggy moves in a <U>consistent manner</u> by developing a relationship between ***position*** and ***time***. 
+
+## Notes
+* Use ***time*** as your independent variable
+* Your Lab Setup is based on an assigned initial set up
+
+
+![bg fit right](buggies.png)
+
+---
+
+# Brainstorm Experimental Design 🧠⛈️ <!--fit--->
+
+## Take 5 minutes ⏲️ to discuss as a lab group and prepare to share your ideas 🗣️
 
 ---
 
@@ -150,92 +183,6 @@ $$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
 
 ---
 
-
-# Analyzing Position-Time (XT) Graphs
-
-### For the following position vs. time graph, consider the positive direction to be north.
-
-1. When is the object moving North? South?
-3. When is the object stopped?
-4. When is the object North of the origin?
-5. What is the velocity of the object at $t = 1$ s? $t = 2.5$ s? $t = 4$ s? When it is at the origin?
-
-
-
-![bg right:42% fit](../figures/xtavvsinst.png)
-
----
-
-# Average vs. Instantaneous
-
-* **Average** - what is something over a period of time, $\Delta t$ 
-* **Instantaneous** - what is something at that exact moment in time, $t$
-
----
-
-# Velocity vs. Speed
-
-## Velocity
-
-$$ \bar{v} = \frac{\Delta x}{\Delta t} = \frac{\textrm{displacement}}{\textrm{time duration}}$$
-
-## Speed 
-
-$$ |v| = \frac{\textrm{distance}}{\Delta t}$$
-
----
-
-# Instantaneous Values:
-
-- _"at that moment"_
-- Value at a specific time 
-
-## Instantaneous Velocity
-
-- Velocity at a specific time
-- The slope of the position vs. time graph ***at that time measurement***
-
-
-## Instantaneous Speed
-
-- Magnitude of the velocity 
-
----
-
-# Analyzing Position-Time (XT) Graphs
-
-
-5. When does the object change directions?
-8. What is the total *distance* the object travels?
-9. What is the total *displacement* of the object?
-10. What is the *average velocity* of the object?
-11. What is the *average speed* of the object?
-
-![bg right fit](../figures/xtavvsinst.png)
-
----
-
-# Average Velocity 
-
-Dispalcement divided by the change in time. 
-
-$$ \bar{v} = \frac{\Delta x}{\Delta t}$$
-
-_"The average slope of the graph"_
-
-# Average Speed 
-
-Total distance divided by change in time 
-
-$$ |v| = \frac{dist}{\Delta t}$$
-
-
-![bg right fit](../figures/image.png)
-
-
-
----
-
 # Motion Maps - Represent this pictorially:
 
 ![width:700 center](../figures/position-time.png)
@@ -305,6 +252,75 @@ Given the following motion map, where positions have been recorded with one dot 
 
 ![bg right fit](../figures/xtpractice2.png)
 
+
+---
+
+# Motion Sensor Lab <!--fit--->
+
+---
+
+
+# Analyzing Position-Time (XT) Graphs
+
+### For the following position vs. time graph, consider the positive direction to be north.
+
+1. When is the object moving North? South?
+3. When is the object stopped?
+4. When is the object North of the origin?
+5. What is the velocity of the object at $t = 1$ s? $t = 2.5$ s? $t = 4$ s? When it is at the origin?
+
+
+
+![bg right:42% fit](../figures/xtavvsinst.png)
+
+---
+
+# Analyzing Position-Time (XT) Graphs
+
+
+5. When does the object change directions?
+8. What is the total *distance* the object travels?
+9. What is the total *displacement* of the object?
+10. What is the *average velocity* of the object?
+11. What is the *average speed* of the object?
+
+![bg right fit](../figures/xtavvsinst.png)
+
+---
+
+# Average Velocity 
+
+Dispalcement divided by the change in time. 
+
+$$ \bar{v} = \frac{\Delta x}{\Delta t}$$
+
+_"The average slope of the graph"_
+
+# Average Speed 
+
+Total distance divided by change in time 
+
+$$ |v| = \frac{dist}{\Delta t}$$
+
+
+![bg right fit](../figures/image.png)
+
+---
+
+# Instantaneous Values:
+
+- _"at that moment"_
+- Value at a specific time 
+
+## Instantaneous Velocity
+
+- Velocity at a specific time
+- The slope of the position vs. time graph ***at that time measurement***
+
+
+## Instantaneous Speed
+
+- Magnitude of the velocity 
 
 ---
 
