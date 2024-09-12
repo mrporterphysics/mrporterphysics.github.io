@@ -16,7 +16,44 @@ math: mathjax
 
 ---
 
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
+# 2024.09.12 **Earth Science** 
+
+##### **❓ of the 📅**: Do you have any weird/unique routines or superstitions? (For example: I ***have*** to put on my left sock before my right sock, and the same for shoes, left on first.)
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. 20 Minutes: Finish Measurement Olympics Graphs 
+2. Is it probable that another planet like Earth exists? 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Graphing Best Practices_ 
+
+
+### 🏠 Homework
+
+- Finish Measurement Olympics Graphs (Due Friday)
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+
+</div>
+
+</div>
+
+---
 
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
