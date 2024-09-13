@@ -3,7 +3,6 @@ marp: true
 title: RP Motion 2024-25
 theme: default
 paginate: true
-footer: Be brave, not perfect
 math: mathjax
 ---
 
@@ -20,27 +19,21 @@ img[alt~="center"] {
 }
 </style>
 
-
-
-
-
-
 # Motion 🚗 <!--fit--->
 
 ## A Descriptive *Model* for Particles 
 
 ### Regents Physics 2024-25 with Mr. Porter
 
-
 ---
 
 # Toy Buggy Observations 🚗 
 
-## In your lab notebook write down... 
+## In your lab notebook write down 2 of the following... 
 
-- ### 2 ***observations*** about the toy buggy
-- ### 2 ***questions*** you can ask and design experiments around 
-
+- 👀 what do you see? (observations)
+- 🤔 what do you think? (hypotheses)
+- 💭 what do you wonder? (what questions could you ask to support hypotheses)
 
 ---
 
@@ -73,15 +66,11 @@ img[alt~="center"] {
 
 ![bg fit right](buggies.png)
 
----
-
-# Brainstorm Experimental Design 🧠⛈️ <!--fit--->
-
-## Take 5 minutes ⏲️ to discuss as a lab group and prepare to share your ideas 🗣️
 
 ---
 
 ![bg fit](image-5.png)
+
 
 ---
 
@@ -124,10 +113,13 @@ $$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
 
 ### Who went further? Dorothy or Toto?
 
-![width:400 center](../../../Daily%20Plan/20232024/images/Kinematics/dortoto.png)
+Make an arguement for **both cases**
+
+![bg fit right](../../../Daily%20Plan/20232024/images/Kinematics/dortoto.png)
 
 
 ---
+
 
 # Vector vs. Scalar 
 
@@ -179,53 +171,231 @@ $$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
 * **Speed** is a ***scalar*** quantity
     - how fast
 
+---
+
+
+# Analyzing Position-Time (XT) Graphs
+
+### For the following position vs. time graph, consider the positive direction to be north.
+
+1. When is the object moving North? South?
+3. When is the object stopped?
+4. When is the object North of the origin?
+5. What is the velocity of the object at $t = 1$ s? $t = 2.5$ s? $t = 4$ s? When it is at the origin?
+
+
+
+![bg right:42% fit](../figures/xtavvsinst.png)
+
+---
+
+# Average vs. Instantaneous
+
+* **Average** - what is something over a period of time, $\Delta t$ 
+* **Instantaneous** - what is something at that exact moment in time, $t$
+
+---
+
+# Velocity vs. Speed
+
+## Velocity
+
+$$ \bar{v} = \frac{\Delta x}{\Delta t} = \frac{\textrm{displacement}}{\textrm{time duration}}$$
+
+## Speed 
+
+$$ |v| = \frac{\textrm{distance}}{\Delta t}$$
+
+---
+
+# Instantaneous Values:
+
+- _"at that moment"_
+- Value at a specific time 
+
+## Instantaneous Velocity
+
+- Velocity at a specific time
+- The slope of the position vs. time graph ***at that time measurement***
+
+
+## Instantaneous Speed
+
+- Magnitude of the velocity 
+
+---
+
+# Visualizing Instantaneous Velocity
+
+![center w:700](image-2.png)
+
+---
+
+# Visualizing Instantaneous Velocity
+
+<iframe src="https://www.desmos.com/calculator/bfyznrfmgh" width="1150px" height="500px" style="border: 1px solid #ccc" frameborder=0 ></iframe>
 
 
 ---
 
-# Motion Maps - Represent this pictorially:
+# Analyzing Position-Time (XT) Graphs
 
-![width:700 center](../figures/position-time.png)
+
+5. When does the object change directions?
+8. What is the total *distance* the object travels?
+9. What is the total *displacement* of the object?
+10. What is the *average velocity* of the object?
+11. What is the *average speed* of the object?
+
+![bg right fit](../figures/xtavvsinst.png)
+
+---
+
+# Average Velocity 
+
+Dispalcement divided by the change in time. 
+
+$$ \bar{v} = \frac{\Delta x}{\Delta t}$$
+
+_"The average slope of the graph"_
+
+# Average Speed 
+
+Total distance divided by change in time 
+
+$$ |v| = \frac{dist}{\Delta t}$$
+
+
+![bg right fit](../figures/image.png)
+
 
 ---
 
 
-## Motion Maps
+# Describing Motion 
 
-![width: 900 center](../figures/motion-map.png)
-
----
-
-![width:600 center](../figures/position-time%20_1.png)
-
-
-![width:600 center](../figures/motion-map%20_1.png)
+Each description should include:
+- Starting position
+- Direction of motion (positive direction, no motion, or negative direction)
+- Type of motion (at rest, constant velocity, speeding up, slowing down or some combination of these)
+- Relative speed (slow, medium, fast, slower, faster—this is only meaningful with there is more than
+one part of the motion or when you are comparing two or more objects)
 
 ---
 
-![width:900 center](../figures/position-time%20(2).png)
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt1.png)
 
 ---
 
-![width:900 center](../figures/motion-map%20(2).png)
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt2.png)
 
 ---
 
-![width:600 center](../figures/position-time%20(2).png)
+# Lets Practice
 
-![width:600 center](../figures/motion-map%20(2).png)
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt3.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt4.png)
 
 
 ---
 
-## Try it...
+# Lets Practice
 
-![width:900 center](../figures/position-time%20(3).png)
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt5.png)
 
 ---
 
-![width:900 center](../figures/motion-map%20(3).png)
+# Lets Practice
 
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt6.png)
+
+
+---
+
+# Motion Maps
+
+![center width:900](https://www.intelligentdesigneronline.com/drhoades/advanced/reading/motionMap1.png)
+
+---
+
+# Motion Maps 
+
+<br>
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/motionmapCPexample.png)
+
+
+---
+
+# Motion Maps 
+
+- Each dot represents **one unit of time**
+- The numberline is the **position** of the object
+- The separation of the dots and length of the arrow represents the **velocity** of the object 
+- Stacked dots represent an object that is motionless
+
+---
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice1.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice2.png)
+
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice3.png)
+
+
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice4.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice5.png)
 
 ---
 
@@ -234,7 +404,7 @@ $$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
 Given the following position vs. time graph
 
 1. Draw a motion map with one dot for each second
-2. Describe the motion in worsds
+2. Describe the motion in words
 
 ![bg right fit](../figures/xtpractice1.png)
 

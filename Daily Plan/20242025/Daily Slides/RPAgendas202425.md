@@ -1,5 +1,5 @@
 ---
-title: Regents Physics 2023-2024
+title: Regents Physics 2024-25
 marp: true
 theme: physics2024
 paginate: true
@@ -16,12 +16,49 @@ math: mathjax
 
 ---
 
+<!-- _footer: <br> --->
+
+# 2024.09.13 **Regents Physics** 
+
+##### **❓ of the 📅**: What extracurriculars do you participate in?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Buggy Lab
+    1. Collect Data
+    2. Graph in pivot (Code: **fee8f6b2**)
+    3. Whiteboard Graph
+2. Buggy Lab Board Meeting
+3. Modeling Motion Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Experimental Basics_ 
+
+🥅 _Linear Modeling_ 
+
+🥅 _Modeling Motion_ 
+
+</div>
+</div>
+
+
+---
+
 
 <!-- _footer: <br> --->
 
 # 2024.09.12 **Regents Physics** 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Do you have any weird/unique routines or superstitions? (For example: I ***have*** to put on my left sock before my right sock, and the same for shoes, left on first.)
 
 <div class = "columns">
 

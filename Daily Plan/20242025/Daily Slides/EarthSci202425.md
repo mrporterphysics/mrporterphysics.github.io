@@ -55,6 +55,46 @@ math: mathjax
 
 ---
 
+
+# CER (Claim, Evidence, Reasoning)
+
+* ### Claim:
+    * Sentence that answers the question.
+
+* ### Evidence:
+    * Explanation of how the evidence supports the claim.
+        * Should include details!
+        * Refer back to the question, include any data, diagrams, or graphs.
+
+* ### Reasoning:
+    * Science principle, such as an equation, law, or definition.
+        * This is general, do no include specific details.
+
+---
+
+# Game: Soup, Salad, or Sandwich
+
+1. Make s Claim-Evidence-Reasoning statement arguing whether the shown food is a soup, salad, or a sandwich. 
+
+---
+
+<!-- class: invert --->
+
+# Soup, Salad, or Sandwich?
+
+![bg ](https://static01.nyt.com/images/2022/07/27/dining/27Chicagodogrex/05Chicagodogrex-master768.jpg?w=1280&q=75)
+
+
+---
+
+
+# Soup, Salad, or Sandwich?
+
+![bg](https://insanelygoodrecipes.com/wp-content/uploads/2022/10/Homemade_Broccoli_and_Cheddar_Soup_in_a_Bread_Bowl.jpg)
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
 # 2024.09.11 **Earth Science** 
