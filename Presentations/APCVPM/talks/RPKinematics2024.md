@@ -27,6 +27,26 @@ img[alt~="center"] {
 
 ---
 
+### Contents 
+
+<div class='columns'>
+<div>
+
+1. [Buggy Lab Results](#lab-results)
+2. [Vector vs. Scalar](#vector-vs-scalar)
+3. [Describing Motion](#describing-motion)
+4. [Motion Maps](#motion-maps-notes)
+
+</div>
+ 
+<div>
+
+</div>
+</div>
+
+
+---
+
 # Toy Buggy Observations 🚗 
 
 ## In your lab notebook write down 2 of the following... 
@@ -174,6 +194,165 @@ Make an arguement for **both cases**
 ---
 
 
+# Describing Motion 
+
+Each description should include:
+- Starting position
+- Direction of motion (positive direction, no motion, or negative direction)
+- Type of motion (at rest, constant velocity, speeding up, slowing down or some combination of these)
+- Relative speed (slow, medium, fast, slower, faster—this is only meaningful with there is more than
+one part of the motion or when you are comparing two or more objects)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt1.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt2.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt3.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt4.png)
+
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt5.png)
+
+---
+
+# Lets Practice
+
+### Describe the motion of each graph
+
+![center](../../../Daily%20Plan/20232024/images/Kinematics/xt6.png)
+
+
+---
+
+# Motion Maps
+
+![center width:900](https://www.intelligentdesigneronline.com/drhoades/advanced/reading/motionMap1.png)
+
+---
+
+# Motion Maps 
+
+<br>
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/motionmapCPexample.png)
+
+
+---
+
+# Motion Maps Notes
+
+- Each dot represents **one unit of time**
+- The numberline is the **position** of the object
+- The separation of the dots and length of the arrow represents the **velocity** of the object 
+- Stacked dots represent an object that is motionless
+
+---
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice1.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice2.png)
+
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice3.png)
+
+
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice4.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice5.png)
+
+---
+
+## Practice: Complete individually and compare
+
+Given the following position vs. time graph
+
+1. Draw a motion map with one dot for each second
+2. Describe the motion in words
+
+![bg right fit](../figures/xtpractice1.png)
+
+---
+
+## More Practice 
+
+Given the following motion map, where positions have been recorded with one dot each second, 
+
+1. Draw a position vs. time graph 
+2. Describe the motion of the object in words
+
+
+![bg right fit vertical](../figures/mmpractice2.png)
+
+![bg right fit](../figures/xtpractice2.png)
+
+
+---
+
+# Motion Sensor Lab <!--fit--->
+
+
+---
+
+
 # Analyzing Position-Time (XT) Graphs
 
 ### For the following position vs. time graph, consider the positive direction to be north.
@@ -269,163 +448,6 @@ $$ |v| = \frac{dist}{\Delta t}$$
 ![bg right fit](../figures/image.png)
 
 
----
-
-
-# Describing Motion 
-
-Each description should include:
-- Starting position
-- Direction of motion (positive direction, no motion, or negative direction)
-- Type of motion (at rest, constant velocity, speeding up, slowing down or some combination of these)
-- Relative speed (slow, medium, fast, slower, faster—this is only meaningful with there is more than
-one part of the motion or when you are comparing two or more objects)
-
----
-
-# Lets Practice
-
-### Describe the motion of each graph
-
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt1.png)
-
----
-
-# Lets Practice
-
-### Describe the motion of each graph
-
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt2.png)
-
----
-
-# Lets Practice
-
-### Describe the motion of each graph
-
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt3.png)
-
----
-
-# Lets Practice
-
-### Describe the motion of each graph
-
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt4.png)
-
-
----
-
-# Lets Practice
-
-### Describe the motion of each graph
-
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt5.png)
-
----
-
-# Lets Practice
-
-### Describe the motion of each graph
-
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt6.png)
-
-
----
-
-# Motion Maps
-
-![center width:900](https://www.intelligentdesigneronline.com/drhoades/advanced/reading/motionMap1.png)
-
----
-
-# Motion Maps 
-
-<br>
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/motionmapCPexample.png)
-
-
----
-
-# Motion Maps 
-
-- Each dot represents **one unit of time**
-- The numberline is the **position** of the object
-- The separation of the dots and length of the arrow represents the **velocity** of the object 
-- Stacked dots represent an object that is motionless
-
----
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice1.png)
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice2.png)
-
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice3.png)
-
-
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice4.png)
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice5.png)
-
----
-
-## Practice: Complete individually and compare
-
-Given the following position vs. time graph
-
-1. Draw a motion map with one dot for each second
-2. Describe the motion in words
-
-![bg right fit](../figures/xtpractice1.png)
-
----
-
-## More Practice 
-
-Given the following motion map, where positions have been recorded with one dot each second, 
-
-1. Draw a position vs. time graph 
-2. Describe the motion of the object in words
-
-
-![bg right fit vertical](../figures/mmpractice2.png)
-
-![bg right fit](../figures/xtpractice2.png)
-
-
----
-
-# Motion Sensor Lab <!--fit--->
 
 ---
 
