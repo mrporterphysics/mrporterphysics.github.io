@@ -3,7 +3,6 @@ title: Regents Physics 2024-25
 marp: true
 theme: physics2024
 paginate: true
-footer: Did you get better today? Did you help someone else get better?
 math: mathjax
 ---
 
@@ -12,6 +11,81 @@ math: mathjax
 # **2024-2025** Agendas
 
 ## 👨‍🏫 Mr. Porter
+
+---
+
+## 2024.09.18 **Regents Physics** Do Now
+
+Four students went out for pizza to celebrate after acing their physics final. All of them went directly from their high school to the nearby pizzeria, but they returned along the paths shown, taking different times. Values for the round-trip distances they traveled and the total times they took to walk their routes are given in the figures.
+
+![center w:600](../images/Kinematics/pizza.png)
+
+**Rank the *diplacement* of each trip and seperately the *distance***
+
+---
+
+<!-- _footer: <br> --->
+
+# 2024.09.18 **Regents Physics** 
+
+##### **❓ of the 📅**: Which of the five senses would you say is your strongest?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Finish 1.1 - 1.3 
+3. Motion Maps Notes
+4. 1.4 in Packet
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Modeling Motion_ 
+
+</div>
+</div>
+
+---
+
+<!-- _footer: <br> --->
+
+# 2024.09.13 **Regents Physics** 
+
+##### **❓ of the 📅**: What extracurriculars do you participate in?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Reminder - Phones in your bags!
+2. Finish Board Meeting
+3. Motion Notes
+4. Applying the Motion Models
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Experimental Basics_ 
+
+🥅 _Linear Modeling_ 
+
+🥅 _Modeling Motion_ 
+
+</div>
+</div>
+
 
 
 ---

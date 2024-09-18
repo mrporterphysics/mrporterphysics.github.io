@@ -18,6 +18,82 @@ math: mathjax
 
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
+# 2024.09.17 **Earth Science** 
+
+##### **❓ of the 📅**: If one superhero was real, which one should it be?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+0. Pick up Handout on Front lab table
+1. Exoplanet Hunt Questions
+2. Origins of the Universe Brainstorm
+3. Exploring Wave properties of moving objects
+
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _What makes life sustainable on Earth?_
+
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+</div>
+
+</div>
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.13 **Earth Science** 
+
+##### **❓ of the 📅**: What extracurriculars do you participate in?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Is life sustainable on planet Earth?
+2. Question Development
+
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Graphing Best Practices_ 
+
+
+### 🏠 Homework
+
+- Finish Measurement Olympics Graphs (Due Friday)
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+
+</div>
+
+</div>
+
+---
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
 # 2024.09.12 **Earth Science** 
 
 ##### **❓ of the 📅**: Do you have any weird/unique routines or superstitions? (For example: I ***have*** to put on my left sock before my right sock, and the same for shoes, left on first.)

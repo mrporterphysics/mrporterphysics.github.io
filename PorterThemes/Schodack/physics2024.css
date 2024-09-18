@@ -158,3 +158,8 @@ section.cover {
   grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
   gap: 1rem;
 }
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}

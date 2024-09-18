@@ -15,6 +15,156 @@ math: mathjax
 
 ---
 
+
+<!--- footer: <br> --->
+
+## 2023.09.18 **AP Physics**  Do Now **Take 2**
+
+![bg fit right:35%](../images/Kinematics/Bryonariel.png)
+
+The position-time graph shown represents the motion of two children who are moving along a narrow, straight hallway.
+
+1. Do either of the children ever change ***direction***?
+2. Are the two children ever at the same ***position*** along the hallway?
+3. Do the two children ever have the same ***speed***?
+4. Do the two children ever have the same ***acceleration***?
+
+---
+
+
+<!-- _footer: 📵 --->
+
+# 2024.09.18 **AP Physics** 
+
+##### **❓ of the 📅**: Which of the five senses would you say is your strongest?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Card Sort Activity
+2. Acceleration Notes
+2. Card Sort #2 
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Create a mathematical model for motion_ 
+
+🥅 _Describe different physical quantities_
+
+🥅 _Relate stacks of kinematic graphs_
+
+
+</div>
+
+</div>
+
+---
+
+<!-- _footer: 📵 --->
+
+# 2024.09.17 **AP Physics** 
+
+##### **❓ of the 📅**: If one superhero was real, which one should it be?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Fan Cart Lab:
+    - Linearize (Review)
+    - Discuss
+    - Wrap Up Lab Notes
+2. Changing Speed Notes 
+3. Card Sort Activity
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Create a mathematical model for motion_ 
+
+🥅 _Describe different physical quantities_
+
+
+### 🏠 Homework
+
+- Due Friday, Posted on canvas
+
+</div>
+
+</div>
+
+
+---
+
+<!--- footer: <br> --->
+
+## 2023.09.16 **AP Physics**  Do Now
+
+![bg fit right:39%](../images/Kinematics/Bryonariel.png)
+
+The position-time graph shown represents the motion of two children who are moving along a narrow, straight hallway.
+
+1. Do either of the children ever change ***direction***?
+2. Are the two children ever at the same ***position*** along the hallway?
+3. Do the two children ever have the same ***speed***?
+4. Do the two children ever have the same ***acceleration***?
+
+
+---
+
+
+
+<!-- _footer: 📵 --->
+
+# 2024.09.16 **AP Physics** 
+
+##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now  
+2. Fan Cart Lab: 
+    - Collect Data
+    - Graph on Pivot
+    - Sketch Graph(s) on whiteboard
+3. Data analysis discussion
+4. Board Meeting & Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Create a mathematical model for motion_ 
+
+🥅 _Describe different physical quantities_
+
+
+### 🏠 Homework
+
+- Due Friday, Posted on canvas
+
+</div>
+
+</div>
+
+
+---
+
 # 2024.09.12  **AP Physics** Do Now 
 
 1. Describe a motion that has
