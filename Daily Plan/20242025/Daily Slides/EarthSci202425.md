@@ -16,6 +16,172 @@ math: mathjax
 
 ---
 
+# 2024.09.24 **Earth Science** Do Now
+
+1. Go to Canvas ➡️ Origin of Universe Model ➡️ Elaborate Links ➡️ Spectrometry 
+2. Read through Spectrometry Module
+3. Be prepared to share what is, how it is done, and why its important for us to know about in reference to the origin of the universe
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.24 **Earth Science** 
+
+##### **❓ of the 📅**: Would you rather be a dragon or own a dragon?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now ✔️
+2. Elaborate & Big Bang Theory :boom:
+3. Evaluate - Is there life out there? 👽 
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _What makes life sustainable on Earth?_
+
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+</div>
+
+</div>
+
+
+---
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.23 **Earth Science** 
+
+##### **❓ of the 📅**: If animals could talk, which one do you think would be the most annoying?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Doppler Worksheet
+2. Compelte Balloon Mini Modeling Experiment in Packet
+3. Regents Questions Practice on Canvas
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _What makes life sustainable on Earth?_
+
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+</div>
+
+</div>
+
+
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.20 **Earth Science** 
+
+##### **❓ of the 📅**: What animal would you want for a non-traditional pet? (i.e. not a dog, fish or cat)
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Explain - Expanding Universe?
+2. Balloon Mini Experiment
+3. Elaborate 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _What makes life sustainable on Earth?_
+
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+</div>
+
+</div>
+
+---
+
+# 2024.09.20 
+
+## Your To-do List:
+
+1. Explain Summary Pages
+2. Balloon Modeling - Universe
+3. Doppler Worksheet
+4. Canvas - Earth Science Regents Practice - Posted In Modules
+
+---
+
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.19 **Earth Science** 
+
+##### **❓ of the 📅**: What's your favorite family recipe?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Reframe yesterday's lab
+2. What is the doppler effect?
+3. What is the Electromagnetic Spectrum?
+4. Model 3 and moving galaxies
+
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _What makes life sustainable on Earth?_
+
+
+### **Note**: This is a cellphone free classroom 📵
+
+
+</div>
+
+</div>
+
+
+---
+
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 
 # 2024.09.17 **Earth Science** 

@@ -200,8 +200,7 @@ Each description should include:
 - Starting position
 - Direction of motion (positive direction, no motion, or negative direction)
 - Type of motion (at rest, constant velocity, speeding up, slowing down or some combination of these)
-- Relative speed (slow, medium, fast, slower, faster—this is only meaningful with there is more than
-one part of the motion or when you are comparing two or more objects)
+- Relative speed (slow, medium, fast, slower, faster—this is only meaningful with there is more than one part of the motion or when you are comparing two or more objects)
 
 ---
 

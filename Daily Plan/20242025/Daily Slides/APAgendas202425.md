@@ -16,6 +16,114 @@ math: mathjax
 ---
 
 
+
+<!-- _footer: 📵 --->
+
+# 2024.09.24 **AP Physics** 
+
+##### **❓ of the 📅**: Would you rather be a dragon or own a dragon?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Graphical Problem Solving
+
+#### 📆 Coming Up...
+
+- **Thursday**: Shapes of Graphs Quiz
+- **Friday**: Fact Sheet Quiz
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Use VT Graphs to solve problems_
+
+
+
+
+</div>
+
+</div>
+
+
+---
+
+<!-- _footer: 📵 --->
+
+# 2024.09.23 **AP Physics** 
+
+##### **❓ of the 📅**: If animals could talk which would be the most annoying?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. VT Graphs
+2. Problem Solving
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Create a mathematical model for motion_ 
+
+🥅 _Describe different physical quantities_
+
+🥅 _Relate stacks of kinematic graphs_
+
+
+</div>
+
+</div>
+
+
+---
+
+<!-- _footer: 📵 --->
+
+# 2024.09.20 **AP Physics** 
+
+##### **❓ of the 📅**: What animal would you want for a non-traditional pet? (i.e. not a dog, fish or cat)
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Chart Summary Discussion
+2. Notes 
+3. Card Sort Round 2
+4. Quantitative VT Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Create a mathematical model for motion_ 
+
+🥅 _Describe different physical quantities_
+
+🥅 _Relate stacks of kinematic graphs_
+
+
+</div>
+
+</div>
+
+
+---
+
+
 <!--- footer: <br> --->
 
 ## 2023.09.18 **AP Physics**  Do Now **Take 2**

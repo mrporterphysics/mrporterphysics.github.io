@@ -14,6 +14,183 @@ math: mathjax
 
 ---
 
+
+# 2024.09.25 **Regents Physics** 
+
+##### **❓ of the 📅**: If you had a ⚠️ warning label, what would yours say?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Practice Quiz 
+    - Try to do on your own, but if you get stuck feel free to reach out to your neighbor
+2. Velocity vs. Time Graphs
+2. [Practice finding $\Delta x$ with VT Graphs](https://www.physicsclassroom.com/calcpad/launch/CPK11)
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Modeling Motion graphically, narratively, and pictorially_ 
+
+
+### 📆 Upcoming
+
+- **Thursday**: Quiz - Multiple Representations
+
+</div>
+</div>
+
+---
+
+# 2024.09.24 **Regents Physics** 
+
+##### **❓ of the 📅**: Would you rather be a dragon or own a dragon?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Interpreting position vs. time graphs
+2. Average vs. instantaneous
+3. Analyzing VT Graphs 
+4. Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Modeling Motion graphically, narratively, and pictorially_ 
+
+
+### 📆 Upcoming
+
+- **Thursday**: Quiz - Multiple Representations
+
+</div>
+</div>
+
+---
+
+# 2024.09.20 **Regents Physics** 
+
+##### **❓ of the 📅**: What animal would you want for a non-traditional pet? (i.e. not a dog, fish or cat)
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Nows
+2. Motion Sensor Demo
+3. Walk the Graph
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Modeling Motion graphically, narratively, and pictorially_ 
+
+</div>
+</div>
+
+---
+
+# Walk the graph 🚶
+
+1. Move, relative to the motion detector, so that you produce a position vs. time graph that closely approximates the graph shown.
+2. Describe how you must move in order to produce the motion Be sure to include each of the following in your description: _starting position, direction moved, type of motion, relative speed_.
+3. Sketch the velocity vs. time graph that corresponds to the position vs. time graph shown.
+4. Sketch the motion map that corresponds to the motion described in the position vs. time graph.
+
+
+---
+
+## 2024.09.19 **Regents Physics** Do Now
+
+Immediately after Lunch, Madeline runs a few short errands before heading to her favorite class. She walks **$37.3\textrm{ m}$** east from the cafeteria to the Student Activities office. She then walks **$18.3\textrm{ m}$** west to the bookstore. She leaves the bookstore and walks **$27.4\textrm{ m}$** east to the library. She finally walks **$14.7\textrm{ m}$** back west to reach the Physics classroom. Peace at last.
+
+1. What is the total ***distance*** walked by Madeline?
+1. What is the *magnitude* of Madeline's ***displacement***?
+1. What is the *direction* of Madeline's ***displacement***?
+
+---
+
+## 2024.09.19 **Regents Physics** Do Now #2
+
+Provide a written narrative of the motion for object 1 and object 2. 
+
+![center w:800](image-1.png)
+
+---
+
+## 2024.09.19 **Regents Physics** Do Now #2
+
+Provide a written narrative of the motion for object 1 and object 2. 
+
+<div class='columns'>
+<div>
+
+Did you describe...
+
+1. the initial position?
+2. the direction of motion?
+3. the type of motion (constant, motionless, etc)
+4. the relative speeds?
+</div>
+ 
+<div>
+
+![center w:800](image-1.png)
+
+</div>
+</div>
+
+---
+
+
+# 2024.09.19 **Regents Physics** 
+
+##### **❓ of the 📅**: What's your favorite family recipe?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Nows
+2. Motion Maps Notes
+3. Representing Motion (1.4)
+4. Walk the Graph
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Modeling Motion graphically, narratively, and pictorially_ 
+
+</div>
+</div>
+
+
+
+---
+
 ## 2024.09.18 **Regents Physics** Do Now
 
 Four students went out for pizza to celebrate after acing their physics final. All of them went directly from their high school to the nearby pizzeria, but they returned along the paths shown, taking different times. Values for the round-trip distances they traveled and the total times they took to walk their routes are given in the figures.

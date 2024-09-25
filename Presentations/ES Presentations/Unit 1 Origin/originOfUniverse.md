@@ -331,6 +331,13 @@ Exchange with as many people as possible
 
 ---
 
+# Explore 
+
+![alt text](image-1.png)
+
+
+---
+
 # Explore: 
 
 ## What’s Going on With the Light Spectra of Other Galaxies?
@@ -345,11 +352,364 @@ Exchange with as many people as possible
 
 ---
 
+# **Engage**: _How did the universe begin?_
 
+# **Explore**: _Are galaxies moving towards/away/or not at all from Earth?_
+
+## Explore Models:
+  - What happens to Waves (sound and light) when the source is moving
+  - What is a spectrum?
+  - What is an absorption spectrum?
+  - What is redshift vs. blue shift?
+  - What is 
+
+---
+
+# Doppler Effect 
+
+* The *Doppler Effect* is observed when the source or the observer of a wave is moving.
+* When the source and observer are moving <mark>closer together</mark> the frequency of the wave is <mark>increased</mark>. 
+* When the source and observer are **moving further** apart the frequency of the wave is **decreased**. 
+
+---
+
+<!--- _class: inverse --->
+
+# Doppler Visualization 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+![bg fit rgiht](../../Waves/figures/doppler1.gif)
+
+
+![bg fit rgiht](../../Waves/figures/doppler2.gif)
+
+---
+
+# Sound Waves & Light Waves
+
+<iframe src="https://phet.colorado.edu/sims/html/waves-intro/latest/waves-intro_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="800px" width="1150px" allowfullscreen></iframe>
+
+---
+
+# Electromagnetic Spectrum
+
+<br>
+
+* The <mark>*electromagnetic spectrum*</mark> is the complete range of frequencies and wavelengths of electromagnetic waves.
+
+---
+
+![bg fit](image-6.png)
+
+
+---
+
+# Electromagnetic Spectrum
+
+<br><br><br><br><br><br><br><br><br><br>
+
+![bg ](image-4.png)
+
+---
+
+![bg fit](image-5.png)
+
+---
+
+# Electromagnetic Spectrum - ES Ref Table
+
+![alt text](image-3.png)
+
+
+---
+
+![bg fit](image-7.png)
+
+---
+
+![bg](image-8.png)
+
+<!---
+The dark lines throughout the spectrum are caused by absorption of light by various elements in the Sun's atmosphere. This dark-line absorption spectrum is sort of like a fingerprint of the Sun; it provides scientists with lots of information about the chemical composition of the Sun and even about the temperature of different regions of the solar atmosphere.
+--->
+
+
+---
+
+# Explore 
+
+- What patterns do we noticed about the absorption spectra?
+- What differences do you noticed about each spectra?
+- Is there a relationship between the absorption line wavelengths and the distance from Earth? If so what is it?
+
+![bg fit right](image-1.png)
+
+---
+
+# Model 1:
+
+
+![center](image-9.png)
+
+
+<!---
+The moving blue sound source emits sound waves at a constant frequency.
+The emitted sound waves are shown as black circular lines. These circles can be understood to represent the crests of the sound waves.
+
+The stationary black microphone is the receiver of the sound waves. It flashes green when it receives a sound wave's crest. The computer plays a snare drum hit sound to indicate when the microphone hears a sound wave crest.
+
+The wave crests moving to the right are smashed together because the moving source somewhat catches up with a newly released crest before it emits another crest. This makes the leading wave crests closer together than they would be if the source were standing still. Also, this smashing together makes more wave crest go by the microphone per second than would go by per second if the source were standing still. The total effect is that the leading waves have a smaller wavelength (the distance between crests) and a higher frequency than they would have if the source were standing still.
+
+The wave crests moving to the left are stretched out because the moving source moves away in the opposite direction  from a new crest before emitting the next crest. Relative to the situation where the source were standing still, these trailing wave crests are further apart, and they go by the microphone less times per second. So, the trailing waves are increased in wavelength and decreased in frequency. 
+--->
+
+---
+
+# Model 2
+
+<div class='columns'>
+<div>
+
+- What happens to the pitch as the frequency increases?
+- What happens to the wavelength as the frequency increases?
+- How does this relate to the doppler effect?
+
+</div>
+ 
+<div>
+
+<iframe src="https://contrib.pbslearningmedia.org/WGBH/buac20/buac20-int-wavesfreq/index.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="500px" width="550px" allowfullscreen></iframe>
+
+
+
+</div>
+</div>
+
+---
+
+# Model 3
+
+**Goal of this activity**: The perceived change in frequency of sound waves you heard as the sirens came toward and away from you is called the doppler effect. In this investigation you will use a computer simulation to investigate the change in frequency and wavelength of light. 
+
+The doppler effect influences all waves, like sound or light. In the case of light, instead of perceiving changes in pitch (like sound), we perceive changes in color. If something of a particular color is moving at a very high speed away or towards us, you will see a wave associated with a different color. This is the case with objects in the universe, they move at a really high speed. Let’s work on this simulator to understand this better. 
+
+
+---
 
 # **Model 3**:  What is the relationship between the pitch of a sound and its wavelength?
 
 ## 🤔 How do your observations of lightwaves relate to what you learned about sound waves?
 ## 🤔 What is the relationship between frequency of light waves and the color an observer perceives? 
 
+
 ---
+
+# Explain ✍️ <!--fit--->
+
+---
+
+<!--- footer: ✍️ Explain --->
+
+# Explain ✍️ 
+
+# What Does the Light Spectra of Galaxies Tell Us?
+
+Universe: Static, Contracting, or Expanding?
+
+As you remember, as a result of the Doppler effect, if galaxies were moving away from us, the wavelengths would become (hint: shorter or longer?)__________________. If this was the case, then the absorption lines would move toward the ___________ color (hint: red or blue?). Take a look at the light spectra of galaxies you observed at the beginning of this investigation, then with your group members generate and sort ideas that will help you respond to the question: Is the universe static, contracting, or expanding?
+
+---
+
+
+# Explain ✍️
+
+- What patterns do we noticed about the absorption spectra?
+- What differences do you noticed about each spectra?
+- Is there a relationship between the absorption line wavelengths and the distance from Earth? If so what is it?
+
+![bg fit right](image-1.png)
+
+---
+
+# Find 3️⃣ people to share <!--fit--->
+# your initial explanation <!--fit---> 
+# with and write it in your packet.  <!--fit--->
+
+---
+
+# Claim 💡 
+
+## The universe is... (expanding, contracting, or static)
+
+# Evidence 🔍 
+
+## My evidence is...(data from our three models)
+
+# Reasoning 🧠
+
+## The scientific concept(s) that link my evidence to the claim is...
+
+
+---
+
+# 🗣️ Share CER Statements <!--fit--->
+
+---
+
+# Explain ✍️
+
+## ***On your own*** fill out the summary task in your packet
+
+
+---
+
+# Explain ✍️ Doppler Mini Lab
+
+<div class='columns'>
+<div>
+
+<br><br>
+
+<p style="background-color:DarkViolet;">VIOLET - 390-455 nm</p>
+
+
+<p style="background-color:Blue;">BLUE - 455-492 nm</p>
+
+
+<p style="background-color:Green;">GREEN - 492-577 nm</p>
+
+
+<p style="color:black; background-color:Yellow;">YELLOW - 577-597 nm</p>
+
+
+<p style="background-color:Orange;">ORANGE - 597-622 nm</p>
+
+
+<p style="background-color:Red;">RED - 622-700 nm</p>
+</div>
+ 
+<div>
+
+| SPECTRUM                 | LOC. OF SPEC. LINES (nm) |
+| ------------------------ | ------------------------------- |
+| Standard Spec.      | 420, 450, 530, 640, 656         |
+| Virgo A Galaxy           | 440, 470, 550, 660, 676         |
+| Coma Pinwheel      | 470, 500, 580, 690, 706         |
+| Andromeda          | 380, 410, 490, 600, 616         |
+| Cetus A Galaxy           | 430, 460, 540, 650, 666         |
+| M65 Spiral   | 620, 650, 730, 840, 856         |
+
+</div>
+</div>
+
+
+
+---
+
+# Regents Practice 💪 <!--fit--->
+
+## Complete Practice in Canvas
+
+---
+
+
+# Explain ✍️
+
+# Explanding Universe 🎈
+
+## With your table partner complete the balloon activity in your packet
+
+
+---
+
+<!--- footer: ➕ Elaborate --->
+
+# Elaborate ➕
+
+
+## What ideas do you have about the start of the universe after the balloon modeling experience yesterday?
+
+### How did the universe start? What did it look like?
+
+---
+
+# Elaborate ➕
+
+# 🎯 **Today's Goal**: Students apply their understanding of the  **electromagnetic spectrum** and **doppler effect** by _analyzing and interpreting data_ from a model for **Cosmic Background Microwave** Radiation and explaining why it serves as further evidence for the Big Bang Theory.
+
+
+---
+
+# Elaborate ➕
+
+# If the universe is expanding what can we conclude about what it was like over 13  billion years ago?
+
+---
+
+# Beginning  of Time... <!--fit--->
+
+# Scientists believe that
+
+# **All** matter in the universe was contained in a single point! This contained an ***unimaginable*** amount of energy. This point would have ***emitted light 🔦***. 
+
+---
+
+# Beginning of Time... <!--fit--->
+
+# What evidence should we look for to support scientists' hypothesis about the beginning of the universe?
+
+1. How should the universe have started?
+2. What lightwaves should be on the **outer** edge of the universe (long or short wavelengths)?
+3. How has the temperature of the universe changed?
+
+
+---
+
+# Electromagnetic Spectrum
+
+![alt text](image-3.png)
+
+## What lightwaves should be on the **outer** edge of the universe (long or short wavelengths)?
+
+---
+
+# Today's Outline:
+
+1. What were the conditions of the early universe (hug analogy)?
+2. 🧩 Crosscutting Concept: **Law of Conservation of Matter and Energy**
+_The law of conservation of matter and energy states that within a closed system, matter and energy can change form, but the total amount of matter and energy is constant._
+    1. Prediction: what happened to energy and matter after the Big Bang?
+3. Wavelength Interactive
+4. Reading - Cosmic Times
+
+
+---
+
+**Claim:** _At the beginning of time, the universe was extremely small, hot, and dense but has been expanding ever since._
+
+| Evidence | Reasoning |
+| ------------------- | ----------------------- |
+| Redshift in the spectra of galaxies                                                                                                                | Redshift means the source of the light and observer are moving away from each other.                   |
+| The detection of microwave background radiation all over the universe.                                                                             | The edge of the universe should have the longest wavelengths. Microwaves have the longest wavelengths. |
+| The composition of stars and interstellar gases is about 74% hydrogen and 25% helium, while heavier elements make up less than 2% of the universe. | The composition of the universe is nearly the same as predicted initial conditions of the universe.    |
+
+---
+
+# Is it probable that there is life on other planets?
+
+
+
+<iframe width="1100" height="615" src="https://www.youtube.com/embed/d9x9RRc0RoU?si=y5TZFswP4Pmd92bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
