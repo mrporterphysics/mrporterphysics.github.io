@@ -708,6 +708,117 @@ _The law of conservation of matter and energy states that within a closed system
 
 ---
 
+# Big Bang Theory 💥 - Summary <!--fit--->
+
+---
+
+# The Universe is approximately **13.7 billion years old**  <!--fit--->
+
+---
+
+# What is the Big Bang?
+
+- The **Big Bang** is the leading explanation of how the universe began.
+- It was **not an explosion**, but a rapid expansion from a hot, dense state.
+- The universe continues to expand from this moment.
+
+![center w:500](image-11.png)
+
+---
+
+# The Early Universe
+
+- The early universe was incredibly hot and dense.
+- **Subatomic particles** like protons, neutrons, and electrons formed during the first seconds.
+- As the universe cooled, particles combined to form simple atoms like hydrogen and helium.
+
+![bg fit right](original.webp)
+
+---
+
+# Cosmic Microwave Background (CMB)
+
+- **Cosmic Microwave Background** is the "afterglow" of the Big Bang.
+- Discovered in 1965 by Penzias and Wilson.
+- It provides strong evidence for the Big Bang, showing that the universe was once in a very hot, dense state.
+
+![bg fit right](image-13.png)
+
+---
+
+# Expansion of the Universe
+
+- The universe continues to expand today.
+- Galaxies are moving away from each other, as observed through **redshift**.
+- **Edwin Hubble's** observations in the 1920s confirmed that the universe is expanding.
+
+
+![bg fit right vertical](hubblaw-anim.gif)
+![bg](redshift_demo.gif)
+
+---
+
+
+## Doppler Effect
+
+- The **Doppler Effect**: A change in the frequency of sound, light, or other waves as the source and observer move toward (or away from) each other.
+
+![bg fit right](doppler.gif)
+
+---
+
+# Redshift and Blueshift <!--fit--->
+
+![center](image-10.png)
+
+---
+
+# What is Redshift?
+
+- **Redshift** occurs when light from an object is shifted to longer wavelengths (toward the red part of the spectrum).
+- It happens when the source of light is moving **away** from the observer.
+- **Hubble’s Law**: The faster a galaxy is moving away, the more its light is redshifted, providing evidence for the expansion of the universe.
+
+---
+
+# What is Blueshift?
+
+- **Blueshift** occurs when light from an object is shifted to shorter wavelengths (toward the blue part of the spectrum).
+- It happens when the source of light is moving **toward** the observer.
+  
+---
+
+# Redshift and the Expanding Universe
+
+- **Redshift** is critical evidence for the **expansion of the universe**.
+- As galaxies move away from us, their light is redshifted.
+- This supports the **Big Bang Theory**, showing that the universe is still expanding from an initial point.
+
+
+---
+
+# Dark Energy and the Future of the Universe
+
+- **Dark Energy** is believed to drive the accelerated expansion of the universe.
+- The future of the universe depends on how dark energy behaves:
+  1. Continued expansion leading to a cold, empty universe.
+  2. Or, a "Big Crunch" if gravity overcomes the expansion.
+
+---
+
+# Summary
+
+* The **Big Bang Theory** explains the origin of the universe and its expansion.
+* **CMB** is a key piece of evidence supporting the theory.
+* The universe is expanding, and **dark energy** plays a crucial role in its future.
+
+
+---
+
+# ***Practice*** Quiz 💻 <!--fit--->
+
+---
+
 # Is it probable that there is life on other planets?
 
 

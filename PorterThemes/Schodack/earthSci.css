@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Creepster');
 
 /*General Styles */
 
@@ -158,3 +159,68 @@ section.cover {
   grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
   gap: 1rem;
 }
+
+
+section.halloween{
+  background-color: rgb(177, 13, 177);
+  background: #6032a8;
+  color: white;
+  
+  }
+  section.halloween h1, section.halloween h2, section.halloween h3 {
+  color: Orange;
+  font-family: 'Creepster', cursive;
+  line-height: 0.8em;
+  text-shadow: 0 0 20px #333;
+  }
+  
+  section.halloween a {
+  color: rgb(245, 162, 39);
+  }
+  
+  section.halloween strong{
+  color: rgb(245, 214, 110);
+  text-shadow: 0 0 20px #333;
+  }
+  
+  section.thanksgiving {
+  background-color: #d35400; 
+  color:#fff;
+  }
+  
+  
+  section.thanksgiving footer{
+  color:#ffffff94;
+  }
+  
+  /* Style the header with a Thanksgiving theme */
+  section.thanksgiving h1 {
+  color: #722d12; /* White text */
+  font-family: 'Lobster', sans-serif;
+  text-shadow: 1px 1px 2px #cec8c8;
+  
+  }
+  
+  section.thanksgiving h1 strong, section.thanksgiving h2 strong, section.thanksgiving h3 strong, section.thanksgiving h4 strong, section.thanksgiving h5 strong{
+  color:#FFE32C;
+  }
+  
+  section.thanksgiving strong{
+    color:#FFE32C;
+    }
+  
+  section.thanksgiving a{
+  color:#FFE32C;
+  text-decoration: underline;
+  }
+  
+  
+  section.winter {
+  color:snow;
+  background-image: url("snowy.gif");
+  text-shadow: 0 0 20px #333;
+  }
+  
+  section.winter a{
+  color:rgb(206,32,47);
+  }

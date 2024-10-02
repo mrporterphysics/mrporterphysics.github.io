@@ -1,6 +1,6 @@
 ---
 title: Regents Physics 2024-25
-marp: true
+marp: false
 theme: physics2024
 paginate: true
 math: mathjax
@@ -14,6 +14,210 @@ math: mathjax
 
 ---
 
+<!--- class: halloween --->
+
+## 2024.10.02 **Regents Physics**  Do Now
+
+![bg fit right:39%](../images/Kinematics/Bryonariel.png)
+
+The position-time graph shown represents the motion of two children who are moving along a narrow, straight hallway.
+
+1. Do either of the children ever change ***direction***?
+2. Are the two children ever at the same ***position*** along the hallway?
+3. Do the two children ever have the same ***speed***?
+4. Do the two children ever have the same ***acceleration***?
+
+---
+
+# 2024.10.02 **Regents Physics**
+
+##### **❓ of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now
+2. Finish Card Sort
+3. Test Card Sort answers with fan cart
+4. Summary Chart with Porter
+5. Notes on Graphs
+6. Card sort 2 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Recognize shapes of kinematic graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<!--- class: halloween--->
+
+
+## 2024.10.01 ***Regents Physics*** Do Now
+
+<div class='columns'>
+<div>
+
+### Question
+
+A red car (on left) and a green car (on right) are spaced 1200 m apart (distance a). They start at the same time and head towards each other. The red car averages a speed of 13.5 m/s. The green car averages a speed of 15.2 m/s. **How much time will the two cars have traveled when they are at the same position?**
+
+![center w:700](image-5.png)
+
+</div>
+ 
+<div>
+
+### Hints & Tips:
+
+1. Sketch a position vs. time graph with the motion of both cars on it. 
+    - What is happening where the lines intersect?
+2. Write the equation of motion for each car. 
+    - Remember: $x = vt + x_i$ 
+3. How can you use the equations to find the tim that they intersect?
+
+</div>
+</div>
+
+---
+
+# 2024.10.01 **Regents Physics** 🎃
+
+##### **❓ of the 📅**: **Is cake 🍰 better than ice cream 🍨?**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now
+2. Finish Dueling Buggies
+3. Card Sort for changing velocity
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Apply Constant Velocity Model to solve problems_
+
+
+</div>
+</div>
+
+---
+
+<!--- class: physics2024 --->
+
+# 2024.09.30 **Regents Physics** Do Now 1
+
+Each graph below shows the position of an object as a function of time.
+
+
+![center](image-3.png)
+
+**Rank the magnitude of the displacement during the time interval from 0 to 4 seconds.**
+
+---
+
+# 2024.09.30 **Regents Physics** Do Now 2
+
+Shown below are six velocity-time graphs for toy robots that are traveling along a straight hallway. All graphs have the same time and velocity scales.
+
+![center w:800](image-4.png)
+
+**Rank the magnitudes of the displacements during these intervals.**
+
+---
+
+# 2024.09.30 **Regents Physics** 
+
+##### **❓ of the 📅**: What household chore do you actually enjoy?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Dueling Buggies 
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Modeling Motion graphically, narratively, and pictorially_ 
+
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# ⚔️ Dueling Buggies 🚗
+
+### 💥 **Goal:**  _Predict where your two buggies will crash_ 💥
+
+#### Procedure:
+
+1. Take any measurements you want about your two buggies
+2. Place buggies in "time out"
+3. Get _crash situation_ from Mr. Porter
+4. Make Prediction (using our models) & Test!
+
+---
+
+# 2024.09.26 **Regents Physics** 
+
+##### **❓ of the 📅**: Is it *OK* to ask the genie for infinite wishes?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz 
+2. Velocity vs. Time Graphs
+2. [Practice finding $\Delta x$ with VT Graphs](https://www.physicsclassroom.com/calcpad/launch/CPK11)
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Modeling Motion graphically, narratively, and pictorially_ 
+
+
+### 📆 Upcoming
+
+- **Thursday**: Quiz - Multiple Representations
+
+</div>
+</div>
+
+
+
+---
 
 # 2024.09.25 **Regents Physics** 
 

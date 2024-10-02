@@ -16,15 +16,240 @@ math: mathjax
 
 ---
 
+<!--- class: halloween
+--->
+
+# 2024.10.02 **Earth Science** Do Now
+
+
+Work through HR Diagram Simulation questions. (Link to simulation in Canvas: Modules➡️Stellar Evolution Links)
+
+Write answer to questions in your notebook. 
+
+You may work with your table partner on this. 
+
+
+---
+
+# 2024.10.02 **Earth Science**
+
+##### **❓ of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now
+2. HR Diagram Simulation Summary
+3. HR Diagram Practice Worksheet
+4. Life cycle of a star
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Read HR Diagram_ 
+
+🥅 _Explain the life cycle of a star_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<!--- class: halloween --->
+
+# 2024.10.01 **Earth Science** Do Now
+
+1. Pick up handout on front table
+2. Read the **short** article and answer the first two questions
+
+---
+
+# 2024.10.01 **Earth Science** 🎃
+
+##### **❓ of the 📅**: **Is cake 🍰 better than ice cream 🍨?**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now 
+2. Starting Stellar Evolution 
+3. Hertzsprung-Russell Diagram
+4. HR Diagram Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn to read a Hertzsprung-Russell Diagram_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.09.30 **Earth Science** Do Now 
+
+### Take ⏱️ 5 Minutes and ✍️ write...
+
+##### _everything you know or think you know about gravity_ <!--fit--->
+
+- Consider:
+    - What is it?
+    - What causes it?
+    - Does it change?
+    - Do you have gravity?
+
+---
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.30 **Earth Science** 
+
+##### **❓ of the 📅**: What household chore do you actually enjoy?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Gravity Lab
+3. APOD Share
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _What makes life sustainable on Earth?_
+
+
+
+
+</div>
+
+</div>
+
+---
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.27 **Earth Science** 
+
+##### **❓ of the 📅**: What is the best thing about fall?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. APOD Photo Explanation
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _What makes life sustainable on Earth?_
+
+
+
+
+</div>
+
+</div>
+
+---
+
+# Astronomy Photo of the Day 📸
+
+1. Go to [https://apod.nasa.gov/](https://apod.nasa.gov/apod/astropix.html)
+2. Either click the previous button to look at other photos OR go to the archive to browse photos
+2. Find a photo that you think is interesting. 
+3. Add the photo to the class slideshow w/ Title
+3. Research your photo:
+    - What is in your photo?
+    - Why is it interesting?
+    - Does it related to anything we've leared so far?
+
+---
+
+# 2024.09.26 **Earth Science** Do Now
+
+![alt text](image-2.png)
+
+Do X rays or Infrared Waves have higher frequencies? Which has more energy? How do you know?
+
+---
+
+<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
+
+# 2024.09.26 **Earth Science** 
+
+##### **❓ of the 📅**: Is it *OK* to ask the genie for infinite wishes?
+
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Big Bang Theory Notes & Summary
+3. Practice Quizz -> On Canvas 
+4. Evaluate (How many Planets?)
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _What makes life sustainable on Earth?_
+
+
+### Reminder
+
+- ***Quiz tomorrow***
+
+
+</div>
+
+</div>
+
+
+
+---
+
+<!--- class: earthSci --->
+
 # 2024.09.24 **Earth Science** Do Now
 
 1. Go to Canvas ➡️ Origin of Universe Model ➡️ Elaborate Links ➡️ Spectrometry 
 2. Read through Spectrometry Module
 3. Be prepared to share what is, how it is done, and why its important for us to know about in reference to the origin of the universe
 
-
 ---
-
 
 <!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
 

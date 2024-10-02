@@ -14,8 +14,207 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
+<!--- footer: <br> --->
+<!--- class: halloween--->
+
+# 2024.10.01 **AP Physics** Do Now 👻
+
+A Car is moving with constant speed $v_0$ when a tree falls into the roadway at $t=0$. It takes the driver a time $T$ to react and apply the brakes. The car then slows with a constant acceleration of magnitude $a$. Which of the following equations correctly expressed the distance $D$ traveled by the car from $t=0$ to the instant the car comes to rest?
+
+A. $D = v_0T + \frac{1}{2}aT^2$
+
+B. $D = \frac{1}{2}aT^2 + \frac{v_0^2}{2a}$
+
+C. $D = v_0T + \frac{v_0^2}{2a}$
+
+D. $D = v_0T + \frac{1}{2}aT^2 + \frac{v_0^2}{2a}$
+
+---
+
+A Car is moving with constant speed $v_0$ when a tree falls into the roadway at $t=0$. It takes the driver a time $T$ to react and apply the brakes. The car then slows with a constant acceleration of magnitude $a$. Which of the following equations correctly expressed the distance $D$ traveled by the car from $t=0$ to the instant the car comes to rest?
+
+### C. $D = v_0T + \frac{v_0^2}{2a}$
+
+Combine 
+
+$$x = x_0 + v_0t + \frac{1}{2}at^2$$
+
+and 
+
+$$v^2 = v_0^2 + 2a(x-x_0)$$
+
+---
 
 
+# 2024.10.02 **AP Physics**
+
+##### **❓ of the 📅**: What secrets do you think your pet would spill about you, if they could talk?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now
+2. Free Fall Five
+3. Free Fall Notes
+3. Free Fall Practice
+4. Rocket Science
+    - AP Workbook 1.J, 1.K
+    - Physics Classroom
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve problems involving Freefall motion_
+
+### 📆 Upcoming
+
+  - Quiz Friday
+      - Stacks of graphs
+      - Solving word problems, potentially two stage motion
+</div>
+</div>
+
+---
+<!--- class: physics2024 --->
+<!-- _footer: 📵 --->
+
+# 2024.09.30 **AP Physics** 
+
+##### **❓ of the 📅**: What household chore do you actually enjoy?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Practice
+    1. Intro to Motion Sensors
+2. Free Fall Motion
+3. Physics Classroom Free Fall
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Solve kinematic problems graphically and with equations_
+
+
+</div>
+
+</div>
+
+
+
+
+
+---
+
+# 2024.09.27 **AP Physics** Do Now
+
+
+## A biker speeds up to 31.3 m/s from rest in 6.10 seconds. The biker maintains this speed for 6.35 seconds before coasting to a stop in 8.4 seconds. What was the biker's average speed for the trip?
+
+***Solve this <u>BOTH</u> Graphically and with Equations***
+
+---
+
+<!--- _class: schodack--->
+<!--- _footer: <br> --->
+
+#### 2024.09.27 **AP Physics**  Do Now
+
+![bg fit right:45%](https://assets.learnosity.com/organisations/537/VH926165.g03.png)
+
+At time $t=0$, a moving cart on a horizontal track is at position $0.5 \textrm{ m}$. Using a motion sensor, students generate a graph of the cart's velocity as a function of time, as show to the right. At $t=2.5 \textrm{ s}$, the cart's position is most nearly
+
+1. $0.5 \textrm{ m}$
+2. $1.25 \textrm{ m}$
+3. $1.75 \textrm{ m}$
+4. $2 \textrm{ m}$
+
+<!---ANSWER IS C --->
+
+---
+
+
+<!-- _footer: 📵 --->
+
+# 2024.09.27 **AP Physics** 
+
+##### **❓ of the 📅**: If you came with a ⚠️ warning label what would it say?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Predict the split lab practical
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Use VT Graphs to solve problems_
+
+
+</div>
+
+</div>
+
+
+
+
+---
+
+
+<!-- _footer: 📵 --->
+
+# 2024.09.26 **AP Physics** 
+
+##### **❓ of the 📅**: If you came with a ⚠️ warning label what would it say?
+<div class = "columns">
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz - Shapes of Graphs
+2. Finish Bear Problem & Discuss
+3. Kinematic Equations & Cross Diagram
+4. Using Kinematics Equations and graphical problem solving 
+
+</div>
+
+<div>
+
+### 🎯 Goals 
+
+🥅 _Use VT Graphs to solve problems_
+
+#### 📆 Coming Up...
+
+- **Friday**: Fact Sheet Quiz
+
+#### 🏡 Homework:
+
+- Phyics Classroom - [K13: Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+
+</div>
+
+</div>
+
+---
 
 <!-- _footer: 📵 --->
 
