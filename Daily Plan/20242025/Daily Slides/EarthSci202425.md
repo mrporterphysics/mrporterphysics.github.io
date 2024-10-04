@@ -13,8 +13,53 @@ math: mathjax
 
 ### 📆 2024-25
 
+---
+
+# 2024.10.04 **Earth Science**
+
+##### **❓ of the 📅**: What skill or talent do you most want to learn?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. HR Diagram Exploration - Lab
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
 
 ---
+
+# Explore 2 - HR Diagram
+
+1. Create Grid on Two Tables
+2. Plot stars on Table
+3. What patterns do we notice?
+4. Organize findings in packet - **Explore 2**
+
+![bg fit blur](image-7.png)
+
+---
+
+![bg fit](image-8.png)
+
+
+---
+
 
 <!--- class: halloween
 --->

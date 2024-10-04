@@ -16,6 +16,14 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.07 **Regents Physics** Do Now: 
+
+Go to [https://www.physicsclassroom.com/Concept-Builders/Kinematics/Match-That-Graph/Concept-Builder](https://www.physicsclassroom.com/Concept-Builders/Kinematics/Match-That-Graph/Concept-Builder) and complete the ***master level***.
+
+<br><br><br>
+Get to this link in Canvas Homepage, right click link and open in a new tab
+
+---
 
 ## 2024.10.04 **RP Do Now**
 
