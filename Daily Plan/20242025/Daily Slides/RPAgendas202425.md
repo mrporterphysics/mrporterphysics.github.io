@@ -1,6 +1,6 @@
 ---
 title: Regents Physics 2024-25
-marp: false
+marp: true
 theme: physics2024
 paginate: true
 math: mathjax
@@ -14,11 +14,63 @@ math: mathjax
 
 ---
 
+<!--- class: halloween--->
+
+
+## 2024.10.04 **RP Do Now**
+
+For which of these cases, if any, is the ____ at the indicated point?
+
+1. **position zero**?
+2. **position negative** 
+3. **velocity zero**?
+4. **velocity negative**?
+5. **acceleration zero**?
+6. **acceleration negative**? 
+
+Explain your reasoning.
+
+![bg fit right:52%](image-6.png)
+
+---
+
+# 2024.10.04 **Regengs Physics**
+
+##### ❓ of the 📅: **What skill or talent do you most want to learn?**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now 
+2. Finish Notes
+3. [Graph that Motion](https://www.physicsclassroom.com/Physics-Interactives/1-D-Kinematics/Graph-That-Motion/Graph-That-Motion-Interactive)
+3. Stacks of Graphs Card Sort 
+4. Stacks of Graphs Practice in Packet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Represent motion with position vs. time, velocity vs. time and acceleration vs. time graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 <!--- class: halloween --->
 
 ## 2024.10.02 **Regents Physics**  Do Now
 
-![bg fit right:39%](../images/Kinematics/Bryonariel.png)
+![bg fit right:36%](../images/Kinematics/Bryonariel.png)
 
 The position-time graph shown represents the motion of two children who are moving along a narrow, straight hallway.
 

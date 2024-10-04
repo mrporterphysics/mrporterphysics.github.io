@@ -14,6 +14,40 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
+
+<!--- class: halloween--->
+
+# 2024.10.04 **AP Physics**
+
+#### **❓ of the 📅**: What skill or talent do you most want to learn?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Quiz
+2. Finish Free Fall Pivot
+3. AP Workbook 1.J & 1.K
+2. Projectile Motion Introduction
+3. Horizontally Fired Projectiles
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define a projectile and solve projectile motion problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- footer: <br> --->
 <!--- class: halloween--->
 

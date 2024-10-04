@@ -615,3 +615,400 @@ $$ \Delta x = \bar{v}{t} $$
 # Up Next... <!--fit--->
 
 # [Changing Velocities...](../../../Presentations/APCAPM/talks/CAPM2023.html) <!--fit--->
+
+---
+
+<!--- class: invert--->
+
+# Defintions & Notes
+
+
+* ***Displacement*** indicates how far an object ends up from its initial position, regardless of its total distance traveled.
+* ***Average velocity*** is displacement divided by the time interval over which that displacement occurred. Slope of position time graph over a time duration.
+* ***Instantaneous velocity*** is how fast an object is moving at a specific moment in time. Slope of position time graph at a specific time.
+* ***Acceleration*** tells how much an object’s speed changes in one second.
+  - When an object speeds up, its acceleration is in the direction of motion.
+  - When an object slows down, its acceleration is opposite the direction of motion.
+
+
+---
+
+# Thinking about graphical relationships
+
+
+<iframe src="https://www.desmos.com/calculator/kqgfxguax7" width="1150px" height="700px" style="border: 1px solid #ccc" frameborder=0 ></iframe>
+
+---
+
+<!--- _footer: . --->
+
+# **Position-time graphs**
+
+* To determine how far from the detector an object is located, look at the vertical axis of the position-time graph.
+* To determine how fast an object is moving, look at the steepness (i.e. the slope) of the position-time graph.
+* To determine which way the object is moving, look at which way the position-time graph is sloped.
+* A position-time slope like a front slash ↗️ / means the object is moving away from the detector.
+* A position-time slope like a back slash ↘️ \ means the object is moving toward the detector
+* Instantaneous velocity is found by taking the slope of the tangent line to a position-time graph
+
+---
+
+<!--- _footer: . --->
+
+## **Velocity-time graphs**
+
+* To determine how fast an object is moving, look at the vertical axis of the velocity-time graph.
+* To determine which way the object is moving, look at whether the velocity-time graph is above or below the horizontal axis.
+* An object is moving away from the detector if the velocity-time graph is above the horizontal axis.
+* An object is moving toward the detector if the velocity-time graph is below the horizontal axis.
+* To determine how far an object travels, determine the area between the velocity-time graph and the horizontal axis.
+* On a velocity-time graph it is not possible to determine how far from the detector the object is located.
+* Most everyday motion can be represented with straight segments on a velocity-time graph.
+
+---
+
+# Acceleration 
+
+* Negative Acceleration **does not** always mean slowing down
+* Negative Acceleration means the velocity is changing in the negative direction
+
+---
+
+# Acceleration: Increasing vs. Decreasing Speed 
+
+* ***Speeding Up***: Acceleration and velocity have the ***same*** sign
+* ***Slowing Down***: Acceleration and Velocity have ***opposite*** signs
+
+---
+
+<!--- class:  --->
+
+# Shapes of VT Graphs 
+
+<div class='columns'>
+<div>
+
+![center w:600](image-3.png)
+
+</div>
+ 
+<div>
+
+![center w:600](image-4.png)
+
+</div>
+</div>
+
+---
+
+<!--- class:  --->
+
+# Shapes of VT Graphs 
+
+<div class='columns'>
+<div>
+
+![center w:600](image-7.png)
+
+</div>
+ 
+<div>
+
+![center w:600](image-8.png)
+
+</div>
+</div>
+
+---
+
+<!--- class:  --->
+
+# Shapes of VT Graphs 
+
+<div class='columns'>
+<div>
+
+![center w:600](image-9.png)
+
+</div>
+ 
+<div>
+
+![center w:600](image-10.png)
+
+</div>
+</div>
+
+
+---
+
+<!-- _class: inverse --->
+<!-- _footer: .  --->
+
+# Shapes of Graphs 
+
+![w:550 px](../figures/stacksnoannotations.png) 
+
+---
+
+
+<!-- _class: inverse --->
+<!-- _footer: .  --->
+
+# Shapes of Graphs 
+
+![w:550 px](../figures/stacksnoannotations.png) ![w:550 px](../figures/stacksannotations.png)
+
+---
+
+<!--- _class: invert --->
+
+<!-- _footer: .  --->
+
+# Shapes of Graphs - Summary 
+
+![center](../figures/graphssummary.png)
+
+
+---
+
+# Graph That Motion <!--fit--->
+
+
+[https://www.physicsclassroom.com/Physics-Interactives/1-D-Kinematics/Graph-That-Motion/Graph-That-Motion-Interactive](https://www.physicsclassroom.com/Physics-Interactives/1-D-Kinematics/Graph-That-Motion/Graph-That-Motion-Interactive)
+
+![bg fit, blur](image-11.png)
+
+---
+
+<!--- _footer: .--->
+<!--- _class: inverse --->
+
+# VT Graphs 
+
+![bg fit right:59%](../figures/VTGraphsarea.png)
+
+For each object...
+
+1. Determine the displacement between $4$ and $8$ seconds. 
+2. Determine the average acceleration during the first $3$ sec. 
+3. Describe the motion in words. 
+4. Draw the *position vs. time* graph that goes with the VT Graph.
+
+---
+
+<!--- _class: inverse --->
+
+# VT Graph 2
+
+![bg fit right:40%](../figures/vtgraph2.png)
+
+1. Give a written description of the motion.
+2. Determine the displacement of the object from $t = 0$ to $t = 4$ seconds.
+3. Determine the displacement of the object from $t = 4$ to $t = 8$ seconds.
+4. Determine the displacement of the object from $t = 2$ to $t = 6$ seconds.
+5. Determine the object’s acceleration at t = 4 seconds.
+---
+
+# Physics is ***more*** than plugging numbers into equations! <!--fit--->
+
+---
+
+# Solve 🧩🤔➡️🔍
+
+A poorly tuned car accelerates from rest to a speed of **28 m/s** in **20 seconds**. What is the acceleration of the car? How far does the car travel in this time?
+
+### 🚨 Remember to: 
+
+1. Sketch and Translate
+2. Simplify and Diagram
+3. Represent Mathematically
+4. Solve + Evaluate
+
+### 🔎 Hint:
+
+Use a graph or graphs to solve the problem.
+
+---
+
+# Multiple Representations:
+
+
+* ***Verbal***: Describes the motion of the car in a narrative manner.
+* ***Pictorial***: A picture shows the initial and final motion of the car.
+* ***Diagrammatic***: The picture is simplified and shows the motion of the car over multiple clock readings.
+* ***Graphical***: Three representations that show how the position, velocity, and acceleration of the car vary over time.
+* ***Mathematical***: Describes the velocity of the car as a function of time and the position of the car as a function of time.
+
+---
+
+# Problem Solving Process:
+
+1. Sketch and Translate
+2. Simplify and Diagram
+3. Represent Mathematically
+4. Solve + Evaluate
+
+---
+
+# 1. Sketch
+
+*  A ***sketch*** of the object or objects at the beginning of the motion, at the end of the motion, and any important points in between where the motion changes (i.e. if the acceleration of the object changes).
+*  A ***coordinate system*** Label the axes and the origin (position 0).
+*  ***Symbols*** that represent the time, position, and velocity of each object at each moment you have draw above. Use subscripts to depict different times and different objects (i.e. $\vec{v}_{car1,i}$ or $\vec{x}_{2f}$or $t_2$). This step *defines* the symbols that you will use later in calculations.
+*  Draw ***arrows*** to show the acceleration and velocity of the object between each position (or write $\vec{a}=0$ or $\vec{v}=0$)
+
+---
+
+# 1. Translate
+
+Now that you have a sketch of the situation you should organize everything you know and want to find. Therefore you should:
+*  Make a ***table*** listing all of the symbol values that are known for the problem or that can be determine from simple geometry. Check that the signs are consistent with your sketch and its coordinate system. Also list known relationships, such as $\vec{v_1}=\vec{v_2}$, even if you don't know the values yet. At this point do any unit conversions that are necessary.
+*  Make a ***list*** of the unknown quantity or quantities you'll need to answer the question.
+
+
+---
+
+# 2. Simplify and Diagram (Physics Diagrams)
+
+- From our sketch we will no create physics diagrams...for motion this includes:
+  - position vs. time graph
+  - velocity vs. time graph (most useful)
+  - acceleration vs. time graph
+
+---
+
+# 3. Represent Mathematically
+
+- mathematical description of the process
+- turn physics diagrams into equations:
+  - use area of v-t to calc displacement
+  - use slopes to calculate velos, or accelerations
+  - use position functions to find final positions
+
+---
+
+# 4. Solve + Evaluate
+
+- substitute in given quantities and solve!
+- Evaluate: does this number make sense? Is it a reasonable solution?
+
+---
+
+# Example:
+
+A poorly tuned car accelerates from rest to a speed of **28 m/s** in **20 seconds**. What is the acceleration of the car? How far does the car travel in this time?
+
+---
+
+# Sketch and Translate
+
+![center](../figures/Sketch.jpg)
+
+---
+
+# Simplify and Diagram
+
+![center](../figures/Diagram.jpg)
+
+---
+
+# Represent ➡️ Solve:
+
+![center](../figures/Solve.jpg)
+
+
+---
+
+# Kinematic Equations 
+
+### ...from AP Reference Table
+
+
+$$\boxed{v_x = v_{x0} + a_x t}$$
+
+$$\boxed{x = x_0 + v_{x0}t + \frac{1}{2}a_xt^2}$$
+
+$$\boxed{v_x^2 = v_{x0}^2 + 2a_x(x-x_0)}$$ 
+
+
+* the $x$ subscript indicates the plane of motion, these equations also work for $y$ and $z$ planes of motion
+* we will often remove that subscript when writing equations involving problems with only one plane of motion: i.e. $v = v_0 + at$ 
+
+---
+
+# Kinematic Equations 
+
+Reminder: $\Delta x = x - x_0$
+
+so...
+
+* $x = x_0 + v_{x0}t + \frac{1}{2}at^2$  **becomes** ➡️  $\Delta x = v_{x0}t + \frac{1}{2}at^2$
+* $v^2 = v_{0}^2 + 2a(x-x_0)$ **becomes** ➡️ $v^2 = v_{0}^2 + 2a\Delta x$
+
+
+---
+
+
+# Kinematic Cross Diagram for Problem Solving 
+
+![center](../figures/crossdiagram.png)
+
+---
+
+# Kinematic Cross Diagram 
+
+![center](../figures/timeandspace.png)
+
+---
+
+# Identifying Equations 
+
+![center](../figures/crossequations1.png)
+
+---
+
+# Non-reference Table Equations 
+
+![center](../figures/crossdiagramequations2.png)
+
+---
+
+# Using the Cross Diagram 
+
+1) Setup
+    1. Write down the cross
+    2. Write down the known variables *and* underline those variables in the cross
+    3. Star (or circle) the variable that is unknown and is being solved for
+2) Planning
+    1. Circle the variables that are involved in this problem
+    2. Use the equation that involves those four variables 
+3) Execution
+    1. Solve the problem
+    2. You can circle twice: solve for first unknown to use in second equation
+
+---
+
+# Example 
+
+A poorly tuned car accelerates from rest to a speed of **28 m/s** in **20 seconds**. What is the acceleration of the car? How far does the car travel in this time?
+
+![bg fit right:65%](../figures/example2.png)
+
+---
+
+# More Complicated Example 
+
+Gideon is South's best speed skater. He accelerates from 0.00 m/s to 7 m/s in 5 s and then continues at this constant speed for another 8 s. What is the total distance Gideon skates?
+
+
+
+![bg fit right:65%](../figures/example3.png)
+
+---
+
+# Practice 
+
+A speedboat increases its speed from 14.3 m/s to 31.1 m/s in a distance of 274 m. Determine the time over which this acceleration occurs.
+
+![center](../figures/crossdiagram.png)
