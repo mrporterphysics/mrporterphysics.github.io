@@ -20,8 +20,40 @@ math: mathjax
 
 Go to [https://www.physicsclassroom.com/Concept-Builders/Kinematics/Match-That-Graph/Concept-Builder](https://www.physicsclassroom.com/Concept-Builders/Kinematics/Match-That-Graph/Concept-Builder) and complete the ***master level***.
 
-<br><br><br>
-Get to this link in Canvas Homepage, right click link and open in a new tab
+<br>
+Get to this link, Go to Canvas Homepage, scroll down to the slides, and right click link and open in a new tab.
+
+---
+
+# 2023.10.07 **Regents Physics**
+
+##### **❓ of the 📅**: **Would you rather live swim in the world's coldest water or eat the world's hottest pepper?🥶🥵**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now 
+2. Hand Back Quizzes
+3. Card Sort
+4. Stacks of Graphs Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Relate Motion to Stacks of Kinematic Graphs_
+
+### 📆 Upcoming
+
+- Quiz Friday, we will practice in class
+
+</div>
+</div>
 
 ---
 

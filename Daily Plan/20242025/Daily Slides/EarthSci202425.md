@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+<!--- class: halloween--->
+
+# 2024.10.07 **Earth Science**
+
+##### **❓ of the 📅**: **Would you rather live swim in the world's coldest water or eat the world's hottest pepper?🥶🥵** 
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now - Go to _Star in a box_ simulation and work on Explore 1 with your table partner
+    - Link is in Canvas (Modules -> Materials -> Stellar Evolution Links)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine the relationship between star mass and the lifecycle of the star_
+
+### 📆 Upcoming
+
+- Stellar Evolution Quiz on ***Friday***
+
+</div>
+</div>
+
+---
+
+
 # 2024.10.04 **Earth Science**
 
 ##### **❓ of the 📅**: What skill or talent do you most want to learn?
