@@ -36,10 +36,23 @@ img[alt~="center"] {
 2. [Vector vs. Scalar](#vector-vs-scalar)
 3. [Describing Motion](#describing-motion)
 4. [Motion Maps](#motion-maps-notes)
+5. [Average vs. Instantaneous](#average-vs-instantaneous)
+6. [Velocity vs. Time Graphs](#velocity-vs-time-graphs)
+7. [Area of VT Graph](#area-of-vt-graph)
+8. [Acceleation Notes](#defintions--notes)
+9. [Position vs. Time Graphs](#position-time-graphs)
+10. [Velocity-time graphs](#velocity-time-graphs)
+11. [Shapes of VT Graphs](#shapes-of-vt-graphs)
 
 </div>
  
 <div>
+
+12. [Shapes of Graphs Summary](#shapes-of-graphs---summary)
+13. [VT Graphs - Changing V](#vt-graphs-3)
+14. [Kinematic Equations](#kinematic-equationsfrom-regents-reference-table)
+15. [Kinematic Cross Diagram](#kinematic-cross-diagram)
+16. [Problem-Solving](#solve)
 
 </div>
 </div>
@@ -516,41 +529,6 @@ $$ |v| = \frac{dist}{\Delta t}$$
 ---
 
 
-# Mathematical Modeling & Making Predictions 
-
-
-## Constant Velocity Particle Model 
-
-$$ x = \bar{v}t + x_0 $$ 
-
-* $x$ ➡️ final position 
-* $\bar{v}$ :arrow_right: constant velocity 
-* $t$ ➡️ time 
-* $x_0$ ➡️ initial position 
-
-
----
-
-# A racecar reaches a speed of **95** m/s after it is **450** meters past the starting line. If the car travels at a constant speed of **95** m/s for the next **12.5** seconds, how far will the care be from the starting line?
-
-1. Sketch and label the situation 
-2. Physics diagrams: position vs. time graph, motion map (qualitative)
-3. Mathematically model
-4. Solve 
-
-
----
-
-
-## Mr. H waits patiently as two beetles race across the **35.8**-cm length of the cereal box. According to Mr. H's estimates, Beetle A averages **0.230** cm/s and Beetle B averages **0.454** cm/s. Beetle A has a **4.1**-cm 'head start' (when Beetle B is at the far edge of the box). What is the separation distance (in cm) between beetles when the first beetle reaches the end of the box?
-
-1. Sketch and label the situation 
-2. Physics diagrams: position vs. time graph, motion map (qualitative)
-3. Mathematically model
-4. Solve 
-
----
-
 # Velocity vs. Time Graphs <!--fit--->
 
 ---
@@ -781,6 +759,14 @@ $$ \Delta x = \bar{v}{t} $$
 
 ---
 
+# Reminders
+
+## To determine how far (**displacement**) an object travels, determine the **area** between the velocity-time graph and the horizontal axis.
+
+## The slope of the Velocity vs. Time Graph is **Acceleration**
+
+---
+
 <!--- _footer: .--->
 <!--- _class: inverse --->
 
@@ -808,6 +794,120 @@ For each object...
 3. Determine the displacement of the object from $t = 4$ to $t = 8$ seconds.
 4. Determine the displacement of the object from $t = 2$ to $t = 6$ seconds.
 5. Determine the object’s acceleration at t = 4 seconds.
+---
+
+<!--- class: invert --->
+
+
+# Kinematic Equations...from Regents Reference Table
+
+<div class='columns'>
+<div>
+
+### Definitions:
+
+Average Speed/Velocity:
+
+$$\boxed{\bar{v}=\frac{d}{t}}$$ 
+
+Acceleration:
+$$\boxed{a = \frac{\Delta v}{t}}$$
+
+</div>
+ 
+<div>
+
+Equation of line for VT Graph (no displacement):
+$$\boxed{v_f = v_i + at}$$ 
+
+Quadratic Position Equation (no final v):
+$$\boxed{d = v_it + \frac{1}{2}at^2}$$ 
+
+Time independent equation (no t):
+$$\boxed{v_f^2 = v_i^2 + 2ad}$$ 
+
+</div>
+
+<div>
+
+- $\bar{v}$ → average speed or velocity
+- $d$ → distance or displacement
+- $t$ → time
+- $a$ → acceleration 
+- $\Delta v$ → change in velocity $(v_f - v_i)$
+- $v_i$ → initial velocity 
+- $v_f$ → final velocity
+
+</div>
+
+</div>
+
+---
+
+# Note **$\Delta x = d$** <!--fit--->
+
+# They are the same! <!--fit--->
+
+### **You should use $d$ to be consistent with Regents Reference Table** <!--fit--->
+
+---
+
+# Kinematic Cross Diagram for Problem Solving 
+
+![center](../figures/crossdiagram.png)
+
+---
+
+# Kinematic Cross Diagram 
+
+![center](../figures/timeandspace.png)
+
+---
+
+# Identifying Equations 
+
+![center](../figures/crossequations1.png)
+
+---
+
+# Non-reference Table Equations 
+
+![center](../figures/crossdiagramequations2.png)
+
+---
+
+# Using the Cross Diagram 
+
+1) Setup
+    1. Write down the cross
+    2. Write down the known variables *and* underline those variables in the cross
+    3. Star (or circle) the variable that is unknown and is being solved for
+2) Planning
+    1. Circle the variables that are involved in this problem
+    2. Use the equation that involves those four variables 
+3) Execution
+    1. Solve the problem
+    2. You can circle twice: solve for first unknown to use in second equation
+
+---
+
+# Example 
+
+A poorly tuned car accelerates from rest to a speed of **28 m/s** in **20 seconds**. What is the acceleration of the car? How far does the car travel in this time?
+
+![bg fit right:65%](../figures/example2.png)
+
+---
+
+# Practice 
+
+A speedboat increases its speed from 14.3 m/s to 31.1 m/s in a distance of 274 m. Determine the time over which this acceleration occurs.
+
+![center](../figures/crossdiagram.png)
+
+
+Complete on a whiteboard with a ***partner*** from your lab table
+
 ---
 
 # Physics is ***more*** than plugging numbers into equations! <!--fit--->
@@ -919,96 +1019,3 @@ A poorly tuned car accelerates from rest to a speed of **28 m/s** in **20 second
 
 
 ---
-
-# Kinematic Equations 
-
-### ...from AP Reference Table
-
-
-$$\boxed{v_x = v_{x0} + a_x t}$$
-
-$$\boxed{x = x_0 + v_{x0}t + \frac{1}{2}a_xt^2}$$
-
-$$\boxed{v_x^2 = v_{x0}^2 + 2a_x(x-x_0)}$$ 
-
-
-* the $x$ subscript indicates the plane of motion, these equations also work for $y$ and $z$ planes of motion
-* we will often remove that subscript when writing equations involving problems with only one plane of motion: i.e. $v = v_0 + at$ 
-
----
-
-# Kinematic Equations 
-
-Reminder: $\Delta x = x - x_0$
-
-so...
-
-* $x = x_0 + v_{x0}t + \frac{1}{2}at^2$  **becomes** ➡️  $\Delta x = v_{x0}t + \frac{1}{2}at^2$
-* $v^2 = v_{0}^2 + 2a(x-x_0)$ **becomes** ➡️ $v^2 = v_{0}^2 + 2a\Delta x$
-
-
----
-
-
-# Kinematic Cross Diagram for Problem Solving 
-
-![center](../figures/crossdiagram.png)
-
----
-
-# Kinematic Cross Diagram 
-
-![center](../figures/timeandspace.png)
-
----
-
-# Identifying Equations 
-
-![center](../figures/crossequations1.png)
-
----
-
-# Non-reference Table Equations 
-
-![center](../figures/crossdiagramequations2.png)
-
----
-
-# Using the Cross Diagram 
-
-1) Setup
-    1. Write down the cross
-    2. Write down the known variables *and* underline those variables in the cross
-    3. Star (or circle) the variable that is unknown and is being solved for
-2) Planning
-    1. Circle the variables that are involved in this problem
-    2. Use the equation that involves those four variables 
-3) Execution
-    1. Solve the problem
-    2. You can circle twice: solve for first unknown to use in second equation
-
----
-
-# Example 
-
-A poorly tuned car accelerates from rest to a speed of **28 m/s** in **20 seconds**. What is the acceleration of the car? How far does the car travel in this time?
-
-![bg fit right:65%](../figures/example2.png)
-
----
-
-# More Complicated Example 
-
-Gideon is South's best speed skater. He accelerates from 0.00 m/s to 7 m/s in 5 s and then continues at this constant speed for another 8 s. What is the total distance Gideon skates?
-
-
-
-![bg fit right:65%](../figures/example3.png)
-
----
-
-# Practice 
-
-A speedboat increases its speed from 14.3 m/s to 31.1 m/s in a distance of 274 m. Determine the time over which this acceleration occurs.
-
-![center](../figures/crossdiagram.png)

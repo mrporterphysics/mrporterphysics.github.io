@@ -17,6 +17,37 @@ math: mathjax
 
 <!--- class: halloween--->
 
+
+# 2024.10.08 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Introduction to Horizontal Projectiles
+2. Marble Mini Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve horizontally fired projectile problems_
+
+### 📆 Upcoming
+
+1. Quiz Thursday -> Free fall and projectiles
+
+</div>
+</div>
+
+---
+
 # 2024.10.04 **AP Physics**
 
 #### **❓ of the 📅**: What skill or talent do you most want to learn?
