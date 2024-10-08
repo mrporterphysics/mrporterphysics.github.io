@@ -20,13 +20,13 @@ math: mathjax
 
 # 2024.10.08 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: **You have to sing karaoke, what song do you pick? 🎤**
 
 <div class ='columns'>
 
  <div>
 
-#### 📋 Agenda
+### 📋 Agenda
 
 1. Introduction to Horizontal Projectiles
 2. Marble Mini Lab

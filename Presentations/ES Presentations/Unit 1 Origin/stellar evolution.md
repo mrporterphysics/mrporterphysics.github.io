@@ -168,5 +168,83 @@ The difference in brightness has to do with distance
 
 ---
 
-# Celestial Objects
+# How can we use the properties we observe about stars to make predictions about their lifespan? 
 
+---
+
+# Think - Pair - Share
+
+
+
+1. What properties in stars allow us to make predictions about their life cycles?
+2. What kind of stars live the longest and most stable lives? Are there observable properties that allow us to identify these stars?
+3. How should this be considered in our search for an Earth-like planet where humans could live?
+
+---
+
+# We know what...but why and how?
+
+# We can predict, now lets explain
+
+---
+
+* The mass of stars allow us to make predictions about their life cycles.
+* Properties like color, temperature, and luminosity give us clues about a stars mass.
+* The lower the star's mass, the shorter and more stable its life cycle is.
+* Stars up to a solar mass of 1 are stable in the main sequence longer than it took for life to exist and evolve on Earth.
+* Stars that have reached stages after the main sequence change a lot. Temperature and luminosity change so much, it would destroy life if it existed on any  planet revolving around it.
+
+
+---
+
+# Text: _Forces Within a Star_ 
+
+- Circle any information that you think will help explain why a star’s size increases over time
+- Underline any information that you think will help explain why a star’s size decreases over time
+- Box any information that you don’t understand or have questions about. Jot those questions in the margin.
+
+---
+
+# Nuclear Fusion 
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/O3wRlPNAnrA?si=7Gmbz9z9JKEFSBJe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+### _Forces Within a Star_ &  Gravity
+- There is a direct relationship between mass and gravitational pull
+- Gravity affects the size of a star by pulling gasses inward toward the center of mass
+
+---
+
+#### _Forces Within a Star_ & Nuclear Fusion
+
+- When gravity pulls hydrogen gas particles together within a star, they collide more frequently and with more force, which leads to nuclear fusion
+- A small percentage of the mass from the hydrogen gas is lost when it’s fused into helium, because it is converted into tremendous amounts of energy. 
+- This energy is much more than what was required to make the fusion happen 
+- This net gain in energy from nuclear fusion in the core pushes outward
+
+---
+
+#### Star formation by collapse of molecular clouds
+
+<iframe width="900" height="515" src="https://www.youtube.com/embed/YbdwTwB8jtc?si=vn_pbEDb5sgRX4NW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!---
+
+timestamps:
+molecular cloud : 0:03
+molecular cloud begins to collapse : 0:34
+proto star eats other proto star : 0:46
+proto star begins to grow quickly : 0:57
+proto star eats its own brother : 1:15
+simulation finishes : 1:34
+
+
+--->
+
+---
+
+# Dying Stars 
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/_dD7u_D20T8?si=JZH5wnaGjbeH3itm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

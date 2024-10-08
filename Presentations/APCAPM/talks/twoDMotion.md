@@ -97,12 +97,6 @@ Explain your reasoning.
 
 ---
 
-![bg fit right:52%](../figures/hprojectrank.png)
-
-Rank the situations from the ***greatest to least time*** that it will take for the sphere to hit the ground. Make your ranking on a single line, using > and = signs. Ties are possible.
-
-Rank the situations from the ***greatest to the least horizontal distance*** that the sphere will travel. Make your ranking on a single line, using only the > and = signs. Ties are possible.
-
 ---
 
 # Horizontal Projectiles 
@@ -175,6 +169,15 @@ Equipment:
 
 2. Use to predict landing spot from new height (like off top of cabinets)
 
+
+---
+
+
+![bg fit right:52%](../figures/hprojectrank.png)
+
+Rank the situations from the ***greatest to least time*** that it will take for the sphere to hit the ground. Make your ranking on a single line, using > and = signs. Ties are possible.
+
+Rank the situations from the ***greatest to the least horizontal distance*** that the sphere will travel. Make your ranking on a single line, using only the > and = signs. Ties are possible.
 
 ---
 

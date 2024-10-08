@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.08 **Earth Science**
+
+#### **❓ of the 📅**: **You have to sing karaoke, what song do you pick? 🎤**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now: Finish Star in a box
+2. Stellar Evolution Summary & Notes
+3. Explain: Develop a model for patterns and stability of stars
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _I can develop an explanatory model for patterns of stability and change observed in stars_
+
+### 📆 Upcoming
+- Quiz Friday (We will practice on Thursday)
+</div>
+</div>
+
+---
+
+
 # 2024.10.07 **Earth Science**
 
 ##### **❓ of the 📅**: **Would you rather live swim in the world's coldest water or eat the world's hottest pepper?🥶🥵** 

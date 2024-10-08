@@ -13,8 +13,51 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
-
 <!--- class: halloween--->
+
+# 2024.10.08 **Regents Physics** Do Now:
+
+Go to canvas and check your answers to stacks of graphs practice.
+
+Find here:
+
+*Modules* -> *Kinematics* -> *Resources* -> *StacksAnswer.pdf*
+
+---
+
+# 2024.10.08 **Regents Physics**
+
+##### **❓ of the 📅**: **You have to sing karaoke, what song do you pick? 🎤**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now - Check Stacks of Graphs Answers on Canvas
+2. Usings Areas & Slopes with VT Graphs
+3. The Kinematic Equations
+4. Cross Diagram & Problem Solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve Problems with VT Graphs Quantitatively_
+
+🥅 _Use the cross diagram to apply kinematic equations to word problems_
+
+### 📆 Upcoming
+
+- Quiz Friday
+
+</div>
+</div>
+
+---
 
 # 2024.10.07 **Regents Physics** Do Now: 
 
