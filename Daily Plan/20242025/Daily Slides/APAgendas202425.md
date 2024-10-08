@@ -18,6 +18,10 @@ math: mathjax
 <!--- class: halloween--->
 
 
+AP PAYMENT DUE 10/17 to Guidance 
+
+---
+
 # 2024.10.08 **AP Physics**
 
 ##### **❓ of the 📅**: **You have to sing karaoke, what song do you pick? 🎤**
