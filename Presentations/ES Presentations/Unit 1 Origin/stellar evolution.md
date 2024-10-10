@@ -248,3 +248,32 @@ simulation finishes : 1:34
 # Dying Stars 
 
 <iframe width="900" height="500" src="https://www.youtube.com/embed/_dD7u_D20T8?si=JZH5wnaGjbeH3itm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Elements Forged in Stars
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/JIF6X4dGp40?si=kYpAfHunGx6fPa-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
+
+<div class='columns'>
+<div>
+
+## Fe[26] Game
+
+How do you think you can represent the difference in gravity of a low mass star and a high mass star in the game? 
+What role does gravity play in nuclear fusion?
+How would you show this using the nuclear fusion game?
+
+
+</div>
+ 
+<div>
+
+<iframe src="https://dimit.me/Fe26/" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="600px" allowfullscreen></iframe>
+
+</div>
+</div>

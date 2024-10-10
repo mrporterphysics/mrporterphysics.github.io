@@ -186,6 +186,146 @@ Rank the situations from the ***greatest to the least horizontal distance*** tha
 
 ---
 
+# Velocity as a 2-Dimensional Vector
+
+![bg fit right](image-5.png)
+
+---
+
+# Vector Components
+
+<iframe src="
+" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="1100px" allowfullscreen></iframe>
+
+---
+
+# Finding Vector Components
+
+![bg fit right:25%](image-6.png)
+
+## Practice: 
+
+Find the x & y components of the following velocities...
+
+1. A water balloon is launched with a speed of 40 m/s at an angle of 60 degrees to the horizontal.
+2. A motorcycle stunt person traveling 70 mi/hr jumps off a ramp at an angle of 35 degrees to the horizontal.
+3. A springboard diver jumps with a velocity of 10 m/s at an angle of 80 degrees to the horizontal.
+
+---
+
+# Some Projectile Reminders & Facts:
+
+- When an object is in free-fall,
+  - its **VERTICAL acceleration** is always $g$ or $10 \text{ m/s}^2$ near the surface of the earth.
+  - its **HORIZONTAL acceleration** *is always zero*. Meaning the only equation you use for the horizontal motion is $\Delta x=vt$ 
+
+- Velocities in perpendicular directions add with the Pythagorean theorem
+- The magnitude of an object's velocity is known as its speed
+- To approach a projectile problem, make two kinematics charts: one vertical, one horizontal.
+
+---
+
+
+# [Concept Checker](https://www.physicsclassroom.com/Concept-Checkers/Interactives/Projectile-Simulator-3/Concept-Checker) 🤔 ✔️ <!--fit--->
+
+![bg blur](image-7.png)
+
+---
+
+
+<div class='columns'>
+<div>
+
+A baseball is thrown from point S in right field to home plate. 
+
+![center](image-8.png)
+
+Use a coordinate system with up (+x) and left (+y), and the origin at home plate.
+Select the graph that best represents:
+1. $v_x$ vs. $t$
+2. $a_x$ vs. $t$
+3. $v_y$ vs. $t$
+4. $v_a$ vs. $t$
+
+</div>
+ 
+<div>
+
+<br><br><br>
+
+![center width:800px](image-9.png)
+
+</div>
+</div>
+
+---
+
+<div class='columns'>
+
+
+<div>
+
+An airplane is flying 1200 m above the ground at a speed of 200 m/s. It drops a bag that hits the ground after traveling a horizontal distance of 3130 m.
+
+![center](image-10.png)
+
+
+
+</div>
+
+<div>
+
+1. The plane’s speed is tripled.
+2. The plane is climbing straight up.
+3. The plane is flying level at an altitude of 1,100 m.
+4. The mass of the bag is increased.
+5. The bag is thrown from the plane with a $v_{0y}$ of 15 m/s down.
+
+</div>
+
+<div>
+
+(i) The $\Delta x$ will be greater than 3130 m.
+(ii) The $\Delta x$ will be less than 3130 m but not zero.
+(iii) The $\Delta x$ will be equal to 3130 m.
+(iv) The $\Delta x$ will be zero 
+(v) We cannot determine how this change will affect $\Delta x$.
+
+
+</div>
+ 
+
+</div>
+
+---
+
+# Problem-Solving Approach
+
+1. Find $v_x$ and $v_{0y}$
+2. Make double cross diagram & determine problem solving approach
+    - often involves finding flight time first
+3. Solve
+
+---
+
+# Together
+
+
+## A long jumper leaves the ground with an initial velocity of **$12\textrm{ m/s}$** at an angle of **$28\textrm{-degrees}$** above the horizontal. 
+
+Determine 
+1. the time of flight 
+2. the horizontal distance
+3. the peak height of the long-jumper
+
+---
+
+# Practice Time <!--fit--->
+
+# [Turd the Target 💩](https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Turd-the-Target-2/Turd-the-Target-2-Interactive) <!--fit--->
+
+---
+
 # Simulation 
 
 ## CER 

@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.09 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather a vacation at the beach or an adventure in the mountains?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Stellar Evolution Notes & Discussion
+2. Explaining Stellar Evolution
+3. Nucleosynthesis 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain stellar evolution and the different lifecycles of stars_
+
+### 📆 Upcoming
+- Quiz Friday (we will practice tomorrow)
+</div>
+</div>
+
+---
+
 # 2024.10.08 **Earth Science**
 
 #### **❓ of the 📅**: **You have to sing karaoke, what song do you pick? 🎤**

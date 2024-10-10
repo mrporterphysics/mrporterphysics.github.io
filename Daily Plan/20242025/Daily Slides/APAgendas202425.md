@@ -17,8 +17,81 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.10 **AP Physics** Do Now
 
-AP PAYMENT DUE 10/17 to Guidance 
+---
+
+# 2024.10.10 **AP Physics**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Frames of Reference
+3. Relative Motion Pivot
+4. Relative Motion Workbook Problem: 1.E
+5. Physics Classroom Practice 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.10.09 **AP Physics** Do Now
+
+1. Check you answers to the homework ranking task with your table. 
+2. Whiteboard your collective answer
+
+---
+
+# 2024.10.08 **AP Physics**
+
+##### **❓ of the 📅**: **Vacation on the beach or adventure in the mountains?**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now
+2. Projectiles at an angle
+3. Turd the Target
+
+
+### 📆 Notice!
+
+- AP PAYMENT DUE 10/17 to Guidance 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve projectile motion problems_
+
+### 📆 Upcoming
+- Quiz tomorrow
+    - Expect graphs, equations, freefall, and a horizontal projectile question
+
+</div>
+</div>
 
 ---
 
