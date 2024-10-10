@@ -326,14 +326,57 @@ Determine
 
 ---
 
-# Simulation 
-
-## CER 
-
-When firing from flat ground...
-
-1. What angle gives you the max height for the projectile?
-2. What angle gives the greatest range (horizontal displacement)?
-3. What angle pairs give the same range? 
+# Frames of Reference
 
 
+
+
+<iframe width="1100" height="600" src="https://www.youtube.com/embed/bJMYoj4hHqU?si=gfVx_4cT7ErotqLZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+<!--- _footer: Images from Physics Classroom --->
+
+# Relative Velocity 
+
+## Headwind and Tail Wind
+
+<div class='columns'>
+<div>
+
+![center w:500](image-11.png)
+
+</div>
+ 
+<div>
+
+![center w:500](image-12.png)
+
+</div>
+</div>
+
+---
+
+# Cross Wind...
+
+
+![center w:700](image-13.png)
+
+---
+
+# Animation 
+
+![center w:600](../figures/plane.gif)
+
+
+---
+
+# Classic Physics Problem **Riverboat**
+
+A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
+
+1. What is the resultant velocity of the motorboat?
+2. If the width of the river is 80 meters wide, then how much time does it take the boat to travel shore to shore?
+3. What distance downstream does the boat reach the opposite shore?
+
+![bg fit right:30%](image-15.png)

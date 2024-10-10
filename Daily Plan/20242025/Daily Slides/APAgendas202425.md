@@ -48,6 +48,7 @@ math: mathjax
 </div>
 </div>
 
+
 ---
 
 # 2024.10.09 **AP Physics** Do Now
