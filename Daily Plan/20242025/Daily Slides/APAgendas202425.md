@@ -17,21 +17,17 @@ math: mathjax
 
 <!--- class: halloween--->
 
-# 2024.10.10 **AP Physics** Do Now
-
----
-
 # 2024.10.10 **AP Physics**
 
-##### **❓ of the 📅**: QUESTION
+#### **❓ of the 📅**: QUESTION
 
 <div class ='columns'>
 
  <div>
 
-#### 📋 Agenda
+### 📋 Agenda
 
-1. Do Now
+1. Quiz
 2. Frames of Reference
 3. Relative Motion Pivot
 4. Relative Motion Workbook Problem: 1.E
@@ -43,7 +39,9 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Define Frames of Reference_
+
+🥅 _Solve problems involving relative motion_
 
 ### 📆 Upcoming
 
