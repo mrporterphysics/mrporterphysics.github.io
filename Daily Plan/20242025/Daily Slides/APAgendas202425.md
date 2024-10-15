@@ -19,7 +19,7 @@ math: mathjax
 
 # 2024.10.10 **AP Physics**
 
-#### **❓ of the 📅**: QUESTION
+#### **❓ of the 📅**: What is your favorite type of apple?
 
 <div class ='columns'>
 

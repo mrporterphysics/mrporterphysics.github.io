@@ -260,7 +260,7 @@ simulation finishes : 1:34
 
 
 <div class='columns'>
-<div>
+<div> 
 
 ## Fe[26] Game
 

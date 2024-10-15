@@ -15,6 +15,39 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.10 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite type of apple?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now
+2. Set up room for Speed Dating
+3. Problem-Solving Graphically
+4. Kinematic Equations & Cross Diagram
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve motion questions graphically and algebraically_
+
+### 📆 Upcoming
+
+- Quiz Tomorrow
+  - Practice & Solutions will be posted on Canvas by end of day
+
+</div>
+</div>
+
+---
+
 # 2024.10.08 **Regents Physics** Do Now:
 
 Go to canvas and check your answers to stacks of graphs practice.

@@ -17,6 +17,38 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.10 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite kind of apple?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now - Stellar Evolution Practice Quiz (**In Canvas**)
+2. Finishing Stellar Evolution Packet
+3. Habitable Zones & Finding Exoplanets
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain Stellar Evolution_
+
+### 📆 Upcoming
+
+- Quiz Tomorrow
+
+</div>
+</div>
+
+---
+
 # 2024.10.09 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather a vacation at the beach or an adventure in the mountains?
