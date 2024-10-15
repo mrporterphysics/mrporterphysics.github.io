@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.15 **Earth Science**
+
+##### **❓ of the 📅**: **You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? (You can't say money or anything directly related to money)**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Stellar Evolution Packet
+2. Finding Exoplanets
+3. Eyes on Expoplanets
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _What is an expoplanet? Where are they?_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.10 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite kind of apple?

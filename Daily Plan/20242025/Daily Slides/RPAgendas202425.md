@@ -21,7 +21,7 @@ math: mathjax
 
 <div class ='columns'>
 
- <div>
+<div>
 
 ### 📋 Agenda
 

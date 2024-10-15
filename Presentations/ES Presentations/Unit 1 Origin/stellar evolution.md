@@ -277,3 +277,79 @@ How would you show this using the nuclear fusion game?
 
 </div>
 </div>
+
+
+---
+
+# What type of star do we want to move to?
+
+---
+
+
+# Reading: _Habitable Zone_
+
+- What is important on our search for _Earth 2.0_?
+- Be prepared to share what you find in the article
+
+---
+
+# In your lab group
+
+## On your whiteboard:
+
+- Why has Earth been a planet where life has appeared and been sustained for such a long time?
+
+---
+
+
+# **Part 3** in Performance Task 
+
+(yes we are skipping 2 for now...)
+
+
+Now that you understand star characteristics and how stars change throughout their lives, identify which stars from the NASA data set you think are most likely to host an Earth-like planet, potentially habitable by humans. Don’t forget to include the evidence to support your claims. 
+
+
+---
+
+# What do we need to know about Planets? 
+
+
+---
+
+<style scoped>
+section {
+    font-size: 30px;
+}
+</style>
+
+### **What questions have we answered?**
+
+<div class='columns'>
+<div>
+
+- Does the planet have a sun?
+- Is there air or an atmosphere on the planet?
+- What is the gravity on the planet?
+- What kind of weather does the planet have?
+- Is there water on the planet?
+- Does the planet already have life on it?
+- Is the planet near a black hole?
+- How far is the planet to the nearest star? 
+- What kinds of life can the planet sustain?
+
+</div>
+ 
+<div>
+
+- Does the planet have day and night?
+- Are there seasons on the planet?
+- What is the landscape of the planet like?
+- Does the planet have a moon?
+- What is the temperature like on the planet?
+- How fast is the planet moving?
+- How long as the planet existed?
+- Does the planet have stable conditions for life to exist?
+
+</div>
+</div>
