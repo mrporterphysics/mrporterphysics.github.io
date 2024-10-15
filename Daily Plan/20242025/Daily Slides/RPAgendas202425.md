@@ -15,6 +15,70 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.15 **Regents Physics**
+
+##### **❓ of the 📅**: **You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? (You can't say money or anything directly related to money)**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now
+2. Kinematic Equations & Cross Diagram
+3. Finish Porter Packet Questions
+4. Physics Classroom Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve word problems using kinematic equations & graphs_
+
+### 📆 Upcoming
+
+- Word Problem Quiz on **Friday**
+
+</div>
+</div>
+
+---
+
+# Physics Classroom Equation Practice:
+
+<div class='columns'>
+<div>
+
+### <u>Mild</u> 🫑
+- [Problem Set K13: Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+- [Problem Set K14: Kinematic Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPK14)
+
+</div>
+ 
+<div>
+
+### <u>Medium</u> 🌶️
+
+- [Problem Set K15: Kinematic Equations 3](https://www.physicsclassroom.com/calcpad/launch/CPK15)
+- [Problem Set K16: Kinematic Equations 4](https://www.physicsclassroom.com/calcpad/launch/CPK16)
+
+
+
+</div>
+</div>
+
+### <u>Spicy</u> 🥵🔥
+
+- [Problem Set K17: Kinematic Equations 5](https://www.physicsclassroom.com/calcpad/launch/CPK17)
+- [Problem Set K18: Kinematic Equations 6](https://www.physicsclassroom.com/calcpad/launch/CPK18)
+
+
+
+---
+
 # 2024.10.10 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your favorite type of apple?

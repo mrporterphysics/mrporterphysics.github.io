@@ -17,6 +17,38 @@ math: mathjax
 
 <!--- class: halloween--->
 
+
+# 2024.10.15 **AP Physics**
+
+##### **❓ of the 📅**: **You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? (You can't say money or anything related to money)**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Finish Relative Motion Pivot
+2. Notes: Vectors and adding Vectors
+3. Pivot: Adding Vectors
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Add 2D Vectors_
+
+### 📆 Upcoming
+
+- Quiz Thursday on Projectile Motion & Relative Motion
+
+</div>
+</div>
+
+---
+
 # 2024.10.10 **AP Physics**
 
 #### **❓ of the 📅**: What is your favorite type of apple?
