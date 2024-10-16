@@ -252,11 +252,11 @@ You can sum the components of the two vectors to find the components of the **re
 
 ---
 
-![center w:500](https://static.life.com/wp-content/uploads/migrated/2012/03/150303-gjon-mili-stroboscopic-02-830x1024.jpg)
+![bg fit](https://static.life.com/wp-content/uploads/migrated/2012/03/150303-gjon-mili-stroboscopic-02-830x1024.jpg)
 
 ---
 
-![center w:600](https://static01.nyt.com/images/2020/12/01/obituaries/23KAMSLER/merlin_180397809_98a11644-afc3-4ac0-8d74-dcadf132f3e9-superJumbo.jpg?quality=75&auto=webp)
+![bg fit](https://static01.nyt.com/images/2020/12/01/obituaries/23KAMSLER/merlin_180397809_98a11644-afc3-4ac0-8d74-dcadf132f3e9-superJumbo.jpg?quality=75&auto=webp)
 
 ---
 
@@ -269,11 +269,10 @@ You can sum the components of the two vectors to find the components of the **re
 
 # Mallet Ball
 
-### We are going to try and recreate constant velocity motion with objects moving over smooth, hard, level surfaces.
+### We are going to try and recreate uniform motion (constant acceleration) where $a=0$ and $a\ne 0$ with objects moving over smooth, hard, level surfaces.
 
 * First with a bowling ball,
-* then with with fan carts
-* finally by looking at a simulation
+* then  by looking at a simulation
 
 ---
 
@@ -286,8 +285,9 @@ Each time we use the mallet, let it bounce. (Don’t use the mallet like a bulld
 
 * Start with a stationary bowling ball. Then, speed up the bowling ball from rest.
 * Have someone roll a bowling ball. Then, bring it to a stop.
-* Have someone roll a bowling ball. Then, keep it moving at a constant velocity.
+* Have someone roll a bowling ball. Then, keep it moving at a CV.
 * Have someone roll a bowling ball. With one tap, have the bowling ball make a 90 degree turn.
+* Keep a bowling ball moving in a circle at constant speed.
 
 **Your goal: summarize the relation between taps and motion in as few statments as possible**
 
@@ -310,6 +310,7 @@ Each time we use the mallet, let it bounce. (Don’t use the mallet like a bulld
 4. Record how you successfully accomplished the task
     - Written description
     - Drawing that models the motion and your mallet taps
+5. Finally, write a general descriptive model that explains how mallet taps relate to the motion of the bowling ball
 
 ---
 
@@ -333,14 +334,6 @@ Each time we use the mallet, let it bounce. (Don’t use the mallet like a bulld
 ---
 
 # Describe the "taps" that affect the motion of the fan cart
-
----
-
-
-# Dueling Fan Carts 
-
-## What happens when there are forces from both directions?
-
 
 ---
 

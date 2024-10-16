@@ -25,8 +25,7 @@ math: mathjax
 
 ### 📋 Agenda
 
-1. Do Now
-2. Kinematic Equations & Cross Diagram
+1. Kinematic Equations & Cross Diagram
 3. Finish Porter Packet Questions
 4. Physics Classroom Practice
 

@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.16 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather have invisibility or flight?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now - Hand in Stellar Evolution Packet
+2. New Lab Groups
+3. Solar System Structure Intro
+4. What is Density? 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Begin Exploration of Explanation for Structure of Universe_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.15 **Earth Science**
 
 ##### **❓ of the 📅**: **You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? (You can't say money or anything directly related to money)**

@@ -43,6 +43,7 @@ math: mathjax
 ### 📆 Upcoming
 
 - Quiz Thursday on Projectile Motion & Relative Motion
+- Kinematics Test **10/23**
 
 </div>
 </div>

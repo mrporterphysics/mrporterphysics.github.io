@@ -1,0 +1,121 @@
+/* 
+@theme astrotheme
+*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono&family=Roboto:wght@300;400;700&display=swap');
+
+/* Theme colors */
+:root {
+  --background-color: #0a0a2a;
+  --text-color: #e0e0ff;
+  --accent-color-1: #ff6b6b;
+  --accent-color-2: #4ecdc4;
+  --accent-color-3: #f7b731;
+}
+
+/* Base slide styles */
+section {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  font-size: 34px;
+  line-height: 1.5;
+  padding: 40px;
+}
+
+/* Header styles */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 60px;
+  color: var(--accent-color-1);
+  text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 48px;
+  color: var(--accent-color-2);
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  color: var(--accent-color-3);
+  line-height: normal;
+}
+
+/* Bold text style */
+strong {
+  color: var(--accent-color-1);
+  font-weight: 700;
+}
+
+/* List styles */
+ul, ol {
+  margin-left: 30px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Code block styles */
+code {
+  font-family: 'Space Mono', monospace;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Blockquote styles */
+blockquote {
+  border-left: 5px solid var(--accent-color-2);
+  padding-left: 20px;
+  font-style: italic;
+  color: var(--accent-color-2);
+}
+
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--accent-color-3);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: rgba(247, 183, 49, 0.2);
+}
+
+/* Footer styles */
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  color: rgba(224, 224, 255, 0.5);
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+    gap: 1rem;
+  }
+  
+  img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+  }
