@@ -17,6 +17,41 @@ math: mathjax
 
 <!--- class: halloween--->
 
+<!--- _footer: <br>--->
+
+# 2024.10.17 **Earth Science**
+
+##### **❓ of the 📅**: **If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Hunting for Earth 2.0
+    - Part 2 -> What kind of dectection method can you use?
+    - Part 3 -> What kind of star is likely to host an Earth-like planet?
+2. Solar System Patterns
+4. Density
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Complete Performance Tasks_
+
+🥅 _Define Density_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.16 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather have invisibility or flight?

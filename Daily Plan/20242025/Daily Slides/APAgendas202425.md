@@ -17,6 +17,64 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.17 **AP Physics**
+
+##### **❓ of the 📅**: **If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Quiz
+2. Mallet Ball Summary & Simulation True/False
+3. Dynamics Laws
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define laws of physics describing motion_
+
+### 📆 Upcoming
+
+- Test 10/23 -> Complete Review!
+
+</div>
+</div>
+
+---
+
+# 2024.10.16 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather have invisibility or flight?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mallet Ball
+2. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2024.10.15 **AP Physics**
 

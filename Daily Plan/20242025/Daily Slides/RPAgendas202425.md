@@ -15,6 +15,69 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.17 **Regents Physics**
+
+##### **❓ of the 📅**: **If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. SLOP (_Shed loads of practice_) - Equations
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Become comfortable with kinematic equations_
+
+### 📆 Upcoming
+
+- Quiz on using equations and solving word problems **tomorrow**
+
+
+</div>
+</div>
+
+---
+
+
+# Physics Classroom Equation Practice:
+
+<div class='columns'>
+<div>
+
+### <u>Mild</u> 🫑
+- [Problem Set K13: Kinematic Equations 1](https://www.physicsclassroom.com/calcpad/launch/CPK13)
+- [Problem Set K14: Kinematic Equations 2](https://www.physicsclassroom.com/calcpad/launch/CPK14)
+
+</div>
+ 
+<div>
+
+### <u>Medium</u> 🌶️
+
+- [Problem Set K15: Kinematic Equations 3](https://www.physicsclassroom.com/calcpad/launch/CPK15)
+- [Problem Set K16: Kinematic Equations 4](https://www.physicsclassroom.com/calcpad/launch/CPK16)
+
+
+
+</div>
+</div>
+
+### <u>Spicy</u> 🥵🔥
+
+- [Problem Set K17: Kinematic Equations 5](https://www.physicsclassroom.com/calcpad/launch/CPK17)
+- [Problem Set K18: Kinematic Equations 6](https://www.physicsclassroom.com/calcpad/launch/CPK18)
+
+
+
+---
+
 # 2024.10.15 **Regents Physics**
 
 ##### **❓ of the 📅**: **You can have an unlimited supply of one thing for the rest of your life, what is it? Sushi? Scotch Tape? (You can't say money or anything directly related to money)**
