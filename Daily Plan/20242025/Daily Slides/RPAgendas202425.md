@@ -15,6 +15,34 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.18 **Regents Physics**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Quiz
+2. 2D Vector Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Add perpendicular vectors to find a resultant_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.17 **Regents Physics**
 
 ##### **❓ of the 📅**: **If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?**
