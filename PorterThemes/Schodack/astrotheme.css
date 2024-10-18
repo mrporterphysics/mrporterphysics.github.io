@@ -95,10 +95,11 @@ th, td {
   border: 1px solid var(--accent-color-3);
   padding: 10px;
   text-align: left;
+  background-color: var(--background-color);
 }
 
 th {
-  background-color: rgba(247, 183, 49, 0.2);
+  background-color: var(--accent-color-1);
 }
 
 /* Footer styles */
