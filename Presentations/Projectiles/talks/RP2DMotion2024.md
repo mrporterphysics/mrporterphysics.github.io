@@ -124,9 +124,9 @@ math: mathjax
 
 # Practice 🎯 <!--fit--->
 
-## [https://www.physicsclassroom.com/calcpad/launch/CPVP3](https://www.physicsclassroom.com/calcpad/launch/CPVP3)
+## [Vector Components 1](https://www.physicsclassroom.com/calcpad/launch/CPVP3)
 
-## [https://www.physicsclassroom.com/calcpad/launch/CPVP4](https://www.physicsclassroom.com/calcpad/launch/CPVP4)
+## [Vector Components 2](https://www.physicsclassroom.com/calcpad/launch/CPVP4)
 
 ---
 
