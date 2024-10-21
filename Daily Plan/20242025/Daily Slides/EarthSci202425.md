@@ -17,6 +17,37 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.21 **Regents Earth Science**
+
+##### **❓ of the 📅**: **Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Phases Simulation
+2. Condensation Temperatures
+3. Explain 2
+3. [Reading: How Planets Form](https://lasp.colorado.edu/outerplanets/solsys_planets.php)
+4. What Makes Jovian Planets so Gassy?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.18 **Earth Science**
 
 ##### **❓ of the 📅**: What would your pirate name be?

@@ -208,3 +208,48 @@ section {
 
 
 </div>
+
+---
+
+# Explain 2: Share Out 🗣️
+
+Write your analysis answers on a whiteboard and be prepared to share out as a group.
+
+---
+
+# States of Matter
+
+**Condensation**: Gas :arrow_right: Liquid
+
+
+**Solidification**: Liquid :arrow_right: Solid
+
+* Occurs at different temperature for different materials
+
+---
+
+<video controls="controls" width = "1150" src="../Unit 1 Origin/buac20-vid-planetsborn.mp4"></video>
+
+---
+
+![bg fit](image-24.png)
+
+---
+
+# Composition of Planets in the Solar System
+
+1) Planetary Nebula collapses and creates the sun. 
+2) Temperature is not uniform so different materials condense at different temperatures. Divided by the _frost line_
+3) Heavy elements condensed into rocks to form the inner, or Terrestrial Planets
+4) Outside of the frost line cooler hydrogen compounds form ice
+
+
+---
+
+# [Reading: How Planets Form](https://lasp.colorado.edu/outerplanets/solsys_planets.php) <!--fit--->
+
+---
+
+# Elaborate: What makes the Jovian Planets so gassy?
+
+---
