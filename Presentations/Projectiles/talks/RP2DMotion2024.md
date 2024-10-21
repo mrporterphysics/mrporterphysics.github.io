@@ -22,7 +22,7 @@ math: mathjax
 
 ---
 
-# Vctor Quantities:
+# Vector Quantities:
 
 ### A *<u>vector</u>* is a quantity with both **magnitude** (size) and **direction**.
 
@@ -198,6 +198,35 @@ If $\vec{C} = \vec{A} + \vec{B}$...
 
 ---
 
+# [Riverboat Problems](https://www.physicsclassroom.com/PhysicsClassroom/media/interactive/RiverBoatSim/index.html)
+
+- River current is 4 m/s North
+- Boat Velocity 4 4 m/s
+- What does a drone see?
+- How can we predict this **resultant velocity**?
+
+![bg fit right:40%](image-5.png)
+
+---
+
+# Example Riverboat
+
+A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
+
+1. What is the resultant velocity of the motorboat?
+2. If the width of the river is 80 meters wide, then how much time does it take the boat to travel shore to shore?
+3. What distance downstream does the boat reach the opposite shore?
+
+![bg fit right:40%](image-6.png)
+
+---
+
+# [Riverboat Practice](https://www.physicsclassroom.com/calcpad/launch/CPVP10) <!--fit--->
+
+
+
+---
+
 # Adding Angled Vectors 
 
 ## Make a Chart
@@ -208,3 +237,6 @@ If $\vec{C} = \vec{A} + \vec{B}$...
 |$B$| | | 
 |$\vdots$ | | | 
 |Resultant | $A_x + B_x + \dots$ | $A_y + B_y + \dots$ |
+
+
+

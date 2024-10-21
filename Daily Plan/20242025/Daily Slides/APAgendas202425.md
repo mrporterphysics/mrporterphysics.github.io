@@ -17,6 +17,39 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.21 **AP Physics**
+
+##### **❓ of the 📅**: **Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. T/F Simulation -> Share out
+2. Rules for CV vs. CA Motion
+3. Force Diagrams and Defining Forces
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Draw Diagrams to represent force situations_
+
+🥅 _Identify forces acting on object_
+
+### 📆 Upcoming
+
+- **Test Wednesday**, HW This week -> Finish AP Classroom work
+
+</div>
+</div>
+
+---
+
 # 2024.10.17 **AP Physics**
 
 ##### **❓ of the 📅**: **If you found that food was falling from the sky, what food would you want to be falling? What food would you NOT want to be falling?**

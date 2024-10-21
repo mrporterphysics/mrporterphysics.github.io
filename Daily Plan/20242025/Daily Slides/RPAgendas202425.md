@@ -15,9 +15,44 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.21 **Regents Physics** Do Now
+
+#### [(Click this link) Vector Components 2](https://www.physicsclassroom.com/calcpad/launch/CPVP4)
+
+---
+
+# 2024.10.21 **Regents Physics**
+
+##### **❓ of the 📅**: **Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Vector Components Do Now
+2. Vector Addition
+3. Riverboat Problems
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.18 **Regents Physics**
 
-##### **❓ of the 📅**: QUESTION
+##### **❓ of the 📅**: If you were a pirate, what would your pirate name be?
 
 <div class ='columns'>
 

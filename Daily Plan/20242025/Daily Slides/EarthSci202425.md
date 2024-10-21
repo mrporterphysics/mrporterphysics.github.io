@@ -17,6 +17,34 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.18 **Earth Science**
+
+##### **❓ of the 📅**: What would your pirate name be?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Explore 2 - Temperature's effect on density and the formation of our solar system
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe how temperature effects the formation of our solar system_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
 <!--- _footer: <br>--->
 
 # 2024.10.17 **Earth Science**

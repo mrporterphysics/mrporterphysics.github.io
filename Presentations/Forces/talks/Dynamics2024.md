@@ -377,25 +377,36 @@ You can do this in ***2 sentences***
 ---
 
 
-# ______'s First Law
+# Newton's First Law
 
 
 ## When the forces acting on a system are **unbalanced** the system will **accelerate**. 
 
 ## When forces acting on a system are **balanced** the system will maintain its **constant velocity**. 
 
-
----
-
-# Interaction Stations <!--fit--->
-
-# and Contact Forces <!--fit--->
-
 ---
 
 # A **force** is <!--fit--->
 
 # an *interaction* between two objects.  <!--fit--->
+
+
+### Forcse can be a result of **contact** or due to forces **at a distance** <!--fit--->
+
+---
+
+
+# Newton's Third Law 
+
+## A **force** is an interaction between two objects. The two objects mutually apply this **force** on each other. The force is **always *equal in magntiude and opposite in direction***.
+
+---
+
+# Force Pairs 
+
+* Newton's Third Law describes force pairs 
+  * You can identify these pairs with an interaction diagram
+  * The line that connects each bubble or object is the force pair. 
 
 ---
 
@@ -407,30 +418,6 @@ You can do this in ***2 sentences***
 
 
 ![bg fit right](https://image1.slideserve.com/2164865/slide14-l.jpg)
-
-
----
-
-# Interaction Diagrams 
-
-1. Put all objects in bubbles 
-2. Connect objects' bubbles with a line ***for each*** interaction 
-3. Label the interactions with Compression, Shear, or Stretch
-    -  (We will eventually use different names)
-
---- 
-
-# Interaction Stations 
-
-### At each station...**in your notebook**
-
-1. Sketch Situation
-2. Identify the interactions:
-    - do you notice compression, stretching, or shear?
-    - do you notice one or more than one interaction
-    - what evidence to you have for that interaction occurring?
-3. Draw Interaction Diagram
-3. Report findings 
 
 ---
 
@@ -450,14 +437,14 @@ You can do this in ***2 sentences***
 
 # Gravitational Force $\vec{F}_g$ or $mg$
 
-### Type: Long Range force
+### **Type:** Long Range force
 
 
-### Description 
+### **Description** 
 
 Attractive force between all objects with mass. 
 
-### Equation 
+### **Equation** 
 
 TBD
 
@@ -465,13 +452,13 @@ TBD
 
 # Normal Force $\vec{F}_N$ or $N$
 
-### Type: Contact, compression
+### **Type**: Contact, compression
 
 
-### Description 
+### **Description** 
 "Perpendicular Force" occurs because atoms are compressed and want to return to their original position. ***Always perpendicular to the surfaces in contact***
 
-### Equation 
+### **Equation** 
 None 
 
 ---
@@ -479,26 +466,26 @@ None
 
 # Spring Force $\vec{F}_s$
 
-### Type: Contact, stretch or compression
+### **Type**: Contact, stretch or compression
 
 
-### Description 
+### **Description** 
 Spring is stretched or compressed and wants to return to "natural" length
 
-### Equation 
+### **Equation** 
 TBD
 
 ---
 
 # Tension Force $\vec{F}_T$ or $T$
 
-### Type: Contact, stretch
+### **Type**: Contact, stretch
 
 
-### Description 
+### **Description** 
 Atomic Structure is stretched and wants to return to natural length
 
-### Equation 
+### **Equation** 
 None
 
 ---
@@ -506,27 +493,26 @@ None
 
 # Friction Force $\vec{F}_f$ or $f$
 
-### Type: Contact, shear
+### **Type**: Contact, shear
 
 
-### Description 
+### **Description** 
 Irregular surfaces interlock to slow or prevent sliding of two surfaces relative to eachother **Always parallel to the surfaces in contact**
 
-### Equation 
+### *Equation* 
 None
-
 
 ---
 
 # Drag Force $\vec{F}_d$
 
-### Type: Contact
+### **Type**: Contact
 
 
-### Description 
+### **Description** 
 Fluid/gas Friction, resists objects motion through a fluid/gas
 
-### Equation 
+### **Equation** 
 None
 
 ---
@@ -534,13 +520,13 @@ None
 
 # Bouyant Force $\vec{F}_B$
 
-### Type: Contact
+### **Type**: Contact
 
 
-### Description 
+### **Description** 
 Fluid/Gas Normal Force
 
-### Equation 
+### **Equation** 
 None
 
 ---
@@ -548,26 +534,26 @@ None
 
 # Electrostatic Force $\vec{F}_e$
 
-### Type: Long Rance
+### **Type**: Long Rance
 
 
-### Description 
+### **Description** 
 Attractice or resistive force because objects have charge
 
-### Equation 
+### **Equation** 
 None 
 
 ---
 
 # Magnetic Force $\vec{F}_M$
 
-### Type: Long Range
+### **Type**: Long Range
 
 
-### Description 
+### **Description** 
 Attractive or repulsive force because of moving charge
 
-### Equation 
+### **Equation** 
 None 
 
 
@@ -749,25 +735,6 @@ $$\boxed{|\vec{F}_s| = k |\vec{x}|}$$
 
 * A spring is _Hookean_ if it follows the equation above
 
----
-
-# Force Interactions <!--fit--->
-
-# 🚙 💥 🚚 <!--fit--->
-
----
-
-# Newton's Third Law 
-
-## A **force** is an interaction between two objects. The two objects mutually apply this **force** on each other. The force is **always *equal in magntiude and opposite in direction***.
-
----
-
-# Force Pairs 
-
-* Newton's Third Law describes force pairs 
-  * You can identify these pairs with an interaction diagram
-  * The line that connects each bubble or object is the force pair. 
 
 ---
 

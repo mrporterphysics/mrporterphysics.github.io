@@ -181,3 +181,30 @@ section {
 
 ---
 
+# Explain 🗣️ 
+
+<div class='columns'>
+<div>
+
+## How does condensation temperature explain the formation of our solar system? Why are the inner planets rocky and the outer planets gaseous?
+
+</div>
+ 
+<div>
+
+### Densities 
+
+1. Earth: 5.51
+2. Mercury: 5.43
+3. Venus: 5.24
+4. Mars: 3.93
+5. Jupiter: 1.33
+6. Saturn: 0.69 
+7. Uranus: 1.27
+8. Neptune: 1.64
+
+</div>
+
+
+
+</div>
