@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.22 **Earth Science**
+
+#### **❓ of the 📅**: **What’s the best pizza topping? 🍕**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Rumors - Orbits
+2. Explore - Graphing Orbit Data
+3. Explore - Orbit Simulation
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe orbital paths of planets_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2024.10.21 **Regents Earth Science**
 
 ##### **❓ of the 📅**: **Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?**

@@ -253,3 +253,80 @@ Write your analysis answers on a whiteboard and be prepared to share out as a gr
 # Elaborate: What makes the Jovian Planets so gassy?
 
 ---
+
+
+# Orbital Motion <!--fit--->
+
+---
+
+# Silent Writing ✍️ 
+
+## What are the characteristics of orbits in our solar system? What’s the same about them? What’s different?
+
+---
+
+# Post-it
+
+## On a Post-It note, write down the characteristic that you are most confident about or is most interesting.
+
+---
+
+# Rumors 
+
+1. Say your rumor outloud to a partner
+2. Listen to their rumor
+3. EXCHANGE post it notes (the rumor)
+4. Find a new partner to share your new rumor to
+
+### Share with as many people in the class as you can in **:stopwatch: 3 minutes**
+
+
+---
+
+# Class Share
+
+## What was the best rumor your heard?
+
+
+---
+
+
+# Graphing
+
+## How does the amount of time it takes for an object to orbit around the Sun change with distance from the Sun?
+
+---
+
+# Graphing Data 
+
+
+| Planet | Average Dist. from the Sun (AU) | Period of Revolution (Years) | 
+|---|---|---|
+| Earth | 1 | 1 | 
+| Juptier | 5.203 | 11.864 | 
+| Saturn | 9.539 | 29.456 |
+| Uranus | 19.18 | 84.07 |
+| Neptune | 30.06 | 164.81 | 
+
+
+
+---
+
+# Orbit Simulator
+
+
+- What patterns do you notice in the relationship do you see between the velocity at which an object orbits and its distance from the Sun?
+- What happens to planet X when you vary its distance from the Sun? What patterns do you observe?
+- What is the shape of most of the orbits in our solar system? Are there any exceptions?
+- What are some ways that the motion of an object with a less circular (more oval like) orbit is different than one with a very circular orbit? (velocity varies more, temperature changes more)
+
+---
+
+# Orbit Simulator Controls
+
+1. Adjust the controls of the planet (distance and velocity) to try and match the orbits of the different planets
+2. What patterns do you notice in the relationship do you see between the velocity at which an object orbits and its distance from the Sun?
+3. What is the shape of most of the orbits in our solar system? Are there any exceptions?
+4. What are some ways that the motion of an object with a less circular (more oval like) orbit is different than one with a very circular orbit? (velocity varies more, temperature changes more)
+
+--- 

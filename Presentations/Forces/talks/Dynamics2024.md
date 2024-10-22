@@ -580,7 +580,7 @@ None
 
 ---
 
-# $F_g$ Lab 
+# Gravity $F_g$ 
 
 ## Notes:
 
@@ -590,6 +590,51 @@ None
     * Measured in N/kg 
     * changes based on planet and location on that planet
     * _near the surface of the Earth_ $g = 9.8 \textrm{ N/kg}$
+
+
+---
+
+
+# Solving Force Problems <!--fit--->
+
+# Quantitatively 🧮 <!--fit--->
+
+---
+
+# Try it - Mild 🫑
+
+Two giant holiday ornaments are hanging on Mr. Porter's front porch as show in the diagram to the right. 
+
+1. Draw the FBD for each ornament. 
+2. Determine the value of **all** of the forces. 
+
+![bg fit right](../figures/tensionmild.png)
+
+---
+
+# Medium 🌶️
+
+In another episode of Don't Do This At Home, Jason secures a strong cable to two dead trees in the woods behind his home and attempts to jump-start his tight-rope walking career. His first attempt ends in the rather precarious position shown in the diagram. The rope makes an angle of 10° with the horizontal. Jason has a mass of 70 kg. Determine the tension in the cable.
+
+![bg fit right:35%](../figures/tensionmedium.png)
+
+---
+
+<!--- footer: <br>--->
+
+## Spicy 🌶️🌶️🌶️
+
+Tarzan, much to his dismay, gets his loincloth stuck on a branch. He’s left hanging with the vine pulling upward at a $40^\circ$ angle and his loincloth pulling him horizontally to the right.
+
+1. Draw FBD for Tarzan
+2. Write the equation for the vertical forces on Tarzan ($\Sigma F_y =$) and horizontal forces ($\Sigma F_x =$)
+3. Tarzan is 75 kg what is his weight?
+4. Determine the tension in the vine and his loincloth. 
+
+
+![bg fit right:22%](../figures/tarzan.png)
+
+
 
 ---
 
@@ -743,45 +788,6 @@ $$\boxed{|\vec{F}_s| = k |\vec{x}|}$$
 # 🤔 🏋️ 📖 ✍️ 🔨 <!--fit--->
 
 ---
-
-# Solving Force Problems <!--fit--->
-
-# Quantitatively <!--fit--->
-
----
-
-# Try it - Mild 🫑
-
-Two giant holiday ornaments are hanging on Mr. Porter's front porch as show in the diagram to the right. 
-
-1. Draw the FBD for each ornament. 
-2. Determine the value of **all** of the forces. 
-
-![bg fit right](../figures/tensionmild.png)
-
----
-
-# Medium 🌶️
-
-In another episode of Don't Do This At Home, Jason secures a strong cable to two dead trees in the woods behind his home and attempts to jump-start his tight-rope walking career. His first attempt ends in the rather precarious position shown in the diagram. The rope makes an angle of 10° with the horizontal. Jason has a mass of 70 kg. Determine the tension in the cable.
-
-![bg fit right:35%](../figures/tensionmedium.png)
-
----
-
-<!--- footer: <br>--->
-
-## Spicy 🌶️🌶️🌶️
-
-Tarzan, much to his dismay, gets his loincloth stuck on a branch. He’s left hanging with the vine pulling upward at a $40^\circ$ angle and his loincloth pulling him horizontally to the right.
-
-1. Draw FBD for Tarzan
-2. Write the equation for the vertical forces on Tarzan ($\Sigma F_y =$) and horizontal forces ($\Sigma F_x =$)
-3. Tarzan is 75 kg what is his weight?
-4. Determine the tension in the vine and his loincloth. 
-
-
-![bg fit right:22%](../figures/tarzan.png)
 
 
 ---

@@ -15,7 +15,66 @@ math: mathjax
 
 ---
 
+<!--- class: schodack--->
+
+### 2024.10.22 **AP Physics** Do Now
+
+![bg fit right:40%](image-9.png)
+
+The forces exerted on an object at a particular instant are represented in the free-body diagram. The magnitude of each force is drawn to scale. A student claims that the vector sum of the forces on the object is equal to zero. Is the student’s claim valid? Why or why not?
+
+---
+
 <!--- class: halloween--->
+
+# 2024.10.22 **AP Physics**
+
+##### **❓ of the 📅**: What’s the best pizza topping? 🍕
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. FBD Card Sort
+3. Practice with FBDs
+4. Solving Balanced force problems with FBDs 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _2.2.B Describe the forces exerted on an object or system using a free-body diagram._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Quantitative Force Problem Solving
+
+## Mild 🫑
+
+[Calculating Net Force (No Angles)](https://www.physicsclassroom.com/calcpad/launch/CPNL3)
+[Finding Force Components](https://www.physicsclassroom.com/calcpad/launch/CPF2D1)
+
+
+## Medium 🌶️
+
+[Adding Force Vectors](https://www.physicsclassroom.com/calcpad/launch/CPF2D2)
+[Equilibrium 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D4)
+
+## Spicy 🔥
+
+[Equilibrium 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D5)
+
+---
 
 # 2024.10.21 **AP Physics**
 
