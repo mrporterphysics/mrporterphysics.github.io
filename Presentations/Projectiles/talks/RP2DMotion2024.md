@@ -14,6 +14,20 @@ math: mathjax
 
 ---
 
+# Contents:
+
+1. [Vector Quantities](#vector-quantities)
+2. [Vector Component Math](#vector-components-math)
+3. [Vector Components Practice](#practice)
+4. [Adding Vectors](#adding-vectors)
+5. [Adding Perpendicular Vectors Example](#adding-perpendicular-vectors)
+6. [Practice Adding Perpendicular Vectors](#practice-1)
+7. [Adding Angled Vectors](#adding-angled-vectors)
+8. [Angled Vectors Addition Practice](#practice-2)
+
+
+---
+
 # **Review:** Vectors  <!--fit--->
 
 # :arrow_upper_left: ↗️ ↘️ ⬆️ ⬇️ <!--fit--->
@@ -190,13 +204,131 @@ If $\vec{C} = \vec{A} + \vec{B}$...
 
 ---
 
+### Adding Perpendicular Vectors
+
+Mac and Tosh are doing the Vector Walk Lab. Starting at the door of their physics classroom, they walk 2.0 meters, south. They make a right hand turn and walk 16.0 meters, west. They turn right again and walk 24.0 meters, north. They then turn left and walk 36.0 meters, west. What is the magnitude of their overall displacement?
+
+_A graphical representation of the given problem will help visualize what is happening. The diagram below depicts such a representation._
+
+![center w:800](image-7.png)
+
+---
+
+## Step 1: Tip-to-tail
+
+
+![center w:650](image-8.png)
+
+---
+
+## Step 2: Sum $X$ and $Y$ directions
+
+![center w:650](image-9.png)
+
+---
+
+
+
 # Practice 🎯 <!--fit--->
 
 ## [Adding 2 Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP5)
 
 ## [Adding 3 or More Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP6)
 
+
 ---
+
+# Adding Angled Vectors
+
+Max plays middle linebacker for South's football team. During one play in last Friday night's game against New Greer Academy, he made the following movements after the ball was snapped on third down. First, he back-pedaled in the southern direction for 2.6 meters. He then shuffled to his left (west) for a distance of 2.2 meters. Finally, he made a half-turn and ran downfield a distance of 4.8 meters in a direction of 240° counter-clockwise from east (30° W of S) before finally knocking the wind out of New Greer's wide receiver. Determine the magnitude and direction of Max's overall displacement.
+
+---
+
+# Visually
+
+<div class='columns'>
+<div>
+
+![center w:600](image-10.png)
+
+</div>
+ 
+<div>
+
+![center w:400](image-11.png)
+
+</div>
+</div>
+
+---
+
+### How to Solve...Find Components of Angled Vector
+
+![center w:500](image-12.png)
+
+<div class='columns'>
+<div>
+
+This..
+
+![center w:500](image-13.png)
+
+</div>
+ 
+<div>
+
+Becomes...
+
+![alt text w:500](image-14.png)
+
+</div>
+</div>
+
+---
+
+### Summing the Components
+
+
+<div class='columns'>
+<div>
+
+![center w:600](image-14.png)
+
+</div>
+ 
+<div>
+
+![center w:600](image-15.png)
+
+</div>
+</div>
+
+---
+
+# Adding Angled Vectors 
+
+## Make a Chart
+
+| Vector | $x$ component | $y$ compnents | 
+|---|---|---|
+|$A$ | | |
+|$B$| | | 
+|$\vdots$ | | | 
+|Resultant | $A_x + B_x + \dots$ | $A_y + B_y + \dots$ |
+
+
+---
+
+# 🎯 Practice 
+
+## [Adding Non-Perpendicular Vectors 1](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
+
+## [Adding Non-Perpendicular Vectors 2](https://www.physicsclassroom.com/calcpad/launch/CPVP8)
+
+
+
+---
+
 
 # [Riverboat Problems](https://www.physicsclassroom.com/PhysicsClassroom/media/interactive/RiverBoatSim/index.html)
 
@@ -222,21 +354,3 @@ A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
 ---
 
 # [Riverboat Practice](https://www.physicsclassroom.com/calcpad/launch/CPVP10) <!--fit--->
-
-
-
----
-
-# Adding Angled Vectors 
-
-## Make a Chart
-
-| Vector | $x$ component | $y$ compnents | 
-|---|---|---|
-|$A$ | | |
-|$B$| | | 
-|$\vdots$ | | | 
-|Resultant | $A_x + B_x + \dots$ | $A_y + B_y + \dots$ |
-
-
-

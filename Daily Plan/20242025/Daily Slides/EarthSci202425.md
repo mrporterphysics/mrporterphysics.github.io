@@ -17,6 +17,37 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.23 **Earth Science**
+
+##### **❓ of the 📅**: If you invited dragons 🐉 to a taco party, would you give them 🌶️ spicy salsa? 🥵🔥
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Orbits Simulation
+2. Elliptical Orbits
+3. Ellipse Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model orbits with ellipses_
+
+🥅 _Calculate the eccentricity of an ellipse_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.22 **Earth Science**
 
 #### **❓ of the 📅**: **What’s the best pizza topping? 🍕**

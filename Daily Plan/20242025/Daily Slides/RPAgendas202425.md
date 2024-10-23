@@ -15,6 +15,66 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.23 **Regents Physics**
+
+##### **❓ of the 📅**: **If you invited dragons to a taco party, would you give them spicy salsa?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Adding 3 or More Perpendicular Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP6)
+2. [Adding Vectors at angles](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
+3. [Bonus Vectors](https://www.physicsclassroom.com/calcpad/launch/CPVP8)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Add vectors at an angle_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.10.23 **Regents Physics**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review on Adding Vectors
+2. Vector Addition Practice:
+    - Right angles
+    - With Components
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Add Vectors_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.21 **Regents Physics** Do Now
 
 #### [(Click this link) Vector Components 2](https://www.physicsclassroom.com/calcpad/launch/CPVP4)

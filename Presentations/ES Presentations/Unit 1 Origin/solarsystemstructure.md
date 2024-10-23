@@ -330,3 +330,245 @@ Write your analysis answers on a whiteboard and be prepared to share out as a gr
 4. What are some ways that the motion of an object with a less circular (more oval like) orbit is different than one with a very circular orbit? (velocity varies more, temperature changes more)
 
 --- 
+
+
+# Kepler's Laws 
+
+1. Law of Orbits: 
+    * All planets orbit in ellipses
+    * Sun at one focus
+2. Law of Equal Areas
+    * Planets Sweep out equal areas in equal times
+    * Speed Varies in Orbit, faster closer to the Sun
+3. Law of Periods
+    * $T^2 = a^3$
+    * Longer orbital paths = longer orbital periods
+    * Double Distance, the period more than doubles
+
+
+
+
+---
+
+# Side Story
+
+<div class='columns'>
+<div>
+
+![center w:350](image-27.png)
+
+Johannes Kepler
+
+</div>
+ 
+<div>
+
+![center w:350](image-28.png)
+
+Tycho Brahe
+
+</div>
+</div>
+
+<!--- 
+
+Ah yes - this is the fascinating story of Kepler and Tycho Brahe! Let me create some slides about this historical drama.
+
+# The Drama Behind Kepler's Laws: Tycho Brahe's Data
+
+---
+
+## Tycho Brahe (1546-1601)
+
+### The Master Observer
+* Danish nobleman and astronomer
+* Built Uraniborg - world's best observatory
+* Created most accurate astronomical data of his time
+* Observed without telescopes - used massive instruments
+* Spent 20+ years collecting precise planetary data
+* Especially detailed observations of Mars
+
+---
+
+## The Partnership
+
+### How They Met:
+* 1600: Kepler becomes Brahe's assistant in Prague
+* Brahe was Imperial Mathematician to Rudolf II
+* Kepler was a brilliant mathematician but poor observer
+* Brahe had data but needed mathematical analysis
+
+### The Arrangement:
+* Brahe gave Kepler limited access to data
+* Only shared Mars observations at first
+* Kept most data secret - his life's work
+* Wanted Kepler to prove Brahe's own model of the universe
+
+---
+
+## The Drama
+
+### Brahe's Sudden Death:
+* October 1601: Brahe dies suddenly
+* Possibly from mercury poisoning
+* Modern tests confirmed mercury in his beard
+
+### The Data Transfer:
+* Kepler quickly takes possession of data
+* Claims he was named Brahe's successor
+* Brahe's family disputes this
+* Legal battles over ownership begin
+
+---
+
+## The Controversy
+
+### Did Kepler "Steal" the Data?
+* Technically inherited position of Imperial Mathematician
+* But may have taken more data than intended
+* Brahe's family tried to reclaim the observations
+* Kepler refused to return all materials
+
+### Modern Perspective:
+* Not exactly theft, but ethically questionable
+* Kepler did credit Brahe extensively
+* Called himself "standing on the shoulders of giants"
+* Without Kepler's analysis, data might have been wasted
+
+---
+
+## The Legacy
+
+### The Perfect Partnership (After Death):
+* Brahe: World's best naked-eye observer
+* Kepler: Brilliant mathematical analyst
+* Together (though not as planned) revolutionized astronomy
+
+### The Result:
+* Kepler spent 20+ years analyzing Brahe's data
+* Particularly Mars data led to discovery of elliptical orbits
+* Published the three laws between 1609-1619
+* Changed our understanding of the solar system forever
+
+Would you like me to expand on any part of this historical drama? There are more details about their relationship and the subsequent legal battles if you're interested!
+--->
+
+---
+
+# Elliptical Orbits <!--fit--->
+
+---
+
+# Revolution 
+
+* The motion of one body around another body
+* Example: Earth's yearly journey around the Sun 
+
+![bg fit right](../Unit%201%20Origin/Earth_tilt_animation.gif)
+
+---
+
+# Orbit 
+
+* The path that one object takes as it revolves around another object
+* In our solar system: paths planets take around the Sun
+
+![bg fit right](image-26.png)
+
+---
+
+# Ellipse 
+
+* A closed curve where the sum of distances from any point on the curve to two fixed points (foci) is constant
+* All planetary orbits are elliptical
+
+![bg fit right](image-25.png)
+
+---
+
+# Eccentricity
+
+* A measure of how much an ellipse deviates from being perfectly circular
+* Describes how "stretched out" or "squashed" an ellipse is
+
+![bg fit right](../Unit%201%20Origin/Animation_of_Orbital_eccentricity.gif)
+
+---
+
+# Eccentricity
+
+## Formula: 
+
+$$\textrm{Eccentricity} = \frac{\textrm{distance between foci}}{\textrm{length of major axis}}$$
+
+![bg fit right](../Unit%201%20Origin/Animation_of_Orbital_eccentricity.gif)
+
+---
+
+# Eccentricity 
+
+* Always between 0 and 1
+* 0 ➡️ Perfect Circle ⭕
+* 1 ➡️ Straight line |
+* Most Planetary orbits are closer to 0
+    * Earth: 0.017
+    * Venus: 0.007 
+    * Mercury: 0.206 
+
+![bg fit right](../Unit%201%20Origin/Animation_of_Orbital_eccentricity.gif)
+
+---
+
+# Label Your Ellipse
+
+![center](image-25.png)
+
+---
+
+# The Sun's Role
+
+* One focus of every planetary orbit is occupied by the Sun
+* This is due to the Sun's gravitational influence
+
+---
+
+# Orbital Points
+
+## Perihelion
+
+* The point in orbit closest to the Sun
+* Planet moves fastest at this point
+
+## Aphelion
+
+* The point in orbit farthest from the Sun
+* Planet moves slowest at this point
+
+
+![bg fit right:40%](image-26.png)
+
+---
+
+# How to draw an ellipse
+
+<div class='columns'>
+<div>
+
+![center w:600](../Unit%201%20Origin/ellipsedraw.gif)
+
+</div>
+ 
+<div>
+
+![center](../Unit%201%20Origin/Ellipse_Animation.gif)
+
+</div>
+</div>
+
+
+
+---
+
+# Ellipse Lab <!--fit--->
+
+## :dart: Goal: Mathematially Model Ellipses <!--fit--->
