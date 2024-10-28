@@ -15,7 +15,90 @@ math: mathjax
 
 ---
 
-<!--- class: schodack--->
+<!--- class: halloween --->
+
+# 2024.10.28 **AP Physics** Do Now
+
+A 0.5-kg ball is suspended from a ceiling by two strings. The ball is at rest.
+
+(a) Is the tension in string 1 (i) greater than, (ii) less than, or (iii) the same as the tension in string 2? 
+
+Explain your reasoning.
+
+![center](image-10.png)
+
+---
+
+<!--- class: halloween --->
+
+# 2024.10.28 **AP Physics**
+
+##### **❓ of the 📅**: **What smell brings back great memories?**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now
+2. Fan Cart N2L Lab
+3. Test & Test Correction Process
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create a mathematical model between force and acceleration_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Test Corrections - Notes and FAQs
+
+- Usually about a week to complete
+- You **cannot** do them at home or outside of the classroom (AP Police will find us)
+- No I will not tell you what you did before
+- You may come work during study hall -> But I will not be able to help you if I have a class. 
+    - take your test and work on it in the breakout space outside of my classroom, or in the middle room.
+- Curve is $\sqrt{\frac{\text{points earned} + \text{1/2 points back}}{\text{total points}}}$
+
+---
+
+<!--- _footer: <br> --->
+
+# Test Corrections
+
+1. Determine correct answer for incorrect questions
+    + For FRQ you need to correct the entire part (i.e. part (a)) if you lost *any* points
+    + No you cannot see what you put before - start from scratch
+2. For MC questions you must provide a justification 
+    - Start with a **fact of physics** "_slope of VT is acceleration_" or "_area of VT is displacement_"
+    - Draw a diagram to help (i.e. draw a VT graph)
+    - Try to use a claim evidence reasoning format to write your justification
+4. Finally, compare your new, correct answers to your test and determine if your mistake was one of the 4 C's: clueless, careless, conceptual, or calculation.
+
+---
+
+# **Test Corrections Summary**
+
+4. Look for trends about what your test performance:
+    - Were there certain types of questions you missed?
+    - Do you need to review/relearn/learn some material that was tested?
+        - What learning mastery standard do you think that material aligns with?
+    - Was there a common mistake you made?
+    - Summarize
+5. Meet with Mr. Porter to discuss the trends **before** you turn in your corrections.
+
+
+---
 
 ### 2024.10.22 **AP Physics** Do Now
 

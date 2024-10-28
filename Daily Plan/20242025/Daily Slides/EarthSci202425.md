@@ -20,7 +20,7 @@ math: mathjax
 
 # 2024.10.28 **Earth Science**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: What smell brings back great memories?
 
 <div class ='columns'>
 

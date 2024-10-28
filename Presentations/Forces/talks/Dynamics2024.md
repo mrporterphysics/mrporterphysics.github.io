@@ -49,16 +49,17 @@ strong{
 4. [Interactions & Force Names](#force-names)
 5. [Force Diagrams](#force-diagrams)
 5. [Force Interactions](#force-interactions)
+5. [Unbalanced Force Lab](#unbalanced-force-lab)
 6. [Tension Force Problems](#solving-force-problems)
-7. [Fan Cart Lab](#fan-cart-lab)
+
 
 
 </div>
 
 <div>
 
-8. [Inclined Planes](#inclined-planes)
-9. [Friction](#Friction)
+10. [Inclined Planes](#inclined-planes)
+11. [Friction](#Friction)
 
 
 </div>
@@ -580,6 +581,50 @@ None
 
 ---
 
+
+# Unbalanced Force Lab <!--fit--->
+
+# What variables affect the **acceleration** of the fan cart?  <!--fit--->
+
+---
+
+# Unbalanced Forces
+
+Design an experiment(s) to find a mathematical relationship between those variables and acceleration 
+
+Consider:
+
+- What will you measure? 
+- How will you measure it? 
+- What tools can you use to limit uncertainty?
+- How can you design your experiment to limit uncertainty?
+
+
+---
+
+# Before you begin... <!--fit--->
+
+## 🤔 How will you measure the fan force for each settings?
+
+---
+
+## Unbalanced Force Lab
+
+_Create a mathematical model relating mass, force, and acceleration._
+
+#### Essential Questions:
+
+1. How is **mass** related to the **acceleration** for a *constant net force*?
+2. How is **net force** related to the **acceleration** for a *constant mass*?
+
+#### Notes:
+
+- Be sure to take at least 8 data points
+- Design **two** experiments to answer the above questions
+- Linearize data in analysis
+
+---
+
 # Gravity $F_g$ 
 
 ## Notes:
@@ -594,10 +639,10 @@ None
 
 ---
 
-
 # Solving Force Problems <!--fit--->
 
 # Quantitatively 🧮 <!--fit--->
+
 
 ---
 
@@ -800,39 +845,6 @@ Draw a FBD and vector addition diagram for the fan cart for the following three 
 2. Fan on, held in place by Mr. Porter
 3. Fan on, moving on level track 
 
----
-
-# Fan Cart Lab <!--fit--->
-
-# What variables affect the **acceleration** of the fan cart?  <!--fit--->
-
----
-
-# Fan Cart 
-
-Design an experiment(s) to find a mathematical relationship between those variables and acceleration 
-
-Consider:
-
-- What will you measure? 
-- How will you measure it? 
-- What tools can you use to limit uncertainty?
-- How can you design your experiment to limit uncertainty?
-
-
----
-
-# Before you begin... 
-
-## 🤔 How will you measure the fan force for each of the three settings?
-
----
-
-# Fan Cart Lab 
-
-## Essential Questions:
-1. How is mass related to the acceleration for a *constant Net Force*?
-2. How is Net Force related to acceleration for a *constant mass*?
 
 ---
 

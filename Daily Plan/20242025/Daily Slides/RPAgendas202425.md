@@ -15,6 +15,34 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.29 **Regents Physics**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Treasure Hunt
+2. Free Fall Five on Pivot -> Homework if you do not finish
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Freefall motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.24 **Regents Physics**
 
 ##### **❓ of the 📅**: **What is one thing you thought was weird or ridiculous until you gave it a try?**
