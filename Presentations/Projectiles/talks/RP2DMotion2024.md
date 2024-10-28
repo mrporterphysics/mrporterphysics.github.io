@@ -238,6 +238,40 @@ _A graphical representation of the given problem will help visualize what is hap
 
 ---
 
+# Vector Treasure Hunt 🪙
+
+1. Create a Vector Map (draw this on the map of the school) -> start at one of the entrances of the school.
+2. Record all vectors in component form and Magnitude-direction from (use the convention degrees clockwise from North...this is the setting your iPhone compass uses)
+3. Exchange vector directions with another group and draw their vector map on your grid in another color or symbol (i.e. dotted line)
+4. Calculate the displacement of the the vector map
+5. Go walk the map and record the landmarks at the end of each vector.
+
+---
+
+# Vector Descriptions
+
+- Component Form:
+    - $\vec{a} = \langle a_x, a_y\rangle$
+    - $\vec{a} = \langle 20,10 \rangle$
+- Magnitude-direction form:
+    - $|\vec{a}|=22.4$ units at $\theta = 26.6$ degrees
+
+
+![bg fit right](image-16.png)
+
+---
+
+# In Your Lab Notebook
+
+1. Tape/staple in vector maps (you can fold in half to fit)
+2. Show any calculations you make for any individual vectors, and the resultant displacement for your map and the exchanged map you receive. 
+3. A brief reflection
+    - Challenges faced in creating/following the vectors
+    - Real-world applications of vector navigation
+    - How this activity enhanced your understanding of vectors
+
+---
+
 # Adding Angled Vectors
 
 Max plays middle linebacker for South's football team. During one play in last Friday night's game against New Greer Academy, he made the following movements after the ball was snapped on third down. First, he back-pedaled in the southern direction for 2.6 meters. He then shuffled to his left (west) for a distance of 2.2 meters. Finally, he made a half-turn and ran downfield a distance of 4.8 meters in a direction of 240° counter-clockwise from east (30° W of S) before finally knocking the wind out of New Greer's wide receiver. Determine the magnitude and direction of Max's overall displacement.

@@ -15,6 +15,33 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.24 **Regents Physics**
+
+##### **❓ of the 📅**: **What is one thing you thought was weird or ridiculous until you gave it a try?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Lab: Vector Treasure Hunt
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create & Read a Vector Map_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.23 **Regents Physics**
 
 ##### **❓ of the 📅**: **If you invited dragons to a taco party, would you give them spicy salsa?**
