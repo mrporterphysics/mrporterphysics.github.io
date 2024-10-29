@@ -17,7 +17,7 @@ math: mathjax
 
 # 2024.10.29 **Regents Physics**
 
-##### **❓ of the 📅**: QUESTION
+##### **❓ of the 📅**: Who is the most competitive person you know?
 
 <div class ='columns'>
 

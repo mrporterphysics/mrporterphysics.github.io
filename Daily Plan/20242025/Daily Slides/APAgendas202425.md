@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2024.10.29 **AP Physics**
+
+##### **❓ of the 📅**: Who is the most competitive person you know?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Unbalanced Force Fan Cart Lab
+2. Whiteboard and Present Results
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Discover mathematical model for unbalanced forces._
+
+### 📆 Upcoming
+
+- Test Corrections Due: 11/08
+
+</div>
+</div>
+
+---
+
 # 2024.10.28 **AP Physics** Do Now
 
 A 0.5-kg ball is suspended from a ceiling by two strings. The ball is at rest.

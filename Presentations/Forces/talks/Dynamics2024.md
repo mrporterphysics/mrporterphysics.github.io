@@ -625,6 +625,36 @@ _Create a mathematical model relating mass, force, and acceleration._
 
 ---
 
+### 🎯 Board Meeting Goal: Develop a mathematical model relating **net force**,  **mass**, and **acceleration**
+
+<div class='columns'>
+<div>
+
+Structure:
+
+1. How did you run your experiment? 
+2. What are your results for each experiment?
+    - What is your slope/intercept? What does it represent? How does it compare to controls?
+
+</div>
+ 
+<div>
+
+Questions to ask peers
+
+- How do you know that? 
+- What is your evidence for...
+- Why do you think...
+- How does your data support...
+- Thats interesting our data shows the opposite...
+
+</div>
+</div>
+
+
+
+---
+
 # Gravity $F_g$ 
 
 ## Notes:

@@ -17,6 +17,34 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2024.10.29 **Earth Science**
+
+##### **❓ of the 📅**: Who is the most competitive person you know?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Scale of Solar System Lab
+2. Finish Regents Practice on Canvas
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the scale of the solar system._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2024.10.28 **Earth Science**
 
