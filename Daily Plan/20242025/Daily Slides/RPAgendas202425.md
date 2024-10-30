@@ -15,6 +15,34 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.30 **Regents Physics**
+
+##### **❓ of the 📅**: **What’s the weirdest food you’ve eaten?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Free Fall Motion Notes
+2. Free Fall Problems
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.29 **Regents Physics**
 
 ##### **❓ of the 📅**: Who is the most competitive person you know?

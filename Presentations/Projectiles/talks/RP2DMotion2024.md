@@ -16,6 +16,12 @@ math: mathjax
 
 # Contents:
 
+
+
+
+<div class='columns'>
+<div>
+
 1. [Vector Quantities](#vector-quantities)
 2. [Vector Component Math](#vector-components-math)
 3. [Vector Components Practice](#practice)
@@ -23,7 +29,17 @@ math: mathjax
 5. [Adding Perpendicular Vectors Example](#adding-perpendicular-vectors)
 6. [Practice Adding Perpendicular Vectors](#practice-1)
 7. [Adding Angled Vectors](#adding-angled-vectors)
+
+
+</div>
+ 
+<div>
+
 8. [Angled Vectors Addition Practice](#practice-2)
+9. [Free Fall](#free-fall)
+
+</div>
+</div>
 
 
 ---
@@ -363,6 +379,117 @@ Becomes...
 
 ---
 
+# Free Fall Motion <!--fit--->
+
+---
+
+# Free Fall 
+
+## An object in **free fall** experiences *only* the force of gravity.
+
+* This means that is accelerates at $g$ which is referred to as "_acceleration due to gravity_" or "_gravitational field strength_
+* Units N/kg and m/s/s are the ***same***
+
+---
+
+
+<iframe width="1150" height="715" src="https://www.youtube.com/embed/E43-CfukEgs?si=8DZF93LgcQA3LuZy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Free Fall Facts
+
+## $a = g = -9.8 \text{ m/s/s}$ &rarr; Always when near the surface of the Earth
+
+---
+
+# Free Fall Facts
+## If object is _dropped_ $v_i = 0$ 
+
+---
+
+# Free Fall Facts
+## If object is projected upwards it will slow down as it rises. The y-velocity will be zero at its heights point or peak
+
+### You can treat $v_f =0$ at the peak
+    
+---
+
+# Free Fall Facts
+
+## If an object is projected upwards the velocity at which it is projected is equal and magnitude and opposite in direction when it returns to its initial height. 
+
+### i.e. a ball projected upwards at $+30 \text{m/s}$ will have a downward velocity of $-30 \text{m/s}$ when it returns to its launch height
+
+---
+
+# Problem-Solving Process
+
+1) Draw a diagram/picture of physical situation
+2) Sketch Physics motion graphs (XT & VT)
+3) Fill out cross diagram with givens and unknowns 
+    - (remember $a = g = -9.8 \text{ m/s/s}$ for all free fall questions)
+4) Identify equation with cross diagram
+5) Substitute and solve
+
+---
+
+
+# Free Fall Kinematics 
+
+1. A ball is thrown downward with an initial speed of 20 m/s on Earth.
+    1. Calculate the displacement of the ball during the first 4 seconds.
+    2. Calculate the time required to reach 50 m/s.
+    3. Calculate the time required to reach 50 m/s.
+    4. Calculate the speed after falling 100 meters.
+
+---
+
+# Free Fall Kinematics 
+
+2. A rock is thrown upward with an initial speed of 15 m/s on Earth.
+    1. Calculate the rock's height after 1 second 
+    2. Calculate the time required for the rock to reach an upward speed of 3 m/s.
+    3. Calculate the time required for the rock to reach a downward speed of 5 m/s
+
+---
+
+# Free Fall - Calculator Free <!--fit--->
+
+## [🔗 **Free Fall 1** 🔗](https://www.physicsclassroom.com/calcpad/launch/CPK19)
+
+---
+
+# Free Fall Kinematics 
+
+3. NASA operates a drop tower in which they test the response of materials to situations in which the only force which acts upon them is gravity. Objects are dropped from rest and free fall for 5.27 seconds through the drop tower.
+    1. Determine the distancw which the objects fall through the tower. 
+
+---
+
+# [🔗 Free Fall - Dropped Objects 🔗](https://www.physicsclassroom.com/calcpad/launch/CPK20 ) <!--fit--->
+
+---
+
+# Free Fall Kinematics 
+
+4. During a parachuting mishap (it could be worse), a parachutist who is falling at 12.2 m/s drops his new camera from an altitude of 78.9 m. What speed will the camera have when it strikes the ground?
+5. A ball is thrown vertically upwards with a speed of 44.5 m/s. 
+    1. How high does the it rise above the point of release?
+    2. How much time does it take the ball to reach the peak of its trajectory?
+
+---
+
+## Additional Free Fall Practice 
+
+### [Free Fall 3](https://www.physicsclassroom.com/calcpad/launch/CPK21)
+
+### [Free Fall 4](https://www.physicsclassroom.com/calcpad/launch/CPK22)
+
+### [Rocket Science](https://www.physicsclassroom.com/calcpad/launch/CPK23)
+
+---
+
 
 # [Riverboat Problems](https://www.physicsclassroom.com/PhysicsClassroom/media/interactive/RiverBoatSim/index.html)
 
@@ -372,6 +499,8 @@ Becomes...
 - How can we predict this **resultant velocity**?
 
 ![bg fit right:40%](image-5.png)
+
+
 
 ---
 
