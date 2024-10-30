@@ -13,9 +13,106 @@ math: mathjax
 
 ### 📆 2024-25
 
+
 ---
 
 <!--- class: halloween--->
+
+# 2024.10.31 **Earth Science** Do Now 👻
+
+1. Finish drawing the orbit and habitable zone for your celestial object. 
+2. Determine if your celestial object falls in the habitable zone. 
+3. Be prepared to present and defend your choice
+
+---
+
+# 2024.10.31 **Earth Science**
+
+##### **❓ of the 📅**: What was your best Halloween costume?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Do Now & Habitable Zones 
+2. Finding Earth 2.0 - Section 4 
+3. Scale and Structure of the Universe 
+4. Finding Earth 2.0 -  Section 5
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Find Earth 2.0_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<iframe width="1150" height="715" src="https://www.youtube.com/embed/gIbfYsQfNWs?si=VACRw2O_Tp_hP5D5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# 2024.10.30 **Earth Science**
+
+On your chromebooks research and read about "_the habitable zone_". Be prepared to describe this term to the class. 
+
+Consider:
+- what does it mean? 
+- what is Earth's habitable zone?
+- do other exoplanets fall in an habitable zone?
+
+---
+
+# 2024.10.30 **Earth Science**
+
+##### **❓ of the 📅**: What is the weirdest food you've tried?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Take out _**Orbital Motion**_ Packet
+1. Orbits and the habitable zone
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine if exoplanets orbit in the habitable zone_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Orbital Motion - Evaluate 
+
+1. Calculate the scaled distance between the foci for each celestial object
+2. Model your celestial objects ***Orbit*** and ***Habitable Zone***
+3. Determine if your celestial object stays in the habitable zone. 
+
+
+**Notes**:
+
+- I will bring you string to draw your ellipse on whiteboard. 
+- Also use your string and different colored markers to show your habitable zone
+
+---
 
 # 2024.10.29 **Earth Science**
 

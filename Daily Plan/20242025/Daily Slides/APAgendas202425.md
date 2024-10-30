@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2024.10.31 **AP Physics**
+
+##### **❓ of the 📅**: **What was your favorite Halloween costume?**
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+1. Finish Collecting Unbalanced Force Lab Data
+2. Board Meeting - Unbalanced forces, mass, and acceleration
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Discover mathematical model for unbalanced forces._
+
+### 📆 Upcoming
+
+- Test Corrections Due: 11/08
+
+</div>
+</div>
+
+---
+
 # 2024.10.29 **AP Physics**
 
 ##### **❓ of the 📅**: Who is the most competitive person you know?

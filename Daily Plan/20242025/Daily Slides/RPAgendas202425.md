@@ -15,6 +15,41 @@ math: mathjax
 ---
 <!--- class: halloween--->
 
+# 2024.10.31 **Regents Physics**
+
+##### **❓ of the 📅**: **What was your favorite Halloween costume?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Physics Facts
+2. Example Problem
+2. Free fall problem Solving:
+    - 🫑 Mild: **[Free Fall 2 - Dropped](https://www.physicsclassroom.com/calcpad/launch/CPK20)**
+    - 🌶️ Medium: **[Free Fall 3 - ⬆️⬇️](https://www.physicsclassroom.com/calcpad/launch/CPK21)**
+    - 🥵 Spicy: **[Free Fall 4 - ⬆️⬇️](https://www.physicsclassroom.com/calcpad/launch/CPK22)** 
+    - 🔥 Inferno:  **[Rocket Science](https://www.physicsclassroom.com/calcpad/launch/CPK23)**
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve Free Fall Problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.10.30 **Regents Physics**
 
 ##### **❓ of the 📅**: **What’s the weirdest food you’ve eaten?**
