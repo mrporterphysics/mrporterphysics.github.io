@@ -11,6 +11,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Creepster');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /*General Styles */
 
@@ -185,6 +189,7 @@ section.halloween{
   
   section.thanksgiving {
   background-color: #d35400; 
+  background: #d35400; 
   color:#fff;
   }
   
@@ -199,6 +204,11 @@ section.halloween{
   font-family: 'Lobster', sans-serif;
   text-shadow: 1px 1px 2px #cec8c8;
   
+  }
+
+  section.thanksgiving h2, section.thanksgiving h3, section.thanksgiving h4, section.thanksgiving h5{
+    color:#722d12; 
+    font-weight: 600;
   }
   
   section.thanksgiving h1 strong, section.thanksgiving h2 strong, section.thanksgiving h3 strong, section.thanksgiving h4 strong, section.thanksgiving h5 strong{

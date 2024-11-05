@@ -231,14 +231,28 @@ text-shadow: 0 0 20px #333;
 }
 
 section.thanksgiving {
-background-color: #d35400; 
-color:#fff;
-}
+  background-color: #d35400; 
+  background: #d35400; 
+  color:#fff;
+  }
 
+  
+  /* Style the header with a Thanksgiving theme */
+  section.thanksgiving h1 {
+  color: #722d12; /* White text */
+  font-family: 'Lobster', sans-serif;
+  text-shadow: 1px 1px 2px #cec8c8;
+  
+  }
 
-section.thanksgiving footer{
-color:#ffffff94;
-}
+  section.thanksgiving h2, section.thanksgiving h3, section.thanksgiving h4, section.thanksgiving h5{
+    color:#722d12; 
+    font-weight: 600;
+  }
+  
+  section.thanksgiving h1 strong, section.thanksgiving h2 strong, section.thanksgiving h3 strong, section.thanksgiving h4 strong, section.thanksgiving h5 strong{
+  color:#FFE32C;
+  }
 
 /* Style the header with a Thanksgiving theme */
 section.thanksgiving h1 {

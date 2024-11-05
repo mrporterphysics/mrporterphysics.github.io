@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+<!--- class: thanksgiving --->
+
+# 2024.11.01 **AP Physics**
+
+##### **❓ of the 📅**: If you were one of Snow White’s dwarfs, which one would you be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Data Analysis on Lab
+2. Whiteboard Results
+3. Board Meeting - Do your results support N2L?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Evaluate Newton's Second Law with lab data_
+
+### 📆 Upcoming
+
+- Test Corrections Due 11/07 
+
+</div>
+</div>
+
+---
+
 <!--- class: halloween --->
 
 # 2024.10.31 **AP Physics**

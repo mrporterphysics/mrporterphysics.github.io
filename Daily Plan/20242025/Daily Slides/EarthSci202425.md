@@ -16,7 +16,56 @@ math: mathjax
 
 ---
 
+<!--- class: thanksgiving --->
+
+# 2024.11.01 **Earth Science**
+
+##### **❓ of the 📅**: If you were one of Snow White’s dwarfs, which one would you be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Astronomy Review Whiteboard Brain Dump - ⏱️ 10 Minutes
+2. Astronomy Whiteboard Review - with notes - ⏱️ 10 minutes
+3. Compare with other boards
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review our Astronomy Unit_
+
+### 📆 Upcoming
+
+- Astronomy Test Wednesday
+
+</div>
+</div>
+
+---
+
+# Whiteboard Summary:
+
+- What do we need to know about Astronomy?
+    - What are the **BIG IDEAS**?
+    - What are some *important details*?
+- Use words and pictures
+- Don't just copy your notes - lots of words isn't great, try to summarize and simplify.
+
+
+_⚠️ Do this first **without** any notes. Then review your notes and add to your board_
+
+---
+
 <!--- class: halloween--->
+
+
+---
 
 # 2024.10.31 **Earth Science** Do Now 👻
 

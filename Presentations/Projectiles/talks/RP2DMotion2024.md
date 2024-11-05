@@ -37,6 +37,7 @@ math: mathjax
 
 8. [Angled Vectors Addition Practice](#practice-2)
 9. [Free Fall](#free-fall)
+10. [Horizontal Projectiles](#horizontal-projectiles)
 
 </div>
 </div>
@@ -490,6 +491,221 @@ Becomes...
 
 ---
 
+
+# Horizontal **Projectiles** <!--fit--->
+
+---
+
+Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
+
+![center](../figures/horzprojec1.png)
+
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
+
+Explain your reasoning.
+
+
+---
+
+
+Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
+
+![center w:500](../figures/horizprojec2.png)
+
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
+
+Explain your reasoning.
+
+---
+
+
+# **Launcher** Demo <!--fit--->
+
+
+---
+
+# Horizontal Projectiles 
+
+* A ***projectile*** is an object that *only* experiences a gravitational force
+* For _**horizontal projectiles**_ the $v_{0y} = 0$
+* We can separate motion in the $x$ and $y$ planes and solve separately
+
+---
+
+# Path of a Projectile 
+
+<div class='columns'>
+<div>
+
+![center w:650](image-17.png)
+
+</div>
+ 
+<div>
+
+![center w:650](image-18.png)
+
+</div>
+</div>
+
+---
+
+# Path of a Projectile
+
+<div class='columns'>
+<div>
+
+<br>
+
+![center w:650](image-19.png)
+
+</div>
+ 
+<div>
+
+![center w:550](image-20.png)
+
+</div>
+</div>
+
+---
+
+
+|                                                                                 | Horizontal Motion | Vertical Motion     |
+| ------------------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------- |
+| **Forces**<br>(Present? - Yes or No)<br>(If present, what dir'n?)       | No                                     | Yes<br>The force of gravity acts downward |
+| **Acceleration**<br>(Present? - Yes or No)<br>(If present, what dir'n?) | No                                     | Yes<br>$g$ is downward at 9.8 m/s/s       |
+| **Velocity**<br>(Constant or Changing?)                                     | Constant                               | Changing<br>(by 9.8 m/s each second)      |
+
+---
+
+## Horizontal and Vertical Velocity 
+
+![center w:750](image-21.png)
+
+
+---
+
+
+## Horizontal and Vertical displacement 
+
+![center w:740](image-22.png)
+
+
+
+
+---
+
+
+# Horizontally Launched Projectiles
+
+
+* Projectile launched with an initial horizontal velocity from an elevated position. 
+* Predictable unknowns include the initial speed of the projectile, the initial height of the projectile, the time of flight, and the horizontal distance of the projectile.
+
+![bg fit right:30%](image-23.png)
+
+---
+
+# Horizontal Projectils 
+
+<div class='columns'>
+
+<div>
+
+## X-Plane Motion
+
+- $v_x$ is ***constant***
+
+$$d = v_x t$$
+
+</div>
+
+<div>
+
+## Y-Plane Motion 
+
+- constant acceleration $a_y = g$
+
+$$d = v_{iy}t + \frac{1}{2}gt^2$$
+
+$$v_{fy} = v_{iy} + at$$
+
+$$v_{fy}^2 = v_{iy}^2 + 2ad$$
+
+</div></div>
+
+
+---
+
+# Problem-solving Process
+
+1) Read & sketch problem
+2) Identify given information & fill out double cross diagram 
+3) Identify the quantity you are solving for
+4) **Using either horizontal or vertical information, find the flight time of the projectile**
+5) With the time find the quantity you are solving for. 
+
+
+![bg fit right:40%](image-24.png)
+
+
+---
+
+
+# Example 
+
+A pool ball leaves a 0.60-meter high table with an initial horizontal velocity of 2.4 m/s. Predict the time required for the pool ball to fall to the ground and the horizontal distance between the table's edge and the ball's landing location.
+
+![bg fit right:40%](image-24.png)
+
+---
+
+# Practice 
+
+## A soccer ball is kicked horizontally off a 22.0-meter high hill and lands a distance of 35.0 meters from the edge of the hill. Determine the initial horizontal velocity of the soccer ball.
+
+
+---
+
+
+# Practice 
+
+In many locations, old abandoned stone quarries have become filled with water once excavating has been completed. While standing on a quarry wall, a boy tosses a piece of granite into the water below. If he throws the rock horizontally with a velocity of 3.0 m/s, and it strikes the water 4.5 meters away, how high above the water is the wall?
+
+---
+
+# Practice w/ Table 
+
+Suppose that an airplane flying 60 m/s, at a height of 300 meters, dropped a sack of flour. How far from the point of release would the sack have traveled when it struck the ground? Where will the plane be in relation to the sack when it hits the ground?
+
+---
+
+# Practice 
+
+A stone is thrown horizontally to the right at a speed of 17.2 m/s from the top of a cliff that is 91.4 m high. Consider up and to the right positive directions.
+
+1. How long does it take the stone to reach the bottom of the cliff?
+2. How far from the base of the cliff does the stone hit the ground?
+3. What is the horizontal component of the stone's velocity just before it hits the ground?
+4. What is the vertical component of the stone's velocity just before it hits the ground?
+
+---
+
+# <!--fit---> Marble Mini-Experiment
+
+1. Determine the launch velocity of your marble.
+
+Equipment:
+
+- Ruler track
+- Marble
+- Carbon paper
+- Meterstick
+
+2. Use to predict landing spot from new height (like off top of cabinets)
+
+---
 
 # [Riverboat Problems](https://www.physicsclassroom.com/PhysicsClassroom/media/interactive/RiverBoatSim/index.html)
 

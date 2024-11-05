@@ -13,6 +13,41 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
+
+<!--- class: thanksgiving --->
+
+# 2024.11.05 **Regents Physics**
+
+##### **❓ of the 📅**: **What was your favorite recess game from elementary school?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Introduction to Projectile Motion
+2. Projectile Practice
+3. Start Projectile Mini Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve Horizontally Fired Projectile problems_
+
+### 📆 Upcoming
+
+- Free Fall & Vector Quiz tomorrow
+- Buffet quiz tomorrow (you chose things you want to redo)
+
+</div>
+</div>
+
+---
+
 <!--- class: halloween--->
 
 # 2024.10.31 **Regents Physics**
