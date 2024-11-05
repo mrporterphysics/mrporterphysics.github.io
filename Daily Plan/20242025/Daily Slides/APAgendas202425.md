@@ -17,6 +17,38 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.06 **AP Physics**
+
+##### **❓ of the 📅**: **If you were to open a store, what would you sell?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Force of Gravity
+    - $F_g = mg$
+2. Solving N2L Problems Systematically 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve problems using N2L_
+
+### 📆 Upcoming
+
+- Buffet Quiz Tomorrow (Thursday) -> pick you non-mastered standards to reassess
+
+</div>
+</div>
+
+---
+
 # 2024.11.01 **AP Physics**
 
 ##### **❓ of the 📅**: If you were one of Snow White’s dwarfs, which one would you be?

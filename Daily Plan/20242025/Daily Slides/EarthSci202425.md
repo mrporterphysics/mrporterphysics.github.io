@@ -18,6 +18,34 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.05 **Earth Science**
+
+##### **❓ of the 📅**: What was your favorite recess game in elementary school.
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Test Review
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for test tomorrow_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.11.01 **Earth Science**
 
 ##### **❓ of the 📅**: If you were one of Snow White’s dwarfs, which one would you be?

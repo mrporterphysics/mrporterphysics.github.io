@@ -16,6 +16,38 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.06 **Regents Physics**
+
+##### **❓ of the 📅**: **If you were to open a store, what would you sell?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+    - Porter will hand out
+2. Buffet Quiz
+    - Select the quiz(zes) you want to take once you hand in your free fall and vector quiz
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Check your understanding of vectors and free fall motion_
+
+### 📆 Upcoming
+
+- Fact sheet quizzes start next week (Friday)
+
+</div>
+</div>
+
+---
+
 # 2024.11.05 **Regents Physics**
 
 ##### **❓ of the 📅**: **What was your favorite recess game from elementary school?**
