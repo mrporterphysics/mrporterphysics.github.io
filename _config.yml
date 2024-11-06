@@ -10,6 +10,8 @@ description: This website is designed to host resources for Mr. Porter's Physics
 breadcrumbs: true
 twitter:
   username: "mrporterphysics"
+include:
+  - /css/styles.css
 # plugins:
 #   - jekyll-paginate-v2
 #   - jekyll-sitemap
