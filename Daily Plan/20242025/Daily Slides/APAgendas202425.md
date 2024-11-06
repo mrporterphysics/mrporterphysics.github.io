@@ -49,6 +49,23 @@ math: mathjax
 
 ---
 
+<!--- _class: physics2024 --->
+
+# **Gravity: $\vec{F_g}$**
+
+## **Notes:**
+
+* Weight == $F_g$ == Force of Gravity...so $F_g = mg$
+* Weight is a **FORCE**, mass is scalar quantity
+* $g$ is the gravitational field strength
+    * Measured in N/kg 
+    * changes based on planet and location on that planet
+    * _near the surface of the Earth_ $g = 9.8 \textrm{ N/kg}$
+      * You can round this to $g = 10 \textrm{ N/kg}$
+
+
+---
+
 # 2024.11.01 **AP Physics**
 
 ##### **❓ of the 📅**: If you were one of Snow White’s dwarfs, which one would you be?

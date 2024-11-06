@@ -30,7 +30,9 @@ math: mathjax
     - Porter will hand out
 2. Buffet Quiz
     - Select the quiz(zes) you want to take once you hand in your free fall and vector quiz
-
+3. Projectile Practice:
+    - [Horizontal Projectiles 1](https://www.physicsclassroom.com/calcpad/launch/CPVP12)
+    - [Horizontal Projectiles 2](https://www.physicsclassroom.com/calcpad/launch/CPVP13)
 </div>
 
 <div>

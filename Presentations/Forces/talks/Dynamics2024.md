@@ -884,7 +884,7 @@ $$\boxed{\vec{a} = \frac{\Sigma \vec{F}}{m}}$$
 
 ---
 
-# Appling Newton's Second Law 
+# Applying Newton's Second Law 
 
 1. Draw Free Body Diagram
 1. Split Forces into x & y components 
