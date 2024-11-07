@@ -16,6 +16,7 @@ header_pages:
   - index.md
   - about.md
   - contact.md
+  - apphysics.md
 # plugins:
 #   - jekyll-paginate-v2
 #   - jekyll-sitemap
