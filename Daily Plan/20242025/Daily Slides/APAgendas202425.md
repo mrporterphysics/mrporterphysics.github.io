@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.07 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz and Quiz Buffet
+2. Solving N2L for angled questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve N2L with angled forces_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2024.11.06 **AP Physics**
 
 ##### **❓ of the 📅**: **If you were to open a store, what would you sell?**
