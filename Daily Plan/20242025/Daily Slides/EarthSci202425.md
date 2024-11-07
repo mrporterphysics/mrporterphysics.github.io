@@ -18,6 +18,33 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.06 **Earth Science**
+
+##### **❓ of the 📅**: **If you were to open a store, what would you sell?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Astronomy Test
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Show what you know about astronomy!_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.11.05 **Earth Science**
 
 ##### **❓ of the 📅**: What was your favorite recess game in elementary school.
@@ -369,7 +396,7 @@ Practice Day:
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Show what you know about astronomy!_
 
 ### 📆 Upcoming
 
@@ -642,7 +669,7 @@ Practice Day:
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Show what you know about astronomy!_
 
 ### 📆 Upcoming
 
