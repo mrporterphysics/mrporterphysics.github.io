@@ -1,3 +1,4 @@
+theme: minima
 markdown: kramdown
 title: Physics with Mr. Porter
 description: This website is designed to host resources for Mr. Porter's Physics Classes
@@ -6,6 +7,11 @@ twitter:
   username: "mrporterphysics"
 include:
   - css/styles.css
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
 # plugins:
 #   - jekyll-paginate-v2
 #   - jekyll-sitemap
