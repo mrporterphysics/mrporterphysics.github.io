@@ -12,6 +12,10 @@ head_include: |
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
+header_pages:
+  - index.md
+  - about.md
+  - contact.md
 # plugins:
 #   - jekyll-paginate-v2
 #   - jekyll-sitemap
