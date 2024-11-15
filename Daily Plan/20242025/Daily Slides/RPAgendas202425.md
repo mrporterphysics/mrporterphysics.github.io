@@ -16,6 +16,92 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.13 **Regents Physcis**
+
+##### **❓ of the 📅**: What slang are you really happy went out of fashion?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Horizontal Projectile Lab
+1. Projectile Motion Think Sheet
+2. Projectiles Fired at an Angle
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Projectile Motion and make predictions_
+
+🥅 _Model Projectile motion for things fired at an angle_
+
+### 📆 Upcoming
+
+- **Fact sheet quiz *Friday***
+
+</div>
+</div>
+
+
+---
+
+# 2024.11.12 **Regents Physics** Do Now
+
+## **The La Quebrada Cliff Divers provide daily entertainment for the crowds at Acapulco, Mexico. As a group of professional high divers, they dive off the cliff of La Quebrada and fall $46.2\textrm{ meters}$ to the water below. More than an act of bravery, the cliff divers must time their dive so that they hit the water when the crest of an incoming wave has arrived. Determine the speed with which Pedro must run off the cliff in order to land in the water a horizontal distance of $10.8\textrm{ meters}$ from the edge of the cliff.**
+
+---
+
+# 2024.11.12 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather live without heat and AC or live without social media?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Horizontal Projectile Lab
+3. Projectile Practice:
+    - [Horizontal Projectiles 1](https://www.physicsclassroom.com/calcpad/launch/CPVP12)
+    - [Horizontal Projectiles 2](https://www.physicsclassroom.com/calcpad/launch/CPVP13)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use knowledge of projectiles to predict landing spot of a marble._
+
+### 📆 Upcoming
+
+- Fact Sheet Quiz **Friday**
+
+</div>
+</div>
+
+---
+
+# **Marble Mini-Experiment**
+
+1. Determine the launch velocity of your marble.
+    - Equipment:
+      - Ruler track
+      - Marble
+      - Carbon paper
+      - Meterstick
+2. Use to predict landing spot from new height (like off top of cabinets)
+
+
+---
+
 # 2024.11.06 **Regents Physics**
 
 ##### **❓ of the 📅**: **If you were to open a store, what would you sell?**

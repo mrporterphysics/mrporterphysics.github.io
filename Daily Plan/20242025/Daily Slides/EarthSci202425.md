@@ -18,6 +18,159 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.14 **Earth Science**
+
+##### **❓ of the 📅**: **How long would you be able to last withouth your smart devices (phone, computer, watch, etc)? 1 Hour? 1 Day? 1 Week?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ⏱ 15 Min: Finish Earth's Interior Packet
+2. Check Answers
+3. Pangea Puzzle
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model movement of Earth's Tectonic Plates_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Puzzle
+
+1. ✂️ Cut out your puzzle with your table partner
+2. 🧩 Arrange your continents together to form a supercontinent 
+2. 🗣️ When you are satisfied with the 'fit' of the continents, discuss the evidence with your partners and decide if
+the evidence is compelling or not. Explain your decision and reasoning on the evidence.
+4. 📖 Read _The Historical Perspective_ section of Continental Drift Post in Canvas
+
+---
+
+# Evidence for Continental Drift 
+
+Read your assigned section and whiteboard your evidence for Wegener's Theory. ***Everyone*** Needs to be prepared to share their assigned evidence.
+
+Sections:
+1. Ocean Floor Mapping
+2. Magnetic Striping and Polar Reversals 
+3. Seafloor Spreading
+4. Concentration of Earthquakes
+
+---
+
+# Rotate and Present
+
+1. Rearrange into new groups (assigned by me)
+2. When you are at your original group's board, present the evidence for Wegener's theory of continental drift
+3. Whole group discussion 
+
+---
+
+# 2024.11.13 **Earth Science**
+
+##### **❓ of the 📅**: What slang are you really happy went out of fashion?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Finish Layers of Earth Lab
+2. Earth's Interior Worksheet (Skip #10)
+3. Continental Drift Nearpod and notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Earth's Interior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.12.11 **Earth Science** Do Now
+
+## Go to Nearpod use code: **T2G3Y** & Answer Questions
+
+You may use your Earth Science Reference Table 
+
+---
+
+# 2024.11.12 **Earth Science**
+
+##### **❓ of the 📅**: **Would you rather live without heat and AC or live without social media?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Lab:  A Slice of Planet Earth
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model a Earth by looking at a slice of Earth's interior._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.11.07 **Earth Science**
+
+##### **❓ of the 📅**: ***What animal do you think is the creepiest?***
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Layers of the Earth Notes
+2. Layers of the Earth Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe the properties of the different layers of the Earth_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2024.11.06 **Earth Science**
 
 ##### **❓ of the 📅**: **If you were to open a store, what would you sell?**

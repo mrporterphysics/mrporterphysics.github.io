@@ -899,107 +899,6 @@ $$\boxed{\vec{a} = \frac{\Sigma \vec{F}}{m}}$$
 
 ---
 
-# Elevator Problem 
-
-An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
-
-
-**Draw the _velocity vs. time_ graph for the motion described above.**
-
----
-
-<style scoped>
-{
-  font-size: 32px;
-}
-</style>
-
-## Elevator Problem: $v$ ⬆️ $a$ ⬆️
-
-An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
-
-**Consider the moment while the elevator is _speeding up_ at the start of its trip**
-
-1. Construct a free body diagram for the woman.
-2. Using N2L to find the force the floor exerts on the woman. 
-
----
-
-
-<style scoped>
-{
-  font-size: 32px;
-}
-</style>
-
-## Elevator Problem: $v$ ⬆️ $a$ 0️⃣
-
-An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
-
-**Consider the moment while the elevator is moving upward at a _constant velocity_.**
-
-1. Construct a free body diagram for the woman.
-2. Using N2L to find the force the floor exerts on the woman. 
-
----
-
-# How would your answer change if the woman was moving downward at a constant velocty?
-
----
-
-
-<style scoped>
-{
-  font-size: 32px;
-}
-</style>
-
-## Elevator Problem: $v$ ⬆️ $a$ ⬇️
-
-An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
-
-**Consider the moment while the elevator is _slowing down_ at the top of its path.**
-
-1. Construct a free body diagram for the woman.
-2. Using N2L to find the force the floor exerts on the woman. 
-
----
-
-<style scoped>
-{
-  font-size: 32px;
-}
-</style>
-
-## Elevator Problem: $v$ ⬇️ $a$ ⬇️
-
-An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
-
-**Consider the moment while the elevator is _speeding up_ downwards**
-
-1. Construct a free body diagram for the woman.
-2. Using N2L to find the force the floor exerts on the woman. 
-
----
-
-
-<style scoped>
-{
-  font-size: 32px;
-}
-</style>
-
-## Elevator Problem: $v$ ⬇️ $a$ ⬆️
-
-An elevator makes a trip up and then back down in a building, and a $50 \textrm{ kg}$ woman stands in the elevator for the entire trip. The elevator starts out at rest, then accelerates upward at $2 \textrm{ m/s}^2$, travels at a constant velocity of $2 \textrm{ m/s}$, then slows down at $3 \textrm{ m/s}^2$. After staying at rest for a moment, it again speeds up at $3 \textrm{ m/s}^2$, downward this time, travels at a constant velocity of $2 \textrm{ m/s}$, and then slows down at $2 \textrm{ m/s}^2$.
-
-**Consider the moment while the elevator is _speeding up_ downwards**
-
-1. Construct a free body diagram for the woman.
-2. Using N2L to find the force the floor exerts on the woman. 
-
----
-
 
 
 # Elevator Scale Reading 
@@ -1072,6 +971,25 @@ List the cases where the scale reading is **equal to** than 500 N.
 
 ---
 
+![bg fit](image-3.png)
+
+---
+
+![bg fit](image-4.png)
+
+---
+
+![bg fit](../figures/Kinetic-vs-Static-Friction.gif)
+
+---
+
+
+![bg fit](../figures/StaticFriction.gif)
+
+![bg fit](../figures/KineticFrictionConstantMotion.gif)
+
+---
+
 # Friction
 
 $$ \boxed{F_f \le \mu F_N} $$
@@ -1084,6 +1002,20 @@ $$ \boxed{F_f \le \mu F_N} $$
   * how likely surface pairs are to interlock
   * _always_ less than 1 
 
+
+
+---
+
+![bg fit](../figures/Testing-Friction-1.gif)
+![bg fit](../figures/Testing-Friction-08%20(1).gif)
+
+---
+
+
+<br><br><br><br>
+
+# [Static Friction Lab Example](https://thephysicsaviary.com/Physics/Programs/Labs/ForceFriction/) <!--fit--->
+
 ---
 
 # Common $\mu$ Values
@@ -1093,6 +1025,37 @@ $$ \boxed{F_f \le \mu F_N} $$
 **How do Kinetic $\mu$ compare to Static $\mu$ values?**
 
 ![bg fit right](../figures/mus.png)
+
+---
+
+# Friction Lab 
+
+#### **Objective**
+
+Determine the coefficient of static friction between your block and a two flat surfaces in the classroom.
+
+<div class='columns'>
+<div>
+
+#### **Materials** 
+
+- Wooden block
+- Electronic Force Sensor
+
+</div>
+ 
+<div>
+
+#### **Hypothesis**
+
+Which surface will have a greater coefficient of friction?
+
+</div>
+</div>
+
+
+
+
 
 ---
 

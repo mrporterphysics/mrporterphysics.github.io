@@ -17,9 +17,217 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.15 **AP Physics**
+
+##### **❓ of the 📅**: Which person in your life is most likely to secretly be a time traveler?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Fact Sheet Quiz - ⏲️ 15 Minutes
+2. Friction Notes
+3. Friction Lab Introduction
+4. Make Lab Report Pretty (Last 20 Min)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Friction_
+
+### 📆 Upcoming
+
+- Definitely a Forces Quiz next week, N2L, mass vs. weight, etc
+
+</div>
+</div>
+
+---
+
+
+# 2024.11.14 **AP Physics**
+
+##### **❓ of the 📅**: **How long would you be able to last withouth your smart devices (phone, computer, watch, etc)? 1 Hour? 1 Day? 1 Week?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Spring Force Lab
+2. Friction Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Spring Force_
+
+🥅 _Model Friction_
+
+### 📆 Upcoming
+
+- Fact Sheet Quiz Tommorow
+- Lab Report Due Tomorrow
+
+</div>
+</div>
+
+---
+
+<style scoped>
+{
+  font-size: 25px;
+}
+</style>
+
+## 2024.11.13 **AP Physics** Do Now
+
+<div class='columns'>
+
+<div>
+
+
+
+A person who weighs **500 N** is standing on a scale in an elevator. The elevator is identical in all cases. The velocity and acceleration of the elevators at the instant shown are given.
+
+1. List the cases where the scale reading is **greater** than 500 N.
+2. List the cases where the scale reading is **less** than 500 N.
+3. List the cases where the scale reading is **equal to** than 500 N.
+4. Rank the scale reading from greatest to least. 
+
+</div>
+
+<div>
+
+![center w:800](image-14.png)
+
+</div></div>
+
+---
+
+
+# 2024.11.13 **AP Physics**
+
+##### **❓ of the 📅**: What slang are you really happy went out of fashion?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now Warmups
+2. Peer Edits on Lab Reports (20 min)
+3. Spring Force Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve problems with angled forces_
+
+### 📆 Upcoming
+
+- *Fact Sheet Quiz* **Friday**
+- Sign up for kinematic reassessments...
+
+
+</div>
+</div>
+
+---
+
+# Peer Edits 
+
+## **Intentions:**
+- What do you want your partner to focus on when reading your lab report?
+
+## **Feedback:**
+
+- What ⭐**glows**⭐ about the lab?
+- Where is room to 🌱**grow**🌱?
+- Provide Feedback referencing the lab report rubric
+
+---
+
+# Peer Edit Feedback
+
+- What did you learn from your partner's lab?
+- What challenges did you face when providing feedback?
+- What do you plan on changing about your lab report?
+
+***What questions do you still have for Mr. Porter?***
+
+
+
+---
+
+# Spring Force Lab:
+
+<div class='columns'>
+<div>
+
+## **Objective:**
+
+Determine the relationship between stretch and force applied on a spring. Test this relationship for **two** springs
+
+(Note: When analyzing graph Spring Force on the vertical axis regardless of your experimental design choice on independent variable)
+</div>
+ 
+<div>
+
+## **Available Materials:**
+
+- Two different springs
+- Spring Scales (force sensors)
+- Masses
+- Ruler/Meterstick
+- Electronic Force Sensor
+
+</div>
+</div>
+
+
+---
+
+
+<!-- 
+Identical treasure chests (shown from above) each have two forces acting on them. All chests start at rest.
+
+![center](image-11.png)
+
+**Rank the speed of the treasure chest after 2 seconds.**
+
+---
+
+The forces exerted on an object at a particular instant are represented in the free-body diagram. The magnitude of each force is drawn to scale. A student claims that the vector sum of the forces on the object is equal to zero. Is the student's claim valid? Why or why not?
+
+![center](image-12.png)
+
+---
+
+The free-body diagram shows three forces exerted on an object. Each square is 1 N by 1 N. What is the magnitude of the vector sum of the forces exerted on the object?
+
+![center](image-13.png)
+ -->
+
+
+---
+
 # 2024.11.07 **AP Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: ***What animal do you think is the creepiest?***
 
 <div class ='columns'>
 

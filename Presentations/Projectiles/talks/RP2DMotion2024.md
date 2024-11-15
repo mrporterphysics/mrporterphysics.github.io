@@ -705,6 +705,38 @@ Equipment:
 
 2. Use to predict landing spot from new height (like off top of cabinets)
 
+
+---
+
+<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="700px" width="1000px" allowfullscreen></iframe>
+
+---
+
+### Finding x & y components of initial velocity 
+
+$$v_{ix} = v \cos \theta $$
+
+$$v_{iy} = v \sin \theta$$
+
+
+![bg fit right:25%](image-25.png)
+
+---
+
+
+# Problem-solving Process
+
+1) Read & sketch problem
+1) _**Calculate x & y components of initial velocity**_
+2) Identify given information & fill out double cross diagram
+3) Identify the quantity you are solving for
+4) Using either horizontal or vertical information, find the flight time of the projectile
+5) With the time find the quantity you are solving for. 
+
+
+![bg fit right:30%](image-24.png)
+
+
 ---
 
 # [Riverboat Problems](https://www.physicsclassroom.com/PhysicsClassroom/media/interactive/RiverBoatSim/index.html)
