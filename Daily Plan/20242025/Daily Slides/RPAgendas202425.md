@@ -16,6 +16,36 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.15 **Regents Physics**
+
+##### **❓ of the 📅**: Which person in your life is most likely to secretly be a time traveler?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Fact Sheet Quiz - ⏲️ 15 Minutes
+2. Angled Projectiles 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve angularly launched projectile pronblems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2024.11.13 **Regents Physcis**
 
 ##### **❓ of the 📅**: What slang are you really happy went out of fashion?

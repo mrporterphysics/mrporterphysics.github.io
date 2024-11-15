@@ -708,7 +708,32 @@ Equipment:
 
 ---
 
+Cannonballs of different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the horizontal component of that velocity, which is the same.
+
+![center w:500](image-26.png)
+
+**Rank the horizontal distance traveled by the cannonballs.**
+
+---
+
+Cannonballs with different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the same vertical component of that velocity.
+
+![center w:500](image-27.png)
+
+**Rank the time the cannonballs are in the air.**
+
+---
+
 <iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="700px" width="1000px" allowfullscreen></iframe>
+
+---
+
+# Components 
+
+- The X-axis velocity component ($v_x$) is constant and will not accelerated so it will stay the same the entire flight
+- The initial Y-axis velocity component will change as it accelerated by gravity 9.8 m/s² down. This is why we say ($v_{iy}$) and not just $v_y$ because it will change throughout the problem.
+
+![bg fit right](../figures/cannon-v-to-viy-and-vx.gif)
 
 ---
 
@@ -720,6 +745,8 @@ $$v_{iy} = v \sin \theta$$
 
 
 ![bg fit right:25%](image-25.png)
+
+
 
 ---
 
@@ -736,6 +763,41 @@ $$v_{iy} = v \sin \theta$$
 
 ![bg fit right:30%](image-24.png)
 
+---
+
+# Projectile Fact Reminders
+
+<div class='columns'>
+<div>
+
+![center](../figures/Highest-Point.gif)
+
+</div>
+ 
+<div>
+
+![center](../figures/Lands-at-Same-Height.gif)
+
+</div>
+</div>
+
+---
+
+# Some Reminders from Free Fall 
+
+- $a_y = g = -9.8 \text{ m/s/s}$ &rarr; Always when near the surface of the Earth
+- If object is _dropped_ $v_{iy} = 0$ 
+- If object is projected upwards it will slow down as it rises. The y-velocity will be zero at its heights point or peak
+    - You can treat $v_{fy} =0$ at the peak
+- If an object is projected upwards the velocity at which it is projected is equal and magnitude and opposite in direction when it returns to its initial height. 
+    - i.e. a ball projected upwards at $+30 \text{m/s}$ will have a downward velocity of $-30 \text{m/s}$ when it returns to its launch height
+
+---
+
+
+# Where should 🎯 go?
+
+<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="650px" width="1000px" allowfullscreen></iframe>
 
 ---
 
@@ -748,9 +810,10 @@ $$v_{iy} = v \sin \theta$$
 
 ![bg fit right:40%](image-5.png)
 
-
-
 ---
+
+
+
 
 # Example Riverboat
 

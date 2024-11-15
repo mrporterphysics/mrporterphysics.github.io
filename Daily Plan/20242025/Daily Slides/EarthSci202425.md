@@ -18,6 +18,44 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.15 **Earth Science** Do Now
+
+1. Arrange your continent puzzle. Be prepared to explain your arrangement.
+2. 📖 Read _The Historical Perspective_ section of Continental Drift Post in Canvas
+
+
+---
+
+# 2024.11.15 **Earth Science**
+
+##### **❓ of the 📅**: **Which person in your life is most likely to secretly be a time traveler?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Fishbowl Share Evidence for Continental Drift
+3. Nearpod Notes: Continental Drift
+4. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain Continental Drift_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.11.14 **Earth Science**
 
 ##### **❓ of the 📅**: **How long would you be able to last withouth your smart devices (phone, computer, watch, etc)? 1 Hour? 1 Day? 1 Week?**
@@ -51,8 +89,7 @@ math: mathjax
 
 1. ✂️ Cut out your puzzle with your table partner
 2. 🧩 Arrange your continents together to form a supercontinent 
-2. 🗣️ When you are satisfied with the 'fit' of the continents, discuss the evidence with your partners and decide if
-the evidence is compelling or not. Explain your decision and reasoning on the evidence.
+2. 🗣️ When you are satisfied with the 'fit' of the continents, discuss the evidence with your partners and decide if the evidence is compelling or not. Explain your decision and reasoning on the evidence.
 4. 📖 Read _The Historical Perspective_ section of Continental Drift Post in Canvas
 
 ---
