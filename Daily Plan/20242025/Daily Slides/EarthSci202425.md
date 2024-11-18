@@ -39,7 +39,6 @@ math: mathjax
 1. Do Now 
 2. Fishbowl Share Evidence for Continental Drift
 3. Nearpod Notes: Continental Drift
-4. 
 
 </div>
 
