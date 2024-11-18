@@ -16,6 +16,39 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.18 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather live where it only snows or the temperature never falls below 100 degrees?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Projectile Motion Think Sheet
+    1. #15 - 18, #23-26
+2. [Projectile Motion Stations](https://www.mrporterphysics.com/Presentations/Projectiles/talks/projectileReviewVirtualStations.html)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Projectile Motion_
+
+### 📆 Upcoming
+
+- Fact Sheet Quiz Thursday
+- Projecile Motion Quiz Friday
+
+</div>
+</div>
+
+---
+
 # 2024.11.15 **Regents Physics**
 
 ##### **❓ of the 📅**: Which person in your life is most likely to secretly be a time traveler?
