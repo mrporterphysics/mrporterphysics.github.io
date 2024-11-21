@@ -18,6 +18,199 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.20 Do Now **Fill in the Following Chart**:
+
+![center w:670](image-15.png)
+
+---
+
+
+# 2024.11.20 **Earth Science**
+
+
+##### **❓ of the 📅**: Is your glass half full or half empty?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Sea Floor Spreading
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Map Sea Floor Spreading_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Sea-Floor Spreading Lab
+## Introduction Slides
+
+---
+
+# Welcome to Sea-Floor Spreading Lab
+
+## Goals of Today's Lab:
+* 🎯 Understand magnetic reversals in oceanic crust
+* 📊 Learn key evidence for sea-floor spreading
+* 📈 Practice data analysis and plotting skills
+
+*Remember: This lab connects directly to our study of plate tectonics!*
+
+---
+
+# The Discovery - A Scientific Detective Story
+
+## Historical Context (1950s):
+* Scientists were searching for submarines 🚢
+* Used magnetic detection equipment
+* Made an unexpected discovery!
+
+## What They Found:
+* Strange magnetic patterns on the ocean floor
+* Symmetrical "stripes" of magnetism
+
+---
+
+# Magnetic Reversals and Rock Formation
+
+## Key Concepts:
+* Earth's magnetic field periodically "flips"
+  * North becomes South
+  * South becomes North
+  * Happens every few hundred thousand years
+
+---
+
+# Magnetic Reversals and Rock Formation
+
+## How Rocks Record Magnetism:
+1. Magma rises at mid-ocean ridges
+2. Magnetic minerals align with Earth's field
+3. Rock solidifies, preserving the alignment
+4. Creates a permanent record
+
+---
+
+# Today's Investigation
+
+## What You'll Do:
+1. Plot real magnetic data from the ocean floor
+2. Look for patterns on both sides of the ridge
+3. Calculate ages and distances
+4. Draw conclusions based on evidence
+
+---
+
+# Making Your Plot
+
+## Step-by-Step Instructions:
+1. Label your axes
+   * X-axis: Longitude (30°W to 15°E)
+   * Y-axis: Age (0 to 180 million years)
+
+2. Plot the points
+   * Use one color for Normal polarity (N)
+   * Use different color for Reversed polarity (S)
+
+3. Mark the ridge location 
+
+---
+
+# Analysis Tips
+
+## Look For:
+* Symmetry in the pattern
+* Age relationships
+* Distance relationships
+
+## Think About:
+* Why are the patterns symmetrical?
+* What does this tell us about sea-floor spreading?
+* How does this support plate tectonic theory?
+
+---
+
+# Time Management:
+* Plotting data: 15 minutes
+* Analysis questions: 20 minutes
+* Class discussion: 10 minutes
+
+---
+
+---
+
+# 2024.11.19 **Earth Science**
+
+##### **❓ of the 📅**: What’s your favorite sandwich and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now:
+    - Grab Moving Plates handout and complete
+2. Finish Notes 
+3. ESRT Fault Practice
+4. Sea-Floor Spreading Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify faults in ESRT_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.11.18 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather live where it only snows or the temperature never falls below 100 degrees?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. **Do Now:** _Join Nearpod (Code: **3SK6Y**) and answer inital questions_
+2. Nearpod Notes
+3. ESRT Plate Tectonic Practice 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use ESRT to find properties of plates_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.11.15 **Earth Science** Do Now
 
 1. Arrange your continent puzzle. Be prepared to explain your arrangement.

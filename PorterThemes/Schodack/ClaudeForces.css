@@ -1,0 +1,118 @@
+/* 
+@theme forces-dark
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Fira+Sans:wght@500;700&family=JetBrains+Mono&display=swap');
+
+:root {
+  --background-color: #1a1a2e;
+  --text-color: #e6e6e6;
+  --primary-color: #4d9de0;
+  --secondary-color: #7fe0a1;
+  --tertiary-color: #e0b94d;
+  --code-bg: #2a2a3e;
+}
+
+section {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 28px;
+  padding: 40px;
+}
+
+h1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  font-size: 44px;
+  color: var(--secondary-color);
+}
+
+h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--tertiary-color);
+}
+
+strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+ul, ol {
+  margin-left: 30px;
+  line-height: 1.6;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+blockquote {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 20px;
+  margin-left: 0;
+  font-style: italic;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid var(--tertiary-color);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--code-bg);
+  color: var(--primary-color);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+  gap: 1rem;
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.formula {
+  color: var(--tertiary-color);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.1em;
+}
+
+.highlight {
+  background-color: rgba(77, 157, 224, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}

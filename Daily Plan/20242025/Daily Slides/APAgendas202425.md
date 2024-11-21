@@ -17,6 +17,105 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.21 **AP Physics**
+
+##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz 
+3. Physics Classroom:
+    - 🫑 Mild - [Angled Forces 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D6)
+    - 🌶️ Medium - [Angled Forces 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D7)
+    - 🔥 Spicy - [Angled Forces 3](https://www.physicsclassroom.com/calcpad/launch/CPF2D8)
+    - Use the graphic organizer to set up the question, then solve question asked
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve Force problems with angles_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.11.20 **AP Physics**
+
+##### **❓ of the 📅**: Is your glass half full or half empty?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Friction Lab
+2. Solving Friction Problems
+  - With Porter
+  - Start Homework Problems
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve N2L Problems involving Friction_
+
+### 📆 Upcoming
+
+- N2L Quiz tomorrow, no angled forces
+
+</div>
+</div>
+
+---
+
+# 2024.11.19 **AP Physics**
+
+##### **❓ of the 📅**: What’s your favorite sandwich and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Friction Lab
+2. Problem-solving friction questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Experimentally measure coefficient of friction_
+
+🥅 _Applying Friction to N2L_
+
+### 📆 Upcoming
+
+- N2L Quiz Thursday 
+
+</div>
+</div>
+
+
+---
+
 # 2024.11.15 **AP Physics**
 
 ##### **❓ of the 📅**: Which person in your life is most likely to secretly be a time traveler?

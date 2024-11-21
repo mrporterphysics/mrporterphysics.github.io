@@ -16,6 +16,78 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.21 **Regents Physics** Do Now
+
+
+
+---
+
+# 2024.11.21 **Regents Physics**
+
+##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?   
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Projectiles
+3. Balanced vs. Unbalanced Forces Pivot
+2. Inertia
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Inertia and Force_
+
+### 📆 Upcoming
+
+- Projectile Motion Quiz tomorrow
+
+</div>
+</div>
+
+
+---
+
+# 2024.11.19 **Regents Physics**
+
+##### **❓ of the 📅**: What’s your favorite sandwich and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Projectile Motion Think Sheet
+    1. Example
+    2. Complete on your own
+2. Projectile Motion [Virtual Stations](https://www.mrporterphysics.com/Presentations/Projectiles/talks/projectileReviewVirtualStations.html) -> Pick what you want to work on
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with projectile motion_
+
+### 📆 Upcoming
+
+- Fact Sheet Quiz Thursday
+- Projecile Motion Quiz Friday
+
+</div>
+</div>
+
+---
+
 # 2024.11.18 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather live where it only snows or the temperature never falls below 100 degrees?

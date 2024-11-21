@@ -1053,10 +1053,6 @@ Which surface will have a greater coefficient of friction?
 </div>
 </div>
 
-
-
-
-
 ---
 
 #### Friction Practice 
