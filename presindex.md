@@ -13,6 +13,7 @@
 - [Kinematics](/mrporterphysics.github.io/Presentations/APCVPM/talks/RPKinematics2024.html)
 - [2D Motion](/mrporterphysics.github.io/Presentations/Projectiles/talks/RP2DMotion2024.html)
 - [2D Motion Review](/mrporterphysics.github.io/Presentations/Projectiles/talks/projectileReviewVirtualStations.html)
+- [Forces](/mrporterphysics.github.io/Presentations/Forces/talks/RPForces2024.html)
 
 
 ## Earth Science

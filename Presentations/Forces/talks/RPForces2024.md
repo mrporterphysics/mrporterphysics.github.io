@@ -7,7 +7,12 @@ transition: reveal
 math: mathjax
 ---
 
-# Forces & Newton's Laws
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+# **Forces** & Newton's Laws <!--fit--->
 
 ## 2024-25 Regents Physics
 
@@ -15,54 +20,64 @@ math: mathjax
 
 ---
 
-# What is a Force?
-- A push or pull on an object
-- Can change an object's:
-  - Speed
-  - Direction
-  - Shape
+<!---_class: default--->
+
+# What is a **Force**?
+- An interaction between two objects
+- Forces are the cause for differing motion
+
 ---
-# Types of Forces
-- Gravity
-- Friction
-- Normal force (push of surfaces)
-- Applied forces (pushes/pulls)
+
+# Motion is a result of **all forces** acting on an object. 
+
+---
+
+# Pivot - Balanced vs. **Unbalanced** Forces <!--fit--->
+
+## How does motion differ when forces are balances vs. unbalanced?
+
+---
+
+# Newton's First Law
+
+
+<div class="mermaid" lineColor: yellow;>
+graph TD
+    A[Forces are Balanced] --> B[Objects at Rest<br>v = 0 m/s]
+    A --> C[Objects in Motion<br>v ≠ 0 m/s]
+    B --> D[a = 0 m/s²]
+    C --> E[a = 0 m/s²] 
+    D --> F[Stay at Rest]
+    E --> G[Stay in Motion<br>same speed and direction]
+
+</div>
+
 ---
 # Balanced Forces
-- Forces that **cancel out**  
+
 - Net force = 0
 - Object either:
   - Stays at rest
   - Continues at constant speed
----
-# Example: Tug of War (Balanced)
-```
-←100N   [🧍‍♂️🔴🧍‍♂️]   100N→
-```
-- Equal forces in opposite directions
-- Rope doesn't move
+
 ---
 # Unbalanced Forces
-- Forces that **don't cancel out**
+
 - Net force ≠ 0  
 - Object:
   - Speeds up
   - Slows down
   - Changes direction
----
-# Example: Tug of War (Unbalanced)
-```
-←100N   [🧍‍♂️🔴🧍‍♂️]   150N→
-```
-- Stronger force to right
-- Net force = 50N right
-- Rope moves right
+
+
 ---
 # Newton's First Law (Inertia)
-- Objects resist changes in motion
-- Without forces:
-  - Still objects stay still
-  - Moving objects keep moving
+
+* ## **Inertia** is an object's resistance to _changes_ in its state of motion
+
+
+* ## The amount of inertia is based solely on its **mass**
+
 ---
 # Mass and Inertia
 - Mass = amount of matter
@@ -71,12 +86,7 @@ math: mathjax
   - Harder to start/stop heavy cart
   - Easier to start/stop light cart
 ---
-# Lab: Pass the Water
-Let's explore inertia by:
-1. Setting up cups of water
-2. Testing how objects resist motion
-3. Connecting mass to inertia
 
-*Worksheet will guide procedure*
+# 📝 Worksheet: Inertia & Mass <!--fit--->
 
-Would you like me to modify any of these slides or add additional content?
+## Complete Independently

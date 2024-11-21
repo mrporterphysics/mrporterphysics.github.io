@@ -1,8 +1,10 @@
 /* 
 @theme forces-dark
 */
-
+@import 'uncover';
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Fira+Sans:wght@500;700&family=JetBrains+Mono&display=swap');
+@import url('https://unpkg.com/mermaid/dist/mermaid.min.js');
+
 
 :root {
   --background-color: #1a1a2e;
@@ -13,18 +15,27 @@
   --code-bg: #2a2a3e;
 }
 
+section::after {
+    content: '<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true});</script>';
+  }
+
+.mermaid {
+    text-align: center;
+  }
+
+
 section {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 28px;
+  font-size: 30px;
   padding: 40px;
 }
 
 h1 {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 700;
-  font-size: 56px;
+  font-size: 60px;
   color: var(--primary-color);
   margin-bottom: 0.5em;
 }
@@ -32,20 +43,25 @@ h1 {
 h2 {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 500;
-  font-size: 44px;
+  font-size: 48px;
   color: var(--secondary-color);
 }
 
 h3 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 40px;
   color: var(--tertiary-color);
 }
 
 strong {
   color: var(--primary-color);
   font-weight: 700;
+}
+
+h1 strong {
+    color:var(--tertiary-color);
+    font-weight: 800;
 }
 
 code {
