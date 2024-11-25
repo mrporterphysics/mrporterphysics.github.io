@@ -90,3 +90,38 @@ graph TD
 # 📝 Worksheet: Inertia & Mass <!--fit--->
 
 ## Complete Independently
+
+---
+
+# Pre-Conceptions 
+
+Students typically have many pre-conceived notions regarding concepts in Physics. It has always proven useful to bring these ideas to the forefront of your mind and to make an effort to evaluate their correctness. The following statements pertain in one way or another to common notions regarding central concepts of this unit. Identify each statement as being either true (T) or false (F).
+
+1. Fill out on sheet and then click answers into Google Form (linked in daily slides) and [here](https://forms.gle/rrFSUb9QNnRGdoni8).
+
+---
+
+# Mini Experiment: **Mass vs. Weight**
+
+## Objective: 
+
+#### **_Determine the mathematical relationship between mass and weight using a spring scale._**
+
+### Notes:
+
+- Don't forget a diagram of your setup 
+- Include units in your measurements
+- Will need graph and equation for line of best fit
+
+---
+
+The diagram to the right shows a 3 kg mass attached to spring scales on Earth, Mars, and Earth's Moon. Use the information in the diagram to calculate the gravitational field strength ($g$) for each Celestial Body.
+
+Reminder:
+
+$$\boxed{g = \frac{F_g}{m}}$$
+
+![bg fit right](image-5.png)
+
+---
+
