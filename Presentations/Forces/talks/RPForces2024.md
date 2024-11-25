@@ -115,6 +115,19 @@ Students typically have many pre-conceived notions regarding concepts in Physics
 
 ---
 
+# Gravity $F_g$ 
+
+## Notes:
+
+* Weight == $F_g$ == Force of Gravity...so $F_g = mg$
+* Weight is a **FORCE**, mass is scalar quantity
+* $g$ is the gravitational field strength
+    * Measured in N/kg 
+    * changes based on planet and location on that planet
+    * _near the surface of the Earth_ $g = 9.8 \textrm{ N/kg}$
+
+---
+
 The diagram to the right shows a 3 kg mass attached to spring scales on Earth, Mars, and Earth's Moon. Use the information in the diagram to calculate the gravitational field strength ($g$) for each Celestial Body.
 
 Reminder:

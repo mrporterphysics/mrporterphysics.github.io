@@ -18,6 +18,35 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.25 **Earth Science**
+
+##### **❓ of the 📅**: **White or dark turkey meat? What is your favorite dish at Thanskgiving?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Finish (or start) Regents Practice
+2. Review Boundary Lab
+3. Volcanoes Nearpod
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.11.21 **Earth Science**
 
 ##### **❓ of the 📅**: What is your hidden talent?
