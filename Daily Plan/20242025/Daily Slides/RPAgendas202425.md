@@ -16,9 +16,68 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
-# 2024.11.21 **Regents Physics** Do Now
+# 2024.11.25 **Regents Physics** Do Now
 
+Write a 2-3 sentence summary of your findings/learnings from the virtual lab _Balanced and Unbalanced Forces: Effect on motion_ 
 
+---
+
+# 2024.11/25 **Regents Physics**
+
+##### **❓ of the 📅**: **White or dark turkey meat? What is your favorite dish at Thanskgiving?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Lab Summary 
+2. Newton's First Law Notes
+3. Inertia Practice 
+4. [Force Ideas - Preconceptions](https://forms.gle/rrFSUb9QNnRGdoni8)
+5. Mini Experiment - Mass vs. Weight
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define N1L_
+
+🥅 _Define inertia_ 
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# **Mini Experiment: Mass vs. Weight**
+
+## Objective: 
+
+**Determine the mathematical relationship between mass and weight using a spring scale.**
+
+### Notes:
+
+- Don't forget a diagram of your setup 
+- Include units in your measurements
+- Will need graph and equation for line of best fit
+
+---
+
+## 2024.11.21 **Regents Physics** Do Now
+
+A water balloon is launched at a building **24 m** away with an initial velocity of **18 m/s** at an angle of **50˚** above the horizontal.
+
+1. At what height will the balloon strike the building?
+2. If the balloon misses or shoots over the building, how far will the balloon land from its launch location?
+3. The balloon can be launched from less than 24 m away from the building at the same speed and angle and still hit exactly the same height you calculated in part 1. Determine this second launch location.
+
+![bg fit right:20%](image-16.png)
 
 ---
 

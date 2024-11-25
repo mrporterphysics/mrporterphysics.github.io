@@ -18,9 +18,40 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
-# 2024.11.20 Do Now **Fill in the Following Chart**:
+# 2024.11.21 **Earth Science**
 
-![center w:670](image-15.png)
+##### **❓ of the 📅**: What is your hidden talent?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Seafloor Spreading Lab
+2. Earth's Interior - Regents Practice
+3. OR Earthquakes Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Regents Questions on Earth's Interior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.11.20 Do Now 
+
+Fill in the Following Chart:
+
+![bg fit right](image-15.png)
 
 ---
 

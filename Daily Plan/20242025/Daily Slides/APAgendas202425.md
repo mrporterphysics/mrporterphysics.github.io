@@ -17,6 +17,40 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2024.11.25 **AP Physics**
+
+##### **❓ of the 📅**: **White or dark turkey meat? What is your favorite dish at Thanskgiving?**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+Work Day:
+1. AP WB: 2.D, E, F, G, I, M
+2. Physics Classroom
+    - 🫑 Mild - [Angled Forces 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D6)
+    - 🌶️ Medium - [Angled Forces 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D7)
+    - 🔥 Spicy - [Angled Forces 3](https://www.physicsclassroom.com/calcpad/launch/CPF2D8)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Newton's 2nd Law_
+
+### 📆 Upcoming
+
+- Group/Class Quiz tomorrow
+
+</div>
+</div>
+
+---
+
 # 2024.11.21 **AP Physics**
 
 ##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
