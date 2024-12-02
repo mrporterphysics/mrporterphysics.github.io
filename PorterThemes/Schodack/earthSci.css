@@ -225,12 +225,115 @@ section.halloween{
   }
   
   
+  @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Frozen&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Ice+Kingdom&display=swap');
+  
+  /* Winter theme section */
   section.winter {
-  color:snow;
-  background-image: url("snowy.gif");
-  text-shadow: 0 0 20px #333;
+    background: url('snowy.gif') no-repeat center center;
+    background-size: cover;
+    color: #E8F1F5;  /* Light icy blue for text */
   }
   
-  section.winter a{
-  color:rgb(206,32,47);
+  section.winter footer {
+    color: #ffffff94;
+  }
+  
+  /* Style headers with winter theme */
+  section.winter h1 {
+    color: #E8F1F5;  /* Icy white */
+    font-family: 'Mountains of Christmas', cursive;
+    text-shadow: 2px 2px 4px #1B4965;  /* Deep blue shadow */
+    font-size: 2.5em;
+  }
+  
+  section.winter h2,
+  section.winter h3,
+  section.winter h4,
+  section.winter h5 {
+    color: #CAF0F8;  /* Light blue */
+    font-family: 'Mountains of Christmas', cursive;
+    text-shadow: 1px 1px 2px #1B4965;
+  }
+  
+  /* Emphasis for winter theme */
+  section.winter strong {
+    color: #90E0EF;  /* Bright ice blue */
+    text-shadow: 1px 1px 2px #0077B6;
+  }
+  
+  section.winter h1 strong,
+  section.winter h2 strong,
+  section.winter h3 strong,
+  section.winter h4 strong,
+  section.winter h5 strong {
+    color: #48CAE4;  /* Bright blue */
+    text-shadow: 1px 1px 2px #023E8A;
+  }
+  
+  /* Links for winter theme */
+  section.winter a {
+    color: #ADE8F4;  /* Light blue */
+    text-decoration: underline;
+  }
+  
+  /* Alternative winter backgrounds */
+  section.winter.frost {
+    background: linear-gradient(135deg, #1B4965 0%, #5FA8D3 100%);
+  }
+  
+  section.winter.ice {
+    background: linear-gradient(to bottom, #CAF0F8 0%, #023E8A 100%);
+  }
+  
+  section.winter.night {
+    background: linear-gradient(to bottom, #03045E 0%, #0077B6 100%);
+    background-image: url('snow.gif');
+    background-blend-mode: overlay;
+  }
+  
+  /* Winter-themed bullet points */
+  section.winter ul {
+    list-style-type: "❄️ ";
+  }
+  
+  /* Winter-themed blockquotes */
+  section.winter blockquote {
+    border-left: 5px solid #48CAE4;
+    background-color: rgba(202, 240, 248, 0.1);
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 0 10px 10px 0;
+  }
+  
+  /* Winter-themed tables */
+  section.winter table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  section.winter th,
+  section.winter td {
+    padding: 12px 15px;
+    border: 1px solid #48CAE4;
+  }
+  
+  section.winter thead tr {
+    background-color: #0077B6;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  /* Winter-themed code blocks */
+  section.winter code {
+    background-color: rgba(27, 73, 101, 0.8);
+    color: #CAF0F8;
+    padding: 2px 5px;
+    border-radius: 4px;
   }

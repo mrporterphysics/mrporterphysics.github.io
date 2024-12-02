@@ -16,7 +16,66 @@ math: mathjax
 
 ---
 
+<!--- class: winter --->
+
+# 2024.12.02 **Earth Science**
+
+##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Volcanoes Map Online Lab
+    - Find link to online portion in canvas
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore impacts of volcanic eruptions_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 <!--- class: thanksgiving --->
+
+
+# 2024.11.26 **Earth Science**
+
+##### **❓ of the 📅**: What celebrity would you like to meet for lunch?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+1. Finish Notes
+3. Volcanic Map Story 🌋
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Start Mapping Volcanoes_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2024.11.25 **Earth Science**
 
@@ -48,6 +107,9 @@ math: mathjax
 ---
 
 # 2024.11.21 **Earth Science**
+
+
+
 
 ##### **❓ of the 📅**: What is your hidden talent?
 

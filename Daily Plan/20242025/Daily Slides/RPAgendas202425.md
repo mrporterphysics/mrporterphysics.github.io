@@ -14,6 +14,43 @@ math: mathjax
 
 ---
 
+<!--- class: winter --->
+
+# 2024.12.02 **Regents Physics**
+
+##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Mass vs. Weight Lab
+2. Notes - Mass vs. Weight 
+3. Packet - Page 11 - _Mass & Weight_
+4. N1L and Notes
+5. Balanced vs. Unbalanced Forces
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define mass and weight_
+
+🥅 _Use N1L to predict motion_
+
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 <!--- class: thanksgiving --->
 
 # 2024.11.25 **Regents Physics** Do Now

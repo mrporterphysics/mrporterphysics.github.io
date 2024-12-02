@@ -15,7 +15,70 @@ math: mathjax
 
 ---
 
+<!--- class: winter --->
+
+# 2024.12.02 **AP Physics**
+
+##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Inclined Planes Pivot 
+2. Notes - Inclined Planes 
+3. Think Sheet
+3. Practice with Inclined Planes:
+    - [Inclined Planes 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D10)
+    - [Inclined Planes 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D11)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model forces for objects on ramps_
+
+### 📆 Upcoming
+
+
+
+</div>
+</div>
+
+---
+
 <!--- class: thanksgiving --->
+
+# 2024.11.26 **AP Physics**
+
+##### **❓ of the 📅**: What celebrity would you like to meet for a cup of coffee?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Context-Rich Problem 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2024.11.25 **AP Physics**
 

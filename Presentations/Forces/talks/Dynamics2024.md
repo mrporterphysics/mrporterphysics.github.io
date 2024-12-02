@@ -711,136 +711,6 @@ Tarzan, much to his dismay, gets his loincloth stuck on a branch. He’s left ha
 
 
 
----
-
-<!---footer: <br>--->
-
-<div class='columns'>
-
-<div>
-Tim is in a lab on the ground floor of the school. He hangs a small box on a spring. It stretches the spring by 20 centimetres. 
-
-![center w:300](../figures/massweight1.png)
-
-He then carries the spring and box up to a classroom on the top floor of the school, two flights up. Then he repeats the experiment.
-</div>
-
-<div>
-
-1. How much would the spring stretch now?
-  a. More than 20 centimetres.
-  b. Exactly 20 centimetres again.
-  c. Less than 20 centimetres. 
-
-
-</div>
-
-</div>
-
----
-
-<!---footer: <br>--->
-
-<div class='columns'>
-
-<div>
-Tim is in a lab on the ground floor of the school. He hangs a small box on a spring. It stretches the spring by 20 centimetres. 
-
-![center w:300](../figures/massweight1.png)
-
-He then carries the spring and box up to a classroom on the top floor of the school, two flights up. Then he repeats the experiment.
-</div>
-
-<div>
-
-2. How would you explain this?
-    a. The box is now higher above the ground.
-    b. The change in distance from the center of the Earth is too small to have any effect.
-    c. The box is now further from the center of the Earth.
-    d. The weight of an object is always the same. 
-
-
-</div>
-
-</div>
-
----
-
-<!---footer: <br>--->
-
-<div class='columns'>
-
-<div>
-Pam is in a lab on the ground floor of the school. She hangs a small box on a spring. It stretches the spring by 35 centimetres. 
-
-![center w:300](../figures/pam.png)
-
-She then takes the spring and box up to the top of a mountain, and repeats the experiment. 
-
-</div>
-
-<div>
-
-1. How much would the spring stretch now?
-  a. More than 35 centimetres.
-  b. Exactly 35 centimetres again.
-  c. Less than 35 centimetres. 
-
-
-</div>
-
-</div>
-
----
-
-
-How would you explain this? 
-
-  1. The box is now higher above the ground, so gravity pulls it down harder.
-  2. The box is further from the center of the Earth, so the gravity force is less.
-  3. The box is further from the center of the Earth, so the gravity force is less, but the change is much too small to see.
-  4. The weight of an object is always the same, so the spring stretches by exactly the same amount. 
-
-
----
-
-
-<!---footer: <br>--->
-
-<div class='columns'>
-
-<div>
-An astronaut carries out an experiment. Before leaving Earth, he hangs a small box from a spring. It stretches the spring by 25 centimeters. 
-
-![center w:300](../figures/astro.png)
-
-He then takes the spring and the box to the Moon, and repeats the experiment. 
-
-</div>
-
-<div>
-
-How much would the spring stretch on the Moon?
-
-1.  More than 25 centimetres.
-1.  Exactly 25 centimetres again.
-1.  Less than 25 centimetres.
-1.  Zero - no stretch at all. 
-
-
-</div>
-
-</div>
-
----
-
-How would you explain this? 
-
-1. The box is now higher above the ground, so gravity pulls it down harder.
-1. The Moon is smaller than the Earth, so gravity is weaker there.
-1. There is no gravity on the moon, because it has no atmosphere.
-1. The weight of an object is always the same. 
-
 
 ---
 
@@ -1097,6 +967,14 @@ Consider the free-body diagram for an object accelerating across a surface. The 
 
 ---
 
+# Inclined Planes 
+
+![center](../figures/increasing-incline-and-force.gif)
+
+
+
+---
+
 # Inclined Planes
 
 
@@ -1128,6 +1006,14 @@ Lab partners Anna Litical and Noah Formula placed a 0.25-kg glider on their air 
 4. Normal Force 
 5. Net Force
 5. Acceleration
+
+---
+
+The image shows our Einstein action figure sitting on a slab of wood coated with plastic tape. The angle at which Einstein slip's is $\theta$. Determine the maximum coefficient of static friction, $\mu_E$ for Einstein in terms of $\theta$, $m$, and physical constants. 
+
+![center](image-6.png)
+
+---
 
 ---
 
