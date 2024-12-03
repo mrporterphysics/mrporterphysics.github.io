@@ -14,7 +14,52 @@ math: mathjax
 
 ---
 
+
+
 <!--- class: winter --->
+
+
+# 2024.12.03 **Regents Physics** Do Now
+
+- Finish Balanced vs. Unbalanced Forces Worksheet
+- [Balanced Forces & Motion](https://www.physicsclassroom.com/mop/NewtonsLaws/Balanced-Forces-and-the-State-of-Motion/Mission-NL2)
+
+
+---
+
+# 2024.12.03 **Regents Physics**
+
+##### **❓ of the 📅**: Who would you most love to prank?
+
+<div class ='columns'>
+
+ <div >
+
+#### 📋 Agenda
+
+1. Do Now
+2. Notes: Types of Forces
+3. Identifying Forces p. 7
+4. [Concept Builder: Balanced vs. Unbalanced Forces](https://www.physicsclassroom.com/Concept-Builders/Newtons-Laws/Balanced-Unbalanced-Forces)
+4. Notes: Force Diagrams
+5. FBD Pracitce - p. 15 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define different force types_
+
+🥅 _Identify force types in physical situations_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2024.12.02 **Regents Physics**
 

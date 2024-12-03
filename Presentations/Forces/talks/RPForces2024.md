@@ -101,7 +101,7 @@ Students typically have many pre-conceived notions regarding concepts in Physics
 
 ---
 
-# Mini Experiment: **Mass vs. Weight**
+# ⚖️ Mini Experiment: **Mass vs. Weight**
 
 ## Objective: 
 
@@ -115,7 +115,7 @@ Students typically have many pre-conceived notions regarding concepts in Physics
 
 ---
 
-# Gravity $F_g$ 
+# 🌎 Gravity $F_g$ 
 
 ## Notes:
 
@@ -128,7 +128,7 @@ Students typically have many pre-conceived notions regarding concepts in Physics
 
 ---
 
-# Reminder Mass vs. **Weight**
+# ⚖️ Reminder Mass vs. **Weight**
 
 <div class='columns'>
 <div>
@@ -174,7 +174,7 @@ $$\boxed{g = \frac{F_g}{m}}$$
 <div class='columns'>
 <div>
 
-## Balanced Forces
+## ⚖️ Balanced Forces
 
 ### Book at Rest
 
@@ -188,7 +188,7 @@ $$\boxed{g = \frac{F_g}{m}}$$
  
 <div>
 
-## Unbalanced Forces
+## :triangular_ruler: Unbalanced Forces
 
 ### Book Sliding across table
 
@@ -310,3 +310,73 @@ $$\boxed{1\textrm{ Newton} = 1\textrm{ kg} \cdot 1 \textrm{ m/s}^2}$$
 |---|---------| 
 | Spring $F_f$ | The spring force is the force exerted by a compressed or stretched spring upon any object that is attached to it. An object that compresses or stretches a spring is always acted upon by a force that restores the object to its rest or equilibrium position.  | 
 | Air Resistance (Drag) $F_D$| The air resistance is a special type of frictional force that acts upon objects as they travel through the air. The force of air resistance is often observed to oppose the motion of an object. This force will frequently be neglected due to its negligible magnitude (and due to the fact that it is mathematically difficult to predict its value). | 
+
+
+--- 
+
+# **Net Force** $F_{net}$ or $\Sigma F$
+
+## If forces are **unbalanaced** there is there is a total amount of unbalanced force. This is the **net force** on an object. 
+
+### Note: Net force **is not** an individual force. It is a result of adding all of the force vectors acting on an object. 
+
+--- 
+
+# Net Force
+
+## Adding Vectors
+
+![w:500](image-13.png)
+
+
+
+---
+
+# Net Force with Force Diagrams
+
+![w:800](image-12.png)
+
+- 1200 N + -800 N = 400 N
+- 600 N + -800 N = -200 N
+- 50 N + -50 N = 0 N
+- 20 N + 0 N = 20 N
+
+---
+
+# Drawing Free Body Diagrams 
+
+<div class='columns'>
+<div>
+
+A special type of force diagram that **represents all the forces acting upon an object**. Arrows represent the forces. The force arrows …
+
+- … are labeled according to type,
+- … are pointing in the direction of the force,
+- … and have a length that is in proportion to their relative strength (longer arrows are stronger forces).
+
+</div>
+ 
+<div>
+
+![alt text](image-14.png)
+
+</div>
+</div>
+
+---
+
+# Drawing FBDs
+
+1) Identify forces that are present:
+    - Is the object near a planet (charge or magnet)?
+    - Is the object in contact with another object?
+2) Determine the direction of each force
+3) Draw an arrow to represent the force starting at the center of the dot or box representing the object and pointing in the direction of the force?
+4) Draw the force to scale to represent magnitude
+5) Label the arrow with the force type
+
+---
+
+# Demo ✏️ <!--fit--->
+
+---
