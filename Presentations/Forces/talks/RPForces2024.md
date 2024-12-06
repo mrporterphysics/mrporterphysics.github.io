@@ -377,6 +377,75 @@ A special type of force diagram that **represents all the forces acting upon an 
 
 ---
 
-# Demo ✏️ <!--fit--->
+# FBD Demo ✏️ <!--fit--->
 
 ---
+
+# Newton's First Law
+
+## _When forces are balanced our objects maintain their constant velocity_
+
+---
+
+# How do we handle unbalanced forces? 
+
+## Netwon's Second Law
+
+---
+
+
+# Newton's Second Law 
+
+# $\boxed{a = \frac{F_{net}}{m}}$
+
+also written as...
+
+# $F_{net} = ma$ 
+
+---
+
+![bg fit](image-16.png)
+
+---
+
+# On a whiteboard...<!--fit--->
+
+## ✏️ Sketch:
+
+### 1. A graph of **acceleration** (y axis) vs. **net force** (x axis) for constant mass
+
+### 2. A graph of **acceleration** (y-axis) vs. **mass** (x-axis) for constant net force 
+
+---
+
+# Newton's 2nd Law Lab: Fan Carts 
+
+<div class='columns'>
+<div>
+
+### Objective:
+
+Using your fan cart, collect data to verify Newton's Second Law. Use acceleration as your dependent variable. Design ***two*** experiments. 
+
+### Materials:
+
+- wireless dynamics cart
+- fan 
+- track
+- assorted masses
+
+</div>
+ 
+<div>
+
+### Must Include:
+
+1. Two procedures.
+2. Free body diagrams for your fan cart to reference your net force, *and how you will measure that fan force*. 
+3. Diagram of your experimental setup. 
+4. Just one discussion & conclusion to write about both experiments.
+
+
+</div>
+</div>
+

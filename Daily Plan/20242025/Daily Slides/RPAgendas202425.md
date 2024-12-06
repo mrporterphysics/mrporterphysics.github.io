@@ -19,6 +19,64 @@ math: mathjax
 <!--- class: winter --->
 
 
+# 2024.12.06 **Regents Physics**
+
+##### **❓ of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Do Now - finish FBDs in packet -> ⏲️ 10 Minutes
+1. Newton's Second Law - Notes
+2. Fan Cart Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Design an experiment to verify Newton's Second Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.12.04 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite Disney movie?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Finish Force Identification Worksheet (p. 7-10)
+2. Notes - Free Body Diagrams 
+3. Worksheet Free-Body Diagrams - page 15
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify forces and represent forces in free body diagrams_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.12.03 **Regents Physics** Do Now
 
 - Finish Balanced vs. Unbalanced Forces Worksheet

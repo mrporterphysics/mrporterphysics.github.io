@@ -18,6 +18,133 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.06 **Earth Science**
+
+##### **❓ of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Shadow Zone Reading
+1. Epicenter notes
+2. Earthquake Practice 
+    - ESRT
+    - Reading Seismographs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Locate Earthquakes using P & S Waves_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.12.05 **Earth Science**
+
+##### **❓ of the 📅**: What is the best board game?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Join Nearpod:
+    - Coode: **YAFWZ**
+3. Notes on Earthquakes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Earthquakes_
+
+🥅 _Use models to find Earthquake Epicenters_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2024.12.04 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite Disney movie?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Volcano Lab: ⏲️ 25 Minutes
+2. Earthquake Notes
+    - What are they
+    - How can we calculate them
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Earthquake terms_
+
+🥅 _Explore Locating Earthquakes_
+
+🥅 _Calculate Earthquake Epicenters_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2024.12.03 **Earth Science**
+
+##### **❓ of the 📅**: Who would you most want to prank?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Volcanoes Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model what happens in an eruption and its impact of the different 'spheres'_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.12.02 **Earth Science**
 
 ##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?

@@ -17,6 +17,230 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.06 **AP Physics**
+
+##### **❓ of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz 
+2. AP Question 2015 (start when you finish the quiz)
+3. [Physics Classroom: Two Body Problems](https://www.physicsclassroom.com/calcpad/launch/CPNL20)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model accelerating systems_
+
+### 📆 Upcoming
+
+- Start Circular motion next week
+- Forces Test Wednesday before break. AP Classroom is open. 
+
+</div>
+</div>
+
+---
+
+# 2024.12.05 **AP Physics**
+
+##### **❓ of the 📅**: What is the best board game?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: AP Workbook 2.J 
+2. Examples on Solving Atwood Machines
+3. AP Workbook 2.I
+4. Old AP Exam Questions - Paired Problem Solving on Whiteboard
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model accelerating systems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<!--- _footer: <br>--->
+
+# 2024.12.04 **AP Physics** Do Now 
+
+The two blocks are identical and both are at rest. A student comparing the normal force exerted on the block by the surface in the two cases states:
+
+_**“Since both blocks are identical, I think the normal forces are the same because in each case the normal force will be equal to the weight.”**_
+
+What, if anything, is wrong with this contention? If something is wrong, identify it and explain how to correct it. If this contention is correct, explain why.
+
+![bg fit right:25%](image-18.png)
+
+---
+
+# 2024.12.04 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite Disney movie?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. AP Workbook 2H
+5. Incline Plane AP Derivations
+3. Friction Paragraph Question (AP Classroom)
+4. Solving Two Body Systems (AP Workbook 2.J & 2.K)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve Inclined Plane Problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+<!--- _class: schodack --->
+<!--- _footer: <br>--->
+
+<div class='columns'>
+<div>
+
+A box is being pushed at constant speed up an inclined plane to a vertical height of 3.0 m above the ground. The person exerts a force parallel to the plane. The mass $m$ of the box is 50 kg, and the coefficient of kinetic friction $\mu_k$ between the box and the plane is 0.30.
+
+1. Draw and label the forces (not components) acting on the box.
+2. Calculate the normal force of the plane on the box.
+</div>
+ 
+<div>
+
+![center w:400](image-20.png)
+
+
+3. Calculate the component of the force of gravity acting on the box that is parallel to the plane. 
+4. Calculate the friction force between the plane and the box. 
+5. Calculate the force applied by the person on the box. 
+
+
+</div>
+</div>
+
+---
+
+<!--- _class: schodack --->
+<!--- _footer: <br>--->
+
+
+<div class='columns'>
+<div>
+
+An empty sled of mass 25 kg slides down a muddy hill with a constant speef of 2.4 m/s. The slope of the hill is inclined at an angle of 15$^\circ$ with the horizontal. 
+
+1. Calculate the time it takes the sled to go 21 m down the slope. 
+2. Draw and label a free-body diagram for the sled as it slides down the slope. 
+
+
+
+</div>
+ 
+<div>
+
+![center](image-21.png)
+
+3. Calculate the frictional force between the sled and the slope.
+4. Calculate the coefficient of friction between the slope and the sled.
+
+</div>
+</div>
+
+---
+
+
+<!--- _class: schodack --->
+<!--- _footer: <br>--->
+
+
+<div class='columns'>
+<div>
+
+
+5. The sled reaches the bottom of the slope and continues on the horizontal ground. Assume the same coefficient of friction. 
+    
+i. In terms of velocity and acceleration, describe the motion of the sled  as it travels on the horizontal ground. 
+
+
+
+
+</div>
+ 
+<div>
+
+![center](image-21.png)
+
+ii. Sketch the velocity vs. time graph for the sled. Include the sled's travel down the slope and across the horizontal ground. Indicated wtih the symbol $t_\ell$ the time at which the sled leaves the slope. 
+
+</div>
+</div>
+
+---
+
+<!--- _class: schodack --->
+
+# A box of mass $m$ is at rest on a inclined plane at an angle of $\theta$. **Derive an expression for the coefficient of friction between the box and the ramp in terms of the given variables and any universal constants.**
+
+---
+
+<!--- _class: schodack --->
+
+<div class='columns'>
+<div>
+
+A person exerts a force $F_p$ on a rope to pull a block of mass $m$ up a ramp. The rope makes an angle $\theta_2$ to the ramp and the ramp makes an angle $\theta_1$ to the horizontal, as shown. The force of kinetic friction between the block and the ramp has a magnitude $F_f$. Which of the following expressions is equal to the magnitude of the acceleation $a$ of the block?
+
+</div>
+ 
+<div>
+
+![center](image-19.png)
+
+A. $\frac{F_p \cos \theta_2 + F_f}{m}-g\sin\theta_1$
+
+B. $\frac{F_p \cos \theta_2 - F_f}{m}-g\sin\theta_1$
+
+C. $\frac{F_p \cos \theta_2 + F_f}{m}+g\sin\theta_1$
+
+D. $\frac{F_p \cos \theta_2 - F_f}{m}+g\sin\theta_1$
+
+
+</div>
+</div>
+
+
+---
+
 # 2024.12.02 **AP Physics**
 
 ##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?
