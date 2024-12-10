@@ -18,6 +18,40 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.10 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather meet your travel back in time to meet your ancestors or to the future to meet your descendants?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Lab: Graph data & find equations 
+1. N2L Lab Review & Notes
+2. Write N2L Lab Discussion and Conclusions
+3. Solving N2L Questions 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Deploy N2L Model -> Use to problem solve_
+
+### 📆 Upcoming
+
+- Forces quiz Friday
+    - Part 1: Forces Facts (from fact sheet)
+    - Part 2: Problem Solving and Free Body Diagrams   
+
+</div>
+</div>
+
+---
+
 # 2024.12.09 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?

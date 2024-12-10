@@ -483,6 +483,16 @@ Using your fan cart, collect data to verify Newton's Second Law. Use acceleratio
 
 
 <div class='columns'>
+
+<div>
+
+### $F_{net}$ vs. Acceleration
+
+- graph is linear
+- slope should be ($1/mass$)
+
+</div>
+
 <div>
 
 ### Mass vs. Acceleration 
@@ -492,12 +502,31 @@ Using your fan cart, collect data to verify Newton's Second Law. Use acceleratio
 
 </div>
  
-<div>
-
-### $F_{net}$ vs. Acceleration
-
-- graph is linear
-- slope should be ($1/mass$)
 
 </div>
-</div>
+
+![center w:800](image-17.png)
+
+---
+
+# N2L Summary:
+
+$$\boxed{a = \frac{F_{net}}{m}}$$
+
+* acceleration is **_directly_ proportional to** Net Force
+* acceleration is **_inversely_ proportional to** mass
+
+
+---
+
+# 💪🧠 Forces Packet **page 12 & 13** <!--fit--->
+
+
+--- 
+
+# Putting it all together 
+
+## Using N2L and $F_{net}$ to find acceleration
+
+1. page 14 in packet together
+2. complete page 16 on your own
