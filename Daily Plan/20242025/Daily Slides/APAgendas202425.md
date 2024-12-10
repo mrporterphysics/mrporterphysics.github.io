@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.10 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather meet your travel back in time to meet your ancestors or to the future to meet your descendants?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Workbook 3.A & 3.B 
+    - Complete with partner and prepare to discuss
+2. Introduction to Circular Motion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define circular motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.12.06 **AP Physics**
 
 ##### **❓ of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?

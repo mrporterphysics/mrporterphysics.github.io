@@ -449,3 +449,55 @@ Using your fan cart, collect data to verify Newton's Second Law. Use acceleratio
 </div>
 </div>
 
+---
+
+# N2L Lab: Measuring Cart Force 
+
+<div class='columns'>
+<div>
+
+
+### Experiment 2: $F_{net}$ vs. $a$
+
+- Change the Fan force (can use 8 values) ➡️ two fans
+- Measure acceleration
+- Be sure to record your control value (mass)
+</div>
+ 
+<div>
+
+### Measuring $F_{net}$
+
+0. Zero force sensor (bottom right corner)
+1. Turn fan on
+2. Have fan **at rest** against a wall or mass
+3. Record force for a set period of time. 
+4. Record average force value
+
+</div>
+</div>
+
+---
+
+# N2L Results
+
+
+<div class='columns'>
+<div>
+
+### Mass vs. Acceleration 
+
+- graph is inverse relationship
+- constant in equation should be $F_{net}$
+
+</div>
+ 
+<div>
+
+### $F_{net}$ vs. Acceleration
+
+- graph is linear
+- slope should be ($1/mass$)
+
+</div>
+</div>

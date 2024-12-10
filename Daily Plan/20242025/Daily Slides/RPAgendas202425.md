@@ -18,6 +18,41 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.09 **Regents Physics**
+
+##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How to measure cart force
+2. Finish Collecting Data
+3. Whiteboard Results (graphs and equations)
+3. Discuss N2L Lab
+4. Write conclusions and discussions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Verify (or deny) Newton's Second Law experimentally_
+
+### 📆 Upcoming
+
+- Forces quiz Friday
+    - Part 1: Forces Facts (from fact sheet)
+    - Part 2: Problem Solving and Free Body Diagrams    
+
+</div>
+</div>
+
+---
+
 
 # 2024.12.06 **Regents Physics**
 

@@ -18,6 +18,34 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.09 **Earth Science**
+
+##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Earth Science Epicenter
+2. Lab -> Finding Epicenter
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use P & S Wave data to locate epicenter of an earthquake_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.12.06 **Earth Science**
 
 ##### **❓ of the 📅**: If you were so wealthy you didn’t need to work, what would you do with your time?
