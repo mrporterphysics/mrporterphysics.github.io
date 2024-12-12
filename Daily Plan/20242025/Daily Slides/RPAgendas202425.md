@@ -14,9 +14,40 @@ math: mathjax
 
 ---
 
-
-
 <!--- class: winter --->
+
+# 2024.12.12 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite road trip snack?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Finish Pages 12 & 13 in packet
+2. Solving Questions with N2L
+3. Packet pages 14, 16-18
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve questions with Newton's Second Law_
+
+### 📆 Upcoming
+
+- ***Forces Quiz tomorrow***
+    - Part 1: Forces Facts (from fact sheet)
+    - Part 2: Problem Solving and Free Body Diagrams   
+
+</div>
+</div>
+
+---
 
 # 2024.12.10 **Regents Physics**
 

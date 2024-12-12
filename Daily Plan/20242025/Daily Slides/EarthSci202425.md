@@ -18,6 +18,103 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.12 **Earth Science**
+
+##### **❓ of the 📅**: question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+Practice Day - Assessment Prep
+
+- [Quizizz](https://quizizz.com/join?gc=703917&source=liveDashboard): **703917**
+- Regents Practice on Canvas (**Earth's Interior Regents Practice 12/12**)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prepare for upcoming assessment on Earth's Interior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2024.12.11 **Earth Science**
+
+##### **❓ of the 📅**: What is the proper length of a playlist?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes - Richter Scale 
+    - Nearpod Code: **5ZUG9**
+2. Finish Earthquake practice grid
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Measure Earthquake Magnitude_
+
+### 📆 Upcoming
+
+- Quiz next week on Earth's Interior
+    - Practice tomorrow 
+
+</div>
+</div>
+
+
+---
+
+# 2024.12.10 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather meet your travel back in time to meet your ancestors or to the future to meet your descendants?    
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Finish Sheet from Last Class
+2. Earthquake Epicenter Lab
+2. Additional Earthquake Practice 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Locate Epicenter locations from P&S Wave Data_
+
+### 📆 Upcoming
+
+- Earth's Interior Quiz next week
+    - we will practice Friday AND next week before quiz
+
+</div>
+</div>
+
+---
+
 # 2024.12.09 **Earth Science**
 
 ##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?

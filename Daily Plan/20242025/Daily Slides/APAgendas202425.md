@@ -17,7 +17,71 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.12 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite road trip snack?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz -> Accelerating Systems
+2. Universal Law of Gravitation
+3. Predicting Circular Orbits
+    - [AP Satellite question](https://secure-media.collegeboard.org/apc/ap18-frq-physics-1.pdf) & [🔑](https://secure-media.collegeboard.org/ap/pdf/ap18-sg-physics-1.pdf)
+    - Planets Question
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Orbital motion with circular motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2024.12.11 **AP Physics**
+
+##### **❓ of the 📅**: What is the proper length of a playlist?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Centripetal Forces
+3. AP Workbook 3.C & Discuss
+4. AP Workbook 3.D & 3.E (finish for HW)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Derive expressions for circular motion_
+
+### 📆 Upcoming
+
+- Quiz tomorrow -> accelerating systems 
+
+</div>
+</div>
+
+---
+
 # 2024.12.10 **AP Physics**
+
 
 ##### **❓ of the 📅**: Would you rather meet your travel back in time to meet your ancestors or to the future to meet your descendants?
 

@@ -389,7 +389,7 @@ A special type of force diagram that **represents all the forces acting upon an 
 
 # How do we handle unbalanced forces? 
 
-## Netwon's Second Law
+## Newton's Second Law
 
 ---
 
