@@ -20,7 +20,7 @@ math: mathjax
 
 # 2024.12.12 **Earth Science**
 
-##### **❓ of the 📅**: question
+##### **❓ of the 📅**: What is your favorite road trip snack?
 
 <div class ='columns'>
 

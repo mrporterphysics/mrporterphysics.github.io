@@ -16,6 +16,38 @@ math: mathjax
 
 <!--- class: winter --->
 
+
+# 2024.12.13 **Regents Physics**
+
+##### **❓ of the 📅**: Do you believe Friday the 13th is good or bad luck?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Forces PC Practice:
+    - Warm up: [Mass vs. Weight](https://www.physicsclassroom.com/calcpad/launch/CPNL1) and [Force Diagrams](https://www.physicsclassroom.com/calcpad/launch/CPNL3)
+    - Practice: [Easy F = ma](https://www.physicsclassroom.com/calcpad/launch/CPNL5) and [N2L: FBDs and Acceleration](https://www.physicsclassroom.com/calcpad/launch/CPNL7) 
+    - Challenge: [N2L: Horizontal](https://www.physicsclassroom.com/calcpad/launch/CPNL8) and [N2L: Vertical](https://www.physicsclassroom.com/calcpad/launch/CPNL9)
+2. Quiz (Last 30 minutes... 🕙 10:10 am)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use N1L & N2L to solve problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.12.12 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your favorite road trip snack?
