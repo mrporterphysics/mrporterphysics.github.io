@@ -530,3 +530,169 @@ $$\boxed{a = \frac{F_{net}}{m}}$$
 
 1. page 14 in packet together
 2. complete page 16 on your own
+
+---
+
+
+# Assuming Friction...
+
+#### Rank the boxes from easiest to acceleration to most difficult to accelerate. Explain your reasoning...
+
+![center](../figures/normalfrictionranking.png)
+
+---
+
+#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on the boxes as shown. 
+
+![center](../figures/wallboxes.png)
+
+##### Rank the **magnitude of the normal force** exerted on the walls by the boxes. 
+
+---
+
+#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on the boxes as shown. 
+
+![center](../figures/wallboxes.png)
+
+##### Rank the **magnitude of the normal force** on each box from greatest to least. 
+
+---
+
+#### Ignoring the normal force...which box(es) do you think is the **most** difficult to hold up? Why?
+
+![center](../figures/wallboxes.png)
+
+
+---
+
+#### In both cases below, Grace pulls the same large crate across a floor at a constant speed of $1.48 \textrm{ m/s}$.
+
+![center](../figures/grace.png)
+
+
+##### Is the magnitude of the force exerted by Grace on the rope (i) _greater_ in Case A, (ii) _greater_ in Case B, or (iii) _the same_ in both cases?
+
+##### Explain your reasoning.
+
+---
+
+![bg fit](image-3.png)
+
+---
+
+![bg fit](image-4.png)
+
+---
+
+![bg fit](../figures/Kinetic-vs-Static-Friction.gif)
+
+---
+
+
+![bg fit](../figures/StaticFriction.gif)
+
+![bg fit](../figures/KineticFrictionConstantMotion.gif)
+
+---
+
+# Friction
+
+$$ \boxed{F_f \le \mu F_N} $$
+
+### Notes: 
+
+* $\le$ is only for **static friction**
+  * Why? Only need friction to **balance** so you don't need the _maximum_ amount of static friction 
+* $\mu$ (greek letter mu, pronouced "_mew_") - **coefficient of friction**
+  * how likely surface pairs are to interlock
+  * _always_ less than 1 
+
+
+
+---
+
+![bg fit](../figures/Testing-Friction-1.gif)
+![bg fit](../figures/Testing-Friction-08%20(1).gif)
+
+---
+
+
+
+# Common $\mu$ Values
+
+** From NYS Regents Physics Reference Tables
+
+**How do Kinetic $\mu$ compare to Static $\mu$ values?**
+
+![bg fit right](../figures/mus.png)
+
+
+
+---
+
+#### Friction Practice 
+
+Consider the free-body diagram for an object accelerating across a surface. The object has a mass of 2.12-kg. There is a forward thrust force of 50.0 N. The coefficient of friction between the object and the surface is 0.365. Determine the …
+
+<div class='columns'>
+<div>
+
+1. $F_N$ experienced by the object
+2. $F_f$ experiened by the object 
+3. $F_{net}$ experienced by the object
+4. Acceleration experienced by the object
+
+</div>
+<div>
+
+![center width:300 invert:75%](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/NewtonsLaws/NL11Q1.png)
+
+</div>
+</div>
+
+
+---
+
+## Dexter Eius is running through the cafeteria when he slips on some mashed potatoes and falls to the floor. (Let that be a lesson for Dexter.) Dexter lands in a puddle of milk and skids to a stop with an acceleration of $-4.23 \textrm{ m/s/s}$. Dexter weighs $723.0 \textrm{ N}$. 
+
+## **Determine the coefficient of friction between Dexter and the milky floor**.
+
+---
+
+## Amaya is driving his $1300 \textrm{-kg}$ car home after soccer practice. He is traveling down Lake Avenue with a speed of $15.8 \textrm{ m/s}$. A deer runs onto the road and Amaya skids to a stop in $3.41 \textrm{ s}$. 
+
+## **Determine the coefficient of friction between the car tires and the roadway.**
+
+---
+
+
+<br><br><br><br>
+
+# [Static Friction Lab Example](https://thephysicsaviary.com/Physics/Programs/Labs/ForceFriction/) <!--fit--->
+
+---
+
+# Friction Lab 
+
+#### **Objective**
+
+Determine the coefficient of static friction between your block and a two flat surfaces in the classroom.
+
+<div class='columns'>
+<div>
+
+#### **Materials** 
+
+- Wooden block
+- Electronic Force Sensor
+
+</div>
+ 
+<div>
+
+#### **Hypothesis**
+
+Which surface will have a greater coefficient of friction?
+
+</div>
+</div>

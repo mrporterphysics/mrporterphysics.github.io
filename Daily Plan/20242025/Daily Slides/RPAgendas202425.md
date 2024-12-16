@@ -16,6 +16,39 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.16 **Regents Physics**
+
+##### **❓ of the 📅**: What fictional world or place would you like to visit?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Drawing FBDs and N2L page 17 & 18
+1. Friction Notes 
+2. Packet Page 19
+3. [PC: Friction and $\mu$](https://www.physicsclassroom.com/calcpad/launch/CPNL11)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Friction_
+
+### 📆 Upcoming
+
+- ***Quiz Later in the week on N2L and Friction***
+
+</div>
+</div>
+
+
+---
+
 
 # 2024.12.13 **Regents Physics**
 

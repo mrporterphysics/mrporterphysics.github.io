@@ -18,6 +18,96 @@ math: mathjax
 
 <!--- class: winter --->
 
+
+# 2024.12.16 **Earth Science**
+
+##### **❓ of the 📅**: What fictional world or place would you like to visit?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Whiteboard Summary ~ 40 Minutes
+2. Choose your study method:
+    - [Way too much practice](https://docs.google.com/document/d/1O8satMHFWY8scWYl-bu-LAKiHK_fp1etFefbLbmIz8U/edit?tab=t.0)
+    - Print out practice
+    - Make a review sheet
+    - Other (check idea with Mr. Porter)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Summarize Earth's Interior Unit_
+
+### 📆 Upcoming
+
+- Earth's Interior Assessment Wednesday
+
+</div>
+</div>
+
+---
+
+# Whiteboard Summary:
+
+- What do we need to know about Earth's Interior?
+    - What are the **BIG IDEAS**?
+    - What are some *important details*?
+- Use words and pictures
+- Don't just copy your notes - lots of words isn't great, try to summarize and simplify.
+
+
+_⚠️ Do this first **without** any notes. Then review your notes and add to your board_
+
+---
+
+
+# 2024.12.13 **Earth Science**
+
+##### **❓ of the 📅**: Do you believe that Friday the 13th is bad luck?
+
+<div class ='columns'>
+
+ <div>
+
+#### 🍅 Ketchup
+
+##### "Catch Up"
+
+- Finish Regents Practice in Canvas
+
+</div>
+
+<div>
+
+#### 🟨 Mustard
+
+##### "Must do"
+
+- Topic 3 Review Sheet (check answers when you finish)
+
+</div>
+
+<div>
+
+#### 🟩 Relish
+
+##### "Extra"
+
+- Plotting Epicenters Worksheet
+
+</div>
+
+</div>
+
+---
+
+
 # 2024.12.12 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite road trip snack?

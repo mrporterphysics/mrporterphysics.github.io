@@ -17,6 +17,43 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.16 **AP Physics**
+
+##### **❓ of the 📅**: What fictional world or place would you like to visit?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: AP Workbook 3.F
+    - if you did it for homework check with neighbor
+2. Newton's Universal Law of Gravitation
+    - AP Workbook 3.M
+
+
+</div>
+
+<div>
+
+3. Predicting Circular Orbits
+    - [AP Satellite question](https://secure-media.collegeboard.org/apc/ap18-frq-physics-1.pdf) & [🔑](https://secure-media.collegeboard.org/ap/pdf/ap18-sg-physics-1.pdf) 
+    - AP Workbook 3.N
+
+### 🎯 Goals
+
+🥅 _Model Circular Orbits_
+
+### 📆 Upcoming
+
+- Test Wednesday (***Finish AP Classroom Progress Check!!***)
+
+</div>
+</div>
+
+---
+
 # 2024.12.12 **AP Physics**
 
 ##### **❓ of the 📅**: What is your favorite road trip snack?
