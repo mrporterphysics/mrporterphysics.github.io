@@ -17,6 +17,40 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.17 **AP Physics**
+
+##### **❓ of the 📅**: Which holiday has the best food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Test Review
+    - AP Classroom Progress Check
+    - AP Workbook (anything in unit 2 or 3 in workbook)
+    - AP Classroom Extra Practice
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for test_
+
+### 📆 Upcoming
+
+- Test tomorrow
+
+</div>
+</div>
+
+
+---
+
 # 2024.12.16 **AP Physics**
 
 ##### **❓ of the 📅**: What fictional world or place would you like to visit?

@@ -18,6 +18,157 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.17 **Earth Science**
+
+##### **❓ of the 📅**: Which holiday has the best food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Famous Geological Event Poster Project 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Research Famous Geological Event_
+
+### 📆 Upcoming
+
+- Assessment Tomorrow 
+
+</div>
+</div>
+
+---
+
+<!--- class: --->
+
+# Famous Geological Events Project
+## Earth-Shaking Research! 🌋🌊
+
+---
+
+# Project Overview
+Research a famous **volcanic eruption** or **earthquake** and create a digital poster about:
+- The geological event itself
+- Its immediate impacts
+- Long-term effects on society
+
+---
+
+# Timeline
+
+<div class='columns'>
+<div>
+
+- **Tuesday (40 mins)**
+  - Pick your event
+  - Research Event
+
+- **Wednesday (?? Time)**
+    - Complete research and start poster
+</div>
+ 
+<div>
+
+- **Thursday (40 mins)**
+  - Complete research
+  - Design your poster
+
+- **Friday (60 mins)**
+  - Digital gallery walk
+  - Share and discuss
+
+</div>
+</div>
+
+
+
+
+
+---
+
+# Choose Your Event!
+Examples include:
+- Mount St. Helens (1980)
+- 2004 Indian Ocean Earthquake/Tsunami
+- 1906 San Francisco Earthquake
+- Pompeii/Mount Vesuvius (79 CE)
+- Krakatoa Eruption (1883)
+- Mount Pinatubo (1991)
+
+*First come, first served - no duplicate events!*
+
+---
+
+# Your Digital Poster Should Include:
+
+1. **Event Details**
+   - When and where?
+   - What happened geologically?
+   - How big was it?
+
+2. **Impacts**
+   - Immediate effects
+   - Long-term changes
+   - Scientific discoveries
+
+---
+
+# Research Requirements
+
+- Use reliable sources
+  - .gov and .edu websites
+  - Scientific organizations
+  - Historical records
+
+- Include both:
+  - Scientific data
+  - Human impact stories
+
+---
+
+# Creating Your Poster
+
+Using Canva, you'll need:
+- Clear title
+- Organized sections
+- Relevant images
+- Data visualization
+- Sources cited
+
+*Design tips and template coming up!*
+
+---
+
+# Friday's Gallery Walk
+
+- Class splits into two groups
+- 20 minutes per group
+- Be ready to:
+  - Present your poster (2 mins)
+  - Answer questions
+  - Give feedback to others
+
+---
+
+# Grading Focus Areas
+
+- Scientific understanding
+- Research quality
+- Visual design
+- Information organization
+- Impact analysis
+
+---
+
+<!--- class: winter --->
 
 # 2024.12.16 **Earth Science**
 

@@ -16,6 +16,39 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.18 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather be extremely short or extremely tall?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Packet Page 19
+2. Review Friction Notes
+3. PC Calc Pad Practice:
+    - [Friction and $\mu$ 1](https://www.physicsclassroom.com/calcpad/launch/CPNL11)
+    - [Friction and $\mu$ 2](https://www.physicsclassroom.com/calcpad/launch/CPNL12)
+    - [Friction and $\mu$ 3](https://www.physicsclassroom.com/calcpad/launch/CPNL13)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.12.16 **Regents Physics**
 
 ##### **❓ of the 📅**: What fictional world or place would you like to visit?
