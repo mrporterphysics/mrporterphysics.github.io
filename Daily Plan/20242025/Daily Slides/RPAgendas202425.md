@@ -40,9 +40,11 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Practice solving problems with friction_
 
 ### 📆 Upcoming
+
+- Quiz (Tomorrow/Friday -> vote) on N2L & Friction
 
 </div>
 </div>
