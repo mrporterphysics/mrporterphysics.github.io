@@ -16,6 +16,40 @@ math: mathjax
 
 <!--- class: winter --->
 
+
+# 2024.12.19 **Regents Physics**
+
+##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now -> Fact Check 
+1. PC Friction Practice:
+    - [Friction and $\mu$ 1](https://www.physicsclassroom.com/calcpad/launch/CPNL11)
+    - [Friction and $\mu$ 2](https://www.physicsclassroom.com/calcpad/launch/CPNL12)
+    - [Friction and $\mu$ 3](https://www.physicsclassroom.com/calcpad/launch/CPNL13)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion that has friction_
+
+### 📆 Upcoming
+
+- Quiz tomorrow on N2L and Friction
+
+</div>
+</div>
+
+---
+
 # 2024.12.18 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather be extremely short or extremely tall?
