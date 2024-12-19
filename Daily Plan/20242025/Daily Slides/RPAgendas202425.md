@@ -19,7 +19,7 @@ math: mathjax
 
 # 2024.12.19 **Regents Physics**
 
-##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
+##### **❓ of the 📅**: What is a good stocking stuffer?
 
 <div class ='columns'>
 

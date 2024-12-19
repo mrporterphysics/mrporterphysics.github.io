@@ -18,6 +18,33 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.19 **Earth Science**
+
+##### **❓ of the 📅**: What is a good stocking stuffer?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Geological Event Project
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2024.12.17 **Earth Science**
 
 ##### **❓ of the 📅**: Which holiday has the best food?
