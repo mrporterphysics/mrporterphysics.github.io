@@ -16,6 +16,10 @@
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* Add January/New Year fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
 /*General Styles */
 
 section {
@@ -337,3 +341,174 @@ section.halloween{
     padding: 2px 5px;
     border-radius: 4px;
   }
+
+
+/* Add January/New Year fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+/* January theme section */
+section.january {
+  background: linear-gradient(135deg, #0B1120 0%, #1B2845 100%);
+  color: #FFFFFF;
+  position: relative;
+}
+
+/* Add subtle sparkle effect */
+section.january::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.6) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(255,255,255,0.4) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px;
+  animation: sparkle 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.2; }
+}
+
+section.january footer {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Style headers with January theme */
+section.january h1 {
+  color: #f2ff80;  /* Bright cyan */
+  font-family: 'Great Vibes', cursive;
+  text-shadow: 0 0 10px rgba(255, 230, 0, 0.5);
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+section.january h2,
+section.january h3,
+section.january h4,
+section.january h5 {
+  color: #f2ff80;  /* Lighter cyan */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Emphasis for January theme */
+section.january strong {
+  color: #FFF200;  /* Bright yellow */
+  font-weight: 700;
+}
+
+section.january h1 strong,
+section.january h2 strong,
+section.january h3 strong,
+section.january h4 strong,
+section.january h5 strong {
+  color: #FF9EFF;  /* Bright pink */
+  text-shadow: 0 0 8px rgba(255, 158, 255, 0.5);
+}
+
+/* Links for January theme */
+section.january a {
+  color: #00FFFF;  /* Bright cyan */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+section.january a:hover {
+  color: #FFF200;  /* Bright yellow on hover */
+}
+
+/* Alternative January backgrounds */
+section.january.midnight {
+  background: linear-gradient(to bottom, #000000 0%, #1B2845 100%);
+}
+
+section.january.celebration {
+  background: linear-gradient(45deg, #000000 0%, #1B2845 50%, #000000 100%);
+  animation: gradientShift 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* January-themed bullet points */
+section.january ul {
+  list-style-type: "✧ ";
+  color: #FFFFFF;
+}
+
+/* January-themed blockquotes */
+section.january blockquote {
+  border-left: 5px solid #00FFFF;
+  background-color: rgba(0, 255, 255, 0.1);
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+/* January-themed tables */
+section.january table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: 'Quicksand', sans-serif;
+  min-width: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+section.january th,
+section.january td {
+  padding: 12px 15px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #FFFFFF;
+}
+
+section.january thead tr {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #FFFFFF;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* January-themed code blocks */
+section.january code {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #00FFFF;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Special class for New Year elements */
+section.january .new-year-highlight {
+  background: linear-gradient(45deg, #00FFFF, #FFF200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+/* Resolution list styling */
+section.january .resolutions {
+  background-color: rgba(0, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #FFFFFF;
+}

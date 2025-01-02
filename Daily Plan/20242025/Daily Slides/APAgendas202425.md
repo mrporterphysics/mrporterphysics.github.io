@@ -15,7 +15,65 @@ math: mathjax
 
 ---
 
+<!--- class: january--->
+
+# 2025.01.02 **AP Physics**
+
+##### **❓ of the 📅**: Do you have a New Year resolution?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. uestion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Energy_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 <!--- class: winter --->
+
+# 2024.12.20 **AP Physics**
+
+##### **❓ of the 📅**: What are the best stocking stuffers?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Hand back N2L Lab Report (yes...that one we did a while back)
+2. Remainder of class to make edits to improve and resubmit
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2024.12.17 **AP Physics**
 

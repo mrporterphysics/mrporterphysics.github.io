@@ -18,6 +18,35 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.20 **Earth Science**
+
+##### **❓ of the 📅**: Who is traveling the furthest this break?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Canva Poster
+2. Gallery Walk & Turn in poster
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Present Geological Event Project_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2024.12.19 **Earth Science**
 
 ##### **❓ of the 📅**: What is a good stocking stuffer?

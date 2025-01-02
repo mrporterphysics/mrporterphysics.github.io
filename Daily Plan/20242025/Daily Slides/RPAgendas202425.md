@@ -16,6 +16,34 @@ math: mathjax
 
 <!--- class: winter --->
 
+# 2024.12.20 **Regents Physics**
+
+##### **❓ of the 📅**: Who is traveling the furthest this break?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Quiz N2L and Friction_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2024.12.19 **Regents Physics**
 

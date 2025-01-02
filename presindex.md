@@ -7,6 +7,7 @@
   - [Linear Dynamics](/mrporterphysics.github.io/Presentations/Forces/talks/Dynamics2024.html)
   - [2D Motion](/mrporterphysics.github.io/Presentations/APCAPM/talks/twoDMotion.html)
   - [Circular Motion](/mrporterphysics.github.io/Presentations/Circular%20Motion/talks/CircularMotion2024-25.html)
+  - [Energy](/mrporterphysics.github.io/Presentations/APETM/talks/APEnergy2025.html)
 
 ## Regents Physics 
 
