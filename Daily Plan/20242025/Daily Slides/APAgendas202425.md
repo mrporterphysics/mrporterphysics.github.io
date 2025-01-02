@@ -19,7 +19,7 @@ math: mathjax
 
 # 2025.01.02 **AP Physics**
 
-##### **❓ of the 📅**: Do you have a New Year resolution?
+##### **❓ of the 📅**: Question
 
 <div class ='columns'>
 
@@ -27,7 +27,39 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. uestion
+1. Finish Work Think Sheet
+2. Launcher Problem
+3. AP Workbook 4.A
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use work to solve problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.01.02 **AP Physics**
+
+##### **❓ of the 📅**: Do you have a New Year's resolution?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Energy Definitions and Ideas
+2. Work
+3. Work Think Sheet
+4. AP Workbook 4.A
 
 </div>
 
@@ -37,7 +69,12 @@ math: mathjax
 
 🥅 _Define Energy_
 
+🥅 _Define **Work**_
+
 ### 📆 Upcoming
+
+- HW: AP Workbook 4.A Work
+- Test Corrections -> Due next Friday 1/10
 
 </div>
 </div>

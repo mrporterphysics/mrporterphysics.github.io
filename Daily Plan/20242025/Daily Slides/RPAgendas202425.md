@@ -14,6 +14,39 @@ math: mathjax
 
 ---
 
+<!--- class: january --->
+
+# 2025.01.03 **Regents Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. True False Sheet (4&5)
+2. Packet Page 25 & 26
+3. Newton's 3rd Law 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review N1L & N2L_
+
+🥅 _Define N3L_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- class: winter --->
 
 # 2024.12.20 **Regents Physics**

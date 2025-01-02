@@ -16,6 +16,67 @@ math: mathjax
 
 ---
 
+<!--- class: january --->
+
+
+# 2025.01.03 **Earth Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Hand Back Tests
+2. Gallery Walk - Geological Event Posters
+3. Notes continued
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Erosion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.01.02 **Earth Science**
+
+##### **❓ of the 📅**: Do you have a New Year's Resolution?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Weathering & Erosion Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define weathering and erosion_
+
+🥅 _Look at factors of erosion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- class: winter --->
 
 # 2024.12.20 **Earth Science**

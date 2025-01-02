@@ -696,3 +696,39 @@ Which surface will have a greater coefficient of friction?
 
 </div>
 </div>
+
+---
+
+# Newton's 3rd Law: **Force Pairs**
+
+## _"For every action, there is an equal and opposite action."_
+
+# 😑
+
+### Forces are a result of **two** objects interacting. The force that each object applies on the other is equal in magnitude and opposite in direction. 
+
+---
+
+## While driving down the road, a firefly strikes the windshield of a bus and makes a quite obvious mess in front of the face of the driver. This is a clear case of Newton's third law of motion. The firefly hit the bus and the bus hits the firefly. **Which of the two forces is greater: the force on the firefly or the force on the bus?**
+
+---
+
+## In the top picture (below), Kent Budgett is pulling upon a rope that is attached to a wall. In the bottom picture, Kent is pulling upon a rope that is attached to an elephant. In each case, the force scale reads 500 Newton. Kent is pulling ...
+
+<div class='columns'>
+<div>
+
+![center](image-18.png)
+
+</div>
+ 
+
+<div>
+
+a. with more force when the rope is attached to the wall.
+b. with more force when the rope is attached to the elephant.
+c. the same force in each case.
+
+</div>
+</div>
+
