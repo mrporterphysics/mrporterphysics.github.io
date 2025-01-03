@@ -18,6 +18,38 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.03 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?n
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: W & E Reading
+2. Hand Back Tests
+3. Gallery Walk -> Geo Events 
+4. Erosion Matching Sheet
+5. Climate Graph Sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify Agents of Erosion_
+
+🥅 _Interpret Climate's impact on W&E from graphical data_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2025.01.03 **Earth Science**
 

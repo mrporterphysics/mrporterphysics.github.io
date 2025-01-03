@@ -17,9 +17,9 @@ math: mathjax
 
 <!--- class: january--->
 
-# 2025.01.02 **AP Physics**
+# 2025.01.03 **AP Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?
 
 <div class ='columns'>
 
