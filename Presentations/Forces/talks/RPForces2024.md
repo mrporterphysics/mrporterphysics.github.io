@@ -732,3 +732,83 @@ c. the same force in each case.
 </div>
 </div>
 
+---
+
+# Packet Page **23** <!--fit--->
+
+---
+
+# Angled Forces
+
+## Identical treasure chests (shown from above) each have two forces acting on them. All chests start at rest.
+
+![center](image-19.png)
+
+**Rank the speed of the treasure chest after 2 seconds.**
+
+---
+
+A block is moving to the right across a rough table at a constant speed of 2 m/s. The tables and the blocks are identical in the two cases. In Case A, the block is pushed with a stick and in Case B, the block is pulled with a string. The angle that the applied force makes with the horizontal is the same in both cases.
+
+_Will the magnitude of the force on the block by the stick in Case A be (i) greater than, (ii) less than, or (iii) equal to the tension on the block by the string in Case B?_
+
+Explain your reasoning.
+
+
+![bg fit right:40%](image-20.png)
+
+---
+
+# Partner Work - Another F = ma <!--fit---> 
+
+(New Forces Packet)
+
+---
+
+# Vector Review
+
+
+* $\vec{A}^2 = \vec{A}_x^2 + \vec{A}_y^2$
+* Depending on the angle...
+  * $A_x = \pm A \cos \theta$
+  * $A_y = \pm A \sin \theta$
+
+---
+
+
+## Adding Vectors 
+
+
+#### Using Components
+
+
+You can sum the components of the two vectors to find the components of the **resultant** vector 
+
+If $\vec{C} = \vec{A} + \vec{B}$...
+
+* $C_x = A_x + B_x$
+* $C_y = A_y + B_y$
+* $|C| = \sqrt{C_x^2 + C_y^2 }$
+
+![bg fit right](../../Projectiles/figures/Adding-Vectors-Using-Components.gif)
+
+---
+
+A pack of five Artic wolves are exerting five different forces upon the carcass of a 500-kg dead polar bear. A top view showing the magnitude and direction of each of the five individual forces is shown in the diagram at the right. 
+
+![bg fit right:25%](image-21.png)
+
+---
+
+
+![bg fit left:35%](image-21.png)
+![](image-23.png)
+![](image-24.png)
+
+---
+
+# **1.** [Name that vector](https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Name-That-Vector/Name-That-Vector-Interactive)
+
+# **2.** [Vector Guessing Game](https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Vector-Guessing-Game/Vector-Guessing-Game-Interactive)
+
+# **Helpful Simulation:** [Vector Addition Simulation](https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Vector-Addition/Vector-Addition-Interactive)

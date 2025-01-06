@@ -18,9 +18,40 @@ math: mathjax
 
 <!--- class: january --->
 
+
+# 2025.01.06 **Earth Science**
+
+##### **❓ of the 📅**: If you had to be a villian from a movie, which movie would you pick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Glacier Notes
+2. Glacier Simulation Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Glacier Features_
+
+🥅 _Explore Glacial Movement_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.01.03 **Earth Science**
 
-##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?n
+##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?
 
 <div class ='columns'>
 

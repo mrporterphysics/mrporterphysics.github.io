@@ -16,6 +16,69 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.07 **Regents**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Newton's Third Law
+2. Page 23
+3. [FBD Practice](https://www.physicsclassroom.com/mop/NewtonsLaws/Force-Diagrams/Mission-NL5)
+4. Forces at angles
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define & Apply N3L_
+
+🥅 _Identify Force Diagrams_
+
+🥅 _Apply Newton's Laws to angled forces_
+
+
+</div>
+</div>
+
+---
+
+# 2025.01.06 **Regents Physics**
+
+##### **❓ of the 📅**: If you had to be a villian from a movie, which movie would you pick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish page 25 & 26 
+2. Newton's Third Law
+3. Packet page 23
+4. PC: [Newton's Second and Third Laws](https://www.physicsclassroom.com/calcpad/launch/CPNL16)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and apply Newton's Third law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.01.03 **Regents Physics**
 
 ##### **❓ of the 📅**: 
