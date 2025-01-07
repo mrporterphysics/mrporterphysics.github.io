@@ -18,7 +18,7 @@ math: mathjax
 
 # 2025.01.07 **Regents**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Should pizza slices be triangles or squares?
 
 <div class ='columns'>
 

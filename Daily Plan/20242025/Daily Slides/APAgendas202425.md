@@ -17,6 +17,37 @@ math: mathjax
 
 <!--- class: january--->
 
+# 2025.01.07 **AP Physics**
+
+##### **❓ of the 📅**: Should pizza slices be triangles or squares?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Launcher Lab
+2. Work - AP Workbook 4.A
+3. Energy Bar Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Apply Work to problem solving_
+
+🥅 _Model energy conservation with bar graphs_
+
+
+</div>
+</div>
+
+
+---
+
 # 2025.01.03 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?
