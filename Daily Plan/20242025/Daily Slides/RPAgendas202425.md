@@ -16,6 +16,56 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.13 **Regents Physics**
+
+##### **❓ of the 📅**: If you became president, what’s the first thing you would do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Another Angle on F-m-a 
+1. Angled Forces Intro 
+2. Adding and Resolving Forces (new packet)
+3. [Force Components](https://www.physicsclassroom.com/calcpad/launch/CPF2D1)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look at forces as two dimensional vectors_
+
+### 📆 Upcoming
+
+- [Adding Force Vectors](https://www.physicsclassroom.com/calcpad/launch/CPF2D2)
+
+</div>
+</div>
+
+---
+
+# 2025.01.09 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather lose both legs, both arms, or one of each?
+
+
+
+#### 📋 Agenda
+
+1. Free Body Diagrams (Card Sort)
+1. N3L Practice
+2. Equilibrium
+4. [Mission F2D3](https://www.physicsclassroom.com/mop/Forces-in-2-Dimensions/Equilibrium-Concepts) on Equilibrium Concepts
+
+
+
+
+---
+
 # 2025.01.07 **Regents**
 
 ##### **❓ of the 📅**: Should pizza slices be triangles or squares?

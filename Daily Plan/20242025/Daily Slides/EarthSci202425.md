@@ -18,6 +18,128 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.13 **Earth Science**
+
+##### **❓ of the 📅**: If you became president, what’s the first thing you would do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes: Deposition
+    - Nearpod: **R275L**
+2. Notes whiteboard share out
+2. Practice Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define stream deposition characteristics_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.01.09 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather lose both legs, both arms, or one of each?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Lab (⏲ 15 Minutes)
+2. Glaciers Questions (⏲ 20 Minutes)
+3. Go Over Lab & Questions at **1:15**
+
+
+</div>
+
+<div>
+
+4. On your own: Nearpod: **C67YM**
+5. Stream Practice
+
+### 🎯 Goals
+
+🥅 _Finish Glacier Lab_
+
+🥅 _Learn about erosional and depositional processes in streams_
+
+
+</div>
+</div>
+
+---
+
+# 2025.01.08 **Earth Science**
+
+##### **❓ of the 📅**: If you could have dinner with anyone in the world, who would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Glacier Lab
+2. Glacier Multiple Choice Practice
+3. Go over Glacier Lab & MC Practice      
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore Glacier simulation and growth_
+
+
+</div>
+</div>
+
+---
+
+# 2025.01.07 **Earth Science**
+
+##### **❓ of the 📅**: Should pizza be cut in triangles or squares?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Agents of Erosion
+1. Glacier Lab
+2. Glacier Questions 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 
 # 2025.01.06 **Earth Science**
 

@@ -738,6 +738,22 @@ c. the same force in each case.
 
 ---
 
+Two toy trucks traveling at different constant speeds are about to collide.
+
+(a) The two identical trucks are traveling in the same direction, and truck B is carrying a heavy load.
+(b) The two identical trucks are traveling in opposite directions, and truck B is carrying a heavy load.
+(c) The two identical trucks are traveling in the same direction, and truck A is carrying a heavy load.
+(d) The two identical trucks are traveling in opposite directions, and truck A is carrying a heavy load.
+
+**During the collision, will the magnitude of the force exerted on truck A by truck B be (i) greater than, (ii) less than, or (iii) equal to the magnitude of the force exerted on truck B by truck A?**
+
+![bg fit right:30% vertical](image-25.png)
+![bg fit right](image-26.png)
+![bg fit right](image-27.png)
+![bg fit right](image-28.png)
+
+---
+
 # Angled Forces
 
 ## Identical treasure chests (shown from above) each have two forces acting on them. All chests start at rest.

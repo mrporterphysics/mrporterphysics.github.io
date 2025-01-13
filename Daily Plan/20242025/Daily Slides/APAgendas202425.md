@@ -17,6 +17,134 @@ math: mathjax
 
 <!--- class: january--->
 
+# 2025.01.14 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [AP B Loop Question](https://secure-media.collegeboard.org/apc/ap10_frq_physics_b_formb.pdf)
+2. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.01.13 **AP Physics**
+
+##### **❓ of the 📅**: If you became president, what’s the first thing you would do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. AP Workbook 4.C, E, F
+2. Physics Classroom Packet:
+    1. 7 & Check
+    2. 9-10 & Check
+    3. HW: 13-18
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Energy_
+
+
+### 📆 Upcoming
+
+- Energy Quiz Wednesday
+
+</div>
+</div>
+
+---
+
+# 2025.01.09 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather lose both legs, both arms, or one of each?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - AP Workbook 4.B
+2. Energy Equations
+3. PC Think Sheet p. 7-10
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Energy Equations_
+
+🥅 _Apply Ideas of work and energy_
+
+### 📆 Upcoming
+
+- Test Corrections
+- HW: [K](https://www.physicsclassroom.com/calcpad/launch/CPWE6) & [U](https://www.physicsclassroom.com/calcpad/launch/CPWE7) Practice
+
+
+</div>
+</div>
+
+---
+
+# 2025.01.08 **AP Physics**
+
+###### **❓ of the 📅**: If you could have dinner with anyone in the world, who would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Law of Conservation of Energy
+2. Modeling Conservation with Bar Graphs
+3. Practice with Bar Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Conservation of Energy_
+
+🥅 _Model Energy with 📊 Graphs_
+
+
+
+</div>
+</div>
+
+---
+
 # 2025.01.07 **AP Physics**
 
 ##### **❓ of the 📅**: Should pizza slices be triangles or squares?
