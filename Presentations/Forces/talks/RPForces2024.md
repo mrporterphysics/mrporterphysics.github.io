@@ -828,3 +828,112 @@ A pack of five Artic wolves are exerting five different forces upon the carcass 
 # **2.** [Vector Guessing Game](https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Vector-Guessing-Game/Vector-Guessing-Game-Interactive)
 
 # **Helpful Simulation:** [Vector Addition Simulation](https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Vector-Addition/Vector-Addition-Interactive)
+
+---
+
+# Solving Force Problems with Components
+
+## **Equilibrium** - when forces on an object are balanced.
+
+![alt text](image-29.png)
+
+---
+
+# Example
+
+![w:400](image-30.png) ![w:545](image-31.png)
+
+---
+
+# Process 1: Vector Addition
+
+![w:400](image-31.png) becomes ![](http://www.physicsclassroom.com/Class/vectors/u3l3c5.gif)
+
+
+---
+
+# Process 2: Vector Components:
+
+![w:300](image-31.png) becomes ![w:500](http://www.physicsclassroom.com/Class/vectors/u3l3c6.gif)
+
+
+![w:600](http://www.physicsclassroom.com/Class/vectors/u3l3c17.gif)
+
+---
+
+![bg fit](image-32.png)
+
+---
+
+# [🔗 Balance It!](https://www.physicsclassroom.com/Physics-Interactives/Forces-in-2D/Equilibrium/Interactive) <!--fit--->
+
+---
+
+# Example Together
+
+<div class='columns'>
+<div>
+
+_Here's the clown who came to town to sign your yearbook upside down_
+
+
+### Suppose the tension in both of the cables is measured to be 50 N and that the angle that each cable makes with the horizontal is known to be 30 degrees. What is the weight of the sign?
+
+</div>
+ 
+<div>
+
+![center](image-33.png)
+
+</div>
+</div>
+
+---
+
+
+# Example Together
+
+<div class='columns'>
+<div>
+
+_Here's the clown who came to town to sign your yearbook upside down_
+
+
+### Suppose the tension in both of the cables is measured to be 50 N and that the angle that each cable makes with the horizontal is known to be 30 degrees. What is the weight of the sign?
+
+</div>
+ 
+<div>
+
+![center w:600](image-34.png)
+
+Fg = 50 N
+
+</div>
+</div>
+
+---
+
+# Example 2
+
+<div class='columns'>
+<div>
+
+#### The sign below hangs outside the physics classroom, advertising the most important truth to be found inside. The sign is supported by a diagonal cable and a rigid horizontal bar. If the sign has a mass of 50 kg, then determine the tension in the diagonal cable that supports its weight.
+
+</div>
+ 
+<div>
+
+![center w:400](image-35.png)
+
+</div>
+</div>
+
+---
+
+# **Packet Page 5 & 6**
+
+# [🔗  Physics Classroom - Equilibrium 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D4)
+
+# [🔗 Physics Classroom - Equilibrium 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D5)

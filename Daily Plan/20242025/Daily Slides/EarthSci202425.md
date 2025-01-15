@@ -18,6 +18,62 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.15 **Earth Science**
+
+##### **❓ of the 📅**: If you could start a charity, what would it be for?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. River Erosion Lab
+2. Finish _The Erosional-Depositional Steam System Practice Questions_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model River Erosion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.01.14 **Earth Science**
+
+##### **❓ of the 📅**: What is your silliest fear? 🐍 🕸️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Stream Velocity & Sediment Transport
+2. The Erosional-Depositional Steam System
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Apply Erosion and deposition knowledge_
+
+
+</div>
+</div>
+
+---
+
 # 2025.01.13 **Earth Science**
 
 ##### **❓ of the 📅**: If you became president, what’s the first thing you would do?

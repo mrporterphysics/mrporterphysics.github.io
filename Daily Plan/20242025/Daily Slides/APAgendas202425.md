@@ -17,7 +17,7 @@ math: mathjax
 
 <!--- class: january--->
 
-# 2025.01.14 **AP Physics**
+# 2025.01.15 **AP Physics**
 
 ##### **❓ of the 📅**: Question
 
@@ -27,8 +27,8 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. [AP B Loop Question](https://secure-media.collegeboard.org/apc/ap10_frq_physics_b_formb.pdf)
-2. 
+1. Quiz 
+2. Pivot - Sliding Puck
 
 </div>
 
@@ -36,12 +36,60 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model the motion of a sliding puck with energy and forces_
 
 ### 📆 Upcoming
 
+- Energy Test 1/24 (Review Opened)
+
 </div>
 </div>
+
+
+---
+
+# 2025.01.14 **AP Physics**
+
+##### **❓ of the 📅**: What is your silliest fear? 🐍 🕸️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [AP B Loop Question](https://secure-media.collegeboard.org/apc/ap10_frq_physics_b_formb.pdf)
+2. Workbook 4.G
+3. Pop Up Toy Mini Lab
+4. Sliding Puck Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Physical Situations with Energy_
+
+### 📆 Upcoming
+
+- Energy Quiz Tomorrow
+- Energy Test 1/24 (Review Opened)
+
+</div>
+</div>
+
+---
+
+# Pop Up Toy
+
+## Objective:
+
+_**Determine the spring constant of the pop-up toy**_
+
+- Using Energy, experimentally determine the spring constant of your toy using a meterstick and the electronic balance.
+- Start with an energy bar graph, write the energy conservation equation & and substitute in
+
 
 ---
 

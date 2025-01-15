@@ -16,6 +16,38 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.15 **Regents Physics**
+
+##### **❓ of the 📅**: If you could start a charity, what would it be for?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: PC [Vector Components](https://www.physicsclassroom.com/calcpad/launch/CPF2D1)
+2. Equilibrium Problems
+3. [🔗 Balance It!](https://www.physicsclassroom.com/Physics-Interactives/Forces-in-2D/Equilibrium/Interactive)
+4. Pages 5 & 6 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use Vector components to solve angled force problems_
+
+### 📆 Upcoming
+
+- Start signing up for quiz retakes...quarter ends next week!
+
+</div>
+</div>
+
+---
+
 # 2025.01.13 **Regents Physics**
 
 ##### **❓ of the 📅**: If you became president, what’s the first thing you would do?
