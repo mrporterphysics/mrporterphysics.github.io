@@ -18,6 +18,48 @@ math: mathjax
 
 <!--- class: january --->
 
+<!--- _footer: <br>--->
+
+## Do Now: Recall Practice - answer without your notes
+
+1. When rocks rub and bounce against each other during transport, we call this process _______. 
+2. Compare and contrast how rocks are broken down by frost action versus plant growth. 
+3. Explain why sediment deposition is greatest at two specific locations in a river system. 
+4. Describe the complete process of how a kettle lake forms
+5. Analyze how particle characteristics affect deposition rates. Include three specific particle properties and explain how each one influences how quickly the particle will be deposited.
+
+---
+
+# 2025.01.16 **Earth Science**
+
+##### **❓ of the 📅**: What’s your favorite month?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Recall Practice 
+2. Hydrology Notes
+3. Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define & Model Hydrology_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.01.15 **Earth Science**
 
 ##### **❓ of the 📅**: If you could start a charity, what would it be for?

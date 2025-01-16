@@ -16,6 +16,41 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.16 **Regents Physics**
+
+##### **❓ of the 📅**: What’s your favorite month? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Packet page 6
+2. Solving Equilibrium Questions 🤡
+2. [Equilibrium 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D4)
+2. [Equilibrium 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D4)
+
+
+</div>
+
+<div>
+
+
+### 📆 Upcoming
+
+- ***Start signing up for retakes...***
+
+### 📁 Resources
+
+- [PC Video on Equilibrium](https://youtu.be/kYrZfkOyIfU?si=Ve7E8AFUSY3bUTlm&t=345)
+
+</div>
+</div>
+
+
+---
+
 # 2025.01.15 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could start a charity, what would it be for?
