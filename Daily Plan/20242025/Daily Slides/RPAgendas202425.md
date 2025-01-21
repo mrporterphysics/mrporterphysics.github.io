@@ -16,6 +16,69 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.22 **Regents Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Inclined Plane Pivot
+2. Notes Inclined Planes
+3. Practice:
+    - [Inclined Planes 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D10)
+    - [Inclined Planes 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D11)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Find Forces on Inclined Planes_
+
+### 📆 Upcoming
+
+  - Lab tomorrow
+
+</div>
+</div>
+
+---
+
+# 2025.01.17 **Regents Physics**
+
+##### **❓ of the 📅**: Who is the most interesting person you’ve met and talked with?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now (10 min) packet page 7 & 8
+1. Pivot - Inclined Planes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model forces for objects on ramps_
+
+### 📆 Upcoming
+
+- Quarter Ends next week: [sign up for reassessments](https://forms.gle/LuWuWWiJcHagHfd89)
+
+</div>
+</div>
+
+---
+
 # 2025.01.16 **Regents Physics**
 
 ##### **❓ of the 📅**: What’s your favorite month? 

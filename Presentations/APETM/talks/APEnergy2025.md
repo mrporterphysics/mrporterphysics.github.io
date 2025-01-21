@@ -595,6 +595,40 @@ $$ x = \sqrt{\frac{8 \textrm{ kg} \cdot (5 \textrm{ m/s})^2}{50 \frac{\textrm{ N
 
 $$ \boxed{x = 2 \textrm{ m}}$$
 
+
+---
+
+# Block Launcher <!--fit--->
+
+---
+
+# Block Launcher Lab
+
+<div class='columns'>
+<div>
+
+## Objective:
+
+- Determine the coefficient of friction between your block and the table. 
+
+</div>
+ 
+<div>
+
+## Available Tools
+
+- Spring Scale
+- Meterstick
+- Electronic Balance
+
+</div>
+</div>
+
+## **Physics:**
+
+- Work-Energy Theorem: What does work to slow the block to a stop?
+- What can  you measure? What can you graph where $\mu$ is in the slope?
+
 ---
 
 

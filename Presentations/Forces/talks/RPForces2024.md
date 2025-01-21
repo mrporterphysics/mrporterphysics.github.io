@@ -937,3 +937,50 @@ Fg = 50 N
 # [🔗  Physics Classroom - Equilibrium 1](https://www.physicsclassroom.com/calcpad/launch/CPF2D4)
 
 # [🔗 Physics Classroom - Equilibrium 2](https://www.physicsclassroom.com/calcpad/launch/CPF2D5)
+
+
+---
+
+
+# Inclined Planes 
+
+![center](../figures/increasing-incline-and-force.gif)
+
+
+
+---
+
+# Inclined Planes
+
+
+![bg fit right:37%](image-1.png)
+
+- Component of gravity ***perpendicular to incline***
+
+$$F_{g\perp} = mg\cos\theta$$
+
+
+
+- Component of gravity ***parallel to incline***
+
+$$F_{g\parallel} = mg\sin\theta$$
+
+
+**if you can't find these with _ease_ using trig, you ***MUST*** memorize those equations
+
+---
+
+
+
+---
+
+Lab partners Anna Litical and Noah Formula placed a 0.25-kg glider on their air track and inclined the track at 10.4° above the horizontal. Use the structure provided at the right to determine the …
+
+![bg fit right:35%](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/ForcesIn2D/F2D10Q1.png)
+
+1. Force of gravity 
+2. Parallel component of gravity
+3. Perpendicular component of gravity
+4. Normal Force 
+5. Net Force
+5. Acceleration

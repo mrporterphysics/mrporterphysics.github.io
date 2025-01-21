@@ -17,6 +17,74 @@ math: mathjax
 
 <!--- class: january--->
 
+
+# 2025.01.21 **AP Physics**
+
+### **❓ of the 📅**: Would you rather be able to run at 100 miles per hour or fly at 10 miles per hour?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Power - Notes and Introduction
+2. Power Lab: Calculate your power 🏃 💪
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and Calculate Mechanical Power_
+
+
+### 📆 Upcoming
+
+- Test Friday 
+
+</div>
+</div>
+
+---
+
+
+# 2025.01.17 **AP Physics**
+
+##### **❓ of the 📅**: Who is the most interesting person you’ve met and talked with?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Block Launcher Lab
+
+
+#### 🏡 Homework
+
+- APCR Energy Progress Check
+- Finish Sliding Puck Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Work done by friction_
+
+### 📆 Upcoming
+
+- Energy Test 1/24 
+
+</div>
+</div>
+
+---
+
 # 2025.01.15 **AP Physics**
 
 ##### **❓ of the 📅**: Question

@@ -18,6 +18,67 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.21 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to run at 100 miles per hour or fly at 10 miles per hour?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Packet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for upcoming test_
+
+### 📆 Upcoming
+
+- Lab tomorrow
+- Test **Friday**
+
+</div>
+</div>
+
+---
+
+# 2025.01.17 **Earth Science**
+
+##### **❓ of the 📅**: Who is the most interesting person you’ve met and talked with?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Hydrology Notes
+2. Quizzizz: **681059**
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Hydrology_
+
+🥅 _Practice Questions_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 <!--- _footer: <br>--->
 
 ## Do Now: Recall Practice - answer without your notes
