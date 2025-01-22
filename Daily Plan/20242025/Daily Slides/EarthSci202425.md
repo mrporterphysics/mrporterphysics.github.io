@@ -18,6 +18,37 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.22 **Earth Science**
+
+##### **❓ of the 📅**: What came first? The chicken or the egg?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Porosity & Permeability Demonstration Lab
+2. Review
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore porosity & permeability_
+
+### 📆 Upcoming
+
+- Test Friday
+
+</div>
+</div>
+
+
+---
+
 # 2025.01.21 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be able to run at 100 miles per hour or fly at 10 miles per hour?

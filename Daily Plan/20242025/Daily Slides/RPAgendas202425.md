@@ -18,7 +18,7 @@ math: mathjax
 
 # 2025.01.22 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: What came first? The chicken or the egg?
 
 <div class ='columns'>
 

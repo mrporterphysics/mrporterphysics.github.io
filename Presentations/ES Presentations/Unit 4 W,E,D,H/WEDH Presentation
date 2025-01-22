@@ -344,3 +344,71 @@ Moraine Deposits have the same shape as the Great Lakes.
 
 
 
+---
+
+
+# Porosity & Permeability Lab
+🥅: Understanding How Water Moves Through Earth Materials
+
+---
+
+## Key Concepts
+
+**Porosity**
+- Ratio of pore space to solid space
+- Measured as a percentage
+- Affects water storage capacity
+
+**Permeability**
+- Rate of water flow through material
+- Measured in mL/second
+- Determines how easily water moves
+
+---
+
+## Lab Setup
+
+![height:400px](https://api.placeholder.com/400/300)
+
+**Equipment per Station:**
+- Plastic tubing with screen
+- Ring stand and clamp
+- Drainage fixture
+- Collection beakers
+- Graduated cylinder
+
+---
+
+## Part A: Investigating Bead Size Effects
+
+We'll test three bead sizes:
+- 12mm (large)
+- 7mm (medium)
+- 4mm (small)
+
+**Make your hypothesis:**
+Which size will have the highest permeability?
+
+---
+
+## Measuring Porosity
+
+1. Add 100mL water
+2. Record volume needed to cover beads
+3. Calculate percentage:
+
+$$
+\text{Porosity} = \frac{\text{Pore Space (mL)}}{100 \text{ cm}^3} \times 100
+$$
+
+---
+
+## Testing Permeability
+
+1. Time how long 300mL takes to drain
+2. Calculate rate:
+
+$$
+\text{Permeability} = \frac{\text{Volume (mL)}}{\text{Time (seconds)}}
+$$
+

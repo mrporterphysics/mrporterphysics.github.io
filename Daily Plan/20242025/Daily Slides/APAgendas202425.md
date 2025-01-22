@@ -17,6 +17,37 @@ math: mathjax
 
 <!--- class: january--->
 
+# 2025.01.22 **AP Physics**
+
+##### **❓ of the 📅**: What came first? The chicken or the egg?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Test Review
+    - AP Classroom FRQ complete in the following order of in class priority: 2, 3, 4, 1
+2. Also *hint hint* 😉 😉 I would do AP Workbook 4.M at some point...
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for Energy Test_
+
+### 📆 Upcoming
+
+- Energy Test Friday
+
+</div>
+</div>
+
+---
+
 
 # 2025.01.21 **AP Physics**
 
