@@ -16,6 +16,35 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.23 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Lab: [Force Stations](../../../Presentations/Forces/talks/forcestations.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Apply Newton's Laws to problem solve physcial situations_
+
+🥅 _Estimate uncertainty in measurements_
+
+
+</div>
+</div>
+
+
+---
+
 # 2025.01.22 **Regents Physics**
 
 ##### **❓ of the 📅**: What came first? The chicken or the egg?
