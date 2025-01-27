@@ -16,7 +16,75 @@ math: mathjax
 
 ---
 
+# 2025.01.27 **Earth Science**
+
+##### **❓ of the 📅**: What is the best fry shape? 🍟
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mineral Notes Nearpod: VHIRX
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn about minerals and their properties_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- class: january --->
+
+
+# 2025.01.23 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Whiteboard Summary
+2. Review of your choice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for test tomorrow_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Whiteboard Summary:
+
+**Remember - spend the first half making your board ***<u>without</u>*** your notes!**
+
+- What do we need to know about Weathering, Erosion, Deposition, and the Water Cycle??
+    - What are the **BIG IDEAS**?
+    - What are some *important details*?
+- Use words and pictures
+- Don't just copy your notes - lots of words isn't great, try to summarize and simplify.
+
+---
 
 # 2025.01.22 **Earth Science**
 

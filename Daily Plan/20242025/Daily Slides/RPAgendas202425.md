@@ -16,6 +16,37 @@ math: mathjax
 
 <!--- class: january --->
 
+# 2025.01.24 **Regents Physics**
+
+##### **❓ of the 📅**: What’s your favorite food combination?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Quarter Strong...
+    1. Finish Force Station lab
+    2. Check Standards - what do you need to practice and retake?
+    3. Practice for ***optional*** retakes on Tuesday
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prepare for reassessments_
+
+### 📆 Upcoming
+
+- Reassessment Buffet 🍽️ Tuesday
+
+</div>
+</div>
+
+---
+
 # 2025.01.23 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather be the hero or the sidekick?

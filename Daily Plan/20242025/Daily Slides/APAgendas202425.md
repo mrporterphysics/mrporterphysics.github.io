@@ -15,6 +15,44 @@ math: mathjax
 
 ---
 
+# 2025.01.27 **AP Physics**
+
+##### **❓ of the 📅**: What is the best fry shape? 🍟
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Blowdart Challenge
+2. Momentum Notes 
+3. Impulse Think Sheets
+
+### 📆 Upcoming
+
+- HW: AP Workbook 5B & 5C
+- Test Corrections
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Break Energy Model_
+
+🥅 _Define momentum and impulse_
+
+🥅 _Qualitatively and quantitatively explore Momentum-Impulse Theorem_
+
+
+
+</div>
+</div>
+
+---
+
 <!--- class: january--->
 
 # 2025.01.22 **AP Physics**

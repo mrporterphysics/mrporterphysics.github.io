@@ -1,0 +1,137 @@
+/* 
+@theme physicalSci
+*/
+/* 
+@theme physicalSci
+*/
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&family=Fira+Code:wght@400;700&display=swap');
+
+:root {
+    /* Light theme colors */
+    --light-background: #F2F0E5;
+    --light-text: #1C1B1A;
+    --light-accent-blue: #3B85BE;
+    --light-accent-green: #668021;
+    --light-accent-red: #B82822;
+    --light-accent-purple: #735EB5;
+    
+    /* Dark theme colors */
+    --dark-background: #1C1B1A;
+    --dark-text: #F2F0E5;
+    --dark-accent-blue: #205EA6;
+    --dark-accent-green: #25D089;
+    --dark-accent-red: #E4685D;
+    --dark-accent-purple: #A373E5;
+    
+    --text-glow: 0 0 10px;
+}
+
+/* Light theme default */
+section {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--light-background);
+    color: var(--light-text);
+    padding: 2rem;
+}
+
+section.dark {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Mono', monospace;
+}
+
+h1 {
+    color: var(--light-accent-purple);
+    font-size: 2em;
+    border-bottom: 2px solid var(--light-accent-blue);
+    padding-bottom: 0.3em;
+}
+
+.dark h1 {
+    color: var(--dark-accent-purple);
+    border-bottom-color: var(--dark-accent-blue);
+}
+
+h2 {
+    color: var(--light-accent-blue);
+    font-size: 1.6em;
+}
+
+.dark h2 {
+    color: var(--dark-accent-blue);
+}
+
+h3, h4, h5, h6 {
+    color: var(--light-accent-green);
+    font-size: 1.3em;
+}
+
+.dark h3, .dark h4, .dark h5, .dark h6 {
+    color: var(--dark-accent-green);
+}
+
+/* Links */
+a {
+    color: var(--light-accent-blue);
+}
+
+.dark a {
+    color: var(--dark-accent-blue);
+}
+
+/* Code blocks */
+code, pre {
+    color: var(--light-accent-green);
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+}
+
+.dark code, .dark pre {
+    color: var(--dark-accent-green);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Other elements */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
+    gap: 1rem;
+}
+
+strong {
+    color: var(--light-accent-red);
+}
+
+.dark strong {
+    color: var(--dark-accent-red);
+}
+
+/* Emoji fixes */
+.emoji {
+    display: inline;
+    white-space: nowrap;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img.emoji {
+    display: inline;
+    height: 1em;
+    width: 1em;
+    margin: 0 0.1em;
+    vertical-align: -0.1em;
+    border: none;
+    padding: 0;
+}
+
+p, span, div {
+    white-space: normal;
+}
