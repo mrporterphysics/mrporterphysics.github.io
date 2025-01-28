@@ -16,6 +16,34 @@ math: mathjax
 
 ---
 
+# 2025.01.28 **Earth Science**
+
+##### **❓ of the 📅**: What was your first username?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Notes
+2. Mineral Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.01.27 **Earth Science**
 
 ##### **❓ of the 📅**: What is the best fry shape? 🍟
