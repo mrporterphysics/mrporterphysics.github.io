@@ -14,7 +14,39 @@ math: mathjax
 
 ---
 
+# 2025.01.28 **Regents Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Optional Quiz Retakes
+2. [Momentum Notes](/mrporterphysics.github.io/Presentations/Momentum/talks/RPmomentum2025.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Momentum and Impulse_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 <!--- class: january --->
+
+
+
 
 # 2025.01.24 **Regents Physics**
 

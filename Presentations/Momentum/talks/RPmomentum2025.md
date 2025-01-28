@@ -105,6 +105,12 @@ $$\boxed{\vec{p} = m\vec{v}}$$
 
 # <!---fit---> the Egg 🥚
 
+---
+
+<center>
+<video src="../videos/eggtoss.MOV" controls muted height="600px"></video>
+</center>
+
 --- 
 
 # Impulse 
