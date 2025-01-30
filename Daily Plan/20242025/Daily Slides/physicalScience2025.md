@@ -16,7 +16,125 @@ math: mathjax
 
 ---
 
-<!--- class:light--->
+# 2025.01.30 **Physical Science**
+
+##### **❓ of the 📅**: _If you suddenly had a 25 hour day, what would you do with your extra hour?_
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Discuss Buggy Lab
+2. Claim-Evidence-Reasoning
+3. Rolling Ball Challenge 🎳
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use Mathematical Models_
+
+🥅 _Make a scientific argument_
+
+</div>
+</div>
+
+---
+
+# Dune Buggy Challenge
+
+## 💡 Big Ideas
+
+* We can use models to make predictions
+* Collecting Data 
+* Use Pivot Tools
+* Start Making Scientific Arguments 
+
+---
+
+
+
+# CER in AP Physics:
+
+* ***Claim***:
+    * Sentence that answers the question.
+
+* ***Evidence***:
+    * Explanation of how the evidence supports the claim.
+        * Should include details!
+        * Refer back to the question, include any data, diagrams, or graphs.
+
+* ***Reasoning***:
+    * Physics principle, such as an equation, law, or definition.
+        * This is general, do no include specific details.
+
+---
+
+# Game: Soup, Salad, or Sandwich
+
+1. Write a Claim-Evidence-Reasoning statement arguing whether the shown food is a soup, salad, or a sandwich. 
+
+---
+
+![bg ](https://static01.nyt.com/images/2022/07/27/dining/27Chicagodogrex/05Chicagodogrex-master768.jpg?w=1280&q=75)
+
+
+---
+
+![bg ](https://static01.nyt.com/images/2019/12/04/dining/aw-cherry-tomato-pasta/aw-cherry-tomato-pasta-master768-v2.jpg?w=1280&q=75)
+
+---
+
+![bg](https://insanelygoodrecipes.com/wp-content/uploads/2022/10/Homemade_Broccoli_and_Cheddar_Soup_in_a_Bread_Bowl.jpg)
+
+
+---
+
+# CER Practice:
+
+### A lab is performed to determine whether or not a car driving along Lake Avenue is speeding.
+
+**Which is an appropriate Claim for the Conclusion section of such a lab?**
+
+1. We analyzed the car’s motion, plotted it on the computer and determined its speed.
+2.  This was a great lab! We had a lot of fun finding the speed of the car. We should do more of these.
+3. We determined that the speed of the car was 49 mi/hr.
+4. The car we analyzed was speeding.
+
+
+---
+
+# CER Practice:
+
+### A lab is performed to determine whether or not a car driving along Lake Avenue is speeding.
+
+**Which is an appropriate statement of the *Evidence* for the Conclusion section of such a lab?**
+
+1. The car was speeding.
+2. The calculated the slope of the line. We might have made an error in the calculation but it was 49 mi/hr.
+3. The position-time plot of the car’s motion is shown in the Data section. The slope of the line was found to be 49 mi/hr. This is 4 mi/hr over the speed limit.
+
+---
+
+# CER Practice:
+
+### A lab is performed to determine whether or not a car driving along Lake Avenue is speeding.
+
+**Which is an appropriate statement of the Reasoning for the Conclusion section of such a lab?**
+
+1. Speed limit signs are always clearly posted on the road side.
+2. Some cars go faster than other cars. The car we analyzed was speeding.
+3. The slope of the line on a position-time plot is equal to the speed of the object.
+
+---
+
+# Rolling Ball Challenge 🎳 <!--fit--->
+
+---
 
 # 2025.01.27 **Physical Science**
 

@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+
+# 2025.01.30 **Earth Science**
+
+##### **❓ of the 📅**: If you suddenly had a 25 hour day, what would you do with your extra hour?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish (or start) Mineral Identification Lab
+2. Discuss and compare results as a class   
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify Minerals_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.01.28 **Earth Science**
 
 ##### **❓ of the 📅**: What was your first username?

@@ -14,6 +14,47 @@ math: mathjax
 
 ---
 
+## 2025.01.30 **Regents Physics** Do Now
+
+Carts with spring plungers run into fixed barriers. The carts are identical but are carrying different loads and so have different masses. The velocity of the cart just before and just after impact is given.
+
+![center w:800](image-22.png)
+
+**Rank the magnitude of the change in momentum of these carts.** Explain your reasoning.
+
+---
+
+# 2025.01.30 **Regents Physics**
+
+##### **❓ of the 📅**: If you suddenly had a 25 hour day, what would you do with your extra hour?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. [Minds on Physics - Momentum](https://www.physicsclassroom.com/mop/Momentum-and-Collisions/Momentum/Mission-MC1)
+2. Finish [Impulse Notes](/mrporterphysics.github.io/Presentations/Momentum/talks/RPmomentum2025.html) 
+3. Impulse-Momentum Think Sheet 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and Apply the ideas of **impulse** and ***momentum***_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.01.28 **Regents Physics**
 
 ##### **❓ of the 📅**: What was your first username?
