@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.02.03 **Physical Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Rolling Ball Challenge
+2. Types of Relationships
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define different mathematical models_
+
+🥅 _Identify different mathematical models_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.01.30 **Physical Science**
 
 ##### **❓ of the 📅**: _If you suddenly had a 25 hour day, what would you do with your extra hour?_
