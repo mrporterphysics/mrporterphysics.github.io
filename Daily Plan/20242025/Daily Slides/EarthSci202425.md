@@ -45,6 +45,22 @@ math: mathjax
 
 ---
 
+# Claim-Evidence-Reasoning
+
+## Claim:
+
+_Mineral #1 is..._
+
+## Evidence:
+
+_What observations about your mineral lead to this conclusions_
+
+## Reasoning:
+
+_What are the defining properties of this mineral? (Hint: check your reference table)_
+
+---
+
 # 2025.01.30 **Earth Science**
 
 ##### **❓ of the 📅**: If you suddenly had a 25 hour day, what would you do with your extra hour?
