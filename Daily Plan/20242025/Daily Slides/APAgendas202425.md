@@ -15,6 +15,38 @@ math: mathjax
 
 ---
 
+# 2025.01.31 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Physics Family Dinner
+    - arrange two tables together and everyone sit together
+    - go through free reponse questions on whiteboard
+    - one person record answers
+2. Impulse & Momentum
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Correct Energy Test_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.01.27 **AP Physics**
 
 ##### **❓ of the 📅**: What is the best fry shape? 🍟

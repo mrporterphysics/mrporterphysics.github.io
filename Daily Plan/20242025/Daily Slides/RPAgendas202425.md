@@ -14,6 +14,39 @@ math: mathjax
 
 ---
 
+# 2025.01.31 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish & Check _Momentum, Impulse, and Momentum Change_ Think Sheet
+2. _Controlling a Collision_ Think Sheet
+3. [Impulse-Momentum Change Table](https://www.physicsclassroom.com/Concept-Builders/Momentum-and-Collisions/Momentum-Change-Table/Concept-Builder)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice applying Impulse-Momentum Theorem_
+
+### 📆 Upcoming
+
+- Impulse & Momentum Quiz on ***Wednesday***
+
+</div>
+</div>
+
+
+
+---
+
 ## 2025.01.30 **Regents Physics** Do Now
 
 Carts with spring plungers run into fixed barriers. The carts are identical but are carrying different loads and so have different masses. The velocity of the cart just before and just after impact is given.

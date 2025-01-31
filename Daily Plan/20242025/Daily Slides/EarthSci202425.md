@@ -16,6 +16,34 @@ math: mathjax
 
 ---
 
+# 2025.01.31 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. 10 Min: Finish Up Mineral Identification
+1. CER Mineral Identification
+2. Mineral Practice Packet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Identifying Different Minerals_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2025.01.30 **Earth Science**
 
