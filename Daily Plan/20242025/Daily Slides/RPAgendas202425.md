@@ -14,9 +14,17 @@ math: mathjax
 
 ---
 
+## 2024.02.05 **Regents Physics** Do Now:
+
+1. Tyrone, South's 75.8-kg halfback, is moving with a speed of 7.03 m/s when he collides with a middle linebacker. If Tyrone experiences a force of 841 N over a time period of 1.13 s, then determine his final speed.
+2. A 1.05-kg rubber ball moving with a speed of 7.53 m/s strikes a wall and rebounds with a speed of 2.21 m/s in the opposite direction. Determine the impulse.
+3. While playing basketball, Logan lost his balance and collied with the padded wall behind the basket. His 72.8-kg body decelerated from 7.67 m/s to 0 m/s in 0.150 seconds. Determine the force acting upon Logan's body.
+
+---
+
 # 2025.02.05 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: What does your warning :warning: label say?
 
 
 
