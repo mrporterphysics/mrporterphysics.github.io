@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2025.02.03 **AP Physics**
+
+##### **❓ of the 📅**: Where are five places you really want to visit before you die?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Impulse-Momentum Think Sheets 
+2. [Impulse Momentum Change Calc Pad](https://www.physicsclassroom.com/calcpad/launch/CPMC2)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Impulse and Momentum_
+
+### 📆 Upcoming
+
+- Energy Quiz 
+
+</div>
+</div>
+
+---
+
 # 2025.01.31 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?

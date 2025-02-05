@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.02.03 **Earth Science**
+
+##### **❓ of the 📅**: Where are five places you really want to visit before you die?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mineral Regents Practice Questions
+2. Sedimentary Rock Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Minerals_
+
+🥅 _Define Sedimentary Rock Characteristics_
+
+| Block            | Start | End   |
+| ---------------- | ----- | ----- |
+| Block 3B         | 12:35 | 1:07  |
+| Block 4          | 1:09  | 2:00  |
+
+---
+
 # 2025.01.31 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?

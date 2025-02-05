@@ -14,6 +14,70 @@ math: mathjax
 
 ---
 
+# 2025.02.05 **Regents Physics**
+
+##### **❓ of the 📅**: Question
+
+
+
+#### 📋 Agenda
+
+0. Do Now
+1. How did the classwork go? Questions
+2. Introduce Paper Car Crash Experiment
+3. Paper Car Crash: Planning, Building, and Documentation in Lab Notebook
+
+
+### 🎯 Goals
+
+🥅 _Use Impulse-Momentum Theorem to make a crash design_
+
+---
+
+# 🎯 Most Crashworthy Car 
+
+### *Crashworthiness*:  **how well a car protects its occupants in a crash**
+
+Your task is to make the most crashworthy paper car. It will be protecting an egg. 
+
+---
+
+# Crashworthiness 
+
+How can we measure the most crashworthy car? 
+
+- ***Momentum*** can be conisdered a measure of how difficult it is to stop an object in motion
+
+Momentum $p=mv$ (mass times velocity)
+
+---
+
+# Contest
+
+Make a paper car with ***the most*** momentum at the bottom of the ramp that still allows an egg to survive. 
+
+---
+
+# **🚗 Car Supplies 📰**
+
+- 2 pieces of copy paper
+- 1 straw to use for car axles
+- 2 axles & 4 wheels
+- scotch tape 
+
+---
+
+# Additional Rules & Requirements 
+
+- Car must fit on gutter ramp
+- Vehicle designs must allow for easy access to and removal of the egg (occupant) for inspection after the crash.
+-  Vehicle designs should be able to withstand 2-3 trials/collisions without parts replacement or repairs.
+-  All vehicles must visibly display the following information on their frames:
+    - vehicle name, builder’s name, vehicle length in centimeters, vehicle mass in grams
+
+
+---
+
 # 2025.01.31 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?

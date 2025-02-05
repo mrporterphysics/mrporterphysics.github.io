@@ -311,28 +311,9 @@ section.halloween{
     border-radius: 0 10px 10px 0;
   }
   
-  /* Winter-themed tables */
-  section.winter table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+
   
-  section.winter th,
-  section.winter td {
-    padding: 12px 15px;
-    border: 1px solid #48CAE4;
-  }
-  
-  section.winter thead tr {
-    background-color: #0077B6;
-    color: #ffffff;
-    text-align: left;
-  }
+
   
   /* Winter-themed code blocks */
   section.winter code {
@@ -461,30 +442,6 @@ section.january blockquote {
   color: #FFFFFF;
 }
 
-/* January-themed tables */
-section.january table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  font-family: 'Quicksand', sans-serif;
-  min-width: 400px;
-  background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-section.january th,
-section.january td {
-  padding: 12px 15px;
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  color: #FFFFFF;
-}
-
-section.january thead tr {
-  background-color: rgba(0, 255, 255, 0.2);
-  color: #FFFFFF;
-  text-align: left;
-  font-weight: bold;
-}
 
 /* January-themed code blocks */
 section.january code {
@@ -511,4 +468,8 @@ section.january .resolutions {
   border-radius: 10px;
   border: 1px solid rgba(0, 255, 255, 0.3);
   color: #FFFFFF;
+}
+
+table{
+  color:#000000;
 }

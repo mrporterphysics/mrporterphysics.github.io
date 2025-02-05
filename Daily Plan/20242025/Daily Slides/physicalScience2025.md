@@ -16,9 +16,477 @@ math: mathjax
 
 ---
 
+# 2025.02.05 **Physical Science**
+
+##### **❓ of the 📅**: What does your warning :warning: label say?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Experimental Variables and Types of Mathematical Relationships 
+2. Identifying Experimental Relationships
+    - Links for [Graph 1](https://www.desmos.com/calculator/mvl8sk6qer) || [Graph 2](https://www.desmos.com/calculator/5gxv44prt1) || [Graph 3](https://www.desmos.com/calculator/zhwpyvtq8l) || [Graph 4](https://www.desmos.com/calculator/nj6olrzfpy) || [Graph 5](https://www.desmos.com/calculator/xg0tlbvbci)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify mathematical relationships_
+
+🥅 _Relate mathematical relationships to proportional reasoning_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Experiments
+
+## Typical Goal: 
+to determine the effect of one quantity upon another quantity.
+
+## Example: 
+How does the **mass** of an object affect its **acceleration**? That is, to determine the effect of **mass** upon **acceleration**.
+
+---
+
+## ***Variable*** - a quantity that changes or varies.
+
+### Independent Variable: 
+the variable that the scientist intentionally changes each trial.
+
+
+### Dependent Variable: 
+
+the variable that changes in response to the changes that are made to the independent variable.
+
+---
+
+## Dependent vs Independent Variable
+
+### Purpose: 
+to determine the effect of mass upon the acceleration of an object.
+### Independent Variable: 
+mass (it is varied by the scientist from trial to trial)
+### Dependent Variable: 
+acceleration (it varies in response to changes in the mass)
+
+---
+
+# Dependent vs Independent Variable
+
+![center](image-23.png)
+
+---
+
+# DRY MIX
+
+### **D**ependent - **R**esponding - **Y**-axis
+
+The dependent variable changes in response to the other variable; its values are plotted on the y-axis.
+
+### **M**anipulated - **I**ndependent - **X**-axis
+The independent variable is the one that is manipulated or changed by the scientist; values are plotted on the x-axis.
+
+---
+
+## What types of patterns are possible?
+
+1. Linear Relationship
+2. Non- or Constant Relationship
+3. Quadratic Relationship
+4. Inverse Relationship
+
+---
+
+# Linear Relationship
+
+Any given change in the independent variable (x) will always produce the same change in the dependent variable (y). 
+
+<div class='columns'>
+<div>
+
+When x changes by a certain amount (1 unit), the value of y always changes by the same amount (e.g., 2 units).
+
+</div>
+
+<div>
+
+![center](image-24.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 0 | 4 | 
+| 1 | 6 | 
+| 2 | 8 | 
+| 3 | 10 | 
+| 4 | 12 | 
+| 5 | 14 | 
+
+</div>
+</div>
+
+---
+
+
+# Directly Proportional 
+A special type of linear relationship - shows an x-y plot that is linear and has a y-intercept of zero.
+
+<div class='columns'>
+<div>
+
+Whatever change is made to one variable is made to the other variable.
+Double x … double y
+Triple x … triple y
+Halve x … halve y
+
+</div>
+
+<div>
+
+![center](image-26.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 0 | 0 | 
+| 1 | 2 | 
+| 2 | 4 | 
+| 3 | 6 | 
+| 4 | 8 | 
+| 5 | 10 | 
+
+</div>
+</div>
+
+---
+
+# Directly Proportional 
+A special type of linear relationship - shows an x-y plot that is linear and has a y-intercept of zero.
+
+<div class='columns'>
+<div>
+
+Whatever change is made to one variable is made to the other variable.
+**Double x … double y**
+Triple x … triple y
+Halve x … halve y
+
+</div>
+
+<div>
+
+![center](image-26.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 0 | 0 | 
+| 1 | 2 | 
+| **2** | **4** | 
+| 3 | 6 | 
+| **4** | **8** | 
+| 5 | 10 | 
+
+</div>
+</div>
+
+---
+
+
+# Directly Proportional 
+A special type of linear relationship - shows an x-y plot that is linear and has a y-intercept of zero.
+
+<div class='columns'>
+<div>
+
+Whatever change is made to one variable is made to the other variable.
+Double x … double y
+**Triple x … triple y**
+Halve x … halve y
+
+</div>
+
+<div>
+
+![center](image-26.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 0 | 0 | 
+| **1** | **2** | 
+| 2 | 4 | 
+| **3** | **6** | 
+| 4 | 8 | 
+| 5 | 10 | 
+
+</div>
+</div>
+
+---
+
+
+# Directly Proportional 
+A special type of linear relationship - shows an x-y plot that is linear and has a y-intercept of zero.
+
+<div class='columns'>
+<div>
+
+Whatever change is made to one variable is made to the other variable.
+Double x … double y
+Triple x … triple y
+**Halve x … halve y**
+
+</div>
+
+<div>
+
+![center](image-26.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 0 | 0 | 
+| 1 | 2 | 
+| 2 | 4 | 
+| 3 | 6 | 
+| 4 | 8 | 
+| 5 | 10 | 
+
+</div>
+</div>
+
+---
+
+
+# Non-Relationship 
+
+## (or Constant Relationship)
+A change in one variable will have no effect upon the value of the other variable. 
+
+<div class='columns'>
+<div>
+As the value of x changes, the value of y remains constant.
+
+<br>
+<br>
+<br>
+X has NO effect upon Y.
+
+</div>
+
+<div>
+
+![center](image-27.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 0 | 4 | 
+| 1 | 4 | 
+| 2 | 4 | 
+| 3 | 4 | 
+| 4 | 4 | 
+| 5 | 4 | 
+
+</div>
+</div>
+
+---
+
+
+# Quadratic Relationship
+
+Most commonly, a quadratic will show an exponent of 2, indicating that the y value depends on the square of x. 
+
+<div class='columns'>
+<div>
+Whatever change is made to x, the square of that change is made to y.
+<br>
+
+Double x…Quadruple y
+Triple x…Nine times y
+Halve x…One-quarter y
+
+</div>
+
+<div>
+
+![center](image-28.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 0 | 0 | 
+| 1 | 2 | 
+| 2 | 8 | 
+| 3 | 18 | 
+| 4 | 32 | 
+| 5 | 50 | 
+
+</div>
+</div>
+
+---
+
+
+
+# Quadratic Relationship
+
+Most commonly, a quadratic will show an exponent of 2, indicating that the y value depends on the square of x. 
+
+<div class='columns'>
+<div>
+Whatever change is made to x, the square of that change is made to y.
+<br>
+
+**Double x…Quadruple y**
+Triple x…Nine times y
+Halve x…One-quarter y
+
+</div>
+
+<div>
+
+![center](image-28.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 0 | 0 | 
+| **1** | **2** | 
+| **2** | **8** | 
+| 3 | 18 | 
+| 4 | 32 | 
+| 5 | 50 | 
+
+</div>
+</div>
+
+---
+
+
+# Inverse Relationship 
+
+An increase in one variable causes a decrease in the other variable. 
+
+<div class='columns'>
+<div>
+Whatever change is made to x, the reciprocal change is made to y.
+
+
+- Double x…Halve y
+- Quadruple x…One-fourth y
+- Halve x…Double y
+
+</div>
+
+<div>
+
+![center](image-29.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 1 | 12 | 
+| 2 | 6 | 
+| 3 | 4 | 
+| 4 | 3 | 
+| 5 | 2.4 |
+| 6 | 2 |  
+
+</div>
+</div>
+
+---
+
+
+# Inverse Relationship 
+
+An increase in one variable causes a decrease in the other variable. 
+
+<div class='columns'>
+<div>
+Whatever change is made to x, the reciprocal change is made to y.
+
+
+- **Double x…Halve y**
+- Quadruple x…One-fourth y
+- Halve x…Double y
+
+</div>
+
+<div>
+
+![center](image-29.png)
+
+</div>
+ 
+<div>
+
+| x | y | 
+|---|---|
+| 1 | 12 | 
+| **2** | **6** | 
+| 3 | 4 | 
+| **4** | **3** | 
+| 5 | 2.4 |
+| 6 | 2 |  
+
+</div>
+</div>
+
+---
+
+# The Big Idea 💡
+
+## Throughout the year we will do experiments and collect data for the dependent and independent variables.
+
+## Then we will need to identify the type of relationship from the patterns that we observe in the data.
+
+---
+
+
 # 2025.02.03 **Physical Science**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Where are five places you really want to visit before you die?
 
 <div class ='columns'>
 
@@ -27,22 +495,24 @@ math: mathjax
 #### 📋 Agenda
 
 1. Finish Rolling Ball Challenge
-2. Types of Relationships
+2. Types of Relationships -- Probably save for Wednesday
 
 </div>
 
 <div>
 
-### 🎯 Goals
-
-🥅 _Define different mathematical models_
-
-🥅 _Identify different mathematical models_
-
-### 📆 Upcoming
+| Block            | Start | End   |
+| ---------------- | ----- | ----- |
+| Block 1          | 9:40  | 10:33 |
+| Block 2          | 10:35 | 11:28 |
+| JR HS - Block 3A | 11:30 | 12:03 |
+| Lunch 7/8        | 12:04 | 12:34 |
+| Block 3B         | 12:35 | 1:07  |
+| Block 4          | 1:09  | 2:00  |
 
 </div>
 </div>
+
 
 ---
 
