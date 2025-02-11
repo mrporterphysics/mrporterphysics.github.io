@@ -15,6 +15,72 @@ math: mathjax
 
 ---
 
+# 2025.02.10 **AP Physics**
+
+##### **❓ of the 📅**: Who is your favorite Disney hero or heroine? Would you trade places with them?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Bounce vs. Embed
+2. AP Workbook CoP Questions:
+	1. 5.E, 5.F, 5.G
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Conservation of Momentum_
+
+### 📆 Upcoming
+
+- Energy & Momentum Quiz on Wednesday
+
+</div>
+</div>
+
+---
+
+# 2025.02.07 **AP Physics**
+
+##### **❓ of the 📅**: Hanging out by a camp fire, bonfire, or fireplace?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Check in on 5.H
+2. Momentum in Collisions
+    - Action-Reaction Think Sheet (p. 7) _**🛑 After question 7**_
+    - Notes on Momentum in Collisions - Momentum Bar Graphs
+    - Momentum Paired Whiteboard Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine if momentum is a conserved quantity_
+
+🥅 _Apply N3L to momentum in collisions_
+
+### 📆 Upcoming
+
+- Energy & Momentum Quiz Monday
+
+</div>
+</div>
+
+---
+
 # 2025.02.03 **AP Physics**
 
 ##### **❓ of the 📅**: Where are five places you really want to visit before you die?

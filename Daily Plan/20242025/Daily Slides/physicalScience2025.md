@@ -16,6 +16,105 @@ math: mathjax
 
 ---
 
+# 2025.02.11 **Physical Science**
+
+##### **❓ of the 📅**: What reality TV show would you star in?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Collecting Ball Bounce Data
+2. Finish Ball Bounce Pivot & Questions - **Do not submit yet**
+3. Whiteboard Lab Results 
+4. Board Meeting & Submit Lab
+5. Using graphs for predictions
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Bouncing Ball_
+
+🥅 _Identify Mathematical Relationships_
+
+🥅 _Use Models to make Predictions_
+
+</div>
+</div>
+
+---
+
+# Using Graphs to Make Predictions
+
+## "For Every" Statement
+
+* The [**y variable**] [increases/decreases/remains the same] [slope value] [y variable units] _for every_ 1 [x units] of [x variable] change.
+
+* A slope of 12 cm/s would give the following statement
+    * _The **position** increases 12 cm for every 1 second of **time** change._
+
+---
+
+# Calculating Slope
+
+<br>
+<br>
+<br>
+
+
+$$\boxed{slope = m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}}$$
+
+
+---
+
+# 2025.02.07 **Physical Science**
+
+##### **❓ of the 📅**: Hanging out by a camp fire, bonfire, or fireplace?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Proportional Reasoning Quick Check (complete with a partner)
+2. Ball Bounce Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Design an experiment_
+
+🥅 _Collect & Analyze Data_
+
+🥅 _Write a conclusion based on evidence and reasoning_
+
+</div>
+</div>
+
+---
+
+# Ball Bounce Lab 🏀
+
+### Question:
+
+How is the bounce height of a ball related to the release height of the ball?
+
+### Purpose:
+
+To determine the type of relationship (linear, quadratic, inverse, or constant) that relates the bounce height to the release height.
+
+---
+
 # 2025.02.05 **Physical Science**
 
 ##### **❓ of the 📅**: What does your warning :warning: label say?

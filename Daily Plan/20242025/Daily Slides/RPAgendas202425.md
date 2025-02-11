@@ -12,13 +12,142 @@ math: mathjax
 
 ## 👨‍🏫 Mr. Porter
 
+<!-- ---
+
+# 2025.02.12 **Regents Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Paper Car Test
+3. Write Up Paper Car Crash Analysis in Lab Notebook
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Test Paper Cars_
+
+### 📆 Upcoming
+
+- Quiz tomorrow -> Momentum and Impulse
+
+</div>
+</div> -->
+
+---
+
+# 2025.02.11 **Regents Physics**
+
+##### **❓ of the 📅**: What reality TV show would you star in?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+**Porter forgot the eggs...😢**
+
+1. Practice for Quiz:
+    - [PC: Impulse-Momentum Change 2](https://www.physicsclassroom.com/calcpad/launch/CPMC3)
+2. Is momentum conserved in collisions?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define conserved quantities_
+
+🥅 _Practice with Impulse-Momentum for quiz_
+
+### 📆 Upcoming
+
+- Quiz tomorrow -> Momentum and Impulse
+
+</div>
+</div>
+
+---
+
+# Paper Car Crash **Test**
+
+1. How will we measure velocity?
+2. Be sure to measure car mass **with egg in it**
+3. Make Momentum Calculation 
+
+---
+
+# Paper Car Crash **Analysis**
+
+- Show Calculations
+  - Velocity, momentum
+- Did your egg passenger survive?
+  - Why or why not?
+- Comparison -> How did your car do in comparison to the rest of the class?
+  - What were some similarities and differences between your design and other designs?
+- How can you improve your design for future crashes?
+
+---
+
+# 2025.02.10 **Regents Physics** Do Now
+
+A 0.232-kg volleyball approaches Jessica with a velocity of 3.76 m/s. Jessica gives the ball a bump, sending it in the opposite direction with a speed of 2.46 m/s.
+
+1.  What is the change in momentum of the volleyball?
+2.  What average force does Jessica apply to the volleyball if the interaction time between her arms and the ball was 0.0247 seconds?
+
+---
+
+# 2025.02.10 **Regents Physcis**
+
+##### **❓ of the 📅**: Quesizont
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Paper Car Build 🏗️ 👷
+    - complete today
+    - testing tomorrow! 💥
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Build Paper Car to test_
+
+### 📆 Upcoming
+
+- Impulse Momentum Quiz Wednesday
+
+</div>
+</div>
+
 ---
 
 ## 2024.02.05 **Regents Physics** Do Now:
 
-1. Tyrone, South's 75.8-kg halfback, is moving with a speed of 7.03 m/s when he collides with a middle linebacker. If Tyrone experiences a force of 841 N over a time period of 1.13 s, then determine his final speed.
-2. A 1.05-kg rubber ball moving with a speed of 7.53 m/s strikes a wall and rebounds with a speed of 2.21 m/s in the opposite direction. Determine the impulse.
-3. While playing basketball, Logan lost his balance and collied with the padded wall behind the basket. His 72.8-kg body decelerated from 7.67 m/s to 0 m/s in 0.150 seconds. Determine the force acting upon Logan's body.
+1. Tyrone, South's $75.8$-kg halfback, is moving with a speed of $7.03$ m/s when he collides with a middle linebacker. If Tyrone experiences a force of $841$ N over a time period of $1.13$ s, then determine his final speed.
+2. A $1.05$-kg rubber ball moving with a speed of $7.53$ m/s strikes a wall and rebounds with a speed of $2.21$ m/s in the opposite direction. Determine the impulse.
+3. While playing basketball, Logan lost his balance and collied with the padded wall behind the basket. His $72.8$-kg body decelerated from $7.67$ m/s to $0$ m/s in $0.150$ seconds. Determine the force acting upon Logan's body.
 
 ---
 

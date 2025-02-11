@@ -206,6 +206,26 @@ img[alt~="center"] {
 
 ---
 
+# What does it mean <!--fit--->
+
+# for a quantity to be  <!--fit--->
+
+# *conserved*? <!--fit--->
+
+---
+
+# Conservation of <!--fit--->
+
+# Cake 🍰 <!--fit--->
+
+---
+
+# Packet Pages 7 - 8 <!--fit--->
+
+# 🛑 Stop after *question #7*
+
+---
+
 # Momentum conservation:
 
 In general momentum of a system is conserved:

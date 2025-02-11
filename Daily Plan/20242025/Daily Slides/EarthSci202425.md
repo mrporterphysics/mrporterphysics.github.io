@@ -16,6 +16,108 @@ math: mathjax
 
 ---
 
+# 2025.02.10 **Earth Science** Do Now 
+
+## Answer in your notebook...
+
+What is different about igneous and sedimentary rocks?
+
+
+---
+
+# 2025.02.10 **Earth Science**
+
+##### **❓ of the 📅**: Who is your favorite Disney hero or heroine? Would you trade places with them?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Igneous Rock Notes
+2. Sedimentary Rock Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Identifying Sedimentary Rocks_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.02.07 **Earth Science**
+
+##### **❓ of the 📅**: Hanging out by a camp fire, bonfire, or fireplace?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Igneous Rock Notes
+	1. Nearpod: **HVPTY**
+2. Igneous Rock Practice 1
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Igneous rocks_
+
+🥅 _Categorize Igneous rocks based on their characteristics_
+
+### 📆 Upcoming
+
+- Sedimentary Rocks Lab
+- Igneous Rocks Lab 
+
+</div>
+</div>
+
+---
+
+# 2025.02.05 **Earth Science**
+
+##### **❓ of the 📅**: What would your warning sign say?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Sedimentary Rock ESRT Practice
+2. Go over weathering test
+3. Rock Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice using Sedimentary Rock ESRT_
+
+### 📆 Upcoming
+
+- Sedimentary Rock Lab
+
+</div>
+</div>
+
+---
+
 # 2025.02.03 **Earth Science**
 
 ##### **❓ of the 📅**: Where are five places you really want to visit before you die?
