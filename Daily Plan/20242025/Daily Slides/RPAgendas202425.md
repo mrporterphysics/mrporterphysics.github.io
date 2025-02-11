@@ -58,6 +58,8 @@ math: mathjax
 
 **Porter forgot the eggs...😢**
 
+_I'll save my egg-cuses for another day_
+
 1. Practice for Quiz:
     - [PC: Impulse-Momentum Change 2](https://www.physicsclassroom.com/calcpad/launch/CPMC3)
 2. Is momentum conserved in collisions?

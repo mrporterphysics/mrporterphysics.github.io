@@ -309,7 +309,6 @@ Most of the energy goes to internal energy
 On an icy road, a *$5000\textrm{ kg}$* truck rear-ends a  *$1200 \textrm{ kg}$* car that had been traveling at *$13\text{ m/s}$*, causing the truck to slow from *$14\text{ m/s}$* to *$12\text{ m/s}$* and the car to speed up.
 1. Sketch the situation 
 2. Complete the momentum conservation diagram 
-![center w:800px](image.png)
 3. Write momentum conservation equation 
 4. What was the speed after the collision?
 
@@ -317,7 +316,6 @@ On an icy road, a *$5000\textrm{ kg}$* truck rear-ends a  *$1200 \textrm{ kg}$* 
 A *$6\text{ kg}$* puppy is riding on a skateboard (*$1.4\text{ kg}$*) moving at a speed of *$1.2\text{ m/s}$*. While gliding along, the puppy sees a squirrel and jumps off the back of the skateboard with a speed of *$0.5\text{ m/s}$* (backwards) relative to the ground. What is the speed of the skateboard just after the puppy jumps? (Be sure to keep careful track of all of the directions involved!)
 1. Sketch the situation 
 2. Complete the momentum conservation diagram 
-![center w:500px](image.png)
 3. Write momentum conservation equation 
 4.  What is the speed of the skateboard just after the puppy jumps?
 
@@ -327,7 +325,6 @@ Two brand new ice skaters have a collision on the ice. Esme, a *$21\text{ kg}$* 
 
 1. Sketch the situation 
 2. Complete the momentum conservation diagram 
-![center w:300px](image.png)
 3. Write momentum conservation equation 
 4. At what speed did the pair end up traveling at together after the collision?
 
