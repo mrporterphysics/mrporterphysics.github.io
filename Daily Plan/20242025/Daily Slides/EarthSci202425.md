@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2025.02.11 **Earth Science**
+
+##### **❓ of the 📅**: What reality TV show would you star in?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Sedimentary Rocks
+2. Fix Sedimentary Rock Lab
+3. Igneous Rock Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review Sedimentary Rocks_
+
+🥅 _Fix Lab_ 
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.02.10 **Earth Science** Do Now 
 
 ## Answer in your notebook...
