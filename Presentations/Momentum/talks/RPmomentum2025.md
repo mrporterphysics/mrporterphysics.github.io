@@ -185,24 +185,7 @@ How would you do this for a changing force?
 
 ## Packet Pages: 
 
----
 
-<style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-</style>
-
-### Momentum Bar Graphs 
-
-![width:1000px center](pbargraph.png)
-
----
-
-# <!---fit---> Momentum is a 
-# <!---fit---> *conserved* quantity
-# <!---fit---> in closed systems
 
 ---
 
@@ -223,6 +206,25 @@ img[alt~="center"] {
 # Packet Pages 7 - 8 <!--fit--->
 
 # 🛑 Stop after *question #7*
+
+---
+
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+### Momentum Bar Graphs 
+
+![width:1000px center](pbargraph.png)
+
+---
+
+# <!---fit---> Momentum is a 
+# <!---fit---> *conserved* quantity
+# <!---fit---> in closed systems
 
 ---
 
