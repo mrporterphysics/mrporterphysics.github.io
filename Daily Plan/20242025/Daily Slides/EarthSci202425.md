@@ -16,6 +16,66 @@ math: mathjax
 
 ---
 
+# 2025.02.13 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather lose all of your money or all of your pictures?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Igenous Rocks Practice II
+2. Metamorphic Rocks - Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Igneous Rock Questions_
+
+🥅 _Define and characterize Metamorphic Rocks_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.02.12 **Earth Science**
+
+##### **❓ of the 📅**: Would you give up three fingers in exchange for $1 million?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Igneous Rock Review
+2. Igneous Rock Identification Lab
+3. Igneous Rock Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify Igneous Rocks_
+
+### 📆 Upcoming
+
+
+</div>
+</div>
+
+---
+
 # 2025.02.11 **Earth Science**
 
 ##### **❓ of the 📅**: What reality TV show would you star in?

@@ -141,3 +141,146 @@ Key process: **Accumulation** and **Preservation** of organic matter
     - Chemical Formation: Minerals dissolve in water -> solution becomes concentrated -> crystals grown and accumulate -> compaction and cementation occurs
 3) Organic:
     - Organisms die and are buried -> material is compressed -> some recrystalization may occur -> C&C occurs
+
+---
+
+# Igneous Rocks
+
+## Formation, Types, and Classification
+
+
+---
+
+# What are Igneous Rocks?
+
+- Formed from cooling and crystallization of magma or lava
+- Name comes from Latin "ignis" meaning fire
+- Make up most of Earth's crust
+- Can form both underground and at the surface
+
+---
+
+# Two Main Categories
+
+1) **Intrusive** (Plutonic)
+   - Forms underground
+   - Slow cooling → large crystals
+   - Examples: granite, gabbro
+2) **Extrusive** (Volcanic)
+   - Forms at the surface
+   - Rapid cooling → small crystals or glass
+   - Examples: basalt, obsidian
+
+---
+
+## The Formation Process
+
+1) Rock melts due to:
+   - Increased temperature
+   - Decreased pressure
+   - Addition of volatiles
+
+2) Magma rises due to:
+   - Lower density than surroundings
+   - Pressure differences
+   - Tectonic activity
+
+3) Crystallization occurs as magma cools
+
+![bg fit right:40%](image-5.png)
+
+
+---
+
+## Composition of Igneous Rocks
+
+Classified by silica content:
+
+- **Felsic** (>65% silica)
+  - Light-colored
+  - Lower density
+  - Example: granite
+
+- **Mafic** (<50% silica)
+  - Dark-colored
+  - Higher density
+  - Example: basalt
+
+![bg fit right](image-6.png)
+![bg fit right vertical](image-7.png)
+
+---
+
+# Important Igneous Rocks
+
+
+
+
+
+<div class='columns'>
+<div>
+
+
+
+**Intrusive:**
+- Granite, Diorite, Gabbro, Peridotite
+
+</div>
+
+<div>
+
+**Extrusive:**
+- Basalt, Obsidian, Pumice,  Rhyolite
+
+</div>
+</div>
+
+![center](image-8.png)
+
+---
+
+# Importance of Igneous Rocks
+
+- Form new crustal material
+- Create valuable mineral deposits
+- Build volcanic islands
+- Provide geothermal energy
+- Create fertile soils
+- Source of building materials
+
+---
+
+# ESRT Page 6: Igneous Rocks
+
+![center w:650](image-9.png)
+
+
+---
+
+# Igneous vs. Sedimentary Rocks: A Comparison
+
+<div class='columns'>
+<div>
+
+**Igneous Rocks:**
+- Form from cooling magma/lava
+- Interlocking crystals
+- No layers or fossils
+- Form primarily through heat
+- Can form deep underground or at surface
+
+</div>
+ 
+<div>
+
+**Sedimentary Rocks:**
+- Form from accumulated sediments
+- Cemented particles or precipitates
+- Occur in layers
+- Contain fossils
+- Form at Earth's surface or shallow depths
+
+</div>
+</div>
+
+---

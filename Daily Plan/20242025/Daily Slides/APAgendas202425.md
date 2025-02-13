@@ -15,6 +15,55 @@ math: mathjax
 
 ---
 
+# 2025.02.13  **AP Physics**
+
+##### **❓ of the 📅**: Would you rather lose all of your money or all of your pictures?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Ballistics Lab
+    - Essential Question: **What is the muzzle velocity of our nerf launcher?**
+2. Model Situation on Whiteboard and Put in Notebook (this is the prelab, background information)
+3. Answer pivot questions in lab notebook
+
+---
+
+# 2025.02.12 **AP Physics**
+
+##### **❓ of the 📅**: Would you give up three fingers in exchange for $1 million?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+    - Read it
+    - Friends without pens
+    - complete & turn in
+2. Nerf Dart Launcher Lab
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use conservation of momentum and the impulse momentum theorem to solve problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.02.10 **AP Physics**
 
 ##### **❓ of the 📅**: Who is your favorite Disney hero or heroine? Would you trade places with them?

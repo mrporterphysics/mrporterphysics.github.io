@@ -12,11 +12,11 @@ math: mathjax
 
 ## 👨‍🏫 Mr. Porter
 
-<!-- ---
+---
 
 # 2025.02.12 **Regents Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Would you give up three fingers in exchange for $1 million?
 
 <div class ='columns'>
 
@@ -37,12 +37,9 @@ math: mathjax
 
 🥅 _Test Paper Cars_
 
-### 📆 Upcoming
-
-- Quiz tomorrow -> Momentum and Impulse
 
 </div>
-</div> -->
+</div>
 
 ---
 

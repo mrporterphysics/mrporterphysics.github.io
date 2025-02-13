@@ -16,6 +16,58 @@ math: mathjax
 
 ---
 
+# 2025.02.13 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather lose all of your money or all of your pictures?
+
+
+#### 📋 Agenda
+
+1. Finish Ball Bounce Lab Board Meeting
+    - Intercept, Slope, Making Predictions
+2. Test Model
+3. Writing Linear Mathematical Models
+
+---
+
+
+# Using Graphs to Make Predictions
+
+## "For Every" Statement
+
+* The [**y variable**] [increases/decreases/remains the same] [slope value] [y variable units] _for every_ 1 [x units] of [x variable] change.
+
+* A slope of 12 cm/s would give the following statement
+    * _The **position** increases 12 cm for every 1 second of **time** change._
+
+---
+
+# Calculating Slope
+
+<br>
+<br>
+<br>
+
+
+$$\boxed{slope = m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}}$$
+
+---
+
+# Calculuate Slope
+
+1. Find two points on best fit line:
+    - $(50, 18)$ and $(10,6)$
+2. Use Slope Formula
+
+$$ m = \frac{y_2 - y_1}{x_2-x_1} = \frac{18-6}{50-10} $$
+
+3. Add in units
+![bg fit right](image-30.png)
+
+$$m = \frac{12 \text{ cm}}{40 \text{ g}}$$
+
+---
+
 # 2025.02.11 **Physical Science**
 
 ##### **❓ of the 📅**: What reality TV show would you star in?
@@ -49,27 +101,6 @@ math: mathjax
 </div>
 
 ---
-
-# Using Graphs to Make Predictions
-
-## "For Every" Statement
-
-* The [**y variable**] [increases/decreases/remains the same] [slope value] [y variable units] _for every_ 1 [x units] of [x variable] change.
-
-* A slope of 12 cm/s would give the following statement
-    * _The **position** increases 12 cm for every 1 second of **time** change._
-
----
-
-# Calculating Slope
-
-<br>
-<br>
-<br>
-
-
-$$\boxed{slope = m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}}$$
-
 
 ---
 
