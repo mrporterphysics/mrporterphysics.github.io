@@ -16,6 +16,33 @@ math: mathjax
 
 ---
 
+# 2025.02.26 **Physical Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Pendulum Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Design controlled experiments to answer a question_
+
+
+
+</div>
+</div>
+
+---
+
 # 2025.02.24 **Physical Science**
 
 ##### **❓ of the 📅**: If you could instantly become an expert in something, what would it be?
