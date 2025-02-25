@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2025.02.24 **Physical Science**
+
+##### **❓ of the 📅**: If you could instantly become an expert in something, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pendulum Lab
+
+**Question**: What factors affect the period of a pendulum?
+
+**Purpose**: Design controlled experiments to isolate the effect of a single variable at a time. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Design multiple controlled experiments._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.02.13 **Physical Science**
 
 ##### **❓ of the 📅**: Would you rather lose all of your money or all of your pictures?

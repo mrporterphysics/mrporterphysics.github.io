@@ -16,6 +16,94 @@ math: mathjax
 
 ---
 
+# 2025.02.25 **Earth Science**
+
+##### **❓ of the 📅**: How do you feel about clowns? 🤡
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Metamorphic Rock Lab
+2. Metamorphic Rock Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify Metamorphic Rocks_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.02.24 **Earth Science**
+
+##### **❓ of the 📅**: If you could instantly become an expert in something, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Metamorphic Rock Notes
+2. Metamorphic Rock Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Metamorphic Rocks and compare to igneous and sedimentary rocks_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.02.14 **Earth Science**
+
+##### **❓ of the 📅**: Who is your scientist? What did they do? Explain your valentine pun.
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Science Valentines
+2. Answering Rock Questions on Whiteboards
+3. Rocks & Minerals Review (**NOT A QUIZ**)
+4. Rocks & Minerals Crossword
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review Minerals, Sedimentary & Igneous Rocks_
+
+### 📆 Upcoming
+
+- 🏖️ Vacation!
+
+</div>
+</div>
+
+---
+
 # 2025.02.13 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather lose all of your money or all of your pictures?

@@ -15,6 +15,71 @@ math: mathjax
 
 ---
 
+# 2025.02.25 **AP Physics**
+
+##### **❓ of the 📅**: How do you feel about clowns? 🤡
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Rotating Disk Pivot
+2. Rot Kinematics Notes
+3. Physics Classroom:
+    - [**Angular and Linear Values 1**](https://www.physicsclassroom.com/calcpad/launch/CPRK1)
+    -  [**Angular and Linear Values 2**](https://www.physicsclassroom.com/calcpad/launch/CPRK2)
+    -  [**Angular and Linear Values 3**](https://www.physicsclassroom.com/calcpad/launch/CPRK3)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Angular Kinematic Quantities_
+
+🥅 _Compare Translational and Angular Kinematics_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.02.14 **AP Physics**
+
+##### **❓ of the 📅**: Who is your scientist? What did they do? Explain your valentine pun
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Physics Valentines
+2. Ballistics Lab
+3. Goal-less problems (Time dependent)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use a variety of physics models to solve problems_
+
+### 📆 Upcoming
+
+- 🌴🏖️ Vacation!
+
+</div>
+</div>
+
+---
+
 # 2025.02.13  **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather lose all of your money or all of your pictures?

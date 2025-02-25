@@ -14,6 +14,106 @@ math: mathjax
 
 ---
 
+# 2025.02.25 **Regents Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Blowdart Collision Pivot
+2. Physics Classroom Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Real-Life Collision_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Physics Classroom SLOP
+
+1. **[Problem Set MC6 - Explosions 1](https://www.physicsclassroom.com/calcpad/launch/CPMC6)** Post-explosion velocity of one of the objects. 
+2. **[Problem Set MC7 - Explosions 2](https://www.physicsclassroom.com/calcpad/launch/CPMC7)** Post-explosion velocity of one of the objects. 
+3. **[Problem Set MC8 - Collision Analysis 1](https://www.physicsclassroom.com/calcpad/launch/CPMC8)** Hit-and-stick style collision. 
+4. **[Problem Set MC9 - Collision Analysis 2](https://www.physicsclassroom.com/calcpad/launch/CPMC9)** Hit-and-bounce style collision. 
+5. **[Problem Set MC10 - Collision Analysis 3](https://www.physicsclassroom.com/calcpad/launch/CPMC10)** Collisions *pay attention to direction*!
+
+---
+
+# 2025.02.24 **Regents Physics**
+
+##### **❓ of the 📅**: If you could instantly become an expert in something, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Conservation of Momentum
+2. Solving Conservation of Momentum Problems
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Remember conservation of momentum_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.02.14 **Regents Physics**
+
+##### **❓ of the 📅**: Who is your scientist? What did they do? Explain your valentine pun
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Physics Valentines
+2. Review Paper Car Crash & Finish Lab Notebook Entry
+3. Conservation of Momentum ➡️ Finish Notes and introductory problems
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Wrap up paper car lab_
+
+🥅 _Start Conservation of $\vec{p}$ problems_
+
+### 📆 Upcoming
+
+- 🌴🏖️ Vacation!
+
+</div>
+</div>
+
+---
+
 # 2025.02.12 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you give up three fingers in exchange for $1 million?
