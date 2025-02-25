@@ -16,7 +16,7 @@ math: mathjax
 
 # 2025.02.25 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: How do you feel about clowns? 🤡
 
 <div class ='columns'>
 
@@ -36,6 +36,8 @@ math: mathjax
 🥅 _Model Real-Life Collision_
 
 ### 📆 Upcoming
+
+- Conservation of Momentum Quiz - Friday
 
 </div>
 </div>

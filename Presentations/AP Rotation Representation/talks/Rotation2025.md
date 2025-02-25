@@ -1,5 +1,5 @@
 ---
-title: AP - Rotation 2024
+title: AP - Rotation 2025
 marp: true
 theme: physicalSci 
 math: mathjax
@@ -13,7 +13,7 @@ paginate: true
 
 
 #### 👨‍🏫 Mr. Porter 
-#### 📆 2023 - Physics
+#### 📆 2024-25 - AP Physics
 
 ---
 
