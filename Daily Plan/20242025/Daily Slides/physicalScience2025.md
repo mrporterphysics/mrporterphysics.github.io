@@ -18,7 +18,7 @@ math: mathjax
 
 # 2025.02.26 **Physical Science**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: What is your funniest family vacation moment?
 
 <div class ='columns'>
 
@@ -27,6 +27,9 @@ math: mathjax
 #### 📋 Agenda
 
 1. Finish Pendulum Lab
+    - mass vs. period
+    - release angle vs. period
+    - length vs. period 
 
 </div>
 

@@ -15,6 +15,42 @@ math: mathjax
 
 ---
 
+# 2025.02.26  **AP Physics**
+
+##### **❓ of the 📅**: What is your funniest family vacation moment?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Angular Motion Notes
+2. Physics Classroom:
+    - [**Angular and Linear Values 1**](https://www.physicsclassroom.com/calcpad/launch/CPRK1)
+    -  [**Angular and Linear Values 2**](https://www.physicsclassroom.com/calcpad/launch/CPRK2)
+    -  [**Angular and Linear Values 3**](https://www.physicsclassroom.com/calcpad/launch/CPRK3)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Angular Kinematic Quantities_
+
+🥅 _Compare Translational and Angular Kinematics_
+
+### 📆 Upcoming
+
+- Momentum Test, AP Classroom review is posted
+
+</div>
+</div>
+
+---
+
 # 2025.02.25 **AP Physics**
 
 ##### **❓ of the 📅**: How do you feel about clowns? 🤡

@@ -1,7 +1,7 @@
 ---
 title: Earth Science 2024-25
 marp: true
-theme: earthSci
+theme: earthSci 
 paginate: true
 footer: Did you get better today? Did you help someone else get better?
 math: mathjax
@@ -13,6 +13,46 @@ math: mathjax
 
 ### 📆 2024-25
 
+
+---
+
+# 2025.02.26 **Earth Science**
+
+##### **❓ of the 📅**: What is your funniest family vacation moment?   
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Rocks Concept Map
+1. Rock Cycle Notes
+2. Rock Cycle Practice
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice working with rock cycle_
+
+### 📆 Upcoming
+
+- Rocks and Mineral Test Next Week
+
+</div>
+</div>
+
+---
+
+Fill in the Graphic organizer
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+![bg ](image-31.png)
 
 ---
 

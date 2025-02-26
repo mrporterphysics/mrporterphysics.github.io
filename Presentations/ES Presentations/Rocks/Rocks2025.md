@@ -284,3 +284,177 @@ Classified by silica content:
 </div>
 
 ---
+
+# The Rock Cycle
+
+---
+
+# What is the Rock Cycle?
+
+The rock cycle is the continuous process through which:
+- Earth materials change form
+- Rocks transform from one type to another
+- Matter and energy flow through Earth systems
+
+---
+
+# ESRT: page 6
+
+![bg fit right:70%](image-10.png)
+
+---
+
+# Three Major Rock Types
+
+**Igneous Rocks**
+- Formed from cooling magma or lava
+- Examples: granite, basalt
+
+**Sedimentary Rocks**
+- Formed from compressed sediments
+- Examples: sandstone, limestone
+
+**Metamorphic Rocks**
+- Formed when existing rocks are changed by heat and pressure
+- Examples: marble, schist
+
+---
+
+### Driving Forces of the Rock Cycle
+
+The rock cycle is powered by:
+
+1. **Earth's Internal Heat**
+   - Drives plate tectonics
+   - Creates magma
+
+2. **Solar Energy**
+   - Drives the water cycle
+   - Powers weather and erosion
+
+3. **Gravity**
+   - Causes materials to move downhill
+   - Compacts sediments
+   
+![bg fit right:30%](image-10.png)
+
+---
+
+# Processes in the Rock Cycle
+
+
+
+<div class='columns'>
+<div>
+
+**Constructive Processes:**
+- Volcanism
+- Mountain building
+- Crystallization
+- Cementation
+- Recrystallization
+
+</div>
+ 
+<div>
+
+
+**Destructive Processes:**
+- Weathering (physical & chemical)
+- Erosion
+- Melting
+- Dissolution
+
+</div>
+</div>
+
+
+---
+
+# Igneous Rocks in the Cycle
+
+**Formation**:
+1. Melting of existing rock
+2. Cooling and crystallization
+
+**Pathways**:
+- **To Sedimentary:** Weathering ->  Erosion -> Deposition
+- **To Metamorphic:** Heat + Pressure (without melting)
+
+---
+
+# Sedimentary Rocks in the Cycle
+
+**Formation**:
+1. Weathering of existing rock
+2. Transport & deposition
+3. Compaction & cementation
+
+**Pathways**:
+- **To Igneous:** Deep burial -> Melting
+- **To Metamorphic:** Heat + Pressure
+
+Examples in New York State:
+- Devonian shales of Finger Lakes region
+- Potsdam Sandstone
+
+---
+
+# Metamorphic Rocks in the Cycle
+
+**Formation**:
+1. Subjecting existing rock to heat and pressure
+2. Recrystallization without melting
+
+**Pathways**:
+- **To Igneous:** More heat → Melting
+- **To Sedimentary:** Uplift → Weathering → Erosion → Deposition
+
+Examples in New York State:
+- Manhattan Schist
+- Adirondack marble and gneiss
+
+---
+
+# New York State Rock Cycle Evidence
+
+- **Adirondack Mountains**
+  - Metamorphic core
+  - Sedimentary rock borders
+  
+- **Catskill Mountains**
+  - Sedimentary rocks (sandstone, shale)
+  - Evidence of ancient river deltas
+  
+- **Hudson Highlands**
+  - Metamorphic rocks exposed by erosion
+
+---
+
+# Rates of Change
+
+Rock cycle processes occur at different timescales:
+
+**Rapid** (human timescale)
+- Volcanic eruptions
+- Landslides
+- Floods
+
+**Gradual** (geologic timescale)
+- Mountain building
+- Metamorphism
+- Most sedimentary rock formation
+
+---
+
+# Human Impacts on the Rock Cycle
+
+Humans accelerate or alter natural processes:
+
+- Mining and quarrying
+- Construction and land use changes
+- Acid rain and pollution effects
+- Dam construction changing sediment transport
+- Climate change affecting weathering rates
+
+

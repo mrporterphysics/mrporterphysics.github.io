@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear and Angular Kinematics Relationship</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 1100px;
+            width: 100%;
+        }
+        
+        canvas {
+            margin: 20px auto;
+            display: block;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        button, select {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover, select:hover {
+            background-color: #2980b9;
+        }
+        
+        .formulas {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .formula {
+            background-color: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 10px 20px;
+            text-align: left;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .data-display {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .data-box {
+            background-color: #eef7ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            min-width: 200px;
+        }
+        
+        .highlighted {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Linear and Angular Kinematics Relationship</h1>
+        
+        <div class="formulas">
+            <div class="formula">
+                <p>Linear Displacement: <strong>s = r·θ</strong></p>
+                <p>Linear Velocity: <strong>v = r·ω</strong></p>
+                <p>Linear Acceleration: <strong>a = r·α</strong></p>
+            </div>
+            <div class="formula">
+                <p>Angular Displacement: <strong>θ</strong> (radians)</p>
+                <p>Angular Velocity: <strong>ω</strong> (radians/s)</p>
+                <p>Angular Acceleration: <strong>α</strong> (radians/s²)</p>
+            </div>
+        </div>
+        
+        <canvas id="kinematicsCanvas" width="1000" height="500"></canvas>
+        
+        <div class="data-display">
+            <div class="data-box">
+                <p>Angular Displacement: <span id="angularDisp">0.00</span> rad</p>
+                <p>Angular Velocity: <span id="angularVel">0.00</span> rad/s</p>
+            </div>
+            <div class="data-box">
+                <p>Linear Displacement: <span id="linearDisp">0.00</span> units</p>
+                <p>Linear Velocity: <span id="linearVel">0.00</span> units/s</p>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="playPauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+            <select id="speedControl">
+                <option value="0.5">Slow</option>
+                <option value="1" selected>Normal</option>
+                <option value="2">Fast</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('kinematicsCanvas');
+            const ctx = canvas.getContext('2d');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const speedControl = document.getElementById('speedControl');
+            
+            // Display elements
+            const angularDispEl = document.getElementById('angularDisp');
+            const angularVelEl = document.getElementById('angularVel');
+            const linearDispEl = document.getElementById('linearDisp');
+            const linearVelEl = document.getElementById('linearVel');
+            
+            // Configuration
+            const centerX = canvas.width / 2 - 200;  // Shifted left to make room for linear path
+            const centerY = canvas.height / 2;
+            const radius = 120;
+            const initialAngularVelocity = 0.5;  // radians per second
+            
+            // State variables
+            let isPlaying = true;
+            let angle = 0;
+            let angularVelocity = initialAngularVelocity;
+            let lastTimestamp = 0;
+            let animationId;
+            let tracePoints = [];
+            let linearTracePoints = [];
+            
+            // Colors
+            const wheelColor = '#3498db';
+            const spokeColor = '#e74c3c';
+            const pointColor = '#2ecc71';
+            const traceColor = '#9b59b6';
+            const linearPathColor = '#f39c12';
+            
+            function drawWheel() {
+                // Draw the wheel (circle)
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = wheelColor;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                
+                // Draw center point
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 4, 0, Math.PI * 2);
+                ctx.fillStyle = wheelColor;
+                ctx.fill();
+            }
+            
+            function drawSpokes() {
+                // Draw main spoke (reference)
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(centerX + radius, centerY);
+                ctx.strokeStyle = '#aaaaaa';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                
+                // Draw rotating spoke
+                const spokeEndX = centerX + radius * Math.cos(angle);
+                const spokeEndY = centerY + radius * Math.sin(angle);
+                
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(spokeEndX, spokeEndY);
+                ctx.strokeStyle = spokeColor;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                
+                return { x: spokeEndX, y: spokeEndY };
+            }
+            
+            function drawPoint(x, y) {
+                // Draw a point on the wheel's rim
+                ctx.beginPath();
+                ctx.arc(x, y, 6, 0, Math.PI * 2);
+                ctx.fillStyle = pointColor;
+                ctx.fill();
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+            
+            function drawTrace(points) {
+                // Draw the circular trace of the point
+                if (points.length < 2) return;
+                
+                ctx.beginPath();
+                ctx.moveTo(points[0].x, points[0].y);
+                
+                for (let i = 1; i < points.length; i++) {
+                    ctx.lineTo(points[i].x, points[i].y);
+                }
+                
+                ctx.strokeStyle = traceColor;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+            
+            function drawLinearPath() {
+                // Draw the linear path (unwrapped circumference)
+                const startX = centerX + radius + 50;
+                const startY = centerY;
+                const pathLength = radius * 4 * Math.PI;  // 2 full rotations
+                
+                // Draw horizontal line
+                ctx.beginPath();
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(startX + pathLength, startY);
+                ctx.strokeStyle = linearPathColor;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                
+                // Draw tick marks
+                for (let i = 0; i <= 8; i++) {
+                    const tickX = startX + (i * radius * Math.PI / 2);
+                    ctx.beginPath();
+                    ctx.moveTo(tickX, startY - 5);
+                    ctx.lineTo(tickX, startY + 5);
+                    ctx.strokeStyle = '#555';
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                    
+                    // Label ticks with radian values
+                    ctx.fillStyle = '#555';
+                    ctx.font = '12px Arial';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(`${(i * Math.PI / 2).toFixed(1)}π`, tickX, startY + 20);
+                }
+                
+                return { startX, startY, pathLength };
+            }
+            
+            function drawLinearPoint(linearPath, angle) {
+                // Calculate position on linear path
+                const linearX = linearPath.startX + (radius * angle);
+                const linearY = linearPath.startY;
+                
+                // Draw point on linear path
+                ctx.beginPath();
+                ctx.arc(linearX, linearY, 6, 0, Math.PI * 2);
+                ctx.fillStyle = pointColor;
+                ctx.fill();
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                
+                return { x: linearX, y: linearY };
+            }
+            
+            function drawLinearTrace(points) {
+                // Draw the linear trace
+                if (points.length < 2) return;
+                
+                ctx.beginPath();
+                ctx.moveTo(points[0].x, points[0].y);
+                
+                for (let i = 1; i < points.length; i++) {
+                    ctx.lineTo(points[i].x, points[i].y);
+                }
+                
+                ctx.strokeStyle = traceColor;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+            
+            function drawConnectionLine(circularPoint, linearPoint) {
+                // Draw dashed line connecting the two points
+                ctx.beginPath();
+                ctx.moveTo(circularPoint.x, circularPoint.y);
+                ctx.lineTo(linearPoint.x, linearPoint.y);
+                ctx.setLineDash([5, 3]);
+                ctx.strokeStyle = '#2c3e50';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                ctx.setLineDash([]);
+            }
+            
+            function drawLabels() {
+                // Add labels
+                ctx.font = '16px Arial';
+                ctx.fillStyle = '#2c3e50';
+                ctx.textAlign = 'center';
+                
+                // Label for wheel
+                ctx.fillText('Circular Motion', centerX, centerY - radius - 20);
+                
+                // Label for linear path
+                ctx.fillText('Equivalent Linear Motion', centerX + radius + 200, centerY - radius - 20);
+                
+                // Formula reminder
+                ctx.font = '14px Arial';
+                ctx.fillStyle = '#e74c3c';
+                ctx.textAlign = 'left';
+                ctx.fillText('s = r·θ', centerX + radius + 50, centerY + 50);
+                ctx.fillText('v = r·ω', centerX + radius + 50, centerY + 70);
+            }
+            
+            function updateDataDisplay(timeDelta) {
+                // Calculate and display kinematic quantities
+                const linearDisplacement = radius * angle;
+                const linearVelocity = radius * angularVelocity;
+                
+                angularDispEl.textContent = angle.toFixed(2);
+                angularVelEl.textContent = angularVelocity.toFixed(2);
+                linearDispEl.textContent = linearDisplacement.toFixed(2);
+                linearVelEl.textContent = linearVelocity.toFixed(2);
+            }
+            
+            function update(timestamp) {
+                if (!lastTimestamp) lastTimestamp = timestamp;
+                
+                const timeDelta = (timestamp - lastTimestamp) / 1000; // Convert to seconds
+                lastTimestamp = timestamp;
+                
+                if (isPlaying) {
+                    // Update angle based on angular velocity and time
+                    angle += angularVelocity * timeDelta * parseFloat(speedControl.value);
+                    
+                    // Keep angle within a reasonable range (0 to 4π)
+                    if (angle > 4 * Math.PI) {
+                        angle = 0;
+                        tracePoints = [];
+                        linearTracePoints = [];
+                    }
+                }
+                
+                // Clear canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw components
+                drawWheel();
+                const linearPath = drawLinearPath();
+                const spokeEnd = drawSpokes();
+                
+                // Store trace points
+                if (isPlaying && angle > 0) {
+                    tracePoints.push({ x: spokeEnd.x, y: spokeEnd.y });
+                    
+                    // Limit the number of points for performance
+                    if (tracePoints.length > 300) tracePoints.shift();
+                }
+                
+                // Draw point on the wheel
+                drawPoint(spokeEnd.x, spokeEnd.y);
+                
+                // Draw trace
+                drawTrace(tracePoints);
+                
+                // Draw linear point and trace
+                const linearPoint = drawLinearPoint(linearPath, angle);
+                
+                if (isPlaying && angle > 0) {
+                    linearTracePoints.push(linearPoint);
+                    
+                    // Limit the number of points for performance
+                    if (linearTracePoints.length > 300) linearTracePoints.shift();
+                }
+                
+                drawLinearTrace(linearTracePoints);
+                
+                // Draw connection between the two points
+                drawConnectionLine(spokeEnd, linearPoint);
+                
+                // Draw labels
+                drawLabels();
+                
+                // Update displayed data
+                updateDataDisplay(timeDelta);
+                
+                // Continue animation
+                animationId = requestAnimationFrame(update);
+            }
+            
+            // Initialize the animation
+            animationId = requestAnimationFrame(update);
+            
+            // Event listeners for buttons
+            playPauseBtn.addEventListener('click', function() {
+                isPlaying = !isPlaying;
+                playPauseBtn.textContent = isPlaying ? 'Pause' : 'Play';
+                
+                if (isPlaying) {
+                    lastTimestamp = 0; // Reset timestamp to avoid large jumps
+                }
+            });
+            
+            resetBtn.addEventListener('click', function() {
+                angle = 0;
+                isPlaying = true;
+                playPauseBtn.textContent = 'Pause';
+                tracePoints = [];
+                linearTracePoints = [];
+                lastTimestamp = 0;
+                angularVelocity = initialAngularVelocity;
+            });
+            
+            speedControl.addEventListener('change', function() {
+                // Angular velocity adjustment is handled in the update function
+            });
+        });
+    </script>
+</body>
+</html>

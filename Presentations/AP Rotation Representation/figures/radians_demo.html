@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radian Definition Animation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 1100px;
+            width: 100%;
+        }
+        
+        canvas {
+            margin: 20px auto;
+            display: block;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .definition {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin: 20px 0;
+            text-align: left;
+            font-size: 1.2em;
+        }
+        
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .highlighted {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>What is a Radian?</h1>
+        
+        <div class="definition">
+            <p>A <span class="highlighted">radian</span> is defined as the angle subtended at the center of a circle when the arc length equals the radius of the circle.</p>
+            <p>1 radian ≈ 57.3° or exactly 180°/π</p>
+        </div>
+        
+        <canvas id="radianCanvas" width="1000" height="500"></canvas>
+        
+        <div class="controls">
+            <button id="playPauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('radianCanvas');
+            const ctx = canvas.getContext('2d');
+            const playPauseBtn = document.getElementById('playPauseBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            
+            // Configuration
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = 150; // Larger radius for better visualization
+            
+            let isPlaying = true;
+            let angle = 0;
+            let targetAngle = 1; // 1 radian
+            let animationSpeed = 0.008; // Slightly slower for better visualization
+            let animationId;
+            let arcPoints = []; // Array to store points for the traced arc
+            
+            // Colors
+            const circleColor = '#3498db';
+            const radiusColor = '#e74c3c';
+            const arcColor = '#2ecc71';
+            const textColor = '#2c3e50';
+            
+            function drawScene() {
+                // Clear canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw circle
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = circleColor;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                
+                // Draw center point
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 4, 0, Math.PI * 2);
+                ctx.fillStyle = circleColor;
+                ctx.fill();
+                
+                // Draw radius line
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(centerX + radius * Math.cos(0), centerY - radius * Math.sin(0));
+                ctx.strokeStyle = radiusColor;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                
+                // We'll draw the arc with the arc length visual below
+                
+                // Draw second radius at the current angle - adjusted for counter-clockwise motion
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(centerX + radius * Math.cos(-angle), centerY - radius * Math.sin(-angle));
+                ctx.strokeStyle = radiusColor;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                
+                // Calculate the end point of the rotating radius
+                const arcEndX = centerX + radius * Math.cos(-angle);
+                const arcEndY = centerY - radius * Math.sin(-angle);
+                
+                // Draw a small circle at the tip of the radius (like a pen)
+                ctx.beginPath();
+                ctx.arc(arcEndX, arcEndY, 5, 0, Math.PI * 2);
+                ctx.fillStyle = '#e74c3c'; // Same as radius color
+                ctx.fill();
+                
+                // Store the position history of the pen tip
+                if (isPlaying && arcPoints.length < 1000) { // Limit the number of points for performance
+                    arcPoints.push({ x: arcEndX, y: arcEndY });
+                }
+                
+                // Draw the traced path (arc) using the stored points
+                ctx.beginPath();
+                if (arcPoints.length > 0) {
+                    ctx.moveTo(arcPoints[0].x, arcPoints[0].y);
+                    for (let i = 1; i < arcPoints.length; i++) {
+                        ctx.lineTo(arcPoints[i].x, arcPoints[i].y);
+                    }
+                }
+                ctx.strokeStyle = arcColor;
+                ctx.lineWidth = 4;
+                ctx.stroke();
+                
+                // Draw a straight line below for comparison with radius
+                ctx.beginPath();
+                ctx.moveTo(centerX + radius + 20, centerY + 20);
+                ctx.lineTo(centerX + radius + 20 + radius * angle, centerY + 20);
+                ctx.strokeStyle = arcColor;
+                ctx.lineWidth = 4;
+                ctx.stroke();
+                
+                // Draw radius comparison line
+                ctx.beginPath();
+                ctx.moveTo(centerX + radius + 20, centerY + 40);
+                ctx.lineTo(centerX + radius + 20 + radius, centerY + 40);
+                ctx.strokeStyle = radiusColor;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                
+                // Add labels
+                ctx.font = '16px Arial';
+                ctx.fillStyle = textColor;
+                
+                // Angle in radians
+                ctx.fillText(`Angle: ${angle.toFixed(2)} radians (${(angle * 180 / Math.PI).toFixed(2)}°)`, centerX - 120, centerY - radius - 20);
+                
+                // Calculate current arc length
+                const arcLength = radius * angle;
+                ctx.fillText(`Arc Length: ${arcLength.toFixed(2)} units`, centerX - 120, centerY - radius - 50);
+                
+                // Arc length label
+                ctx.fillText('Arc Length = r × θ', centerX + radius + 20, centerY + 15);
+                
+                // Radius label
+                ctx.fillText('Radius (r)', centerX + radius + 20, centerY + 35);
+                
+                // When angle reaches 1 radian, show the definition highlight
+                if (Math.abs(angle - 1) < 0.02) {
+                    ctx.fillStyle = '#e74c3c';
+                    ctx.font = 'bold 16px Arial';
+                    ctx.fillText('When arc length equals radius, the angle is 1 radian!', centerX - 180, centerY + radius + 40);
+                }
+            }
+            
+            function animate() {
+                if (isPlaying) {
+                    if (angle < targetAngle) {
+                        angle += animationSpeed;
+                    } else                     if (angle > targetAngle + 0.01) {
+                        angle = 0;
+                        arcPoints = []; // Clear the traced path for the next cycle
+                    }
+                }
+                drawScene();
+                animationId = requestAnimationFrame(animate);
+            }
+            
+            // Initialize the animation
+            animate();
+            
+            // Event listeners for buttons
+            playPauseBtn.addEventListener('click', function() {
+                isPlaying = !isPlaying;
+                playPauseBtn.textContent = isPlaying ? 'Pause' : 'Play';
+            });
+            
+            resetBtn.addEventListener('click', function() {
+                angle = 0;
+                isPlaying = true;
+                arcPoints = []; // Clear the traced path
+                playPauseBtn.textContent = 'Pause';
+            });
+        });
+    </script>
+</body>
+</html>

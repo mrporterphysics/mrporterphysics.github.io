@@ -51,6 +51,10 @@ $$ \Delta \theta = \frac{\Delta s}{r}$$
 
 ---
 
+<iframe src="../figures/radians_demo.html" width="1100" height="600"></iframe>
+
+---
+
 # Angular Velocity
 
 - Measure of how fast an object is rotating.
@@ -96,6 +100,14 @@ How to translate the two (not on the reference table!)
 | $x = \theta r$ | $\theta = \frac{x}{r}$ |
 | $v = \omega r$ | $\omega = \frac{v}{r}$ |
 | $a = \alpha r$ | $\alpha = \frac{a}{r}$ |
+
+---
+
+<iframe src="../figures/linearangularequiv.html" width="1100" height="600"></iframe>
+
+---
+
+<iframe src="../figures/wheeldemo.html" width="1100" height="600"></iframe>
 
 
 ---
