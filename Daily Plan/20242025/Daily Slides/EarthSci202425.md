@@ -59,7 +59,7 @@ math: mathjax
     - Group 1: Abby & Emma
     - Group 2: Grace & Amalya
     - Group 3: Parker & Brady
-    - Group 4: Sydney & Ava
+    - Group 4: Sydney & Ayva
     - Group 5: Sabrina and Addison
     - Group 6: Maya & Keira
     - Group 7: Lynx and Lexi
