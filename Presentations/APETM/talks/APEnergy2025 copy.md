@@ -1,7 +1,7 @@
 ---
 marp: true
 title: Energy 2025
-theme: physicalSci
+theme: forces-dark
 paginate: true
 footer: 
 transition: reveal
@@ -35,143 +35,38 @@ section.left h2, section.left p,{
 
 ## _A model conservation and non-uniform motion_ <!--fit--->
 
-### Mr. Porter - Regents Physics 2025
+### Mr. Porter - AP Physics 2024
 
 ---
 
-# Energy Definitions
+# The Bungee Jumper
 
-## Work:
++ Represent this situation with as well as you can (with as many diagrams as you can)
++ Predict (using your physics diagrams or equations and your designated variables) the lowest height of the mass after it is released
 
-### When a **force** acts upon an object to *cause* a **displacement**, it is said that ***work*** was done upon the object. 
+Assume you know the spring constant and mass
+
+---
+
+
+
+# How do we use the  <!--fit--->
+
+# word **energy** <!--fit--->
+
+# <!--fit---> in everyday language?
 
 ---
 
 
-# Work $W$
+# <!--fit---> How is this definition 
 
-## Three 🔑 ingredients: **force**, **displacement**, and **cause.**
-
-### In order for a force to do **work** on an object, there must be a _displacement_ and the force must _cause_ that displacement. 
+# <!--fit---> different than in science?
 
 ---
 
-# Work Equation 
-
-![center w:700](image-4.png)
-
-- $F$ is the force exerted on the system (N)
-- $d$ is the distance over which the force is exerted (m)
-- $\theta$ is the angle between $\vec{F}$ and $\Delta \vec{x}$
-
-
-$$ \boxed{W = Fd = \Delta E_T } $$
-
-Note: 
-
-$$ W = F_{\parallel}d = Fd \cos \theta $$
-
----
-
-# Work
-
-* Work is scalar, but can be negative
-* $W$ has units of joules (J) which is equal to $1 \textrm{ N} \cdot \textrm{m}$
-* Only force components parallel to $d$ do work 
-
-![bg fit right 60%](image-6.png)
-
----
-
-# Examples
-
-| Work | No Work |
-|---|---|
-| Horse pulls a plow | A teacher applies a force to a wall and becomes exhausted. |
-| A book falls off a table and free falls to the ground. | A waiter carries a tray full of meals above his head by one arm straight across the room at constant speed. |
-| A rocket accelerates through space. | Water bottle sits on a table |
-
----
-
-# Negative Work 
-
-## When forces act on moving objects to *hinder* the displacement
-
-- Car skidding to a stop
-- Softball player sliding into second base
-- Spiderman stopping a moving train
-
-
-![bg fit right ](https://media.tenor.com/F0H5j2EXoUUAAAAM/spiderman-train-tracks.gif)
-
----
-
-# Examples
-
-![center w:1000](image-8.png)
-
----
-
-# Angled Example
-
-### A force of 50 N acts on the block at the angle shown in the diagram. The block moves a horizontal distance of 3.0 m. How much work is done by the applied force?
-
-![center w:600](image-9.png)
-
----
-
-# More than one force:
-
-### A 10-N force is applied to push a block across a friction free surface for a displacement of 5.0 m to the right.
-
- For each case, indicate which force(s) are doing work upon the object. Then calculate the work done by these forces.
-
-![center w:300](image-10.png)
-
-
-
----
-
-# More than one force
-
-### An approximately 2-kg object is pulled upward at constant speed by a 20-N force for a vertical displacement of 5 m. 
-
- For each case, indicate which force(s) are doing work upon the object. Then calculate the work done by these forces.
-
-![center w:300](image-11.png)
-
----
-
-# Energy Packet Pages 1-4  <!--fit--->
-
----
-
-# Energy and Systems
-
-*  A single object or a collection of objects can be referred to as a **system**
-* Anything outside of the system is part of the **surroundings (environment)**, and interactions between the system and enviroment are **external** interactions
-
-
-<div class='columns'>
-<div>
-
-![alt text](image-3.png)
-
-</div>
  
-<div>
-
-* **Work** is the amount of **mechanical energy** transferred **into** or **out of** a system
-
-</div>
-</div>
-
-
----
-
-# Work as Area
-
-![center w:600](image-5.png)
+> # Physics is a foregin language that sounds like English 
 
 
 ---
@@ -276,6 +171,103 @@ Energy is like money...
 * **Equation**: $K + U_g + U_s$
 * **Notes**: Mechanical Energy is the sum of **all** of the potential and kinetic energies
 
+---
+
+# Energy Definitions
+
+## Work:
+
+_Work is a transfer of energy by a mechanical process (a force exerted on an object or system as it moves through a displacement in the direction of the force)_ The amount of energy transferred in this process is referred to as the work done.
+
+---
+
+# Energy Definitions
+
+## Work:
+
+_Work is a transfer of energy by a mechanical process (a force exerted on an object or system as it moves through a displacement in the direction of the force)._ The amount of energy transferred in this process is referred to as the work done.
+
+* **Symbol**: $W = \Delta E$
+* **When is the energy stored in this way?** External force changes the mechanical energy of the system
+* **Notes**: Area of Force vs. Displacement Graph
+
+---
+
+# Energy and Systems
+
+*  A single object or a collection of objects can be referred to as a **system**
+* Anything outside of the system is part of the **surroundings (environment)**, and interactions between the system and enviroment are **external** interactions
+
+
+<div class='columns'>
+<div>
+
+![alt text](image-3.png)
+
+</div>
+ 
+<div>
+
+* **Work** is the amount of **mechanical energy** transferred **into** or **out of** a system
+
+</div>
+</div>
+
+---
+
+# Work 
+
+## Three 🔑 ingredients: **force**, **displacement**, and **cause.**
+
+### In order for a force to do **work** on an object, there must be a _displacement_ and the force must _cause_ that displacement. 
+
+---
+
+# Work Equation 
+
+![center w:700](image-4.png)
+
+- $F$ is the force exerted on the system (N)
+- $d$ is the distance over which the force is exerted (m)
+- $\theta$ is the angle between $\vec{F}$ and $\Delta \vec{x}$
+
+
+$$ \boxed{W = F_{\parallel}d = Fd \cos \theta } $$
+
+---
+
+# Work
+
+* Work is scalar, but can be negative
+* $W$ has units of joules (J) which is equal to $1 \textrm{ N} \cdot \textrm{m}$
+* Only force components parallel to $\Delta \vec{x}$ do work 
+
+---
+
+# Examples
+
+| Work | No Work |
+|---|---|
+| Horse pulls a plow | A teacher applies a force to a wall and becomes exhausted. |
+| A book falls off a table and free falls to the ground. | A waiter carries a tray full of meals above his head by one arm straight across the room at constant speed. |
+| A rocket accelerates through space. | Water bottle sits on a table |
+
+---
+
+# Conservative and Nonconservative Forces 
+
+* The work done by a **conservative** force exerted on a system is **path-independent** and obly depends on the intial and final configurations of that system (e.g., gravitational force)
+  * For a conservative force, we include the source of the force in the system and associate that force with potential energy.
+* The work done by a **nonconservative** force is **path-dependent** (e.g., friction and air resistance)
+
+### Can we get that mechanical energy back?
+
+
+---
+
+# Work as Area
+
+![center w:600](image-5.png)
 
 ---
 

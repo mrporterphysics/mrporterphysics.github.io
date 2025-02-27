@@ -15,6 +15,44 @@ math: mathjax
 
 ---
 
+<!--- _footer: <br> --->
+
+# 2025.02.27 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather always be slightly late or super early?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How are we on yesterday's practice?
+2. Speed-dating: Angular Kinematics
+    1. [**Angular Acceleration**](https://www.physicsclassroom.com/calcpad/launch/CPRK5)
+	  2. [**Rotational Kinematics 1**](https://www.physicsclassroom.com/calcpad/launch/CPRK6)
+	  3. [**Rotational Kinematics 2**](https://www.physicsclassroom.com/calcpad/launch/CPRK7)
+	  4. [**Rot & Linear Kinematics**](https://www.physicsclassroom.com/calcpad/launch/CPRK8)
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with angular quantities_
+
+### 📆 Upcoming
+
+- Momentum Test, AP Classroom review is posted
+
+</div>
+</div>
+
+---
+
 # 2025.02.26  **AP Physics**
 
 ##### **❓ of the 📅**: What is your funniest family vacation moment?
