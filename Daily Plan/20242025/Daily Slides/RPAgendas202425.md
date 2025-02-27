@@ -14,6 +14,37 @@ math: mathjax
 
 ---
 
+# 2025.02.27 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather always be slightly late or super early? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 🎵 Work, Work, Work, Work
+2. Work Notes
+2. Packet Practice On work
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and calculate Work_
+
+### 📆 Upcoming
+
+Conservation Momentum Quiz tomorrow
+
+</div>
+</div>
+
+---
+
 # 2025.02.25 **Regents Physics**
 
 ##### **❓ of the 📅**: How do you feel about clowns? 🤡

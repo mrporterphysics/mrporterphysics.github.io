@@ -19,6 +19,7 @@
 - [Forces](/mrporterphysics.github.io/Presentations/Forces/talks/RPForces2024.html)
 - [Force Stations](/mrporterphysics.github.io/Presentations/Forces/talks/forcestations.html)
 - [Momentum](/mrporterphysics.github.io/Presentations/Momentum/talks/RPmomentum2025.html)
+- [Energy](/mrporterphysics.github.io/Presentations/APETM/talks/RPEnergy2025.html)
 - [Rotation](/mrporterphysics.github.io/Presentations/AP%20Rotation%20Representation/talks/Rotation2025.html)
 
 

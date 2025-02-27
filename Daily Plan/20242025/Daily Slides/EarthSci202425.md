@@ -16,6 +16,71 @@ math: mathjax
 
 ---
 
+# 2025.02.27 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather always be slightly late or super early?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Rock Cycle Story
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe the rock cycle_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<!--- _footer: <br> --->
+
+<div class='columns'>
+<div>
+
+**Task:**  To create a children’s storybook or comic strip that illustrates the different parts of the rock cycle and teaches them how different rocks form.
+
+**Output:** Storybook OR Comic 
+
+**Groups**: 
+
+    - Group 1: Abby & Emma
+    - Group 2: Grace & Amalya
+    - Group 3: Parker & Brady
+    - Group 4: Sydney & Ava
+    - Group 5: Sabrina and Addison
+    - Group 6: Maya & Keira
+    - Group 7: Lynx and Lexi
+    - Group 8: Peter & Lucas
+
+
+
+</div>
+ 
+<div>
+
+
+**Audience:**
+
+![center](IMG_1073.jpg)
+
+</div>
+</div>
+
+---
+
 # 2025.02.26 **Earth Science**
 
 ##### **❓ of the 📅**: What is your funniest family vacation moment?   
