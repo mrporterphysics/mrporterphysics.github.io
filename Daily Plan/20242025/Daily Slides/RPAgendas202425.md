@@ -1,7 +1,7 @@
 ---
 title: Regents Physics 2024-25
 marp: true
-theme: physics2024
+theme: physics2024 
 paginate: true
 math: mathjax
 ---
@@ -13,6 +13,140 @@ math: mathjax
 ## 👨‍🏫 Mr. Porter
 
 ---
+
+# 2025.03.03 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Calculating Power
+2. Finish Page 5 & Page 6
+3. Power Lab
+4. Bicycle Question
+5. Physics Classroom Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Measure and Calculate your Power_
+
+🥅 _Apply Power to real life example_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+# Power Lab 💪 🏋️
+
+**Question:**
+What is my power requirement for climbing a staircase - both by walking and by running (or fast walking)?
+
+**Purpose:**
+To determine my power requirement for climbing a staircase - both by walking and by running.
+
+---
+
+# 🚫 Rules:
+
+1. Do not disturb classes or other students in the hall 
+2. Spread out to the different staircases (there are 4 by my count) - no more than 2 per group 
+3. No skippinng stairs
+4. **BE SAFE** and use good judgement
+
+---
+
+# Power Lab 💪 
+
+**Question:**
+What is my power requirement for climbing a staircase - both by walking and by running (or fast walking)?
+
+**Purpose:**
+To determine my power requirement for climbing a staircase - both by walking and by running.
+
+---
+
+![bg blur](image-33.png)
+
+## Calculate Mr. Porter's Power and Compare
+
+- Elevation Gain: **3,521 feet**
+- Mr. Porter + Bike Mass: **85 kg**
+- Active Time: **55 minutes 19 seconds**
+
+How does this compare to the **measured** average power of 286 W?
+
+---
+
+## Calculate Mr. Porter's Power and Compare
+
+- Elevation Gain: 3,521 feet
+- Mr. Porter + Bike Mass: 85 kg
+- Active Time: 55 minutes 19 seconds
+
+How does this compare to the **measured** average power of 286 W?
+
+![bg fit right 125%](image-32.png)
+
+---
+
+# Physics Classroom Practice
+
+[**Problem Set WE1:  Work 1**](https://www.physicsclassroom.com/calcpad/launch/CPWE1)
+
+[**Problem Set WE2:  Work 2**](https://www.physicsclassroom.com/calcpad/launch/CPWE2)
+
+[**Problem Set WE3:  Work and Power 1**](https://www.physicsclassroom.com/calcpad/launch/CPWE3)
+
+[**Problem Set WE4:  Work and Power 2**](https://www.physicsclassroom.com/calcpad/launch/CPWE4)
+
+[**Problem Set WE5:  Work and Power 3**](https://www.physicsclassroom.com/calcpad/launch/CPWE5)
+
+---
+
+# 2025.02.28 **Regents Physics**
+
+##### **❓ of the 📅**: What topic could you give a 20-minute presentation on without any preparation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Conservation of Momentum Quiz
+2. Power 💪 
+3. Power Think Sheet
+3. Determine your power
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Power_
+
+🥅 _Measure Power_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2025.02.27 **Regents Physics**
 

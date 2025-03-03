@@ -16,6 +16,34 @@ math: mathjax
 
 ---
 
+# 2025.02.28 **Earth Science**
+
+##### **❓ of the 📅**: What topic could you give a 20-minute presentation on without any preparation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Work on Rock Cycle Story
+2. Check-in at end of class: do we need more time?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Write rock cycle story_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.02.27 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather always be slightly late or super early?

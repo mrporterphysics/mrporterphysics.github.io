@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2025.03.03 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pivot - Rotational Motion of a Bicycle
+2. [**Using the Big 4 Eqns and Linear Relationships**](https://www.physicsclassroom.com/calcpad/launch/CPRK8)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Compare Linear and Rotational Motion_
+
+### 📆 Upcoming
+
+- Test Wednesday on Momentum, Finish AP Classroom Review
+
+</div>
+</div>
+
+---
+
 <!--- _footer: <br> --->
 
 # 2025.02.27 **AP Physics**

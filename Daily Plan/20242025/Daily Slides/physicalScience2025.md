@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2025.02.28 **Physical Science**
+
+##### **❓ of the 📅**: What topic could you give a 20-minute presentation on without any preparation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Ping-Pong Ball Bazooka Pivot
+    - Modeling Motion:
+        - with pictures
+        - with graphs
+        - with equations
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the motion of a ping pong ball_
+
+
+
+</div>
+</div>
+
+---
+
 # 2025.02.26 **Physical Science**
 
 ##### **❓ of the 📅**: What is your funniest family vacation moment?
