@@ -17,7 +17,7 @@ math: mathjax
 
 # 2025.03.03 **AP Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
 
 <div class ='columns'>
 
