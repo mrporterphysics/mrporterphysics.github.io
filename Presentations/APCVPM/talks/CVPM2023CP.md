@@ -1,9 +1,9 @@
 ---
 marp: true
 title: CVPM 2023-24
-theme: default
+theme: physicalSci
 paginate: true
-footer: Be brave, not perfect
+
 ---
 
 <style>
@@ -17,13 +17,10 @@ img[alt~="center"] {
 
 ## A Descriptive *Model* for Particles 
 
-### AP Physics 2023-24 with Mr. Porter
+### Physics with Mr. Porter
 
 
 ---
-
-
-# Lab Results:
 
 * A ***constant velocity***
     * means that it changed its *position* equal amounts for each equal change in *time*
@@ -92,11 +89,11 @@ $$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
 # Describing Motion 
 
 Each description should include:
-- Starting position
-- Direction of motion (positive direction, no motion, or negative direction)
-- Type of motion (at rest, constant velocity, speeding up, slowing down or some combination of these)
-- Relative speed (slow, medium, fast, slower, faster—this is only meaningful with there is more than
-one part of the motion or when you are comparing two or more objects)
+
+* Starting position
+* Direction of motion (positive direction, no motion, or negative direction)
+* Type of motion (at rest, constant velocity, speeding up, slowing down or some combination of these)
+* Relative speed (slow, medium, fast, slower, faster—this is only meaningful with there is more than one part of the motion or when you are comparing two or more objects)
 
 ---
 

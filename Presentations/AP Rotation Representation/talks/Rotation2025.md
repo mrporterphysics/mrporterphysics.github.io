@@ -127,6 +127,36 @@ The same as linear, but with their rotational twin!
 
 <img style="width:100%"  src="../figures/anggraphs.png">
 
+---
+
+
+# Torque 
+
+## When a ***force*** has the ability to rotate an object 
+
+* i.e. Pushing the edge a door so it rotates around its axis of rotation (the hinges)
+
+---
+
+# Torque
+
+## Depends on:
+
+* where the force is exerted
+* how large the force is 
+* what angle the force is at 
+
+---
+
+# Torque 
+
+$$ \boxed{\tau = r_\perp F = r F \sin \theta}$$
+
+* $\tau$ (tau) is  torque (Newton $\cdot$ meter)
+* $r$ is distance between point force is exerted and axis of rotation
+* $F \sin \theta$ is Force perpendicular to axis of rotation
+
+
 
 ---
 
@@ -194,33 +224,6 @@ Develop a method to determine the mass of your meterstick using the balance.
 
 - $F_g$ is effectively exerted on the center of mass
 
----
-
-# Torque 
-
-## When a *force* has the ability to rotate an object 
-
-* i.e. Pushing the edge a door so it rotates around its axis of rotation (the hinges)
-
----
-
-# Torque
-
-## Depends on:
-
-* where the force is exerted
-* how large the force is 
-* what angle the force is at 
-
----
-
-# Torque 
-
-$$ \boxed{\tau = r_\perp F = r F \sin \theta}$$
-
-* $\tau$ is  torque (Newton $\cdot$ meter)
-* $r$ is distance between point force is exerted and axis of rotation
-* $F \sin \theta$ is Force perpendicular to axis of rotation
 
 ---
 

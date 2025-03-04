@@ -15,6 +15,51 @@ math: mathjax
 
 ---
 
+# 2025.03.04 **AP Physics** Do Now 
+
+The figures below show hollow spheres (not drawn to scale) that are rolling at a constant rate without slipping. The
+spheres all have the same mass, but their radii as well as their linear and angular speeds vary.
+
+![center w:600](image-34.png)
+
+**Rank the radius of the spheres**
+
+---
+
+# 2025.03.04 **AP Physics**
+
+##### **❓ of the 📅**: Is tap water better than bottled water?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Notes - Torque
+3. Pivot - Torque
+4. PC Practice: [Torque by a Single Force](https://www.physicsclassroom.com/calcpad/launch/CPRT1)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Torque_
+
+### 📆 Upcoming
+
+- Test Tomorrow on Momentum, Finish AP Classroom Review
+
+
+</div>
+</div>
+
+---
+
+
 # 2025.03.03 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?

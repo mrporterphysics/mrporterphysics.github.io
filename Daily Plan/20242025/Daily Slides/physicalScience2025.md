@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.03.04 **Physical Science**
+
+##### **❓ of the 📅**: Is tap water better than bottled water?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Introduction to Motion
+2. Describing Motion
+3. Ball Rolling Left Pivot
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe Motion Verbally_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.02.28 **Physical Science**
 
 ##### **❓ of the 📅**: What topic could you give a 20-minute presentation on without any preparation?

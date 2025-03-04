@@ -16,6 +16,63 @@ math: mathjax
 
 ---
 
+# 2025.03.04 **Earth Science**
+
+##### **❓ of the 📅**: Is tap water better than bottled water?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Work on story
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Work on rock cycle story_
+
+### 📆 Upcoming
+
+- Test Friday: Minerals, Rocks, Rock Cycle
+
+</div>
+</div>
+
+---
+# 2025.03.03 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Work on story
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Work on rock cycle story_
+
+### 📆 Upcoming
+
+- Test Friday: Minerals, Rocks, Rock Cycle
+
+</div>
+</div>
+
+---
+
 # 2025.02.28 **Earth Science**
 
 ##### **❓ of the 📅**: What topic could you give a 20-minute presentation on without any preparation?
