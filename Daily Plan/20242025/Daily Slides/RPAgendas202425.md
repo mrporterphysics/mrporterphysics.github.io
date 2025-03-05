@@ -47,6 +47,31 @@ math: mathjax
 
 ---
 
+
+![bg blur](image-33.png)
+
+## Calculate Mr. Porter's Power and Compare
+
+- Elevation Gain: **3,521 feet**
+- Mr. Porter + Bike Mass: **85 kg**
+- Active Time: **55 minutes 19 seconds**
+
+How does this compare to the **measured** average power of 286 W?
+
+---
+
+## Calculate Mr. Porter's Power and Compare
+
+- Elevation Gain: 3,521 feet
+- Mr. Porter + Bike Mass: 85 kg
+- Active Time: 55 minutes 19 seconds
+
+How does this compare to the **measured** average power of 286 W?
+
+![bg fit right 125%](image-32.png)
+
+---
+
 # 2025.03.03 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
@@ -108,29 +133,6 @@ What is my power requirement for climbing a staircase - both by walking and by r
 **Purpose:**
 To determine my power requirement for climbing a staircase - both by walking and by running.
 
----
-
-![bg blur](image-33.png)
-
-## Calculate Mr. Porter's Power and Compare
-
-- Elevation Gain: **3,521 feet**
-- Mr. Porter + Bike Mass: **85 kg**
-- Active Time: **55 minutes 19 seconds**
-
-How does this compare to the **measured** average power of 286 W?
-
----
-
-## Calculate Mr. Porter's Power and Compare
-
-- Elevation Gain: 3,521 feet
-- Mr. Porter + Bike Mass: 85 kg
-- Active Time: 55 minutes 19 seconds
-
-How does this compare to the **measured** average power of 286 W?
-
-![bg fit right 125%](image-32.png)
 
 ---
 
