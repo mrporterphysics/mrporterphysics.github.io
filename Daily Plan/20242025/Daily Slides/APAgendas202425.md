@@ -1,7 +1,7 @@
 ---
 title: AP Physics 2024-2025
 marp: true
-theme: physics2024
+theme: physics2024 
 paginate: true
 footer: Did you get better today? Did you help someone else get better?
 math: mathjax
