@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2025.03.06 **Physical Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Distance vs. Displacement
+    - Notes/discussion
+    - Think Sheet 
+    - [Distance vs. Displacement Concept Builder](https://www.physicsclassroom.com/Concept-Builders/Kinematics/Distance-vs-Displacement/Interactive)
+	-  [MOP - Distance & Displacement](https://www.physicsclassroom.com/mop/Kinematic-Concepts/Distance-and-Displacement/Mission-KC2)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Differentiate between distance and displacement_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.04 **Physical Science**
 
 ##### **❓ of the 📅**: Is tap water better than bottled water?

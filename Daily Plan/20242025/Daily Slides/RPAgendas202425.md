@@ -14,6 +14,39 @@ math: mathjax
 
 ---
 
+# 2025.03.05 **Regents Physics**
+
+##### **❓ of the 📅**: Who is your celebrity crush?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do now
+3. Power Practice:
+    - [**Problem Set WE3:  Work and Power 1**](https://www.physicsclassroom.com/calcpad/launch/CPWE3)
+2. Energy Definitions
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Power Calculations_
+
+🥅 _Define Energy "Types"_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.03 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?

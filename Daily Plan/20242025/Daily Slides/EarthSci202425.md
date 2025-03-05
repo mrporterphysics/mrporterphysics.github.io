@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2025.03.05 **Earth Science**
+
+##### **❓ of the 📅**: Who is your celebrity crush?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Whiteboard Summary with Partner
+2. Quizziz: [joinmyquiz.com](https://quizizz.com/join?gc=727009&source=liveDashboard) OR CODE **727009**
+3. Review Sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for Friday's Test_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.04 **Earth Science**
 
 ##### **❓ of the 📅**: Is tap water better than bottled water?

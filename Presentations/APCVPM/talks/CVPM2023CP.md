@@ -144,6 +144,90 @@ Each description should include:
 
 ![center](../../../Daily%20Plan/20232024/images/Kinematics/xt6.png)
 
+---
+
+# How Far?
+
+## Position vs. Distance vs. Displacement
+
+---
+
+# Scalars vs. Vectors
+
+* **Scalars** are quantities that are fully described by a magnitude (or numerical value) alone.
+* **Vectors** are quantities that are fully described by both a magnitude and a direction.
+
+---
+
+# Distance and Displacement
+
+
+* **Distance** is a **scalar quantity** that refers to "how much ground an object has covered" during its motion.
+* **Displacement** is a **vector quantity** that refers to "how far out of place an object is"; it is the object's overall change in position.
+
+---
+
+# Example
+
+A physics teacher walks 4 meters East, 2 meters South, 4 meters West, and finally 2 meters North.
+
+- Distance = 4 m + 2 m + 4 m + 2 m = 12 m
+- Displacement = 0 (didn't change position!)
+
+![bg right fit](image-12.png)
+
+---
+
+# ✔️🤔
+
+The diagram below shows the position of a cross-country skier at various times. At each of the indicated times, the skier turns around and reverses the direction of travel. In other words, the skier moves from A to B to C to D.
+
+What is the Distance and Displacement of the skiier?
+
+
+
+![bg fit right:45%](image-13.png)
+
+
+---
+
+# ✔️🤔
+
+What is the Distance and Displacement of the skiier?
+
+
+
+![bg fit right:45%](image-13.png)
+
+
+The skier covers a distance of (180 m + 140 m + 100 m) = 420 m
+and has a displacement of 140 m, rightward.
+
+---
+
+# ✔️🤔
+
+Consider a football coach pacing back and forth along the sidelines. The diagram below shows several of coach's positions at various times. At each marked position, the coach makes a "U-turn" and moves in the opposite direction. In other words, the coach moves from position A to B to C to D.
+ 
+
+What is the coach's resulting displacement and distance of travel? 
+
+![bg fit right:40%](image-14.png)
+
+---
+
+# ✔️🤔
+
+
+What is the coach's resulting displacement and distance of travel? 
+
+The coach covers a distance of
+
+(35 yds + 20 yds + 40 yds) = 95 yards
+and has a displacement of 55 yards, left.
+
+![bg fit right:40%](image-14.png)
+
 
 ---
 
