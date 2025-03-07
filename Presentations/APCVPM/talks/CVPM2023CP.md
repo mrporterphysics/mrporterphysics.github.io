@@ -3,7 +3,7 @@ marp: true
 title: CVPM 2023-24
 theme: physicalSci
 paginate: true
-
+math: mathjax
 ---
 
 <style>
@@ -204,6 +204,7 @@ The skier covers a distance of (180 m + 140 m + 100 m) = 420 m
 and has a displacement of 140 m, rightward.
 
 ---
+
 
 # ✔️🤔
 

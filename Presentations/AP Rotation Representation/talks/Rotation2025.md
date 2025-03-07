@@ -224,6 +224,24 @@ Develop a method to determine the mass of your meterstick using the balance.
 
 - $F_g$ is effectively exerted on the center of mass
 
+---
+
+# Center of Mass:
+
+$$\boxed{\vec{x}_{cm} = \frac{\Sigma m_i \vec{x}_i}{\Sigma m_i}}$$
+
+1. $\vec{x}_{cm}$ represents the position vector of the center of mass.
+2. $m_i$ represents the mass of each individual object in the system.
+3. $\vec{x}_i$ represents the position vector of each individual object.
+4. $\Sigma m_i \vec{x}_i$ in the numerator means: multiply each object's mass by its position vector, then sum these products for all objects in the system.
+5. $\Sigma m_i$ in the denominator is the total mass of the system (the sum of all individual masses).
+
+---
+
+For a 1-dimensional case with objects along a line, this simplifies to:
+
+$$x_{cm} = \frac{m_1 x_1 + m_2 x_2 + m_3 x_3 + ... + m_n x_n}{m_1 + m_2 + m_3 + ... + m_n}$$
+
 
 ---
 
@@ -234,6 +252,15 @@ Develop a method to determine the mass of your meterstick using the balance.
     * $\Sigma F = F_1 + F_2 + F_3 + \ldots = 0$
     * $\Sigma \tau = \tau_1 + \tau_2 + \tau_3 + \ldots = 0$
 * Sum of torques = zero (balanced torques)
+
+
+---
+
+Consider the beam shown below to be in equilibrium (Net Torque = 0) around the fulcrum at Point A. The mass of the beam is 6.5 kg, the mass of the resting mass is 43 kg, and the distance between vertical yellow marks is 49 cm.
+
+![center w:600](image-6.png)
+
+What is the magnitude of force F?
 
 ---
 

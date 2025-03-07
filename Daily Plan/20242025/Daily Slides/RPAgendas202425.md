@@ -14,6 +14,40 @@ math: mathjax
 
 ---
 
+# 2025.03.06 **Regents Physics**
+
+##### **❓ of the 📅**: If you could be immortal, what age would you choose to stop aging at and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Introduction to Energy Bar Graphs 📊
+2. Energy Bar graphs with partners
+	1. Speed dating bar graphs
+3. Energy Equations (if there is time)
+	1. Intro equations
+	2. Think sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe energy conservation with bar graphs_
+
+### 📆 Upcoming
+
+- Need a work & power quiz next week...
+
+</div>
+</div>
+
+---
+
 # 2025.03.05 **Regents Physics**
 
 ##### **❓ of the 📅**: Who is your celebrity crush?

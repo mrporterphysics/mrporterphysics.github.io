@@ -15,6 +15,28 @@ math: mathjax
 
 ---
 
+
+<!--- _footer: <br> --->
+
+# 2025.03.07 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+#### 📋 Agenda
+
+1. Do Now: Calculating Torque: **[Torque Produced by a Single Force](https://www.physicsclassroom.com/calcpad/launch/CPRT1)**
+2. Lab Activity: Balancing Act
+3. Static Equilibrium Notes
+4. Practicing with Static Equilibrium
+    - [Beam with Mass](https://www.physicsclassroom.com/calcpad/launch/CPRT5)
+    - [Beam with Mass and Angles](https://www.physicsclassroom.com/calcpad/launch/CPRT6)
+    - [Mass on Beam](https://www.physicsclassroom.com/calcpad/launch/CPRT7)
+
+
+
+
+---
+
 # 2025.03.04 **AP Physics** Do Now 
 
 The figures below show hollow spheres (not drawn to scale) that are rolling at a constant rate without slipping. The

@@ -259,7 +259,7 @@ Energy is like money...
 
 
 * **Kinetic Energy** - when energy is stored in ***motion***
-* **Spring interaction energy** - energy stored when an object stretches or compresses a spring
+* **Spring Potential Energy** - energy stored when an object stretches or compresses a spring
 
 ---
 
@@ -295,7 +295,7 @@ Energy is like money...
 
 ## Spring Potential Energy:
 
-* **Symbol**: $U_s$
+* **Symbol**: $PE_s$
 * **When is the energy stored in this way?** object stretches or compresses a spring or another elastic material
 * **Notes:** Interaction energy is energy stored in the interaction of two objects. (i.e. Loaded nerf launcher without a dart)
 
@@ -305,7 +305,7 @@ Energy is like money...
 
 ## Gravitational Potential Energy:
 
-* **Symbol**: $U_g$
+* **Symbol**: $PE_g$
 * **When is the energy stored in this way?**: $\Delta y$ in a gravitational field
 * **Notes**: Depends on $\Delta y$, a reference line ($y=0$), and the weight of the object
 
@@ -328,7 +328,7 @@ Energy is like money...
 
 * **Symbol**: None
 * **When is the energy stored in this way?** $K$ or $U$ present
-* **Equation**: $K + U_g + U_s$
+* **Equation**: $K + PE_g + PE_s$
 * **Notes**: Mechanical Energy is the sum of **all** of the potential and kinetic energies
 
 
@@ -342,45 +342,6 @@ Energy is like money...
 
 ### **Isolated System**: System where there are no external forces
 
----
-
-# Conservation of Cake 🍰 <!--fit--->
-
-## For Fiona's Birthday (Sat) we are cutting an imaginary birthday cake into 21 pieces
-
-
-What changes? What remains constant?
-
-<!--- Cut cake into 20 pieces:
-- Number of pieces did not remain the same
-- Average piece size changed 
-- total _mass_ remains the same --->
-
----
-
-# Conservation of Cake 🍰 <!--fit--->
-
-Conservation of Mass:
-
-$$\{ \textrm{initial cake mass} \} + \{\textrm{new mass enerting or leaving system}\} = \{\textrm{final cake mass}\}$$
-
-* What happened to the mass of our isolated cake system?
-
-<!---
-- System lost mass
-- Environment (hungry students) removed mass from the system
-- If we expand the system to the classroom then our mass was conserved
- --->
-
----
-
-# Conservation of Cake 🍰 <!--fit--->
-
-![center](image.png)
-
---- 
-
-# Conservation of **Energy** <!--fit--->
 
 ---
 
@@ -393,6 +354,9 @@ $$\{ \textrm{initial cake mass} \} + \{\textrm{new mass enerting or leaving syst
 # Conservation of Energy 
 
 ## The energy of **an isolated system** remains constant.
+
+
+* This means there are **no external forces doing *work***
 
 ---
 
@@ -412,8 +376,12 @@ $$\{ \textrm{initial cake mass} \} + \{\textrm{new mass enerting or leaving syst
 - Always start by defining your object or system 
 - The **net work** done by external forces changes the system's **mechanical energy** (Sum of potential and kinetic energies)
 
-$$W_{ext} = \Delta K + \Delta U$$
-$$W_{ext} = (K_f - K_i) + (U_f - U_i)$$
+$$\boxed{W = \Delta E_T}$$
+
+or as we will use
+
+$$ E_i \pm W = E_f $$
+
 
 
 
@@ -426,21 +394,21 @@ $$W_{ext} = (K_f - K_i) + (U_f - U_i)$$
 
 ---
 
-# Elastic (Spring) Potential Energy 
-
-# **$\boxed{U_s = \frac{1}{2}kx^2}$** <!--fit--->
+# Spring Potential Energy 
+ 
+## **$\boxed{PE_s = \frac{1}{2}kx^2}$** <!--fit--->
 
 ---
 
 # Kinetic Energy 
 
-# **$\boxed{K = \frac{1}{2}mv^2}$** <!--fit--->
+## **$\boxed{KE = \frac{1}{2}mv^2}$** <!--fit--->
 
 ---
 
 # Gravitational Potential Energy 
 
-# **$\boxed{\Delta U_g = mg\Delta y }$** <!--fit--->
+## **$\boxed{\Delta PE_g = mg\Delta h }$** <!--fit--->
 
 ---
 
