@@ -20,11 +20,11 @@ math: mathjax
 
 # 2025.03.07 **AP Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?
 
 #### 📋 Agenda
 
-1. Do Now: Calculating Torque: **[Torque Produced by a Single Force](https://www.physicsclassroom.com/calcpad/launch/CPRT1)**
+1. Do Now: Calculating Torque: **[Torque by a Single Force](https://www.physicsclassroom.com/calcpad/launch/CPRT1)**
 2. Lab Activity: Balancing Act
 3. Static Equilibrium Notes
 4. Practicing with Static Equilibrium

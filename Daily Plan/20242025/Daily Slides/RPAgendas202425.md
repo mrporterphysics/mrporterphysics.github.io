@@ -14,6 +14,38 @@ math: mathjax
 
 ---
 
+# 2025.03.07 **Regents Physics**
+
+##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Bar Graphs
+	1. Whiteboard Answers and Discuss
+2. Intro Equations
+3. Think Sheet from PC in Packet on Energy Types and identifying with simple calculations
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Energy Transformations Graphically_
+
+### 📆 Upcoming
+
+- Need a work & power quiz next week...
+
+</div>
+</div>
+
+---
+
 # 2025.03.06 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could be immortal, what age would you choose to stop aging at and why?
