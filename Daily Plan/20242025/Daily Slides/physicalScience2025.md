@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.03.10 **Physical Science**
+
+##### **❓ of the 📅**: If you could redesign the human body, what one improvement would you make?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Distance & Displacement Review -> Think Sheet
+1. Calculating Average Velocity
+2. Pivot -> Find Skaters' average velocity
+3. Pivot -> Ball Rolling Left
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Calculate Average Velocity_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.06 **Physical Science**
 
 ##### **❓ of the 📅**: Question

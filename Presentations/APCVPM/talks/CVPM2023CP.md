@@ -229,6 +229,48 @@ and has a displacement of 55 yards, left.
 
 ![bg fit right:40%](image-14.png)
 
+---
+
+# Average Velocity
+
+$$ v = \frac{\Delta x}{\Delta t}$$
+
+- $v$ -> velocity
+- $\Delta x$ -> displacement
+- $\Delta t$ -> time duration, or change in time
+
+---
+
+
+# Example
+
+
+![center w:900](image-13.png)
+
+$$ v = \frac{\Delta x}{\Delta t}$$
+
+---
+
+# Example 2
+
+![center w:900](image-14.png)
+
+$$ v = \frac{\Delta x}{\Delta t}$$
+
+---
+
+![center](image-15.png)
+
+---
+
+![center](image-16.png)
+
+
+---
+
+![center](image-17.png)
+
+
 
 ---
 

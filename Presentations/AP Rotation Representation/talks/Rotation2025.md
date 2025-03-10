@@ -264,6 +264,15 @@ What is the magnitude of force F?
 
 ---
 
+# Physics Classroom Practice
+
+- [Beam with Mass](https://www.physicsclassroom.com/calcpad/launch/CPRT5)
+- [Beam with Mass and Angles](https://www.physicsclassroom.com/calcpad/launch/CPRT6)
+- [Mass on Beam](https://www.physicsclassroom.com/calcpad/launch/CPRT7)
+
+
+---
+
 # AP Workbook
 
 A long rod of length L and negligible mass supports a box of mass M. The left end of each rod is held in place by a frictionless pin about which it can freely rotate. In each case, a vertical force is holding the rods and the weights at rest. The rods are marked at half-meter intervals. 

@@ -15,6 +15,41 @@ math: mathjax
 
 ---
 
+# 2025.03.10 **AP Physics**
+
+##### **❓ of the 📅**: If you could redesign the human body, what one improvement would you make?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Static Equilibrium Notes
+4. Practicing with Static Equilibrium
+    - [Beam with Mass](https://www.physicsclassroom.com/calcpad/launch/CPRT5)
+    - [Beam with Mass and Angles](https://www.physicsclassroom.com/calcpad/launch/CPRT6)
+    - [Mass on Beam](https://www.physicsclassroom.com/calcpad/launch/CPRT7)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define static equilibrium_
+
+🥅 _Solve static equilibrium problems_
+
+### 📆 Upcoming
+
+- Need a torque quiz this week
+
+</div>
+</div>
+
+---
+
 
 <!--- _footer: <br> --->
 

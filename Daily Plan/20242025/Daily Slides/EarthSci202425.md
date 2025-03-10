@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.03.10 **Earth Science**
+
+##### **❓ of the 📅**: If you could redesign the human body, what one improvement would you make?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes: Geologic History **KUAW6**
+2. ESRT Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn to read the ESRT Geologic History Reference table._
+
+### 📆 Upcoming
+
+- Stories due by the end of the week
+
+</div>
+</div>
+
+---
+
 # 2025.03.06 **Earth Science**
 
 ##### **❓ of the 📅**: If you could be immortal, what age would you choose to stop aging at and why?
