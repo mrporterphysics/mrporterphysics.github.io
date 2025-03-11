@@ -14,6 +14,63 @@ math: mathjax
 
 ---
 
+# 2025.03.11 **Regents Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Pages 7 & 8 in packet
+2. Spring Force Lab
+3. Work-Energy Relationships (pages 9 & 10)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine Equation for Springs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Spring Force Lab:
+
+<div class='columns'>
+<div>
+
+## **Objective:**
+
+Determine the relationship between stretch and force applied on a spring. Test this relationship for **two** springs
+
+(Note: When analyzing graph Spring Force on the vertical axis regardless of your experimental design choice on independent variable)
+</div>
+ 
+<div>
+
+## **Available Materials:**
+
+- Two different springs
+- Spring Scales (force sensors)
+- Masses
+- Ruler/Meterstick
+- Electronic Force Sensor
+
+</div>
+</div>
+
+
+---
+
 # 2025.03.07 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?

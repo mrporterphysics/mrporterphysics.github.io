@@ -15,6 +15,42 @@ math: mathjax
 
 ---
 
+<!--- _footer: <br> --->
+
+# 2025.03.11 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to control the weather or predict it with perfect accuracy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. AP Workobook 7B
+2. Physics Classroom -> Static Equilibrium
+    - [Mass on Beam; moving Fulcrum](https://www.physicsclassroom.com/calcpad/launch/CPRT11)
+    - [Angled Beams](https://www.physicsclassroom.com/calcpad/launch/CPRT12)
+    - [Scaffold Questions](https://www.physicsclassroom.com/calcpad/launch/CPRT13)
+    - [Person on Structure](https://www.physicsclassroom.com/calcpad/launch/CPRT14)
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _More Static Equilibrium Practice_
+
+### 📆 Upcoming
+
+- Quiz Thursday -> Angular Kinematics & Static Equilibrium
+
+
+</div>
+</div>
+
+---
+
 # 2025.03.10 **AP Physics**
 
 ##### **❓ of the 📅**: If you could redesign the human body, what one improvement would you make?
