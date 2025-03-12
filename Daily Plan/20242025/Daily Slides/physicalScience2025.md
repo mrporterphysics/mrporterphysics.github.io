@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.03.12 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Velocity Calculations
+	1. Whiteboard and check answers
+2. Skater Velocity Calculations
+3. Ball Rolling Left Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice calculating average velocity_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.10 **Physical Science**
 
 ##### **❓ of the 📅**: If you could redesign the human body, what one improvement would you make?

@@ -14,9 +14,43 @@ math: mathjax
 
 ---
 
+# 2025.03.12 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Spring Lab -> Whiteboard and discuss
+2. Physics Classroom Practice with Energy Calculations
+	1. [**Kinetic Energy**](https://www.physicsclassroom.com/calcpad/launch/CPWE6)
+	2. [**Potential Energy**](https://www.physicsclassroom.com/calcpad/launch/CPWE7)
+	3. [**Total Mechanical Energy**](https://www.physicsclassroom.com/calcpad/launch/CPWE8)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Hooke's Law_
+
+🥅 _Practice with Energy Calculations_
+
+### 📆 Upcoming
+- Quiz Tomorrow on Work, Power, Energy Calculations
+
+</div>
+</div>
+
+---
+
 # 2025.03.11 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Would you rather be able to control the weather or predict it with perfect accuracy?
 
 <div class ='columns'>
 

@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.03.11 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to control the weather or predict it with perfect accuracy?    
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ESRT Geologic History Practice
+2. Notes - Absolute & Relative Dating
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+
+---
+
 # 2025.03.10 **Earth Science**
 
 ##### **❓ of the 📅**: If you could redesign the human body, what one improvement would you make?

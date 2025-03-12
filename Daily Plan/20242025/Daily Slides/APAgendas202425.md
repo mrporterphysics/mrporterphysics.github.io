@@ -17,7 +17,7 @@ math: mathjax
 
 <!--- _footer: <br> --->
 
-# 2025.03.11 **AP Physics**
+# 2025.03.11     **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to control the weather or predict it with perfect accuracy?
 
