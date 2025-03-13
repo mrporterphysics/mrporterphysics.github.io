@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2025.03.13 **AP Physics**
+
+##### **❓ of the 📅**: Is it more important to explore the depths of the **ocean** or the depths of *space*?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Unbalanced Torques - Pivot
+    - What do we expect this model to look like?
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Develop a model for unbalanced torques_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- _footer: <br> --->
 
 # 2025.03.11     **AP Physics**

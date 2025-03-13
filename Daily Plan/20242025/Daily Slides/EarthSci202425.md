@@ -16,6 +16,64 @@ math: mathjax
 
 ---
 
+# 2925.03.13 **Earth Science**
+
+##### **❓ of the 📅**: Is it more important to explore the depths of the *ocean* or the depths of *space*?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Absolute Dating Lab
+2. Half Life Worksheet
+3. Relative Dating Notes 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use Absolute Dating to find the age of old things_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.03.12 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes - Absolute Dating
+2. Nearpod: **9Q6BL**
+2. Practice - Half Life
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Radioactive Decay_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.11 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be able to control the weather or predict it with perfect accuracy?    

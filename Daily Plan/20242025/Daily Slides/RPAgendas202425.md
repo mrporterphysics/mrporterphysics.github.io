@@ -14,6 +14,37 @@ math: mathjax
 
 ---
 
+# 2025.03.13 **Regents Physics**
+
+##### **❓ of the 📅**: Is it more important to explore the depths of the **ocean** or the depths of *space*?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Spring Lab - Board Meeting
+3. Solving Problems with Energy
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Hooke's Law_
+
+🥅 _Use Work-Energy Theorem to solve problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.12 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
