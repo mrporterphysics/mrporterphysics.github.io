@@ -43,6 +43,8 @@ math: mathjax
 
 ### 📆 Upcoming
 
+- Energy Conservation Quiz Friday
+
 </div>
 </div>
 
