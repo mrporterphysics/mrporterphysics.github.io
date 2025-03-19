@@ -16,7 +16,94 @@ math: mathjax
 
 ---
 
-# 2925.03.13 **Earth Science**
+# 2025.03.19 **Earth Science**
+
+##### **❓ of the 📅**: Is New York-style pizza better than Chicago-style pizza?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Watch sequence of events video on canvas
+1. Sequence of Events Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use Rock Layers to determine the sequence of events_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.03.18 **Earth Science**
+
+##### **❓ of the 📅**: If you could go to the Olympics, what sport would you want to do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Relative Dating Practice
+2. Earth's History Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.03.17 **Earth Science**
+
+##### **❓ of the 📅**: If you could hire someone to help you, would it be with cleaning, cooking, or yard work?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes - Relative Dating
+2. Relative Dating Practice
+    - Correlation
+    - Sequence of Events
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Relative Dating_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.03.13 **Earth Science**
 
 ##### **❓ of the 📅**: Is it more important to explore the depths of the *ocean* or the depths of *space*?
 

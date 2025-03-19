@@ -435,6 +435,16 @@ $$ \alpha = \frac{\Sigma \tau}{I} $$
 * ***for a point like object $I=mr^2$***
 * this relationship is used to build the equations for other moments of inertia
 
+---
+
+# Reference Table 
+
+$$ \boxed{I = \Sigma m_ir_i^2}$$
+
+- $I$ ➡️ moment of interia
+- $m$ ➡️ mass 
+- $r$ ➡️ position vector magnitude
+
 
 ---
 
@@ -482,7 +492,7 @@ A potter is shaping a bowl out of clay on a potter's wheel initially rotating at
 
 # Example 
 
-![bg fit right:22%](image-1.png)
+![bg fit right:17%](image-1.png)
 
 A block of unknown mass is attached to a long, lightweight string that is wrapped several turns around a pulley on a horizontal axis through its center, as shown. The pulley is a uniform solid disk of mass $M$ and radius $R$. The rotational inertia of the pulley is described by the equation $I = \frac{1}{2}MR^2$. The pulley can rotate about its center with negligible friction. The string does not slip on the pulley as the block falls. When the block is rleased from rest and as the block travels towards the ground, the magnitude of the tension exerted on the block is $F_T$. What is $\alpha_D$ of the disk as the block travels down?
 
@@ -491,6 +501,7 @@ A block of unknown mass is attached to a long, lightweight string that is wrappe
 # Class Work:
 
 ### On your own: 
+1. [**Problem Set RD1: Moment of Inertia for a System of Point Masses**](https://www.physicsclassroom.com/calcpad/launch/CPRD1)
 1. 7.D
 
 
@@ -498,6 +509,17 @@ A block of unknown mass is attached to a long, lightweight string that is wrappe
 
 1. 7.E
 2. 7.G
+
+---
+
+# Parallel Axis Theorem
+
+$$ \boxed{I' = I_{cm} + Md^2}$$
+
+- $I'$ ➡️ New Moment of Interia
+- $I$ ➡️ Moment of interia about original axis
+- $M$ ➡️ Mass
+- $d$ ➡️ Distance between two axes 
 
 
 ---

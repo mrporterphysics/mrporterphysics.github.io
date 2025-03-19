@@ -15,6 +15,73 @@ math: mathjax
 
 ---
 
+<!--- _footer: <br> --->
+
+# 2025.03.19 **AP Physics**
+
+##### **❓ of the 📅**: Is New York-style pizza better than Chicago-style pizza?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Torque Pivot
+2. AP Workbook 7.D
+3. Notes on N2L and Moment of Inertia
+4. PC Practice:
+    1. [**Problem Set RD1: Moment of Inertia for a System of Point Masses**](https://www.physicsclassroom.com/calcpad/launch/CPRD1)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define N2L for Rotation_
+
+🥅 _Define Moment of Interia_ 
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.03.17 **AP Physics**
+
+##### **❓ of the 📅**: If you could hire someone to help you, would it be with cleaning, cooking, or yard work?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Unbalanced Torque Lab
+2. Discuss & Notes 
+3. Workbook 7.D
+3. [**Moment of Inertia for a System of Point Masses**](https://www.physicsclassroom.com/calcpad/launch/CPRD1)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define N2L for Rotation_
+
+🥅 _Define Moment of Interia_ 
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.13 **AP Physics**
 
 ##### **❓ of the 📅**: Is it more important to explore the depths of the **ocean** or the depths of *space*?

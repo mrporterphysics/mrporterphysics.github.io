@@ -14,6 +14,122 @@ math: mathjax
 
 ---
 
+# 2025.03.19 **Regents Earth Science**
+
+##### **❓ of the 📅**: Is New York-style pizza better than Chicago-style pizza?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Mini Lab
+2. PC Practice for Conservation of Energy Quiz (Friday)
+	1. [**Energy Analysis 1**](https://www.physicsclassroom.com/calcpad/launch/CPWE16)
+	2. [**Energy Analysis 2**](https://www.physicsclassroom.com/calcpad/launch/CPWE17)
+	3. [**Energy Analysis 3**](https://www.physicsclassroom.com/calcpad/launch/CPWE18)
+	4. [**Energy Analysis 4**](https://www.physicsclassroom.com/calcpad/launch/CPWE19)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Lab_
+
+🥅 _Practice with Energy Conservation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.03.18 **Regents Physics**
+
+##### **❓ of the 📅**: If you could go to the Olympics, what sport would you want to do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Wrap Up Pop Up Toy
+2. Energy Mini Labs
+    - Predict answer **using theory** (i.e. using equations or energy descriptions)
+    - collect data & determine if hypothesis is correct     
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use conservation of energy to make predictions_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# Energy Mini Labs
+
+## In Notebook...
+
+1. Question
+2. Hypothesis **with theory** to support your prediction
+3. Experimental Design, data, and calculations
+4. Confirmation or denial of your hypothesis
+
+
+---
+
+# 2025.03.17 **Regents Physics**
+
+##### **❓ of the 📅**: If you could hire someone to help you, would it be with cleaning, cooking, or yard work?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Conservation of Energy Problems
+2. Mini Lab: Pop up toy
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Apply conservation of energy to problem solving_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Pop Up Toy
+
+## Objective:
+
+_**Determine the <u>spring constant</u> of the pop-up toy**_
+
+- Using Energy, experimentally determine the spring constant of your toy using a meterstick and the electronic balance.
+- Start with an energy bar graph, write the energy conservation equation & and substitute in
+
+---
+
 # 2025.03.13 **Regents Physics**
 
 ##### **❓ of the 📅**: Is it more important to explore the depths of the **ocean** or the depths of *space*?

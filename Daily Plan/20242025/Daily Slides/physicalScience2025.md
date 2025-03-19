@@ -16,6 +16,33 @@ math: mathjax
 
 ---
 
+# 2025.03.18 **Physical Science**
+
+##### **❓ of the 📅**: If you could go to the Olympics, what sport would you want to do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Ball Rolling Left Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion with position vs. time graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.12 **Physical Science**
 
 ##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
