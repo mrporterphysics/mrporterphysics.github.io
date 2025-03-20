@@ -16,6 +16,42 @@ math: mathjax
 
 ---
 
+
+# 2025.03.19 **Physical Science**
+
+##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Rolling Ball Challenge Level 3: Collisions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion with position vs. time graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Rolling Ball Challenge Level 3: Collisions
+
+![center w:500](image-35.png)
+
+### What is happening where the lines intersect?
+
+---
+
 # 2025.03.18 **Physical Science**
 
 ##### **❓ of the 📅**: If you could go to the Olympics, what sport would you want to do?

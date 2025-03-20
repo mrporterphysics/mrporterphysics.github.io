@@ -16,6 +16,34 @@ math: mathjax
 
 ---
 
+# 2025.03.20 **Earth Science**
+
+##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Online Earth's History Regents Practice -> Canvas Quiz Format
+2. Sequence of Events Extra Practice 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.19 **Earth Science**
 
 ##### **❓ of the 📅**: Is New York-style pizza better than Chicago-style pizza?

@@ -15,6 +15,38 @@ math: mathjax
 
 ---
 
+# 2025.03.20 **AP Physics**
+
+##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish 7.E & 7.F
+2. Parallel Axis Theorem
+3. Calculating $I$ -> 
+	1. [Physics Classroom Questions]((https://www.physicsclassroom.com/calcpad/launch/CPRD1))
+	2. AP Classroom Questions
+4. AP FRQ Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Moment of Inertia_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- _footer: <br> --->
 
 # 2025.03.19 **AP Physics**

@@ -521,6 +521,15 @@ $$ \boxed{I' = I_{cm} + Md^2}$$
 - $M$ ➡️ Mass
 - $d$ ➡️ Distance between two axes 
 
+---
+
+# Example:  
+
+The symmetrical object shown in the figure is made of a material with uniform density and the object has mass $5 \text{ kg}$ and length $4 \text{ m}$. The object has rotational inertia $10 \text{ kg}\cdot\text{m}^2$ about a vertical axis through its center of mass, which is indicated by the solid line in the figure. What would the rotational inertia of the object be about a vertical axis at the right edge of the object, as indicated by the dashed line in the figure?
+
+![bg fit right:25%](image-7.png)
+
+$$ \boxed{I' = I_{cm} + Md^2}$$
 
 ---
 
