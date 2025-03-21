@@ -14,6 +14,38 @@ math: mathjax
 
 ---
 
+# 2025.03.21 **Regents Physics**
+
+##### **❓ of the 📅**: Do you love or hate rollercoasters?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review for quiz
+	1. [**Energy Analysis 1**](https://www.physicsclassroom.com/calcpad/launch/CPWE16)
+	2. [**Energy Analysis 2**](https://www.physicsclassroom.com/calcpad/launch/CPWE17)
+	3. [**Energy Analysis 3**](https://www.physicsclassroom.com/calcpad/launch/CPWE18)
+	4. [**Energy Analysis 4**](https://www.physicsclassroom.com/calcpad/launch/CPWE19)
+2. Energy Conservation quiz
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model energy conservation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.19 **Regents Earth Science**
 
 ##### **❓ of the 📅**: Is New York-style pizza better than Chicago-style pizza?

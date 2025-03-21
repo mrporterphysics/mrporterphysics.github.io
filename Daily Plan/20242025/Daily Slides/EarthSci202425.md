@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2025.03.21 **Earth Science**
+
+##### **❓ of the 📅**: Do you love or hate rollercoasters?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Sequence of Events Practice Sheet
+2. Mapping Earth Notes
+3. Latitude and Longitude
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Earth's mapping terms_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.20 **Earth Science**
 
 ##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?
