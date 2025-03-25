@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2025.03.24 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Collisions Pivot
+2. Notes on Motion Maps
+3. Walk the graph lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Represent Motion Pictorially_
+
+### 📆 Upcoming
+
+- I am at a conference Wed & Fri -> you will have a pivot assignment to complete
+
+</div>
+</div>
+
+---
+
 
 # 2025.03.19 **Physical Science**
 

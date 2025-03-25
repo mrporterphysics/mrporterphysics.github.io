@@ -14,6 +14,70 @@ math: mathjax
 
 ---
 
+# 2025.03.25 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on Charge and Electrostatic Forces
+2. Working with charge
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define charge and electrostatic forces_
+
+🥅 _Calculate charge_ 
+
+
+</div>
+</div>
+
+### 📆 Upcoming
+
+I am at a conference the rest of the week. You will have a pivot to complete, a video to watch, and practice sheet to complete.
+
+
+---
+
+# 2025.03.24 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Sticky Tape Pivot 
+2. Introduction to Electrostatics
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Introduce electric charge and force_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.21 **Regents Physics**
 
 ##### **❓ of the 📅**: Do you love or hate rollercoasters?

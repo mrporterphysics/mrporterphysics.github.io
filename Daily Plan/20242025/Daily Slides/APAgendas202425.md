@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+# 2025.03.25 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Rotation FRQ Problems
+    - Solve with Partner
+    - Score as class with key
+    - New partner
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Solving Rotational Dynamics Questions_
+
+### 📆 Upcoming
+
+- I am not here the rest of the week...
+    - AP Classroom Assigned Wed & Thurs
+
+</div>
+</div>
+
+---
+
 # 2025.03.20 **AP Physics**
 
 ##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?

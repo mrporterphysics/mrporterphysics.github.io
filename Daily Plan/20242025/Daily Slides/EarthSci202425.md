@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2025.03.24 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mapping Practice:
+    1. Finish Packet
+    2. ESRT Mapping
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Lat & Long Coordinate system_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.21 **Earth Science**
 
 ##### **❓ of the 📅**: Do you love or hate rollercoasters?
@@ -100,6 +129,7 @@ math: mathjax
 </div>
 
 ---
+
 
 # 2025.03.18 **Earth Science**
 
