@@ -686,6 +686,48 @@ $$K_{rotational} = \frac{1}{2}mv^2 = \frac{1}{2}m(r\omega)^2 = \frac{1}{2}(mr^2)
 
 ---
 
+A solid sphere rolls without slipping along a track shaped as shown at right. It
+starts from rest at point A and is moving vertically when it leaves the track at
+point B.
+
+At its highest point while in the air, will the sphere be (a) above, (b) below,
+or (c) at the same height as point A? _____
+
+Explain your reasoning.
+
+![bg fit right](image-8.png)
+
+---
+
+In each case, a 1-kg object is released from rest on a ramp at a height of 2 m from the bottom. All of the spheres roll without slipping, and the blocks slide without friction.
+
+![center w:950](image-9.png)
+
+Rank the maximum height of the objects on the other side of the ramp.
+
+Explain your reasoning
+
+---
+
+In each case, a 1-kg object is released from rest on a ramp at a height of 2 m from the bottom. All of the spheres roll without slipping, and the blocks slide without friction. The ramps are identical in Cases A and C. The ramps in Cases B and D are identical and are not as steep as the others.
+
+![center](image-10.png)
+
+Rank the speed of the objects when they reach the horizontal surface at the bottom of the ramp.
+
+Explain your reasoning.
+
+---
+
+Four objects are placed in a row at the same height near the top of a ramp and are released from rest at the same time. The objects are a 1-kg solid sphere; a 1-kg hollow sphere; a 2-kg solid sphere; and a 1-kg thin hoop. All four objects have the same diameter, and the hoop has a width that is one-quarter its diameter. The time it takes the objects to reach the finish line near the bottom of the ramp is recorded. The moment of inertia for a solid sphere is $\frac{2}{5}MR^2$; for a hollow sphere it is $\frac{2}{3}MR^2$; and for a hoop it is $MR^2$.
+
+
+![bg fit right:25%](image-11.png)
+
+Rank the four objects from fastest (shortest time) down the ramp to slowest.
+
+---
+
 # Rolling Race 
 
 
@@ -697,28 +739,6 @@ $$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I \omega^2$$
 
 $$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\Big(\frac{v}{r}\Big)^2$$
 
+How do different equations for $I$ change the translational velocity?
 
 ---
-
-<!--- _class: inverse--->
-
-![bg fit](image-5.png)
-
-
----
-
-|                       | Linear Motion                 | Rotational Motion                               |                      |
-| --------------------- | ----------------------------- | ----------------------------------------------- | -------------------- |
-| Position              | $x$                           | $\theta$                                        | Angular Position     |
-| Velocity              | $v$                           | $\omega$                                        | Angular Velocity     |
-| Acceleration          | $a$                           | $\alpha$                                        | Angular Acceleration |
-| Motion Equations      | $x = \bar{v}t$                | $\theta = \bar{\omega}t$                        | Motion Equations     |
-|                       | $v= v_0 + at$                 | $\omega = \omega_0 + \alpha t$                  |                      |
-|                       | $x = v_0 t + \frac{1}{2}at^2$ | $\theta = \omega_o t + \frac{1}{2}\alpha t^2$   |                      |
-|                       | $v^2 = v_0^2 + 2a\Delta x$    | $\omega^2 = \omega_0^2 + 2\alpha \Delta \theta$ |                      |
-| Mass (linear inertia) | $m$                           | $I$                                             | Moment of Inertia    |
-| Newton's Second Law   | $F=ma$                        | $\tau = I \alpha$                               | Newton's Second Law  |
-| Momentum              | $p=mv$                        | $L = I \omega$                                  | Angular Momentum     |
-| Work                  | $W=Fd$                        | $W = \tau \theta$                               | Work                 |
-| Kinetic Energy        | $K = \frac{1}{2}mv^2$         | $K = \frac{1}{2}I\omega^2$                      | Kinetic Energy       |
-| Power                 | $P = Fv$                      | $P = \tau \omega$                               | Power                |

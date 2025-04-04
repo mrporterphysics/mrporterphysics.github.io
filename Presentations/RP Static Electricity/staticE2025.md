@@ -187,21 +187,6 @@ The total change in a system is constant
 
 ![bg width:400px](induct.gif)
 
-
----
-
----
-
-![bg](https://i.ytimg.com/vi/3Ptu07enIsY/maxresdefault.jpg)
-
-# Van de Graff Generator
-
-### Explain:
-
-- Why do you get "shocked"
-- Why does the hair stand up?
-
-
 ---
 
 # Coulomb's Law 
@@ -233,6 +218,12 @@ What shows the relationship between the electrostatics force and the distance?
 
 ## Two charges attract each other with a force of F. If one charge was doubled and the other charge was tripled, how would that change the attractive force between those charges?
 
+---
+
+# Practice Time: 
+
+1. *Physics Classroom* Packet **pages 13 & 14**
+2. *APlusPhysics* **pages 112-115** 
 
 ---
 

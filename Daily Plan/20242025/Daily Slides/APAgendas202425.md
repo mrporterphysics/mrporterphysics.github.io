@@ -15,6 +15,132 @@ math: mathjax
 
 ---
 
+# 2025.04.04 **AP Physics**
+
+##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. AP Workbook
+    1. 7.C, 7.H, 7.J
+2. Physics Classroom
+	1. [**RD7: Rotational Kinetic Energy**](https://www.physicsclassroom.com/calcpad/launch/CPRD7)
+	2. [**RD8: Angular Momentum**](https://www.physicsclassroom.com/calcpad/launch/CPRD8)
+3. Work on Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make Angular Energy & Momentum Calculations_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.02 **AP Physics**
+
+##### **❓ of the 📅**: Does your family have a "motto" – spoken or unspoken?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes - Rotational Kinetic Energy 
+2. TIPER Questions 
+3. AP Workbook: 7.C, H, & J 
+4. Finish Pivots 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Rotational KE & Use to Model Motion_
+
+### 📆 Upcoming
+
+- Quarter Ends Friday...
+
+</div>
+</div>
+
+---
+
+# 2025.04.01 **AP Physics**
+
+##### **❓ of the 📅**: Do you like or dislike surprises? Why or why not?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Disk Collisions Pivot
+2. Pivot #2 -> Translating Object Angular Momentum
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Angular Momentum_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.03.31 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather win the lottery or work at the perfect job?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Check-in
+2. Angular Momentum
+3. Workbook 7.I 
+4. Pivot - Rotational Collisions: Disk on Disk
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Angular Momentum_
+
+### 📆 Upcoming
+
+- Quarter Ends Friday...
+
+</div>
+</div>
+
+---
+
 # 2025.03.25 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?

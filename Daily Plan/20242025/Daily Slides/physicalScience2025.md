@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2025.04.03 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Introductiont to motion maps
+2. Practice with Motion Maps
+3. Walk the graph lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion pictorially_
+
+🥅 _Use motion representations to translate between motion and multiple representations_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.24 **Physical Science**
 
 ##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?

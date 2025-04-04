@@ -14,6 +14,148 @@ math: mathjax
 
 ---
 
+# 2025.04.04 **Regents Physics**
+
+##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Coulomb's Law Quiz
+2. Electric Field Notes
+3. Electric Field Practice in Packets
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.03 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Page 112 of APlusPhysics Packet
+2. Mapping the Electric Field
+	1. Spreadsheet Magic 🪄 🧙‍♂️
+3. Electric Field Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Map the electric field using Coulomb's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.04.02 **Regents Physics**
+
+##### **❓ of the 📅**: Does your family have a "motto" – spoken or unspoken? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Reintroduction to Coulomb's Law
+2. Coulomb's Law PC Packet
+2. Coulomb's Law Regents Questions (APlusPhysics)
+3. Work on Pivot (if needed)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Coulomb's Law_
+
+🥅 _Use Coulomb's law to calculate electric forces_
+
+### 📆 Upcoming
+
+- Charge & Coulomb's Law Quiz Friday (Q4 Grade)
+- ***Schedule reassessments***
+
+</div>
+</div>
+
+
+---
+
+# 2025.03.31 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather win the lottery or work at the perfect job?
+
+<div class ='columns'>
+<div>
+
+#### 📋 Agenda
+
+1. Check In -> You should have data for both pivots
+2. Finish Pivots - Wednesday
+
+</div>
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Pivots_
+
+### 📆 Upcoming
+
+- Charge & Coulomb's Law Quiz Friday (Q4 Grade)
+- ***Schedule reassessments...quarter ends Friday***
+
+</div>
+</div>
+
+---
+
+## Forces & Electric Charge Pivots
+
+### Force vs. Distance
+
+- Units should be in **METERS**
+- Linearize instructions are in pivot, you need to make a calculated column and graph that
+- Slope question is based on linearized graph 
+
+### **Force vs. Charge**
+
+- Charge should start at 100 and half each time the sphere is touched
+  - 100 -> 50 -> 25 ... etc
+  - The lab discussed this in the section above...
+
+
+---
+
 # 2025.03.25 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?

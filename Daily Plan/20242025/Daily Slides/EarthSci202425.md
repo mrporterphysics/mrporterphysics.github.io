@@ -16,6 +16,180 @@ math: mathjax
 
 ---
 
+# 2025.04.04 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Earth's Motion Notes
+2. Moon Notes
+3. Moon Tide Lab 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.03 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?
+
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Earth's Motion Notes
+2. Moon's Motion Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore the motions of the Earth and Moon_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.02 **Earth Science**
+
+##### **❓ of the 📅**: Does your family have a "motto" – spoken or unspoken? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Mapping Practice (20 Min)
+2. Motions of the Earth Notes
+3. Moon Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Discuss motions of the Earth and Moon to explain cyclical patterns on Earth_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.01 **Earth Science**
+
+##### **❓ of the 📅**: Do you like or dislike surprises? Why or why not?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Isoline & Profile Packet
+2. Regents Mapping Practice on Canvas 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Wrap up mapping unit_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.03.31 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather win the lottery or work at the perfect job?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Check in on labs
+2. Sometime to finish?
+    - If done, work on extra practice
+3. Creating Profiles & Calculating Gradients
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create profiles_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.03.25 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on Fields & Profiles
+2. Finish Mapping Practice from yesterday
+2. Fields and Profile Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.03.24 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?
