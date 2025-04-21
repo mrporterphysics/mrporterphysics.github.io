@@ -16,9 +16,127 @@ math: mathjax
 
 ---
 
+# 2025.04.11 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite fast food chain?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on eclipses 
+
+</div>
+
+<div>
+
+| Block          | Start | End   |
+| -------------- | ----- | ----- |
+| Lunch 7/8      | 10:33 | 11:03 |
+| JR HS-Block 3B | 11:04 | 11:36 |
+| Block 4        | 11:39 | 12:39 |
+| Assembly       | 12:39 | 2:00  |
+
+</div>
+</div>
+
+---
+
+# 2025.04.10 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite zoo animal?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+
+1. Finish Moon Phases Virtual Lab
+3. Moon Regents Practice Questions (Posted on Canvas -> 33 Questions)
+1. Eclipse Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore phases of the moon_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.08 **Earth Science**
+
+##### **❓ of the 📅**: If you could make the world's biggest food fight, what food would you have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Lunar Phases Lab
+	1. Background reading and packet
+	2. Visualizing Phases
+	3. Simulator
+
+**Everything is linked in Canvas in the _Lunar Phases Simulator Lab_**
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the motion of the moon and its phases_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.07 **Earth Science**
+
+##### **❓ of the 📅**: What was the last movie you went to? What did you think?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on Sun-Earth-Moon System & Tides 🌊
+2. Finish Moon Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn about the tides_
+
+
+</div>
+</div>
+
+
+---
+
 # 2025.04.04 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
 
 <div class ='columns'>
 
@@ -36,7 +154,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Explore the motions of the Earth and Moon_
 
 ### 📆 Upcoming
 

@@ -14,6 +14,158 @@ math: mathjax
 
 ---
 
+# 2025.04.21 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Battery Circuit Lab
+2. Notes on Circuits
+3. Packet Pages 1-4
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Electrical Current_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+### Lab Sparky the Electrician
+
+#### ⚠️ *Note: Revisit your successful methods first*
+
+**Question:**  
+What are the two requirements for an electric circuit?
+
+**Purpose:**  
+To identify the four successful arrangements of wire, bulb and battery which successfully light a bulb and a couple of unsuccessful arrangements AND to describe the commonalities of those arrangements by identifying the two requirements for an electric circuit.
+
+---
+
+# 2025.04.10 **Regents Physics**
+
+##### **❓ of the 📅**: What's your favorite zoo animal?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Voltage 
+2. Voltage Calculations in APlusPhysics Packet
+3. Sparky the Electrician Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Voltage_ 
+
+🥅 _Make a circuit_ 🔌
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+### Lab Sparky the Electrician
+
+**Question:**  
+What are the two requirements for an electric circuit?
+
+**Purpose:**  
+To identify the four successful arrangements of wire, bulb and battery which successfully light a bulb and a couple of unsuccessful arrangements AND to describe the commonalities of those arrangements by identifying the two requirements for an electric circuit.
+
+---
+
+### Lab Notebook Requirements
+
+A complete lab write-up includes a Title, a Purpose, a Data section, a Conclusion and a Discussion of Results. 
+
+- The **Data** section includes sketches of the four successful arrangements and at least two unsuccessful arrangements. 
+- The **Conclusion** describes the two requirements for an electric circuit. 
+- The **Discussion of Results** should explain why the unsuccessful arrangements were unsuccessful in terms of how they fail to meet the requirements; and uses one of the successful arrangements to elaborate on the meaning of each requirement.
+
+---
+
+# 2025.04.09 **Regents Physics**
+
+##### **❓ of the 📅**: What is your ideal sandwich? 🥪
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: APlusPhysics Packet page 117 & 118
+2. Go over 👆
+3. Introduction to Electric Potential (Voltage)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Electric Potential_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.08 **Regents Physics**
+
+##### **❓ of the 📅**: If you could make the world's biggest food fight, what food would you have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Electric Fields
+2. Electric Field Practice
+    - Page 15-18 Physics Classroom Packet
+    - Page 117-121 APlusPhysics
+3. Introduction to Voltage
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Map Electric Fields_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.04.04 **Regents Physics**
 
 ##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?

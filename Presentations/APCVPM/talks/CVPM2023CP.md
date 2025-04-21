@@ -366,6 +366,106 @@ Given the following motion map, where positions have been recorded with one dot 
 
 ---
 
+# Acceleration
+
+## Acceleration is a ***vector quantity*** that is defined as the rate at which an object ***changes its velocity***. An object is accelerating if it is changing its velocity.
+
+---
+
+# Acceleration 
+
+<div class='columns'>
+<div>
+
+## is...
+
+- increasing speed
+- decreasing speed
+- changing direction
+</div>
+ 
+<div>
+
+## is not...
+
+- "going fast"
+- only speeding up 
+
+
+</div>
+</div>
+
+---
+
+# Meaning of Constant Acceleration 
+
+![center w:1000](image-18.png)
+
+---
+
+
+# Examples of constant acceleration:
+
+- Free fall motion
+- Ball rolling down ramp
+
+![bg fit right:30%](image-19.png)
+
+---
+
+
+| **Time  Interval** | **Velocity Change During Interval** | **Ave. Velocity During Interval** | **Distance Traveled  During Interval** | **Total Distance Traveled from 0 s to End of Interval** |
+| ---------------------- | ---------------------------------------- | -------------------------------------- | ------------------------------------------ | ------------------------------------------------------------ |
+| 0 – 1.0 s              | 0 to ~10 m/s                             | ~5 m/s                                 | ~5 m                                       | ~5 m                                                         |
+| 1.0 – 2.0 s            | ~10 to 20 m/s                            | ~15 m/s                                | ~15 m                                      | ~20 m                                                        |
+| 2.0 – 3.0 s            | ~20 to 30 m/s                            | ~25 m/s                                | ~25 m                                      | ~45 m                                                        |
+| 3.0 – 4.0 s            | ~30 to 40 m/s                            | ~35 m/s                                | ~35 m                                      | ~80 m                                                        |
+
+---
+
+# Calculating Average Acceleration 
+
+$$ \bar{a} = \frac{\Delta \text{velocity}}{\text{time}} = \frac{v_f - v_i}{t}$$
+
+## Example
+
+$$ \bar{a} = \frac{v_f - v_i}{t} = \frac{50 \text{ m/s} - 0 \text{ m/s}}{5 \text{ s}} = \frac{10 \text{ m/s}}{1 \text{ s}}$$ 
+
+### Units
+
+- m/s/s or m/s$^2$
+- mi/hr/s
+- km/hr/s
+
+---
+
+# Direction of Acceleration 
+
+* When an object is **speeding up** the velocity and acceleration are in the **same direction**
+    - v (+) and a (+)
+    - v (-) and a (-)
+*   When an object is **slowing down** the velocity and acceleration are in the **opposite direction**
+    - v (+) and a (-)
+    - v (-) and a (+) 
+
+---
+
+# Direction of Acceleration (+)
+
+![center w:1000](image-20.png)
+
+---
+
+# Direction of Acceleration (-)
+
+![center w:1000](image-21.png)
+
+---
+
+# Direction of Acceleration 
+
+![center w:800](../figures/avd.gif)
+
 ---
 
 # Velocity vs. Time Graphs <!--fit--->

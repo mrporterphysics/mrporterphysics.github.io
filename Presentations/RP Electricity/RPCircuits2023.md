@@ -10,6 +10,7 @@ class: invert
 <style>
 
     @import 'base';
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Workbench&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Roboto&display=swap');
     em{
         color: #de6266;
@@ -17,12 +18,11 @@ class: invert
 
     section{
         background-color: black;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'JetBrains Mono', monospace;
     }
 
     h1{
         font-style:bold;
-        color:#34b3f7; 
     }
 
 
@@ -41,7 +41,7 @@ class: invert
 
 
 #### 👨‍🏫 Mr. Porter 
-#### 📆 2023 - Physics
+#### 📆 2025 - Physics
 
 ---
 
@@ -78,8 +78,9 @@ $$I = \frac{\Delta q}{t}$$
 2. $2.5 \times 10^{15}$ elementary charges flow per second. What is the current?
 3. Current through a light bulb is 2 amperes. How much charge flows through the light bulb in 1 minute?
 
----
 
+<!-- 
+---
 # My Milkshake Brings All the Physics to the yard 🥛🥤🍨
 
 ## Consider:
@@ -89,14 +90,13 @@ In a speed milkshake drinking contest
 - What advantages does your straw provide?
 - What disadvantages does your straw provide?
 
-
 ---
 
 # Straw as a Resistor
 
 - How does length affect your sip rate?
 - How does size (cross-sectional area) affect your sip rate?
-- How does your milkshake's thickness (viscosity) affect your sip rate?
+- How does your milkshake's thickness (viscosity) affect your sip rate? -->
 
 ---
 
@@ -113,8 +113,8 @@ In a speed milkshake drinking contest
 # Resistivity
 
 * A material's ability to resist movement of electrical charge. 
-    * Symbol: $\rho$
-    * Measured in: $\Omega$ m
+    * Symbol: $\rho$ (rho)
+    * Measured in: $\Omega \text{m}$
 * based on the same properties as conductivity, but inverse 
 
 ---
@@ -137,6 +137,14 @@ $$ R = \frac{\rho L}{A}$$
 - $R$ ➡️ Resistance (Ohms, $\Omega$)
 - $L$ ➡️ Length (meters, m)
 - $A$ ➡️ Cross sectional area (meters$^2$, m$^2$)
+
+---
+
+# ⚠️ NOTE ⚠️ <!--fit--->
+ 
+# **Resistance** and **Resistivity** <!--fit--->
+
+# are different <!--fit--->
 
 ---
 

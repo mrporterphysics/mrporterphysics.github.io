@@ -15,6 +15,141 @@ math: mathjax
 
 ---
 
+# 2025.04.21 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on Oscillations 
+2. AP Workbook on Oscillations - Unit 6 - Start and see how far you get
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Simple Harmonic Motion_
+
+### 📆 Upcoming
+
+- Lab Report Due
+- Fact Sheet Quizzes, Fact sheet to be updated today
+
+</div>
+</div>
+
+---
+
+# 2025.04.11 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite fast food chain?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Oscillations Lab
+    - Due Wednesday we return from break...I was hopeful that you finished in class today...
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _FInish Oscillation Lab_
+
+
+| Block          | Start | End   |
+| -------------- | ----- | ----- |
+| Block 4        | 11:39 | 12:39 |
+| Assembly       | 12:39 | 2:00  |
+
+</div>
+</div>
+
+---
+
+# 2025.04.08**AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Oscillations lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the period of an oscillation_
+
+### 📆 Upcoming
+
+- Lab Report Due Friday
+
+</div>
+</div>
+
+---
+
+# 2025.04.07 **AP Physics**
+
+##### **❓ of the 📅**: What was the last movie you went to? What did you think?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Oscillations lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the period of an oscillation_
+
+### 📆 Upcoming
+
+- Lab Report Due Friday
+
+</div>
+</div>
+
+---
+
+# Oscillations Lab 
+
+**Experimental Question**
+
+- What factors affect the period of oscillation for your system (pendulum or spring mass system)?
+- What is the mathematical relationship between those variables and the period of oscillation?
+
+**Hypthosis**
+
+- What do you know from physics (forces, energy, kinematics, momentum) etc that can help predict this motion?
+    - i.e. if you set up an energy bar graph does mass matter? 
+
+---
+
 # 2025.04.04 **AP Physics**
 
 ##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?

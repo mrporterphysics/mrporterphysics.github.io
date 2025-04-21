@@ -16,6 +16,98 @@ math: mathjax
 
 ---
 
+# 2025.04.11 **Physical Science**
+
+##### **❓ of the 📅**: What's your favorite fast food chain?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Defining Acceleration
+2. Acceleration Worksheet
+3. [Acceleration Concept Builder](https://www.physicsclassroom.com/Concept-Builders/Kinematics/Acceleration/Concept-Builder) (🔗 Link in Canvas)
+    - Modules -> 1D Motion -> Acceleration Concept Builder
+
+</div>
+
+<div>
+
+| Block          | Start | End   |
+| -------------- | ----- | ----- |
+| Block 1        | 7:40  | 8:40  |
+| Advisory       | 8:43  | 8:53  |
+| Block 2        | 8:56  | 9:56  |
+| JR HS-Block 3A | 9:59  | 10:32 |
+| Lunch 7/8      | 10:33 | 11:03 |
+| JR HS-Block 3B | 11:04 | 11:36 |
+| Block 4        | 11:39 | 12:39 |
+| Assembly       | 12:39 | 2:00  |
+
+</div>
+</div>
+
+---
+
+# 2025.04.09 **Physical Science**
+
+##### **❓ of the 📅**: What is your ideal sandwich? 🥪
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Introduction to Acceleration Pivot
+2. Discuss Acceleration 
+3. [Acceleration Concept Builder](https://www.physicsclassroom.com/Concept-Builders/Kinematics/Acceleration/Concept-Builder)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Acceleration_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.07 **Physical Science**
+
+##### **❓ of the 📅**: What was the last movie you went to? What did you think?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 🍅 Ketchup: Finish Walk the Graph Lab
+2. 🟨 Mustard: Multiple Representations Practice Sheet
+3. 🟩 Relish: Introduction to Acceleration Pivot Activity
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model and physically represent constant velocity motion_
+
+
+</div>
+</div>
+
+---
+
 # 2025.04.03 **Physical Science**
 
 ##### **❓ of the 📅**: Would you rather vacation in Hawaii or Alaska, and why?

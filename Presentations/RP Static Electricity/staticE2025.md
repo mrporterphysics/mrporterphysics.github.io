@@ -283,23 +283,49 @@ $$ E = \frac{F_e}{q} $$
 
 ## What is the magnitude of the electric field intensity at a point in the field where an electron experiences 1 N of force?
 
+---
+
+# Fields, Work, and Potential Energy
+
+![center w:800](image.png)
 
 ---
 
-# Potential & Gravity Comparison
+![bg fit vertical](image-1.png)
 
-- What is Potential?
-    - What is gravity?
-    - Where does it come from?
-    - How do you know it is present?
-    - What do you change an object's $PE_g$?
-    - What is Earth's gravitational field strength?
+![bg fit](image-2.png)
 
 ---
 
-# Bleacher Example 
+## Gravitational Potential
 
-![center width:500](https://sdsu-physics.org/physics180/physics180B/p180b_images/e_potentialenergy.gif)
+- move object up, increase PE
+- move object down, decreases PE
+* quantity that refers great _potential_ of having large quantities of _potential energy_ is called **gravitational potential**
+
+
+![bg fit right:40% vertical](image-3.png)
+![bg fit](image-4.png)
+
+
+---
+
+# Electric Potential Energy
+
+- Work required to move charge towards VDG
+- More charge, more work because more force ($W=Fd$)
+
+
+![bg fit right](image-5.png)
+
+---
+
+# Electric Potential 
+
+- does not depend on charge, is the energy per unit charge
+- location dependent in the electric field
+
+![bg fit right](image-6.png)
 
 ---
 
@@ -309,7 +335,28 @@ The work needed or energy required by moving a positive charge in an electric fi
 
 $$ W = Fd = (qE)d = \overbrace{qV}^{\textrm{EPE}} = \underbrace{mgh}_{\textrm{PEg}} = \frac{1}{2}mv^2$$ 
 
-![center width:500](https://sdsu-physics.org/physics180/physics180B/Topics/electromagnetism/images_em/17_potentialenergy1.jpg)
+---
+
+## Electric Potential Difference (Voltage)
+
+- work done from moving charge from A to B would be equal to the change in electric potential energy
+- this work would be scaled by charge, if we consider the work done per unit charge, than that is the **electric potential difference**
+
+$$\Delta V = V_B - V_A = \frac{\text{Work}}{\text{Charge}} = \frac{\Delta PE}{q}$$
+
+
+![bg fit right:20%](image-7.png)
+
+---
+
+## Simple Circuits
+
+- Circuits are about the movement of charges
+- 12 volt battery means then every coulomb of charge is gaining 12 joules of potential energy as it moves through the battery. 
+- Every coulomb of charge loses 12 joules of electric potential energy as it passes through the external circuit. 
+- What does the loss give us?
+
+![bg fit right:20%](image-8.png)
 
 ---
 
