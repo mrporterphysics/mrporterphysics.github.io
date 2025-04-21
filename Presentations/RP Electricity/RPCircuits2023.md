@@ -45,6 +45,19 @@ class: invert
 
 ---
 
+# Building a 💡 Circuit
+
+### 1. **Need a Power Source** (source of potential difference)
+
+### 2. **Current needs a closed loop to flow**
+
+
+
+
+![bg fit right](image-2.png)
+
+---
+
 # Current 
 
 * The flow of charge

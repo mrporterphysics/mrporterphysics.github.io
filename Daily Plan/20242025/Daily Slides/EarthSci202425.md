@@ -16,6 +16,40 @@ math: mathjax
 
 ---
 
+# 2025.04.21 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Moon Review
+    - phases
+    - ranking tasks
+2. Finish Eclipse Notes
+2. Seasons Notes
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review Moon_
+
+🥅 _Reason for the Seasons_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.04.11 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite fast food chain?
