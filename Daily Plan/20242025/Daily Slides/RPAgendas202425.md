@@ -14,6 +14,61 @@ math: mathjax
 
 ---
 
+# 2025.04.22 **Regents Physics**
+
+##### **❓ of the 📅**: If you were featured on the local news, what would you most likely be on there for?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Packet 1-4
+2. Notes: Resistance 
+3. Voltage-Current-Resistance Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Voltage-Current-Resistance
+
+**Question:**
+What is the mathematical relationship between voltage, current and resistance?
+
+**Purpose:**
+To determine the mathematical relationship (i.e., equation) relating the voltage, current and resistance in a simple circuit.
+
+**Equipment:**
+
+- Variable Power Source, 2 Resistors, Wires, Voltmeter, Ammeter 
+
+
+---
+
+# Voltage-Current-Resistance
+
+
+A complete lab write-up includes a Title, a Purpose, a Data section, a Conclusion and a Discussion of Results. 
+- Data section: table and graph - completed and taped in. 
+  - A linear regression analysis should be performed and the results (slope, y-intercept and regression constant) should be reported. 
+- Conclusion should report a general equation relating Delta V, I and R. 
+- The Discussion of Results should discuss the evidence which supports the equation reported in the Conclusion; specific attention should be devoted to the slope-resistance relationship. 
+
+---
+
 # 2025.04.21 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?

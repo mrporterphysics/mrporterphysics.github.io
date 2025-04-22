@@ -113,6 +113,17 @@ In a speed milkshake drinking contest
 
 ---
 
+# Electrical Resistance 
+
+* The opposition of conductance of electrical current 
+* Based on:
+    * Materials Resistivity
+    * Shape of material
+    * Length of Material 
+    * Temperature of Material 
+
+---
+
 # Conductivity
 
 * A material’s ability to conduct electrical charge
@@ -132,16 +143,15 @@ In a speed milkshake drinking contest
 
 ---
 
-# Electrical Resistance 
 
-* The opposition of conductance of electrical current 
-* Based on:
-    * Materials Resistivity
-    * Shape of material
-    * Length of Material 
-    * Temperature of Material 
+# ⚠️ NOTE ⚠️ <!--fit--->
+ 
+# **Resistance** and **Resistivity** <!--fit--->
+
+# are different <!--fit--->
 
 ---
+
 
 # Electrical Resistance
 
@@ -151,13 +161,6 @@ $$ R = \frac{\rho L}{A}$$
 - $L$ ➡️ Length (meters, m)
 - $A$ ➡️ Cross sectional area (meters$^2$, m$^2$)
 
----
-
-# ⚠️ NOTE ⚠️ <!--fit--->
- 
-# **Resistance** and **Resistivity** <!--fit--->
-
-# are different <!--fit--->
 
 ---
 
@@ -197,6 +200,119 @@ At 20 degrees C, four conducting wires made of different materials have the same
 # Quick Practice 
 
 ## A $10$-meter length of copper wire is at $20$ degrees C. The radius of the wire is $1 \times 10^{-3}$ m. Find the resistance of the wire.
+
+---
+
+# Measuring Voltage and Current 
+
+- A ***Voltmeter*** is used to measure Potential Difference in a circuit
+- A ***Ammeter*** is used to measure the current in a circuit
+
+---
+
+# Voltmeter
+
+- Used to measure the potential difference between two points in a circuit (i.e. the change in height)
+- Measured ***in parallel*** to the circuit
+    - current does **not** go through the voltmeter
+
+![bg fit right:40%](image-4.png)
+
+---
+
+![center w:500](image-5.png)
+
+
+![bg fit right vertical](image-6.png)![bg fit right](image-7.png)
+
+---
+
+# Ammeter
+
+- Used to measure the current flowing through a circuit at certain points
+- Measured ***in series*** to the circuit
+    - Current flows through the ammeter
+
+![bg fit right](image-8.png)
+
+---
+
+![center w:350](image-9.png)
+
+![bg fit right vertical](image-10.png) ![bg fit right](image-11.png)
+
+---
+
+<iframe src="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc-virtual-lab/latest/circuit-construction-kit-dc-virtual-lab_en.html"
+        width="1120"
+        height="600"
+        allowfullscreen>
+</iframe>
+
+---
+
+
+# Voltage-Current-Resistance
+
+**Question:**
+What is the mathematical relationship between voltage, current and resistance?
+
+**Purpose:**
+To determine the mathematical relationship (i.e., equation) relating the voltage, current and resistance in a simple circuit.
+
+**Equipment:**
+
+- Variable Power Source, 2 Resistors, Wires, Voltmeter, Ammeter 
+
+
+---
+
+Notebook Includes Title, a Purpose, a Data section, a Conclusion and a Discussion of Results. 
+- Data section: table and graph - completed and taped in. 
+  - A linear regression should be performed and the results (slope, y-intercept) reported. 
+- Conclusion should report a general equation relating V, I and R. 
+- The Discussion of Results should discuss the evidence which supports the equation reported in the Conclusion; specific attention should be devoted to the slope-resistance relationship. 
+
+
+
+---
+
+
+![center w:700](image-3.png)
+
+---
+
+# Notes 
+
+- Make measurement and turn off power source
+    - ⚠️ DO NOT leave on to get too hot
+- No water bottles on table with circuits
+- Some wires may be dead, try switching them out before giving up
+- Use voltage scale that goes up to 10 V (power source puts out less than that)
+- Ammeter can be on scale 0-1 A
+
+---
+
+# Voltage-Current-Resistance
+
+**Question:**
+What is the mathematical relationship between voltage, current and resistance?
+
+**Purpose:**
+To determine the mathematical relationship (i.e., equation) relating the voltage, current and resistance in a simple circuit.
+
+**Equipment:**
+
+- Variable Power Source, 2 Resistors, Wires, Voltmeter, Ammeter 
+
+
+---
+
+Notebook Includes Title, a Purpose, a Data section, a Conclusion and a Discussion of Results. 
+- Data section: table and graph - completed and taped in. 
+  - A linear regression should be performed and the results (slope, y-intercept) reported. 
+- Conclusion should report a general equation relating V, I and R. 
+- The Discussion of Results should discuss the evidence which supports the equation reported in the Conclusion; specific attention should be devoted to the slope-resistance relationship. 
 
 ---
 

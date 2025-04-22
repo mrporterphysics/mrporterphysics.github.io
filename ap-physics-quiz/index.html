@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Physics 1 Quiz</title>
+  <!-- CSS files -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <h1>AP Physics 1 Quiz</h1>
+  
+  <div class="container">
+    <!-- Setup Panel -->
+    <div class="setup-panel" id="setupPanel">
+      <h2>Physics Review Questions</h2>
+      <p class="setup-instructions">Test your knowledge with AP Physics 1 review questions. Choose a question type and topic to begin!</p>
+      
+      <div class="question-type-select">
+        <h3>Select Question Type:</h3>
+        <div style="width: 100%; margin-bottom: 10px;"></div>
+        <button class="question-type-btn active" data-type="all" type="button">All Question Types</button>
+        <button class="question-type-btn" data-type="tf" type="button">True/False Questions</button>
+        <button class="question-type-btn" data-type="fill" type="button">Fill in the Blank</button>
+        <button class="question-type-btn" data-type="mc" type="button">Multiple Choice</button>
+      </div>
+      
+      <div class="topic-select">
+        <h3>Select Topic (Optional):</h3>
+        <div style="width: 100%; margin-bottom: 10px;"></div>
+        <button class="topic-btn active" data-topic="all" type="button">All Topics</button>
+        <button class="topic-btn" data-topic="kinematics" type="button">Kinematics & Graphs</button>
+        <button class="topic-btn" data-topic="forces" type="button">Forces & Newton's Laws</button>
+        <button class="topic-btn" data-topic="energy" type="button">Energy & Work</button>
+        <button class="topic-btn" data-topic="momentum" type="button">Momentum & Impulse</button>
+        <button class="topic-btn" data-topic="rotation" type="button">Rotation & Torque</button>
+        <button class="topic-btn" data-topic="gravitation" type="button">Gravitation</button>
+        <button class="topic-btn" data-topic="shm" type="button">Simple Harmonic Motion</button>
+        <button class="topic-btn" data-topic="fluids" type="button">Fluids</button>
+      </div>
+      
+      <div class="mode-select">
+        <h3>Study Mode:</h3>
+        <div style="width: 100%; margin-bottom: 10px;"></div>
+        <div class="mode-option active" data-mode="test">Test Mode</div>
+        <div class="mode-option" data-mode="learn">Learning Mode</div>
+        <div class="mode-option" data-mode="review">Review Missed</div>
+      </div>
+      
+      <div class="setup-instructions">
+        <p><strong>Test Mode:</strong> Answer questions without seeing answers until the end</p>
+        <p><strong>Learning Mode:</strong> See correct answers immediately after each response</p>
+        <p><strong>Review Missed:</strong> Focus on questions you previously answered incorrectly</p>
+      </div>
+      
+      <button class="btn" id="startQuiz" type="button">Start Quiz</button>
+    </div>
+    
+    <!-- Quiz Panel -->
+    <div id="quizPanel" style="display: none;">
+      <div class="control-panel">
+        <div>
+          Question <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
+        </div>
+        <div>
+          <button class="btn" id="showAnswer" type="button">Show Answer</button>
+          <button class="btn" id="nextQuestion" type="button">Next Question</button>
+        </div>
+      </div>
+      
+      <div class="quiz-area">
+        <div class="quiz-question" id="questionText">Loading question...</div>
+        
+        <!-- True/False Options -->
+        <div id="tfOptions" class="multiple-choice" style="display: none;">
+          <div class="choice-item" data-answer="true">True</div>
+          <div class="choice-item" data-answer="false">False</div>
+        </div>
+        
+        <!-- Fill in the blank input -->
+        <input type="text" class="quiz-input" id="answerInput" placeholder="Your answer..." style="display: none;">
+        
+        <!-- Multiple choice options -->
+        <div id="mcOptions" class="multiple-choice" style="display: none;">
+          <!-- Will be populated dynamically -->
+        </div>
+        
+        <div class="quiz-feedback" id="feedback"></div>
+        <div class="answer-reveal" id="answerReveal"></div>
+      </div>
+      
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill">0%</div>
+      </div>
+      
+      <div class="stats">
+        <div class="stat-box">
+          <div>Correct</div>
+          <div class="stat-value" id="correctCount">0</div>
+        </div>
+        <div class="stat-box">
+          <div>Incorrect</div>
+          <div class="stat-value" id="incorrectCount">0</div>
+        </div>
+        <div class="stat-box">
+          <div>Accuracy</div>
+          <div class="stat-value" id="accuracyRate">0%</div>
+        </div>
+      </div>
+      
+      <div class="control-panel" style="margin-top: 20px;">
+        <button class="btn" id="restartQuiz" type="button">Restart Quiz</button>
+        <button class="btn" id="backToSetup" type="button">Change Settings</button>
+      </div>
+    </div>
+    
+    <!-- Results Panel -->
+    <div id="resultsPanel" style="display: none;">
+      <h2>Quiz Results</h2>
+      <div class="results" id="resultsContent">
+        You answered <span id="finalCorrect">0</span> out of <span id="finalTotal">0</span> questions correctly.
+      </div>
+      
+      <div id="missedQuestionsSection" style="margin-top: 20px; display: none;">
+        <h3>Questions to Review</h3>
+        <div id="missedQuestions"></div>
+      </div>
+      
+      <div style="margin-top: 20px;">
+        <button class="btn" id="tryAgain" type="button">Try Again</button>
+        <button class="btn" id="reviewMissed" type="button">Review Missed Questions</button>
+        <button class="btn" id="newQuiz" type="button">New Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript files -->
+  <script src="js/utils.js"></script>
+  <script src="js/quiz-data.js"></script>
+  <script src="js/quiz-ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

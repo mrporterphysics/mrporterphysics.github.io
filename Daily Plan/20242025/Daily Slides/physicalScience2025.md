@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2025.04.22 **Physical Science**
+
+##### **❓ of the 📅**: How was your break?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pivot: Introduction to Constant Acceleration (Ramp)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create velocity time graph for constant acceleration_
+
+🥅 _Interpret Velocity time graph to make meaning of the slope and intercept_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.04.11 **Physical Science**
 
 ##### **❓ of the 📅**: What's your favorite fast food chain?

@@ -299,366 +299,6 @@
         gap: 10px;
       }
       
-      // Show the correct answer
-      function showCorrectAnswer() {
-        const question = filteredQuestions[currentQuestionIndex];
-        
-        // Build answer text
-        let answerText = `<strong>Correct Answer:</strong> `;
-        
-        if (question.type === 'tf') {
-          answerText += question.answer === 'true' ? 'True' : 'False';
-        } else if (question.type === 'fill') {
-          answerText += question.answer;
-        } else if (question.type === 'mc') {
-          const option = question.options.find(opt => opt.label === question.answer);
-          answerText += `${question.answer}. ${option.text}`;
-        }
-        
-        // Add explanation if available
-        if (question.explanation) {
-          answerText += `<br><br><strong>Explanation:</strong> ${question.explanation}`;
-        }
-        
-        // Display answer
-        answerReveal.innerHTML = answerText;
-        answerReveal.style.display = 'block';
-      }
-      
-      // Show results at the end of the quiz
-      function showResults() {
-        // Update results display
-        finalCorrectSpan.textContent = correctCount;
-        finalTotalSpan.textContent = filteredQuestions.length;
-        
-        // Show missed questions if any
-        if (missedQuestions.length > 0) {
-          missedQuestionsSection.style.display = 'block';
-          missedQuestionsDiv.innerHTML = '';
-          
-          // Create a div for each missed question
-          missedQuestions.forEach(question => {
-            const missedQuestionDiv = document.createElement('div');
-            missedQuestionDiv.className = 'missed-question';
-            
-            let questionText = `<div><strong>Question:</strong> ${question.question}</div>`;
-            
-            // Add answer info
-            let answerText = `<div class="missed-answer"><strong>Correct Answer:</strong> `;
-            if (question.type === 'tf') {
-              answerText += question.answer === 'true' ? 'True' : 'False';
-            } else if (question.type === 'fill') {
-              answerText += question.answer;
-            } else if (question.type === 'mc') {
-              const option = question.options.find(opt => opt.label === question.answer);
-              answerText += `${question.answer}. ${option.text}`;
-            }
-            answerText += '</div>';
-            
-            // Add explanation if available
-            let explanationText = '';
-            if (question.explanation) {
-              explanationText = `<div class="missed-explanation">${question.explanation}</div>`;
-            }
-            
-            missedQuestionDiv.innerHTML = questionText + answerText + explanationText;
-            missedQuestionsDiv.appendChild(missedQuestionDiv);
-          });
-        } else {
-          missedQuestionsSection.style.display = 'none';
-        }
-        
-        // Show results panel
-        quizPanel.style.display = 'none';
-        resultsPanel.style.display = 'block';
-        
-        // Hide review missed button if no missed questions
-        reviewMissedBtn.style.display = missedQuestions.length > 0 ? 'inline-block' : 'none';
-      }
-      
-      // Event Listeners
-      
-      // True/False option selection
-      tfOptions.querySelectorAll('.choice-item').forEach(option => {
-        option.addEventListener('click', function() {
-          tfOptions.querySelectorAll('.choice-item').forEach(opt => opt.classList.remove('selected'));
-          this.classList.add('selected');
-          selectedAnswer = this.getAttribute('data-answer');
-          
-          if (currentMode === 'learn') {
-            checkAnswer();
-          }
-        });
-      });
-      
-      // Fill in the blank input enter key
-      answerInput.addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') {
-          checkAnswer();
-        }
-      });
-      
-      // Show answer button
-      showAnswerBtn.addEventListener('click', function() {
-        if (!attemptedQuestions.has(currentQuestionIndex)) {
-          checkAnswer();
-        }
-        showCorrectAnswer();
-      });
-      
-      // Next question button
-      nextQuestionBtn.addEventListener('click', function() {
-        // If question not answered yet, check it
-        if (!attemptedQuestions.has(currentQuestionIndex)) {
-          checkAnswer();
-        }
-        
-        // Move to next question
-        currentQuestionIndex++;
-        displayQuestion();
-      });
-      
-      // Restart quiz button
-      restartQuizBtn.addEventListener('click', function() {
-        // Reset with same questions but shuffled
-        currentQuestionIndex = 0;
-        correctCount = 0;
-        incorrectCount = 0;
-        questionsAnswered = 0;
-        attemptedQuestions = new Set();
-        
-        // Update UI
-        currentQuestionSpan.textContent = '1';
-        correctCountSpan.textContent = '0';
-        incorrectCountSpan.textContent = '0';
-        accuracyRateSpan.textContent = '0%';
-        progressFill.style.width = '0%';
-        progressFill.textContent = '0%';
-        
-        // Shuffle questions
-        filteredQuestions = shuffleArray(filteredQuestions);
-        
-        // Display first question
-        displayQuestion();
-      });
-      
-      // Back to setup button
-      backToSetupBtn.addEventListener('click', function() {
-        quizPanel.style.display = 'none';
-        setupPanel.style.display = 'block';
-      });
-      
-      // Try again button
-      tryAgainBtn.addEventListener('click', function() {
-        resultsPanel.style.display = 'none';
-        quizPanel.style.display = 'block';
-        restartQuizBtn.click();
-      });
-      
-      // Review missed button
-      reviewMissedBtn.addEventListener('click', function() {
-        currentMode = 'review';
-        modeOptions.forEach(opt => opt.classList.remove('active'));
-        document.querySelector(`.mode-option[data-mode="review"]`).classList.add('active');
-        
-        resultsPanel.style.display = 'none';
-        setupPanel.style.display = 'none';
-        
-        startQuiz();
-      });
-      
-      // New quiz button
-      newQuizBtn.addEventListener('click', function() {
-        resultsPanel.style.display = 'none';
-        setupPanel.style.display = 'block';
-      });
-      
-      // Study mode selection
-      modeOptions.forEach(option => {
-        option.addEventListener('click', function() {
-          modeOptions.forEach(opt => opt.classList.remove('active'));
-          this.classList.add('active');
-          currentMode = this.getAttribute('data-mode');
-        });
-      });
-      
-      // Topic selection
-      topicButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          topicButtons.forEach(btn => btn.classList.remove('active'));
-          this.classList.add('active');
-          currentTopic = this.getAttribute('data-topic');
-        });
-      });
-      
-      // Question type selection
-      questionTypeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          questionTypeButtons.forEach(btn => btn.classList.remove('active'));
-          this.classList.add('active');
-          currentQuestionType = this.getAttribute('data-type');
-        });
-      });
-      
-      // Start quiz button
-      startQuizBtn.addEventListener('click', startQuiz);
-      
-      // Load all questions from the paste.txt file
-      // This is where you would load the full question set from your 200 questions
-      // The following is a placeholder - you would replace this with your actual code to load questions
-      
-      // Example of how to add more questions from your complete list:
-      // function loadAllQuestions() {
-      //   // Add more questions to each category from the paste.txt file
-      //   // This is where you'd parse and add all 200 questions
-      // }
-      
-      // Load additional questions from the full question set
-      function loadAllQuestions() {
-        // In a real implementation, you would parse the full question set from your paste.txt file
-        // Below is an example of how you could add more questions to each category
-        
-        // Add more true/false questions
-        quizData.tf.push(
-          { id: 101, question: "True or False: In projectile motion, horizontal acceleration is always zero.", answer: "true", topic: "kinematics", explanation: "In the absence of air resistance, there is no horizontal force acting on a projectile, so the horizontal acceleration is zero." },
-          { id: 102, question: "True or False: An object is in equilibrium only when it remains at rest.", answer: "false", topic: "forces", explanation: "An object is in equilibrium when it's either at rest or moving with constant velocity (no acceleration)." },
-          { id: 103, question: "True or False: The normal force always equals the weight of an object.", answer: "false", topic: "forces", explanation: "The normal force equals the weight only on horizontal surfaces with no other vertical forces. On inclines or with additional forces, this is not true." }
-        );
-        
-        // Add more fill-in-the-blank questions
-        quizData.fill.push(
-          { id: 151, question: "Velocities in perpendicular directions add with the __________ theorem.", answer: "pythagorean", alternateAnswers: ["pythagoras", "pythagorean theorem"], topic: "kinematics", explanation: "When velocities are perpendicular, their magnitudes are related by the Pythagorean theorem (v² = vx² + vy²)." },
-          { id: 152, question: "An object is in equilibrium if it is moving in a __________ at constant speed.", answer: "straight line", alternateAnswers: ["line", "linear path"], topic: "forces", explanation: "An object is in equilibrium when the net force is zero, which happens when it's either at rest or moving with constant velocity in a straight line." },
-          { id: 153, question: "Newton's Second Law can be expressed as __________.", answer: "F = ma", alternateAnswers: ["force equals mass times acceleration"], topic: "forces", explanation: "Newton's Second Law states that the net force on an object equals its mass times its acceleration." }
-        );
-        
-        // Add more multiple choice questions
-        quizData.mc.push(
-          { 
-            id: 201, 
-            question: "For an object in projectile motion, which statement is correct?",
-            options: [
-              { label: "A", text: "Horizontal and vertical accelerations are both 10 m/s²" },
-              { label: "B", text: "Horizontal acceleration is 10 m/s² and vertical acceleration is 0" },
-              { label: "C", text: "Horizontal acceleration is 0 and vertical acceleration is 10 m/s²" },
-              { label: "D", text: "Both horizontal and vertical accelerations are 0" }
-            ],
-            answer: "C",
-            topic: "kinematics",
-            explanation: "In projectile motion (assuming no air resistance), there is no horizontal force, so horizontal acceleration is 0. The only force is gravity, which causes a vertical acceleration of approximately 10 m/s² downward."
-          },
-          { 
-            id: 202, 
-            question: "In Newton's Second Law, if you double the force applied to an object, what happens to its acceleration?",
-            options: [
-              { label: "A", text: "It doubles" },
-              { label: "B", text: "It halves" },
-              { label: "C", text: "It quadruples" },
-              { label: "D", text: "It remains the same" }
-            ],
-            answer: "A",
-            topic: "forces",
-            explanation: "According to Newton's Second Law (F = ma), if mass remains constant, acceleration is directly proportional to force. So doubling the force doubles the acceleration."
-          },
-          { 
-            id: 203, 
-            question: "According to Newton's Third Law, when you push on a wall:",
-            options: [
-              { label: "A", text: "The wall doesn't push back" },
-              { label: "B", text: "The wall pushes back with less force" },
-              { label: "C", text: "The wall pushes back with more force" },
-              { label: "D", text: "The wall pushes back with equal force" }
-            ],
-            answer: "D",
-            topic: "forces",
-            explanation: "Newton's Third Law states that for every action, there is an equal and opposite reaction. So when you push on a wall, the wall pushes back with equal force in the opposite direction."
-          }
-        );
-        
-        // Update the allQuestions array with the new questions
-        allQuestions.length = 0; // Clear the array
-        allQuestions.push(
-          ...quizData.tf,
-          ...quizData.fill,
-          ...quizData.mc
-        );
-      }
-      
-      // Function to parse and load the full 200 questions
-      function loadFullQuestionSet() {
-        // In a production environment, you would likely fetch this data from a server
-        // or load it from a JSON file. For now, we'll use the sample questions already defined.
-        
-        // Here you would parse the full question set from the paste.txt file
-        // Format the questions according to the structure used in quizData
-        
-        console.log('Quiz initialized with sample questions');
-        console.log(`Total questions loaded: ${allQuestions.length}`);
-        
-        // In a complete implementation, you might add code to parse all 200 questions from paste.txt
-        // For example:
-        /*
-        fetch('questions.json')
-          .then(response => response.json())
-          .then(data => {
-            // Add true/false questions
-            data.truefalse.forEach(q => {
-              quizData.tf.push({
-                id: q.id,
-                question: q.question,
-                answer: q.answer,
-                topic: q.topic,
-                explanation: q.explanation
-              });
-            });
-            
-            // Add fill in the blank questions
-            data.fillblank.forEach(q => {
-              quizData.fill.push({
-                id: q.id,
-                question: q.question,
-                answer: q.answer,
-                alternateAnswers: q.alternateAnswers || [],
-                topic: q.topic,
-                explanation: q.explanation
-              });
-            });
-            
-            // Add multiple choice questions
-            data.multiplechoice.forEach(q => {
-              quizData.mc.push({
-                id: q.id,
-                question: q.question,
-                options: q.options,
-                answer: q.answer,
-                topic: q.topic,
-                explanation: q.explanation
-              });
-            });
-            
-            // Update the allQuestions array
-            allQuestions.length = 0;
-            allQuestions.push(
-              ...quizData.tf,
-              ...quizData.fill,
-              ...quizData.mc
-            );
-            
-            console.log(`Full question set loaded: ${allQuestions.length} questions`);
-          })
-          .catch(error => {
-            console.error('Error loading questions:', error);
-          });
-        */
-      }
-      
-      // Initialize the quiz
-      loadFullQuestionSet();
-    });
-  </script>
-</body>
-</html>
-      
       .stats {
         flex-direction: column;
         gap: 10px;
@@ -682,24 +322,24 @@
       <div class="question-type-select">
         <h3>Select Question Type:</h3>
         <div style="width: 100%; margin-bottom: 10px;"></div>
-        <button class="question-type-btn active" data-type="all">All Question Types</button>
-        <button class="question-type-btn" data-type="tf">True/False Questions</button>
-        <button class="question-type-btn" data-type="fill">Fill in the Blank</button>
-        <button class="question-type-btn" data-type="mc">Multiple Choice</button>
+        <button class="question-type-btn active" data-type="all" type="button">All Question Types</button>
+        <button class="question-type-btn" data-type="tf" type="button">True/False Questions</button>
+        <button class="question-type-btn" data-type="fill" type="button">Fill in the Blank</button>
+        <button class="question-type-btn" data-type="mc" type="button">Multiple Choice</button>
       </div>
       
       <div class="topic-select">
         <h3>Select Topic (Optional):</h3>
         <div style="width: 100%; margin-bottom: 10px;"></div>
-        <button class="topic-btn active" data-topic="all">All Topics</button>
-        <button class="topic-btn" data-topic="kinematics">Kinematics & Graphs</button>
-        <button class="topic-btn" data-topic="forces">Forces & Newton's Laws</button>
-        <button class="topic-btn" data-topic="energy">Energy & Work</button>
-        <button class="topic-btn" data-topic="momentum">Momentum & Impulse</button>
-        <button class="topic-btn" data-topic="rotation">Rotation & Torque</button>
-        <button class="topic-btn" data-topic="gravitation">Gravitation</button>
-        <button class="topic-btn" data-topic="shm">Simple Harmonic Motion</button>
-        <button class="topic-btn" data-topic="fluids">Fluids</button>
+        <button class="topic-btn active" data-topic="all" type="button">All Topics</button>
+        <button class="topic-btn" data-topic="kinematics" type="button">Kinematics & Graphs</button>
+        <button class="topic-btn" data-topic="forces" type="button">Forces & Newton's Laws</button>
+        <button class="topic-btn" data-topic="energy" type="button">Energy & Work</button>
+        <button class="topic-btn" data-topic="momentum" type="button">Momentum & Impulse</button>
+        <button class="topic-btn" data-topic="rotation" type="button">Rotation & Torque</button>
+        <button class="topic-btn" data-topic="gravitation" type="button">Gravitation</button>
+        <button class="topic-btn" data-topic="shm" type="button">Simple Harmonic Motion</button>
+        <button class="topic-btn" data-topic="fluids" type="button">Fluids</button>
       </div>
       
       <div class="mode-select">
@@ -716,7 +356,7 @@
         <p><strong>Review Missed:</strong> Focus on questions you previously answered incorrectly</p>
       </div>
       
-      <button class="btn" id="startQuiz">Start Quiz</button>
+      <button class="btn" id="startQuiz" type="button">Start Quiz</button>
     </div>
     
     <div id="quizPanel" style="display: none;">
@@ -725,8 +365,8 @@
           Question <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
         </div>
         <div>
-          <button class="btn" id="showAnswer">Show Answer</button>
-          <button class="btn" id="nextQuestion">Next Question</button>
+          <button class="btn" id="showAnswer" type="button">Show Answer</button>
+          <button class="btn" id="nextQuestion" type="button">Next Question</button>
         </div>
       </div>
       
@@ -771,8 +411,8 @@
       </div>
       
       <div class="control-panel" style="margin-top: 20px;">
-        <button class="btn" id="restartQuiz">Restart Quiz</button>
-        <button class="btn" id="backToSetup">Change Settings</button>
+        <button class="btn" id="restartQuiz" type="button">Restart Quiz</button>
+        <button class="btn" id="backToSetup" type="button">Change Settings</button>
       </div>
     </div>
     
@@ -788,15 +428,18 @@
       </div>
       
       <div style="margin-top: 20px;">
-        <button class="btn" id="tryAgain">Try Again</button>
-        <button class="btn" id="reviewMissed">Review Missed Questions</button>
-        <button class="btn" id="newQuiz">New Quiz</button>
+        <button class="btn" id="tryAgain" type="button">Try Again</button>
+        <button class="btn" id="reviewMissed" type="button">Review Missed Questions</button>
+        <button class="btn" id="newQuiz" type="button">New Quiz</button>
       </div>
     </div>
   </div>
 
   <script>
+    // Wrap all JavaScript code in a DOMContentLoaded event listener
     document.addEventListener('DOMContentLoaded', function() {
+      console.log("DOM fully loaded and parsed");
+      
       // DOM elements
       const setupPanel = document.getElementById('setupPanel');
       const quizPanel = document.getElementById('quizPanel');
@@ -999,6 +642,8 @@
 
       // Start the quiz
       function startQuiz() {
+        console.log("Starting quiz...");
+        
         // Get filtered questions
         filteredQuestions = filterQuestions();
         if (!filteredQuestions) return;
@@ -1035,6 +680,8 @@
 
       // Display current question
       function displayQuestion() {
+        console.log("Displaying question at index:", currentQuestionIndex);
+        
         if (currentQuestionIndex >= filteredQuestions.length) {
           showResults();
           return;
@@ -1112,46 +759,3 @@
                         userAnswer === alt.toLowerCase() || 
                         (userAnswer.length > 3 && alt.toLowerCase().includes(userAnswer))
                       ));
-        } else if (question.type === 'mc') {
-          userAnswer = selectedAnswer;
-          isCorrect = (userAnswer === question.answer);
-        }
-        
-        // Mark question as attempted
-        attemptedQuestions.add(currentQuestionIndex);
-        
-        // Update stats
-        if (isCorrect) {
-          feedback.textContent = 'Correct!';
-          feedback.className = 'quiz-feedback correct';
-          correctCount++;
-          correctCountSpan.textContent = correctCount;
-        } else {
-          feedback.textContent = 'Incorrect';
-          feedback.className = 'quiz-feedback incorrect';
-          incorrectCount++;
-          incorrectCountSpan.textContent = incorrectCount;
-          
-          // Add to missed questions if not already there
-          const alreadyMissed = missedQuestions.some(q => q.id === question.id);
-          if (!alreadyMissed) {
-            missedQuestions.push(question);
-          }
-        }
-        
-        questionsAnswered++;
-        
-        // Calculate accuracy
-        const accuracy = Math.round((correctCount / questionsAnswered) * 100);
-        accuracyRateSpan.textContent = `${accuracy}%`;
-        
-        // Update progress bar
-        const progress = Math.round((questionsAnswered / filteredQuestions.length) * 100);
-        progressFill.style.width = `${progress}%`;
-        progressFill.textContent = `${progress}%`;
-        
-        // Show answer if in learning mode
-        if (currentMode === 'learn') {
-          showCorrectAnswer();
-        }
-      }

@@ -24,7 +24,7 @@
 - [Energy](/mrporterphysics.github.io/Presentations/APETM/talks/RPEnergy2025.html)
 - [Rotation](/mrporterphysics.github.io/Presentations/AP%20Rotation%20Representation/talks/Rotation2025.html)
 - [Static Electricity](/mrporterphysics.github.io/Presentations/RP%20Static%20Electricity/staticE2025.html)
-
+- [Circuits](/mrporterphysics.github.io/Presentations/RP%20Electricity/RPCircuits2023.html)
 
 ## Earth Science
 
