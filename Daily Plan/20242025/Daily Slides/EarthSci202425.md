@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2025.04.22 **Earth Science**
+
+##### **❓ of the 📅**: If you were featured on the local news, what would you most likely be on there for?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Eclipse Notes
+2. Seasons Notes
+
+# NearPod Code: 
+# **H F N 4 V**
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Reasons for the seasons_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.04.21 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?

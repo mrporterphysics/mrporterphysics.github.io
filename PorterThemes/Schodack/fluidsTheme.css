@@ -1,0 +1,333 @@
+/* 
+@theme fluids
+*/
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Audiowide&display=swap');
+
+:root {
+    /* Color palette based on provided color chart */
+    --background: #1a1a1a;         /* Base 900 */
+    --text: #f2f2f2;               /* Base 100 */
+    --accent-blue:#66A0C8;         /* Blue 600 */
+    --accent-red: #C63685;         /* Magenta 500 */
+    --accent-yellow: #D0A215;      /* Yellow 600 */
+    --accent-green: #53A047;       /* Green 600 */
+    --accent-cyan: #24B3B7;        /* Cyan 500 */
+    --secondary-bg: #262626;       /* Base 850 */
+    --code-bg: #2d2d2d;            /* Base 800 */
+    --border-color: #4d4d4d;       /* Base 700 */
+    --text-dim: #c0c0c0;           /* Base 250 */
+}
+
+section {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 70px;
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+/* Smooth transitions for all elements */
+section * {
+    transition: all 0.3s ease;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    color: var(--accent-blue);
+    font-size: 1.6em;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 0.3em;
+    margin-bottom: 0.8em;
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--accent-red);
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--accent-yellow);
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+h4, h5, h6 {
+    color: var(--accent-cyan);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* Code blocks */
+code {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent-green);
+    background-color: var(--code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+pre {
+    background-color: var(--code-bg);
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+    border-left: 4px solid var(--accent-green);
+}
+
+/* Links */
+a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent-cyan);
+}
+
+a:hover {
+    color: var(--accent-blue);
+    border-bottom: 1px solid var(--accent-blue);
+}
+
+/* Emphasis */
+strong {
+    color: var(--accent-red);
+    font-weight: bold;
+}
+
+em {
+    color: var(--accent-yellow);
+    font-style: italic;
+}
+
+/* Lists */
+ul {
+    list-style-type: "→ ";
+    padding-left: 1.5em;
+}
+
+ol {
+    padding-left: 1.5em;
+}
+
+li {
+    margin: 0.5em 0;
+    font-size: 1em;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--accent-blue);
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background-color: var(--secondary-bg);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: none;
+}
+
+table td, table th {
+    border: 1px solid var(--border-color);
+    padding: 0.25em;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--code-bg);
+    color: var(--accent-blue);
+    font-weight: bold;
+}
+
+table tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Fix for the gray area outside tables */
+section table {
+    background-clip: padding-box;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5em auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid layout for content */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5em 0;
+}
+
+/* Equation styling */
+.math {
+    color: var(--text);
+    font-style: italic;
+    background-color: var(--secondary-bg);
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+/* Special AP Physics concept boxes */
+.concept {
+    background-color: var(--secondary-bg);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 0 8px 8px 0;
+    padding: 1em;
+    margin: 1.5em 0;
+}
+
+.concept-title {
+    color: var(--accent-blue);
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+/* Example problem styling */
+.example {
+    background-color: var(--secondary-bg);
+    border-left: 4px solid var(--accent-yellow);
+    border-radius: 0 8px 8px 0;
+    padding: 1em;
+    margin: 1.5em 0;
+}
+
+.example-title {
+    color: var(--accent-yellow);
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+/* Important note styling */
+.important {
+    background-color: var(--secondary-bg);
+    border-left: 4px solid var(--accent-red);
+    border-radius: 0 8px 8px 0;
+    padding: 1em;
+    margin: 1.5em 0;
+}
+
+.important-title {
+    color: var(--accent-red);
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
+}
+
+/* Motion diagrams and vector fields */
+.diagram {
+    background-color: var(--secondary-bg);
+    padding: 1em;
+    border-radius: 8px;
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+/* Forces special styling */
+.force-vector {
+    font-weight: bold;
+    color: var(--accent-blue);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Physics constants */
+.constant {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--secondary-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--accent-cyan);
+}
+
+/* Special class for fluid physics */
+.fluid-title {
+    font-family: 'Audiowide', cursive;
+    background: linear-gradient(45deg, var(--accent-blue), var(--accent-cyan));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 0.2em 0;
+    text-align: center;
+    font-size: 1.4em;
+    letter-spacing: 0.05em;
+    margin: 1em 0;
+}
+
+/* Wave animation for fluid concepts */
+@keyframes wave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.fluid-concept {
+    background: linear-gradient(45deg, var(--secondary-bg), var(--code-bg));
+    background-size: 200% 200%;
+    animation: wave 8s ease infinite;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1.5em 0;
+    border-left: 4px solid var(--accent-cyan);
+}
+
+/* Emoji fixes */
+.emoji {
+    display: inline;
+    white-space: nowrap;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img.emoji {
+    display: inline;
+    height: 1em;
+    width: 1em;
+    margin: 0 0.1em;
+    vertical-align: -0.1em;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+p, span, div {
+    white-space: normal;
+}
+
+.question-box {
+    background-color:#8e6B01;
+    border-radius: 10px;
+    padding: 15px;
+    width: 350px;
+    text-align: center;
+    position: absolute;
+    right: 50px;
+    top: 250px;
+  }

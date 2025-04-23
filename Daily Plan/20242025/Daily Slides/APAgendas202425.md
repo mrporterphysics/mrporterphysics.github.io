@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+# 2025.04.23 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on Fluids
+2. AP Workbook 8.A & 8.B
+3. If Time - Unit 6 Workbook continued
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Fluid_
+
+🥅 _Define Density_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.04.21 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?
