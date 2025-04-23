@@ -14,6 +14,35 @@ math: mathjax
 
 ---
 
+# 2025.04.23 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Resistance Questions
+2. Current-Voltage-Resistance Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Develop the mathematical relationship between current-voltage-resistance_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.04.22 **Regents Physics**
 
 ##### **❓ of the 📅**: If you were featured on the local news, what would you most likely be on there for?
