@@ -11,6 +11,7 @@
   - [Momentum](/mrporterphysics.github.io/Presentations/Momentum/talks/APmomentum2025.html)
   - [Rotation](/mrporterphysics.github.io/Presentations/AP%20Rotation%20Representation/talks/Rotation2025.html)
   - [Oscillation](/mrporterphysics.github.io/Presentations/AP%20SHM/talks/SHM2025.html)
+  - [Fluids](/mrporterphysics.github.io/Presentations/Fluids/talk/APfluids2025.html)
 
 ## Regents Physics 
 
@@ -25,6 +26,7 @@
 - [Rotation](/mrporterphysics.github.io/Presentations/AP%20Rotation%20Representation/talks/Rotation2025.html)
 - [Static Electricity](/mrporterphysics.github.io/Presentations/RP%20Static%20Electricity/staticE2025.html)
 - [Circuits](/mrporterphysics.github.io/Presentations/RP%20Electricity/RPCircuits2023.html)
+
 
 ## Earth Science
 
