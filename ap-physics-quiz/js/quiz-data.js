@@ -166,6 +166,7 @@ const QuizData = (function() {
 
   // Initialize and add properties to questions
   function initializeQuestions() {
+    console.log("Initializing quiz data with basic questions");
     // Reset data
     quizData = {
       tf: [...basicQuestions.tf],
@@ -189,11 +190,19 @@ const QuizData = (function() {
       ...quizData.matching // Include matching questions
     ];
     
-    Utils.debug('Basic questions initialized', { count: allQuestions.length });
+    console.log('Basic questions initialized', { count: allQuestions.length });
+    return allQuestions.length;
   }
   
   // Load extended question set
   function loadExtendedQuestions() {
+    console.log("Loading extended question set");
+    
+    // First initialize with basic questions if not already done
+    if (allQuestions.length === 0) {
+      initializeQuestions();
+    }
+    
     // Add extended questions to each category
     for (const type in extendedQuestions) {
       extendedQuestions[type].forEach(question => {
@@ -210,13 +219,18 @@ const QuizData = (function() {
       ...quizData.matching // Include matching questions
     ];
     
-    Utils.debug('Extended questions loaded', { count: allQuestions.length });
+    console.log('Extended questions loaded', { count: allQuestions.length });
     return allQuestions.length;
   }
   
   // Filter questions based on type and topic
   function filterQuestions(questionType = 'all', topic = 'all', useReviewMode = false) {
-    Utils.debug('Filtering questions', { questionType, topic, useReviewMode });
+    console.log('Filtering questions', { questionType, topic, useReviewMode });
+    
+    // Make sure we have questions loaded
+    if (allQuestions.length === 0) {
+      initializeQuestions();
+    }
     
     let filtered = [];
     
@@ -239,7 +253,7 @@ const QuizData = (function() {
     
     // Ensure we have at least one question
     if (filtered.length === 0) {
-      Utils.debug('No questions match the filters');
+      console.log('No questions match the filters');
       return null;
     }
     
@@ -252,7 +266,7 @@ const QuizData = (function() {
     const alreadyMissed = missedQuestions.some(q => q.id === question.id);
     if (!alreadyMissed) {
       missedQuestions.push(question);
-      Utils.debug('Added to missed questions', { id: question.id });
+      console.log('Added to missed questions', { id: question.id });
     }
     return missedQuestions.length;
   }
@@ -261,8 +275,16 @@ const QuizData = (function() {
   function clearMissedQuestions() {
     const count = missedQuestions.length;
     missedQuestions = [];
-    Utils.debug('Cleared missed questions', { count });
+    console.log('Cleared missed questions', { count });
     return count;
+  }
+  
+  /**
+   * Get missed questions array
+   * @return {Array} Array of missed questions
+   */
+  function getMissedQuestions() {
+    return missedQuestions;
   }
   
   // Check if an answer is correct
@@ -275,28 +297,29 @@ const QuizData = (function() {
     
     switch (question.type) {
       case 'tf':
-        isCorrect = userAnswer === question.answer;
+        // Convert answers to string for comparison
+        isCorrect = String(userAnswer).toLowerCase() === String(question.answer).toLowerCase();
         break;
         
       case 'fill':
-        userAnswer = userAnswer.trim().toLowerCase();
+        userAnswer = String(userAnswer).trim().toLowerCase();
         // Check main answer and alternatives
-        isCorrect = (userAnswer === question.answer.toLowerCase()) ||
+        isCorrect = (userAnswer === String(question.answer).toLowerCase()) ||
                     (question.alternateAnswers && question.alternateAnswers.some(alt => 
                       Utils.stringSimilarity(userAnswer, alt, true)
                     ));
         break;
         
       case 'mc':
-        isCorrect = userAnswer === question.answer;
+        isCorrect = String(userAnswer) === String(question.answer);
         break;
         
       case 'matching':
-        isCorrect = userAnswer === question.answer;
+        isCorrect = String(userAnswer) === String(question.answer);
         break;
     }
     
-    Utils.debug('Checking answer', { 
+    console.log('Checking answer', { 
       questionId: question.id, 
       userAnswer, 
       correctAnswer: question.answer,
@@ -311,9 +334,9 @@ const QuizData = (function() {
    * @return {Promise<number>} Promise resolving to the number of questions loaded
    */
   function loadFullQuestionSet() {
-    Utils.debug('Loading full question set from CSV');
+    console.log('Loading full question set from CSV');
     
-    const csvFileName = 'ap-physics-questions-latex.csv'; // Set your CSV file name here
+    const csvFileName = 'ap-physics-questions.csv'; // Set your CSV file name here
     const csvFilePath = `data/${csvFileName}`; // Assuming it's in a 'data' folder
     
     // Check if we're running on a server or local file
@@ -330,75 +353,18 @@ const QuizData = (function() {
         })
         .then(text => {
           console.log(`Successfully loaded CSV file: ${csvFileName}`);
-          const questions = CSVImport.parseCSV(text);
-          return processImportedQuestions(questions);
+          return processImportedQuestions(parseCSV(text));
         })
         .catch(error => {
-          console.error('Error loading questions:', error);
+          console.error('Error loading questions from CSV:', error);
           // Fallback to extended questions if loading fails
           alert(`Failed to load questions from ${csvFileName}. Using built-in questions instead.`);
           return loadExtendedQuestions();
         });
     } else {
-      // Local file mode - show file upload or paste options
-      return new Promise((resolve) => {
-        // Create container for import options
-        const importContainer = document.createElement('div');
-        importContainer.className = 'import-options';
-        importContainer.style.margin = '20px 0';
-        
-        // Add a heading
-        const heading = document.createElement('h3');
-        heading.textContent = 'Import Questions';
-        importContainer.appendChild(heading);
-        
-        // Create a paragraph explaining options
-        const explanation = document.createElement('p');
-        explanation.textContent = 'When running locally, you need to import questions manually. Choose one of the options below:';
-        importContainer.appendChild(explanation);
-        
-        // Function to handle imported questions
-        const handleImportedQuestions = (questions) => {
-          const result = processImportedQuestions(questions);
-          
-          // Clean up UI
-          importContainer.innerHTML = `<p>Successfully imported ${Object.values(questions).flat().length} questions!</p>`;
-          setTimeout(() => {
-            importContainer.remove();
-          }, 3000);
-          
-          resolve(result);
-        };
-        
-        // Create file upload option
-        const fileImport = CSVImport.createFileInput(handleImportedQuestions);
-        fileImport.style.margin = '10px 0';
-        importContainer.appendChild(fileImport);
-        
-        // Create text area for direct paste
-        const textImport = CSVImport.createTextArea(handleImportedQuestions);
-        textImport.style.margin = '20px 0';
-        importContainer.appendChild(textImport);
-        
-        // Add option for extended questions
-        const orText = document.createElement('p');
-        orText.textContent = 'Or use our built-in question set:';
-        orText.style.marginTop = '20px';
-        importContainer.appendChild(orText);
-        
-        const extendedButton = document.createElement('button');
-        extendedButton.textContent = 'Use Built-in Questions';
-        extendedButton.className = 'btn';
-        extendedButton.addEventListener('click', () => {
-          resolve(loadExtendedQuestions());
-          importContainer.remove();
-        });
-        importContainer.appendChild(extendedButton);
-        
-        // Add to setup panel
-        const setupPanel = document.getElementById('setupPanel');
-        setupPanel.appendChild(importContainer);
-      });
+      // Local file mode - use built-in questions
+      console.log('Running in local file mode - using built-in questions');
+      return Promise.resolve(loadExtendedQuestions());
     }
   }
   
@@ -435,7 +401,7 @@ const QuizData = (function() {
     ];
     
     // Log information about loaded questions
-    Utils.debug('CSV questions loaded', { count: allQuestions.length });
+    console.log('CSV questions loaded', { count: allQuestions.length });
     console.log(`Loaded ${allQuestions.length} questions from CSV:`);
     console.log(`- True/False: ${quizData.tf.length}`);
     console.log(`- Fill in the Blank: ${quizData.fill.length}`);
@@ -445,8 +411,148 @@ const QuizData = (function() {
     return allQuestions.length;
   }
   
+  /**
+   * Parse CSV text directly
+   * @param {string} csvText - The CSV text content
+   * @return {Object} Object containing questions by type
+   */
+  function parseCSV(csvText) {
+    // Simple CSV parsing function
+    const lines = csvText.split('\n').filter(line => line.trim());
+    const headers = lines[0].split(',').map(header => header.trim());
+    
+    // Prepare question containers
+    const questions = {
+      tf: [],
+      fill: [],
+      mc: [],
+      matching: []
+    };
+    
+    // Process each line (skipping the header)
+    for (let i = 1; i < lines.length; i++) {
+      const values = parseCSVLine(lines[i]);
+      
+      // Make sure we have enough values
+      if (values.length < 3) continue;
+      
+      // Create an object with the headers as keys
+      const data = {};
+      headers.forEach((header, index) => {
+        if (index < values.length) {
+          data[header] = values[index].trim();
+        } else {
+          data[header] = '';
+        }
+      });
+      
+      // Process based on question type
+      const type = data.type.toLowerCase();
+      
+      if (type === 'tf' || type === 'true/false') {
+        questions.tf.push({
+          id: parseInt(data.id) || Math.floor(Math.random() * 10000),
+          question: data.question,
+          answer: data.answer.toLowerCase(),
+          topic: data.topic || 'general',
+          explanation: data.explanation || '',
+          type: 'tf'
+        });
+      } else if (type === 'fill') {
+        questions.fill.push({
+          id: parseInt(data.id) || Math.floor(Math.random() * 10000),
+          question: data.question,
+          answer: data.answer,
+          alternateAnswers: data.alternateAnswers ? data.alternateAnswers.split(',').map(a => a.trim()) : [],
+          topic: data.topic || 'general',
+          explanation: data.explanation || '',
+          type: 'fill'
+        });
+      } else if (type === 'mc') {
+        const options = [];
+        ['A', 'B', 'C', 'D', 'E'].forEach(letter => {
+          const optionKey = `option${letter}`;
+          if (data[optionKey]) {
+            options.push({
+              label: letter,
+              text: data[optionKey]
+            });
+          }
+        });
+        
+        questions.mc.push({
+          id: parseInt(data.id) || Math.floor(Math.random() * 10000),
+          question: data.question,
+          options: options,
+          answer: data.answer,
+          topic: data.topic || 'general',
+          explanation: data.explanation || '',
+          type: 'mc'
+        });
+      } else if (type === 'matching') {
+        const matchingOptions = [];
+        ['A', 'B', 'C', 'D', 'E'].forEach(letter => {
+          const optionKey = `option${letter}`;
+          if (data[optionKey]) {
+            matchingOptions.push({
+              label: letter,
+              text: data[optionKey]
+            });
+          }
+        });
+        
+        questions.matching.push({
+          id: parseInt(data.id) || Math.floor(Math.random() * 10000),
+          question: data.question,
+          matchingOptions: matchingOptions,
+          answer: data.answer,
+          topic: data.topic || 'general',
+          explanation: data.explanation || '',
+          type: 'matching'
+        });
+      }
+    }
+    
+    return questions;
+  }
+  
+  /**
+   * Parse a CSV line handling quotes and special characters
+   */
+  function parseCSVLine(line) {
+    const values = [];
+    let currentValue = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      
+      if (char === '"') {
+        // Toggle quote state
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        // End of value
+        values.push(currentValue);
+        currentValue = '';
+      } else {
+        // Add character to current value
+        currentValue += char;
+      }
+    }
+    
+    // Add the last value
+    values.push(currentValue);
+    
+    return values;
+  }
+  
   // Count questions by type and topic
   function getQuestionStats() {
+    // Make sure we have questions loaded
+    if (allQuestions.length === 0) {
+      initializeQuestions();
+    }
+    
     const stats = {
       total: allQuestions.length,
       byType: {
@@ -479,8 +585,11 @@ const QuizData = (function() {
     loadFullQuestionSet,
     addToMissedQuestions,
     clearMissedQuestions,
+    getMissedQuestions,
     checkAnswer,
     getQuestionStats,
+    processImportedQuestions,
     getMissedQuestionsCount: () => missedQuestions.length
   };
 })();
+

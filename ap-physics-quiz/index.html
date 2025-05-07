@@ -11,9 +11,6 @@
   
   <!-- Add KaTeX CSS for LaTeX rendering -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked@4.2.5/marked.min.js"></script>
 </head>
 <body>
   <h1>AP Physics 1 Quiz</h1>
@@ -163,21 +160,27 @@
     </div>
   </div>
 
-  <!-- JavaScript libraries -->
+  <!-- JavaScript libraries - Load in correct order -->
   <script src="https://cdn.jsdelivr.net/npm/marked@4.2.5/marked.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
 
-  <!-- Application JavaScript files -->
+  <!-- Base utility scripts first -->
   <script src="js/utils.js"></script>
   <script src="js/quiz-storage.js"></script>
+  
+  <!-- Data handling scripts next -->
   <script src="js/question-parser.js"></script>
   <script src="js/quiz-data.js"></script>
+  
+  <!-- UI scripts next -->
   <script src="js/quiz-ui.js"></script>
+  
+  <!-- Main application script last -->
   <script src="js/app.js"></script>
   <script src="js/advanced-question-types.js"></script>
   
-  <!-- Initialize theme toggle -->
+  <!-- Initialize theme toggle and render math -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       // Initialize theme toggle
@@ -203,6 +206,17 @@
             settings.theme = newTheme;
             QuizStorage.saveSettings(settings);
           }
+        });
+      }
+      
+      // Render math expressions if KaTeX is loaded
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: "$", right: "$", display: true},
+            {left: "$", right: "$", display: false}
+          ],
+          throwOnError: false
         });
       }
       

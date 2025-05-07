@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.05.07 **Earth Science**
+
+##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Angle of Insolation Lab - Collect Data
+    - Return Light to Mr. Bacon's Room when finished
+2. Answer Questions
+2. Finish Regents Practice Exam
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look at how angle of insolation effects thermal energy_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.05.06 **Earth Science**
 
 ##### **❓ of the 📅**: What was your dream job? 

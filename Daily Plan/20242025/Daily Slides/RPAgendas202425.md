@@ -16,7 +16,7 @@ math: mathjax
 
 # 2025.05.07 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
 
 <div class ='columns'>
 
