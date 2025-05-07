@@ -13,8 +13,8 @@ const PhysicsQuizApp = (function() {
   let attemptedQuestions = new Set();
   let currentMode = '';
   
-  // Enable debug mode in development (set to false for production)
-  Utils.setDebugMode(false);
+  // Enable debug mode in development (set to true for troubleshooting)
+  Utils.setDebugMode(true);
   
   /**
    * Initialize the application
@@ -24,6 +24,13 @@ const PhysicsQuizApp = (function() {
     
     // Performance monitoring
     Utils.performance.start('AppInit');
+    
+    // Make sure QuizData is available before proceeding
+    if (typeof QuizData === 'undefined') {
+      console.error("ERROR: QuizData module is not available. Check script loading order.");
+      alert("Error initializing quiz. Please refresh the page or contact support.");
+      return;
+    }
     
     // Initialize local storage if available
     if (typeof QuizStorage !== 'undefined') {
@@ -42,6 +49,7 @@ const PhysicsQuizApp = (function() {
       .catch(error => {
         console.error("Error loading questions from CSV:", error);
         // Load default questions if CSV loading fails
+        console.log("Loading extended questions as fallback");
         QuizData.loadExtendedQuestions();
         logQuestionStats();
       });
@@ -62,8 +70,15 @@ const PhysicsQuizApp = (function() {
    */
   function loadQuestionsFromCSV() {
     return new Promise((resolve, reject) => {
+      // First check if QuizData is properly loaded
+      if (typeof QuizData === 'undefined') {
+        reject(new Error("QuizData module is not defined. Check script loading order."));
+        return;
+      }
+      
       // Path to the CSV file in the data folder
-      const csvFilePath = 'data/apphysicsquestions.csv';
+      const csvFilePath = 'data/ap-physics-questions.csv';
+      console.log("Attempting to load CSV from:", csvFilePath);
       
       // Fetch the CSV file
       fetch(csvFilePath)
@@ -76,32 +91,228 @@ const PhysicsQuizApp = (function() {
         .then(csvText => {
           console.log("Successfully loaded CSV file");
           
-          // Parse the CSV and process questions
-          if (typeof CSVImport !== 'undefined') {
-            const questions = CSVImport.parseCSV(csvText);
-            
-            if (typeof QuizData !== 'undefined' && 
-                typeof QuizData.processImportedQuestions === 'function') {
-              QuizData.processImportedQuestions(questions);
-              resolve();
-            } else {
-              reject(new Error("QuizData module not available for processing questions"));
-            }
+          // Check if the CSV text is valid
+          if (!csvText || csvText.trim() === '') {
+            throw new Error("CSV file is empty");
+          }
+          
+          // Process CSV directly without using CSVImport
+          const questions = parseCSVDirectly(csvText);
+          
+          if (typeof QuizData !== 'undefined' && 
+              typeof QuizData.processImportedQuestions === 'function') {
+            QuizData.processImportedQuestions(questions);
+            resolve();
           } else {
-            reject(new Error("CSVImport module not available for parsing CSV"));
+            reject(new Error("QuizData.processImportedQuestions method is not available"));
           }
         })
         .catch(error => {
           console.error("Error loading CSV:", error);
-          reject(error);
+          // Fall back to built-in questions
+          console.log("Falling back to built-in questions");
+          if (typeof QuizData !== 'undefined' && 
+              typeof QuizData.loadExtendedQuestions === 'function') {
+            QuizData.loadExtendedQuestions();
+            resolve();
+          } else {
+            reject(new Error("Unable to load fallback questions - QuizData module issue"));
+          }
         });
     });
+  }
+
+  /**
+   * Parse CSV text directly without relying on CSVImport module
+   * @param {string} csvText - The CSV text content
+   * @return {Object} Object containing questions by type
+   */
+  function parseCSVDirectly(csvText) {
+    // Split by lines
+    const lines = csvText.split('\n').filter(line => line.trim());
+    
+    // Make sure we have at least a header row
+    if (lines.length === 0) {
+      console.error("CSV file appears to be empty or has no valid lines");
+      return { tf: [], fill: [], mc: [], matching: [] };
+    }
+    
+    // Get headers
+    const headers = lines[0].split(',').map(header => header.trim());
+    
+    // Prepare question containers
+    const questions = {
+      tf: [],
+      fill: [],
+      mc: [],
+      matching: []
+    };
+    
+    // Process each line (skipping header)
+    for (let i = 1; i < lines.length; i++) {
+      // Skip empty lines
+      if (!lines[i].trim()) continue;
+      
+      const values = parseCSVLine(lines[i]);
+      
+      // Skip if not enough values
+      if (values.length < 3) continue;
+      
+      // Create question data
+      const questionData = {};
+      headers.forEach((header, index) => {
+        if (index < values.length) {
+          questionData[header] = values[index] || '';
+        }
+      });
+      
+      // Determine question type
+      const type = questionData.type ? questionData.type.toLowerCase().trim() : '';
+      
+      // Add to appropriate question type array
+      if (type === 'tf' || type === 'true/false') {
+        questions.tf.push(processTFQuestion(questionData));
+      } else if (type === 'fill') {
+        questions.fill.push(processFillQuestion(questionData));
+      } else if (type === 'mc' || type === 'multiple choice') {
+        questions.mc.push(processMCQuestion(questionData));
+      } else if (type === 'matching') {
+        questions.matching.push(processMatchingQuestion(questionData));
+      }
+      // Add other question types if needed
+    }
+    
+    console.log("Parsed questions from CSV:", {
+      tf: questions.tf.length,
+      fill: questions.fill.length,
+      mc: questions.mc.length,
+      matching: questions.matching.length,
+      total: questions.tf.length + questions.fill.length + questions.mc.length + questions.matching.length
+    });
+    
+    return questions;
+  }
+
+  /**
+   * Parse a CSV line, handling quotes and commas
+   */
+  function parseCSVLine(line) {
+    const values = [];
+    let currentValue = '';
+    let inQuotes = false;
+    
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      
+      if (char === '"') {
+        // Toggle quote state
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        // End of value
+        values.push(currentValue);
+        currentValue = '';
+      } else {
+        // Add character to current value
+        currentValue += char;
+      }
+    }
+    
+    // Add the last value
+    values.push(currentValue);
+    
+    return values;
+  }
+
+  // Basic processors for different question types
+  function processTFQuestion(data) {
+    return {
+      id: parseInt(data.id) || Math.floor(Math.random() * 10000),
+      question: data.question.trim(),
+      answer: data.answer.toLowerCase().trim(),
+      topic: data.topic ? data.topic.trim() : 'general',
+      explanation: data.explanation ? data.explanation.trim() : '',
+      type: 'tf'
+    };
+  }
+
+  function processFillQuestion(data) {
+    return {
+      id: parseInt(data.id) || Math.floor(Math.random() * 10000),
+      question: data.question.trim(),
+      answer: data.answer.trim(),
+      alternateAnswers: data.alternateAnswers ? data.alternateAnswers.split(',').map(ans => ans.trim()) : [],
+      topic: data.topic ? data.topic.trim() : 'general',
+      explanation: data.explanation ? data.explanation.trim() : '',
+      type: 'fill'
+    };
+  }
+
+  function processMCQuestion(data) {
+    // Process options (this is just a basic implementation)
+    const options = [];
+    
+    ['A', 'B', 'C', 'D', 'E'].forEach(letter => {
+      const optionKey = `option${letter}`;
+      if (data[optionKey]) {
+        options.push({
+          label: letter,
+          text: data[optionKey].trim()
+        });
+      }
+    });
+    
+    return {
+      id: parseInt(data.id) || Math.floor(Math.random() * 10000),
+      question: data.question.trim(),
+      options: options,
+      answer: data.answer.trim(),
+      topic: data.topic ? data.topic.trim() : 'general',
+      explanation: data.explanation ? data.explanation.trim() : '',
+      type: 'mc'
+    };
+  }
+
+  function processMatchingQuestion(data) {
+    // Basic implementation - you'll need to enhance this based on your data format
+    const matchingOptions = [
+      { label: 'A', text: 'Option A' },
+      { label: 'B', text: 'Option B' },
+      { label: 'C', text: 'Option C' },
+      { label: 'D', text: 'Option D' },
+      { label: 'E', text: 'Option E' }
+    ];
+    
+    // Try to get matching options from CSV if available
+    if (data.optionA || data.optionB) {
+      for (let i = 0; i < matchingOptions.length; i++) {
+        const letter = matchingOptions[i].label;
+        const optionKey = `option${letter}`;
+        if (data[optionKey]) {
+          matchingOptions[i].text = data[optionKey].trim();
+        }
+      }
+    }
+    
+    return {
+      id: parseInt(data.id) || Math.floor(Math.random() * 10000),
+      question: data.question.trim(),
+      answer: data.answer.trim(),
+      matchingOptions: matchingOptions,
+      topic: data.topic ? data.topic.trim() : 'general',
+      explanation: data.explanation ? data.explanation.trim() : '',
+      type: 'matching'
+    };
   }
   
   /**
    * Log statistics about loaded questions
    */
   function logQuestionStats() {
+    if (typeof QuizData === 'undefined' || typeof QuizData.getQuestionStats !== 'function') {
+      console.error("Unable to log question stats - QuizData module issue");
+      return;
+    }
+    
     const stats = QuizData.getQuestionStats();
     console.log("Question Statistics:", stats);
   }
@@ -160,6 +371,8 @@ const PhysicsQuizApp = (function() {
       // Display next question
       displayQuestion();
     });
+    
+    // Rest of event listeners remain unchanged
     
     // Restart quiz button
     QuizUI.elements.buttons.restart.addEventListener('click', restartQuiz);
@@ -276,6 +489,13 @@ const PhysicsQuizApp = (function() {
     currentMode = selections.mode;
     
     // Filter questions based on selections
+    if (typeof QuizData === 'undefined' || typeof QuizData.filterQuestions !== 'function') {
+      console.error("QuizData module not available for filtering questions");
+      alert("Error: Unable to start quiz. Please refresh the page.");
+      Utils.performance.end('startQuiz');
+      return;
+    }
+    
     currentQuestions = QuizData.filterQuestions(
       selections.questionType,
       selections.topic,
@@ -314,6 +534,8 @@ const PhysicsQuizApp = (function() {
     
     Utils.performance.end('startQuiz');
   }
+  
+  // Other functions remain unchanged
   
   /**
    * Resume a previously saved quiz
@@ -474,7 +696,7 @@ const PhysicsQuizApp = (function() {
     Utils.performance.start('showResults');
     
     // Get all missed questions
-    const missedQuestions = QuizData.getMissedQuestions();
+    const missedQuestions = [];
     
     // Create results object
     const results = {

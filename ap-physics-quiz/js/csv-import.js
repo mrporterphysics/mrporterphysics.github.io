@@ -208,6 +208,1219 @@ const CSVImport = (function() {
       type: 'fill'
     };
   }
+
+  /**
+ * Ordered List Question Type Implementation
+ * 
+ * This file contains functions to:
+ * 1. Process ordered list questions from CSV
+ * 2. Display ordered list questions in the UI
+ * 3. Check ordered list answers
+ */
+
+// Add to CSVImport.js
+function processOrderedListQuestion(data) {
+  // Parse items from CSV (expect JSON string or comma-separated items)
+  let items = [];
+  
+  if (data.items) {
+    try {
+      // Try parsing as JSON first
+      items = JSON.parse(data.items);
+    } catch (error) {
+      // Fall back to comma-separated list
+      items = data.items.split(',').map(item => item.trim());
+    }
+  }
+  
+  // Parse correct order from CSV
+  let correctOrder = [];
+  if (data.answer) {
+    try {
+      // Try parsing as JSON first
+      correctOrder = JSON.parse(data.answer);
+    } catch (error) {
+      // Fall back to comma-separated list of indices or values
+      const orderStrings = data.answer.split(',').map(item => item.trim());
+      // Check if the answers are indices (numbers) or the actual items
+      if (!isNaN(parseInt(orderStrings[0]))) {
+        // Indices
+        correctOrder = orderStrings.map(idx => parseInt(idx));
+      } else {
+        // Item values
+        correctOrder = orderStrings;
+      }
+    }
+  }
+  
+  return {
+    id: parseInt(data.id) || generateId(),
+    question: data.question.trim(),
+    items: items,
+    answer: correctOrder,
+    topic: data.topic ? data.topic.trim() : 'general',
+    explanation: data.explanation ? data.explanation.trim() : '',
+    type: 'ordered-list'
+  };
+}
+
+// Add to quiz-ui.js
+function displayOrderedListQuestion(question) {
+  // Create ordered list container if it doesn't exist
+  let orderedListContainer = document.getElementById('orderedListContainer');
+  
+  if (!orderedListContainer) {
+    orderedListContainer = document.createElement('div');
+    orderedListContainer.id = 'orderedListContainer';
+    orderedListContainer.className = 'ordered-list-container';
+    
+    // Insert after question text
+    elements.displays.question.parentNode.insertBefore(
+      orderedListContainer,
+      elements.displays.question.nextSibling
+    );
+  }
+  
+  // Clear container
+  orderedListContainer.innerHTML = '';
+  
+  // Add instructions
+  const instructions = document.createElement('div');
+  instructions.className = 'ordered-list-instructions';
+  instructions.textContent = 'Arrange the items in the correct order by dragging them up or down:';
+  orderedListContainer.appendChild(instructions);
+  
+  // Create sortable list
+  const listElement = document.createElement('ul');
+  listElement.className = 'sortable-list';
+  listElement.id = 'sortableList';
+  
+  // Shuffle items for display
+  const shuffledItems = Utils.shuffleArray([...question.items]);
+  
+  // Add items to the list
+  shuffledItems.forEach((item, index) => {
+    const listItem = document.createElement('li');
+    listItem.className = 'sortable-item';
+    listItem.setAttribute('data-value', item);
+    listItem.draggable = true;
+    
+    // Add drag handle
+    const dragHandle = document.createElement('div');
+    dragHandle.className = 'drag-handle';
+    dragHandle.innerHTML = '&#8942;&#8942;'; // Unicode for vertical dots
+    listItem.appendChild(dragHandle);
+    
+    // Add item content
+    const itemContent = document.createElement('div');
+    itemContent.className = 'item-content';
+    itemContent.innerHTML = Utils.renderMarkdownWithLaTeX(item);
+    listItem.appendChild(itemContent);
+    
+    // Add to list
+    listElement.appendChild(listItem);
+  });
+  
+  orderedListContainer.appendChild(listElement);
+  
+  // Initialize drag-and-drop functionality
+  initSortableList(listElement);
+  
+  // Show the container
+  orderedListContainer.style.display = 'block';
+}
+
+// Set up drag and drop for ordered lists
+function initSortableList(listElement) {
+  const items = listElement.querySelectorAll('.sortable-item');
+  let draggedItem = null;
+  
+  items.forEach(item => {
+    // Drag start event
+    item.addEventListener('dragstart', function() {
+      draggedItem = this;
+      setTimeout(() => {
+        this.classList.add('dragging');
+      }, 0);
+    });
+    
+    // Drag end event
+    item.addEventListener('dragend', function() {
+      this.classList.remove('dragging');
+      draggedItem = null;
+    });
+    
+    // Drag over event (required for drop to work)
+    item.addEventListener('dragover', function(e) {
+      e.preventDefault();
+    });
+    
+    // Drag enter event
+    item.addEventListener('dragenter', function(e) {
+      e.preventDefault();
+      if (this !== draggedItem) {
+        const rect = this.getBoundingClientRect();
+        const midpoint = (rect.top + rect.bottom) / 2;
+        
+        if (e.clientY < midpoint) {
+          // Insert before
+          listElement.insertBefore(draggedItem, this);
+        } else {
+          // Insert after
+          listElement.insertBefore(draggedItem, this.nextSibling);
+        }
+      }
+    });
+  });
+}
+
+// Add to QuizData.js in checkAnswer function
+function checkOrderedListAnswer(question) {
+  // Get the current order of items from the DOM
+  const listItems = document.querySelectorAll('#sortableList .sortable-item');
+  const userOrder = Array.from(listItems).map(item => item.getAttribute('data-value'));
+  
+  // Simple case: exact match of the entire sequence
+  if (question.answer.length === userOrder.length) {
+    let allCorrect = true;
+    
+    for (let i = 0; i < question.answer.length; i++) {
+      // Check if the answer is an index or the actual item value
+      if (typeof question.answer[i] === 'number') {
+        // It's an index into the items array
+        if (userOrder[i] !== question.items[question.answer[i]]) {
+          allCorrect = false;
+          break;
+        }
+      } else {
+        // It's the actual item value
+        if (userOrder[i] !== question.answer[i]) {
+          allCorrect = false;
+          break;
+        }
+      }
+    }
+    
+    return allCorrect;
+  }
+  
+  return false;
+}
+
+// Add to QuizUI.js in showCorrectAnswer function
+function showOrderedListCorrectAnswer(question) {
+  let answerText = `<strong>Correct Order:</strong><ol>`;
+  
+  // Display the correct order
+  if (typeof question.answer[0] === 'number') {
+    // Answer is indices into items array
+    for (let i = 0; i < question.answer.length; i++) {
+      const index = question.answer[i];
+      answerText += `<li>${Utils.renderMarkdownWithLaTeX(question.items[index])}</li>`;
+    }
+  } else {
+    // Answer is the actual item values
+    for (let i = 0; i < question.answer.length; i++) {
+      answerText += `<li>${Utils.renderMarkdownWithLaTeX(question.answer[i])}</li>`;
+    }
+  }
+  
+  answerText += `</ol>`;
+  
+  // Add explanation if available
+  if (question.explanation) {
+    answerText += `<br><strong>Explanation:</strong> ${Utils.renderMarkdownWithLaTeX(question.explanation)}`;
+  }
+  
+  return answerText;
+}
+
+// Add CSS styles for ordered list questions
+const orderedListStyles = `
+.ordered-list-container {
+  margin: 15px 0;
+  background-color: var(--bg);
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid var(--ui);
+}
+
+.ordered-list-instructions {
+  margin-bottom: 10px;
+  color: var(--tx-2);
+  font-style: italic;
+}
+
+.sortable-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sortable-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-2);
+  border: 1px solid var(--ui);
+  border-radius: 5px;
+  margin-bottom: 8px;
+  padding: 10px;
+  cursor: move;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.sortable-item:hover {
+  background-color: var(--ui);
+}
+
+.sortable-item.dragging {
+  opacity: 0.7;
+  transform: scale(1.02);
+  background-color: var(--ui-2);
+}
+
+.drag-handle {
+  color: var(--tx-3);
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: grab;
+}
+
+.item-content {
+  flex: 1;
+}
+`;
+
+/**
+ * Diagram Labeling Question Type Implementation
+ * 
+ * This file contains functions to:
+ * 1. Process diagram labeling questions from CSV
+ * 2. Display diagram labeling questions in the UI
+ * 3. Check diagram labeling answers
+ */
+
+// Add to CSVImport.js
+function processDiagramLabelingQuestion(data) {
+  // Parse labels from CSV (expect JSON string or comma-separated items)
+  let labels = [];
+  
+  if (data.labels) {
+    try {
+      // Try parsing as JSON first
+      labels = JSON.parse(data.labels);
+    } catch (error) {
+      // Fall back to comma-separated list
+      labels = data.labels.split(',').map(label => label.trim());
+    }
+  }
+  
+  // Parse correct answers from CSV (mapping of label position to label)
+  let correctLabels = {};
+  if (data.answer) {
+    try {
+      // Try parsing as JSON first
+      correctLabels = JSON.parse(data.answer);
+    } catch (error) {
+      // Fall back to parsing as key-value pairs separated by semicolons
+      // Format: "1:Force; 2:Mass; 3:Acceleration"
+      const pairs = data.answer.split(';');
+      pairs.forEach(pair => {
+        const [position, label] = pair.split(':').map(item => item.trim());
+        if (position && label) {
+          correctLabels[position] = label;
+        }
+      });
+    }
+  }
+  
+  return {
+    id: parseInt(data.id) || generateId(),
+    question: data.question.trim(),
+    imageUrl: data.imageUrl || data.image || '',
+    labels: labels,
+    answer: correctLabels,
+    topic: data.topic ? data.topic.trim() : 'general',
+    explanation: data.explanation ? data.explanation.trim() : '',
+    type: 'diagram-labeling'
+  };
+}
+
+// Add to quiz-ui.js
+function displayDiagramLabelingQuestion(question) {
+  // Show image container
+  elements.displays.imageContainer.style.display = 'block';
+  elements.displays.imageContainer.innerHTML = '';
+  
+  // Add loading indicator
+  const loadingIndicator = document.createElement('div');
+  loadingIndicator.className = 'image-loading';
+  loadingIndicator.innerHTML = '<div class="spinner"></div><span>Loading diagram...</span>';
+  elements.displays.imageContainer.appendChild(loadingIndicator);
+  
+  // Create diagram container
+  const diagramContainer = document.createElement('div');
+  diagramContainer.className = 'diagram-container';
+  
+  // Load the image
+  loadImage(question.imageUrl)
+    .then(image => {
+      // Remove loading indicator
+      elements.displays.imageContainer.removeChild(loadingIndicator);
+      
+      // Add the diagram image to the container
+      image.className = 'diagram-image';
+      diagramContainer.appendChild(image);
+      
+      // Create labeling points based on the number of expected labels
+      const labelPositions = Object.keys(question.answer);
+      
+      labelPositions.forEach((position, index) => {
+        // Create label point marker
+        const labelPoint = document.createElement('div');
+        labelPoint.className = 'label-point';
+        labelPoint.setAttribute('data-position', position);
+        
+        // Position markers evenly around the image
+        // This is a simple positioning strategy - in a real app, you'd store coordinates in the CSV
+        const angle = (index / labelPositions.length) * 2 * Math.PI;
+        const radius = 42; // Distance from center in percentage
+        
+        // Calculate position (center + radius * direction)
+        const xPos = 50 + radius * Math.cos(angle);
+        const yPos = 50 + radius * Math.sin(angle);
+        
+        labelPoint.style.left = `${xPos}%`;
+        labelPoint.style.top = `${yPos}%`;
+        
+        // Add label number
+        const labelNum = document.createElement('span');
+        labelNum.className = 'label-number';
+        labelNum.textContent = position;
+        labelPoint.appendChild(labelNum);
+        
+        diagramContainer.appendChild(labelPoint);
+      });
+      
+      // Add diagram container to image container
+      elements.displays.imageContainer.appendChild(diagramContainer);
+      
+      // Create label selection area
+      createLabelSelectionArea(question, labelPositions);
+    })
+    .catch(error => {
+      // Show error message
+      loadingIndicator.innerHTML = '<div class="error-icon">!</div><span>Failed to load diagram</span>';
+      console.error('Error loading diagram image:', error);
+    });
+}
+
+// Create the label selection area for the diagram
+function createLabelSelectionArea(question, labelPositions) {
+  // Create the label selection area
+  const labelingArea = document.createElement('div');
+  labelingArea.className = 'labeling-area';
+  labelingArea.id = 'labelingArea';
+  
+  // Add instructions
+  const instructions = document.createElement('div');
+  instructions.className = 'labeling-instructions';
+  instructions.textContent = 'Match each label with the corresponding position in the diagram:';
+  labelingArea.appendChild(instructions);
+  
+  // Create a selection dropdown for each position
+  labelPositions.forEach(position => {
+    const labelGroup = document.createElement('div');
+    labelGroup.className = 'label-group';
+    
+    // Create label for the position
+    const posLabel = document.createElement('label');
+    posLabel.className = 'position-label';
+    posLabel.textContent = `Position ${position}:`;
+    posLabel.setAttribute('for', `select-pos-${position}`);
+    labelGroup.appendChild(posLabel);
+    
+    // Create select element
+    const select = document.createElement('select');
+    select.className = 'label-select';
+    select.id = `select-pos-${position}`;
+    select.setAttribute('data-position', position);
+    
+    // Add default "Select" option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.textContent = '-- Select label --';
+    select.appendChild(defaultOption);
+    
+    // Add options for each label
+    question.labels.forEach(label => {
+      const option = document.createElement('option');
+      option.value = label;
+      option.textContent = label;
+      select.appendChild(option);
+    });
+    
+    labelGroup.appendChild(select);
+    labelingArea.appendChild(labelGroup);
+  });
+  
+  // Append to image container
+  elements.displays.imageContainer.appendChild(labelingArea);
+}
+
+// Add to QuizData.js in checkAnswer function
+function checkDiagramLabelingAnswer(question) {
+  const selects = document.querySelectorAll('#labelingArea .label-select');
+  let allCorrect = true;
+  
+  // Check each position
+  selects.forEach(select => {
+    const position = select.getAttribute('data-position');
+    const userLabel = select.value;
+    const correctLabel = question.answer[position];
+    
+    if (userLabel !== correctLabel) {
+      allCorrect = false;
+    }
+  });
+  
+  return allCorrect;
+}
+
+// Get the user's answers for diagram labeling
+function getDiagramLabelingUserAnswer() {
+  const selects = document.querySelectorAll('#labelingArea .label-select');
+  const userAnswers = {};
+  
+  selects.forEach(select => {
+    const position = select.getAttribute('data-position');
+    userAnswers[position] = select.value;
+  });
+  
+  return userAnswers;
+}
+
+// Add to QuizUI.js in showCorrectAnswer function
+function showDiagramLabelingCorrectAnswer(question) {
+  let answerText = `<strong>Correct Labels:</strong><ul>`;
+  
+  // Get user's answers
+  const userAnswers = getDiagramLabelingUserAnswer();
+  
+  // Display correct answers for each position
+  Object.entries(question.answer).forEach(([position, label]) => {
+    const userLabel = userAnswers[position];
+    const isCorrect = userLabel === label;
+    
+    answerText += `<li>Position ${position}: <strong>${label}</strong>`;
+    
+    if (!isCorrect) {
+      answerText += ` <span class="incorrect">(You selected: ${userLabel || 'None'})</span>`;
+    } else {
+      answerText += ` <span class="correct">✓</span>`;
+    }
+    
+    answerText += `</li>`;
+  });
+  
+  answerText += `</ul>`;
+  
+  // Add explanation if available
+  if (question.explanation) {
+    answerText += `<br><strong>Explanation:</strong> ${Utils.renderMarkdownWithLaTeX(question.explanation)}`;
+  }
+  
+  return answerText;
+}
+
+// Add highlighting to selected label points
+function initLabelPointHighlighting() {
+  // Add event listeners to select elements
+  const selects = document.querySelectorAll('#labelingArea .label-select');
+  
+  selects.forEach(select => {
+    select.addEventListener('change', function() {
+      const position = this.getAttribute('data-position');
+      const labelPoint = document.querySelector(`.label-point[data-position="${position}"]`);
+      
+      // Remove highlighting from all positions
+      document.querySelectorAll('.label-point').forEach(point => {
+        point.classList.remove('selected', 'has-label');
+      });
+      
+      // Add highlighting to selected position
+      if (this.value) {
+        labelPoint.classList.add('selected', 'has-label');
+        
+        // Create or update label text
+        let labelText = labelPoint.querySelector('.label-text');
+        if (!labelText) {
+          labelText = document.createElement('div');
+          labelText.className = 'label-text';
+          labelPoint.appendChild(labelText);
+        }
+        
+        labelText.textContent = this.value;
+      } else {
+        // Remove label text if no selection
+        const labelText = labelPoint.querySelector('.label-text');
+        if (labelText) {
+          labelPoint.removeChild(labelText);
+        }
+      }
+    });
+  });
+  
+  // Add click handler to label points to focus corresponding select
+  const labelPoints = document.querySelectorAll('.label-point');
+  
+  labelPoints.forEach(point => {
+    point.addEventListener('click', function() {
+      const position = this.getAttribute('data-position');
+      const select = document.querySelector(`#select-pos-${position}`);
+      
+      if (select) {
+        select.focus();
+      }
+    });
+  });
+}
+
+// Add CSS styles for diagram labeling
+const diagramLabelingStyles = `
+.diagram-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto 20px;
+}
+
+.diagram-image {
+  display: block;
+  max-width: 100%;
+  max-height: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.label-point {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.label-point:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background-color: var(--accent-secondary);
+}
+
+.label-point.selected {
+  background-color: var(--accent-success);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.label-number {
+  font-size: 12px;
+}
+
+.label-text {
+  position: absolute;
+  background-color: var(--bg);
+  border: 1px solid var(--ui);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--tx);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.labeling-area {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: var(--bg);
+  border: 1px solid var(--ui);
+  border-radius: 8px;
+}
+
+.labeling-instructions {
+  margin-bottom: 10px;
+  color: var(--tx-2);
+  font-style: italic;
+}
+
+.label-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.position-label {
+  flex: 0 0 100px;
+  font-weight: 500;
+}
+
+.label-select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--ui);
+  border-radius: 4px;
+  background-color: var(--bg);
+  color: var(--tx);
+}
+
+.label-select:focus {
+  border-color: var(--accent-primary);
+  outline: none;
+}
+`;
+
+/**
+ * Drag and Drop Question Type Implementation (Continued)
+ */
+
+function handleDragLeave(e) {
+  // Remove highlight class
+  this.classList.remove('drag-over');
+}
+
+function handleDrop(e) {
+  // Prevent default behavior
+  e.preventDefault();
+  
+  // Remove highlight class
+  this.classList.remove('drag-over');
+  
+  // Get the dragged item
+  const itemId = e.dataTransfer.getData('text/plain');
+  const draggedItem = document.querySelector(`.drag-item[data-item="${itemId}"]`);
+  
+  if (!draggedItem) return;
+  
+  // Get the drop target
+  const dropZone = e.currentTarget;
+  const dropTarget = dropZone.closest('.drop-target');
+  const targetId = dropTarget.getAttribute('data-target');
+  
+  // Remove placeholder if it exists
+  const placeholder = dropZone.querySelector('.drop-placeholder');
+  if (placeholder) {
+    dropZone.removeChild(placeholder);
+  }
+  
+  // Create a copy of the dragged item for the drop zone
+  const itemCopy = document.createElement('div');
+  itemCopy.className = 'dropped-item';
+  itemCopy.setAttribute('data-item', itemId);
+  itemCopy.setAttribute('data-target', targetId);
+  itemCopy.innerHTML = draggedItem.innerHTML;
+  
+  // Add remove button to the copied item
+  const removeBtn = document.createElement('button');
+  removeBtn.className = 'remove-item-btn';
+  removeBtn.innerHTML = '&times;';
+  removeBtn.addEventListener('click', function() {
+    // Remove the item from the drop zone
+    dropZone.removeChild(itemCopy);
+    
+    // Show the original item in the left column
+    draggedItem.style.display = 'block';
+    
+    // Add placeholder if drop zone is empty
+    if (dropZone.children.length === 0) {
+      const newPlaceholder = document.createElement('div');
+      newPlaceholder.className = 'drop-placeholder';
+      newPlaceholder.textContent = 'Drop items here';
+      dropZone.appendChild(newPlaceholder);
+    }
+  });
+  
+  itemCopy.appendChild(removeBtn);
+  
+  // Add the copy to the drop zone
+  dropZone.appendChild(itemCopy);
+  
+  // Hide the original item
+  draggedItem.style.display = 'none';
+}
+
+// Reset all drag items and drop zones
+function resetDragDrop(container) {
+  // Show all original drag items
+  const dragItems = container.querySelectorAll('.drag-item');
+  dragItems.forEach(item => {
+    item.style.display = 'block';
+  });
+  
+  // Clear all drop zones
+  const dropZones = container.querySelectorAll('.drop-zone');
+  dropZones.forEach(zone => {
+    zone.innerHTML = '';
+    
+    // Add placeholder
+    const placeholder = document.createElement('div');
+    placeholder.className = 'drop-placeholder';
+    placeholder.textContent = 'Drop items here';
+    zone.appendChild(placeholder);
+  });
+}
+
+// Add to QuizData.js in checkAnswer function
+function checkDragDropAnswer(question) {
+  const dropTargets = document.querySelectorAll('.drop-target');
+  let allCorrect = true;
+  const userMatches = {};
+  
+  // Go through each drop target and check its items
+  dropTargets.forEach(target => {
+    const targetId = target.getAttribute('data-target');
+    const dropZone = target.querySelector('.drop-zone');
+    const droppedItems = dropZone.querySelectorAll('.dropped-item');
+    
+    // For each dropped item, check if it's in the correct target
+    droppedItems.forEach(item => {
+      const itemId = item.getAttribute('data-item');
+      userMatches[itemId] = targetId;
+      
+      const correctTarget = question.answer[itemId];
+      if (correctTarget !== targetId) {
+        allCorrect = false;
+      }
+    });
+  });
+  
+  // Also check if all required matches are present
+  for (const item in question.answer) {
+    if (!userMatches.hasOwnProperty(item)) {
+      allCorrect = false;
+      break;
+    }
+  }
+  
+  return allCorrect;
+}
+
+// Get the user's answers for drag and drop
+function getDragDropUserAnswer() {
+  const dropTargets = document.querySelectorAll('.drop-target');
+  const userMatches = {};
+  
+  // Go through each drop target and collect its items
+  dropTargets.forEach(target => {
+    const targetId = target.getAttribute('data-target');
+    const dropZone = target.querySelector('.drop-zone');
+    const droppedItems = dropZone.querySelectorAll('.dropped-item');
+    
+    // For each dropped item, record which target it's in
+    droppedItems.forEach(item => {
+      const itemId = item.getAttribute('data-item');
+      userMatches[itemId] = targetId;
+    });
+  });
+  
+  return userMatches;
+}
+
+// Add to QuizUI.js in showCorrectAnswer function
+function showDragDropCorrectAnswer(question) {
+  let answerText = `<strong>Correct Matches:</strong><ul>`;
+  
+  // Get user's answers
+  const userAnswers = getDragDropUserAnswer();
+  
+  // Display correct matches
+  for (const item in question.answer) {
+    const correctTarget = question.answer[item];
+    const userTarget = userAnswers[item] || 'Not matched';
+    const isCorrect = userTarget === correctTarget;
+    
+    answerText += `<li><strong>${item}</strong> → ${correctTarget}`;
+    
+    if (!isCorrect) {
+      answerText += ` <span class="incorrect">(You matched: ${userTarget})</span>`;
+    } else {
+      answerText += ` <span class="correct">✓</span>`;
+    }
+    
+    answerText += `</li>`;
+  }
+  
+  answerText += `</ul>`;
+  
+  // Add explanation if available
+  if (question.explanation) {
+    answerText += `<br><strong>Explanation:</strong> ${Utils.renderMarkdownWithLaTeX(question.explanation)}`;
+  }
+  
+  return answerText;
+}
+
+// Add CSS styles for drag and drop questions
+const dragDropStyles = `
+.drag-drop-container {
+  margin: 15px 0;
+  background-color: var(--bg);
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid var(--ui);
+}
+
+.drag-drop-instructions {
+  margin-bottom: 10px;
+  color: var(--tx-2);
+  font-style: italic;
+}
+
+.drag-drop-columns {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  .drag-drop-columns {
+    flex-direction: column;
+  }
+}
+
+.drag-items-column,
+.drop-targets-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.column-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--ui);
+  color: var(--tx);
+}
+
+.drag-item {
+  background-color: var(--bg-2);
+  border: 1px solid var(--ui);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: move;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.drag-item:hover {
+  background-color: var(--ui);
+}
+
+.drag-item.dragging {
+  opacity: 0.7;
+  background-color: var(--ui-2);
+}
+
+.drop-target {
+  margin-bottom: 15px;
+}
+
+.target-label {
+  background-color: var(--accent-secondary);
+  color: var(--paper);
+  padding: 8px 12px;
+  border-radius: 5px 5px 0 0;
+  font-weight: 500;
+}
+
+.drop-zone {
+  min-height: 80px;
+  border: 2px dashed var(--ui);
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  background-color: var(--bg-2);
+  transition: background-color 0.2s;
+}
+
+.drop-zone.drag-over {
+  background-color: var(--ui);
+  border-color: var(--accent-primary);
+}
+
+.drop-placeholder {
+  color: var(--tx-3);
+  text-align: center;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+.dropped-item {
+  background-color: var(--bg);
+  border: 1px solid var(--ui-2);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: 4px;
+  padding: 8px 30px 8px 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.remove-item-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--tx-3);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.remove-item-btn:hover {
+  color: var(--accent-danger);
+  background-color: var(--ui);
+}
+
+.reset-btn {
+  background-color: var(--ui);
+  color: var(--tx);
+  margin-top: 10px;
+}
+
+.reset-btn:hover {
+  background-color: var(--ui-2);
+}
+`;
+
+// Add to utils.js or app.js to load all the new CSS styles
+function addQuestionTypeStyles() {
+  const styleElement = document.createElement('style');
+  styleElement.textContent = `
+    ${orderedListStyles}
+    ${diagramLabelingStyles}
+    ${dragDropStyles}
+    ${numericalStyles || ''}
+  `;
+  document.head.appendChild(styleElement);
+}
+
+// Call this function during app initialization
+function initializeAdvancedQuestionTypes() {
+  // Add CSS styles
+  addQuestionTypeStyles();
+  
+  // Register new question types with QuizData
+  if (typeof QuizData !== 'undefined') {
+    // Update checkAnswer function to handle new question types
+    const originalCheckAnswer = QuizData.checkAnswer;
+    QuizData.checkAnswer = function(question, userAnswer) {
+      if (!question) return false;
+      
+      switch (question.type) {
+        case 'ordered-list':
+          return checkOrderedListAnswer(question);
+        case 'diagram-labeling':
+          return checkDiagramLabelingAnswer(question);
+        case 'drag-drop':
+          return checkDragDropAnswer(question);
+        case 'numerical':
+          return checkNumericalAnswer(question, userAnswer);
+        default:
+          // Use the original check function for standard question types
+          return originalCheckAnswer(question, userAnswer);
+      }
+    };
+  }
+  
+  // Update QuizUI to display new question types
+  if (typeof QuizUI !== 'undefined') {
+    // Update displayQuestion function to handle new question types
+    const originalDisplayQuestion = QuizUI.displayQuestion;
+    QuizUI.displayQuestion = function(question, index, total) {
+      if (!question) return false;
+      
+      // Update question number and total
+      if (typeof index !== 'undefined' && typeof total !== 'undefined') {
+        elements.displays.currentQuestion.textContent = index + 1;
+        elements.displays.totalQuestions.textContent = total;
+      }
+      
+      // Display question text
+      elements.displays.question.innerHTML = Utils.renderMarkdownWithLaTeX(question.question);
+      
+      // Reset UI elements
+      resetQuizUI();
+      
+      // Display based on question type
+      switch (question.type) {
+        case 'ordered-list':
+          displayOrderedListQuestion(question);
+          break;
+        case 'diagram-labeling':
+          displayDiagramLabelingQuestion(question);
+          break;
+        case 'drag-drop':
+          displayDragDropQuestion(question);
+          break;
+        case 'numerical':
+          displayNumericalQuestion(question);
+          break;
+        default:
+          // Use the original display function for standard question types
+          return originalDisplayQuestion(question, index, total);
+      }
+      
+      return true;
+    };
+    
+    // Update showCorrectAnswer function
+    const originalShowCorrectAnswer = QuizUI.showCorrectAnswer;
+    QuizUI.showCorrectAnswer = function(question) {
+      if (!question) return false;
+      
+      let answerText = '';
+      
+      switch (question.type) {
+        case 'ordered-list':
+          answerText = showOrderedListCorrectAnswer(question);
+          break;
+        case 'diagram-labeling':
+          answerText = showDiagramLabelingCorrectAnswer(question);
+          break;
+        case 'drag-drop':
+          answerText = showDragDropCorrectAnswer(question);
+          break;
+        case 'numerical':
+          answerText = showNumericalCorrectAnswer(question);
+          break;
+        default:
+          // Use the original function for standard question types
+          return originalShowCorrectAnswer(question);
+      }
+      
+      // Display the answer
+      elements.displays.answerReveal.innerHTML = answerText;
+      elements.displays.answerReveal.style.display = 'block';
+      
+      return true;
+    };
+    
+    // Update getUserAnswer function
+    const originalGetUserAnswer = QuizUI.getUserAnswer;
+    QuizUI.getUserAnswer = function(questionType) {
+      switch (questionType) {
+        case 'ordered-list':
+          // For ordered list, get the current order from the DOM
+          const listItems = document.querySelectorAll('#sortableList .sortable-item');
+          return Array.from(listItems).map(item => item.getAttribute('data-value'));
+        case 'diagram-labeling':
+          return getDiagramLabelingUserAnswer();
+        case 'drag-drop':
+          return getDragDropUserAnswer();
+        case 'numerical':
+          return elements.inputs.answerInput.value.trim();
+        default:
+          // Use the original function for standard question types
+          return originalGetUserAnswer(questionType);
+      }
+    };
+    
+    // Helper function to reset UI elements
+    function resetQuizUI() {
+      // Hide standard input elements
+      elements.inputs.tfOptions.style.display = 'none';
+      elements.inputs.answerInput.style.display = 'none';
+      elements.inputs.answerInput.setAttribute('type', 'text');
+      elements.inputs.mcOptions.style.display = 'none';
+      elements.inputs.mcOptions.innerHTML = '';
+      
+      // Hide any existing special containers
+      const containers = [
+        document.getElementById('orderedListContainer'),
+        document.getElementById('dragDropContainer'),
+        document.getElementById('labelingArea')
+      ];
+      
+      containers.forEach(container => {
+        if (container) container.style.display = 'none';
+      });
+      
+      // Clear feedback and answer reveal
+      elements.displays.feedback.textContent = '';
+      elements.displays.feedback.className = 'quiz-feedback';
+      elements.displays.answerReveal.style.display = 'none';
+      
+      // Clear image container if it's not needed
+      const imgContainer = elements.displays.imageContainer;
+      if (imgContainer) {
+        imgContainer.innerHTML = '';
+        imgContainer.style.display = 'none';
+      }
+      
+      // Hide units display if it exists
+      const unitsDisplay = document.getElementById('unitsDisplay');
+      if (unitsDisplay) {
+        unitsDisplay.style.display = 'none';
+      }
+    }
+  }
+  
+  // Update CSV import to handle new question types
+  if (typeof CSVImport !== 'undefined') {
+    const originalParseCSV = CSVImport.parseCSV;
+    CSVImport.parseCSV = function(csvText) {
+      // Get base result from original function
+      const questions = originalParseCSV(csvText);
+      
+      // Add new question types to the container if not already present
+      if (!questions.ordered) questions.ordered = [];
+      if (!questions.diagram) questions.diagram = [];
+      if (!questions.dragdrop) questions.dragdrop = [];
+      if (!questions.numerical) questions.numerical = [];
+      
+      // Process each line for new question types
+      const lines = csvText.split('\n').filter(line => line.trim());
+      const headers = lines[0].split(',').map(header => header.trim());
+      
+      for (let i = 1; i < lines.length; i++) {
+        const values = parseCSVLine(lines[i]);
+        if (values.length < 3) continue;
+        
+        const questionData = {};
+        headers.forEach((header, index) => {
+          questionData[header] = values[index] || '';
+        });
+        
+        // Determine question type
+        const type = questionData.type ? questionData.type.toLowerCase().trim() : '';
+        
+        // Process based on type
+        if (type === 'ordered-list' || type === 'ordered') {
+          questions.ordered.push(processOrderedListQuestion(questionData));
+        } else if (type === 'diagram-labeling' || type === 'diagram') {
+          questions.diagram.push(processDiagramLabelingQuestion(questionData));
+        } else if (type === 'drag-drop' || type === 'dragdrop') {
+          questions.dragdrop.push(processDragDropQuestion(questionData));
+        } else if (type === 'numerical') {
+          questions.numerical.push(processNumericalQuestion(questionData));
+        }
+      }
+      
+      return questions;
+    };
+  }
+}
   
   /**
    * Process a Multiple Choice question

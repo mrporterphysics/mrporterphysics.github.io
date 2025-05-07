@@ -326,6 +326,735 @@ const QuizUI = (function() {
     
     Utils.performance.end('displayImageQuestion');
   }
+
+  /**
+ * Drag and Drop Question Type Implementation
+ * 
+ * This file contains functions to:
+ * 1. Process drag and drop questions from CSV
+ * 2. Display drag and drop questions in the UI
+ * 3. Check drag and drop answers
+ */
+
+// Add to CSVImport.js
+function processDragDropQuestion(data) {
+  // Parse items from CSV (expect JSON strings for items and targets)
+  let items = [];
+  let targets = [];
+  let correctMatches = {};
+  
+  // Process drag items
+  if (data.items) {
+    try {
+      // Try parsing as JSON first
+      items = JSON.parse(data.items);
+    } catch (error) {
+      // Fall back to comma-separated list
+      items = data.items.split(',').map(item => item.trim());
+    }
+  }
+  
+  // Process drop targets
+  if (data.targets) {
+    try {
+      // Try parsing as JSON first
+      targets = JSON.parse(data.targets);
+    } catch (error) {
+      // Fall back to comma-separated list
+      targets = data.targets.split(',').map(target => target.trim());
+    }
+  }
+  
+  // Process correct matches
+  if (data.answer) {
+    try {
+      // Try parsing as JSON first (preferred format)
+      correctMatches = JSON.parse(data.answer);
+    } catch (error) {
+      // Fall back to parsing as item:target pairs separated by semicolons
+      // Format: "Force:Newton; Energy:Joule; Power:Watt"
+      const pairs = data.answer.split(';');
+      pairs.forEach(pair => {
+        const [item, target] = pair.split(':').map(part => part.trim());
+        if (item && target) {
+          correctMatches[item] = target;
+        }
+      });
+    }
+  }
+  
+  return {
+    id: parseInt(data.id) || generateId(),
+    question: data.question.trim(),
+    items: items,
+    targets: targets,
+    answer: correctMatches,
+    topic: data.topic ? data.topic.trim() : 'general',
+    explanation: data.explanation ? data.explanation.trim() : '',
+    type: 'drag-drop'
+  };
+}
+
+// Add to quiz-ui.js
+function displayDragDropQuestion(question) {
+  // Create drag and drop container if it doesn't exist
+  let dragDropContainer = document.getElementById('dragDropContainer');
+  
+  if (!dragDropContainer) {
+    dragDropContainer = document.createElement('div');
+    dragDropContainer.id = 'dragDropContainer';
+    dragDropContainer.className = 'drag-drop-container';
+    
+    // Insert after question text
+    elements.displays.question.parentNode.insertBefore(
+      dragDropContainer,
+      elements.displays.question.nextSibling
+    );
+  }
+  
+  // Clear container
+  dragDropContainer.innerHTML = '';
+  
+  // Add instructions
+  const instructions = document.createElement('div');
+  instructions.className = 'drag-drop-instructions';
+  instructions.textContent = 'Drag each item from the left column and drop it to its matching category in the right column:';
+  dragDropContainer.appendChild(instructions);
+  
+  // Create two-column layout
+  const columnsContainer = document.createElement('div');
+  columnsContainer.className = 'drag-drop-columns';
+  
+  // Left column - draggable items
+  const leftColumn = document.createElement('div');
+  leftColumn.className = 'drag-items-column';
+  
+  // Add column header
+  const leftHeader = document.createElement('div');
+  leftHeader.className = 'column-header';
+  leftHeader.textContent = 'Items';
+  leftColumn.appendChild(leftHeader);
+  
+  // Create draggable items
+  const shuffledItems = Utils.shuffleArray([...question.items]);
+  
+  shuffledItems.forEach(item => {
+    const dragItem = document.createElement('div');
+    dragItem.className = 'drag-item';
+    dragItem.setAttribute('draggable', 'true');
+    dragItem.setAttribute('data-item', item);
+    dragItem.innerHTML = Utils.renderMarkdownWithLaTeX(item);
+    
+    // Add drag event listeners
+    dragItem.addEventListener('dragstart', handleDragStart);
+    dragItem.addEventListener('dragend', handleDragEnd);
+    
+    leftColumn.appendChild(dragItem);
+  });
+  
+  // Right column - drop targets
+  const rightColumn = document.createElement('div');
+  rightColumn.className = 'drop-targets-column';
+  
+  // Add column header
+  const rightHeader = document.createElement('div');
+  rightHeader.className = 'column-header';
+  rightHeader.textContent = 'Categories';
+  rightColumn.appendChild(rightHeader);
+  
+  // Create drop targets
+  question.targets.forEach(target => {
+    const dropTarget = document.createElement('div');
+    dropTarget.className = 'drop-target';
+    dropTarget.setAttribute('data-target', target);
+    
+    // Create target label
+    const targetLabel = document.createElement('div');
+    targetLabel.className = 'target-label';
+    targetLabel.innerHTML = Utils.renderMarkdownWithLaTeX(target);
+    dropTarget.appendChild(targetLabel);
+    
+    // Create drop zone
+    const dropZone = document.createElement('div');
+    dropZone.className = 'drop-zone';
+    dropZone.innerHTML = '<div class="drop-placeholder">Drop items here</div>';
+    
+    // Add drop event listeners
+    dropZone.addEventListener('dragover', handleDragOver);
+    dropZone.addEventListener('dragenter', handleDragEnter);
+    dropZone.addEventListener('dragleave', handleDragLeave);
+    dropZone.addEventListener('drop', handleDrop);
+    
+    dropTarget.appendChild(dropZone);
+    rightColumn.appendChild(dropTarget);
+  });
+  
+  // Add columns to container
+  columnsContainer.appendChild(leftColumn);
+  columnsContainer.appendChild(rightColumn);
+  dragDropContainer.appendChild(columnsContainer);
+  
+  // Reset button
+  const resetButton = document.createElement('button');
+  resetButton.className = 'btn reset-btn';
+  resetButton.textContent = 'Reset Matches';
+  resetButton.addEventListener('click', () => {
+    // Reset all drag items and drop zones
+    resetDragDrop(dragDropContainer);
+  });
+  
+  dragDropContainer.appendChild(resetButton);
+  
+  // Show the container
+  dragDropContainer.style.display = 'block';
+}
+
+// Drag and drop event handlers
+function handleDragStart(e) {
+  // Set the data to be dragged
+  e.dataTransfer.setData('text/plain', e.target.getAttribute('data-item'));
+  e.dataTransfer.effectAllowed = 'move';
+  
+  // Add dragging class
+  this.classList.add('dragging');
+}
+
+function handleDragEnd(e) {
+  // Remove dragging class
+  this.classList.remove('dragging');
+}
+
+function handleDragOver(e) {
+  // Prevent default to allow drop
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+}
+
+function handleDragEnter(e) {
+  // Add highlight class
+  this.classList.add('drag-over');
+}
+
+function handleDragLeave(e) {
+  // Remove highlight class
+  this.classList.remove('drag-over');
+  
+  // Get the dragged item
+  const itemId = e.dataTransfer.getData('text/plain');
+  const draggedItem = document.querySelector(`.drag-item[data-item="${itemId}"]`);
+  
+  if (!draggedItem) return;
+  
+  // Get the drop target
+  const dropZone = e.currentTarget;
+  const dropTarget = dropZone.closest('.drop-target');
+  const targetId = dropTarget.getAttribute('data-target');
+  
+  // Remove placeholder if it exists
+  const placeholder = dropZone.querySelector('.drop-placeholder');
+  if (placeholder) {
+    dropZone.removeChild(placeholder);
+  }
+  
+  // Create a copy of the dragged item for the drop zone
+  const itemCopy = document.createElement('div');
+  itemCopy.className = 'dropped-item';
+  itemCopy.setAttribute('data-item', itemId);
+  itemCopy.setAttribute('data-target', targetId);
+  itemCopy.innerHTML = draggedItem.innerHTML;
+  
+  // Add remove button to the copied item
+  const removeBtn = document.createElement('button');
+  removeBtn.className = 'remove-item-btn';
+  removeBtn.innerHTML = '&times;';
+  removeBtn.addEventListener('click', function() {
+    // Remove the item from the drop zone
+    dropZone.removeChild(itemCopy);
+    
+    // Show the original item in the left column
+    draggedItem.style.display = 'block';
+    
+    // Add placeholder if drop zone is empty
+    if (dropZone.children.length === 0) {
+      const newPlaceholder = document.createElement('div');
+      newPlaceholder.className = 'drop-placeholder';
+      newPlaceholder.textContent = 'Drop items here';
+      dropZone.appendChild(newPlaceholder);
+    }
+  });
+  
+  itemCopy.appendChild(removeBtn);
+  
+  // Add the copy to the drop zone
+  dropZone.appendChild(itemCopy);
+  
+  // Hide the original item
+  draggedItem.style.display = 'none';
+}
+
+// Reset all drag items and drop zones
+function resetDragDrop(container) {
+  // Show all original drag items
+  const dragItems = container.querySelectorAll('.drag-item');
+  dragItems.forEach(item => {
+    item.style.display = 'block';
+  });
+  
+  // Clear all drop zones
+  const dropZones = container.querySelectorAll('.drop-zone');
+  dropZones.forEach(zone => {
+    zone.innerHTML = '';
+    
+    // Add placeholder
+    const placeholder = document.createElement('div');
+    placeholder.className = 'drop-placeholder';
+    placeholder.textContent = 'Drop items here';
+    zone.appendChild(placeholder);
+  });
+}
+
+// Add to QuizData.js in checkAnswer function
+function checkDragDropAnswer(question) {
+  const dropTargets = document.querySelectorAll('.drop-target');
+  let allCorrect = true;
+  const userMatches = {};
+  
+  // Go through each drop target and check its items
+  dropTargets.forEach(target => {
+    const targetId = target.getAttribute('data-target');
+    const dropZone = target.querySelector('.drop-zone');
+    const droppedItems = dropZone.querySelectorAll('.dropped-item');
+    
+    // For each dropped item, check if it's in the correct target
+    droppedItems.forEach(item => {
+      const itemId = item.getAttribute('data-item');
+      userMatches[itemId] = targetId;
+      
+      const correctTarget = question.answer[itemId];
+      if (correctTarget !== targetId) {
+        allCorrect = false;
+      }
+    });
+  });
+  
+  // Also check if all required matches are present
+  for (const item in question.answer) {
+    if (!userMatches.hasOwnProperty(item)) {
+      allCorrect = false;
+      break;
+    }
+  }
+  
+  return allCorrect;
+}
+
+// Get the user's answers for drag and drop
+function getDragDropUserAnswer() {
+  const dropTargets = document.querySelectorAll('.drop-target');
+  const userMatches = {};
+  
+  // Go through each drop target and collect its items
+  dropTargets.forEach(target => {
+    const targetId = target.getAttribute('data-target');
+    const dropZone = target.querySelector('.drop-zone');
+    const droppedItems = dropZone.querySelectorAll('.dropped-item');
+    
+    // For each dropped item, record which target it's in
+    droppedItems.forEach(item => {
+      const itemId = item.getAttribute('data-item');
+      userMatches[itemId] = targetId;
+    });
+  });
+  
+  return userMatches;
+}
+
+// Add to QuizUI.js in showCorrectAnswer function
+function showDragDropCorrectAnswer(question) {
+  let answerText = `<strong>Correct Matches:</strong><ul>`;
+  
+  // Get user's answers
+  const userAnswers = getDragDropUserAnswer();
+  
+  // Display correct matches
+  for (const item in question.answer) {
+    const correctTarget = question.answer[item];
+    const userTarget = userAnswers[item] || 'Not matched';
+    const isCorrect = userTarget === correctTarget;
+    
+    answerText += `<li><strong>${item}</strong> → ${correctTarget}`;
+    
+    if (!isCorrect) {
+      answerText += ` <span class="incorrect">(You matched: ${userTarget})</span>`;
+    } else {
+      answerText += ` <span class="correct">✓</span>`;
+    }
+    
+    answerText += `</li>`;
+  }
+  
+  answerText += `</ul>`;
+  
+  // Add explanation if available
+  if (question.explanation) {
+    answerText += `<br><strong>Explanation:</strong> ${Utils.renderMarkdownWithLaTeX(question.explanation)}`;
+  }
+  
+  return answerText;
+}
+
+// Add CSS styles for drag and drop questions
+const dragDropStyles = `
+.drag-drop-container {
+  margin: 15px 0;
+  background-color: var(--bg);
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid var(--ui);
+}
+
+.drag-drop-instructions {
+  margin-bottom: 10px;
+  color: var(--tx-2);
+  font-style: italic;
+}
+
+.drag-drop-columns {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  .drag-drop-columns {
+    flex-direction: column;
+  }
+}
+
+.drag-items-column,
+.drop-targets-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.column-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--ui);
+  color: var(--tx);
+}
+
+.drag-item {
+  background-color: var(--bg-2);
+  border: 1px solid var(--ui);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: move;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.drag-item:hover {
+  background-color: var(--ui);
+}
+
+.drag-item.dragging {
+  opacity: 0.7;
+  background-color: var(--ui-2);
+}
+
+.drop-target {
+  margin-bottom: 15px;
+}
+
+.target-label {
+  background-color: var(--accent-secondary);
+  color: var(--paper);
+  padding: 8px 12px;
+  border-radius: 5px 5px 0 0;
+  font-weight: 500;
+}
+
+.drop-zone {
+  min-height: 80px;
+  border: 2px dashed var(--ui);
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  background-color: var(--bg-2);
+  transition: background-color 0.2s;
+}
+
+.drop-zone.drag-over {
+  background-color: var(--ui);
+  border-color: var(--accent-primary);
+}
+
+.drop-placeholder {
+  color: var(--tx-3);
+  text-align: center;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+.dropped-item {
+  background-color: var(--bg);
+  border: 1px solid var(--ui-2);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: 4px;
+  padding: 8px 30px 8px 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.remove-item-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--tx-3);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.remove-item-btn:hover {
+  color: var(--accent-danger);
+  background-color: var(--ui);
+}
+
+.reset-btn {
+  background-color: var(--ui);
+  color: var(--tx);
+  margin-top: 10px;
+}
+
+.reset-btn:hover {
+  background-color: var(--ui-2);
+}
+`;
+
+// Add to utils.js or app.js to load all the new CSS styles
+function addQuestionTypeStyles() {
+  const styleElement = document.createElement('style');
+  styleElement.textContent = `
+    ${orderedListStyles}
+    ${diagramLabelingStyles}
+    ${dragDropStyles}
+    ${numericalStyles || ''}
+  `;
+  document.head.appendChild(styleElement);
+}
+
+// Call this function during app initialization
+function initializeAdvancedQuestionTypes() {
+  // Add CSS styles
+  addQuestionTypeStyles();
+  
+  // Register new question types with QuizData
+  if (typeof QuizData !== 'undefined') {
+    // Update checkAnswer function to handle new question types
+    const originalCheckAnswer = QuizData.checkAnswer;
+    QuizData.checkAnswer = function(question, userAnswer) {
+      if (!question) return false;
+      
+      switch (question.type) {
+        case 'ordered-list':
+          return checkOrderedListAnswer(question);
+        case 'diagram-labeling':
+          return checkDiagramLabelingAnswer(question);
+        case 'drag-drop':
+          return checkDragDropAnswer(question);
+        case 'numerical':
+          return checkNumericalAnswer(question, userAnswer);
+        default:
+          // Use the original check function for standard question types
+          return originalCheckAnswer(question, userAnswer);
+      }
+    };
+  }
+  
+  // Update QuizUI to display new question types
+  if (typeof QuizUI !== 'undefined') {
+    // Update displayQuestion function to handle new question types
+    const originalDisplayQuestion = QuizUI.displayQuestion;
+    QuizUI.displayQuestion = function(question, index, total) {
+      if (!question) return false;
+      
+      // Update question number and total
+      if (typeof index !== 'undefined' && typeof total !== 'undefined') {
+        elements.displays.currentQuestion.textContent = index + 1;
+        elements.displays.totalQuestions.textContent = total;
+      }
+      
+      // Display question text
+      elements.displays.question.innerHTML = Utils.renderMarkdownWithLaTeX(question.question);
+      
+      // Reset UI elements
+      resetQuizUI();
+      
+      // Display based on question type
+      switch (question.type) {
+        case 'ordered-list':
+          displayOrderedListQuestion(question);
+          break;
+        case 'diagram-labeling':
+          displayDiagramLabelingQuestion(question);
+          break;
+        case 'drag-drop':
+          displayDragDropQuestion(question);
+          break;
+        case 'numerical':
+          displayNumericalQuestion(question);
+          break;
+        default:
+          // Use the original display function for standard question types
+          return originalDisplayQuestion(question, index, total);
+      }
+      
+      return true;
+    };
+    
+    // Update showCorrectAnswer function
+    const originalShowCorrectAnswer = QuizUI.showCorrectAnswer;
+    QuizUI.showCorrectAnswer = function(question) {
+      if (!question) return false;
+      
+      let answerText = '';
+      
+      switch (question.type) {
+        case 'ordered-list':
+          answerText = showOrderedListCorrectAnswer(question);
+          break;
+        case 'diagram-labeling':
+          answerText = showDiagramLabelingCorrectAnswer(question);
+          break;
+        case 'drag-drop':
+          answerText = showDragDropCorrectAnswer(question);
+          break;
+        case 'numerical':
+          answerText = showNumericalCorrectAnswer(question);
+          break;
+        default:
+          // Use the original function for standard question types
+          return originalShowCorrectAnswer(question);
+      }
+      
+      // Display the answer
+      elements.displays.answerReveal.innerHTML = answerText;
+      elements.displays.answerReveal.style.display = 'block';
+      
+      return true;
+    };
+    
+    // Update getUserAnswer function
+    const originalGetUserAnswer = QuizUI.getUserAnswer;
+    QuizUI.getUserAnswer = function(questionType) {
+      switch (questionType) {
+        case 'ordered-list':
+          // For ordered list, get the current order from the DOM
+          const listItems = document.querySelectorAll('#sortableList .sortable-item');
+          return Array.from(listItems).map(item => item.getAttribute('data-value'));
+        case 'diagram-labeling':
+          return getDiagramLabelingUserAnswer();
+        case 'drag-drop':
+          return getDragDropUserAnswer();
+        case 'numerical':
+          return elements.inputs.answerInput.value.trim();
+        default:
+          // Use the original function for standard question types
+          return originalGetUserAnswer(questionType);
+      }
+    };
+    
+    // Helper function to reset UI elements
+    function resetQuizUI() {
+      // Hide standard input elements
+      elements.inputs.tfOptions.style.display = 'none';
+      elements.inputs.answerInput.style.display = 'none';
+      elements.inputs.answerInput.setAttribute('type', 'text');
+      elements.inputs.mcOptions.style.display = 'none';
+      elements.inputs.mcOptions.innerHTML = '';
+      
+      // Hide any existing special containers
+      const containers = [
+        document.getElementById('orderedListContainer'),
+        document.getElementById('dragDropContainer'),
+        document.getElementById('labelingArea')
+      ];
+      
+      containers.forEach(container => {
+        if (container) container.style.display = 'none';
+      });
+      
+      // Clear feedback and answer reveal
+      elements.displays.feedback.textContent = '';
+      elements.displays.feedback.className = 'quiz-feedback';
+      elements.displays.answerReveal.style.display = 'none';
+      
+      // Clear image container if it's not needed
+      const imgContainer = elements.displays.imageContainer;
+      if (imgContainer) {
+        imgContainer.innerHTML = '';
+        imgContainer.style.display = 'none';
+      }
+      
+      // Hide units display if it exists
+      const unitsDisplay = document.getElementById('unitsDisplay');
+      if (unitsDisplay) {
+        unitsDisplay.style.display = 'none';
+      }
+    }
+  }
+  
+  // Update CSV import to handle new question types
+  if (typeof CSVImport !== 'undefined') {
+    const originalParseCSV = CSVImport.parseCSV;
+    CSVImport.parseCSV = function(csvText) {
+      // Get base result from original function
+      const questions = originalParseCSV(csvText);
+      
+      // Add new question types to the container if not already present
+      if (!questions.ordered) questions.ordered = [];
+      if (!questions.diagram) questions.diagram = [];
+      if (!questions.dragdrop) questions.dragdrop = [];
+      if (!questions.numerical) questions.numerical = [];
+      
+      // Process each line for new question types
+      const lines = csvText.split('\n').filter(line => line.trim());
+      const headers = lines[0].split(',').map(header => header.trim());
+      
+      for (let i = 1; i < lines.length; i++) {
+        const values = parseCSVLine(lines[i]);
+        if (values.length < 3) continue;
+        
+        const questionData = {};
+        headers.forEach((header, index) => {
+          questionData[header] = values[index] || '';
+        });
+        
+        // Determine question type
+        const type = questionData.type ? questionData.type.toLowerCase().trim() : '';
+        
+        // Process based on type
+        if (type === 'ordered-list' || type === 'ordered') {
+          questions.ordered.push(processOrderedListQuestion(questionData));
+        } else if (type === 'diagram-labeling' || type === 'diagram') {
+          questions.diagram.push(processDiagramLabelingQuestion(questionData));
+        } else if (type === 'drag-drop' || type === 'dragdrop') {
+          questions.dragdrop.push(processDragDropQuestion(questionData));
+        } else if (type === 'numerical') {
+          questions.numerical.push(processNumericalQuestion(questionData));
+        }
+      }
+      
+      return questions;
+    };
+  }
+}
   
   /**
    * Load an image with caching
