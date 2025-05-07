@@ -15,6 +15,294 @@ math: mathjax
 
 ---
 
+# 2025.05.07 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. AP FRQ Question Tips & Information
+2. Test Prep of your choice
+    - AP Classroom - Practice or Videos
+    - AP Workbook - Any (Review pages, or other units)
+    - Study Fact Sheet 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prep for Exam_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.06 **AP Physics**
+
+##### **❓ of the 📅**: What was your childhood dream job? Is it still your dream job?  
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on: Continuity Equation, Bernoulli's Equation, Torricelli's Theorem
+2. AP Workbook:
+    - 8.I, 8.O, 8.J, 8.M (in this order)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.05 **AP Physics**
+
+##### **❓ of the 📅**: What is one song you know all of the words to?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Conservation of Energy in Fluid Flow
+2. Notes 
+3. AP Workbook
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Fluid Dynamics_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.01 **AP Physics**
+
+##### **❓ of the 📅**: What color are you wearing to prom?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Workbook while Pre-Prom Assembly
+2. Go Over Workbook Questions
+3. AP Classroom - Practice Exam 2 FRQ Question 2
+    - Complete and then grade another group's
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Buoyant Force_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.04.30 **AP Physics** Do Now
+
+![bg fit right](image-36.png)
+
+A valve to the left of point $A$ closes off a pipe. The section of the pipe shown is full fo water, but the water is not flowing. The density of water is $1000 \text{kg/m}^3$. 
+
+**What is the absolute pressure at Point $A$?**
+
+---
+
+<!---_footer: <br>--->
+
+<style scoped>section { font-size: 23px; }</style>
+
+<div class='columns'>
+<div>
+
+The experimental diving bell shown is lowered from rest at the ocean's surface and reaches a maximum depth of 80 m. Initially it accelerates downward at a rate of $0.10 \, \text{m/s}^2$ until it reaches a speed of $2.0 \, \text{m/s}$, which then remains constant. During the descent, the pressure inside the bell remains constant at 1 atmosphere. The top of the bell has a cross-sectional area $A = 9.0 \, \text{m}^2$. The density of seawater is $1025 \, \text{kg/m}^3$.
+
+(a) Calculate the total time it takes the bell to reach the maximum depth of 80 m.
+(b) Calculate the weight of the water on the top of the bell when it is at the maximum depth.
+
+</div>
+ 
+<div>
+
+![center w:300px](image-37.png)
+
+
+(c) Calculate the absolute pressure on the top of the bell at the maximum depth.
+On the top of the bell there is a circular hatch of radius $r = 0.25 \, \text{m}$.
+(d) Calculate the minimum force necessary to lift open the hatch of the bell at the maximum depth.
+(e) What could you do to reduce the force necessary to open the hatch at this depth? Justify your answer.
+
+</div>
+</div>
+
+
+
+(a) Calculate the total time it takes the bell to reach the maximum depth of 80 m.
+(b) Calculate the weight of the water on the top of the bell when it is at the maximum depth.
+(c) Calculate the absolute pressure on the top of the bell at the maximum depth.
+On the top of the bell there is a circular hatch of radius $r = 0.25 \, \text{m}$.
+(d) Calculate the minimum force necessary to lift open the hatch of the bell at the maximum depth.
+(e) What could you do to reduce the force necessary to open the hatch at this depth? Justify your answer.
+
+---
+
+# 2025.04.30 **AP Physics**
+
+##### **❓ of the 📅**: If you were ruler of your own country what would be the first law you would introduce?  
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do now
+2. Pascal and Archimedes Principles
+3. Workbook 8.E, F & G
+    - Finish for Homework
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Buoyant Force_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+
+---
+
+# 2025.04.29 **AP Physics**
+
+##### **❓ of the 📅**: What superstition do you think is ridiculous?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pressure Notes
+3. AP Workbook 8.C & 8.D
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Pressure_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.25 **AP Physics**
+
+##### **❓ of the 📅**: If you could teleport inside any game, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pressure vs. Depth Pivot
+2. Pressure Notes
+3. AP Workbook 8.C & 8.D
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Develop mathematical model for pressure_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.24 **AP Physics**
+
+##### **❓ of the 📅**: How many pairs of shoes do you own?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Density Workbooks
+2. 🎵 Under Pressure 🎵 Notes
+3. Pressure vs. Depth Lab - Pivot 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.04.23 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?

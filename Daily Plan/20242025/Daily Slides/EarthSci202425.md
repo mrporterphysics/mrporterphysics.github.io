@@ -16,6 +16,299 @@ math: mathjax
 
 ---
 
+# 2025.05.06 **Earth Science**
+
+##### **❓ of the 📅**: What was your dream job? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Radiation Notes
+2. Insolation Notes
+3. Insolation Practice Sheet    
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Insolation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.05 **Earth Science**
+
+##### **❓ of the 📅**: What is one song you know all of the words to? 🎤
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Practice:
+	1. 55-57 and 60-65 (last class)
+	2. 66-71 and 75-78
+2. Notes - Radiant Energy
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Radiant Energy_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.02 **Earth Science**
+
+##### **❓ of the 📅**: What would be on your ultimate ice cream sundae? 🍨
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Temperature and Thermal Energy Practice
+2. Regents Short Answer Practice
+    - 55-57
+    - 60-65
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practicd with Thermal Energy_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.01 **Earth Science**
+
+##### **❓ of the 📅**: If everyone in your family was a zoo animal, which animal would they all be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Questions 35-50
+2. Finish Notes
+3. Thermal Energy Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Thermal Energy_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.30 **Earth Science**
+
+##### **❓ of the 📅**: If you were ruler of your own country what would be the first law you would introduce?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Earth Science Review Questions: #29-35
+2. Finish Energy Notes
+3. Temperature & Energy Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.04.29 **Earth Science**
+
+##### **❓ of the 📅**: What superstition do you think is ridiculous?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. June 2024 Regent Questions 1-19
+	1. Answer **all questions** including the ones you don't know
+2. Energy Notes: **8QMLE**
+3. Energy Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.28 **Earth Science**
+
+##### **❓ of the 📅**: What is the coolest animal?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Earth's Rotating Sky Lab
+    - Homework after today's class
+2. Can start a test if you finish early -> or do something quietly not on your phone...
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish lab_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025-04-25 **Earth Science**
+
+##### **❓ of the 📅**: If you could teleport inside any game, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Earth's Rotating Sky
+2. The Final Start Simulation Lab (I pinky promise) - Motions of the Sun
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the motion of the sun and stars_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.24 **Earth Science**
+
+##### **❓ of the 📅**: How many pairs of shoes do you own?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Coordinates Lab
+2. Start Rotating Sky Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Map Star Trails with the Rotating Sky_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.04.23 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Coordinates and the Seasons Lab
+2. Seasons Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Seasons Lab_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.04.22 **Earth Science**
 
 ##### **❓ of the 📅**: If you were featured on the local news, what would you most likely be on there for?

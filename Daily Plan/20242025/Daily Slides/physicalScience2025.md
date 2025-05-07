@@ -16,6 +16,155 @@ math: mathjax
 
 ---
 
+# 2025.05.06 **Physical Science**
+
+##### **❓ of the 📅**: What was your childhood dream job? Is it still your dream job?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Balanced vs. Unbalanced Forces - Pivot
+2. Inertia Definition and Discussion
+3. Inertia Think Sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Inertia_
+
+🥅 _Define conditions for acceleraiton and constant velocity_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.02 **Physical Science**
+
+##### **❓ of the 📅**: What would be on your ultimate ice cream sundae? 🍨
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Slides on Motion Graphs
+2. Pivot - Motion Graphs: Constant Acceleration
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model constant acceleration motion with graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.30 **Physical Science**
+
+##### **❓ of the 📅**: If you were ruler of your own country what would be the first law you would introduce?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Section 6 of Lab Together
+2. Describing Motion with Diagrams & Numerically
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Motion Graphically and Numerically_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.28 **Physical Science**
+
+##### **❓ of the 📅**: What animal do you think is the coolest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Make VT Graphs on Pivot - Finisih Pivot
+    - Section 5: On your own, call me over for help
+    - Section 6: Together
+3. Describing Motion with Diagrams & Numerically
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Motion Graphically and Numerically_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.24 **Physical Science**
+
+##### **❓ of the 📅**: How many pairs of shoes do you own?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Advanced Introduction to Acceleration
+    - Complete through **Part 3** and 🛑
+    - Discuss
+    - Linearizing 
+    - Complete Pivot
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn how to model constant acceleration with position vs. time graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.04.22 **Physical Science**
 
 ##### **❓ of the 📅**: How was your break?

@@ -14,6 +14,226 @@ math: mathjax
 
 ---
 
+# 2025.05.07 **Regents Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Circuits Quiz
+2. Wave Basics Review
+3. Wave Basics Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define wave basic characteristics_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.05 **Regents Physics**
+
+##### **❓ of the 📅**: What is one song you know all of the words to? 🎤
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Prep - Questions # 22-35
+  - Guessing on questions: 23, 27, 31, 32, 35
+2. Waves Notes
+3. Wave Basics Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Introduce Waves_
+
+### 📆 Upcoming
+
+- Circuit Quiz **Wednesday**
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.02 **Regents Physics**
+
+##### **❓ of the 📅**: What would be on your ultimate ice cream sundae?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Parallel Circuits Simulation
+2. Parallel Circuits worksheet
+3. Prom 💃🤵
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Parallel Circuits_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.01 **Regents Physics**
+
+##### **❓ of the 📅**: What's your prom fit?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Prep Questions #1-21
+2. [Circuit Builder](https://www.physicsclassroom.com/Physics-Interactives/Electric-Circuits/Circuit-Builder/Circuit-Builder-Interactive):
+	1. Series Circuits
+	2. Parallel Circuits
+3. Notes - Parallel Circuits
+4. Parallel Circuits Worksheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Parallel Circuits_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.29 **Regents Physics**
+
+##### **❓ of the 📅**: What superstition do you think is ridiculous?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Series Circuits Notes
+    - VIRP Tables
+2. Series Circuits Practice: pages 9-14
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Series Circuits_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.04.28 **Regents Physics**
+
+##### **❓ of the 📅**: What animal do you think is the coolest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Ohm's Law Pages: 6-8
+2. Kirchoff's Laws & Series Circuits 
+3. Packet Pages 9-14
+    - Periodic Check-ins
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Series Circuits using Ohm's Law_
+
+### 📆 Upcoming
+
+- Ohm's Law & Electrical Resitance Quiz
+  - Calc, I, R, V, using $R  V/I$, $I = q/t$ and $R = \rho L / A$
+
+</div>
+</div>
+
+---
+
+# 2025.04.25 **Regents Physics**
+
+##### **❓ of the 📅**: If you could teleport inside any game, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Voltage-Current-Resistance Lab
+  - Analyze Graph -> Write Equation
+  - Finish Summary
+  - Discuss as a class
+2. Ohm's Law
+3. Packet pages 6-8
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model relationship between current, reistance, and voltage_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.04.23 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?

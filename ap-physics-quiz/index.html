@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AP Physics 1 Quiz</title>
-  <!-- CSS files -->
-  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Add CSS files - Using Flexoki color scheme -->
+  <link rel="stylesheet" href="css/styles-flexoki.css">
   <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Add KaTeX CSS for LaTeX rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@4.2.5/marked.min.js"></script>
 </head>
 <body>
   <h1>AP Physics 1 Quiz</h1>
@@ -24,6 +31,8 @@
         <button class="question-type-btn" data-type="tf" type="button">True/False Questions</button>
         <button class="question-type-btn" data-type="fill" type="button">Fill in the Blank</button>
         <button class="question-type-btn" data-type="mc" type="button">Multiple Choice</button>
+        <button class="question-type-btn" data-type="matching" type="button">Matching Questions</button>
+        <button class="question-type-btn" data-type="image" type="button">Image-Based Questions</button>
       </div>
       
       <div class="topic-select">
@@ -54,7 +63,16 @@
         <p><strong>Review Missed:</strong> Focus on questions you previously answered incorrectly</p>
       </div>
       
+      <!-- Resume button will be inserted here if there's a saved quiz -->
       <button class="btn" id="startQuiz" type="button">Start Quiz</button>
+      
+      <!-- User Statistics Section -->
+      <div class="user-stats" id="userStats" style="display: none;">
+        <h3 class="stats-title">Your Progress</h3>
+        <div class="stats-grid" id="statsGrid">
+          <!-- Will be populated dynamically -->
+        </div>
+      </div>
     </div>
     
     <!-- Quiz Panel -->
@@ -72,17 +90,20 @@
       <div class="quiz-area">
         <div class="quiz-question" id="questionText">Loading question...</div>
         
+        <!-- Image Container (will be shown for image questions) -->
+        <div id="imageContainer" class="image-container" style="display: none;"></div>
+        
         <!-- True/False Options -->
-        <div id="tfOptions" class="multiple-choice" style="display: none;">
-          <div class="choice-item" data-answer="true">True</div>
-          <div class="choice-item" data-answer="false">False</div>
+        <div id="tfOptions" class="multiple-choice" style="display: none;" role="radiogroup" aria-label="True or False options">
+          <div class="choice-item" data-answer="true" role="radio" tabindex="0" aria-checked="false">True</div>
+          <div class="choice-item" data-answer="false" role="radio" tabindex="0" aria-checked="false">False</div>
         </div>
         
         <!-- Fill in the blank input -->
-        <input type="text" class="quiz-input" id="answerInput" placeholder="Your answer..." style="display: none;">
+        <input type="text" class="quiz-input" id="answerInput" placeholder="Your answer..." style="display: none;" aria-label="Enter your answer">
         
         <!-- Multiple choice options -->
-        <div id="mcOptions" class="multiple-choice" style="display: none;">
+        <div id="mcOptions" class="multiple-choice" style="display: none;" role="radiogroup" aria-label="Multiple choice options">
           <!-- Will be populated dynamically -->
         </div>
         
@@ -119,7 +140,7 @@
     <div id="resultsPanel" style="display: none;">
       <h2>Quiz Results</h2>
       <div class="results" id="resultsContent">
-        You answered <span id="finalCorrect">0</span> out of <span id="finalTotal">0</span> questions correctly.
+        <p>You answered <span id="finalCorrect">0</span> out of <span id="finalTotal">0</span> questions correctly.</p>
       </div>
       
       <div id="missedQuestionsSection" style="margin-top: 20px; display: none;">
@@ -133,12 +154,101 @@
         <button class="btn" id="newQuiz" type="button">New Quiz</button>
       </div>
     </div>
+    
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌓</span>
+      </button>
+    </div>
   </div>
 
-  <!-- JavaScript files -->
+  <!-- JavaScript libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@4.2.5/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Application JavaScript files -->
   <script src="js/utils.js"></script>
+  <script src="js/quiz-storage.js"></script>
+  <script src="js/question-parser.js"></script>
   <script src="js/quiz-data.js"></script>
   <script src="js/quiz-ui.js"></script>
   <script src="js/app.js"></script>
+  
+  <!-- Initialize theme toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Initialize theme toggle
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.body.setAttribute('data-theme', savedTheme);
+        }
+        
+        themeToggle.addEventListener('click', function() {
+          const currentTheme = document.body.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.body.setAttribute('data-theme', newTheme);
+          
+          // Save theme preference
+          localStorage.setItem('theme', newTheme);
+          
+          // Also save in QuizStorage if available
+          if (typeof QuizStorage !== 'undefined') {
+            const settings = QuizStorage.loadSettings();
+            settings.theme = newTheme;
+            QuizStorage.saveSettings(settings);
+          }
+        });
+      }
+      
+      // Display user stats if available
+      if (typeof QuizStorage !== 'undefined') {
+        const statsSection = document.getElementById('userStats');
+        const statsGrid = document.getElementById('statsGrid');
+        
+        if (statsSection && statsGrid) {
+          const stats = QuizStorage.loadStats();
+          
+          // Only show stats if the user has completed at least one quiz
+          if (stats && stats.totalQuizzesCompleted > 0) {
+            // Create stat cards
+            const accuracy = stats.totalAnswered > 0 ? 
+              Math.round((stats.totalCorrect / stats.totalAnswered) * 100) : 0;
+            
+            // Add overall stats
+            addStatCard(statsGrid, stats.totalCorrect || 0, 'Correct Answers');
+            addStatCard(statsGrid, stats.totalAnswered || 0, 'Questions Attempted');
+            addStatCard(statsGrid, accuracy + '%', 'Overall Accuracy');
+            addStatCard(statsGrid, stats.totalQuizzesCompleted || 0, 'Quizzes Completed');
+            
+            // Show the stats section
+            statsSection.style.display = 'block';
+          }
+        }
+      }
+      
+      // Helper function to add stat card
+      function addStatCard(container, value, label) {
+        const card = document.createElement('div');
+        card.className = 'stat-card';
+        
+        const valueElem = document.createElement('div');
+        valueElem.className = 'stat-value';
+        valueElem.textContent = value;
+        
+        const labelElem = document.createElement('div');
+        labelElem.className = 'stat-label';
+        labelElem.textContent = label;
+        
+        card.appendChild(valueElem);
+        card.appendChild(labelElem);
+        container.appendChild(card);
+      }
+    });
+  </script>
 </body>
 </html>

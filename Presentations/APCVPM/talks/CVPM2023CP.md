@@ -472,7 +472,21 @@ $$ \bar{a} = \frac{v_f - v_i}{t} = \frac{50 \text{ m/s} - 0 \text{ m/s}}{5 \text
 
 ---
 
-# VT Graphs 
+
+# Area of VT Graph 
+
+- Area "under the curve" represents the displacement (*change in position*) of the object. 
+- Areas can be negative because that represents the direction
+
+$$ \Delta x = \bar{v}{t} $$
+
+- Add multiple segments together, including the sign to get the total displacement of a piecewise motion
+
+![bg fit right:40%](image.png)
+
+---
+
+### VT Graphs 
 
 1. Draw the velocity vs. time graph for an object whose motion produced the position vs. time graphs shown below.
 2. For many graphs, both the ***slope*** and ***area*** between the line and the horizontal axis have physical meanings. What does the ***slope*** of the position vs. time graph tell you about the motion of an object?
@@ -481,7 +495,7 @@ $$ \bar{a} = \frac{v_f - v_i}{t} = \frac{50 \text{ m/s} - 0 \text{ m/s}}{5 \text
 
 ---
 
-# VT Graphs 
+### VT Graphs 
 
 ![bg right fit](../figures/xtvtgraphs.png)
 
@@ -497,25 +511,14 @@ $$ \bar{a} = \frac{v_f - v_i}{t} = \frac{50 \text{ m/s} - 0 \text{ m/s}}{5 \text
 
 ---
 
-# VT Graphs 
+## VT Graphs 
 
 ![bg right fit](../figures/xtvtgraphs.png)
  
 4. Looking at the velocity vs. time graphs, determine the units for a square of area on the graph. 
 5. What does the "*area under the velocity-time graph*" tell you about the motion of the object?
 
----
 
-# Area of VT Graph 
-
-- Area "under the curve" represents the displacement (*change in position*) of the object. 
-- Areas can be negative because that represents the direction
-
-$$ \Delta x = \bar{v}{t} $$
-
-- Add multiple segments together, including the sign to get the total displacement of a piecewise motion
-
-![bg fit right](image.png)
 
 ---
 
@@ -529,6 +532,3 @@ $$ \Delta x = \bar{v}{t} $$
 
 ---
 
-# Up Next... <!--fit--->
-
-# [Changing Velocities...](../../../Presentations/APCAPM/talks/CAPM2023.html) <!--fit--->

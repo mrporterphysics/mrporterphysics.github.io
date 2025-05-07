@@ -6,9 +6,10 @@
 const QuizData = (function() {
   // Private data
   let quizData = {
-    tf: [],   // True/False questions
-    fill: [], // Fill in the blank questions
-    mc: []    // Multiple choice questions
+    tf: [],      // True/False questions
+    fill: [],    // Fill in the blank questions
+    mc: [],      // Multiple choice questions
+    matching: [] // Matching questions - Added support
   };
   
   let allQuestions = [];
@@ -22,12 +23,7 @@ const QuizData = (function() {
       { id: 2, question: "True or False: Average velocity is displacement divided by the time interval over which that displacement occurred.", answer: "true", topic: "kinematics", explanation: "Average velocity is defined as the total displacement divided by the time interval." },
       { id: 3, question: "True or False: On a position-time graph, a positive slope indicates the object is moving away from the detector.", answer: "true", topic: "kinematics", explanation: "A positive slope on a position-time graph means the position is increasing with time, indicating movement away from the reference point." },
       { id: 4, question: "True or False: On a velocity-time graph, the slope represents the object's acceleration.", answer: "true", topic: "kinematics", explanation: "The slope of a velocity-time graph gives the rate of change of velocity, which is acceleration." },
-      { id: 5, question: "True or False: The acceleration of an object in free fall is -10 m/s².", answer: "true", topic: "kinematics", explanation: "On Earth, the acceleration due to gravity is approximately 10 m/s² downward, often written as -10 m/s² when downward is negative." },
-      { id: 6, question: "True or False: Mechanical energy is conserved when there is no net work done by external forces.", answer: "true", topic: "energy", explanation: "Mechanical energy (kinetic + potential) is conserved when no non-conservative forces do work." },
-      { id: 7, question: "True or False: Power is defined as the amount of energy used in one second.", answer: "true", topic: "energy", explanation: "Power is the rate of energy transfer, measured in energy per unit time (joules per second, or watts)." },
-      { id: 8, question: "True or False: In an elastic collision, mechanical energy is conserved.", answer: "true", topic: "momentum", explanation: "By definition, an elastic collision conserves both momentum and mechanical energy." },
-      { id: 9, question: "True or False: The period of a pendulum depends on the mass of the bob.", answer: "false", topic: "shm", explanation: "The period of a pendulum depends only on its length and the gravitational field strength, not on the mass." },
-      { id: 10, question: "True or False: Density is defined as volume divided by mass.", answer: "false", topic: "fluids", explanation: "Density is defined as mass divided by volume (ρ = m/V)." }
+      { id: 5, question: "True or False: The acceleration of an object in free fall is -10 m/s².", answer: "true", topic: "kinematics", explanation: "On Earth, the acceleration due to gravity is approximately 10 m/s² downward, often written as -10 m/s² when downward is negative." }
     ],
     
     // Fill in the Blank Questions
@@ -79,32 +75,38 @@ const QuizData = (function() {
         answer: "B",
         topic: "forces",
         explanation: "Newton's Second Law states that force equals mass times acceleration (F = ma)."
-      },
-      { 
-        id: 19, 
-        question: "What is the formula for kinetic energy?",
-        options: [
-          { label: "A", text: "KE = mgh" },
-          { label: "B", text: "KE = mv" },
-          { label: "C", text: "KE = ½mv²" },
-          { label: "D", text: "KE = ½kx²" }
+      }
+    ],
+    
+    // Matching Questions - Added basic support
+    matching: [
+      {
+        id: 151,
+        question: "Displacement",
+        answer: "A",
+        matchingOptions: [
+          { label: "A", text: "How far an object ends up from its initial position" },
+          { label: "B", text: "The total path length traveled by an object" },
+          { label: "C", text: "The time it takes to move from one position to another" },
+          { label: "D", text: "The average speed of an object" },
+          { label: "E", text: "The direction of motion" }
         ],
-        answer: "C",
-        topic: "energy",
-        explanation: "Kinetic energy is calculated as KE = ½mv², where m is mass and v is velocity."
+        topic: "kinematics",
+        explanation: "Displacement is the straight-line distance and direction from initial to final position."
       },
-      { 
-        id: 20, 
-        question: "In a simple pendulum, what does the period depend on?",
-        options: [
-          { label: "A", text: "The mass of the bob" },
-          { label: "B", text: "The amplitude of oscillation" },
-          { label: "C", text: "The length of the pendulum" },
-          { label: "D", text: "All of the above" }
+      {
+        id: 152,
+        question: "Average velocity",
+        answer: "B",
+        matchingOptions: [
+          { label: "A", text: "Total distance divided by total time" },
+          { label: "B", text: "Displacement divided by time interval" },
+          { label: "C", text: "Speed at a specific moment" },
+          { label: "D", text: "How quickly an object accelerates" },
+          { label: "E", text: "The slope of a distance-time graph" }
         ],
-        answer: "C",
-        topic: "shm",
-        explanation: "For small oscillations, the period of a pendulum depends only on its length and the gravitational field strength, not on mass or amplitude."
+        topic: "kinematics",
+        explanation: "Average velocity equals total displacement divided by total time."
       }
     ]
   };
@@ -140,32 +142,24 @@ const QuizData = (function() {
         answer: "C",
         topic: "kinematics",
         explanation: "In projectile motion (assuming no air resistance), there is no horizontal force, so horizontal acceleration is 0. The only force is gravity, which causes a vertical acceleration of approximately 10 m/s² downward."
-      },
-      { 
-        id: 202, 
-        question: "In Newton's Second Law, if you double the force applied to an object, what happens to its acceleration?",
-        options: [
-          { label: "A", text: "It doubles" },
-          { label: "B", text: "It halves" },
-          { label: "C", text: "It quadruples" },
-          { label: "D", text: "It remains the same" }
-        ],
+      }
+    ],
+    
+    // Additional matching questions
+    matching: [
+      {
+        id: 251,
+        question: "Normal force",
         answer: "A",
-        topic: "forces",
-        explanation: "According to Newton's Second Law (F = ma), if mass remains constant, acceleration is directly proportional to force. So doubling the force doubles the acceleration."
-      },
-      { 
-        id: 203, 
-        question: "According to Newton's Third Law, when you push on a wall:",
-        options: [
-          { label: "A", text: "The wall doesn't push back" },
-          { label: "B", text: "The wall pushes back with less force" },
-          { label: "C", text: "The wall pushes back with more force" },
-          { label: "D", text: "The wall pushes back with equal force" }
+        matchingOptions: [
+          { label: "A", text: "Force perpendicular to a surface" },
+          { label: "B", text: "Force parallel to a surface that opposes motion" },
+          { label: "C", text: "Force that attracts objects with mass" },
+          { label: "D", text: "Force transmitted by a string or rope" },
+          { label: "E", text: "Sum of all forces acting on an object" }
         ],
-        answer: "D",
         topic: "forces",
-        explanation: "Newton's Third Law states that for every action, there is an equal and opposite reaction. So when you push on a wall, the wall pushes back with equal force in the opposite direction."
+        explanation: "Normal force acts perpendicular to the contact surface between objects."
       }
     ]
   };
@@ -176,7 +170,8 @@ const QuizData = (function() {
     quizData = {
       tf: [...basicQuestions.tf],
       fill: [...basicQuestions.fill],
-      mc: [...basicQuestions.mc]
+      mc: [...basicQuestions.mc],
+      matching: [...basicQuestions.matching] // Include matching questions
     };
     
     // Add type property to all questions for easier handling
@@ -190,7 +185,8 @@ const QuizData = (function() {
     allQuestions = [
       ...quizData.tf,
       ...quizData.fill,
-      ...quizData.mc
+      ...quizData.mc,
+      ...quizData.matching // Include matching questions
     ];
     
     Utils.debug('Basic questions initialized', { count: allQuestions.length });
@@ -210,7 +206,8 @@ const QuizData = (function() {
     allQuestions = [
       ...quizData.tf,
       ...quizData.fill,
-      ...quizData.mc
+      ...quizData.mc,
+      ...quizData.matching // Include matching questions
     ];
     
     Utils.debug('Extended questions loaded', { count: allQuestions.length });
@@ -293,6 +290,10 @@ const QuizData = (function() {
       case 'mc':
         isCorrect = userAnswer === question.answer;
         break;
+        
+      case 'matching':
+        isCorrect = userAnswer === question.answer;
+        break;
     }
     
     Utils.debug('Checking answer', { 
@@ -305,14 +306,143 @@ const QuizData = (function() {
     return isCorrect;
   }
   
-  // Loading the full 200 question set (placeholder for future implementation)
+  /**
+   * Load the full question set from the CSV file
+   * @return {Promise<number>} Promise resolving to the number of questions loaded
+   */
   function loadFullQuestionSet() {
-    Utils.debug('Loading full question set (placeholder)');
-    // Here you would implement code to load your full 200 question set
-    // This could be from a JSON file, fetch API call, or parsing your paste.txt
+    Utils.debug('Loading full question set from CSV');
     
-    // For now, we'll just load the extended questions
-    return loadExtendedQuestions();
+    const csvFileName = 'ap-physics-questions-latex.csv'; // Set your CSV file name here
+    const csvFilePath = `data/${csvFileName}`; // Assuming it's in a 'data' folder
+    
+    // Check if we're running on a server or local file
+    const isOnline = window.location.protocol.includes('http');
+    
+    if (isOnline) {
+      // Online mode - fetch the file
+      return fetch(csvFilePath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to load CSV file: ${response.status} ${response.statusText}`);
+          }
+          return response.text();
+        })
+        .then(text => {
+          console.log(`Successfully loaded CSV file: ${csvFileName}`);
+          const questions = CSVImport.parseCSV(text);
+          return processImportedQuestions(questions);
+        })
+        .catch(error => {
+          console.error('Error loading questions:', error);
+          // Fallback to extended questions if loading fails
+          alert(`Failed to load questions from ${csvFileName}. Using built-in questions instead.`);
+          return loadExtendedQuestions();
+        });
+    } else {
+      // Local file mode - show file upload or paste options
+      return new Promise((resolve) => {
+        // Create container for import options
+        const importContainer = document.createElement('div');
+        importContainer.className = 'import-options';
+        importContainer.style.margin = '20px 0';
+        
+        // Add a heading
+        const heading = document.createElement('h3');
+        heading.textContent = 'Import Questions';
+        importContainer.appendChild(heading);
+        
+        // Create a paragraph explaining options
+        const explanation = document.createElement('p');
+        explanation.textContent = 'When running locally, you need to import questions manually. Choose one of the options below:';
+        importContainer.appendChild(explanation);
+        
+        // Function to handle imported questions
+        const handleImportedQuestions = (questions) => {
+          const result = processImportedQuestions(questions);
+          
+          // Clean up UI
+          importContainer.innerHTML = `<p>Successfully imported ${Object.values(questions).flat().length} questions!</p>`;
+          setTimeout(() => {
+            importContainer.remove();
+          }, 3000);
+          
+          resolve(result);
+        };
+        
+        // Create file upload option
+        const fileImport = CSVImport.createFileInput(handleImportedQuestions);
+        fileImport.style.margin = '10px 0';
+        importContainer.appendChild(fileImport);
+        
+        // Create text area for direct paste
+        const textImport = CSVImport.createTextArea(handleImportedQuestions);
+        textImport.style.margin = '20px 0';
+        importContainer.appendChild(textImport);
+        
+        // Add option for extended questions
+        const orText = document.createElement('p');
+        orText.textContent = 'Or use our built-in question set:';
+        orText.style.marginTop = '20px';
+        importContainer.appendChild(orText);
+        
+        const extendedButton = document.createElement('button');
+        extendedButton.textContent = 'Use Built-in Questions';
+        extendedButton.className = 'btn';
+        extendedButton.addEventListener('click', () => {
+          resolve(loadExtendedQuestions());
+          importContainer.remove();
+        });
+        importContainer.appendChild(extendedButton);
+        
+        // Add to setup panel
+        const setupPanel = document.getElementById('setupPanel');
+        setupPanel.appendChild(importContainer);
+      });
+    }
+  }
+  
+  /**
+   * Process imported questions and add them to the quiz data
+   * @param {Object} questions - Questions object from CSV import
+   * @return {number} The total number of questions processed
+   */
+  function processImportedQuestions(questions) {
+    // Reset question sets first
+    quizData = {
+      tf: [],
+      fill: [],
+      mc: [],
+      matching: []
+    };
+    
+    // Add the parsed questions to quizData
+    for (const type in questions) {
+      if (questions[type] && questions[type].length > 0) {
+        questions[type].forEach(question => {
+          question.type = type;
+          quizData[type].push(question);
+        });
+      }
+    }
+    
+    // Update all questions array
+    allQuestions = [
+      ...quizData.tf,
+      ...quizData.fill,
+      ...quizData.mc,
+      ...quizData.matching
+    ];
+    
+    // Log information about loaded questions
+    Utils.debug('CSV questions loaded', { count: allQuestions.length });
+    console.log(`Loaded ${allQuestions.length} questions from CSV:`);
+    console.log(`- True/False: ${quizData.tf.length}`);
+    console.log(`- Fill in the Blank: ${quizData.fill.length}`);
+    console.log(`- Multiple Choice: ${quizData.mc.length}`);
+    console.log(`- Matching: ${quizData.matching.length}`);
+    
+    return allQuestions.length;
   }
   
   // Count questions by type and topic
@@ -322,7 +452,8 @@ const QuizData = (function() {
       byType: {
         tf: quizData.tf.length,
         fill: quizData.fill.length,
-        mc: quizData.mc.length
+        mc: quizData.mc.length,
+        matching: quizData.matching.length
       },
       byTopic: {}
     };

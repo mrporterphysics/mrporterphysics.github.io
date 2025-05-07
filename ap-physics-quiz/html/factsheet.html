@@ -4,317 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AP Physics 1 Quiz</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #f5f7fa;
-      color: #333;
-    }
-    
-    h1 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .container {
-      background-color: white;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    .control-panel {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-    
-    .quiz-area {
-      margin-bottom: 20px;
-    }
-    
-    .quiz-question {
-      font-size: 1.2em;
-      margin-bottom: 15px;
-      font-weight: 500;
-      line-height: 1.4;
-    }
-    
-    .quiz-input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 1em;
-      margin-bottom: 10px;
-    }
-    
-    .quiz-feedback {
-      font-weight: bold;
-      min-height: 24px;
-      margin-bottom: 15px;
-    }
-    
-    .correct {
-      color: #27ae60;
-    }
-    
-    .incorrect {
-      color: #e74c3c;
-    }
-    
-    .btn {
-      background-color: #3498db;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s;
-      margin: 5px 0;
-    }
-    
-    .btn:hover {
-      background-color: #2980b9;
-    }
-    
-    .btn:disabled {
-      background-color: #95a5a6;
-      cursor: not-allowed;
-    }
-    
-    .results {
-      margin-top: 20px;
-      padding: 15px;
-      border-radius: 5px;
-      background-color: #f1f8ff;
-    }
-    
-    .progress-bar {
-      width: 100%;
-      background-color: #ecf0f1;
-      border-radius: 5px;
-      margin: 10px 0;
-      height: 20px;
-      overflow: hidden;
-    }
-    
-    .progress-fill {
-      height: 100%;
-      background-color: #3498db;
-      transition: width 0.5s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 0.8em;
-    }
-    
-    .setup-panel {
-      margin-bottom: 20px;
-    }
-    
-    .setup-instructions {
-      margin-bottom: 15px;
-      color: #7f8c8d;
-    }
-    
-    .mode-select {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
-      flex-wrap: wrap;
-    }
-    
-    .mode-option {
-      flex: 1;
-      padding: 10px;
-      text-align: center;
-      background-color: #ecf0f1;
-      border-radius: 5px;
-      cursor: pointer;
-      min-width: 100px;
-    }
-    
-    .mode-option.active {
-      background-color: #3498db;
-      color: white;
-    }
-    
-    .stats {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
-    
-    .stat-box {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-      background-color: #f1f8ff;
-      border-radius: 5px;
-      margin: 0 5px 5px 0;
-      min-width: 100px;
-    }
-    
-    .stat-value {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #2c3e50;
-    }
-    
-    .hint-text {
-      color: #7f8c8d;
-      font-style: italic;
-      margin-top: 5px;
-    }
-    
-    #showAnswer {
-      background-color: #e67e22;
-      margin-right: 10px;
-    }
-    
-    #showAnswer:hover {
-      background-color: #d35400;
-    }
-    
-    .answer-reveal {
-      padding: 10px;
-      background-color: #fffbeb;
-      border-left: 3px solid #f1c40f;
-      margin: 10px 0;
-      display: none;
-    }
-    
-    .topic-select {
-      margin-bottom: 15px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    
-    .topic-btn {
-      background-color: #ecf0f1;
-      color: #333;
-      border: none;
-      padding: 8px 12px;
-      margin: 0 5px 5px 0;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9em;
-      transition: background-color 0.3s;
-    }
-    
-    .topic-btn:hover {
-      background-color: #bdc3c7;
-    }
-    
-    .topic-btn.active {
-      background-color: #3498db;
-      color: white;
-    }
-
-    .question-type-select {
-      margin-bottom: 15px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .question-type-btn {
-      background-color: #ecf0f1;
-      color: #333;
-      border: none;
-      padding: 8px 12px;
-      margin: 0 5px 5px 0;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9em;
-      transition: background-color 0.3s;
-    }
-
-    .question-type-btn:hover {
-      background-color: #bdc3c7;
-    }
-
-    .question-type-btn.active {
-      background-color: #3498db;
-      color: white;
-    }
-    
-    .multiple-choice {
-      margin-top: 15px;
-    }
-    
-    .choice-item {
-      display: block;
-      padding: 8px 10px;
-      margin-bottom: 8px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    
-    .choice-item:hover {
-      background-color: #f5f7fa;
-    }
-    
-    .choice-item.selected {
-      background-color: #e1f0fa;
-      border-color: #3498db;
-    }
-    
-    .mc-text {
-      margin-left: 10px;
-    }
-    
-    .missed-question {
-      margin-bottom: 20px;
-      padding: 15px;
-      background-color: #f8f9fa;
-      border-radius: 5px;
-      border-left: 3px solid #e74c3c;
-    }
-    
-    .missed-answer {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    
-    .missed-explanation {
-      margin-top: 5px;
-      font-style: italic;
-      color: #555;
-    }
-
-    @media (max-width: 600px) {
-      .control-panel {
-        flex-direction: column;
-        gap: 10px;
-      }
-      
-      .stats {
-        flex-direction: column;
-        gap: 10px;
-      }
-      
-      .stat-box {
-        margin: 0;
-        margin-bottom: 5px;
-      }
-    }
-  </style>
+  
+  <!-- Add CSS files - Using Flexoki color scheme -->
+  <link rel="stylesheet" href="css/styles-flexoki.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Add KaTeX CSS for LaTeX rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@4.2.5/marked.min.js"></script>
 </head>
 <body>
   <h1>AP Physics 1 Quiz</h1>
   
   <div class="container">
+    <!-- Setup Panel -->
     <div class="setup-panel" id="setupPanel">
       <h2>Physics Review Questions</h2>
       <p class="setup-instructions">Test your knowledge with AP Physics 1 review questions. Choose a question type and topic to begin!</p>
@@ -326,6 +31,8 @@
         <button class="question-type-btn" data-type="tf" type="button">True/False Questions</button>
         <button class="question-type-btn" data-type="fill" type="button">Fill in the Blank</button>
         <button class="question-type-btn" data-type="mc" type="button">Multiple Choice</button>
+        <button class="question-type-btn" data-type="matching" type="button">Matching Questions</button>
+        <button class="question-type-btn" data-type="image" type="button">Image-Based Questions</button>
       </div>
       
       <div class="topic-select">
@@ -350,17 +57,42 @@
         <div class="mode-option" data-mode="review">Review Missed</div>
       </div>
       
+      <!-- New Timer Settings -->
+      <div class="timer-settings">
+        <h3>Timer:</h3>
+        <div style="width: 100%; margin-bottom: 10px;"></div>
+        <div class="timer-option active" data-timer="off">No Timer</div>
+        <div class="timer-option" data-timer="stopwatch">Stopwatch</div>
+        <div class="timer-option" data-timer="countdown">5 Minute Countdown</div>
+      </div>
+      
       <div class="setup-instructions">
         <p><strong>Test Mode:</strong> Answer questions without seeing answers until the end</p>
         <p><strong>Learning Mode:</strong> See correct answers immediately after each response</p>
         <p><strong>Review Missed:</strong> Focus on questions you previously answered incorrectly</p>
       </div>
       
+      <!-- Import CSV Button -->
+      <div class="csv-import-container" id="csvImportContainer">
+        <!-- Will be populated dynamically -->
+      </div>
+      
+      <!-- Resume button will be inserted here if there's a saved quiz -->
       <button class="btn" id="startQuiz" type="button">Start Quiz</button>
+      
+      <!-- User Statistics Section -->
+      <div class="user-stats" id="userStats" style="display: none;">
+        <h3 class="stats-title">Your Progress</h3>
+        <div class="stats-grid" id="statsGrid">
+          <!-- Will be populated dynamically -->
+        </div>
+      </div>
     </div>
     
+    <!-- Quiz Panel -->
     <div id="quizPanel" style="display: none;">
       <div class="control-panel">
+        <!-- Timer will be inserted here -->
         <div>
           Question <span id="currentQuestion">1</span>/<span id="totalQuestions">10</span>
         </div>
@@ -373,17 +105,20 @@
       <div class="quiz-area">
         <div class="quiz-question" id="questionText">Loading question...</div>
         
+        <!-- Image Container (will be shown for image questions) -->
+        <div id="imageContainer" class="image-container" style="display: none;"></div>
+        
         <!-- True/False Options -->
-        <div id="tfOptions" class="multiple-choice" style="display: none;">
-          <div class="choice-item" data-answer="true">True</div>
-          <div class="choice-item" data-answer="false">False</div>
+        <div id="tfOptions" class="multiple-choice" style="display: none;" role="radiogroup" aria-label="True or False options">
+          <div class="choice-item" data-answer="true" role="radio" tabindex="0" aria-checked="false">True</div>
+          <div class="choice-item" data-answer="false" role="radio" tabindex="0" aria-checked="false">False</div>
         </div>
         
         <!-- Fill in the blank input -->
-        <input type="text" class="quiz-input" id="answerInput" placeholder="Your answer..." style="display: none;">
+        <input type="text" class="quiz-input" id="answerInput" placeholder="Your answer..." style="display: none;" aria-label="Enter your answer">
         
         <!-- Multiple choice options -->
-        <div id="mcOptions" class="multiple-choice" style="display: none;">
+        <div id="mcOptions" class="multiple-choice" style="display: none;" role="radiogroup" aria-label="Multiple choice options">
           <!-- Will be populated dynamically -->
         </div>
         
@@ -416,10 +151,12 @@
       </div>
     </div>
     
+    <!-- Results Panel -->
     <div id="resultsPanel" style="display: none;">
       <h2>Quiz Results</h2>
       <div class="results" id="resultsContent">
-        You answered <span id="finalCorrect">0</span> out of <span id="finalTotal">0</span> questions correctly.
+        <p>You answered <span id="finalCorrect">0</span> out of <span id="finalTotal">0</span> questions correctly.</p>
+        <p>Time spent: <span id="timeResult">0m 0s</span></p>
       </div>
       
       <div id="missedQuestionsSection" style="margin-top: 20px; display: none;">
@@ -433,329 +170,119 @@
         <button class="btn" id="newQuiz" type="button">New Quiz</button>
       </div>
     </div>
+    
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+      <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌓</span>
+      </button>
+    </div>
   </div>
 
+  <!-- JavaScript libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@4.2.5/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Application JavaScript files -->
+  <script src="js/utils.js"></script>
+  <script src="js/quiz-storage.js"></script>
+  <script src="js/csv-import.js"></script>
+  <script src="js/question-parser.js"></script>
+  <script src="js/quiz-data.js"></script>
+  <script src="js/quiz-ui.js"></script>
+  <script src="js/app.js"></script>
+  
+  <!-- Initialize KaTeX auto-rendering and theme toggle -->
   <script>
-    // Wrap all JavaScript code in a DOMContentLoaded event listener
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log("DOM fully loaded and parsed");
+    document.addEventListener("DOMContentLoaded", function() {
+      // Initialize CSV import
+      if (typeof CSVImport !== 'undefined') {
+        const importContainer = document.getElementById('csvImportContainer');
+        if (importContainer) {
+          const fileInput = CSVImport.createFileInput(function(questions) {
+            // Process imported questions
+            if (typeof QuizData !== 'undefined' && typeof QuizData.processImportedQuestions === 'function') {
+              QuizData.processImportedQuestions(questions);
+            }
+          });
+          importContainer.appendChild(fileInput);
+          
+          // Add sample template
+          CSVImport.addSampleTemplate();
+        }
+      }
       
-      // DOM elements
-      const setupPanel = document.getElementById('setupPanel');
-      const quizPanel = document.getElementById('quizPanel');
-      const resultsPanel = document.getElementById('resultsPanel');
-      const startQuizBtn = document.getElementById('startQuiz');
-      const modeOptions = document.querySelectorAll('.mode-option');
-      const topicButtons = document.querySelectorAll('.topic-btn');
-      const questionTypeButtons = document.querySelectorAll('.question-type-btn');
-      
-      const questionText = document.getElementById('questionText');
-      const answerInput = document.getElementById('answerInput');
-      const tfOptions = document.getElementById('tfOptions');
-      const mcOptions = document.getElementById('mcOptions');
-      
-      const feedback = document.getElementById('feedback');
-      const answerReveal = document.getElementById('answerReveal');
-      const showAnswerBtn = document.getElementById('showAnswer');
-      const nextQuestionBtn = document.getElementById('nextQuestion');
-      const currentQuestionSpan = document.getElementById('currentQuestion');
-      const totalQuestionsSpan = document.getElementById('totalQuestions');
-      const progressFill = document.getElementById('progressFill');
-      
-      const correctCountSpan = document.getElementById('correctCount');
-      const incorrectCountSpan = document.getElementById('incorrectCount');
-      const accuracyRateSpan = document.getElementById('accuracyRate');
-      
-      const restartQuizBtn = document.getElementById('restartQuiz');
-      const backToSetupBtn = document.getElementById('backToSetup');
-      
-      const finalCorrectSpan = document.getElementById('finalCorrect');
-      const finalTotalSpan = document.getElementById('finalTotal');
-      const missedQuestionsDiv = document.getElementById('missedQuestions');
-      const missedQuestionsSection = document.getElementById('missedQuestionsSection');
-      const tryAgainBtn = document.getElementById('tryAgain');
-      const reviewMissedBtn = document.getElementById('reviewMissed');
-      const newQuizBtn = document.getElementById('newQuiz');
-      
-      // Quiz state
-      let questions = [];
-      let filteredQuestions = [];
-      let currentQuestionType = 'all';
-      let currentMode = 'test';
-      let currentTopic = 'all';
-      let currentQuestionIndex = 0;
-      let correctCount = 0;
-      let incorrectCount = 0;
-      let missedQuestions = [];
-      let questionsAnswered = 0;
-      let selectedAnswer = null;
-      let attemptedQuestions = new Set();
-
-      // Quiz questions data - using a smaller set for demonstration
-      const quizData = {
-        // True/False Questions
-        tf: [
-          { id: 1, question: "True or False: Displacement indicates the total distance an object travels.", answer: "false", topic: "kinematics", explanation: "Displacement only indicates how far an object ends up from its initial position, regardless of the path taken." },
-          { id: 2, question: "True or False: Average velocity is displacement divided by the time interval over which that displacement occurred.", answer: "true", topic: "kinematics", explanation: "Average velocity is defined as the total displacement divided by the time interval." },
-          { id: 3, question: "True or False: On a position-time graph, a positive slope indicates the object is moving away from the detector.", answer: "true", topic: "kinematics", explanation: "A positive slope on a position-time graph means the position is increasing with time, indicating movement away from the reference point." },
-          { id: 4, question: "True or False: On a velocity-time graph, the slope represents the object's acceleration.", answer: "true", topic: "kinematics", explanation: "The slope of a velocity-time graph gives the rate of change of velocity, which is acceleration." },
-          { id: 5, question: "True or False: The acceleration of an object in free fall is -10 m/s².", answer: "true", topic: "kinematics", explanation: "On Earth, the acceleration due to gravity is approximately 10 m/s² downward, often written as -10 m/s² when downward is negative." },
-          { id: 6, question: "True or False: Mechanical energy is conserved when there is no net work done by external forces.", answer: "true", topic: "energy", explanation: "Mechanical energy (kinetic + potential) is conserved when no non-conservative forces do work." },
-          { id: 7, question: "True or False: Power is defined as the amount of energy used in one second.", answer: "true", topic: "energy", explanation: "Power is the rate of energy transfer, measured in energy per unit time (joules per second, or watts)." },
-          { id: 8, question: "True or False: In an elastic collision, mechanical energy is conserved.", answer: "true", topic: "momentum", explanation: "By definition, an elastic collision conserves both momentum and mechanical energy." },
-          { id: 9, question: "True or False: The period of a pendulum depends on the mass of the bob.", answer: "false", topic: "shm", explanation: "The period of a pendulum depends only on its length and the gravitational field strength, not on the mass." },
-          { id: 10, question: "True or False: Density is defined as volume divided by mass.", answer: "false", topic: "fluids", explanation: "Density is defined as mass divided by volume (ρ = m/V)." }
-        ],
+      // Initialize theme toggle
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.body.setAttribute('data-theme', savedTheme);
+        }
         
-        // Fill in the Blank Questions
-        fill: [
-          { id: 11, question: "The units of acceleration are __________.", answer: "m/s²", alternateAnswers: ["m/s/s", "meters per second squared"], topic: "kinematics", explanation: "Acceleration is the rate of change of velocity, measured in meters per second per second (m/s²)." },
-          { id: 12, question: "On a position-time graph, a position-time slope like a front slash (/) means the object is moving __________ from the detector.", answer: "away", alternateAnswers: ["farther", "further"], topic: "kinematics", explanation: "A positive slope (front slash) on a position-time graph indicates the object is moving away from the reference point." },
-          { id: 13, question: "When an object slows down, its acceleration is __________ the direction of motion.", answer: "opposite", alternateAnswers: ["against", "contrary to"], topic: "kinematics", explanation: "Deceleration occurs when acceleration is in the direction opposite to velocity." },
-          { id: 14, question: "In projectile motion, the vertical acceleration is always __________ m/s².", answer: "10", alternateAnswers: ["9.8", "9.81"], topic: "kinematics", explanation: "On Earth, objects experience a downward acceleration of approximately 10 m/s² due to gravity." },
-          { id: 15, question: "The force of friction is equal to the coefficient of friction times the __________ force.", answer: "normal", alternateAnswers: ["perpendicular"], topic: "forces", explanation: "The formula for friction force is Ff = μFn, where Fn is the normal force." }
-        ],
-        
-        // Multiple Choice Questions
-        mc: [
-          { 
-            id: 16, 
-            question: "Which of the following is the correct definition of instantaneous velocity?",
-            options: [
-              { label: "A", text: "The total distance traveled divided by the total time" },
-              { label: "B", text: "How fast an object is moving at a specific moment in time" },
-              { label: "C", text: "The change in position divided by time" },
-              { label: "D", text: "The slope of a velocity-time graph" }
-            ],
-            answer: "B",
-            topic: "kinematics",
-            explanation: "Instantaneous velocity is the velocity at a single moment in time, not averaged over an interval."
-          },
-          { 
-            id: 17, 
-            question: "On a position-time graph, which of the following is true?",
-            options: [
-              { label: "A", text: "The slope indicates the object's position" },
-              { label: "B", text: "The slope indicates the object's acceleration" },
-              { label: "C", text: "The slope indicates the object's speed" },
-              { label: "D", text: "The vertical axis represents time" }
-            ],
-            answer: "C",
-            topic: "kinematics",
-            explanation: "The slope of a position-time graph represents the rate of change of position, which is velocity/speed."
-          },
-          { 
-            id: 18, 
-            question: "Which of the following correctly represents Newton's Second Law?",
-            options: [
-              { label: "A", text: "F = ma²" },
-              { label: "B", text: "F = ma" },
-              { label: "C", text: "F = mv" },
-              { label: "D", text: "F = m/a" }
-            ],
-            answer: "B",
-            topic: "forces",
-            explanation: "Newton's Second Law states that force equals mass times acceleration (F = ma)."
-          },
-          { 
-            id: 19, 
-            question: "What is the formula for kinetic energy?",
-            options: [
-              { label: "A", text: "KE = mgh" },
-              { label: "B", text: "KE = mv" },
-              { label: "C", text: "KE = ½mv²" },
-              { label: "D", text: "KE = ½kx²" }
-            ],
-            answer: "C",
-            topic: "energy",
-            explanation: "Kinetic energy is calculated as KE = ½mv², where m is mass and v is velocity."
-          },
-          { 
-            id: 20, 
-            question: "In a simple pendulum, what does the period depend on?",
-            options: [
-              { label: "A", text: "The mass of the bob" },
-              { label: "B", text: "The amplitude of oscillation" },
-              { label: "C", text: "The length of the pendulum" },
-              { label: "D", text: "All of the above" }
-            ],
-            answer: "C",
-            topic: "shm",
-            explanation: "For small oscillations, the period of a pendulum depends only on its length and the gravitational field strength, not on mass or amplitude."
+        themeToggle.addEventListener('click', function() {
+          const currentTheme = document.body.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.body.setAttribute('data-theme', newTheme);
+          
+          // Save theme preference
+          localStorage.setItem('theme', newTheme);
+          
+          // Also save in QuizStorage if available
+          if (typeof QuizStorage !== 'undefined') {
+            const settings = QuizStorage.loadSettings();
+            settings.theme = newTheme;
+            QuizStorage.saveSettings(settings);
           }
-        ]
-      };
-
-      // Add type property to all questions for easier handling
-      for (const type in quizData) {
-        quizData[type].forEach(question => {
-          question.type = type;
         });
       }
-
-      // Combine all questions
-      const allQuestions = [
-        ...quizData.tf,
-        ...quizData.fill,
-        ...quizData.mc
-      ];
-
-      // Shuffle array utility function
-      function shuffleArray(array) {
-        const newArray = [...array];
-        for (let i = newArray.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-        }
-        return newArray;
-      }
-
-      // Filter questions based on type and topic
-      function filterQuestions() {
-        let filtered = [];
+      
+      // Display user stats if available
+      if (typeof QuizStorage !== 'undefined') {
+        const statsSection = document.getElementById('userStats');
+        const statsGrid = document.getElementById('statsGrid');
         
-        // Filter by question type
-        if (currentQuestionType === 'all') {
-          filtered = allQuestions;
-        } else {
-          filtered = quizData[currentQuestionType] || [];
-        }
-        
-        // Filter by topic
-        if (currentTopic !== 'all') {
-          filtered = filtered.filter(q => q.topic === currentTopic);
-        }
-        
-        // If in review mode, use only missed questions if available
-        if (currentMode === 'review' && missedQuestions.length > 0) {
-          filtered = missedQuestions;
-        }
-        
-        // Ensure we have at least one question
-        if (filtered.length === 0) {
-          alert('No questions available with the selected filters. Please choose different options.');
-          return null;
-        }
-        
-        return shuffleArray(filtered);
-      }
-
-      // Start the quiz
-      function startQuiz() {
-        console.log("Starting quiz...");
-        
-        // Get filtered questions
-        filteredQuestions = filterQuestions();
-        if (!filteredQuestions) return;
-        
-        // Reset quiz state
-        currentQuestionIndex = 0;
-        correctCount = 0;
-        incorrectCount = 0;
-        questionsAnswered = 0;
-        attemptedQuestions = new Set();
-        
-        // If not in review mode, clear missed questions
-        if (currentMode !== 'review') {
-          missedQuestions = [];
-        }
-        
-        // Update UI
-        currentQuestionSpan.textContent = '1';
-        totalQuestionsSpan.textContent = filteredQuestions.length;
-        correctCountSpan.textContent = '0';
-        incorrectCountSpan.textContent = '0';
-        accuracyRateSpan.textContent = '0%';
-        progressFill.style.width = '0%';
-        progressFill.textContent = '0%';
-        
-        // Show quiz panel
-        setupPanel.style.display = 'none';
-        quizPanel.style.display = 'block';
-        resultsPanel.style.display = 'none';
-        
-        // Display first question
-        displayQuestion();
-      }
-
-      // Display current question
-      function displayQuestion() {
-        console.log("Displaying question at index:", currentQuestionIndex);
-        
-        if (currentQuestionIndex >= filteredQuestions.length) {
-          showResults();
-          return;
-        }
-        
-        const question = filteredQuestions[currentQuestionIndex];
-        
-        // Update question number
-        currentQuestionSpan.textContent = currentQuestionIndex + 1;
-        
-        // Display question text
-        questionText.textContent = question.question;
-        
-        // Reset UI
-        tfOptions.style.display = 'none';
-        answerInput.style.display = 'none';
-        mcOptions.style.display = 'none';
-        mcOptions.innerHTML = '';
-        feedback.textContent = '';
-        feedback.className = 'quiz-feedback';
-        answerReveal.style.display = 'none';
-        selectedAnswer = null;
-        
-        // Set up appropriate input method based on question type
-        if (question.type === 'tf') {
-          tfOptions.style.display = 'block';
-          tfOptions.querySelectorAll('.choice-item').forEach(opt => opt.classList.remove('selected'));
-        } else if (question.type === 'fill') {
-          answerInput.style.display = 'block';
-          answerInput.value = '';
-          answerInput.focus();
-        } else if (question.type === 'mc') {
-          mcOptions.style.display = 'block';
+        if (statsSection && statsGrid) {
+          const stats = QuizStorage.loadStats();
           
-          // Create option elements
-          question.options.forEach(option => {
-            const optionElement = document.createElement('div');
-            optionElement.className = 'choice-item';
-            optionElement.setAttribute('data-answer', option.label);
-            optionElement.innerHTML = `<strong>${option.label}.</strong> <span class="mc-text">${option.text}</span>`;
+          // Only show stats if the user has completed at least one quiz
+          if (stats && stats.totalQuizzesCompleted > 0) {
+            // Create stat cards
+            const accuracy = stats.totalAnswered > 0 ? 
+              Math.round((stats.totalCorrect / stats.totalAnswered) * 100) : 0;
             
-            // Add click event
-            optionElement.addEventListener('click', function() {
-              mcOptions.querySelectorAll('.choice-item').forEach(opt => opt.classList.remove('selected'));
-              this.classList.add('selected');
-              selectedAnswer = this.getAttribute('data-answer');
-              
-              if (currentMode === 'learn') {
-                checkAnswer();
-              }
-            });
+            // Add overall stats
+            addStatCard(statsGrid, stats.totalCorrect || 0, 'Correct Answers');
+            addStatCard(statsGrid, stats.totalAnswered || 0, 'Questions Attempted');
+            addStatCard(statsGrid, accuracy + '%', 'Overall Accuracy');
+            addStatCard(statsGrid, stats.totalQuizzesCompleted || 0, 'Quizzes Completed');
             
-            mcOptions.appendChild(optionElement);
-          });
+            // Show the stats section
+            statsSection.style.display = 'block';
+          }
         }
       }
-
-      // Check answer
-      function checkAnswer() {
-        if (attemptedQuestions.has(currentQuestionIndex)) return;
+      
+      // Helper function to add stat card
+      function addStatCard(container, value, label) {
+        const card = document.createElement('div');
+        card.className = 'stat-card';
         
-        const question = filteredQuestions[currentQuestionIndex];
-        let userAnswer;
-        let isCorrect = false;
+        const valueElem = document.createElement('div');
+        valueElem.className = 'stat-value';
+        valueElem.textContent = value;
         
-        // Get user's answer based on question type
-        if (question.type === 'tf') {
-          userAnswer = selectedAnswer;
-          isCorrect = (userAnswer === question.answer);
-        } else if (question.type === 'fill') {
-          userAnswer = answerInput.value.trim().toLowerCase();
-          // Check main answer and alternatives
-          isCorrect = (userAnswer === question.answer.toLowerCase()) ||
-                      (question.alternateAnswers && question.alternateAnswers.some(alt => 
-                        userAnswer === alt.toLowerCase() || 
-                        (userAnswer.length > 3 && alt.toLowerCase().includes(userAnswer))
-                      ));
+        const labelElem = document.createElement('div');
+        labelElem.className = 'stat-label';
+        labelElem.textContent = label;
+        
+        card.appendChild(valueElem);
+        card.appendChild(labelElem);
+        container.appendChild(card);
+      }
+    });
+  </script>
+</body>
+</html>

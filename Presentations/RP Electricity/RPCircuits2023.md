@@ -380,6 +380,8 @@ $$ W = Pt = VIt = I^2Rt = \frac{V^2 t}{R} $$
 
 ---
 
+<style scoped>section { font-size: 31px; }</style>
+
 # The Simple Circuit 
 
 1. A source of electrical potential difference or voltage. (typically a battery or electrical outlet)
@@ -399,6 +401,8 @@ $$ W = Pt = VIt = I^2Rt = \frac{V^2 t}{R} $$
 </iframe>
 
 ---
+
+<style scoped>section { font-size: 31px; }</style>
 
 # Kirchhoff's Laws:
 
@@ -428,6 +432,8 @@ $$ W = Pt = VIt = I^2Rt = \frac{V^2 t}{R} $$
 
 ---
 
+<style scoped>section { font-size: 31px; }</style>
+
 # Series Circuit 
 
 * A ***series*** circuit has more than one resistor (anything that uses electricity to do work) and gets its name from only having one path for the charges to move along. 
@@ -444,6 +450,8 @@ Animation models electrical energy as Gravitational Potential Energy, the greate
 ![center width:500](series.gif)
 
 ---
+
+<style scoped>section { font-size: 31px; }</style>
 
 # Parallel Circuit 
 
