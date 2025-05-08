@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2025.05.08 **Physical Science**
+
+##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Catch-up Day -> Complete and Turn in incomplete pivots
+    - Let me know if you need something extended in Pivot
+
+
+
+</div>
+
+<div>
+
+- Introduction to Acceleration
+- Introduction to Constant Acceleration (Ramp)
+- Advanced Introduction Constant Acceleration:
+- Motion Graphs: Constant Acceleration 1
+- Balanced and Unbalanced Forces: Effect on motion
+
+</div>
+</div>
+
+
+---
+
 # 2025.05.06 **Physical Science**
 
 ##### **❓ of the 📅**: What was your childhood dream job? Is it still your dream job?

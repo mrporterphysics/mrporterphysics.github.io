@@ -14,6 +14,39 @@ math: mathjax
 
 ---
 
+# 2025.05.08 **Regents Physics**
+
+##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Regents Review: #36-50
+1. Wave Characteristics
+2. Practice with Wave Characteristics 
+	1. [Nature and Categories of Waves](https://www.physicsclassroom.com/mop/Wave-Motion/Nature-and-Categories-of-Waves/Mission-WM1)
+	2. [Wave Concept Check](https://www.physicsclassroom.com/Concept-Checkers/Interactives/Simple-Wave-Simulator/Concept-Checker)
+	3. Wave Speed Think Sheet
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Wave Characteristics_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.05.07 **Regents Physics**
 
 ##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
