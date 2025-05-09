@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2025.05.09 **Regents Physics**
+
+##### **❓ of the 📅**: What is the worst food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Questions 51-59
+2. Wave Characteristics # 10-27
+3. Wave Behavior Notes
+4. Wave Behavior Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Wave behaviors_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.05.08 **Regents Physics**
 
 ##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
