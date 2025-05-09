@@ -16,6 +16,33 @@ math: mathjax
 
 ---
 
+# 2025.05.08 **Earth Science**
+
+##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Heating of Land and Water
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Compare insolation for land and water_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.05.07 **Earth Science**
 
 ##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
@@ -37,7 +64,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 _Look at how angle of insolation effects thermal energy_
+🥅 _Look at how angle of insolation effects thermal energy  _
 
 ### 📆 Upcoming
 

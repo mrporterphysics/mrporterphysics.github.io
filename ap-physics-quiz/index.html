@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AP Physics 1 Quiz</title>
+  <title>Physics & Earth Science Quiz</title>
   
   <!-- Add CSS files - Using Flexoki color scheme -->
   <link rel="stylesheet" href="css/styles-flexoki.css">
@@ -11,13 +11,93 @@
   
   <!-- Add KaTeX CSS for LaTeX rendering -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  
+  <style>
+    /* Course Selection Styles */
+    .course-selection {
+      margin: 20px 0 30px 0;
+      text-align: center;
+    }
+    
+    .course-selection h3 {
+      margin-bottom: 15px;
+      color: var(--tx);
+    }
+    
+    .course-btn {
+      background-color: var(--bg-2);
+      color: var(--tx);
+      border: 2px solid var(--ui);
+      border-radius: 8px;
+      padding: 12px 20px;
+      margin: 0 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 200px;
+    }
+    
+    .course-btn:hover {
+      background-color: var(--ui);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .course-btn.active {
+      background-color: var(--accent-primary);
+      color: var(--paper);
+      border-color: var(--accent-primary);
+    }
+    
+    .course-logo {
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 10px auto;
+    }
+    
+    .course-description {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: center;
+      color: var(--tx-2);
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-  <h1>AP Physics 1 Quiz</h1>
+  <h1>Physics & Earth Science Quiz</h1>
   
   <div class="container">
     <!-- Setup Panel -->
     <div class="setup-panel" id="setupPanel">
+      <!-- Course Selection Section -->
+      <div class="course-selection">
+        <h3>Select Your Course:</h3>
+        <div class="course-description" id="courseDescription">
+          Choose a subject to begin your quiz experience
+        </div>
+        <div>
+          <button class="course-btn" id="apPhysicsBtn" data-course="physics" type="button">
+            <svg class="course-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="14.5" y1="7.5" x2="9.5" y2="16.5"></line>
+              <polyline points="12,7 15,10 12,13"></polyline>
+            </svg>
+            AP Physics 1
+          </button>
+          <button class="course-btn" id="earthScienceBtn" data-course="earth" type="button">
+            <svg class="course-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2 A10 10 0 0 1 12 22 A10 10 0 0 1 12 2"></path>
+              <path d="M2 12 L22 12"></path>
+              <path d="M12 2 L12 22"></path>
+            </svg>
+            Earth Science
+          </button>
+        </div>
+      </div>
+      
       <h2>Physics Review Questions</h2>
       <p class="setup-instructions">Test your knowledge with AP Physics 1 review questions. Choose a question type and topic to begin!</p>
       
@@ -175,95 +255,154 @@
   
   <!-- UI scripts next -->
   <script src="js/quiz-ui.js"></script>
+  <!-- Add this after your other JavaScript files but before app.js -->
+  <script src="js/enhanced-fill-questions-dropdown.js"></script>
   
   <!-- Main application script last -->
   <script src="js/app.js"></script>
   <script src="js/advanced-question-types.js"></script>
   
-  <!-- Initialize theme toggle and render math -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Initialize theme toggle
-      const themeToggle = document.getElementById('themeToggle');
-      if (themeToggle) {
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-          document.body.setAttribute('data-theme', savedTheme);
-        }
-        
-        themeToggle.addEventListener('click', function() {
-          const currentTheme = document.body.getAttribute('data-theme');
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          document.body.setAttribute('data-theme', newTheme);
-          
-          // Save theme preference
-          localStorage.setItem('theme', newTheme);
-          
-          // Also save in QuizStorage if available
-          if (typeof QuizStorage !== 'undefined') {
-            const settings = QuizStorage.loadSettings();
-            settings.theme = newTheme;
-            QuizStorage.saveSettings(settings);
-          }
-        });
-      }
+  <!-- Course Selection Script -->
+  <!-- Course Selection Script - Fixed Version -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Course selection logic
+    const apPhysicsBtn = document.getElementById('apPhysicsBtn');
+    const earthScienceBtn = document.getElementById('earthScienceBtn');
+    const courseDescription = document.getElementById('courseDescription');
+    const topicButtons = document.querySelectorAll('.topic-btn');
+    const setupTitle = document.querySelector('.setup-panel h2');
+    let currentCourse = 'physics'; // Default course
+    
+    // Update topic buttons based on selected course
+    function updateTopicButtons(course) {
+      // Hide all topic buttons first
+      topicButtons.forEach(btn => {
+        btn.style.display = 'none';
+      });
       
-      // Render math expressions if KaTeX is loaded
-      if (typeof renderMathInElement === 'function') {
-        renderMathInElement(document.body, {
-          delimiters: [
-            {left: "$", right: "$", display: true},
-            {left: "$", right: "$", display: false}
-          ],
-          throwOnError: false
-        });
-      }
-      
-      // Display user stats if available
-      if (typeof QuizStorage !== 'undefined') {
-        const statsSection = document.getElementById('userStats');
-        const statsGrid = document.getElementById('statsGrid');
+      // Show only relevant topic buttons based on course
+      if (course === 'physics') {
+        setupTitle.textContent = 'Physics Review Questions';
+        courseDescription.textContent = 'Test your knowledge of AP Physics concepts including kinematics, forces, energy, and more.';
         
-        if (statsSection && statsGrid) {
-          const stats = QuizStorage.loadStats();
+        // Show physics topics
+        document.querySelector('[data-topic="all"]').style.display = 'inline-block';
+        document.querySelector('[data-topic="kinematics"]').style.display = 'inline-block';
+        document.querySelector('[data-topic="forces"]').style.display = 'inline-block';
+        document.querySelector('[data-topic="energy"]').style.display = 'inline-block';
+        document.querySelector('[data-topic="momentum"]').style.display = 'inline-block';
+        document.querySelector('[data-topic="rotation"]').style.display = 'inline-block';
+        document.querySelector('[data-topic="gravitation"]').style.display = 'inline-block';
+        document.querySelector('[data-topic="shm"]').style.display = 'inline-block';
+        document.querySelector('[data-topic="fluids"]').style.display = 'inline-block';
+      } else if (course === 'earth') {
+        setupTitle.textContent = 'Earth Science Review Questions';
+        courseDescription.textContent = 'Test your knowledge of Earth Science concepts including astronomy, meteorology, geology, and more.';
+        
+        // Show earth science topics
+        document.querySelector('[data-topic="all"]').style.display = 'inline-block';
+        
+        // Add Earth Science-specific topics
+        const topicContainer = document.querySelector('.topic-select');
+        
+        // Check if Earth Science buttons already exist
+        if (!document.querySelector('[data-topic="astronomy"]')) {
+          // Create Earth Science topic buttons
+          const earthTopics = [
+            { id: 'astronomy', label: 'Astronomy' },
+            { id: 'meteorology', label: 'Meteorology' },
+            { id: 'geology', label: 'Geology' },
+            { id: 'hydrology', label: 'Hydrology' },
+            { id: 'earth_history', label: 'Earth History' },
+            { id: 'plate_tectonics', label: 'Plate Tectonics' }
+          ];
           
-          // Only show stats if the user has completed at least one quiz
-          if (stats && stats.totalQuizzesCompleted > 0) {
-            // Create stat cards
-            const accuracy = stats.totalAnswered > 0 ? 
-              Math.round((stats.totalCorrect / stats.totalAnswered) * 100) : 0;
+          earthTopics.forEach(topic => {
+            const btn = document.createElement('button');
+            btn.className = 'topic-btn';
+            btn.dataset.topic = topic.id;
+            btn.type = 'button';
+            btn.textContent = topic.label;
+            btn.style.display = 'inline-block';
             
-            // Add overall stats
-            addStatCard(statsGrid, stats.totalCorrect || 0, 'Correct Answers');
-            addStatCard(statsGrid, stats.totalAnswered || 0, 'Questions Attempted');
-            addStatCard(statsGrid, accuracy + '%', 'Overall Accuracy');
-            addStatCard(statsGrid, stats.totalQuizzesCompleted || 0, 'Quizzes Completed');
+            topicContainer.appendChild(btn);
             
-            // Show the stats section
-            statsSection.style.display = 'block';
-          }
+            // Add event listener to new button
+            btn.addEventListener('click', function() {
+              document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('active'));
+              this.classList.add('active');
+            });
+          });
+        } else {
+          // Show existing Earth Science buttons
+          document.querySelector('[data-topic="astronomy"]').style.display = 'inline-block';
+          document.querySelector('[data-topic="meteorology"]').style.display = 'inline-block';
+          document.querySelector('[data-topic="geology"]').style.display = 'inline-block';
+          document.querySelector('[data-topic="hydrology"]').style.display = 'inline-block';
+          document.querySelector('[data-topic="earth_history"]').style.display = 'inline-block';
+          document.querySelector('[data-topic="plate_tectonics"]').style.display = 'inline-block';
         }
       }
       
-      // Helper function to add stat card
-      function addStatCard(container, value, label) {
-        const card = document.createElement('div');
-        card.className = 'stat-card';
-        
-        const valueElem = document.createElement('div');
-        valueElem.className = 'stat-value';
-        valueElem.textContent = value;
-        
-        const labelElem = document.createElement('div');
-        labelElem.className = 'stat-label';
-        labelElem.textContent = label;
-        
-        card.appendChild(valueElem);
-        card.appendChild(labelElem);
-        container.appendChild(card);
+      // Make "All Topics" active
+      document.querySelectorAll('.topic-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector('[data-topic="all"]').classList.add('active');
+    }
+    
+    // Function to load questions based on selected course
+    function loadCourseQuestions(csvPath) {
+      window.quizDataFile = csvPath;
+      
+      // Check if PhysicsQuizApp is properly initialized 
+      if (typeof PhysicsQuizApp !== 'undefined') {
+        // Use the app.js loadQuestionsFromCSV function if we're already initialized
+        PhysicsQuizApp.loadQuestionsFromCSV && PhysicsQuizApp.loadQuestionsFromCSV()
+          .then(() => {
+            console.log(`Successfully loaded questions from ${csvPath}`);
+          })
+          .catch(error => {
+            console.error(`Error loading questions from ${csvPath}:`, error);
+            alert(`Failed to load questions. Please try refreshing the page.`);
+          });
+      } else {
+        // The app will load questions on initialization using the set quizDataFile
+        console.log(`Quiz data file path set to ${csvPath} - will load on app initialization`);
       }
+    }
+    
+    // Course button click handlers
+    apPhysicsBtn.addEventListener('click', function() {
+      currentCourse = 'physics';
+      updateTopicButtons(currentCourse);
+      
+      // Update button styles
+      apPhysicsBtn.classList.add('active');
+      earthScienceBtn.classList.remove('active');
+      
+      // Load physics questions
+      loadCourseQuestions('data/ap-physics-questions.csv');
     });
-  </script>
+    
+    earthScienceBtn.addEventListener('click', function() {
+      currentCourse = 'earth';
+      updateTopicButtons(currentCourse);
+      
+      // Update button styles
+      earthScienceBtn.classList.add('active');
+      apPhysicsBtn.classList.remove('active');
+      
+      // Load earth science questions
+      loadCourseQuestions('data/earth-science-questions.csv');
+    });
+    
+    // Set default course on page load
+    apPhysicsBtn.classList.add('active');
+    updateTopicButtons(currentCourse);
+    
+    // Set initial quiz data file path
+    window.quizDataFile = 'data/ap-physics-questions.csv';
+  });
+</script>
 </body>
 </html>
