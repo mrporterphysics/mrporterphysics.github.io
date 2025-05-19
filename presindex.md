@@ -12,6 +12,7 @@
   - [Rotation](/mrporterphysics.github.io/Presentations/AP%20Rotation%20Representation/talks/Rotation2025.html)
   - [Oscillation](/mrporterphysics.github.io/Presentations/AP%20SHM/talks/SHM2025.html)
   - [Fluids](/mrporterphysics.github.io/Presentations/Fluids/talk/APfluids2025.html)
+  - [Final Project 2025](/mrporterphysics.github.io/Presentations/Final%20Project/FinalProject2025.html)
 
 ## Regents Physics 
 
