@@ -13,6 +13,180 @@ math: mathjax
 
 ### 📆 2024-25
 
+---
+
+# 2025.05.16 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be immune to all diseases or never feel physical pain?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes - Humidity
+2. Atmosphereic Moisture Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Discuss and model moisture in the atmosphere_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+
+---
+
+# 2025.05.15 **Earth Sciecnce**
+
+##### **❓ of the 📅**: Soft serve or hard ice cream? Bowl or cone?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Review
+	1. Short Answers #51-59
+	2. Go over 26-50 answers and SA Answers
+2. Weather Instruments Lab
+3. Notes - Relative Humidity
+4. Atmospheric Moisture Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Discuss and model moisture in the atmosphere_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.14 **Earth Science**
+
+##### **❓ of the 📅**: Should you eat rice with a fork, a spoon or chopsticks?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Weather Notes
+2. Weather Instruments & Station Model Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.13 **Earth Science**
+
+##### **❓ of the 📅**: If you woke up and were rich, what would you hope to be rich from?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Atmosphere Notes
+2. Atmosphere Lab
+3. Continue with weather notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Atmosphere Lab_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.12 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite family vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Atmosphere Notes
+2. Atmosphere Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Layers of the Atmosphere_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.09 **Earth Science**
+
+##### **❓ of the 📅**: What is the worst food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Heating of Land and Water Lab
+2. Regents Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Lab_
+
+### 📆 Upcoming
+
+</div>
+</div>
 
 ---
 

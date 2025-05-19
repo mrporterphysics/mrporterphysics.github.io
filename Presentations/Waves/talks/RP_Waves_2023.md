@@ -24,6 +24,13 @@ math: mathjax
 
 ---
 
+# Quick Links 
+
+
+1. [Speed of Sound Lab](#tube-resonance-lab---determine-speed-of-sound)
+
+---
+
 
 # Waves
 
@@ -459,6 +466,64 @@ Draw the following 4 waves: A, B, C, and D
 * *Resonance* occurs when one vibrating body sympathetically causes another body to vibrate. 
 * *Natural frequency* is a particular frequency that a body will vibrate if disturbed. 
 * Musical instruments can change notes by making different resonant frequencies.  They do this by changing the length of the “tube” that vibrates creating standing waves of different lengths. 
+
+---
+
+# Tube Resonance Lab - Determine Speed of Sound
+
+**Question**: What is the speed of sound? (closed end air column) 
+
+**Purpose**: To determine the speed of sound using a closed end air column. 
+
+**Lab write‐up includes** 
+
+- *Title, Purpose and Essential Question*
+- *Procedure*: should include step-by-step procedure and diagram of setup 
+- *Data section*: should include collected data; data should be organized and labeled. Calculations of speed should be organized, labeled and clearly shown.
+- Con*clusion and a Discussion of Results*:  should respond to the question raised in the Purpose section. The Discussion of Results should include an error analysis. The reliability of the results should be evaluated based upon the theoretical value for the speed of sound. A percent error calculation should be performed.
+
+---
+
+# Background Information
+
+<div class="columns">
+<div>
+
+#### 1st Harmonic
+
+![center](../figures/harmonic-1a.gif)
+
+</div>
+<div>
+
+- Resonant Frequencies will be the first harmonic
+- Lube length = $\frac{\lambda}{4}$ (1/4 wavelength)
+- Wave equation: $\boxed{v = f \lambda}$
+    - We will graph as $L = v * \frac{1}{f}$ where $L = \frac{\lambda}{4}$
+    * This means your slope is 4 $\times$ speed of sound
+        - $\frac{\text{slope}}{4} = v_{sound}$
+- Speed of Sound Theoretical:
+    - $v = 331 + (0.6 T)$ 
+
+</div>
+</div>
+
+---
+
+# Tube Resonance Lab - Determine Speed of Sound
+
+**Question**: What is the speed of sound? (closed end air column) 
+
+**Purpose**: To determine the speed of sound using a closed end air column. 
+
+**Lab write‐up includes** 
+
+- *Title, Purpose and Essential Question*
+- *Procedure*: should include step-by-step procedure and diagram of setup 
+- *Data section*: should include collected data; data should be organized and labeled. Calculations of speed should be organized, labeled and clearly shown.
+- Con*clusion and a Discussion of Results*:  should respond to the question raised in the Purpose section. The Discussion of Results should include an error analysis. The reliability of the results should be evaluated based upon the theoretical value for the speed of sound. A percent error calculation should be performed.
+
+
 
 ---
 

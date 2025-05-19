@@ -15,6 +15,63 @@ math: mathjax
 
 ---
 
+# 2025.05.13 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Test Prep - Choose your prep
+    - Some time whould be spent in AP Classroom on practice problems 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+# 2025.05.12 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite family vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Graphs Review
+2. Equation Review
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.05.07 **AP Physics**
 
 ##### **❓ of the 📅**: Question

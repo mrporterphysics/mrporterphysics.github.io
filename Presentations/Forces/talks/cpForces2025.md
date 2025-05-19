@@ -22,7 +22,7 @@ math: mathjax
 
 ## CER
 
-On the next slide there is a list of statements. Decide if they the statement is ***true*** or ***false*** and then support that claim with evidence from the simulation and reasoning based on our models of motion and forces. 
+On the next slide there is a list of statements. Decide if the the statement is ***true*** or ***false*** and then support that claim with evidence from the simulation and reasoning based on our models of motion and forces. 
 
 ![bg fit right](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics-900.png)
 

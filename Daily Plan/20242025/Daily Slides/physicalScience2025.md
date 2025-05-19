@@ -16,6 +16,98 @@ math: mathjax
 
 ---
 
+# 2025.05.16 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather be immune to all diseases or never feel physical pain?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mallet Ball
+3. [MOP: Inertia & Mass](https://www.physicsclassroom.com/mop/NewtonsLaws/Inertia-and-Newton-s-First-Law/Mission-NL1)
+4. [Balanced vs. Unbalanced Forces](https://www.physicsclassroom.com/Concept-Builders/Newtons-Laws/Balanced-Unbalanced-Forces/Interactive)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Experience N1L with the motion of a bowling ball_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.14 **Physical Science**
+
+##### **❓ of the 📅**: Should you eat rice with a fork, a spoon or chopsticks?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. N1L & Balanced vs. Unbalanced
+1. Inertia Notes
+2. Inertia Worksheet -> Complete & Discuss
+3. [MOP: Inertia & Mass](https://www.physicsclassroom.com/mop/NewtonsLaws/Inertia-and-Newton-s-First-Law/Mission-NL1)
+4. [Balanced vs. Unbalanced Forces](https://www.physicsclassroom.com/Concept-Builders/Newtons-Laws/Balanced-Unbalanced-Forces/Interactive)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Inertia_
+
+🥅 _Practice with Balanced and Unbalanced Forces_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.12 **Physical Science**
+
+##### **❓ of the 📅**: What is your favorite family vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Balanced/Unbalanced Forces Pivot
+2. Tug-of-War True/False
+2. Inertia and N1L
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define inertia and N1Le_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.05.08 **Physical Science**
 
 ##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?

@@ -14,6 +14,79 @@ math: mathjax
 
 ---
 
+# 2025.05.15 **Regents Physics**
+
+##### **❓ of the 📅**: Soft serve or hard ice cream? Bowl or cone?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Speed of Sound Lab
+2. Wave Behavior Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Experimentally Measure the Speed of sound using Resonance Phemonenon_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.14 **Regents Physics**
+
+##### **❓ of the 📅**: Should you eat rice with a fork, a spoon or chopsticks?
+
+
+#### 📋 Agenda
+
+1. Wave superposition worksheet
+1. Regents Practice - Questions: 62-80
+2. Notes - Wave Behaviors - Standing Waves, Doppler, Resonance
+3. Wave Behavior Practice
+
+
+
+---
+
+# 2025.05.13 **Regents Physics**
+
+##### **❓ of the 📅**: If you woke up and were rich, what would you hope to be rich from?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pivot - Wave Interference: Reflection and Superposition 
+2. Notes - Wave Behaviors
+3. Wave Behavior Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look at the behavior of waves reflecting and interfering_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.05.09 **Regents Physics**
 
 ##### **❓ of the 📅**: What is the worst food?

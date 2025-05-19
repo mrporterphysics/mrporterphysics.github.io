@@ -1,7 +1,7 @@
 /* 
 @theme physicalSci
 */
-/* 
+/*  
 @theme physicalSci
 */
 @import 'default';
@@ -140,3 +140,82 @@ img[alt~="center"] {
     display: block;
     margin: 0 auto;
   }
+
+/* Table styling - aggressive fix for dark mode */
+section table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+    font-size: 0.9em;
+    border: 2px solid var(--light-accent-blue);
+}
+
+section.dark table {
+    border: 2px solid var(--dark-accent-purple) !important;
+}
+
+section table > thead > tr > th,
+section table th {
+    background-color: var(--light-accent-purple);
+    color: var(--light-background);
+    font-weight: bold;
+    padding: 0.8em;
+    text-align: left;
+}
+
+section.dark table > thead > tr > th,
+section.dark table th {
+    background-color: var(--dark-accent-purple) !important;
+    color: var(--dark-text) !important;
+}
+
+section table > tbody > tr > td,
+section table td {
+    padding: 0.8em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--light-background);
+}
+
+section.dark table > tbody > tr > td,
+section.dark table td {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background-color: var(--dark-background) !important;
+    color: var(--dark-text) !important;
+}
+
+section table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+section.dark table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(40, 40, 40, 1) !important;
+}
+
+section.dark table > tbody > tr:nth-child(odd) > td {
+    background-color: var(--dark-background) !important;
+}
+
+/* Override any inline styles */
+section.dark table,
+section.dark table tr,
+section.dark table td,
+section.dark table th {
+    background-color: var(--dark-background) !important;
+    color: var(--dark-text) !important;
+}
+
+section.dark table th {
+    background-color: var(--dark-accent-purple) !important;
+}
+
+section.dark table tr:nth-child(even) td {
+    background-color: rgba(40, 40, 40, 1) !important;
+}
+
+/* Reset any possible markdown styling */
+section.dark table tr[style],
+section.dark table td[style],
+section.dark table th[style] {
+    background-color: inherit !important;
+    color: inherit !important;
+}
