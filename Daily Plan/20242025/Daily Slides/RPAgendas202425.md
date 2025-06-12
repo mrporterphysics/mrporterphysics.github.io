@@ -14,6 +14,314 @@ math: mathjax
 
 ---
 
+# 2025.06.11 **Regents Physics**
+
+##### **❓ of the 📅**: What are you most excited for this summer?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents FRQ
+2. Magnetism Practice
+3. Circular Motion 
+
+</div>
+
+<div>
+
+### 📋 Review Sessions
+
+- Tuesday 6/17 12 - 2 pm
+- Friday 6/20 12 - 2 pm
+
+**Exam is Tuesday 6/24 from 12 - 3 pm**
+
+</div>
+</div>
+
+---
+
+# 2025.06.11 **Regents Physics**
+
+##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. June 2023 Regents Questions
+2. Magnetism
+3. Magnetism Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn about magnets_
+
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.06.05 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite Stewart's ice cream flavor?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Practice
+2. Standard Model Practice
+3. $E = mc^2$ 
+4. Mass-energy equivalence practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Mass-Energy Equivalence_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.06.03 **Regents Physics**
+
+##### **❓ of the 📅**: What's your favorite thing to do on vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Practice -> June 2023 Questions 1 - 17
+2. Energy Levels Questions 26-29
+3. Standard Model Notes & Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Nuclear Physics_
+
+🥅 _Practice with Regents Questions_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.06.02 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite restaurant?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Models of the Atom Notes
+2. Models of the Atom Practice
+3. Atomic Spectra
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the hydrogen atom and atomic spectra_
+
+
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.30 **Regents Physics**
+
+##### **❓ of the 📅**: How do you cook your s'mores marshmallows 🔥?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Wave-Particle Duality Notes
+2. Wave-Particle Duality Practice
+3. Models of the Atom
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Wave-Particle Duality_
+
+🥅 _Discuss models of the atom_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+
+# 2025.05.28 **Regents Physics**
+
+##### **❓ of the 📅**: Road trip or 'staycation'?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Refraction Questions
+2. Diffraction Practice
+2. Wave-Particle Duality Notes
+3. Wave-Particle Duality Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Wave-Particle Duality_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.21 **Regents Physics**
+
+##### **❓ of the 📅**: Any big plans for the long weekend?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Diffraction Notes
+2. Mr. Porter Bye
+3. Refraction Practice #1-21
+4. Diffraction Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and Model Difffraction_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+
+---
+
+# 2025.05.20 **Regents Physics**
+
+##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Reflection Notes
+2. Reflection Practice
+3. Refraction Notes 
+4. Refraction Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model light rays_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.19 **Regents Physics**
+
+##### **❓ of the 📅**: Are you related or distantly related to anyone famous?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Wave Behaviors - Doppler Effect
+2. Wave Behaviors Practice
+3. Optics - Reflection
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Continue to model wave behavior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.05.15 **Regents Physics**
 
 ##### **❓ of the 📅**: Soft serve or hard ice cream? Bowl or cone?

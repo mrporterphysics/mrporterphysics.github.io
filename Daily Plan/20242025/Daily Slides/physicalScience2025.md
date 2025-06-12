@@ -16,6 +16,305 @@ math: mathjax
 
 ---
 
+# 2025.06.12 **Physical Science**
+
+##### **❓ of the 📅**: What are you most excited for this summer?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Spring Force Challenge! (Final pivot of the year!)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Apply knowledge of Hooke's law to a challenge_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.06.10 **Physical Science**
+
+##### **❓ of the 📅**: If you could have any view from your bedroom window, what would you want it to be? (mountains, trees, ocean, etc.)
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Spring/Rubberband Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model a rubberband and compare to Hooke's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.06.06 **Physical Science**
+
+##### **❓ of the 📅**: Do you have any summer vacation plans?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Gravity Lab Discussion
+2. Spring Force Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Spring Forces_
+
+
+
+</div>
+</div>
+
+---
+
+
+# Force of Gravity Lab
+
+### Problem:
+
+We have two ways to define "heavy" and need to differentiate between them. 
+
+### Essential Question:
+
+_What is the mathematical relationship between mass and weight (force of gravity)?_
+
+### Hypothesis:
+
+- How does increasing mass affect weight?
+- Increase? Decrease? Linear? Non-linear? Etc
+
+---
+
+# **Gravity: $\vec{F_g}$**
+
+## **Notes:**
+
+* Weight == $F_g$ == Force of Gravity...so $F_g = mg$
+* Weight is a **FORCE**, mass is scalar quantity
+* $g$ is the gravitational field strength
+    * Measured in N/kg 
+    * changes based on planet and location on that planet
+    * _near the surface of the Earth_ $g = 9.8 \textrm{ N/kg}$
+      * You can round this to $g = 10 \textrm{ N/kg}$
+
+---
+
+# Spring Force - Hooke's Law
+
+$$\boxed{F_s = kx}$$ 
+
+* $F_s$ ➡️ Spring Force (Newtons)
+* $k$ ➡️ Spring Constant (Newtons/meter)
+* $x$ ➡️ Stretch OR compression of spring (meters)
+
+![bg fit right:30%](https://stickmanphysics.com/wp-content/uploads/2020/10/Spring-Constant.gif)
+
+---
+
+## What does it mean to obey Hooke's Law?
+
+That there is a proportional relationship between Spring Force and stretch. 
+
+i.e. The graph looks like 👉
+
+![bg fit right:40%](image-40.png)
+
+---
+
+# Rubberband Lab
+
+### Problem:
+
+Rubberbands are stretchy...do they obey Hooke's Law?
+
+### Essential Question:
+
+_Are rubberbands **Hookean**? Meaning do they obey Hooke's Law?_
+
+### Hypothesis:
+
+- Yes/No, why or why not?
+
+---
+
+# 2025.06.04 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather fight 100 duck-sized horses or 1 horse-sized duck? 🦆
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Force of Gravity Lab
+    - _What is the relationships between mass and weight?_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Find a mathematical equation for weight_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.06.02 **Physical Science**
+
+##### **❓ of the 📅**: What is your favorite restaurant?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Make Up Work Day
+    
+- 🍅 *Ketchup*: Old Labs that have been extended
+- 🟨 *Mustard* (MUST DO): Finish **Fan Cart:Force & Acceleration**
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Get caught up on past due work_
+
+
+
+</div>
+</div>
+
+---
+
+# 2025.05.29 **Physical Science**
+
+##### **❓ of the 📅**: How do you make your marshmallow for s'mores? 🔥
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Newton's Law's Pivot (Fan Force & Acceleration)
+    - many of you **did not start...** last week
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine relationship between force and acceleration_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.22 **Physical Science**
+
+##### **❓ of the 📅**: Any big plans for the long weekend?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish: Newton's Second Law: Mass & Accelertion
+2. Start: Fan Cart: Force & Acceleration
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Newton's Second Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.20 **Physical Science**
+
+##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pivot: Newton's Second Law: Mass and Motion
+2. Exploring Newton's Second Law
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore how mass changes acceleration for constant forces_
+
+
+
+</div>
+</div>
+
+---
+
 # 2025.05.16 **Physical Science**
 
 ##### **❓ of the 📅**: Would you rather be immune to all diseases or never feel physical pain?

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Reference Quiz</title>
+    <style>
+        :root {
+            /* Flexoki Color Palette */
+            --paper: #FFFCF0;
+            --base-50: #F2F0E5;
+            --base-100: #E6E4D9;
+            --base-200: #CECDC3;
+            --base-300: #B7B5AC;
+            --base-400: #9F9D96;
+            --base-500: #878580;
+            --base-600: #6F6E69;
+            --base-700: #575653;
+            --base-800: #403E3C;
+            --base-900: #282726;
+            --base-950: #1C1B1A;
+            --black: #100F0F;
+            
+            --red-400: #D14D41;
+            --red-600: #AF3029;
+            --orange-400: #DA702C;
+            --orange-600: #BC5215;
+            --yellow-400: #D0A215;
+            --yellow-600: #AD8301;
+            --green-400: #879A39;
+            --green-600: #66800B;
+            --cyan-400: #3AA99F;
+            --cyan-600: #24837B;
+            --blue-400: #4385BE;
+            --blue-600: #205EA6;
+            --purple-400: #8B7EC8;
+            --purple-600: #5E409D;
+            --magenta-400: #CE5D97;
+            --magenta-600: #A02F6F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            background-color: var(--paper);
+            color: var(--base-800);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: var(--base-50);
+            border-radius: 12px;
+            border: 2px solid var(--base-200);
+        }
+
+        h1 {
+            color: var(--blue-600);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: var(--base-600);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .mode-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .mode-btn {
+            padding: 1rem 2rem;
+            background-color: var(--base-100);
+            border: 2px solid var(--base-300);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            color: var(--base-700);
+        }
+
+        .mode-btn:hover {
+            background-color: var(--blue-400);
+            color: var(--paper);
+            border-color: var(--blue-600);
+        }
+
+        .mode-btn.active {
+            background-color: var(--blue-600);
+            color: var(--paper);
+            border-color: var(--blue-600);
+        }
+
+        .quiz-container {
+            background-color: var(--base-50);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 2px solid var(--base-200);
+            margin-bottom: 2rem;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--base-200);
+        }
+
+        .question-number {
+            background-color: var(--purple-600);
+            color: var(--paper);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .score {
+            background-color: var(--green-600);
+            color: var(--paper);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .question {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--base-800);
+            font-weight: 500;
+        }
+
+        .options {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .option {
+            padding: 1rem;
+            background-color: var(--paper);
+            border: 2px solid var(--base-300);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .option:hover {
+            background-color: var(--base-100);
+            border-color: var(--blue-400);
+        }
+
+        .option.selected {
+            background-color: var(--blue-100);
+            border-color: var(--blue-600);
+            color: var(--blue-600);
+        }
+
+        .option.correct {
+            background-color: var(--green-400);
+            color: var(--paper);
+            border-color: var(--green-600);
+        }
+
+        .option.incorrect {
+            background-color: var(--red-400);
+            color: var(--paper);
+            border-color: var(--red-600);
+        }
+
+        .matching-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .matching-column {
+            background-color: var(--paper);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--base-300);
+        }
+
+        .matching-item {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background-color: var(--base-50);
+            border: 2px solid var(--base-200);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .matching-item:hover {
+            background-color: var(--base-100);
+        }
+
+        .matching-item.selected {
+            background-color: var(--orange-400);
+            color: var(--paper);
+            border-color: var(--orange-600);
+        }
+
+        .matching-item.matched {
+            background-color: var(--green-400);
+            color: var(--paper);
+            border-color: var(--green-600);
+            cursor: default;
+        }
+
+        .matching-item.wrong {
+            background-color: var(--red-400);
+            color: var(--paper);
+            border-color: var(--red-600);
+        }
+
+        .equation-display {
+            background-color: var(--paper);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--base-300);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.4rem;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+            color: var(--base-800);
+        }
+
+        .scientific-text {
+            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            font-weight: 600;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background-color: var(--blue-600);
+            color: var(--paper);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--blue-400);
+        }
+
+        .btn-secondary {
+            background-color: var(--base-300);
+            color: var(--base-800);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--base-400);
+        }
+
+        .feedback {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border: 2px solid;
+            font-weight: 500;
+        }
+
+        .feedback.correct {
+            background-color: var(--green-400);
+            color: var(--paper);
+            border-color: var(--green-600);
+        }
+
+        .feedback.incorrect {
+            background-color: var(--red-400);
+            color: var(--paper);
+            border-color: var(--red-600);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background-color: var(--base-100);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--base-300);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--purple-600);
+        }
+
+        .stat-label {
+            color: var(--base-600);
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .mode-selector {
+                flex-direction: column;
+            }
+
+            .matching-container {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Physics Reference Quiz</h1>
+            <p class="subtitle">Test your knowledge of units, constants, and equations from the NY Regents Physics Reference Tables</p>
+        </header>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" onclick="switchMode('units')">Units & Constants</button>
+            <button class="mode-btn" onclick="switchMode('equations')">Equation Recognition</button>
+        </div>
+
+        <div class="quiz-container">
+            <div class="question-header">
+                <div class="question-number">Question <span id="current-question">1</span> of <span id="total-questions">10</span></div>
+                <div class="score">Score: <span id="score">0</span>/<span id="total-score">0</span></div>
+            </div>
+
+            <div id="question-content">
+                <!-- Question content will be inserted here -->
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-secondary" onclick="previousQuestion()">Previous</button>
+                <button class="btn btn-primary" onclick="nextQuestion()">Next Question</button>
+                <button class="btn btn-secondary" onclick="newQuiz()">New Quiz</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="questions-answered">0</div>
+                <div class="stat-label">Questions Answered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="current-streak">0</div>
+                <div class="stat-label">Current Streak</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Physics data from reference tables
+        const physicsData = {
+            constants: [
+                { name: "Universal gravitational constant", symbol: "G", value: "6.67 × 10⁻¹¹", unit: "N•m²/kg²" },
+                { name: "Acceleration due to gravity", symbol: "g", value: "9.81", unit: "m/s²" },
+                { name: "Speed of light in a vacuum", symbol: "c", value: "3.00 × 10⁸", unit: "m/s" },
+                { name: "Speed of sound in air at STP", symbol: "", value: "3.31 × 10²", unit: "m/s" },
+                { name: "Electrostatic constant", symbol: "k", value: "8.99 × 10⁹", unit: "N•m²/C²" },
+                { name: "Elementary charge", symbol: "e", value: "1.60 × 10⁻¹⁹", unit: "C" },
+                { name: "Planck's constant", symbol: "h", value: "6.63 × 10⁻³⁴", unit: "J•s" },
+                { name: "Rest mass of electron", symbol: "mₑ", value: "9.11 × 10⁻³¹", unit: "kg" },
+                { name: "Rest mass of proton", symbol: "mₚ", value: "1.67 × 10⁻²⁷", unit: "kg" },
+                { name: "Rest mass of neutron", symbol: "mₙ", value: "1.67 × 10⁻²⁷", unit: "kg" }
+            ],
+            quantities: [
+                // Mechanics quantities
+                { quantity: "Force", unit: "N (Newton)" },
+                { quantity: "Energy", unit: "J (Joule)" },
+                { quantity: "Power", unit: "W (Watt)" },
+                { quantity: "Acceleration", unit: "m/s²" },
+                { quantity: "Velocity", unit: "m/s" },
+                { quantity: "Displacement", unit: "m" },
+                { quantity: "Distance", unit: "m" },
+                { quantity: "Time", unit: "s" },
+                { quantity: "Mass", unit: "kg" },
+                { quantity: "Momentum", unit: "kg•m/s" },
+                { quantity: "Impulse", unit: "N•s" },
+                { quantity: "Work", unit: "J (Joule)" },
+                { quantity: "Kinetic Energy", unit: "J (Joule)" },
+                { quantity: "Potential Energy", unit: "J (Joule)" },
+                { quantity: "Spring constant", unit: "N/m" },
+                { quantity: "Gravitational field strength", unit: "N/kg" },
+                { quantity: "Weight", unit: "N (Newton)" },
+                { quantity: "Normal force", unit: "N (Newton)" },
+                { quantity: "Friction force", unit: "N (Newton)" },
+                { quantity: "Net force", unit: "N (Newton)" },
+                { quantity: "Centripetal acceleration", unit: "m/s²" },
+                { quantity: "Centripetal force", unit: "N (Newton)" },
+                { quantity: "Height", unit: "m" },
+                { quantity: "Radius", unit: "m" },
+                
+                // Electricity quantities
+                { quantity: "Electric current", unit: "A (Ampere)" },
+                { quantity: "Voltage", unit: "V (Volt)" },
+                { quantity: "Electric potential", unit: "V (Volt)" },
+                { quantity: "Resistance", unit: "Ω (Ohm)" },
+                { quantity: "Electric charge", unit: "C (Coulomb)" },
+                { quantity: "Electric field strength", unit: "N/C" },
+                { quantity: "Electrostatic force", unit: "N (Newton)" },
+                { quantity: "Electric work", unit: "J (Joule)" },
+                { quantity: "Electric power", unit: "W (Watt)" },
+                { quantity: "Resistivity", unit: "Ω•m" },
+                { quantity: "Cross-sectional area", unit: "m²" },
+                { quantity: "Length of conductor", unit: "m" },
+                { quantity: "Equivalent resistance", unit: "Ω (Ohm)" },
+                
+                // Waves quantities
+                { quantity: "Frequency", unit: "Hz (Hertz)" },
+                { quantity: "Wavelength", unit: "m" },
+                { quantity: "Period", unit: "s" },
+                { quantity: "Wave velocity", unit: "m/s" },
+                { quantity: "Wave speed", unit: "m/s" },
+                { quantity: "Index of refraction", unit: "unitless" },
+                { quantity: "Angle of incidence", unit: "degrees or radians" },
+                { quantity: "Angle of reflection", unit: "degrees or radians" },
+                { quantity: "Angle of refraction", unit: "degrees or radians" },
+                
+                // Modern Physics quantities
+                { quantity: "Photon energy", unit: "J (Joule)" },
+                { quantity: "Rest mass", unit: "kg" },
+                { quantity: "Energy level", unit: "eV (electronvolt)" },
+                { quantity: "Ionization energy", unit: "eV (electronvolt)" },
+                
+                // General quantities
+                { quantity: "Temperature", unit: "K (Kelvin)" },
+                { quantity: "Pressure", unit: "Pa (Pascal)" },
+                { quantity: "Area", unit: "m²" },
+                { quantity: "Volume", unit: "m³" },
+                { quantity: "Density", unit: "kg/m³" },
+                { quantity: "Coefficient of friction", unit: "unitless" },
+                { quantity: "Spring displacement", unit: "m" },
+                { quantity: "Change in momentum", unit: "kg•m/s" },
+                { quantity: "Change in velocity", unit: "m/s" },
+                { quantity: "Time interval", unit: "s" },
+                { quantity: "Distance between centers", unit: "m" },
+                { quantity: "Planck's constant", unit: "J•s" },
+                { quantity: "Speed of light", unit: "m/s" },
+                { quantity: "Universal gravitational constant", unit: "N•m²/kg²" },
+                { quantity: "Electrostatic constant", unit: "N•m²/C²" },
+                { quantity: "Elementary charge", unit: "C (Coulomb)" }
+            ],
+            equations: {
+                mechanics: [
+                    { equation: "v = d/t", description: "Average velocity", symbols: { v: "velocity", d: "displacement", t: "time" } },
+                    { equation: "a = Δv/t", description: "Acceleration", symbols: { a: "acceleration", "Δv": "change in velocity", t: "time" } },
+                    { equation: "vf = vi + at", description: "Final velocity", symbols: { vf: "final velocity", vi: "initial velocity", a: "acceleration", t: "time" } },
+                    { equation: "d = vi•t + ½at²", description: "Displacement with acceleration", symbols: { d: "displacement", vi: "initial velocity", t: "time", a: "acceleration" } },
+                    { equation: "vf² = vi² + 2ad", description: "Velocity squared equation", symbols: { vf: "final velocity", vi: "initial velocity", a: "acceleration", d: "displacement" } },
+                    { equation: "F = ma", description: "Newton's second law", symbols: { F: "force", m: "mass", a: "acceleration" } },
+                    { equation: "Fg = mg", description: "Weight", symbols: { Fg: "gravitational force", m: "mass", g: "acceleration due to gravity" } },
+                    { equation: "p = mv", description: "Momentum", symbols: { p: "momentum", m: "mass", v: "velocity" } },
+                    { equation: "J = FnetΔt = Δp", description: "Impulse", symbols: { J: "impulse", Fnet: "net force", "Δt": "time interval", "Δp": "change in momentum" } },
+                    { equation: "KE = ½mv²", description: "Kinetic energy", symbols: { KE: "kinetic energy", m: "mass", v: "velocity" } },
+                    { equation: "PE = mgh", description: "Gravitational potential energy", symbols: { PE: "potential energy", m: "mass", g: "acceleration due to gravity", h: "height" } },
+                    { equation: "W = Fd", description: "Work", symbols: { W: "work", F: "force", d: "displacement" } },
+                    { equation: "P = W/t", description: "Power", symbols: { P: "power", W: "work", t: "time" } }
+                ],
+                electricity: [
+                    { equation: "V = W/q", description: "Electric potential", symbols: { V: "voltage", W: "work", q: "charge" } },
+                    { equation: "I = Δq/t", description: "Electric current", symbols: { I: "current", "Δq": "charge", t: "time" } },
+                    { equation: "R = V/I", description: "Ohm's law", symbols: { R: "resistance", V: "voltage", I: "current" } },
+                    { equation: "P = VI", description: "Electric power", symbols: { P: "power", V: "voltage", I: "current" } },
+                    { equation: "W = VIt", description: "Electric work", symbols: { W: "work", V: "voltage", I: "current", t: "time" } },
+                    { equation: "Fe = kq₁q₂/r²", description: "Coulomb's law", symbols: { Fe: "electrostatic force", k: "electrostatic constant", "q₁": "charge 1", "q₂": "charge 2", r: "distance" } }
+                ],
+                waves: [
+                    { equation: "v = fλ", description: "Wave speed", symbols: { v: "velocity", f: "frequency", "λ": "wavelength" } },
+                    { equation: "T = 1/f", description: "Period and frequency", symbols: { T: "period", f: "frequency" } },
+                    { equation: "n = c/v", description: "Index of refraction", symbols: { n: "index of refraction", c: "speed of light in vacuum", v: "speed of light in medium" } },
+                    { equation: "n₁sinθ₁ = n₂sinθ₂", description: "Snell's law", symbols: { "n₁": "index 1", "θ₁": "angle 1", "n₂": "index 2", "θ₂": "angle 2" } }
+                ],
+                modern: [
+                    { equation: "E = hf", description: "Photon energy", symbols: { E: "energy", h: "Planck's constant", f: "frequency" } },
+                    { equation: "E = hc/λ", description: "Photon energy (wavelength)", symbols: { E: "energy", h: "Planck's constant", c: "speed of light", "λ": "wavelength" } },
+                    { equation: "E = mc²", description: "Mass-energy equivalence", symbols: { E: "energy", m: "mass", c: "speed of light" } }
+                ]
+            }
+        };
+
+        // Quiz state
+        let currentMode = 'units';
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let totalQuestions = 10;
+        let questions = [];
+        let userAnswers = [];
+        let streak = 0;
+        let totalAnswered = 0;
+
+        // Question types for units mode
+        const unitsQuestionTypes = [
+            'constantValue',
+            'constantUnit', 
+            'constantSymbol',
+            'quantityUnit',
+            'unitQuantity',
+            'matching'
+        ];
+
+        // Question types for equations mode
+        const equationQuestionTypes = [
+            'symbolMeaning',
+            'equationTopic',
+            'equationDescription',
+            'symbolUnits'
+        ];
+
+        function switchMode(mode) {
+            currentMode = mode;
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            newQuiz();
+        }
+
+        function generateUnitsQuestion() {
+            const type = unitsQuestionTypes[Math.floor(Math.random() * unitsQuestionTypes.length)];
+            
+            switch(type) {
+                case 'constantValue':
+                    return generateConstantValueQuestion();
+                case 'constantUnit':
+                    return generateConstantUnitQuestion();
+                case 'constantSymbol':
+                    return generateConstantSymbolQuestion();
+                case 'quantityUnit':
+                    return generateQuantityUnitQuestion();
+                case 'unitQuantity':
+                    return generateUnitQuantityQuestion();
+                case 'matching':
+                    return generateUnitsMatchingQuestion();
+                default:
+                    return generateConstantValueQuestion();
+            }
+        }
+
+        function generateConstantValueQuestion() {
+            const constant = physicsData.constants[Math.floor(Math.random() * physicsData.constants.length)];
+            const wrongAnswers = physicsData.constants
+                .filter(c => c.value !== constant.value)
+                .map(c => `${c.value} ${c.unit}`)
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 3);
+            
+            return {
+                type: 'multiple-choice',
+                question: `What is the value of ${constant.name} (${constant.symbol})?`,
+                options: shuffle([`${constant.value} ${constant.unit}`, ...wrongAnswers]),
+                correct: `${constant.value} ${constant.unit}`,
+                explanation: `${constant.name} (${constant.symbol}) = ${constant.value} ${constant.unit}`
+            };
+        }
+
+        function generateConstantUnitQuestion() {
+            const constant = physicsData.constants[Math.floor(Math.random() * physicsData.constants.length)];
+            const wrongAnswers = physicsData.constants
+                .filter(c => c.unit !== constant.unit)
+                .map(c => c.unit)
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 3);
+            
+            return {
+                type: 'multiple-choice',
+                question: `What is the unit for ${constant.name} (${constant.symbol})?`,
+                options: shuffle([constant.unit, ...wrongAnswers]),
+                correct: constant.unit,
+                explanation: `${constant.name} (${constant.symbol}) has units of ${constant.unit}`
+            };
+        }
+
+        function generateConstantSymbolQuestion() {
+            const constant = physicsData.constants.filter(c => c.symbol)[Math.floor(Math.random() * physicsData.constants.filter(c => c.symbol).length)];
+            const wrongAnswers = physicsData.constants
+                .filter(c => c.symbol && c.symbol !== constant.symbol)
+                .map(c => c.symbol)
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 3);
+            
+            return {
+                type: 'multiple-choice',
+                question: `What is the symbol for ${constant.name}?`,
+                options: shuffle([constant.symbol, ...wrongAnswers]),
+                correct: constant.symbol,
+                explanation: `The symbol for ${constant.name} is ${constant.symbol}`
+            };
+        }
+
+        function generateQuantityUnitQuestion() {
+            const quantity = physicsData.quantities[Math.floor(Math.random() * physicsData.quantities.length)];
+            const wrongAnswers = physicsData.quantities
+                .filter(q => q.unit !== quantity.unit)
+                .map(q => q.unit)
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 3);
+            
+            return {
+                type: 'multiple-choice',
+                question: `What is the unit for ${quantity.quantity}?`,
+                options: shuffle([quantity.unit, ...wrongAnswers]),
+                correct: quantity.unit,
+                explanation: `${quantity.quantity} is measured in ${quantity.unit}`
+            };
+        }
+
+        function generateUnitQuantityQuestion() {
+            const quantity = physicsData.quantities[Math.floor(Math.random() * physicsData.quantities.length)];
+            const wrongAnswers = physicsData.quantities
+                .filter(q => q.quantity !== quantity.quantity)
+                .map(q => q.quantity)
+                .sort(() => 0.5 - Math.random())
+                .slice(0, 3);
+            
+            return {
+                type: 'multiple-choice',
+                question: `What quantity is measured in ${quantity.unit}?`,
+                options: shuffle([quantity.quantity, ...wrongAnswers]),
+                correct: quantity.quantity,
+                explanation: `${quantity.unit} is the unit for ${quantity.quantity}`
+            };
+        }
+
+        function generateUnitsMatchingQuestion() {
+            const items = [...physicsData.constants.slice(0, 5)];
+            const leftItems = items.map(item => ({ id: item.symbol, text: item.symbol, match: item.name }));
+            const rightItems = shuffle(items.map(item => ({ id: item.name, text: item.name, match: item.symbol })));
+            
+            return {
+                type: 'matching',
+                question: 'Match each symbol with its corresponding constant:',
+                leftItems: leftItems,
+                rightItems: rightItems,
+                explanation: 'These are fundamental physics constants from the reference table.'
+            };
+        }
+
+        function generateEquationsQuestion() {
+            const type = equationQuestionTypes[Math.floor(Math.random() * equationQuestionTypes.length)];
+            
+            switch(type) {
+                case 'symbolMeaning':
+                    return generateSymbolMeaningQuestion();
+                case 'equationTopic':
+                    return generateEquationTopicQuestion();
+                case 'equationDescription':
+                    return generateEquationDescriptionQuestion();
+                case 'symbolUnits':
+                    return generateSymbolUnitsQuestion();
+                default:
+                    return generateSymbolMeaningQuestion();
+            }
+        }
+
+        function generateSymbolMeaningQuestion() {
+            const topics = Object.keys(physicsData.equations);
+            const topic = topics[Math.floor(Math.random() * topics.length)];
+            const equation = physicsData.equations[topic][Math.floor(Math.random() * physicsData.equations[topic].length)];
+            const symbols = Object.keys(equation.symbols);
+            const targetSymbol = symbols[Math.floor(Math.random() * symbols.length)];
+            
+            const wrongAnswers = [];
+            for (let t of topics) {
+                for (let eq of physicsData.equations[t]) {
+                    for (let sym in eq.symbols) {
+                        if (eq.symbols[sym] !== equation.symbols[targetSymbol] && !wrongAnswers.includes(eq.symbols[sym])) {
+                            wrongAnswers.push(eq.symbols[sym]);
+                        }
+                    }
+                }
+            }
+            
+            return {
+                type: 'multiple-choice',
+                question: `In the equation <span class="scientific-text">${equation.equation}</span>, what does the symbol "<span class="scientific-text">${targetSymbol}</span>" represent?`,
+                options: shuffle([equation.symbols[targetSymbol], ...wrongAnswers.slice(0, 3)]),
+                correct: equation.symbols[targetSymbol],
+                explanation: `In ${equation.equation} (${equation.description}), ${targetSymbol} represents ${equation.symbols[targetSymbol]}`
+            };
+        }
+
+        function generateEquationTopicQuestion() {
+            const topics = Object.keys(physicsData.equations);
+            const topic = topics[Math.floor(Math.random() * topics.length)];
+            const equation = physicsData.equations[topic][Math.floor(Math.random() * physicsData.equations[topic].length)];
+            
+            const topicNames = {
+                mechanics: 'Mechanics',
+                electricity: 'Electricity',
+                waves: 'Waves',
+                modern: 'Modern Physics'
+            };
+            
+            const wrongTopics = topics.filter(t => t !== topic).map(t => topicNames[t]);
+            
+            return {
+                type: 'multiple-choice',
+                question: `Which topic does this equation belong to: <span class="scientific-text">${equation.equation}</span>?`,
+                options: shuffle([topicNames[topic], ...wrongTopics]),
+                correct: topicNames[topic],
+                explanation: `${equation.equation} is ${equation.description}, which belongs to ${topicNames[topic]}`
+            };
+        }
+
+        function generateEquationDescriptionQuestion() {
+            const topics = Object.keys(physicsData.equations);
+            const topic = topics[Math.floor(Math.random() * topics.length)];
+            const equation = physicsData.equations[topic][Math.floor(Math.random() * physicsData.equations[topic].length)];
+            
+            const wrongDescriptions = [];
+            for (let t of topics) {
+                for (let eq of physicsData.equations[t]) {
+                    if (eq.description !== equation.description && !wrongDescriptions.includes(eq.description)) {
+                        wrongDescriptions.push(eq.description);
+                    }
+                }
+            }
+            
+            return {
+                type: 'multiple-choice',
+                question: `What does this equation calculate: <span class="scientific-text">${equation.equation}</span>?`,
+                options: shuffle([equation.description, ...wrongDescriptions.slice(0, 3)]),
+                correct: equation.description,
+                explanation: `${equation.equation} calculates ${equation.description}`
+            };
+        }
+
+        function generateSymbolUnitsQuestion() {
+            const unitMap = {
+                'v': 'm/s', 'd': 'm', 't': 's', 'a': 'm/s²', 'F': 'N', 'm': 'kg',
+                'p': 'kg•m/s', 'J': 'N•s', 'KE': 'J', 'PE': 'J', 'W': 'J', 'P': 'W',
+                'V': 'V', 'I': 'A', 'R': 'Ω', 'q': 'C', 'E': 'J', 'f': 'Hz',
+                'λ': 'm', 'T': 's', 'n': 'unitless', 'h': 'J•s', 'c': 'm/s'
+            };
+            
+            const symbols = Object.keys(unitMap);
+            const symbol = symbols[Math.floor(Math.random() * symbols.length)];
+            const wrongUnits = Object.values(unitMap).filter(u => u !== unitMap[symbol]).slice(0, 3);
+            
+            return {
+                type: 'multiple-choice',
+                question: `What is the unit for the symbol "<span class="scientific-text">${symbol}</span>" in physics equations?`,
+                options: shuffle([unitMap[symbol], ...wrongUnits]),
+                correct: unitMap[symbol],
+                explanation: `The symbol "${symbol}" has units of ${unitMap[symbol]}`
+            };
+        }
+
+        function shuffle(array) {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+
+        function generateQuestions() {
+            questions = [];
+            userAnswers = [];
+            for (let i = 0; i < totalQuestions; i++) {
+                if (currentMode === 'units') {
+                    questions.push(generateUnitsQuestion());
+                } else {
+                    questions.push(generateEquationsQuestion());
+                }
+                userAnswers.push(null);
+            }
+        }
+
+        function renderQuestion() {
+            const question = questions[currentQuestionIndex];
+            const content = document.getElementById('question-content');
+            
+            if (question.type === 'multiple-choice') {
+                content.innerHTML = `
+                    <div class="question">${question.question}</div>
+                    <div class="options">
+                        ${question.options.map((option, index) => 
+                            `<div class="option scientific-text" onclick="selectOption(${index})" data-option="${index}">
+                                ${option}
+                            </div>`
+                        ).join('')}
+                    </div>
+                    <div id="feedback" class="feedback hidden"></div>
+                `;
+            } else if (question.type === 'matching') {
+                content.innerHTML = `
+                    <div class="question">${question.question}</div>
+                    <div class="matching-container">
+                        <div class="matching-column">
+                            <h4>Symbols</h4>
+                            ${question.leftItems.map((item, index) => 
+                                `<div class="matching-item" onclick="selectLeft(${index})" data-left="${index}">
+                                    ${item.text}
+                                </div>`
+                            ).join('')}
+                        </div>
+                        <div class="matching-column">
+                            <h4>Constants</h4>
+                            ${question.rightItems.map((item, index) => 
+                                `<div class="matching-item" onclick="selectRight(${index})" data-right="${index}">
+                                    ${item.text}
+                                </div>`
+                            ).join('')}
+                        </div>
+                    </div>
+                    <div id="feedback" class="feedback hidden"></div>
+                `;
+            }
+            
+            // Restore previous answer if exists
+            if (userAnswers[currentQuestionIndex] !== null) {
+                if (question.type === 'multiple-choice') {
+                    const selectedOption = document.querySelector(`[data-option="${userAnswers[currentQuestionIndex]}"]`);
+                    if (selectedOption) {
+                        selectedOption.classList.add('selected');
+                    }
+                }
+            }
+            
+            updateQuestionCounter();
+        }
+
+        function selectOption(optionIndex) {
+            const question = questions[currentQuestionIndex];
+            const options = document.querySelectorAll('.option');
+            
+            // Clear previous selections
+            options.forEach(opt => opt.classList.remove('selected', 'correct', 'incorrect'));
+            
+            // Mark selected option
+            options[optionIndex].classList.add('selected');
+            userAnswers[currentQuestionIndex] = optionIndex;
+            
+            // Show feedback
+            const feedback = document.getElementById('feedback');
+            const selectedAnswer = question.options[optionIndex];
+            const isCorrect = selectedAnswer === question.correct;
+            
+            if (isCorrect) {
+                options[optionIndex].classList.add('correct');
+                feedback.className = 'feedback correct';
+                feedback.textContent = 'Correct! ' + question.explanation;
+                if (userAnswers[currentQuestionIndex] === null || userAnswers[currentQuestionIndex] !== optionIndex) {
+                    score++;
+                    streak++;
+                    updateStats();
+                }
+            } else {
+                options[optionIndex].classList.add('incorrect');
+                // Show correct answer
+                options.forEach((opt, idx) => {
+                    if (question.options[idx] === question.correct) {
+                        opt.classList.add('correct');
+                    }
+                });
+                feedback.className = 'feedback incorrect';
+                feedback.textContent = 'Incorrect. ' + question.explanation;
+                streak = 0;
+                updateStats();
+            }
+            
+            feedback.classList.remove('hidden');
+            
+            if (totalAnswered <= currentQuestionIndex) {
+                totalAnswered = currentQuestionIndex + 1;
+            }
+            updateStats();
+        }
+
+        let selectedLeft = null;
+        let selectedRight = null;
+        let matchedPairs = [];
+
+        function selectLeft(index) {
+            document.querySelectorAll('[data-left]').forEach(item => item.classList.remove('selected'));
+            document.querySelector(`[data-left="${index}"]`).classList.add('selected');
+            selectedLeft = index;
+            checkMatch();
+        }
+
+        function selectRight(index) {
+            document.querySelectorAll('[data-right]').forEach(item => item.classList.remove('selected'));
+            document.querySelector(`[data-right="${index}"]`).classList.add('selected');
+            selectedRight = index;
+            checkMatch();
+        }
+
+        function checkMatch() {
+            if (selectedLeft !== null && selectedRight !== null) {
+                const question = questions[currentQuestionIndex];
+                const leftItem = question.leftItems[selectedLeft];
+                const rightItem = question.rightItems[selectedRight];
+                
+                if (leftItem.match === rightItem.id) {
+                    // Correct match
+                    document.querySelector(`[data-left="${selectedLeft}"]`).classList.add('matched');
+                    document.querySelector(`[data-right="${selectedRight}"]`).classList.add('matched');
+                    matchedPairs.push({left: selectedLeft, right: selectedRight});
+                    
+                    if (matchedPairs.length === question.leftItems.length) {
+                        score++;
+                        streak++;
+                        totalAnswered = Math.max(totalAnswered, currentQuestionIndex + 1);
+                        const feedback = document.getElementById('feedback');
+                        feedback.className = 'feedback correct';
+                        feedback.textContent = 'Excellent! All matches are correct.';
+                        feedback.classList.remove('hidden');
+                        updateStats();
+                    }
+                } else {
+                    // Incorrect match
+                    document.querySelector(`[data-left="${selectedLeft}"]`).classList.add('wrong');
+                    document.querySelector(`[data-right="${selectedRight}"]`).classList.add('wrong');
+                    setTimeout(() => {
+                        document.querySelector(`[data-left="${selectedLeft}"]`).classList.remove('wrong', 'selected');
+                        document.querySelector(`[data-right="${selectedRight}"]`).classList.remove('wrong', 'selected');
+                    }, 1000);
+                    streak = 0;
+                    updateStats();
+                }
+                
+                selectedLeft = null;
+                selectedRight = null;
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                matchedPairs = [];
+                renderQuestion();
+            } else {
+                // Quiz complete
+                alert(`Quiz complete! Your score: ${score}/${questions.length}`);
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                matchedPairs = [];
+                renderQuestion();
+            }
+        }
+
+        function newQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            totalAnswered = 0;
+            streak = 0;
+            matchedPairs = [];
+            generateQuestions();
+            renderQuestion();
+            updateStats();
+        }
+
+        function updateQuestionCounter() {
+            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+            document.getElementById('total-questions').textContent = questions.length;
+            document.getElementById('score').textContent = score;
+            document.getElementById('total-score').textContent = totalAnswered;
+        }
+
+        function updateStats() {
+            const accuracy = totalAnswered > 0 ? Math.round((score / totalAnswered) * 100) : 0;
+            document.getElementById('accuracy').textContent = accuracy + '%';
+            document.getElementById('questions-answered').textContent = totalAnswered;
+            document.getElementById('current-streak').textContent = streak;
+            updateQuestionCounter();
+        }
+
+        // Initialize quiz when page loads
+        window.addEventListener('load', function() {
+            newQuiz();
+        });
+    </script>
+</body>
+</html>

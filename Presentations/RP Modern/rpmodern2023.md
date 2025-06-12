@@ -52,6 +52,8 @@ ol, ul {
 
 - Light behaves both like a wave and a particle! 🤔
 
+![center](image.png)
+
 ---
 
 # Dual Nature of Light
@@ -107,9 +109,30 @@ ol, ul {
 
 ---
 
-# Photon Energy 
+# Quantized vs. Continuous
 
-![center](figures/3d78ea95dbec987c88c0d5682f237c831781a129.webp)
+<div class='columns'>
+<div>
+
+![center w:500](image-2.png)
+
+</div>
+ 
+<div>
+
+ ![center w:500](image-3.png)
+
+</div>
+</div>
+
+
+
+---
+
+# Energy of a Photon 
+
+![center w:800](image-1.png)
+
 
 ---
 
@@ -204,6 +227,9 @@ $$ p = \frac{E}{C}=\frac{hf}{c}=\frac{h}{\lambda}$$
 * Smaller particles have more wavelike behavior
 * $\lambda = h/p = h/mv$
 
+![bg fit right:15%](figures/1-2-3-phase-animated.gif)
+
+
 ---
 
 **Moving electrons are found to exhibit properties of**
@@ -245,6 +271,10 @@ Note: $\lambda = h/p = h/mv$
 
 ---
 
+
+
+---
+
 ### Rutherford’s Gold Foil Experiment
 
 
@@ -272,7 +302,19 @@ Note: $\lambda = h/p = h/mv$
 
 ---
 
-![bg](figures/spectra.jpg)
+<iframe src="https://phet.colorado.edu/sims/html/rutherford-scattering/latest/rutherford-scattering_en.html"
+        width="1100"
+        height="650"
+        allowfullscreen>
+</iframe>
+
+---
+
+<iframe src="https://phet.colorado.edu/sims/html/models-of-the-hydrogen-atom/latest/models-of-the-hydrogen-atom_en.html"
+        width="1100"
+        height="650"
+        allowfullscreen>
+</iframe>
 
 ---
 

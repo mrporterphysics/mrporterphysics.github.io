@@ -747,7 +747,7 @@ Draw the following 4 waves: A, B, C, and D
 
 # Index of Refraction (p. 2 ref table)
 
-![center w:400](../figures/refractable.png)
+![center w:350](../figures/refractable.png)
 
 ---
 
@@ -792,7 +792,11 @@ $$\boxed{n_1 \sin \theta_1 = n_2 \sin \theta_2}$$
 
 </div></div>
 
+---
 
+# Practice 
+
+Packet questions 2-4
 
 
 

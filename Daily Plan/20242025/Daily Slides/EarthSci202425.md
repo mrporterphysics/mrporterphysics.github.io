@@ -15,6 +15,331 @@ math: mathjax
 
 ---
 
+# 2025.06.10 **Earth Science**
+
+##### **❓ of the 📅**: If you could have any view from your bedroom window, what would you want it to be? (mountains, trees, ocean, etc.)
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Go over Practice Practical & Answer any questions
+2. Earthquake additional practice 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.06.09 **Earth Science**
+
+##### **❓ of the 📅**: Tell me about the best pizza. 
+
+
+#### 📋 Agenda
+
+1. Practical Review - Day 1
+
+
+# ⚠️ NOTE:
+
+## We will be doing the practical on <u>**WEDNESDAY**</u> in class
+
+
+
+---
+
+# 2025.06.06 **Earth Science**
+
+##### **❓ of the 📅**: Are you traveling this summer? Where?
+
+
+#### 📋 Agenda
+
+1. Finish going over regents - last page
+1. Geologic History - Ice Age Notes
+2. Key worksheets -> Rocks & Minerals
+
+
+---
+
+# 2025.06.05 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite flavor of Stewart's Ice Cream?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Free Response June 2023 Regents
+2. Go Over Answers
+3. 🧠 Break
+4. June 2022 Regents MC
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice for Regents_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.06.04 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather fight 100 duck-sized horses or 1 horse-sized duck? 🦆
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Earth's History Review
+2. Earth's Interior Review
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for Regents Exam_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.06.03 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite thing to do on vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish going over regents MC from last class
+2. Astronomy Review Packet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review Astronomy_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.06.02 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite restuarant? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. June 2023 Regents - Multiple Choice
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Regents Questions_
+
+### 📆 Upcoming
+
+- Ice Age Notes
+- Key Worksheets Review
+- Lab Practical Review -> Next week
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.30 **Earth Science**
+
+##### **❓ of the 📅**: What superhero power would be the best to have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Reference Table Review Packet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Find 🔍 reference table items_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.29 **Earth Science**
+
+##### **❓ of the 📅**: How do you make your marshmallow for s'mores? 🔥
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ⏲️ 10 Min: Finish Lab/Work on Regents
+2. Severe Storm Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define severe storms_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.28 **Earth Science**
+
+##### **❓ of the 📅**: Road trip or 'staycation'?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+1. Finish Mapping Weather Variables
+3. Weather Fronts
+4. Regents Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Map Weather Variables_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# 2025.05.20 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Wind and Pressure Notes
+2. Finish Regents and go over answers
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model wind and pressure_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2025.05.19 **Earth Science**
+
+##### **❓ of the 📅**: Are you related or distantly related to anyone famous?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Complete Moisture Lab
+2. Cloud Formation Lab
+3. Finish Jan 2025 Regents 
+4. Answers to Jan 2025 Regents
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Cloud Fomation based on moisture data_
+
+### 📆 Upcoming
+
+- Wind & Pressure
+
+</div>
+</div>
+
+---
+
 # 2025.05.16 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be immune to all diseases or never feel physical pain?
@@ -303,6 +628,7 @@ math: mathjax
 
 </div>
 </div>
+
 
 
 ---

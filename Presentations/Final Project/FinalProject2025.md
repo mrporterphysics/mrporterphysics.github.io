@@ -155,7 +155,7 @@ math: mathjax
 
 ---
 
-# 2025.05.21 **AP Physics** Day 2
+# 2025.05.21 **AP Physics** Day 1
 
 ##### **❓ of the 📅**: What rule do you wish they would introduce into your favorite sport (or game)?
 
@@ -185,7 +185,7 @@ math: mathjax
 
 ---
 
-# 2024.05.23 **AP Physics** Day 3
+# 2025.05.21 **AP Physics** Day 2
 
 ##### **❓ of the 📅**: Any big Memorial Day Weekend Plans?
 
@@ -195,6 +195,7 @@ math: mathjax
 
 #### 📋 Agenda
 
+0. Submit Proposal
 1. Research
 2. Data Collection - Should be completed by the end of next week
 
@@ -217,7 +218,7 @@ math: mathjax
 
 ---
 
-# Day 4 - Experimental Design & Research 
+# Day 3 - Experimental Design & Research 
 
 ##### ❓of the 📅: *If you were ruler of your own country what would be the first law you would introduce?*
 
@@ -233,7 +234,7 @@ math: mathjax
 
 
 
-# 5.29: Day 5 - Start Experimenting 
+# 5.28 Start Experimenting 
 
 ##### ❓of the 📅: What three items would you take with you on a deserted island?
 
@@ -246,26 +247,23 @@ math: mathjax
 
 ---
 
-<!--- _header: 2023.05.24 - **AP Physics** --->
+# 2025.05.29 - Collecting Data
 
-# Day 6 - Collecting Data
-
-
+##### ❓of the 📅: Which body of water: ocean, lake, pond, river, stream, pool?
 
 ## 📋 Agenda
 
 1. Collect Data
 2. Analyze Data 
 
-## 🎯 Week Goal: Complete data collection
+### 🎯 Week Goal: Complete data collection
 
 ---
 
-<!--- _header: 2023.05.25 - **AP Physics** --->
 
-# Day 7 - Finish Data Collection 
+# 2025.05.30 - Finish Data Collection 
 
-##### **❓of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+##### **❓of the 📅**: Should we terraform Mars for human habitation or focus on fixing Earth?
 
 <div class="columns">
 <div>
@@ -294,9 +292,9 @@ math: mathjax
 ---
 
 
-<!--- _header: 2023.05.31 - **AP Physics** --->
+<!--- _header: 2025.06.03 - **AP Physics** --->
 
-# Day 8 - Data Analysis
+# Data Analysis
 
 ##### **❓of the 📅**: What did you do over your long weekend?
 
