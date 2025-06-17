@@ -28,6 +28,8 @@
 - [Static Electricity](/mrporterphysics.github.io/Presentations/RP%20Static%20Electricity/staticE2025.html)
 - [Circuits](/mrporterphysics.github.io/Presentations/RP%20Electricity/RPCircuits2023.html)
 - [Waves](/mrporterphysics.github.io/Presentations/Waves/talks/RP_Waves_2023.html)
+- [Modern Physics](/mrporterphysics.github.io/Presentations/RP%20Modern/rpmodern2023.html)
+- [Magnets](/mrporterphysics.github.io/Presentations/Magnetism/magnetism.html)
 
 
 ## Earth Science
