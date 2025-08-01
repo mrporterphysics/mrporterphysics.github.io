@@ -132,18 +132,88 @@
         <div class="mode-option active" data-mode="test">Test Mode</div>
         <div class="mode-option" data-mode="learn">Learning Mode</div>
         <div class="mode-option" data-mode="review">Review Missed</div>
+        <div class="mode-option" data-mode="spaced">Smart Review</div>
       </div>
       
       <div class="setup-instructions">
         <p><strong>Test Mode:</strong> Answer questions without seeing answers until the end</p>
         <p><strong>Learning Mode:</strong> See correct answers immediately after each response</p>
         <p><strong>Review Missed:</strong> Focus on questions you previously answered incorrectly</p>
+        <p><strong>Smart Review:</strong> AI-powered spaced repetition focuses on questions you need to practice most</p>
       </div>
       
       <!-- Resume button will be inserted here if there's a saved quiz -->
       <button class="btn" id="startQuiz" type="button">Start Quiz</button>
       
-      <!-- User Statistics Section -->
+      <!-- Teacher Mode Toggle -->
+      <div class="teacher-access" style="margin-top: 15px; text-align: center;">
+        <button class="btn teacher-btn" id="teacherModeBtn" type="button" style="background-color: var(--accent-info); font-size: 0.9em;">
+          👨‍🏫 Teacher Mode
+        </button>
+      </div>
+      
+      <!-- Visual Progress Dashboard -->
+      <div class="progress-dashboard" id="progressDashboard" style="display: none;">
+        <h3 class="dashboard-title">📊 Your Learning Progress</h3>
+        
+        <!-- Overall Stats Cards -->
+        <div class="stats-cards">
+          <div class="stat-card overall-accuracy">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-value" id="overallAccuracy">0%</div>
+            <div class="stat-label">Overall Accuracy</div>
+          </div>
+          <div class="stat-card questions-answered">
+            <div class="stat-icon">✅</div>
+            <div class="stat-value" id="totalAnswered">0</div>
+            <div class="stat-label">Questions Answered</div>
+          </div>
+          <div class="stat-card study-streak">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-value" id="studyStreak">0</div>
+            <div class="stat-label">Day Streak</div>
+          </div>
+          <div class="stat-card mastery-level">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-value" id="masteryLevel">Beginner</div>
+            <div class="stat-label">Level</div>
+          </div>
+        </div>
+        
+        <!-- Topic Mastery Grid -->
+        <div class="topic-mastery-section">
+          <h4>📚 Topic Mastery</h4>
+          <div class="topic-mastery-grid" id="topicMasteryGrid">
+            <!-- Will be populated dynamically -->
+          </div>
+        </div>
+        
+        <!-- Difficulty Progress -->
+        <div class="difficulty-progress-section">
+          <h4>⭐ Difficulty Progress</h4>
+          <div class="difficulty-bars" id="difficultyBars">
+            <!-- Will be populated dynamically -->
+          </div>
+        </div>
+        
+        <!-- Recent Activity -->
+        <div class="recent-activity-section">
+          <h4>📈 Recent Activity</h4>
+          <div class="activity-chart" id="activityChart">
+            <div class="activity-placeholder">Complete some quizzes to see your progress!</div>
+          </div>
+        </div>
+        
+        <!-- Recommendations -->
+        <div class="recommendations-section">
+          <h4>💡 Recommendations</h4>
+          <div class="recommendations-list" id="recommendationsList">
+            <!-- Will be populated dynamically -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Legacy User Statistics Section (kept for compatibility) -->
       <div class="user-stats" id="userStats" style="display: none;">
         <h3 class="stats-title">Your Progress</h3>
         <div class="stats-grid" id="statsGrid">
@@ -239,6 +309,218 @@
       </button>
     </div>
   </div>
+  
+  <!-- Teacher Admin Panel -->
+  <div id="teacherPanel" class="teacher-panel" style="display: none;">
+    <div class="container">
+      <div class="teacher-header">
+        <h2>👨‍🏫 Teacher Administration Panel</h2>
+        <button class="btn close-teacher" id="closeTeacherPanel">✕ Close</button>
+      </div>
+      
+      <!-- Authentication -->
+      <div id="teacherAuth" class="teacher-auth">
+        <h3>🔐 Teacher Access</h3>
+        <p>Enter the teacher access code to continue:</p>
+        <div class="auth-form">
+          <input type="password" id="teacherPassword" placeholder="Access Code" class="auth-input">
+          <button class="btn" id="teacherLogin">Access Panel</button>
+        </div>
+        <p class="auth-hint">Default code: <code>physics2024</code></p>
+      </div>
+      
+      <!-- Main Teacher Dashboard -->
+      <div id="teacherDashboard" class="teacher-dashboard" style="display: none;">
+        
+        <!-- Quick Stats -->
+        <div class="teacher-stats-cards">
+          <div class="teacher-stat-card">
+            <div class="stat-icon">📚</div>
+            <div class="stat-number" id="totalQuestionsCount">260</div>
+            <div class="stat-label">Total Questions</div>
+          </div>
+          <div class="teacher-stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-number" id="activeStudentsCount">-</div>
+            <div class="stat-label">Active Students</div>
+          </div>
+          <div class="teacher-stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-number" id="averageAccuracy">-</div>
+            <div class="stat-label">Class Average</div>
+          </div>
+          <div class="teacher-stat-card">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-number" id="totalSessionsCount">-</div>
+            <div class="stat-label">Total Sessions</div>
+          </div>
+        </div>
+        
+        <!-- Navigation Tabs -->
+        <div class="teacher-tabs">
+          <button class="teacher-tab active" data-tab="overview">📊 Overview</button>
+          <button class="teacher-tab" data-tab="questions">❓ Questions</button>
+          <button class="teacher-tab" data-tab="analytics">📈 Analytics</button>
+          <button class="teacher-tab" data-tab="settings">⚙️ Settings</button>
+        </div>
+        
+        <!-- Overview Tab -->
+        <div id="overviewTab" class="teacher-tab-content active">
+          <h3>📊 Class Overview</h3>
+          
+          <!-- Recent Activity -->
+          <div class="teacher-section">
+            <h4>Recent Student Activity</h4>
+            <div class="activity-log" id="recentActivity">
+              <div class="activity-placeholder">No recent student activity recorded.</div>
+            </div>
+          </div>
+          
+          <!-- Topic Performance -->
+          <div class="teacher-section">
+            <h4>Topic Performance Summary</h4>
+            <div class="topic-performance-grid" id="topicPerformanceGrid">
+              <!-- Will be populated dynamically -->
+            </div>
+          </div>
+          
+          <!-- Study Recommendations -->
+          <div class="teacher-section">
+            <h4>Class Recommendations</h4>
+            <div class="class-recommendations" id="classRecommendations">
+              <!-- Will be populated dynamically -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Questions Tab -->
+        <div id="questionsTab" class="teacher-tab-content">
+          <h3>❓ Question Management</h3>
+          
+          <!-- Question Stats -->
+          <div class="teacher-section">
+            <h4>Question Database</h4>
+            <div class="question-stats-grid" id="questionStatsGrid">
+              <!-- Will be populated dynamically -->
+            </div>
+          </div>
+          
+          <!-- Question Import/Export -->
+          <div class="teacher-section">
+            <h4>Import/Export Questions</h4>
+            <div class="import-export-controls">
+              <div class="control-group">
+                <label for="csvImport">Import Questions (CSV):</label>
+                <input type="file" id="csvImport" accept=".csv" class="file-input">
+                <button class="btn" id="importQuestions">Import</button>
+              </div>
+              <div class="control-group">
+                <label>Export Questions:</label>
+                <button class="btn" id="exportQuestions">Download CSV</button>
+                <button class="btn" id="exportPrintable">Printable Version</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Question Preview -->
+          <div class="teacher-section">
+            <h4>Question Preview</h4>
+            <div class="question-preview" id="questionPreview">
+              <p>Select a topic to preview questions:</p>
+              <select id="previewTopicSelect" class="topic-select">
+                <option value="all">All Topics</option>
+                <option value="kinematics">Kinematics</option>
+                <option value="forces">Forces</option>
+                <option value="energy">Energy</option>
+                <option value="momentum">Momentum</option>
+                <option value="rotation">Rotation</option>
+                <option value="gravitation">Gravitation</option>
+                <option value="shm">Simple Harmonic Motion</option>
+                <option value="fluids">Fluids</option>
+              </select>
+              <div id="previewContent" class="preview-content">
+                <!-- Questions will be displayed here -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Analytics Tab -->
+        <div id="analyticsTab" class="teacher-tab-content">
+          <h3>📈 Detailed Analytics</h3>
+          
+          <!-- Performance Metrics -->
+          <div class="teacher-section">
+            <h4>Performance Metrics</h4>
+            <div class="metrics-dashboard" id="metricsDashboard">
+              <!-- Charts and metrics will be displayed here -->
+            </div>
+          </div>
+          
+          <!-- Difficulty Analysis -->
+          <div class="teacher-section">
+            <h4>Question Difficulty Analysis</h4>
+            <div class="difficulty-analysis" id="difficultyAnalysis">
+              <!-- Difficulty breakdowns will be displayed here -->
+            </div>
+          </div>
+          
+          <!-- Learning Progress -->
+          <div class="teacher-section">
+            <h4>Learning Progress Tracking</h4>
+            <div class="progress-tracking" id="progressTracking">
+              <!-- Progress charts will be displayed here -->
+            </div>
+          </div>
+        </div>
+        
+        <!-- Settings Tab -->
+        <div id="settingsTab" class="teacher-tab-content">
+          <h3>⚙️ Settings & Configuration</h3>
+          
+          <!-- General Settings -->
+          <div class="teacher-section">
+            <h4>General Settings</h4>
+            <div class="settings-group">
+              <label>
+                <input type="checkbox" id="allowStudentStats"> 
+                Allow students to view detailed statistics
+              </label>
+              <label>
+                <input type="checkbox" id="enableSpacedRepetition" checked> 
+                Enable spaced repetition for students
+              </label>
+              <label>
+                <input type="checkbox" id="showDifficulty" checked> 
+                Show difficulty indicators to students
+              </label>
+            </div>
+          </div>
+          
+          <!-- Access Control -->
+          <div class="teacher-section">
+            <h4>Access Control</h4>
+            <div class="settings-group">
+              <label for="newTeacherPassword">Change Teacher Access Code:</label>
+              <input type="password" id="newTeacherPassword" placeholder="New access code">
+              <button class="btn" id="updatePassword">Update Code</button>
+            </div>
+          </div>
+          
+          <!-- Data Management -->
+          <div class="teacher-section">
+            <h4>Data Management</h4>
+            <div class="settings-group">
+              <button class="btn" id="exportAllData">Export All Student Data</button>
+              <button class="btn danger" id="clearAllData">Clear All Data</button>
+              <p class="warning-text">⚠️ Warning: Clearing data cannot be undone!</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript libraries - Load in correct order -->
   <script src="https://cdn.jsdelivr.net/npm/marked@4.2.5/marked.min.js"></script>
@@ -255,6 +537,9 @@
   
   <!-- UI scripts next -->
   <script src="js/quiz-ui.js"></script>
+  <script src="js/progress-dashboard.js"></script>
+  <script src="js/spaced-repetition.js"></script>
+  <script src="js/teacher-panel.js"></script>
   <!-- Add this after your other JavaScript files but before app.js -->
   <script src="js/enhanced-fill-questions-dropdown.js"></script>
   

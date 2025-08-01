@@ -9,7 +9,10 @@ const QuizStorage = (function() {
       MISSED: 'ap_physics_quiz_missed',
       STATS: 'ap_physics_quiz_stats',
       SETTINGS: 'ap_physics_quiz_settings',
-      LAST_VISIT: 'ap_physics_quiz_last_visit'
+      LAST_VISIT: 'ap_physics_quiz_last_visit',
+      ACTIVITY_DATES: 'ap_physics_quiz_activity_dates',
+      LAST_ACTIVITY: 'ap_physics_quiz_last_activity',
+      DIFFICULTY_STATS: 'ap_physics_quiz_difficulty_stats'
     };
     
     /**
@@ -278,6 +281,95 @@ const QuizStorage = (function() {
       }
     }
     
+    /**
+     * Track activity date for streak calculation
+     */
+    function trackActivity() {
+      try {
+        const today = new Date().toDateString();
+        let activityDates = getActivityDates();
+        
+        // Add today if not already tracked
+        if (!activityDates.includes(today)) {
+          activityDates.push(today);
+          // Keep only last 30 days
+          activityDates = activityDates.slice(-30);
+          localStorage.setItem(KEYS.ACTIVITY_DATES, JSON.stringify(activityDates));
+        }
+        
+        // Update last activity
+        localStorage.setItem(KEYS.LAST_ACTIVITY, new Date().toISOString());
+      } catch (error) {
+        console.error('Error tracking activity:', error);
+      }
+    }
+    
+    /**
+     * Get activity dates for streak calculation
+     * @return {Array} Array of activity date strings
+     */
+    function getActivityDates() {
+      try {
+        const dates = localStorage.getItem(KEYS.ACTIVITY_DATES);
+        return dates ? JSON.parse(dates) : [];
+      } catch (error) {
+        console.error('Error getting activity dates:', error);
+        return [];
+      }
+    }
+    
+    /**
+     * Get last activity timestamp
+     * @return {string|null} ISO timestamp of last activity
+     */
+    function getLastActivity() {
+      try {
+        return localStorage.getItem(KEYS.LAST_ACTIVITY);
+      } catch (error) {
+        console.error('Error getting last activity:', error);
+        return null;
+      }
+    }
+    
+    /**
+     * Save difficulty-based statistics
+     * @param {Object} difficultyStats - Stats by difficulty level
+     */
+    function saveDifficultyStats(difficultyStats) {
+      try {
+        localStorage.setItem(KEYS.DIFFICULTY_STATS, JSON.stringify(difficultyStats));
+      } catch (error) {
+        console.error('Error saving difficulty stats:', error);
+      }
+    }
+    
+    /**
+     * Load difficulty-based statistics
+     * @return {Object} Stats by difficulty level
+     */
+    function loadDifficultyStats() {
+      try {
+        const stats = localStorage.getItem(KEYS.DIFFICULTY_STATS);
+        return stats ? JSON.parse(stats) : { easy: {}, medium: {}, hard: {} };
+      } catch (error) {
+        console.error('Error loading difficulty stats:', error);
+        return { easy: {}, medium: {}, hard: {} };
+      }
+    }
+    
+    /**
+     * Get comprehensive statistics for dashboard
+     * @return {Object} Complete user statistics
+     */
+    function getStats() {
+      return {
+        ...loadStats(),
+        activityDates: getActivityDates(),
+        lastActivity: getLastActivity(),
+        difficultyStats: loadDifficultyStats()
+      };
+    }
+
     // Initialize the module
     function init() {
       if (!isSupported()) {
@@ -286,6 +378,7 @@ const QuizStorage = (function() {
       }
       
       updateLastVisit();
+      trackActivity();
       return true;
     }
     
@@ -306,6 +399,12 @@ const QuizStorage = (function() {
       clearAllData,
       exportData,
       importData,
-      isSupported
+      isSupported,
+      trackActivity,
+      getActivityDates,
+      getLastActivity,
+      saveDifficultyStats,
+      loadDifficultyStats,
+      getStats
     };
   })();

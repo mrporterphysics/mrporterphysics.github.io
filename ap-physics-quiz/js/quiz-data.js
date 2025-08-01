@@ -224,12 +224,17 @@ const QuizData = (function() {
   }
   
   // Filter questions based on type and topic
-  function filterQuestions(questionType = 'all', topic = 'all', useReviewMode = false) {
-    console.log('Filtering questions', { questionType, topic, useReviewMode });
+  function filterQuestions(questionType = 'all', topic = 'all', useReviewMode = false, useSpacedRepetition = false) {
+    console.log('Filtering questions', { questionType, topic, useReviewMode, useSpacedRepetition });
     
     // Make sure we have questions loaded
     if (allQuestions.length === 0) {
       initializeQuestions();
+    }
+    
+    // Handle spaced repetition mode
+    if (useSpacedRepetition && typeof SpacedRepetition !== 'undefined') {
+      return getSpacedRepetitionQuestions(questionType, topic);
     }
     
     let filtered = [];
@@ -547,6 +552,87 @@ const QuizData = (function() {
   }
   
   // Count questions by type and topic
+  /**
+   * Get questions optimized for spaced repetition
+   * @param {string} questionType - Type of questions to include
+   * @param {string} topic - Topic to focus on
+   * @return {Array} Array of questions optimized for learning
+   */
+  function getSpacedRepetitionQuestions(questionType = 'all', topic = 'all') {
+    // Get study session from spaced repetition system
+    const studySession = SpacedRepetition.getStudySession({
+      maxQuestions: 20,
+      focusTopic: topic === 'all' ? null : topic,
+      includeNew: true,
+      reviewOnly: false
+    });
+    
+    const dueQuestionIds = studySession.dueForReview;
+    const spacedQuestions = [];
+    
+    // Find questions that are due for review
+    allQuestions.forEach(question => {
+      const questionId = question.id ? question.id.toString() : `q_${allQuestions.indexOf(question)}`;
+      
+      if (dueQuestionIds.includes(questionId)) {
+        // Check if question matches filters
+        if (questionType === 'all' || question.type === questionType) {
+          if (topic === 'all' || question.topic === topic) {
+            spacedQuestions.push({
+              ...question,
+              spacedRepetition: true,
+              priority: 'review'
+            });
+          }
+        }
+      }
+    });
+    
+    // If we don't have enough due questions, add some new ones
+    if (spacedQuestions.length < 10) {
+      const newQuestions = allQuestions.filter(question => {
+        const questionId = question.id ? question.id.toString() : `q_${allQuestions.indexOf(question)}`;
+        const isAlreadyIncluded = spacedQuestions.some(sq => 
+          (sq.id ? sq.id.toString() : `q_${allQuestions.indexOf(sq)}`) === questionId
+        );
+        
+        if (isAlreadyIncluded) return false;
+        
+        // Apply filters
+        if (questionType !== 'all' && question.type !== questionType) return false;
+        if (topic !== 'all' && question.topic !== topic) return false;
+        
+        return true;
+      });
+      
+      // Add new questions up to our target
+      const neededCount = Math.min(10 - spacedQuestions.length, newQuestions.length);
+      const shuffledNew = Utils.shuffleArray(newQuestions).slice(0, neededCount);
+      
+      shuffledNew.forEach(question => {
+        spacedQuestions.push({
+          ...question,
+          spacedRepetition: true,
+          priority: 'new'
+        });
+      });
+    }
+    
+    // Sort by priority (review questions first, then new)
+    spacedQuestions.sort((a, b) => {
+      if (a.priority === 'review' && b.priority !== 'review') return -1;
+      if (a.priority !== 'review' && b.priority === 'review') return 1;
+      return 0;
+    });
+    
+    console.log(`Spaced repetition selected ${spacedQuestions.length} questions`, {
+      review: spacedQuestions.filter(q => q.priority === 'review').length,
+      new: spacedQuestions.filter(q => q.priority === 'new').length
+    });
+    
+    return spacedQuestions;
+  }
+
   function getQuestionStats() {
     // Make sure we have questions loaded
     if (allQuestions.length === 0) {

@@ -169,8 +169,10 @@ const QuizUI = (function() {
     elements.displays.currentQuestion.textContent = index + 1;
     elements.displays.totalQuestions.textContent = total;
     
-    // Display question text with LaTeX rendering
-    elements.displays.question.innerHTML = Utils.renderMarkdownWithLaTeX(question.question);
+    // Display question text with LaTeX rendering and difficulty indicator
+    const questionHTML = Utils.renderMarkdownWithLaTeX(question.question);
+    const difficultyIndicator = getDifficultyIndicator(question.difficulty || 2);
+    elements.displays.question.innerHTML = `${difficultyIndicator} ${questionHTML}`;
     
     // Reset UI
     elements.inputs.tfOptions.style.display = 'none';
@@ -1092,8 +1094,18 @@ function initializeAdvancedQuestionTypes() {
   }
   
   // Show feedback for an answer
-  function showAnswerFeedback(isCorrect) {
-    elements.displays.feedback.textContent = isCorrect ? 'Correct!' : 'Incorrect';
+  function showAnswerFeedback(isCorrect, userAnswer = null, question = null) {
+    let feedbackText = isCorrect ? 'Correct!' : 'Incorrect';
+    
+    // Add detailed feedback for incorrect answers
+    if (!isCorrect && question) {
+      const wrongAnswerExplanation = getWrongAnswerExplanation(question, userAnswer);
+      if (wrongAnswerExplanation) {
+        feedbackText = `Incorrect - ${wrongAnswerExplanation}`;
+      }
+    }
+    
+    elements.displays.feedback.innerHTML = feedbackText;
     elements.displays.feedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
     
     // Add animation
@@ -1105,6 +1117,86 @@ function initializeAdvancedQuestionTypes() {
     }, 500);
     
     return true;
+  }
+  
+  /**
+   * Get detailed explanation for wrong answers
+   * @param {Object} question - The question object
+   * @param {string} userAnswer - The user's incorrect answer
+   * @return {string} Detailed explanation for the wrong answer
+   */
+  function getWrongAnswerExplanation(question, userAnswer) {
+    if (!question || !userAnswer) return null;
+    
+    // Check for specific wrong answer explanations
+    if (question.wrongAnswerExplanations && question.wrongAnswerExplanations[userAnswer]) {
+      return question.wrongAnswerExplanations[userAnswer];
+    }
+    
+    // Generate contextual explanations based on question type and content
+    if (question.type === 'tf') {
+      if (question.topic === 'kinematics') {
+        return "Remember to distinguish between distance (total path) and displacement (straight-line change in position).";
+      } else if (question.topic === 'forces') {
+        return "Review Newton's laws and the relationships between force, mass, and acceleration.";
+      } else if (question.topic === 'energy') {
+        return "Consider the conservation of energy and the different forms energy can take.";
+      }
+    } else if (question.type === 'mc' && question.options) {
+      const wrongOption = question.options.find(opt => opt.label === userAnswer);
+      if (wrongOption) {
+        return `"${wrongOption.text}" is a common misconception. ${getTopicGuidance(question.topic)}`;
+      }
+    } else if (question.type === 'fill') {
+      return `The correct answer should be "${question.answer}". ${getTopicGuidance(question.topic)}`;
+    }
+    
+    return getTopicGuidance(question.topic);
+  }
+  
+  /**
+   * Get difficulty indicator HTML
+   * @param {number} difficulty - Difficulty level (1-3)
+   * @return {string} HTML for difficulty indicator
+   */
+  function getDifficultyIndicator(difficulty) {
+    const difficultyNames = {
+      1: 'Easy',
+      2: 'Medium', 
+      3: 'Hard'
+    };
+    
+    const difficultyClass = `difficulty-${difficulty}`;
+    const difficultyName = difficultyNames[difficulty] || 'Medium';
+    
+    // Create stars for visual indication
+    const stars = '★'.repeat(difficulty) + '☆'.repeat(3 - difficulty);
+    
+    return `<span class="difficulty-indicator ${difficultyClass}" title="${difficultyName}">${stars}</span>`;
+  }
+
+  /**
+   * Get topic-specific guidance for wrong answers
+   * @param {string} topic - The question topic
+   * @return {string} Topic-specific guidance
+   */
+  function getTopicGuidance(topic) {
+    const topicGuidance = {
+      'kinematics': 'Review the definitions of position, velocity, and acceleration, and how they relate on graphs.',
+      'forces': 'Remember to identify all forces acting on an object and apply Newton\'s laws systematically.',
+      'energy': 'Consider which types of energy are present and apply conservation of energy principles.',
+      'momentum': 'Apply conservation of momentum and remember that momentum is a vector quantity.',
+      'rotation': 'Think about rotational analogs to linear motion concepts (torque, angular velocity, etc.).',
+      'gravitation': 'Consider how gravitational force depends on mass and distance according to Newton\'s law.',
+      'shm': 'Remember the relationships between position, velocity, and acceleration in harmonic motion.',
+      'fluids': 'Apply principles of pressure, buoyancy, and fluid flow (Bernoulli\'s principle).',
+      'astronomy': 'Consider the scale and relationships between celestial objects and phenomena.',
+      'meteorology': 'Think about how atmospheric conditions and weather systems interact.',
+      'geology': 'Consider the processes that shape Earth\'s surface and interior over time.',
+      'plate_tectonics': 'Remember how plate movements cause earthquakes, volcanoes, and mountain formation.'
+    };
+    
+    return topicGuidance[topic] || 'Review the fundamental concepts related to this topic.';
   }
   
   /**

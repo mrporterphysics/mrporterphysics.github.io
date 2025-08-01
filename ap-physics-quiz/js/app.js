@@ -13,8 +13,8 @@ const PhysicsQuizApp = (function() {
   let attemptedQuestions = new Set();
   let currentMode = '';
   
-  // Enable debug mode in development (set to true for troubleshooting)
-  Utils.setDebugMode(true);
+  // Enable debug mode in development (set to false for production)
+  Utils.setDebugMode(false);
   
   /**
    * Initialize the application
@@ -220,6 +220,29 @@ function parseCSVDirectly(csvText) {
 }
 
 /**
+ * Parse difficulty level from CSV data
+ * @param {string} difficultyString - The difficulty value from CSV
+ * @return {number} Difficulty level (1-3, default 2)
+ */
+function parseDifficulty(difficultyString) {
+  if (!difficultyString) return 2; // Default to medium
+  
+  const difficulty = difficultyString.toString().toLowerCase().trim();
+  
+  // Handle numeric values
+  if (!isNaN(difficulty)) {
+    const num = parseInt(difficulty);
+    return Math.max(1, Math.min(3, num)); // Clamp between 1-3
+  }
+  
+  // Handle text values
+  if (difficulty.includes('easy') || difficulty.includes('beginner') || difficulty === '1') return 1;
+  if (difficulty.includes('hard') || difficulty.includes('difficult') || difficulty.includes('advanced') || difficulty === '3') return 3;
+  
+  return 2; // Default to medium
+}
+
+/**
  * Parse a CSV line, properly handling quotes and commas
  * @param {string} line - A single CSV line
  * @return {Array} Array of values from the line
@@ -270,6 +293,7 @@ function processTFQuestion(data) {
     answer: String(data.answer).toLowerCase().trim(),
     topic: data.topic ? data.topic.trim() : 'general',
     explanation: data.explanation ? data.explanation.trim() : '',
+    difficulty: parseDifficulty(data.difficulty),
     type: 'tf'
   };
 }
@@ -305,6 +329,7 @@ function processFillQuestion(data) {
     alternateAnswers: alternateAnswers,
     topic: data.topic ? data.topic.trim() : 'general',
     explanation: data.explanation ? data.explanation.trim() : '',
+    difficulty: parseDifficulty(data.difficulty),
     type: 'fill'
   };
 }
@@ -350,6 +375,7 @@ function processMCQuestion(data) {
     answer: data.answer.trim(),
     topic: data.topic ? data.topic.trim() : 'general',
     explanation: data.explanation ? data.explanation.trim() : '',
+    difficulty: parseDifficulty(data.difficulty),
     type: 'mc'
   };
 }
@@ -381,6 +407,7 @@ function processMatchingQuestion(data) {
     matchingOptions: matchingOptions,
     topic: data.topic ? data.topic.trim() : 'general',
     explanation: data.explanation ? data.explanation.trim() : '',
+    difficulty: parseDifficulty(data.difficulty),
     type: 'matching'
   };
 }
@@ -415,6 +442,7 @@ function processImageQuestion(data) {
     answer: data.answer.trim(),
     topic: data.topic ? data.topic.trim() : 'general',
     explanation: data.explanation ? data.explanation.trim() : '',
+    difficulty: parseDifficulty(data.difficulty),
     type: 'image'
   };
 }
@@ -612,7 +640,8 @@ function startQuiz() {
   currentQuestions = QuizData.filterQuestions(
     selections.questionType,
     selections.topic,
-    selections.mode === 'review'
+    selections.mode === 'review',
+    selections.mode === 'spaced'
   );
   
   if (!currentQuestions || currentQuestions.length === 0) {
@@ -738,6 +767,11 @@ function checkAnswer() {
   // Mark question as attempted
   attemptedQuestions.add(currentQuestionIndex);
   
+  // Update spaced repetition system
+  if (typeof SpacedRepetition !== 'undefined') {
+    updateSpacedRepetitionData(question, isCorrect, userAnswer);
+  }
+  
   // Update stats
   if (isCorrect) {
     correctCount++;
@@ -748,8 +782,8 @@ function checkAnswer() {
   
   questionsAnswered++;
   
-  // Update UI
-  QuizUI.showAnswerFeedback(isCorrect);
+  // Update UI with detailed feedback
+  QuizUI.showAnswerFeedback(isCorrect, userAnswer, question);
   QuizUI.updateProgress(questionsAnswered, currentQuestions.length, correctCount, incorrectCount);
   
   // Show answer if in learning mode
@@ -762,6 +796,42 @@ function checkAnswer() {
   
   Utils.performance.end('checkAnswer');
   return isCorrect;
+}
+
+/**
+ * Update spaced repetition data based on user performance
+ * @param {Object} question - The question object
+ * @param {boolean} isCorrect - Whether the answer was correct
+ * @param {string} userAnswer - The user's answer
+ */
+function updateSpacedRepetitionData(question, isCorrect, userAnswer) {
+  // Calculate quality rating based on performance
+  let quality = SpacedRepetition.QUALITY.CORRECT_NORMAL;
+  
+  if (!isCorrect) {
+    quality = SpacedRepetition.QUALITY.INCORRECT;
+  } else {
+    // For correct answers, determine quality based on difficulty and response
+    const difficulty = question.difficulty || 2;
+    
+    // Simple heuristic: if it's an easy question (1) and correct, mark as easy
+    // If it's a hard question (3) and correct, mark as hard
+    if (difficulty === 1) {
+      quality = SpacedRepetition.QUALITY.CORRECT_EASY;
+    } else if (difficulty === 3) {
+      quality = SpacedRepetition.QUALITY.CORRECT_HARD;
+    }
+  }
+  
+  // Update the spaced repetition card
+  const questionId = question.id ? question.id.toString() : `q_${currentQuestionIndex}`;
+  SpacedRepetition.updateCard(
+    questionId, 
+    quality, 
+    0, // responseTime - could be tracked in future
+    isCorrect, 
+    question.topic || 'general'
+  );
 }
 
 /**
