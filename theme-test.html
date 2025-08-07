@@ -1,0 +1,81 @@
+---
+layout: default
+title: Theme Test
+---
+
+<h1>Flexoki Theme Test Page</h1>
+
+<p>This page demonstrates the new Flexoki theme with light/dark mode toggle functionality.</p>
+
+<h2>Typography Examples</h2>
+
+<p>Regular paragraph text with <strong>bold</strong> and <em>italic</em> styling. Here's a <a href="#">sample link</a> to test link colors.</p>
+
+<h3>Code Examples</h3>
+
+<p>Inline code: <code>console.log('Hello World');</code></p>
+
+<pre><code>// Code block example
+function toggleTheme() {
+  const theme = document.documentElement.getAttribute('data-theme');
+  const newTheme = theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+}</code></pre>
+
+<h3>List Examples</h3>
+
+<ul>
+  <li>First list item</li>
+  <li>Second list item with <strong>emphasis</strong></li>
+  <li>Third item with a <a href="#">link</a></li>
+</ul>
+
+<ol>
+  <li>Numbered list item</li>
+  <li>Another numbered item</li>
+  <li>Final numbered item</li>
+</ol>
+
+<h3>Interactive Elements</h3>
+
+<button onclick="alert('Button clicked!')">Sample Button</button>
+
+<h3>Blockquote Example</h3>
+
+<blockquote>
+  <p>This is a sample blockquote to demonstrate the styling of quoted text in both light and dark themes.</p>
+</blockquote>
+
+<h3>Table Example</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row 1, Col 1</td>
+      <td>Row 1, Col 2</td>
+      <td>Row 1, Col 3</td>
+    </tr>
+    <tr>
+      <td>Row 2, Col 1</td>
+      <td>Row 2, Col 2</td>
+      <td>Row 2, Col 3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Theme Toggle Instructions</h2>
+
+<p>You can toggle between light and dark themes using:</p>
+<ul>
+  <li>The theme toggle button in the site header</li>
+  <li>Keyboard shortcut: <kbd>Ctrl+Shift+T</kbd> (or <kbd>Cmd+Shift+T</kbd> on Mac)</li>
+</ul>
+
+<p>Your theme preference will be automatically saved and restored when you visit the site again.</p>
