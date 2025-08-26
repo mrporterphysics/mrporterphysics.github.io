@@ -3,10 +3,9 @@
 # Presentations:
 
 You can find links to class presentations here:
-  - [AP Agenda 2024-25](/Daily%20Plan/20252026/Daily%20Slides/APAgendas202526.html)
-  - Find [Regents Agenda 2024-25](/Daily%20Plan/20252026/Daily%20Slides/RPAgendas202526.html).
-  - Find [Earth Science Agenda 2024-25](/Daily%20Plan/20252026/Daily%20Slides/EarthSci2024526.html).
-  - Find [Physical Science Agenda 2025](/mrporterphysics.github.io/Daily%20Plan/20252026/Daily%20Slides/physicalScience2026.html)
+  - [AP Agenda 2025-26](/Daily%20Plan/20252026/Daily%20Slides/APAgendas202526.html)
+  - Find [Regents Agenda 2025-26](/Daily%20Plan/20252026/Daily%20Slides/RPAgendas202526.html).
+  - Find [Earth Science Agenda 2025-26](/Daily%20Plan/20252026/Daily%20Slides/EarthSci2024526.html).
   - Find [Content Presentations](presindex).
 
 # Resource Pages
