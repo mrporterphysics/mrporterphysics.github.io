@@ -2,7 +2,7 @@
 title: Regents Physics 2024-25
 marp: true
 theme: physicalSci
-class: dark
+class: bluegray
 paginate: true
 math: mathjax
 ---
@@ -15,7 +15,7 @@ math: mathjax
 
 ---
 
-# 2024.09.06 **Regents Physics** 
+# 2025.09.04 **Regents Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
