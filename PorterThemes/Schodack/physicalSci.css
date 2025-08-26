@@ -24,6 +24,46 @@
     --dark-accent-red: #E4685D;
     --dark-accent-purple: #A373E5;
     
+    /* Twilight theme colors - dusky evening tones */
+    --twilight-background: #2D2B3A;
+    --twilight-text: #D4C4B0;
+    --twilight-accent-blue: #6B8CAE;
+    --twilight-accent-green: #7A9B59;
+    --twilight-accent-red: #C75B5B;
+    --twilight-accent-purple: #9B7EBF;
+    
+    /* Sepia theme colors - vintage photograph tones */
+    --sepia-background: #F4F1E8;
+    --sepia-text: #5D4E37;
+    --sepia-accent-blue: #8B7355;
+    --sepia-accent-green: #A0805B;
+    --sepia-accent-red: #D2B48C;
+    --sepia-accent-purple: #BC9A6A;
+    
+    /* High contrast theme colors - sharp black and white */
+    --highcontrast-background: #FFFFFF;
+    --highcontrast-text: #000000;
+    --highcontrast-accent-blue: #0066CC;
+    --highcontrast-accent-green: #008000;
+    --highcontrast-accent-red: #CC0000;
+    --highcontrast-accent-purple: #6600CC;
+    
+    /* Blue-gray professional theme colors - corporate slate */
+    --bluegray-background: #9BB0C1;
+    --bluegray-text: #F8F8FF;
+    --bluegray-accent-blue: #2E4A6B;
+    --bluegray-accent-green: #2F5A5A;
+    --bluegray-accent-red: #8A9BB0;
+    --bluegray-accent-purple: #5A4B7A;
+    
+    /* Soft contrast theme colors - muted pastels */
+    --soft-background: #FAF9F7;
+    --soft-text: #6B6B6B;
+    --soft-accent-blue: #A4C8E1;
+    --soft-accent-green: #B8D8A7;
+    --soft-accent-red: #E1A4A4;
+    --soft-accent-purple: #D8A7D8;
+    
     --text-glow: 0 0 10px;
 }
 
@@ -38,6 +78,31 @@ section {
 section.dark {
     background-color: var(--dark-background);
     color: var(--dark-text);
+}
+
+section.twilight {
+    background-color: var(--twilight-background) !important;
+    color: var(--twilight-text) !important;
+}
+
+section.sepia {
+    background-color: var(--sepia-background) !important;
+    color: var(--sepia-text) !important;
+}
+
+section.highcontrast {
+    background-color: var(--highcontrast-background) !important;
+    color: var(--highcontrast-text) !important;
+}
+
+section.bluegray {
+    background-color: var(--bluegray-background) !important;
+    color: var(--bluegray-text) !important;
+}
+
+section.soft {
+    background-color: var(--soft-background) !important;
+    color: var(--soft-text) !important;
 }
 
 /* Headers */
@@ -57,6 +122,56 @@ h1 {
     border-bottom-color: var(--dark-accent-blue);
 }
 
+.twilight h1 {
+    color: var(--twilight-accent-purple) !important;
+    border-bottom-color: var(--twilight-accent-blue) !important;
+}
+
+.sepia h1 {
+    color: var(--sepia-accent-purple) !important;
+    border-bottom-color: var(--sepia-accent-blue) !important;
+}
+
+.highcontrast h1 {
+    color: var(--highcontrast-accent-purple) !important;
+    border-bottom-color: var(--highcontrast-accent-blue) !important;
+}
+
+.bluegray h1 {
+    color: var(--bluegray-accent-purple) !important;
+    border-bottom-color: var(--bluegray-accent-blue) !important;
+}
+
+.soft h1 {
+    color: var(--soft-accent-purple) !important;
+    border-bottom-color: var(--soft-accent-blue) !important;
+}
+
+.twilight h1 {
+    color: var(--twilight-accent-purple) !important;
+    border-bottom-color: var(--twilight-accent-blue) !important;
+}
+
+.sepia h1 {
+    color: var(--sepia-accent-purple) !important;
+    border-bottom-color: var(--sepia-accent-blue) !important;
+}
+
+.highcontrast h1 {
+    color: var(--highcontrast-accent-purple) !important;
+    border-bottom-color: var(--highcontrast-accent-blue) !important;
+}
+
+.bluegray h1 {
+    color: var(--bluegray-accent-purple) !important;
+    border-bottom-color: var(--bluegray-accent-blue) !important;
+}
+
+.soft h1 {
+    color: var(--soft-accent-purple) !important;
+    border-bottom-color: var(--soft-accent-blue) !important;
+}
+
 h2 {
     color: var(--light-accent-blue);
     font-size: 1.5em;
@@ -64,6 +179,46 @@ h2 {
 
 .dark h2 {
     color: var(--dark-accent-blue);
+}
+
+.twilight h2 {
+    color: var(--twilight-accent-blue) !important;
+}
+
+.sepia h2 {
+    color: var(--sepia-accent-blue) !important;
+}
+
+.highcontrast h2 {
+    color: var(--highcontrast-accent-blue) !important;
+}
+
+.bluegray h2 {
+    color: var(--bluegray-accent-blue) !important;
+}
+
+.soft h2 {
+    color: var(--soft-accent-blue) !important;
+}
+
+.twilight h2 {
+    color: var(--twilight-accent-blue) !important;
+}
+
+.sepia h2 {
+    color: var(--sepia-accent-blue) !important;
+}
+
+.highcontrast h2 {
+    color: var(--highcontrast-accent-blue) !important;
+}
+
+.bluegray h2 {
+    color: var(--bluegray-accent-blue) !important;
+}
+
+.soft h2 {
+    color: var(--soft-accent-blue) !important;
 }
 
 h3, h4, h5, h6 {
@@ -75,6 +230,46 @@ h3, h4, h5, h6 {
     color: var(--dark-accent-green);
 }
 
+.twilight h3, .twilight h4, .twilight h5, .twilight h6 {
+    color: var(--twilight-accent-green) !important;
+}
+
+.sepia h3, .sepia h4, .sepia h5, .sepia h6 {
+    color: var(--sepia-accent-green) !important;
+}
+
+.highcontrast h3, .highcontrast h4, .highcontrast h5, .highcontrast h6 {
+    color: var(--highcontrast-accent-green) !important;
+}
+
+.bluegray h3, .bluegray h4, .bluegray h5, .bluegray h6 {
+    color: var(--bluegray-accent-green) !important;
+}
+
+.soft h3, .soft h4, .soft h5, .soft h6 {
+    color: var(--soft-accent-green) !important;
+}
+
+.twilight h3, .twilight h4, .twilight h5, .twilight h6 {
+    color: var(--twilight-accent-green) !important;
+}
+
+.sepia h3, .sepia h4, .sepia h5, .sepia h6 {
+    color: var(--sepia-accent-green) !important;
+}
+
+.highcontrast h3, .highcontrast h4, .highcontrast h5, .highcontrast h6 {
+    color: var(--highcontrast-accent-green) !important;
+}
+
+.bluegray h3, .bluegray h4, .bluegray h5, .bluegray h6 {
+    color: var(--bluegray-accent-green) !important;
+}
+
+.soft h3, .soft h4, .soft h5, .soft h6 {
+    color: var(--soft-accent-green) !important;
+}
+
 /* Links */
 a {
     color: var(--light-accent-blue);
@@ -82,6 +277,46 @@ a {
 
 .dark a {
     color: var(--dark-accent-blue);
+}
+
+.twilight a {
+    color: var(--twilight-accent-blue) !important;
+}
+
+.sepia a {
+    color: var(--sepia-accent-blue) !important;
+}
+
+.highcontrast a {
+    color: var(--highcontrast-accent-blue) !important;
+}
+
+.bluegray a {
+    color: var(--bluegray-accent-blue) !important;
+}
+
+.soft a {
+    color: var(--soft-accent-blue) !important;
+}
+
+.twilight a {
+    color: var(--twilight-accent-blue) !important;
+}
+
+.sepia a {
+    color: var(--sepia-accent-blue) !important;
+}
+
+.highcontrast a {
+    color: var(--highcontrast-accent-blue) !important;
+}
+
+.bluegray a {
+    color: var(--bluegray-accent-blue) !important;
+}
+
+.soft a {
+    color: var(--soft-accent-blue) !important;
 }
 
 /* Code blocks */
@@ -97,6 +332,56 @@ code, pre {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.twilight code, .twilight pre {
+    color: var(--twilight-accent-green) !important;
+    background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.sepia code, .sepia pre {
+    color: var(--sepia-accent-green) !important;
+    background-color: rgba(60, 58, 54, 0.08) !important;
+}
+
+.highcontrast code, .highcontrast pre {
+    color: var(--highcontrast-accent-green) !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.bluegray code, .bluegray pre {
+    color: var(--bluegray-accent-green) !important;
+    background-color: rgba(44, 48, 53, 0.08) !important;
+}
+
+.soft code, .soft pre {
+    color: var(--soft-accent-green) !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+.twilight code, .twilight pre {
+    color: var(--twilight-accent-green) !important;
+    background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.sepia code, .sepia pre {
+    color: var(--sepia-accent-green) !important;
+    background-color: rgba(60, 58, 54, 0.08) !important;
+}
+
+.highcontrast code, .highcontrast pre {
+    color: var(--highcontrast-accent-green) !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.bluegray code, .bluegray pre {
+    color: var(--bluegray-accent-green) !important;
+    background-color: rgba(44, 48, 53, 0.08) !important;
+}
+
+.soft code, .soft pre {
+    color: var(--soft-accent-green) !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
 /* Other elements */
 .columns {
     display: grid;
@@ -110,6 +395,46 @@ strong {
 
 .dark strong {
     color: var(--dark-accent-red);
+}
+
+.twilight strong {
+    color: var(--twilight-accent-red) !important;
+}
+
+.sepia strong {
+    color: var(--sepia-accent-red) !important;
+}
+
+.highcontrast strong {
+    color: var(--highcontrast-accent-red) !important;
+}
+
+.bluegray strong {
+    color: var(--bluegray-accent-red) !important;
+}
+
+.soft strong {
+    color: var(--soft-accent-red) !important;
+}
+
+.twilight strong {
+    color: var(--twilight-accent-red) !important;
+}
+
+.sepia strong {
+    color: var(--sepia-accent-red) !important;
+}
+
+.highcontrast strong {
+    color: var(--highcontrast-accent-red) !important;
+}
+
+.bluegray strong {
+    color: var(--bluegray-accent-red) !important;
+}
+
+.soft strong {
+    color: var(--soft-accent-red) !important;
 }
 
 /* Emoji fixes */
@@ -154,6 +479,46 @@ section.dark table {
     border: 2px solid var(--dark-accent-purple) !important;
 }
 
+section.twilight table {
+    border: 2px solid var(--twilight-accent-blue);
+}
+
+section.sepia table {
+    border: 2px solid var(--sepia-accent-blue);
+}
+
+section.highcontrast table {
+    border: 2px solid var(--highcontrast-accent-blue);
+}
+
+section.bluegray table {
+    border: 2px solid var(--bluegray-accent-blue);
+}
+
+section.soft table {
+    border: 2px solid var(--soft-accent-blue);
+}
+
+.twilight table {
+    border: 2px solid var(--twilight-accent-blue);
+}
+
+.sepia table {
+    border: 2px solid var(--sepia-accent-blue);
+}
+
+.highcontrast table {
+    border: 2px solid var(--highcontrast-accent-blue);
+}
+
+.bluegray table {
+    border: 2px solid var(--bluegray-accent-blue);
+}
+
+.soft table {
+    border: 2px solid var(--soft-accent-blue);
+}
+
 section table > thead > tr > th,
 section table th {
     background-color: var(--light-accent-purple);
@@ -167,6 +532,66 @@ section.dark table > thead > tr > th,
 section.dark table th {
     background-color: var(--dark-accent-purple) !important;
     color: var(--dark-text) !important;
+}
+
+section.twilight table > thead > tr > th,
+section.twilight table th {
+    background-color: var(--twilight-accent-purple);
+    color: var(--twilight-background);
+}
+
+section.sepia table > thead > tr > th,
+section.sepia table th {
+    background-color: var(--sepia-accent-purple);
+    color: var(--sepia-background);
+}
+
+section.highcontrast table > thead > tr > th,
+section.highcontrast table th {
+    background-color: var(--highcontrast-accent-purple);
+    color: var(--highcontrast-background);
+}
+
+section.bluegray table > thead > tr > th,
+section.bluegray table th {
+    background-color: var(--bluegray-accent-purple);
+    color: var(--bluegray-background);
+}
+
+section.soft table > thead > tr > th,
+section.soft table th {
+    background-color: var(--soft-accent-purple);
+    color: var(--soft-background);
+}
+
+.twilight table > thead > tr > th,
+.twilight table th {
+    background-color: var(--twilight-accent-purple);
+    color: var(--twilight-background);
+}
+
+.sepia table > thead > tr > th,
+.sepia table th {
+    background-color: var(--sepia-accent-purple);
+    color: var(--sepia-background);
+}
+
+.highcontrast table > thead > tr > th,
+.highcontrast table th {
+    background-color: var(--highcontrast-accent-purple);
+    color: var(--highcontrast-background);
+}
+
+.bluegray table > thead > tr > th,
+.bluegray table th {
+    background-color: var(--bluegray-accent-purple);
+    color: var(--bluegray-background);
+}
+
+.soft table > thead > tr > th,
+.soft table th {
+    background-color: var(--soft-accent-purple);
+    color: var(--soft-background);
 }
 
 section table > tbody > tr > td,
@@ -183,6 +608,76 @@ section.dark table td {
     color: var(--dark-text) !important;
 }
 
+section.twilight table > tbody > tr > td,
+section.twilight table td {
+    border: 1px solid rgba(42, 40, 38, 0.2);
+    background-color: var(--twilight-background);
+    color: var(--twilight-text);
+}
+
+section.sepia table > tbody > tr > td,
+section.sepia table td {
+    border: 1px solid rgba(60, 58, 54, 0.2);
+    background-color: var(--sepia-background);
+    color: var(--sepia-text);
+}
+
+section.highcontrast table > tbody > tr > td,
+section.highcontrast table td {
+    border: 1px solid rgba(37, 36, 34, 0.2);
+    background-color: var(--highcontrast-background);
+    color: var(--highcontrast-text);
+}
+
+section.bluegray table > tbody > tr > td,
+section.bluegray table td {
+    border: 1px solid rgba(44, 48, 53, 0.2);
+    background-color: var(--bluegray-background);
+    color: var(--bluegray-text);
+}
+
+section.soft table > tbody > tr > td,
+section.soft table td {
+    border: 1px solid rgba(69, 67, 64, 0.2);
+    background-color: var(--soft-background);
+    color: var(--soft-text);
+}
+
+.twilight table > tbody > tr > td,
+.twilight table td {
+    border: 1px solid rgba(42, 40, 38, 0.2);
+    background-color: var(--twilight-background);
+    color: var(--twilight-text);
+}
+
+.sepia table > tbody > tr > td,
+.sepia table td {
+    border: 1px solid rgba(60, 58, 54, 0.2);
+    background-color: var(--sepia-background);
+    color: var(--sepia-text);
+}
+
+.highcontrast table > tbody > tr > td,
+.highcontrast table td {
+    border: 1px solid rgba(37, 36, 34, 0.2);
+    background-color: var(--highcontrast-background);
+    color: var(--highcontrast-text);
+}
+
+.bluegray table > tbody > tr > td,
+.bluegray table td {
+    border: 1px solid rgba(44, 48, 53, 0.2);
+    background-color: var(--bluegray-background);
+    color: var(--bluegray-text);
+}
+
+.soft table > tbody > tr > td,
+.soft table td {
+    border: 1px solid rgba(69, 67, 64, 0.2);
+    background-color: var(--soft-background);
+    color: var(--soft-text);
+}
+
 section table > tbody > tr:nth-child(even) > td {
     background-color: rgba(0, 0, 0, 0.05);
 }
@@ -193,6 +688,46 @@ section.dark table > tbody > tr:nth-child(even) > td {
 
 section.dark table > tbody > tr:nth-child(odd) > td {
     background-color: var(--dark-background) !important;
+}
+
+section.twilight table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(42, 40, 38, 0.05);
+}
+
+section.sepia table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(60, 58, 54, 0.05);
+}
+
+section.highcontrast table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(37, 36, 34, 0.08);
+}
+
+section.bluegray table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(44, 48, 53, 0.05);
+}
+
+section.soft table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(69, 67, 64, 0.04);
+}
+
+.twilight table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(42, 40, 38, 0.05);
+}
+
+.sepia table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(60, 58, 54, 0.05);
+}
+
+.highcontrast table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(37, 36, 34, 0.08);
+}
+
+.bluegray table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(44, 48, 53, 0.05);
+}
+
+.soft table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(69, 67, 64, 0.04);
 }
 
 /* Override any inline styles */

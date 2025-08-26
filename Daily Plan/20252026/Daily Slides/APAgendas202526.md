@@ -15,7 +15,7 @@ math: mathjax
 
 ---
 
-# 2024.09.05 **AP Physics** 
+# 2025.09.06 **AP Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
