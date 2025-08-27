@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Physics & Earth Science Quiz</title>
+  <title>AP Physics 1 Quiz</title>
   
   <!-- Add CSS files - Using Flexoki color scheme -->
   <link rel="stylesheet" href="css/styles-flexoki.css">
@@ -66,7 +66,7 @@
   </style>
 </head>
 <body>
-  <h1>Physics & Earth Science Quiz</h1>
+  <h1>AP Physics 1 Quiz</h1>
   
   <div class="container">
     <!-- Setup Panel -->
@@ -86,15 +86,15 @@
             </svg>
             AP Physics 1
           </button>
-          <button class="course-btn" id="earthScienceBtn" data-course="earth" type="button">
-            <svg class="course-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 2 A10 10 0 0 1 12 22 A10 10 0 0 1 12 2"></path>
-              <path d="M2 12 L22 12"></path>
-              <path d="M12 2 L12 22"></path>
-            </svg>
-            Earth Science
-          </button>
+<!--            <button class="course-btn" id="earthScienceBtn" data-course="earth" type="button">
+<!--              <svg class="course-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<!--                <circle cx="12" cy="12" r="10"></circle>
+<!--                <path d="M12 2 A10 10 0 0 1 12 22 A10 10 0 0 1 12 2"></path>
+<!--                <path d="M2 12 L22 12"></path>
+<!--                <path d="M12 2 L12 22"></path>
+<!--              </svg>
+<!--              Earth Science -->
+<!--           </button> -->
         </div>
       </div>
       
@@ -543,7 +543,7 @@
   <!-- Add this after your other JavaScript files but before app.js -->
   <script src="js/enhanced-fill-questions-dropdown.js"></script>
   
-  <!-- Main application script last -->
+  <script src="js/factsheet-integration.js"></script>  <!-- Main application script last -->
   <script src="js/advanced-question-types.js"></script>
   <script src="js/app.js"></script>
   
@@ -553,8 +553,8 @@
   document.addEventListener("DOMContentLoaded", function() {
     // Course selection logic
     const apPhysicsBtn = document.getElementById('apPhysicsBtn');
-    const earthScienceBtn = document.getElementById('earthScienceBtn');
-    const courseDescription = document.getElementById('courseDescription');
+    //     const earthScienceBtn = document.getElementById('earthScienceBtn');
+        const courseDescription = document.getElementById('courseDescription');
     const topicButtons = document.querySelectorAll('.topic-btn');
     const setupTitle = document.querySelector('.setup-panel h2');
     let currentCourse = 'physics'; // Default course
@@ -581,7 +581,7 @@
         document.querySelector('[data-topic="gravitation"]').style.display = 'inline-block';
         document.querySelector('[data-topic="shm"]').style.display = 'inline-block';
         document.querySelector('[data-topic="fluids"]').style.display = 'inline-block';
-      } else if (course === 'earth') {
+    /* Earth Science functionality disabled for initial release      } else if (course === 'earth') {
         setupTitle.textContent = 'Earth Science Review Questions';
         courseDescription.textContent = 'Test your knowledge of Earth Science concepts including astronomy, meteorology, geology, and more.';
         
@@ -630,7 +630,7 @@
         }
       }
       
-      // Make "All Topics" active
+    */      // Make "All Topics" active
       document.querySelectorAll('.topic-btn').forEach(btn => btn.classList.remove('active'));
       document.querySelector('[data-topic="all"]').classList.add('active');
     }
@@ -663,23 +663,23 @@
       
       // Update button styles
       apPhysicsBtn.classList.add('active');
-      earthScienceBtn.classList.remove('active');
+      //       earthScienceBtn.classList.remove('active');
       
       // Load physics questions
       loadCourseQuestions('data/ap-physics-questions.csv');
     });
     
-    earthScienceBtn.addEventListener('click', function() {
-      currentCourse = 'earth';
-      updateTopicButtons(currentCourse);
-      
-      // Update button styles
-      earthScienceBtn.classList.add('active');
-      apPhysicsBtn.classList.remove('active');
-      
-      // Load earth science questions
-      loadCourseQuestions('data/earth-science-questions.csv');
-    });
+    /*     earthScienceBtn.addEventListener('click', function() {
+    /*       currentCourse = 'earth';
+    /*       updateTopicButtons(currentCourse);
+    /*       
+    /*       // Update button styles
+    /*       earthScienceBtn.classList.add('active');
+    /*       apPhysicsBtn.classList.remove('active');
+    /*       
+    /*       // Load earth science questions
+    /*       loadCourseQuestions('data/earth-science-questions.csv');
+    /*     }); */
     
     // Set default course on page load
     apPhysicsBtn.classList.add('active');

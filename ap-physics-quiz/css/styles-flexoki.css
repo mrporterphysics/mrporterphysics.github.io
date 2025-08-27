@@ -1311,3 +1311,54 @@
       padding-bottom: 5px;
     }
   }
+/* Fact Sheet Integration Styles */
+.fact-sheet-section {
+  background: linear-gradient(135deg, var(--ui-2) 0%, var(--ui-1) 100%);
+  border: 1px solid var(--ui-3);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.fact-sheet-header {
+  color: var(--tx-2);
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fact-sheet-section .fact-sheet-btn {
+  margin-top: 10px;
+}
+
+.fact-sheet-section .fact-sheet-tooltip {
+  margin-top: 15px;
+  background: var(--bg);
+}
+
+/* Responsive adjustments for fact sheet integration */
+@media (max-width: 768px) {
+  .fact-sheet-section {
+    padding: 12px;
+    margin: 15px 0;
+  }
+  
+  .fact-sheet-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .fact-sheet-section {
+  background: linear-gradient(135deg, var(--base-900) 0%, var(--base-850) 100%);
+  border-color: var(--base-700);
+}
+
+[data-theme="dark"] .fact-sheet-tooltip {
+  background: var(--base-850);
+  border-color: var(--base-700);
+}

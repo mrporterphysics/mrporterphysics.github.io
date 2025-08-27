@@ -183,6 +183,29 @@ const QuizUI = (function() {
     elements.displays.feedback.className = 'quiz-feedback';
     elements.displays.answerReveal.style.display = 'none';
     
+    // Add fact sheet integration if available
+    const questionContainer = elements.displays.question.parentElement;
+    let existingFactSheetSection = questionContainer.querySelector('.fact-sheet-section');
+    if (existingFactSheetSection) {
+      existingFactSheetSection.remove();
+    }
+    
+    if (typeof FactSheetIntegration !== 'undefined') {
+      const factSheetButton = FactSheetIntegration.createFactSheetButton(question);
+      if (factSheetButton) {
+        const factSheetSection = document.createElement('div');
+        factSheetSection.className = 'fact-sheet-section';
+        factSheetSection.innerHTML = '<div class="fact-sheet-header"><strong>📚 Quick Reference:</strong></div>';
+        factSheetSection.appendChild(factSheetButton);
+        
+        const quickRef = FactSheetIntegration.createQuickReference(question);
+        if (quickRef) {
+          factSheetSection.appendChild(quickRef);
+        }
+        
+        questionContainer.appendChild(factSheetSection);
+      }
+    }    
     // Clear any previous image
     elements.displays.imageContainer.innerHTML = '';
     elements.displays.imageContainer.style.display = 'none';

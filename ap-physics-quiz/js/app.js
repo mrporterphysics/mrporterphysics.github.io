@@ -40,6 +40,16 @@ const PhysicsQuizApp = (function() {
     // Set up UI elements
     QuizUI.setup();
     
+    // Initialize fact sheet integration
+    if (typeof FactSheetIntegration !== 'undefined') {
+      FactSheetIntegration.init().then(success => {
+        if (success) {
+          console.log('Fact sheet integration ready');
+        } else {
+          console.warn('Fact sheet integration failed to initialize');
+        }
+      });
+    }    
     // Set default quiz data file path if not set yet
     if (!window.quizDataFile) {
       window.quizDataFile = 'data/ap-physics-questions.csv';
