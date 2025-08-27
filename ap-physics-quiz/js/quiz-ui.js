@@ -286,12 +286,12 @@ const QuizUI = {
                 return;
             }
 
-            // Validate user input
+            // Validate user input with enhanced validation
             const userAnswer = this.getUserAnswer();
-            const validation = PhysicsQuizApp.validateUserInput(userAnswer, 'answer');
+            const validation = Utils.validateUserInput(userAnswer, 'answer');
             
-            if (!validation.valid) {
-                this.showFeedback(validation.error, 'warning');
+            if (!validation.isValid) {
+                this.showFeedback(`Input Error: ${validation.errors.join(', ')}`, 'warning');
                 return;
             }
 

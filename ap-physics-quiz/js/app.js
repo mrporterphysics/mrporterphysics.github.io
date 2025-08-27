@@ -22,6 +22,15 @@ const PhysicsQuizApp = {
         Utils.performance.start('appInit');
         
         try {
+            // Application health check
+            const healthReport = Utils.validateApplicationHealth();
+            if (healthReport.overall === 'critical') {
+                this.showCriticalError('Application Health Check Failed', 
+                    'Critical system components are not available. Please refresh the page.', 
+                    () => window.location.reload());
+                return;
+            }
+            
             // Show loading state
             this.showLoadingState('Initializing application...');
             

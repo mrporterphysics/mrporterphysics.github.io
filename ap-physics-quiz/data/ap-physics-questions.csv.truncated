@@ -1,0 +1,31 @@
+id,type,question,answer,topic,explanation,optionA,optionB,optionC,optionD,optionE,alternateAnswers,difficulty
+1,tf,"An object at rest will stay at rest unless acted upon by a net external force.",true,forces,"This is Newton's First Law of Motion (Law of Inertia).",,,,,,,1
+2,tf,"Acceleration is directly proportional to the applied force and inversely proportional to the mass.",true,forces,"This describes Newton's Second Law: F = ma",,,,,,,1
+3,mc,"What is the SI unit for force?",D,forces,"Force is measured in Newtons (N) in the SI system.",Kilogram,Meter,Joule,Newton,Pascal,,1
+4,mc,"Which of the following is NOT a vector quantity?",C,forces,"Speed is a scalar quantity, while velocity, acceleration, and force are vectors.",Velocity,Acceleration,Speed,Force,Displacement,,2
+5,fill,"The acceleration due to gravity on Earth is approximately __ m/s².",9.8,forces,"Standard acceleration due to gravity",,,,,,"9.81,10",1
+6,tf,"Kinetic energy is directly proportional to the square of velocity.",true,energy,"KE = ½mv², showing v² relationship",,,,,,,1
+7,mc,"Which form of energy is stored in a compressed spring?",B,energy,"A compressed or stretched spring stores elastic potential energy.",Kinetic,Elastic Potential,Gravitational Potential,Thermal,Chemical,,1
+8,fill,"The work-energy theorem states that work done on an object equals its change in __ energy.",kinetic,energy,"W = ΔKE according to the work-energy theorem",,,,,,"KE,kinetic energy",2
+9,tf,"Momentum is conserved in all collisions.",false,momentum,"Momentum is conserved in isolated systems, but kinetic energy is not always conserved.",,,,,,,2
+10,mc,"What is the formula for momentum?",A,momentum,"Momentum is mass times velocity: p = mv",p = mv,p = ma,p = mgh,p = ½mv²,p = Ft,,1
+11,fill,"In an elastic collision, both momentum and __ energy are conserved.",kinetic,momentum,"Elastic collisions conserve both momentum and kinetic energy",,,,,,"KE,kinetic energy",2
+12,tf,"The period of a simple pendulum depends on its mass.",false,shm,"Period depends only on length and gravitational acceleration: T = 2π√(L/g)",,,,,,,2
+13,mc,"For simple harmonic motion, which quantity is maximum at equilibrium?",C,shm,"At equilibrium position, velocity is maximum while displacement is zero.",Displacement,Potential Energy,Velocity,Acceleration,Force,,2
+14,fill,"The frequency of oscillation is the reciprocal of the __.",period,shm,"Frequency f = 1/T, where T is the period",,,,,,"T,time period",1
+15,tf,"Centripetal force always points toward the center of circular motion.",true,kinematics,"Centripetal force is directed radially inward toward the center of the circular path.",,,,,,,1
+16,mc,"In projectile motion, what is the horizontal acceleration?",A,kinematics,"In ideal projectile motion, there is no horizontal acceleration (ignoring air resistance).",0 m/s²,9.8 m/s²,-9.8 m/s²,Variable,Cannot be determined,,1
+17,fill,"The range of a projectile is maximum when launched at an angle of __ degrees.",45,kinematics,"Maximum range occurs at 45° launch angle for level ground",,,,,,"45°,forty-five",2
+18,tf,"Displacement and distance traveled are always equal.",false,kinematics,"Displacement is a vector (straight-line distance), while distance is the total path length.",,,,,,,1
+19,mc,"Which kinematic equation relates velocity, acceleration, displacement, and time?",B,kinematics,"v² = u² + 2as relates final velocity, initial velocity, acceleration, and displacement.",v = u + at,v² = u² + 2as,s = ut + ½at²,v = (u + v)/2 × t,All of the above,,2
+20,fill,"Acceleration is the rate of change of __ with respect to time.",velocity,kinematics,"Acceleration a = dv/dt",,,,,,"speed,v",1
+21,mc,Which of the following is an example of potential energy?,C,energy,A compressed spring stores elastic potential energy.,A moving car,A spinning wheel,A compressed spring,A flowing river,,,1
+22,fill,The distance between two consecutive peaks of a wave is called the ____.,wavelength,waves,Wavelength is the distance between identical points on consecutive waves.,,,,,,wave length,1
+23,tf,Sound waves are longitudinal waves.,true,waves,Sound waves compress and rarify the medium parallel to the direction of propagation.,,,,,,,2
+24,mc,Which quantity is analogous to force in rotational motion?,B,rotation,"Torque is the rotational equivalent of force, causing angular acceleration.",Angular velocity,Torque,Angular momentum,Moment of inertia,,,2
+25,fill,The rotational equivalent of mass is called ____ ____.,moment of inertia,rotation,Moment of inertia determines how much torque is needed for angular acceleration.,,,,,,"rotational inertia,moment inertia",2
+26,tf,Gravitational force depends on the mass of both objects.,true,gravitation,Newton's law of universal gravitation: F = Gm₁m₂/r²,,,,,,,1
+27,mc,"As the distance between two masses doubles, the gravitational force:",D,gravitation,Gravitational force follows inverse square law: F ∝ 1/r²,Doubles,Halves,Stays the same,Becomes one-fourth,Becomes one-eighth,,2
+28,fill,The upward force exerted by a fluid on an immersed object is called ____.,buoyancy,fluids,Buoyant force equals the weight of displaced fluid (Archimedes' principle).,,,,,,buoyant force,1
+29,tf,Pressure in a fluid increases with depth.,true,fluids,"Hydrostatic pressure: P = ρgh, increases linearly with depth.",,,,,,,1
+30,mc,Which graph shows a constant velocity?,B,general,Constant velocity appears as a straight line on position-time graphs.,Curved position-time graph,Straight position-time graph,Curved velocity-time graph,Sloped velocity-time graph,,,2
