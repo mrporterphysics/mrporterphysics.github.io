@@ -1,410 +1,382 @@
 /**
- * Local Storage Module for AP Physics 1 Quiz App
- * Handles saving and loading quiz state, user progress, and statistics
+ * QuizStorage - Local storage management for quiz progress and settings
  */
-const QuizStorage = (function() {
-    // Constants for storage keys
-    const KEYS = {
-      STATE: 'ap_physics_quiz_state',
-      MISSED: 'ap_physics_quiz_missed',
-      STATS: 'ap_physics_quiz_stats',
-      SETTINGS: 'ap_physics_quiz_settings',
-      LAST_VISIT: 'ap_physics_quiz_last_visit',
-      ACTIVITY_DATES: 'ap_physics_quiz_activity_dates',
-      LAST_ACTIVITY: 'ap_physics_quiz_last_activity',
-      DIFFICULTY_STATS: 'ap_physics_quiz_difficulty_stats'
-    };
-    
-    /**
-     * Save the current quiz state to localStorage
-     * @param {Object} state - The current quiz state
-     */
-    function saveQuizState(state) {
-      try {
-        localStorage.setItem(KEYS.STATE, JSON.stringify(state));
-        updateLastVisit();
-      } catch (error) {
-        console.error('Error saving quiz state:', error);
-      }
-    }
-    
-    /**
-     * Load the saved quiz state from localStorage
-     * @return {Object|null} - Saved quiz state or null if not found
-     */
-    function loadQuizState() {
-      try {
-        const state = localStorage.getItem(KEYS.STATE);
-        return state ? JSON.parse(state) : null;
-      } catch (error) {
-        console.error('Error loading quiz state:', error);
-        return null;
-      }
-    }
-    
-    /**
-     * Save missed questions to localStorage
-     * @param {Array} questions - Array of missed question objects
-     */
-    function saveMissedQuestions(questions) {
-      try {
-        localStorage.setItem(KEYS.MISSED, JSON.stringify(questions));
-      } catch (error) {
-        console.error('Error saving missed questions:', error);
-      }
-    }
-    
-    /**
-     * Load missed questions from localStorage
-     * @return {Array} - Array of missed question objects
-     */
-    function loadMissedQuestions() {
-      try {
-        const questions = localStorage.getItem(KEYS.MISSED);
-        return questions ? JSON.parse(questions) : [];
-      } catch (error) {
-        console.error('Error loading missed questions:', error);
-        return [];
-      }
-    }
-    
-    /**
-     * Update user statistics
-     * @param {Object} stats - The statistics to update or merge with existing stats
-     */
-    function updateStats(stats) {
-      try {
-        // Get current stats
-        const currentStats = loadStats();
-        
-        // Merge with new stats
-        const updatedStats = {
-          ...currentStats,
-          ...stats,
-          totalQuizzesCompleted: (currentStats.totalQuizzesCompleted || 0) + 1,
-          lastUpdated: new Date().toISOString()
-        };
-        
-        // If topics stats exist, merge them properly
-        if (currentStats.topics && stats.topics) {
-          updatedStats.topics = { ...currentStats.topics };
-          
-          for (const topic in stats.topics) {
-            if (updatedStats.topics[topic]) {
-              updatedStats.topics[topic].correct = (updatedStats.topics[topic].correct || 0) + (stats.topics[topic].correct || 0);
-              updatedStats.topics[topic].total = (updatedStats.topics[topic].total || 0) + (stats.topics[topic].total || 0);
-            } else {
-              updatedStats.topics[topic] = { ...stats.topics[topic] };
-            }
-          }
-        }
-        
-        // Save updated stats
-        localStorage.setItem(KEYS.STATS, JSON.stringify(updatedStats));
-      } catch (error) {
-        console.error('Error updating statistics:', error);
-      }
-    }
-    
-    /**
-     * Load user statistics from localStorage
-     * @return {Object} - User statistics
-     */
-    function loadStats() {
-      try {
-        const stats = localStorage.getItem(KEYS.STATS);
-        return stats ? JSON.parse(stats) : {
-          totalCorrect: 0,
-          totalAnswered: 0,
-          totalQuizzesCompleted: 0,
-          topics: {},
-          questionTypes: {}
-        };
-      } catch (error) {
-        console.error('Error loading statistics:', error);
-        return {
-          totalCorrect: 0,
-          totalAnswered: 0,
-          totalQuizzesCompleted: 0,
-          topics: {},
-          questionTypes: {}
-        };
-      }
-    }
-    
-    /**
-     * Save user settings to localStorage
-     * @param {Object} settings - User settings
-     */
-    function saveSettings(settings) {
-      try {
-        localStorage.setItem(KEYS.SETTINGS, JSON.stringify(settings));
-      } catch (error) {
-        console.error('Error saving settings:', error);
-      }
-    }
-    
-    /**
-     * Load user settings from localStorage
-     * @return {Object} - User settings
-     */
-    function loadSettings() {
-      try {
-        const settings = localStorage.getItem(KEYS.SETTINGS);
-        return settings ? JSON.parse(settings) : {
-          timerEnabled: false,
-          theme: 'light',
-          showExplanations: true
-        };
-      } catch (error) {
-        console.error('Error loading settings:', error);
-        return {
-          timerEnabled: false,
-          theme: 'light',
-          showExplanations: true
-        };
-      }
-    }
-    
-    /**
-     * Update last visit timestamp
-     */
-    function updateLastVisit() {
-      try {
-        localStorage.setItem(KEYS.LAST_VISIT, new Date().toISOString());
-      } catch (error) {
-        console.error('Error updating last visit:', error);
-      }
-    }
-    
-    /**
-     * Get the timestamp of the last visit
-     * @return {Date|null} - Date object of last visit or null if not found
-     */
-    function getLastVisit() {
-      try {
-        const lastVisit = localStorage.getItem(KEYS.LAST_VISIT);
-        return lastVisit ? new Date(lastVisit) : null;
-      } catch (error) {
-        console.error('Error getting last visit:', error);
-        return null;
-      }
-    }
-    
-    /**
-     * Check if there's a saved quiz to resume
-     * @return {boolean} - True if there's a saved quiz to resume
-     */
-    function hasSavedQuiz() {
-      const state = loadQuizState();
-      return Boolean(state && state.questions && state.index < state.questions.length);
-    }
-    
-    /**
-     * Clear all saved quiz data
-     */
-    function clearQuizData() {
-      try {
-        localStorage.removeItem(KEYS.STATE);
-        localStorage.removeItem(KEYS.MISSED);
-      } catch (error) {
-        console.error('Error clearing quiz data:', error);
-      }
-    }
-    
-    /**
-     * Clear all user data (quiz state, missed questions, statistics, settings)
-     */
-    function clearAllData() {
-      try {
-        Object.values(KEYS).forEach(key => {
-          localStorage.removeItem(key);
-        });
-      } catch (error) {
-        console.error('Error clearing all data:', error);
-      }
-    }
-    
-    /**
-     * Export all user data as a JSON object
-     * @return {Object} - All user data
-     */
-    function exportData() {
-      try {
-        const data = {};
-        
-        Object.entries(KEYS).forEach(([name, key]) => {
-          const value = localStorage.getItem(key);
-          if (value) {
-            data[name] = JSON.parse(value);
-          }
-        });
-        
-        return data;
-      } catch (error) {
-        console.error('Error exporting data:', error);
-        return null;
-      }
-    }
-    
-    /**
-     * Import user data from a JSON object
-     * @param {Object} data - The data to import
-     * @return {boolean} - True if import was successful
-     */
-    function importData(data) {
-      try {
-        if (!data) return false;
-        
-        Object.entries(KEYS).forEach(([name, key]) => {
-          if (data[name]) {
-            localStorage.setItem(key, JSON.stringify(data[name]));
-          }
-        });
-        
-        return true;
-      } catch (error) {
-        console.error('Error importing data:', error);
-        return false;
-      }
-    }
-    
-    // Check for browser support
-    function isSupported() {
-      try {
-        const testKey = '__test_storage__';
-        localStorage.setItem(testKey, testKey);
-        localStorage.removeItem(testKey);
-        return true;
-      } catch (e) {
-        return false;
-      }
-    }
-    
-    /**
-     * Track activity date for streak calculation
-     */
-    function trackActivity() {
-      try {
-        const today = new Date().toDateString();
-        let activityDates = getActivityDates();
-        
-        // Add today if not already tracked
-        if (!activityDates.includes(today)) {
-          activityDates.push(today);
-          // Keep only last 30 days
-          activityDates = activityDates.slice(-30);
-          localStorage.setItem(KEYS.ACTIVITY_DATES, JSON.stringify(activityDates));
-        }
-        
-        // Update last activity
-        localStorage.setItem(KEYS.LAST_ACTIVITY, new Date().toISOString());
-      } catch (error) {
-        console.error('Error tracking activity:', error);
-      }
-    }
-    
-    /**
-     * Get activity dates for streak calculation
-     * @return {Array} Array of activity date strings
-     */
-    function getActivityDates() {
-      try {
-        const dates = localStorage.getItem(KEYS.ACTIVITY_DATES);
-        return dates ? JSON.parse(dates) : [];
-      } catch (error) {
-        console.error('Error getting activity dates:', error);
-        return [];
-      }
-    }
-    
-    /**
-     * Get last activity timestamp
-     * @return {string|null} ISO timestamp of last activity
-     */
-    function getLastActivity() {
-      try {
-        return localStorage.getItem(KEYS.LAST_ACTIVITY);
-      } catch (error) {
-        console.error('Error getting last activity:', error);
-        return null;
-      }
-    }
-    
-    /**
-     * Save difficulty-based statistics
-     * @param {Object} difficultyStats - Stats by difficulty level
-     */
-    function saveDifficultyStats(difficultyStats) {
-      try {
-        localStorage.setItem(KEYS.DIFFICULTY_STATS, JSON.stringify(difficultyStats));
-      } catch (error) {
-        console.error('Error saving difficulty stats:', error);
-      }
-    }
-    
-    /**
-     * Load difficulty-based statistics
-     * @return {Object} Stats by difficulty level
-     */
-    function loadDifficultyStats() {
-      try {
-        const stats = localStorage.getItem(KEYS.DIFFICULTY_STATS);
-        return stats ? JSON.parse(stats) : { easy: {}, medium: {}, hard: {} };
-      } catch (error) {
-        console.error('Error loading difficulty stats:', error);
-        return { easy: {}, medium: {}, hard: {} };
-      }
-    }
-    
-    /**
-     * Get comprehensive statistics for dashboard
-     * @return {Object} Complete user statistics
-     */
-    function getStats() {
-      return {
-        ...loadStats(),
-        activityDates: getActivityDates(),
-        lastActivity: getLastActivity(),
-        difficultyStats: loadDifficultyStats()
-      };
-    }
 
-    // Initialize the module
-    function init() {
-      if (!isSupported()) {
-        console.warn('localStorage is not supported. Quiz progress will not be saved.');
-        return false;
-      }
-      
-      updateLastVisit();
-      trackActivity();
-      return true;
+const QuizStorage = {
+    // Storage keys
+    KEYS: {
+        PROGRESS: 'quiz_progress',
+        SETTINGS: 'quiz_settings', 
+        STATISTICS: 'quiz_statistics',
+        MISSED_QUESTIONS: 'missed_questions',
+        BOOKMARKS: 'bookmarked_questions',
+        THEME: 'quiz_theme'
+    },
+
+    // Default settings
+    DEFAULT_SETTINGS: {
+        course: 'ap-physics',
+        mode: 'learning',
+        showExplanations: true,
+        theme: 'light',
+        autoAdvance: false,
+        timerEnabled: false,
+        difficultySetting: 'all'
+    },
+
+    // Initialize storage with comprehensive error handling
+    init: function() {
+        try {
+            // Test localStorage availability
+            this.testStorageAvailability();
+            
+            // Initialize settings
+            const currentSettings = this.getSettings();
+            if (!currentSettings || Object.keys(currentSettings).length === 0) {
+                this.saveSettings(this.DEFAULT_SETTINGS);
+            }
+            
+            // Initialize statistics
+            const currentStats = this.getStatistics();
+            if (!currentStats || !currentStats.lastUpdated) {
+                this.saveStatistics(this.createEmptyStatistics());
+            }
+            
+            // Validate and repair corrupted data
+            this.validateAndRepairData();
+            
+            console.log('✅ QuizStorage initialized successfully');
+        } catch (error) {
+            Utils.handleError(error, 'QuizStorage.init');
+            
+            // Attempt recovery
+            try {
+                this.performStorageRecovery();
+            } catch (recoveryError) {
+                Utils.handleError(recoveryError, 'QuizStorage.init recovery');
+                throw new Error('Unable to initialize storage. Local storage may be disabled or full.');
+            }
+        }
+    },
+
+    // Test localStorage availability and quota
+    testStorageAvailability: function() {
+        if (typeof Storage === 'undefined') {
+            throw new Error('localStorage is not supported by this browser');
+        }
+        
+        try {
+            const testKey = '__quiz_storage_test__';
+            const testData = 'test';
+            localStorage.setItem(testKey, testData);
+            
+            if (localStorage.getItem(testKey) !== testData) {
+                throw new Error('localStorage write/read test failed');
+            }
+            
+            localStorage.removeItem(testKey);
+        } catch (error) {
+            if (error.name === 'QuotaExceededError') {
+                throw new Error('localStorage quota exceeded. Please clear some data.');
+            }
+            throw new Error(`localStorage test failed: ${error.message}`);
+        }
+    },
+
+    // Validate and repair corrupted storage data
+    validateAndRepairData: function() {
+        let repairsMade = 0;
+        
+        // Validate settings structure
+        const settings = Utils.storage.get(this.KEYS.SETTINGS);
+        if (settings && typeof settings === 'object') {
+            let needsRepair = false;
+            const repairedSettings = { ...this.DEFAULT_SETTINGS };
+            
+            for (const key in settings) {
+                if (this.DEFAULT_SETTINGS.hasOwnProperty(key)) {
+                    repairedSettings[key] = settings[key];
+                } else {
+                    needsRepair = true;
+                }
+            }
+            
+            if (needsRepair) {
+                Utils.storage.set(this.KEYS.SETTINGS, repairedSettings);
+                repairsMade++;
+            }
+        }
+        
+        // Validate statistics structure
+        const stats = Utils.storage.get(this.KEYS.STATISTICS);
+        if (stats && typeof stats === 'object') {
+            const requiredFields = ['totalQuestions', 'correctAnswers', 'totalTime', 'lastUpdated'];
+            let needsRepair = false;
+            
+            for (const field of requiredFields) {
+                if (!(field in stats)) {
+                    needsRepair = true;
+                    break;
+                }
+            }
+            
+            if (needsRepair) {
+                const repairedStats = { ...this.createEmptyStatistics(), ...stats };
+                this.saveStatistics(repairedStats);
+                repairsMade++;
+            }
+        }
+        
+        if (repairsMade > 0) {
+            console.log(`🔧 Repaired ${repairsMade} corrupted storage items`);
+        }
+    },
+
+    // Perform storage recovery
+    performStorageRecovery: function() {
+        console.log('🚨 Attempting storage recovery...');
+        
+        // Clear potentially corrupted items
+        Object.values(this.KEYS).forEach(key => {
+            try {
+                localStorage.removeItem(key);
+            } catch (e) {
+                // Continue recovery attempt
+            }
+        });
+        
+        // Reinitialize with defaults
+        this.saveSettings(this.DEFAULT_SETTINGS);
+        this.saveStatistics(this.createEmptyStatistics());
+        
+        console.log('✅ Storage recovery completed');
+    },
+
+    // Settings management
+    getSettings: function() {
+        return Utils.storage.get(this.KEYS.SETTINGS, this.DEFAULT_SETTINGS);
+    },
+
+    saveSettings: function(settings) {
+        const merged = { ...this.DEFAULT_SETTINGS, ...settings };
+        return Utils.storage.set(this.KEYS.SETTINGS, merged);
+    },
+
+    updateSetting: function(key, value) {
+        const settings = this.getSettings();
+        settings[key] = value;
+        return this.saveSettings(settings);
+    },
+
+    // Progress tracking
+    getProgress: function() {
+        return Utils.storage.get(this.KEYS.PROGRESS, {
+            currentQuestionIndex: 0,
+            answeredQuestions: [],
+            correctAnswers: 0,
+            totalAttempted: 0,
+            sessionStartTime: Date.now(),
+            completedTopics: []
+        });
+    },
+
+    saveProgress: function(progress) {
+        return Utils.storage.set(this.KEYS.PROGRESS, progress);
+    },
+
+    updateProgress: function(questionId, isCorrect, timeSpent = 0) {
+        const progress = this.getProgress();
+        
+        // Update answered questions
+        if (!progress.answeredQuestions.includes(questionId)) {
+            progress.answeredQuestions.push(questionId);
+            progress.totalAttempted++;
+        }
+        
+        if (isCorrect) {
+            progress.correctAnswers++;
+        }
+
+        // Update statistics
+        this.updateStatistics(questionId, isCorrect, timeSpent);
+        
+        return this.saveProgress(progress);
+    },
+
+    resetProgress: function() {
+        const defaultProgress = {
+            currentQuestionIndex: 0,
+            answeredQuestions: [],
+            correctAnswers: 0,
+            totalAttempted: 0,
+            sessionStartTime: Date.now(),
+            completedTopics: []
+        };
+        return this.saveProgress(defaultProgress);
+    },
+
+    // Statistics management
+    createEmptyStatistics: function() {
+        return {
+            totalQuestions: 0,
+            correctAnswers: 0,
+            totalTime: 0,
+            averageTime: 0,
+            topicStats: {},
+            questionTypeStats: {},
+            difficultyStats: {1: {correct: 0, total: 0}, 2: {correct: 0, total: 0}, 3: {correct: 0, total: 0}},
+            streaks: {current: 0, best: 0},
+            lastUpdated: Date.now()
+        };
+    },
+
+    getStatistics: function() {
+        return Utils.storage.get(this.KEYS.STATISTICS, this.createEmptyStatistics());
+    },
+
+    saveStatistics: function(stats) {
+        stats.lastUpdated = Date.now();
+        return Utils.storage.set(this.KEYS.STATISTICS, stats);
+    },
+
+    updateStatistics: function(questionId, isCorrect, timeSpent, question = {}) {
+        const stats = this.getStatistics();
+        
+        stats.totalQuestions++;
+        if (isCorrect) stats.correctAnswers++;
+        stats.totalTime += timeSpent;
+        stats.averageTime = stats.totalTime / stats.totalQuestions;
+
+        // Topic statistics
+        if (question.topic) {
+            if (!stats.topicStats[question.topic]) {
+                stats.topicStats[question.topic] = {correct: 0, total: 0};
+            }
+            stats.topicStats[question.topic].total++;
+            if (isCorrect) stats.topicStats[question.topic].correct++;
+        }
+
+        // Question type statistics
+        if (question.type) {
+            if (!stats.questionTypeStats[question.type]) {
+                stats.questionTypeStats[question.type] = {correct: 0, total: 0};
+            }
+            stats.questionTypeStats[question.type].total++;
+            if (isCorrect) stats.questionTypeStats[question.type].correct++;
+        }
+
+        // Difficulty statistics
+        if (question.difficulty) {
+            const diff = question.difficulty;
+            if (stats.difficultyStats[diff]) {
+                stats.difficultyStats[diff].total++;
+                if (isCorrect) stats.difficultyStats[diff].correct++;
+            }
+        }
+
+        // Streak tracking
+        if (isCorrect) {
+            stats.streaks.current++;
+            if (stats.streaks.current > stats.streaks.best) {
+                stats.streaks.best = stats.streaks.current;
+            }
+        } else {
+            stats.streaks.current = 0;
+        }
+
+        return this.saveStatistics(stats);
+    },
+
+    // Missed questions management
+    getMissedQuestions: function() {
+        return Utils.storage.get(this.KEYS.MISSED_QUESTIONS, []);
+    },
+
+    addMissedQuestion: function(questionId) {
+        const missed = this.getMissedQuestions();
+        if (!missed.includes(questionId)) {
+            missed.push(questionId);
+            return Utils.storage.set(this.KEYS.MISSED_QUESTIONS, missed);
+        }
+        return true;
+    },
+
+    removeMissedQuestion: function(questionId) {
+        const missed = this.getMissedQuestions();
+        const filtered = missed.filter(id => id !== questionId);
+        return Utils.storage.set(this.KEYS.MISSED_QUESTIONS, filtered);
+    },
+
+    clearMissedQuestions: function() {
+        return Utils.storage.set(this.KEYS.MISSED_QUESTIONS, []);
+    },
+
+    // Bookmarks management
+    getBookmarks: function() {
+        return Utils.storage.get(this.KEYS.BOOKMARKS, []);
+    },
+
+    toggleBookmark: function(questionId) {
+        const bookmarks = this.getBookmarks();
+        const index = bookmarks.indexOf(questionId);
+        
+        if (index > -1) {
+            bookmarks.splice(index, 1);
+        } else {
+            bookmarks.push(questionId);
+        }
+        
+        return Utils.storage.set(this.KEYS.BOOKMARKS, bookmarks);
+    },
+
+    isBookmarked: function(questionId) {
+        return this.getBookmarks().includes(questionId);
+    },
+
+    // Export/Import functionality
+    exportData: function() {
+        return {
+            settings: this.getSettings(),
+            progress: this.getProgress(),
+            statistics: this.getStatistics(),
+            missedQuestions: this.getMissedQuestions(),
+            bookmarks: this.getBookmarks(),
+            exportDate: new Date().toISOString(),
+            version: '1.0'
+        };
+    },
+
+    importData: function(data) {
+        try {
+            if (data.settings) this.saveSettings(data.settings);
+            if (data.progress) this.saveProgress(data.progress);
+            if (data.statistics) this.saveStatistics(data.statistics);
+            if (data.missedQuestions) Utils.storage.set(this.KEYS.MISSED_QUESTIONS, data.missedQuestions);
+            if (data.bookmarks) Utils.storage.set(this.KEYS.BOOKMARKS, data.bookmarks);
+            return true;
+        } catch (error) {
+            Utils.handleError(error, 'QuizStorage.importData');
+            return false;
+        }
+    },
+
+    // Clear all data
+    clearAllData: function() {
+        Object.values(this.KEYS).forEach(key => {
+            Utils.storage.remove(key);
+        });
+        this.init(); // Reinitialize with defaults
     }
-    
-    // Public API
-    return {
-      init,
-      saveQuizState,
-      loadQuizState,
-      saveMissedQuestions,
-      loadMissedQuestions,
-      updateStats,
-      loadStats,
-      saveSettings,
-      loadSettings,
-      getLastVisit,
-      hasSavedQuiz,
-      clearQuizData,
-      clearAllData,
-      exportData,
-      importData,
-      isSupported,
-      trackActivity,
-      getActivityDates,
-      getLastActivity,
-      saveDifficultyStats,
-      loadDifficultyStats,
-      getStats
-    };
-  })();
+};
+
+// Initialize on load
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+        QuizStorage.init();
+    });
+}
+
+// Export for module use
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = QuizStorage;
+}

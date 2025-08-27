@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP Physics 1 Fact Sheet</title>
+  
+  <!-- Use same styling as main app -->
+  <link rel="stylesheet" href="css/styles-flexoki.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- KaTeX for mathematical notation -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    .fact-sheet-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 30px;
+    }
+    
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+      background: var(--ui-2);
+      border: 1px solid var(--ui-3);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    
+    .sidebar h3 {
+      margin: 0 0 15px 0;
+      color: var(--tx-1);
+      font-size: 1.1em;
+    }
+    
+    .nav-section {
+      margin-bottom: 20px;
+    }
+    
+    .nav-section h4 {
+      margin: 0 0 8px 0;
+      color: var(--tx-2);
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 4px;
+    }
+    
+    .nav-links a {
+      color: var(--tx-3);
+      text-decoration: none;
+      font-size: 0.85em;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: block;
+      transition: all 0.2s ease;
+    }
+    
+    .nav-links a:hover {
+      background: var(--ui-3);
+      color: var(--tx-1);
+    }
+    
+    .nav-links a.active {
+      background: var(--accent-ui);
+      color: var(--accent-tx);
+    }
+    
+    .content {
+      background: var(--bg);
+      border: 1px solid var(--ui-2);
+      border-radius: 8px;
+      padding: 30px;
+    }
+    
+    .section {
+      margin-bottom: 40px;
+      scroll-margin-top: 80px;
+    }
+    
+    .section h1 {
+      color: var(--tx-1);
+      border-bottom: 2px solid var(--accent-ui);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .section h2 {
+      color: var(--tx-1);
+      margin: 25px 0 15px 0;
+      font-size: 1.3em;
+    }
+    
+    .section h3 {
+      color: var(--tx-2);
+      margin: 20px 0 10px 0;
+      font-size: 1.1em;
+    }
+    
+    .formula-box {
+      background: var(--ui-2);
+      border: 1px solid var(--ui-3);
+      border-radius: 6px;
+      padding: 15px;
+      margin: 15px 0;
+      font-family: 'Fira Code', monospace;
+    }
+    
+    .key-point {
+      background: linear-gradient(90deg, var(--accent-ui-2) 0%, transparent 100%);
+      border-left: 4px solid var(--accent-ui);
+      padding: 12px 16px;
+      margin: 12px 0;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    .definition {
+      background: var(--ui-2);
+      border-radius: 6px;
+      padding: 12px;
+      margin: 10px 0;
+      border-left: 3px solid var(--blue-ui);
+    }
+    
+    .equation {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 15px 0;
+      padding: 10px;
+      background: var(--ui-1);
+      border-radius: 4px;
+    }
+    
+    .back-to-quiz {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent-ui);
+      color: var(--accent-tx);
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+    }
+    
+    .back-to-quiz:hover {
+      background: var(--accent-ui-hover);
+      transform: translateY(-1px);
+    }
+    
+    @media (max-width: 768px) {
+      .fact-sheet-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .sidebar {
+        position: relative;
+        order: 2;
+      }
+      
+      .content {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-to-quiz">← Back to Quiz</a>
+  
+  <div class="fact-sheet-container">
+    <nav class="sidebar">
+      <h3>AP Physics 1 Fact Sheet</h3>
+      
+      <div class="nav-section">
+        <h4>Kinematics</h4>
+        <ul class="nav-links">
+          <li><a href="#kinematics-definitions">Definitions</a></li>
+          <li><a href="#position-time-graphs">Position-time graphs</a></li>
+          <li><a href="#velocity-time-graphs">Velocity-time graphs</a></li>
+          <li><a href="#acceleration">Acceleration</a></li>
+          <li><a href="#displacement-equations">Displacement equations</a></li>
+          <li><a href="#algebraic-kinematics">Algebraic kinematics</a></li>
+          <li><a href="#projectile-motion">Projectile motion</a></li>
+          <li><a href="#rotational-kinematics">Rotational kinematics</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Dynamics</h4>
+        <ul class="nav-links">
+          <li><a href="#equilibrium">Equilibrium</a></li>
+          <li><a href="#newtons-second-law">Newton's Second Law</a></li>
+          <li><a href="#solving-force-problems">Solving force problems</a></li>
+          <li><a href="#mass-weight">Mass and Weight</a></li>
+          <li><a href="#normal-force">Normal force</a></li>
+          <li><a href="#force-components">Force components</a></li>
+          <li><a href="#free-body-diagrams">Free-body diagrams</a></li>
+          <li><a href="#inclined-planes">Inclined planes</a></li>
+          <li><a href="#friction">Friction</a></li>
+          <li><a href="#newtons-third-law">Newton's Third Law</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Circular Motion</h4>
+        <ul class="nav-links">
+          <li><a href="#circular-motion-basics">Circular motion basics</a></li>
+          <li><a href="#centripetal-acceleration">Centripetal acceleration</a></li>
+          <li><a href="#centripetal-force">Centripetal force</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Conservation Laws</h4>
+        <ul class="nav-links">
+          <li><a href="#what-is-conserved">What is conserved?</a></li>
+          <li><a href="#conservation-conditions">Conservation conditions</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Energy</h4>
+        <ul class="nav-links">
+          <li><a href="#energy-forms">Forms of energy</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#power">Power</a></li>
+          <li><a href="#work-energy-theorem">Work-energy theorem</a></li>
+          <li><a href="#conservation-energy">Conservation of energy</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Momentum</h4>
+        <ul class="nav-links">
+          <li><a href="#momentum-basics">Momentum basics</a></li>
+          <li><a href="#impulse">Impulse</a></li>
+          <li><a href="#collisions">Collisions</a></li>
+          <li><a href="#center-of-mass">Center of mass</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Rotation</h4>
+        <ul class="nav-links">
+          <li><a href="#rotational-motion">Rotational motion</a></li>
+          <li><a href="#torque">Torque</a></li>
+          <li><a href="#rotational-inertia">Rotational inertia</a></li>
+          <li><a href="#angular-momentum">Angular momentum</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Simple Harmonic Motion</h4>
+        <ul class="nav-links">
+          <li><a href="#shm-basics">SHM basics</a></li>
+          <li><a href="#springs">Springs</a></li>
+          <li><a href="#pendulums">Pendulums</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Fluids</h4>
+        <ul class="nav-links">
+          <li><a href="#fluid-properties">Fluid properties</a></li>
+          <li><a href="#pressure">Pressure</a></li>
+          <li><a href="#buoyancy">Buoyancy</a></li>
+          <li><a href="#fluid-flow">Fluid flow</a></li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h4>Graphs & Analysis</h4>
+        <ul class="nav-links">
+          <li><a href="#graph-types">Five types of graphs</a></li>
+          <li><a href="#relationships">Relationships</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <main class="content">
+      <section id="kinematics" class="section">
+        <h1>1. Kinematics</h1>
+        
+        <section id="kinematics-definitions">
+          <h2>1.1 Kinematic Definitions</h2>
+          
+          <div class="definition">
+            <strong>Displacement (Δx or Δy):</strong> Indicates how far an object ends up from its initial position, regardless of its total distance traveled.
+          </div>
+          
+          <div class="definition">
+            <strong>Average velocity (v̄):</strong> Displacement divided by the time interval over which that displacement occurred.
+          </div>
+          
+          <div class="definition">
+            <strong>Instantaneous velocity (v):</strong> How fast an object is moving at a specific moment in time.
+          </div>
+          
+          <div class="definition">
+            <strong>Average Speed:</strong> Total distance divided by time duration.
+          </div>
+        </section>
+        
+        <section id="position-time-graphs">
+          <h2>1.2 Position-time graphs</h2>
+          
+          <div class="key-point">
+            <strong>Reading position-time graphs:</strong>
+            <ul>
+              <li>Vertical axis shows distance from detector</li>
+              <li>Slope indicates speed (steepness = how fast)</li>
+              <li>For curved graphs, use tangent line slope for instantaneous speed</li>
+            </ul>
+          </div>
+          
+          <div class="key-point">
+            <strong>Direction from slope:</strong>
+            <ul>
+              <li>Front slash (/) slope → moving away from detector</li>
+              <li>Back slash (\) slope → moving toward detector</li>
+            </ul>
+          </div>
+          
+          <div class="key-point">
+            <strong>Acceleration from shape:</strong>
+            <ul>
+              <li>Concave up (U shape) → positive acceleration</li>
+              <li>Concave down (∩ shape) → negative acceleration</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section id="velocity-time-graphs">
+          <h2>1.3 Velocity-time graphs</h2>
+          
+          <div class="key-point">
+            <strong>Reading velocity-time graphs:</strong>
+            <ul>
+              <li>Vertical axis shows speed</li>
+              <li>Above horizontal axis → moving away from detector</li>
+              <li>Below horizontal axis → moving toward detector</li>
+              <li>Area under curve = displacement</li>
+              <li>Slope = acceleration</li>
+            </ul>
+          </div>
+          
+          <div class="formula-box">
+            <strong>Note:</strong> On velocity-time graphs, you cannot determine the object's location.
+          </div>
+        </section>
+        
+        <section id="acceleration">
+          <h2>1.4 Acceleration</h2>
+          
+          <div class="definition">
+            <strong>Acceleration:</strong> How much an object's speed changes in one second.
+          </div>
+          
+          <div class="key-point">
+            <ul>
+              <li>Speeding up → acceleration in direction of motion</li>
+              <li>Slowing down → acceleration opposite direction of motion</li>
+              <li>Free fall acceleration: g ≈ 10 m/s² (near Earth's surface)</li>
+              <li>Units: m/s² or m/s/s</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section id="displacement-equations">
+          <h2>1.5 Special equations for displacement</h2>
+          
+          <div class="equation">
+            Constant speed: Δx = vt
+          </div>
+          
+          <div class="equation">
+            From rest or to rest: x = ½at² or x = v₀t + ½at²
+          </div>
+          
+          <div class="formula-box">
+            The constant speed equation includes horizontal components of projectile motion.
+          </div>
+        </section>
+        
+        <section id="algebraic-kinematics">
+          <h2>1.6 Algebraic kinematics</h2>
+          
+          <div class="key-point">
+            <strong>Problem-solving steps:</strong>
+            <ol>
+              <li>Define positive direction (e.g., "away from detector")</li>
+              <li>Specify motion portion being analyzed</li>
+              <li>Choose appropriate kinematic equation</li>
+              <li>Substitute known values</li>
+              <li>Solve algebraically</li>
+            </ol>
+          </div>
+          
+          <div class="formula-box">
+            <strong>Key kinematic equations:</strong><br>
+            • v = v₀ + at<br>
+            • x = v₀t + ½at²<br>
+            • v² = v₀² + 2ax<br>
+            • x = ½(v₀ + v)t
+          </div>
+        </section>
+        
+        <section id="projectile-motion">
+          <h2>1.7 Projectile motion</h2>
+          
+          <div class="key-point">
+            <strong>Key principles:</strong>
+            <ul>
+              <li>Horizontal acceleration = 0 (no air resistance)</li>
+              <li>Vertical acceleration = g ≈ 10 m/s²</li>
+              <li>Horizontal and vertical motions are independent</li>
+              <li>Time of flight determined by vertical motion only</li>
+            </ul>
+          </div>
+          
+          <div class="equation">
+            Velocities add using Pythagorean theorem: v = √(vₓ² + vᵧ²)
+          </div>
+        </section>
+        
+        <section id="rotational-kinematics">
+          <h2>1.8 Rotational kinematics</h2>
+          
+          <div class="definition">
+            <strong>Angular displacement (θ):</strong> Angle through which an object rotates (radians)
+          </div>
+          
+          <div class="definition">
+            <strong>Angular velocity (ω):</strong> Rate of angular displacement (rad/s)
+          </div>
+          
+          <div class="definition">
+            <strong>Angular acceleration (α):</strong> Rate of change of angular velocity (rad/s²)
+          </div>
+          
+          <div class="equation">
+            Linear-angular relationships: v = rω, a = rα
+          </div>
+        </section>
+      </section>
+      
+      <section id="dynamics" class="section">
+        <h1>2. Dynamics</h1>
+        
+        <section id="equilibrium">
+          <h2>2.1 Definition of Equilibrium</h2>
+          
+          <div class="definition">
+            An object is in equilibrium if it is either:
+            <ul>
+              <li>At rest, or</li>
+              <li>Moving in a straight line at constant speed</li>
+            </ul>
+          </div>
+          
+          <div class="key-point">
+            Equilibrium means the net force on the object is zero (ΣF = 0).
+          </div>
+        </section>
+        
+        <section id="newtons-second-law">
+          <h2>2.2 Newton's Second Law</h2>
+          
+          <div class="equation">
+            F = ma
+          </div>
+          
+          <div class="key-point">
+            <ul>
+              <li>Net force is in the direction of acceleration</li>
+              <li>F and a are vectors pointing in the same direction</li>
+              <li>Force causes acceleration, not velocity</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section id="solving-force-problems">
+          <h2>2.3 Solving problems with forces</h2>
+          
+          <div class="key-point">
+            <strong>Problem-solving strategy:</strong>
+            <ol>
+              <li>Draw free-body diagram</li>
+              <li>Choose coordinate system</li>
+              <li>Apply Newton's second law in each direction</li>
+              <li>Solve the resulting equations</li>
+            </ol>
+          </div>
+        </section>
+        
+        <section id="mass-weight">
+          <h2>2.4 Mass and Weight</h2>
+          
+          <div class="definition">
+            <strong>Mass (m):</strong> Intrinsic property, measured in kg
+          </div>
+          
+          <div class="definition">
+            <strong>Weight (W):</strong> Force due to gravity, measured in N
+          </div>
+          
+          <div class="equation">
+            W = mg
+          </div>
+        </section>
+        
+        <section id="normal-force">
+          <h2>2.5 Normal force</h2>
+          
+          <div class="definition">
+            <strong>Normal force (N):</strong> Contact force perpendicular to surface
+          </div>
+          
+          <div class="key-point">
+            Normal force does NOT always equal weight. It equals the component of all forces perpendicular to the surface.
+          </div>
+        </section>
+        
+        <section id="force-components">
+          <h2>2.6 Adding perpendicular forces</h2>
+          
+          <div class="equation">
+            Pythagorean theorem: F = √(Fₓ² + Fᵧ²)
+          </div>
+          
+          <div class="equation">
+            Angle: tan θ = Fᵧ/Fₓ
+          </div>
+        </section>
+        
+        <section id="free-body-diagrams">
+          <h2>2.8 Free-body diagrams</h2>
+          
+          <div class="key-point">
+            <strong>A free-body diagram includes:</strong>
+            <ul>
+              <li>Each arrow begins on the object</li>
+              <li>Each arrow points in direction force acts</li>
+              <li>Only forces acting ON the object</li>
+              <li>No motion arrows or acceleration arrows</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section id="inclined-planes">
+          <h2>2.9 Inclined planes</h2>
+          
+          <div class="equation">
+            Weight parallel to incline: mg sin θ
+          </div>
+          
+          <div class="equation">
+            Weight perpendicular to incline: mg cos θ
+          </div>
+          
+          <div class="key-point">
+            Use coordinate system aligned with the incline for easier calculations.
+          </div>
+        </section>
+        
+        <section id="friction">
+          <h2>2.10 Friction</h2>
+          
+          <div class="equation">
+            Friction force: f = μN
+          </div>
+          
+          <div class="definition">
+            <strong>μₛ:</strong> Coefficient of static friction (higher)
+          </div>
+          
+          <div class="definition">
+            <strong>μₖ:</strong> Coefficient of kinetic friction (lower)
+          </div>
+          
+          <div class="key-point">
+            Friction opposes motion and acts parallel to the surface.
+          </div>
+        </section>
+        
+        <section id="newtons-third-law">
+          <h2>2.11 Newton's Third Law</h2>
+          
+          <div class="key-point">
+            For every action, there is an equal and opposite reaction.
+          </div>
+          
+          <div class="key-point">
+            <strong>Important:</strong>
+            <ul>
+              <li>Action-reaction pairs act on DIFFERENT objects</li>
+              <li>Forces are equal in magnitude, opposite in direction</li>
+              <li>They occur simultaneously</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      
+      <section id="circular-motion" class="section">
+        <h1>3. Circular motion</h1>
+        
+        <section id="circular-motion-basics">
+          <h2>3.1 Circular motion basics</h2>
+          
+          <div class="key-point">
+            An object moving in a circle at constant speed still has acceleration because its velocity direction constantly changes.
+          </div>
+        </section>
+        
+        <section id="centripetal-acceleration">
+          <h2>3.2 Centripetal acceleration</h2>
+          
+          <div class="equation">
+            aᶜ = v²/r
+          </div>
+          
+          <div class="key-point">
+            Centripetal acceleration points toward the center of the circle.
+          </div>
+        </section>
+        
+        <section id="centripetal-force">
+          <h2>3.3 Centripetal force</h2>
+          
+          <div class="equation">
+            Fᶜ = maᶜ = mv²/r
+          </div>
+          
+          <div class="key-point">
+            Centripetal force is not a new type of force - it's the net force toward the center provided by tension, gravity, friction, etc.
+          </div>
+        </section>
+      </section>
+      
+      <!-- Continue with remaining sections... -->
+      
+    </main>
+  </div>
+
+  <script>
+    // Auto-render mathematical expressions
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+      
+      // Highlight current section in navigation
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            const currentLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+            
+            // Remove active class from all links
+            document.querySelectorAll('.nav-links a').forEach(link => 
+              link.classList.remove('active'));
+              
+            // Add active class to current link
+            if (currentLink) {
+              currentLink.classList.add('active');
+            }
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all sections
+      document.querySelectorAll('section[id]').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
