@@ -308,10 +308,24 @@ const PhysicsQuizApp = {
             });
         });
 
-        // Mode selection
-        document.querySelectorAll('input[name="mode"]').forEach(radio => {
-            radio.addEventListener('change', (e) => {
-                this.switchMode(e.target.value);
+        // Mode selection buttons
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Remove active class from all mode buttons
+                document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                e.currentTarget.classList.add('active');
+                this.switchMode(e.currentTarget.dataset.mode);
+            });
+        });
+
+        // Subject selection buttons  
+        document.querySelectorAll('.subject-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Remove active class from all subject buttons
+                document.querySelectorAll('.subject-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                e.currentTarget.classList.add('active');
             });
         });
 
@@ -450,12 +464,12 @@ const PhysicsQuizApp = {
 
     // Get current form settings
     getCurrentFormSettings: function() {
-        const modeRadio = document.querySelector('input[name="mode"]:checked');
-        const subjectRadio = document.querySelector('input[name="subject"]:checked');
+        const activeMode = document.querySelector('.mode-btn.active');
+        const activeSubject = document.querySelector('.subject-btn.active');
         
         return {
-            mode: modeRadio ? modeRadio.value : 'learning',
-            subject: subjectRadio ? subjectRadio.value : 'all'
+            mode: activeMode ? activeMode.dataset.mode : 'learning',
+            subject: activeSubject ? activeSubject.dataset.subject : 'all'
         };
     },
 

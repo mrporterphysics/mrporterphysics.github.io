@@ -188,23 +188,61 @@ h1 {
 
 .mode-options {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
-.mode-option label {
+.mode-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border: 2px solid var(--ui-3);
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
+  transition: all 0.2s ease;
+  text-align: left;
+  flex: 1;
+  min-width: 200px;
 }
 
-.mode-option input[type="radio"] {
-  accent-color: var(--bl);
+.mode-btn:hover {
+  border-color: var(--bl);
+  background: var(--ui-2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Subject selection */
+.mode-btn.active {
+  border-color: var(--bl);
+  background: var(--bl);
+  color: var(--bg);
+}
+
+.mode-btn .btn-emoji {
+  font-size: 1.5em;
+  min-width: 24px;
+}
+
+.mode-btn .btn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mode-btn .btn-content span {
+  font-size: 0.85em;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.mode-btn.active .btn-content span {
+  opacity: 0.9;
+}
+
+/* Subject selection with emoji buttons */
 .subject-selection {
   margin: 24px 0;
   padding: 16px;
@@ -223,23 +261,52 @@ h1 {
   gap: 12px;
 }
 
-.subject-option label {
+.subject-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg);
+  border: 2px solid var(--ui-3);
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
-  padding: 8px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  text-align: left;
 }
 
-.subject-option label:hover {
-  background: var(--ui-3);
+.subject-btn:hover {
+  border-color: var(--bl);
+  background: var(--ui-2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.subject-option input[type="radio"] {
-  accent-color: var(--bl);
+.subject-btn.active {
+  border-color: var(--bl);
+  background: var(--bl);
+  color: var(--bg);
+}
+
+.subject-btn .btn-emoji {
+  font-size: 1.5em;
+  min-width: 24px;
+}
+
+.subject-btn .btn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.subject-btn .btn-content span {
+  font-size: 0.85em;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.subject-btn.active .btn-content span {
+  opacity: 0.9;
 }
 
 /* Question display */
@@ -444,6 +511,26 @@ button, .btn {
 
 .btn-primary:hover {
   background: var(--cy);
+}
+
+.start-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transform: scale(1);
+  transition: all 0.2s ease;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(32, 94, 166, 0.3);
+}
+
+.start-btn .btn-emoji {
+  font-size: 1.2em;
 }
 
 .btn-secondary {

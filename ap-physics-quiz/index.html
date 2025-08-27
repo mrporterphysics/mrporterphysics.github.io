@@ -44,93 +44,106 @@
 
             <!-- Subject Selection -->
             <div class="subject-selection">
-                <h3>Subject Focus</h3>
+                <h3>📚 Subject Focus</h3>
                 <div class="subject-options">
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="all" checked>
-                            <strong>All Topics</strong> - Complete review
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="kinematics">
-                            <strong>Kinematics</strong> - Motion, velocity, acceleration
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="forces">
-                            <strong>Forces</strong> - Newton's laws, friction, equilibrium
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="energy">
-                            <strong>Energy</strong> - Work, kinetic, potential energy
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="momentum">
-                            <strong>Momentum</strong> - Collisions, impulse
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="rotation">
-                            <strong>Rotation</strong> - Angular motion, torque
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="gravitation">
-                            <strong>Gravitation</strong> - Orbits, gravitational force
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="shm">
-                            <strong>Simple Harmonic Motion</strong> - Oscillations, springs
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="fluids">
-                            <strong>Fluids</strong> - Pressure, buoyancy, flow
-                        </label>
-                    </div>
-                    <div class="subject-option">
-                        <label>
-                            <input type="radio" name="subject" value="waves">
-                            <strong>Waves</strong> - Wave properties, sound
-                        </label>
-                    </div>
+                    <button class="subject-btn active" data-subject="all">
+                        <div class="btn-emoji">🌟</div>
+                        <div class="btn-content">
+                            <strong>All Topics</strong>
+                            <span>Complete review</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="kinematics">
+                        <div class="btn-emoji">🚀</div>
+                        <div class="btn-content">
+                            <strong>Kinematics</strong>
+                            <span>Motion, velocity, acceleration</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="forces">
+                        <div class="btn-emoji">⚡</div>
+                        <div class="btn-content">
+                            <strong>Forces</strong>
+                            <span>Newton's laws, friction, equilibrium</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="energy">
+                        <div class="btn-emoji">🔋</div>
+                        <div class="btn-content">
+                            <strong>Energy</strong>
+                            <span>Work, kinetic, potential energy</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="momentum">
+                        <div class="btn-emoji">💥</div>
+                        <div class="btn-content">
+                            <strong>Momentum</strong>
+                            <span>Collisions, impulse</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="rotation">
+                        <div class="btn-emoji">🌀</div>
+                        <div class="btn-content">
+                            <strong>Rotation</strong>
+                            <span>Angular motion, torque</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="gravitation">
+                        <div class="btn-emoji">🪐</div>
+                        <div class="btn-content">
+                            <strong>Gravitation</strong>
+                            <span>Orbits, gravitational force</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="shm">
+                        <div class="btn-emoji">〰️</div>
+                        <div class="btn-content">
+                            <strong>Simple Harmonic Motion</strong>
+                            <span>Oscillations, springs</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="fluids">
+                        <div class="btn-emoji">💧</div>
+                        <div class="btn-content">
+                            <strong>Fluids</strong>
+                            <span>Pressure, buoyancy, flow</span>
+                        </div>
+                    </button>
+                    <button class="subject-btn" data-subject="waves">
+                        <div class="btn-emoji">🌊</div>
+                        <div class="btn-content">
+                            <strong>Waves</strong>
+                            <span>Wave properties, sound</span>
+                        </div>
+                    </button>
                 </div>
             </div>
 
             <!-- Mode Selection -->
             <div class="mode-selection">
-                <h3>Study Mode</h3>
+                <h3>🎯 Study Mode</h3>
                 <div class="mode-options">
-                    <div class="mode-option">
-                        <label>
-                            <input type="radio" name="mode" value="learning" checked>
-                            <strong>Learning</strong> - Immediate feedback and explanations
-                        </label>
-                    </div>
-                    <div class="mode-option">
-                        <label>
-                            <input type="radio" name="mode" value="test">
-                            <strong>Test</strong> - No feedback until complete
-                        </label>
-                    </div>
-                    <div class="mode-option">
-                        <label>
-                            <input type="radio" name="mode" value="review">
-                            <strong>Review</strong> - Practice missed questions only
-                        </label>
-                    </div>
+                    <button class="mode-btn active" data-mode="learning">
+                        <div class="btn-emoji">🧠</div>
+                        <div class="btn-content">
+                            <strong>Learning</strong>
+                            <span>Immediate feedback and explanations</span>
+                        </div>
+                    </button>
+                    <button class="mode-btn" data-mode="test">
+                        <div class="btn-emoji">📝</div>
+                        <div class="btn-content">
+                            <strong>Test</strong>
+                            <span>No feedback until complete</span>
+                        </div>
+                    </button>
+                    <button class="mode-btn" data-mode="review">
+                        <div class="btn-emoji">🔄</div>
+                        <div class="btn-content">
+                            <strong>Review</strong>
+                            <span>Practice missed questions only</span>
+                        </div>
+                    </button>
                 </div>
             </div>
 
@@ -162,7 +175,8 @@
 
             <!-- Start Button -->
             <div class="text-center">
-                <button id="start-quiz" class="btn btn-primary">
+                <button id="start-quiz" class="btn btn-primary start-btn">
+                    <span class="btn-emoji">🚀</span>
                     Start Quiz
                 </button>
             </div>
