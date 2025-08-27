@@ -1,0 +1,3330 @@
+{
+  "topicMapping": {
+    "kinematics": {
+      "factSheetSections": [
+        "kinematics-definitions",
+        "position-time-graphs",
+        "velocity-time-graphs",
+        "acceleration",
+        "displacement-equations",
+        "algebraic-kinematics",
+        "projectile-motion",
+        "rotational-kinematics"
+      ],
+      "primarySection": "kinematics",
+      "description": "Motion in one and two dimensions, graphs of motion, projectile motion"
+    },
+    "forces": {
+      "factSheetSections": [
+        "equilibrium",
+        "newtons-second-law",
+        "force-problem-solving",
+        "mass-weight",
+        "normal-force",
+        "force-components",
+        "free-body-diagrams",
+        "inclined-planes",
+        "friction",
+        "newtons-third-law"
+      ],
+      "primarySection": "dynamics",
+      "description": "Newton's laws, force analysis, friction, inclined planes"
+    },
+    "circular motion": {
+      "factSheetSections": [
+        "circular-motion-basics",
+        "centripetal-acceleration",
+        "centripetal-force"
+      ],
+      "primarySection": "circular-motion",
+      "description": "Uniform circular motion, centripetal acceleration and force"
+    },
+    "energy": {
+      "factSheetSections": [
+        "energy-forms",
+        "work",
+        "power",
+        "work-energy-theorem",
+        "conservation-energy"
+      ],
+      "primarySection": "energy",
+      "description": "Work, energy, power, conservation of energy"
+    },
+    "momentum": {
+      "factSheetSections": [
+        "momentum-basics",
+        "impulse",
+        "collisions",
+        "center-of-mass"
+      ],
+      "primarySection": "momentum",
+      "description": "Linear momentum, impulse, collisions, center of mass"
+    },
+    "rotation": {
+      "factSheetSections": [
+        "rotational-motion",
+        "torque",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "description": "Rotational motion, torque, moment of inertia, angular momentum"
+    },
+    "gravitation": {
+      "factSheetSections": [
+        "universal-gravitation",
+        "orbital-motion",
+        "gravitational-energy"
+      ],
+      "primarySection": "gravitation",
+      "description": "Universal gravitation, orbital mechanics, gravitational potential energy"
+    },
+    "shm": {
+      "factSheetSections": [
+        "shm-basics",
+        "springs",
+        "pendulums"
+      ],
+      "primarySection": "shm",
+      "description": "Simple harmonic motion, springs, pendulums"
+    },
+    "fluids": {
+      "factSheetSections": [
+        "fluid-properties",
+        "pressure",
+        "buoyancy",
+        "fluid-flow"
+      ],
+      "primarySection": "fluids",
+      "description": "Fluid statics and dynamics, pressure, buoyancy, Bernoulli's principle"
+    },
+    "waves": {
+      "factSheetSections": [
+        "wave-properties",
+        "wave-behavior",
+        "sound-waves"
+      ],
+      "primarySection": "waves",
+      "description": "Wave properties, interference, sound waves"
+    },
+    "general": {
+      "factSheetSections": [
+        "graph-types",
+        "relationships",
+        "problem-solving"
+      ],
+      "primarySection": "graphs",
+      "description": "Mathematical relationships, graph analysis, problem-solving strategies"
+    }
+  },
+  "questionTypeMapping": {
+    "tf": {
+      "icon": "\u2713\u2717",
+      "description": "True/False questions test conceptual understanding",
+      "factSheetUsage": "Quick concept verification"
+    },
+    "fill": {
+      "icon": "\ud83d\udcdd",
+      "description": "Fill-in-the-blank questions test formula recall and units",
+      "factSheetUsage": "Formula reference and unit lookup"
+    },
+    "mc": {
+      "icon": "\ud83d\udd24",
+      "description": "Multiple choice questions test conceptual understanding",
+      "factSheetUsage": "Detailed explanations and concept clarification"
+    },
+    "matching": {
+      "icon": "\ud83d\udd17",
+      "description": "Matching questions connect concepts to definitions/formulas",
+      "factSheetUsage": "Cross-reference definitions and relationships"
+    }
+  },
+  "factSheetSectionIds": {
+    "kinematics-definitions": "Kinematic Definitions",
+    "position-time-graphs": "Position-time Graphs",
+    "velocity-time-graphs": "Velocity-time Graphs",
+    "acceleration": "Acceleration",
+    "displacement-equations": "Displacement Equations",
+    "algebraic-kinematics": "Algebraic Kinematics",
+    "projectile-motion": "Projectile Motion",
+    "rotational-kinematics": "Rotational Kinematics",
+    "equilibrium": "Equilibrium",
+    "newtons-second-law": "Newton's Second Law",
+    "force-problem-solving": "Force Problem Solving",
+    "mass-weight": "Mass vs Weight",
+    "normal-force": "Normal Force",
+    "force-components": "Force Components",
+    "free-body-diagrams": "Free-body Diagrams",
+    "inclined-planes": "Inclined Planes",
+    "friction": "Friction",
+    "newtons-third-law": "Newton's Third Law",
+    "circular-motion-basics": "Circular Motion Basics",
+    "centripetal-acceleration": "Centripetal Acceleration",
+    "centripetal-force": "Centripetal Force",
+    "energy-forms": "Forms of Energy",
+    "work": "Work",
+    "power": "Power",
+    "work-energy-theorem": "Work-Energy Theorem",
+    "conservation-energy": "Conservation of Energy",
+    "momentum-basics": "Momentum Basics",
+    "impulse": "Impulse",
+    "collisions": "Collisions",
+    "center-of-mass": "Center of Mass",
+    "rotational-motion": "Rotational Motion",
+    "torque": "Torque",
+    "rotational-inertia": "Rotational Inertia",
+    "angular-momentum": "Angular Momentum",
+    "universal-gravitation": "Universal Gravitation",
+    "orbital-motion": "Orbital Motion",
+    "gravitational-energy": "Gravitational Energy",
+    "shm-basics": "SHM Basics",
+    "springs": "Springs",
+    "pendulums": "Pendulums",
+    "fluid-properties": "Fluid Properties",
+    "pressure": "Pressure",
+    "buoyancy": "Buoyancy",
+    "fluid-flow": "Fluid Flow",
+    "wave-properties": "Wave Properties",
+    "wave-behavior": "Wave Behavior",
+    "sound-waves": "Sound Waves",
+    "graph-types": "Graph Types",
+    "relationships": "Mathematical Relationships",
+    "problem-solving": "Problem-Solving Strategies"
+  },
+  "questionMappings": {
+    "1": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: Displacement indicates the total distance an object travels."
+    },
+    "2": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: Average velocity is displacement divided by the time interva..."
+    },
+    "3": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: On a position-time graph, a positive slope indicates the obj..."
+    },
+    "4": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: On a velocity-time graph, the slope represents the object's ..."
+    },
+    "5": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: To determine how far an object travels, you find the area be..."
+    },
+    "6": {
+      "topic": "rotation",
+      "type": "tf",
+      "factSheetSections": [
+        "torque",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-kinematics",
+        "kinematics-definitions"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "True or False: Angular displacement is measured in radians."
+    },
+    "7": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: The acceleration of an object in free fall is -10 m/s\u00b2."
+    },
+    "8": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: When an object speeds up, its acceleration is always in the ..."
+    },
+    "9": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "position-time-graphs",
+        "algebraic-kinematics",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: The kinematic equation vf\u00b2 = vo\u00b2 + 2ax is only valid for con..."
+    },
+    "10": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: For an object moving at steady speed v, its displacement is ..."
+    },
+    "11": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "projectile-motion",
+        "position-time-graphs",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: In projectile motion, horizontal acceleration is always zero..."
+    },
+    "12": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: An object is in equilibrium only when it remains at rest."
+    },
+    "13": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "relationships",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: According to Newton's Second Law, force and acceleration are..."
+    },
+    "14": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: For all forces other than gravity, objects must be in contac..."
+    },
+    "15": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "normal-force",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: The normal force always equals the weight of an object."
+    },
+    "16": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: Mass and weight are different names for the same physical qu..."
+    },
+    "17": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "friction",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: The coefficient of static friction is typically less than th..."
+    },
+    "18": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "inclined-planes",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: On an inclined plane, you should use horizontal and vertical..."
+    },
+    "19": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: Forces in a third law force pair can sometimes act on the sa..."
+    },
+    "20": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: Two forces in a third law force pair are always equal in mag..."
+    },
+    "21": {
+      "topic": "circular motion",
+      "type": "tf",
+      "factSheetSections": [
+        "centripetal-force",
+        "centripetal-acceleration",
+        "circular-motion-basics"
+      ],
+      "primarySection": "circular-motion",
+      "question_preview": "True or False: An object moving in a circle at constant speed has zero acce..."
+    },
+    "22": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: In a two-body problem, each object experiences the same acce..."
+    },
+    "23": {
+      "topic": "gravitation",
+      "type": "tf",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "True or False: The gravitational field near a planet is always equal to the..."
+    },
+    "24": {
+      "topic": "gravitation",
+      "type": "tf",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "True or False: In all experiments ever performed, gravitational mass equals..."
+    },
+    "25": {
+      "topic": "energy",
+      "type": "tf",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "True or False: Gravitational potential energy is always positive."
+    },
+    "26": {
+      "topic": "gravitation",
+      "type": "tf",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "angular-momentum",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "True or False: In an elliptical orbit, angular momentum is constant."
+    },
+    "27": {
+      "topic": "gravitation",
+      "type": "tf",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "True or False: Escape velocity is the minimum speed needed to reach any oth..."
+    },
+    "28": {
+      "topic": "rotation",
+      "type": "tf",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "True or False: Rotational inertia depends on both the mass and the distribu..."
+    },
+    "29": {
+      "topic": "rotation",
+      "type": "tf",
+      "factSheetSections": [
+        "torque",
+        "rotational-inertia",
+        "centripetal-force",
+        "centripetal-acceleration",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "True or False: Angular acceleration and centripetal acceleration are depend..."
+    },
+    "30": {
+      "topic": "rotation",
+      "type": "tf",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "True or False: The torque provided by a force is \u03c4 = F\u00d7r."
+    },
+    "31": {
+      "topic": "energy",
+      "type": "tf",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "True or False: Mechanical energy is conserved when there is no net work don..."
+    },
+    "32": {
+      "topic": "energy",
+      "type": "tf",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "True or False: Power is defined as the amount of energy used in one second."
+    },
+    "33": {
+      "topic": "momentum",
+      "type": "tf",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "True or False: In an elastic collision, mechanical energy is conserved."
+    },
+    "34": {
+      "topic": "rotation",
+      "type": "tf",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "True or False: Angular momentum is conserved when no net external torque ac..."
+    },
+    "35": {
+      "topic": "momentum",
+      "type": "tf",
+      "factSheetSections": [
+        "impulse",
+        "graph-types",
+        "momentum-basics",
+        "collisions",
+        "center-of-mass"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "True or False: Impulse equals the area under a force vs. time graph."
+    },
+    "36": {
+      "topic": "momentum",
+      "type": "tf",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "True or False: The total momentum of a system can change even when no exter..."
+    },
+    "37": {
+      "topic": "momentum",
+      "type": "tf",
+      "factSheetSections": [
+        "impulse",
+        "momentum-basics",
+        "collisions",
+        "center-of-mass",
+        "newtons-second-law"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "True or False: The center of mass of a system always obeys Newton's second ..."
+    },
+    "38": {
+      "topic": "shm",
+      "type": "tf",
+      "factSheetSections": [
+        "position-time-graphs",
+        "pendulums",
+        "graph-types",
+        "shm-basics",
+        "springs"
+      ],
+      "primarySection": "shm",
+      "question_preview": "True or False: In simple harmonic motion, the position-time graph is a sine..."
+    },
+    "39": {
+      "topic": "shm",
+      "type": "tf",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "True or False: The period of a pendulum depends on the mass of the bob."
+    },
+    "40": {
+      "topic": "shm",
+      "type": "tf",
+      "factSheetSections": [
+        "pendulums",
+        "shm-basics",
+        "springs",
+        "equilibrium",
+        "kinematics-definitions"
+      ],
+      "primarySection": "shm",
+      "question_preview": "True or False: The force of a spring is directly proportional to the displa..."
+    },
+    "41": {
+      "topic": "fluids",
+      "type": "tf",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "True or False: Pressure in a static column of fluid increases with depth."
+    },
+    "42": {
+      "topic": "fluids",
+      "type": "tf",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "True or False: The buoyant force on an object equals the weight of the obje..."
+    },
+    "43": {
+      "topic": "fluids",
+      "type": "tf",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "True or False: According to Bernoulli's equation, as fluid speed increases,..."
+    },
+    "44": {
+      "topic": "fluids",
+      "type": "tf",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "True or False: Density is defined as volume divided by mass."
+    },
+    "45": {
+      "topic": "fluids",
+      "type": "tf",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "True or False: The continuity principle is based on conservation of mass."
+    },
+    "46": {
+      "topic": "general",
+      "type": "tf",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "True or False: A quadratic relationship shows y varies as x\u00b2."
+    },
+    "47": {
+      "topic": "general",
+      "type": "tf",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "True or False: A square root relationship shows y varies as \u221ax."
+    },
+    "48": {
+      "topic": "general",
+      "type": "tf",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "True or False: There are exponential relationships in AP Physics 1."
+    },
+    "49": {
+      "topic": "general",
+      "type": "tf",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "True or False: When arrows in an equation point in opposite directions, we ..."
+    },
+    "50": {
+      "topic": "general",
+      "type": "tf",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "True or False: Linear relationships always produce straight-line graphs wit..."
+    },
+    "51": {
+      "topic": "kinematics",
+      "type": "fill",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "The units of acceleration are ____."
+    },
+    "52": {
+      "topic": "kinematics",
+      "type": "fill",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "On a position-time graph, a position-time slope like a front slash (/) mean..."
+    },
+    "53": {
+      "topic": "kinematics",
+      "type": "fill",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "On a velocity-time graph, an object is moving toward the detector if the gr..."
+    },
+    "54": {
+      "topic": "kinematics",
+      "type": "fill",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "When an object slows down, its acceleration is _____ the direction of motio..."
+    },
+    "55": {
+      "topic": "kinematics",
+      "type": "fill",
+      "factSheetSections": [
+        "position-time-graphs",
+        "algebraic-kinematics",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "The constant-acceleration kinematic equation that relates final velocity, i..."
+    },
+    "56": {
+      "topic": "kinematics",
+      "type": "fill",
+      "factSheetSections": [
+        "projectile-motion",
+        "position-time-graphs",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "In projectile motion, the vertical acceleration is always _____ m/s\u00b2."
+    },
+    "57": {
+      "topic": "kinematics",
+      "type": "fill",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Velocities in perpendicular directions add with the _____ theorem."
+    },
+    "58": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "An object is in equilibrium if it is moving in a _____ at constant speed."
+    },
+    "59": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Newton's Second Law can be expressed as _____."
+    },
+    "60": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "The net force is in the direction of _____."
+    },
+    "61": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "free-body-diagrams",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "When drawing a free-body diagram, each arrow begins on the _____ and points..."
+    },
+    "62": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "inclined-planes",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "The component of an object's weight parallel to an incline is mg_____."
+    },
+    "63": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "inclined-planes",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "The component of an object's weight perpendicular to an incline is mg_____."
+    },
+    "64": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "friction",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "The force of friction is equal to the coefficient of friction times the ___..."
+    },
+    "65": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-third-law",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Newton's Third Law says that the force of object A on object B is _____ to ..."
+    },
+    "66": {
+      "topic": "circular motion",
+      "type": "fill",
+      "factSheetSections": [
+        "centripetal-force",
+        "centripetal-acceleration",
+        "circular-motion-basics"
+      ],
+      "primarySection": "circular-motion",
+      "question_preview": "An object moving at constant speed v in a circle of radius r has an acceler..."
+    },
+    "67": {
+      "topic": "forces",
+      "type": "fill",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "In a two-body problem, the tension in one rope is _____ throughout the rope..."
+    },
+    "68": {
+      "topic": "gravitation",
+      "type": "fill",
+      "factSheetSections": [
+        "gravitational-energy",
+        "relationships",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "The gravitational force between two objects is proportional to the product ..."
+    },
+    "69": {
+      "topic": "gravitation",
+      "type": "fill",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "The universal gravitational constant G has a value of approximately _____ N..."
+    },
+    "70": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Near the surface of a planet, the potential energy of a planet-object syste..."
+    },
+    "71": {
+      "topic": "gravitation",
+      "type": "fill",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "To find the speed of a circular orbit, set gravitational force equal to ___..."
+    },
+    "72": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-kinematics",
+        "kinematics-definitions"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Angular displacement indicates the _____ through which an object has rotate..."
+    },
+    "73": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-kinematics",
+        "rotational-motion"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Angular velocity is measured in _____."
+    },
+    "74": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "The linear speed of a rotating object is given by v = _____."
+    },
+    "75": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "The rotational inertia of a point particle is _____, where M is the particl..."
+    },
+    "76": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "The parallel axis theorem states that I' = _____ + _____."
+    },
+    "77": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "An angular acceleration is caused by a net _____."
+    },
+    "78": {
+      "topic": "momentum",
+      "type": "fill",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "Momentum is equal to _____ times _____."
+    },
+    "79": {
+      "topic": "momentum",
+      "type": "fill",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "The standard units of momentum are _____."
+    },
+    "80": {
+      "topic": "momentum",
+      "type": "fill",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "Impulse can be calculated as the change in an object's _____ or as _____ ti..."
+    },
+    "81": {
+      "topic": "momentum",
+      "type": "fill",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "The total momentum of objects before a collision equals the total momentum ..."
+    },
+    "82": {
+      "topic": "momentum",
+      "type": "fill",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "The location of the center of mass is given by the equation _____."
+    },
+    "83": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "All forms of energy have units of _____."
+    },
+    "84": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Kinetic energy is calculated as _____."
+    },
+    "85": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Gravitational potential energy near Earth's surface is calculated as _____."
+    },
+    "86": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "springs"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Spring potential energy is calculated as _____."
+    },
+    "87": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Rotational kinetic energy is calculated as _____."
+    },
+    "88": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "kinematics-definitions"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Positive work is done by a force _____ to an object's displacement."
+    },
+    "89": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "graph-types",
+        "power",
+        "work"
+      ],
+      "primarySection": "energy",
+      "question_preview": "The area under a force vs. displacement graph is _____."
+    },
+    "90": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Power is defined as _____ divided by time."
+    },
+    "91": {
+      "topic": "momentum",
+      "type": "fill",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "In an elastic collision, _____ energy of the system is conserved."
+    },
+    "92": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "The angular momentum L of an extended object is given by _____."
+    },
+    "93": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "For an object moving in a straight line at constant speed, the r in mvr rep..."
+    },
+    "94": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Angular momentum is conserved when no net external _____ acts."
+    },
+    "95": {
+      "topic": "shm",
+      "type": "fill",
+      "factSheetSections": [
+        "position-time-graphs",
+        "pendulums",
+        "graph-types",
+        "shm-basics",
+        "springs"
+      ],
+      "primarySection": "shm",
+      "question_preview": "In simple harmonic motion, an object's position-time graph is in the shape ..."
+    },
+    "96": {
+      "topic": "shm",
+      "type": "fill",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "The period of an object on a spring is given by T = _____."
+    },
+    "97": {
+      "topic": "shm",
+      "type": "fill",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "The period of a pendulum is given by T = _____."
+    },
+    "98": {
+      "topic": "shm",
+      "type": "fill",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "The force of a spring is given by F = _____."
+    },
+    "99": {
+      "topic": "shm",
+      "type": "fill",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "The standard units of the spring constant are _____."
+    },
+    "100": {
+      "topic": "fluids",
+      "type": "fill",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "Density is defined as _____ divided by _____."
+    },
+    "101": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Which of the following is the correct definition of instantaneous velocity?"
+    },
+    "102": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "On a position-time graph, which of the following is true?"
+    },
+    "103": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "How can you determine the instantaneous speed from a curved position-time g..."
+    },
+    "104": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Which of the following is NOT a correct formula for displacement under cons..."
+    },
+    "105": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "projectile-motion",
+        "position-time-graphs",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "For an object in projectile motion, which statement is correct?"
+    },
+    "106": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "In Newton's Second Law, if you double the force applied to an object, what ..."
+    },
+    "107": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "inclined-planes",
+        "mass-weight",
+        "normal-force",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "What is the formula for the normal force on an object on an inclined plane ..."
+    },
+    "108": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-third-law",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "According to Newton's Third Law, when you push on a wall:"
+    },
+    "109": {
+      "topic": "circular motion",
+      "type": "mc",
+      "factSheetSections": [
+        "centripetal-force",
+        "centripetal-acceleration",
+        "circular-motion-basics"
+      ],
+      "primarySection": "circular-motion",
+      "question_preview": "What is the acceleration of an object moving in a circle with radius r at c..."
+    },
+    "110": {
+      "topic": "gravitation",
+      "type": "mc",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "The gravitational field g near an object of mass M at distance d from the c..."
+    },
+    "111": {
+      "topic": "gravitation",
+      "type": "mc",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "In a circular orbit, which of the following is NOT constant?"
+    },
+    "112": {
+      "topic": "gravitation",
+      "type": "mc",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "The escape velocity from a planet depends on:"
+    },
+    "113": {
+      "topic": "rotation",
+      "type": "mc",
+      "factSheetSections": [
+        "torque",
+        "relationships",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-motion"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "The relationship between linear and angular quantities is best described by..."
+    },
+    "114": {
+      "topic": "rotation",
+      "type": "mc",
+      "factSheetSections": [
+        "torque",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-motion",
+        "newtons-second-law"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Which equation correctly represents Newton's Second Law for rotation?"
+    },
+    "115": {
+      "topic": "rotation",
+      "type": "mc",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "For a point particle, rotational inertia is:"
+    },
+    "116": {
+      "topic": "momentum",
+      "type": "mc",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "Which of the following is conserved when no external forces act on a system..."
+    },
+    "117": {
+      "topic": "momentum",
+      "type": "mc",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "Impulse equals:"
+    },
+    "118": {
+      "topic": "momentum",
+      "type": "mc",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "When two objects collide and stick together, the collision is:"
+    },
+    "119": {
+      "topic": "momentum",
+      "type": "mc",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "The center of mass of a system moves with constant velocity when:"
+    },
+    "120": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Kinetic energy is:"
+    },
+    "121": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Which of the following is NOT a form of energy discussed in AP Physics 1?"
+    },
+    "122": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Positive work is done by a force when:"
+    },
+    "123": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Power can be calculated as:"
+    },
+    "124": {
+      "topic": "momentum",
+      "type": "mc",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "In an elastic collision between two objects:"
+    },
+    "125": {
+      "topic": "rotation",
+      "type": "mc",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "The angular momentum of a point object is:"
+    },
+    "126": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "Simple harmonic motion occurs when:"
+    },
+    "127": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "The amplitude of an object in simple harmonic motion is:"
+    },
+    "128": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "The spring constant k:"
+    },
+    "129": {
+      "topic": "fluids",
+      "type": "mc",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "Bernoulli's equation is based on conservation of:"
+    },
+    "130": {
+      "topic": "fluids",
+      "type": "mc",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "The buoyant force on an object depends on:"
+    },
+    "131": {
+      "topic": "general",
+      "type": "mc",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "When arrows in a physics equation point in opposite directions:"
+    },
+    "132": {
+      "topic": "general",
+      "type": "mc",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "When arrows in a physics equation point in the same direction and one varia..."
+    },
+    "133": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "The work-energy theorem states that:"
+    },
+    "134": {
+      "topic": "rotation",
+      "type": "mc",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "The torque provided by a force is:"
+    },
+    "135": {
+      "topic": "rotation",
+      "type": "mc",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "When the net torque on an object is zero:"
+    },
+    "136": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "The frequency of a simple harmonic oscillator is:"
+    },
+    "137": {
+      "topic": "fluids",
+      "type": "mc",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "Which of the following correctly explains why an object floats in a fluid?"
+    },
+    "138": {
+      "topic": "fluids",
+      "type": "mc",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "According to the continuity principle, when fluid flows from a wide pipe to..."
+    },
+    "139": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Which of these forces is NOT a contact force?"
+    },
+    "140": {
+      "topic": "fluids",
+      "type": "mc",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "According to Bernoulli's equation, as fluid speed increases:"
+    },
+    "141": {
+      "topic": "momentum",
+      "type": "mc",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "Which of the following is the correct unit for momentum?"
+    },
+    "142": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "springs"
+      ],
+      "primarySection": "energy",
+      "question_preview": "For a particular spring, as you stretch it to twice its original stretch:"
+    },
+    "143": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "The period of a pendulum:"
+    },
+    "144": {
+      "topic": "general",
+      "type": "mc",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Which of the following graphs would represent an inverse relationship?"
+    },
+    "145": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "relationships",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "In the equation F = ma, the relationship between force and acceleration is:"
+    },
+    "146": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "relationships",
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "Which of the following relationships is described by Hooke's Law?"
+    },
+    "147": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "An object initially at rest falls freely under gravity. Its velocity-time g..."
+    },
+    "148": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "position-time-graphs",
+        "algebraic-kinematics",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "The kinematic equation \u0394x = vot + \u00bdat\u00b2 shows what type of relationship betw..."
+    },
+    "149": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "relationships",
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "For a mass on a spring, the relationship between period and mass is:"
+    },
+    "150": {
+      "topic": "gravitation",
+      "type": "mc",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "If you triple the radius of a circular orbit (assuming the central mass rem..."
+    },
+    "151": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Displacement"
+    },
+    "152": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Average velocity"
+    },
+    "153": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Instantaneous velocity"
+    },
+    "154": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Acceleration"
+    },
+    "155": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Free fall acceleration"
+    },
+    "156": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Position-time graph slope"
+    },
+    "157": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Position-time graph shape"
+    },
+    "158": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Velocity-time graph height"
+    },
+    "159": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Velocity-time graph area"
+    },
+    "160": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Velocity-time graph slope"
+    },
+    "161": {
+      "topic": "forces",
+      "type": "matching",
+      "factSheetSections": [
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "normal-force",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Normal force"
+    },
+    "162": {
+      "topic": "forces",
+      "type": "matching",
+      "factSheetSections": [
+        "friction",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Friction force"
+    },
+    "163": {
+      "topic": "forces",
+      "type": "matching",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Gravitational force"
+    },
+    "164": {
+      "topic": "forces",
+      "type": "matching",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Tension force"
+    },
+    "165": {
+      "topic": "forces",
+      "type": "matching",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Net force"
+    },
+    "166": {
+      "topic": "forces",
+      "type": "matching",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "F = ma"
+    },
+    "167": {
+      "topic": "gravitation",
+      "type": "matching",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "F = GMm/d\u00b2"
+    },
+    "168": {
+      "topic": "shm",
+      "type": "matching",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "F = kx"
+    },
+    "169": {
+      "topic": "circular motion",
+      "type": "matching",
+      "factSheetSections": [
+        "centripetal-force",
+        "centripetal-acceleration",
+        "circular-motion-basics"
+      ],
+      "primarySection": "circular-motion",
+      "question_preview": "v\u00b2/r"
+    },
+    "170": {
+      "topic": "energy",
+      "type": "matching",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "\u00bdmv\u00b2"
+    },
+    "171": {
+      "topic": "energy",
+      "type": "matching",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Kinetic energy"
+    },
+    "172": {
+      "topic": "energy",
+      "type": "matching",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Gravitational potential energy"
+    },
+    "173": {
+      "topic": "energy",
+      "type": "matching",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "springs"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Spring potential energy"
+    },
+    "174": {
+      "topic": "energy",
+      "type": "matching",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Rotational kinetic energy"
+    },
+    "175": {
+      "topic": "energy",
+      "type": "matching",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Total mechanical energy"
+    },
+    "176": {
+      "topic": "momentum",
+      "type": "matching",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "Conservation of momentum"
+    },
+    "177": {
+      "topic": "rotation",
+      "type": "matching",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Conservation of angular momentum"
+    },
+    "178": {
+      "topic": "energy",
+      "type": "matching",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Conservation of mechanical energy"
+    },
+    "179": {
+      "topic": "fluids",
+      "type": "matching",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "Conservation of mass (continuity principle)"
+    },
+    "180": {
+      "topic": "fluids",
+      "type": "matching",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "Conservation of energy (Bernoulli's equation)"
+    },
+    "181": {
+      "topic": "rotation",
+      "type": "matching",
+      "factSheetSections": [
+        "torque",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-kinematics",
+        "kinematics-definitions"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Angular displacement (\u03b8)"
+    },
+    "182": {
+      "topic": "rotation",
+      "type": "matching",
+      "factSheetSections": [
+        "torque",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-kinematics",
+        "rotational-motion"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Angular velocity (\u03c9)"
+    },
+    "183": {
+      "topic": "rotation",
+      "type": "matching",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Angular acceleration (\u03b1)"
+    },
+    "184": {
+      "topic": "rotation",
+      "type": "matching",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Torque (\u03c4)"
+    },
+    "185": {
+      "topic": "rotation",
+      "type": "matching",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "Rotational inertia (I)"
+    },
+    "186": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Force"
+    },
+    "187": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Energy"
+    },
+    "188": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "power",
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Power"
+    },
+    "189": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Momentum"
+    },
+    "190": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "pressure",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Pressure"
+    },
+    "191": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "shm-basics",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Simple harmonic motion"
+    },
+    "192": {
+      "topic": "kinematics",
+      "type": "matching",
+      "factSheetSections": [
+        "projectile-motion",
+        "position-time-graphs",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "Projectile motion"
+    },
+    "193": {
+      "topic": "circular motion",
+      "type": "matching",
+      "factSheetSections": [
+        "centripetal-force",
+        "centripetal-acceleration",
+        "circular-motion-basics"
+      ],
+      "primarySection": "circular-motion",
+      "question_preview": "Circular motion"
+    },
+    "194": {
+      "topic": "momentum",
+      "type": "matching",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "Elastic collision"
+    },
+    "195": {
+      "topic": "momentum",
+      "type": "matching",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "Inelastic collision"
+    },
+    "196": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Linear relationship"
+    },
+    "197": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Quadratic relationship"
+    },
+    "198": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Inverse relationship"
+    },
+    "199": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "Square root relationship"
+    },
+    "200": {
+      "topic": "general",
+      "type": "matching",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "No dependence"
+    },
+    "201": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "projectile-motion",
+        "position-time-graphs",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "What happens to the free-fall time of a projectile if you double its initia..."
+    },
+    "202": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "friction",
+        "inclined-planes",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "What is the acceleration of an object placed on a frictionless inclined pla..."
+    },
+    "203": {
+      "topic": "momentum",
+      "type": "mc",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "In a completely inelastic collision between two objects with equal mass:"
+    },
+    "204": {
+      "topic": "shm",
+      "type": "tf",
+      "factSheetSections": [
+        "pendulums",
+        "shm-basics",
+        "springs",
+        "kinematics-definitions",
+        "relationships"
+      ],
+      "primarySection": "shm",
+      "question_preview": "True or False: The restoring force in simple harmonic motion is always prop..."
+    },
+    "205": {
+      "topic": "energy",
+      "type": "tf",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "True or False: The work done by a conservative force over a closed path is ..."
+    },
+    "206": {
+      "topic": "fluids",
+      "type": "fill",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "The terminal velocity of an object falling through a fluid occurs when the ..."
+    },
+    "207": {
+      "topic": "general",
+      "type": "tf",
+      "factSheetSections": [
+        "relationships",
+        "problem-solving",
+        "graph-types"
+      ],
+      "primarySection": "graphs",
+      "question_preview": "True or False: A ticking clock on a train will appear to run slower to a st..."
+    },
+    "208": {
+      "topic": "waves",
+      "type": "mc",
+      "factSheetSections": [
+        "sound-waves",
+        "wave-behavior",
+        "wave-properties"
+      ],
+      "primarySection": "waves",
+      "question_preview": "A wave traveling on a string has wavelength \u03bb and frequency f. The wave spe..."
+    },
+    "209": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "What is the mechanical advantage of a simple machine with 50% efficiency if..."
+    },
+    "210": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Two identical charges are separated by distance d. If the distance is doubl..."
+    },
+    "211": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "projectile-motion",
+        "position-time-graphs",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: In projectile motion, the horizontal and vertical components..."
+    },
+    "212": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "friction",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: The coefficient of kinetic friction is typically greater tha..."
+    },
+    "213": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "springs"
+      ],
+      "primarySection": "energy",
+      "question_preview": "A spring with spring constant k = 100 N/m is compressed by 0.2 m. The elast..."
+    },
+    "214": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "A car travels at constant speed around a circular track. The net force on t..."
+    },
+    "215": {
+      "topic": "shm",
+      "type": "tf",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "True or False: Increasing the amplitude of a pendulum doubles its period."
+    },
+    "216": {
+      "topic": "momentum",
+      "type": "mc",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "A 1000 kg car traveling at 20 m/s collides with a stationary 2000 kg truck...."
+    },
+    "217": {
+      "topic": "gravitation",
+      "type": "fill",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "The gravitational field strength on Earth's surface is approximately _____ ..."
+    },
+    "218": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "Which has more kinetic energy: a 1 kg object at 10 m/s or a 2 kg object at ..."
+    },
+    "219": {
+      "topic": "energy",
+      "type": "tf",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "True or False: Work is a vector quantity."
+    },
+    "220": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "A mass oscillates on a spring with period T. If the mass is doubled, the ne..."
+    },
+    "221": {
+      "topic": "gravitation",
+      "type": "fill",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "A satellite orbits Earth at distance r from the center. If it moves to dist..."
+    },
+    "222": {
+      "topic": "waves",
+      "type": "mc",
+      "factSheetSections": [
+        "sound-waves",
+        "wave-behavior",
+        "wave-properties"
+      ],
+      "primarySection": "waves",
+      "question_preview": "Two waves of equal amplitude interfere. The resulting amplitude when they a..."
+    },
+    "223": {
+      "topic": "gravitation",
+      "type": "tf",
+      "factSheetSections": [
+        "gravitational-energy",
+        "projectile-motion",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "True or False: The escape velocity from a planet depends on the mass of the..."
+    },
+    "224": {
+      "topic": "rotation",
+      "type": "mc",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "A uniform rod rotates about one end. Compared to rotation about its center,..."
+    },
+    "225": {
+      "topic": "momentum",
+      "type": "fill",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "The impulse-momentum theorem states that impulse equals the change in _____..."
+    },
+    "226": {
+      "topic": "kinematics",
+      "type": "mc",
+      "factSheetSections": [
+        "position-time-graphs",
+        "graph-types",
+        "velocity-time-graphs",
+        "acceleration",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "A ball is thrown horizontally from a cliff. Which graph best represents its..."
+    },
+    "227": {
+      "topic": "forces",
+      "type": "tf",
+      "factSheetSections": [
+        "centripetal-force",
+        "mass-weight",
+        "centripetal-acceleration",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "True or False: Centripetal acceleration is always directed toward the cente..."
+    },
+    "228": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "friction",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "A 5 kg block on a horizontal surface has \u03bc_s = 0.4. The maximum static fric..."
+    },
+    "229": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "The work-energy theorem relates work done to change in _____ energy."
+    },
+    "230": {
+      "topic": "waves",
+      "type": "mc",
+      "factSheetSections": [
+        "sound-waves",
+        "wave-behavior",
+        "wave-properties"
+      ],
+      "primarySection": "waves",
+      "question_preview": "Sound waves in air are:"
+    },
+    "231": {
+      "topic": "kinematics",
+      "type": "tf",
+      "factSheetSections": [
+        "velocity-time-graphs",
+        "acceleration",
+        "position-time-graphs",
+        "kinematics-definitions"
+      ],
+      "primarySection": "kinematics",
+      "question_preview": "True or False: An object can have zero velocity but non-zero acceleration."
+    },
+    "232": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "inclined-planes",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "A 2 kg block slides down a 37\u00b0 incline with \u03bc_k = 0.2. Its acceleration is:"
+    },
+    "233": {
+      "topic": "shm",
+      "type": "fill",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "A pendulum on the Moon (g = 1.6 m/s\u00b2) with length 1 m has period approximat..."
+    },
+    "234": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "mass-weight",
+        "springs",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Two identical springs in parallel support a mass. Compared to one spring, t..."
+    },
+    "235": {
+      "topic": "energy",
+      "type": "tf",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "collisions"
+      ],
+      "primarySection": "energy",
+      "question_preview": "True or False: Mechanical energy is conserved in all collisions."
+    },
+    "236": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "centripetal-force",
+        "mass-weight",
+        "centripetal-acceleration",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "A car rounds a banked curve at the design speed. The centripetal force is p..."
+    },
+    "237": {
+      "topic": "waves",
+      "type": "fill",
+      "factSheetSections": [
+        "sound-waves",
+        "wave-behavior",
+        "wave-properties"
+      ],
+      "primarySection": "waves",
+      "question_preview": "The frequency of a wave is 50 Hz and its speed is 340 m/s. Its wavelength i..."
+    },
+    "238": {
+      "topic": "gravitation",
+      "type": "mc",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "A planet has twice Earth's radius and four times Earth's mass. Its surface ..."
+    },
+    "239": {
+      "topic": "rotation",
+      "type": "tf",
+      "factSheetSections": [
+        "torque",
+        "rotational-inertia",
+        "equilibrium",
+        "angular-momentum",
+        "rotational-motion"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "True or False: The net torque on an object in rotational equilibrium is zer..."
+    },
+    "240": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "A mass attached to a string moves in a vertical circle. The tension is grea..."
+    },
+    "241": {
+      "topic": "fluids",
+      "type": "fill",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "Bernoulli's principle states that as fluid speed increases, pressure _____."
+    },
+    "242": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "friction"
+      ],
+      "primarySection": "energy",
+      "question_preview": "A 0.5 kg ball dropped from 2 m height bounces to 1.5 m. The coefficient of ..."
+    },
+    "243": {
+      "topic": "fluids",
+      "type": "tf",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "True or False: Buoyant force depends on the depth of submersion."
+    },
+    "244": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Two masses connected by a string over a pulley (Atwood machine). If m1 = 2 ..."
+    },
+    "245": {
+      "topic": "rotation",
+      "type": "fill",
+      "factSheetSections": [
+        "torque",
+        "energy-forms",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-motion"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "A wheel with moment of inertia 0.5 kg\u00b7m\u00b2 rotates at 10 rad/s. Its rotationa..."
+    },
+    "246": {
+      "topic": "waves",
+      "type": "mc",
+      "factSheetSections": [
+        "sound-waves",
+        "wave-behavior",
+        "wave-properties"
+      ],
+      "primarySection": "waves",
+      "question_preview": "Standing waves are formed when:"
+    },
+    "247": {
+      "topic": "momentum",
+      "type": "tf",
+      "factSheetSections": [
+        "impulse",
+        "center-of-mass",
+        "momentum-basics",
+        "collisions"
+      ],
+      "primarySection": "momentum",
+      "question_preview": "True or False: The center of mass of a system remains at rest if no externa..."
+    },
+    "248": {
+      "topic": "energy",
+      "type": "mc",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "inclined-planes"
+      ],
+      "primarySection": "energy",
+      "question_preview": "A uniform disk and a uniform sphere, both of mass M and radius R, roll down..."
+    },
+    "249": {
+      "topic": "waves",
+      "type": "fill",
+      "factSheetSections": [
+        "sound-waves",
+        "wave-behavior",
+        "wave-properties"
+      ],
+      "primarySection": "waves",
+      "question_preview": "The Doppler effect occurs when there is relative motion between a wave sour..."
+    },
+    "250": {
+      "topic": "gravitation",
+      "type": "mc",
+      "factSheetSections": [
+        "gravitational-energy",
+        "orbital-motion",
+        "universal-gravitation"
+      ],
+      "primarySection": "gravitation",
+      "question_preview": "A satellite in circular orbit has speed v. To escape to infinity, it needs ..."
+    },
+    "251": {
+      "topic": "waves",
+      "type": "tf",
+      "factSheetSections": [
+        "sound-waves",
+        "wave-behavior",
+        "wave-properties"
+      ],
+      "primarySection": "waves",
+      "question_preview": "True or False: The speed of sound increases with temperature."
+    },
+    "252": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "power",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving",
+        "newtons-second-law"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "A 1000 kg car engine provides 50,000 W of power at 25 m/s. The driving forc..."
+    },
+    "253": {
+      "topic": "shm",
+      "type": "fill",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics"
+      ],
+      "primarySection": "shm",
+      "question_preview": "A simple pendulum has length L. To double its period, the length must be __..."
+    },
+    "254": {
+      "topic": "forces",
+      "type": "mc",
+      "factSheetSections": [
+        "newtons-second-law",
+        "mass-weight",
+        "equilibrium",
+        "force-problem-solving"
+      ],
+      "primarySection": "dynamics",
+      "question_preview": "Two point charges +Q and -Q are separated by distance d. The electric field..."
+    },
+    "255": {
+      "topic": "energy",
+      "type": "tf",
+      "factSheetSections": [
+        "power",
+        "work",
+        "energy-forms",
+        "work-energy-theorem"
+      ],
+      "primarySection": "energy",
+      "question_preview": "True or False: A heat engine can be 100% efficient."
+    },
+    "256": {
+      "topic": "fluids",
+      "type": "mc",
+      "factSheetSections": [
+        "fluid-flow",
+        "fluid-properties",
+        "buoyancy",
+        "pressure"
+      ],
+      "primarySection": "fluids",
+      "question_preview": "Water flows through a pipe that narrows from area A to area A/2. The speed ..."
+    },
+    "257": {
+      "topic": "energy",
+      "type": "fill",
+      "factSheetSections": [
+        "energy-forms",
+        "work-energy-theorem",
+        "power",
+        "work",
+        "friction"
+      ],
+      "primarySection": "energy",
+      "question_preview": "The work done by friction is always _____ because friction opposes motion."
+    },
+    "258": {
+      "topic": "shm",
+      "type": "mc",
+      "factSheetSections": [
+        "pendulums",
+        "springs",
+        "shm-basics",
+        "kinematics-definitions"
+      ],
+      "primarySection": "shm",
+      "question_preview": "A mass-spring system oscillates with amplitude A. The speed is maximum when..."
+    },
+    "259": {
+      "topic": "rotation",
+      "type": "tf",
+      "factSheetSections": [
+        "torque",
+        "rotational-motion",
+        "rotational-inertia",
+        "angular-momentum"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "True or False: Angular momentum is conserved when no external torques act o..."
+    },
+    "260": {
+      "topic": "rotation",
+      "type": "mc",
+      "factSheetSections": [
+        "torque",
+        "relationships",
+        "rotational-inertia",
+        "angular-momentum",
+        "rotational-motion"
+      ],
+      "primarySection": "rotation",
+      "question_preview": "A wheel rolls without slipping. The relationship between linear speed v and..."
+    }
+  }
+}
