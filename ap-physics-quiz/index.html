@@ -42,6 +42,73 @@
                 </button> -->
             </div>
 
+            <!-- Subject Selection -->
+            <div class="subject-selection">
+                <h3>Subject Focus</h3>
+                <div class="subject-options">
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="all" checked>
+                            <strong>All Topics</strong> - Complete review
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="kinematics">
+                            <strong>Kinematics</strong> - Motion, velocity, acceleration
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="forces">
+                            <strong>Forces</strong> - Newton's laws, friction, equilibrium
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="energy">
+                            <strong>Energy</strong> - Work, kinetic, potential energy
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="momentum">
+                            <strong>Momentum</strong> - Collisions, impulse
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="rotation">
+                            <strong>Rotation</strong> - Angular motion, torque
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="gravitation">
+                            <strong>Gravitation</strong> - Orbits, gravitational force
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="shm">
+                            <strong>Simple Harmonic Motion</strong> - Oscillations, springs
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="fluids">
+                            <strong>Fluids</strong> - Pressure, buoyancy, flow
+                        </label>
+                    </div>
+                    <div class="subject-option">
+                        <label>
+                            <input type="radio" name="subject" value="waves">
+                            <strong>Waves</strong> - Wave properties, sound
+                        </label>
+                    </div>
+                </div>
+            </div>
+
             <!-- Mode Selection -->
             <div class="mode-selection">
                 <h3>Study Mode</h3>
@@ -74,6 +141,14 @@
                 </div>
             </div>
 
+            <!-- Topic Mastery Overview -->
+            <div id="topic-mastery" class="topic-mastery" style="display: none;">
+                <h4>📊 Topic Mastery</h4>
+                <div id="mastery-meters" class="mastery-meters">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
             <!-- Study Resources -->
             <div class="study-resources">
                 <h4>📖 Study Resources</h4>
@@ -103,10 +178,26 @@
                 <div class="progress-bar-container">
                     <div id="progress-bar" class="progress-bar"></div>
                 </div>
+                
+                <!-- Streak Counter -->
+                <div id="streak-display" class="streak-display" style="display: none;">
+                    <div id="current-streak" class="streak-counter">0</div>
+                    <div class="streak-text">Current Streak</div>
+                    <div id="personal-best" class="personal-best">Best: 0</div>
+                </div>
             </div>
 
             <!-- Question Container -->
             <div class="question-container">
+                <!-- Question Breadcrumb -->
+                <div id="question-breadcrumb" class="question-breadcrumb">
+                    <span>AP Physics 1</span>
+                    <span class="breadcrumb-separator">›</span>
+                    <span id="breadcrumb-topic">Forces</span>
+                    <span class="breadcrumb-separator">›</span>
+                    <span id="breadcrumb-type">Multiple Choice</span>
+                </div>
+                
                 <!-- Question Header -->
                 <div class="question-header">
                     <div id="question-type" class="question-type">
@@ -195,6 +286,11 @@
     
     <!-- Fact Sheet Integration -->
     <script src="js/factsheet-integration.js"></script>
+    
+    <!-- UX Enhancement Modules -->
+    <script src="js/topic-mastery.js"></script>
+    <script src="js/streak-tracker.js"></script>
+    <script src="js/bookmark-system.js"></script>
     
     <!-- Main Application -->
     <script src="js/app.js"></script>

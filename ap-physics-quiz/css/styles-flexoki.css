@@ -204,6 +204,44 @@ h1 {
   accent-color: var(--bl);
 }
 
+/* Subject selection */
+.subject-selection {
+  margin: 24px 0;
+  padding: 16px;
+  background: var(--ui-2);
+  border-radius: 8px;
+}
+
+.subject-selection h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+}
+
+.subject-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.subject-option label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.subject-option label:hover {
+  background: var(--ui-3);
+}
+
+.subject-option input[type="radio"] {
+  accent-color: var(--bl);
+}
+
 /* Question display */
 .question-container {
   background: var(--bg);
@@ -217,9 +255,25 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ui-2);
   font-size: 0.9rem;
   color: var(--tx-2);
+}
+
+.question-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--tx-3);
+  margin-bottom: 8px;
+}
+
+.breadcrumb-separator {
+  color: var(--tx-3);
+  opacity: 0.6;
 }
 
 .question-type {
@@ -232,15 +286,52 @@ h1 {
 
 .question-topic {
   background: var(--ui-2);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.85rem;
   text-transform: capitalize;
+  color: var(--tx);
+  border: 1px solid var(--ui-3);
+  transition: all 0.2s ease;
+}
+
+.question-topic:hover {
+  background: var(--ui-3);
+  transform: translateY(-1px);
+}
+
+.question-difficulty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--ui) 0%, var(--ui-2) 100%);
+  padding: 6px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--ui-3);
+  transition: all 0.2s ease;
+}
+
+.question-difficulty:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .question-difficulty .stars {
   color: var(--ye);
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
+
+.difficulty-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tx-2);
+}
+
+.difficulty-1 .stars { color: var(--gr); }
+.difficulty-2 .stars { color: var(--ye); }
+.difficulty-3 .stars { color: var(--or); }
 
 .question-text {
   font-size: 1.1rem;
@@ -592,6 +683,204 @@ button, .btn {
     align-items: flex-start;
     gap: 8px;
   }
+}
+
+/* Topic Mastery Visualization */
+.topic-mastery {
+  background: var(--ui);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid var(--ui-2);
+}
+
+.topic-mastery h4 {
+  margin: 0 0 16px 0;
+  color: var(--tx);
+  font-size: 1.1rem;
+}
+
+.mastery-meters {
+  display: grid;
+  gap: 12px;
+}
+
+.mastery-meter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mastery-meter:hover {
+  background: var(--ui-2);
+}
+
+.topic-name {
+  font-weight: 600;
+  color: var(--tx);
+  min-width: 120px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+.progress-bar-wrapper {
+  flex: 1;
+  height: 8px;
+  background: var(--ui-3);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gr) 0%, var(--cy) 100%);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+  position: relative;
+}
+
+.progress-fill.mastery-low {
+  background: linear-gradient(90deg, var(--re) 0%, var(--or) 100%);
+}
+
+.progress-fill.mastery-medium {
+  background: linear-gradient(90deg, var(--ye) 0%, var(--or) 100%);
+}
+
+.progress-fill.mastery-high {
+  background: linear-gradient(90deg, var(--gr) 0%, var(--cy) 100%);
+}
+
+.mastery-percentage {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--tx-2);
+  min-width: 45px;
+  text-align: right;
+}
+
+.mastery-stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ui-2);
+  font-size: 0.85rem;
+  color: var(--tx-2);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: var(--tx);
+}
+
+/* Streak Counter */
+.streak-display {
+  background: linear-gradient(135deg, var(--ui) 0%, var(--ui-2) 100%);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid var(--ui-3);
+  text-align: center;
+}
+
+.streak-counter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--or);
+  margin-bottom: 4px;
+}
+
+.streak-text {
+  font-size: 0.9rem;
+  color: var(--tx-2);
+  margin-bottom: 8px;
+}
+
+.personal-best {
+  font-size: 0.8rem;
+  color: var(--tx-3);
+}
+
+.streak-fire {
+  animation: pulse 1.5s infinite;
+}
+
+.streak-hot {
+  animation: bounce 1s infinite;
+}
+
+.streak-blazing {
+  animation: flame 0.8s infinite;
+}
+
+/* Achievement Modal */
+.achievement-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: var(--ui);
+  border: 2px solid var(--ui-3);
+  border-radius: 16px;
+  padding: 24px;
+  z-index: 1000;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.achievement-modal.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.achievement-content {
+  text-align: center;
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.achievement-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--tx);
+  margin-bottom: 8px;
+}
+
+.achievement-subtext {
+  font-size: 0.9rem;
+  color: var(--tx-2);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes flame {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.05) rotate(1deg); }
+  75% { transform: scale(1.05) rotate(-1deg); }
 }
 
 /* Utility classes */

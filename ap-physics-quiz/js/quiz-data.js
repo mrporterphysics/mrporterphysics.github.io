@@ -7,6 +7,7 @@ const QuizData = {
     filteredQuestions: [],
     currentFilters: {
         course: 'ap-physics',
+        subject: 'all',
         topics: [],
         types: [],
         difficulty: 'all'
@@ -105,8 +106,15 @@ const QuizData = {
         this.filteredQuestions = this.questions.filter(question => {
             // Course filter - not needed if all questions are from the same dataset
             
-            // Topic filter
-            if (this.currentFilters.topics.length > 0) {
+            // Subject filter (single topic selection)
+            if (this.currentFilters.subject !== 'all') {
+                if (question.topic !== this.currentFilters.subject) {
+                    return false;
+                }
+            }
+            
+            // Topic filter (multiple topics - overridden by subject filter)
+            if (this.currentFilters.topics.length > 0 && this.currentFilters.subject === 'all') {
                 if (!this.currentFilters.topics.includes(question.topic)) {
                     return false;
                 }

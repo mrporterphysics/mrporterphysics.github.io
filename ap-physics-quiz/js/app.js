@@ -448,9 +448,28 @@ const PhysicsQuizApp = {
         });
     },
 
+    // Get current form settings
+    getCurrentFormSettings: function() {
+        const modeRadio = document.querySelector('input[name="mode"]:checked');
+        const subjectRadio = document.querySelector('input[name="subject"]:checked');
+        
+        return {
+            mode: modeRadio ? modeRadio.value : 'learning',
+            subject: subjectRadio ? subjectRadio.value : 'all'
+        };
+    },
+
     // Start the quiz
     startQuiz: function() {
         console.log('Starting quiz...');
+        
+        // Get current settings from form and save them
+        const formSettings = this.getCurrentFormSettings();
+        QuizStorage.updateSetting('mode', formSettings.mode);
+        QuizStorage.updateSetting('subject', formSettings.subject);
+        
+        // Apply subject filter to question data
+        QuizData.setFilters({ subject: formSettings.subject });
         
         const settings = QuizStorage.getSettings();
         let questionsToUse;

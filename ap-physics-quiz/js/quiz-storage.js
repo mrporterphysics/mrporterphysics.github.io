@@ -16,6 +16,7 @@ const QuizStorage = {
     // Default settings
     DEFAULT_SETTINGS: {
         course: 'ap-physics',
+        subject: 'all',
         mode: 'learning',
         showExplanations: true,
         theme: 'light',

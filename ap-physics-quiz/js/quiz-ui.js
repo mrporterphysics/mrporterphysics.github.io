@@ -23,6 +23,17 @@ const QuizUI = {
         this.isInitialized = true;
     },
 
+    // Get readable name for question type
+    getQuestionTypeName: function(type) {
+        const typeNames = {
+            'tf': 'True/False',
+            'mc': 'Multiple Choice', 
+            'fill': 'Fill in the Blank',
+            'matching': 'Matching'
+        };
+        return typeNames[type] || type;
+    },
+
     // Cache DOM elements for performance
     cacheElements: function() {
         this.elements.displays = {
@@ -30,6 +41,8 @@ const QuizUI = {
             questionType: document.getElementById('question-type'),
             questionTopic: document.getElementById('question-topic'),
             questionDifficulty: document.getElementById('question-difficulty'),
+            breadcrumbTopic: document.getElementById('breadcrumb-topic'),
+            breadcrumbType: document.getElementById('breadcrumb-type'),
             options: document.getElementById('answer-options'),
             explanation: document.getElementById('explanation'),
             feedback: document.getElementById('feedback'),
@@ -104,18 +117,35 @@ const QuizUI = {
         }
 
         // Question topic
+        const topicName = question.topic.charAt(0).toUpperCase() + question.topic.slice(1);
         if (this.elements.displays.questionTopic) {
-            this.elements.displays.questionTopic.textContent = question.topic.charAt(0).toUpperCase() + question.topic.slice(1);
+            this.elements.displays.questionTopic.textContent = topicName;
+        }
+        
+        // Update breadcrumbs
+        if (this.elements.displays.breadcrumbTopic) {
+            this.elements.displays.breadcrumbTopic.textContent = topicName;
+        }
+        if (this.elements.displays.breadcrumbType) {
+            this.elements.displays.breadcrumbType.textContent = this.getQuestionTypeName(question.type);
         }
 
-        // Question difficulty
+        // Question difficulty with enhanced styling
         if (this.elements.displays.questionDifficulty) {
             const stars = '★'.repeat(question.difficulty) + '☆'.repeat(3 - question.difficulty);
             this.elements.displays.questionDifficulty.innerHTML = `
                 <span class="stars">${stars}</span>
                 <span class="difficulty-text">Level ${question.difficulty}</span>
             `;
+            
+            // Add difficulty class for color coding
+            this.elements.displays.questionDifficulty.className = `question-difficulty difficulty-${question.difficulty}`;
         }
+
+        // Dispatch event for other components (bookmark system)
+        document.dispatchEvent(new CustomEvent('questionDisplayed', {
+            detail: { question: question }
+        }));
     },
 
     // Display question text
@@ -324,6 +354,15 @@ const QuizUI = {
                 // Continue without explanation
             }
 
+            // Dispatch event for other components (streak tracker, topic mastery)
+            document.dispatchEvent(new CustomEvent('questionAnswered', {
+                detail: {
+                    isCorrect: isCorrect,
+                    question: this.currentQuestion,
+                    userAnswer: cleanAnswer
+                }
+            }));
+
             // Update UI state
             this.disableAnswerInputs();
             this.showNextButton();
@@ -363,7 +402,31 @@ const QuizUI = {
     // Check if answer is correct
     checkAnswer: function(userAnswer, question) {
         if (question.type === 'tf') {
-            return userAnswer === (question.answer === 'true' || question.answer === true);
+            // Robust True/False checking to handle malformed CSV data
+            const answerStr = String(question.answer).toLowerCase().trim();
+            
+            // Check for explicit true/false values
+            if (answerStr === 'true' || answerStr === 'false') {
+                return userAnswer === (answerStr === 'true');
+            }
+            
+            // If the answer field contains text that's not true/false,
+            // check if it starts with "true" or "false" 
+            if (answerStr.startsWith('true')) {
+                return userAnswer === true;
+            } else if (answerStr.startsWith('false')) {
+                return userAnswer === false;
+            }
+            
+            // Log malformed data for debugging
+            console.warn('Malformed True/False answer data:', {
+                id: question.id,
+                question: question.question,
+                answer: question.answer
+            });
+            
+            // Default to false if we can't determine the answer
+            return false;
         }
 
         if (question.type === 'fill') {
