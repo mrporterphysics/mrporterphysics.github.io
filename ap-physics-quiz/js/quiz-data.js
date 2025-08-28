@@ -104,18 +104,30 @@ const QuizData = {
         Utils.performance.start('applyFilters');
         
         this.filteredQuestions = this.questions.filter(question => {
+            // Ensure question has required properties
+            if (!question || !question.topic) {
+                console.warn('Question missing topic:', question);
+                return false;
+            }
+            
             // Course filter - not needed if all questions are from the same dataset
             
             // Subject filter (single topic selection)
             if (this.currentFilters.subject !== 'all') {
-                if (question.topic !== this.currentFilters.subject) {
+                const questionTopic = String(question.topic).trim().toLowerCase();
+                const filterSubject = String(this.currentFilters.subject).trim().toLowerCase();
+                
+                if (questionTopic !== filterSubject) {
                     return false;
                 }
             }
             
             // Topic filter (multiple topics - overridden by subject filter)
             if (this.currentFilters.topics.length > 0 && this.currentFilters.subject === 'all') {
-                if (!this.currentFilters.topics.includes(question.topic)) {
+                const questionTopic = String(question.topic).trim().toLowerCase();
+                const normalizedTopics = this.currentFilters.topics.map(t => String(t).trim().toLowerCase());
+                
+                if (!normalizedTopics.includes(questionTopic)) {
                     return false;
                 }
             }
@@ -130,7 +142,8 @@ const QuizData = {
             // Difficulty filter
             if (this.currentFilters.difficulty !== 'all') {
                 const targetDifficulty = parseInt(this.currentFilters.difficulty);
-                if (question.difficulty !== targetDifficulty) {
+                const questionDifficulty = parseInt(question.difficulty) || 1; // Default to 1 if not set
+                if (questionDifficulty !== targetDifficulty) {
                     return false;
                 }
             }
