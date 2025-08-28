@@ -168,33 +168,9 @@ const PhysicsQuizApp = {
                     
                     if (error.name === 'AbortError') {
                         Utils.handleError(new Error('Request timeout'), 'PhysicsQuizApp.loadQuestions');
-                        // Try fallback data for timeout as well
-                        if (window.FallbackData) {
-                            console.warn('CSV loading timed out, using fallback data');
-                            try {
-                                const fallbackQuestions = FallbackData.getFallbackQuestions();
-                                FallbackData.showFallbackNotification();
-                                resolve(fallbackQuestions);
-                                return;
-                            } catch (fallbackError) {
-                                console.error('Fallback data also failed:', fallbackError);
-                            }
-                        }
                         reject(new Error('Loading timeout. Please check your connection and try again.'));
                     } else {
                         Utils.handleError(error, 'PhysicsQuizApp.loadQuestions');
-                        // Try fallback data if CSV loading fails
-                        if (window.FallbackData) {
-                            console.warn('CSV loading failed, using fallback data', error.message);
-                            try {
-                                const fallbackQuestions = FallbackData.getFallbackQuestions();
-                                FallbackData.showFallbackNotification();
-                                resolve(fallbackQuestions);
-                                return;
-                            } catch (fallbackError) {
-                                console.error('Fallback data also failed:', fallbackError);
-                            }
-                        }
                         reject(error);
                     }
                 });
@@ -375,14 +351,6 @@ const PhysicsQuizApp = {
             prevBtn.addEventListener('click', () => {
                 this.previousQuestion();
             });
-
-        // Reset quiz button
-        const resetBtn = document.getElementById('reset-quiz');
-        if (resetBtn) {
-            resetBtn.addEventListener('click', () => {
-                this.resetQuiz();
-            });
-        }
         }
 
         // Settings
