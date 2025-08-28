@@ -53,6 +53,7 @@ const PhysicsQuizApp = {
                     this.setupEventListeners();
                     this.initializeUI();
                     this.initializeFactSheetIntegration();
+                    this.initializePhase7Modules();
                     
                     this.isInitialized = true;
                     this.hideLoadingState();
@@ -428,6 +429,47 @@ const PhysicsQuizApp = {
             });
         } else {
             console.log('Fact sheet integration not available');
+        }
+    },
+
+    // Initialize Phase 7 modules
+    initializePhase7Modules: function() {
+        console.log('Initializing Phase 7 modules...');
+        
+        // Initialize Achievement System
+        if (typeof AchievementSystem !== 'undefined') {
+            try {
+                AchievementSystem.init();
+                console.log('Achievement System initialized');
+            } catch (error) {
+                console.warn('Achievement System failed to initialize:', error);
+            }
+        } else {
+            console.log('Achievement System not available');
+        }
+        
+        // Initialize Mobile Optimization
+        if (typeof MobileOptimization !== 'undefined') {
+            try {
+                MobileOptimization.init();
+                console.log('Mobile Optimization initialized');
+            } catch (error) {
+                console.warn('Mobile Optimization failed to initialize:', error);
+            }
+        } else {
+            console.log('Mobile Optimization not available');
+        }
+        
+        // Initialize Fact Sheet Links
+        if (typeof FactSheetLinks !== 'undefined') {
+            try {
+                FactSheetLinks.init();
+                console.log('Fact Sheet Links initialized');
+            } catch (error) {
+                console.warn('Fact Sheet Links failed to initialize:', error);
+            }
+        } else {
+            console.log('Fact Sheet Links not available');
         }
     },
 
