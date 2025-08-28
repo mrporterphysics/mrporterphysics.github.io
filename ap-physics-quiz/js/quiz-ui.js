@@ -402,31 +402,39 @@ const QuizUI = {
     // Check if answer is correct
     checkAnswer: function(userAnswer, question) {
         if (question.type === 'tf') {
+            // Convert user answer to boolean if it isn't already
+            const userBool = typeof userAnswer === 'boolean' ? userAnswer : Boolean(userAnswer);
+            
             // Robust True/False checking to handle malformed CSV data
             const answerStr = String(question.answer).toLowerCase().trim();
             
             // Check for explicit true/false values
-            if (answerStr === 'true' || answerStr === 'false') {
-                return userAnswer === (answerStr === 'true');
+            if (answerStr === 'true') {
+                return userBool === true;
+            }
+            if (answerStr === 'false') {
+                return userBool === false;
             }
             
-            // If the answer field contains text that's not true/false,
+            // If the answer field contains text that's not exactly true/false,
             // check if it starts with "true" or "false" 
             if (answerStr.startsWith('true')) {
-                return userAnswer === true;
-            } else if (answerStr.startsWith('false')) {
-                return userAnswer === false;
+                return userBool === true;
+            }
+            if (answerStr.startsWith('false')) {
+                return userBool === false;
             }
             
             // Log malformed data for debugging
             console.warn('Malformed True/False answer data:', {
                 id: question.id,
                 question: question.question,
-                answer: question.answer
+                answer: question.answer,
+                answerStr: answerStr
             });
             
-            // Default to false if we can't determine the answer
-            return false;
+            // Fallback: treat any non-"true" value as false
+            return userBool === false;
         }
 
         if (question.type === 'fill') {
@@ -453,10 +461,20 @@ const QuizUI = {
         `;
 
         if (!isCorrect) {
+            // Format True/False answers for display
+            let displayUserAnswer = userAnswer;
+            let displayCorrectAnswer = question.answer;
+            
+            if (question.type === 'tf') {
+                displayUserAnswer = userAnswer === true ? 'True' : 'False';
+                const correctBool = String(question.answer).toLowerCase().trim() === 'true';
+                displayCorrectAnswer = correctBool ? 'True' : 'False';
+            }
+            
             html += `
                 <div class="feedback-details">
-                    <p><strong>Your answer:</strong> ${userAnswer}</p>
-                    <p><strong>Correct answer:</strong> ${question.answer}</p>
+                    <p><strong>Your answer:</strong> ${displayUserAnswer}</p>
+                    <p><strong>Correct answer:</strong> ${displayCorrectAnswer}</p>
                 </div>
             `;
         }

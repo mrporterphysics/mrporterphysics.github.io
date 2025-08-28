@@ -334,13 +334,20 @@ h1 {
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
-  color: var(--tx-3);
-  margin-bottom: 8px;
+  color: var(--tx-2);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: var(--ui);
+  border: 1px solid var(--ui-2);
+  border-radius: 6px;
+  font-weight: 500;
 }
 
 .breadcrumb-separator {
-  color: var(--tx-3);
-  opacity: 0.6;
+  color: var(--bl);
+  opacity: 0.8;
+  font-weight: bold;
+  margin: 0 4px;
 }
 
 .question-type {
@@ -396,9 +403,39 @@ h1 {
   color: var(--tx-2);
 }
 
-.difficulty-1 .stars { color: var(--gr); }
-.difficulty-2 .stars { color: var(--ye); }
-.difficulty-3 .stars { color: var(--or); }
+/* Enhanced question difficulty styling with color coding and animations */
+.difficulty-1 {
+    border-color: var(--gr);
+    background: linear-gradient(135deg, var(--ui) 0%, var(--ui-2) 100%);
+}
+.difficulty-1 .stars { 
+    color: var(--gr); 
+    filter: drop-shadow(0 0 2px rgba(126, 162, 180, 0.3));
+}
+
+.difficulty-2 {
+    border-color: var(--ye);
+    background: linear-gradient(135deg, var(--ui) 0%, var(--ui-2) 100%);
+}
+.difficulty-2 .stars { 
+    color: var(--ye); 
+    filter: drop-shadow(0 0 2px rgba(174, 129, 92, 0.3));
+}
+
+.difficulty-3 {
+    border-color: var(--or);
+    background: linear-gradient(135deg, var(--ui) 0%, var(--ui-2) 100%);
+}
+.difficulty-3 .stars { 
+    color: var(--or); 
+    filter: drop-shadow(0 0 2px rgba(172, 94, 97, 0.3));
+    animation: pulse-difficulty 2s ease-in-out infinite;
+}
+
+@keyframes pulse-difficulty {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
 
 .question-text {
   font-size: 1.1rem;
