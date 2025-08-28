@@ -392,18 +392,6 @@
     </script>
     
     <!-- Fact Sheet Links System -->
-    
-    <!-- Application Initialization -->
-    <script>
-        // Initialize the main application when DOM is ready
-        document.addEventListener("DOMContentLoaded", function() {
-            if (window.PhysicsQuizApp) {
-                PhysicsQuizApp.init();
-            } else {
-                console.error("PhysicsQuizApp not loaded");
-            }
-        });
-    </script>
     <script src="js/fact-sheet-links.js"></script>
 </body>
 </html>

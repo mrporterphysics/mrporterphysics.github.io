@@ -310,8 +310,6 @@
     <script src="js/hint-system.js"></script>
     <script src="js/rapid-fire-mode.js"></script>
     <script src="js/study-guides.js"></script>
-    <script src="js/achievement-system.js"></script>
-    <script src="js/mobile-optimization.js"></script>
     
     <!-- Main Application -->
     <script src="js/app.js"></script>
@@ -392,18 +390,6 @@
     </script>
     
     <!-- Fact Sheet Links System -->
-    
-    <!-- Application Initialization -->
-    <script>
-        // Initialize the main application when DOM is ready
-        document.addEventListener("DOMContentLoaded", function() {
-            if (window.PhysicsQuizApp) {
-                PhysicsQuizApp.init();
-            } else {
-                console.error("PhysicsQuizApp not loaded");
-            }
-        });
-    </script>
     <script src="js/fact-sheet-links.js"></script>
 </body>
 </html>
