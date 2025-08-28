@@ -1,611 +1,555 @@
 /**
- * Direct Fact Sheet Links System
- * Provides contextual links from questions to specific fact sheet sections
+ * Fact Sheet Direct Links System
+ * Provides contextual links to specific fact sheet sections from quiz questions
  */
 
 const FactSheetLinks = {
-    // Mapping of question topics/keywords to fact sheet sections
+    // Fact sheet section mappings
     sectionMappings: {
-        // Kinematics mappings
-        'kinematics': {
-            'position': 'kinematic-definitions',
-            'displacement': 'kinematic-definitions', 
-            'velocity': 'kinematic-definitions',
-            'acceleration': 'kinematic-definitions',
-            'motion': 'kinematic-equations',
-            'constant acceleration': 'kinematic-equations',
-            'free fall': 'kinematic-equations'
+        // Kinematics sections
+        'kinematic-definitions': {
+            title: 'Kinematic Definitions',
+            keywords: ['position', 'displacement', 'velocity', 'acceleration', 'motion'],
+            url: 'factsheet-complete.html#kinematic-definitions'
         },
-
-        // Forces mappings
-        'forces': {
-            'newton': 'newtons-laws',
-            'force': 'forces',
-            'friction': 'forces',
-            'normal force': 'forces',
-            'tension': 'forces',
-            'weight': 'forces',
-            'equilibrium': 'equilibrium',
-            'net force': 'newtons-laws'
+        'kinematic-equations': {
+            title: 'Kinematic Equations',
+            keywords: ['kinematic equation', 'uniformly accelerated', 'constant acceleration'],
+            url: 'factsheet-complete.html#kinematic-equations'
         },
-
-        // Energy mappings
-        'energy': {
-            'work': 'work',
-            'kinetic energy': 'energy',
-            'potential energy': 'energy',
-            'conservation': 'conservation-laws',
-            'power': 'work',
-            'joule': 'energy'
-        },
-
-        // Momentum mappings
-        'momentum': {
-            'momentum': 'momentum',
-            'impulse': 'momentum',
-            'collision': 'collisions',
-            'conservation of momentum': 'conservation-laws'
-        },
-
-        // Rotation mappings
-        'rotation': {
-            'angular': 'rotational-motion',
-            'torque': 'torque',
-            'rotational': 'rotational-motion',
-            'moment of inertia': 'rotational-motion',
-            'angular momentum': 'angular-momentum'
-        },
-
-        // Additional mappings for other topics
-        'gravitation': {
-            'gravity': 'gravitation',
-            'gravitational': 'gravitation',
-            'orbital': 'orbital-motion',
-            'weight': 'gravitation'
-        },
-
-        'waves': {
-            'wave': 'waves',
-            'frequency': 'wave-properties',
-            'wavelength': 'wave-properties',
-            'sound': 'sound',
-            'interference': 'wave-behavior'
-        },
-
-        'fluids': {
-            'pressure': 'pressure',
-            'buoyancy': 'buoyancy',
-            'fluid': 'fluids',
-            'density': 'fluids'
-        }
-    },
-
-    // Initialize fact sheet links system
-    init: function() {
-        this.setupEventListeners();
-    },
-
-    // Setup event listeners
-    setupEventListeners: function() {
-        // Listen for question display to add fact sheet links
-        document.addEventListener('questionDisplayed', (event) => {
-            if (event.detail && event.detail.question) {
-                this.addFactSheetLinks(event.detail.question);
-            }
-        });
-
-        // Listen for existing fact sheet button clicks to enhance them
-        document.addEventListener('click', (event) => {
-            if (event.target.classList.contains('fact-sheet-btn') || 
-                event.target.closest('.fact-sheet-btn')) {
-                event.preventDefault();
-                const question = this.getCurrentQuestion();
-                if (question) {
-                    this.openRelevantFactSheet(question);
-                }
-            }
-        });
-    },
-
-    // Add contextual fact sheet links to the current question
-    addFactSheetLinks: function(question) {
-        // Find or create fact sheet section
-        let factSheetSection = document.querySelector('.fact-sheet-section');
-        if (!factSheetSection) {
-            factSheetSection = document.createElement('div');
-            factSheetSection.className = 'fact-sheet-section';
-            
-            const questionContainer = document.querySelector('.question-container');
-            if (questionContainer) {
-                questionContainer.appendChild(factSheetSection);
-            }
-        }
-
-        // Generate relevant links
-        const relevantSections = this.findRelevantSections(question);
         
-        if (relevantSections.length > 0) {
-            factSheetSection.innerHTML = `
-                <div class="fact-sheet-links">
-                    <h4>📚 Quick Reference</h4>
-                    <p class="reference-intro">Relevant fact sheet sections for this question:</p>
-                    <div class="reference-buttons">
-                        ${relevantSections.map(section => `
-                            <button class="btn btn-secondary btn-sm reference-btn" 
-                                    onclick="FactSheetLinks.openFactSheetSection('${section.id}')">
-                                ${section.icon} ${section.title}
-                            </button>
-                        `).join('')}
-                        <button class="btn btn-outline btn-sm" 
-                                onclick="FactSheetLinks.openFullFactSheet()">
-                            📋 View Complete Fact Sheet
-                        </button>
-                    </div>
-                    <div class="reference-tip">
-                        💡 <em>Use these references to understand key concepts before answering</em>
-                    </div>
-                </div>
-            `;
-        } else {
-            // Fallback - show general fact sheet link
-            factSheetSection.innerHTML = `
-                <div class="fact-sheet-links">
-                    <h4>📚 Reference Available</h4>
-                    <div class="reference-buttons">
-                        <button class="btn btn-secondary btn-sm" 
-                                onclick="FactSheetLinks.openFullFactSheet()">
-                            📋 Open AP Physics Fact Sheet
-                        </button>
-                    </div>
-                </div>
-            `;
+        // Forces sections
+        'force-definitions': {
+            title: 'Force Definitions',
+            keywords: ['force', 'newton', 'contact force', 'field force'],
+            url: 'factsheet-complete.html#force-definitions'
+        },
+        'newtons-laws': {
+            title: "Newton's Laws",
+            keywords: ['newton\'s law', 'inertia', 'net force', 'action reaction'],
+            url: 'factsheet-complete.html#newtons-laws'
+        },
+        'equilibrium': {
+            title: 'Equilibrium',
+            keywords: ['equilibrium', 'static', 'balanced forces', 'net force zero'],
+            url: 'factsheet-complete.html#equilibrium'
+        },
+        'friction': {
+            title: 'Friction',
+            keywords: ['friction', 'static friction', 'kinetic friction', 'coefficient'],
+            url: 'factsheet-complete.html#friction'
+        },
+        
+        // Energy sections
+        'work-energy': {
+            title: 'Work and Energy',
+            keywords: ['work', 'energy', 'kinetic energy', 'potential energy', 'joule'],
+            url: 'factsheet-complete.html#work-energy'
+        },
+        'conservation-energy': {
+            title: 'Conservation of Energy',
+            keywords: ['conservation of energy', 'mechanical energy', 'energy conservation'],
+            url: 'factsheet-complete.html#conservation-energy'
+        },
+        'power': {
+            title: 'Power',
+            keywords: ['power', 'watt', 'rate of work', 'rate of energy'],
+            url: 'factsheet-complete.html#power'
+        },
+        
+        // Momentum sections
+        'momentum': {
+            title: 'Momentum',
+            keywords: ['momentum', 'impulse', 'collision', 'conservation of momentum'],
+            url: 'factsheet-complete.html#momentum'
+        },
+        
+        // Rotation sections
+        'rotation': {
+            title: 'Rotational Motion',
+            keywords: ['rotation', 'angular', 'torque', 'moment of inertia', 'rotational'],
+            url: 'factsheet-complete.html#rotation'
+        },
+        
+        // Gravitation sections
+        'gravitation': {
+            title: 'Gravitation',
+            keywords: ['gravity', 'gravitational', 'universal gravitation', 'orbital'],
+            url: 'factsheet-complete.html#gravitation'
+        },
+        
+        // Simple Harmonic Motion sections
+        'shm': {
+            title: 'Simple Harmonic Motion',
+            keywords: ['harmonic', 'oscillation', 'spring', 'pendulum', 'periodic'],
+            url: 'factsheet-complete.html#shm'
+        },
+        
+        // Waves sections
+        'waves': {
+            title: 'Waves',
+            keywords: ['wave', 'frequency', 'wavelength', 'amplitude', 'wave speed'],
+            url: 'factsheet-complete.html#waves'
+        },
+        
+        // Fluids sections
+        'fluids': {
+            title: 'Fluids',
+            keywords: ['fluid', 'pressure', 'density', 'buoyancy', 'bernoulli'],
+            url: 'factsheet-complete.html#fluids'
         }
+    },
+
+    // Usage tracking
+    linkUsage: {},
+
+    // Initialize the system
+    init: function() {
+        this.loadUsageData();
+        this.setupEventListeners();
+        console.log('Fact Sheet Links system initialized');
     },
 
     // Find relevant fact sheet sections for a question
     findRelevantSections: function(question) {
         const relevantSections = [];
         const questionText = (question.question + ' ' + (question.explanation || '')).toLowerCase();
-        
-        // Define fact sheet sections with metadata
-        const factSheetSections = {
-            'kinematic-definitions': { 
-                id: 'kinematic-definitions', 
-                title: 'Kinematic Definitions', 
-                icon: '📏',
-                keywords: ['position', 'displacement', 'velocity', 'speed', 'acceleration']
-            },
-            'kinematic-equations': { 
-                id: 'kinematic-equations', 
-                title: 'Kinematic Equations', 
-                icon: '🧮',
-                keywords: ['equation', 'constant acceleration', 'motion', 'time', 'distance']
-            },
-            'newtons-laws': { 
-                id: 'newtons-laws', 
-                title: "Newton's Laws", 
-                icon: '⚖️',
-                keywords: ['newton', 'force', 'mass', 'acceleration', 'inertia', 'action', 'reaction']
-            },
-            'forces': { 
-                id: 'forces', 
-                title: 'Types of Forces', 
-                icon: '⚡',
-                keywords: ['friction', 'normal', 'tension', 'weight', 'applied', 'contact']
-            },
-            'equilibrium': { 
-                id: 'equilibrium', 
-                title: 'Equilibrium', 
-                icon: '⚖️',
-                keywords: ['equilibrium', 'balanced', 'static', 'net force', 'zero']
-            },
-            'work': { 
-                id: 'work', 
-                title: 'Work and Power', 
-                icon: '🔧',
-                keywords: ['work', 'power', 'joule', 'watt', 'energy transfer']
-            },
-            'energy': { 
-                id: 'energy', 
-                title: 'Energy Types', 
-                icon: '🔋',
-                keywords: ['kinetic', 'potential', 'mechanical', 'energy', 'joule']
-            },
-            'conservation-laws': { 
-                id: 'conservation-laws', 
-                title: 'Conservation Laws', 
-                icon: '🔄',
-                keywords: ['conservation', 'conserved', 'total', 'system', 'isolated']
-            },
-            'momentum': { 
-                id: 'momentum', 
-                title: 'Momentum & Impulse', 
-                icon: '💥',
-                keywords: ['momentum', 'impulse', 'collision', 'change in momentum']
-            },
-            'rotational-motion': { 
-                id: 'rotational-motion', 
-                title: 'Rotational Motion', 
-                icon: '🌀',
-                keywords: ['angular', 'rotational', 'rotation', 'torque', 'moment']
-            },
-            'waves': { 
-                id: 'waves', 
-                title: 'Wave Properties', 
-                icon: '🌊',
-                keywords: ['wave', 'frequency', 'wavelength', 'amplitude', 'period']
-            },
-            'gravitation': { 
-                id: 'gravitation', 
-                title: 'Gravitation', 
-                icon: '🪐',
-                keywords: ['gravity', 'gravitational', 'universal', 'orbital', 'planet']
+        const questionTopic = question.topic ? question.topic.toLowerCase() : '';
+
+        // Check each section mapping
+        for (const [sectionId, section] of Object.entries(this.sectionMappings)) {
+            let score = 0;
+
+            // Check topic match first (high priority)
+            if (questionTopic && sectionId.includes(questionTopic)) {
+                score += 10;
             }
-        };
 
-        // Check each section for keyword matches
-        Object.values(factSheetSections).forEach(section => {
-            let matchCount = 0;
-            section.keywords.forEach(keyword => {
-                if (questionText.includes(keyword.toLowerCase())) {
-                    matchCount++;
-                }
-            });
+            // Check keyword matches
+            const keywordMatches = section.keywords.filter(keyword => 
+                questionText.includes(keyword.toLowerCase())
+            ).length;
+            
+            score += keywordMatches * 3;
 
-            // Add section if it has multiple keyword matches or high relevance
-            if (matchCount >= 1) {
-                section.relevanceScore = matchCount;
-                relevantSections.push(section);
+            // Check partial topic matches
+            if (questionTopic === 'kinematics' && sectionId.startsWith('kinematic')) score += 8;
+            if (questionTopic === 'forces' && (sectionId.includes('force') || sectionId.includes('newton') || sectionId === 'equilibrium' || sectionId === 'friction')) score += 8;
+            if (questionTopic === 'energy' && (sectionId.includes('work') || sectionId.includes('energy') || sectionId === 'power')) score += 8;
+            if (questionTopic === 'momentum' && sectionId === 'momentum') score += 8;
+            if (questionTopic === 'rotation' && sectionId === 'rotation') score += 8;
+            if (questionTopic === 'gravitation' && sectionId === 'gravitation') score += 8;
+            if (questionTopic === 'shm' && sectionId === 'shm') score += 8;
+            if (questionTopic === 'waves' && sectionId === 'waves') score += 8;
+            if (questionTopic === 'fluids' && sectionId === 'fluids') score += 8;
+
+            if (score > 0) {
+                relevantSections.push({
+                    id: sectionId,
+                    title: section.title,
+                    url: section.url,
+                    score: score
+                });
             }
-        });
+        }
 
-        // Sort by relevance and return top 3
+        // Sort by relevance score (highest first) and limit to top 3
         return relevantSections
-            .sort((a, b) => b.relevanceScore - a.relevanceScore)
+            .sort((a, b) => b.score - a.score)
             .slice(0, 3);
     },
 
-    // Open specific fact sheet section
-    openFactSheetSection: function(sectionId) {
-        const factSheetUrl = `factsheet-complete.html#${sectionId}`;
+    // Create fact sheet link elements for a question
+    createFactSheetLinks: function(question) {
+        const relevantSections = this.findRelevantSections(question);
         
-        // Track fact sheet section access
-        this.trackFactSheetAccess(sectionId);
-        
-        // Open in new window/tab
-        const newWindow = window.open(factSheetUrl, 'factsheet', 'width=800,height=600,scrollbars=yes,resizable=yes');
-        
-        if (!newWindow) {
-            // Fallback if popup blocked
-            window.location.href = factSheetUrl;
-        }
-    },
-
-    // Open full fact sheet
-    openFullFactSheet: function() {
-        const factSheetUrl = 'factsheet-complete.html';
-        
-        // Track fact sheet access
-        this.trackFactSheetAccess('full');
-        
-        // Open in new window/tab
-        const newWindow = window.open(factSheetUrl, 'factsheet', 'width=900,height=700,scrollbars=yes,resizable=yes');
-        
-        if (!newWindow) {
-            // Fallback if popup blocked
-            window.location.href = factSheetUrl;
-        }
-    },
-
-    // Get current question
-    getCurrentQuestion: function() {
-        if (window.PhysicsQuizApp && window.PhysicsQuizApp.currentQuestion) {
-            return window.PhysicsQuizApp.currentQuestion;
-        }
-        return null;
-    },
-
-    // Track fact sheet access for analytics
-    trackFactSheetAccess: function(sectionId) {
-        try {
-            let accessStats = Utils.storage.get('fact_sheet_access', {
-                totalAccess: 0,
-                sectionAccess: {},
-                recentAccess: []
-            });
-
-            accessStats.totalAccess++;
-            accessStats.sectionAccess[sectionId] = (accessStats.sectionAccess[sectionId] || 0) + 1;
-            
-            // Add to recent access (keep last 20)
-            accessStats.recentAccess.unshift({
-                section: sectionId,
-                timestamp: new Date().toISOString(),
-                question: this.getCurrentQuestion()?.id || 'unknown'
-            });
-            accessStats.recentAccess = accessStats.recentAccess.slice(0, 20);
-
-            Utils.storage.set('fact_sheet_access', accessStats);
-
-        } catch (error) {
-            console.warn('Failed to track fact sheet access:', error);
-        }
-    },
-
-    // Get fact sheet usage analytics
-    getFactSheetAnalytics: function() {
-        try {
-            const stats = Utils.storage.get('fact_sheet_access', {
-                totalAccess: 0,
-                sectionAccess: {},
-                recentAccess: []
-            });
-
-            const topSections = Object.entries(stats.sectionAccess)
-                .sort(([,a], [,b]) => b - a)
-                .slice(0, 5);
-
-            return {
-                totalAccess: stats.totalAccess,
-                topSections: topSections,
-                recentAccess: stats.recentAccess.slice(0, 5),
-                uniqueSections: Object.keys(stats.sectionAccess).length
-            };
-
-        } catch (error) {
-            console.warn('Failed to get fact sheet analytics:', error);
+        if (relevantSections.length === 0) {
             return null;
         }
+
+        const linksContainer = document.createElement('div');
+        linksContainer.className = 'fact-sheet-links';
+        
+        const header = document.createElement('div');
+        header.className = 'fact-sheet-links-header';
+        header.innerHTML = '<i class="icon">📋</i> Related Fact Sheet Sections:';
+        linksContainer.appendChild(header);
+
+        const linksList = document.createElement('div');
+        linksList.className = 'fact-sheet-links-list';
+
+        relevantSections.forEach(section => {
+            const linkButton = document.createElement('button');
+            linkButton.className = 'fact-sheet-link-btn';
+            linkButton.innerHTML = `<i class="icon">🔗</i> ${section.title}`;
+            linkButton.setAttribute('data-section-id', section.id);
+            linkButton.setAttribute('data-section-url', section.url);
+            
+            linkButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.openFactSheetSection(section.id, section.url, section.title);
+            });
+
+            linksList.appendChild(linkButton);
+        });
+
+        linksContainer.appendChild(linksList);
+        return linksContainer;
     },
 
-    // Show fact sheet usage summary
-    showUsageSummary: function() {
-        const analytics = this.getFactSheetAnalytics();
-        if (!analytics) return;
+    // Open fact sheet section in new tab
+    openFactSheetSection: function(sectionId, url, title) {
+        // Track usage
+        this.trackLinkUsage(sectionId);
+        
+        // Open in new tab
+        window.open(url, '_blank');
+        
+        // Show brief confirmation
+        this.showLinkConfirmation(title);
+    },
 
+    // Track fact sheet link usage
+    trackLinkUsage: function(sectionId) {
+        if (!this.linkUsage[sectionId]) {
+            this.linkUsage[sectionId] = 0;
+        }
+        this.linkUsage[sectionId]++;
+        
+        // Save to storage
+        Utils.storage.set('fact_sheet_link_usage', this.linkUsage);
+        
+        console.log(`Fact sheet link used: ${sectionId} (${this.linkUsage[sectionId]} times)`);
+    },
+
+    // Show link confirmation message
+    showLinkConfirmation: function(title) {
+        // Remove any existing confirmation
+        const existingConfirmation = document.querySelector('.fact-sheet-confirmation');
+        if (existingConfirmation) {
+            existingConfirmation.remove();
+        }
+
+        const confirmation = document.createElement('div');
+        confirmation.className = 'fact-sheet-confirmation';
+        confirmation.innerHTML = `
+            <i class="icon">✅</i>
+            Opened: ${title}
+        `;
+
+        document.body.appendChild(confirmation);
+
+        // Auto-remove after 3 seconds
+        setTimeout(() => {
+            confirmation.classList.add('fade-out');
+            setTimeout(() => {
+                if (confirmation.parentNode) {
+                    confirmation.parentNode.removeChild(confirmation);
+                }
+            }, 300);
+        }, 3000);
+    },
+
+    // Load usage data from storage
+    loadUsageData: function() {
+        this.linkUsage = Utils.storage.get('fact_sheet_link_usage', {});
+    },
+
+    // Setup event listeners
+    setupEventListeners: function() {
+        // Listen for question display events to add links
+        document.addEventListener('questionDisplayed', (event) => {
+            const question = event.detail.question;
+            this.addLinksToQuestion(question);
+        });
+    },
+
+    // Add links to currently displayed question
+    addLinksToQuestion: function(question) {
+        // Remove any existing fact sheet links
+        const existingLinks = document.querySelector('.fact-sheet-links');
+        if (existingLinks) {
+            existingLinks.remove();
+        }
+
+        // Create new links
+        const linksElement = this.createFactSheetLinks(question);
+        if (linksElement) {
+            // Find the best place to insert links (after explanation or question text)
+            let insertTarget = document.querySelector('.question-explanation');
+            if (!insertTarget || insertTarget.style.display === 'none') {
+                insertTarget = document.querySelector('.question-text');
+            }
+
+            if (insertTarget && insertTarget.parentNode) {
+                insertTarget.parentNode.insertBefore(linksElement, insertTarget.nextSibling);
+            }
+        }
+    },
+
+    // Get usage statistics
+    getUsageStatistics: function() {
+        const stats = {
+            totalClicks: Object.values(this.linkUsage).reduce((sum, count) => sum + count, 0),
+            sectionsUsed: Object.keys(this.linkUsage).length,
+            mostUsedSections: Object.entries(this.linkUsage)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5)
+                .map(([sectionId, count]) => ({
+                    section: this.sectionMappings[sectionId]?.title || sectionId,
+                    count: count
+                }))
+        };
+
+        return stats;
+    },
+
+    // Show usage analytics
+    showUsageAnalytics: function() {
+        const stats = this.getUsageStatistics();
+        
         const modal = document.createElement('div');
-        modal.className = 'fact-sheet-analytics-modal';
+        modal.className = 'modal-overlay active';
         modal.innerHTML = `
-            <div class="analytics-content">
-                <div class="analytics-header">
-                    <h3>📊 Fact Sheet Usage</h3>
-                    <button class="close-analytics">×</button>
+            <div class="modal-content fact-sheet-analytics">
+                <div class="modal-header">
+                    <h2><i class="icon">📊</i> Fact Sheet Usage Analytics</h2>
+                    <button class="close-modal" onclick="this.closest('.modal-overlay').remove()">×</button>
                 </div>
-                
-                <div class="usage-stats">
-                    <div class="stat-card">
-                        <div class="stat-value">${analytics.totalAccess}</div>
-                        <div class="stat-label">Total References</div>
+                <div class="modal-body">
+                    <div class="stats-overview">
+                        <div class="stat-card">
+                            <div class="stat-number">${stats.totalClicks}</div>
+                            <div class="stat-label">Total Fact Sheet Links Clicked</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">${stats.sectionsUsed}</div>
+                            <div class="stat-label">Different Sections Accessed</div>
+                        </div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-value">${analytics.uniqueSections}</div>
-                        <div class="stat-label">Sections Accessed</div>
-                    </div>
-                </div>
-
-                ${analytics.topSections.length > 0 ? `
-                    <div class="top-sections">
-                        <h4>Most Referenced Sections</h4>
-                        <div class="section-list">
-                            ${analytics.topSections.map(([section, count]) => `
-                                <div class="section-item">
-                                    <span class="section-name">${section}</span>
-                                    <span class="section-count">${count} times</span>
+                    
+                    <div class="most-used-sections">
+                        <h3>Most Referenced Sections:</h3>
+                        <div class="sections-list">
+                            ${stats.mostUsedSections.map(section => `
+                                <div class="section-usage">
+                                    <span class="section-name">${section.section}</span>
+                                    <span class="usage-count">${section.count} clicks</span>
                                 </div>
                             `).join('')}
                         </div>
                     </div>
-                ` : ''}
-                
-                <div class="analytics-footer">
-                    <p>Keep using the fact sheet references to reinforce your understanding!</p>
                 </div>
             </div>
         `;
 
         document.body.appendChild(modal);
 
-        // Event handlers
-        modal.querySelector('.close-analytics').addEventListener('click', () => {
-            document.body.removeChild(modal);
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                document.body.removeChild(modal);
-            }
-        });
+        // Focus management
+        modal.querySelector('.close-modal').focus();
     }
 };
 
 // Add CSS for fact sheet links
-const factSheetCSS = `
-/* Fact Sheet Links */
-.fact-sheet-section {
+const factSheetLinksCSS = `
+/* Fact Sheet Links Styling */
+.fact-sheet-links {
     margin: 20px 0;
     padding: 16px;
-    background: var(--ui);
-    border: 1px solid var(--ui-2);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
     border-radius: 8px;
-    border-left: 4px solid var(--bl);
+    font-family: inherit;
 }
 
-.fact-sheet-links h4 {
-    margin: 0 0 8px 0;
-    color: var(--tx);
-    font-size: 1rem;
-}
-
-.reference-intro {
-    margin: 0 0 12px 0;
-    color: var(--tx-2);
+.fact-sheet-links-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
     font-size: 0.9rem;
 }
 
-.reference-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
+.fact-sheet-links-header .icon {
+    font-size: 1rem;
 }
 
-.reference-btn {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
-}
-
-.reference-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.reference-tip {
-    font-size: 0.8rem;
-    color: var(--tx-3);
-    font-style: italic;
-    margin-top: 8px;
-}
-
-/* Fact Sheet Analytics Modal */
-.fact-sheet-analytics-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-.analytics-content {
-    background: var(--bg);
-    border-radius: 12px;
-    padding: 24px;
-    max-width: 500px;
-    width: 90%;
-    border: 1px solid var(--ui-2);
-}
-
-.analytics-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--ui-2);
-    padding-bottom: 12px;
-}
-
-.analytics-header h3 {
-    margin: 0;
-    color: var(--tx);
-}
-
-.close-analytics {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--tx-2);
-    padding: 4px;
-}
-
-.usage-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.stat-card {
-    text-align: center;
-    padding: 16px;
-    background: var(--ui);
-    border-radius: 8px;
-    border: 1px solid var(--ui-2);
-}
-
-.stat-value {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--bl);
-    margin-bottom: 4px;
-}
-
-.stat-label {
-    font-size: 0.85rem;
-    color: var(--tx-2);
-}
-
-.top-sections h4 {
-    margin: 0 0 12px 0;
-    color: var(--tx);
-}
-
-.section-list {
+.fact-sheet-links-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.section-item {
+.fact-sheet-link-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.fact-sheet-link-btn:hover {
+    background: var(--blue-light);
+    border-color: var(--blue);
+    transform: translateY(-1px);
+}
+
+.fact-sheet-link-btn:active {
+    transform: translateY(0);
+}
+
+.fact-sheet-link-btn .icon {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Confirmation message */
+.fact-sheet-confirmation {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--green);
+    color: var(--bg-primary);
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10000;
+    animation: slideInFade 0.3s ease;
+}
+
+.fact-sheet-confirmation.fade-out {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+.fact-sheet-confirmation .icon {
+    font-size: 1rem;
+}
+
+/* Analytics modal styling */
+.fact-sheet-analytics .stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.fact-sheet-analytics .stat-card {
+    text-align: center;
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.fact-sheet-analytics .stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--blue);
+    margin-bottom: 4px;
+}
+
+.fact-sheet-analytics .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.fact-sheet-analytics .most-used-sections h3 {
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.fact-sheet-analytics .sections-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fact-sheet-analytics .section-usage {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 12px;
-    background: var(--ui);
+    padding: 10px 12px;
+    background: var(--bg-secondary);
     border-radius: 6px;
-    border: 1px solid var(--ui-2);
+    border: 1px solid var(--border-light);
 }
 
-.section-name {
+.fact-sheet-analytics .section-name {
     font-weight: 500;
-    color: var(--tx);
+    color: var(--text-primary);
 }
 
-.section-count {
+.fact-sheet-analytics .usage-count {
     font-size: 0.85rem;
-    color: var(--bl);
-    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
 }
 
-.analytics-footer {
-    margin-top: 20px;
-    text-align: center;
-    padding-top: 16px;
-    border-top: 1px solid var(--ui-2);
-}
-
-.analytics-footer p {
-    margin: 0;
-    color: var(--tx-2);
-    font-style: italic;
-}
-
-/* Mobile fact sheet adjustments */
-@media (max-width: 480px) {
-    .reference-buttons {
-        flex-direction: column;
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .fact-sheet-links {
+        margin: 16px 0;
+        padding: 12px;
     }
     
-    .reference-btn {
+    .fact-sheet-links-list {
+        gap: 6px;
+    }
+    
+    .fact-sheet-link-btn {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+    
+    .fact-sheet-confirmation {
+        top: 10px;
+        right: 10px;
+        left: 10px;
         text-align: center;
     }
-    
-    .usage-stats {
-        grid-template-columns: 1fr;
+}
+
+/* Animations */
+@keyframes slideInFade {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
     }
 }
 `;
 
-// Inject fact sheet CSS
-const factSheetStyleSheet = document.createElement('style');
-factSheetStyleSheet.textContent = factSheetCSS;
-document.head.appendChild(factSheetStyleSheet);
+// Inject CSS
+const factSheetLinksStyleSheet = document.createElement('style');
+factSheetLinksStyleSheet.textContent = factSheetLinksCSS;
+document.head.appendChild(factSheetLinksStyleSheet);
 
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
