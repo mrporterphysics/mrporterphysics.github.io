@@ -89,11 +89,6 @@ const QuizUI = {
 
         // Render any math content
         this.renderMathContent();
-        
-        // Dispatch event for fact sheet links integration
-        document.dispatchEvent(new CustomEvent('questionDisplayed', {
-            detail: { question: question }
-        }));
     },
 
     // Clear previous question display
@@ -147,6 +142,11 @@ const QuizUI = {
             this.elements.displays.questionDifficulty.className = `question-difficulty difficulty-${question.difficulty}`;
         }
 
+        // Dispatch event for other components (bookmark system)
+        document.dispatchEvent(new CustomEvent('questionDisplayed', {
+            detail: { question: question }
+        }));
+    },
 
     // Display question text
     displayQuestionText: function(question) {

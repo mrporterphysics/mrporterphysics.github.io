@@ -388,8 +388,5 @@
             }
         });
     </script>
-    
-    <!-- Fact Sheet Links System -->
-    <script src="js/fact-sheet-links.js"></script>
 </body>
 </html>
