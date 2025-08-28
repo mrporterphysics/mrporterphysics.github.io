@@ -206,50 +206,22 @@ const PhysicsQuizApp = {
     validateQuestionsData: function(questions) {
         let criticalErrors = 0;
         let warnings = 0;
-        const validTypes = ['tf', 'mc', 'fill', 'matching'];
         
         questions.forEach((question, index) => {
-            // Critical validations - these prevent the app from working
-            if (!question.question || question.question.trim().length === 0) {
-                console.error(`Line ${index + 1}: Missing question text`);
+            // Critical validations
+            if (!question.question || !question.answer || !question.type) {
                 criticalErrors++;
             }
             
-            if (!question.answer || question.answer.toString().trim().length === 0) {
-                console.error(`Line ${index + 1}: Missing answer`);
-                criticalErrors++;
-            }
-            
-            if (!question.type || !validTypes.includes(question.type.toLowerCase())) {
-                console.error(`Line ${index + 1}: Invalid question type: ${question.type}`);
-                criticalErrors++;
-            }
-            
-            // Warning validations - these affect quality but don't break functionality
-            if (!question.explanation || question.explanation.trim().length === 0) {
-                console.warn(`Line ${index + 1}: Missing explanation`);
-                warnings++;
-            }
-            
-            if (question.type === 'mc' && (!question.optionA || !question.optionB)) {
-                console.warn(`Line ${index + 1}: Multiple choice question missing options`);
-                warnings++;
-            }
-            
-            if (!question.topic || question.topic === 'undefined' || question.topic.trim().length === 0) {
-                console.warn(`Line ${index + 1}: Missing or invalid topic`);
-                warnings++;
-            }
-            
-            if (!question.difficulty || isNaN(parseInt(question.difficulty))) {
-                console.warn(`Line ${index + 1}: Invalid difficulty level`);
-                warnings++;
-            }
+            // Warning validations
+            if (!question.explanation) warnings++;
+            if (question.type === 'mc' && (!question.options || question.options.length < 2)) warnings++;
+            if (!question.topic || question.topic === 'undefined') warnings++;
         });
         
-        console.log(`Validation complete: ${criticalErrors} critical errors, ${warnings} warnings`);
         return { criticalErrors, warnings, total: questions.length };
     },
+
     // Parse CSV data directly with enhanced error handling
     parseCSVDirectly: function(csvData) {
         Utils.performance.start('parseCSV');
@@ -461,104 +433,44 @@ const PhysicsQuizApp = {
     },
 
     // Initialize Phase 7 modules
-    // Initialize Phase 7 modules with comprehensive dependency handling
     initializePhase7Modules: function() {
         console.log('Initializing Phase 7 modules...');
         
-        const modules = [
-            {
-                name: 'AchievementSystem',
-                displayName: 'Achievement System',
-                required: false,
-                global: 'AchievementSystem'
-            },
-            {
-                name: 'MobileOptimization', 
-                displayName: 'Mobile Optimization',
-                required: false,
-                global: 'MobileOptimization'
-            },
-            {
-                name: 'FactSheetLinks',
-                displayName: 'Fact Sheet Links', 
-                required: false,
-                global: 'FactSheetLinks'
-            },
-            {
-                name: 'TopicMastery',
-                displayName: 'Topic Mastery',
-                required: false,
-                global: 'TopicMastery'
-            },
-            {
-                name: 'StreakTracker',
-                displayName: 'Streak Tracker',
-                required: false,
-                global: 'StreakTracker'
-            },
-            {
-                name: 'BookmarkSystem',
-                displayName: 'Bookmark System',
-                required: false,
-                global: 'BookmarkSystem'
-            },
-            {
-                name: 'HintSystem',
-                displayName: 'Hint System',
-                required: false,
-                global: 'HintSystem'
-            },
-            {
-                name: 'PerformanceAnalytics',
-                displayName: 'Performance Analytics',
-                required: false,
-                global: 'PerformanceAnalytics'
-            },
-            {
-                name: 'RapidFireMode',
-                displayName: 'Rapid Fire Mode',
-                required: false,
-                global: 'RapidFireMode'
-            }
-        ];
-        
-        let initializedCount = 0;
-        let failedCount = 0;
-        
-        modules.forEach(module => {
+        // Initialize Achievement System
+        if (typeof AchievementSystem !== 'undefined') {
             try {
-                // Check if module is available in global scope
-                if (typeof window[module.global] !== 'undefined' && window[module.global].init) {
-                    window[module.global].init();
-                    console.log(`✅ ${module.displayName} initialized`);
-                    initializedCount++;
-                } else {
-                    console.log(`⏭️  ${module.displayName} not available - skipping`);
-                    if (module.required) {
-                        console.warn(`⚠️  Required module ${module.displayName} is missing`);
-                        failedCount++;
-                    }
-                }
+                AchievementSystem.init();
+                console.log('Achievement System initialized');
             } catch (error) {
-                console.warn(`❌ ${module.displayName} failed to initialize:`, error);
-                failedCount++;
-                
-                // Continue initialization even if one module fails
-                if (module.required) {
-                    console.error(`Critical module ${module.displayName} failed - some features may not work`);
-                }
+                console.warn('Achievement System failed to initialize:', error);
             }
-        });
+        } else {
+            console.log('Achievement System not available');
+        }
         
-        console.log(`Phase 7 module initialization complete: ${initializedCount} initialized, ${failedCount} failed`);
+        // Initialize Mobile Optimization
+        if (typeof MobileOptimization !== 'undefined') {
+            try {
+                MobileOptimization.init();
+                console.log('Mobile Optimization initialized');
+            } catch (error) {
+                console.warn('Mobile Optimization failed to initialize:', error);
+            }
+        } else {
+            console.log('Mobile Optimization not available');
+        }
         
-        // Return initialization status
-        return {
-            success: failedCount === 0,
-            initialized: initializedCount,
-            failed: failedCount,
-            total: modules.length
-        };
+        // Initialize Fact Sheet Links
+        if (typeof FactSheetLinks !== 'undefined') {
+            try {
+                FactSheetLinks.init();
+                console.log('Fact Sheet Links initialized');
+            } catch (error) {
+                console.warn('Fact Sheet Links failed to initialize:', error);
+            }
+        } else {
+            console.log('Fact Sheet Links not available');
+        }
     },
 
     // Initialize UI

@@ -24,50 +24,7 @@ const Utils = {
     },
 
     // String utilities
-    // Enhanced string sanitization for XSS prevention
-    sanitizeString: function(str) {
-        if (typeof str !== 'string') return '';
-        
-        return str.trim()
-            // Escape HTML entities
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#x27;')
-            .replace(/\//g, '&#x2F;')
-            // Remove potentially dangerous characters
-            .replace(/[\x00-\x1F\x7F]/g, '')  // Remove control characters
-            .replace(/javascript:/gi, '')     // Remove javascript: protocol
-            .replace(/vbscript:/gi, '')       // Remove vbscript: protocol
-            .replace(/data:/gi, '')           // Remove data: protocol for safety
-            .replace(/on\w+\s*=/gi, '');      // Remove event handlers like onclick=
-    },
-    
-    // Sanitize HTML content (for use in innerHTML)
-    sanitizeHTML: function(html) {
-        if (typeof html !== 'string') return '';
-        
-        // Create a temporary div to parse HTML safely
-        const tempDiv = document.createElement('div');
-        tempDiv.textContent = html;
-        
-        // Return the safely encoded content
-        return tempDiv.innerHTML;
-    },
-    
-    // Sanitize for attribute values
-    sanitizeAttribute: function(attr) {
-        if (typeof attr !== 'string') return '';
-        
-        return attr.trim()
-            .replace(/&/g, '&amp;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#x27;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/[\x00-\x1F\x7F]/g, '');
-    },
+
     // Number utilities
     parseNumber: function(value) {
         const num = parseFloat(value);

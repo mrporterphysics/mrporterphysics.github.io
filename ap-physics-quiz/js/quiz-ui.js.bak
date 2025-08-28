@@ -67,7 +67,6 @@ const QuizUI = {
         }
 
         this.currentQuestion = question;
-        console.log(`Displaying question ${question.id}: ${question.type}`);
 
         // Clear previous content
         this.clearQuestionDisplay();
@@ -89,6 +88,11 @@ const QuizUI = {
 
         // Render any math content
         this.renderMathContent();
+        
+        // Dispatch event for fact sheet links integration
+        document.dispatchEvent(new CustomEvent('questionDisplayed', {
+            detail: { question: question }
+        }));
     },
 
     // Clear previous question display
@@ -142,16 +146,15 @@ const QuizUI = {
             this.elements.displays.questionDifficulty.className = `question-difficulty difficulty-${question.difficulty}`;
         }
 
-        // Dispatch event for other components (bookmark system)
-        document.dispatchEvent(new CustomEvent('questionDisplayed', {
-            detail: { question: question }
-        }));
-    },
 
     // Display question text
     displayQuestionText: function(question) {
-        if (this.elements.displays.question) {
-            this.elements.displays.question.innerHTML = question.question;
+        const questionElement = this.elements.displays.question;
+        
+        if (questionElement) {
+            questionElement.innerHTML = question.question;
+        } else {
+            console.error('Question text element not found');
         }
     },
 

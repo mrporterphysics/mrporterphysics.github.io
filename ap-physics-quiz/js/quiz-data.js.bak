@@ -99,14 +99,6 @@ const QuizData = {
         return Date.now().toString(36) + Math.random().toString(36).substr(2);
     },
 
-    // Robust string normalization for filtering
-    normalizeString: function(str) {
-        if (typeof str !== 'string') return '';
-        return str.trim().toLowerCase()
-            .replace(/\s+/g, ' ')  // Replace multiple whitespace with single space
-            .replace(/[^\w\s-]/g, '')  // Remove special characters except word chars, spaces, hyphens
-            .trim();
-    },
     // Apply current filters to questions
     applyFilters: function() {
         Utils.performance.start('applyFilters');
@@ -122,8 +114,8 @@ const QuizData = {
             
             // Subject filter (single topic selection)
             if (this.currentFilters.subject !== 'all') {
-                const questionTopic = this.normalizeString(question.topic);
-                const filterSubject = this.normalizeString(this.currentFilters.subject);
+                const questionTopic = String(question.topic).trim().toLowerCase();
+                const filterSubject = String(this.currentFilters.subject).trim().toLowerCase();
                 
                 if (questionTopic !== filterSubject) {
                     return false;
@@ -132,8 +124,8 @@ const QuizData = {
             
             // Topic filter (multiple topics - overridden by subject filter)
             if (this.currentFilters.topics.length > 0 && this.currentFilters.subject === 'all') {
-                const questionTopic = this.normalizeString(question.topic);
-                const normalizedTopics = this.currentFilters.topics.map(t => this.normalizeString(t));
+                const questionTopic = String(question.topic).trim().toLowerCase();
+                const normalizedTopics = this.currentFilters.topics.map(t => String(t).trim().toLowerCase());
                 
                 if (!normalizedTopics.includes(questionTopic)) {
                     return false;

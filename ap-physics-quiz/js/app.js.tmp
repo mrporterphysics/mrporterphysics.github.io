@@ -203,53 +203,7 @@ const PhysicsQuizApp = {
     },
 
     // Validate questions data for quality and integrity
-    validateQuestionsData: function(questions) {
-        let criticalErrors = 0;
-        let warnings = 0;
-        const validTypes = ['tf', 'mc', 'fill', 'matching'];
-        
-        questions.forEach((question, index) => {
-            // Critical validations - these prevent the app from working
-            if (!question.question || question.question.trim().length === 0) {
-                console.error(`Line ${index + 1}: Missing question text`);
-                criticalErrors++;
-            }
-            
-            if (!question.answer || question.answer.toString().trim().length === 0) {
-                console.error(`Line ${index + 1}: Missing answer`);
-                criticalErrors++;
-            }
-            
-            if (!question.type || !validTypes.includes(question.type.toLowerCase())) {
-                console.error(`Line ${index + 1}: Invalid question type: ${question.type}`);
-                criticalErrors++;
-            }
-            
-            // Warning validations - these affect quality but don't break functionality
-            if (!question.explanation || question.explanation.trim().length === 0) {
-                console.warn(`Line ${index + 1}: Missing explanation`);
-                warnings++;
-            }
-            
-            if (question.type === 'mc' && (!question.optionA || !question.optionB)) {
-                console.warn(`Line ${index + 1}: Multiple choice question missing options`);
-                warnings++;
-            }
-            
-            if (!question.topic || question.topic === 'undefined' || question.topic.trim().length === 0) {
-                console.warn(`Line ${index + 1}: Missing or invalid topic`);
-                warnings++;
-            }
-            
-            if (!question.difficulty || isNaN(parseInt(question.difficulty))) {
-                console.warn(`Line ${index + 1}: Invalid difficulty level`);
-                warnings++;
-            }
-        });
-        
-        console.log(`Validation complete: ${criticalErrors} critical errors, ${warnings} warnings`);
-        return { criticalErrors, warnings, total: questions.length };
-    },
+
     // Parse CSV data directly with enhanced error handling
     parseCSVDirectly: function(csvData) {
         Utils.performance.start('parseCSV');

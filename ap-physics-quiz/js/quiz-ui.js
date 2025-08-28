@@ -60,10 +60,45 @@ const QuizUI = {
     },
 
     // Display a question in the UI
+
+    // Validate required DOM elements exist
+    validateRequiredElements: function() {
+        const requiredElements = [
+            'question-text', 'answer-options', 'question-counter',
+            'submit-answer', 'feedback', 'explanation'
+        ];
+        
+        const missingElements = requiredElements.filter(id => !document.getElementById(id));
+        
+        if (missingElements.length > 0) {
+            console.error('Missing critical DOM elements:', missingElements);
+            this.showError('Critical UI elements are missing. Please refresh the page.');
+            return false;
+        }
+        return true;
+    },
+
+    // Show error message to user
+    showError: function(message) {
+        const errorContainer = document.querySelector('.app-container') || document.body;
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.style.cssText = 'background: #ff4444; color: white; padding: 15px; margin: 10px; border-radius: 5px; text-align: center;';
+        errorDiv.textContent = message;
+        errorContainer.insertBefore(errorDiv, errorContainer.firstChild);
+        
+        setTimeout(() => errorDiv.remove(), 5000);
+    },
     displayQuestion: function(question) {
+        // Validate DOM elements first
+        if (!this.validateRequiredElements()) {
+            return false;
+        }
+
         if (!question) {
             console.error('No question provided to display');
-            return;
+            this.showError('Unable to load question - please try again');
+            return false;
         }
 
         this.currentQuestion = question;
@@ -565,43 +600,136 @@ const QuizUI = {
     },
 
     // Setup math rendering
+    // Enhanced math rendering setup with availability checks
     setupMathRendering: function() {
-        if (typeof katex !== 'undefined') {
-            this.renderMathContent();
+        console.log('Setting up math rendering...');
+        
+        // Check for KaTeX availability
+        if (typeof katex !== 'undefined' && katex.renderToString) {
+            this.mathRenderingEnabled = true;
+            console.log('✅ KaTeX is available - math rendering enabled');
+            
+            // Test KaTeX functionality with a simple expression
+            try {
+                katex.renderToString('x = 1', { displayMode: false });
+                console.log('✅ KaTeX functionality test passed');
+            } catch (error) {
+                console.warn('⚠️ KaTeX test failed, disabling math rendering:', error);
+                this.mathRenderingEnabled = false;
+            }
+        } else {
+            this.mathRenderingEnabled = false;
+            console.log('⚠️ KaTeX not available - math will display as plain text');
+            this.showMathFallbackWarning();
+        }
+        
+        // Set up retry mechanism for delayed KaTeX loading
+        if (!this.mathRenderingEnabled) {
+            this.setupMathRenderingRetry();
+        }
+    },
+    
+    // Setup retry mechanism for KaTeX loading
+    setupMathRenderingRetry: function() {
+        let retryCount = 0;
+        const maxRetries = 3;
+        const retryDelay = 1000; // 1 second
+        
+        const retryInterval = setInterval(() => {
+            retryCount++;
+            
+            if (typeof katex !== 'undefined' && katex.renderToString) {
+                console.log('✅ KaTeX became available on retry', retryCount);
+                this.mathRenderingEnabled = true;
+                this.hideMathFallbackWarning();
+                clearInterval(retryInterval);
+                
+                // Re-render any existing math content
+                this.renderMathContent();
+            } else if (retryCount >= maxRetries) {
+                console.log('❌ KaTeX loading failed after', maxRetries, 'retries');
+                clearInterval(retryInterval);
+            }
+        }, retryDelay);
+    },
+    
+    // Show warning when KaTeX is not available
+    showMathFallbackWarning: function() {
+        const warningDiv = document.createElement('div');
+        warningDiv.id = 'math-fallback-warning';
+        warningDiv.className = 'warning-message';
+        warningDiv.style.cssText = 'background: #fff3cd; color: #856404; padding: 10px; margin: 5px; border-radius: 4px; border: 1px solid #ffeaa7; font-size: 0.9em; text-align: center;';
+        warningDiv.innerHTML = '⚠️ Math rendering unavailable - formulas will display as plain text';
+        
+        const container = document.querySelector('.app-container') || document.body;
+        container.insertBefore(warningDiv, container.firstChild);
+        
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            if (document.getElementById('math-fallback-warning')) {
+                this.hideMathFallbackWarning();
+            }
+        }, 5000);
+    },
+    
+    // Hide the math fallback warning
+    hideMathFallbackWarning: function() {
+        const warning = document.getElementById('math-fallback-warning');
+        if (warning) {
+            warning.remove();
         }
     },
 
-    // Render math content using KaTeX
+    // Enhanced math content rendering with error handling
     renderMathContent: function() {
-        if (typeof katex === 'undefined') return;
+        if (!this.mathRenderingEnabled || typeof katex === 'undefined') {
+            return;
+        }
 
-        // Render inline math ($ ... $)
-        document.querySelectorAll('.question-text, .option-text, .explanation-content').forEach(element => {
-            let html = element.innerHTML;
-            
-            // Replace inline math
-            html = html.replace(/\$([^$]+)\$/g, (match, math) => {
-                try {
-                    return katex.renderToString(math, { displayMode: false });
-                } catch (error) {
-                    console.warn('KaTeX rendering error:', error);
-                    return match;
+        try {
+            // Render math in question text, options, and explanations
+            document.querySelectorAll('.question-text, .option-text, .explanation-content').forEach(element => {
+                if (!element.innerHTML) return;
+                
+                let html = element.innerHTML;
+                let mathFound = false;
+                
+                // Replace display math ($$ ... $$) first (to avoid conflicts)
+                html = html.replace(/\$\$([^$]+)\$\$/g, (match, math) => {
+                    mathFound = true;
+                    try {
+                        return katex.renderToString(math.trim(), { 
+                            displayMode: true,
+                            throwOnError: false 
+                        });
+                    } catch (error) {
+                        console.warn('KaTeX display math error:', error.message, 'for:', math);
+                        return `<span class="math-error" title="Math rendering error">${match}</span>`;
+                    }
+                });
+                
+                // Replace inline math ($ ... $)
+                html = html.replace(/\$([^$]+)\$/g, (match, math) => {
+                    mathFound = true;
+                    try {
+                        return katex.renderToString(math.trim(), { 
+                            displayMode: false,
+                            throwOnError: false 
+                        });
+                    } catch (error) {
+                        console.warn('KaTeX inline math error:', error.message, 'for:', math);
+                        return `<span class="math-error" title="Math rendering error">${match}</span>`;
+                    }
+                });
+                
+                if (mathFound) {
+                    element.innerHTML = html;
                 }
             });
-            
-            // Replace display math ($$ ... $$)
-            html = html.replace(/\$\$([^$]+)\$\$/g, (match, math) => {
-                try {
-                    return katex.renderToString(math, { displayMode: true });
-                } catch (error) {
-                    console.warn('KaTeX rendering error:', error);
-                    return match;
-                }
-            });
-            
-            element.innerHTML = html;
-        });
-    }
+        } catch (error) {
+            console.error('Math rendering failed:', error);
+            this.mathRenderingEnabled = false;
+        }
 };
 
 // Export for module use
