@@ -595,7 +595,38 @@ const PhysicsQuizApp = {
     // Show a specific question
     showQuestion: function(index) {
         const questions = this.getActiveQuestions();
-        if (index < 0 || index >= questions.length) return;
+        
+        // Emergency fix: If no filtered questions, try to use all questions
+        if (questions.length === 0) {
+            console.warn('No filtered questions available, using all loaded questions');
+            const allQuestions = QuizData.questions;
+            if (allQuestions.length > 0) {
+                this.currentQuestionIndex = 0;
+                this.currentQuestion = allQuestions[0];
+                
+                // Use QuizUI to display question
+                if (typeof QuizUI !== 'undefined') {
+                    QuizUI.displayQuestion(this.currentQuestion);
+                } else {
+                    this.displayQuestionFallback(this.currentQuestion);
+                }
+                
+                this.updateQuestionCounter();
+                this.updateProgressBar();
+                return;
+            } else {
+                console.error('No questions available at all. CSV may have failed to parse.');
+                this.showCriticalError('No questions available', 
+                    'Failed to load any questions. Please refresh the page.', 
+                    () => window.location.reload());
+                return;
+            }
+        }
+        
+        if (index < 0 || index >= questions.length) {
+            console.error(`Invalid question index: ${index} (total: ${questions.length})`);
+            return;
+        }
         
         this.currentQuestionIndex = index;
         this.currentQuestion = questions[index];
@@ -654,9 +685,11 @@ const PhysicsQuizApp = {
     // Get currently active questions based on mode
     getActiveQuestions: function() {
         const settings = QuizStorage.getSettings();
+        
         if (settings.mode === 'review') {
             return QuizData.getReviewQuestions();
         }
+        
         return QuizData.filteredQuestions;
     },
 

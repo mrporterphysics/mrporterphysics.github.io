@@ -67,7 +67,6 @@ const QuizUI = {
         }
 
         this.currentQuestion = question;
-        console.log(`Displaying question ${question.id}: ${question.type}`);
 
         // Clear previous content
         this.clearQuestionDisplay();
@@ -150,8 +149,12 @@ const QuizUI = {
 
     // Display question text
     displayQuestionText: function(question) {
-        if (this.elements.displays.question) {
-            this.elements.displays.question.innerHTML = question.question;
+        const questionElement = this.elements.displays.question;
+        
+        if (questionElement) {
+            questionElement.innerHTML = question.question;
+        } else {
+            console.error('Question text element not found');
         }
     },
 
