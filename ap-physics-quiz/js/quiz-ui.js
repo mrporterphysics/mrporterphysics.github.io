@@ -384,7 +384,8 @@ const QuizUI = {
 
             case 'tf':
                 const tfChecked = document.querySelector('input[name="tf-answer"]:checked');
-                return tfChecked ? (tfChecked.value === 'true') : null;
+                const result = tfChecked ? (tfChecked.value === 'true') : null;
+                return result;
 
             case 'fill':
                 const fillInput = document.getElementById('fill-answer');
@@ -402,39 +403,22 @@ const QuizUI = {
     // Check if answer is correct
     checkAnswer: function(userAnswer, question) {
         if (question.type === 'tf') {
-            // Convert user answer to boolean if it isn't already
-            const userBool = typeof userAnswer === 'boolean' ? userAnswer : Boolean(userAnswer);
+            // Simplified and bulletproof True/False checking
+            // Convert both to strings and compare directly
+            const userStr = String(userAnswer).toLowerCase();
+            const correctStr = String(question.answer).toLowerCase().trim();
             
-            // Robust True/False checking to handle malformed CSV data
-            const answerStr = String(question.answer).toLowerCase().trim();
             
-            // Check for explicit true/false values
-            if (answerStr === 'true') {
-                return userBool === true;
-            }
-            if (answerStr === 'false') {
-                return userBool === false;
-            }
-            
-            // If the answer field contains text that's not exactly true/false,
-            // check if it starts with "true" or "false" 
-            if (answerStr.startsWith('true')) {
-                return userBool === true;
-            }
-            if (answerStr.startsWith('false')) {
-                return userBool === false;
+            // Direct string comparison
+            if (correctStr === 'true') {
+                return userStr === 'true';
+            } else if (correctStr === 'false') {
+                return userStr === 'false';
             }
             
-            // Log malformed data for debugging
-            console.warn('Malformed True/False answer data:', {
-                id: question.id,
-                question: question.question,
-                answer: question.answer,
-                answerStr: answerStr
-            });
-            
-            // Fallback: treat any non-"true" value as false
-            return userBool === false;
+            // Fallback for malformed data
+            console.warn('Unexpected TF data:', { question: question.question, answer: question.answer });
+            return false;
         }
 
         if (question.type === 'fill') {
