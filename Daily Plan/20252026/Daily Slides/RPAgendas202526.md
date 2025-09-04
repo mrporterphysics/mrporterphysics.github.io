@@ -238,3 +238,32 @@ math: mathjax
 ---
 
 # Board Meeting 
+
+<div class='columns'>
+<div>
+
+### Rules 📝
+
+1. 👂 Listen 
+2. 🗣️ Speak Clearly
+3. ❔ Ask Questions
+4. 🤔 Seek to understand
+5. 👉 Refer to your board and use **evidence**
+7. 📊 Use & connect multiple representations
+6. 🌟 Come to consensus
+
+</div>
+ 
+<div>
+
+### Goals 🎯
+
+1. Practice Presenting to Class
+    - speaking clearly
+    - listening intently
+2. Learn how to come to class consensus
+    - What does the *majority* of the data show?
+3. Create a culture of learning from each other
+
+</div>
+</div>
