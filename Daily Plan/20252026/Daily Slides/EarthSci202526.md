@@ -18,60 +18,6 @@ class:  twilight
 ---
 
 
-<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
-
-# 2024.09.06 **Earth Science** 
-
-##### **❓ of the 📅**: Should you bite or lick your ice cream? 🍨 🍦
-
-<div class = "columns">
-
-<div>
-
-#### 📋 Agenda
-
-1. Sit with your group from yesterday
-2. Survival Island
-3. Ball Bounce Lab
-</div>
-
-<div>
-
-### 🎯 Goals 
-
-🥅 _Introductions_
-
-🥅 _Classroom Culture_
-
-
-### 🏠 Homework
-
-- Signed Safety Contract
-
-
-### **Note**: This is a cellphone free classroom 📵
-
-
-
-</div>
-
-</div>
-
----
-
-
-# Survival Island 🌴
-
-1. Share your *survival skill* that **you wrote down** with your group
-2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
-3. On your whiteboard present your plan (drawing, mind map, set of instructions)
-    - Highlight everyone's skill
-4. Share Plan to the class
-
----
-
-<!-- _footer: 🤔 Did you get better at science today? Did you help make someone else better today? --->
-
 # 2024.09.05 **Earth Science** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
@@ -83,6 +29,7 @@ class:  twilight
 #### 📋 Agenda
 
 0. Sit Anywhere (For Now)
+    - you will move later
 1. Do Now (fill out questionnaire & card)
 2. Question of the Day
 3. Grouping Game
@@ -101,9 +48,6 @@ class:  twilight
 ### 🏠 Homework
 
 - Signed Safety Contract
-
-
-### **Note**: This is a cellphone free classroom 📵
 
 
 
@@ -127,8 +71,8 @@ class:  twilight
 
 # Lab Grouping Game
 
-- There are 16 of you
-- Based on your cards get into ***LOGICAL*** groups
+- There are 15 of you
+- Based on your cards get into ***LOGICAL*** groups of ***3***
 - Check **whole class** answer with Mr. Porter
     - 4 Chances to Check
 - Reorganize if necessary
@@ -137,3 +81,59 @@ class:  twilight
 (Yes this is the game Connections)
 
 ---
+
+# Answers  <!--fit-->
+
+---
+
+# Answers 
+
+- **States of Matter**: Gas, Liquid, Solid
+- **Energy**: Juice, Spirit, Vigor
+- **Classical Elements**: Air, Fire, Water
+- **Things with Rings**: Circus, Saturn, Tree
+- **Desserts**: Pie, Cake, Cobbler
+
+---
+
+
+# Survival Island 🌴
+
+1. Share your *survival skill* that **you wrote down** with your group
+2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
+3. On your whiteboard present your plan (drawing, mind map, set of instructions)
+    - Highlight everyone's skill
+4. Share Plan to the class
+
+---
+
+# Board Meeting -  **Survival Island**
+
+
+<div class='columns'>
+<div>
+
+### Rules 📝
+
+1. 👂 Listen 
+2. 🗣️ Speak Clearly
+3. ❔ Ask Questions
+4. 🤔 Seek to understand
+5. 👉 Refer to your board and use **evidence**
+6. 🌟 Come to consensus
+
+</div>
+ 
+<div>
+
+### Goals 🎯
+
+1. Practice Presenting to Class
+    - speaking clearly
+    - listening intently
+2. Learn how to come to class consensus
+    - What does the *majority* of the data show?
+3. Create a culture of learning from each other
+
+</div>
+</div>

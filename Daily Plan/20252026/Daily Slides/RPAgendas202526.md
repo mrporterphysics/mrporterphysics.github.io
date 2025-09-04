@@ -28,8 +28,9 @@ math: mathjax
 0. Sit Anywhere
 1. Do Now (fill out questionnaire & card)
 2. Question of the Day
-3. Grouping Game
-4. Survival Island
+3. Survival Island
+4. Pasta Bridge Lab 🍝
+
 </div>
 
 <div>
@@ -57,24 +58,11 @@ math: mathjax
 
 1. Fill out index card:
     1. Name
-    2. Phone number to reach your parents/guardians if you sleep through the AP Exam
+    2. Phone number to reach your parents/guardians if you sleep through the Regents
     3. Favorite Candy
     4. Favorite Emoji
     5. Emoji the describes your current mood
 2. Fill out Paper Quesionnaire
-
----
-
-# Lab Grouping Game
-
-- There are 14 of you, two groups of 4, two groups of 3
-- Based on your cards get into ***LOGICAL*** groups of 4 (or 3)
-- Check **whole class** answer with Mr. Porter
-    - 4 Chances to Check
-- Reorganize if necessary
-
-
-(Yes this is the game Connections)
 
 ---
 
@@ -189,6 +177,11 @@ math: mathjax
 * **Observations and qualitative notes**: 
   - Record all relevant observations, even if they seem unimportant.
   - Note any unexpected occurrences or anomalies.
+
+---
+
+# During the Experiment 
+
 * **Any changes to the planned procedure**: 
   - Document any deviations from the original procedure.
   - Explain why changes were made and how they might affect results.
@@ -240,3 +233,8 @@ math: mathjax
 ## Objective: 
 
 * Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
+* Develop an experiment to compare at least two types of pasta. Create a hypothesis for which will be stronger. 
+
+---
+
+# Board Meeting 
