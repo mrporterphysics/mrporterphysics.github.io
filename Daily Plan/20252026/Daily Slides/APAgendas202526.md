@@ -15,7 +15,7 @@ math: mathjax
 
 ---
 
-# 2025.09.06 **AP Physics** 
+# 2025.09.05 **AP Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
@@ -44,9 +44,6 @@ math: mathjax
 ### 🏠 Homework
 
 - Signed Safety Contract
-
-### **Note**: This is a cellphone free classroom 📵
-
 
 
 </div>
@@ -160,7 +157,7 @@ math: mathjax
 * **Title and objective of the experiment**: 
   - Write a clear, concise title for each experiment.
   - State the main objective or purpose of the experiment in 1-2 sentences.
-* ***Theoretical background**: 
+* **Theoretical background**: 
   - Briefly explain the relevant scientific principles.
   - Include key equations or concepts that will be tested or applied.
 * **Hypotheses**: 
@@ -192,6 +189,11 @@ math: mathjax
 * **Observations and qualitative notes**: 
   - Record all relevant observations, even if they seem unimportant.
   - Note any unexpected occurrences or anomalies.
+
+---
+
+# During the Experiment 
+
 * **Any changes to the planned procedure**: 
   - Document any deviations from the original procedure.
   - Explain why changes were made and how they might affect results.
@@ -238,9 +240,8 @@ math: mathjax
 ---
 
 
-# Buggy Lab 
+# Ball Bounce Lab
 
-## Objective: 
+## Question:
 
-* Determine if your toy buggy moves in a <U>consistent manner</u> by developing a relationship between ***position*** and ***time***. 
-* Use ***time*** as your independent variable
+Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
