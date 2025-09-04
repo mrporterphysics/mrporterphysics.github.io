@@ -1,5 +1,5 @@
 ---
-title: Regents Physics 2024-25
+title: Regents Physics 2025-26
 marp: true
 theme: physicalSci
 class: bluegray
