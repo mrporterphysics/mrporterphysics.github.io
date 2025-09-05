@@ -95,6 +95,22 @@ math: mathjax
 
 ---
 
+# Board Meeting 
+
+- What is the **slope**? 
+  - _For every_ statement ("_The **y quantity** changes **the slope number** <y units> for every 1 **x quantity** <x units>_")
+- What is the **intercept**?
+- What do they represent?
+  - How does each group's result compare?
+
+---
+
+# Pasta Bridge Model:
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+---
+
 # 2025.09.04 **Regents Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
