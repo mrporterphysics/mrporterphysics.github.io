@@ -66,14 +66,23 @@ math: mathjax
 
 # Lab Grouping Game
 
-- There are 8 of you and 8 extra cards
-- Based on your cards get into ***LOGICAL*** pairs with **two** extra cards
+- There are 13 of you
+- Based on your cards get into ***LOGICAL*** groups of **three** (plus one group of 4)
 - Check **whole class** answer with Mr. Porter
     - 4 Chances to Check
 - Reorganize if necessary
 
 
 (Yes this is the game Connections)
+
+---
+
+# Answers
+
+- **KINDS OF BEANS** - KIDNEY, MUNG, NAVY
+- **DEVISE** - CONCOCT, ENGINEER, HATCH
+- **NASA SPACECRAFT** - GALILEO, VIKING, VOYAGER
+- **GAMES WHERE YOU SAY THE GAME’S NAME** - BINGO, TAG, UNO
 
 ---
 
@@ -90,12 +99,9 @@ math: mathjax
 
 ---
 
-# Buggy Lab 
+# Coefficient of Restitution Lab
 
-## Objective: 
-
-* Determine if your toy buggy moves in a <U>consistent manner</u> by developing a relationship between ***position*** and ***time***. 
-* Use ***time*** as your independent variable
+Determine whether the ***coefficient of restitution***, $e$, for a specific ball remains constant when dropped from various heights. Do this by comparing drop height to bounce height for your assigned ball. 
 
 ---
 
