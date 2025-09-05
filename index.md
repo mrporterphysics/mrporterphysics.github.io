@@ -1,5 +1,3 @@
-# Welcome to Physics with [@MrPorterPhysics](https://twitter.com/MrPorterPhysics)
-
 # Presentations:
 
 You can find links to class presentations here:
