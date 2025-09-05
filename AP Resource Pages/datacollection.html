@@ -542,18 +542,15 @@
                 }
             }
             
-            // Draw average line with error bars
-            const avgLine = [];
+            // Draw average points with error bars (no connecting line)
             for (let i = 0; i < xValues.length; i++) {
                 const xPos = padding + ((xValues[i] - Math.min(...xValues)) / xRangeTrials) * (canvas.width - padding - 20);
                 const yPos = canvas.height - 30 - ((averages[i] - minY) / (maxY - minY)) * (canvas.height - 50);
-                avgLine.push({x: xPos, y: yPos});
                 
                 // Error bar height in pixels
                 const errorBarHeight = (errorBars[i] / (maxY - minY)) * (canvas.height - 50);
                 drawPoint(ctx, xPos, yPos, colors.measured, 7, numTrials > 1 ? errorBarHeight : null); // Larger red points
             }
-            drawLine(ctx, avgLine, colors.measured, 3);
             
             // Calculate fit quality
             const predicted = xValues.map(x => trueK * x + trueIntercept);
