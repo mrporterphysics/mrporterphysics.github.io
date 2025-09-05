@@ -10,6 +10,7 @@ You can find links to class presentations here:
 
 # Resource Pages
   - [AP Extra Practice for Reassessments](\AP%20Resource%20Pages\apSBGPractice)
+- [Data Collection Best Practices](/AP%20Resource%20Pages/datacollection.html)
 
 # Test Prep
   - [Regents Units and Equations Quiz](/mrporterphysics.github.io/regentsTestPrep/unitstestprepquiz.html)
