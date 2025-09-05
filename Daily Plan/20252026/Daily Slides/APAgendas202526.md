@@ -245,9 +245,21 @@ Determine whether the ***coefficient of restitution***, $e$, for a specific ball
 
 ---
 
+# Ball Bounce Lab
+
+#### Question:
+
+Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
+
+---
 
 # Ball Bounce Lab
 
-## Question:
+#### Question:
 
 Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
+
+
+#### Background: 
+
+The coefficient of restitution (symbol: $e$) is a dimensionless quantity that describes how much energy is conserved in a collision, specifically how well an object bounces back after impact. It is used to characterize the elasticity of collisions between two bodies.
