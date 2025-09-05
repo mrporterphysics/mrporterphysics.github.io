@@ -1,5 +1,9 @@
 # AP Physics Warehouse
 
+## Resources
+
+- [Data Collection Best Practices](/AP%20Resource%20Pages/datacollection.html)
+
 ## AP Physics Content Slides:
 
   - [Kinematics](/mrporterphysics.github.io/Presentations/APCVPM/talks/CVPM2024.html)

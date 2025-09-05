@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Best Practices</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .viz-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .viz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        .viz-card h3 {
+            color: #495057;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        canvas {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            background: white;
+        }
+        .controls {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        .legend {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+        .rule-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .rule-box h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+        }
+        .rule-box p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        .stat-badge {
+            background: white;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Why Good Data Collection Matters</h1>
+        <div class="subtitle">Interactive demonstrations of key experimental principles</div>
+        
+        <div class="viz-grid">
+            <!-- Multiple Trials Visualization -->
+            <div class="viz-card">
+                <h3>🔄 Multiple Trials Reduce Uncertainty</h3>
+                <canvas id="trialsCanvas"></canvas>
+                <div class="controls">
+                    <button onclick="showTrials(1)">1 Trial</button>
+                    <button onclick="showTrials(3)">3 Trials</button>
+                    <button onclick="showTrials(5)">5 Trials</button>
+                    <button onclick="showTrials(10)">10 Trials</button>
+                </div>
+                <div class="legend">
+                    Watch how averaging multiple trials (gray dots) gives us a more reliable result (red line) compared to the true relationship (blue line).
+                </div>
+                <div class="stats" id="trialsStats"></div>
+            </div>
+            
+            <!-- Data Range Visualization -->
+            <div class="viz-card">
+                <h3>📏 Wide Data Range (8×10 Rule)</h3>
+                <canvas id="rangeCanvas"></canvas>
+                <div class="controls">
+                    <button onclick="showRange('narrow')">Narrow Range (2×)</button>
+                    <button onclick="showRange('medium')">Medium Range (5×)</button>
+                    <button onclick="showRange('wide')">Wide Range (10×)</button>
+                </div>
+                <div class="legend">
+                    A wider range of x-values helps reveal the true nature of the relationship. Notice how narrow ranges can miss important patterns!
+                </div>
+                <div class="stats" id="rangeStats"></div>
+            </div>
+            
+            <!-- Data Points Visualization -->
+            <div class="viz-card">
+                <h3>📍 More Data Points = Better Fit</h3>
+                <canvas id="pointsCanvas"></canvas>
+                <div class="controls">
+                    <button onclick="showPoints(3)">3 Points</button>
+                    <button onclick="showPoints(5)">5 Points</button>
+                    <button onclick="showPoints(8)">8 Points</button>
+                    <button onclick="showPoints(15)">15 Points</button>
+                </div>
+                <div class="legend">
+                    More data points help us identify the true pattern and detect outliers. Watch how the fitted line becomes more reliable!
+                </div>
+                <div class="stats" id="pointsStats"></div>
+            </div>
+            
+            <!-- Combined Effect -->
+            <div class="viz-card">
+                <h3>✨ Combined Best Practices</h3>
+                <canvas id="combinedCanvas"></canvas>
+                <div class="controls">
+                    <button onclick="showCombined('poor')">Poor Practice</button>
+                    <button onclick="showCombined('better')">Better Practice</button>
+                    <button onclick="showCombined('best')">Best Practice</button>
+                </div>
+                <div class="legend">
+                    See the dramatic difference when we combine all three principles: multiple trials, wide range, and sufficient data points.
+                </div>
+                <div class="stats" id="combinedStats"></div>
+            </div>
+        </div>
+        
+        <div class="rule-box">
+            <h2>🎯 The 8×10 Rule</h2>
+            <p><strong>8+ Data Points:</strong> Minimum for reliable pattern detection</p>
+            <p><strong>10× Range:</strong> Largest value should be ~10 times the smallest</p>
+            <p><strong>Multiple Trials:</strong> Repeat measurements to reduce random error</p>
+        </div>
+    </div>
+    
+    <script>
+        // Utility functions
+        function clearCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            return ctx;
+        }
+        
+        function drawAxes(ctx, canvas) {
+            ctx.strokeStyle = '#ddd';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(40, canvas.height - 30);
+            ctx.lineTo(canvas.width - 20, canvas.height - 30);
+            ctx.moveTo(40, canvas.height - 30);
+            ctx.lineTo(40, 20);
+            ctx.stroke();
+        }
+        
+        function drawPoint(ctx, x, y, color = '#666', size = 4) {
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        
+        function drawLine(ctx, points, color = '#4CAF50', width = 2, dashed = false) {
+            ctx.strokeStyle = color;
+            ctx.lineWidth = width;
+            if (dashed) {
+                ctx.setLineDash([5, 5]);
+            } else {
+                ctx.setLineDash([]);
+            }
+            ctx.beginPath();
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                ctx.lineTo(points[i].x, points[i].y);
+            }
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+        
+        function calculateR2(actual, predicted) {
+            const mean = actual.reduce((a, b) => a + b, 0) / actual.length;
+            const ssTotal = actual.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0);
+            const ssRes = actual.reduce((sum, val, i) => sum + Math.pow(val - predicted[i], 2), 0);
+            return 1 - (ssRes / ssTotal);
+        }
+        
+        // Multiple Trials Visualization
+        function showTrials(numTrials) {
+            const ctx = clearCanvas('trialsCanvas');
+            const canvas = document.getElementById('trialsCanvas');
+            drawAxes(ctx, canvas);
+            
+            const xValues = [1, 2, 3, 4, 5, 6, 7, 8];
+            const trueSlope = 15;
+            const trueIntercept = 20;
+            
+            // Generate trial data with noise
+            let allTrials = [];
+            for (let t = 0; t < numTrials; t++) {
+                let trial = [];
+                for (let x of xValues) {
+                    const noise = (Math.random() - 0.5) * 30;
+                    const y = trueSlope * x + trueIntercept + noise;
+                    trial.push(y);
+                }
+                allTrials.push(trial);
+            }
+            
+            // Calculate averages
+            let averages = [];
+            let stdevs = [];
+            for (let i = 0; i < xValues.length; i++) {
+                let values = allTrials.map(t => t[i]);
+                averages.push(values.reduce((a, b) => a + b, 0) / values.length);
+                if (numTrials > 1) {
+                    const mean = averages[i];
+                    const variance = values.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / values.length;
+                    stdevs.push(Math.sqrt(variance));
+                }
+            }
+            
+            // Scale and draw
+            const padding = 40;
+            const maxY = Math.max(...allTrials.flat(), ...averages) + 20;
+            const minY = Math.min(...allTrials.flat(), ...averages) - 20;
+            
+            // Draw true line
+            const trueLine = [];
+            for (let x of xValues) {
+                const xPos = padding + ((x - 1) / 7) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((trueSlope * x + trueIntercept - minY) / (maxY - minY)) * (canvas.height - 50);
+                trueLine.push({x: xPos, y: yPos});
+            }
+            drawLine(ctx, trueLine, '#3498db', 2, true);
+            
+            // Draw individual trial points
+            for (let t = 0; t < numTrials; t++) {
+                for (let i = 0; i < xValues.length; i++) {
+                    const xPos = padding + ((xValues[i] - 1) / 7) * (canvas.width - padding - 20);
+                    const yPos = canvas.height - 30 - ((allTrials[t][i] - minY) / (maxY - minY)) * (canvas.height - 50);
+                    drawPoint(ctx, xPos, yPos, '#ccc', 3);
+                }
+            }
+            
+            // Draw average line
+            const avgLine = [];
+            for (let i = 0; i < xValues.length; i++) {
+                const xPos = padding + ((xValues[i] - 1) / 7) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((averages[i] - minY) / (maxY - minY)) * (canvas.height - 50);
+                avgLine.push({x: xPos, y: yPos});
+                drawPoint(ctx, xPos, yPos, '#e74c3c', 5);
+            }
+            drawLine(ctx, avgLine, '#e74c3c', 3);
+            
+            // Update stats
+            const avgStdev = stdevs.length > 0 ? (stdevs.reduce((a, b) => a + b, 0) / stdevs.length).toFixed(1) : 'N/A';
+            document.getElementById('trialsStats').innerHTML = `
+                <span class="stat-badge">Trials: ${numTrials}</span>
+                <span class="stat-badge">Avg Std Dev: ${avgStdev}</span>
+                <span class="stat-badge">Blue: True | Red: Average</span>
+            `;
+        }
+        
+        // Data Range Visualization
+        function showRange(rangeType) {
+            const ctx = clearCanvas('rangeCanvas');
+            const canvas = document.getElementById('rangeCanvas');
+            drawAxes(ctx, canvas);
+            
+            let xValues, displayRange;
+            if (rangeType === 'narrow') {
+                xValues = [4, 4.5, 5, 5.5, 6, 6.5, 7, 8];
+                displayRange = '2×';
+            } else if (rangeType === 'medium') {
+                xValues = [2, 3, 4, 5, 6, 7, 8, 10];
+                displayRange = '5×';
+            } else {
+                xValues = [1, 2, 3, 5, 7, 10, 12, 15];
+                displayRange = '10×';
+            }
+            
+            // Quadratic relationship
+            const yValues = xValues.map(x => 10 + 5*x + 0.5*x*x + (Math.random() - 0.5) * 10);
+            
+            const padding = 40;
+            const maxX = 15;
+            const maxY = Math.max(...yValues) + 20;
+            const minY = 0;
+            
+            // Draw true curve
+            const trueCurve = [];
+            for (let x = 0; x <= maxX; x += 0.5) {
+                const xPos = padding + (x / maxX) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((10 + 5*x + 0.5*x*x - minY) / (maxY - minY)) * (canvas.height - 50);
+                trueCurve.push({x: xPos, y: yPos});
+            }
+            drawLine(ctx, trueCurve, '#9b59b6', 2, true);
+            
+            // Draw data points and fitted line
+            const points = [];
+            for (let i = 0; i < xValues.length; i++) {
+                const xPos = padding + (xValues[i] / maxX) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((yValues[i] - minY) / (maxY - minY)) * (canvas.height - 50);
+                points.push({x: xPos, y: yPos});
+                drawPoint(ctx, xPos, yPos, '#27ae60', 5);
+            }
+            
+            // Simple linear fit for visualization
+            const sumX = xValues.reduce((a, b) => a + b, 0);
+            const sumY = yValues.reduce((a, b) => a + b, 0);
+            const sumXY = xValues.reduce((sum, x, i) => sum + x * yValues[i], 0);
+            const sumX2 = xValues.reduce((sum, x) => sum + x * x, 0);
+            const n = xValues.length;
+            const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+            const intercept = (sumY - slope * sumX) / n;
+            
+            const fitLine = [];
+            for (let x = Math.min(...xValues); x <= Math.max(...xValues); x += 0.5) {
+                const xPos = padding + (x / maxX) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((slope * x + intercept - minY) / (maxY - minY)) * (canvas.height - 50);
+                fitLine.push({x: xPos, y: yPos});
+            }
+            drawLine(ctx, fitLine, '#27ae60', 2);
+            
+            // Calculate R²
+            const predicted = xValues.map(x => slope * x + intercept);
+            const r2 = calculateR2(yValues, predicted);
+            
+            document.getElementById('rangeStats').innerHTML = `
+                <span class="stat-badge">Range: ${displayRange}</span>
+                <span class="stat-badge">R²: ${r2.toFixed(3)}</span>
+                <span class="stat-badge">Purple: True Curve | Green: Linear Fit</span>
+            `;
+        }
+        
+        // Data Points Visualization
+        function showPoints(numPoints) {
+            const ctx = clearCanvas('pointsCanvas');
+            const canvas = document.getElementById('pointsCanvas');
+            drawAxes(ctx, canvas);
+            
+            // Generate x values
+            const xValues = [];
+            for (let i = 0; i < numPoints; i++) {
+                xValues.push(1 + i * (14 / (numPoints - 1)));
+            }
+            
+            // Sinusoidal relationship with noise
+            const yValues = xValues.map(x => 50 + 30 * Math.sin(x / 2) + (Math.random() - 0.5) * 15);
+            
+            const padding = 40;
+            const maxX = 15;
+            const maxY = Math.max(...yValues) + 20;
+            const minY = Math.min(...yValues) - 20;
+            
+            // Draw true curve
+            const trueCurve = [];
+            for (let x = 0; x <= maxX; x += 0.2) {
+                const xPos = padding + (x / maxX) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((50 + 30 * Math.sin(x / 2) - minY) / (maxY - minY)) * (canvas.height - 50);
+                trueCurve.push({x: xPos, y: yPos});
+            }
+            drawLine(ctx, trueCurve, '#f39c12', 2, true);
+            
+            // Draw data points
+            const points = [];
+            for (let i = 0; i < xValues.length; i++) {
+                const xPos = padding + (xValues[i] / maxX) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((yValues[i] - minY) / (maxY - minY)) * (canvas.height - 50);
+                points.push({x: xPos, y: yPos});
+                drawPoint(ctx, xPos, yPos, '#e74c3c', 5);
+            }
+            
+            // Connect the dots
+            drawLine(ctx, points, '#e74c3c', 2);
+            
+            // Calculate error
+            const trueValues = xValues.map(x => 50 + 30 * Math.sin(x / 2));
+            const avgError = yValues.reduce((sum, y, i) => sum + Math.abs(y - trueValues[i]), 0) / numPoints;
+            
+            document.getElementById('pointsStats').innerHTML = `
+                <span class="stat-badge">Points: ${numPoints}</span>
+                <span class="stat-badge">Avg Error: ${avgError.toFixed(1)}</span>
+                <span class="stat-badge">Orange: True | Red: Measured</span>
+            `;
+        }
+        
+        // Combined Visualization
+        function showCombined(quality) {
+            const ctx = clearCanvas('combinedCanvas');
+            const canvas = document.getElementById('combinedCanvas');
+            drawAxes(ctx, canvas);
+            
+            let numPoints, numTrials, range;
+            if (quality === 'poor') {
+                numPoints = 3;
+                numTrials = 1;
+                range = 2;
+            } else if (quality === 'better') {
+                numPoints = 5;
+                numTrials = 3;
+                range = 5;
+            } else {
+                numPoints = 10;
+                numTrials = 5;
+                range = 10;
+            }
+            
+            // Generate data
+            const xMin = 2;
+            const xMax = xMin * range;
+            const xValues = [];
+            for (let i = 0; i < numPoints; i++) {
+                xValues.push(xMin + i * (xMax - xMin) / (numPoints - 1));
+            }
+            
+            // Power law relationship
+            const trueFunc = x => 20 * Math.sqrt(x);
+            
+            // Multiple trials
+            let allTrials = [];
+            for (let t = 0; t < numTrials; t++) {
+                let trial = xValues.map(x => trueFunc(x) + (Math.random() - 0.5) * 15);
+                allTrials.push(trial);
+            }
+            
+            // Average across trials
+            const yValues = xValues.map((x, i) => {
+                const values = allTrials.map(t => t[i]);
+                return values.reduce((a, b) => a + b, 0) / values.length;
+            });
+            
+            const padding = 40;
+            const maxX = 20;
+            const maxY = Math.max(...allTrials.flat()) + 20;
+            const minY = 0;
+            
+            // Draw true curve
+            const trueCurve = [];
+            for (let x = xMin; x <= Math.min(xMax, maxX); x += 0.2) {
+                const xPos = padding + (x / maxX) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((trueFunc(x) - minY) / (maxY - minY)) * (canvas.height - 50);
+                trueCurve.push({x: xPos, y: yPos});
+            }
+            drawLine(ctx, trueCurve, '#3498db', 3, true);
+            
+            // Draw all trial points
+            for (let t = 0; t < numTrials; t++) {
+                for (let i = 0; i < xValues.length; i++) {
+                    const xPos = padding + (xValues[i] / maxX) * (canvas.width - padding - 20);
+                    const yPos = canvas.height - 30 - ((allTrials[t][i] - minY) / (maxY - minY)) * (canvas.height - 50);
+                    drawPoint(ctx, xPos, yPos, '#ecf0f1', 3);
+                }
+            }
+            
+            // Draw averaged points and fit
+            const points = [];
+            for (let i = 0; i < xValues.length; i++) {
+                const xPos = padding + (xValues[i] / maxX) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((yValues[i] - minY) / (maxY - minY)) * (canvas.height - 50);
+                points.push({x: xPos, y: yPos});
+                drawPoint(ctx, xPos, yPos, '#e74c3c', 6);
+            }
+            drawLine(ctx, points, '#e74c3c', 2);
+            
+            // Calculate quality metric
+            const trueValues = xValues.map(trueFunc);
+            const error = yValues.reduce((sum, y, i) => sum + Math.abs(y - trueValues[i]), 0) / numPoints;
+            const qualityScore = Math.max(0, 100 - error).toFixed(0);
+            
+            document.getElementById('combinedStats').innerHTML = `
+                <span class="stat-badge">Points: ${numPoints}</span>
+                <span class="stat-badge">Trials: ${numTrials}</span>
+                <span class="stat-badge">Range: ${range}×</span>
+                <span class="stat-badge">Quality: ${qualityScore}%</span>
+            `;
+        }
+        
+        // Initialize with default views
+        showTrials(1);
+        showRange('narrow');
+        showPoints(3);
+        showCombined('poor');
+    </script>
+</body>
+</html>
