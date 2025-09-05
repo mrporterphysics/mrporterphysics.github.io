@@ -3,208 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Collection Best Practices</title>
+    <title>Data Collection Best Practices - Physics Lab Techniques</title>
+    <link rel="stylesheet" href="../css/flexoki-theme.css">
     <style>
+        /* Flexoki Theme Variables */
+        :root {
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+            --fx-red-light: #D14D41;
+            --fx-orange-light: #DA702C;
+            --fx-yellow-light: #D0A215;
+            --fx-green-light: #879A39;
+            --fx-cyan-light: #3AA99F;
+            --fx-blue-light: #4385BE;
+            --fx-purple-light: #8B7EC8;
+            --fx-magenta-light: #CE5D97;
+        }
+        
+        [data-theme="dark"] {
+            --fx-red-dark: #AF3029;
+            --fx-orange-dark: #BC5215;
+            --fx-yellow-dark: #AD8301;
+            --fx-green-dark: #66800B;
+            --fx-cyan-dark: #24837B;
+            --fx-blue-dark: #205EA6;
+            --fx-purple-dark: #5E409D;
+            --fx-magenta-dark: #A02F6F;
+        }
+        
+        /* Page-specific styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary, var(--fx-paper));
+            color: var(--text-primary, var(--fx-base-950));
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        .viz-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        .viz-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .viz-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-        }
-        .viz-card h3 {
-            color: #495057;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-        canvas {
-            width: 100%;
-            height: 250px;
-            border-radius: 10px;
-            background: white;
-        }
-        .controls {
-            margin-top: 15px;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
-        }
-        button:active {
-            transform: scale(0.98);
-        }
-        .legend {
-            margin-top: 10px;
-            font-size: 12px;
-            color: #666;
-            padding: 10px;
-            background: #fff;
-            border-radius: 8px;
             line-height: 1.6;
         }
-        .rule-box {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 20px;
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary, var(--fx-base-50));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px var(--shadow, rgba(28, 27, 26, 0.1));
+        }
+        
+        h1 {
+            font-family: 'Inconsolata', 'SF Mono', monospace;
+            color: var(--text-primary, var(--fx-base-950));
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
-        .rule-box h2 {
-            margin: 0 0 10px 0;
-            font-size: 1.8em;
+        
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary, var(--fx-base-700));
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
-        .rule-box p {
-            margin: 5px 0;
-            font-size: 1.1em;
+        
+        .viz-section {
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color, var(--fx-base-200));
         }
+        
+        .viz-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .viz-card {
+            background-color: var(--bg-tertiary, var(--fx-base-100));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .viz-card:hover {
+            border-color: var(--border-hover, var(--fx-base-300));
+            box-shadow: 0 4px 8px var(--shadow-hover, rgba(28, 27, 26, 0.15));
+        }
+        
+        .viz-card h3 {
+            font-family: 'Inconsolata', monospace;
+            color: var(--text-primary, var(--fx-base-950));
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        canvas {
+            width: 100%;
+            height: 300px;
+            border-radius: 6px;
+            background-color: var(--bg-primary, var(--fx-paper));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            margin-bottom: 1rem;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        button {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            border: 1px solid var(--accent-primary, var(--fx-blue-light));
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: var(--accent-hover, var(--fx-blue-dark));
+            border-color: var(--accent-hover, var(--fx-blue-dark));
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px var(--shadow, rgba(28, 27, 26, 0.1));
+        }
+        
+        button.active {
+            background-color: var(--accent-secondary, var(--fx-purple-light));
+            border-color: var(--accent-secondary, var(--fx-purple-light));
+        }
+        
+        .legend {
+            background-color: var(--bg-primary, var(--fx-paper));
+            color: var(--text-secondary, var(--fx-base-700));
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
         .stats {
             display: flex;
-            gap: 15px;
-            margin-top: 10px;
+            gap: 0.75rem;
             flex-wrap: wrap;
         }
+        
         .stat-badge {
-            background: white;
-            color: #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: bold;
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: inherit;
+        }
+        
+        .stat-badge.secondary {
+            background-color: var(--text-muted, var(--fx-base-600));
+        }
+        
+        .rule-box {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .rule-box h2 {
+            margin: 0 0 1rem 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .rule-box p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        
+        /* Dark theme support */
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: var(--fx-blue-dark);
+            --accent-hover: var(--fx-blue-light);
+            --accent-secondary: var(--fx-purple-dark);
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+        
+        /* Theme toggle button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--bg-tertiary, var(--fx-base-100));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            color: var(--text-primary, var(--fx-base-950));
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            border-color: var(--accent-primary, var(--fx-blue-light));
         }
     </style>
 </head>
 <body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+    
     <div class="container">
-        <h1>📊 Why Good Data Collection Matters</h1>
-        <div class="subtitle">Interactive demonstrations of key experimental principles</div>
+        <h1>📊 Physics Lab: Data Collection Best Practices</h1>
+        <div class="subtitle">Interactive demonstrations showing why the 8×10 rule matters in physics experiments</div>
         
-        <div class="viz-grid">
-            <!-- Multiple Trials Visualization -->
+        <div class="viz-section">
             <div class="viz-card">
-                <h3>🔄 Multiple Trials Reduce Uncertainty</h3>
+                <h3>🔄 Multiple Trials Reduce Experimental Uncertainty</h3>
                 <canvas id="trialsCanvas"></canvas>
                 <div class="controls">
-                    <button onclick="showTrials(1)">1 Trial</button>
-                    <button onclick="showTrials(3)">3 Trials</button>
-                    <button onclick="showTrials(5)">5 Trials</button>
-                    <button onclick="showTrials(10)">10 Trials</button>
+                    <button onclick="showTrials(1)" id="trials-1">1 Trial</button>
+                    <button onclick="showTrials(3)" id="trials-3">3 Trials</button>
+                    <button onclick="showTrials(5)" id="trials-5">5 Trials</button>
+                    <button onclick="showTrials(10)" id="trials-10">10 Trials</button>
+                    <button onclick="showTrials(20)" id="trials-20">20 Trials</button>
                 </div>
                 <div class="legend">
-                    Watch how averaging multiple trials (gray dots) gives us a more reliable result (red line) compared to the true relationship (blue line).
+                    <strong>Physics Example:</strong> Measuring spring constant (F = kx). Individual measurements (gray dots) have random error from reading rulers and force gauges. Averaging multiple trials (red line) approaches the true relationship (blue dashed line). Error bars show ±1 standard deviation.
                 </div>
                 <div class="stats" id="trialsStats"></div>
             </div>
-            
-            <!-- Data Range Visualization -->
+        </div>
+        
+        <div class="viz-section">
             <div class="viz-card">
-                <h3>📏 Wide Data Range (8×10 Rule)</h3>
+                <h3>📏 Wide Data Range Reveals True Relationships (8×10 Rule)</h3>
                 <canvas id="rangeCanvas"></canvas>
                 <div class="controls">
-                    <button onclick="showRange('narrow')">Narrow Range (2×)</button>
-                    <button onclick="showRange('medium')">Medium Range (5×)</button>
-                    <button onclick="showRange('wide')">Wide Range (10×)</button>
+                    <button onclick="showRange('narrow')" id="range-narrow">Narrow Range (2×)</button>
+                    <button onclick="showRange('medium')" id="range-medium">Medium Range (5×)</button>
+                    <button onclick="showRange('wide')" id="range-wide">Wide Range (10×)</button>
+                    <button onclick="showRange('extreme')" id="range-extreme">Very Wide (15×)</button>
                 </div>
                 <div class="legend">
-                    A wider range of x-values helps reveal the true nature of the relationship. Notice how narrow ranges can miss important patterns!
+                    <strong>Physics Example:</strong> Pendulum period vs. length relationship (T ∝ √L). Narrow ranges miss the square-root nature and suggest linear behavior. The purple curve shows the true relationship; green shows linear fit to limited data. Wide ranges reveal the actual physics!
                 </div>
                 <div class="stats" id="rangeStats"></div>
             </div>
-            
-            <!-- Data Points Visualization -->
+        </div>
+        
+        <div class="viz-section">
             <div class="viz-card">
-                <h3>📍 More Data Points = Better Fit</h3>
+                <h3>📍 Sufficient Data Points Enable Pattern Recognition</h3>
                 <canvas id="pointsCanvas"></canvas>
                 <div class="controls">
-                    <button onclick="showPoints(3)">3 Points</button>
-                    <button onclick="showPoints(5)">5 Points</button>
-                    <button onclick="showPoints(8)">8 Points</button>
-                    <button onclick="showPoints(15)">15 Points</button>
+                    <button onclick="showPoints(3)" id="points-3">3 Points</button>
+                    <button onclick="showPoints(5)" id="points-5">5 Points</button>
+                    <button onclick="showPoints(8)" id="points-8">8 Points</button>
+                    <button onclick="showPoints(12)" id="points-12">12 Points</button>
+                    <button onclick="showPoints(20)" id="points-20">20 Points</button>
                 </div>
                 <div class="legend">
-                    More data points help us identify the true pattern and detect outliers. Watch how the fitted line becomes more reliable!
+                    <strong>Physics Example:</strong> Simple harmonic motion position tracking (x = A cos(ωt + φ)). Few data points can't reveal the oscillatory nature and may appear linear or random. Sufficient points clearly show the sinusoidal pattern (blue dashed curve) vs. misleading linear fit (green line).
                 </div>
                 <div class="stats" id="pointsStats"></div>
             </div>
-            
-            <!-- Combined Effect -->
+        </div>
+        
+        <div class="viz-section">
             <div class="viz-card">
-                <h3>✨ Combined Best Practices</h3>
+                <h3>✨ Combined Best Practices in Action</h3>
                 <canvas id="combinedCanvas"></canvas>
                 <div class="controls">
-                    <button onclick="showCombined('poor')">Poor Practice</button>
-                    <button onclick="showCombined('better')">Better Practice</button>
-                    <button onclick="showCombined('best')">Best Practice</button>
+                    <button onclick="showCombined('poor')" id="combined-poor">Poor Practice</button>
+                    <button onclick="showCombined('better')" id="combined-better">Better Practice</button>
+                    <button onclick="showCombined('best')" id="combined-best">Best Practice</button>
+                    <button onclick="showCombined('excellent')" id="combined-excellent">Excellent Practice</button>
                 </div>
                 <div class="legend">
-                    See the dramatic difference when we combine all three principles: multiple trials, wide range, and sufficient data points.
+                    <strong>Physics Example:</strong> Projectile motion energy analysis (E = ½mv²). Poor practice misses the quadratic relationship entirely. Best practice with multiple trials, wide velocity range (10×), and 10+ data points clearly reveals E ∝ v² relationship with high confidence.
                 </div>
                 <div class="stats" id="combinedStats"></div>
             </div>
         </div>
         
         <div class="rule-box">
-            <h2>🎯 The 8×10 Rule</h2>
-            <p><strong>8+ Data Points:</strong> Minimum for reliable pattern detection</p>
-            <p><strong>10× Range:</strong> Largest value should be ~10 times the smallest</p>
-            <p><strong>Multiple Trials:</strong> Repeat measurements to reduce random error</p>
+            <h2>🎯 The 8×10 Rule for Physics Labs</h2>
+            <p><strong>8+ Data Points:</strong> Minimum for reliable pattern detection and outlier identification</p>
+            <p><strong>10× Range:</strong> Largest independent variable ≥ 10× smallest (when equipment allows)</p>
+            <p><strong>Multiple Trials:</strong> Repeat measurements to calculate uncertainty and improve precision</p>
+            <p><strong>Why it works:</strong> Wide ranges reveal true relationships, multiple trials reduce random error, and sufficient points enable proper statistical analysis</p>
         </div>
     </div>
     
     <script>
+        // Theme management
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.querySelector('.theme-toggle');
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            
+            if (isDark) {
+                body.removeAttribute('data-theme');
+                button.textContent = '🌙 Dark';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                button.textContent = '☀️ Light';
+            }
+        }
+        
+        // Active button management
+        function setActiveButton(groupPrefix, activeId) {
+            document.querySelectorAll(`[id^="${groupPrefix}-"]`).forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(activeId).classList.add('active');
+        }
+        
         // Utility functions
         function clearCanvas(canvasId) {
             const canvas = document.getElementById(canvasId);
@@ -215,8 +368,30 @@
             return ctx;
         }
         
-        function drawAxes(ctx, canvas) {
-            ctx.strokeStyle = '#ddd';
+        function drawAxes(ctx, canvas, xLabel = 'Independent Variable', yLabel = 'Dependent Variable') {
+            const isDark = document.body.getAttribute('data-theme') === 'dark';
+            const gridColor = isDark ? '#403E39' : '#E6E2CC';
+            const axisColor = isDark ? '#6F6144' : '#847759';
+            const textColor = isDark ? '#F2F0E5' : '#343331';
+            
+            // Grid lines
+            ctx.strokeStyle = gridColor;
+            ctx.lineWidth = 1;
+            ctx.setLineDash([2, 2]);
+            for (let i = 1; i < 10; i++) {
+                const x = 40 + (i / 10) * (canvas.width - 60);
+                const y = 20 + (i / 10) * (canvas.height - 50);
+                ctx.beginPath();
+                ctx.moveTo(x, 20);
+                ctx.lineTo(x, canvas.height - 30);
+                ctx.moveTo(40, y);
+                ctx.lineTo(canvas.width - 20, y);
+                ctx.stroke();
+            }
+            
+            // Main axes
+            ctx.setLineDash([]);
+            ctx.strokeStyle = axisColor;
             ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.moveTo(40, canvas.height - 30);
@@ -224,13 +399,38 @@
             ctx.moveTo(40, canvas.height - 30);
             ctx.lineTo(40, 20);
             ctx.stroke();
+            
+            // Axis labels
+            ctx.fillStyle = textColor;
+            ctx.font = '12px Fira Code';
+            ctx.textAlign = 'center';
+            ctx.fillText(xLabel, canvas.width / 2, canvas.height - 5);
+            ctx.save();
+            ctx.translate(15, canvas.height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText(yLabel, 0, 0);
+            ctx.restore();
         }
         
-        function drawPoint(ctx, x, y, color = '#666', size = 4) {
+        function drawPoint(ctx, x, y, color = '#666', size = 4, errorBar = null) {
             ctx.fillStyle = color;
             ctx.beginPath();
             ctx.arc(x, y, size, 0, 2 * Math.PI);
             ctx.fill();
+            
+            // Draw error bar if provided
+            if (errorBar) {
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(x, y - errorBar);
+                ctx.lineTo(x, y + errorBar);
+                ctx.moveTo(x - 3, y - errorBar);
+                ctx.lineTo(x + 3, y - errorBar);
+                ctx.moveTo(x - 3, y + errorBar);
+                ctx.lineTo(x + 3, y + errorBar);
+                ctx.stroke();
+            }
         }
         
         function drawLine(ctx, points, color = '#4CAF50', width = 2, dashed = false) {
@@ -254,42 +454,66 @@
             const mean = actual.reduce((a, b) => a + b, 0) / actual.length;
             const ssTotal = actual.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0);
             const ssRes = actual.reduce((sum, val, i) => sum + Math.pow(val - predicted[i], 2), 0);
-            return 1 - (ssRes / ssTotal);
+            return Math.max(0, 1 - (ssRes / ssTotal));
         }
         
-        // Multiple Trials Visualization
+        function calculateStatistics(values) {
+            const n = values.length;
+            const mean = values.reduce((a, b) => a + b, 0) / n;
+            const variance = values.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / n;
+            const stdev = Math.sqrt(variance);
+            const sem = stdev / Math.sqrt(n); // Standard error of the mean
+            return { mean, stdev, sem, n };
+        }
+        
+        function getThemeColors() {
+            const isDark = document.body.getAttribute('data-theme') === 'dark';
+            return {
+                true: isDark ? '#205EA6' : '#4385BE',
+                measured: isDark ? '#AF3029' : '#D14D41',
+                fit: isDark ? '#66800B' : '#879A39',
+                trials: isDark ? '#575142' : '#B5A988',
+                background: isDark ? '#100F0F' : '#FFFCF0'
+            };
+        }
+        
+        // Multiple Trials Visualization - Spring Constant Experiment
         function showTrials(numTrials) {
+            setActiveButton('trials', `trials-${numTrials}`);
             const ctx = clearCanvas('trialsCanvas');
             const canvas = document.getElementById('trialsCanvas');
-            drawAxes(ctx, canvas);
+            drawAxes(ctx, canvas, 'Extension (cm)', 'Force (N)');
             
-            const xValues = [1, 2, 3, 4, 5, 6, 7, 8];
-            const trueSlope = 15;
-            const trueIntercept = 20;
+            const colors = getThemeColors();
+            const xValues = [2, 4, 6, 8, 10, 12, 14, 16]; // Extension in cm
+            const trueK = 2.5; // Spring constant N/cm
+            const trueIntercept = 0.5; // Small systematic error
             
-            // Generate trial data with noise
+            // Generate trial data with more dramatic measurement noise
             let allTrials = [];
             for (let t = 0; t < numTrials; t++) {
                 let trial = [];
                 for (let x of xValues) {
-                    const noise = (Math.random() - 0.5) * 30;
-                    const y = trueSlope * x + trueIntercept + noise;
-                    trial.push(y);
+                    // F = kx with significant measurement uncertainty
+                    const readingError = (Math.random() - 0.5) * 4.0; // ±2.0 N reading error
+                    const setupError = (Math.random() - 0.5) * 2.0; // ±1.0 N setup variations
+                    const systematicDrift = (Math.random() - 0.5) * 1.5; // ±0.75 N systematic error
+                    const y = trueK * x + trueIntercept + readingError + setupError + systematicDrift;
+                    trial.push(Math.max(0.1, y)); // Force can't be negative
                 }
                 allTrials.push(trial);
             }
             
-            // Calculate averages
+            // Calculate statistics for each x value
             let averages = [];
-            let stdevs = [];
+            let errorBars = [];
+            let allStats = [];
             for (let i = 0; i < xValues.length; i++) {
                 let values = allTrials.map(t => t[i]);
-                averages.push(values.reduce((a, b) => a + b, 0) / values.length);
-                if (numTrials > 1) {
-                    const mean = averages[i];
-                    const variance = values.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / values.length;
-                    stdevs.push(Math.sqrt(variance));
-                }
+                const stats = calculateStatistics(values);
+                averages.push(stats.mean);
+                errorBars.push(stats.stdev); // 1 standard deviation
+                allStats.push(stats);
             }
             
             // Scale and draw
@@ -297,77 +521,100 @@
             const maxY = Math.max(...allTrials.flat(), ...averages) + 20;
             const minY = Math.min(...allTrials.flat(), ...averages) - 20;
             
-            // Draw true line
+            // Draw true relationship (Hooke's Law)
             const trueLine = [];
-            for (let x of xValues) {
-                const xPos = padding + ((x - 1) / 7) * (canvas.width - padding - 20);
-                const yPos = canvas.height - 30 - ((trueSlope * x + trueIntercept - minY) / (maxY - minY)) * (canvas.height - 50);
+            const xRange = Math.max(...xValues) - Math.min(...xValues);
+            for (let x = Math.min(...xValues); x <= Math.max(...xValues); x += 0.5) {
+                const xPos = padding + ((x - Math.min(...xValues)) / xRange) * (canvas.width - padding - 20);
+                const yPos = canvas.height - 30 - ((trueK * x + trueIntercept - minY) / (maxY - minY)) * (canvas.height - 50);
                 trueLine.push({x: xPos, y: yPos});
             }
-            drawLine(ctx, trueLine, '#3498db', 2, true);
+            drawLine(ctx, trueLine, colors.true, 3, true);
             
-            // Draw individual trial points
+            // Draw ALL individual trial points in gray (more visible)
+            const xRangeTrials = Math.max(...xValues) - Math.min(...xValues);
+            const grayColor = '#999999'; // Consistent gray regardless of theme
             for (let t = 0; t < numTrials; t++) {
                 for (let i = 0; i < xValues.length; i++) {
-                    const xPos = padding + ((xValues[i] - 1) / 7) * (canvas.width - padding - 20);
+                    const xPos = padding + ((xValues[i] - Math.min(...xValues)) / xRangeTrials) * (canvas.width - padding - 20);
                     const yPos = canvas.height - 30 - ((allTrials[t][i] - minY) / (maxY - minY)) * (canvas.height - 50);
-                    drawPoint(ctx, xPos, yPos, '#ccc', 3);
+                    drawPoint(ctx, xPos, yPos, grayColor, 4); // Larger, more visible points
                 }
             }
             
-            // Draw average line
+            // Draw average line with error bars
             const avgLine = [];
             for (let i = 0; i < xValues.length; i++) {
-                const xPos = padding + ((xValues[i] - 1) / 7) * (canvas.width - padding - 20);
+                const xPos = padding + ((xValues[i] - Math.min(...xValues)) / xRangeTrials) * (canvas.width - padding - 20);
                 const yPos = canvas.height - 30 - ((averages[i] - minY) / (maxY - minY)) * (canvas.height - 50);
                 avgLine.push({x: xPos, y: yPos});
-                drawPoint(ctx, xPos, yPos, '#e74c3c', 5);
+                
+                // Error bar height in pixels
+                const errorBarHeight = (errorBars[i] / (maxY - minY)) * (canvas.height - 50);
+                drawPoint(ctx, xPos, yPos, colors.measured, 7, numTrials > 1 ? errorBarHeight : null); // Larger red points
             }
-            drawLine(ctx, avgLine, '#e74c3c', 3);
+            drawLine(ctx, avgLine, colors.measured, 3);
             
-            // Update stats
-            const avgStdev = stdevs.length > 0 ? (stdevs.reduce((a, b) => a + b, 0) / stdevs.length).toFixed(1) : 'N/A';
+            // Calculate fit quality
+            const predicted = xValues.map(x => trueK * x + trueIntercept);
+            const r2 = calculateR2(averages, predicted);
+            const avgStdev = errorBars.length > 0 ? (errorBars.reduce((a, b) => a + b, 0) / errorBars.length).toFixed(2) : 'N/A';
+            const uncertainty = numTrials > 1 ? (avgStdev / Math.sqrt(numTrials)).toFixed(2) : avgStdev;
+            
             document.getElementById('trialsStats').innerHTML = `
                 <span class="stat-badge">Trials: ${numTrials}</span>
-                <span class="stat-badge">Avg Std Dev: ${avgStdev}</span>
-                <span class="stat-badge">Blue: True | Red: Average</span>
+                <span class="stat-badge">Avg σ: ${avgStdev} N</span>
+                <span class="stat-badge">SEM: ±${uncertainty} N</span>
+                <span class="stat-badge">R²: ${r2.toFixed(3)}</span>
+                <span class="stat-badge secondary">Gray: Individual trials | Red: Averages | Dashed: True F=kx</span>
             `;
         }
         
-        // Data Range Visualization
+        // Data Range Visualization - Pendulum Period vs Length
         function showRange(rangeType) {
+            setActiveButton('range', `range-${rangeType}`);
             const ctx = clearCanvas('rangeCanvas');
             const canvas = document.getElementById('rangeCanvas');
-            drawAxes(ctx, canvas);
+            drawAxes(ctx, canvas, 'Length (cm)', 'Period (s)');
             
+            const colors = getThemeColors();
             let xValues, displayRange;
             if (rangeType === 'narrow') {
-                xValues = [4, 4.5, 5, 5.5, 6, 6.5, 7, 8];
-                displayRange = '2×';
+                xValues = [18, 20, 22, 24, 26, 28, 30, 32]; // 1.8× range
+                displayRange = '1.8×';
             } else if (rangeType === 'medium') {
-                xValues = [2, 3, 4, 5, 6, 7, 8, 10];
-                displayRange = '5×';
-            } else {
-                xValues = [1, 2, 3, 5, 7, 10, 12, 15];
-                displayRange = '10×';
+                xValues = [10, 15, 20, 25, 30, 35, 40, 45]; // 4.5× range
+                displayRange = '4.5×';
+            } else if (rangeType === 'wide') {
+                xValues = [5, 10, 15, 25, 35, 45, 55, 65]; // 13× range
+                displayRange = '13×';
+            } else { // extreme
+                xValues = [3, 8, 15, 25, 40, 55, 75, 100]; // 33× range
+                displayRange = '33×';
             }
             
-            // Quadratic relationship
-            const yValues = xValues.map(x => 10 + 5*x + 0.5*x*x + (Math.random() - 0.5) * 10);
+            // Pendulum relationship T = 2π√(L/g), g = 980 cm/s²
+            const g = 980; // cm/s²
+            const yValues = xValues.map(x => {
+                const theoretical = 2 * Math.PI * Math.sqrt(x / g);
+                const noise = (Math.random() - 0.5) * 0.05; // ±0.025s measurement error
+                return theoretical + noise;
+            });
             
             const padding = 40;
-            const maxX = 15;
-            const maxY = Math.max(...yValues) + 20;
+            const maxX = Math.max(...xValues) * 1.1;
+            const maxY = Math.max(...yValues) * 1.2;
             const minY = 0;
             
-            // Draw true curve
+            // Draw true curve (T = 2π√(L/g))
             const trueCurve = [];
-            for (let x = 0; x <= maxX; x += 0.5) {
+            for (let x = Math.min(...xValues); x <= maxX; x += 1) {
                 const xPos = padding + (x / maxX) * (canvas.width - padding - 20);
-                const yPos = canvas.height - 30 - ((10 + 5*x + 0.5*x*x - minY) / (maxY - minY)) * (canvas.height - 50);
+                const theoretical = 2 * Math.PI * Math.sqrt(x / g);
+                const yPos = canvas.height - 30 - ((theoretical - minY) / (maxY - minY)) * (canvas.height - 50);
                 trueCurve.push({x: xPos, y: yPos});
             }
-            drawLine(ctx, trueCurve, '#9b59b6', 2, true);
+            drawLine(ctx, trueCurve, colors.true, 3, true);
             
             // Draw data points and fitted line
             const points = [];
@@ -378,7 +625,7 @@
                 drawPoint(ctx, xPos, yPos, '#27ae60', 5);
             }
             
-            // Simple linear fit for visualization
+            // Linear fit to limited data (shows why wide range matters)
             const sumX = xValues.reduce((a, b) => a + b, 0);
             const sumY = yValues.reduce((a, b) => a + b, 0);
             const sumXY = xValues.reduce((sum, x, i) => sum + x * yValues[i], 0);
@@ -388,52 +635,70 @@
             const intercept = (sumY - slope * sumX) / n;
             
             const fitLine = [];
-            for (let x = Math.min(...xValues); x <= Math.max(...xValues); x += 0.5) {
+            const fitStart = Math.max(0, Math.min(...xValues) - 5);
+            const fitEnd = Math.min(maxX, Math.max(...xValues) + 5);
+            for (let x = fitStart; x <= fitEnd; x += 1) {
                 const xPos = padding + (x / maxX) * (canvas.width - padding - 20);
                 const yPos = canvas.height - 30 - ((slope * x + intercept - minY) / (maxY - minY)) * (canvas.height - 50);
                 fitLine.push({x: xPos, y: yPos});
             }
-            drawLine(ctx, fitLine, '#27ae60', 2);
+            drawLine(ctx, fitLine, colors.fit, 2);
             
-            // Calculate R²
+            // Calculate fit quality
             const predicted = xValues.map(x => slope * x + intercept);
-            const r2 = calculateR2(yValues, predicted);
+            const truePredicted = xValues.map(x => 2 * Math.PI * Math.sqrt(x / g));
+            const linearR2 = calculateR2(yValues, predicted);
+            const trueR2 = calculateR2(yValues, truePredicted);
+            const rangeRatio = (Math.max(...xValues) / Math.min(...xValues)).toFixed(1);
             
             document.getElementById('rangeStats').innerHTML = `
-                <span class="stat-badge">Range: ${displayRange}</span>
-                <span class="stat-badge">R²: ${r2.toFixed(3)}</span>
-                <span class="stat-badge">Purple: True Curve | Green: Linear Fit</span>
+                <span class="stat-badge">Range: ${rangeRatio}×</span>
+                <span class="stat-badge">Linear R²: ${linearR2.toFixed(3)}</span>
+                <span class="stat-badge">True R²: ${trueR2.toFixed(3)}</span>
+                <span class="stat-badge secondary">Dashed: T∝L | Solid: Linear fit</span>
             `;
         }
         
-        // Data Points Visualization
+        // Data Points Visualization - Simple Harmonic Motion Position
         function showPoints(numPoints) {
+            setActiveButton('points', `points-${numPoints}`);
             const ctx = clearCanvas('pointsCanvas');
             const canvas = document.getElementById('pointsCanvas');
-            drawAxes(ctx, canvas);
+            drawAxes(ctx, canvas, 'Time (s)', 'Position (cm)');
             
-            // Generate x values
+            const colors = getThemeColors();
+            
+            // Generate time values for one complete period plus a bit more
             const xValues = [];
+            const maxTime = 2.5; // 1.25 complete periods (T = 2s)
             for (let i = 0; i < numPoints; i++) {
-                xValues.push(1 + i * (14 / (numPoints - 1)));
+                xValues.push(i * (maxTime / (numPoints - 1)));
             }
             
-            // Sinusoidal relationship with noise
-            const yValues = xValues.map(x => 50 + 30 * Math.sin(x / 2) + (Math.random() - 0.5) * 15);
+            // Simple harmonic motion: x(t) = A*cos(ωt + φ)
+            const A = 15; // Amplitude (cm)
+            const omega = Math.PI; // Angular frequency (T = 2s)
+            const phi = Math.PI / 6; // Phase constant
+            const yValues = xValues.map(t => {
+                const theoretical = A * Math.cos(omega * t + phi);
+                const noise = (Math.random() - 0.5) * 2.5; // ±1.25 cm measurement error
+                return theoretical + noise;
+            });
             
             const padding = 40;
-            const maxX = 15;
-            const maxY = Math.max(...yValues) + 20;
-            const minY = Math.min(...yValues) - 20;
+            const maxX = maxTime;
+            const maxY = Math.max(...yValues, A) * 1.1;
+            const minY = Math.min(...yValues, -A) - Math.abs(A) * 0.1;
             
-            // Draw true curve
+            // Draw true sinusoidal curve
             const trueCurve = [];
-            for (let x = 0; x <= maxX; x += 0.2) {
-                const xPos = padding + (x / maxX) * (canvas.width - padding - 20);
-                const yPos = canvas.height - 30 - ((50 + 30 * Math.sin(x / 2) - minY) / (maxY - minY)) * (canvas.height - 50);
+            for (let t = 0; t <= maxTime; t += 0.05) {
+                const xPos = padding + (t / maxX) * (canvas.width - padding - 20);
+                const theoretical = A * Math.cos(omega * t + phi);
+                const yPos = canvas.height - 30 - ((theoretical - minY) / (maxY - minY)) * (canvas.height - 50);
                 trueCurve.push({x: xPos, y: yPos});
             }
-            drawLine(ctx, trueCurve, '#f39c12', 2, true);
+            drawLine(ctx, trueCurve, colors.true, 3, true);
             
             // Draw data points
             const points = [];
@@ -441,59 +706,121 @@
                 const xPos = padding + (xValues[i] / maxX) * (canvas.width - padding - 20);
                 const yPos = canvas.height - 30 - ((yValues[i] - minY) / (maxY - minY)) * (canvas.height - 50);
                 points.push({x: xPos, y: yPos});
-                drawPoint(ctx, xPos, yPos, '#e74c3c', 5);
+                drawPoint(ctx, xPos, yPos, colors.measured, 5);
             }
             
-            // Connect the dots
-            drawLine(ctx, points, '#e74c3c', 2);
+            // Linear fit line (to show inadequacy with few points)
+            if (numPoints >= 3) {
+                const sumX = xValues.reduce((a, b) => a + b, 0);
+                const sumY = yValues.reduce((a, b) => a + b, 0);
+                const sumXY = xValues.reduce((sum, x, i) => sum + x * yValues[i], 0);
+                const sumX2 = xValues.reduce((sum, x) => sum + x * x, 0);
+                const n = xValues.length;
+                const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+                const intercept = (sumY - slope * sumX) / n;
+                
+                const linearFit = [];
+                const xStart = 0;
+                const xEnd = maxTime;
+                for (let t = xStart; t <= xEnd; t += 0.1) {
+                    const xPos = padding + (t / maxX) * (canvas.width - padding - 20);
+                    const yFit = slope * t + intercept;
+                    const yPos = canvas.height - 30 - ((yFit - minY) / (maxY - minY)) * (canvas.height - 50);
+                    linearFit.push({x: xPos, y: yPos});
+                }
+                drawLine(ctx, linearFit, colors.fit, 2);
+            }
             
-            // Calculate error
-            const trueValues = xValues.map(x => 50 + 30 * Math.sin(x / 2));
+            // Calculate pattern detection ability
+            const trueValues = xValues.map(t => A * Math.cos(omega * t + phi));
             const avgError = yValues.reduce((sum, y, i) => sum + Math.abs(y - trueValues[i]), 0) / numPoints;
+            
+            // Compare linear vs sinusoidal fit
+            let linearR2 = 0;
+            let sinusoidalR2 = 0;
+            
+            if (numPoints >= 3) {
+                // Linear fit R²
+                const sumX = xValues.reduce((a, b) => a + b, 0);
+                const sumY = yValues.reduce((a, b) => a + b, 0);
+                const sumXY = xValues.reduce((sum, x, i) => sum + x * yValues[i], 0);
+                const sumX2 = xValues.reduce((sum, x) => sum + x * x, 0);
+                const n = xValues.length;
+                const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+                const intercept = (sumY - slope * sumX) / n;
+                const linearPredicted = xValues.map(t => slope * t + intercept);
+                linearR2 = calculateR2(yValues, linearPredicted);
+                
+                // Sinusoidal fit R² (using true function as best possible fit)
+                sinusoidalR2 = calculateR2(yValues, trueValues);
+            }
+            
+            // Determine if oscillation is detectable
+            const range = Math.max(...yValues) - Math.min(...yValues);
+            const expectedRange = 2 * A; // Peak to peak
+            const oscillationDetectable = range > expectedRange * 0.6; // Account for noise
+            
+            const patternDetection = numPoints >= 12 && sinusoidalR2 > 0.7 && oscillationDetectable ? 'Clear SHM' : 
+                                   numPoints >= 8 && sinusoidalR2 > 0.5 && oscillationDetectable ? 'Suggests SHM' :
+                                   numPoints >= 5 && oscillationDetectable ? 'Some oscillation' :
+                                   'Pattern unclear';
             
             document.getElementById('pointsStats').innerHTML = `
                 <span class="stat-badge">Points: ${numPoints}</span>
-                <span class="stat-badge">Avg Error: ${avgError.toFixed(1)}</span>
-                <span class="stat-badge">Orange: True | Red: Measured</span>
+                <span class="stat-badge">Linear R²: ${linearR2.toFixed(3)}</span>
+                <span class="stat-badge">SHM R²: ${sinusoidalR2.toFixed(3)}</span>
+                <span class="stat-badge secondary">Pattern: ${patternDetection}</span>
             `;
         }
         
-        // Combined Visualization
+        // Combined Visualization - Projectile Energy Analysis
         function showCombined(quality) {
+            setActiveButton('combined', `combined-${quality}`);
             const ctx = clearCanvas('combinedCanvas');
             const canvas = document.getElementById('combinedCanvas');
-            drawAxes(ctx, canvas);
+            drawAxes(ctx, canvas, 'Velocity (m/s)', 'Kinetic Energy (J)');
             
+            const colors = getThemeColors();
             let numPoints, numTrials, range;
             if (quality === 'poor') {
                 numPoints = 3;
                 numTrials = 1;
                 range = 2;
             } else if (quality === 'better') {
-                numPoints = 5;
+                numPoints = 6;
                 numTrials = 3;
                 range = 5;
-            } else {
+            } else if (quality === 'best') {
                 numPoints = 10;
                 numTrials = 5;
                 range = 10;
+            } else { // excellent
+                numPoints = 15;
+                numTrials = 8;
+                range = 12;
             }
             
-            // Generate data
-            const xMin = 2;
+            // Generate velocity data
+            const xMin = 1;
             const xMax = xMin * range;
             const xValues = [];
             for (let i = 0; i < numPoints; i++) {
                 xValues.push(xMin + i * (xMax - xMin) / (numPoints - 1));
             }
             
-            // Power law relationship
-            const trueFunc = x => 20 * Math.sqrt(x);
+            // Kinetic energy relationship E = ½mv²
+            const mass = 0.5; // kg
+            const trueFunc = v => 0.5 * mass * v * v;
             
-            // Multiple trials
+            // Multiple trials with measurement uncertainty
             let allTrials = [];
             for (let t = 0; t < numTrials; t++) {
-                let trial = xValues.map(x => trueFunc(x) + (Math.random() - 0.5) * 15);
+                let trial = xValues.map(v => {
+                    const trueEnergy = trueFunc(v);
+                    const measurementError = (Math.random() - 0.5) * 0.3; // ±0.15 J
+                    const systematicError = (Math.random() - 0.5) * 0.1; // Small systematic drift
+                    return Math.max(0, trueEnergy + measurementError + systematicError);
+                });
                 allTrials.push(trial);
             }
             
@@ -536,24 +863,37 @@
             }
             drawLine(ctx, points, '#e74c3c', 2);
             
-            // Calculate quality metric
+            // Calculate comprehensive statistics
             const trueValues = xValues.map(trueFunc);
-            const error = yValues.reduce((sum, y, i) => sum + Math.abs(y - trueValues[i]), 0) / numPoints;
-            const qualityScore = Math.max(0, 100 - error).toFixed(0);
+            const avgError = yValues.reduce((sum, y, i) => sum + Math.abs(y - trueValues[i]), 0) / numPoints;
+            
+            // Quadratic fit quality (should be very good for E = ½mv²)
+            const sumV2 = xValues.reduce((sum, v) => sum + v * v, 0);
+            const sumE = yValues.reduce((sum, e) => sum + e, 0);
+            const sumV2E = xValues.reduce((sum, v, i) => sum + v * v * yValues[i], 0);
+            const sumV4 = xValues.reduce((sum, v) => sum + v * v * v * v, 0);
+            const quadA = (numPoints * sumV2E - sumV2 * sumE) / (numPoints * sumV4 - sumV2 * sumV2);
+            const quadPredicted = xValues.map(v => quadA * v * v);
+            const quadR2 = calculateR2(yValues, quadPredicted);
+            
+            const confidenceLevel = quadR2 > 0.95 ? 'Excellent' : quadR2 > 0.9 ? 'Good' : quadR2 > 0.8 ? 'Fair' : 'Poor';
             
             document.getElementById('combinedStats').innerHTML = `
                 <span class="stat-badge">Points: ${numPoints}</span>
                 <span class="stat-badge">Trials: ${numTrials}</span>
                 <span class="stat-badge">Range: ${range}×</span>
-                <span class="stat-badge">Quality: ${qualityScore}%</span>
+                <span class="stat-badge">R²: ${quadR2.toFixed(3)}</span>
+                <span class="stat-badge secondary">Confidence: ${confidenceLevel}</span>
             `;
         }
         
         // Initialize with default views
-        showTrials(1);
-        showRange('narrow');
-        showPoints(3);
-        showCombined('poor');
+        document.addEventListener('DOMContentLoaded', function() {
+            showTrials(1);
+            showRange('narrow');
+            showPoints(3);
+            showCombined('poor');
+        });
     </script>
 </body>
 </html>

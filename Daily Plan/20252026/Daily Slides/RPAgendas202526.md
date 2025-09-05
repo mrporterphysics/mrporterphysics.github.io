@@ -15,6 +15,86 @@ math: mathjax
 
 ---
 
+# 2025.09.05 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather vacation in Hawaii or Alaska?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pasta Bridge Lab
+    - Collect Data
+    - Graph Data
+    - Write Discussion and Conclusions
+2. Whiteboard Lab Results
+3. Board Meeting 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect Data and create a mathematical model_
+
+🥅 _Present Lab Results_
+
+### 📆 Upcoming
+
+- Safety Contract...still figuring out digital or physical
+
+</div>
+</div>
+
+---
+
+
+
+# Pasta Bridge Lab 🍝
+
+## Objective: 
+
+* Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
+* Develop an experiment to compare at least two types of pasta. Create a hypothesis for which will be stronger. 
+
+---
+
+# Board Meeting 
+
+<div class='columns'>
+<div>
+
+### Rules 📝
+
+1. 👂 Listen 
+2. 🗣️ Speak Clearly
+3. ❔ Ask Questions
+4. 🤔 Seek to understand
+5. 👉 Refer to your board and use **evidence**
+7. 📊 Use & connect multiple representations
+6. 🌟 Come to consensus
+
+</div>
+ 
+<div>
+
+### Goals 🎯
+
+1. Practice Presenting to Class
+    - speaking clearly
+    - listening intently
+2. Learn how to come to class consensus
+    - What does the *majority* of the data show?
+3. Create a culture of learning from each other
+
+</div>
+</div>
+
+---
+
 # 2025.09.04 **Regents Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
