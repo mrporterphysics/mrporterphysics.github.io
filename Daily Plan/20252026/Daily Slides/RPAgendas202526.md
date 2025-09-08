@@ -15,9 +15,9 @@ math: mathjax
 
 ---
 
-# 2025.09.05 **Regents Physics**
+# 2025.09.09 **Regents Physics**
 
-##### **❓ of the 📅**: Would you rather vacation in Hawaii or Alaska?
+##### **❓ of the 📅**: Question
 
 <div class ='columns'>
 
@@ -25,12 +25,10 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Pasta Bridge Lab
-    - Collect Data
-    - Graph Data
-    - Write Discussion and Conclusions
-2. Whiteboard Lab Results
-3. Board Meeting 
+1. Finish Pasta Bridge Lab
+2. Pasta Lab Board Meeting
+3. Data Collection Best Practices
+4. Dune Buggy Challenge
 
 </div>
 
@@ -38,13 +36,11 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 _Collect Data and create a mathematical model_
+🥅 _Present Data and defend lab results_
 
-🥅 _Present Lab Results_
+🥅 _Determine data collection best practices_
 
 ### 📆 Upcoming
-
-- Safety Contract...still figuring out digital or physical
 
 </div>
 </div>
@@ -108,6 +104,81 @@ math: mathjax
 # Pasta Bridge Model:
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+---
+
+# Data Collection 📊
+
+1. Go to [Data Collection Best Practices Interactive](https://www.mrporterphysics.com/AP%20Resource%20Pages/datacollection.html)
+2. Read and click through the examples
+3. Reflect on your _Coefficient of Restitution_ lab, did you follow these practices? How can you improve upon your design?
+
+---
+
+# Dune Buggy Challenge 🚗
+
+### Question:
+
+How much time does it take a Dune Buggy car to travel a specified distance?
+
+### Purpose:
+
+To collect distance-time data for a Dune Buggy Car in order to predict the time it takes a Dune Buggy to travel a specified distance
+
+### Data & Prediction
+
+- when graphing put time on the **horizontal** axis
+
+---
+
+#### Claim:
+
+I predicted that it would take my Dune Buggy car _______________ to travel the specified distance of ______________ cm.
+
+### Evidence:
+
+(Discuss values from your Data section...identifying the data that you used to determine the prediction. Use specifics in your discussion.)
+
+### Reasoning:
+
+(Explain in a few sentences why this evidence provides logical support for believing that your claim is true. And while you’re at it, you ought to mention how well...or not well...that you did.)
+
+---
+
+# 2025.09.05 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather vacation in Hawaii or Alaska?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pasta Bridge Lab
+    - Collect Data
+    - Graph Data
+    - Write Discussion and Conclusions
+2. Whiteboard Lab Results
+3. Board Meeting 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect Data and create a mathematical model_
+
+🥅 _Present Lab Results_
+
+### 📆 Upcoming
+
+- Safety Contract...still figuring out digital or physical
+
+</div>
+</div>
+
 
 ---
 

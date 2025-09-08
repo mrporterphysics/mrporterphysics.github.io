@@ -74,6 +74,19 @@ math: mathjax
 
 ---
 
+# Register for...
+
+1. _AP Classroom_ ->> AP Exam Prep & Review
+  - Website: [https://apclassroom.collegeboard.org/](https://apclassroom.collegeboard.org/)
+  - Code: **RPPQPA**
+2. _Physics Classroom_ ->> General Physics Practice & Homework
+  - Website: [http://www.physicsclassroom.com/sign-in](http://www.physicsclassroom.com/sign-in)
+  - Code: **003117a**
+  - Register with school email as username
+
+
+---
+
 # 2025.09.05 **AP Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
