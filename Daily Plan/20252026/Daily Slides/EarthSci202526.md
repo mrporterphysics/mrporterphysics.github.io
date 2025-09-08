@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2025.09.08 **Earth Science**
+
+##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Collecting Metric Olympics Data
+    - If you are waiting for the next station you should be graphing
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect **ALL** of our data_
+
+### 📆 Upcoming
+
+- Safety Contracts
+
+</div>
+</div>
+
+---
+
 # 2025.09.05 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather vacation in Hawaii or Alaska?

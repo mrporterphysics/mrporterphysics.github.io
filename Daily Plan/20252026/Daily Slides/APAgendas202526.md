@@ -15,6 +15,65 @@ math: mathjax
 
 ---
 
+# AP Physics **Do Now**
+
+1. Go to [Data Collection Best Practices Interactive](https://www.mrporterphysics.com/AP%20Resource%20Pages/datacollection.html)
+2. Read and click through the examples
+3. Reflect on your _Coefficient of Restitution_ lab, did you follow these practices? How can you improve upon your design?
+
+---
+
+# 2025.09.08 **AP Physics**
+
+##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Co. of Restitution Lab
+	1. Finish Collecting Data
+	2. Graph
+	3. Whiteboard Results
+3. $e$ Board Meeting 
+4. Finish Lab Notebook 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn quality data collection techniques_
+
+🥅 _Engage in scientific discussion_
+
+🥅 _Use graphs and data to answer questions_
+
+
+</div>
+</div>
+
+---
+
+# $e$ Board Meeting
+
+## On your whiteboard
+
+- Hypothesis and results
+  - What did you do and what did you find? How does your data support or refute your hypothesis?
+
+### Things to consider:
+- What does your graph look like? Linear, curve, etc?
+  - What does that mean? What do the graphical features like slope/intercept mean?
+- How confident are you in your data? High or low levels of uncertainty?
+
+---
+
 # 2025.09.05 **AP Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
