@@ -246,6 +246,84 @@
             color: var(--bg-primary, var(--fx-paper));
             border-color: var(--accent-primary, var(--fx-blue-light));
         }
+        
+        /* Teacher introduction styles */
+        .teacher-intro {
+            background-color: var(--bg-tertiary, var(--fx-base-100));
+            border: 2px solid var(--accent-primary, var(--fx-blue-light));
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .teacher-intro h2 {
+            color: var(--accent-primary, var(--fx-blue-light));
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .teacher-intro h3 {
+            color: var(--text-primary, var(--fx-base-950));
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .teacher-intro p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .teacher-intro ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .teacher-intro li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .learning-objectives, .how-to-use {
+            margin-top: 1.5rem;
+        }
+        
+        /* Helper text styles */
+        .helper-text {
+            background-color: var(--bg-primary, var(--fx-paper));
+            border-left: 4px solid var(--accent-secondary, var(--fx-purple-light));
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .helper-text h4 {
+            color: var(--accent-secondary, var(--fx-purple-light));
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .helper-text p {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+        
+        .helper-text .try-this {
+            background-color: var(--bg-secondary, var(--fx-base-50));
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            border: 1px solid var(--border-color, var(--fx-base-200));
+        }
+        
+        .helper-text .try-this strong {
+            color: var(--accent-secondary, var(--fx-purple-light));
+        }
     </style>
 </head>
 <body>
@@ -255,9 +333,45 @@
         <h1>📊 Physics Lab: Data Collection Best Practices</h1>
         <div class="subtitle">Interactive demonstrations showing why the 8×10 rule matters in physics experiments</div>
         
+        <div class="teacher-intro">
+            <h2>🎓 Welcome, Future Physicists!</h2>
+            <p><strong>Why does this matter for YOUR labs?</strong> You've probably wondered why I keep harping on about "collecting more data" and "using a wider range of values." This interactive tool will show you exactly why these aren't just arbitrary requirements - they're the difference between discovering real physics and getting fooled by bad data.</p>
+            
+            <div class="learning-objectives">
+                <h3>What you'll learn:</h3>
+                <ul>
+                    <li><strong>Why multiple trials matter:</strong> See how random measurement errors disappear when you average many measurements</li>
+                    <li><strong>The power of wide ranges:</strong> Discover why testing across a 10× range reveals true relationships that narrow ranges hide</li>
+                    <li><strong>Pattern recognition:</strong> Understand why 8+ data points let you distinguish between linear, quadratic, and other relationships</li>
+                    <li><strong>Real-world application:</strong> Connect these principles to actual AP Physics labs you'll encounter</li>
+                </ul>
+            </div>
+            
+            <div class="how-to-use">
+                <h3>How to use this tool:</h3>
+                <p>Click the buttons in each section to see different scenarios. Watch how the data changes and pay attention to the statistics. The <span style="color: var(--fx-blue-light); font-weight: bold;">blue dashed lines</span> show the true physics relationships, while the <span style="color: var(--fx-green-light); font-weight: bold;">green solid lines</span> show what linear fits to your data would suggest. Notice when they match and when they don't!</p>
+            </div>
+        </div>
+        
         <div class="viz-section">
             <div class="viz-card">
                 <h3>🔄 Multiple Trials Reduce Experimental Uncertainty</h3>
+                
+                <div class="helper-text">
+                    <h4>What's happening here?</h4>
+                    <p>This simulates measuring spring force vs. extension (Hooke's Law: F = kx). Every time you measure force with a spring scale and extension with a ruler, you introduce small random errors due to:</p>
+                    <ul>
+                        <li>Difficulty reading the exact scale markings</li>
+                        <li>Tiny vibrations and setup variations</li>
+                        <li>Parallax error when reading instruments</li>
+                    </ul>
+                    <p>The <strong>gray dots</strong> show individual measurements with realistic experimental scatter. The <strong>red dots</strong> show averages across multiple trials, and the <strong>blue dashed line</strong> shows the true F = kx relationship.</p>
+                    
+                    <div class="try-this">
+                        <strong>Try this:</strong> Start with "1 Trial" and notice how far your single measurements (gray dots) can be from the true line. Then click "5 Trials" and "20 Trials." Watch how the red averaged points get closer to the blue true line, and how the error bars (showing ±1 standard deviation) get smaller. This is why we repeat measurements!
+                    </div>
+                </div>
+                
                 <canvas id="trialsCanvas"></canvas>
                 <div class="controls">
                     <button onclick="showTrials(1)" id="trials-1">1 Trial</button>
@@ -276,6 +390,18 @@
         <div class="viz-section">
             <div class="viz-card">
                 <h3>📏 Wide Data Range Reveals True Relationships (8×10 Rule)</h3>
+                
+                <div class="helper-text">
+                    <h4>Why does the "10×" part of the 8×10 rule matter?</h4>
+                    <p>This shows a pendulum experiment where you're measuring period (T) vs. length (L). Physics tells us T ∝ √L, but if you only test a narrow range of lengths, the relationship can appear linear!</p>
+                    <p>The <strong>purple dashed curve</strong> shows the true square-root relationship. The <strong>green solid line</strong> shows what happens when you fit a straight line to your limited data.</p>
+                    <p><strong>Key insight:</strong> When your largest measurement is only 2-3 times bigger than your smallest, you're seeing such a small piece of the curve that it looks straight. But when you go 10× or more, the curve becomes obvious!</p>
+                    
+                    <div class="try-this">
+                        <strong>Try this:</strong> Start with "Narrow Range" and see how the green line seems to fit well - you might think T ∝ L (linear). Then try "Wide Range" - suddenly the green line is clearly wrong and you can see the true curve! This is why we always try to make our largest value at least 10× our smallest value when equipment allows.
+                    </div>
+                </div>
+                
                 <canvas id="rangeCanvas"></canvas>
                 <div class="controls">
                     <button onclick="showRange('narrow')" id="range-narrow">Narrow Range (2×)</button>
@@ -293,6 +419,18 @@
         <div class="viz-section">
             <div class="viz-card">
                 <h3>📍 Sufficient Data Points Enable Pattern Recognition</h3>
+                
+                <div class="helper-text">
+                    <h4>Why does the "8+" part of the 8×10 rule matter?</h4>
+                    <p>This simulates tracking the position of an object in simple harmonic motion (like a mass on a spring). The true motion follows x(t) = A cos(ωt + φ) - a perfect sine wave.</p>
+                    <p>With only 3-5 data points, you might think the motion is linear or just random noise. But physics isn't linear here - it's oscillatory! You need enough points to see the pattern.</p>
+                    <p>The <strong>blue dashed curve</strong> shows the true sinusoidal motion. The <strong>green line</strong> shows what happens when you try to fit a straight line to insufficient data.</p>
+                    
+                    <div class="try-this">
+                        <strong>Try this:</strong> Start with "3 Points" - does this look like harmonic motion to you? Probably looks random or maybe linear. Now try "8 Points" and "12 Points." Suddenly the oscillating pattern becomes obvious! This is why we need at least 8 data points to reliably identify patterns in physics experiments.
+                    </div>
+                </div>
+                
                 <canvas id="pointsCanvas"></canvas>
                 <div class="controls">
                     <button onclick="showPoints(3)" id="points-3">3 Points</button>
@@ -311,6 +449,22 @@
         <div class="viz-section">
             <div class="viz-card">
                 <h3>✨ Combined Best Practices in Action</h3>
+                
+                <div class="helper-text">
+                    <h4>Putting it all together: The 8×10 rule in action!</h4>
+                    <p>This final example shows kinetic energy vs. velocity (E = ½mv²) - a quadratic relationship you'll encounter in mechanics labs. Watch how combining all three best practices reveals the true physics:</p>
+                    <ul>
+                        <li><strong>Multiple trials:</strong> Reduces random measurement errors</li>
+                        <li><strong>Wide range (10×):</strong> Shows the curve isn't linear</li>
+                        <li><strong>Sufficient points (8+):</strong> Lets you distinguish quadratic from linear relationships</li>
+                    </ul>
+                    <p>The <strong>gray dots</strong> are individual measurements, <strong>red line</strong> connects the averaged data points, and <strong>blue dashed curve</strong> shows the true E ∝ v² relationship.</p>
+                    
+                    <div class="try-this">
+                        <strong>Try this:</strong> Start with "Poor Practice" - with only 3 points across a narrow range and single trials, you might think energy is linear in velocity! Progress through "Better" and "Best Practice" to see how proper data collection reveals the true quadratic relationship. Notice how the R² value (goodness of fit) improves dramatically!
+                    </div>
+                </div>
+                
                 <canvas id="combinedCanvas"></canvas>
                 <div class="controls">
                     <button onclick="showCombined('poor')" id="combined-poor">Poor Practice</button>
