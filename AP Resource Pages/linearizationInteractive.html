@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linearization Techniques - AP Physics Interactive Guide</title>
+    <link rel="stylesheet" href="../css/flexoki-theme.css">
+    <style>
+        /* Flexoki Theme Variables */
+        :root {
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+            --fx-red-light: #D14D41;
+            --fx-orange-light: #DA702C;
+            --fx-yellow-light: #D0A215;
+            --fx-green-light: #879A39;
+            --fx-cyan-light: #3AA99F;
+            --fx-blue-light: #4385BE;
+            --fx-purple-light: #8B7EC8;
+            --fx-magenta-light: #CE5D97;
+        }
+        
+        [data-theme="dark"] {
+            --fx-red-dark: #AF3029;
+            --fx-orange-dark: #BC5215;
+            --fx-yellow-dark: #AD8301;
+            --fx-green-dark: #66800B;
+            --fx-cyan-dark: #24837B;
+            --fx-blue-dark: #205EA6;
+            --fx-purple-dark: #5E409D;
+            --fx-magenta-dark: #A02F6F;
+        }
+
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary, var(--fx-paper));
+            color: var(--text-primary, var(--fx-base-950));
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary, var(--fx-base-50));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px var(--shadow, rgba(28, 27, 26, 0.1));
+        }
+        h1 {
+            font-family: 'Inconsolata', 'SF Mono', monospace;
+            color: var(--text-primary, var(--fx-base-950));
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary, var(--fx-base-700));
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Introduction Section */
+        .intro-section {
+            background-color: var(--bg-tertiary, var(--fx-base-100));
+            border: 2px solid var(--accent-primary, var(--fx-blue-light));
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        .intro-section h2 {
+            color: var(--accent-primary, var(--fx-blue-light));
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .intro-section p {
+            color: var(--text-primary, var(--fx-base-950));
+            line-height: 1.7;
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+        .intro-section ul {
+            color: var(--text-primary, var(--fx-base-950));
+            line-height: 1.7;
+            margin: 1rem 0;
+            margin-left: 1.5rem;
+        }
+        .intro-section li {
+            margin: 0.5rem 0;
+        }
+        .intro-section strong {
+            color: var(--accent-primary, var(--fx-blue-light));
+        }
+        .highlight-box {
+            background-color: var(--bg-primary, var(--fx-paper));
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-secondary, var(--fx-purple-light));
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+        
+        /* Tab Navigation */
+        .tab-container {
+            margin-bottom: 2rem;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            background-color: var(--bg-tertiary, var(--fx-base-100));
+            color: var(--text-primary, var(--fx-base-950));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        .tab-btn:hover {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            border-color: var(--accent-primary, var(--fx-blue-light));
+        }
+        .tab-btn.active {
+            background-color: var(--accent-secondary, var(--fx-purple-light));
+            color: var(--bg-primary, var(--fx-paper));
+            border-color: var(--accent-secondary, var(--fx-purple-light));
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Function Content Sections */
+        .function-content {
+            background-color: var(--bg-tertiary, var(--fx-base-100));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .function-content h3 {
+            font-family: 'Inconsolata', monospace;
+            color: var(--text-primary, var(--fx-base-950));
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color, var(--fx-base-200));
+            padding-bottom: 0.5rem;
+        }
+        .function-content h4 {
+            color: var(--accent-primary, var(--fx-blue-light));
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .function-content p {
+            line-height: 1.6;
+            color: var(--text-primary, var(--fx-base-950));
+            margin: 0.75rem 0;
+        }
+        .function-content ul {
+            line-height: 1.6;
+            color: var(--text-primary, var(--fx-base-950));
+            margin: 0.75rem 0;
+            margin-left: 1.5rem;
+        }
+        .function-content li {
+            margin: 0.5rem 0;
+        }
+        .function-content em {
+            color: var(--accent-secondary, var(--fx-purple-light));
+            font-style: normal;
+            font-weight: bold;
+        }
+        .lab-example {
+            background-color: var(--bg-primary, var(--fx-paper));
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--accent-primary, var(--fx-blue-light));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+        }
+        .lab-example h4 {
+            color: var(--accent-primary, var(--fx-blue-light));
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .tip-box {
+            background-color: var(--bg-secondary, var(--fx-base-50));
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--fx-yellow-light);
+            margin: 1rem 0;
+            border: 1px solid var(--border-color, var(--fx-base-200));
+        }
+        .tip-box strong {
+            color: var(--fx-yellow-dark, var(--fx-yellow-light));
+        }
+        
+        /* Interactive Visualization */
+        .function-selector {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .function-btn {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            border: 1px solid var(--accent-primary, var(--fx-blue-light));
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        .function-btn:hover {
+            background-color: var(--accent-hover, var(--fx-blue-dark));
+            border-color: var(--accent-hover, var(--fx-blue-dark));
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px var(--shadow, rgba(28, 27, 26, 0.1));
+        }
+        .function-btn.active {
+            background-color: var(--accent-secondary, var(--fx-purple-light));
+            border-color: var(--accent-secondary, var(--fx-purple-light));
+        }
+        .viz-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 768px) {
+            .viz-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .viz-card {
+            background-color: var(--bg-tertiary, var(--fx-base-100));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .viz-card:hover {
+            border-color: var(--border-hover, var(--fx-base-300));
+            box-shadow: 0 4px 8px var(--shadow-hover, rgba(28, 27, 26, 0.15));
+        }
+        .viz-card h3 {
+            font-family: 'Inconsolata', monospace;
+            color: var(--text-primary, var(--fx-base-950));
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        canvas {
+            width: 100%;
+            height: 300px;
+            border-radius: 6px;
+            background-color: var(--bg-primary, var(--fx-paper));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .equation-box {
+            background-color: var(--bg-primary, var(--fx-paper));
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color, var(--fx-base-200));
+        }
+        .equation {
+            font-size: 1.1rem;
+            color: var(--text-primary, var(--fx-base-950));
+            text-align: center;
+            margin: 0.75rem 0;
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+        }
+        .original-eq {
+            color: var(--fx-red-light);
+        }
+        .linearized-eq {
+            color: var(--fx-green-light);
+        }
+        .transform-eq {
+            color: var(--fx-cyan-light);
+            font-size: 1rem;
+        }
+        .stats-box {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .stat-badge {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: inherit;
+        }
+        .controls {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .control-btn {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            border: 1px solid var(--accent-primary, var(--fx-blue-light));
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        .control-btn:hover {
+            background-color: var(--accent-hover, var(--fx-blue-dark));
+            border-color: var(--accent-hover, var(--fx-blue-dark));
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px var(--shadow, rgba(28, 27, 26, 0.1));
+        }
+        .legend {
+            background-color: var(--bg-primary, var(--fx-paper));
+            color: var(--text-secondary, var(--fx-base-700));
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .axis-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary, var(--fx-base-700));
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        
+        /* Checklist Section */
+        .checklist-section {
+            background-color: var(--bg-secondary, var(--fx-base-50));
+            border-left: 4px solid var(--fx-green-light);
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .checklist-section h2 {
+            color: var(--fx-green-light);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .checklist-section ol {
+            line-height: 1.6;
+            color: var(--text-primary, var(--fx-base-950));
+            margin-left: 1.5rem;
+        }
+        .checklist-section li {
+            margin: 0.75rem 0;
+        }
+        
+        /* Pitfalls Section */
+        .pitfalls-section {
+            background-color: var(--bg-secondary, var(--fx-base-50));
+            border-left: 4px solid var(--fx-red-light);
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .pitfalls-section h2 {
+            color: var(--fx-red-light);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .pitfalls-section ol {
+            line-height: 1.6;
+            color: var(--text-primary, var(--fx-base-950));
+            margin-left: 1.5rem;
+        }
+        .pitfalls-section li {
+            margin: 0.75rem 0;
+        }
+        
+        /* Bottom Line */
+        .bottom-line {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--fx-paper);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .bottom-line h2 {
+            margin: 0 0 1rem 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--fx-paper);
+        }
+        .bottom-line p {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 0.5rem 0;
+            color: var(--fx-paper);
+        }
+        .bottom-line em {
+            color: var(--fx-paper);
+            font-style: italic;
+        }
+        .bottom-line strong {
+            color: var(--fx-paper);
+            font-weight: 700;
+        }
+        
+        /* Dark theme support */
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: var(--fx-blue-dark);
+            --accent-hover: var(--fx-blue-light);
+            --accent-secondary: var(--fx-purple-dark);
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+        
+        /* Theme toggle button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--bg-tertiary, var(--fx-base-100));
+            border: 1px solid var(--border-color, var(--fx-base-200));
+            color: var(--text-primary, var(--fx-base-950));
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--accent-primary, var(--fx-blue-light));
+            color: var(--bg-primary, var(--fx-paper));
+            border-color: var(--accent-primary, var(--fx-blue-light));
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+    
+    <div class="container">
+        <h1>📈 Linearization in AP Physics: Your Guide to Taming Curves</h1>
+        <div class="subtitle">Interactive demonstrations and comprehensive guide for mastering linearization</div>
+        
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <h2>Introduction: Why Should You Care About Linearization?</h2>
+            <p>Hey there, future physicists!</p>
+            <p>Picture this: You're in the lab, you've collected beautiful data from your experiment, and you plot it... only to get a curve. How do you find the acceleration due to gravity from a curved line? How do you extract the spring constant from a parabola? This is where linearization becomes your superpower.</p>
+            <div class="highlight-box">
+                <strong>Linearization is the art of transforming curved relationships into straight lines.</strong> Why do we love straight lines so much? Three huge reasons:
+                <ul>
+                    <li><strong>Finding constants is easy</strong> - The slope of a straight line directly gives you physical constants (like g, k, or μ)</li>
+                    <li><strong>Checking your model</strong> - A straight line confirms you have the right equation (high R² value = good fit!)</li>
+                    <li><strong>Making predictions</strong> - It's much easier to extrapolate from a straight line than a curve</li>
+                </ul>
+            </div>
+            <p>Think of linearization as putting on special glasses that let you see the hidden linear relationship in your data. Once you master this technique, you'll be able to extract meaningful physics from any experiment!</p>
+        </div>
+        
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="showTab('interactive')">🎮 Interactive Demo</button>
+                <button class="tab-btn" onclick="showTab('quadratic')">📐 Quadratic</button>
+                <button class="tab-btn" onclick="showTab('sqrt')">√ Square Root</button>
+                <button class="tab-btn" onclick="showTab('inverse')">1/x Inverse</button>
+                <button class="tab-btn" onclick="showTab('inverse2')">1/x² Inverse Square</button>
+                <button class="tab-btn" onclick="showTab('checklist')">✅ Checklist & Tips</button>
+            </div>
+            
+            <!-- Interactive Demo Tab -->
+            <div id="interactive" class="tab-content active">
+                <div class="function-selector">
+                    <button class="function-btn active" onclick="selectFunction('quadratic')">
+                        Quadratic: y = ax²
+                    </button>
+                    <button class="function-btn" onclick="selectFunction('sqrt')">
+                        Square Root: y = a√x
+                    </button>
+                    <button class="function-btn" onclick="selectFunction('inverse')">
+                        Inverse: y = a/x
+                    </button>
+                    <button class="function-btn" onclick="selectFunction('inverse2')">
+                        Inverse Square: y = a/x²
+                    </button>
+                </div>
+                
+                <div class="viz-container">
+                    <div class="viz-card">
+                        <h3>📊 Original Data</h3>
+                        <canvas id="originalCanvas"></canvas>
+                        <div class="axis-label" id="originalAxisLabel">x vs y</div>
+                        <div class="equation-box">
+                            <div class="equation original-eq" id="originalEquation">y = ax²</div>
+                        </div>
+                        <div class="legend">
+                            Non-linear relationship with experimental data points (blue) and best-fit curve (red)
+                        </div>
+                    </div>
+                    
+                    <div class="viz-card">
+                        <h3>✨ Linearized Data</h3>
+                        <canvas id="linearizedCanvas"></canvas>
+                        <div class="axis-label" id="linearizedAxisLabel">x² vs y</div>
+                        <div class="equation-box">
+                            <div class="equation transform-eq" id="transformEquation">Transform: x → x²</div>
+                            <div class="equation linearized-eq" id="linearizedEquation">y = ax² becomes y = aX</div>
+                        </div>
+                        <div class="legend">
+                            Same data after linearization transformation showing linear relationship
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-box" id="statsBox">
+                    <span class="stat-badge">R² (original): <span id="r2Original">0.985</span></span>
+                    <span class="stat-badge">R² (linearized): <span id="r2Linear">0.998</span></span>
+                    <span class="stat-badge">Slope: <span id="slope">2.5</span></span>
+                    <span class="stat-badge">Physics Constant: <span id="constant">2.5</span> <span id="units">m/s²</span></span>
+                </div>
+                
+                <div class="controls">
+                    <button class="control-btn" onclick="addNoise()">Add More Noise</button>
+                    <button class="control-btn" onclick="resetNoise()">Reset Noise</button>
+                    <button class="control-btn" onclick="showMorePoints()">More Data Points</button>
+                    <button class="control-btn" onclick="showFewerPoints()">Fewer Data Points</button>
+                </div>
+            </div>
+            
+            <!-- Quadratic Tab -->
+            <div id="quadratic" class="tab-content">
+                <div class="function-content">
+                    <h3>Quadratic Relationships: y = ax²</h3>
+                    <p><strong>When you'll see this:</strong> Anything involving squared velocities, squared displacements, or squared time with constant acceleration.</p>
+                    <p><strong>The transformation:</strong> Plot y vs x² (square your independent variable)</p>
+                    <p><strong>What the slope tells you:</strong> The coefficient 'a' in your relationship</p>
+                    
+                    <div class="lab-example">
+                        <h4>Real Lab Example: Finding Acceleration from Position-Time Data</h4>
+                        <p>You drop a ball and measure its position at different times. Your raw data shows a curve because d = ½at².</p>
+                        <ul>
+                            <li><strong>What you measure:</strong> distance (d) at various times (t)</li>
+                            <li><strong>What you plot:</strong> d on the y-axis vs t² on the x-axis</li>
+                            <li><strong>What you get:</strong> A straight line with slope = ½a</li>
+                            <li><strong>Extract the physics:</strong> Multiply the slope by 2 to get acceleration!</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Pro tip:</strong> If you get g = 9.8 m/s² from your slope, you know you nailed it!
+                        </div>
+                    </div>
+                    
+                    <div class="lab-example">
+                        <h4>Real Lab Example: Kinetic Energy vs Velocity</h4>
+                        <p>You use photogates to measure the kinetic energy of a cart at different velocities.</p>
+                        <ul>
+                            <li><strong>What you measure:</strong> KE at various velocities v</li>
+                            <li><strong>What you plot:</strong> KE vs v²</li>
+                            <li><strong>What you get:</strong> Straight line with slope = ½m</li>
+                            <li><strong>Extract the physics:</strong> The slope directly gives you half the mass of your cart</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Common mistake:</strong> Forgetting to square the velocity before plotting. Your curve won't straighten out if you plot KE vs v!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Square Root Tab -->
+            <div id="sqrt" class="tab-content">
+                <div class="function-content">
+                    <h3>Square Root Relationships: y = a√x</h3>
+                    <p><strong>When you'll see this:</strong> Pendulums, wave phenomena, anything with a square root in the theoretical equation.</p>
+                    <p><strong>The transformation:</strong> Plot y² vs x (square your dependent variable)</p>
+                    <p><strong>What the slope tells you:</strong> The coefficient 'a' squared (a²)</p>
+                    
+                    <div class="lab-example">
+                        <h4>Real Lab Example: Pendulum Period vs Length</h4>
+                        <p>You're testing how a pendulum's period depends on its length. Theory says T = 2π√(L/g).</p>
+                        <ul>
+                            <li><strong>What you measure:</strong> Period T for different lengths L</li>
+                            <li><strong>What you plot:</strong> T² on the y-axis vs L on the x-axis</li>
+                            <li><strong>What you get:</strong> Straight line with slope = 4π²/g</li>
+                            <li><strong>Extract the physics:</strong> Solve for g = 4π²/slope</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Reality check:</strong> If your calculated g is way off from 9.8 m/s², check if you measured the length to the center of mass of the bob!
+                        </div>
+                    </div>
+                    
+                    <div class="lab-example">
+                        <h4>Real Lab Example: Standing Waves on a String</h4>
+                        <p>You're finding how wave speed depends on tension: v = √(T/μ).</p>
+                        <ul>
+                            <li><strong>What you measure:</strong> Wave speed v at different tensions T</li>
+                            <li><strong>What you plot:</strong> v² vs T</li>
+                            <li><strong>What you get:</strong> Straight line with slope = 1/μ</li>
+                            <li><strong>Extract the physics:</strong> The inverse of the slope gives you the linear mass density!</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Lab wisdom:</strong> Make sure your string tension is actually what you think it is - hanging masses can swing and throw off your measurements.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Inverse Tab -->
+            <div id="inverse" class="tab-content">
+                <div class="function-content">
+                    <h3>Inverse Relationships: y = a/x</h3>
+                    <p><strong>When you'll see this:</strong> Lots of places! Gas laws, circuits, optics, anywhere one quantity decreases as another increases.</p>
+                    <p><strong>The transformation:</strong> Plot y vs 1/x (take the reciprocal of your independent variable)</p>
+                    <p><strong>What the slope tells you:</strong> The coefficient 'a' directly</p>
+                    
+                    <div class="lab-example">
+                        <h4>Real Lab Example: Boyle's Law (Pressure vs Volume)</h4>
+                        <p>You compress a syringe and measure pressure at different volumes: P = nRT/V.</p>
+                        <ul>
+                            <li><strong>What you measure:</strong> Pressure P at different volumes V</li>
+                            <li><strong>What you plot:</strong> P on the y-axis vs 1/V on the x-axis</li>
+                            <li><strong>What you get:</strong> Straight line with slope = nRT</li>
+                            <li><strong>Extract the physics:</strong> If you know n and T, you can calculate R!</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Watch out:</strong> Temperature must stay constant! If the gas heats up during compression, your line won't be straight.
+                        </div>
+                    </div>
+                    
+                    <div class="lab-example">
+                        <h4>Real Lab Example: Focal Length from Lens Equation</h4>
+                        <p>You're finding a lens's focal length using: 1/f = 1/do + 1/di.</p>
+                        <ul>
+                            <li><strong>What you measure:</strong> Image distance di for various object distances do</li>
+                            <li><strong>What you plot:</strong> 1/di vs 1/do</li>
+                            <li><strong>What you get:</strong> Straight line with slope = -1 and y-intercept = 1/f</li>
+                            <li><strong>Extract the physics:</strong> The y-intercept directly gives you 1/f</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Experimental hint:</strong> Use distances much larger than the focal length for best results - this gives you more data points to work with.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Inverse Square Tab -->
+            <div id="inverse2" class="tab-content">
+                <div class="function-content">
+                    <h3>Inverse Square Relationships: y = a/x²</h3>
+                    <p><strong>When you'll see this:</strong> The famous inverse square laws - gravity, electric fields, light intensity, sound intensity.</p>
+                    <p><strong>The transformation:</strong> Plot y vs 1/x² (reciprocal of the square)</p>
+                    <p><strong>What the slope tells you:</strong> The coefficient 'a' (often containing fundamental constants!)</p>
+                    
+                    <div class="lab-example">
+                        <h4>Real Lab Example: Light Intensity vs Distance</h4>
+                        <p>You measure light intensity at different distances from a bulb: I = P/(4πr²).</p>
+                        <ul>
+                            <li><strong>What you measure:</strong> Intensity I at various distances r</li>
+                            <li><strong>What you plot:</strong> I vs 1/r²</li>
+                            <li><strong>What you get:</strong> Straight line with slope = P/(4π)</li>
+                            <li><strong>Extract the physics:</strong> Calculate the bulb's power output from the slope!</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Critical detail:</strong> Measure from the filament, not the bulb's surface. A few centimeters off throws everything off at close distances.
+                        </div>
+                    </div>
+                    
+                    <div class="lab-example">
+                        <h4>Real Lab Example: Gravitational or Electric Force</h4>
+                        <p>Testing Coulomb's law with charged spheres: F = kq₁q₂/r².</p>
+                        <ul>
+                            <li><strong>What you measure:</strong> Force F at different separations r</li>
+                            <li><strong>What you plot:</strong> F vs 1/r²</li>
+                            <li><strong>What you get:</strong> Straight line with slope = kq₁q₂</li>
+                            <li><strong>Extract the physics:</strong> If you know the charges, you can find Coulomb's constant k!</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Reality in the lab:</strong> Static electricity experiments are humidity-dependent. Dry days give better results!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Checklist Tab -->
+            <div id="checklist" class="tab-content">
+                <div class="checklist-section">
+                    <h2>✅ Your Linearization Checklist</h2>
+                    <p>Before you start any lab:</p>
+                    <ol>
+                        <li><strong>Identify the theoretical relationship</strong> - What equation are you testing?</li>
+                        <li><strong>Decide what to transform</strong> - Which variable needs to be squared, inverted, etc.?</li>
+                        <li><strong>Label your axes correctly</strong> - If you're plotting t², your axis label is "t² (s²)" not "t (s)"</li>
+                        <li><strong>Include units in your slope</strong> - The slope has units! These tell you if you did it right</li>
+                        <li><strong>Check your R² value</strong> - Should be > 0.95 for good data. If not, you might have the wrong model</li>
+                        <li><strong>Extract the physical meaning</strong> - What constant did you just measure?</li>
+                    </ol>
+                </div>
+                
+                <div class="pitfalls-section">
+                    <h2>⚠️ Common Pitfalls to Avoid</h2>
+                    <ol>
+                        <li><strong>Transforming the wrong variable</strong> - If the curve gets worse, you transformed the wrong one!</li>
+                        <li><strong>Forgetting to transform error bars</strong> - If x becomes x², the uncertainty changes too</li>
+                        <li><strong>Including the origin when you shouldn't</strong> - Not all relationships pass through (0,0)</li>
+                        <li><strong>Using too narrow a range</strong> - Remember the 8×10 rule: your largest value should be ~10× your smallest</li>
+                        <li><strong>Assuming linearity proves your model</strong> - Other relationships might also give straight lines after transformation</li>
+                    </ol>
+                </div>
+                
+                <div class="bottom-line">
+                    <h2>🎯 The Bottom Line</h2>
+                    <p>Linearization isn't just a math trick - it's how real physicists extract meaning from data. Every time you transform a curve into a line and find that slope, you're measuring a fundamental property of the universe.</p>
+                    <p><strong>Nature loves power laws and inverse relationships, but humans love straight lines. Linearization is the bridge between what nature gives us and what we can easily analyze.</strong></p>
+                    <p><em>When you see a perfect straight line appear after transformation, with all your data points lined up and an R² of 0.999, you'll feel like you've just decoded a secret message from the universe. And in a way, you have!</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Theme management
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.querySelector('.theme-toggle');
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            
+            if (isDark) {
+                body.removeAttribute('data-theme');
+                button.textContent = '🌙 Dark';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                button.textContent = '☀️ Light';
+            }
+        }
+
+        let currentFunction = 'quadratic';
+        let noiseLevel = 0.1;
+        let numPoints = 10;
+        let data = [];
+        
+        function showTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+        
+        function generateData() {
+            data = [];
+            const a = 2.5; // Coefficient
+            
+            for (let i = 0; i < numPoints; i++) {
+                let x, y;
+                
+                switch(currentFunction) {
+                    case 'quadratic':
+                        x = 1 + i * 0.8;
+                        y = a * x * x * (1 + (Math.random() - 0.5) * noiseLevel);
+                        break;
+                    case 'sqrt':
+                        x = 1 + i * 2;
+                        y = a * Math.sqrt(x) * (1 + (Math.random() - 0.5) * noiseLevel);
+                        break;
+                    case 'inverse':
+                        x = 1 + i * 0.5;
+                        y = a / x * (1 + (Math.random() - 0.5) * noiseLevel);
+                        break;
+                    case 'inverse2':
+                        x = 1 + i * 0.3;
+                        y = a / (x * x) * (1 + (Math.random() - 0.5) * noiseLevel);
+                        break;
+                }
+                
+                data.push({x: x, y: y});
+            }
+        }
+        
+        function getTransformedData() {
+            return data.map(point => {
+                let newX, newY;
+                
+                switch(currentFunction) {
+                    case 'quadratic':
+                        newX = point.x * point.x;
+                        newY = point.y;
+                        break;
+                    case 'sqrt':
+                        newX = point.x;
+                        newY = point.y * point.y;
+                        break;
+                    case 'inverse':
+                        newX = 1 / point.x;
+                        newY = point.y;
+                        break;
+                    case 'inverse2':
+                        newX = 1 / (point.x * point.x);
+                        newY = point.y;
+                        break;
+                }
+                
+                return {x: newX, y: newY};
+            });
+        }
+        
+        function clearCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            return ctx;
+        }
+        
+        function drawAxes(ctx, canvas, xLabel, yLabel) {
+            const isDark = document.body.getAttribute('data-theme') === 'dark';
+            const gridColor = isDark ? '#403E39' : '#E6E2CC';
+            const axisColor = isDark ? '#6F6144' : '#847759';
+            const textColor = isDark ? '#F2F0E5' : '#343331';
+            
+            ctx.strokeStyle = axisColor;
+            ctx.lineWidth = 2;
+            
+            // Draw axes
+            const padding = 50;
+            ctx.beginPath();
+            ctx.moveTo(padding, canvas.height - padding);
+            ctx.lineTo(canvas.width - 20, canvas.height - padding);
+            ctx.moveTo(padding, canvas.height - padding);
+            ctx.lineTo(padding, 20);
+            ctx.stroke();
+            
+            // Add axis labels
+            ctx.fillStyle = textColor;
+            ctx.font = '12px Fira Code';
+            ctx.textAlign = 'center';
+            ctx.fillText(xLabel, canvas.width / 2, canvas.height - 10);
+            
+            ctx.save();
+            ctx.translate(15, canvas.height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText(yLabel, 0, 0);
+            ctx.restore();
+        }
+        
+        function getThemeColors() {
+            const isDark = document.body.getAttribute('data-theme') === 'dark';
+            return {
+                points: isDark ? '#4385BE' : '#205EA6',
+                line: isDark ? '#D14D41' : '#AF3029',
+                curve: isDark ? '#D14D41' : '#AF3029'
+            };
+        }
+
+        function drawPoints(ctx, points, color = null) {
+            if (!color) {
+                const colors = getThemeColors();
+                color = colors.points;
+            }
+            ctx.fillStyle = color;
+            points.forEach(point => {
+                ctx.beginPath();
+                ctx.arc(point.x, point.y, 5, 0, 2 * Math.PI);
+                ctx.fill();
+            });
+        }
+        
+        function drawLine(ctx, points, color = null, width = 2) {
+            if (points.length < 2) return;
+            
+            if (!color) {
+                const colors = getThemeColors();
+                color = colors.line;
+            }
+            
+            ctx.strokeStyle = color;
+            ctx.lineWidth = width;
+            ctx.beginPath();
+            ctx.moveTo(points[0].x, points[0].y);
+            
+            for (let i = 1; i < points.length; i++) {
+                ctx.lineTo(points[i].x, points[i].y);
+            }
+            ctx.stroke();
+        }
+        
+        function drawCurve(ctx, func, xMin, xMax, yMin, yMax, canvasWidth, canvasHeight, color = null) {
+            if (!color) {
+                const colors = getThemeColors();
+                color = colors.curve;
+            }
+            
+            const padding = 50;
+            const points = [];
+            
+            for (let x = xMin; x <= xMax; x += (xMax - xMin) / 100) {
+                const y = func(x);
+                const xPos = padding + ((x - xMin) / (xMax - xMin)) * (canvasWidth - padding - 20);
+                const yPos = canvasHeight - padding - ((y - yMin) / (yMax - yMin)) * (canvasHeight - padding - 20);
+                points.push({x: xPos, y: yPos});
+            }
+            
+            drawLine(ctx, points, color, 3);
+        }
+        
+        function calculateR2(actual, predicted) {
+            const mean = actual.reduce((a, b) => a + b, 0) / actual.length;
+            const ssTotal = actual.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0);
+            const ssRes = actual.reduce((sum, val, i) => sum + Math.pow(val - predicted[i], 2), 0);
+            return 1 - (ssRes / ssTotal);
+        }
+        
+        function plotOriginal() {
+            const ctx = clearCanvas('originalCanvas');
+            const canvas = document.getElementById('originalCanvas');
+            
+            let xLabel, yLabel;
+            switch(currentFunction) {
+                case 'quadratic': xLabel = 'x'; yLabel = 'y'; break;
+                case 'sqrt': xLabel = 'x'; yLabel = 'y'; break;
+                case 'inverse': xLabel = 'x'; yLabel = 'y'; break;
+                case 'inverse2': xLabel = 'x'; yLabel = 'y'; break;
+            }
+            
+            drawAxes(ctx, canvas, xLabel, yLabel);
+            
+            if (data.length === 0) return;
+            
+            const padding = 50;
+            const xValues = data.map(d => d.x);
+            const yValues = data.map(d => d.y);
+            const xMin = Math.min(...xValues) * 0.9;
+            const xMax = Math.max(...xValues) * 1.1;
+            const yMin = Math.min(...yValues) * 0.9;
+            const yMax = Math.max(...yValues) * 1.1;
+            
+            // Draw theoretical curve
+            let func;
+            const a = 2.5;
+            switch(currentFunction) {
+                case 'quadratic': func = x => a * x * x; break;
+                case 'sqrt': func = x => a * Math.sqrt(x); break;
+                case 'inverse': func = x => a / x; break;
+                case 'inverse2': func = x => a / (x * x); break;
+            }
+            
+            drawCurve(ctx, func, xMin, xMax, yMin, yMax, canvas.width, canvas.height);
+            
+            // Draw data points
+            const points = data.map(d => ({
+                x: padding + ((d.x - xMin) / (xMax - xMin)) * (canvas.width - padding - 20),
+                y: canvas.height - padding - ((d.y - yMin) / (yMax - yMin)) * (canvas.height - padding - 20)
+            }));
+            
+            drawPoints(ctx, points);
+            
+            // Calculate R²
+            const predicted = xValues.map(func);
+            const r2 = calculateR2(yValues, predicted);
+            document.getElementById('r2Original').textContent = r2.toFixed(3);
+        }
+        
+        function plotLinearized() {
+            const ctx = clearCanvas('linearizedCanvas');
+            const canvas = document.getElementById('linearizedCanvas');
+            
+            let xLabel, yLabel;
+            switch(currentFunction) {
+                case 'quadratic': xLabel = 'x²'; yLabel = 'y'; break;
+                case 'sqrt': xLabel = 'x'; yLabel = 'y²'; break;
+                case 'inverse': xLabel = '1/x'; yLabel = 'y'; break;
+                case 'inverse2': xLabel = '1/x²'; yLabel = 'y'; break;
+            }
+            
+            drawAxes(ctx, canvas, xLabel, yLabel);
+            
+            if (data.length === 0) return;
+            
+            const transformedData = getTransformedData();
+            const padding = 50;
+            const xValues = transformedData.map(d => d.x);
+            const yValues = transformedData.map(d => d.y);
+            const xMin = Math.min(...xValues) * 0.9;
+            const xMax = Math.max(...xValues) * 1.1;
+            const yMin = Math.min(...yValues) * 0.9;
+            const yMax = Math.max(...yValues) * 1.1;
+            
+            // Calculate linear fit
+            const n = xValues.length;
+            const sumX = xValues.reduce((a, b) => a + b, 0);
+            const sumY = yValues.reduce((a, b) => a + b, 0);
+            const sumXY = xValues.reduce((sum, x, i) => sum + x * yValues[i], 0);
+            const sumX2 = xValues.reduce((sum, x) => sum + x * x, 0);
+            
+            const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+            const intercept = (sumY - slope * sumX) / n;
+            
+            // Draw best-fit line
+            const linePoints = [
+                {
+                    x: padding,
+                    y: canvas.height - padding - ((slope * xMin + intercept - yMin) / (yMax - yMin)) * (canvas.height - padding - 20)
+                },
+                {
+                    x: canvas.width - 20,
+                    y: canvas.height - padding - ((slope * xMax + intercept - yMin) / (yMax - yMin)) * (canvas.height - padding - 20)
+                }
+            ];
+            
+            drawLine(ctx, linePoints, '#e74c3c', 3);
+            
+            // Draw data points
+            const points = transformedData.map(d => ({
+                x: padding + ((d.x - xMin) / (xMax - xMin)) * (canvas.width - padding - 20),
+                y: canvas.height - padding - ((d.y - yMin) / (yMax - yMin)) * (canvas.height - padding - 20)
+            }));
+            
+            drawPoints(ctx, points);
+            
+            // Calculate R² for linear fit
+            const predicted = xValues.map(x => slope * x + intercept);
+            const r2 = calculateR2(yValues, predicted);
+            document.getElementById('r2Linear').textContent = r2.toFixed(3);
+            document.getElementById('slope').textContent = slope.toFixed(3);
+            document.getElementById('constant').textContent = slope.toFixed(3);
+        }
+        
+        function updateEquations() {
+            const equations = {
+                quadratic: {
+                    original: 'y = ax²',
+                    transform: 'Transform: x → x²',
+                    linearized: 'y = a·X where X = x²',
+                    originalAxis: 'x vs y',
+                    linearizedAxis: 'x² vs y',
+                    units: 'm/s²'
+                },
+                sqrt: {
+                    original: 'y = a√x',
+                    transform: 'Transform: y → y²',
+                    linearized: 'Y = a²·x where Y = y²',
+                    originalAxis: 'x vs y',
+                    linearizedAxis: 'x vs y²',
+                    units: 's⁻¹'
+                },
+                inverse: {
+                    original: 'y = a/x',
+                    transform: 'Transform: x → 1/x',
+                    linearized: 'y = a·X where X = 1/x',
+                    originalAxis: 'x vs y',
+                    linearizedAxis: '1/x vs y',
+                    units: 'N·m'
+                },
+                inverse2: {
+                    original: 'y = a/x²',
+                    transform: 'Transform: x → 1/x²',
+                    linearized: 'y = a·X where X = 1/x²',
+                    originalAxis: 'x vs y',
+                    linearizedAxis: '1/x² vs y',
+                    units: 'N·m²'
+                }
+            };
+            
+            const eq = equations[currentFunction];
+            document.getElementById('originalEquation').textContent = eq.original;
+            document.getElementById('transformEquation').textContent = eq.transform;
+            document.getElementById('linearizedEquation').textContent = eq.linearized;
+            document.getElementById('originalAxisLabel').textContent = eq.originalAxis;
+            document.getElementById('linearizedAxisLabel').textContent = eq.linearizedAxis;
+            document.getElementById('units').textContent = eq.units;
+        }
+        
+        function selectFunction(func) {
+            currentFunction = func;
+            
+            // Update active button
+            document.querySelectorAll('.function-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Generate new data and update plots
+            generateData();
+            updateEquations();
+            plotOriginal();
+            plotLinearized();
+        }
+        
+        function addNoise() {
+            noiseLevel = Math.min(noiseLevel + 0.1, 0.5);
+            generateData();
+            plotOriginal();
+            plotLinearized();
+        }
+        
+        function resetNoise() {
+            noiseLevel = 0.1;
+            generateData();
+            plotOriginal();
+            plotLinearized();
+        }
+        
+        function showMorePoints() {
+            numPoints = Math.min(numPoints + 5, 25);
+            generateData();
+            plotOriginal();
+            plotLinearized();
+        }
+        
+        function showFewerPoints() {
+            numPoints = Math.max(numPoints - 5, 5);
+            generateData();
+            plotOriginal();
+            plotLinearized();
+        }
+        
+        // Initialize
+        generateData();
+        updateEquations();
+        plotOriginal();
+        plotLinearized();
+    </script>
+</body>
+</html>
