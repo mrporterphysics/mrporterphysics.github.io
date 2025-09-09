@@ -17,6 +17,38 @@ class:  twilight
 
 ---
 
+# 2025.09.09 **Earth Science**
+
+##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish last two stations to collect data
+2. Discuss how to make histogram
+3. Release them to graph
+4. Work on graphing practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Graphing_
+
+### 📆 Upcoming
+
+- Look for safety contract in Parent Square
+
+</div>
+</div>
+
+---
+
 # 2025.09.08 **Earth Science**
 
 ##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
