@@ -21,7 +21,7 @@
       "./PorterThemes/Schodack/momentum.css",
       "./PorterThemes/Schodack/physics2024.css"
    ],
-   "pasteImage.basePath": "${currentFileDir}/images",
+   "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"
 }
 

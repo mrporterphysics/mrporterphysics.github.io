@@ -17,6 +17,80 @@ class:  twilight
 
 ---
 
+# 2025.09.10 **Earth Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Graphs
+2. Whiteboard your graph
+3. Present a finding from your graph
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Interpret and analyze graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Metric Olympic Presentations
+
+## Claim
+
+What is one thing you can conclude from your graph?
+
+## Evidence
+
+How does you graph support/show what you concluded?
+
+## Reasoning
+
+What is the science or big idea that support your evidence
+
+---
+
+# Claim-Evidence-Reasoning Example
+
+**Claim**: Strong hurricanes start with greatest wind speeds. 
+
+**Evidence**: On the graph the Major Hurricane initial wind speed > Weak hurricane > Tropical storm
+
+**Reasoning**: Hurricanes are in part rated by their windspeed. 
+
+![bg fit right](image-1.png)
+
+---
+
+# Metric Olympic Presentations
+
+## Claim
+
+What is one thing you can conclude from your graph?
+
+## Evidence
+
+How does you graph support/show what you concluded?
+
+## Reasoning
+
+What is the science or big idea that support your evidence?
+
+
+---
+
 # 2025.09.09 **Earth Science**
 
 ##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes?
