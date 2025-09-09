@@ -87,6 +87,7 @@ You will be given scenario card that describes the setup of your buggies
 
 ![bg fit right](image.png)
 
+
 ---
 
 # AP Physics **Do Now**
