@@ -17,7 +17,7 @@ math: mathjax
 
 # 2025.09.09 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes?
 
 <div class ='columns'>
 
