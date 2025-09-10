@@ -15,6 +15,54 @@ math: mathjax
 
 ---
 
+# 2025.09.10 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Reread/Remind yourself about [Data Collection]()
+2. Discussion of Data Best Practices
+3. Dune Buggy Challenge
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use data collection best practices_
+
+### 📆 Upcoming
+
+- Get your parent/guardian to sign the student safety contract
+
+</div>
+</div>
+
+---
+
+# Dune Buggy Challenge 🚗
+
+### Questions:
+
+1. How much time does it take a Dune Buggy car to travel a specified distance?
+2. Does your buggy move **in a consistent** manner?
+
+### Purpose:
+
+To collect distance-time data for a Dune Buggy Car in order to predict the time it takes a Dune Buggy to travel a specified distance
+
+### Data & Prediction
+
+- when graphing put time on the **horizontal** axis
+
+---
+
 # 2025.09.09 **Regents Physics**
 
 ##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes?
@@ -115,21 +163,7 @@ math: mathjax
 
 ---
 
-# Dune Buggy Challenge 🚗
 
-### Question:
-
-How much time does it take a Dune Buggy car to travel a specified distance?
-
-### Purpose:
-
-To collect distance-time data for a Dune Buggy Car in order to predict the time it takes a Dune Buggy to travel a specified distance
-
-### Data & Prediction
-
-- when graphing put time on the **horizontal** axis
-
----
 
 #### Claim:
 
