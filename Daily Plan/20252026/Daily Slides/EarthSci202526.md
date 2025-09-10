@@ -17,9 +17,9 @@ class:  twilight
 
 ---
 
-# 2025.09.10 **Earth Science**
+# 2025.09.11 **Earth Science**
 
-##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
+##### **❓ of the 📅**: Question
 
 <div class ='columns'>
 
@@ -27,9 +27,9 @@ class:  twilight
 
 #### 📋 Agenda
 
-1. Finish Graphs
-2. Whiteboard your graph
-3. Present a finding from your graph
+1. CER: Soup, Salad, or Sandwich
+2. CER Argument for Metric Olympics
+3. CER Graph Practice
 
 </div>
 
@@ -37,16 +37,56 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 _Interpret and analyze graphs_
+🥅 _Make a scientific argument using CER model_
 
-### 📆 Homework:
-
-- Get safety contract signed in ***ParentSquare***
+### 📆 Upcoming
 
 </div>
 </div>
 
 ---
+
+
+# CER (Claim, Evidence, Reasoning)
+
+* ### Claim:
+    * Sentence that answers the question.
+
+* ### Evidence:
+    * Explanation of how the evidence supports the claim.
+        * Should include details!
+        * Refer back to the question, include any data, diagrams, or graphs.
+
+* ### Reasoning:
+    * Science principle, such as an equation, law, or definition.
+        * This is general, do no include specific details.
+
+---
+
+# Game: Soup, Salad, or Sandwich
+
+1. Make a Claim-Evidence-Reasoning statement arguing whether the shown food is a soup, salad, or a sandwich. 
+
+---
+
+
+
+![bg ](https://static01.nyt.com/images/2022/07/27/dining/27Chicagodogrex/05Chicagodogrex-master768.jpg?w=1280&q=75)
+
+---
+
+
+![bg](https://insanelygoodrecipes.com/wp-content/uploads/2022/10/Homemade_Broccoli_and_Cheddar_Soup_in_a_Bread_Bowl.jpg)
+
+
+---
+
+
+![bg](https://insanelygoodrecipes.com/wp-content/uploads/2022/10/Homemade_Broccoli_and_Cheddar_Soup_in_a_Bread_Bowl.jpg)
+
+
+---
+
 
 # Metric Olympic Presentations
 
@@ -90,6 +130,37 @@ How does you graph support/show what you concluded?
 
 What is the science or big idea that support your evidence?
 
+
+---
+
+# 2025.09.10 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Graphs
+2. Whiteboard your graph
+3. Present a finding from your graph
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Interpret and analyze graphs_
+
+### 📆 Homework:
+
+- Get safety contract signed in ***ParentSquare***
+
+</div>
+</div>
 
 ---
 

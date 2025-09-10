@@ -7,6 +7,7 @@ You can find links to class presentations here:
   - Find [Content Presentations](presindex).
 
 # Resource Pages
+  - [Earth Science Reference](/earthscienceref.md)
   - [FACT SHEET](/ap-physics-quiz/factsheet-complete.html)
   - [AP Extra Practice for Reassessments](\AP%20Resource%20Pages\apSBGPractice)
   - [Data Collection Best Practices](/AP%20Resource%20Pages/datacollection.html)

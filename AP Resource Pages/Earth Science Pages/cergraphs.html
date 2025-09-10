@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CER Earth Science Data Explorer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .dataset-selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            background: #f8f9fa;
+            flex-wrap: wrap;
+        }
+        
+        .dataset-btn {
+            padding: 12px 24px;
+            border: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .dataset-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .dataset-btn.active {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .dataset-info {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .dataset-info.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .info-card {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-card h3 {
+            color: #4a90e2;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .cer-template {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .cer-template h3 {
+            color: #d84315;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .cer-section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .cer-section h4 {
+            color: #f4511e;
+            margin-bottom: 10px;
+        }
+        
+        .cer-section p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .question-prompt {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #2c3e50;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .data-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .data-table tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .interactive-controls {
+            background: #f0f4f8;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        .control-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .control-group select {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Earth Science CER Data Explorer</h1>
+            <p class="subtitle">Analyze Real Data to Make Scientific Arguments</p>
+        </header>
+        
+        <div class="dataset-selector">
+            <button class="dataset-btn active" onclick="showDataset('earthquakes')">🌋 Earthquakes & Depth</button>
+            <button class="dataset-btn" onclick="showDataset('climate')">🌡️ Global Temperature Change</button>
+            <button class="dataset-btn" onclick="showDataset('sealevel')">🌊 Sea Level Rise</button>
+            <button class="dataset-btn" onclick="showDataset('co2')">💨 CO₂ Levels</button>
+            <button class="dataset-btn" onclick="showDataset('hurricanes')">🌀 Hurricane Intensity</button>
+        </div>
+        
+        <div class="content">
+            <!-- Earthquakes Dataset -->
+            <div id="earthquakes" class="dataset-info active">
+                <div class="info-card">
+                    <h3>📊 Dataset: Global Earthquake Patterns (2020-2024)</h3>
+                    <p>This dataset shows the relationship between earthquake depth and magnitude for major seismic events worldwide. Data represents significant earthquakes (M>4.0) from tectonic plate boundaries.</p>
+                </div>
+                
+                <div class="question-prompt">
+                    🔬 <strong>Question:</strong> Is there a relationship between earthquake depth and magnitude? What patterns do you observe?
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="earthquakeChart"></canvas>
+                </div>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Location</th>
+                            <th>Depth (km)</th>
+                            <th>Magnitude</th>
+                            <th>Plate Boundary Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Japan Trench</td><td>35</td><td>7.1</td><td>Convergent</td></tr>
+                        <tr><td>Chile Subduction</td><td>125</td><td>6.2</td><td>Convergent</td></tr>
+                        <tr><td>Mid-Atlantic Ridge</td><td>10</td><td>5.8</td><td>Divergent</td></tr>
+                        <tr><td>San Andreas</td><td>15</td><td>6.4</td><td>Transform</td></tr>
+                        <tr><td>Tonga Trench</td><td>580</td><td>5.2</td><td>Convergent</td></tr>
+                        <tr><td>Peru-Chile</td><td>200</td><td>5.9</td><td>Convergent</td></tr>
+                    </tbody>
+                </table>
+                
+                <div class="cer-template">
+                    <h3>📝 Build Your CER Argument</h3>
+                    <div class="cer-section">
+                        <h4>Claim:</h4>
+                        <p><em>State your answer to the question. What pattern do you observe?</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Evidence:</h4>
+                        <p><em>Describe specific data points from the graph. Include numbers and comparisons.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Reasoning:</h4>
+                        <p><em>Explain the Earth science principle. Why does this pattern occur? Consider plate tectonics.</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Climate Dataset -->
+            <div id="climate" class="dataset-info">
+                <div class="info-card">
+                    <h3>📊 Dataset: Global Temperature Anomaly (1880-2024)</h3>
+                    <p>Temperature deviation from the 1951-1980 average. Data from NASA GISS Surface Temperature Analysis.</p>
+                </div>
+                
+                <div class="question-prompt">
+                    🔬 <strong>Question:</strong> How has Earth's average temperature changed over time? What trend do you observe?
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="climateChart"></canvas>
+                </div>
+                
+                <div class="cer-template">
+                    <h3>📝 Build Your CER Argument</h3>
+                    <div class="cer-section">
+                        <h4>Claim:</h4>
+                        <p><em>State the temperature trend you observe.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Evidence:</h4>
+                        <p><em>Cite specific years and temperature values. Compare different time periods.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Reasoning:</h4>
+                        <p><em>Explain the greenhouse effect and climate science principles.</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sea Level Dataset -->
+            <div id="sealevel" class="dataset-info">
+                <div class="info-card">
+                    <h3>📊 Dataset: Global Sea Level Change (1993-2024)</h3>
+                    <p>Satellite measurements of global mean sea level from NASA. Values show change relative to 1993 baseline.</p>
+                </div>
+                
+                <div class="question-prompt">
+                    🔬 <strong>Question:</strong> How has global sea level changed since 1993? What is the rate of change?
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="sealevelChart"></canvas>
+                </div>
+                
+                <div class="cer-template">
+                    <h3>📝 Build Your CER Argument</h3>
+                    <div class="cer-section">
+                        <h4>Claim:</h4>
+                        <p><em>State what's happening to sea level.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Evidence:</h4>
+                        <p><em>Calculate the rate of change. Compare early vs recent years.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Reasoning:</h4>
+                        <p><em>Explain thermal expansion and ice melt contributions.</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CO2 Dataset -->
+            <div id="co2" class="dataset-info">
+                <div class="info-card">
+                    <h3>📊 Dataset: Atmospheric CO₂ Concentration (1960-2024)</h3>
+                    <p>Monthly measurements from Mauna Loa Observatory, Hawaii. Data shows parts per million (ppm) of CO₂.</p>
+                </div>
+                
+                <div class="question-prompt">
+                    🔬 <strong>Question:</strong> How have atmospheric CO₂ levels changed? What patterns do you notice?
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="co2Chart"></canvas>
+                </div>
+                
+                <div class="cer-template">
+                    <h3>📝 Build Your CER Argument</h3>
+                    <div class="cer-section">
+                        <h4>Claim:</h4>
+                        <p><em>Describe the CO₂ trend and any patterns.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Evidence:</h4>
+                        <p><em>Compare values from different decades. Note seasonal patterns.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Reasoning:</h4>
+                        <p><em>Explain carbon cycle and human impacts.</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hurricanes Dataset -->
+            <div id="hurricanes" class="dataset-info">
+                <div class="info-card">
+                    <h3>📊 Dataset: Atlantic Hurricane Categories (2000-2024)</h3>
+                    <p>Distribution of Atlantic hurricanes by category. Data from National Hurricane Center.</p>
+                </div>
+                
+                <div class="question-prompt">
+                    🔬 <strong>Question:</strong> How are hurricanes distributed by intensity? What factors might influence this?
+                </div>
+                
+                <div class="interactive-controls">
+                    <div class="control-group">
+                        <label for="hurricaneYear">Select Time Period:</label>
+                        <select id="hurricaneYear" onchange="updateHurricaneChart()">
+                            <option value="all">All Years (2000-2024)</option>
+                            <option value="early">2000-2012</option>
+                            <option value="recent">2013-2024</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="hurricaneChart"></canvas>
+                </div>
+                
+                <div class="cer-template">
+                    <h3>📝 Build Your CER Argument</h3>
+                    <div class="cer-section">
+                        <h4>Claim:</h4>
+                        <p><em>State the pattern in hurricane intensity distribution.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Evidence:</h4>
+                        <p><em>Compare different categories. Note any changes between time periods.</em></p>
+                    </div>
+                    <div class="cer-section">
+                        <h4>Reasoning:</h4>
+                        <p><em>Explain hurricane formation and factors affecting intensity.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Store chart instances
+        let charts = {};
+        
+        // Initialize all charts
+        function initCharts() {
+            // Earthquake Chart
+            const eqCtx = document.getElementById('earthquakeChart').getContext('2d');
+            charts.earthquake = new Chart(eqCtx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Shallow (<70km)',
+                        data: [
+                            {x: 10, y: 5.8}, {x: 15, y: 6.4}, {x: 35, y: 7.1},
+                            {x: 25, y: 5.5}, {x: 45, y: 6.8}, {x: 20, y: 5.2},
+                            {x: 55, y: 6.1}, {x: 30, y: 5.9}, {x: 40, y: 6.6}
+                        ],
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        pointRadius: 8
+                    }, {
+                        label: 'Intermediate (70-300km)',
+                        data: [
+                            {x: 125, y: 6.2}, {x: 200, y: 5.9}, {x: 150, y: 5.5},
+                            {x: 180, y: 5.7}, {x: 250, y: 5.3}, {x: 100, y: 6.0},
+                            {x: 220, y: 5.4}, {x: 280, y: 5.1}
+                        ],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        pointRadius: 8
+                    }, {
+                        label: 'Deep (>300km)',
+                        data: [
+                            {x: 580, y: 5.2}, {x: 450, y: 5.6}, {x: 650, y: 4.8},
+                            {x: 520, y: 5.3}, {x: 400, y: 5.8}, {x: 600, y: 5.0}
+                        ],
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        pointRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Earthquake Depth vs Magnitude',
+                            font: { size: 18 }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Depth (km)',
+                                font: { size: 14 }
+                            },
+                            min: 0,
+                            max: 700
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Magnitude',
+                                font: { size: 14 }
+                            },
+                            min: 4,
+                            max: 8
+                        }
+                    }
+                }
+            });
+            
+            // Climate Chart
+            const climateCtx = document.getElementById('climateChart').getContext('2d');
+            charts.climate = new Chart(climateCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1880', '1900', '1920', '1940', '1960', '1980', '2000', '2010', '2020', '2024'],
+                    datasets: [{
+                        label: 'Temperature Anomaly (°C)',
+                        data: [-0.2, -0.15, -0.27, 0.12, -0.03, 0.26, 0.42, 0.72, 1.01, 1.24],
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Global Temperature Anomaly from 1951-1980 Average',
+                            font: { size: 18 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Temperature Anomaly (°C)',
+                                font: { size: 14 }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Year',
+                                font: { size: 14 }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Sea Level Chart
+            const seaCtx = document.getElementById('sealevelChart').getContext('2d');
+            charts.sealevel = new Chart(seaCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1993', '1996', '1999', '2002', '2005', '2008', '2011', '2014', '2017', '2020', '2024'],
+                    datasets: [{
+                        label: 'Sea Level Change (mm)',
+                        data: [0, 12, 18, 28, 35, 42, 50, 61, 75, 88, 104],
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        tension: 0.1,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Global Mean Sea Level Change Since 1993',
+                            font: { size: 18 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Sea Level Change (mm)',
+                                font: { size: 14 }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Year',
+                                font: { size: 14 }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // CO2 Chart
+            const co2Ctx = document.getElementById('co2Chart').getContext('2d');
+            charts.co2 = new Chart(co2Ctx, {
+                type: 'line',
+                data: {
+                    labels: ['1960', '1970', '1980', '1990', '2000', '2010', '2020', '2024'],
+                    datasets: [{
+                        label: 'CO₂ Concentration (ppm)',
+                        data: [317, 326, 339, 354, 369, 390, 414, 422],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Atmospheric CO₂ Concentration at Mauna Loa',
+                            font: { size: 18 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'CO₂ (ppm)',
+                                font: { size: 14 }
+                            },
+                            min: 300
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Year',
+                                font: { size: 14 }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Solar System Chart (Reference Tables)
+            const planetCtx = document.getElementById('planetChart').getContext('2d');
+            charts.planet = new Chart(planetCtx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Inner Planets',
+                        data: [
+                            {x: 57.9, y: 0.24}, // Mercury (88 days = 0.24 years)
+                            {x: 108.2, y: 0.62}, // Venus (224.7 days = 0.62 years)
+                            {x: 149.6, y: 1.0}, // Earth
+                            {x: 228.0, y: 1.9} // Mars
+                        ],
+                        backgroundColor: 'rgba(255, 159, 64, 0.6)',
+                        borderColor: 'rgba(255, 159, 64, 1)',
+                        pointRadius: 10
+                    }, {
+                        label: 'Outer Planets',
+                        data: [
+                            {x: 778.5, y: 11.9}, // Jupiter
+                            {x: 1432.0, y: 29.5}, // Saturn
+                            {x: 2867.0, y: 83.7}, // Uranus
+                            {x: 4515.0, y: 163.7} // Neptune
+                        ],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        pointRadius: 12
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Planetary Distance vs. Revolution Period',
+                            font: { size: 18 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+                                    const index = context.dataIndex + (context.datasetIndex * 4);
+                                    return planets[index] + ': ' + context.parsed.x + ' million km, ' + context.parsed.y + ' years';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'logarithmic',
+                            title: {
+                                display: true,
+                                text: 'Distance from Sun (million km) - Log Scale',
+                                font: { size: 14 }
+                            },
+                            min: 50,
+                            max: 5000
+                        },
+                        y: {
+                            type: 'logarithmic',
+                            title: {
+                                display: true,
+                                text: 'Period of Revolution (years) - Log Scale',
+                                font: { size: 14 }
+                            },
+                            min: 0.2,
+                            max: 200
+                        }
+                    }
+                }
+            });
+            
+            // Hurricane Chart
+            createHurricaneChart('all');
+        }
+        
+        function createHurricaneChart(period) {
+            const ctx = document.getElementById('hurricaneChart').getContext('2d');
+            
+            let data;
+            if (period === 'early') {
+                data = [12, 18, 28, 15, 8];
+            } else if (period === 'recent') {
+                data = [10, 15, 25, 20, 12];
+            } else {
+                data = [22, 33, 53, 35, 20];
+            }
+            
+            if (charts.hurricane) {
+                charts.hurricane.destroy();
+            }
+            
+            charts.hurricane = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5'],
+                    datasets: [{
+                        label: 'Number of Hurricanes',
+                        data: data,
+                        backgroundColor: [
+                            'rgba(255, 206, 86, 0.6)',
+                            'rgba(255, 159, 64, 0.6)',
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(153, 102, 255, 0.6)',
+                            'rgba(75, 0, 130, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(75, 0, 130, 1)'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Atlantic Hurricane Distribution by Category',
+                            font: { size: 18 }
+                        },
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Number of Hurricanes',
+                                font: { size: 14 }
+                            },
+                            beginAtZero: true
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Hurricane Category (Saffir-Simpson Scale)',
+                                font: { size: 14 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function updateHurricaneChart() {
+            const period = document.getElementById('hurricaneYear').value;
+            createHurricaneChart(period);
+        }
+        
+        function showDataset(dataset) {
+            // Update button states
+            document.querySelectorAll('.dataset-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Show selected dataset
+            document.querySelectorAll('.dataset-info').forEach(info => {
+                info.classList.remove('active');
+            });
+            document.getElementById(dataset).classList.add('active');
+        }
+        
+        // Initialize charts when page loads
+        window.onload = function() {
+            initCharts();
+        };
+    </script>
+</body>
+</html>
