@@ -57,89 +57,24 @@ img[alt~="center"] {
 </div>
 </div>
 
-
----
-
-# Toy Buggy Observations 🚗 
-
-## In your lab notebook write down 2 of the following... 
-
-- 👀 what do you see? (observations)
-- 🤔 what do you think? (hypotheses)
-- 💭 what do you wonder? (what questions could you ask to support hypotheses)
-
 ---
 
 # Buggy Lab 🚗
 
-## Objective: 
+### Questions:
 
-* Determine if your toy buggy moves in a <U>consistent manner</u> by developing a relationship between ***position*** and ***time***. 
+1. How much time does it take a Dune Buggy car to travel a specified distance?
+2. Does your buggy move **in a consistent** manner?
 
-## Notes
-* Use ***time*** as your independent variable
-* Your Lab Setup is based on an assigned initial set up
+### Purpose:
 
----
+To collect distance-time data for a Dune Buggy Car in order to predict the time it takes a Dune Buggy to travel a specified distance
 
-![bg fit](buggies.png)
+### Data & Prediction
 
----
-
-# Buggy Lab 🚗
-
-## Objective: 
-
-* Determine if your toy buggy moves in a <U>consistent manner</u> by developing a relationship between ***position*** and ***time***. 
-
-## Notes
-* Use ***time*** as your independent variable
-* Your Lab Setup is based on an assigned initial set up
-
-
-![bg fit right](buggies.png)
-
+- when graphing put time on the **horizontal** axis
 
 ---
-
-![bg fit](image-5.png)
-
-
----
-
-# Lab Results:
-
-* The buggies moved with a ***constant velocity***
-    * means that it changed its *position* equal amounts for each equal change in *time*
-* ***Velocity*** ($\bar{v}$) is represented by the *slope* of the position vs. time graph
-    * how "fast"
-    * AND what direction
-* ***Speed*** is the steepness of the slope:
-    * it tells us the rate that position changes with time
-    * steeper slope == faster
-* The **initial position** ($x_0$ or $y_0$) of the object is the vertical intercept
-    *  it tells us where the object is at clock reading 0.
-
----
-
-# Mathematical Models 
-
-#### General Mathematical Mode:
-
-$$x = \bar{v}t + x_0$$
-
-
-#### Specific Mathematical Model (example):
-
-$$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
-
-
-#### Narrative Model:
-
-*"The toy car started at a position of 250 cm and moved in the positive direction at a speed of 25 cm/s."*
-
---- 
-
 
 
 # Defining "How Far"
@@ -196,6 +131,50 @@ Make an arguement for **both cases**
 - "Location"
 
 ---
+
+
+![bg git](image-22.png)
+
+---
+
+![bg fit](image-5.png)
+
+
+---
+
+# Lab Results:
+
+* The buggies moved with a ***constant velocity***
+    * means that it changed its *position* equal amounts for each equal change in *time*
+* ***Velocity*** ($\bar{v}$) is represented by the *slope* of the position vs. time graph
+    * how "fast"
+    * AND what direction
+* ***Speed*** is the steepness of the slope:
+    * it tells us the rate that position changes with time
+    * steeper slope == faster
+* The **initial position** ($x_0$ or $y_0$) of the object is the vertical intercept
+    *  it tells us where the object is at clock reading 0.
+
+---
+
+# Mathematical Models 
+
+#### General Mathematical Mode:
+
+$$x = \bar{v}t + x_0$$
+
+
+#### Specific Mathematical Model (example):
+
+$$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
+
+
+#### Narrative Model:
+
+*"The toy car started at a position of 250 cm and moved in the positive direction at a speed of 25 cm/s."*
+
+--- 
+
 
 # Speed vs. Velocity:
 

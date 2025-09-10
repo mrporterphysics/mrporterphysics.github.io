@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2025.09/11 **Regents Physics **
+
+##### **❓ of the 📅**: Does a week start on Sunday or Monday?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Buggy Lab & Whiteboard Results
+2. Buggy Lab Board Meeting
+3. [CV Model Notes](../../../Presentations/APCVPM/talks/RPKinematics2025.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion of toy car with position and time_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.10 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
