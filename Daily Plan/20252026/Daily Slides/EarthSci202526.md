@@ -19,7 +19,7 @@ class:  twilight
 
 # 2025.09.10 **Earth Science**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
 
 <div class ='columns'>
 

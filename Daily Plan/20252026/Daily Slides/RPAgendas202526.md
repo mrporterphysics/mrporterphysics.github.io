@@ -25,7 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Do Now: Reread/Remind yourself about [Data Collection]()
+1. Do Now: Reread/Remind yourself about [Data Collection](https://www.mrporterphysics.com/AP%20Resource%20Pages/datacollection.html)
 2. Discussion of Data Best Practices
 3. Dune Buggy Challenge
 
