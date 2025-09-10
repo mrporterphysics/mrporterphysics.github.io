@@ -39,7 +39,9 @@ class:  twilight
 
 🥅 _Interpret and analyze graphs_
 
-### 📆 Upcoming
+### 📆 Homework:
+
+- Get safety contract signed in ***ParentSquare***
 
 </div>
 </div>
