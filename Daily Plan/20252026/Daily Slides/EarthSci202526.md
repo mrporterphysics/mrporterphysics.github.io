@@ -19,7 +19,7 @@ class:  twilight
 
 # 2025.09.11 **Earth Science**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Does a week start on Sunday or Monday?
 
 <div class ='columns'>
 

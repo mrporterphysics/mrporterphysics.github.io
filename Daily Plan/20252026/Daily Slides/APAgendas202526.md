@@ -15,6 +15,61 @@ math: mathjax
 
 ---
 
+# 2025.09.11 **AP Physics**
+
+##### **❓ of the 📅**: Does a week start on Sunday or Monday?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Buggy Lab
+    - Goal is to have data collected, graphed, and discussion written by the end of class
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion of a toy car_
+
+### 📆 Upcoming
+
+- Get your parents/guardians to sign your safety contract on ParentSquare
+
+</div>
+</div>
+
+---
+
+# Buggy Lab 🚗 
+
+### Purpose
+
+Collect data on your buggies so that you can represent the motion (all aspescts) of both buggies on the **same** graph. Your final models should be able to predict the **position** of your buggy at specified times. 
+
+### Question
+
+Does your Buggy move **in a consistent manner**? [Define consistent]
+
+### Constraints
+
+You will be given scenario card that describes the setup of your buggies
+
+---
+
+# Scenarios
+
+- You can ignore the speed label, just use the colors for reference
+
+![bg fit right](image.png)
+
+
+---
+
 # **Do Now:** Register for...
 
 1. _AP Classroom_ ->> AP Exam Prep & Review
