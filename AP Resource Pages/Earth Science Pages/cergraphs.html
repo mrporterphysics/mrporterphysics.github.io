@@ -420,7 +420,7 @@
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()"></button>
+    <button type="button" class="theme-toggle" onclick="toggleTheme()" title="Toggle between light and dark theme"></button>
     <div class="container">
         <header>
             <h1>🌍 Earth Science CER Data Explorer</h1>
@@ -428,12 +428,12 @@
         </header>
         
         <div class="dataset-selector">
-            <button class="dataset-btn active" onclick="showDataset('earthquakes')">🌋 Earthquakes & Depth</button>
-            <button class="dataset-btn" onclick="showDataset('climate')">🌡️ Global Temperature Change</button>
-            <button class="dataset-btn" onclick="showDataset('sealevel')">🌊 Sea Level Rise</button>
-            <button class="dataset-btn" onclick="showDataset('co2')">💨 CO₂ Levels</button>
-            <button class="dataset-btn" onclick="showDataset('planets')">🪐 Solar System Data</button>
-            <button class="dataset-btn" onclick="showDataset('hurricanes')">🌀 Hurricane Intensity</button>
+            <button type="button" class="dataset-btn active" onclick="showDataset('earthquakes')" title="View earthquake depth and magnitude data">🌋 Earthquakes & Depth</button>
+            <button type="button" class="dataset-btn" onclick="showDataset('climate')" title="View global temperature change data">🌡️ Global Temperature Change</button>
+            <button type="button" class="dataset-btn" onclick="showDataset('sealevel')" title="View sea level rise data">🌊 Sea Level Rise</button>
+            <button type="button" class="dataset-btn" onclick="showDataset('co2')" title="View atmospheric CO₂ concentration data">💨 CO₂ Levels</button>
+            <button type="button" class="dataset-btn" onclick="showDataset('planets')" title="View solar system planetary data">🪐 Solar System Data</button>
+            <button type="button" class="dataset-btn" onclick="showDataset('hurricanes')" title="View hurricane intensity distribution data">🌀 Hurricane Intensity</button>
         </div>
         
         <div class="content">
