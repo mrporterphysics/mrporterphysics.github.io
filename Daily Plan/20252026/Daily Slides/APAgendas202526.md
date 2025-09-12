@@ -15,6 +15,54 @@ math: mathjax
 
 ---
 
+# 2025.09.12
+
+# **AP Physics** Do Now
+
+## Defining "How Far"
+
+### Who went further? Dorothy or Toto?
+
+![bg fit right](../../../Daily%20Plan/20232024/images/Kinematics/dortoto.png)
+
+
+
+---
+
+# 2025.09.12 **AP Physics**
+
+##### **❓ of the 📅**: What is the best fry shape? 🍟 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Do Now
+1. Whiteboard Buggy Lab Results
+2. Buggy Lab Board Meeting
+3. [CV Model Notes](../../../Presentations/APCVPM/talks/CVPM2025.html) 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define position, distance, and displacement_
+
+🥅 _Model **consistent** motion_
+
+### 📆 Upcoming
+
+- Get those safety contracts signed!
+
+</div>
+</div>
+
+---
+
 # 2025.09.11 **AP Physics**
 
 ##### **❓ of the 📅**: Does a week start on Sunday or Monday?

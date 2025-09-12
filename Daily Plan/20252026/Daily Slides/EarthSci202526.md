@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2025.09.12 **Earth Science**
+
+##### **❓ of the 📅**: What is the best fry shape? 🍟
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Present CER on Metric Olympics
+2. Real-life data and CER practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make scientific arguments from data and graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.11 **Earth Science**
 
 ##### **❓ of the 📅**: Does a week start on Sunday or Monday?
