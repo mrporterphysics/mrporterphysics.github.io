@@ -43,6 +43,7 @@ math: mathjax
 1. Whiteboard Buggy Lab Results
 2. Buggy Lab Board Meeting
 3. [CV Model Notes](../../../Presentations/APCVPM/talks/CVPM2025.html) 
+4. Physics Classrom: [Distance vs. Displacement](https://www.physicsclassroom.com/concept-builder/relationships-and-graphs/experiments-and-variables)
 
 </div>
 
@@ -57,6 +58,7 @@ math: mathjax
 ### 📆 Upcoming
 
 - Get those safety contracts signed!
+- PC: [Distance vs. Displacement](https://www.physicsclassroom.com/concept-builder/relationships-and-graphs/experiments-and-variables)
 
 </div>
 </div>
