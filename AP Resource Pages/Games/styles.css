@@ -151,6 +151,12 @@ h3 {
 .player-stats {
     display: flex;
     gap: 2rem;
+    animation: stats-float 3s ease-in-out infinite;
+}
+
+@keyframes stats-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-2px); }
 }
 
 .stat-item {
@@ -252,14 +258,33 @@ h3 {
 .btn {
     padding: 0.75rem 1.5rem;
     border: 1px solid transparent;
-    border-radius: var(--radius);
+    border-radius: 12px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
     font-family: inherit;
-    box-shadow: 0 2px 4px var(--shadow);
+    box-shadow: 0 4px 12px var(--shadow);
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
 }
 
 .btn-primary {
@@ -271,8 +296,8 @@ h3 {
 .btn-primary:hover {
     background: var(--primary-hover);
     border-color: var(--primary-hover);
-    box-shadow: 0 4px 8px var(--shadow-hover);
-    transform: translateY(-1px);
+    box-shadow: 0 8px 20px var(--shadow-hover);
+    transform: translateY(-3px) scale(1.05);
 }
 
 .btn-secondary {
@@ -400,15 +425,17 @@ h3 {
 
 .graph-container {
     width: 100%;
-    height: 300px;
-    margin: 1rem 0;
-    background: var(--bg-tertiary);
-    border: 2px solid var(--border-color);
-    border-radius: var(--radius);
+    height: 400px;
+    margin: 1.5rem 0;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+    border: 3px solid var(--primary-color);
+    border-radius: 16px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
 
 .graph-container canvas {
@@ -421,13 +448,13 @@ h3 {
 /* Responsive graph sizes */
 @media (max-width: 768px) {
     .graph-container {
-        height: 250px;
+        height: 320px;
     }
 }
 
 @media (max-width: 480px) {
     .graph-container {
-        height: 200px;
+        height: 280px;
     }
 }
 
@@ -449,26 +476,60 @@ h3 {
 
 .answer-option:hover {
     border-color: var(--primary-color);
-    background: var(--bg-secondary);
-    box-shadow: 0 2px 4px var(--shadow);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--primary-light) 10%);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(67, 133, 190, 0.25);
+    animation: subtle-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes subtle-glow {
+    0% { box-shadow: 0 12px 32px rgba(67, 133, 190, 0.25); }
+    100% { box-shadow: 0 12px 32px rgba(67, 133, 190, 0.4); }
 }
 
 .answer-option.selected {
     border-color: var(--primary-color);
-    background: var(--bg-secondary);
-    box-shadow: 0 2px 4px var(--shadow);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-secondary) 50%);
+    box-shadow: 0 0 0 3px var(--primary-color), 0 8px 24px rgba(67, 133, 190, 0.3);
+    transform: scale(1.05);
+    animation: pulse-select 0.8s ease-out;
+}
+
+@keyframes pulse-select {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1.05); }
 }
 
 .answer-option.correct {
     border-color: var(--success-color);
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, rgba(135, 154, 57, 0.2) 0%, var(--bg-secondary) 50%);
     color: var(--success-color);
+    box-shadow: 0 0 0 3px var(--success-color), 0 8px 24px rgba(135, 154, 57, 0.4);
+    animation: success-bounce 0.6s ease-out;
+}
+
+@keyframes success-bounce {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1) rotate(1deg); }
+    50% { transform: scale(1.05) rotate(-0.5deg); }
+    100% { transform: scale(1.02) rotate(0deg); }
 }
 
 .answer-option.incorrect {
     border-color: var(--error-color);
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, rgba(218, 112, 44, 0.2) 0%, var(--bg-secondary) 50%);
     color: var(--error-color);
+    box-shadow: 0 0 0 3px var(--error-color), 0 8px 24px rgba(218, 112, 44, 0.4);
+    animation: error-shake 0.5s ease-out;
+}
+
+@keyframes error-shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px) rotate(-1deg); }
+    40% { transform: translateX(8px) rotate(1deg); }
+    60% { transform: translateX(-4px) rotate(-0.5deg); }
+    80% { transform: translateX(4px) rotate(0.5deg); }
 }
 
 /* Feedback */

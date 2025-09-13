@@ -128,29 +128,19 @@ class GameEngine {
 
     generateSessionQuestions() {
         const playerLevel = this.playerData.currentLevel;
-        const questionsNeeded = 8; // Base questions per session
+        const questionsNeeded = SAMPLE_QUESTIONS.length; // Use all available questions
         
-        // Mix of current level and slightly easier questions
-        const questions = [];
+        // Create a shuffled copy of all available questions
+        const availableQuestions = [...SAMPLE_QUESTIONS];
+        this.shuffleArray(availableQuestions);
         
-        // 60% current level, 30% previous level, 10% next level
-        for (let i = 0; i < questionsNeeded; i++) {
-            let targetLevel = playerLevel;
-            
-            const rand = Math.random();
-            if (rand < 0.3 && playerLevel > 0) {
-                targetLevel = playerLevel - 1; // Easier
-            } else if (rand > 0.9 && playerLevel < GAME_CONFIG.LEVELS.length - 1) {
-                targetLevel = playerLevel + 1; // Harder
-            }
-            
-            const question = this.selectQuestionForLevel(targetLevel);
-            if (question) {
-                questions.push(question);
-            }
-        }
+        // Take the first questionsNeeded questions (ensuring no duplicates)
+        const questions = availableQuestions.slice(0, questionsNeeded);
         
-        this.currentSession.questions = questions;
+        // Clone each question to avoid reference issues
+        const clonedQuestions = questions.map(q => this.cloneQuestion(q));
+        
+        this.currentSession.questions = clonedQuestions;
     }
 
     selectQuestionForLevel(level) {
@@ -166,6 +156,15 @@ class GameEngine {
 
     cloneQuestion(question) {
         return JSON.parse(JSON.stringify(question));
+    }
+    
+    shuffleArray(array) {
+        // Fisher-Yates shuffle algorithm
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     }
 
     getCurrentQuestion() {
@@ -247,9 +246,9 @@ class GameEngine {
         switch (question.type) {
             case 'graph-matching':
             case 'misconception-identification':
-                return question.options[selectedAnswer] && question.options[selectedAnswer].correct;
-            
             case 'area-under-curve':
+            case 'animation-interpretation':
+            case 'graph-animation-match':
                 return question.options[selectedAnswer] && question.options[selectedAnswer].correct;
             
             case 'sketch-challenge':
@@ -267,6 +266,8 @@ class GameEngine {
             case 'graph-matching':
             case 'misconception-identification':
             case 'area-under-curve':
+            case 'animation-interpretation':
+            case 'graph-animation-match':
                 return question.options.findIndex(opt => opt.correct);
             
             default:

@@ -4,8 +4,10 @@ class KinemaQuestApp {
         this.gameEngine = new GameEngine();
         this.currentScreen = 'welcome';
         this.currentQuestionStartTime = null;
+        this.audioContext = null;
         
         this.initializeApp();
+        this.setupAudio();
     }
 
     initializeApp() {
@@ -21,6 +23,67 @@ class KinemaQuestApp {
         
         // Debug test can be enabled for development
         // setTimeout(() => this.debugTestComplexGraph(), 2000);
+    }
+
+    setupAudio() {
+        try {
+            this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        } catch (e) {
+            console.log('Web Audio API not supported:', e);
+            this.audioContext = null;
+        }
+    }
+
+    playSound(type) {
+        if (!this.audioContext) return;
+        
+        const oscillator = this.audioContext.createOscillator();
+        const gainNode = this.audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(this.audioContext.destination);
+        
+        switch (type) {
+            case 'correct':
+                oscillator.frequency.setValueAtTime(523.25, this.audioContext.currentTime); // C5
+                oscillator.frequency.setValueAtTime(659.25, this.audioContext.currentTime + 0.1); // E5
+                oscillator.frequency.setValueAtTime(783.99, this.audioContext.currentTime + 0.2); // G5
+                gainNode.gain.setValueAtTime(0.1, this.audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + 0.5);
+                oscillator.start(this.audioContext.currentTime);
+                oscillator.stop(this.audioContext.currentTime + 0.5);
+                break;
+                
+            case 'incorrect':
+                oscillator.frequency.setValueAtTime(220, this.audioContext.currentTime); // A3
+                oscillator.frequency.setValueAtTime(196, this.audioContext.currentTime + 0.15); // G3
+                oscillator.type = 'sawtooth';
+                gainNode.gain.setValueAtTime(0.05, this.audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + 0.3);
+                oscillator.start(this.audioContext.currentTime);
+                oscillator.stop(this.audioContext.currentTime + 0.3);
+                break;
+                
+            case 'select':
+                oscillator.frequency.setValueAtTime(400, this.audioContext.currentTime);
+                oscillator.type = 'sine';
+                gainNode.gain.setValueAtTime(0.03, this.audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + 0.1);
+                oscillator.start(this.audioContext.currentTime);
+                oscillator.stop(this.audioContext.currentTime + 0.1);
+                break;
+                
+            case 'levelup':
+                oscillator.frequency.setValueAtTime(261.63, this.audioContext.currentTime); // C4
+                oscillator.frequency.setValueAtTime(329.63, this.audioContext.currentTime + 0.2); // E4
+                oscillator.frequency.setValueAtTime(392, this.audioContext.currentTime + 0.4); // G4
+                oscillator.frequency.setValueAtTime(523.25, this.audioContext.currentTime + 0.6); // C5
+                gainNode.gain.setValueAtTime(0.08, this.audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + 1.0);
+                oscillator.start(this.audioContext.currentTime);
+                oscillator.stop(this.audioContext.currentTime + 1.0);
+                break;
+        }
     }
 
     setupEventListeners() {
@@ -570,23 +633,25 @@ class KinemaQuestApp {
                     const miniGraphContainer = document.createElement('div');
                     miniGraphContainer.className = 'mini-graph-container';
                     miniGraphContainer.style.cssText = `
-                        width: 180px;
-                        height: 120px;
-                        margin: 10px auto 5px;
-                        border: 2px solid var(--border-color);
-                        border-radius: 8px;
-                        background: var(--bg-primary);
+                        width: 320px;
+                        height: 240px;
+                        margin: 20px auto 15px;
+                        border: 3px solid var(--border-color);
+                        border-radius: 16px;
+                        background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         position: relative;
+                        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+                        transition: all 0.2s ease;
                     `;
                     
                     const miniCanvas = document.createElement('canvas');
-                    miniCanvas.width = 160;
-                    miniCanvas.height = 100;
-                    miniCanvas.style.width = '160px';
-                    miniCanvas.style.height = '100px';
+                    miniCanvas.width = 300;
+                    miniCanvas.height = 220;
+                    miniCanvas.style.width = '300px';
+                    miniCanvas.style.height = '220px';
                     miniCanvas.style.border = '1px solid var(--border-color)';
                     miniCanvas.style.borderRadius = '4px';
                     
@@ -605,6 +670,69 @@ class KinemaQuestApp {
                         }
                     }, 150);
                 }
+                
+                // Add multi-graphs for multi-graph options
+                if (option.multiGraphs) {
+                    const multiGraphContainer = document.createElement('div');
+                    multiGraphContainer.className = 'multi-graph-container';
+                    multiGraphContainer.style.cssText = `
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                        gap: 10px;
+                        margin: 15px auto 10px;
+                        max-width: 600px;
+                    `;
+                    
+                    const graphTypes = ['position', 'velocity', 'acceleration'];
+                    graphTypes.forEach(graphType => {
+                        if (option.multiGraphs[graphType]) {
+                            const graphWrapper = document.createElement('div');
+                            graphWrapper.style.cssText = `
+                                text-align: center;
+                                padding: 10px;
+                                border: 2px solid var(--border-color);
+                                border-radius: 12px;
+                                background: var(--bg-primary);
+                            `;
+                            
+                            const graphTitle = document.createElement('div');
+                            graphTitle.textContent = `${graphType.charAt(0).toUpperCase() + graphType.slice(1)}-Time`;
+                            graphTitle.style.cssText = `
+                                font-size: 0.8rem;
+                                font-weight: bold;
+                                margin-bottom: 5px;
+                                color: var(--text-secondary);
+                            `;
+                            
+                            const miniCanvas = document.createElement('canvas');
+                            miniCanvas.width = 160;
+                            miniCanvas.height = 120;
+                            miniCanvas.style.width = '160px';
+                            miniCanvas.style.height = '120px';
+                            
+                            graphWrapper.appendChild(graphTitle);
+                            graphWrapper.appendChild(miniCanvas);
+                            multiGraphContainer.appendChild(graphWrapper);
+                            
+                            // Render each mini-graph
+                            setTimeout(() => {
+                                try {
+                                    const axes = this.getAxesConfigForMiniGraph(option.multiGraphs[graphType]);
+                                    GraphRenderer.renderGraph(miniCanvas, option.multiGraphs[graphType], axes);
+                                } catch (error) {
+                                    console.error(`Failed to render ${graphType} mini-graph:`, error);
+                                    miniCanvas.style.display = 'none';
+                                    const errorDiv = document.createElement('div');
+                                    errorDiv.textContent = 'Preview unavailable';
+                                    errorDiv.style.cssText = 'font-size: 0.7rem; color: var(--text-secondary);';
+                                    graphWrapper.appendChild(errorDiv);
+                                }
+                            }, 150 + graphTypes.indexOf(graphType) * 50);
+                        }
+                    });
+                    
+                    optionElement.appendChild(multiGraphContainer);
+                }
             }
             
             optionsContainer.appendChild(optionElement);
@@ -614,6 +742,9 @@ class KinemaQuestApp {
     }
 
     selectAnswer(element) {
+        // Play selection sound
+        this.playSound('select');
+        
         // Remove previous selections
         document.querySelectorAll('.answer-option').forEach(opt => {
             opt.classList.remove('selected');
@@ -640,6 +771,9 @@ class KinemaQuestApp {
     showFeedback(result) {
         const container = document.getElementById('feedback-container');
         const messageDiv = document.getElementById('feedback-message');
+        
+        // Play feedback sound
+        this.playSound(result.correct ? 'correct' : 'incorrect');
         
         // Clear previous content
         messageDiv.innerHTML = '';
@@ -919,6 +1053,9 @@ class KinemaQuestApp {
 
     // Event Handlers
     handleLevelUp(detail) {
+        // Play level up sound
+        this.playSound('levelup');
+        
         // Show level up notification
         const notification = document.getElementById('level-up-notification');
         const newLevelName = document.getElementById('new-level-name');
@@ -1178,37 +1315,64 @@ style.textContent = `
     /* Improved answer options styling */
     .answer-options {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1rem;
-        margin-top: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+        padding: 1rem;
     }
     
     .answer-option {
-        padding: 1.2rem;
-        border: 2px solid var(--border-color);
-        border-radius: var(--radius);
+        padding: 1.5rem;
+        border: 3px solid var(--border-color);
+        border-radius: 16px;
         background: var(--bg-secondary);
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         text-align: center;
-        min-height: 200px;
+        min-height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .answer-option::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
     }
     
     .answer-option:hover {
         border-color: var(--primary-color);
         background: var(--bg-primary);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+    
+    .answer-option:hover::before {
+        opacity: 1;
     }
     
     .answer-option.selected {
-        border-color: var(--primary-color);
-        background: var(--primary-color);
+        border-color: var(--success-color);
+        background: var(--success-color);
         color: var(--bg-primary);
-        transform: scale(1.02);
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 16px 32px rgba(0,0,0,0.3);
+        animation: pulse 0.6s ease-in-out;
+    }
+    
+    @keyframes pulse {
+        0% { transform: translateY(-4px) scale(1.05); }
+        50% { transform: translateY(-4px) scale(1.08); }
+        100% { transform: translateY(-4px) scale(1.05); }
     }
     
     .answer-option strong {
@@ -1233,23 +1397,59 @@ style.textContent = `
     
     .answer-option.selected .mini-graph-container {
         border-color: var(--bg-primary) !important;
-        background: rgba(255,255,255,0.9) !important;
+        background: rgba(255,255,255,0.95) !important;
+    }
+    
+    /* Game-like enhancements */
+    .question-text {
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        border: 2px solid var(--border-color);
+        position: relative;
+    }
+    
+    .question-text h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    .graph-container {
+        border: 3px solid var(--primary-color) !important;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+        border-radius: 16px !important;
+    }
+    
+    .animation-container {
+        border: 3px solid var(--accent-color) !important;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+        border-radius: 16px !important;
+        background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%) !important;
     }
     
     @media (max-width: 768px) {
         .answer-options {
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 0.8rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            padding: 0.5rem;
+        }
+        
+        .answer-option {
+            min-height: 250px;
+            padding: 1rem;
         }
         
         .mini-graph-container {
-            width: 150px !important;
-            height: 100px !important;
+            width: 240px !important;
+            height: 160px !important;
         }
         
         .mini-graph-container canvas {
-            width: 130px !important;
-            height: 80px !important;
+            width: 220px !important;
+            height: 140px !important;
         }
     }
 `;

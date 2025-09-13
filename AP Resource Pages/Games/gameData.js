@@ -251,40 +251,46 @@ const SAMPLE_QUESTIONS = [
 
     {
         id: 3,
-        type: 'multi-graph-coordination',
-        level: 4,
-        points: 45,
-        question: "Given this position-time graph, determine which velocity-time and acceleration-time graphs match.",
-        primaryGraph: {
-            type: "position-time",
-            data: { type: 'piecewise', segments: [
-                { startX: 0, endX: 2, type: 'parabolic', a: 2, b: 0, c: 0 },
-                { startX: 2, endX: 5, type: 'linear', slope: 8, intercept: 8 },
-                { startX: 5, endX: 7, type: 'parabolic', a: -1, b: 18, c: -37 }
-            ]}
-        },
-        matchingGraphs: {
-            velocityTime: {
-                correct: { type: 'piecewise', segments: [
-                    { startX: 0, endX: 2, type: 'linear', slope: 4, intercept: 0 },
-                    { startX: 2, endX: 5, type: 'constant', value: 8 },
-                    { startX: 5, endX: 7, type: 'linear', slope: -2, intercept: 18 }
-                ]},
-                options: 3
+        type: 'graph-matching',
+        level: 2,
+        points: 25,
+        question: "An object moves with constant velocity. Which position-time graph best represents this motion?",
+        scenario: "A car travels down a highway at a steady 60 mph without speeding up or slowing down.",
+        graphType: "position-time",
+        options: [
+            {
+                id: 'a',
+                description: "Linear line with positive slope",
+                graphData: { type: 'linear', startX: 0, startY: 5, endX: 10, endY: 20 },
+                correct: true
             },
-            accelerationTime: {
-                correct: { type: 'piecewise', segments: [
-                    { startX: 0, endX: 2, type: 'constant', value: 4 },
-                    { startX: 2, endX: 5, type: 'constant', value: 0 },
-                    { startX: 5, endX: 7, type: 'constant', value: -2 }
-                ]},
-                options: 3
+            {
+                id: 'b',
+                description: "Horizontal line",
+                graphData: { type: 'horizontal', y: 10 },
+                correct: false
+            },
+            {
+                id: 'c',
+                description: "Parabolic curve starting at origin",
+                graphData: { type: 'parabolic', a: 0.2, b: 0, c: 5 },
+                correct: false
+            },
+            {
+                id: 'd',
+                description: "Steep linear line",
+                graphData: { type: 'linear', startX: 0, startY: 0, endX: 10, endY: 25 },
+                correct: false
             }
-        },
-        explanation: "Each piece of the position graph determines the corresponding velocity (derivative) and acceleration (second derivative).",
-        teachingPoints: [
-            "Parabolic position → linear velocity → constant acceleration",
-            "Linear position → constant velocity → zero acceleration"
+        ],
+        explanation: "Constant velocity means position changes at a steady rate, producing a straight line on a position-time graph.",
+        commonMistakes: [
+            "Thinking constant velocity means horizontal line",
+            "Confusing position-time with velocity-time graphs"
+        ],
+        hints: [
+            "What happens to position when velocity is constant?",
+            "A straight line means constant rate of change"
         ]
     },
 
@@ -406,8 +412,8 @@ const SAMPLE_QUESTIONS = [
             },
             {
                 id: 'd',
-                description: "Exponential decay",
-                graphData: { type: 'exponential' },
+                description: "Linear decreasing line",
+                graphData: { type: 'linear', startX: 0, startY: 15, endX: 10, endY: 5 },
                 correct: false
             }
         ],
@@ -416,6 +422,295 @@ const SAMPLE_QUESTIONS = [
             "Notice the pendulum's velocity changes as it swings",
             "Maximum speed occurs at the bottom of the swing",
             "The motion is periodic and symmetric"
+        ]
+    },
+
+    // Additional Kinematic Graph Matching Questions
+    {
+        id: 7,
+        type: 'graph-matching',
+        level: 2,
+        points: 20,
+        question: "An object starts with a positive velocity and slows down to a stop. Which position-time graph represents this motion?",
+        scenario: "A car is moving forward but applies the brakes and comes to a complete stop.",
+        graphType: "position-time",
+        options: [
+            {
+                id: 'a',
+                description: "Upward curving line that levels off",
+                graphData: { type: 'parabolic', a: -0.1, b: 3, c: 0 },
+                correct: true
+            },
+            {
+                id: 'b',
+                description: "Straight line with positive slope",
+                graphData: { type: 'linear', startX: 0, startY: 0, endX: 10, endY: 15 },
+                correct: false
+            },
+            {
+                id: 'c',
+                description: "Downward curving parabola",
+                graphData: { type: 'parabolic', a: 0.2, b: -2, c: 5 },
+                correct: false
+            },
+            {
+                id: 'd',
+                description: "Horizontal line",
+                graphData: { type: 'horizontal', y: 10 },
+                correct: false
+            }
+        ],
+        explanation: "When an object slows down from positive velocity to rest, position increases at a decreasing rate, creating an upward curve that levels off.",
+        commonMistakes: [
+            "Confusing position graphs with velocity graphs",
+            "Not understanding that slowing down means decreasing slope, not negative position"
+        ],
+        hints: [
+            "Think about how position changes when velocity decreases",
+            "The slope of position vs. time represents velocity"
+        ]
+    },
+
+    {
+        id: 8,
+        type: 'graph-matching',
+        level: 3,
+        points: 25,
+        question: "Match this velocity-time graph to its corresponding acceleration-time graph.",
+        primaryGraph: {
+            type: "velocity-time",
+            data: { type: 'linear', startX: 0, startY: 5, endX: 10, endY: 15 }
+        },
+        graphType: "acceleration-time",
+        options: [
+            {
+                id: 'a',
+                description: "Horizontal line above zero",
+                graphData: { type: 'horizontal', y: 1 },
+                correct: true
+            },
+            {
+                id: 'b',
+                description: "Linear increasing line",
+                graphData: { type: 'linear', startX: 0, startY: 0, endX: 10, endY: 5 },
+                correct: false
+            },
+            {
+                id: 'c',
+                description: "Horizontal line at zero",
+                graphData: { type: 'horizontal', y: 0 },
+                correct: false
+            },
+            {
+                id: 'd',
+                description: "Linear decreasing line",
+                graphData: { type: 'linear', startX: 0, startY: 2, endX: 10, endY: -1 },
+                correct: false
+            }
+        ],
+        explanation: "A linear velocity-time graph indicates constant acceleration. The slope of the v-t graph gives the acceleration value.",
+        commonMistakes: [
+            "Thinking acceleration graph should match velocity graph shape",
+            "Confusing the slope with the y-values"
+        ],
+        hints: [
+            "What does the slope of a velocity-time graph represent?",
+            "If velocity changes at a constant rate, what does that say about acceleration?"
+        ]
+    },
+
+    {
+        id: 9,
+        type: 'graph-matching',
+        level: 3,
+        points: 30,
+        question: "An object undergoes constant positive acceleration from rest. Which set of graphs correctly shows position, velocity, and acceleration vs. time?",
+        graphType: "multi-graph",
+        options: [
+            {
+                id: 'a',
+                description: "Position: parabolic up, Velocity: linear up, Acceleration: horizontal",
+                correct: true,
+                multiGraphs: {
+                    position: { type: 'parabolic', a: 0.2, b: 0, c: 0 },
+                    velocity: { type: 'linear', startX: 0, startY: 0, endX: 10, endY: 8 },
+                    acceleration: { type: 'horizontal', y: 1 }
+                }
+            },
+            {
+                id: 'b',
+                description: "Position: linear up, Velocity: horizontal, Acceleration: zero",
+                correct: false,
+                multiGraphs: {
+                    position: { type: 'linear', startX: 0, startY: 0, endX: 10, endY: 10 },
+                    velocity: { type: 'horizontal', y: 5 },
+                    acceleration: { type: 'horizontal', y: 0 }
+                }
+            },
+            {
+                id: 'c',
+                description: "Position: linear up, Velocity: parabolic up, Acceleration: linear up",
+                correct: false,
+                multiGraphs: {
+                    position: { type: 'linear', startX: 0, startY: 0, endX: 10, endY: 8 },
+                    velocity: { type: 'parabolic', a: 0.1, b: 0, c: 0 },
+                    acceleration: { type: 'linear', startX: 0, startY: 0, endX: 10, endY: 3 }
+                }
+            },
+            {
+                id: 'd',
+                description: "Position: horizontal, Velocity: linear down, Acceleration: horizontal negative",
+                correct: false,
+                multiGraphs: {
+                    position: { type: 'horizontal', y: 5 },
+                    velocity: { type: 'linear', startX: 0, startY: 5, endX: 10, endY: 0 },
+                    acceleration: { type: 'horizontal', y: -0.5 }
+                }
+            }
+        ],
+        explanation: "Constant acceleration produces: quadratic position (parabolic), linear velocity, and constant acceleration graphs.",
+        teachingPoints: [
+            "Position is the integral of velocity (parabolic when velocity is linear)",
+            "Velocity is the integral of acceleration (linear when acceleration is constant)",
+            "Acceleration is constant (horizontal line)"
+        ],
+        hints: [
+            "Think about the mathematical relationships: position = ∫velocity, velocity = ∫acceleration",
+            "Starting from rest means initial velocity = 0"
+        ]
+    },
+
+    {
+        id: 10,
+        type: 'graph-matching',
+        level: 4,
+        points: 35,
+        question: "This position-time graph shows an object that speeds up, moves at constant velocity, then slows down. Which velocity-time graph matches?",
+        primaryGraph: {
+            type: "position-time",
+            data: { type: 'piecewise', segments: [
+                { startX: 0, endX: 3, type: 'parabolic', a: 0.5, b: 0, c: 0 },
+                { startX: 3, endX: 7, type: 'linear', slope: 3, intercept: 4.5 },
+                { startX: 7, endX: 10, type: 'parabolic', a: -0.3, b: 4.2, c: -10.25 }
+            ]}
+        },
+        graphType: "velocity-time",
+        options: [
+            {
+                id: 'a',
+                description: "Linear up, then horizontal, then linear down",
+                graphData: { type: 'piecewise', segments: [
+                    { startX: 0, endX: 3, type: 'linear', slope: 1, intercept: 0 },
+                    { startX: 3, endX: 7, type: 'horizontal', y: 3 },
+                    { startX: 7, endX: 10, type: 'linear', slope: -1, intercept: 10 }
+                ]},
+                correct: true
+            },
+            {
+                id: 'b',
+                description: "Parabolic up, then linear up, then parabolic down",
+                graphData: { type: 'piecewise', segments: [
+                    { startX: 0, endX: 3, type: 'parabolic', a: 0.3, b: 0, c: 0 },
+                    { startX: 3, endX: 7, type: 'linear', slope: 0.5, intercept: 2 },
+                    { startX: 7, endX: 10, type: 'parabolic', a: -0.2, b: 3, c: -8 }
+                ]},
+                correct: false
+            },
+            {
+                id: 'c',
+                description: "Constant horizontal line",
+                graphData: { type: 'horizontal', y: 2 },
+                correct: false
+            },
+            {
+                id: 'd',
+                description: "Linear up throughout",
+                graphData: { type: 'linear', startX: 0, startY: 0, endX: 10, endY: 8 },
+                correct: false
+            }
+        ],
+        explanation: "The slope of position-time gives velocity. Curved position → changing velocity (linear). Straight position → constant velocity (horizontal).",
+        commonMistakes: [
+            "Thinking velocity graph should have same shape as position graph",
+            "Not understanding that slope of position-time equals velocity"
+        ],
+        hints: [
+            "Look at how steep the position graph is at each segment",
+            "Curved segments have changing slope, straight segments have constant slope"
+        ]
+    },
+
+    {
+        id: 11,
+        type: 'misconception-identification',
+        level: 2,
+        points: 25,
+        question: "A student says: 'The object is moving backward because the acceleration graph is below zero.' What's wrong with this reasoning?",
+        graphType: "acceleration-time",
+        studentStatement: "Negative acceleration always means moving backward.",
+        graphData: { type: 'horizontal', y: -2 },
+        options: [
+            {
+                id: 'a',
+                text: "The student is correct - negative acceleration means backward motion",
+                correct: false
+            },
+            {
+                id: 'b',
+                text: "Negative acceleration means slowing down, not necessarily moving backward",
+                correct: true
+            },
+            {
+                id: 'c',
+                text: "Acceleration graphs don't show direction of motion",
+                correct: false
+            },
+            {
+                id: 'd',
+                text: "The graph is showing velocity, not acceleration",
+                correct: false
+            }
+        ],
+        explanation: "Negative acceleration can mean either slowing down while moving forward, or speeding up while moving backward. Direction depends on velocity, not acceleration.",
+        misconception: "acceleration-direction-confusion",
+        remediation: "Remember: acceleration tells you how velocity is changing, not which direction you're moving. An object can have negative acceleration while moving forward (slowing down)."
+    },
+
+    {
+        id: 12,
+        type: 'area-under-curve',
+        level: 3,
+        points: 30,
+        question: "Find the displacement during the motion shown in this velocity-time graph.",
+        graphType: "velocity-time",
+        graphData: {
+            type: 'complex',
+            regions: [
+                { shape: 'rectangle', base: 3, height: 8, xStart: 0 },
+                { shape: 'triangle', base: 2, height: -4, xStart: 3 },
+                { shape: 'rectangle', base: 3, height: 4, xStart: 5 }
+            ]
+        },
+        calculation: {
+            steps: [
+                "First rectangle: 3s × 8m/s = 24m",
+                "Triangle: ½ × 2s × (-4m/s) = -4m", 
+                "Second rectangle: 3s × 4m/s = 12m",
+                "Total displacement: 24m + (-4m) + 12m = 32m"
+            ],
+            answer: 32,
+            units: "m"
+        },
+        options: [
+            { text: "32 m", correct: true },
+            { text: "40 m", correct: false, error: "Ignored negative area" },
+            { text: "28 m", correct: false, error: "Calculation error" },
+            { text: "36 m", correct: false, error: "Wrong triangle area formula" }
+        ],
+        hints: [
+            "Break into geometric shapes: rectangles and triangles",
+            "Areas below the time axis are negative",
+            "Add all areas algebraically for displacement"
         ]
     }
 ];
