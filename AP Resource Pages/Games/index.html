@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinemaQuest: Graph Master Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- ARIA Live Regions for Screen Reader Announcements -->
+        <div aria-live="polite" aria-atomic="true" class="sr-only" id="status-updates"></div>
+        <div aria-live="assertive" aria-atomic="true" class="sr-only" id="urgent-updates"></div>
+        
+        <!-- Header -->
+        <header class="game-header">
+            <div class="header-content">
+                <h1>KinemaQuest: Graph Master Challenge</h1>
+                <div class="player-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Level:</span>
+                        <span id="player-level">1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Points:</span>
+                        <span id="player-points">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Accuracy:</span>
+                        <span id="player-accuracy">--</span>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <progress id="level-progress" class="progress-fill" value="0" max="100" aria-label="Level progress"></progress>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main id="main-content">
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="screen active">
+                <div class="welcome-content">
+                    <h2>Welcome to KinemaQuest!</h2>
+                    <p>Master kinematics graphs through engaging challenges and unlock your physics potential.</p>
+                    
+                    <div class="level-preview">
+                        <h3>Your Current Level: <span id="current-level-name">Novice Explorer</span></h3>
+                        <p id="level-description">Learn basic graph reading and identify positive/negative slopes</p>
+                    </div>
+
+                    <div class="session-options">
+                        <button type="button" id="start-session" class="btn btn-primary">Start 20-Minute Session</button>
+                        <button type="button" id="practice-mode" class="btn btn-secondary">Practice Mode</button>
+                        <button type="button" id="view-progress" class="btn btn-tertiary">View Progress</button>
+                    </div>
+
+                    <div class="daily-challenge">
+                        <h4>Today's Challenge: <span id="daily-challenge-name">Graph Detective</span></h4>
+                        <p id="daily-challenge-desc">Identify misconceptions in student-generated graphs</p>
+                        <button type="button" id="daily-challenge-btn" class="btn btn-accent">Take Challenge (+50% Bonus)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Screen -->
+            <div id="game-screen" class="screen">
+                <div class="game-content">
+                    <!-- Timer and Session Info -->
+                    <div class="session-header">
+                        <div class="timer">
+                            <span class="timer-label">Time:</span>
+                            <span id="session-timer">20:00</span>
+                        </div>
+                        <div class="question-counter">
+                            <span>Question <span id="current-question">1</span> of <span id="total-questions">8</span></span>
+                        </div>
+                        <div class="session-points">
+                            <span>Session: <span id="session-points">0</span> pts</span>
+                        </div>
+                    </div>
+
+                    <!-- Question Area -->
+                    <div id="question-container" class="question-container">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+
+                    <!-- Answer Area -->
+                    <div id="answer-container" class="answer-container">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+
+                    <!-- Feedback Area -->
+                    <div id="feedback-container" class="feedback-container hidden">
+                        <div class="feedback-content">
+                            <div id="feedback-message"></div>
+                            <button type="button" id="next-question" class="btn btn-primary">Next Question</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="screen">
+                <div class="results-content">
+                    <h2>Session Complete!</h2>
+                    
+                    <div class="results-stats">
+                        <div class="stat-card">
+                            <h3 id="final-score">0</h3>
+                            <p>Points Earned</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 id="final-accuracy">0%</h3>
+                            <p>Accuracy</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 id="questions-answered">0</h3>
+                            <p>Questions Answered</p>
+                        </div>
+                    </div>
+
+                    <div id="level-up-notification" class="level-up hidden">
+                        <h3>🎉 Level Up!</h3>
+                        <p>You've reached <span id="new-level-name"></span>!</p>
+                        <div id="new-badges"></div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button type="button" id="continue-session" class="btn btn-primary">Continue (+10 min)</button>
+                        <button type="button" id="new-session" class="btn btn-secondary">New Session</button>
+                        <button type="button" id="view-leaderboard" class="btn btn-tertiary">View Leaderboard</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Screen -->
+            <div id="progress-screen" class="screen">
+                <div class="progress-content">
+                    <h2>Your Progress</h2>
+                    
+                    <div class="tabs">
+                        <button type="button" class="tab-btn active" data-tab="overview">Overview</button>
+                        <button type="button" class="tab-btn" data-tab="badges">Badges</button>
+                        <button type="button" class="tab-btn" data-tab="leaderboard">Leaderboard</button>
+                    </div>
+
+                    <div id="overview-tab" class="tab-content active">
+                        <div class="level-progress-detailed">
+                            <h3>Level Progress</h3>
+                            <div class="level-bar">
+                                <div class="level-fill"></div>
+                            </div>
+                            <p><span id="points-to-next">100</span> points to next level</p>
+                        </div>
+
+                        <div class="topic-mastery">
+                            <h3>Topic Mastery</h3>
+                            <div class="mastery-grid">
+                                <div class="mastery-item">
+                                    <span>Graph Reading</span>
+                                    <div class="mastery-bar"><div class="mastery-75"></div></div>
+                                </div>
+                                <div class="mastery-item">
+                                    <span>Slope Interpretation</span>
+                                    <div class="mastery-bar"><div class="mastery-60"></div></div>
+                                </div>
+                                <div class="mastery-item">
+                                    <span>Area Under Curves</span>
+                                    <div class="mastery-bar"><div class="mastery-45"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="badges-tab" class="tab-content">
+                        <div class="badges-grid" id="badges-grid">
+                            <!-- Badges will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div id="leaderboard-tab" class="tab-content">
+                        <div class="leaderboard">
+                            <h3>Class Leaderboard</h3>
+                            <div class="leaderboard-list" id="leaderboard-list">
+                                <!-- Leaderboard will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="back-to-main" class="btn btn-secondary">Back to Main</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../js/theme-toggle.js"></script>
+    <script src="gameData.js"></script>
+    <script src="gameEngine.js"></script>
+    <script src="animationEngine.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
