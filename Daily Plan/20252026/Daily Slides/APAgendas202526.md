@@ -15,6 +15,55 @@ math: mathjax
 
 ---
 
+# 2025.09.15 
+
+# **AP Physics** Do Now
+
+1. Do the cyclists start at the same point? How do you know? If not, which is ahead?
+2. At $t=7\text{ s}$, which cyclist is ahead? How do you know?
+3.  Which cyclist is traveling faster at 3s? How do you know?
+4.  Are their velocities equal at any time? How do you know?
+5.  What is happening at the intersection of lines $A$ and $B$?
+
+![bg fit right:32%](image-5.png)
+
+
+---
+
+# 2025.09.15 **AP Physics**
+
+##### **❓ of the 📅**: What is the proper length of a playlist?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Finish Notes
+3. Physics Classrom: [Distance vs. Displacement](https://www.physicsclassroom.com/concept-builder/relationships-and-graphs/experiments-and-variables)
+4. Analyzing XT Graphs
+5. Average vs. Instantaneous; Speed vs. Velocity
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with distance and displacement_
+
+🥅 _Define average vs. instantaneous_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.12
 
 # **AP Physics** Do Now
