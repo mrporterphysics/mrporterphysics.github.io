@@ -77,6 +77,51 @@ To collect distance-time data for a Dune Buggy Car in order to predict the time 
 ---
 
 
+
+![bg git](image-22.png)
+
+---
+
+![bg fit](image-5.png)
+
+
+---
+
+# Lab Results:
+
+* The buggies moved with a ***constant velocity***
+    * means that it changed its *position* equal amounts for each equal change in *time*
+* ***Velocity*** ($\bar{v}$) is represented by the *slope* of the position vs. time graph
+    * how "fast"
+    * AND what direction
+* ***Speed*** is the steepness of the slope:
+    * it tells us the rate that position changes with time
+    * steeper slope == faster
+* The **initial position** ($x_0$ or $y_0$) of the object is the vertical intercept
+    *  it tells us where the object is at clock reading 0.
+
+---
+
+# Mathematical Models 
+
+#### General Mathematical Mode:
+
+$$x = \bar{v}t + x_0$$
+
+
+#### Specific Mathematical Model (example):
+
+$$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
+
+
+#### Narrative Model:
+
+*"The toy car started at a position of 250 cm and moved in the positive direction at a speed of 25 cm/s."*
+
+---
+
+
+
 # Defining "How Far"
 
 ### Who went further? Dorothy or Toto?
@@ -130,48 +175,6 @@ Make an arguement for **both cases**
 - Where an object is at any particular time in coordinate system (***vector***)
 - "Location"
 
----
-
-
-![bg git](image-22.png)
-
----
-
-![bg fit](image-5.png)
-
-
----
-
-# Lab Results:
-
-* The buggies moved with a ***constant velocity***
-    * means that it changed its *position* equal amounts for each equal change in *time*
-* ***Velocity*** ($\bar{v}$) is represented by the *slope* of the position vs. time graph
-    * how "fast"
-    * AND what direction
-* ***Speed*** is the steepness of the slope:
-    * it tells us the rate that position changes with time
-    * steeper slope == faster
-* The **initial position** ($x_0$ or $y_0$) of the object is the vertical intercept
-    *  it tells us where the object is at clock reading 0.
-
----
-
-# Mathematical Models 
-
-#### General Mathematical Mode:
-
-$$x = \bar{v}t + x_0$$
-
-
-#### Specific Mathematical Model (example):
-
-$$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
-
-
-#### Narrative Model:
-
-*"The toy car started at a position of 250 cm and moved in the positive direction at a speed of 25 cm/s."*
 
 --- 
 

@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2025.09.15 **Regents Physics**
+
+##### **❓ of the 📅**: What is the proper length of a playlist?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Buggy Lab Board Meeting
+  - Remind yourself of your lab & results
+2. [CV Notes](../../../Presentations/APCVPM/talks/RPKinematics2025.html) & Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define CV Model_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09/11 **Regents Physics **
 
 ##### **❓ of the 📅**: Does a week start on Sunday or Monday?
