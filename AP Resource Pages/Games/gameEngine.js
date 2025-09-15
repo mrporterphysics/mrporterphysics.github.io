@@ -688,6 +688,12 @@ class GraphRenderer {
             case 'sawtooth':
                 this.drawSawtoothGraph(ctx, graphData, width, height, axes);
                 break;
+            case 'inverse':
+                this.drawInverseGraph(ctx, graphData, width, height, axes);
+                break;
+            case 'exponential':
+                this.drawExponentialGraph(ctx, graphData, width, height, axes);
+                break;
             default:
                 console.warn(`Unknown graph type: ${graphData.type}`);
                 this.drawErrorMessage(ctx, width, height, `Graph type "${graphData.type}" not supported`);
@@ -1186,6 +1192,88 @@ class GraphRenderer {
             }
         }
         
+        ctx.stroke();
+    }
+
+    static drawInverseGraph(ctx, graphData, width, height, axes) {
+        const margin = 50;
+        const xRange = width - 2 * margin;
+        const yRange = height - 2 * margin;
+
+        const xMax = axes.xMax || 10;
+        const yMax = axes.yMax || 100;
+        const yMin = axes.yMin || 0;
+
+        const xScale = xRange / xMax;
+        const yScale = yRange / (yMax - yMin);
+
+        const coefficient = graphData.coefficient || 10;
+        const power = graphData.power || 1;
+        const yShift = graphData.yShift || 0;
+
+        ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--primary-color') || '#4385BE';
+        ctx.lineWidth = 4;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+
+        let firstPoint = true;
+        const step = xMax / 200;
+
+        for (let x = step; x <= xMax; x += step) { // Start from step to avoid division by zero
+            const y = coefficient / Math.pow(x, power) + yShift;
+
+            const pixelX = margin + x * xScale;
+            const pixelY = height - margin - (y - yMin) * yScale;
+
+            if (firstPoint) {
+                ctx.moveTo(pixelX, pixelY);
+                firstPoint = false;
+            } else {
+                ctx.lineTo(pixelX, pixelY);
+            }
+        }
+
+        ctx.stroke();
+    }
+
+    static drawExponentialGraph(ctx, graphData, width, height, axes) {
+        const margin = 50;
+        const xRange = width - 2 * margin;
+        const yRange = height - 2 * margin;
+
+        const xMax = axes.xMax || 10;
+        const yMax = axes.yMax || 100;
+        const yMin = axes.yMin || 0;
+
+        const xScale = xRange / xMax;
+        const yScale = yRange / (yMax - yMin);
+
+        const base = graphData.base || Math.E;
+        const coefficient = graphData.coefficient || 10;
+        const yShift = graphData.yShift || 0;
+
+        ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--primary-color') || '#4385BE';
+        ctx.lineWidth = 4;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+
+        let firstPoint = true;
+        const step = xMax / 200;
+
+        for (let x = 0; x <= xMax; x += step) {
+            const y = coefficient * Math.pow(base, x) + yShift;
+
+            const pixelX = margin + x * xScale;
+            const pixelY = height - margin - (y - yMin) * yScale;
+
+            if (firstPoint) {
+                ctx.moveTo(pixelX, pixelY);
+                firstPoint = false;
+            } else {
+                ctx.lineTo(pixelX, pixelY);
+            }
+        }
+
         ctx.stroke();
     }
 }

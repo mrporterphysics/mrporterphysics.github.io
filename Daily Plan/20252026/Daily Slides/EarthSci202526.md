@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2025.09.15 **Earth Science**
+
+##### **❓ of the 📅**: What is the proper length of a playlist?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. CER Graph Practice
+2. Discuss
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make scientific arguments about graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.12 **Earth Science**
 
 ##### **❓ of the 📅**: What is the best fry shape? 🍟

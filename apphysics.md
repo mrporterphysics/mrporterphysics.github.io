@@ -3,6 +3,7 @@
 ## Resources
 
 - [Data Collection Best Practices](/AP%20Resource%20Pages/datacollection.html)
+- [Graph Matching Game](/AP%20Resource%20Pages/Games/index.html)
 
 ## AP Physics Content Slides:
 
