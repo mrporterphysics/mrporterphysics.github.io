@@ -27,6 +27,18 @@ math: mathjax
 
 ![bg fit right:32%](image-5.png)
 
+---
+
+
+# 2025.09.15 
+
+# **AP Physics** Do Now
+
+6. Write a hypothetical mathematical model for each cyclist
+
+![bg fit right:32%](image-5.png)
+
+
 
 ---
 
