@@ -53,12 +53,6 @@ On an index card:
 3. What are your expectations for your child this year?
 4. Is there anything you want me to know about your child?
 
----
-
-# One more question!
-
-
-5. If we were on a deserted island what skills could you bring to ensure the survival of everyone in this room?
 
 ---
 

@@ -754,3 +754,12 @@ section.dark table th[style] {
     background-color: inherit !important;
     color: inherit !important;
 }
+
+.blur {
+  width: 33%;
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #7b998aa6;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
