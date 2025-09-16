@@ -17,14 +17,15 @@ math: mathjax
 
 # 2025.09.16 **Do Now**
 
-### 1. Provide an example where **distance**, **displacment**, and final position are ***the same***
-### 2. Provide an example where **distance**, **displacment**, and final position are ***different***
+### 1. Complete _Describing Motion Verbally with Distance and Displacement_ Worksheet
+### 2. Provide an example where **distance**, **displacment**, and final position are ***the same***
+### 3. Provide an example where **distance**, **displacment**, and final position are ***different***
 
 ---
 
 # 2025.09.16 **Regents Physics**
 
-##### **❓ of the 📅**: QUESTION
+##### **❓ of the 📅**: What's the best pizza topping? 🍕
 
 <div class ='columns'>
 
