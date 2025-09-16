@@ -246,104 +246,6 @@ Each description should include:
 
 ![center](../../../Daily%20Plan/20232024/images/Kinematics/xt6.png)
 
-
----
-
-# Motion Maps
-
-![center width:900](https://www.intelligentdesigneronline.com/drhoades/advanced/reading/motionMap1.png)
-
----
-
-# Motion Maps 
-
-<br>
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/motionmapCPexample.png)
-
-
----
-
-# Motion Maps Notes
-
-- Each dot represents **one unit of time**
-- The numberline is the **position** of the object
-- The separation of the dots and length of the arrow represents the **velocity** of the object 
-- Stacked dots represent an object that is motionless
-
----
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice1.png)
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice2.png)
-
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice3.png)
-
-
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice4.png)
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice5.png)
-
----
-
-## Practice: Complete individually and compare
-
-Given the following position vs. time graph
-
-1. Draw a motion map with one dot for each second
-2. Describe the motion in words
-
-![bg right fit](../figures/xtpractice1.png)
-
----
-
-## More Practice 
-
-Given the following motion map, where positions have been recorded with one dot each second, 
-
-1. Draw a position vs. time graph 
-2. Describe the motion of the object in words
-
-
-![bg right fit vertical](../figures/mmpractice2.png)
-
-![bg right fit](../figures/xtpractice2.png)
-
-
----
-
-# Motion Sensor Lab <!--fit--->
-
-
 ---
 
 
@@ -507,6 +409,106 @@ $$ |v| = \frac{dist}{\Delta t}$$
 ## Instantaneous Speed
 
 - Magnitude of the velocity 
+
+
+
+---
+
+# Motion Maps
+
+![center width:900](https://www.intelligentdesigneronline.com/drhoades/advanced/reading/motionMap1.png)
+
+---
+
+# Motion Maps 
+
+<br>
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/motionmapCPexample.png)
+
+
+---
+
+# Motion Maps Notes
+
+- Each dot represents **one unit of time**
+- The numberline is the **position** of the object
+- The separation of the dots and length of the arrow represents the **velocity** of the object 
+- Stacked dots represent an object that is motionless
+
+---
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice1.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice2.png)
+
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice3.png)
+
+
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice4.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice5.png)
+
+---
+
+## Practice: Complete individually and compare
+
+Given the following position vs. time graph
+
+1. Draw a motion map with one dot for each second
+2. Describe the motion in words
+
+![bg right fit](../figures/xtpractice1.png)
+
+---
+
+## More Practice 
+
+Given the following motion map, where positions have been recorded with one dot each second, 
+
+1. Draw a position vs. time graph 
+2. Describe the motion of the object in words
+
+
+![bg right fit vertical](../figures/mmpractice2.png)
+
+![bg right fit](../figures/xtpractice2.png)
+
+
+---
+
+# Motion Sensor Lab <!--fit--->
+
+
 
 ---
 

@@ -15,6 +15,46 @@ math: mathjax
 
 ---
 
+# 2025.09.16 **Do Now**
+
+### 1. Provide an example where **distance**, **displacment**, and final position are ***the same***
+### 2. Provide an example where **distance**, **displacment**, and final position are ***different***
+
+---
+
+# 2025.09.16 **Regents Physics**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Speed vs. Velocity
+3. Describing Motion
+4. Average vs. Instantaneous Speed & Velocity
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Interpret & describe motion from position vs. time graphs_
+
+### 📆 Upcoming
+
+- Physics Classroom HW:
+  - Set K1: Distance versus Displacement
+
+</div>
+</div>
+
+---
+
 # 2025.09.15 **Regents Physics**
 
 ##### **❓ of the 📅**: What is the proper length of a playlist?
@@ -28,6 +68,7 @@ math: mathjax
 1. Buggy Lab Board Meeting
   - Remind yourself of your lab & results
 2. [CV Notes](../../../Presentations/APCVPM/talks/RPKinematics2025.html) & Practice
+3. Physics Classroom: _**Position-Time Graphs - Conceptual Analysis Concept Builder**_
 
 </div>
 
