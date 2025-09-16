@@ -36,7 +36,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 _Make scientific arguments fromg graphical data_
+🥅 _Make scientific arguments from graphical data_
 
 ### 📆 Upcoming
 
