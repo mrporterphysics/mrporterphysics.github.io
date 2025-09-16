@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2025.09.16 **Earth Science**
+
+##### **❓ of the 📅**: What's the best pizza topping? 🍕
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish CER Worksheet
+2. Whiteboard and Present Assigned Graph
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make scientific arguments fromg graphical data_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.15 **Earth Science**
 
 ##### **❓ of the 📅**: What is the proper length of a playlist?
