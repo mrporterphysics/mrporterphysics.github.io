@@ -306,13 +306,6 @@ $$ |v| = \frac{\textrm{distance}}{\Delta t}$$
 
 ---
 
-# Visualizing Instantaneous Velocity
-
-<iframe src="https://www.desmos.com/calculator/bfyznrfmgh" width="1150px" height="500px" style="border: 1px solid #ccc" frameborder=0 ></iframe>
-
-
----
-
 # Analyzing Position-Time (XT) Graphs
 
 
@@ -342,75 +335,6 @@ $$ |v| = \frac{dist}{\Delta t}$$
 
 
 ![bg right fit](../figures/image.png)
-
-
-
----
-
-
-# Analyzing Position-Time (XT) Graphs
-
-### For the following position vs. time graph, consider the positive direction to be north.
-
-1. When is the object moving North? South?
-3. When is the object stopped?
-4. When is the object North of the origin?
-5. What is the velocity of the object at $t = 1$ s? $t = 2.5$ s? $t = 4$ s? When it is at the origin?
-
-
-
-![bg right:42% fit](../figures/xtavvsinst.png)
-
----
-
-# Analyzing Position-Time (XT) Graphs
-
-
-5. When does the object change directions?
-8. What is the total *distance* the object travels?
-9. What is the total *displacement* of the object?
-10. What is the *average velocity* of the object?
-11. What is the *average speed* of the object?
-
-![bg right fit](../figures/xtavvsinst.png)
-
----
-
-# Average Velocity 
-
-Dispalcement divided by the change in time. 
-
-$$ \bar{v} = \frac{\Delta x}{\Delta t}$$
-
-_"The average slope of the graph"_
-
-# Average Speed 
-
-Total distance divided by change in time 
-
-$$ |v| = \frac{dist}{\Delta t}$$
-
-
-![bg right fit](../figures/image.png)
-
----
-
-# Instantaneous Values:
-
-- _"at that moment"_
-- Value at a specific time 
-
-## Instantaneous Velocity
-
-- Velocity at a specific time
-- The slope of the position vs. time graph ***at that time measurement***
-
-
-## Instantaneous Speed
-
-- Magnitude of the velocity 
-
-
 
 ---
 

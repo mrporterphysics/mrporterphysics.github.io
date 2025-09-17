@@ -15,6 +15,40 @@ math: mathjax
 
 ---
 
+# 2025.09.17 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather live in the ocean 🌊 or on the moon 🌔?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now PC - **_Position-Time Graphs - Conceptual Analysis Concept Builder_**
+2. Average vs. Instantaneous
+    - **_Position-Time Graphs - Numerical Analysis_**
+3. Motion Maps
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion with position vs. time graphs_
+
+🥅 _Differentiate between average and instantaneous_
+
+### 📆 Homework
+
+- PC: CalcPad - **Kinematics 2: Position-Time Graphs**
+
+</div>
+</div>
+
+---
+
 # 2025.09.16 **Do Now**
 
 ### 1. Complete _Describing Motion Verbally with Distance and Displacement_ Worksheet
