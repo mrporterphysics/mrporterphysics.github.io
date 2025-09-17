@@ -35,5 +35,9 @@
 
 - [Rocks](/mrporterphysics.github.io/Presentations/ES%20Presentations/Rocks/Rocks2025.html)
 
+---
 
+## Misc.
+
+- [Parent's Night 2025](/Presentations/Parent's%20Night/Markdown/parentsnightphysics2025.html)
 

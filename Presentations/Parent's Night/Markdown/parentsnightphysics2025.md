@@ -1,5 +1,5 @@
 ---
-title: Parents Night 2024
+title: Parents Night 2025
 marp: true
 theme: physicalSci
 class: twilight
@@ -8,16 +8,26 @@ paginate: true
 
 # CONTENTS: <!--fit--->
 
-## 1. [Physics](#physics-2024-25)
-## 2. [Earth Science](#earth-science--2024-25)
+## 1. [Physics](#physics-2025-26)
+## 2. [Earth Science](#earth-science--2025-26)
 
 ---
 
-# Back to School Night 2024 <!---fit--->
+# Back to School Night 2025 <!---fit--->
 
 # **Mr. Porter**
 
 ## Physics 2025-26
+
+---
+
+# Think about
+    
+- [x] Communication -> Parent Square
+- [x] Fix slides with dates and information
+- [ ] Update photos
+
+
 
 ---
 
@@ -26,8 +36,8 @@ paginate: true
 <div class='blur'>
 <div>
 
-- 13th Year at Schodack
-- Married and we have an 18 month old son
+- 14th Year at Schodack
+- Married and we have an 2.5 year old son
 - Avid Cyclist
     - CBRC Board Member
 - Like to vacation 🏕️ in Maine 🦞
@@ -42,7 +52,9 @@ paginate: true
 
 ![bg](../figures/IMG-5767.JPG)
 
-![bg](../figures/Robie.JPG)
+![bg](../figures/Robie2.jpeg)
+
+
 
 ---
 
@@ -51,17 +63,16 @@ paginate: true
 On an index card:
 
 0. Your Name & Your Child's Name & Class
-1. What is your proudest moment as parent in regards to the child I am teaching?
+1. What is your proudest moment as parent/guardian in regards to the child I am teaching?
 2. What motivates your child?
 3. What are your expectations for your child this year?
-4. Is there anything you want me to know about your child?
+4. Is there anything else you want me to know about your child?
 
 
 ---
 
-<!--- _backgroundColor: black --->
 
-![bg blur](../figures/IMG_3213.JPG)
+![bg blur:15px](../figures/IMG_3213.JPG)
 
 
 
@@ -145,7 +156,7 @@ On an index card:
 | Developing | 3|
 | Emerging | 2|
 | Beginning | 1|
-| No Evidence |0  |
+
 
 </div></div>
 
@@ -166,14 +177,14 @@ On an index card:
 
 ---
 
-# Grades Overall 
+# Grades Overall AP/Regents
 
-- 15% Tests
-- 25% (10% AP) Lab Completion (Lab work in Lab Notebook and Pivot Interactives)
+- 5%/10% Homework
+- 15%/20% Tests
+- 20% Lab Completion (Lab work in Lab Notebook and Pivot Interactives)
     - Labs must be completed thoughtfully and thoroughly. 
-- 60% (75% AP) Cumulative Standards Score 
+- 60%/50% Cumulative Standards Score 
     - Based on # of standards Mastered out of # assessed
-
 
 ---
 
@@ -247,7 +258,7 @@ On an index card:
 ---
 
 
-# Back to School Night 2024 <!---fit--->
+# Back to School Night 2025 <!---fit--->
 
 # **Mr. Porter**
 
@@ -260,8 +271,8 @@ On an index card:
 <div class='blur'>
 <div>
 
-- 13th Year at Schodack
-- Married and we have an 18 month old son
+- 14th Year at Schodack
+- Married and we have an 2.5 old son
 - Avid Cyclist
     - CBRC Board Member
 - Like to vacation 🏕️ in Maine 🦞
@@ -278,7 +289,7 @@ On an index card:
 
 ![bg](../figures/IMG-5767.JPG)
 
-![bg](../figures/Robie.JPG)
+![bg](../figures/Robie2.jpeg)
 
 ---
 
@@ -287,18 +298,10 @@ On an index card:
 On an index card:
 
 0. Your Name & Your Child's Name & Class
-1. What is your proudest moment as parent in regards to the child I am teaching?
+1. What is your proudest moment as parent/guardian in regards to the child I am teaching?
 2. What motivates your child?
 3. What are your expectations for your child this year?
-4. Is there anything you want me to know about your child?
-
----
-
-# One more question!
-
-
-5. If we were on a deserted island what skills could you bring to ensure the survival of everyone in this room?
-
+4. Is there anything else you want me to know about your child?
 
 ---
 
@@ -313,26 +316,46 @@ On an index card:
 
 # What is Earth Science?
 
-1. Origin of the Universe and Solar System
-2. Earth's Interior and Plate Tectonics
-3. Landscapes and Surface Processes
-4. Geologic History and Evolution of Life
-5. The Earth-Sun-Moon System
-6. Weather
-7. Climate
+1. Space Systems
+2. Earth's History
+2. Earth's Systems
+3. Weather & Climate
+4. Human Sustainability
 
 ---
 
-# Learning Process
+# Transition to NYSSLS 
 
-1) ⚓Phenomenon & Driving Question:
-    * _"If we had to move off of Planet Earth where would we go?"_
-2) Introduction to the performance task
-3) Connecting Science Learning to Anchor and Performance Task
-    * "Traditional Teaching" -> Labs, Notes, Quizzes, etc
-    * Origin of Universe (_How did all matter in the universe come into exisitence?_)
-4) Complete Performance Task
-5) Unit Test
+## Earth Science Test has changed to match the New York State Science Learning Standards
+
+<div class='columns'>
+<div>
+
+### New ESS
+
+- Phenomena and systems driven, clusters around real-world contexts
+- Shift towards scientific literacy and application
+
+</div>
+ 
+<div>
+
+### Old
+
+- traditional test, MC & FRQ
+- Classic skills such as profiles, plotting, quantitative and recall items
+
+</div>
+</div>
+
+---
+
+<iframe src="https://www.nysedregents.org/earth_space_sciences/625/ess62025-exam.pdf" 
+        width="100%" 
+        height="600px" 
+        type="application/pdf"
+        style="border: 1px solid #ccc;">
+</iframe>
 
 ---
 
@@ -350,3 +373,7 @@ On an index card:
 
 # What questions do you have? <!--fit--->
 
+## Contacts:
+
+💻 Encouraged to start with **ParentSquare**
+✉️ Email: nporter@schodack.k12.ny.us
