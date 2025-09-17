@@ -6,8 +6,10 @@ class: twilight
 paginate: true
 ---
 
-# [Physics](#physics-2024-25)
-# [Earth Science](#earth-science--2024-25)
+# CONTENTS: <!--fit--->
+
+## 1. [Physics](#physics-2024-25)
+## 2. [Earth Science](#earth-science--2024-25)
 
 ---
 

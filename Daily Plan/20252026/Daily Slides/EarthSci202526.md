@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2025.09.17 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather live in the ocean 🌊 or on the moon 🌔?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Hand in Graphs CER
+2. 🚀 Discovering [New Worlds](../../../Presentations/ES%20Presentations/Unit%201%20Origin/originOfUniverse.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _What sustains life?_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.16 **Earth Science**
 
 ##### **❓ of the 📅**: What's the best pizza topping? 🍕

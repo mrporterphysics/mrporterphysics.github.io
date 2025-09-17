@@ -35,27 +35,27 @@ img[alt~="center"] {
 - Why do you think each species lives in that enviroment
  --->
 
----
-
-# There are a variety of species on Earth and each is adapted to live in a particular environment. As I’m sure you are aware, planet Earth has been experiencing a lot of environmental stress and scientists are concerned with how this might impact species on Earth, including humans.
-
-
 
 ---
 
 <iframe width="1100" height="615" src="https://www.youtube.com/embed/u6GRYrv2e3M?si=-nP7Z5cbpM4bKxOm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <!--- 
+
+# There are a variety of species on Earth and each is adapted to live in a particular environment. As I’m sure you are aware, planet Earth has been experiencing a lot of environmental stress and scientists are concerned with how this might impact species on Earth, including humans.
+
+
+
 - What are the important details from the video that tell the story of what is starting to happen to planet Earth
 --->
 
 ---
 
-## Our Earth, for 12,000 years has been an ideal place for humans and other life to evolve. Now rising global temperatures have caused sea-levels to rise, and an increase in  floods and droughts, all forcing groups of people to leave their homes  There is also a rapid decline in populations of species worldwide that many scientists are referring to as the “Sixth Mass Extinction.” Our Earth is becoming less and less welcoming due to human impact, and our population is continuing to increase! 
+### Our Earth, for 12,000 years has been an ideal place for humans and other life to evolve. Now rising global temperatures have caused sea-levels to rise, and an increase in  floods and droughts, all forcing groups of people to leave their homes  There is also a rapid decline in populations of species worldwide that many scientists are referring to as the “Sixth Mass Extinction.” Our Earth is becoming less and less welcoming due to human impact, and our population is continuing to increase! 
 
-## What are your initial ideas for what we can do to stop what is occurring to planet Earth and ensure the survival of humans and other species?
+### **1. What are your initial ideas for what we can do to stop what is occurring to planet Earth and ensure the survival of humans and other species?**
 
-## What can humans do to survive as a species if we are not successful in stopping the negative changes to planet Earth?
+### **2. What can humans do to survive as a species if we are not successful in stopping the negative changes to planet Earth?**
 
 
 ---

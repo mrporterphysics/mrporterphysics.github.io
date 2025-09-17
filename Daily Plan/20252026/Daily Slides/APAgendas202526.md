@@ -15,6 +15,51 @@ math: mathjax
 
 ---
 
+# 2025.09.17 **Do Now**
+
+Each graph below shows the position of an object as a function of time.
+
+![center](image-6.png)
+
+1. Rank the **displacement** of each object from least to greatest. 
+2. Rank the **distance** of each object from least to greatest. 
+
+
+---
+
+# 2025.09.17 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather live in the ocean 🌊 or on the moon 🌔?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Average vs. Instantaneous
+3. Motion Maps
+4. Practice Interpreting Motion Maps
+    - Concept Builders: Position time graphs (both)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Interpret position vs. time graphs, pictorially, graphically, mathematically, and narratively_
+
+### 📆 Upcoming
+
+- HW: PC _Kinematics 2: Position-Time Graphs_
+
+</div>
+</div>
+
+---
+
 # 2025.09.15 
 
 # **AP Physics** Do Now
