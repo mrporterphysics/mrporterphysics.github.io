@@ -6,7 +6,9 @@ class: twilight
 paginate: true
 ---
 
-# CONTENTS: <!--fit--->
+<!--- _class: light --->
+
+# CONTENTS:
 
 ## 1. [Physics](#physics-2025-26)
 ## 2. [Earth Science](#earth-science--2025-26)
@@ -18,16 +20,6 @@ paginate: true
 # **Mr. Porter**
 
 ## Physics 2025-26
-
----
-
-# Think about
-    
-- [x] Communication -> Parent Square
-- [x] Fix slides with dates and information
-- [ ] Update photos
-
-
 
 ---
 
@@ -253,7 +245,23 @@ On an index card:
 
 ---
 
+# 💯 How do I help my child succeed? 💯
+
+- Complete the homework & practice
+    - Encourage them to stay after school to do this!
+- Encourage them to sign up for reassessments
+
+---
+
 # What questions do you have? <!--fit--->
+
+## Contacts:
+
+💻 Encouraged to start with **ParentSquare**
+✉️ Email: nporter@schodack.k12.ny.us
+🔗 Presentation: 
+
+![center width:200](image-2.png)
 
 ---
 
@@ -262,7 +270,7 @@ On an index card:
 
 # **Mr. Porter**
 
-## Earth Science 🌎 2024-25
+## Earth Science 🌎 2025-26
 
 ---
 
@@ -371,9 +379,22 @@ On an index card:
 ---
 
 
+# 💯 How do I help my child succeed? 💯
+
+- Complete the homework & practice
+- Encourage them to stay after school to do this!
+- Encourage your student to ask for extra practice if they are struggling with a concept
+
+
+---
+
+
 # What questions do you have? <!--fit--->
 
 ## Contacts:
 
 💻 Encouraged to start with **ParentSquare**
 ✉️ Email: nporter@schodack.k12.ny.us
+🔗 Presentation: 
+
+![center width:200](image-2.png)

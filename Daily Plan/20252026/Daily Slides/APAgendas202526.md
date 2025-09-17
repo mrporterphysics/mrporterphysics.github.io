@@ -13,6 +13,35 @@ math: mathjax
 
 ## 👨‍🏫 Mr. Porter
 
+
+---
+
+# 2025.09.18 **AP Physics**
+
+##### **❓ of the 📅**: Questionb
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. AP Workbook - 1.A through 1.D
+2. Velocity vs. Time Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
 ---
 
 # 2025.09.17 **Do Now**
