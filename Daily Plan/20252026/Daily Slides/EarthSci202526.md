@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2025.09.18 **Earth Science**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Share out ideas to save the world
+2. Exploring Data
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.17 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather live in the ocean 🌊 or on the moon 🌔?

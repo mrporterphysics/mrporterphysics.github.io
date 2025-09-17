@@ -27,7 +27,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. AP Workbook - 1.A through 1.D
-2. Velocity vs. Time Graphs
+2. Velocity vs. Time Graphs 
 
 </div>
 
@@ -35,7 +35,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Create and interpret velocity vs. time graphs_
 
 ### 📆 Upcoming
 
