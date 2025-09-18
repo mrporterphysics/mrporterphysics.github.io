@@ -17,6 +17,39 @@ class:  twilight
 
 ---
 
+# 2025.09.19 **Earth Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Share out Earth Models
+2. Analyzing Earth Data: _How do we survive?_
+3. Exploring the Performance Task
+    - What do we do?
+4. The Sun
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model what makes Earth Habitable_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.18 **Earth Science**
 
 ##### **❓ of the 📅**: What animal do you think is the creepiest?

@@ -60,69 +60,6 @@ img[alt~="center"] {
 
 ---
 
-# Primary Texts 
-
-1. Read through the 3 texts in the packet
-2. Return to each text and make your annotations (circle 3 details related to phenomenon)
-3. Share with your group 
-4. Discuss as a group, and develop a story, what is the phenomenon in these texts?
-
-### What is happening to planet Earth?
-
-### 👀 Focus on the **phenomenon**, not your predictions
-
-<!---
-- What is happening to Planet Earth
-- Why do you tihnk this detail is important?
---->
-
----
-
-# Brainstorm 🧠 ⛈️ solutions to <!--fit--->
-
-# ensure the survival of humans <!--fit--->
-
-
-- jot down some of your ideas silently
-
----
-
-# Share 🗣️ with your lab table <!--fit--->
-
-## Agree on 2-3 possible solutions to share to the class 
-
-<!---
-Circulate and Ask...
-- Did your group memebers and you circle the same ideas?
-- What was Earth like before these things were occurring?
-- What will Earth be like if this all continues?
-
-Brainstorm:
-- What are your initial ideaas for what we can do to stop what is occurring to planet Earth and ensure the survival of humans and other species?
-- What can humans do to survive if we are not successful in stopping the negative changes to planet Earth?
-
---->
-
-
----
-
-# *Hunting for Earth 2.0* <!--fit--->
-
----
-
-# Hunting for Eath 2.0 
-
-## If the Earth could no longer sustain human life, where could we go? Imagine that you belong to a committee of scientists that has been asked to explore the universe for an Earth like planet that may be habitable by humans. Your task is to convince the scientific community, congress, the president, your family and friends, basically the whole world, that the exoplanet you detect is worth the funding necessary to investigate it further and perhaps try to reach it one day. 
-
----
-
-<iframe width="1100" height="615" src="https://www.youtube.com/embed/d9x9RRc0RoU?si=y5TZFswP4Pmd92bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<!---- Show the first two minutes and fifty seconds of the How many Planets? Video.
-After watching the video, highlight for students that there are a tremendous number of planets that they can investigate, so they will have to come up with a criteria for what makes a planet Earth-like in order to narrow down the search. 
---->
-
----
 
 # Earth's Timeline
 
@@ -161,7 +98,10 @@ In order to find another Earth-like planet, we’re going to start by thinking a
 - What factors do you think contributed to it taking that long?
 --->
 
---- 
+
+
+---
+
 
 # Earth-Sun System
 
@@ -208,16 +148,138 @@ Think about your initial explanation for why planet Earth has been such an ideal
 
 # Share 🗣️ Out <!--fit--->
 
-# Organzie your group's questions on ExcaliDraw 
+---
+
+# Primary Texts 
+
+1. Read through the 3 texts in the packet
+2. Return to each text and make your annotations (circle 3 details related to phenomenon)
+3. Share with your group 
+4. Discuss as a group, and develop a story, what is the phenomenon in these texts?
+
+### What is happening to planet Earth?
+
+### 👀 Focus on the **phenomenon**, not your predictions
+
+<!---
+- What is happening to Planet Earth
+- Why do you tihnk this detail is important?
+--->
+
+---
+
+# Brainstorm 🧠 ⛈️ solutions to <!--fit--->
+
+# ensure the survival of humans <!--fit--->
+
+
+- jot down some of your ideas silently
+
+---
+
+# Share 🗣️ with your lab table <!--fit--->
+
+## Agree on 2-3 possible solutions to share to the class 
+
+<!---
+Circulate and Ask...
+- Did your group memebers and you circle the same ideas?
+- What was Earth like before these things were occurring?
+- What will Earth be like if this all continues?
+
+Brainstorm:
+- What are your initial ideaas for what we can do to stop what is occurring to planet Earth and ensure the survival of humans and other species?
+- What can humans do to survive if we are not successful in stopping the negative changes to planet Earth?
+
+--->
+
+---
+
+# Hunting for Eath 2.0 
+
+## If the Earth could no longer sustain human life, where could we go? Imagine that you belong to a committee of scientists that has been asked to explore the universe for an Earth like planet that may be habitable by humans. Your task is to convince the scientific community, congress, the president, your family and friends, basically the whole world, that the exoplanet you detect is worth the funding necessary to investigate it further and perhaps try to reach it one day. 
+
+---
+
+<iframe width="1100" height="615" src="https://www.youtube.com/embed/d9x9RRc0RoU?si=y5TZFswP4Pmd92bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!---- Show the first two minutes and fifty seconds of the How many Planets? Video.
+After watching the video, highlight for students that there are a tremendous number of planets that they can investigate, so they will have to come up with a criteria for what makes a planet Earth-like in order to narrow down the search. 
+--->
+
+---
+
+# 1. What do we need to investigate about other stars (suns) and planets in order to find an Earthlike planet where humans and other species might be able to live? 
+# 2. Think about your initial explanations for why planet Earth has been able to sustain life. Then generate questions you would like to further investigate about exoplanets and the stars at the center of their solar system. 
+
+---
+
+# 1. Share with group <!--fit--->
+
+# 2. Share questions with class <!--fit--->
 
 
 ---
 
-# Exploring the <!--fit--->
+---
 
-# 🌎 Origin 🪐 🌠 <!--fit--->
+# Does the expoplanet 🪐 <!--fit--->
 
-# of the Universe <!--fit--->
+# have a sun like ours? ☀️ <!--fit--->
+
+---
+
+
+
+---
+
+# 🌎 Exploring the <!--fit---> Origin  <!--fit--->
+
+# of the Universe 🪐 <!--fit--->
+
+---
+
+<iframe width="1100" height="615" src="https://www.youtube.com/embed/UJTo1Hc8fAk?si=S4-YPXPDuAYByk3-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
+# 👓 **Read:** _How does the sun provide energy_
+
+## What other phenomena are you familiar with that are associated with a lot of energy? How is that energy being produced?
+
+---
+
+# The Sun
+
+- What are your ideas for how the Sun provides so much energy?
+- What did you observe in the video or in your life that made you think this?
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 
 ---
 
