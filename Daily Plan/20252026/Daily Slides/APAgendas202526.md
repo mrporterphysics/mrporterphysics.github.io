@@ -28,6 +28,7 @@ math: mathjax
 
 1. AP Workbook - 1.A through 1.D
 2. Velocity vs. Time Graphs 
+3. Red Car vs. Green Car Questions
 
 </div>
 
@@ -43,6 +44,40 @@ math: mathjax
 
 </div>
 </div>
+
+---
+
+A red car (top) and a green car (bottom) are having a race. The green car has a **$21.0\text{ m}$** head start (distance a). The two cars start at the same time. The red car must travel **$200.0\text{ m}$** to the finish line (distance b). The red car averages a speed of $19.3\text{ m/s}$. The green car averages a speed of **$14.2\text{ m/s}$**.
+
+
+1. Determine the **time** it takes the red car to reach the finish line.
+2. Determine the **time** it takes the green car to reach the finish line.
+
+![bg fit right:40%](image-7.png)
+
+---
+
+A red car (top) and a green car (bottom) are having a race. The green car has a **$35.0\text{ m}$** head start (distance a). The two cars start at the same time. The red car must travel 200.0 m to the finish line (distance b). The red car averages a speed of **$21.8\text{ m/s}$**. The green car averages a speed of **$14.7\text{ m/s}$**. When the red car crosses the finish line, how far (in meters) ahead or behind is the green car? (Enter a + answer if green car is ahead and a - answer if the green car is behind.)
+
+![bg fit right:40%](image-7.png)
+
+---
+
+A red car (top) and a green car (bottom) are having a race. The green car has a **$30.0\text{ m}$** head start (distance a). The two cars start at the same time. The red car must travel **$200.0\text{ m}$** to the finish line (distance b). The green car averages a speed of **$16.1\text{ m/s}$**. What speed (in m/s) must the red car average in order to reach the finish line at the exact same time as the green car?
+ 
+![bg fit right:40%](image-7.png)
+
+---
+
+A red car (top) and a green car (bottom) are having a race. The green car has a head start (distance a). The two cars start at the same time. The red car must travel **$200.0\text{ m}$** to the finish line (distance b). The red car averages a speed of **$17.7\text{ m/s}$**. The green car averages a speed of **$14.0\text{ m/s}$**. What must be the head start distance (distance a) in order for the two cars to reach the finish line at the exact same time?
+
+![bg fit right:40%](image-7.png)
+
+---
+
+A red car (on left) and a green car (on right) are spaced **$1200\text{ m}$** apart (distance a). They start at the same time and head towards each other. The red car averages a speed of **$13.2\text{ m/s}$**. The green car averages a speed of **$16.8\text{ m/s}$**. What distance will the red car have traveled (distance b) when it is at the same position as the green car?
+
+![bg fit right:40%](image-8.png)
 
 ---
 
