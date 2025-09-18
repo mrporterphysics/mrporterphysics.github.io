@@ -18,7 +18,7 @@ math: mathjax
 
 # 2025.09.18 **AP Physics**
 
-##### **❓ of the 📅**: Questionb
+##### **❓ of the 📅**: What animal do you think is the creepiest?
 
 <div class ='columns'>
 
@@ -38,6 +38,8 @@ math: mathjax
 🥅 _Create and interpret velocity vs. time graphs_
 
 ### 📆 Upcoming
+
+- Quiz **tomorrow** -> Practice posted on Canvas
 
 </div>
 </div>
