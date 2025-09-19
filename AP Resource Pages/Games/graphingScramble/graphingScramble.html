@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Graphs Card Sort Activity</title>
+    <link rel="stylesheet" href="../../../css/flexoki-theme.css">
+    <style>
+        /* Flexoki Theme Variables Override for Game */
+        :root {
+            /* Game-specific color overrides */
+            --game-bg-gradient: linear-gradient(135deg, var(--fx-blue-light), var(--fx-purple-light));
+            --game-card-shadow: 0 4px 12px var(--shadow);
+            --game-accent: var(--accent-primary);
+        }
+
+        [data-theme="dark"] {
+            --game-bg-gradient: linear-gradient(135deg, var(--fx-blue-dark), var(--fx-purple-dark));
+            --game-card-shadow: 0 4px 12px var(--shadow-hover);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background: var(--game-bg-gradient);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: auto;
+            transition: background 0.3s ease;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            min-width: 1200px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--bg-primary);
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 4px var(--shadow-hover);
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-weight: 700;
+        }
+
+        .instructions {
+            text-align: center;
+            color: var(--bg-primary);
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            text-shadow: 1px 1px 2px var(--shadow);
+        }
+        
+        .score-board {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .score-item {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: var(--game-card-shadow);
+            font-weight: bold;
+            font-size: 1.1em;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .workspace {
+            background: var(--bg-primary);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px var(--shadow-hover);
+            margin-bottom: 30px;
+            min-height: 700px;
+            position: relative;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .sorting-area {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 50px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .stack-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            min-width: 180px;
+        }
+        
+        .description-header {
+            background: var(--bg-secondary);
+            border: 3px solid var(--success);
+            border-radius: 12px;
+            padding: 15px;
+            width: 180px;
+            min-height: 100px;
+            box-shadow: var(--game-card-shadow);
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95em;
+            line-height: 1.3;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        
+        .drop-zone {
+            width: 180px;
+            min-height: 400px;
+            border: 3px dashed var(--border-color);
+            border-radius: 12px;
+            background: var(--bg-tertiary);
+            opacity: 0.7;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .drop-zone.drag-over {
+            background: var(--bg-secondary);
+            border-color: var(--accent-primary);
+            opacity: 1;
+        }
+
+        .drop-zone.correct {
+            background: var(--bg-secondary);
+            border-color: var(--success);
+            opacity: 1;
+        }
+
+        .drop-zone.incorrect {
+            background: var(--bg-secondary);
+            border-color: var(--error);
+            opacity: 1;
+        }
+        
+        .card {
+            width: 180px;
+            height: 120px;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 8px;
+            cursor: move;
+            box-shadow: var(--game-card-shadow);
+            transition: all 0.2s ease;
+            position: absolute;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .card.dragging {
+            opacity: 0.8;
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 10px 30px var(--shadow-hover);
+            z-index: 1000;
+        }
+        
+        .card.in-stack {
+            position: relative;
+            cursor: move;
+        }
+        
+        .card canvas {
+            width: 100%;
+            height: 70px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-secondary);
+        }
+        
+        .card-label {
+            font-weight: bold;
+            margin-top: 3px;
+            color: var(--text-secondary);
+            font-size: 0.85em;
+        }
+        
+        .card-pool {
+            background: var(--bg-tertiary);
+            opacity: 0.8;
+            border-radius: 15px;
+            padding: 20px;
+            min-height: 200px;
+            position: relative;
+            border: 2px dashed var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .card-pool-title {
+            text-align: center;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .controls {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 0 10px;
+            box-shadow: var(--game-card-shadow);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-family: inherit;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px var(--shadow-hover);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .feedback-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg-primary);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px var(--shadow-hover);
+            z-index: 2000;
+            display: none;
+            text-align: center;
+            max-width: 500px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .feedback-modal.show {
+            display: block;
+            animation: popup 0.5s ease;
+        }
+        
+        @keyframes popup {
+            0% {
+                transform: translate(-50%, -50%) scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .feedback-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        .feedback-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .feedback-message {
+            font-size: 1.2em;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--shadow-hover);
+            z-index: 1999;
+            display: none;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+        
+        .level-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--success);
+            color: var(--bg-primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            box-shadow: var(--game-card-shadow);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 100;
+            box-shadow: var(--game-card-shadow);
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+        }
+
+        .theme-toggle::before {
+            content: '☀️';
+        }
+
+        [data-theme="dark"] .theme-toggle::before {
+            content: '🌙';
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light theme">Theme</button>
+
+    <div class="container">
+        <h1>🎯 Motion Graphs Card Sort Activity 🎯</h1>
+        <p class="instructions">Sort the graph cards into stacks under the correct motion descriptions!</p>
+        
+        <div class="score-board">
+            <div class="score-item">
+                Score: <span id="score">0</span>
+            </div>
+            <div class="score-item">
+                Level: <span id="level">1</span> / 10
+            </div>
+            <div class="score-item">
+                Attempts: <span id="attempts">0</span>
+            </div>
+        </div>
+        
+        <div class="workspace" id="workspace">
+            <div class="level-badge">Level <span id="currentLevelBadge">1</span></div>
+            
+            <div class="sorting-area" id="sortingArea"></div>
+            
+            <div class="card-pool" id="cardPool">
+                <div class="card-pool-title">Graph Cards - Drag to Sort!</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" onclick="checkAnswer()">Check Stacks</button>
+            <button class="btn" onclick="shuffleCards()">Shuffle Cards</button>
+            <button class="btn" onclick="getHint()" id="hintBtn">Get Hint (3 left)</button>
+            <button class="btn" onclick="resetLevel()">Reset Level</button>
+        </div>
+    </div>
+    
+    <div class="overlay" id="overlay"></div>
+    <div class="feedback-modal" id="feedbackModal">
+        <div class="feedback-icon" id="feedbackIcon"></div>
+        <div class="feedback-title" id="feedbackTitle"></div>
+        <div class="feedback-message" id="feedbackMessage"></div>
+        <button class="btn" onclick="closeFeedback()" id="feedbackBtn">Continue</button>
+    </div>
+    
+    <script>
+        // Motion scenarios from worksheet
+        const worksheetData = [
+            {
+                id: 1,
+                graphs: { d: "linear_up", v: "constant_positive", a: "zero" },
+                description: "Constant speed, positive direction, moving away"
+            },
+            {
+                id: 2,
+                graphs: { d: "curve_up_accel", v: "linear_up", a: "constant_positive" },
+                description: "Speeding up, positive direction, moving away"
+            },
+            {
+                id: 3,
+                graphs: { d: "curve_up_decel", v: "linear_down_positive", a: "constant_negative" },
+                description: "Slowing down, positive direction, moving away"
+            },
+            {
+                id: 4,
+                graphs: { d: "curve_down_accel", v: "linear_down", a: "constant_negative" },
+                description: "Speeding up, negative direction, moving away"
+            },
+            {
+                id: 5,
+                graphs: { d: "constant_horizontal", v: "zero", a: "zero" },
+                description: "Object standing still"
+            },
+            {
+                id: 6,
+                graphs: { d: "curve_down_decel", v: "linear_up_from_negative", a: "constant_positive" },
+                description: "Slowing down, negative direction, moving away"
+            },
+            {
+                id: 7,
+                graphs: { d: "linear_down", v: "constant_negative", a: "zero" },
+                description: "Constant speed, negative direction"
+            },
+            {
+                id: 8,
+                graphs: { d: "linear_up_gentle", v: "constant_positive_low", a: "zero" },
+                description: "Constant speed, positive direction, towards reference"
+            },
+            {
+                id: 9,
+                graphs: { d: "curve_up_from_below", v: "linear_up", a: "constant_positive" },
+                description: "Speeding up, positive direction, towards reference"
+            },
+            {
+                id: 10,
+                graphs: { d: "parabola_up", v: "linear_through_zero", a: "constant_positive" },
+                description: "Changes from negative to positive velocity"
+            }
+        ];
+        
+        // Level configurations
+        const levelConfigs = [
+            { stacks: 2, cardsPerStack: 3 },  // Level 1: 2 stacks, 3 cards each
+            { stacks: 2, cardsPerStack: 3 },  // Level 2
+            { stacks: 3, cardsPerStack: 3 },  // Level 3
+            { stacks: 3, cardsPerStack: 3 },  // Level 4
+            { stacks: 4, cardsPerStack: 3 },  // Level 5
+            { stacks: 4, cardsPerStack: 3 },  // Level 6
+            { stacks: 5, cardsPerStack: 3 },  // Level 7
+            { stacks: 5, cardsPerStack: 3 },  // Level 8
+            { stacks: 6, cardsPerStack: 3 },  // Level 9
+            { stacks: 6, cardsPerStack: 3 },  // Level 10
+        ];
+        
+        // Game state
+        let currentLevel = 1;
+        let score = 0;
+        let attempts = 0;
+        let hintsLeft = 3;
+        let currentScenarios = [];
+        let cards = [];
+        let draggedCard = null;
+        
+        function drawGraph(canvas, type, graphType = '') {
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+
+            ctx.clearRect(0, 0, width, height);
+
+            // Draw axes
+            ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--border-color').trim();
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(10, height - 10);
+            ctx.lineTo(10, 10);
+            ctx.moveTo(10, height/2);
+            ctx.lineTo(width - 10, height/2);
+            ctx.stroke();
+
+            // Add axis labels
+            ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--text-secondary').trim();
+            ctx.font = '8px Fira Code, monospace';
+            ctx.textAlign = 'center';
+
+            // X-axis label (time)
+            ctx.fillText('time (s)', width - 25, height - 2);
+
+            // Y-axis label
+            ctx.save();
+            ctx.translate(2, 15);
+            ctx.rotate(-Math.PI / 2);
+            ctx.textAlign = 'center';
+
+            let yLabel = '';
+            if (graphType === 'd') {
+                yLabel = 'position (m)';
+            } else if (graphType === 'v') {
+                yLabel = 'velocity (m/s)';
+            } else if (graphType === 'a') {
+                yLabel = 'acceleration (m/s²)';
+            }
+
+            ctx.fillText(yLabel, 0, 0);
+            ctx.restore();
+
+            // Draw graph
+            ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent-primary').trim();
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            
+            switch(type) {
+                case 'linear_up':
+                case 'linear_up_gentle':
+                    ctx.moveTo(15, height - 15);
+                    ctx.lineTo(width - 15, 15);
+                    break;
+                case 'linear_down':
+                    ctx.moveTo(15, 15);
+                    ctx.lineTo(width - 15, height - 15);
+                    break;
+                case 'constant_positive':
+                case 'constant_positive_low':
+                    ctx.moveTo(15, height/3);
+                    ctx.lineTo(width - 15, height/3);
+                    break;
+                case 'constant_negative':
+                    ctx.moveTo(15, 2*height/3);
+                    ctx.lineTo(width - 15, 2*height/3);
+                    break;
+                case 'constant_horizontal':
+                case 'zero':
+                    ctx.moveTo(15, height/2);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'curve_up_accel':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height - 15 - (t * t * (height - 30));
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'curve_up_decel':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height - 15 - (Math.sqrt(t) * (height - 30));
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'curve_down_accel':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = 15 + (t * t * (height - 30));
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'curve_down_decel':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = 15 + (Math.sqrt(t) * (height - 30));
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'linear_down_positive':
+                    ctx.moveTo(15, height/3);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'linear_up_from_negative':
+                    ctx.moveTo(15, 2*height/3);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'linear_through_zero':
+                    ctx.moveTo(15, 2*height/3);
+                    ctx.lineTo(width - 15, height/3);
+                    break;
+                case 'parabola_up':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30) - 0.5;
+                        let y = height/2 - (t * t * height * 0.6) + height * 0.15;
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'curve_up_from_below':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = 2*height/3 - (t * t * height/3);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+            }
+            
+            ctx.stroke();
+        }
+        
+        function setupLevel() {
+            const config = levelConfigs[currentLevel - 1];
+            const numStacks = config.stacks;
+            
+            // Select random scenarios
+            const availableScenarios = [...worksheetData];
+            currentScenarios = [];
+            for (let i = 0; i < numStacks; i++) {
+                const index = Math.floor(Math.random() * availableScenarios.length);
+                currentScenarios.push(availableScenarios.splice(index, 1)[0]);
+            }
+            
+            // Create sorting area with description headers
+            const sortingArea = document.getElementById('sortingArea');
+            sortingArea.innerHTML = '';
+            
+            currentScenarios.forEach((scenario, index) => {
+                const column = document.createElement('div');
+                column.className = 'stack-column';
+                
+                // Description header
+                const header = document.createElement('div');
+                header.className = 'description-header';
+                header.textContent = scenario.description;
+                column.appendChild(header);
+                
+                // Drop zone for cards
+                const dropZone = document.createElement('div');
+                dropZone.className = 'drop-zone';
+                dropZone.dataset.stackId = scenario.id;
+                
+                setupDropZone(dropZone);
+                column.appendChild(dropZone);
+                
+                sortingArea.appendChild(column);
+            });
+            
+            // Create cards and place in pool
+            createCards();
+            distributeCards();
+        }
+        
+        function createCards() {
+            cards = [];
+            const cardPool = document.getElementById('cardPool');
+            
+            // Clear existing cards
+            document.querySelectorAll('.card').forEach(card => card.remove());
+            
+            currentScenarios.forEach(scenario => {
+                // Create position-time card
+                const dCard = createCard('d', scenario.graphs.d, scenario.id, 'Position (d-t)');
+                cards.push(dCard);
+                
+                // Create velocity-time card
+                const vCard = createCard('v', scenario.graphs.v, scenario.id, 'Velocity (v-t)');
+                cards.push(vCard);
+                
+                // Create acceleration-time card
+                const aCard = createCard('a', scenario.graphs.a, scenario.id, 'Acceleration (a-t)');
+                cards.push(aCard);
+            });
+        }
+        
+        function createCard(graphType, graphPattern, scenarioId, label) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.dataset.graphType = graphType;
+            card.dataset.scenarioId = scenarioId;
+            card.dataset.graphPattern = graphPattern;
+            
+            const canvas = document.createElement('canvas');
+            canvas.width = 140;
+            canvas.height = 70;
+            card.appendChild(canvas);
+            
+            const labelDiv = document.createElement('div');
+            labelDiv.className = 'card-label';
+            labelDiv.textContent = label;
+            card.appendChild(labelDiv);
+            
+            // Draw the graph
+            setTimeout(() => drawGraph(canvas, graphPattern, graphType), 50);
+            
+            // Setup drag handlers
+            setupCardDrag(card);
+            
+            return card;
+        }
+        
+        function setupCardDrag(card) {
+            let isDragging = false;
+            let startX, startY;
+            let initialX, initialY;
+            
+            card.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                draggedCard = card;
+                
+                const rect = card.getBoundingClientRect();
+                const workspaceRect = document.getElementById('workspace').getBoundingClientRect();
+                
+                startX = e.clientX;
+                startY = e.clientY;
+                initialX = rect.left - workspaceRect.left;
+                initialY = rect.top - workspaceRect.top;
+                
+                card.style.left = initialX + 'px';
+                card.style.top = initialY + 'px';
+                card.style.position = 'absolute';
+                card.classList.add('dragging');
+                card.style.zIndex = 1000;
+                
+                // Remove from stack if in one
+                if (card.parentElement.classList.contains('drop-zone')) {
+                    document.getElementById('workspace').appendChild(card);
+                }
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging || draggedCard !== card) return;
+                
+                e.preventDefault();
+                
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                
+                card.style.left = (initialX + dx) + 'px';
+                card.style.top = (initialY + dy) + 'px';
+                
+                // Check for drop zones
+                const dropZones = document.querySelectorAll('.drop-zone');
+                dropZones.forEach(zone => {
+                    const rect = zone.getBoundingClientRect();
+                    if (e.clientX >= rect.left && e.clientX <= rect.right &&
+                        e.clientY >= rect.top && e.clientY <= rect.bottom) {
+                        zone.classList.add('drag-over');
+                    } else {
+                        zone.classList.remove('drag-over');
+                    }
+                });
+            });
+            
+            document.addEventListener('mouseup', (e) => {
+                if (!isDragging || draggedCard !== card) return;
+                
+                isDragging = false;
+                card.classList.remove('dragging');
+                
+                // Find drop zone under cursor
+                let dropped = false;
+                const dropZones = document.querySelectorAll('.drop-zone');
+                dropZones.forEach(zone => {
+                    const rect = zone.getBoundingClientRect();
+                    if (e.clientX >= rect.left && e.clientX <= rect.right &&
+                        e.clientY >= rect.top && e.clientY <= rect.bottom) {
+                        // Add to stack
+                        zone.appendChild(card);
+                        card.style.position = 'relative';
+                        card.style.left = '0';
+                        card.style.top = '0';
+                        card.classList.add('in-stack');
+                        dropped = true;
+                    }
+                    zone.classList.remove('drag-over');
+                });
+                
+                // If not dropped in a zone, snap to pool
+                if (!dropped) {
+                    const poolRect = document.getElementById('cardPool').getBoundingClientRect();
+                    const workspaceRect = document.getElementById('workspace').getBoundingClientRect();
+                    
+                    if (e.clientY >= poolRect.top) {
+                        document.getElementById('cardPool').appendChild(card);
+                        card.style.position = 'relative';
+                        card.style.left = '0';
+                        card.style.top = '0';
+                    }
+                }
+                
+                draggedCard = null;
+            });
+        }
+        
+        function setupDropZone(zone) {
+            zone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+        }
+        
+        function distributeCards() {
+            const cardPool = document.getElementById('cardPool');
+            
+            // Shuffle cards array
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cards[i], cards[j]] = [cards[j], cards[i]];
+            }
+            
+            // Add all cards to pool
+            cards.forEach((card, index) => {
+                cardPool.appendChild(card);
+                card.style.position = 'absolute';
+                
+                // Random positioning in pool
+                const x = 20 + (index % 6) * 170;
+                const y = 50 + Math.floor(index / 6) * 130;
+                
+                card.style.left = x + 'px';
+                card.style.top = y + 'px';
+            });
+        }
+        
+        function shuffleCards() {
+            // Move all cards back to pool
+            cards.forEach(card => {
+                if (card.parentElement.classList.contains('drop-zone')) {
+                    document.getElementById('cardPool').appendChild(card);
+                    card.style.position = 'absolute';
+                    card.classList.remove('in-stack');
+                }
+            });
+            
+            // Redistribute
+            distributeCards();
+        }
+        
+        function checkAnswer() {
+            attempts++;
+            document.getElementById('attempts').textContent = attempts;
+            
+            let allCorrect = true;
+            let correctStacks = 0;
+            let totalStacks = currentScenarios.length;
+            
+            const dropZones = document.querySelectorAll('.drop-zone');
+            
+            dropZones.forEach(zone => {
+                const expectedId = zone.dataset.stackId;
+                const cardsInZone = zone.querySelectorAll('.card');
+                
+                // Check if all three cards are present and correct
+                const hasD = Array.from(cardsInZone).some(c => 
+                    c.dataset.graphType === 'd' && c.dataset.scenarioId === expectedId);
+                const hasV = Array.from(cardsInZone).some(c => 
+                    c.dataset.graphType === 'v' && c.dataset.scenarioId === expectedId);
+                const hasA = Array.from(cardsInZone).some(c => 
+                    c.dataset.graphType === 'a' && c.dataset.scenarioId === expectedId);
+                
+                if (hasD && hasV && hasA && cardsInZone.length === 3) {
+                    zone.classList.add('correct');
+                    zone.classList.remove('incorrect');
+                    correctStacks++;
+                } else if (cardsInZone.length > 0) {
+                    zone.classList.add('incorrect');
+                    zone.classList.remove('correct');
+                    allCorrect = false;
+                } else {
+                    zone.classList.remove('correct', 'incorrect');
+                    allCorrect = false;
+                }
+            });
+            
+            // Clear feedback after 3 seconds
+            setTimeout(() => {
+                dropZones.forEach(zone => {
+                    zone.classList.remove('correct', 'incorrect');
+                });
+            }, 3000);
+            
+            // Show feedback
+            if (allCorrect && correctStacks === totalStacks) {
+                score += 10 * currentLevel;
+                document.getElementById('score').textContent = score;
+                showFeedback(true);
+            } else {
+                showFeedback(false, correctStacks, totalStacks);
+            }
+        }
+        
+        function showFeedback(success, correct = 0, total = 0) {
+            const modal = document.getElementById('feedbackModal');
+            const overlay = document.getElementById('overlay');
+            const icon = document.getElementById('feedbackIcon');
+            const title = document.getElementById('feedbackTitle');
+            const message = document.getElementById('feedbackMessage');
+            const btn = document.getElementById('feedbackBtn');
+            
+            if (success) {
+                icon.textContent = '🎉';
+                title.textContent = 'Perfect!';
+                message.textContent = `All stacks are correctly sorted! Ready for Level ${currentLevel + 1}?`;
+                btn.textContent = currentLevel < 10 ? 'Next Level' : 'Play Again';
+                btn.onclick = () => {
+                    closeFeedback();
+                    if (currentLevel < 10) {
+                        nextLevel();
+                    } else {
+                        resetGame();
+                    }
+                };
+            } else {
+                icon.textContent = '🤔';
+                title.textContent = 'Keep Trying!';
+                message.textContent = `You have ${correct} out of ${total} stacks correct. Check each graph carefully!`;
+                btn.textContent = 'Continue';
+                btn.onclick = closeFeedback;
+            }
+            
+            modal.classList.add('show');
+            overlay.classList.add('show');
+        }
+        
+        function closeFeedback() {
+            document.getElementById('feedbackModal').classList.remove('show');
+            document.getElementById('overlay').classList.remove('show');
+        }
+        
+        function getHint() {
+            if (hintsLeft <= 0) return;
+            
+            // Find a misplaced card
+            const dropZones = document.querySelectorAll('.drop-zone');
+            let hintGiven = false;
+            
+            for (let zone of dropZones) {
+                const expectedId = zone.dataset.stackId;
+                const cardsInZone = zone.querySelectorAll('.card');
+                
+                for (let card of cardsInZone) {
+                    if (card.dataset.scenarioId !== expectedId) {
+                        // Highlight the incorrect card
+                        card.style.animation = 'pulse 2s ease-in-out';
+                        setTimeout(() => {
+                            card.style.animation = '';
+                        }, 2000);
+                        
+                        hintGiven = true;
+                        break;
+                    }
+                }
+                if (hintGiven) break;
+            }
+            
+            if (hintGiven) {
+                hintsLeft--;
+                document.getElementById('hintBtn').textContent = `Get Hint (${hintsLeft} left)`;
+                if (hintsLeft === 0) {
+                    document.getElementById('hintBtn').disabled = true;
+                }
+            }
+        }
+        
+        function nextLevel() {
+            currentLevel++;
+            document.getElementById('level').textContent = currentLevel;
+            document.getElementById('currentLevelBadge').textContent = currentLevel;
+            hintsLeft = 3;
+            document.getElementById('hintBtn').textContent = 'Get Hint (3 left)';
+            document.getElementById('hintBtn').disabled = false;
+            setupLevel();
+        }
+        
+        function resetLevel() {
+            setupLevel();
+        }
+        
+        function resetGame() {
+            currentLevel = 1;
+            score = 0;
+            attempts = 0;
+            hintsLeft = 3;
+            
+            document.getElementById('level').textContent = currentLevel;
+            document.getElementById('currentLevelBadge').textContent = currentLevel;
+            document.getElementById('score').textContent = score;
+            document.getElementById('attempts').textContent = attempts;
+            document.getElementById('hintBtn').textContent = 'Get Hint (3 left)';
+            document.getElementById('hintBtn').disabled = false;
+            
+            setupLevel();
+        }
+        
+        // Add pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0%, 100% { 
+                    box-shadow: 0 3px 10px rgba(0,0,0,0.2); 
+                    border-color: #333;
+                }
+                50% { 
+                    box-shadow: 0 0 20px 5px rgba(255, 193, 7, 0.6);
+                    border-color: #FFC107;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Theme Management
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            // Redraw all canvases with new colors
+            cards.forEach(card => {
+                const canvas = card.querySelector('canvas');
+                if (canvas) {
+                    const graphPattern = card.dataset.graphPattern;
+                    const graphType = card.dataset.graphType;
+                    setTimeout(() => drawGraph(canvas, graphPattern, graphType), 50);
+                }
+            });
+        }
+
+        // Load saved theme
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+
+        // Initialize theme and game
+        loadTheme();
+        setupLevel();
+    </script>
+</body>
+</html>

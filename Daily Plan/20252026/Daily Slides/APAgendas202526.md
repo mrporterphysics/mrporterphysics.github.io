@@ -16,6 +16,34 @@ math: mathjax
 
 ---
 
+# 2025.09.19 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be a superhero or super villain?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Based on time: start fan cart lab or group problem solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.18 **AP Physics**
 
 ##### **❓ of the 📅**: What animal do you think is the creepiest?
