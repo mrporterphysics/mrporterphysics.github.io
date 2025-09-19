@@ -15,6 +15,15 @@ math: mathjax
 
 ---
 
+# 🖱️ Open [Graphical Analysis](https://graphicalanalysis.app/) <!--fit--->
+
+### [Click link in slides or find herehttps://graphicalanalysis.app/](https://graphicalanalysis.app/)
+
+## ❗**Save this to your bookmarks**
+
+
+---
+
 # 2025.09.17 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather live in the ocean 🌊 or on the moon 🌔?

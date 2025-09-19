@@ -16,6 +16,14 @@ math: mathjax
 
 ---
 
+- how to set up the spark timer to collect good data:
+  - length of tape = length of run, make sure tape is shorter than track so it is pulled all of the way through
+  - label tape after collecting data
+    - trial #, where zero is
+  - need to pull tape through timer **BEFORE** taping to cart
+
+---
+
 # 2025.09.19 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be a superhero or super villain?
