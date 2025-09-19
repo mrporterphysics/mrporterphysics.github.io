@@ -21,6 +21,50 @@ math: mathjax
 
 ## ❗**Save this to your bookmarks**
 
+---
+
+# 2025.09.19 **Regents Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Find _Graphical Analysis Page_
+2. Motion Maps
+3. Walk the Graph Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Connect physical motion to multiple representation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Walk the Graph Lab 🚶‍♂️
+
+**Question:**  How can different types of walking motion be represented and interpreted using position-time and velocity-time graphs?
+
+**Purpose:**  To investigate how various walking motions (such as walking away from or toward the sensor, walking at different speeds, or stopping and starting) are represented on position-time and velocity-time graphs, and to develop an understanding of the relationship between motion and its graphical representation.
+
+
+**Instructions for Lab Notebook Reflection:**  
+Record your answers to the reflection questions above in your lab notebook. Include sketches of your graphs and a brief written description of your movement for each trial.
+
+
+
+
 
 ---
 
