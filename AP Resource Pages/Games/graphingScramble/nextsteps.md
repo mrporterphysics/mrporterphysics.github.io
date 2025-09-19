@@ -56,6 +56,11 @@ Great question! Here are some potential enhancements to make the card sort activ
 - "Ghost" outlines showing where cards can be placed
 - Particle effects for correct answers
 
+### 9.1. **Animation System Improvements** 🎬
+- **Add coordinate system to animations**: Include x/y axes with scale markings and grid lines
+- **Fix animations to be uniform motion**: Ensure all motions follow proper physics (constant acceleration, etc.)
+- **Fix breadcrumbs**: Improve trail timing and positioning to accurately reflect object path
+
 ## 📚 **Learning Support**
 
 ### 10. **Integrated Reference Tools**

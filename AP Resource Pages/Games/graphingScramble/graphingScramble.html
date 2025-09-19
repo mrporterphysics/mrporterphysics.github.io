@@ -84,7 +84,7 @@
             padding: 30px;
             box-shadow: 0 10px 30px var(--shadow-hover);
             margin-bottom: 30px;
-            min-height: 700px;
+            min-height: 800px;
             position: relative;
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
@@ -192,7 +192,7 @@
         
         .card canvas {
             width: 100%;
-            height: 70px;
+            height: 75px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
             background: var(--bg-secondary);
@@ -210,7 +210,7 @@
             opacity: 0.8;
             border-radius: 15px;
             padding: 20px;
-            min-height: 200px;
+            min-height: 300px;
             position: relative;
             border: 2px dashed var(--border-color);
             transition: all 0.3s ease;
@@ -334,6 +334,238 @@
             box-shadow: var(--game-card-shadow);
         }
 
+        /* Examples Modal Styling */
+        .examples-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--bg-primary);
+            padding: 0;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px var(--shadow-hover);
+            z-index: 2000;
+            display: none;
+            max-width: 900px;
+            max-height: 80vh;
+            width: 90vw;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .examples-modal.show {
+            display: block;
+            animation: popup 0.5s ease;
+        }
+
+        .examples-header {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .examples-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--bg-primary);
+            font-size: 2em;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .examples-content {
+            padding: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .example-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .example-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .example-scenario {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .animation-container {
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+        }
+
+        .motion-object {
+            width: 30px;
+            height: 30px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            box-shadow: var(--game-card-shadow);
+            z-index: 10;
+        }
+
+        .breadcrumb {
+            width: 8px;
+            height: 8px;
+            background: var(--text-muted);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) scale(0);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .breadcrumb.show {
+            opacity: 0.6;
+            transform: translateY(-50%) scale(1);
+        }
+
+        .velocity-vector {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 2px;
+            background: var(--error);
+            z-index: 5;
+        }
+
+        .velocity-vector::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -3px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid var(--error);
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+
+        .velocity-vector.reverse {
+            transform: translateY(-50%) scaleX(-1);
+        }
+
+        .velocity-vector.small {
+            width: 20px;
+        }
+
+        .velocity-vector.medium {
+            width: 40px;
+        }
+
+        .velocity-vector.large {
+            width: 60px;
+        }
+
+        /* Animation Types */
+        .parked-car {
+            left: 50px;
+            animation: none;
+        }
+
+        .cruise-control {
+            animation: constantMotion 4s linear infinite;
+        }
+
+        .accelerating-car {
+            animation: acceleration 4s ease-out infinite;
+        }
+
+        .braking-car {
+            animation: deceleration 4s ease-in infinite;
+        }
+
+        .sliding-backward {
+            animation: backwardAccel 4s ease-out infinite;
+        }
+
+        .direction-change {
+            animation: directionChange 6s ease-in-out infinite;
+        }
+
+        /* CSS Keyframe Animations */
+        @keyframes constantMotion {
+            0% { left: 0px; }
+            100% { left: calc(100% - 30px); }
+        }
+
+        @keyframes acceleration {
+            0% { left: 0px; }
+            25% { left: 20px; }
+            50% { left: 60px; }
+            75% { left: 120px; }
+            100% { left: calc(100% - 30px); }
+        }
+
+        @keyframes deceleration {
+            0% { left: 0px; }
+            25% { left: 120px; }
+            50% { left: 180px; }
+            75% { left: 220px; }
+            100% { left: 240px; }
+        }
+
+        @keyframes backwardAccel {
+            0% { right: 0px; }
+            25% { right: 20px; }
+            50% { right: 60px; }
+            75% { right: 120px; }
+            100% { right: calc(100% - 30px); }
+        }
+
+        @keyframes directionChange {
+            0% { left: 50%; }
+            20% { left: 30%; }  /* Moving backward, slowing down */
+            40% { left: 20%; }  /* Still moving backward, slower */
+            50% { left: 15%; }  /* Momentary stop */
+            60% { left: 20%; }  /* Start moving forward, slowly */
+            80% { left: 40%; }  /* Moving forward, speeding up */
+            100% { left: 70%; } /* Moving forward, faster */
+        }
+
         /* Theme Toggle Button */
         .theme-toggle {
             position: fixed;
@@ -402,6 +634,7 @@
         <div class="controls">
             <button class="btn" onclick="checkAnswer()">Check Stacks</button>
             <button class="btn" onclick="shuffleCards()">Shuffle Cards</button>
+            <button class="btn" onclick="showExamples()" id="exampleBtn">Show Examples</button>
             <button class="btn" onclick="getHint()" id="hintBtn">Get Hint (3 left)</button>
             <button class="btn" onclick="resetLevel()">Reset Level</button>
         </div>
@@ -414,59 +647,204 @@
         <div class="feedback-message" id="feedbackMessage"></div>
         <button class="btn" onclick="closeFeedback()" id="feedbackBtn">Continue</button>
     </div>
+
+    <div class="examples-modal" id="examplesModal">
+        <div class="examples-header">
+            <h2>🌟 Real-World Physics Examples</h2>
+            <button class="close-btn" onclick="closeExamples()">×</button>
+        </div>
+        <div class="examples-content" id="examplesContent">
+            <!-- Examples will be populated here -->
+        </div>
+    </div>
     
     <script>
-        // Motion scenarios from worksheet
+        // Complete motion scenarios from worksheet - all PDF horizontal sets
         const worksheetData = [
+            // Page 1, Row 1: A-S-D-F
             {
                 id: 1,
-                graphs: { d: "linear_up", v: "constant_positive", a: "zero" },
-                description: "Constant speed, positive direction, moving away"
+                graphs: { d: "constant_horizontal", v: "zero", a: "zero" },
+                description: "Object standing still in front of reference point",
+                realWorldExample: {
+                    title: "🚗 Car Parked at a Stoplight",
+                    scenario: "A car is stopped at a red light, waiting for it to turn green. The car's position doesn't change, its velocity is zero, and there's no acceleration.",
+                    animation: "parked-car"
+                }
             },
+            // Page 1, Row 2: G-H-D-J
             {
                 id: 2,
-                graphs: { d: "curve_up_accel", v: "linear_up", a: "constant_positive" },
-                description: "Speeding up, positive direction, moving away"
+                graphs: { d: "linear_up", v: "constant_positive", a: "zero" },
+                description: "Constant speed in the positive direction, moving away from reference point",
+                realWorldExample: {
+                    title: "🚗 Car on Cruise Control",
+                    scenario: "A car driving on a highway with cruise control set at 65 mph. The car maintains constant speed, moving steadily away from the starting point.",
+                    animation: "cruise-control"
+                }
             },
+            // Page 1, Row 3: K-M-Z-X
             {
                 id: 3,
-                graphs: { d: "curve_up_decel", v: "linear_down_positive", a: "constant_negative" },
-                description: "Slowing down, positive direction, moving away"
+                graphs: { d: "curve_up_accel", v: "linear_up", a: "constant_positive" },
+                description: "Speeding up in the positive direction, moving away from ref. point",
+                realWorldExample: {
+                    title: "🚗 Car Accelerating from Stoplight",
+                    scenario: "When the light turns green, a car accelerates from rest. The car speeds up at a constant rate, moving away from the intersection.",
+                    animation: "accelerating-car"
+                }
             },
+            // Page 1, Row 4: C-V-B-L
             {
                 id: 4,
-                graphs: { d: "curve_down_accel", v: "linear_down", a: "constant_negative" },
-                description: "Speeding up, negative direction, moving away"
+                graphs: { d: "curve_up_decel", v: "linear_down_positive", a: "constant_negative" },
+                description: "Slowing down in the positive direction, moving away from reference point",
+                realWorldExample: {
+                    title: "🚗 Car Approaching Stop Sign",
+                    scenario: "A car slows down as it approaches a stop sign. It's still moving forward but getting slower and slower.",
+                    animation: "braking-car"
+                }
             },
+            // Page 1, Row 5: Q-W-B-E
             {
                 id: 5,
-                graphs: { d: "constant_horizontal", v: "zero", a: "zero" },
-                description: "Object standing still"
+                graphs: { d: "curve_down_accel", v: "linear_down", a: "constant_negative" },
+                description: "Speeding up in the negative direction, moving away from reference point",
+                realWorldExample: {
+                    title: "🛝 Child on Playground Slide",
+                    scenario: "A child pushes off and slides down a slide backward, speeding up as they go in the negative direction.",
+                    animation: "sliding-backward"
+                }
             },
+            // Page 2, Row 1: T-Y-Z-P
             {
                 id: 6,
-                graphs: { d: "curve_down_decel", v: "linear_up_from_negative", a: "constant_positive" },
-                description: "Slowing down, negative direction, moving away"
+                graphs: { d: "curve_high_to_low", v: "linear_through_zero_down", a: "constant_positive" },
+                description: "Slowing down in the negative direction, moving away from ref. point",
+                realWorldExample: {
+                    title: "🎢 Roller Coaster at Bottom of Hill",
+                    scenario: "A roller coaster car rolling backward up a hill after going through the bottom. It slows down as it moves away from the bottom.",
+                    animation: "braking-car"
+                }
             },
+            // Page 2, Row 2: I-O-D-A
             {
                 id: 7,
                 graphs: { d: "linear_down", v: "constant_negative", a: "zero" },
-                description: "Constant speed, negative direction"
+                description: "Constant speed in the negative direction, moving away from ref. point",
+                realWorldExample: {
+                    title: "🚗 Car Backing Out of Driveway",
+                    scenario: "A car backing out of a driveway at constant speed, moving away from the house in the negative direction.",
+                    animation: "cruise-control"
+                }
             },
+            // Page 2, Row 3: Φ-O-D-Γ
             {
                 id: 8,
-                graphs: { d: "linear_up_gentle", v: "constant_positive_low", a: "zero" },
-                description: "Constant speed, positive direction, towards reference"
+                graphs: { d: "linear_down_towards", v: "constant_negative", a: "zero" },
+                description: "Constant speed in the negative direction, moving towards reference point",
+                realWorldExample: {
+                    title: "🚂 Train Approaching Station",
+                    scenario: "A train moving at constant speed toward the station platform. It maintains steady velocity as it approaches.",
+                    animation: "cruise-control"
+                }
             },
+            // Page 2, Row 4: Λ-H-D-Θ
             {
                 id: 9,
-                graphs: { d: "curve_up_from_below", v: "linear_up", a: "constant_positive" },
-                description: "Speeding up, positive direction, towards reference"
+                graphs: { d: "linear_up_towards", v: "constant_positive", a: "zero" },
+                description: "Constant speed in positive direction, moving towards reference point",
+                realWorldExample: {
+                    title: "🚗 Car Approaching Home",
+                    scenario: "A car driving home at constant speed on a straight road, getting closer to the house.",
+                    animation: "cruise-control"
+                }
             },
+            // Page 2, Row 5: Ω-Y-Z-Σ
             {
                 id: 10,
-                graphs: { d: "parabola_up", v: "linear_through_zero", a: "constant_positive" },
-                description: "Changes from negative to positive velocity"
+                graphs: { d: "curve_down_towards", v: "linear_up_from_negative", a: "constant_positive" },
+                description: "Slowing down in the negative direction, moving towards reference point",
+                realWorldExample: {
+                    title: "⚽ Ball on Inclined Track",
+                    scenario: "A ball rolling backward up an inclined track experiences constant gravitational acceleration, slowing down uniformly until it stops and rolls back.",
+                    animation: "braking-car"
+                }
+            },
+            // Page 3, Row 1: 2-H-Z-5
+            {
+                id: 11,
+                graphs: { d: "linear_up_through_origin", v: "constant_positive", a: "zero" },
+                description: "Constant speed in + direction, starting behind ref. point & moving past it",
+                realWorldExample: {
+                    title: "🚗 Car Passing Through Intersection",
+                    scenario: "A car traveling at constant speed through an intersection, starting from behind the crosswalk and continuing past it.",
+                    animation: "cruise-control"
+                }
+            },
+            // Page 3, Row 2: 3-O-D-4
+            {
+                id: 12,
+                graphs: { d: "linear_down_through_origin", v: "constant_negative", a: "zero" },
+                description: "Constant speed in - direction, starting in front of ref. point & moving past it",
+                realWorldExample: {
+                    title: "🛴 Scooter Passing Landmark",
+                    scenario: "A person on a scooter traveling at constant speed in reverse, starting in front of a landmark and moving past it.",
+                    animation: "cruise-control"
+                }
+            },
+            // Page 3, Row 3: Π-V-B-μ
+            {
+                id: 13,
+                graphs: { d: "curve_up_towards_origin", v: "linear_down_positive", a: "constant_negative" },
+                description: "Slowing down in positive direction, moving towards reference point"
+            },
+            // Page 3, Row 4: Ξ-W-B-σ
+            {
+                id: 14,
+                graphs: { d: "curve_down_negative_accel", v: "linear_down", a: "constant_negative" },
+                description: "Speeding up in negative direction, moving towards reference point"
+            },
+            // Page 3, Row 5: α-M-Z-β
+            {
+                id: 15,
+                graphs: { d: "curve_up_from_below_towards", v: "linear_up", a: "constant_positive" },
+                description: "Speeding up in the positive direction, moving towards the reference point"
+            },
+            // Page 4, Row 1: 8-@-Z-#
+            {
+                id: 16,
+                graphs: { d: "parabola_min", v: "linear_through_zero", a: "constant_positive" },
+                description: "Slowing down in the negative dir & then speeding up in the positive dir.",
+                realWorldExample: {
+                    title: "⚽ Ball Thrown Backward Then Rolling Forward",
+                    scenario: "A ball is thrown backward, slows down due to friction, stops momentarily, then starts rolling forward down a slight incline.",
+                    animation: "direction-change"
+                }
+            },
+            // Page 4, Row 2: 9-$-B-?
+            {
+                id: 17,
+                graphs: { d: "parabola_max", v: "linear_down_through_zero", a: "constant_negative" },
+                description: "Slowing down in the positive direction, then speeding up in the negative direction"
+            },
+            // Page 4, Row 3: ψ-%-6-ψ
+            {
+                id: 18,
+                graphs: { d: "curve_up_accel_decel", v: "triangle_up", a: "square_wave_pos" },
+                description: "Speeding up in the positive direction & then slowing down in the positive dir."
+            },
+            // Page 4, Row 4: &-*-7-<
+            {
+                id: 19,
+                graphs: { d: "curve_complex", v: "triangle_down", a: "square_wave_neg" },
+                description: "Slowing down in the positive dir & then speeding up in the positive dir."
+            },
+            // Page 4, Row 5: =-+-7->
+            {
+                id: 20,
+                graphs: { d: "curve_down_up", v: "v_shape", a: "square_wave_neg_pos" },
+                description: "Speeding up in the negative direction and then slowing down in the - dir."
             }
         ];
         
@@ -538,27 +916,27 @@
 
             // Draw graph
             ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--accent-primary').trim();
-            ctx.lineWidth = 2.5;
+            ctx.lineWidth = 3;
             ctx.beginPath();
             
             switch(type) {
                 case 'linear_up':
                 case 'linear_up_gentle':
-                    ctx.moveTo(15, height - 15);
-                    ctx.lineTo(width - 15, 15);
+                    ctx.moveTo(15, height - 10);
+                    ctx.lineTo(width - 15, 10);
                     break;
                 case 'linear_down':
-                    ctx.moveTo(15, 15);
-                    ctx.lineTo(width - 15, height - 15);
+                    ctx.moveTo(15, 10);
+                    ctx.lineTo(width - 15, height - 10);
                     break;
                 case 'constant_positive':
                 case 'constant_positive_low':
-                    ctx.moveTo(15, height/3);
-                    ctx.lineTo(width - 15, height/3);
+                    ctx.moveTo(15, height/4);
+                    ctx.lineTo(width - 15, height/4);
                     break;
                 case 'constant_negative':
-                    ctx.moveTo(15, 2*height/3);
-                    ctx.lineTo(width - 15, 2*height/3);
+                    ctx.moveTo(15, 3*height/4);
+                    ctx.lineTo(width - 15, 3*height/4);
                     break;
                 case 'constant_horizontal':
                 case 'zero':
@@ -568,7 +946,7 @@
                 case 'curve_up_accel':
                     for(let x = 15; x <= width - 15; x += 2) {
                         let t = (x - 15) / (width - 30);
-                        let y = height - 15 - (t * t * (height - 30));
+                        let y = height - 10 - (t * t * (height - 25));
                         if(x === 15) ctx.moveTo(x, y);
                         else ctx.lineTo(x, y);
                     }
@@ -576,7 +954,7 @@
                 case 'curve_up_decel':
                     for(let x = 15; x <= width - 15; x += 2) {
                         let t = (x - 15) / (width - 30);
-                        let y = height - 15 - (Math.sqrt(t) * (height - 30));
+                        let y = height - 10 - (Math.sqrt(t) * (height - 25));
                         if(x === 15) ctx.moveTo(x, y);
                         else ctx.lineTo(x, y);
                     }
@@ -584,7 +962,7 @@
                 case 'curve_down_accel':
                     for(let x = 15; x <= width - 15; x += 2) {
                         let t = (x - 15) / (width - 30);
-                        let y = 15 + (t * t * (height - 30));
+                        let y = 10 + (t * t * (height - 25));
                         if(x === 15) ctx.moveTo(x, y);
                         else ctx.lineTo(x, y);
                     }
@@ -592,27 +970,27 @@
                 case 'curve_down_decel':
                     for(let x = 15; x <= width - 15; x += 2) {
                         let t = (x - 15) / (width - 30);
-                        let y = 15 + (Math.sqrt(t) * (height - 30));
+                        let y = 10 + (Math.sqrt(t) * (height - 25));
                         if(x === 15) ctx.moveTo(x, y);
                         else ctx.lineTo(x, y);
                     }
                     break;
                 case 'linear_down_positive':
-                    ctx.moveTo(15, height/3);
+                    ctx.moveTo(15, height/4);
                     ctx.lineTo(width - 15, height/2);
                     break;
                 case 'linear_up_from_negative':
-                    ctx.moveTo(15, 2*height/3);
+                    ctx.moveTo(15, 3*height/4);
                     ctx.lineTo(width - 15, height/2);
                     break;
                 case 'linear_through_zero':
-                    ctx.moveTo(15, 2*height/3);
-                    ctx.lineTo(width - 15, height/3);
+                    ctx.moveTo(15, 3*height/4);
+                    ctx.lineTo(width - 15, height/4);
                     break;
                 case 'parabola_up':
                     for(let x = 15; x <= width - 15; x += 2) {
                         let t = (x - 15) / (width - 30) - 0.5;
-                        let y = height/2 - (t * t * height * 0.6) + height * 0.15;
+                        let y = height/2 - (t * t * height * 0.8) + height * 0.2;
                         if(x === 15) ctx.moveTo(x, y);
                         else ctx.lineTo(x, y);
                     }
@@ -625,6 +1003,153 @@
                         else ctx.lineTo(x, y);
                     }
                     break;
+                case 'linear_down_towards':
+                    ctx.moveTo(15, height/4);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'linear_up_towards':
+                    ctx.moveTo(15, 3*height/4);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'curve_down_towards':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height/3 + (Math.sqrt(t) * height/6);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'linear_up_through_origin':
+                    ctx.moveTo(15, 2*height/3);
+                    ctx.lineTo(width - 15, height/3);
+                    break;
+                case 'linear_down_through_origin':
+                    ctx.moveTo(15, height/3);
+                    ctx.lineTo(width - 15, 2*height/3);
+                    break;
+                case 'curve_up_towards_origin':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height/3 + (Math.sqrt(t) * height/6);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'curve_down_negative_accel':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height/3 + (t * t * height/3);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'curve_up_from_below_towards':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = 2*height/3 - (t * t * height/3);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'parabola_min':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30) - 0.5;
+                        let y = height/2 + (t * t * height * 0.7);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'parabola_max':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30) - 0.5;
+                        let y = height/2 - (t * t * height * 0.7);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'linear_down_through_zero':
+                    ctx.moveTo(15, height/3);
+                    ctx.lineTo(width - 15, 2*height/3);
+                    break;
+                case 'curve_up_accel_decel':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height - 15 - (t * (2-t) * (height - 30));
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'triangle_up':
+                    let midX = (15 + width - 15) / 2;
+                    ctx.moveTo(15, height/2);
+                    ctx.lineTo(midX, height/5);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'triangle_down':
+                    let midX2 = (15 + width - 15) / 2;
+                    ctx.moveTo(15, height/2);
+                    ctx.lineTo(midX2, 4*height/5);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'square_wave_pos':
+                    let mid1 = (width - 30) / 2 + 15;
+                    ctx.moveTo(15, height/4);
+                    ctx.lineTo(mid1, height/4);
+                    ctx.lineTo(mid1, height/2);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'square_wave_neg':
+                    let mid2 = (width - 30) / 2 + 15;
+                    ctx.moveTo(15, 3*height/4);
+                    ctx.lineTo(mid2, 3*height/4);
+                    ctx.lineTo(mid2, height/2);
+                    ctx.lineTo(width - 15, height/2);
+                    break;
+                case 'square_wave_neg_pos':
+                    let mid3 = (width - 30) / 2 + 15;
+                    ctx.moveTo(15, 3*height/4);
+                    ctx.lineTo(mid3, 3*height/4);
+                    ctx.lineTo(mid3, height/4);
+                    ctx.lineTo(width - 15, height/4);
+                    break;
+                case 'curve_complex':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height - 15 - (Math.sin(t * Math.PI) * (height - 30) * 0.3) - (t * (height - 30) * 0.5);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'curve_down_up':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height/2 + Math.sin(t * Math.PI * 2 - Math.PI/2) * height/4;
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'v_shape':
+                    let midX3 = (15 + width - 15) / 2;
+                    ctx.moveTo(15, 3*height/4);
+                    ctx.lineTo(midX3, height/2);
+                    ctx.lineTo(width - 15, height/4);
+                    break;
+                case 'curve_high_to_low':
+                    for(let x = 15; x <= width - 15; x += 2) {
+                        let t = (x - 15) / (width - 30);
+                        let y = height/3 + (Math.sqrt(1-t) * height/3);
+                        if(x === 15) ctx.moveTo(x, y);
+                        else ctx.lineTo(x, y);
+                    }
+                    break;
+                case 'linear_pos_to_neg':
+                    ctx.moveTo(15, height/3);
+                    ctx.lineTo(width - 15, 2*height/3);
+                    break;
+                case 'linear_through_zero_down':
+                    ctx.moveTo(15, height/3);
+                    ctx.lineTo(width - 15, 2*height/3);
+                    break;
             }
             
             ctx.stroke();
@@ -633,13 +1158,15 @@
         function setupLevel() {
             const config = levelConfigs[currentLevel - 1];
             const numStacks = config.stacks;
-            
-            // Select random scenarios
+
+            // Select random scenarios from all available sets
             const availableScenarios = [...worksheetData];
             currentScenarios = [];
+
+            // Randomly select unique scenarios for this level
             for (let i = 0; i < numStacks; i++) {
-                const index = Math.floor(Math.random() * availableScenarios.length);
-                currentScenarios.push(availableScenarios.splice(index, 1)[0]);
+                const randomIndex = Math.floor(Math.random() * availableScenarios.length);
+                currentScenarios.push(availableScenarios.splice(randomIndex, 1)[0]);
             }
             
             // Create sorting area with description headers
@@ -702,8 +1229,8 @@
             card.dataset.graphPattern = graphPattern;
             
             const canvas = document.createElement('canvas');
-            canvas.width = 140;
-            canvas.height = 70;
+            canvas.width = 160;
+            canvas.height = 75;
             card.appendChild(canvas);
             
             const labelDiv = document.createElement('div');
@@ -834,9 +1361,12 @@
                 cardPool.appendChild(card);
                 card.style.position = 'absolute';
                 
-                // Random positioning in pool
-                const x = 20 + (index % 6) * 170;
-                const y = 50 + Math.floor(index / 6) * 130;
+                // Smart positioning in pool to fit all cards
+                const cardsPerRow = 4;
+                const cardSpacing = 210;
+                const rowHeight = 140;
+                const x = 20 + (index % cardsPerRow) * cardSpacing;
+                const y = 50 + Math.floor(index / cardsPerRow) * rowHeight;
                 
                 card.style.left = x + 'px';
                 card.style.top = y + 'px';
@@ -870,16 +1400,18 @@
             dropZones.forEach(zone => {
                 const expectedId = zone.dataset.stackId;
                 const cardsInZone = zone.querySelectorAll('.card');
-                
-                // Check if all three cards are present and correct
-                const hasD = Array.from(cardsInZone).some(c => 
-                    c.dataset.graphType === 'd' && c.dataset.scenarioId === expectedId);
-                const hasV = Array.from(cardsInZone).some(c => 
-                    c.dataset.graphType === 'v' && c.dataset.scenarioId === expectedId);
-                const hasA = Array.from(cardsInZone).some(c => 
-                    c.dataset.graphType === 'a' && c.dataset.scenarioId === expectedId);
-                
-                if (hasD && hasV && hasA && cardsInZone.length === 3) {
+
+                // Check if all three cards are present, correct, and from the same scenario
+                const cardsFromExpectedScenario = Array.from(cardsInZone).filter(c =>
+                    c.dataset.scenarioId === expectedId);
+
+                const hasCorrectD = cardsFromExpectedScenario.some(c => c.dataset.graphType === 'd');
+                const hasCorrectV = cardsFromExpectedScenario.some(c => c.dataset.graphType === 'v');
+                const hasCorrectA = cardsFromExpectedScenario.some(c => c.dataset.graphType === 'a');
+
+                // Stack is correct only if it has exactly 3 cards, all from the expected scenario
+                if (hasCorrectD && hasCorrectV && hasCorrectA &&
+                    cardsInZone.length === 3 && cardsFromExpectedScenario.length === 3) {
                     zone.classList.add('correct');
                     zone.classList.remove('incorrect');
                     correctStacks++;
@@ -1052,6 +1584,236 @@
             const savedTheme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
         }
+
+        // Show Examples Function
+        function showExamples() {
+            const modal = document.getElementById('examplesModal');
+            const overlay = document.getElementById('overlay');
+            const content = document.getElementById('examplesContent');
+
+            // Clear previous content
+            content.innerHTML = '';
+
+            let hasExamples = false;
+
+            // Create examples for current scenarios
+            currentScenarios.forEach(scenario => {
+                if (scenario.realWorldExample) {
+                    hasExamples = true;
+                    const exampleDiv = document.createElement('div');
+                    exampleDiv.className = 'example-item';
+
+                    // Choose appropriate emoji based on example
+                    let emoji = '🚗';
+                    if (scenario.realWorldExample.title.includes('Roller')) emoji = '🎢';
+                    if (scenario.realWorldExample.title.includes('Slide')) emoji = '🛝';
+                    if (scenario.realWorldExample.title.includes('Ball')) emoji = '⚽';
+                    if (scenario.realWorldExample.title.includes('Train')) emoji = '🚂';
+                    if (scenario.realWorldExample.title.includes('Scooter')) emoji = '🛴';
+
+                    // Create animation container with breadcrumbs and velocity vectors
+                    const animationContainer = document.createElement('div');
+                    animationContainer.className = 'animation-container';
+
+                    // Add breadcrumbs based on animation type
+                    createBreadcrumbs(animationContainer, scenario.realWorldExample.animation);
+
+                    // Add velocity vectors
+                    createVelocityVectors(animationContainer, scenario.realWorldExample.animation);
+
+                    // Add the moving object
+                    const motionObject = document.createElement('div');
+                    motionObject.className = `motion-object ${scenario.realWorldExample.animation}`;
+                    motionObject.textContent = emoji;
+                    animationContainer.appendChild(motionObject);
+
+                    exampleDiv.innerHTML = `
+                        <div class="example-title">${scenario.realWorldExample.title}</div>
+                        <div class="example-scenario">${scenario.realWorldExample.scenario}</div>
+                    `;
+                    exampleDiv.appendChild(animationContainer);
+
+                    content.appendChild(exampleDiv);
+                } else {
+                    // Create a basic example for scenarios without specific real-world examples
+                    hasExamples = true;
+                    const exampleDiv = document.createElement('div');
+                    exampleDiv.className = 'example-item';
+
+                    exampleDiv.innerHTML = `
+                        <div class="example-title">📚 ${scenario.description}</div>
+                        <div class="example-scenario">This motion type represents: ${scenario.description.toLowerCase()}. Think about everyday situations where you might see this type of motion!</div>
+                        <div class="animation-container">
+                            <div class="motion-object cruise-control">📐</div>
+                        </div>
+                    `;
+
+                    content.appendChild(exampleDiv);
+                }
+            });
+
+            // If no scenarios found, show a message
+            if (!hasExamples) {
+                content.innerHTML = `
+                    <div class="example-item">
+                        <div class="example-title">🎯 Ready to Learn!</div>
+                        <div class="example-scenario">Start playing to see real-world examples of different motion types!</div>
+                    </div>
+                `;
+            }
+
+            // Show modal
+            modal.classList.add('show');
+            overlay.classList.add('show');
+        }
+
+        function closeExamples() {
+            document.getElementById('examplesModal').classList.remove('show');
+            document.getElementById('overlay').classList.remove('show');
+        }
+
+        // Helper function to create breadcrumbs
+        function createBreadcrumbs(container, animationType) {
+            const breadcrumbData = getBreadcrumbData(animationType);
+
+            breadcrumbData.forEach((data, index) => {
+                const breadcrumb = document.createElement('div');
+                breadcrumb.className = 'breadcrumb';
+                breadcrumb.style.left = data.position + '%';
+                container.appendChild(breadcrumb);
+
+                // Set timeout to show breadcrumb when object reaches position
+                setTimeout(() => {
+                    breadcrumb.classList.add('show');
+                }, data.delay);
+            });
+        }
+
+        // Helper function to create velocity vectors
+        function createVelocityVectors(container, animationType) {
+            const vectorData = getVelocityVectorData(animationType);
+
+            vectorData.forEach((data, index) => {
+                const vector = document.createElement('div');
+                vector.className = `velocity-vector ${data.size} ${data.direction}`;
+                vector.style.left = data.position + '%';
+                vector.style.animationDelay = (index * 0.8) + 's';
+                container.appendChild(vector);
+            });
+        }
+
+        // Get breadcrumb data with positions and timing for different animation types
+        function getBreadcrumbData(animationType) {
+            const animationDuration = getAnimationDuration(animationType);
+
+            switch(animationType) {
+                case 'parked-car':
+                    return [{position: 15, delay: 0}]; // Single position for stationary
+                case 'cruise-control':
+                    return [
+                        {position: 10, delay: animationDuration * 0.1},
+                        {position: 25, delay: animationDuration * 0.25},
+                        {position: 40, delay: animationDuration * 0.4},
+                        {position: 55, delay: animationDuration * 0.55},
+                        {position: 70, delay: animationDuration * 0.7},
+                        {position: 85, delay: animationDuration * 0.85}
+                    ];
+                case 'accelerating-car':
+                    return [
+                        {position: 5, delay: animationDuration * 0.1},
+                        {position: 15, delay: animationDuration * 0.3},
+                        {position: 30, delay: animationDuration * 0.5},
+                        {position: 50, delay: animationDuration * 0.7},
+                        {position: 75, delay: animationDuration * 0.9}
+                    ];
+                case 'braking-car':
+                    return [
+                        {position: 5, delay: animationDuration * 0.1},
+                        {position: 25, delay: animationDuration * 0.4},
+                        {position: 40, delay: animationDuration * 0.7},
+                        {position: 50, delay: animationDuration * 0.85},
+                        {position: 55, delay: animationDuration * 0.95}
+                    ];
+                case 'sliding-backward':
+                    return [
+                        {position: 85, delay: animationDuration * 0.1},
+                        {position: 70, delay: animationDuration * 0.3},
+                        {position: 50, delay: animationDuration * 0.5},
+                        {position: 25, delay: animationDuration * 0.7},
+                        {position: 5, delay: animationDuration * 0.9}
+                    ];
+                case 'direction-change':
+                    return [
+                        {position: 50, delay: 0},
+                        {position: 35, delay: animationDuration * 0.2},
+                        {position: 25, delay: animationDuration * 0.4},
+                        {position: 20, delay: animationDuration * 0.5},
+                        {position: 25, delay: animationDuration * 0.6},
+                        {position: 40, delay: animationDuration * 0.8},
+                        {position: 60, delay: animationDuration * 1.0}
+                    ];
+                default:
+                    return [
+                        {position: 20, delay: animationDuration * 0.25},
+                        {position: 40, delay: animationDuration * 0.5},
+                        {position: 60, delay: animationDuration * 0.75}
+                    ];
+            }
+        }
+
+        // Get animation duration in milliseconds
+        function getAnimationDuration(animationType) {
+            switch(animationType) {
+                case 'direction-change':
+                    return 6000; // 6 seconds
+                default:
+                    return 4000; // 4 seconds
+            }
+        }
+
+        // Get velocity vector data for different animation types
+        function getVelocityVectorData(animationType) {
+            switch(animationType) {
+                case 'parked-car':
+                    return []; // No velocity vectors for stationary
+                case 'cruise-control':
+                    return [
+                        {position: 15, size: 'medium', direction: ''},
+                        {position: 40, size: 'medium', direction: ''},
+                        {position: 65, size: 'medium', direction: ''}
+                    ];
+                case 'accelerating-car':
+                    return [
+                        {position: 10, size: 'small', direction: ''},
+                        {position: 35, size: 'medium', direction: ''},
+                        {position: 65, size: 'large', direction: ''}
+                    ];
+                case 'braking-car':
+                    return [
+                        {position: 15, size: 'large', direction: ''},
+                        {position: 35, size: 'medium', direction: ''},
+                        {position: 50, size: 'small', direction: ''}
+                    ];
+                case 'sliding-backward':
+                    return [
+                        {position: 75, size: 'small', direction: 'reverse'},
+                        {position: 50, size: 'medium', direction: 'reverse'},
+                        {position: 25, size: 'large', direction: 'reverse'}
+                    ];
+                case 'direction-change':
+                    return [
+                        {position: 40, size: 'medium', direction: 'reverse'},
+                        {position: 25, size: 'small', direction: 'reverse'},
+                        {position: 30, size: 'small', direction: ''},
+                        {position: 55, size: 'medium', direction: ''}
+                    ];
+                default:
+                    return [{position: 40, size: 'medium', direction: ''}];
+            }
+        }
+
+        // Close examples when clicking overlay
+        document.getElementById('overlay').addEventListener('click', closeExamples);
 
         // Initialize theme and game
         loadTheme();
