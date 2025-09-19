@@ -25,7 +25,7 @@ math: mathjax
 
 # 2025.09.19 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Would you rather be a superhero or super villain?
 
 <div class ='columns'>
 
