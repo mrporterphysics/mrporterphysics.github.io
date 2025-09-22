@@ -39,6 +39,13 @@ TEACHER NOTE: Give students a minute to think and jot ideas.
 
 Encourage all students to participate, including using accessible methods for blind students (e.g., audio, Braille).
 
+POSSIBLE ANSWERS
+It’s very bright.
+It’s yellow or white.
+It’s very large compared to Earth.
+It’s very hot.
+
+
 
 -->
 ## Engage: What Do You Know About the Sun?
@@ -48,13 +55,6 @@ Encourage all students to participate, including using accessible methods for bl
 2. Share your ideas with a partner.
 3. As a class, we’ll use the “Rumors” routine to surface and categorize our ideas.
 
-**Look & Listen For:**  
-- “It’s very bright.”  
-- “It’s yellow or white.”  
-- “It’s very hot.”  
-- “It’s made of gas.”  
-- “There are explosions in it.”
-
 ---
 
 <!-- Engage: Observing the Sun 
@@ -63,16 +63,18 @@ TEACHER NOTE: This is the brainstorming handout prompt.
 
 Remind students to connect their ideas to prior experience or observations.
 
+It looks like lava.
+It has flames shooting out of it .
+There’re explosions in it.
+Some parts are darker than others.
+It seems to have gas in it.
+
+
 -->
 ## Engage: Observing the Sun
 
 - We’ll watch NASA telescope footage of the Sun.
 - As you watch, write down any new observations you notice.
-
-**Sample observations:**  
-- “It looks like lava.”  
-- “There are flames and explosions.”  
-- “Some parts are darker than others.”
 
 ---
 
