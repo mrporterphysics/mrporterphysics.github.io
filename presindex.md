@@ -35,6 +35,8 @@
 
 ## Earth Science
 
+
+- [Exploring the Sun](/Presentations/ES%20Presentations/Unit%201%20Origin/thesun.html)
 - [Rocks](/mrporterphysics.github.io/Presentations/ES%20Presentations/Rocks/Rocks2025.html)
 
 ---

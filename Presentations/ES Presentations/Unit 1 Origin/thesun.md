@@ -168,6 +168,21 @@ We can’t take apart the Sun, but we can observe it from Earth!
 
 ---
 
+# What is the **electromagnetic spectrum**?
+
+* Full range of electromagnetic radiation
+* Divided into bands
+    - separated by characteristics such as how they are produced
+
+![bg fit right:55%](image-32.png)
+
+
+---
+
+![bg fit](image-31.png)
+
+---
+
 <!-- Explore: Comparing Sun & Lab Spectra -->
 ## Explore: Comparing Sun & Lab Spectra
 
@@ -190,15 +205,6 @@ We can’t take apart the Sun, but we can observe it from Earth!
 
 ---
 
-<!-- Routine Reminders -->
-## Group Learning Routines
-
-- **Rumors:** Share your most confident idea with several classmates, listen for trends, and report out.
-- **Domino Discover:** Each group shares one key understanding with the class.
-- **See-Think-Wonder:** Use this organizer to connect evidence to claims and questions.
-
----
-
 <!-- Next Steps -->
 ## What’s Next?
 
@@ -210,8 +216,179 @@ We can’t take apart the Sun, but we can observe it from Earth!
 
 ---
 
-<!-- Exit Ticket / Reflection -->
+
+---
+
+
+
+<!--
+TEACHER NOTE: Title slide for Explain phase.  
+You may want to add your name, class, and date.
+-->
+# How the Sun Works: Explain  
+Earth & Space Science – Unit 1
+
+---
+
+<!--
+TEACHER NOTE: Use this slide to introduce the purpose of the Explain phase.
+-->
+## Explain: Making Sense of the Evidence
+
+- Use patterns in data to develop a claim about the Sun’s composition
+- Practice supporting claims with scientific evidence
+- Work toward a class consensus about how the Sun works
+
+---
+
+<!--
+TEACHER NOTE: Reconnect to the driving question.  
+Prompt students to recall what they are trying to figure out.
+-->
+## What Are We Trying to Figure Out?
+
+- Does the exoplanet have a Sun like ours?
+- What is our Sun made of, and how does it release energy?
+- What counts as an evidence-based claim in science?
+
+---
+
+<!--
+TEACHER NOTE: Facilitate a class discussion about what counts as evidence.  
+Encourage students to share their thinking and experiences from Engage/Explore.
+-->
+## What Counts as an Evidence-Based Claim?
+
+- Information from a reliable source or experiment
+- Evidence from an investigation or data
+- Not just someone’s opinion
+- Agreement among scientists
+- Patterns in data can serve as evidence
+
+---
+
+<!--
+TEACHER NOTE: Remind students to refer back to the class poster or board of ideas from Engage.
+-->
+## Using Evidence to Support or Revise Our Ideas
+
+- Review your observations from the Explore phase
+- Does your evidence support your initial ideas?
+- Do you need to revise your thinking?
+
+---
+
+<!--
+TEACHER NOTE: This is the sequencing card sort.  
+Encourage students to work in pairs or small groups.
+-->
+## Organize Evidence: How Do We Know What the Sun is Made Of?
+
+**Instructions:**  
+1. Work with your group to sequence the evidence cards from the sunlight investigation  
+2. Put the cards in an order that shows how we can determine the Sun’s composition  
+3. Be ready to explain your reasoning
+
+---
+
+<!--
+TEACHER NOTE: Circulate and listen for key ideas as students work.  
+Prompt students to cite specific evidence and patterns.
+-->
+## Look & Listen For
+
+- White light contains many wavelengths (colors)
+- A spectrometer separates light into its component wavelengths
+- When white light passes through a gas, some wavelengths are absorbed (black lines)
+- Each gas has a unique pattern of absorption lines
+- The Sun’s spectrum matches the patterns for hydrogen and helium
+
+---
+
+<!--
+TEACHER NOTE: Students write a scientific explanation (CER) about the Sun’s composition.  
+Offer scaffolds as needed.
+-->
+## Write a Scientific Explanation
+
+**Prompt:**  
+- What is the Sun made of? How do you know?
+
+**Use the CER (Claim-Evidence-Reasoning) approach:**  
+- **Claim:** What do you think the Sun is composed of?  
+- **Evidence:** What data supports your claim?  
+- **Reasoning:** How does your evidence support your claim?
+
+---
+
+<!--
+TEACHER NOTE: Sample conferring questions to guide students' explanations.
+-->
+## Conferring Prompts
+
+- Why does the evidence tell us the Sun is composed of hydrogen and helium?
+- What patterns did you use as evidence?
+- How do you know there is a pattern?
+- What makes your explanation convincing?
+
+---
+
+<!--
+TEACHER NOTE: Scaffold for students who need support.  
+Encourage use of the CER chart or sentence starters.
+-->
+## Need Help Getting Started?
+
+- Use the CER chart on your handout
+- Try sentence starters:
+  - “The Sun is composed of…”
+  - “The evidence for this is…”
+  - “This evidence supports my claim because…”
+
+---
+
+<!--
+TEACHER NOTE: Class consensus routine.  
+Select groups to share explanations that move the class forward.
+-->
+## Class Consensus Discussion
+
+- Groups share their scientific explanations
+- Listen for:
+  - Use of patterns as evidence
+  - Clear reasoning linking evidence to claim
+- As a class, discuss and agree on the best-supported claim
+
+---
+
+<!--
+TEACHER NOTE: Key points to ensure are surfaced during discussion.
+-->
+## Take Time for These Key Points
+
+- The Sun is made mostly of hydrogen and helium
+- We know this from spectra data and patterns
+- Patterns in evidence are a useful lens for figuring out other things in space science
+
+---
+
+<!--
+TEACHER NOTE: Encourage students to reflect on their learning and the process.
+-->
+## Reflection & Summary
+
+- What did you learn about making evidence-based claims?
+- How did using patterns in data help you figure out what the Sun is made of?
+- What questions do you still have about the Sun?
+
+---
+
+<!--
+TEACHER NOTE: Use as an exit ticket or homework prompt.
+-->
 ## Exit Ticket
 
-- What is one idea or question about the Sun’s energy that you’re curious to investigate further?
-- What is one thing you learned or observed today that surprised you?
+- What is one thing you learned about how scientists use evidence to make claims?
+- What is one question you still have about the Sun or its energy?
+
+---

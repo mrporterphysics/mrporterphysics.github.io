@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2025.09.23 **Earth Science**
+
+##### **❓ of the 📅**: What is the worst food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Spectrascopy & The Sun
+2. Elements of the Sun
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore the spectra of the sun_
+
+
+</div>
+</div>
+
+---
+
 # 2025.09.22 **Earth Science**
 
 ##### **❓ of the 📅**: If you were to open a store, what would you sell?
