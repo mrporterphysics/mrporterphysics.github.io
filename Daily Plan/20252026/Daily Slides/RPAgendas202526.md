@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2025.09.22 **Regents Physics**
+
+##### **❓ of the 📅**: If you were to open a store, what would you sell?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Walk the Graph Lab 🚶‍♂️
+2. Velocity vs. time graphs
+3. Red Car vs. Green Car 🚗 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model & Predict Constant Velocity Motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 🖱️ Open [Graphical Analysis](https://graphicalanalysis.app/) <!--fit--->
 
 ### [Click link in slides or find herehttps://graphicalanalysis.app/](https://graphicalanalysis.app/)
