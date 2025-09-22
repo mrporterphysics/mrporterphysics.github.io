@@ -63,6 +63,14 @@
     --soft-accent-green: #B8D8A7;
     --soft-accent-red: #E1A4A4;
     --soft-accent-purple: #D8A7D8;
+
+    /* Sun theme colors - warm sunny tones */
+    --sun-background: #FFF8DC;
+    --sun-text: #4A4A4A;
+    --sun-accent-blue: #FF8C00;
+    --sun-accent-green: #DAA520;
+    --sun-accent-red: #FF6347;
+    --sun-accent-purple: #CD853F;
     
     --text-glow: 0 0 10px;
 }
@@ -774,4 +782,61 @@ section input[type="checkbox"] {
 section label {
   cursor: pointer; /* indicates interactivity */
   user-select: none; /* prevents text selection on click */
+}
+
+section.sun {
+    background-color: var(--sun-background) !important;
+    color: var(--sun-text) !important;
+}
+
+/* Sun theme headers */
+.sun h1 {
+    color: var(--sun-accent-purple) !important;
+    border-bottom-color: var(--sun-accent-blue) !important;
+}
+
+.sun h2 {
+    color: var(--sun-accent-blue) !important;
+}
+
+.sun h3, .sun h4, .sun h5, .sun h6 {
+    color: var(--sun-accent-green) !important;
+}
+
+/* Sun theme links */
+.sun a {
+    color: var(--sun-accent-blue) !important;
+}
+
+/* Sun theme code blocks */
+.sun code, .sun pre {
+    color: var(--sun-accent-green) !important;
+    background-color: rgba(218, 165, 32, 0.15) !important;
+}
+
+/* Sun theme strong text */
+.sun strong {
+    color: var(--sun-accent-red) !important;
+}
+
+/* Sun theme tables */
+section.sun table {
+    border: 2px solid var(--sun-accent-blue);
+}
+
+section.sun table > thead > tr > th,
+section.sun table th {
+    background-color: var(--sun-accent-purple);
+    color: var(--sun-background);
+}
+
+section.sun table > tbody > tr > td,
+section.sun table td {
+    border: 1px solid rgba(205, 133, 63, 0.3);
+    background-color: var(--sun-background);
+    color: var(--sun-text);
+}
+
+section.sun table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(255, 140, 0, 0.08);
 }
