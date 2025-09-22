@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2025.09.22 **Earth Science**
+
+##### **❓ of the 📅**: If you were to open a store, what would you sell?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. The Sun - where does all of this energy come from?  
+    - [Sun Slides](../../../Presentations/ES%20Presentations/Unit%201%20Origin/thesun.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore and analyze the sun_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.19 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be a superhero or super villain?
