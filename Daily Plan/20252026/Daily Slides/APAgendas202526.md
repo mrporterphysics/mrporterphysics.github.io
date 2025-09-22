@@ -16,11 +16,47 @@ math: mathjax
 
 ---
 
+
+# 2025.09.23 **AP Physics**
+
+##### **❓ of the 📅**: What is the worst food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Fan Cart Lab
+  - Notes on data collection best practices
+2. Tutorial on [https://graphicalanalysis.app](https://graphicalanalysis.app/)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Fan Cart Data Collection & Analysis_
+
+### 📆 Upcoming
+
+- AP Exam checks are due to guidance on **Thursday, October 16th** 
+-> Check to _Schodack Central Schools_ 
+
+</div>
+</div>
+
+---
+
+# Ticker Tape Best Practices
+
 - how to set up the spark timer to collect good data:
   - length of tape = length of run, make sure tape is shorter than track so it is pulled all of the way through
   - label tape after collecting data
     - trial #, where zero is
   - need to pull tape through timer **BEFORE** taping to cart
+- **Note** You do not need to record _every_ ticker mark...but be sure to follow the 8x10 rule. More data is better here if you have it!
 
 ---
 
