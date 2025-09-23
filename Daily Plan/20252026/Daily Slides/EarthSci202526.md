@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2025.09.24 **Earth Science**
+
+##### **❓ of the 📅**: If you could do anything you wanted today, what would you do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Whiteboard CER -- what elements make up the sun
+2. Present CER & Come to a class consensus
+3. Reflect on first consensus activity
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine what elements make up the sun_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.23 **Earth Science**
 
 ##### **❓ of the 📅**: What is the worst food?
