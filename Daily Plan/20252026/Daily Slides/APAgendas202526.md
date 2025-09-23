@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2025.09.24 **AP Physics**
+
+##### **❓ of the 📅**: If you could do anything you wanted today, what would you do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Fan Cart Lab
+2. Whiteboard Results
+3. Board Meeting
+4. Card Sort
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Represent changing velocity motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2025.09.23 **AP Physics**
 
