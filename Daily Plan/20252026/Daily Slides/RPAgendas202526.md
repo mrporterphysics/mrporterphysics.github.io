@@ -15,6 +15,104 @@ math: mathjax
 
 ---
 
+# 2025.09.23 **Regents Physics**
+
+##### **❓ of the 📅**: What is the _worst_ food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Red Car vs. Green Car: Team problem-solving
+    - Solve in group
+    - Share solutions
+2. Dueling Buggies Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use mathematical models to make predictions about constant velocity motion._
+
+### 📆 Upcoming
+
+- HW: Finish Red Car vs Green Car on Physics Classroom (due **Friday**)
+- Quiz Friday
+
+</div>
+</div>
+
+---
+
+# Team Solving
+
+### Solve with your lab group on a whiteboard
+
+A red car (on left) and a green car (on right) are spaced **$1200\text{ m}$** apart (distance a). They start at the same time and head towards each other. The red car averages a speed of **$13.2\text{ m/s}$**. The green car averages a speed of **$16.8\text{ m/s}$**. What distance will the red car have traveled (distance b) when it is at the same position as the green car?
+
+![bg fit right:40%](image-8.png)
+
+---
+
+
+# Dueling Buggies Lab
+
+## Lab Question
+
+How can we use measurements and models to predict the meeting point of two battery-powered buggies, one fast and one slow, when they move toward each other from known starting positions?
+
+## Lab Purpose
+
+To determine and test the predicted meeting point of two buggies moving at constant, but different, speeds toward each other, using measurements, motion maps, graphs, and algebraic models.
+
+---
+
+## Procedure Overview
+
+1) In teams, measure all properties you think are necessary to predict how the fast and slow buggies will move (speed, direction, etc.).
+2) Record your measurements and describe your methods.
+3) After measurements, your buggies will be collected. The teacher will mark two starting lines: one for the fast buggy and one for the slow buggy.
+4) Using your data, determine and clearly mark on the floor where you predict the two buggies will meet if started at the same time.
+
+---
+
+# Procedure Overview
+
+5) Use at least two different approaches (motion maps, position-time graphs, algebraic equations, etc.) to support your prediction.
+6) Once you have made your prediction, test it by running the buggies from the assigned start lines.
+7) Record and analyze the outcome.
+
+---
+
+## Data Section
+
+- Table of measurements for each buggy (speed, direction, other relevant properties)
+- Sample calculations for determining speed
+- Sample calculations for determining speed
+- Diagrams, graphs, or descriptions of any modeling tools used
+- Sketches or descriptions of motion maps and position-time graphs
+- Written description of your prediction process
+
+---
+
+
+# Dueling Buggies Lab
+
+## Lab Question
+
+How can we use measurements and models to predict the meeting point of two battery-powered buggies, one fast and one slow, when they move toward each other from known starting positions?
+
+## Lab Purpose
+
+To determine and test the predicted meeting point of two buggies moving at constant, but different, speeds toward each other, using measurements, motion maps, graphs, and algebraic models.
+
+---
+
+
 # 2025.09.22 **Regents Physics**
 
 ##### **❓ of the 📅**: If you were to open a store, what would you sell?
