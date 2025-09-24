@@ -46,6 +46,15 @@ class:  twilight
 
 ---
 
+# Board Meeting Procedures
+1. Each group shares CER
+2. What is similar about all of the boards?
+3. What is different amongst the boards?
+4. Can we come to a consensus about what elements compose the sun? 
+    -> Be sure to provide evidence of this
+
+---
+
 # 2025.09.23 **Earth Science**
 
 ##### **❓ of the 📅**: What is the worst food?
