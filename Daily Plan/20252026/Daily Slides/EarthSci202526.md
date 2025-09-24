@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2025.09.25 **Earth Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Card Sort - Summarization of CER
+2. How does the Sun release energy?
+    - Cart sort #2 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2025.09.24 **Earth Science**
 
 ##### **❓ of the 📅**: If you could do anything you wanted today, what would you do?
