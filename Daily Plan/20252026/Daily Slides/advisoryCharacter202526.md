@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: physicalSci
-class: dark
+class: green
 ---
 
 # Advisory Slides

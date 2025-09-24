@@ -1,9 +1,7 @@
 /* 
 @theme physicalSci
 */
-/*  
-@theme physicalSci
-*/
+
 @import 'default';
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&family=Fira+Code:wght@400;700&display=swap');
 
@@ -71,6 +69,15 @@
     --sun-accent-green: #DAA520;
     --sun-accent-red: #FF6347;
     --sun-accent-purple: #CD853F;
+
+    /* Green theme colors */
+    --green-background: #E8F5E9;
+    --green-text: #1B4332;
+    --green-accent-blue: #2E7D32;
+    --green-accent-green: #388E3C;
+    --green-accent-red: #6A4C93;
+    --green-accent-purple: #00695C;
+
     
     --text-glow: 0 0 10px;
 }
@@ -839,4 +846,63 @@ section.sun table td {
 
 section.sun table > tbody > tr:nth-child(even) > td {
     background-color: rgba(255, 140, 0, 0.08);
+}
+
+
+/* Green theme */
+section.green {
+    background-color: var(--green-background) !important;
+    color: var(--green-text) !important;
+}
+
+/* Green theme headers */
+.green h1 {
+    color: var(--green-accent-purple) !important;
+    border-bottom-color: var(--green-accent-blue) !important;
+}
+
+.green h2 {
+    color: var(--green-accent-blue) !important;
+}
+
+.green h3, .green h4, .green h5, .green h6 {
+    color: var(--green-accent-green) !important;
+}
+
+/* Green theme links */
+.green a {
+    color: var(--green-accent-blue) !important;
+}
+
+/* Green theme code blocks */
+.green code, .green pre {
+    color: var(--green-accent-green) !important;
+    background-color: rgba(27, 67, 50, 0.08) !important;
+}
+
+/* Green theme strong text */
+.green strong {
+    color: var(--green-accent-red) !important;
+}
+
+/* Green theme tables */
+section.green table {
+    border: 2px solid var(--green-accent-blue);
+}
+
+section.green table > thead > tr > th,
+section.green table th {
+    background-color: var(--green-accent-purple);
+    color: var(--green-background);
+}
+
+section.green table > tbody > tr > td,
+section.green table td {
+    border: 1px solid rgba(27, 67, 50, 0.2);
+    background-color: var(--green-background);
+    color: var(--green-text);
+}
+
+section.green table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(56, 142, 60, 0.08);
 }
