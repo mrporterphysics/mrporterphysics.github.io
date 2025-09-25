@@ -392,3 +392,111 @@ TEACHER NOTE: Use as an exit ticket or homework prompt.
 - What is one question you still have about the Sun or its energy?
 
 ---
+
+---
+
+<!--
+TEACHER NOTE: Title slide for Elaborate & Evaluate.  
+You may want to add your name, class, and date.
+-->
+# How the Sun Works:  
+Elaborate & Evaluate  
+Earth & Space Science – Unit 1
+
+---
+
+<!--
+TEACHER NOTE: Introduce the purpose of the Elaborate phase.
+-->
+## Elaborate: Explaining How the Sun Releases Energy
+
+- Use evidence and reasoning to explain the process that releases the Sun’s energy
+- Compare chemical and nuclear reactions as possible sources
+- Connect the scale and duration of energy release to scientific explanations
+
+---
+
+<!--
+TEACHER NOTE: Remind students of their earlier ideas about explosions, burning, and chemical reactions.
+-->
+## Revisiting Our Ideas
+
+- We know the Sun is made of hydrogen and helium
+- But how do these elements release so much energy for so long?
+- Let’s analyze the evidence for two possible processes:
+  - Chemical reactions
+  - Nuclear reactions
+
+---
+
+<!--
+TEACHER NOTE: Students analyze the data table comparing chemical and nuclear processes.
+-->
+## Analyze the Evidence
+
+**Possible Energy-Releasing Processes in the Sun:**
+- **Chemical:**  
+  - Small amount of energy per reaction  
+  - Would only power the Sun for ~50,000 years
+- **Nuclear (Fusion):**  
+  - Much more energy per reaction  
+  - Can power the Sun for ~10 billion years
+
+---
+
+<!--
+TEACHER NOTE: Students use claim and data cards to sort evidence and reasoning.
+-->
+## Card Sort: Which Process Powers the Sun?
+
+**Instructions:**  
+1. Work with your partner to sort the claim and data cards  
+2. Decide which evidence supports chemical or nuclear reactions  
+3. Add your reasoning to the cards as needed
+
+---
+
+<!--
+TEACHER NOTE: Circulate and use conferring prompts to push student thinking.
+-->
+## Conferring Prompts
+
+- What made you decide this card supports your claim?
+- Is there evidence that can support both claims?
+- Which claim has stronger evidence?
+- How does the scale of energy and time help you decide?
+
+---
+
+<!--
+TEACHER NOTE: Students write a scientific explanation for how the Sun releases energy.
+-->
+## Write Your Scientific Explanation
+
+**Prompt:**  
+- Is the Sun’s energy released by chemical or nuclear reactions?  
+- Use evidence and reasoning to support your claim
+
+---
+
+<!--
+TEACHER NOTE: Encourage students to reflect on what makes evidence strong.
+-->
+## What Counts as an Evidence-Based Claim?
+
+- Information from a reliable source
+- Evidence from an experiment or investigation
+- Not just an opinion
+- Patterns in data can count as evidence
+- Claims can be revised based on new evidence
+
+---
+
+<!--
+TEACHER NOTE: Transition to Evaluate phase.  
+Students will revise and critique their models and make predictions.
+-->
+## Evaluate: Revising and Predicting
+
+- Revise your model of how the Sun works based on new evidence
+- Use your model to predict what will happen to
