@@ -504,6 +504,114 @@ $$ \Delta x = \bar{v}{t} $$
 
 ---
 
+# Motion on an Incline Lab <!--fit--->
+
+---
+
+# Observations :eyes:
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+---
+
+## Lab Question
+
+How does the position and velocity of an object change as it rolls down an inclined track?
+
+- Does the wheel increase its velocity?
+- Does the wheel increase its velocity at a constant rate?
+
+---
+
+## Purpose
+
+- Observe and measure motion on an incline
+- Model position-time and velocity-time behavior
+- Analyze data using graphs and equations
+
+---
+
+## Apparatus
+
+- Inclined track and 3D printed wheel
+- Timer (photogates, stopwatch, or video analysis)
+- Meter stick or ruler
+- Register tape
+- Graph paper or Logger Pro/Graphical Analysis software
+
+---
+
+## Procedure Overview
+
+1. Set up your apparatus; object starts from rest at position zero.
+2. Measure and record position at even time intervals.
+3. Use photogates, video analysis, or manual timing.
+4. Mark position every few frames if using video.
+5. Plot position (x) vs. time (t) in Graphical Analysis.
+6. Use the tangent tool to measure instantaneous velocities.
+7. Plot velocity (v) vs. time (t) using tangent slopes.
+8. (Together) Add a column for t²; plot position vs. t².
+9. (Together) Plot v² vs. position (x).
+
+---
+
+## Data Table
+
+- Complete and print using Google Sheets.
+- Tape printed tables into your lab notebook.
+
+---
+
+## Graphs to Create
+
+- Position vs. Time (x vs. t)
+- Instantaneous Velocity vs. Time (v vs. t)
+- Position vs. Time² (x vs. t²)
+- Velocity² vs. Position (v² vs. x)
+
+---
+
+## Reflection & Analysis
+
+- What does your position vs. time graph show?
+- How does velocity change down the incline?
+- What does the slope of the velocity vs. time graph represent?
+- How does the position vs. time² graph help you understand acceleration?
+- What is the meaning of the slope in your velocity² vs. position graph?
+- Where do you see evidence of constant acceleration?
+- How would your graphs change with a different starting velocity or position?
+- What sources of error might affect your measurements?
+
+---
+
+## Lab Notebook Instructions
+
+- Record all observations and measurements.
+- Include labeled graphs.
+- Show tangent line and velocity calculations.
+- Answer all reflection questions.
+- Summarize findings and connect to uniform acceleration.
+
+---
+
+# Motion on an Incline
+
+## Lab Question
+
+How does the position and velocity of an object change as it rolls down an inclined track?
+
+- Does the wheel increase its velocity?
+- Does the wheel increase its velocity at a constant rate?
+
+
+## Purpose
+
+- Observe and measure motion on an incline
+- Model position-time and velocity-time behavior
+- Analyze data using graphs and equations
+
+---
+
 <!--- class: invert--->
 
 # Defintions & Notes
