@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+# 2025.09.25 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite family vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Wheel Lab
+  -> introduction and observations
+  -> Technology pieces 
+2. Wheel Lab -> Collect Data
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect Data on object moving down an incline_
+
+### 📆 Upcoming
+
+- HW: Finish Red Car vs Green Car on PC (due **Friday**)
+- Quiz Friday
+
+</div>
+</div>
+
+---
+
 # 2025.09.23 **Regents Physics**
 
 ##### **❓ of the 📅**: What is the _worst_ food?
