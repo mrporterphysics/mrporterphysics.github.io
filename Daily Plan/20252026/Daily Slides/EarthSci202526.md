@@ -19,7 +19,7 @@ class:  twilight
 
 # 2025.09.25 **Earth Science**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: What is your favorite family vacation?
 
 <div class ='columns'>
 

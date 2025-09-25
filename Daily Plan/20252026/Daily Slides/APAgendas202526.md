@@ -16,6 +16,50 @@ math: mathjax
 
 ---
 
+### 2025.09.25 **AP Physics** Do Now
+
+![bg fit right:40%](../Daily%20Slides/images/Kinematics/Bryonariel.png)
+
+The position-time graph shown represents the motion of two children who are moving along a narrow, straight hallway.
+
+1. Do either of the children ever change ***direction***?
+2. Are the two children ever at the same ***position*** along the hallway?
+3. Do the two children ever have the same ***speed***?
+4. Do the two children ever have the same ***acceleration***?
+
+---
+
+
+# 2025.09.25 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite family vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Review Lab Results
+3. Linearization
+4. Card Sort
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Uniform motion graphically_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.24 **AP Physics**
 
 ##### **❓ of the 📅**: If you could do anything you wanted today, what would you do?
