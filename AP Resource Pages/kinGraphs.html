@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinematics Graphs - Uniform Acceleration</title>
+    <link rel="stylesheet" href="../css/flexoki-theme.css">
+    <script src="../js/theme-toggle.js"></script>
+    <style>
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px var(--shadow-hover);
+            padding: 40px;
+            max-width: 1400px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .sliders {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .slider-container {
+            text-align: center;
+            background: var(--bg-tertiary);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .slider-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        input[type="range"] {
+            width: 80%;
+            margin: 0 10px;
+            accent-color: var(--accent-primary);
+        }
+
+        .graphs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        canvas {
+            width: 100%;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            background: var(--bg-primary);
+        }
+
+        #positionGraph, #velocityGraph {
+            height: 400px;
+        }
+
+        #motionMap {
+            height: 150px;
+            grid-column: 1 / -1;
+        }
+
+        .equations {
+            background: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .equations h3 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        .equation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .equation {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid var(--accent-primary);
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+            border: 1px solid var(--border-color);
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px var(--shadow);
+            font-family: inherit;
+        }
+
+        button:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+            transform: translateY(-1px);
+        }
+
+        .motion-map-label {
+            text-align: center;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-top: 20px;
+            margin-bottom: -10px;
+        }
+
+        .theme-toggle-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            .graphs {
+                grid-template-columns: 1fr;
+            }
+            .sliders {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <!-- Theme toggle will be automatically inserted here by theme-toggle.js -->
+    </div>
+    <div class="container">
+        <h1>Kinematics: Uniform Acceleration</h1>
+        <div class="subtitle">Interactive Position, Velocity, and Motion Map Visualizations</div>
+        
+        <div class="sliders">
+            <div class="slider-container">
+                <label for="v0Slider">Initial Velocity (v₀): <span id="v0Value">0.0</span> m/s</label>
+                <input type="range" id="v0Slider" min="-10" max="10" step="0.5" value="0"
+                       title="Adjust initial velocity" aria-label="Initial velocity slider">
+            </div>
+            <div class="slider-container">
+                <label for="accelSlider">Acceleration (a): <span id="accelValue">2.0</span> m/s²</label>
+                <input type="range" id="accelSlider" min="-5" max="5" step="0.5" value="2"
+                       title="Adjust acceleration" aria-label="Acceleration slider">
+            </div>
+        </div>
+        
+        <div class="graphs">
+            <canvas id="positionGraph"></canvas>
+            <canvas id="velocityGraph"></canvas>
+        </div>
+        
+        <div class="motion-map-label">Motion Map (Position and Velocity Vectors)</div>
+        <div class="graphs">
+            <canvas id="motionMap"></canvas>
+        </div>
+        
+        <div class="equations">
+            <h3>Key Kinematic Equations for Uniform Acceleration:</h3>
+            <div class="equation-grid">
+                <div class="equation">v = v₀ + at</div>
+                <div class="equation">x = x₀ + v₀t + ½at²</div>
+                <div class="equation">v² = v₀² + 2a(x - x₀)</div>
+                <div class="equation">x = x₀ + ½(v₀ + v)t</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button type="button" onclick="animateGraphs()">Animate Motion</button>
+            <button type="button" onclick="resetGraphs()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        const posCanvas = document.getElementById('positionGraph');
+        const velCanvas = document.getElementById('velocityGraph');
+        const motionCanvas = document.getElementById('motionMap');
+        const posCtx = posCanvas.getContext('2d');
+        const velCtx = velCanvas.getContext('2d');
+        const motionCtx = motionCanvas.getContext('2d');
+        const v0Slider = document.getElementById('v0Slider');
+        const accelSlider = document.getElementById('accelSlider');
+        const v0Value = document.getElementById('v0Value');
+        const accelValue = document.getElementById('accelValue');
+        
+        let animationId = null;
+        let currentTime = 0;
+        let initialVelocity = 0;
+        let acceleration = 2;
+
+        // Function to get CSS custom property values
+        function getCSSVariable(name) {
+            return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+        }
+
+        // Function to get theme-aware colors
+        function getThemeColors() {
+            return {
+                textPrimary: getCSSVariable('--text-primary'),
+                textSecondary: getCSSVariable('--text-secondary'),
+                textMuted: getCSSVariable('--text-muted'),
+                borderColor: getCSSVariable('--border-color'),
+                accentPrimary: getCSSVariable('--accent-primary'),
+                accentSecondary: getCSSVariable('--accent-secondary'),
+                error: getCSSVariable('--error'),
+                bgPrimary: getCSSVariable('--bg-primary'),
+                bgSecondary: getCSSVariable('--bg-secondary')
+            };
+        }
+
+        // Helper function to convert hex color to rgb
+        function hexToRgb(hex) {
+            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : {r: 102, g: 126, b: 234}; // fallback to blue
+        }
+        
+        // Set canvas resolution
+        function setCanvasSize() {
+            const canvases = [
+                { canvas: posCanvas, height: 400 },
+                { canvas: velCanvas, height: 400 },
+                { canvas: motionCanvas, height: 150 }
+            ];
+            
+            canvases.forEach(({ canvas, height }) => {
+                canvas.width = canvas.offsetWidth * 2;
+                canvas.height = height * 2;
+                const ctx = canvas.getContext('2d');
+                ctx.scale(2, 2);
+            });
+        }
+        
+        v0Slider.addEventListener('input', (e) => {
+            initialVelocity = parseFloat(e.target.value);
+            v0Value.textContent = initialVelocity.toFixed(1);
+            resetGraphs();
+        });
+        
+        accelSlider.addEventListener('input', (e) => {
+            acceleration = parseFloat(e.target.value);
+            accelValue.textContent = acceleration.toFixed(1);
+            resetGraphs();
+        });
+        
+        function getPosition(t) {
+            return initialVelocity * t + 0.5 * acceleration * t * t;
+        }
+        
+        function getVelocity(t) {
+            return initialVelocity + acceleration * t;
+        }
+        
+        function drawAxes(ctx, canvas, title, xLabel, yLabel, yMin, yMax) {
+            const width = canvas.width / 2;
+            const height = canvas.height / 2;
+            const margin = 50;
+            const graphWidth = width - 2 * margin;
+            const graphHeight = height - 2 * margin;
+            const colors = getThemeColors();
+
+            ctx.clearRect(0, 0, width, height);
+
+            // Title
+            ctx.font = 'bold 18px Inconsolata, monospace';
+            ctx.fillStyle = colors.textPrimary;
+            ctx.textAlign = 'center';
+            ctx.fillText(title, width / 2, 25);
+
+            // Calculate zero position
+            const zeroY = height - margin - ((-yMin) / (yMax - yMin)) * graphHeight;
+
+            // Draw axes
+            ctx.strokeStyle = colors.textPrimary;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            // Y-axis
+            ctx.moveTo(margin, margin);
+            ctx.lineTo(margin, height - margin);
+            // X-axis at zero
+            ctx.moveTo(margin, zeroY);
+            ctx.lineTo(width - margin, zeroY);
+            ctx.stroke();
+
+            // Draw grid
+            ctx.strokeStyle = colors.borderColor;
+            ctx.lineWidth = 1;
+            for (let i = 1; i <= 10; i++) {
+                const x = margin + (graphWidth / 10) * i;
+                const y = margin + (graphHeight / 10) * i;
+
+                ctx.beginPath();
+                ctx.moveTo(x, margin);
+                ctx.lineTo(x, height - margin);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(margin, y);
+                ctx.lineTo(width - margin, y);
+                ctx.stroke();
+            }
+
+            // Labels
+            ctx.font = '14px Fira Code, monospace';
+            ctx.fillStyle = colors.textSecondary;
+            ctx.textAlign = 'center';
+            ctx.fillText(xLabel, width / 2, height - 10);
+
+            ctx.save();
+            ctx.translate(15, height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText(yLabel, 0, 0);
+            ctx.restore();
+            
+            // Scale numbers
+            ctx.font = '12px Fira Code, monospace';
+            ctx.fillStyle = colors.textMuted;
+            ctx.textAlign = 'right';
+            const numYTicks = 5;
+            for (let i = 0; i <= numYTicks; i++) {
+                const value = yMin + (yMax - yMin) * i / numYTicks;
+                const y = height - margin - (graphHeight / numYTicks) * i;
+                ctx.fillText(value.toFixed(0), margin - 5, y + 3);
+            }
+
+            ctx.textAlign = 'center';
+            for (let i = 0; i <= 5; i++) {
+                const x = margin + (graphWidth / 5) * i;
+                ctx.fillText((2 * i).toFixed(0), x, zeroY + 20);
+            }
+            
+            return { margin, graphWidth, graphHeight, width, height, zeroY };
+        }
+        
+        function drawGraph() {
+            const colors = getThemeColors();
+
+            // Calculate ranges for graphs
+            let posMin = -50, posMax = 150;
+            let velMin = -20, velMax = 30;
+
+            // Adjust ranges based on motion
+            const maxTime = 10;
+            const positions = [];
+            const velocities = [];
+            for (let t = 0; t <= maxTime; t += 0.5) {
+                positions.push(getPosition(t));
+                velocities.push(getVelocity(t));
+            }
+
+            const minPos = Math.min(...positions, 0);
+            const maxPos = Math.max(...positions, 0);
+            posMin = Math.floor(minPos / 50) * 50;
+            posMax = Math.ceil(maxPos / 50) * 50;
+
+            const minVel = Math.min(...velocities, 0);
+            const maxVel = Math.max(...velocities, 0);
+            velMin = Math.floor(minVel / 10) * 10;
+            velMax = Math.ceil(maxVel / 10) * 10;
+
+            // Position-Time Graph
+            const posParams = drawAxes(posCtx, posCanvas, 'Position vs Time', 'Time (s)', 'Position (m)', posMin, posMax);
+
+            // Velocity-Time Graph
+            const velParams = drawAxes(velCtx, velCanvas, 'Velocity vs Time', 'Time (s)', 'Velocity (m/s)', velMin, velMax);
+
+            if (currentTime > 0) {
+                // Draw position curve
+                posCtx.strokeStyle = colors.accentPrimary;
+                posCtx.lineWidth = 3;
+                posCtx.beginPath();
+                for (let t = 0; t <= currentTime; t += 0.05) {
+                    const x = posParams.margin + (t / 10) * posParams.graphWidth;
+                    const position = getPosition(t);
+                    const y = posParams.height - posParams.margin - ((position - posMin) / (posMax - posMin)) * posParams.graphHeight;
+                    if (t === 0) {
+                        posCtx.moveTo(x, y);
+                    } else {
+                        posCtx.lineTo(x, y);
+                    }
+                }
+                posCtx.stroke();
+                
+                // Draw velocity line
+                velCtx.strokeStyle = colors.accentSecondary;
+                velCtx.lineWidth = 3;
+                velCtx.beginPath();
+                const v0x = velParams.margin;
+                const v0y = velParams.height - velParams.margin - ((initialVelocity - velMin) / (velMax - velMin)) * velParams.graphHeight;
+                velCtx.moveTo(v0x, v0y);
+                const vx = velParams.margin + (currentTime / 10) * velParams.graphWidth;
+                const velocity = getVelocity(currentTime);
+                const vy = velParams.height - velParams.margin - ((velocity - velMin) / (velMax - velMin)) * velParams.graphHeight;
+                velCtx.lineTo(vx, vy);
+                velCtx.stroke();
+                
+                // Draw current point on position graph
+                const currentX = posParams.margin + (currentTime / 10) * posParams.graphWidth;
+                const currentPos = getPosition(currentTime);
+                const currentY = posParams.height - posParams.margin - ((currentPos - posMin) / (posMax - posMin)) * posParams.graphHeight;
+                
+                posCtx.fillStyle = colors.accentPrimary;
+                posCtx.beginPath();
+                posCtx.arc(currentX, currentY, 5, 0, 2 * Math.PI);
+                posCtx.fill();
+                
+                // Draw tangent line at current point (shows instantaneous velocity)
+                if (currentTime > 1) {
+                    posCtx.strokeStyle = colors.error;
+                    posCtx.lineWidth = 2;
+                    posCtx.setLineDash([5, 5]);
+                    posCtx.beginPath();
+                    
+                    // Calculate the slope in graph units
+                    const velocity = getVelocity(currentTime);
+                    // Convert to graph units: 
+                    // x-axis: 10 seconds spans graphWidth pixels
+                    // y-axis: (posMax - posMin) meters spans graphHeight pixels
+                    const slopeInGraphUnits = (velocity * 10 / (posMax - posMin)) * (posParams.graphHeight / posParams.graphWidth);
+                    
+                    // Draw tangent line extending both directions from current point
+                    const tangentLength = 60;
+                    const dx = tangentLength;
+                    const dy = -tangentLength * slopeInGraphUnits; // negative because y increases downward
+                    
+                    posCtx.moveTo(currentX - dx, currentY - dy);
+                    posCtx.lineTo(currentX + dx, currentY + dy);
+                    posCtx.stroke();
+                    posCtx.setLineDash([]);
+                    
+                    // Label for slope
+                    posCtx.fillStyle = colors.error;
+                    posCtx.font = 'bold 12px Fira Code, monospace';
+                    posCtx.textAlign = 'left';
+                    posCtx.fillText(`Slope = v = ${velocity.toFixed(1)} m/s`, currentX + 10, currentY - 20);
+                }
+                
+                // Draw current point on velocity graph
+                velCtx.fillStyle = colors.accentSecondary;
+                velCtx.beginPath();
+                velCtx.arc(vx, vy, 5, 0, 2 * Math.PI);
+                velCtx.fill();
+                
+                // Label for slope of velocity graph
+                velCtx.fillStyle = colors.error;
+                velCtx.font = 'bold 12px Fira Code, monospace';
+                velCtx.textAlign = 'center';
+                velCtx.fillText(`Slope = a = ${acceleration} m/s²`, velParams.width / 2, velParams.margin + 30);
+                
+                // Draw area under velocity graph
+                const accentSecondaryRgb = hexToRgb(colors.accentSecondary);
+                velCtx.fillStyle = `rgba(${accentSecondaryRgb.r}, ${accentSecondaryRgb.g}, ${accentSecondaryRgb.b}, 0.2)`;
+                velCtx.beginPath();
+                velCtx.moveTo(v0x, velParams.zeroY);
+                velCtx.lineTo(v0x, v0y);
+                velCtx.lineTo(vx, vy);
+                velCtx.lineTo(vx, velParams.zeroY);
+                velCtx.closePath();
+                velCtx.fill();
+                
+                // Label for area
+                if (currentTime > 3) {
+                    velCtx.fillStyle = colors.accentPrimary;
+                    velCtx.font = 'bold 12px Fira Code, monospace';
+                    velCtx.textAlign = 'center';
+                    const areaX = velParams.margin + (currentTime / 20) * velParams.graphWidth;
+                    const areaY = velParams.zeroY - 20;
+                    const displacement = getPosition(currentTime) - getPosition(0);
+                    velCtx.fillText(`Area = Δx = ${displacement.toFixed(1)} m`, areaX, areaY);
+                }
+            }
+            
+            // Draw motion map
+            drawMotionMap();
+        }
+        
+        function drawMotionMap() {
+            const colors = getThemeColors();
+            const width = motionCanvas.width / 2;
+            const height = motionCanvas.height / 2;
+            const margin = 30;
+            const mapWidth = width - 2 * margin;
+            const mapHeight = height - 2 * margin;
+
+            motionCtx.clearRect(0, 0, width, height);
+            
+            // Calculate position range for scaling
+            let minPos = 0, maxPos = 100;
+            const positions = [];
+            for (let t = 0; t <= 10; t += 1) {
+                positions.push(getPosition(t));
+            }
+            minPos = Math.min(...positions, -50);
+            maxPos = Math.max(...positions, 50);
+            const range = maxPos - minPos;
+            
+            // Draw axis line
+            motionCtx.strokeStyle = colors.textPrimary;
+            motionCtx.lineWidth = 2;
+            motionCtx.beginPath();
+            motionCtx.moveTo(margin, height / 2);
+            motionCtx.lineTo(width - margin, height / 2);
+            motionCtx.stroke();
+            
+            // Draw scale marks
+            motionCtx.strokeStyle = colors.textSecondary;
+            motionCtx.lineWidth = 1;
+            motionCtx.font = '10px Fira Code, monospace';
+            motionCtx.textAlign = 'center';
+            motionCtx.fillStyle = colors.textSecondary;
+            
+            const numMarks = 5;
+            for (let i = 0; i <= numMarks; i++) {
+                const x = margin + (mapWidth / numMarks) * i;
+                const value = minPos + (range / numMarks) * i;
+                
+                motionCtx.beginPath();
+                motionCtx.moveTo(x, height / 2 - 5);
+                motionCtx.lineTo(x, height / 2 + 5);
+                motionCtx.stroke();
+                
+                motionCtx.fillText(value.toFixed(0) + ' m', x, height / 2 + 20);
+            }
+            
+            // Draw motion dots and velocity vectors
+            const timeStep = 1; // Draw every 1 second
+            const maxDots = Math.min(Math.floor(currentTime / timeStep) + 1, 11);
+            
+            for (let i = 0; i < maxDots; i++) {
+                const t = i * timeStep;
+                if (t <= currentTime) {
+                    const position = getPosition(t);
+                    const velocity = getVelocity(t);
+                    const x = margin + ((position - minPos) / range) * mapWidth;
+                    const y = height / 2;
+                    
+                    // Draw position dot
+                    const alpha = (currentTime - t) < 0.5 ? (currentTime - t) * 2 : 1;
+                    const accentPrimaryRgb = hexToRgb(colors.accentPrimary);
+                    motionCtx.fillStyle = `rgba(${accentPrimaryRgb.r}, ${accentPrimaryRgb.g}, ${accentPrimaryRgb.b}, ${alpha})`;
+                    motionCtx.beginPath();
+                    motionCtx.arc(x, y, 6, 0, 2 * Math.PI);
+                    motionCtx.fill();
+                    
+                    // Draw velocity vector
+                    if (Math.abs(velocity) > 0.1) {
+                        const errorRgb = hexToRgb(colors.error);
+                        motionCtx.strokeStyle = `rgba(${errorRgb.r}, ${errorRgb.g}, ${errorRgb.b}, ${alpha})`;
+                        motionCtx.lineWidth = 2;
+                        motionCtx.beginPath();
+                        motionCtx.moveTo(x, y);
+                        
+                        // Scale velocity vector
+                        const vectorLength = (velocity / 30) * 100; // Scale for visibility
+                        motionCtx.lineTo(x + vectorLength, y);
+                        motionCtx.stroke();
+                        
+                        // Draw arrowhead
+                        const arrowSize = 5;
+                        motionCtx.beginPath();
+                        if (velocity > 0) {
+                            motionCtx.moveTo(x + vectorLength, y);
+                            motionCtx.lineTo(x + vectorLength - arrowSize, y - arrowSize);
+                            motionCtx.moveTo(x + vectorLength, y);
+                            motionCtx.lineTo(x + vectorLength - arrowSize, y + arrowSize);
+                        } else {
+                            motionCtx.moveTo(x + vectorLength, y);
+                            motionCtx.lineTo(x + vectorLength + arrowSize, y - arrowSize);
+                            motionCtx.moveTo(x + vectorLength, y);
+                            motionCtx.lineTo(x + vectorLength + arrowSize, y + arrowSize);
+                        }
+                        motionCtx.stroke();
+                    }
+                    
+                    // Label time
+                    const textPrimaryRgb = hexToRgb(colors.textPrimary);
+                    motionCtx.fillStyle = `rgba(${textPrimaryRgb.r}, ${textPrimaryRgb.g}, ${textPrimaryRgb.b}, ${alpha})`;
+                    motionCtx.font = '9px Fira Code, monospace';
+                    motionCtx.textAlign = 'center';
+                    motionCtx.fillText(`t=${t}s`, x, y - 15);
+                }
+            }
+            
+            // Add legend
+            motionCtx.font = 'bold 11px Fira Code, monospace';
+            motionCtx.fillStyle = colors.accentPrimary;
+            motionCtx.textAlign = 'left';
+            motionCtx.fillText('● Position', margin, 15);
+            motionCtx.fillStyle = colors.error;
+            motionCtx.fillText('→ Velocity', margin + 80, 15);
+        }
+        
+        function animateGraphs() {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+            currentTime = 0;
+            
+            function animate() {
+                currentTime += 0.05;
+                if (currentTime > 10) {
+                    currentTime = 10;
+                    cancelAnimationFrame(animationId);
+                }
+                drawGraph();
+                if (currentTime < 10) {
+                    animationId = requestAnimationFrame(animate);
+                }
+            }
+            animate();
+        }
+        
+        function resetGraphs() {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+            }
+            currentTime = 0;
+            drawGraph();
+        }
+        
+        // Listen for theme changes to redraw graphs with new colors
+        window.addEventListener('themeChange', () => {
+            drawGraph();
+        });
+
+        // Initialize
+        window.addEventListener('resize', () => {
+            setCanvasSize();
+            drawGraph();
+        });
+
+        setCanvasSize();
+        drawGraph();
+    </script>
+</body>
+</html>

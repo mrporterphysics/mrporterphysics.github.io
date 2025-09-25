@@ -4,7 +4,9 @@
 
 - [Data Collection Best Practices](/AP%20Resource%20Pages/datacollection.html)
 - [Linearization](/AP%20Resource%20Pages/linearizationInteractive.html)
-- [Graph Matching Game](/AP%20Resource%20Pages/Games/index.html)
+- [Kinematic Graphs Animation](/AP%20Resource%20Pages/kinGraphs.html)
+<!-- - [Graph Matching Game](/AP%20Resource%20Pages/Games/index.html) -->
+
 
 ## AP Physics Content Slides:
 
