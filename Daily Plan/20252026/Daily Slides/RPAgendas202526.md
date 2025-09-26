@@ -17,7 +17,7 @@ math: mathjax
 
 # 2025.09.26 **Regents Physics**
 
-##### **❓ of the 📅**: Q
+##### **❓ of the 📅**: What is your favorite road trip snack?
 
 <div class ='columns'>
 

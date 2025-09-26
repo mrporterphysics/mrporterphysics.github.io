@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2025.09.26 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite road trip snack?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.25 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite family vacation?
