@@ -27,7 +27,10 @@ class:  twilight
 
 #### 📋 Agenda
 
-1. 
+1. Finish Chemical Rx vs. Nuclear Card Sort
+2. Consensus Sort as a class
+3. Write CER on Chem vs. Nuclear
+4. Update Habitable Model in PTO Packet
 
 </div>
 
@@ -35,7 +38,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Determine fuel source of the sun_
 
 ### 📆 Upcoming
 
