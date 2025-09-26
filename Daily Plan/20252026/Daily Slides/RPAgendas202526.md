@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2025.09.26 **Regents Physics**
+
+##### **❓ of the 📅**: Q
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Finish Wheel Lab Data Analysis
+3. Wheel Lab Board Meeting
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model changing velocity motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.25 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your favorite family vacation?
