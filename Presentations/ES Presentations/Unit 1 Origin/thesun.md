@@ -500,3 +500,288 @@ Students will revise and critique their models and make predictions.
 
 - Revise your model of how the Sun works based on new evidence
 - Use your model to predict what will happen to
+
+
+
+---
+
+# <!--fit---> SLIDES
+
+---
+
+<!-- _class: lead -->
+# How the Sun Works
+Energy, Light, and the Solar Interior
+
+- Course: Earth & Space Science (Grade 9)
+- Standards: NYSSLS/NGSS (HS-ESS1-1, HS-ESS1-2, HS-ESS1-3; HS-PS3-1, HS-PS3-3; SEP, CCC)
+- Driving Question: How do we know what’s happening inside the Sun if we can’t see it?
+
+---
+
+## Learning Targets
+By the end of this lesson, you will be able to:
+- Explain how matter converts to energy (E = mc²) and how fusion powers the Sun. (DCI PS3, ESS1)
+- Describe how light behaves (wave vs. photon) and how spectra reveal composition and motion. (DCI PS4)
+- Summarize energy transport inside the Sun (radiation, convection) and hydrostatic equilibrium. (ESS1)
+- Interpret how helioseismology and neutrinos give evidence of the solar interior. (SEP: Analyzing data)
+
+---
+
+## Standards Alignment (Teacher Slide)
+- HS-ESS1-1: Develop a model of the Sun–Earth system; explain solar energy source.
+- HS-ESS1-2: Construct explanations from spectral data for star properties.
+- HS-ESS1-3: Communicate how observations (spectra, neutrinos, pulsations) infer stellar interiors.
+- HS-PS3-1: Create computational model showing energy transfer (E = mc²).
+- SEPs: Developing & using models; Analyzing & interpreting data; Constructing explanations.
+- CCCs: Energy & Matter; Patterns; Scale, Proportion & Quantity.
+
+---
+
+## Anchor Phenomenon
+Why does the Sun shine steadily for billions of years—and how do we know what’s inside?
+
+Think–Pair–Share:
+- If we can’t see the Sun’s core, what evidence could scientists use?
+- What kinds of data can travel out of the Sun?
+
+---
+
+## Light: Waves and Photons (Maxwell)
+- Light is an electromagnetic wave: oscillating electric and magnetic fields.
+- All EM waves move at speed of light in a vacuum.
+- Light can also behave as particles (photons) with energy E = h·f.
+
+![bg fit right:30% Alt: Figure of Maxwell, physicist who unified electricity and magnetism](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/02148c4e96f7b322b057cbba8b33f830ccceaf5c)
+
+Notes:
+- c = 3.0 × 10^8 m/s
+- Frequency (f) and wavelength (λ) relate by c = λf
+
+---
+
+## The Electromagnetic Spectrum
+- Spectrum ranges from gamma rays (highest energy) to radio (lowest).
+- Different bands interact differently with Earth’s atmosphere.
+
+![bg fit right:40% Alt: Diagram of EM spectrum and atmospheric windows](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/fd686395fdb767eb21ed9f677d202e5b639293db)
+
+Prompt:
+- Why do we need space telescopes for UV/X-ray/gamma observations?
+
+---
+
+![bg fit](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/6c4f556160b5a4c85c149507ea2838314931847d)
+
+---
+
+## Spectra: Our Decoder Ring
+- Continuous spectrum: hot dense sources.
+- Absorption lines: cool thin gas in front of a continuous source.
+- Emission lines: excited thin gas emits discrete wavelengths.
+
+
+<div class='columns'>
+<div>
+
+![Alt: Solar visible spectrum with many dark absorption lines](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/463dc6b891027044760b893bb856330b227362a5)  
+
+</div>
+ 
+<div>
+
+![Alt: Line spectra for sodium, hydrogen, calcium, mercury](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/8765b16e7c60f55573d5d08501140d0d468bf3e1)
+
+
+</div>
+</div>
+
+
+---
+
+## Atomic Structure and Energy Levels (Bohr)
+- Electrons occupy discrete energy levels.
+- Absorption: electron jumps up by absorbing specific photon.
+- Emission: electron falls and emits a photon with exact energy difference.
+
+![bg fit right:45% Alt: Diagram of hydrogen atom orbits and labeled transitions in visible/UV](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/a02dc151e6fb2bde2306171ce7da4cc1e2d63a1e)
+
+Key idea:
+- Each element has a unique spec fingerprint.
+
+---
+
+![bg fit](image-33.png)
+
+
+---
+
+## Energy in the Sun: E = mc² (Einstein)
+- Matter converts to energy: E = mc²
+- Even small mass loss → huge energy output.
+- Sun’s luminosity can be sustained by converting ~4 million tons of mass to energy per second.
+
+![bg fit left:30% Alt: Portrait of Albert Einstein](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/4641e9cc52a5c4e8cd4bd5aeec3db460f3b45ed7)
+
+Quick calc:
+- If 1 kg H fuses and 0.0071 kg becomes energy, E ≈ 6.4 × 10^14 J.
+
+---
+
+## Fusion in the Sun: Proton–Proton Chain
+- Net: 4 H → He-4 + energy (photons + neutrinos)
+- Steps: p + p → D + e⁺ + ν; D + p → He-3 + γ; He-3 + He-3 → He-4 + p + p
+- Requires ~15 million K in core to overcome electrical repulsion.
+
+<div class='columns'>
+<div>
+
+![Alt: Proton–proton chain Step 1: two protons form deuterium, positron, neutrino](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/4f0c5d82f3096d2d477107c15a3cab7fa84d8f3f)
+
+</div>
+ 
+<div>
+
+![Alt: Proton–proton chain Step 2: deuterium + proton → He-3 + gamma](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/2ff3ddc5ed1965e8dce406958ba86db316f62a70)
+
+</div>
+
+<div>
+
+![Alt: Proton–proton chain Step 3: He-3 + He-3 → He-4 + 2 protons](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/496860575d352d985ad31da714fc59894e3daff5)
+
+</div>
+</div>
+
+---
+
+## The Solar Interior: Structure & Stability
+- Hydrostatic equilibrium: inward gravity balanced by outward gas pressure.
+- Core (~0–0.25 R☉): fusion, T ≈ 15 million K, high density.
+- Radiative zone (~0.25–0.7 R☉): energy moves via photon absorption/reemission.
+- Convection zone (~0.7–1.0 R☉): energy transported by rising hot gas, sinking cool gas.
+
+![Alt: Diagram showing gravity inward vs pressure outward arrows (hydrostatic equilibrium)](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/804638fd247b706dbc5b136855ff226029fe10ad)
+
+![Alt: Interior graphs of temperature, density, luminosity, H abundance vs fractional radius](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250827.171612/resources/c380caf1c18f47a032361f17c7b545a35d38bc93)
+
+---
+
+## Energy Transport and Random Walk
+- Photons in radiative zone travel ~centimeters before absorption.
+- Random walk takes ~100,000–1,000,000 years to reach surface.
+- Neutrinos escape in ~2 seconds.
+
+![Alt: Photon path zigzagging in dense solar interior (random walk)](https://openstax.org/apps/archive/20200803.01/data/images/ast2e/ast2e_ch16_figure_13.jpg)
+
+![Alt: Comparison: photon zigzag vs straight neutrino path from core to surface](https://openstax.org/apps/archive/20200803.01/data/images/ast2e/ast2e_ch16_figure_14.jpg)
+
+---
+
+## Convection Near the Surface
+- Rising hot gas, sinking cool gas form convection cells.
+- Drives granulation and surface dynamics.
+
+![Alt: Convection zone with circulating cells above the solar interior](https://openstax.org/apps/archive/20200803.01/data/images/ast2e/ast2e_ch16_figure_12.jpg)
+
+Think further:
+- How could convection affect solar variability we measure at Earth?
+
+---
+
+## Observing the Interior: Helioseismology
+- The Sun “pulsates” in many modes; surface velocities change in ~5-minute cycles.
+- Sound waves traverse the Sun in ~1 hour; reveal temperature, density, rotation patterns.
+
+![Alt: Cutaway simulation of oscillations showing regions moving toward/away from observer](https://openstax.org/apps/archive/20200803.01/data/images/ast2e/ast2e_ch16_figure_17.jpg)
+
+Findings:
+- Convection extends inward ~30% of radius.
+- Differential rotation in convection zone; more solid-body rotation below.
+
+---
+
+## Sunspots: Subsurface Flow
+- Strong magnetic fields block upward heat flow → cooler spots.
+- Downflows act as a plug; surrounding hot gas deflects sideways then rises nearby.
+- Explains slight increase in total solar output during high sunspot activity.
+
+![Alt: Diagram of flows beneath sunspot, showing sinking cool material and diverted hot plumes](https://openstax.org/apps/archive/20200803.01/data/images/ast2e/ast2e_ch16_figure_18.jpg)
+
+---
+
+## Observing the Interior: Neutrinos
+- Neutrinos from fusion escape directly; Earth is nearly transparent to them.
+- Early chlorine experiments detected 1/3 the expected number → “solar neutrino problem.”
+- Solution: neutrino oscillations (three flavors) confirmed; total flux matches models.
+
+![Alt: Photo of Raymond Davis and the subterranean neutrino tank](https://openstax.org/apps/archive/20200803.01/data/images/ast2e/ast2e_ch16_figure_19.jpg)
+
+![Alt: Photo of Sudbury Neutrino Observatory acrylic sphere and photomultipliers](https://openstax.org/apps/archive/20200803.01/data/images/ast2e/ast2e_ch16_figure_20.jpg)
+
+---
+
+## Apply: Spectral Evidence Station Rotation
+- Station 1: Identify elements from emission-line spectra (pattern matching).
+- Station 2: Doppler shift calculations for red/blueshifted lines.
+- Station 3: Blackbody curves—estimate peak wavelength and temperature (Wien’s law).
+- Station 4: Model hydrostatic equilibrium with balloon analogy and claim–evidence–reasoning.
+
+Materials:
+- Printed spectra, rulers, calculators, sticky notes.
+
+---
+
+## Practice Problems (Quick)
+1) A hydrogen line (656.3 nm) is observed at 656.6 nm. What’s the radial velocity?
+- v = c × Δλ/λ
+
+2) A star’s peak wavelength is 520 nm. Estimate surface temperature (Wien’s law).
+- T ≈ (3 × 10^6 nm·K) / λ_max
+
+3) If 0.0071 kg of mass converts to energy, compute E.
+- E = mc²
+
+---
+
+## Exit Ticket (2–3 min)
+- One observation that directly probes the Sun’s interior.
+- One way spectra tell us about composition or motion.
+- One model or mechanism that keeps the Sun stable.
+
+---
+
+## Homework/Extension
+- Research: How does the CNO cycle differ from the p–p chain? In what stars is it dominant?
+- Optional: Explore helioseismology visualizations; summarize one key finding in 3–4 sentences.
+
+---
+
+## Vocabulary
+- Photon, wavelength, frequency, spectrum
+- Emission/absorption lines, Doppler effect
+- Hydrostatic equilibrium, radiative zone, convection zone
+- Proton–proton chain, neutrino, oscillation
+
+---
+
+## Accessibility & UDL Notes (Teacher)
+- Use alt text for all visuals.
+- Offer sentence frames for CER tasks.
+- Provide tactile/embossed line spectra (for TVI support) or sonified data options.
+- Allow calculator and formula cards; chunk problems.
+
+---
+
+## References
+OpenStax Astronomy 2e, Sections:
+- 5.1 The Behavior of Light
+- 5.2 The Electromagnetic Spectrum
+- 5.3 Spectroscopy in Astronomy
+- 5.4 The Structure of the Atom
+- 5.5 Formation of Spectral Lines
+- 5.6 The Doppler Effect
+- 16.1 Sources of Sunshine
+- 16.2 Mass, Energy, and Relativity
+- 16.3 The Solar Interior: Theory
+- 16.4 The Solar Interior: Observations
