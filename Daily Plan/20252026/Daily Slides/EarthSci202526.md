@@ -30,7 +30,7 @@ class:  twilight
 1. How much fuel does the sun have? What will happen when it runs out of hydrogen?
 2. Update Earth 2.0 Model
 3. Supernova 1054
-4. Life Span of a Star
+4. [Life Span of a Star](../../../Presentations/ES%20Presentations/Unit%201%20Origin/starLifeCycles.html)
 
 </div>
 
