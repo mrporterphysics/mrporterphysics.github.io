@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+# 2025.09.29 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Board Meeting -> Does it change velocity?
+2. Linearization
+    - how is x related to t?
+    - how is v related to x?
+3. Finish Up Lab Notebook
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Uniform Motion Graphically_
+
+### 📆 Upcoming
+
+
+
+</div>
+</div>
+
+---
+
 # 2025.09.26 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your favorite road trip snack?
