@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2025.09.29 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How much fuel does the sun have? What will happen when it runs out of hydrogen?
+2. Update Earth 2.0 Model
+3. Supernova 1054
+4. Life Span of a Star
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look into the life span of a star_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.26 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite road trip snack?
