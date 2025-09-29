@@ -16,6 +16,49 @@ math: mathjax
 
 ---
 
+### 2025.09.29 **AP Physics** Do Now
+
+The graphs below show the velocity versus time for boats traveling along a straight, narrow channel. The scales on both axes are the same for all of these graphs. In each graph, a point is marked with a dot.
+
+![center w:750](image-9.png)
+
+**Rank the magnitude of the velocity of the boat at the point indicated. Explain your reasoning.**
+
+---
+
+# 2025.09.29 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Finish Carts and Ramps
+3. Notes of Graphical Representations
+3. Card Sort #2 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model and represent uniform motion graphical_
+
+### 📆 Homework
+
+- PC Mission KC4: Acceleration
+- PC Mission KG1: Basics of Position-Time Graphs
+
+</div>
+</div>
+
+---
+
 ### 2025.09.25 **AP Physics** Do Now
 
 ![bg fit right:40%](../Daily%20Slides/images/Kinematics/Bryonariel.png)
