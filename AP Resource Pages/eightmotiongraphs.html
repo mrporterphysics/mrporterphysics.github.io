@@ -309,7 +309,7 @@
             </div>
             
             <div class="motion-map-container">
-                <div class="motion-map-label">Motion Map (Position and Velocity Vectors)</div>
+                <div class="motion-map-label">Motion Map (Position, Velocity, and Acceleration Vectors)</div>
                 <div class="motion-legend">
                     <div class="motion-legend-item">
                         <span style="color: #3498db; font-size: 18px;">●</span>
@@ -317,7 +317,11 @@
                     </div>
                     <div class="motion-legend-item">
                         <span style="color: #e74c3c; font-size: 18px;">→</span>
-                        <span>Velocity vectors (magnitude & direction)</span>
+                        <span>Velocity vectors (scaled)</span>
+                    </div>
+                    <div class="motion-legend-item">
+                        <span style="color: #2ecc71; font-size: 18px;">→</span>
+                        <span>Acceleration vectors (green)</span>
                     </div>
                 </div>
                 <canvas id="motionMap" class="motion-map-canvas"></canvas>
@@ -385,15 +389,15 @@
             5: {
                 title: "Scenario 5: Slowing Down in the Positive Direction",
                 description: "Object decelerates while moving forward. Position curve flattens, velocity decreases toward zero, acceleration is negative.",
-                v0: 6,
-                a: -2,
+                v0: 10,
+                a: -1,
                 x0: 0
             },
             6: {
                 title: "Scenario 6: Slowing Down in the Negative Direction",
                 description: "Object decelerates while moving backward. Position curve flattens, velocity approaches zero from negative, acceleration is positive.",
-                v0: -6,
-                a: 2,
+                v0: -10,
+                a: 1,
                 x0: 30
             },
             7: {
@@ -602,11 +606,22 @@
             const timeStep = 1; // Draw every 1 second
             const maxDots = Math.min(Math.floor(currentTime / timeStep) + 1, 11);
 
+            // Calculate distance between consecutive position dots for vector scaling
+            let dotDistance = 0;
+            if (maxDots > 1) {
+                const pos1 = getPosition(0, currentScenario);
+                const pos2 = getPosition(timeStep, currentScenario);
+                const x1 = margin + ((pos1 - minPos) / range) * mapWidth;
+                const x2 = margin + ((pos2 - minPos) / range) * mapWidth;
+                dotDistance = Math.abs(x2 - x1);
+            }
+
             for (let i = 0; i < maxDots; i++) {
                 const t = i * timeStep;
                 if (t <= currentTime) {
                     const position = getPosition(t, currentScenario);
                     const velocity = getVelocity(t, currentScenario);
+                    const acceleration = getAcceleration(currentScenario);
                     const x = margin + ((position - minPos) / range) * mapWidth;
                     const y = height / 2;
 
@@ -626,22 +641,35 @@
                     motionCtx.textAlign = 'center';
                     motionCtx.fillText(`t=${t}`, x, y - 25);
 
-                    // Draw velocity vector
+                    // Draw velocity vector - scaled to be half the distance between position dots
                     if (Math.abs(velocity) > 0.1) {
                         motionCtx.strokeStyle = `rgba(231, 76, 60, ${alpha})`;
                         motionCtx.lineWidth = 2;
                         motionCtx.beginPath();
                         motionCtx.moveTo(x, y);
-                        
-                        // Scale velocity vector for visibility
-                        const maxVectorLength = 40;
-                        const vectorScale = maxVectorLength / 15; // Adjust scale as needed
-                        const vectorLength = velocity * vectorScale;
+
+                        // Calculate the actual distance the object moves in one time step
+                        let actualDistance = 0;
+                        if (i < maxDots - 1) {
+                            // Use distance to next position
+                            const nextPos = getPosition((i + 1) * timeStep, currentScenario);
+                            actualDistance = Math.abs(nextPos - position);
+                        } else if (i > 0) {
+                            // Use distance from previous position
+                            const prevPos = getPosition((i - 1) * timeStep, currentScenario);
+                            actualDistance = Math.abs(position - prevPos);
+                        }
+
+                        // Convert actual distance to screen pixels
+                        const actualDistancePixels = (actualDistance / range) * mapWidth;
+
+                        // Scale velocity vector to be half the actual distance moved
+                        const vectorLength = actualDistancePixels * 0.5 * (velocity >= 0 ? 1 : -1);
                         const endX = x + vectorLength;
-                        
+
                         motionCtx.lineTo(endX, y);
                         motionCtx.stroke();
-                        
+
                         // Draw arrowhead
                         const arrowSize = 4;
                         motionCtx.beginPath();
@@ -667,11 +695,76 @@
                         }
                     } else {
                         // Show zero velocity
-                        if (i === maxDots - 1) {
+                        if (i === maxDots - 1 && Math.abs(velocity) <= 0.1) {
                             motionCtx.fillStyle = `rgba(231, 76, 60, ${alpha})`;
                             motionCtx.font = 'bold 10px Arial';
                             motionCtx.textAlign = 'center';
                             motionCtx.fillText('v=0', x, y + 35);
+                        }
+                    }
+
+                    // Draw acceleration vector (green)
+                    if (Math.abs(acceleration) > 0.01) {
+                        motionCtx.strokeStyle = `rgba(46, 204, 113, ${alpha})`;
+                        motionCtx.lineWidth = 2;
+                        motionCtx.beginPath();
+                        motionCtx.moveTo(x, y + 15); // Offset below the position dot
+
+                        // Calculate change in velocity (acceleration effect over time step)
+                        const deltaV = acceleration * timeStep; // Change in velocity over 1 second
+
+                        // Calculate what this change in velocity would look like as a distance
+                        // Use the same scaling as velocity vectors but for the change in velocity
+                        let velocityChangeDistance = 0;
+                        if (i < maxDots - 1) {
+                            const nextVel = getVelocity((i + 1) * timeStep, currentScenario);
+                            const velChange = nextVel - velocity;
+                            // Scale the velocity change similar to how we scale velocity vectors
+                            velocityChangeDistance = Math.abs(velChange) * timeStep; // Distance equivalent of velocity change
+                        } else if (i > 0) {
+                            const prevVel = getVelocity((i - 1) * timeStep, currentScenario);
+                            const velChange = velocity - prevVel;
+                            velocityChangeDistance = Math.abs(velChange) * timeStep;
+                        }
+
+                        // Convert to screen pixels and scale appropriately
+                        const velocityChangePixels = (velocityChangeDistance / range) * mapWidth;
+                        const accelVectorLength = velocityChangePixels * 0.7 * (acceleration >= 0 ? 1 : -1); // Make it visible
+                        const accelEndX = x + accelVectorLength;
+
+                        motionCtx.lineTo(accelEndX, y + 15);
+                        motionCtx.stroke();
+
+                        // Draw acceleration arrowhead
+                        const accelArrowSize = 3;
+                        motionCtx.beginPath();
+                        if (acceleration > 0) {
+                            motionCtx.moveTo(accelEndX, y + 15);
+                            motionCtx.lineTo(accelEndX - accelArrowSize, y + 15 - accelArrowSize);
+                            motionCtx.moveTo(accelEndX, y + 15);
+                            motionCtx.lineTo(accelEndX - accelArrowSize, y + 15 + accelArrowSize);
+                        } else {
+                            motionCtx.moveTo(accelEndX, y + 15);
+                            motionCtx.lineTo(accelEndX + accelArrowSize, y + 15 - accelArrowSize);
+                            motionCtx.moveTo(accelEndX, y + 15);
+                            motionCtx.lineTo(accelEndX + accelArrowSize, y + 15 + accelArrowSize);
+                        }
+                        motionCtx.stroke();
+
+                        // Acceleration value label (only for the most recent dot)
+                        if (i === maxDots - 1) {
+                            motionCtx.fillStyle = '#2ecc71';
+                            motionCtx.font = 'bold 10px Arial';
+                            motionCtx.textAlign = 'center';
+                            motionCtx.fillText(`a=${acceleration.toFixed(1)}`, x, y + 50);
+                        }
+                    } else {
+                        // Show zero acceleration
+                        if (i === maxDots - 1) {
+                            motionCtx.fillStyle = `rgba(46, 204, 113, ${alpha})`;
+                            motionCtx.font = 'bold 10px Arial';
+                            motionCtx.textAlign = 'center';
+                            motionCtx.fillText('a=0', x, y + 50);
                         }
                     }
                 }

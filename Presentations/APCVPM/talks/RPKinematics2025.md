@@ -612,6 +612,74 @@ How does the position and velocity of an object change as it rolls down an incli
 
 ---
 
+# From your **Velocity vs. Time** Graph...
+
+### *Does your object **change** its **velocity***?
+
+
+### *If it does change velocity, does the **velocity change constantly***?
+
+
+- What does the slope represent? 
+- What does the intercept represent?
+
+---
+
+<iframe width=1100 height= 600 src="/Users/nathanporter/Documents/mrporterphysics.github.io/AP Resource Pages/kinGraphs.html"></iframe>
+
+
+---
+
+# What about Position and Time?
+
+## What is the relationship betwen position and time?
+
+## How do we know what curve to pick??
+
+
+---
+
+# Linearization 
+
+## *Linearization is the art of transforming curved relationships into straight lines.*
+
+---
+
+# Why Linearize?
+
+1. Finding constants is easy - The slope of a straight line directly gives you physical constants (like $g$, $k$, or $\mu$)
+2. Checking your model - A straight line confirms you have the right equation (high R² value = good fit!)
+3. Making predictions - It's much easier to extrapolate from a straight line than a curve
+---
+
+# Linearizing allows us to interpret <!--fit--->
+
+# curves as **lines** <!--fit--->
+
+---
+
+# How do we change a curve into a line?
+
+## *By making a test plot*
+
+1. Make a new data column
+2. Calculate the expected relationship in that column (i.e. if the graph looks quadratic calculate $x^2$)
+3. Make a new plot (i.e. graph $y$ vs. $x^2$)
+4. Analyze new linear model 
+
+---
+
+# [Example & Demo](https://www.mrporterphysics.com/AP%20Resource%20Pages/linearizationInteractive.html) <!--fit--->
+
+---
+
+# Cheat Sheet 
+
+![bg fit right](../figures/Graphical%20Methods%20Summary.jpg)
+
+
+---
+
 <!--- class: invert--->
 
 # Defintions & Notes
