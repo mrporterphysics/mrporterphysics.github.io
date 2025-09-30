@@ -16,17 +16,17 @@ math: mathjax
 
 ---
 
-![bg fit right](../Daily%20Slides/images/Kinematics/ninextgraphs.png)
+![bg fit right:60%](../Daily%20Slides/images/Kinematics/ninextgraphs.png)
 
 
-For each of these cases, if any, is...
+For each of these cases, if any, is...at the indicated point?
 
-1. the **position** zero at the indicated point?
-2. the **position** negative at the indicated point?
-3. the **velocity zero** at the indicated point?
-4. the **velocity negative** at the indicated point?
-5. the **acceleration zero** at the indicated point?
-6. the **acceleration negative** at the indicated point?
+1. the **position zero** ?
+2. the **position negative**?
+3. the **velocity zero**?
+4. the **velocity negative**?
+5. the **acceleration zero** ?
+6. the **acceleration negative**?
 
 
 ---

@@ -17,6 +17,39 @@ class:  twilight
 
 ---
 
+# 2025.10.01 **Earth Science **
+
+##### **❓ of the 📅**: Cake or Pie? 🍰🥧 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Star In A Box](https://starinabox.lco.global/)
+2. Explore:
+    - _look for evidence of patterns in the relationship between star mass and stability and change in stars_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _use a **computational model**_
+
+🥅 _find **evidence** of **patterns_**
+
+🥅 _use mass to **explain** <mark>stability</mark> and change in stars_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.30 **Earth Science**
 
 ##### **❓ of the 📅**: Should you bite or lick your ice cream? 🍨 🍦
