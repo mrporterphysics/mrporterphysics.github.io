@@ -16,9 +16,24 @@ math: mathjax
 
 ---
 
+![bg fit right](../Daily%20Slides/images/Kinematics/ninextgraphs.png)
+
+
+For each of these cases, if any, is...
+
+1. the **position** zero at the indicated point?
+2. the **position** negative at the indicated point?
+3. the **velocity zero** at the indicated point?
+4. the **velocity negative** at the indicated point?
+5. the **acceleration zero** at the indicated point?
+6. the **acceleration negative** at the indicated point?
+
+
+---
+
 # 2025.09.30 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Should you bite or lick your ice cream? 🍨🍦
 
 <div class ='columns'>
 
@@ -26,9 +41,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Notes on Acceleration and Graphical Representations
-2. Card Sort 2 
-3. Velocity vs time graphs
+1. 📓 Notes & [8 Examples](https://www.mrporterphysics.com/AP%20Resource%20Pages/eightmotiongraphs.html)
+2. 🃏 Card Sort 2 
+3. 📈 Velocity vs time graphs
 
 </div>
 
@@ -36,7 +51,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 _Model motion with xt, vt, and at graphs_ 
+🥅 _Model motion graphically_ 
 
 🥅 _Make predictions of motion from VT Graphs_
 
@@ -47,7 +62,7 @@ math: mathjax
 ### 🏡 Homework
 
 - PC CalcPad K10 - Velocity Time Graphs 1
-- C CalcPad K11 - Velocity Time Graphs 2
+- PC CalcPad K11 - Velocity Time Graphs 2
 
 
 
