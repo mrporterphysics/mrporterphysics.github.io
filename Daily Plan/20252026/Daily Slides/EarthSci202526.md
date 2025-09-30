@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2025.09.30 **Earth Science**
+
+##### **❓ of the 📅**: Should you bite or lick your ice cream? 🍨 🍦
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Performance Task Organizer Questions
+2. Supernova 1054
+3. What do we need to know about the life and death of stars to find an Earth-like planet?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Generate Questions about the life span of stars_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.29 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?

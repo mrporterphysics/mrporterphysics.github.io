@@ -16,6 +16,43 @@ math: mathjax
 
 ---
 
+# 2025.09.30 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on Acceleration and Graphical Representations
+2. Card Sort 2 
+3. Velocity vs time graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion with xt, vt, and at graphs_ 
+
+🥅 _Make predictions of motion from VT Graphs_
+
+
+</div>
+</div>
+
+### 🏡 Homework
+
+- PC CalcPad K10 - Velocity Time Graphs 1
+- C CalcPad K11 - Velocity Time Graphs 2
+
+
+
+---
+
 ### 2025.09.29 **AP Physics** Do Now
 
 The graphs below show the velocity versus time for boats traveling along a straight, narrow channel. The scales on both axes are the same for all of these graphs. In each graph, a point is marked with a dot.

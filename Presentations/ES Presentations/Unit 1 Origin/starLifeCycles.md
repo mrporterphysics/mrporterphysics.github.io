@@ -18,29 +18,13 @@ TEACHER NOTE:
 # Star Life Cycles 5E
 Does the exoplanet have a star like our Sun?
 
-- Performance Expectations: HS‑ESS1‑1, HS‑ESS1‑3
-- __Driving question: Which kinds of stars are most likely to support Earth‑like planets?__
+ 
+__Driving question: Which kinds of stars are most likely to support Earth‑like planets?__
 
 <!--
 TEACHER NOTE:
 - Set context: connects to prior 5E "How the Sun Works."
 - Mention stability of energy over ~4–5 billion years.
--->
-
----
-
-## Agenda (7 days)
-
-1. Engage: Supernova 1054
-2. Explore 1: Star in a Box (life cycles vs mass)
-3. Explore 2: HR Diagram (observable properties)
-4. Explain: Models of gravity + fusion; stability
-5. Elaborate: Nucleosynthesis with Fe‑26 game
-6. Evaluate: Models + arguments for habitable stars
-
-<!--
-TEACHER NOTE:
-- Time boxes flexible; align with your schedule.
 -->
 
 ---
@@ -52,7 +36,7 @@ What happens to stars over time? What will happen to our Sun?
 - Individually answer Q1–Q4 on “What Was Supernova 1054?”
 - Share in Domino Discover routine.
 
-Prompt:
+**Consider**:
 - What might cause a star to change and explode?
 - What other phenomena are similar to a supernova?
 
