@@ -4,6 +4,11 @@
 
 @import 'default';
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Mono:wght@400;700&family=Fira+Code:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:ital@0;1&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Workbench&display=swap');
 
 :root {
     /* Light theme colors */
@@ -905,4 +910,104 @@ section.green table td {
 
 section.green table > tbody > tr:nth-child(even) > td {
     background-color: rgba(56, 142, 60, 0.08);
+}
+
+
+/* Halloween theme colors (scoped via CSS variables for maintainability) */
+:root {
+  --halloween-background: #1A0F1F;      /* deep purple-black */
+  --halloween-text: #F8F1E7;            /* warm off-white */
+  --halloween-accent-orange: #FF8C00;   /* jack-o’-lantern orange */
+  --halloween-accent-purple: #8A2BE2;   /* eerie purple */
+  --halloween-accent-green: #32CD32;    /* slime green */
+  --halloween-accent-yellow: #F5D76E;   /* candle glow */
+}
+
+/* Halloween theme */
+section.halloween {
+  background-color: var(--halloween-background) !important;
+  color: var(--halloween-text) !important;
+}
+
+/* Headers: spooky but readable */
+section.halloween h1,
+section.halloween h2,
+section.halloween h3,
+section.halloween h4,
+section.halloween h5,
+section.halloween h6 {
+  color: var(--halloween-accent-orange) !important;
+  line-height: 1.05em;
+  text-shadow: 0 0 14px rgba(0,0,0,0.7);
+}
+
+section.halloween h1 {
+  border-bottom: 2px solid var(--halloween-accent-purple) !important;
+  padding-bottom: 0.1em;
+}
+
+/* Links */
+section.halloween a {
+  color: var(--halloween-accent-orange) !important;
+  text-decoration-color: var(--halloween-accent_purple, var(--halloween-accent-purple));
+}
+
+/* Code blocks */
+section.halloween code,
+section.halloween pre {
+  color: var(--halloween-accent-green) !important;
+  background-color: rgba(255, 140, 0, 0.12) !important; /* translucent orange */
+  border-radius: 4px;
+}
+
+/* Strong text */
+section.halloween strong {
+  color: var(--halloween-accent-yellow) !important;
+  text-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+/* Tables */
+section.halloween table {
+  border: 2px solid var(--halloween-accent-purple);
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+section.halloween table > thead > tr > th,
+section.halloween table th {
+  background-color: var(--halloween-accent-purple);
+  color: var(--halloween-background);
+  font-weight: bold;
+  padding: 0.8em;
+  text-align: left;
+}
+
+section.halloween table > tbody > tr > td,
+section.halloween table td {
+  padding: 0.8em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: var(--halloween-background);
+  color: var(--halloween-text);
+}
+
+section.halloween table > tbody > tr:nth-child(even) > td {
+  /* subtle striping to aid readability */
+  background-color: rgba(138, 43, 226, 0.08); /* purple tint */
+}
+
+/* Aggressive override to prevent inline Markdown table styles from breaking theme */
+section.halloween table,
+section.halloween table tr,
+section.halloween table td,
+section.halloween table th {
+  background-color: var(--halloween-background) !important;
+  color: var(--halloween-text) !important;
+}
+section.halloween table th {
+  background-color: var(--halloween-accent-purple) !important;
+}
+section.halloween table tr:nth-child(even) td {
+  background-color: rgba(138, 43, 226, 0.08) !important;
 }

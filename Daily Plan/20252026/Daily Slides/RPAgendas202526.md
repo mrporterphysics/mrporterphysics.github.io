@@ -15,6 +15,96 @@ math: mathjax
 
 ---
 
+<!--- class: halloween--->
+
+# 🎃 2025.10.01 **Regents Physics** 👻
+
+##### **❓ of the 📅**: Cake or pie? 🍰🥧
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Card Sort
+2. Summary Table as a class
+3. Start Physics Classroom Practice
+    - Name that Motion
+    - Graph that Motion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Analyze motion with xt, vt, and at graphs_
+
+### 📆 Homework
+
+- PC: Name That Motion
+- PC: Match That Graph
+
+</div>
+</div>
+
+---
+
+# Card Sort
+
+There 8 Verbal Descriptions: 
+1. Match 1 Position vs. time and 1 Velocity vs. Time graph to each verbal description
+2. Sketch the graphs with the description in your lab note as a hypothesis column
+3. Connect the smart cart to your computer in graphical analysis and record the data
+    - record this as your data next to your hypothesis
+4. Double check all representations with my website:
+5. Draw the motion map from the website below your graphs 
+6. Fill out summary chart
+
+---
+
+
+
+<div class='columns'>
+<div>
+
+Fill out chart on whiteboard
+
+If it is increasing ($\textuparrow$), decreasing ($\textdownarrow$), or remaining the same ($\leftrightarrow$) And if it is positive ($+$) or negative ($-$)
+
+1. Constant speed + 
+2. Constant speed -
+3. Speed up +
+3. Speed up -
+4. Slow down +
+5. Slow down -
+6. Slow down + speed up -
+7. Slow down - speed up +
+
+</div>
+ 
+<div>
+
+| # | xt slope | v values | vt slope | accel |
+|---|---|---|---|---|
+|1.| ↔️ +  | ↔️ + | ↔️ 0 | ↔️ 0 |
+|2 | | | | |
+|3 | | | | |
+|4 | | | | |
+|5 | | | | |
+|6 | | | | |
+|7 | | | | |
+|8 | | | | |
+
+
+</div>
+</div>
+
+---
+
+<!--- class: bluegray --->
+
 # 2025.09.29 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather watch a movie on your TV at home or on the big screen in the theater, and why?
