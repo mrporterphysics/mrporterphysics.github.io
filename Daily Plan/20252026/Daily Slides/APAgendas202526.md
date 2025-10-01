@@ -16,6 +16,38 @@ math: mathjax
 
 ---
 
+# 2025.10.01 **AP Physics**
+
+##### **❓ of the 📅**: Cake or pie? 🍰🥧
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Check stacks of graphs with table
+2. Solving VT Graphs Quantitatively
+3. Introduction to problem solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use velocity vs. time graphs to solve Kinematic problems_
+
+### 📆 Upcoming
+
+- PC CalcPad K10 - Velocity Time Graphs 1
+- PC CalcPad K11 - Velocity Time Graphs 2
+
+</div>
+</div>
+
+---
+
 ![bg fit right:60%](../Daily%20Slides/images/Kinematics/ninextgraphs.png)
 
 
