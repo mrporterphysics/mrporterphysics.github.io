@@ -92,6 +92,38 @@ TEACHER NOTE:
 
 ---
 
+Have you ever seen stars in the night sky? If you live in the city, you may see fewer stars than in the image below. From a dark place on Earth, many stars are visible.
+
+
+![center w:500](image-34.png)
+
+
+What do you think we would see if we looked at that same portion of the sky with an even more powerful telescope?
+
+---
+
+# **Hubble Telescope**
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+![bg](image-35.png)
+
+---
+
+
+### Spectra Data from Omega Centauri Star Cluster
+
+
+![center w:600](image-36.png)
+
+---
+
+## Composition of 1 Solar Mass Star
+
+![center w:800](image-37.png)
+
+---
+
 ## Explore 1: See–Think–Wonder
 
 Synthesize:

@@ -17,7 +17,7 @@ class:  twilight
 
 ---
 
-# 2025.10.01 **Earth Science **
+# 2025.10.01 **Earth Science**
 
 ##### **❓ of the 📅**: Cake or Pie? 🍰🥧 
 
