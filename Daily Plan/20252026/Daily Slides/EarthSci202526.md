@@ -27,6 +27,7 @@ class:  twilight
 
 #### 📋 Agenda
 
+1. Finish Supernova 1054
 1. [Star In A Box](https://starinabox.lco.global/)
 2. Explore:
     - _look for evidence of patterns in the relationship between star mass and stability and change in stars_
