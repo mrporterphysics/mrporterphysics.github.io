@@ -17,6 +17,41 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 🎃 2025.10.02 **Regents Physisc** 👻
+
+##### **❓ of the 📅**: Your favorite halloween costume?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Card Sort Data collection
+2. Card Sort Summary Chart & Discussion
+3. While waiting...Physics Classroom:
+    - Graph that Motion
+    - Name that Motion
+    - Match that Graph
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion with position, velocity, and acceleration graphs_
+
+### 📆 Homework
+
+- ✅ Finish Physics Classroom Practice Assignments
+
+</div>
+</div>
+
+
+---
+
 # 🎃 2025.10.01 **Regents Physics** 👻
 
 ##### **❓ of the 📅**: Cake or pie? 🍰🥧
