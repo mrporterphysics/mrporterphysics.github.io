@@ -19,6 +19,38 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.03 **Earth Science**
+
+##### **❓ of the 📅**: WYR go to a Haunted House or a Corn Maze?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Star in a Box Data
+2. See Think Wonder
+3. Class Share
+4. Group Star Graphing Activity
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look for patterns in stellar life cycle_
+
+🥅 _Look at star property patterns_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 🎃 2025.10.02 **Earth Science** 👻
 
 ##### **❓ of the 📅**: What is your favorite halloween candy? 🍬🍫🍭
