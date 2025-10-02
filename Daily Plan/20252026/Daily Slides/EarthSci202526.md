@@ -17,6 +17,38 @@ class:  twilight
 
 ---
 
+<!--- class: halloween --->
+
+# 🎃 2025.10.02 **Earth Science** 👻
+
+##### **❓ of the 📅**: What is your favorite halloween candy? 🍬🍫🍭
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Discuss Life Cycle Mass Grouping
+2. Stellar Life Cycle Data Collection - Star In a Box
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect data on star life cycles using the Star in a box simulation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<!--- class: twilight --->
+
 # 2025.10.01 **Earth Science**
 
 ##### **❓ of the 📅**: Cake or Pie? 🍰🥧 
