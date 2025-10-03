@@ -51,6 +51,12 @@ class:  twilight
 
 ---
 
+# Graph Axes
+
+![center w:800](image-10.png)
+
+---
+
 # 🎃 2025.10.02 **Earth Science** 👻
 
 ##### **❓ of the 📅**: What is your favorite halloween candy? 🍬🍫🍭
