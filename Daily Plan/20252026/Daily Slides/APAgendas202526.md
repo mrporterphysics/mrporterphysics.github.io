@@ -16,6 +16,49 @@ math: mathjax
 
 ---
 
+<!--- class: halloween --->
+
+# 🎃 2025.10.03 **AP Physics** Do Now 👻
+
+Graphs of velocity versus time during 4 seconds for identical objects are shown below.
+
+![center w:800](image-13.png)
+
+**Rank the magnitudes of the displacements of the objects during each of these intervals.**
+
+---
+
+
+# 🎃 2025.10.03 **AP Physics** 👻
+
+##### **❓ of the 📅**: Would you rather visit a Haunted House or a Corn Maze?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Problem-solving with VT Graphs
+3. Paired Problem Solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use velocity time graphs to model motion and make predictions._
+
+
+</div>
+</div>
+
+---
+
+<!--- class: --->
+
 # 2025.10.01 **AP Physics**
 
 ##### **❓ of the 📅**: Cake or pie? 🍰🥧
