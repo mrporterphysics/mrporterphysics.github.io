@@ -17,6 +17,39 @@ math: mathjax
 
 <!--- class: halloween--->
 
+
+# 🕷️ 2025.10.03 **Regents Physics** 🕸️
+
+##### **❓ of the 📅**: WYR visit a corn maze or haunted house?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Packet pages 13 - 16
+	1. Stop at question 4 on page 16
+2. Review and New - VT Graphs
+3. Finish Page 16, 21-22
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve problems with graphical features of velocity time graphs_
+
+### 📆 Homework Due **Wednesday**
+- Velocity Time Graphs 1
+- Velocity Time Graphs 2
+
+</div>
+</div>
+
+---
+
 # 🎃 2025.10.02 **Regents Physisc** 👻
 
 ##### **❓ of the 📅**: Your favorite halloween costume?
