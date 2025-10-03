@@ -57,6 +57,14 @@ class:  twilight
 
 ---
 
+![bg fit](image-11.png)
+
+---
+
+![bg fit](image-12.png)
+
+---
+
 # 🎃 2025.10.02 **Earth Science** 👻
 
 ##### **❓ of the 📅**: What is your favorite halloween candy? 🍬🍫🍭
