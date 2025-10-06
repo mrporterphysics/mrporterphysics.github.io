@@ -19,6 +19,37 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.06 **Earth Science**
+
+##### **❓ of the 📅**: Candy Corn: yay or nay?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 👀🤔💭 See-think-wonder share out
+2. Stellar Evolution Diagram -> Review answers & discuss
+3. Stellar Evolution Practice - Finish for homework
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Discuss and define stellar evolution_
+
+### 📆 Upcoming
+
+- Finish Stellar Evolution Practice Questions
+
+</div>
+</div>
+
+---
+
 # 2025.10.03 **Earth Science**
 
 ##### **❓ of the 📅**: WYR go to a Haunted House or a Corn Maze?
