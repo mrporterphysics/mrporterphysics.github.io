@@ -17,6 +17,41 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.07 **Regents Physics**
+
+##### **❓ of the 📅**: Candy corn: yay or nay?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - packet page 21 & 22
+2. Introduction to kinematic equations and the cross diagram
+3. Practice with equations & problem-solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve problems with VT Graphs_
+
+🥅 _Use kinematic equations to make predictions_
+
+### 📆 Upcoming
+
+- PC Velocity Graphs due **Wed**
+- PC Kinematic Eqns due **Thu**
+- ***Quiz Thursday***
+
+</div>
+</div>
+
+---
+
 
 # 🕷️ 2025.10.03 **Regents Physics** 🕸️
 
