@@ -18,6 +18,38 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# :alien: 2025.10.06 **AP Physics**
+
+##### **❓ of the 📅**: Candy corn: yay or nay?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Graphs Practice worksheet
+2. Problem-Solving with VT Graphs 
+    - get back into pairs (different than Friday!)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use velocity time graphs to model motion and make predictions._
+
+### 📆 Upcoming
+
+- Quiz Friday
+
+</div>
+</div>
+
+---
+
 # 🎃 2025.10.03 **AP Physics** Do Now 👻
 
 Graphs of velocity versus time during 4 seconds for identical objects are shown below.

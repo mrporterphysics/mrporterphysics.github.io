@@ -19,6 +19,71 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.07 **Earth Science**
+
+##### **❓ of the 📅**: QUESTIONNNNNNNNN
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Star Sort & Graphing
+2. See-think-wonder
+3. Class consensus
+4. HR Diagram Extension
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Investigate:
+
+- How can we determine star mass from ***observable*** properties?
+- We will be creating a static model of the star in a box simulation
+
+---
+
+# Instructions
+
+1. Plot your stars based on their data
+2. Look for patterns & connections based one graph
+
+## Investigate:
+
+- How can we determine star mass from ***observable*** properties?
+- We will be creating a static model of the star in a box simulation
+
+![bg fit right](image-10.png)
+
+---
+
+# Hertzsprung-Russell Diagram (HR Diagram)
+
+![bg right](image-11.png)
+
+---
+
+# Consensus Questions 
+
+### **1. What properties in stars allow us to make predictions about their life span and stability?**
+
+### **2. What kind of stars live the longest and most stable lives?**
+
+---
+
 # 2025.10.06 **Earth Science**
 
 ##### **❓ of the 📅**: Candy Corn: yay or nay?
@@ -80,15 +145,7 @@ class:  twilight
 </div>
 </div>
 
----
 
-# Graph Axes
-
-![center w:800](image-10.png)
-
----
-
-![bg fit](image-11.png)
 
 ---
 
