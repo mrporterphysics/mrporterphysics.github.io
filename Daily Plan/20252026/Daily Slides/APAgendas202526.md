@@ -18,6 +18,37 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 🎃 2025.10.07 **AP Physics** 🕸️
+
+##### **❓ of the 📅**: Do you like scary movies? What is your favorite? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Bear Problem
+2. Discuss
+3. Kinematic Equations & Cross Diagram
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use graphs and equations to solve word problems_
+
+### 📆 Upcoming
+
+- PC Kinematic Eqns 1, 2, 3
+
+</div>
+</div>
+
+---
+
 # :alien: 2025.10.06 **AP Physics**
 
 ##### **❓ of the 📅**: Candy corn: yay or nay?
