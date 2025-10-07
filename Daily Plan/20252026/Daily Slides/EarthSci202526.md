@@ -21,7 +21,7 @@ class:  twilight
 
 # 2025.10.07 **Earth Science**
 
-##### **❓ of the 📅**: QUESTIONNNNNNNNN
+##### **❓ of the 📅**: Do you like scary movies? What is your favorite?
 
 <div class ='columns'>
 
@@ -40,7 +40,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model the HR Diagram_
 
 ### 📆 Upcoming
 
