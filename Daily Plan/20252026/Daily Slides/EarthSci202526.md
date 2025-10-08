@@ -19,6 +19,15 @@ class:  twilight
 
 <!--- class: halloween --->
 
+
+---
+
+# Star Formation
+
+<iframe width="1000" height="700" src="https://www.youtube.com/embed/YbdwTwB8jtc?si=Y24opNIdT7SP6SXl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # 2025.10.08 **Earth Science**
 
 ##### **❓ of the 📅**: Do you believe in ghosts? 👻
@@ -30,6 +39,7 @@ class:  twilight
 #### 📋 Agenda
 
 1. Answer Questions about Graph (see photos in next slides)
+    - _can access these through Canvas on the homepage_
 2. HR Diagram Extension
 
 </div>
