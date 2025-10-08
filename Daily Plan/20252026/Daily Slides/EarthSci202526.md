@@ -21,7 +21,7 @@ class:  twilight
 
 # 2025.10.08 **Earth Science**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Do you believe in ghosts? 👻
 
 <div class ='columns'>
 
@@ -30,7 +30,7 @@ class:  twilight
 #### 📋 Agenda
 
 1. Answer Questions about Graph (see photos in next slides)
-2. HR Diagram Explanati
+2. HR Diagram Extension
 
 </div>
 
@@ -38,7 +38,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Use the HR Diagram to describe the life cycle of stars_
 
 ### 📆 Upcoming
 
