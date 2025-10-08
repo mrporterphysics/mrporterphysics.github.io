@@ -19,6 +19,62 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.08 **Earth Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Answer Questions about Graph (see photos in next slides)
+2. HR Diagram Explanati
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+![bg fit](IMG_2525.jpeg)
+
+---
+
+![bg fit](IMG_2526.jpeg)
+
+---
+
+![bg fit](IMG_2527.jpeg)
+
+---
+
+![bg fit](IMG_2528.jpeg)
+
+---
+
+![bg fit](IMG_2529.jpeg)
+
+---
+
+
+# Hertzsprung-Russell Diagram (HR Diagram)
+
+![bg right](image-11.png)
+
+
+---
+
 # 2025.10.07 **Earth Science**
 
 ##### **❓ of the 📅**: Do you like scary movies? What is your favorite?
@@ -68,11 +124,6 @@ class:  twilight
 
 ![bg fit right](image-10.png)
 
----
-
-# Hertzsprung-Russell Diagram (HR Diagram)
-
-![bg right](image-11.png)
 
 ---
 

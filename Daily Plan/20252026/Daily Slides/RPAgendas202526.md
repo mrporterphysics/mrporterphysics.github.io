@@ -17,6 +17,38 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.08 **Regents Physics**
+
+##### **❓ of the 📅**: Do you like scary movies?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Worksheet of word problems
+    - put assigned question on whiteboard
+2. Additional kinematic equation practice - Physics Classroom 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use kinematic equations to solve problems_
+
+### 📆 Upcoming
+
+- Quiz **Tomorrow** on Velocity vs. Time graphs
+
+</div>
+</div>
+
+---
+
 # 2025.10.07 **Regents Physics**
 
 ##### **❓ of the 📅**: Candy corn: yay or nay?
