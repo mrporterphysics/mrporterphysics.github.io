@@ -17,6 +17,34 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.09 **Regents Physics**
+
+##### **❓ of the 📅**: Apple or pumpkin flavored?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Breaking Down Kinematic Problem-solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.08 **Regents Physics**
 
 ##### **❓ of the 📅**: Do you like scary movies?
@@ -46,6 +74,44 @@ math: mathjax
 
 </div>
 </div>
+
+
+---
+
+### A race car accelerates uniformly from 18.5 m/s to 46.1 m/s in 2.47 seconds. Determine the acceleration of the car and the distance traveled.
+
+![alt text](image-15.png)
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+---
+
+### A feather is dropped on the moon from a height of 1.40 meters. The acceleration of gravity on the moon is 1.67 m/s$^2$. Determine the time for the feather to fall to the surface of the moon.
+
+![alt text](image-15.png)
+
+<br><br><br><br><br><br><br><br><br>
+
+---
+
+### A bullet leaves a rifle with a muzzle velocity of 521 m/s. While accelerating through the barrel of the rifle, the bullet moves a distance of 0.840 m. Determine the acceleration of the bullet (assume a uniform acceleration).
+
+![alt text](image-15.png)
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+---
+
+An engineer is designing a runway for an airport. Several planes will use the runway and the engineer must design it so that it is long enough for the largest planes to become airborne before the runway ends. If the largest plane accelerates at 3.30 m/s$^2$ and has a takeoff speed of 88.0 m/s, then what is the minimum allowed length for the runway?
+
+![alt text](image-15.png)
+
+<br><br><br><br><br><br><br><br><br><br>
+
+---
+
+
 
 ---
 
