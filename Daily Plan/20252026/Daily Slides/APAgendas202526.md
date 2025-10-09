@@ -47,7 +47,7 @@ math: mathjax
 
 ---
 
-#  Ramp Cart Timing Lab
+#  Photogate Timing Lab
 Target: time between photogates = **0.12 s**
 
 ![center w:700](image-14.png)
