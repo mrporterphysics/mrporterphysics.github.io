@@ -29,6 +29,7 @@ math: mathjax
 
 1. Quiz
 2. Breaking Down Kinematic Problem-solving
+3. Practice with equations on physics classroom
 
 </div>
 
@@ -36,7 +37,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Use kinematic equations to solve problems_
 
 ### 📆 Upcoming
 
