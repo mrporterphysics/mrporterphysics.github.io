@@ -18,6 +18,37 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.09 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Photogate Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use equations and graphical models to solve problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Photogate
+
+---
+
 # 🎃 2025.10.07 **AP Physics** 🕸️
 
 ##### **❓ of the 📅**: Do you like scary movies? What is your favorite? 

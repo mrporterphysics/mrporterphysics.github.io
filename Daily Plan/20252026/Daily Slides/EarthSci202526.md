@@ -20,6 +20,42 @@ class:  twilight
 <!--- class: halloween --->
 
 
+# 2025.10.09 **Earth Science**
+
+##### **❓ of the 📅**: Pumpkin flavored or apple flavored?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Share See-Think-Wonder 
+2. HR Diagram Extension
+3. Forces in a star
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify stars based on the HR Diagram_
+
+🥅 _Explain forces in a star_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+# Hertzsprung-Russell Diagram (HR Diagram)
+
+![bg right](image-11.png)
+
 ---
 
 # Star Formation
@@ -75,12 +111,7 @@ class:  twilight
 
 ![bg fit](IMG_2529.jpeg)
 
----
 
-
-# Hertzsprung-Russell Diagram (HR Diagram)
-
-![bg right](image-11.png)
 
 
 ---
