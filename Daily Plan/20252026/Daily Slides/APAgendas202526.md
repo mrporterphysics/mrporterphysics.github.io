@@ -42,6 +42,10 @@ math: mathjax
 
 ### 📆 Upcoming
 
+- Quiz tomorrow:
+  - VT graphs
+  - Equations
+
 </div>
 </div>
 
