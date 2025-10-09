@@ -19,6 +19,38 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.10 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite classic Halloween monster?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review gravity/fusion balance
+2. Rewatch video
+3. Finish labeling forces
+    - Do this on a whiteboard with your lab group **BEFORE** you put it into your packet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain the balance of fusion vs. gravity in stars_
+
+### 📆 Upcoming
+
+- Star quiz at the **end** of next week
+
+</div>
+</div>
+
+---
+
 
 # 2025.10.09 **Earth Science**
 
