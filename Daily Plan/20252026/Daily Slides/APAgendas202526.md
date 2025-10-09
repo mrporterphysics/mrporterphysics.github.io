@@ -18,9 +18,11 @@ math: mathjax
 
 <!--- class: halloween --->
 
+
+
 # 2025.10.09 **AP Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Apple 🍎 or pumpkin 🎃 flavored?
 
 <div class ='columns'>
 
@@ -45,7 +47,80 @@ math: mathjax
 
 ---
 
-# Photogate
+#  Ramp Cart Timing Lab
+Target: time between photogates = **0.12 s**
+
+![center w:700](image-14.png)
+
+The figure above shows a cart on an inclined ramp. The cart is released from rest a distance $\Delta x_1 = 20\text{ cm}$ from photogate 1. You are tasked to determine the distance from photogate 1, $\Delta x_2$, to put a second photogate, so that the time it takes for the cart to travel between the two gates is $\Delta t = 0.12\text{ s}$.
+
+---
+
+## Question
+How far from photogate 1 should photogate 2 be placed to get **0.12 s** between gates?
+
+---
+
+## Purpose
+Use the constant-acceleration particle model to:
+- Measure ramp acceleration from rest.
+- Predict photogate spacing **Δx2** for the target interval.
+
+---
+
+## Materials
+Cart, inclined ramp, 2 photogates + timer, meterstick, tape, angle finder (optional), data table.
+
+---
+
+## Procedure (Measure a)
+1. Mark release point **Δx1 = 20 cm** above gate 1; start cart from rest.
+2. Place gates; record gate times or interval over known spacing.
+3. Repeat 5 trials; keep setup identical.
+
+---
+
+## Determine Acceleration
+
+
+## Predict Spacing
+- Derive **Δx2(Δx1, a, Δt)** from CAPM equations.
+- Compute **Δx2** for **Δt = 0.12 s**.
+
+---
+
+## Test & Validate
+- Place gate 2 at predicted **Δx2**.
+- Run 3 trials; compare to 0.12 s.
+- Compute percent error.
+
+---
+
+## Representations
+
+- v–t with slope **a**.
+- x–t showing curvature.
+- Equations + sample calc with units.
+
+---
+
+## Reflection
+- Does data support constant **a**?
+- How does steeper ramp (larger **a**) affect **Δx2** for same **Δt**?
+- Evaluate the peer claim about moving gate 1 closer.
+
+---
+
+## Notebook Checklist
+
+
+✅ Titles
+✅ Procedures and data
+✅ labeled tables/graphs
+✅ units
+✅ best-fit lines
+✅ clear conclusion & reflection questions
+
 
 ---
 
