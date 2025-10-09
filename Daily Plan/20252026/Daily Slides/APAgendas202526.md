@@ -18,6 +18,34 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.10 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite Halloween monster?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Finish up anything in the photogate lab and get it stamped 
+3. Pep Rally - play nice 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Crush your quiz 💪🧠_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 
 # 2025.10.09 **AP Physics**
