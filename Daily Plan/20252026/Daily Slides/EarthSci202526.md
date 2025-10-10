@@ -19,6 +19,33 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.14 **Earth Science**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.10 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite classic Halloween monster?
@@ -48,6 +75,12 @@ class:  twilight
 
 </div>
 </div>
+
+---
+
+# Consensus Discussion <!--fit--->
+
+
 
 ---
 

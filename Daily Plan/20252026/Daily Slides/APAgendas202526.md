@@ -18,6 +18,37 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.14 **AP Physics**
+
+##### **❓ of the 📅**: Favorite season? 🍂❄️🌞💮
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Go over quiz?
+2. Collaborative Problem-Solving
+	1. 🏀 Rolling ball ranking task
+	2. 🚀 Rocketship average velocity question
+	3. 🚀 Rocketship graph question (in packet from problem-solving)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Problem-solve motion questions in small gorups_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.10 **AP Physics**
 
 ##### **❓ of the 📅**: What is your favorite Halloween monster?
