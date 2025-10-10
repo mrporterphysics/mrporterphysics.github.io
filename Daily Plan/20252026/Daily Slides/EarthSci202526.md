@@ -21,7 +21,7 @@ class:  twilight
 
 # 2025.10.14 **Earth Science**
 
-##### **❓ of the 📅**: QUESTION
+##### **❓ of the 📅**: Favorite season? 🍂❄️🌞💮
 
 <div class ='columns'>
 
@@ -29,7 +29,10 @@ class:  twilight
 
 #### 📋 Agenda
 
-1. 
+1. Share out fusion vs. gravity whiteboards
+2. Elaborate: Why do the lifetimes vary -> elaborating on fusion
+3. Create a Stellar Evolution Model
+
 
 </div>
 
@@ -37,12 +40,16 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Finish modeling stellar evolution_
 
 ### 📆 Upcoming
 
 </div>
 </div>
+
+---
+
+![bg fit](image-16.png)
 
 ---
 
