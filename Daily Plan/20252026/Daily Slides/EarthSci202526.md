@@ -49,6 +49,18 @@ class:  twilight
 
 ---
 
+# Share Out
+
+Share out board and consider:
+
+1. Why do more massive stars die faster than less massive stars?
+2. How does the rate of star death relate to luminosity of a star (amount of energy released per second)?
+3. What factors lead to a star’s stability or instability? Why is it important to understand how long a star is stable and when it might change?
+4. What did you learn from the How the Sun Works investigation that you needed to know in order to explain what causes some stars to be stable and some stars to change?
+
+
+---
+
 ![bg fit](image-16.png)
 
 ---
