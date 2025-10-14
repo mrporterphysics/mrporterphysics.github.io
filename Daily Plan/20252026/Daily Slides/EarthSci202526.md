@@ -44,6 +44,8 @@ class:  twilight
 
 ### 📆 Upcoming
 
+- Quiz **Friday** 
+
 </div>
 </div>
 
