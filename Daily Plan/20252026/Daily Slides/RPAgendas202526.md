@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.14 **Regents Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Kinematics Review
+    - Finish Kinematics 4
+    - Start: Kinematics 5 & 8 (Due Friday)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review Kinematic Concepts & Practice_
+
+### 📆 Upcoming
+
+- Most Likely Quiz Thursday (_assuming I give you back your quizzes tomorrow_)
+
+</div>
+</div>
 
 ---
 
