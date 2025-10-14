@@ -19,7 +19,7 @@ math: mathjax
 
 # 2025.10.14 **Regents Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Favorite season? 🍂❄️🌞💮
 
 <div class ='columns'>
 
