@@ -28,11 +28,12 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Go over quiz?
-2. Collaborative Problem-Solving
+1. Collaborative Problem-Solving
 	1. 🏀 Rolling ball ranking task
 	2. 🚀 Rocketship average velocity question
 	3. 🚀 Rocketship graph question (in packet from problem-solving)
+
+**Solve on whiteboard with group**
 
 </div>
 

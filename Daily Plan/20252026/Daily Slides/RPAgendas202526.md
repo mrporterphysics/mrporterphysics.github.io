@@ -17,6 +17,9 @@ math: mathjax
 
 <!--- class: halloween--->
 
+
+---
+
 # 2025.10.09 **Regents Physics**
 
 ##### **❓ of the 📅**: Apple or pumpkin flavored?
