@@ -28,12 +28,10 @@ math: mathjax
 
 #### 📋 Agenda
 
+0. AP Workbook 1.I The Chase
 1. Collaborative Problem-Solving
 	1. 🏀 Rolling ball ranking task
 	2. 🚀 Rocketship average velocity question
-	3. 🚀 Rocketship graph question (in packet from problem-solving)
-
-**Solve on whiteboard with group**
 
 </div>
 
