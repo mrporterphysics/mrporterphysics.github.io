@@ -45,6 +45,8 @@ math: mathjax
 
 ### 📆 Upcoming
 
+- AP Checks due! Get them in
+
 </div>
 </div>
 
