@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.15 **Regents Physics**
+
+##### **❓ of the 📅**: If you could make up a new rule, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [2D Vector Notes](../../../Presentations/Projectiles/talks/RP2DMotion2025.html)
+2. 2D Vector Practice
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe 2D Vectors with magnitude and direction._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.14 **Regents Physics**
 
 ##### **❓ of the 📅**: Favorite season? 🍂❄️🌞💮
