@@ -19,6 +19,37 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.15 **Earth Science**
+
+##### **❓ of the 📅**: If you could make up a new rule, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Fe26 Simulation Experiment
+    - Share out results
+2. Create Stellar Evolution Model on Whiteboard (see rubric to help guide your model)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Stellar Evolution_
+
+### 📆 Upcoming
+
+- Stellar Evolution Quiz **Friday**
+
+</div>
+</div>
+
+---
+
 # 2025.10.14 **Earth Science**
 
 ##### **❓ of the 📅**: Favorite season? 🍂❄️🌞💮
