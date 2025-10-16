@@ -18,6 +18,34 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.16 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather discover that witches, vampires, or werewolves were real?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. 2D Vectors 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.14 **AP Physics**
 
 ##### **❓ of the 📅**: Favorite season? 🍂❄️🌞💮

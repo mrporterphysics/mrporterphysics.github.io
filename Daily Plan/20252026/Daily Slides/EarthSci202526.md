@@ -19,6 +19,49 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.16 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather discover that witches, vampires, or werewolves were real?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ⏲️ 10 Minutes - Finish Questions about Fe26
+2. Discuss Rates of Fusion
+3. Nucleosynthesis
+4. Stellar Evolution Whiteboard 
+5. Star Life Cycle Performance Task
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create final model of stellar evolution_
+
+### 📆 Upcoming
+
+- Stellar Evolution Quiz tomorrow
+
+</div>
+</div>
+
+---
+
+# Stellar Evolution Model
+
+1. Create a model to represent the life cycle of stars. 
+2. Make a claim about the best type & stage of star we should look for to support life on Earth
+    - support this claim with evidence from your model
+3. Use the rubric in your packet to guide your model
+4. Be prepared to share out your model
+
+---
+
 # 2025.10.15 **Earth Science**
 
 ##### **❓ of the 📅**: If you could make up a new rule, what would it be?
