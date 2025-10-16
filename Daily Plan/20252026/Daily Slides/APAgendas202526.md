@@ -18,6 +18,40 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.17 **AP Physics**
+
+##### **❓ of the 📅**: QUESTIONS
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Vector Addition Notes
+2. Vector Addition Think Sheet
+3. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Homework
+
+Due **Wednesday**:
+
+-  Adding Right Angle Vectors
+- Vector Component Addition
+
+</div>
+</div>
+
+---
+
 # 2025.10.16 **AP Physics** Do Now
 
 Shown below are the paths two motorcyclists took on an afternoon ride. Both started at the same place, and both took the same time for the ride. Rider A traveled east for 19 km and then south for 4 km. Rider B traveled south for 7 km and then east for 16 km.
