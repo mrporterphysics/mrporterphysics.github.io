@@ -52,6 +52,10 @@ class:  twilight
 
 ---
 
+![bg fit](image-16.png)
+
+---
+
 # Stellar Evolution Model
 
 1. Create a model to represent the life cycle of stars. 
@@ -134,10 +138,6 @@ Share out board and consider:
 3. What factors lead to a star’s stability or instability? Why is it important to understand how long a star is stable and when it might change?
 4. What did you learn from the How the Sun Works investigation that you needed to know in order to explain what causes some stars to be stable and some stars to change?
 
-
----
-
-![bg fit](image-16.png)
 
 ---
 
