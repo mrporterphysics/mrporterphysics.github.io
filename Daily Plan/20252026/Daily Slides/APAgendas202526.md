@@ -18,6 +18,16 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.16 **AP Physics** Do Now
+
+Shown below are the paths two motorcyclists took on an afternoon ride. Both started at the same place, and both took the same time for the ride. Rider A traveled east for 19 km and then south for 4 km. Rider B traveled south for 7 km and then east for 16 km.
+
+![center w:500](image-17.png)
+
+Is the magnitude of the displacement of the rider (i) greater in case A, (ii) greater in case B, or (iii) the same in both cases?   _**Explain your reasoning.**_  
+
+---
+
 # 2025.10.16 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather discover that witches, vampires, or werewolves were real?
@@ -29,7 +39,8 @@ math: mathjax
 #### 📋 Agenda
 
 1. Do Now
-2. 2D Vectors 
+2. 2D Vectors - Measuring and drawing
+2. 2D Vectors - Adding Vectors
 
 </div>
 
@@ -37,9 +48,13 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Measure and draw 2D Vectors_
+
+🥅 _Add together right angled vectors_
 
 ### 📆 Upcoming
+
+- ***HAND IN YOUR AP CHECKS!***
 
 </div>
 </div>
