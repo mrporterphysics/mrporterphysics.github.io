@@ -56,6 +56,10 @@ class:  twilight
 
 ---
 
+![center](image-18.png)
+
+---
+
 # Stellar Evolution Model
 
 1. Create a model to represent the life cycle of stars. 
