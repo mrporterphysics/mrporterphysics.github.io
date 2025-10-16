@@ -8,9 +8,9 @@ math: mathjax
 
 # Two Dimensional Motion 
 
-## Regents Physics 
+## Physics 
 
-### Maple Hill High School 2024-25
+### Maple Hill High School 2025-26
 
 ---
 
