@@ -40,7 +40,7 @@ Is the magnitude of the displacement of the rider (i) greater in case A, (ii) gr
 
 1. Do Now
 1. Go over rolling ball question
-2. 2D Vectors - Measuring and drawing
+2. [2D Vectors - Measuring and drawing](../../../Presentations/Projectiles/talks/RP2DMotion2025.html)
 2. 2D Vectors - Adding Vectors
 
 </div>
