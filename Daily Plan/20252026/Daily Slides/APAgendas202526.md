@@ -28,7 +28,7 @@ Is the magnitude of the displacement of the rider (i) greater in case A, (ii) gr
 
 ---
 
-# 2025.10.16 **AP Physics**
+# 👻 2025.10.16 **AP Physics** 🧟
 
 ##### **❓ of the 📅**: Would you rather discover that witches, vampires, or werewolves were real?
 
@@ -39,6 +39,7 @@ Is the magnitude of the displacement of the rider (i) greater in case A, (ii) gr
 #### 📋 Agenda
 
 1. Do Now
+1. Go over rolling ball question
 2. 2D Vectors - Measuring and drawing
 2. 2D Vectors - Adding Vectors
 
