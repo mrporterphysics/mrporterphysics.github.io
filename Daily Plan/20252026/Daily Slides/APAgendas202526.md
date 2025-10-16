@@ -53,9 +53,10 @@ Is the magnitude of the displacement of the rider (i) greater in case A, (ii) gr
 
 🥅 _Add together right angled vectors_
 
-### 📆 Upcoming
+### 📆 Homework - PC:
 
-- ***HAND IN YOUR AP CHECKS!***
+- Vectors and Projectiles 1: Adding Right Angle Vectors
+- Vector Direction Concept Builder 
 
 </div>
 </div>

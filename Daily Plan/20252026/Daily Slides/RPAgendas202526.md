@@ -17,6 +17,34 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.16 **Regents Physics** 🧟🧟‍♀️
+
+##### **❓ of the 📅**: Would you rather discover that witches, vampires, or werewolves were real?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mapping Troy Lab
+2. Adding Vectors Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use vectors to map in a city_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.15 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could make up a new rule, what would it be?
