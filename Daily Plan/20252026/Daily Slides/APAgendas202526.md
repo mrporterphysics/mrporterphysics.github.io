@@ -30,6 +30,8 @@ math: mathjax
 
 1. Vector Addition Notes
 2. Vector Addition Think Sheet
+3. Vector Components
+3. Adding Vectors with components
 
 </div>
 
