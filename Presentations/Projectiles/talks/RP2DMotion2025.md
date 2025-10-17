@@ -142,9 +142,41 @@ math: mathjax
 
 ---
 
+
+
+# Try It...
+
+![bg fit right:45%](../figures/troy.png)
+
+Mr. Porter and his wife walk from Nighthawks to Troy Savings Bank Music Hall. They walk 6 blocks East and then 2 Blocks South. [1 Block = 100 Meters]
+
+1. Determine the **distance** that they traveled.
+2. Determine their  **displacement**.
+
+
+---
+
+---
+
 # Adding Angled Vectors
 
 ![center w:600](https://www.physicsclassroom.com/Class/vectors/u3l1b1.gif)
+
+---
+
+
+<!--- _footer: <br>--->
+
+## Adding Vectors 
+
+Vectors are added ___"tip to tail"___, that is redraw the vectors so that the tip of one vector is attached to the tail of the second vector. 
+
+$$\vec{C} = \vec{a} + \vec{b}$$
+
+>_The **resultant** vector S is equal to the addition of vectors a and b_
+
+![bg fit right](../figures/tip-to-tail.gif.gif)
+
 
 ---
 
@@ -237,6 +269,10 @@ Eric leaves the base camp and hikes 11 km, north and then hikes 11 km east. Dete
 
 ---
 
+# Stop 🛑 <!--fit--->
+
+---
+
 # Representing Vector Components
 
 
@@ -308,54 +344,9 @@ Eric leaves the base camp and hikes 11 km, north and then hikes 11 km east. Dete
 
 ---
 
-# Practice 🎯 <!--fit--->
-
-## [Vector Components 1](https://www.physicsclassroom.com/calcpad/launch/CPVP3)
-
-## [Vector Components 2](https://www.physicsclassroom.com/calcpad/launch/CPVP4)
 
 ---
 
-# Try It...
-
-![bg fit right:45%](../figures/troy.png)
-
-Mr. Porter and his wife walk from Nighthawks to Troy Savings Bank Music Hall. They walk 6 blocks East and then 2 Blocks South. [1 Block = 100 Meters]
-
-1. Determine the **distance** that they traveled.
-2. Determine their  **displacement**.
-
-
----
-
-<!--- _footer: <br>--->
-
-## Adding Vectors 
-
-Vectors are added ___"tip to tail"___, that is redraw the vectors so that the tip of one vector is attached to the tail of the second vector. 
-
-$$\vec{C} = \vec{a} + \vec{b}$$
-
->_The **resultant** vector S is equal to the addition of vectors a and b_
-
-![bg fit right](../figures/tip-to-tail.gif.gif)
-
----
-
-# Adding Vectors 
-
-Mr. Porter's brother is on a hike. He walks:
-
-- 2 KM North
-- 3 KM East 
-- 5 KM Exactly South East 
-
-
-**Draw a the vector addition diagram** to represent this motion
-
-
-
----
 
 ## Adding Vectors 
 
