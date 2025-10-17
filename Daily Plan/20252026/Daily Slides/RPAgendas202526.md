@@ -17,6 +17,34 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.17 **Regents Earth Science**
+
+##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Earth 2.0 Task
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Crush your quiz 💪_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.16 **Regents Physics** 🧟🧟‍♀️
 
 ##### **❓ of the 📅**: Would you rather discover that witches, vampires, or werewolves were real?
