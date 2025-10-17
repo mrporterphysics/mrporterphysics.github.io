@@ -20,7 +20,7 @@ math: mathjax
 
 # 2025.10.17 **AP Physics**
 
-##### **❓ of the 📅**: QUESTIONS
+##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍 
 
 <div class ='columns'>
 
@@ -30,7 +30,6 @@ math: mathjax
 
 1. Vector Addition Notes
 2. Vector Addition Think Sheet
-3. 
 
 </div>
 
@@ -38,7 +37,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Add two-dimensional vectors_
 
 ### 📆 Homework
 
