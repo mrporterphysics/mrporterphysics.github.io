@@ -19,6 +19,38 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.20 **Earth Science**
+
+##### **❓ of the 📅**: What is your ideal sandwich? 🥪
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Quiz
+2. Start Orbits
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Quiz_
+
+
+🥅 _Start Orbits_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.17 **Regents Earth Science**
 
 ##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍 
