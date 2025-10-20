@@ -18,6 +18,42 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.20 **AP Physics**
+
+##### **❓ of the 📅**: What is your ideal sandwich 🥪?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda - ***Here*** Fri
+
+1. Think Sheet: 5-8
+2. Work on Homework
+
+</div>
+
+<div>
+
+#### 📋 Agenda - ***Absent*** Fri
+
+1. Vector Addition Notes
+2. Vector Addition Think Sheet
+3. Vector Components
+3. Adding Vectors with components
+
+</div>
+</div>
+
+
+#### 📆 HW
+
+- PC: Adding Right Angle Vectors
+- PC: Vector Component Addition
+
+
+---
+
 # 2025.10.17 **AP Physics**
 
 ##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍 
