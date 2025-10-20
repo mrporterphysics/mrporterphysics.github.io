@@ -17,7 +17,34 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.20 **Regents Physics**
 
+##### **❓ of the 📅**: What is your ideal sandwich 🥪?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Vector Mapping Lab
+2. Adding 2D Vectors
+3. Vector Components 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn how to add 2 Dimensional Vectors_
+
+### 📆 Homework
+
+- PC: Head to Tail Vector Addition
+
+</div>
+</div>
 
 ---
 
