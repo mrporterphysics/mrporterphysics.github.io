@@ -30,7 +30,8 @@ class:  twilight
 #### 📋 Agenda
 
 1. Finish Quiz
-2. Start Orbits
+2. Earth 2.0 - Update Model
+3. Start Orbits
 
 
 </div>
