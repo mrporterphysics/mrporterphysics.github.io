@@ -17,6 +17,41 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.21 **Regents Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Think Sheet
+2. Vector Components
+2. Think Sheets:
+    - Vector Components
+    - Vector Addition by Components
+3. Start Physics Classroom Assignments
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Add 2D vectors_
+
+### 📆 Upcoming
+
+- Due **Tomorrow**: _Adding Right Angle Vectors_
+- Due **Friday**: _Vectors 2 & 3: Component Addition_ 
+
+</div>
+</div>
+
+---
+
 # 2025.10.20 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your ideal sandwich 🥪?
