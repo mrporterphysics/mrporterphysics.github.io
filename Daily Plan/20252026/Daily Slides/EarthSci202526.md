@@ -19,6 +19,100 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.21 **Earth Science**
+
+##### **❓ of the 📅**: If you had to be a villain from a movie, which movie would you pick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Comets
+2. Orbital Data
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look for patterns in orbital data_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# [Comet Lemmon](https://apod.nasa.gov/apod/ap250930.html) 
+
+_Closest Approach to Earth is **TONIGHT**_
+
+![bg](image-19.png)
+
+---
+
+![bg](https://earthsky.org/upl/2025/08/Comet-A6-Lemmon-on-Oct-21-facing-W-NW-just-after-SUNSET-Eddie-Irizarry-Stellarium-e1755808487761.jpg)
+
+---
+
+<video width= "1200" controls src="videosasteroidsVideo-Comet-Borrelly-Flyby-020429.webm" title="Title"></video>
+
+
+---
+
+# What makes a comet different than other objects in our solar system?
+
+---
+
+# Water in our solar system
+
+- Identify 3-5 details that are important in telling the story about water in our solar system
+
+---
+
+# Analyzing data 
+
+| Celestial Object | Average Distance from the Sun1 (AU) | Period of Revolution (Earth years) | Minimum Distance from Sun (AU) | Maximum Distance from Sun (AU) | Phase of majority of water |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| Mercury | .387 | .241 | 0.307 | 0.467 | vapor |
+| Venus | .723 | .615 | 0.718 | 0.728 | vapor |
+| Earth | 1.00 | 1 | 0.983 | 1.017 | liquid |
+| Mars | 1.523 | 1.88 | 1.381 | 1.666 | ice |
+| Comet Borrelly | 3.590 | 6.80 | 1.350 | 5.830 | Ice, but a great deal vaporizes every several years |
+| Europa (Jupiter’s moon) | 5.203 | 11.87 | 4.950 | 5.459 | Ice layer at surface, with liquid water ocean underneath |
+| Mimas (Saturn’s moon) | 9.539 | 29.46 | 9.041 | 10.124 |  |
+| Uranus | 19.185 | 84.03 | 18.324 | 20.078 | ice |
+| Neptune | 30.061 | 164.82 | 29.709 | 30.386 | ice |
+| Pluto | 39.479 | 248.06 | 29.658 | 49.304 | ice |
+
+---
+
+# Graphical Analysis
+
+1. https://graphicalanalysis.app/
+2. Manual Entry
+3. Fill out data in data table (just number columns)
+4. Make graphs to look for trends and patterns
+
+![bg fit right vertical](image-20.png)
+![bg fit](image-21.png)
+
+---
+
+# Patterns:
+
+* What patterns do you see in the relationship between the phase of water on solar system objects and their average distance from the Sun?  
+* What pattern do you see in the minimum and maximum distance from the Sun?  
+* What patterns do you see in the relationship between an object’s average distance from the Sun and orbital period?  
+* Do all objects in the solar system fit that pattern?  
+* Which patterns or exceptions to patterns in the data that could help us explain the Comet Borrelly investigative phenomenon?
+
+---
+
 # 2025.10.20 **Earth Science**
 
 ##### **❓ of the 📅**: What is your ideal sandwich? 🥪
