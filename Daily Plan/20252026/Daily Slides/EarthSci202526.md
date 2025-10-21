@@ -19,6 +19,49 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.22 **Earth Science**
+
+##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Graphing Orbits
+    - Graph & Look for Patterns
+    - Complete See-Think-Wonder _**indvidually**_
+    - Domino Discover
+2. Kepler's Laws Simulation Labs
+3. Developing Our Orbit Models
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finding patterns describing orbits in the solar system_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Patterns:
+
+* What patterns do you see in the relationship between the phase of water on solar system objects and their average distance from the Sun?  
+* What pattern do you see in the minimum and maximum distance from the Sun?  
+* What patterns do you see in the relationship between an object’s average distance from the Sun and orbital period?  
+* Do all objects in the solar system fit that pattern?  
+* Which patterns or exceptions to patterns in the data that could help us explain the Comet Borrelly investigative phenomenon?
+---
+
+
 # 2025.10.21 **Earth Science**
 
 ##### **❓ of the 📅**: If you had to be a villain from a movie, which movie would you pick?
@@ -103,15 +146,7 @@ _Closest Approach to Earth is **TONIGHT**_
 ![bg fit right vertical](image-20.png)
 ![bg fit](image-21.png)
 
----
 
-# Patterns:
-
-* What patterns do you see in the relationship between the phase of water on solar system objects and their average distance from the Sun?  
-* What pattern do you see in the minimum and maximum distance from the Sun?  
-* What patterns do you see in the relationship between an object’s average distance from the Sun and orbital period?  
-* Do all objects in the solar system fit that pattern?  
-* Which patterns or exceptions to patterns in the data that could help us explain the Comet Borrelly investigative phenomenon?
 
 ---
 

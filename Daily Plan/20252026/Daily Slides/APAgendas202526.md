@@ -18,6 +18,39 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.22 **AP Physics**
+
+##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. AP Workbook 1.E
+1. 1D Relative Motion
+2. Pivot
+2. 2D Relative Motion
+3. Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model relative motion_
+
+### 📆 Homework:
+
+-> PC: Vectors and Projectiles 2: Component Addition
+
+</div>
+</div>
+
+---
+
 # 2025.10.20 **AP Physics**
 
 ##### **❓ of the 📅**: What is your ideal sandwich 🥪?

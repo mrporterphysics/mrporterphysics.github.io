@@ -424,104 +424,55 @@ _A graphical representation of the given problem will help visualize what is hap
 
 ---
 
-# In Your Lab Notebook
-
-1. Tape/staple in vector maps (you can fold in half to fit)
-2. Show any calculations you make for any individual vectors, and the resultant displacement for your map and the exchanged map you receive. 
-3. A brief reflection
-    - Challenges faced in creating/following the vectors
-    - Real-world applications of vector navigation
-    - How this activity enhanced your understanding of vectors
+# Relative Motion <!--fit--->
 
 ---
 
-# Adding Angled Vectors
-
-Max plays middle linebacker for South's football team. During one play in last Friday night's game against New Greer Academy, he made the following movements after the ball was snapped on third down. First, he back-pedaled in the southern direction for 2.6 meters. He then shuffled to his left (west) for a distance of 2.2 meters. Finally, he made a half-turn and ran downfield a distance of 4.8 meters in a direction of 240° counter-clockwise from east (30° W of S) before finally knocking the wind out of New Greer's wide receiver. Determine the magnitude and direction of Max's overall displacement.
+<iframe width="1100" height="700" src="https://www.youtube.com/embed/bJMYoj4hHqU?si=CIP2ANhEbkR27lj-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
-# Visually
+# Relative Velocity and Vector Addition
+
+- **Goal:** Understand how velocities add as vectors and why motion is relative to the observer.
+
+---
+
+# 📝 Complete AP Workbook **1.E** <!--fit--->
+
+---
+
+# 1D Relative Motion: Vector Sums
 
 <div class='columns'>
 <div>
 
-![center w:600](image-10.png)
+![center w:400](https://www.physicsclassroom.com/Class/vectors/u3l1f2.gif) 
 
 </div>
  
 <div>
 
-![center w:400](image-11.png)
+![center w:500](https://www.physicsclassroom.com/Class/vectors/u3l1f3.gif)
 
 </div>
 </div>
 
 ---
 
-### How to Solve...Find Components of Angled Vector
-
-![center w:500](image-12.png)
-
-<div class='columns'>
-<div>
-
-This..
-
-![center w:500](image-13.png)
-
-</div>
- 
-<div>
-
-Becomes...
-
-![alt text w:500](image-14.png)
-
-</div>
-</div>
+# Pivot: One-Dimensional Relative Motion Using a Drone
 
 ---
 
-### Summing the Components
+# Boat Crossing a River: Resultant Velocity
 
+When a boat heads straight across, the river current carries it downstream. The boat’s velocity relative to water adds vectorially to the current’s velocity relative to ground.
 
-<div class='columns'>
-<div>
-
-![center w:600](image-14.png)
-
-</div>
- 
-<div>
-
-![center w:600](image-15.png)
-
-</div>
-</div>
+![center w:400](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250916.165151/resources/4a95f3dc74d754bf791cdafa69c8521b930b1c14)
 
 ---
 
-# Adding Angled Vectors 
-
-## Make a Chart
-
-| Vector | $x$ component | $y$ compnents | 
-|---|---|---|
-|$A$ | | |
-|$B$| | | 
-|$\vdots$ | | | 
-|Resultant | $A_x + B_x + \dots$ | $A_y + B_y + \dots$ |
-
-
----
-
-# 🎯 Practice 
-
-## [Adding Non-Perpendicular Vectors 1](https://www.physicsclassroom.com/calcpad/launch/CPVP7)
-
-## [Adding Non-Perpendicular Vectors 2](https://www.physicsclassroom.com/calcpad/launch/CPVP8)
-
+# Pivot: 2D Motion with a Drone
 
 
 ---
