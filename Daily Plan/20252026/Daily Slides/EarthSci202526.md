@@ -42,6 +42,8 @@ class:  twilight
 
 ### 📆 Upcoming
 
+- Star PTO Due Wednesday (Pages 14-19)
+
 </div>
 </div>
 
