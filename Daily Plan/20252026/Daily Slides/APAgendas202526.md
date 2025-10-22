@@ -18,6 +18,58 @@ math: mathjax
 
 <!--- class: halloween --->
 
+In each case shown, someone is running on a flatbed train car as the train moves. In cases C and D, the person is running toward the front of the train, while in cases A and B the person is running toward the rear. The speeds of the train and of each person relative to the train are given. 
+
+![center w:500](image-25.png)
+
+**Rank the speed of the runners relative to the observer standing beside the tracks.**
+
+---
+
+Shown are five asteroids and a spaceship, all moving in the same direction away from Earth. The velocities of the asteroids and of the spaceship are given as measured from Earth.
+
+![center](image-26.png)
+
+1. List the asteroids that are moving toward the spaceship. 
+2. List the asteroids that are moving away from the spaceship.
+
+**Explain your reasoning**
+
+---
+
+# 2025.10.23 **AP Physics**
+
+##### **❓ of the 📅**: If you were a pirate, what would your pirate name be? 🏴‍☠️🦜  
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 2D Relative Motion Notes
+2. River Boat Physics Classroom Questions
+3. 2D Relative Motion Drone Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model 2D relative motion_
+
+🥅 _Calculate relative velocities with vector addition_
+
+### 📆 Upcoming
+
+- Quiz tomorrow
+
+</div>
+</div>
+
+---
+
 # 2025.10.22 **AP Physics**
 
 ##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
