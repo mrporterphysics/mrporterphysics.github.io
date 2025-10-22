@@ -19,6 +19,82 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.23 **Earth Science**
+
+##### **❓ of the 📅**: If you were a pirate, what would your pirate name be? 🏴‍☠️🦜
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Kepler's Law Simulation Demo
+1. Prelab
+2. Kepler's First Law
+2. Continue...
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore Kepler's Law with a computational model_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Kepler’s First Law: 
+
+### Orbits are Ellipses
+
+_Planets orbit the Sun in ellipses with the Sun at one focus._
+
+- Key terms:
+    - **Semi-major axis (a)**: half of the longest diameter of the ellipse.
+    - **Foci**: two special points whose sum of distances to any point on the ellipse is constant.
+    - **Eccentricity (e)**: how “stretched” an ellipse is (0: circle; near 1: very elongated).
+
+$$\boxed{\text{Eccentricity} = \frac{\text{distance between foci}}{\text{length of major axis}}}$$
+
+---
+
+<!--- _class: light--->
+
+![bg fit](image-23.png)
+![bg fit](image-24.png)
+
+---
+
+# Kepler’s Second Law: 
+
+### Equal Areas in Equal Times
+
+_A planet sweeps out equal areas in equal time intervals._
+
+- Consequences:
+    - Fastest at **periapsis** (closest approach).
+    - Slowest at **apoapsis** (furthest point).
+- Vocabulary:
+    - **Periapsis/Apoapsis** (general).
+    - Around the Sun: perihelion/aphelion.
+    - Around Earth: perigee/apogee.
+
+---
+
+# Kepler’s Third Law: 
+
+### Period–Distance Relationship
+
+_For objects orbiting the same star, the square of the period (T) is proportional to the cube of the semi-major axis (a) ($T^2 \propto a^3$)._
+
+---
+
 # 2025.10.22 **Earth Science**
 
 ##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
