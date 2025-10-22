@@ -17,6 +17,39 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.22 **Regents Physics**
+
+##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Think Sheet & Check Answers
+2. Physics Classroom:
+    - Vectors and Projectiles 2: Component Addition
+    - Vectors and Projectiles 3: Component Addition
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with adding vectors using component analysis_
+
+### 📆 Upcoming
+
+- Quiz Friday:
+    - Kinematics & Adding Vectors 
+
+</div>
+</div>
+
+---
+
 # 2025.10.21 **Regents Physics**
 
 ##### **❓ of the 📅**: If you had to be a villain from a movie, which movie would you pick?
