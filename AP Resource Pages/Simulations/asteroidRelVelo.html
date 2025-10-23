@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Relative Velocity Simulation</title>
+
+    <!-- Flexoki Theme CSS -->
+    <link rel="stylesheet" href="../../css/flexoki-theme.css">
+
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- Babel Standalone for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Theme Toggle -->
+    <script src="../../js/theme-toggle.js"></script>
+
+    <style>
+        /* Simulation-specific styles using Flexoki theme variables */
+
+        /* Override body padding from main theme for standalone page */
+        body {
+            padding: 20px;
+        }
+
+        .simulation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .simulation-title {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .simulation-description {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--accent-secondary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-secondary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+
+        .btn-success {
+            background-color: var(--success);
+            color: var(--bg-primary);
+            border: 1px solid var(--success);
+        }
+
+        .btn-inactive {
+            background-color: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-inactive:hover {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .canvas-container {
+            position: relative;
+            height: 16rem;
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 2px solid var(--border-color);
+        }
+
+        .canvas-label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .info-box {
+            background-color: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .velocity-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .velocity-item {
+            background-color: var(--bg-tertiary);
+            padding: 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .velocity-label {
+            font-weight: 600;
+        }
+
+        .velocity-value {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-box {
+            margin-bottom: 2rem;
+            background-color: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .legend-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .legend-items {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-note {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+
+        .question-box {
+            background-color: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .question-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .answer-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-answer {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-tertiary);
+            color: var(--text-secondary);
+        }
+
+        .btn-answer:hover {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .btn-answer-selected-toward {
+            background-color: var(--success);
+            color: var(--bg-primary);
+            border-color: var(--success);
+        }
+
+        .btn-answer-selected-away {
+            background-color: var(--error);
+            color: var(--bg-primary);
+            border-color: var(--error);
+        }
+
+        .feedback-box {
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+        }
+
+        .feedback-correct {
+            background-color: var(--bg-tertiary);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .feedback-incorrect {
+            background-color: var(--bg-tertiary);
+            color: var(--error);
+            border: 1px solid var(--error);
+        }
+
+        .explanation-box {
+            background-color: var(--bg-tertiary);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--accent-primary);
+        }
+
+        .explanation-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .explanation-text {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .key-concept {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: var(--bg-secondary);
+            border-radius: 6px;
+            border-left: 4px solid var(--warning);
+        }
+
+        .explanation-list {
+            list-style-type: disc;
+            list-style-position: inside;
+            color: var(--text-secondary);
+        }
+
+        .explanation-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .explanation-list strong {
+            color: var(--text-primary);
+        }
+
+        .note-box {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background-color: var(--bg-secondary);
+            border-radius: 6px;
+            border-left: 4px solid var(--warning);
+            color: var(--text-secondary);
+        }
+
+        .object-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .rocket-icon {
+            color: var(--warning);
+        }
+
+        .velocity-badge {
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .velocity-badge-spaceship {
+            background-color: var(--warning);
+            color: var(--bg-primary);
+        }
+
+        .velocity-badge-asteroid {
+            background-color: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        [data-theme="dark"] .velocity-badge-spaceship {
+            background-color: var(--fx-yellow-dark);
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .transition-all {
+            transition: all 0.05s ease;
+        }
+
+        .duration-50 {
+            transition-duration: 50ms;
+        }
+
+        @media (max-width: 768px) {
+            .velocity-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .simulation-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .velocity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const Asteroid = ({ size, label }) => {
+          return (
+            <svg width={size} height={size} viewBox="0 0 100 100">
+              <defs>
+                <radialGradient id={`asteroidGrad-${label}`} cx="35%" cy="35%">
+                  <stop offset="0%" style={{ stopColor: '#8B7355', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#6B5644', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#4A3F35', stopOpacity: 1 }} />
+                </radialGradient>
+              </defs>
+              <path
+                d="M50,10 L65,15 L80,25 L90,45 L85,65 L70,85 L45,90 L25,85 L12,70 L10,50 L15,30 L30,15 Z"
+                fill={`url(#asteroidGrad-${label})`}
+                stroke="#3A2F25"
+                strokeWidth="2"
+              />
+              <circle cx="35" cy="30" r="8" fill="#5A4A3A" opacity="0.7" />
+              <circle cx="60" cy="45" r="6" fill="#5A4A3A" opacity="0.7" />
+              <circle cx="45" cy="65" r="5" fill="#5A4A3A" opacity="0.6" />
+              <circle cx="25" cy="55" r="4" fill="#5A4A3A" opacity="0.6" />
+              <circle cx="70" cy="30" r="4" fill="#5A4A3A" opacity="0.5" />
+              <text
+                x="50"
+                y="55"
+                textAnchor="middle"
+                fill="white"
+                fontSize="32"
+                fontWeight="bold"
+                fontFamily="Arial"
+              >
+                {label}
+              </text>
+            </svg>
+          );
+        };
+
+        const RocketIcon = ({ size }) => (
+          <svg 
+            width={size} 
+            height={size} 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          >
+            <path d="M4.5 16.5c-1.5 1.25-2 5-2 5s3.75-.5 5-2c.625-.625 1-1.5 1-2.5v-1.25L6.5 14"></path>
+            <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+          </svg>
+        );
+
+        function AsteroidSimulation() {
+          const [referenceFrame, setReferenceFrame] = useState('earth');
+          const [selectedToward, setSelectedToward] = useState([]);
+          const [selectedAway, setSelectedAway] = useState([]);
+          const [showAnswer, setShowAnswer] = useState(false);
+          const [time, setTime] = useState(0);
+          const [showVectors, setShowVectors] = useState(true);
+          
+          const objects = [
+            { id: 'A', velocity: 600, size: 40, label: 'A' },
+            { id: 'B', velocity: 700, size: 25, label: 'B' },
+            { id: 'C', velocity: 800, size: 30, label: 'C' },
+            { id: 'D', velocity: 400, size: 35, label: 'D' },
+            { id: 'spaceship', velocity: 600, size: 50, label: 'Spaceship' },
+            { id: 'E', velocity: 400, size: 30, label: 'E' }
+          ];
+          
+          const spaceshipVelocity = 600;
+          const correctToward = ['B', 'C', 'E'];
+          const correctAway = ['D'];
+          
+          useEffect(() => {
+            const interval = setInterval(() => {
+              setTime(t => (t + 0.01) % 10);
+            }, 50);
+            return () => clearInterval(interval);
+          }, []);
+          
+          const getPosition = (obj) => {
+            const basePosition = objects.indexOf(obj) * 15 + 5;
+            
+            if (referenceFrame === 'earth') {
+              return basePosition + (obj.velocity * time * 0.01);
+            } else {
+              const relativeVelocity = obj.velocity - spaceshipVelocity;
+              return basePosition + (relativeVelocity * time * 0.01);
+            }
+          };
+          
+          const getVectorLength = (velocity) => {
+            const baseLength = Math.abs(velocity) / 8;
+            return Math.max(baseLength, 10);
+          };
+          
+          const getVectorColor = (velocity) => {
+            if (velocity > 0) return '#10b981';
+            if (velocity < 0) return '#ef4444';
+            return '#6b7280';
+          };
+          
+          const toggleSelection = (list, setList, id) => {
+            if (list.includes(id)) {
+              setList(list.filter(item => item !== id));
+            } else {
+              setList([...list, id]);
+            }
+          };
+          
+          const checkAnswers = () => {
+            setShowAnswer(true);
+          };
+          
+          const resetAnswers = () => {
+            setSelectedToward([]);
+            setSelectedAway([]);
+            setShowAnswer(false);
+          };
+          
+          const getRelativeVelocity = (velocity) => {
+            return velocity - spaceshipVelocity;
+          };
+          
+          const asteroids = objects.filter(obj => obj.id !== 'spaceship');
+          
+          return (
+            <div className="simulation-container">
+              <h1 className="simulation-title">Relative Velocity Simulation</h1>
+
+              <p className="simulation-description">
+                Five asteroids and a spaceship are all moving away from Earth.
+                Determine which asteroids are moving toward or away from the spaceship.
+              </p>
+
+              <div className="button-group">
+                <button
+                  onClick={() => setReferenceFrame('earth')}
+                  className={referenceFrame === 'earth' ? 'btn-primary' : 'btn-inactive'}
+                >
+                  Earth's Reference Frame
+                </button>
+                <button
+                  onClick={() => setReferenceFrame('spaceship')}
+                  className={referenceFrame === 'spaceship' ? 'btn-secondary' : 'btn-inactive'}
+                >
+                  Spaceship's Reference Frame
+                </button>
+                <button
+                  onClick={() => setShowVectors(!showVectors)}
+                  className={showVectors ? 'btn-success' : 'btn-inactive'}
+                >
+                  {showVectors ? 'Hide' : 'Show'} Velocity Vectors
+                </button>
+              </div>
+
+              <div className="canvas-container">
+                <div className="canvas-label">
+                  {referenceFrame === 'earth' ? 'Viewing from Earth →' : 'Viewing from Spaceship'}
+                </div>
+                
+                {objects.map((obj) => {
+                  const position = getPosition(obj);
+                  const displayVelocity = referenceFrame === 'earth' 
+                    ? obj.velocity 
+                    : getRelativeVelocity(obj.velocity);
+                  
+                  const vectorLength = getVectorLength(displayVelocity);
+                  const vectorColor = getVectorColor(displayVelocity);
+                  
+                  return (
+                    <div
+                      key={obj.id}
+                      className="absolute transition-all duration-50"
+                      style={{
+                        left: `${position}%`,
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                      }}
+                    >
+                      {obj.id === 'spaceship' ? (
+                        <div className="object-container">
+                          <div className="rocket-icon">
+                            <RocketIcon size={obj.size} />
+                          </div>
+                          {showVectors && (
+                            <svg
+                              className="absolute" 
+                              style={{ 
+                                left: obj.size / 2, 
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                overflow: 'visible'
+                              }}
+                              width={vectorLength + 20}
+                              height="20"
+                            >
+                              {displayVelocity !== 0 && (
+                                <>
+                                  <defs>
+                                    <marker
+                                      id={`arrowhead-${obj.id}`}
+                                      markerWidth="10"
+                                      markerHeight="10"
+                                      refX="9"
+                                      refY="3"
+                                      orient="auto"
+                                    >
+                                      <polygon
+                                        points="0 0, 10 3, 0 6"
+                                        fill={vectorColor}
+                                      />
+                                    </marker>
+                                  </defs>
+                                  <line
+                                    x1="5"
+                                    y1="10"
+                                    x2={vectorLength + 5}
+                                    y2="10"
+                                    stroke={vectorColor}
+                                    strokeWidth="3"
+                                    markerEnd={`url(#arrowhead-${obj.id})`}
+                                  />
+                                </>
+                              )}
+                              {displayVelocity === 0 && (
+                                <circle cx="10" cy="10" r="4" fill={vectorColor} />
+                              )}
+                            </svg>
+                          )}
+                          <div className="velocity-badge velocity-badge-spaceship">
+                            {displayVelocity} m/s
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="object-container">
+                          <Asteroid size={obj.size} label={obj.label} />
+                          {showVectors && (
+                            <svg 
+                              className="absolute" 
+                              style={{ 
+                                left: obj.size / 2, 
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                overflow: 'visible'
+                              }}
+                              width={Math.abs(displayVelocity) > 0 ? vectorLength + 20 : 30}
+                              height="20"
+                            >
+                              {displayVelocity > 0 && (
+                                <>
+                                  <defs>
+                                    <marker
+                                      id={`arrowhead-${obj.id}`}
+                                      markerWidth="10"
+                                      markerHeight="10"
+                                      refX="9"
+                                      refY="3"
+                                      orient="auto"
+                                    >
+                                      <polygon
+                                        points="0 0, 10 3, 0 6"
+                                        fill={vectorColor}
+                                      />
+                                    </marker>
+                                  </defs>
+                                  <line
+                                    x1="5"
+                                    y1="10"
+                                    x2={vectorLength + 5}
+                                    y2="10"
+                                    stroke={vectorColor}
+                                    strokeWidth="3"
+                                    markerEnd={`url(#arrowhead-${obj.id})`}
+                                  />
+                                </>
+                              )}
+                              {displayVelocity < 0 && (
+                                <>
+                                  <defs>
+                                    <marker
+                                      id={`arrowhead-${obj.id}`}
+                                      markerWidth="10"
+                                      markerHeight="10"
+                                      refX="1"
+                                      refY="3"
+                                      orient="auto"
+                                    >
+                                      <polygon
+                                        points="10 0, 0 3, 10 6"
+                                        fill={vectorColor}
+                                      />
+                                    </marker>
+                                  </defs>
+                                  <line
+                                    x1={vectorLength + 5}
+                                    y1="10"
+                                    x2="5"
+                                    y2="10"
+                                    stroke={vectorColor}
+                                    strokeWidth="3"
+                                    markerEnd={`url(#arrowhead-${obj.id})`}
+                                  />
+                                </>
+                              )}
+                              {displayVelocity === 0 && (
+                                <circle cx="10" cy="10" r="4" fill={vectorColor} />
+                              )}
+                            </svg>
+                          )}
+                          <div className="velocity-badge velocity-badge-asteroid">
+                            {displayVelocity > 0 ? '+' : ''}{displayVelocity} m/s
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {showVectors && (
+                <div className="legend-box">
+                  <h3 className="legend-title">Velocity Vector Legend:</h3>
+                  <div className="legend-items">
+                    <div className="legend-item">
+                      <svg width="40" height="20">
+                        <defs>
+                          <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+                            <polygon points="0 0, 8 3, 0 6" fill="#10b981" />
+                          </marker>
+                        </defs>
+                        <line x1="2" y1="10" x2="32" y2="10" stroke="#10b981" strokeWidth="3" markerEnd="url(#arrow-green)" />
+                      </svg>
+                      <span style={{color: 'var(--success)'}}>Moving Right (Positive velocity)</span>
+                    </div>
+                    <div className="legend-item">
+                      <svg width="40" height="20">
+                        <defs>
+                          <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="1" refY="3" orient="auto">
+                            <polygon points="8 0, 0 3, 8 6" fill="#ef4444" />
+                          </marker>
+                        </defs>
+                        <line x1="32" y1="10" x2="2" y2="10" stroke="#ef4444" strokeWidth="3" markerEnd="url(#arrow-red)" />
+                      </svg>
+                      <span style={{color: 'var(--error)'}}>Moving Left (Negative velocity)</span>
+                    </div>
+                    <div className="legend-item">
+                      <svg width="40" height="20">
+                        <circle cx="20" cy="10" r="4" fill="#6b7280" />
+                      </svg>
+                      <span style={{color: 'var(--text-muted)'}}>Stationary (Zero velocity)</span>
+                    </div>
+                  </div>
+                  <p className="legend-note">Note: Arrow length is proportional to speed (longer = faster)</p>
+                </div>
+              )}
+
+              <div className="info-box">
+                <h3 className="info-title">Velocities (as measured from Earth)</h3>
+                <div className="velocity-grid">
+                  {objects.map(obj => (
+                    <div key={obj.id} className="velocity-item">
+                      <div className="velocity-label">{obj.label}</div>
+                      <div className="velocity-value">{obj.velocity} m/s</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="question-box">
+                <h3 className="question-title">Answer the Questions:</h3>
+
+                <div className="question-section">
+                  <p className="question-text">1. Which asteroids are moving TOWARD the spaceship?</p>
+                  <div className="answer-buttons">
+                    {asteroids.map(obj => (
+                      <button
+                        key={obj.id}
+                        onClick={() => toggleSelection(selectedToward, setSelectedToward, obj.id)}
+                        className={`btn-answer ${
+                          selectedToward.includes(obj.id) ? 'btn-answer-selected-toward' : ''
+                        }`}
+                      >
+                        {obj.label}
+                      </button>
+                    ))}
+                  </div>
+                  {showAnswer && (
+                    <div className={`feedback-box ${
+                      JSON.stringify(selectedToward.sort()) === JSON.stringify(correctToward.sort())
+                        ? 'feedback-correct'
+                        : 'feedback-incorrect'
+                    }`}>
+                      {JSON.stringify(selectedToward.sort()) === JSON.stringify(correctToward.sort())
+                        ? '✓ Correct! B and C (behind spaceship, moving faster) and E (ahead of spaceship, moving slower) are all moving toward the spaceship.'
+                        : `✗ Incorrect. The correct answer is B, C, and E. B and C catch up from behind; the spaceship catches up to E from behind.`}
+                    </div>
+                  )}
+                </div>
+
+                <div className="question-section">
+                  <p className="question-text">2. Which asteroids are moving AWAY from the spaceship?</p>
+                  <div className="answer-buttons">
+                    {asteroids.map(obj => (
+                      <button
+                        key={obj.id}
+                        onClick={() => toggleSelection(selectedAway, setSelectedAway, obj.id)}
+                        className={`btn-answer ${
+                          selectedAway.includes(obj.id) ? 'btn-answer-selected-away' : ''
+                        }`}
+                      >
+                        {obj.label}
+                      </button>
+                    ))}
+                  </div>
+                  {showAnswer && (
+                    <div className={`feedback-box ${
+                      JSON.stringify(selectedAway.sort()) === JSON.stringify(correctAway.sort())
+                        ? 'feedback-correct'
+                        : 'feedback-incorrect'
+                    }`}>
+                      {JSON.stringify(selectedAway.sort()) === JSON.stringify(correctAway.sort())
+                        ? '✓ Correct! Only D is moving away from the spaceship.'
+                        : `✗ Incorrect. The correct answer is D. It's behind the spaceship and moving slower, so it falls further behind!`}
+                    </div>
+                  )}
+                </div>
+
+                <div className="button-group">
+                  <button
+                    onClick={checkAnswers}
+                    className="btn-primary"
+                  >
+                    Check Answers
+                  </button>
+                  <button
+                    onClick={resetAnswers}
+                    className="btn-inactive"
+                  >
+                    Reset
+                  </button>
+                </div>
+              </div>
+
+
+              {showAnswer && (
+                <div className="explanation-box">
+                  <h3 className="explanation-title">Explanation:</h3>
+                  <p className="explanation-text">
+                    Even though all objects are moving away from Earth, whether they're moving toward or away from the spaceship depends on BOTH their position relative to the spaceship AND their velocity.
+                  </p>
+                  <div className="key-concept">
+                    <strong>Key Concept:</strong> "Moving toward" means the distance between objects is DECREASING. "Moving away" means the distance is INCREASING.
+                  </div>
+                  <ul className="explanation-list">
+                    <li><strong>Asteroid B (700 m/s):</strong> Behind spaceship and faster (700 &gt; 600) → B catches up → Moving TOWARD ✓</li>
+                    <li><strong>Asteroid C (800 m/s):</strong> Behind spaceship and faster (800 &gt; 600) → C catches up → Moving TOWARD ✓</li>
+                    <li><strong>Asteroid E (400 m/s):</strong> Ahead of spaceship and slower (400 &lt; 600) → Spaceship catches up to E → Moving TOWARD ✓</li>
+                    <li><strong>Asteroid D (400 m/s):</strong> Behind spaceship and slower (400 &lt; 600) → D falls further behind → Moving AWAY ✓</li>
+                    <li><strong>Asteroid A (600 m/s):</strong> Same speed as spaceship → Stays at constant distance (neither toward nor away)</li>
+                  </ul>
+                  <div className="note-box">
+                    In the spaceship's reference frame: B and C have positive velocities (catching up from behind), E has negative velocity (spaceship approaching it), and D has negative velocity (falling behind appears as backward motion).
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<AsteroidSimulation />);
+    </script>
+</body>
+</html>
