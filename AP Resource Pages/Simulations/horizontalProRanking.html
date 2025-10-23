@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion Simulation</title>
+    <style>
+        /* Flexoki Color Variables */
+        :root {
+            /* Base Colors */
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+
+            /* Light Theme Accent Colors */
+            --fx-red-light: #D14D41;
+            --fx-orange-light: #DA702C;
+            --fx-yellow-light: #D0A215;
+            --fx-green-light: #879A39;
+            --fx-cyan-light: #3AA99F;
+            --fx-blue-light: #4385BE;
+            --fx-purple-light: #8B7EC8;
+            --fx-magenta-light: #CE5D97;
+
+            /* Dark Theme Accent Colors */
+            --fx-red-dark: #AF3029;
+            --fx-orange-dark: #BC5215;
+            --fx-yellow-dark: #AD8301;
+            --fx-green-dark: #66800B;
+            --fx-cyan-dark: #24837B;
+            --fx-blue-dark: #205EA6;
+            --fx-purple-dark: #5E409D;
+            --fx-magenta-dark: #A02F6F;
+
+            /* Light Theme (Default) */
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --border-hover: var(--fx-base-300);
+            --accent-primary: var(--fx-blue-light);
+            --accent-hover: var(--fx-blue-dark);
+            --accent-secondary: var(--fx-purple-light);
+            --success: var(--fx-green-light);
+            --warning: var(--fx-orange-light);
+            --error: var(--fx-red-light);
+            --shadow: rgba(28, 27, 26, 0.1);
+            --shadow-hover: rgba(28, 27, 26, 0.15);
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: var(--fx-blue-dark);
+            --accent-hover: var(--fx-blue-light);
+            --accent-secondary: var(--fx-purple-dark);
+            --success: var(--fx-green-dark);
+            --warning: var(--fx-orange-dark);
+            --error: var(--fx-red-dark);
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-secondary);
+            min-height: 100vh;
+            padding: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+            transform: translateY(-1px);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: 1px solid var(--accent-primary);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-family: inherit;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+
+        .launch-btn {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+        }
+
+        .launch-btn:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+        }
+
+        .reset-btn {
+            background: var(--error);
+            color: var(--bg-primary);
+            border-color: var(--error);
+        }
+
+        .reset-btn:hover {
+            background: var(--fx-red-dark);
+            border-color: var(--fx-red-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+        }
+
+        .toggle-btn {
+            background: var(--accent-secondary);
+            color: var(--bg-primary);
+            border-color: var(--accent-secondary);
+        }
+
+        .toggle-btn:hover {
+            background: var(--fx-purple-dark);
+            border-color: var(--fx-purple-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+        }
+
+        .info-panel {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .info-panel h3 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .info-item {
+            background: var(--bg-tertiary);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .info-item strong {
+            color: var(--accent-primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .canvas-container {
+            position: relative;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 6px var(--shadow);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 15px;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+            color: var(--text-secondary);
+        }
+
+        .legend-box {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid var(--text-primary);
+        }
+
+        .questions {
+            margin-top: 30px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            border-left: 4px solid var(--warning);
+        }
+
+        .questions h3 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        .questions ol {
+            margin-left: 20px;
+        }
+
+        .questions li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .speed-control input[type="range"] {
+            width: 200px;
+        }
+
+        .tables-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .data-table {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .data-table h3 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-tertiary);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table th {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+
+        .data-table tbody tr:hover {
+            background: var(--bg-secondary);
+        }
+
+        .data-table .scenario-name {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .graphs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .graph-panel {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .graph-panel h3 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        .graph-canvas {
+            background: var(--bg-primary);
+            border-radius: 6px;
+            box-shadow: 0 2px 8px var(--shadow);
+            display: block;
+            width: 100%;
+            height: auto;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        /* Smooth transitions for theme switching */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .tables-container,
+            .graphs-container {
+                grid-template-columns: 1fr;
+            }
+
+            .data-table table {
+                font-size: 0.85em;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 8px 6px;
+            }
+
+            .graph-panel canvas {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+    <div class="container">
+        <h1>🎯 Projectile Motion Simulation</h1>
+        <p class="subtitle">Explore how mass, velocity, and height affect projectile motion</p>
+
+        <div class="info-panel">
+            <h3>📊 Scenario Parameters</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Base Values:</strong>
+                    Mass (M) = 1 kg, Velocity (v) = 10 m/s, Height (h) = 20 m
+                </div>
+                <div class="info-item">
+                    <strong>Key Physics:</strong>
+                    Time = √(2h/g), Distance = v × time
+                </div>
+                <div class="info-item">
+                    <strong>Gravity:</strong>
+                    g = 9.8 m/s² (downward)
+                </div>
+            </div>
+        </div>
+
+        <div class="tables-container">
+            <div class="data-table">
+                <h3>📊 Time to Ground Rankings</h3>
+                <table id="timeTable">
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Mass</th>
+                            <th>Velocity</th>
+                            <th>Height</th>
+                            <th>Time (s)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="data-table">
+                <h3>📏 Horizontal Distance Rankings</h3>
+                <table id="distanceTable">
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Mass</th>
+                            <th>Velocity</th>
+                            <th>Height</th>
+                            <th>Distance (m)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="speed-control">
+            <label for="speedSlider"><strong>Animation Speed:</strong></label>
+            <input type="range" id="speedSlider" min="0.5" max="3" step="0.5" value="1">
+            <span id="speedValue">1x</span>
+        </div>
+
+        <div class="controls">
+            <button class="launch-btn" onclick="launchAll()">🚀 Launch All</button>
+            <button class="reset-btn" onclick="resetSimulation()">🔄 Reset</button>
+            <button class="toggle-btn" onclick="toggleTrails()">👁️ Toggle Trails</button>
+            <button class="toggle-btn" onclick="toggleLabels()">🏷️ Toggle Labels</button>
+            <button class="toggle-btn" onclick="toggleGraphs()">📊 Toggle Graphs</button>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="simulationCanvas"></canvas>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #e74c3c;"></div>
+                <span><strong>A:</strong> M, v, h</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #3498db;"></div>
+                <span><strong>B:</strong> M, v/2, h</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #2ecc71;"></div>
+                <span><strong>C:</strong> 2M, v, h</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #f39c12;"></div>
+                <span><strong>D:</strong> M, v, 2h</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #9b59b6;"></div>
+                <span><strong>E:</strong> M, 0, h</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #1abc9c;"></div>
+                <span><strong>F:</strong> M, v, 2h</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #e91e63;"></div>
+                <span><strong>G:</strong> M, 2v, 2h</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #ff5722;"></div>
+                <span><strong>H:</strong> 2M, 2v, h</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #795548;"></div>
+                <span><strong>I:</strong> 2M, v/2, 2h</span>
+            </div>
+        </div>
+
+        <div class="graphs-container" id="graphsContainer" style="display: none;">
+            <div class="graph-panel">
+                <h3>📈 Horizontal Position vs. Time</h3>
+                <canvas id="positionGraph" class="graph-canvas"></canvas>
+            </div>
+            <div class="graph-panel">
+                <h3>📉 Vertical Position vs. Time</h3>
+                <canvas id="verticalPositionGraph" class="graph-canvas"></canvas>
+            </div>
+        </div>
+
+        <div class="info-panel" id="graphNotes" style="display: none; margin-top: 20px;">
+            <h3>📝 Graph Analysis Notes</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Horizontal Position:</strong>
+                    Linear (straight line) motion shows constant horizontal velocity. After landing (⚫), position remains constant (horizontal line).
+                </div>
+                <div class="info-item">
+                    <strong>Vertical Position:</strong>
+                    Parabolic curves show accelerated motion due to gravity. After landing (⚫), height stays at zero (on the ground).
+                </div>
+                <div class="info-item">
+                    <strong>Key Insight:</strong>
+                    Mass doesn't affect motion! Compare scenarios with different masses but same velocity and height - they follow identical paths.
+                </div>
+            </div>
+        </div>
+
+        <div class="questions">
+            <h3>🤔 Challenge Questions</h3>
+            <ol>
+                <li><strong>Rank the situations from the greatest to least time that it will take for the sphere to hit the ground.</strong> Make your ranking on a single line, using > and = signs. Ties are possible.</li>
+                <li><strong>Explain the reasons behind your ranking.</strong> Try to give a brief explanation that covers all the cases rather than explain each case individually.</li>
+                <li><strong>Rank the situations from the greatest to the least horizontal distance that the sphere will travel.</strong> Make your ranking on a single line, using only the > and = signs. Ties are possible.</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('simulationCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set canvas size
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth;
+            canvas.height = Math.min(600, window.innerHeight * 0.6);
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('resize', () => {
+            if (showGraphs) {
+                drawGraphs();
+            }
+        });
+
+        // Physics constants
+        const g = 9.8; // m/s²
+        const M_base = 1; // kg
+        const v_base = 10; // m/s
+        const h_base = 20; // m
+        const scale = canvas.height / 50; // pixels per meter
+
+        // Simulation state
+        let animationSpeed = 1;
+        let showTrails = true;
+        let showLabels = true;
+        let showGraphs = false;
+        let isRunning = false;
+        let startTime = 0;
+        let landedScenarios = new Set();
+
+        // Speed control
+        document.getElementById('speedSlider').addEventListener('input', (e) => {
+            animationSpeed = parseFloat(e.target.value);
+            document.getElementById('speedValue').textContent = animationSpeed + 'x';
+        });
+
+        // Scenario definitions
+        const scenarios = [
+            { name: 'A', mass: M_base, velocity: v_base, height: h_base, color: '#e74c3c' },        // Red
+            { name: 'B', mass: M_base, velocity: v_base/2, height: h_base, color: '#3498db' },      // Blue
+            { name: 'C', mass: 2*M_base, velocity: v_base, height: h_base, color: '#2ecc71' },      // Green
+            { name: 'D', mass: M_base, velocity: v_base, height: 2*h_base, color: '#f39c12' },      // Orange
+            { name: 'E', mass: M_base, velocity: 0, height: h_base, color: '#9b59b6' },             // Purple
+            { name: 'F', mass: M_base, velocity: v_base, height: 2*h_base, color: '#1abc9c' },      // Turquoise
+            { name: 'G', mass: M_base, velocity: 2*v_base, height: 2*h_base, color: '#e91e63' },    // Pink
+            { name: 'H', mass: 2*M_base, velocity: 2*v_base, height: h_base, color: '#ff5722' },    // Deep Orange
+            { name: 'I', mass: 2*M_base, velocity: v_base/2, height: 2*h_base, color: '#795548' }   // Brown
+        ];
+
+        // Calculate physics for each scenario
+        scenarios.forEach(scenario => {
+            scenario.timeToGround = Math.sqrt(2 * scenario.height / g);
+            scenario.horizontalDistance = scenario.velocity * scenario.timeToGround;
+            scenario.trail = [];
+            scenario.radius = 6 + (scenario.mass / M_base) * 2; // Size based on mass
+            scenario.positionData = []; // For graphs
+            scenario.velocityData = []; // For graphs
+            scenario.hasLanded = false;
+            scenario.landingX = 0;
+            scenario.landingY = 0;
+        });
+
+        // Populate tables
+        function populateTables() {
+            // Sort by time (descending)
+            const timeRanked = [...scenarios].sort((a, b) => b.timeToGround - a.timeToGround);
+            const timeTableBody = document.querySelector('#timeTable tbody');
+            timeTableBody.innerHTML = '';
+            timeRanked.forEach((s, index) => {
+                const row = `
+                    <tr style="border-left: 4px solid ${s.color};">
+                        <td class="scenario-name" style="color: ${s.color};">${s.name}</td>
+                        <td>${s.mass}M</td>
+                        <td>${s.velocity === 0 ? '0' : (s.velocity / v_base) + 'v'}</td>
+                        <td>${(s.height / h_base)}h</td>
+                        <td><strong>${s.timeToGround.toFixed(3)}</strong></td>
+                    </tr>
+                `;
+                timeTableBody.innerHTML += row;
+            });
+
+            // Sort by distance (descending)
+            const distanceRanked = [...scenarios].sort((a, b) => b.horizontalDistance - a.horizontalDistance);
+            const distanceTableBody = document.querySelector('#distanceTable tbody');
+            distanceTableBody.innerHTML = '';
+            distanceRanked.forEach((s, index) => {
+                const row = `
+                    <tr style="border-left: 4px solid ${s.color};">
+                        <td class="scenario-name" style="color: ${s.color};">${s.name}</td>
+                        <td>${s.mass}M</td>
+                        <td>${s.velocity === 0 ? '0' : (s.velocity / v_base) + 'v'}</td>
+                        <td>${(s.height / h_base)}h</td>
+                        <td><strong>${s.horizontalDistance.toFixed(2)}</strong></td>
+                    </tr>
+                `;
+                distanceTableBody.innerHTML += row;
+            });
+        }
+
+        populateTables();
+
+        function launchAll() {
+            isRunning = true;
+            startTime = Date.now();
+            landedScenarios.clear();
+            scenarios.forEach(s => {
+                s.trail = [];
+                s.positionData = [];
+                s.velocityData = [];
+                s.hasLanded = false;
+            });
+            animate();
+        }
+
+        function resetSimulation() {
+            isRunning = false;
+            landedScenarios.clear();
+            scenarios.forEach(s => {
+                s.trail = [];
+                s.positionData = [];
+                s.velocityData = [];
+                s.hasLanded = false;
+            });
+            draw();
+            drawGraphs();
+        }
+
+        function toggleTrails() {
+            showTrails = !showTrails;
+            draw();
+        }
+
+        function toggleLabels() {
+            showLabels = !showLabels;
+            draw();
+        }
+
+        function toggleGraphs() {
+            showGraphs = !showGraphs;
+            const graphsContainer = document.getElementById('graphsContainer');
+            const graphNotes = document.getElementById('graphNotes');
+            graphsContainer.style.display = showGraphs ? 'grid' : 'none';
+            graphNotes.style.display = showGraphs ? 'block' : 'none';
+            if (showGraphs) {
+                drawGraphs();
+            }
+        }
+
+        function draw() {
+            // Get theme-aware colors
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const canvasBg = isDark ? '#343331' : '#EFEBD4';
+            const gridColor = isDark ? '#575142' : '#DAD4BA';
+            const groundColor = isDark ? '#6F6144' : '#8B4513';
+            const grassColor = isDark ? '#66800B' : '#228B22';
+            const textColor = isDark ? '#FFFCF0' : '#1C1B1A';
+
+            // Clear canvas
+            ctx.fillStyle = canvasBg;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw grid
+            ctx.strokeStyle = gridColor;
+            ctx.lineWidth = 1;
+            for (let i = 0; i < canvas.width; i += 50) {
+                ctx.beginPath();
+                ctx.moveTo(i, 0);
+                ctx.lineTo(i, canvas.height);
+                ctx.stroke();
+            }
+            for (let i = 0; i < canvas.height; i += 50) {
+                ctx.beginPath();
+                ctx.moveTo(0, i);
+                ctx.lineTo(canvas.width, i);
+                ctx.stroke();
+            }
+
+            // Draw ground
+            const groundY = canvas.height - 50;
+            ctx.fillStyle = groundColor;
+            ctx.fillRect(0, groundY, canvas.width, canvas.height - groundY);
+
+            // Draw grass
+            ctx.fillStyle = grassColor;
+            ctx.fillRect(0, groundY - 10, canvas.width, 10);
+
+            // Calculate current time
+            const elapsedTime = isRunning ? ((Date.now() - startTime) / 1000) * animationSpeed : 0;
+
+            // Find max distance for scaling
+            const maxDistance = Math.max(...scenarios.map(s => s.horizontalDistance));
+            const maxHeight = Math.max(...scenarios.map(s => s.height));
+            const horizontalScale = (canvas.width - 100) / (maxDistance + 5);
+            const verticalScale = (groundY - 100) / (maxHeight + 5);
+
+            // Draw each scenario
+            scenarios.forEach((scenario, index) => {
+                const t = Math.min(elapsedTime, scenario.timeToGround);
+                const x = 50 + scenario.velocity * t * horizontalScale;
+                const y_calc = scenario.height * verticalScale - 0.5 * g * t * t * verticalScale;
+                const y = groundY - 10 - y_calc;
+
+                // Store data for graphs (only while in flight)
+                if (isRunning && t < scenario.timeToGround && !scenario.hasLanded) {
+                    const horizontalPos = scenario.velocity * t;
+                    const verticalPos = scenario.height - 0.5 * g * t * t;
+                    const horizontalVel = scenario.velocity;
+                    const verticalVel = -g * t;
+                    
+                    scenario.positionData.push({ t, x: horizontalPos, y: verticalPos });
+                    scenario.velocityData.push({ t, vx: horizontalVel, vy: verticalVel });
+                }
+
+                // Check if landed
+                if (t >= scenario.timeToGround && !scenario.hasLanded) {
+                    scenario.hasLanded = true;
+                    scenario.landingX = 50 + scenario.horizontalDistance * horizontalScale;
+                    scenario.landingY = groundY - 10;
+                    landedScenarios.add(scenario.name);
+                    
+                    // Add final landing data point (at the moment of landing)
+                    scenario.positionData.push({ 
+                        t: scenario.timeToGround, 
+                        x: scenario.horizontalDistance, 
+                        y: 0 
+                    });
+                    scenario.velocityData.push({ 
+                        t: scenario.timeToGround, 
+                        vx: scenario.velocity, 
+                        vy: 0 
+                    });
+                }
+
+                // Add constant values after landing for graphs (only add one point at current time)
+                if (scenario.hasLanded && isRunning && elapsedTime > scenario.timeToGround) {
+                    const currentTime = elapsedTime;
+                    const lastTime = scenario.positionData.length > 0 ? 
+                        scenario.positionData[scenario.positionData.length - 1].t : 0;
+                    
+                    // Only add if this is significantly different from last time (every 0.1 seconds)
+                    if (currentTime - lastTime > 0.1) {
+                        scenario.positionData.push({ 
+                            t: currentTime, 
+                            x: scenario.horizontalDistance, 
+                            y: 0 
+                        });
+                        scenario.velocityData.push({ 
+                            t: currentTime, 
+                            vx: 0, 
+                            vy: 0 
+                        });
+                    }
+                }
+
+                // Determine position to draw
+                let drawX, drawY;
+                if (scenario.hasLanded) {
+                    drawX = scenario.landingX;
+                    drawY = scenario.landingY;
+                } else {
+                    drawX = x;
+                    drawY = y;
+                }
+
+                // Add to trail (only while in flight)
+                if (isRunning && !scenario.hasLanded &&
+                    (scenario.trail.length === 0 || 
+                     (drawX !== scenario.trail[scenario.trail.length - 1].x || 
+                      drawY !== scenario.trail[scenario.trail.length - 1].y))) {
+                    scenario.trail.push({ x: drawX, y: drawY });
+                }
+
+                // Draw trail
+                if (showTrails && scenario.trail.length > 1) {
+                    ctx.strokeStyle = scenario.color;
+                    ctx.lineWidth = 2;
+                    ctx.globalAlpha = 0.4;
+                    ctx.beginPath();
+                    ctx.moveTo(scenario.trail[0].x, scenario.trail[0].y);
+                    for (let i = 1; i < scenario.trail.length; i++) {
+                        ctx.lineTo(scenario.trail[i].x, scenario.trail[i].y);
+                    }
+                    ctx.stroke();
+                    ctx.globalAlpha = 1;
+                }
+
+                // Draw sphere
+                ctx.fillStyle = scenario.color;
+                ctx.beginPath();
+                ctx.arc(drawX, drawY, scenario.radius, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Draw label
+                if (showLabels) {
+                    ctx.fillStyle = textColor;
+                    ctx.font = 'bold 14px Arial';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(scenario.name, drawX, drawY - scenario.radius - 8);
+                }
+
+                // Draw velocity vector (only at start)
+                if (scenario.velocity > 0 && t < 0.5 && !scenario.hasLanded) {
+                    const arrowLength = scenario.velocity * 3;
+                    ctx.strokeStyle = scenario.color;
+                    ctx.lineWidth = 2;
+                    ctx.beginPath();
+                    ctx.moveTo(drawX, drawY);
+                    ctx.lineTo(drawX + arrowLength, drawY);
+                    ctx.stroke();
+                    
+                    // Arrow head
+                    ctx.beginPath();
+                    ctx.moveTo(drawX + arrowLength, drawY);
+                    ctx.lineTo(drawX + arrowLength - 8, drawY - 4);
+                    ctx.lineTo(drawX + arrowLength - 8, drawY + 4);
+                    ctx.closePath();
+                    ctx.fillStyle = scenario.color;
+                    ctx.fill();
+                }
+            });
+
+            // Draw time display
+            if (isRunning) {
+                ctx.fillStyle = textColor;
+                ctx.font = 'bold 20px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText(`Time: ${elapsedTime.toFixed(2)}s`, 20, 30);
+            }
+        }
+
+        function drawGraphs() {
+            if (!showGraphs) return;
+
+            const dpr = window.devicePixelRatio || 1;
+
+            // Get theme-aware colors
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const graphBg = isDark ? '#FFFCF0' : 'white';
+            const axisColor = isDark ? '#1C1B1A' : '#333';
+            const gridColor = isDark ? '#DAD4BA' : '#e0e0e0';
+            const textColor = isDark ? '#1C1B1A' : '#666';
+
+            // ===== HORIZONTAL POSITION GRAPH =====
+            const posCanvas = document.getElementById('positionGraph');
+            const posCtx = posCanvas.getContext('2d');
+            
+            // Set canvas size for high DPI - responsive to container
+            const posContainer = posCanvas.parentElement;
+            const posWidth = Math.min(600, posContainer.clientWidth - 40);
+            const posHeight = 400;
+            posCanvas.width = posWidth * dpr;
+            posCanvas.height = posHeight * dpr;
+            posCanvas.style.width = posWidth + 'px';
+            posCanvas.style.height = posHeight + 'px';
+            posCtx.scale(dpr, dpr);
+
+            // Clear
+            posCtx.fillStyle = graphBg;
+            posCtx.fillRect(0, 0, posWidth, posHeight);
+
+            // Find max values for scaling
+            let maxTime = Math.max(...scenarios.map(s => s.timeToGround));
+            let maxDistance = Math.max(...scenarios.map(s => s.horizontalDistance));
+            
+            const padding = 60;
+            const graphWidth = posWidth - 2 * padding;
+            const graphHeight = posHeight - 2 * padding;
+
+            // Draw axes
+            posCtx.strokeStyle = axisColor;
+            posCtx.lineWidth = 2;
+            posCtx.beginPath();
+            posCtx.moveTo(padding, padding);
+            posCtx.lineTo(padding, posHeight - padding);
+            posCtx.lineTo(posWidth - padding, posHeight - padding);
+            posCtx.stroke();
+
+            // Labels
+            posCtx.fillStyle = axisColor;
+            posCtx.font = 'bold 14px Arial';
+            posCtx.textAlign = 'center';
+            posCtx.fillText('Time (s)', posWidth / 2, posHeight - 15);
+
+            posCtx.save();
+            posCtx.translate(20, posHeight / 2);
+            posCtx.rotate(-Math.PI / 2);
+            posCtx.fillText('Horizontal Position (m)', 0, 0);
+            posCtx.restore();
+
+            // Grid lines and scale
+            posCtx.strokeStyle = gridColor;
+            posCtx.lineWidth = 1;
+            posCtx.font = '12px Arial';
+            posCtx.fillStyle = textColor;
+            
+            for (let i = 0; i <= 5; i++) {
+                const x = padding + (i / 5) * graphWidth;
+                const t = (i / 5) * maxTime;
+                posCtx.beginPath();
+                posCtx.moveTo(x, padding);
+                posCtx.lineTo(x, posHeight - padding);
+                posCtx.stroke();
+                posCtx.textAlign = 'center';
+                posCtx.fillText(t.toFixed(1), x, posHeight - padding + 20);
+            }
+
+            for (let i = 0; i <= 5; i++) {
+                const y = posHeight - padding - (i / 5) * graphHeight;
+                const d = (i / 5) * maxDistance;
+                posCtx.beginPath();
+                posCtx.moveTo(padding, y);
+                posCtx.lineTo(posWidth - padding, y);
+                posCtx.stroke();
+                posCtx.textAlign = 'right';
+                posCtx.fillText(d.toFixed(0), padding - 8, y + 4);
+            }
+
+            // Add legend note at top of graph
+            posCtx.fillStyle = textColor;
+            posCtx.font = '12px Arial';
+            posCtx.textAlign = 'left';
+            posCtx.fillText('⚫ = Landing point', padding + 10, padding - 10);
+
+            // Plot each scenario
+            scenarios.forEach(scenario => {
+                if (scenario.positionData.length < 2) return;
+
+                posCtx.strokeStyle = scenario.color;
+                posCtx.lineWidth = 3.5;
+                posCtx.lineCap = 'round';
+                posCtx.lineJoin = 'round';
+                posCtx.beginPath();
+
+                let firstPoint = true;
+                let landingPointX, landingPointY;
+                scenario.positionData.forEach((point, idx) => {
+                    const x = padding + (point.t / maxTime) * graphWidth;
+                    const y = posHeight - padding - (point.x / maxDistance) * graphHeight;
+                    
+                    // Check if this is the landing point (when y position becomes 0)
+                    if (point.y === 0 && idx > 0 && scenario.positionData[idx-1].y > 0) {
+                        landingPointX = x;
+                        landingPointY = y;
+                    }
+                    
+                    if (firstPoint) {
+                        posCtx.moveTo(x, y);
+                        firstPoint = false;
+                    } else {
+                        posCtx.lineTo(x, y);
+                    }
+                });
+
+                posCtx.stroke();
+
+                // Draw landing marker (circle at landing point)
+                if (landingPointX && landingPointY) {
+                    posCtx.beginPath();
+                    posCtx.arc(landingPointX, landingPointY, 7, 0, Math.PI * 2);
+                    posCtx.fillStyle = scenario.color;
+                    posCtx.fill();
+                    posCtx.strokeStyle = 'white';
+                    posCtx.lineWidth = 2.5;
+                    posCtx.stroke();
+                }
+
+                // Draw label at end with background
+                if (scenario.positionData.length > 0) {
+                    const lastPoint = scenario.positionData[scenario.positionData.length - 1];
+                    const x = padding + (lastPoint.t / maxTime) * graphWidth;
+                    const y = posHeight - padding - (lastPoint.x / maxDistance) * graphHeight;
+
+                    // Draw background for label
+                    posCtx.fillStyle = graphBg;
+                    posCtx.strokeStyle = gridColor;
+                    posCtx.lineWidth = 1;
+                    posCtx.fillRect(x + 5, y - 12, 24, 18);
+                    posCtx.strokeRect(x + 5, y - 12, 24, 18);
+                    
+                    posCtx.fillStyle = scenario.color;
+                    posCtx.font = 'bold 14px Arial';
+                    posCtx.textAlign = 'left';
+                    posCtx.fillText(scenario.name, x + 8, y + 2);
+                }
+            });
+
+            // ===== VERTICAL POSITION GRAPH =====
+            const vertCanvas = document.getElementById('verticalPositionGraph');
+            const vertCtx = vertCanvas.getContext('2d');
+            
+            // Set canvas size for high DPI - responsive to container
+            const vertContainer = vertCanvas.parentElement;
+            const vertWidth = Math.min(600, vertContainer.clientWidth - 40);
+            const vertHeight = 400;
+            vertCanvas.width = vertWidth * dpr;
+            vertCanvas.height = vertHeight * dpr;
+            vertCanvas.style.width = vertWidth + 'px';
+            vertCanvas.style.height = vertHeight + 'px';
+            vertCtx.scale(dpr, dpr);
+
+            // Clear
+            vertCtx.fillStyle = graphBg;
+            vertCtx.fillRect(0, 0, vertWidth, vertHeight);
+
+            // Find max height for scaling
+            let maxHeight = Math.max(...scenarios.map(s => s.height));
+
+            // Draw axes
+            vertCtx.strokeStyle = axisColor;
+            vertCtx.lineWidth = 2;
+            vertCtx.beginPath();
+            vertCtx.moveTo(padding, padding);
+            vertCtx.lineTo(padding, vertHeight - padding);
+            vertCtx.lineTo(vertWidth - padding, vertHeight - padding);
+            vertCtx.stroke();
+
+            // Labels
+            vertCtx.fillStyle = axisColor;
+            vertCtx.font = 'bold 14px Arial';
+            vertCtx.textAlign = 'center';
+            vertCtx.fillText('Time (s)', vertWidth / 2, vertHeight - 15);
+
+            vertCtx.save();
+            vertCtx.translate(20, vertHeight / 2);
+            vertCtx.rotate(-Math.PI / 2);
+            vertCtx.fillText('Vertical Position (m)', 0, 0);
+            vertCtx.restore();
+
+            // Grid and scale
+            vertCtx.strokeStyle = gridColor;
+            vertCtx.lineWidth = 1;
+            vertCtx.font = '12px Arial';
+            vertCtx.fillStyle = textColor;
+            
+            for (let i = 0; i <= 5; i++) {
+                const x = padding + (i / 5) * graphWidth;
+                const t = (i / 5) * maxTime;
+                vertCtx.beginPath();
+                vertCtx.moveTo(x, padding);
+                vertCtx.lineTo(x, vertHeight - padding);
+                vertCtx.stroke();
+                vertCtx.textAlign = 'center';
+                vertCtx.fillText(t.toFixed(1), x, vertHeight - padding + 20);
+            }
+
+            for (let i = 0; i <= 5; i++) {
+                const y = vertHeight - padding - (i / 5) * graphHeight;
+                const h = (i / 5) * maxHeight;
+                vertCtx.beginPath();
+                vertCtx.moveTo(padding, y);
+                vertCtx.lineTo(vertWidth - padding, y);
+                vertCtx.stroke();
+                vertCtx.textAlign = 'right';
+                vertCtx.fillText(h.toFixed(0), padding - 8, y + 4);
+            }
+
+            // Add legend note at top of graph
+            vertCtx.fillStyle = textColor;
+            vertCtx.font = '12px Arial';
+            vertCtx.textAlign = 'left';
+            vertCtx.fillText('⚫ = Landing point', padding + 10, padding - 10);
+
+            // Plot vertical position for each scenario
+            scenarios.forEach(scenario => {
+                if (scenario.positionData.length < 2) return;
+
+                vertCtx.strokeStyle = scenario.color;
+                vertCtx.lineWidth = 3.5;
+                vertCtx.lineCap = 'round';
+                vertCtx.lineJoin = 'round';
+                vertCtx.beginPath();
+
+                let firstPoint = true;
+                let landingPointX, landingPointY;
+                scenario.positionData.forEach((point, idx) => {
+                    const x = padding + (point.t / maxTime) * graphWidth;
+                    const y = vertHeight - padding - (point.y / maxHeight) * graphHeight;
+                    
+                    // Check if this is the landing point (when y position becomes 0)
+                    if (point.y === 0 && idx > 0 && scenario.positionData[idx-1].y > 0) {
+                        landingPointX = x;
+                        landingPointY = y;
+                    }
+                    
+                    if (firstPoint) {
+                        vertCtx.moveTo(x, y);
+                        firstPoint = false;
+                    } else {
+                        vertCtx.lineTo(x, y);
+                    }
+                });
+
+                vertCtx.stroke();
+
+                // Draw landing marker (circle at landing point)
+                if (landingPointX && landingPointY) {
+                    vertCtx.beginPath();
+                    vertCtx.arc(landingPointX, landingPointY, 7, 0, Math.PI * 2);
+                    vertCtx.fillStyle = scenario.color;
+                    vertCtx.fill();
+                    vertCtx.strokeStyle = 'white';
+                    vertCtx.lineWidth = 2.5;
+                    vertCtx.stroke();
+                }
+
+                // Draw label with background
+                if (scenario.positionData.length > 0) {
+                    const lastPoint = scenario.positionData[scenario.positionData.length - 1];
+                    const x = padding + (lastPoint.t / maxTime) * graphWidth;
+                    const y = vertHeight - padding - (lastPoint.y / maxHeight) * graphHeight;
+
+                    // Draw background for label
+                    vertCtx.fillStyle = graphBg;
+                    vertCtx.strokeStyle = gridColor;
+                    vertCtx.lineWidth = 1;
+                    vertCtx.fillRect(x + 5, y - 12, 24, 18);
+                    vertCtx.strokeRect(x + 5, y - 12, 24, 18);
+                    
+                    vertCtx.fillStyle = scenario.color;
+                    vertCtx.font = 'bold 14px Arial';
+                    vertCtx.textAlign = 'left';
+                    vertCtx.fillText(scenario.name, x + 8, y + 2);
+                }
+            });
+        }
+
+        function animate() {
+            if (!isRunning) return;
+
+            draw();
+            if (showGraphs) {
+                drawGraphs();
+            }
+
+            const elapsedTime = ((Date.now() - startTime) / 1000) * animationSpeed;
+            const maxTime = Math.max(...scenarios.map(s => s.timeToGround));
+
+            if (elapsedTime < maxTime + 0.5) {
+                requestAnimationFrame(animate);
+            } else {
+                isRunning = false;
+                if (showGraphs) {
+                    drawGraphs();
+                }
+            }
+        }
+
+        // Initial draw
+        draw();
+        drawGraphs();
+
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            // Redraw canvas with new theme colors
+            draw();
+            if (showGraphs) {
+                drawGraphs();
+            }
+        }
+
+        // Load saved theme preference
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+
+        // Initialize theme on page load
+        loadTheme();
+    </script>
+</body>
+</html>
