@@ -478,6 +478,31 @@ When a boat heads straight across, the river current carries it downstream. The 
 
 ---
 
+![center w:600](https://www.physicsclassroom.com/Class/vectors/u3l1f4.gif)
+
+---
+
+<div class='columns'>
+<div>
+
+A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
+
+1. What is the resultant velocity of the motorboat?
+2. If the width of the river is 80 meters wide, then how much time does it take the boat to travel shore to shore?
+3. What distance downstream does the boat reach the opposite shore?
+
+</div>
+ 
+<div>
+
+</div>
+</div>
+
+
+
+
+---
+
 # Pivot: 2D Motion with a Drone
 
 
