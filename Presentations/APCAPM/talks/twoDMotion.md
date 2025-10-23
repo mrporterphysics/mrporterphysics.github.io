@@ -29,6 +29,12 @@ img[alt~="center"] {
 
 ---
 
+# Freefall 
+
+<iframe width="1100" height="515" src="https://www.youtube.com/embed/E43-CfukEgs?si=8EBUCGY2lQHrCsZ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Freefall
 
 * An object in **freefall** is on object which is only acted on by the force of gravity
@@ -36,6 +42,10 @@ img[alt~="center"] {
 * $g$ is known as _the acceleration due to gravity_ 
 * But is best to be called ***gravitational field strength***
 * Direction of $g$ is towards the center of the planet (down)
+
+---
+
+<video height = "625" controls src="../videos/freefallfive.mov" title="Title"></video>
 
 ---
 

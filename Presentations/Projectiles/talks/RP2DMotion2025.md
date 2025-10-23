@@ -470,6 +470,12 @@ When a boat heads straight across, the river current carries it downstream. The 
 
 ![center w:400](https://openstax.org/apps/image-cdn/v1/f=webp/apps/archive/20250916.165151/resources/4a95f3dc74d754bf791cdafa69c8521b930b1c14)
 
+
+---
+
+<iframe id="interactiveIframe" style="width:100%; height:100%;" scrolling="no" allowfullscreen="allowfullscreen" src="https://www.physicsclassroom.com/html-module/river-boat/1/index.html"></iframe>
+
+
 ---
 
 # Pivot: 2D Motion with a Drone
