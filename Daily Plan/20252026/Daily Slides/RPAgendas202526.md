@@ -17,6 +17,34 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.24 **Earth Science**
+
+##### **❓ of the 📅**: Which animal would be the scariest if it was super-sized? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. River Boat Simulation Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model 2D Relative Motion with a Computational Model_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.22 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could only eat one meal for the rest of your life, what would it be?
