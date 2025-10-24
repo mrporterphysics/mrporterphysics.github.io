@@ -18,6 +18,35 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.25 **AP Physics**
+
+##### **❓ of the 📅**: Which animal would be the scariest if it was super-sized? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Free Fall
+3. Free Fall Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define free fall and solve problems involving free fall motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 In each case shown, someone is running on a flatbed train car as the train moves. In cases C and D, the person is running toward the front of the train, while in cases A and B the person is running toward the rear. The speeds of the train and of each person relative to the train are given. 
 
 ![center w:500](image-25.png)
