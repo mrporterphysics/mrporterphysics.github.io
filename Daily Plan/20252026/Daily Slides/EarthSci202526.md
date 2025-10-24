@@ -19,6 +19,33 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.1024 **Earth Science**
+
+##### **❓ of the 📅**: Which animal would be the scariest if it was super-sized?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Kepler's Laws Simulation Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model planetary motion with Kepler's Laws_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.23 **Earth Science**
 
 ##### **❓ of the 📅**: If you were a pirate, what would your pirate name be? 🏴‍☠️🦜
