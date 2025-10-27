@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.27 **Regents Physics**
+
+##### **❓ of the 📅**: What superhero power would be the best to have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Riverboat](https://www.physicsclassroom.com/interactive/vectors-and-projectiles/river-boat) Relative Motion Simulation Lab
+    - Answer all questions in lab notebook
+2. Physics Classroom Riverboat Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use vector addition to solve River Boat Questions_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.24 **Earth Science**
 
 ##### **❓ of the 📅**: Which animal would be the scariest if it was super-sized? 
