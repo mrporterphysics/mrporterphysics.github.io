@@ -46,7 +46,7 @@ math: mathjax
 
 ---
 
-# 2025.10.24 **Earth Science**
+# 2025.10.24 **Regents Physics**
 
 ##### **❓ of the 📅**: Which animal would be the scariest if it was super-sized? 
 
