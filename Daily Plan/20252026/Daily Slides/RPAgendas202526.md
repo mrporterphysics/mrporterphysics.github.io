@@ -17,6 +17,12 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# Which Jack-o-lantern is your favorite?
+
+![bg fit right](15243808-F24F-4B27-B693-BC6E193887E9_1_105_c.jpeg)
+
+---
+
 # 2025.10.27 **Regents Physics**
 
 ##### **❓ of the 📅**: What superhero power would be the best to have?
