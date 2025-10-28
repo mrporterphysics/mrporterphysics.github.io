@@ -28,7 +28,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Free Fall Notes
+1. [Free Fall Notes](../../../Presentations/APCAPM/talks/twoDMotion.html)
 2. Free Fall Think Sheet & Concept Check
 3. PC Practice Questions
 4. 🚀 Rocket Science: AP Workbook 1.J & 1.K
