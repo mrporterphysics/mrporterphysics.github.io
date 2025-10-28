@@ -258,10 +258,7 @@ _A soccer ball is kicked horizontally off a 22.0-meter high hill and lands a dis
 
 
 
-![bg fit right](image-19.png)
-
-
-
+![bg fit right:40%](image-19.png)
 
 ---
 
@@ -279,7 +276,7 @@ Suppose that an airplane flying 60 m/s, at a height of 300 meters, dropped a sac
 
 ---
 
-# <!--fit---> Marble Mini-Experiment
+# <!--fit---> **Lab:** Marble Mini-Experiment
 
 1. Determine the launch velocity of your marble.
 
