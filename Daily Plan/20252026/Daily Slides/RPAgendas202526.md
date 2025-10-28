@@ -19,7 +19,7 @@ math: mathjax
 
 # 2025.10.28 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Have you checked anything off of your "bucket list"?
 
 <div class ='columns'>
 

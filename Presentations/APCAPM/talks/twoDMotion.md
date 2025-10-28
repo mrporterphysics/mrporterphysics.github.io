@@ -76,6 +76,33 @@ img[alt~="center"] {
 
 ---
 
+# Projectiles 
+
+![bg fit right](a-man-in-a-red-shirt-sits-on-top-of-a-wooden-structure.gif)
+
+---
+
+# Projectile Motion 
+
+_Projectile_ => object in the air undergoing free fall motion
+
+<div class='columns'>
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/09/Y-Axis-1D-Motion.gif)
+
+</div>
+ 
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/09/2D-Projectile-Motion.gif)
+
+</div>
+</div>
+
+
+---
+
 # Horizontal **Projectiles** <!--fit--->
 
 ---
@@ -96,9 +123,7 @@ Two toy trucks roll off the ends of identical tables. The speeds and masses of t
 
 ![center w:500](../figures/horizprojec2.png)
 
-**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
-
-Explain your reasoning.
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?** Explain your reasoning.
 
 ---
 
@@ -107,13 +132,81 @@ Explain your reasoning.
 
 ---
 
+# What are the three possible outcomes?
+
+1) Right ball ($v_x > 0$) hits first 
+2) Left ball ($v_x =0$) hits first 
+3) Balls hit at the same time 
+
 ---
 
-# Horizontal Projectiles 
+# Projectiles 
 
 * A ***projectile*** is an object that *only* experiences a gravitational force
-* For _**horizontal projectiles**_ the $v_{0y} = 0$
 * We can separate motion in the $x$ and $y$ planes and solve separately
+
+<div class='columns'>
+<div>
+
+<div class='columns'>
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/10/Ball-Roll2b.gif)
+
+</div>
+ 
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/09/Constant-Velocity-Equal-Spaced.jpg)
+
+</div>
+</div>
+
+</div>
+ 
+<div>
+
+
+<div class='columns'>
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/09/Throw-Up.gif)
+
+</div>
+ 
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/09/Y-Axis-Acceleration.jpg)
+
+</div>
+</div>
+
+</div>
+</div>
+
+---
+
+# Projectiles 
+
+<div class='columns'>
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/09/Throw-up-and-ball-roll.gif)
+
+</div>
+
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/09/Combined-X-and-Y-axis.jpg)
+
+</div>
+
+<div>
+
+![center](https://stickmanphysics.com/wp-content/uploads/2020/09/viy-30-vx-5.jpg)
+
+</div>
+</div>
 
 ---
 
