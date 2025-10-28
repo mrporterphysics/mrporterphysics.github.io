@@ -210,7 +210,7 @@ Two toy trucks roll off the ends of identical tables. The speeds and masses of t
 
 ---
 
-# Horizontal Projectils 
+#  Projectiles 
 
 <div class='columns'>
 
@@ -230,18 +230,38 @@ $$\Delta x = v_x t$$
 
 - constant acceleration $a_y = g$
 
-$$\Delta y = \frac{1}{2}gt^2$$
+$$\Delta y = v_{y0}t + \frac{1}{2}gt^2$$
 
-$$v_y = gt$$
+$$v_y = v_{y0} + gt$$
 
-$$v_y^2 = 2g\Delta y$$
+$$v_y^2 = v_{y0}^2 + 2g\Delta y$$
 
 </div></div>
 
 
 ---
 
-# Double Cross Diagram <!--fit--->
+# Horizontal Projectiles 
+
+- $v_{y0} = 0 m/s$ => means we treat y-motion as if the object is dropped
+
+![bg fit right](https://www.physicsclassroom.com/mmedia/vectors/hlp.gif)
+
+
+---
+
+# Double Cross Diagram 
+
+
+
+_A soccer ball is kicked horizontally off a 22.0-meter high hill and lands a distance of 35.0 meters from the edge of the hill. Determine the initial horizontal velocity of the soccer ball._
+
+
+
+![bg fit right](image-19.png)
+
+
+
 
 ---
 
