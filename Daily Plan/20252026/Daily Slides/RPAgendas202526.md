@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.28 **Regents Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Lab
+2. Riverboat Notes & Summary
+3. Riverboat PC Concept Check
+4. Riverboat Think Sheet - work with partner(s) on whiteboard
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve 2D relative motion problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # Which Jack-o-lantern is your favorite?
 
 ![bg fit right](15243808-F24F-4B27-B693-BC6E193887E9_1_105_c.jpeg)

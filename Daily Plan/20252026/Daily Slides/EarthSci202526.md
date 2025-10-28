@@ -19,6 +19,64 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.28 **Earth Science**
+
+##### **❓ of the 📅**: What is your Halloween costume this year?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish 3rd Law Simulation & Discuss 
+2. Finish 2nd Law Simulation & Discuss
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Kepler's 2nd Law_
+
+🥅 _Define Kepler's 3rd Law_
+
+### 📆 Upcoming
+
+- State Lab **Thursday**
+    - Reschedule any lessons, try not to be absent...
+
+</div>
+</div>
+
+---
+
+# Kepler’s Third Law: 
+
+### Period–Distance Relationship
+
+_For objects orbiting the same star, the square of the period (T) is proportional to the cube of the semi-major axis (a) ($T^2 \propto a^3$)._
+
+---
+
+# Kepler’s Second Law: 
+
+### Equal Areas in Equal Times
+
+_A planet sweeps out equal areas in equal time intervals._
+
+- Consequences:
+    - Fastest at **periapsis** (closest approach).
+    - Slowest at **apoapsis** (furthest point).
+- Vocabulary:
+    - **Periapsis/Apoapsis** (general).
+    - Around the Sun: perihelion/aphelion.
+    - Around Earth: perigee/apogee.
+
+
+
+---
 
 # Which Jack-o-lantern is your favorite?
 
@@ -77,31 +135,6 @@ $$\boxed{\text{Eccentricity} = \frac{\text{distance between foci}}{\text{length 
 
 ![bg fit](image-23.png)
 ![bg fit](image-24.png)
-
----
-
-# Kepler’s Second Law: 
-
-### Equal Areas in Equal Times
-
-_A planet sweeps out equal areas in equal time intervals._
-
-- Consequences:
-    - Fastest at **periapsis** (closest approach).
-    - Slowest at **apoapsis** (furthest point).
-- Vocabulary:
-    - **Periapsis/Apoapsis** (general).
-    - Around the Sun: perihelion/aphelion.
-    - Around Earth: perigee/apogee.
-
----
-
-# Kepler’s Third Law: 
-
-### Period–Distance Relationship
-
-_For objects orbiting the same star, the square of the period (T) is proportional to the cube of the semi-major axis (a) ($T^2 \propto a^3$)._
-
 
 ---
 

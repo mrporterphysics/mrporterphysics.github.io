@@ -18,6 +18,38 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.28 **AP Physics**
+
+##### **❓ of the 📅**: Questions
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Free Fall Notes
+2. Free Fall Think Sheet & Concept Check
+3. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Homework
+
+- 
+- 
+
+</div>
+</div>
+
+---
+
 # 2025.10.25 **AP Physics**
 
 ##### **❓ of the 📅**: Which animal would be the scariest if it was super-sized? 
