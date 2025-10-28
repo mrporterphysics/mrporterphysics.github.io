@@ -20,7 +20,7 @@ math: mathjax
 
 # 2025.10.28 **AP Physics**
 
-##### **❓ of the 📅**: Questions
+##### **❓ of the 📅**: Have you ever completed anything on your "bucket list"?
 
 <div class ='columns'>
 
@@ -30,7 +30,8 @@ math: mathjax
 
 1. Free Fall Notes
 2. Free Fall Think Sheet & Concept Check
-3. 
+3. PC Practice Questions
+4. 🚀 Rocket Science: AP Workbook 1.J & 1.K
 
 </div>
 
@@ -38,12 +39,13 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model the motion of objects in free fall_
 
 ### 📆 Homework
 
-- 
-- 
+Finish
+- Kinematics 6: Free Fall and Kinematic Equations
+- Kinematics 7: Free Fall, Rocket Science, and KEs
 
 </div>
 </div>

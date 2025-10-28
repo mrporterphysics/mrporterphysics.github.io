@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Motion Simulator</title>
+    <style>
+        /* Flexoki Color Scheme */
+        :root {
+            /* Base Colors */
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+
+            /* Accent Colors */
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+
+        /* Light Theme */
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --border-hover: var(--fx-base-300);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+            --shadow-hover: rgba(28, 27, 26, 0.15);
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
+        }
+        
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+        
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .theme-toggle::before {
+            content: '☀️ Light';
+        }
+        
+        [data-theme="dark"] .theme-toggle::before {
+            content: '🌙 Dark';
+        }
+        
+        .question {
+            background-color: var(--bg-tertiary);
+            padding: 25px;
+            border-left: 4px solid var(--accent-primary);
+            margin: 0;
+        }
+        
+        .question h2 {
+            color: var(--accent-primary);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .question p {
+            line-height: 1.8;
+            font-size: 1.05em;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .simulation-container {
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: var(--bg-primary);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        .controls {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .control-group {
+            margin: 15px 0;
+        }
+        
+        label {
+            display: inline-block;
+            min-width: 180px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        input[type="range"] {
+            width: 50%;
+            margin: 0 15px;
+            vertical-align: middle;
+            accent-color: var(--accent-primary);
+        }
+        
+        button {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+            font-family: inherit;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        button:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+            transform: translateY(-1px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .value-display {
+            display: inline-block;
+            min-width: 80px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--accent-primary);
+        }
+        
+        .explanation {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--accent-secondary);
+        }
+        
+        .explanation h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .explanation p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        
+        .info-box {
+            background-color: var(--bg-tertiary);
+            border: 2px solid var(--warning);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        
+        .info-box strong {
+            color: var(--warning);
+        }
+
+        .graph-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        @media (max-width: 768px) {
+            .graph-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .answer-section {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid var(--success);
+        }
+
+        .answer-section h3 {
+            color: var(--success);
+            margin-bottom: 12px;
+        }
+
+        .answer-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background-color: var(--warning);
+            color: var(--bg-primary);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rocket Motion Simulator</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+        
+        <div class="question">
+            <h2>Scenario</h2>
+            <p>A rocket fires its engines to launch straight up from rest with an upward acceleration of 5 m/s² for 10 seconds. After this time, the engines shut off, and the rocket freely falls straight back to Earth's surface.</p>
+        </div>
+        
+        <div class="content">
+            <div class="controls">
+                <div class="control-group">
+                    <label>Powered Acceleration:</label>
+                    <input type="range" id="acceleration" min="3" max="10" value="5" step="0.5">
+                    <span class="value-display" id="accel-display">5.0 m/s²</span>
+                </div>
+                <div class="control-group">
+                    <label>Engine Burn Time:</label>
+                    <input type="range" id="burn-time" min="5" max="15" value="10" step="0.5">
+                    <span class="value-display" id="burn-display">10.0 s</span>
+                </div>
+                <div class="control-group">
+                    <label>Animation Speed:</label>
+                    <input type="range" id="speed" min="0.5" max="3" value="1" step="0.1">
+                    <span class="value-display" id="speed-display">1.0x</span>
+                </div>
+                <div class="control-group">
+                    <button onclick="launchRocket()">🚀 Launch</button>
+                    <button onclick="resetSimulation()">🔄 Reset</button>
+                    <button onclick="togglePause()">⏯️ Pause/Resume</button>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>Current Time:</strong> <span id="current-time">0.00</span> s | 
+                <strong>Velocity:</strong> <span id="current-velocity">0.00</span> m/s | 
+                <strong>Height:</strong> <span id="current-height">0.00</span> m | 
+                <strong>Phase:</strong> <span id="current-phase">Ready</span>
+            </div>
+
+            <div class="simulation-container">
+                <canvas id="rocket-canvas" width="400" height="600"></canvas>
+            </div>
+
+            <div class="graph-container">
+                <div class="simulation-container">
+                    <h3 style="text-align: center; margin-bottom: 10px; color: var(--accent-primary);">Acceleration vs Time</h3>
+                    <canvas id="accel-graph" width="550" height="400"></canvas>
+                </div>
+                <div class="simulation-container">
+                    <h3 style="text-align: center; margin-bottom: 10px; color: var(--accent-primary);">Velocity vs Time</h3>
+                    <canvas id="velocity-graph" width="550" height="400"></canvas>
+                </div>
+            </div>
+
+            <div class="answer-section">
+                <h3>Answers to Problem Questions</h3>
+                <p><strong>Part C:</strong> Velocity after 10 seconds = <span class="highlight" id="velocity-at-10">50.0 m/s</span></p>
+                <p><strong>Part D:</strong> Height after 10 seconds = <span class="highlight" id="height-at-10">250.0 m</span></p>
+                <p><strong>Part E:</strong> At 10.1 seconds (after engines shut off), the rocket is in free fall. The acceleration is <span class="highlight">-9.8 m/s²</span> (downward), which is the acceleration due to gravity.</p>
+                <p><strong>Part F:</strong> At 10.1 seconds, the rocket is still moving <span class="highlight">upward</span> because it has positive velocity. It won't reach maximum height until velocity becomes zero.</p>
+                <p><strong>Time to Max Height:</strong> <span class="highlight" id="time-max-height">15.10 s</span></p>
+                <p><strong>Maximum Height:</strong> <span class="highlight" id="max-height-value">377.55 m</span></p>
+                <p><strong>Time to Land:</strong> <span class="highlight" id="landing-time">18.77 s</span></p>
+            </div>
+
+            <div class="explanation">
+                <h3>Understanding the Physics</h3>
+                <p><strong>Phase 1 (0-10s): Powered Flight</strong></p>
+                <p>During powered flight, the rocket experiences constant upward acceleration of 5 m/s². The velocity increases linearly: v = at = 5t. After 10 seconds, v = 50 m/s. The height increases quadratically: h = ½at² = ½(5)(10)² = 250 m.</p>
+                
+                <p style="margin-top: 15px;"><strong>Phase 2 (10s-15.1s): Free Fall (ascending)</strong></p>
+                <p>After engines shut off, only gravity acts on the rocket (a = -9.8 m/s²). The rocket continues upward but decelerates. Using v = v₀ + at, when v = 0: 0 = 50 + (-9.8)t, so t = 5.10 more seconds. Time to max height = 10 + 5.10 = 15.10 s.</p>
+                <p>Additional height gained: h = v₀t + ½at² = 50(5.10) + ½(-9.8)(5.10)² = 127.55 m. Total max height = 250 + 127.55 = 377.55 m.</p>
+                
+                <p style="margin-top: 15px;"><strong>Phase 3 (15.1s-18.77s): Free Fall (descending)</strong></p>
+                <p>The rocket falls back to Earth from maximum height. Using y = y₀ + v₀t + ½at² with y = 0, y₀ = 377.55 m, v₀ = 0, and a = -9.8 m/s²: 0 = 377.55 + 0 + ½(-9.8)t². Solving: t = 8.77 s. Total time to landing = 10 + 8.77 = 18.77 s.</p>
+            </div>
+        </div>
+        
+        <footer>
+            Interactive Physics Simulation | Created for High School Physics
+        </footer>
+    </div>
+    
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <script>
+        // Canvas elements
+        const rocketCanvas = document.getElementById('rocket-canvas');
+        const rocketCtx = rocketCanvas.getContext('2d');
+        const accelCanvas = document.getElementById('accel-graph');
+        const accelCtx = accelCanvas.getContext('2d');
+        const velocityCanvas = document.getElementById('velocity-graph');
+        const velocityCtx = velocityCanvas.getContext('2d');
+
+        // Physics constants
+        const g = 9.8; // m/s²
+
+        // Simulation parameters
+        let a0 = 5.0; // powered acceleration (m/s²)
+        let tBurn = 10.0; // burn time (s)
+        let animSpeed = 1.0; // animation speed multiplier
+
+        // Simulation state
+        let t = 0; // current time (s)
+        let v = 0; // current velocity (m/s)
+        let y = 0; // current height (m)
+        let a = 0; // current acceleration (m/s²)
+        let isRunning = false;
+        let isPaused = false;
+        let animationId;
+
+        // Data arrays for graphing
+        let timeData = [];
+        let accelData = [];
+        let velocityData = [];
+
+        // Calculated values
+        let vAtBurn = 0; // velocity at end of burn
+        let yAtBurn = 0; // height at end of burn
+        let tMaxHeight = 0; // time to max height
+        let yMax = 0; // maximum height
+        let tLanding = 0; // time to landing
+
+        // Event listeners
+        document.getElementById('acceleration').addEventListener('input', function(e) {
+            a0 = parseFloat(e.target.value);
+            document.getElementById('accel-display').textContent = a0.toFixed(1) + ' m/s²';
+            if (!isRunning) updateCalculations();
+        });
+
+        document.getElementById('burn-time').addEventListener('input', function(e) {
+            tBurn = parseFloat(e.target.value);
+            document.getElementById('burn-display').textContent = tBurn.toFixed(1) + ' s';
+            if (!isRunning) updateCalculations();
+        });
+
+        document.getElementById('speed').addEventListener('input', function(e) {
+            animSpeed = parseFloat(e.target.value);
+            document.getElementById('speed-display').textContent = animSpeed.toFixed(1) + 'x';
+        });
+
+        function updateCalculations() {
+            // Calculate values at end of burn
+            vAtBurn = a0 * tBurn;
+            yAtBurn = 0.5 * a0 * tBurn * tBurn;
+
+            // Time from burn to max height
+            const tRise = vAtBurn / g;
+            tMaxHeight = tBurn + tRise;
+
+            // Additional height after burn
+            const yAdditional = vAtBurn * tRise - 0.5 * g * tRise * tRise;
+            yMax = yAtBurn + yAdditional;
+
+            // Time from max height to landing
+            const tFall = Math.sqrt(2 * yMax / g);
+            tLanding = tMaxHeight + tFall;
+
+            // Update display
+            document.getElementById('velocity-at-10').textContent = vAtBurn.toFixed(1) + ' m/s';
+            document.getElementById('height-at-10').textContent = yAtBurn.toFixed(1) + ' m';
+            document.getElementById('time-max-height').textContent = tMaxHeight.toFixed(2) + ' s';
+            document.getElementById('max-height-value').textContent = yMax.toFixed(2) + ' m';
+            document.getElementById('landing-time').textContent = tLanding.toFixed(2) + ' s';
+        }
+
+        function launchRocket() {
+            if (isRunning) return;
+            
+            isRunning = true;
+            isPaused = false;
+            t = 0;
+            v = 0;
+            y = 0;
+            a = a0;
+            timeData = [];
+            accelData = [];
+            velocityData = [];
+            
+            updateCalculations();
+            animate();
+        }
+
+        function resetSimulation() {
+            cancelAnimationFrame(animationId);
+            isRunning = false;
+            isPaused = false;
+            t = 0;
+            v = 0;
+            y = 0;
+            a = 0;
+            timeData = [];
+            accelData = [];
+            velocityData = [];
+            
+            updateCalculations();
+            updateDisplay();
+            drawRocket();
+            drawAccelGraph();
+            drawVelocityGraph();
+        }
+
+        function togglePause() {
+            if (!isRunning) return;
+            isPaused = !isPaused;
+            if (!isPaused) animate();
+        }
+
+        function animate() {
+            if (!isRunning || isPaused) return;
+
+            const dt = 0.016 * animSpeed; // time step adjusted by animation speed
+            t += dt;
+
+            // Determine current phase and calculate acceleration
+            if (t <= tBurn) {
+                // Phase 1: Powered flight
+                a = a0;
+                v = a0 * t;
+                y = 0.5 * a0 * t * t;
+            } else if (t <= tLanding) {
+                // Phase 2 & 3: Free fall
+                a = -g;
+                const tSinceBurn = t - tBurn;
+                v = vAtBurn - g * tSinceBurn;
+                y = yAtBurn + vAtBurn * tSinceBurn - 0.5 * g * tSinceBurn * tSinceBurn;
+                
+                // Stop if hit ground
+                if (y <= 0) {
+                    y = 0;
+                    v = 0;
+                    a = 0;
+                    isRunning = false;
+                }
+            } else {
+                // Finished
+                y = 0;
+                v = 0;
+                a = 0;
+                isRunning = false;
+            }
+
+            // Store data for graphing
+            timeData.push(t);
+            accelData.push(a);
+            velocityData.push(v);
+
+            // Update display
+            updateDisplay();
+            drawRocket();
+            drawAccelGraph();
+            drawVelocityGraph();
+
+            if (isRunning) {
+                animationId = requestAnimationFrame(animate);
+            }
+        }
+
+        function updateDisplay() {
+            document.getElementById('current-time').textContent = t.toFixed(2);
+            document.getElementById('current-velocity').textContent = v.toFixed(2);
+            document.getElementById('current-height').textContent = y.toFixed(2);
+            
+            let phase = 'Ready';
+            if (isRunning) {
+                if (t <= tBurn) {
+                    phase = '🚀 Powered Ascent';
+                } else if (v > 0) {
+                    phase = '⬆️ Coasting Up';
+                } else if (v < 0) {
+                    phase = '⬇️ Falling';
+                } else {
+                    phase = '🔝 Max Height';
+                }
+            }
+            document.getElementById('current-phase').textContent = phase;
+        }
+
+        function drawRocket() {
+            rocketCtx.clearRect(0, 0, rocketCanvas.width, rocketCanvas.height);
+            
+            const canvasWidth = rocketCanvas.width;
+            const canvasHeight = rocketCanvas.height;
+            const groundY = canvasHeight - 50;
+            const scale = (groundY - 50) / (yMax * 1.1); // scale to fit canvas
+            
+            // Draw sky gradient
+            const gradient = rocketCtx.createLinearGradient(0, 0, 0, groundY);
+            gradient.addColorStop(0, '#87CEEB');
+            gradient.addColorStop(1, '#B0E0E6');
+            rocketCtx.fillStyle = gradient;
+            rocketCtx.fillRect(0, 0, canvasWidth, groundY);
+            
+            // Draw ground
+            rocketCtx.fillStyle = '#8B7355';
+            rocketCtx.fillRect(0, groundY, canvasWidth, 50);
+            
+            // Draw ground line
+            rocketCtx.strokeStyle = '#654321';
+            rocketCtx.lineWidth = 2;
+            rocketCtx.beginPath();
+            rocketCtx.moveTo(0, groundY);
+            rocketCtx.lineTo(canvasWidth, groundY);
+            rocketCtx.stroke();
+            
+            // Draw height scale markers
+            rocketCtx.strokeStyle = '#999';
+            rocketCtx.lineWidth = 1;
+            rocketCtx.setLineDash([5, 5]);
+            rocketCtx.font = '12px monospace';
+            rocketCtx.fillStyle = '#333';
+            
+            const heightIntervals = [50, 100, 150, 200, 250, 300, 350];
+            heightIntervals.forEach(h => {
+                if (h <= yMax * 1.1) {
+                    const screenY = groundY - h * scale;
+                    rocketCtx.beginPath();
+                    rocketCtx.moveTo(0, screenY);
+                    rocketCtx.lineTo(canvasWidth, screenY);
+                    rocketCtx.stroke();
+                    rocketCtx.fillText(h + 'm', 5, screenY - 5);
+                }
+            });
+            rocketCtx.setLineDash([]);
+            
+            // Draw max height marker
+            if (isRunning || timeData.length > 0) {
+                const maxHeightY = groundY - yMax * scale;
+                rocketCtx.strokeStyle = '#FF6B6B';
+                rocketCtx.lineWidth = 2;
+                rocketCtx.setLineDash([10, 5]);
+                rocketCtx.beginPath();
+                rocketCtx.moveTo(0, maxHeightY);
+                rocketCtx.lineTo(canvasWidth, maxHeightY);
+                rocketCtx.stroke();
+                rocketCtx.setLineDash([]);
+                
+                rocketCtx.fillStyle = '#FF6B6B';
+                rocketCtx.font = 'bold 14px monospace';
+                rocketCtx.fillText('Max: ' + yMax.toFixed(1) + 'm', canvasWidth - 120, maxHeightY - 5);
+            }
+            
+            // Draw rocket
+            const rocketX = canvasWidth / 2;
+            const rocketY = groundY - y * scale;
+            
+            // Rocket body
+            rocketCtx.fillStyle = '#E0E0E0';
+            rocketCtx.fillRect(rocketX - 15, rocketY - 40, 30, 40);
+            
+            // Rocket nose cone
+            rocketCtx.fillStyle = '#FF4444';
+            rocketCtx.beginPath();
+            rocketCtx.moveTo(rocketX, rocketY - 60);
+            rocketCtx.lineTo(rocketX - 15, rocketY - 40);
+            rocketCtx.lineTo(rocketX + 15, rocketY - 40);
+            rocketCtx.closePath();
+            rocketCtx.fill();
+            
+            // Rocket fins
+            rocketCtx.fillStyle = '#666';
+            rocketCtx.beginPath();
+            rocketCtx.moveTo(rocketX - 15, rocketY);
+            rocketCtx.lineTo(rocketX - 25, rocketY + 10);
+            rocketCtx.lineTo(rocketX - 15, rocketY + 10);
+            rocketCtx.closePath();
+            rocketCtx.fill();
+            
+            rocketCtx.beginPath();
+            rocketCtx.moveTo(rocketX + 15, rocketY);
+            rocketCtx.lineTo(rocketX + 25, rocketY + 10);
+            rocketCtx.lineTo(rocketX + 15, rocketY + 10);
+            rocketCtx.closePath();
+            rocketCtx.fill();
+            
+            // Rocket window
+            rocketCtx.fillStyle = '#4FC3F7';
+            rocketCtx.beginPath();
+            rocketCtx.arc(rocketX, rocketY - 25, 6, 0, Math.PI * 2);
+            rocketCtx.fill();
+            
+            // Engine flames (only during powered phase)
+            if (t <= tBurn && isRunning) {
+                const flameHeight = 20 + Math.random() * 10;
+                const gradient = rocketCtx.createLinearGradient(rocketX, rocketY, rocketX, rocketY + flameHeight);
+                gradient.addColorStop(0, '#FFD700');
+                gradient.addColorStop(0.5, '#FF8C00');
+                gradient.addColorStop(1, '#FF4500');
+                
+                rocketCtx.fillStyle = gradient;
+                rocketCtx.beginPath();
+                rocketCtx.moveTo(rocketX - 10, rocketY);
+                rocketCtx.lineTo(rocketX, rocketY + flameHeight);
+                rocketCtx.lineTo(rocketX + 10, rocketY);
+                rocketCtx.closePath();
+                rocketCtx.fill();
+            }
+            
+            // Velocity vector
+            if (Math.abs(v) > 0.1) {
+                const vectorScale = 2;
+                const vectorLength = Math.abs(v) * vectorScale;
+                const vectorDirection = v > 0 ? -1 : 1;
+                
+                rocketCtx.strokeStyle = '#4CAF50';
+                rocketCtx.lineWidth = 3;
+                rocketCtx.beginPath();
+                rocketCtx.moveTo(rocketX + 35, rocketY - 20);
+                rocketCtx.lineTo(rocketX + 35, rocketY - 20 + vectorDirection * vectorLength);
+                rocketCtx.stroke();
+                
+                // Arrow head
+                rocketCtx.fillStyle = '#4CAF50';
+                rocketCtx.beginPath();
+                if (v > 0) {
+                    rocketCtx.moveTo(rocketX + 35, rocketY - 20 + vectorDirection * vectorLength);
+                    rocketCtx.lineTo(rocketX + 30, rocketY - 20 + vectorDirection * vectorLength + 10);
+                    rocketCtx.lineTo(rocketX + 40, rocketY - 20 + vectorDirection * vectorLength + 10);
+                } else {
+                    rocketCtx.moveTo(rocketX + 35, rocketY - 20 + vectorDirection * vectorLength);
+                    rocketCtx.lineTo(rocketX + 30, rocketY - 20 + vectorDirection * vectorLength - 10);
+                    rocketCtx.lineTo(rocketX + 40, rocketY - 20 + vectorDirection * vectorLength - 10);
+                }
+                rocketCtx.closePath();
+                rocketCtx.fill();
+                
+                // Label
+                rocketCtx.fillStyle = '#4CAF50';
+                rocketCtx.font = 'bold 14px monospace';
+                rocketCtx.fillText('v', rocketX + 45, rocketY - 15);
+            }
+        }
+
+        function drawAccelGraph() {
+            accelCtx.clearRect(0, 0, accelCanvas.width, accelCanvas.height);
+            
+            const padding = 60;
+            const graphWidth = accelCanvas.width - 2 * padding;
+            const graphHeight = accelCanvas.height - 2 * padding;
+            const maxTime = Math.max(20, tLanding);
+            const maxAccel = Math.max(a0, g) + 2;
+            
+            // Draw axes
+            accelCtx.strokeStyle = '#666';
+            accelCtx.lineWidth = 2;
+            accelCtx.beginPath();
+            accelCtx.moveTo(padding, padding);
+            accelCtx.lineTo(padding, padding + graphHeight);
+            accelCtx.lineTo(padding + graphWidth, padding + graphHeight);
+            accelCtx.stroke();
+            
+            // Draw zero line
+            const zeroY = padding + graphHeight / 2;
+            accelCtx.strokeStyle = '#999';
+            accelCtx.lineWidth = 1;
+            accelCtx.setLineDash([5, 5]);
+            accelCtx.beginPath();
+            accelCtx.moveTo(padding, zeroY);
+            accelCtx.lineTo(padding + graphWidth, zeroY);
+            accelCtx.stroke();
+            accelCtx.setLineDash([]);
+            
+            // Draw labels
+            accelCtx.fillStyle = '#333';
+            accelCtx.font = '14px monospace';
+            accelCtx.textAlign = 'right';
+            accelCtx.fillText(maxAccel.toFixed(0), padding - 10, padding + 5);
+            accelCtx.fillText('0', padding - 10, zeroY + 5);
+            accelCtx.fillText(-maxAccel.toFixed(0), padding - 10, padding + graphHeight + 5);
+            
+            accelCtx.textAlign = 'center';
+            for (let i = 0; i <= 4; i++) {
+                const tLabel = (maxTime / 4) * i;
+                const x = padding + (graphWidth / 4) * i;
+                accelCtx.fillText(tLabel.toFixed(0), x, padding + graphHeight + 30);
+            }
+            
+            // Axis labels
+            accelCtx.save();
+            accelCtx.translate(20, accelCanvas.height / 2);
+            accelCtx.rotate(-Math.PI / 2);
+            accelCtx.font = 'bold 16px monospace';
+            accelCtx.fillText('Acceleration (m/s²)', 0, 0);
+            accelCtx.restore();
+            
+            accelCtx.font = 'bold 16px monospace';
+            accelCtx.fillText('Time (s)', accelCanvas.width / 2, accelCanvas.height - 10);
+            
+            // Draw theoretical graph
+            accelCtx.strokeStyle = '#CCC';
+            accelCtx.lineWidth = 2;
+            accelCtx.setLineDash([10, 5]);
+            accelCtx.beginPath();
+            
+            // Powered phase
+            let x = padding;
+            let y = zeroY - (a0 / maxAccel) * (graphHeight / 2);
+            accelCtx.moveTo(x, y);
+            x = padding + (tBurn / maxTime) * graphWidth;
+            accelCtx.lineTo(x, y);
+            
+            // Free fall phase
+            y = zeroY - (-g / maxAccel) * (graphHeight / 2);
+            accelCtx.lineTo(x, y);
+            x = padding + (tLanding / maxTime) * graphWidth;
+            accelCtx.lineTo(x, y);
+            accelCtx.stroke();
+            accelCtx.setLineDash([]);
+            
+            // Draw actual data
+            if (timeData.length > 1) {
+                accelCtx.strokeStyle = '#4385BE';
+                accelCtx.lineWidth = 3;
+                accelCtx.beginPath();
+                
+                for (let i = 0; i < timeData.length; i++) {
+                    const x = padding + (timeData[i] / maxTime) * graphWidth;
+                    const y = zeroY - (accelData[i] / maxAccel) * (graphHeight / 2);
+                    
+                    if (i === 0) accelCtx.moveTo(x, y);
+                    else accelCtx.lineTo(x, y);
+                }
+                accelCtx.stroke();
+                
+                // Draw current point
+                if (isRunning) {
+                    const lastIdx = timeData.length - 1;
+                    const x = padding + (timeData[lastIdx] / maxTime) * graphWidth;
+                    const y = zeroY - (accelData[lastIdx] / maxAccel) * (graphHeight / 2);
+                    
+                    accelCtx.fillStyle = '#FF5722';
+                    accelCtx.beginPath();
+                    accelCtx.arc(x, y, 6, 0, Math.PI * 2);
+                    accelCtx.fill();
+                }
+            }
+        }
+
+        function drawVelocityGraph() {
+            velocityCtx.clearRect(0, 0, velocityCanvas.width, velocityCanvas.height);
+            
+            const padding = 60;
+            const graphWidth = velocityCanvas.width - 2 * padding;
+            const graphHeight = velocityCanvas.height - 2 * padding;
+            const maxTime = Math.max(20, tLanding);
+            
+            // Calculate max velocity magnitude (both positive and negative)
+            const vLanding = -Math.sqrt(2 * g * yMax);
+            const maxVelMagnitude = Math.max(vAtBurn + 5, Math.abs(vLanding) + 5);
+            
+            // Zero line is in the middle
+            const zeroY = padding + graphHeight / 2;
+            
+            // Draw axes
+            velocityCtx.strokeStyle = '#666';
+            velocityCtx.lineWidth = 2;
+            velocityCtx.beginPath();
+            velocityCtx.moveTo(padding, padding);
+            velocityCtx.lineTo(padding, padding + graphHeight);
+            velocityCtx.lineTo(padding + graphWidth, padding + graphHeight);
+            velocityCtx.stroke();
+            
+            // Draw zero line (horizontal)
+            velocityCtx.strokeStyle = '#999';
+            velocityCtx.lineWidth = 2;
+            velocityCtx.setLineDash([5, 5]);
+            velocityCtx.beginPath();
+            velocityCtx.moveTo(padding, zeroY);
+            velocityCtx.lineTo(padding + graphWidth, zeroY);
+            velocityCtx.stroke();
+            velocityCtx.setLineDash([]);
+            
+            // Draw labels on y-axis
+            velocityCtx.fillStyle = '#333';
+            velocityCtx.font = '14px monospace';
+            velocityCtx.textAlign = 'right';
+            velocityCtx.fillText(maxVelMagnitude.toFixed(0), padding - 10, padding + 5);
+            velocityCtx.fillText('0', padding - 10, zeroY + 5);
+            velocityCtx.fillText(-maxVelMagnitude.toFixed(0), padding - 10, padding + graphHeight + 5);
+            
+            // Draw labels on x-axis
+            velocityCtx.textAlign = 'center';
+            for (let i = 0; i <= 4; i++) {
+                const tLabel = (maxTime / 4) * i;
+                const x = padding + (graphWidth / 4) * i;
+                velocityCtx.fillText(tLabel.toFixed(0), x, padding + graphHeight + 30);
+            }
+            
+            // Axis labels
+            velocityCtx.save();
+            velocityCtx.translate(20, velocityCanvas.height / 2);
+            velocityCtx.rotate(-Math.PI / 2);
+            velocityCtx.font = 'bold 16px monospace';
+            velocityCtx.fillText('Velocity (m/s)', 0, 0);
+            velocityCtx.restore();
+            
+            velocityCtx.font = 'bold 16px monospace';
+            velocityCtx.fillText('Time (s)', velocityCanvas.width / 2, velocityCanvas.height - 10);
+            
+            // Draw theoretical graph
+            velocityCtx.strokeStyle = '#CCC';
+            velocityCtx.lineWidth = 2;
+            velocityCtx.setLineDash([10, 5]);
+            velocityCtx.beginPath();
+            
+            // Powered phase (0 to vAtBurn)
+            let x = padding;
+            let y = zeroY;
+            velocityCtx.moveTo(x, y);
+            x = padding + (tBurn / maxTime) * graphWidth;
+            y = zeroY - (vAtBurn / maxVelMagnitude) * (graphHeight / 2);
+            velocityCtx.lineTo(x, y);
+            
+            // Free fall phase to max height (vAtBurn to 0)
+            x = padding + (tMaxHeight / maxTime) * graphWidth;
+            y = zeroY;
+            velocityCtx.lineTo(x, y);
+            
+            // Falling phase (0 to vLanding)
+            x = padding + (tLanding / maxTime) * graphWidth;
+            y = zeroY - (vLanding / maxVelMagnitude) * (graphHeight / 2);
+            velocityCtx.lineTo(x, y);
+            velocityCtx.stroke();
+            velocityCtx.setLineDash([]);
+            
+            // Shade area under curve (displacement) - positive area
+            if (timeData.length > 1) {
+                // Positive area (upward motion)
+                velocityCtx.fillStyle = 'rgba(67, 133, 190, 0.3)';
+                velocityCtx.beginPath();
+                velocityCtx.moveTo(padding, zeroY);
+                
+                for (let i = 0; i < timeData.length; i++) {
+                    if (velocityData[i] >= 0) {
+                        const x = padding + (timeData[i] / maxTime) * graphWidth;
+                        const y = zeroY - (velocityData[i] / maxVelMagnitude) * (graphHeight / 2);
+                        velocityCtx.lineTo(x, y);
+                    } else {
+                        const x = padding + (timeData[i] / maxTime) * graphWidth;
+                        velocityCtx.lineTo(x, zeroY);
+                        break;
+                    }
+                }
+                
+                if (timeData.length > 0) {
+                    const lastValidIdx = timeData.findIndex(v => velocityData[v] < 0);
+                    const idx = lastValidIdx >= 0 ? lastValidIdx : timeData.length - 1;
+                    velocityCtx.lineTo(padding + (timeData[idx] / maxTime) * graphWidth, zeroY);
+                }
+                velocityCtx.closePath();
+                velocityCtx.fill();
+                
+                // Negative area (downward motion)
+                velocityCtx.fillStyle = 'rgba(211, 77, 65, 0.3)';
+                velocityCtx.beginPath();
+                let startedNegative = false;
+                
+                for (let i = 0; i < timeData.length; i++) {
+                    const x = padding + (timeData[i] / maxTime) * graphWidth;
+                    const y = zeroY - (velocityData[i] / maxVelMagnitude) * (graphHeight / 2);
+                    
+                    if (velocityData[i] < 0) {
+                        if (!startedNegative) {
+                            velocityCtx.moveTo(x, zeroY);
+                            startedNegative = true;
+                        }
+                        velocityCtx.lineTo(x, y);
+                    }
+                }
+                
+                if (startedNegative && timeData.length > 0) {
+                    velocityCtx.lineTo(padding + (timeData[timeData.length-1] / maxTime) * graphWidth, zeroY);
+                    velocityCtx.closePath();
+                    velocityCtx.fill();
+                }
+            }
+            
+            // Draw actual data
+            if (timeData.length > 1) {
+                velocityCtx.strokeStyle = '#4385BE';
+                velocityCtx.lineWidth = 3;
+                velocityCtx.beginPath();
+                
+                for (let i = 0; i < timeData.length; i++) {
+                    const x = padding + (timeData[i] / maxTime) * graphWidth;
+                    const y = zeroY - (velocityData[i] / maxVelMagnitude) * (graphHeight / 2);
+                    
+                    if (i === 0) velocityCtx.moveTo(x, y);
+                    else velocityCtx.lineTo(x, y);
+                }
+                velocityCtx.stroke();
+                
+                // Draw current point
+                if (isRunning) {
+                    const lastIdx = timeData.length - 1;
+                    const x = padding + (timeData[lastIdx] / maxTime) * graphWidth;
+                    const y = zeroY - (velocityData[lastIdx] / maxVelMagnitude) * (graphHeight / 2);
+                    
+                    velocityCtx.fillStyle = '#FF5722';
+                    velocityCtx.beginPath();
+                    velocityCtx.arc(x, y, 6, 0, Math.PI * 2);
+                    velocityCtx.fill();
+                }
+            }
+            
+            // Mark key events
+            if (!isRunning && timeData.length > 0) {
+                // Mark max height time
+                const xMaxHeight = padding + (tMaxHeight / maxTime) * graphWidth;
+                velocityCtx.strokeStyle = '#FF6B6B';
+                velocityCtx.lineWidth = 2;
+                velocityCtx.setLineDash([5, 5]);
+                velocityCtx.beginPath();
+                velocityCtx.moveTo(xMaxHeight, padding);
+                velocityCtx.lineTo(xMaxHeight, padding + graphHeight);
+                velocityCtx.stroke();
+                velocityCtx.setLineDash([]);
+                
+                velocityCtx.fillStyle = '#FF6B6B';
+                velocityCtx.font = 'bold 12px monospace';
+                velocityCtx.fillText('Max Height', xMaxHeight, padding - 10);
+            }
+        }
+
+        // Initialize
+        updateCalculations();
+        drawRocket();
+        drawAccelGraph();
+        drawVelocityGraph();
+    </script>
+</body>
+</html>
