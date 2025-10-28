@@ -20,6 +20,38 @@ math: mathjax
 
 # 2025.10.28 **AP Physics**
 
+##### **❓ of the 📅**: Crunchy or chewy candy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: PC Concept Builder Free Fall
+2. 🚀 Rocket Science: AP Workbook 1.J & 1.K
+3. Introduction to Projectile Motion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define a projectile_
+
+🥅 _Compare and contrast the vertical and horizontal motion of a projectile_
+
+### 📆 Homework
+- Kinematics 7: Free Fall, Rocket Science, and KEs
+
+</div>
+</div>
+
+---
+
+# 2025.10.28 **AP Physics**
+
 ##### **❓ of the 📅**: Have you ever completed anything on your "bucket list"?
 
 <div class ='columns'>

@@ -140,6 +140,15 @@ Two toy trucks roll off the ends of identical tables. The speeds and masses of t
 
 ---
 
+# What does each result imply about the **horizontal velocity's** effect on **flight time**?
+
+
+1. Right ball ($v_x > 0$) hits first 
+2. Left ball ($v_x =0$) hits first 
+3. Balls hit at the same time 
+
+---
+
 # Projectiles 
 
 * A ***projectile*** is an object that *only* experiences a gravitational force
