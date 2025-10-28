@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linearizing Graphs: Drop Height vs Time</title>
+    <style>
+        /* Flexoki Color Scheme */
+        :root {
+            /* Base Colors */
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+
+            /* Accent Colors */
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+
+        /* Light Theme */
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --border-hover: var(--fx-base-300);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+            --shadow-hover: rgba(28, 27, 26, 0.15);
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
+        }
+        
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+        
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .theme-toggle::before {
+            content: '☀️ Light';
+        }
+        
+        [data-theme="dark"] .theme-toggle::before {
+            content: '🌙 Dark';
+        }
+        
+        .question {
+            background-color: var(--bg-tertiary);
+            padding: 25px;
+            border-left: 4px solid var(--accent-primary);
+            margin: 0;
+        }
+        
+        .question h2 {
+            color: var(--accent-primary);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .question p {
+            line-height: 1.8;
+            font-size: 1.05em;
+            color: var(--text-secondary);
+            margin: 10px 0;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .simulation-container {
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        canvas {
+            display: block;
+            margin: 10px auto;
+            background-color: var(--bg-primary);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        .controls {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .control-group {
+            margin: 15px 0;
+        }
+        
+        label {
+            display: inline-block;
+            min-width: 150px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        input[type="range"] {
+            width: 60%;
+            margin: 0 15px;
+            vertical-align: middle;
+            accent-color: var(--accent-primary);
+        }
+        
+        button {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+            font-family: inherit;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        button:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+            transform: translateY(-1px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .value-display {
+            display: inline-block;
+            min-width: 80px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--accent-primary);
+        }
+        
+        .explanation {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--accent-secondary);
+        }
+        
+        .explanation h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .explanation p {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin: 10px 0;
+        }
+
+        .data-table {
+            margin: 20px 0;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .data-table th {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .data-table tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+
+        .graph-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .graph-box {
+            flex: 1;
+            min-width: 350px;
+            max-width: 500px;
+        }
+
+        .graph-box h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--accent-primary);
+        }
+
+        .results-box {
+            background-color: var(--success);
+            color: var(--bg-primary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .reference-table {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .reference-table h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 15px;
+        }
+
+        .reference-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .reference-table th {
+            background-color: var(--accent-secondary);
+            color: var(--bg-primary);
+            padding: 10px;
+            text-align: left;
+        }
+
+        .reference-table td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        footer {
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-color);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            label {
+                min-width: 120px;
+            }
+            
+            input[type="range"] {
+                width: 50%;
+            }
+
+            .graph-box {
+                min-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Linearizing Graphs: Drop Height vs Time</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+        
+        <div class="question">
+            <h2>Scenario</h2>
+            <p><strong>Angela, Blake, and Carlos</strong> have been given a stopwatch, several large spheres, and a meterstick and have been asked to determine the acceleration due to gravity. They were told that they need to collect drop height and time data at several different heights to create a position vs. time graph. The averages of the collected data are shown in the data table below.</p>
+            
+            <p><strong>Part A:</strong> Graph the drop height with area or ball on the axis above.</p>
+            
+            <p><strong>Part B:</strong> Based on your graph and the table at the right, identify the correct relationship between the drop height and the time to fall to the ground.</p>
+            
+            <p><strong>Claim:</strong> The <em>displacement</em> is <em>proportional</em> to the <em>square</em> of <em>time</em>.</p>
+            
+            <p><strong>Part C:</strong> The relationship between drop height and time to fall can be compared to the equation H = ½gt², so that the students can create what is called a linearized graph. Fill in the third column in the data table with appropriate values and graph to create a linearized graph.</p>
+            
+            <p><strong>Part D:</strong> What quantities should be plotted on a graph if the graph is to have a linear trend and the slope of the best-fit line is to be used to determine the acceleration due to gravity?</p>
+            
+            <p><em>Acceptable answers include: Drop height vs. time squared, or the square root of drop height vs. time, among others.</em></p>
+        </div>
+        
+        <div class="content">
+            <div class="simulation-container">
+                <h3 style="text-align: center; color: var(--accent-primary); margin-bottom: 15px;">Drop Simulation</h3>
+                <canvas id="simulation" width="300" height="500"></canvas>
+                
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="height">Drop Height (m):</label>
+                        <input type="range" id="height" min="0.25" max="1.5" step="0.05" value="0.5">
+                        <span class="value-display" id="heightValue">0.50 m</span>
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button id="dropBtn" onclick="dropBall()">Drop Ball</button>
+                        <button onclick="clearData()">Clear Data</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="explanation">
+                <h3>Collected Data</h3>
+                <div style="margin-bottom: 15px;">
+                    <label for="functionSelect" style="font-weight: 600; color: var(--text-primary);">Choose function to apply to Time:</label>
+                    <select id="functionSelect" onchange="updateFunction()" style="margin-left: 10px; padding: 8px; background-color: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 4px; color: var(--text-primary); font-family: inherit; font-size: 1em; cursor: pointer;">
+                        <option value="none">T (no transformation)</option>
+                        <option value="square" selected>T² (square)</option>
+                        <option value="inverse">1/T (inverse)</option>
+                        <option value="sqrt">√T (square root)</option>
+                    </select>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Height H (m)</th>
+                            <th>Time T (s)</th>
+                            <th id="transformHeader">T² (s²)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTable">
+                        <tr><td colspan="3" style="text-align: center; color: var(--text-muted);">No data collected yet. Drop the ball to collect data!</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="graph-container">
+                <div class="graph-box">
+                    <h3>H vs T (Original)</h3>
+                    <canvas id="originalGraph" width="400" height="300"></canvas>
+                </div>
+                <div class="graph-box">
+                    <h3 id="transformedGraphTitle">H vs T² (Transformed)</h3>
+                    <canvas id="linearizedGraph" width="400" height="300"></canvas>
+                </div>
+            </div>
+
+            <div id="resultsBox" style="display: none;" class="results-box">
+                <div id="linearResultsContent"></div>
+            </div>
+
+            <div class="reference-table">
+                <h3>Common Relationships Used in AP Physics 1</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Graph</th>
+                            <th>Relationship</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Linear</strong></td>
+                            <td>As x increases, y increases proportionally. y is directly proportional to x.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Inverse</strong></td>
+                            <td>As x increases, y decreases. y is inversely proportional to x.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quadratic</strong></td>
+                            <td>y is proportional to the square of x.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Square Root</strong></td>
+                            <td>The square of y is proportional to x.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="explanation">
+                <h3>Understanding Linearization</h3>
+                <p>Not all relationships are linear, but when you manipulate the data so that the graph is a line, it is easier to get usable information from the graph to be able to draw conclusions as well as construct equations.</p>
+                <p>In this experiment, the relationship between drop height (H) and time (T) follows the equation:</p>
+                <p style="text-align: center; font-size: 1.2em; margin: 15px 0;"><strong>H = ½gT²</strong></p>
+                <p>This is a <strong>quadratic relationship</strong> - the height is proportional to the square of time. To linearize it, you need to find the right transformation.</p>
+                <p><strong>Try different transformations:</strong></p>
+                <ul style="margin-left: 25px; margin-top: 10px; color: var(--text-secondary);">
+                    <li><strong>T² (square):</strong> Creates a linear graph where slope = ½g</li>
+                    <li><strong>1/T (inverse):</strong> Creates a curve (not linear)</li>
+                    <li><strong>√T (square root):</strong> Creates a curve (not linear)</li>
+                    <li><strong>T (no transformation):</strong> Shows the original quadratic relationship</li>
+                </ul>
+                <p style="margin-top: 15px;">When you find the correct transformation (T²), the slope of the line equals <strong>½g</strong>, so <strong>g = 2 × slope</strong>. The R² value tells you how linear the fit is - values close to 1.0 indicate an excellent linear relationship!</p>
+            </div>
+        </div>
+        
+        <footer>
+            Interactive Physics Simulation | Created for High School Physics | Kinematics & Linearization
+        </footer>
+    </div>
+    
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <script>
+        // Physics simulation
+        const canvas = document.getElementById('simulation');
+        const ctx = canvas.getContext('2d');
+        const heightSlider = document.getElementById('height');
+        const heightValue = document.getElementById('heightValue');
+        const dropBtn = document.getElementById('dropBtn');
+
+        // Data storage
+        let dataPoints = [];
+        let selectedFunction = 'square'; // Track which function is selected
+        
+        // Ball properties
+        const ballRadius = 15;
+        let ballY = 0;
+        let ballX = canvas.width / 2;
+        let dropHeight = 0.5; // meters
+        let isAnimating = false;
+        let startTime = 0;
+        let animationFrame;
+        
+        // Scale: 1 meter = 300 pixels
+        const scale = 300;
+        const g = 9.8; // m/s²
+        
+        // Ground level
+        const groundY = canvas.height - 30;
+        
+        // Update height display
+        heightSlider.addEventListener('input', function() {
+            dropHeight = parseFloat(this.value);
+            heightValue.textContent = dropHeight.toFixed(2) + ' m';
+            if (!isAnimating) {
+                drawInitial();
+            }
+        });
+        
+        function drawInitial() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Get theme colors
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const textColor = isDark ? '#FFFCF0' : '#1C1B1A';
+            const lineColor = isDark ? '#847759' : '#C8BFA1';
+            const ballColor = isDark ? '#205EA6' : '#4385BE';
+            
+            // Draw ground
+            ctx.fillStyle = lineColor;
+            ctx.fillRect(0, groundY, canvas.width, canvas.height - groundY);
+            
+            // Draw height line
+            const startY = groundY - dropHeight * scale;
+            ctx.strokeStyle = lineColor;
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(ballX - 50, startY);
+            ctx.lineTo(ballX + 50, startY);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            
+            // Draw height measurement
+            ctx.strokeStyle = textColor;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(ballX - 40, startY);
+            ctx.lineTo(ballX - 40, groundY);
+            ctx.stroke();
+            
+            // Draw arrows
+            ctx.beginPath();
+            ctx.moveTo(ballX - 40, startY);
+            ctx.lineTo(ballX - 45, startY + 10);
+            ctx.moveTo(ballX - 40, startY);
+            ctx.lineTo(ballX - 35, startY + 10);
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(ballX - 40, groundY);
+            ctx.lineTo(ballX - 45, groundY - 10);
+            ctx.moveTo(ballX - 40, groundY);
+            ctx.lineTo(ballX - 35, groundY - 10);
+            ctx.stroke();
+            
+            // Draw height label
+            ctx.fillStyle = textColor;
+            ctx.font = '14px monospace';
+            ctx.fillText(dropHeight.toFixed(2) + ' m', ballX - 90, (startY + groundY) / 2);
+            
+            // Draw ball
+            ballY = startY;
+            ctx.fillStyle = ballColor;
+            ctx.beginPath();
+            ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        function dropBall() {
+            if (isAnimating) return;
+            
+            isAnimating = true;
+            dropBtn.disabled = true;
+            startTime = Date.now();
+            ballY = groundY - dropHeight * scale;
+            
+            animate();
+        }
+        
+        function animate() {
+            if (!isAnimating) return;
+            
+            const currentTime = (Date.now() - startTime) / 1000; // Convert to seconds
+            
+            // Calculate position using kinematic equation: y = y0 + v0*t + 0.5*a*t^2
+            const displacement = 0.5 * g * currentTime * currentTime * scale;
+            const newY = (groundY - dropHeight * scale) + displacement;
+            
+            // Check if ball has hit the ground
+            if (newY >= groundY - ballRadius) {
+                ballY = groundY - ballRadius;
+                isAnimating = false;
+                dropBtn.disabled = false;
+                
+                // Calculate actual fall time
+                const fallTime = Math.sqrt(2 * dropHeight / g);
+                
+                // Store data point
+                dataPoints.push({
+                    height: dropHeight,
+                    time: fallTime,
+                    timeSquared: fallTime * fallTime
+                });
+                
+                updateDataTable();
+                updateGraphs();
+                
+                drawInitial();
+                return;
+            }
+            
+            ballY = newY;
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Get theme colors
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const textColor = isDark ? '#FFFCF0' : '#1C1B1A';
+            const lineColor = isDark ? '#847759' : '#C8BFA1';
+            const ballColor = isDark ? '#205EA6' : '#4385BE';
+            
+            // Draw ground
+            ctx.fillStyle = lineColor;
+            ctx.fillRect(0, groundY, canvas.width, canvas.height - groundY);
+            
+            // Draw ball
+            ctx.fillStyle = ballColor;
+            ctx.beginPath();
+            ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Display time
+            ctx.fillStyle = textColor;
+            ctx.font = '16px monospace';
+            ctx.fillText('Time: ' + currentTime.toFixed(2) + ' s', 10, 30);
+            
+            animationFrame = requestAnimationFrame(animate);
+        }
+        
+        function updateDataTable() {
+            const tbody = document.getElementById('dataTable');
+            tbody.innerHTML = '';
+            
+            dataPoints.forEach(point => {
+                const row = tbody.insertRow();
+                row.insertCell(0).textContent = point.height.toFixed(2);
+                row.insertCell(1).textContent = point.time.toFixed(3);
+                
+                const transformedValue = applyTransform(point.time, selectedFunction);
+                row.insertCell(2).textContent = transformedValue.toFixed(4);
+            });
+        }
+        
+        function applyTransform(time, funcType) {
+            switch(funcType) {
+                case 'none':
+                    return time;
+                case 'square':
+                    return time * time;
+                case 'inverse':
+                    return 1 / time;
+                case 'sqrt':
+                    return Math.sqrt(time);
+                default:
+                    return time * time;
+            }
+        }
+        
+        function getTransformLabel(funcType) {
+            switch(funcType) {
+                case 'none':
+                    return { header: 'T (s)', xlabel: 'Time (s)' };
+                case 'square':
+                    return { header: 'T² (s²)', xlabel: 'Time² (s²)' };
+                case 'inverse':
+                    return { header: '1/T (1/s)', xlabel: '1/Time (1/s)' };
+                case 'sqrt':
+                    return { header: '√T (s^0.5)', xlabel: '√Time (s^0.5)' };
+                default:
+                    return { header: 'T² (s²)', xlabel: 'Time² (s²)' };
+            }
+        }
+        
+        function updateFunction() {
+            selectedFunction = document.getElementById('functionSelect').value;
+            const labels = getTransformLabel(selectedFunction);
+            
+            // Update table header
+            document.getElementById('transformHeader').textContent = labels.header;
+            
+            // Update graph title
+            document.getElementById('transformedGraphTitle').textContent = 'H vs ' + labels.header.split(' ')[0] + ' (Transformed)';
+            
+            // Recalculate and redraw if we have data
+            if (dataPoints.length > 0) {
+                updateDataTable();
+                updateGraphs();
+            }
+        }
+        
+        function updateGraphs() {
+            if (dataPoints.length < 2) return;
+            
+            const labels = getTransformLabel(selectedFunction);
+            
+            // Original graph (no transformation)
+            drawGraph('originalGraph', 
+                dataPoints.map(p => p.time), 
+                dataPoints.map(p => p.height),
+                'Time (s)',
+                'Height (m)',
+                false);
+            
+            // Transformed graph
+            const transformedX = dataPoints.map(p => applyTransform(p.time, selectedFunction));
+            drawGraph('linearizedGraph', 
+                transformedX, 
+                dataPoints.map(p => p.height),
+                labels.xlabel,
+                'Height (m)',
+                true);
+        }
+        
+        function drawGraph(canvasId, xData, yData, xLabel, yLabel, isLinearized) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = 50;
+            
+            ctx.clearRect(0, 0, width, height);
+            
+            // Get theme colors
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const textColor = isDark ? '#FFFCF0' : '#1C1B1A';
+            const gridColor = isDark ? '#403E39' : '#E6E2CC';
+            const dataColor = isDark ? '#205EA6' : '#4385BE';
+            const lineColor = isDark ? '#D14D41' : '#D14D41';
+            
+            // Find ranges
+            const xMin = 0;
+            const xMax = Math.max(...xData) * 1.1;
+            const yMin = 0;
+            const yMax = Math.max(...yData) * 1.1;
+            
+            // Draw grid
+            ctx.strokeStyle = gridColor;
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 5; i++) {
+                const x = padding + (width - 2 * padding) * i / 5;
+                ctx.beginPath();
+                ctx.moveTo(x, padding);
+                ctx.lineTo(x, height - padding);
+                ctx.stroke();
+                
+                const y = padding + (height - 2 * padding) * i / 5;
+                ctx.beginPath();
+                ctx.moveTo(padding, y);
+                ctx.lineTo(width - padding, y);
+                ctx.stroke();
+            }
+            
+            // Draw axes
+            ctx.strokeStyle = textColor;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(padding, height - padding);
+            ctx.lineTo(width - padding, height - padding);
+            ctx.moveTo(padding, height - padding);
+            ctx.lineTo(padding, padding);
+            ctx.stroke();
+            
+            // Draw labels
+            ctx.fillStyle = textColor;
+            ctx.font = '12px monospace';
+            ctx.textAlign = 'center';
+            ctx.fillText(xLabel, width / 2, height - 10);
+            
+            ctx.save();
+            ctx.translate(15, height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText(yLabel, 0, 0);
+            ctx.restore();
+            
+            // Plot data points
+            ctx.fillStyle = dataColor;
+            for (let i = 0; i < xData.length; i++) {
+                const x = padding + ((xData[i] - xMin) / (xMax - xMin)) * (width - 2 * padding);
+                const y = (height - padding) - ((yData[i] - yMin) / (yMax - yMin)) * (height - 2 * padding);
+                
+                ctx.beginPath();
+                ctx.arc(x, y, 5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            // Draw best fit line for transformed graph
+            if (isLinearized && dataPoints.length >= 2) {
+                // Calculate line of best fit using least squares
+                let sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0;
+                const n = xData.length;
+                
+                for (let i = 0; i < n; i++) {
+                    sumX += xData[i];
+                    sumY += yData[i];
+                    sumXY += xData[i] * yData[i];
+                    sumX2 += xData[i] * xData[i];
+                }
+                
+                const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+                const intercept = (sumY - slope * sumX) / n;
+                
+                // Calculate R² (coefficient of determination)
+                const meanY = sumY / n;
+                let ssTotal = 0, ssResidual = 0;
+                for (let i = 0; i < n; i++) {
+                    const predictedY = slope * xData[i] + intercept;
+                    ssTotal += Math.pow(yData[i] - meanY, 2);
+                    ssResidual += Math.pow(yData[i] - predictedY, 2);
+                }
+                const rSquared = 1 - (ssResidual / ssTotal);
+                
+                // Draw line
+                ctx.strokeStyle = lineColor;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                
+                const x1 = padding;
+                const y1Val = intercept;
+                const y1 = (height - padding) - ((y1Val - yMin) / (yMax - yMin)) * (height - 2 * padding);
+                
+                const x2 = width - padding;
+                const x2Val = xMax;
+                const y2Val = slope * x2Val + intercept;
+                const y2 = (height - padding) - ((y2Val - yMin) / (yMax - yMin)) * (height - 2 * padding);
+                
+                ctx.moveTo(x1, y1);
+                ctx.lineTo(x2, y2);
+                ctx.stroke();
+                
+                // Display results based on selected function
+                const resultsBox = document.getElementById('resultsBox');
+                const resultsContent = document.getElementById('linearResultsContent');
+                resultsBox.style.display = 'block';
+                
+                // Determine linearity quality
+                let linearityText = '';
+                if (rSquared > 0.95) {
+                    linearityText = '✓ Excellent linear fit!';
+                } else if (rSquared > 0.85) {
+                    linearityText = '~ Good linear fit';
+                } else {
+                    linearityText = '✗ Poor linear fit - try a different function';
+                }
+                
+                if (selectedFunction === 'square') {
+                    // Calculate g from slope for T² transformation
+                    const calculatedG = 2 * slope;
+                    const percentError = Math.abs((calculatedG - g) / g * 100);
+                    
+                    resultsContent.innerHTML = `
+                        <p><strong>${linearityText}</strong></p>
+                        <p>R² = ${rSquared.toFixed(4)}</p>
+                        <p>Slope = ${slope.toFixed(3)} m/s²</p>
+                        <p>Calculated g = 2 × slope = ${calculatedG.toFixed(2)} m/s²</p>
+                        <p>Percent error: ${percentError.toFixed(1)}%</p>
+                    `;
+                } else {
+                    resultsContent.innerHTML = `
+                        <p><strong>${linearityText}</strong></p>
+                        <p>R² = ${rSquared.toFixed(4)} (closer to 1.0 means more linear)</p>
+                        <p>Slope = ${slope.toFixed(4)}</p>
+                        <p style="margin-top: 10px; font-size: 0.9em;">💡 Try T² to calculate acceleration due to gravity!</p>
+                    `;
+                }
+            }
+        }
+        
+        function clearData() {
+            dataPoints = [];
+            document.getElementById('dataTable').innerHTML = '<tr><td colspan="3" style="text-align: center; color: var(--text-muted);">No data collected yet. Drop the ball to collect data!</td></tr>';
+            
+            const canvas1 = document.getElementById('originalGraph');
+            const canvas2 = document.getElementById('linearizedGraph');
+            canvas1.getContext('2d').clearRect(0, 0, canvas1.width, canvas1.height);
+            canvas2.getContext('2d').clearRect(0, 0, canvas2.width, canvas2.height);
+            
+            document.getElementById('resultsBox').style.display = 'none';
+            
+            drawInitial();
+        }
+        
+        // Initialize
+        drawInitial();
+    </script>
+</body>
+</html>
