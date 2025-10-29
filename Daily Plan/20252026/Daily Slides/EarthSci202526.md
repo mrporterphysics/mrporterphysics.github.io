@@ -19,6 +19,38 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.30 **Earth Science**
+
+##### **❓ of the 📅**: Trick or treating or handing out candy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Kepler's Law
+2. Kepler Triangulation Demonstration & Practice
+3. Lab Partners & Start Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Complete **Unearthing Mars** Lab_
+
+### 📆 Upcoming
+
+- Astronomy Test Next **Wednesday 11/5**
+    - We will review Monday & Tuesday
+
+</div>
+</div>
+
+---
+
 # 2025.10.29 **Earth Science**
 
 ##### **❓ of the 📅**: Crunchy or chewy candy?
