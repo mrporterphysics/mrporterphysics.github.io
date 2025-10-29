@@ -19,6 +19,79 @@ class:  twilight
 
 <!--- class: halloween --->
 
+# 2025.10.29 **Earth Science**
+
+##### **❓ of the 📅**: Crunchy or chewy candy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Kepler's Laws Assignment
+2. Review Kepler's Laws
+3. Ellipse & Kepler Practice    
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define all three of Kepler's Laws_
+
+### 📆 Upcoming
+- State Lab Tomorrow & Friday
+- Astronomy Test Next Wednesday 11/5
+    - We will review Monday & Tuesday
+
+</div>
+</div>
+
+---
+
+
+# Kepler’s Third Law: 
+
+### Period–Distance Relationship
+
+_For objects orbiting the same star, the square of the period (T) is proportional to the cube of the semi-major axis (a) ($T^2 \propto a^3$)._
+
+---
+
+# Kepler’s Second Law: 
+
+### Equal Areas in Equal Times
+
+_A planet sweeps out equal areas in equal time intervals._
+
+- Consequences:
+    - Fastest at **periapsis** (closest approach).
+    - Slowest at **apoapsis** (furthest point).
+- Vocabulary:
+    - **Periapsis/Apoapsis** (general).
+    - Around the Sun: perihelion/aphelion.
+    - Around Earth: perigee/apogee.
+
+---
+
+# Kepler’s First Law: 
+
+### Orbits are Ellipses
+
+_Planets orbit the Sun in ellipses with the Sun at one focus._
+
+- Key terms:
+    - **Semi-major axis (a)**: half of the longest diameter of the ellipse.
+    - **Foci**: two special points whose sum of distances to any point on the ellipse is constant.
+    - **Eccentricity (e)**: how “stretched” an ellipse is (0: circle; near 1: very elongated).
+
+$$\boxed{\text{Eccentricity} = \frac{\text{distance between foci}}{\text{length of major axis}}}$$
+
+---
+
+
 # 2025.10.28 **Earth Science**
 
 ##### **❓ of the 📅**: What is your Halloween costume this year?
@@ -49,32 +122,6 @@ class:  twilight
 
 </div>
 </div>
-
----
-
-# Kepler’s Third Law: 
-
-### Period–Distance Relationship
-
-_For objects orbiting the same star, the square of the period (T) is proportional to the cube of the semi-major axis (a) ($T^2 \propto a^3$)._
-
----
-
-# Kepler’s Second Law: 
-
-### Equal Areas in Equal Times
-
-_A planet sweeps out equal areas in equal time intervals._
-
-- Consequences:
-    - Fastest at **periapsis** (closest approach).
-    - Slowest at **apoapsis** (furthest point).
-- Vocabulary:
-    - **Periapsis/Apoapsis** (general).
-    - Around the Sun: perihelion/aphelion.
-    - Around Earth: perigee/apogee.
-
-
 
 ---
 
