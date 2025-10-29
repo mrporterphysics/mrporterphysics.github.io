@@ -26,7 +26,7 @@ A duck flies past a truck that is at rest. The duck takes $2.1$ seconds to fly a
 
 ---
 
-# 2025.10.28 **AP Physics**
+# 2025.10.29 **AP Physics**
 
 ##### **❓ of the 📅**: Crunchy or chewy candy?
 
