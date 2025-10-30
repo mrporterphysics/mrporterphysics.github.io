@@ -18,6 +18,39 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2025.10.30 **AP Physics**
+
+##### **❓ of the 📅**: Trick-or-Treating or passing out candy? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Do Now: PC **Free Fall Concept Builder**
+1. Review X & Y independence
+2. Notes on Projectile Motion
+3. Think Sheet #1-8 & 12-14
+4. Marble Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use kinematics to problem-solve horizontally launched projectile motion questions_
+
+### 📆 Upcoming
+
+- **Test Wednesday 11/5** - Progress Check Posted
+
+</div>
+</div>
+
+---
+
 # 2025.10.29  **AP Physics** Do Now 🦆🚚
 
 A duck flies past a truck that is at rest. The duck takes $2.1$ seconds to fly at a constant speed $v_d$ from the back of the truck to the front. Later, the truck travels along a flat, straight roadway with a constant speed $\frac{3}{4}v_d$. The duck again flies past the truck with constant speed $v_d$, flying in the same direction that the truck is moving. How long does it take the duck to fly from the back oof the truck to the front in this cases?
