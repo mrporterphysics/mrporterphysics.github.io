@@ -17,6 +17,39 @@ math: mathjax
 
 <!--- class: halloween--->
 
+# 2025.10.30 **Regents Physics**
+
+##### **❓ of the 📅**: Trick-or-treating or handing out candy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Free Fall Five - Pivot Lab Assignment
+    - Find link in canvas
+2. Notes on Free Fall
+3. Think Sheet - Free Fall
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore and define Free Fall Motion_
+
+### 📆 Upcoming
+
+- Vector Addition Quiz Tomorrow; study from think sheets and PC Homeworks 
+
+</div>
+</div>
+
+---
+
 # 2025.10.28 **Regents Physics**
 
 ##### **❓ of the 📅**: Have you checked anything off of your "bucket list"?
