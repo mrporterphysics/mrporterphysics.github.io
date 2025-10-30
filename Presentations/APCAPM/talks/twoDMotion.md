@@ -219,18 +219,7 @@ Two toy trucks roll off the ends of identical tables. The speeds and masses of t
 
 ---
 
-### 🔑 **Key Ideas**:
 
-## A projectile is an object with the following characteristics:
-
-* The only force acting on it is the gravitational force; it is a free-falling object
-* The acceleration is directed downwards and has a magnitude of $9.8 \text{ m/s}^2$
-* Once projected, it continues its horizontal motion without any need of a force
-* As it travels through the air, its horizontal velocity remains constant
-* As it rises, its vertical velocity ($v_y$) decreases; as it falls, its $v_y$ increases
-
-
----
 
 #  Projectiles 
 
@@ -295,6 +284,20 @@ with a velocity of 3.0 m/s, and it strikes the water 4.5 meters away, how high a
 # Practice w/ Table 
 
 Suppose that an airplane flying 60 m/s, at a height of 300 meters, dropped a sack of flour. How far from the point of release would the sack have traveled when it struck the ground? Where will the plane be in relation to the sack when it hits the ground?
+
+---
+
+### 🔑 **Key Ideas**:
+
+## A projectile is an object with the following characteristics:
+
+* The only force acting on it is the gravitational force; it is a free-falling object
+* The acceleration is directed downwards and has a magnitude of $9.8 \text{ m/s}^2$
+* Once projected, it continues its horizontal motion without any need of a force
+* As it travels through the air, its horizontal velocity remains constant
+* As it rises, its vertical velocity ($v_y$) decreases; as it falls, its $v_y$ increases
+
+
 
 ---
 
