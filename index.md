@@ -1,19 +1,135 @@
-# Presentations:
+# Physics with Mr. Porter
 
-You can find links to class presentations here:
-  - [AP Agenda 2025-26](/Daily%20Plan/20252026/Daily%20Slides/APAgendas202526.html)
-  - Find [Regents Agenda 2025-26](/Daily%20Plan/20252026/Daily%20Slides/RPAgendas202526.html).
-  - Find [Earth Science Agenda 2025-26](/Daily%20Plan/20252026/Daily%20Slides/EarthSci202526.html).
-  - Find [Content Presentations](presindex).
+Welcome to your central hub for physics resources, daily agendas, interactive simulations, and study tools.
 
-# Resource Pages
-  - [Earth Science Reference](/earthscienceref.md)
-  - [FACT SHEET](/ap-physics-quiz/factsheet-complete.html)
-  - [AP Extra Practice for Reassessments](\AP%20Resource%20Pages\apSBGPractice)
-  - [Data Collection Best Practices](/AP%20Resource%20Pages/datacollection.html)
-  - [Linearization](/AP%20Resource%20Pages/linearizationInteractive.html)
-  - [Simulations](/SimulationResources.md)
+---
 
-# Test Prep
-  - [Regents Units and Equations Quiz](/mrporterphysics.github.io/regentsTestPrep/unitstestprepquiz.html)
-  - [Fact Sheet Practice](/mrporterphysics.github.io/ap-physics-quiz/index.html)
+<div class="quick-access">
+  <h2>⚡ Quick Access</h2>
+  <p>Most frequently used resources for today's classes</p>
+  <div class="quick-access-grid">
+    <a href="/Daily Plan/20252026/Daily Slides/APAgendas202526.html" class="quick-btn">
+      📅 AP Agenda Today
+    </a>
+    <a href="/Daily Plan/20252026/Daily Slides/RPAgendas202526.html" class="quick-btn">
+      📅 Regents Agenda
+    </a>
+    <a href="/Daily Plan/20252026/Daily Slides/EarthSci202526.html" class="quick-btn">
+      🌍 Earth Science
+    </a>
+    <a href="/ap-physics-quiz/index.html" class="quick-btn">
+      🎯 Fact Sheet Quiz
+    </a>
+    <a href="/ap-physics-quiz/factsheet-complete.html" class="quick-btn">
+      📚 AP Fact Sheet
+    </a>
+    <a href="/SimulationResources.html" class="quick-btn">
+      🔬 Simulations
+    </a>
+  </div>
+</div>
+
+---
+
+## 📚 By Course
+
+<div class="card-grid">
+
+  <div class="content-card">
+    <div class="card-icon">🚀</div>
+    <h3 class="card-title">AP Physics 1</h3>
+    <p class="card-description">
+      College-level physics focusing on mechanics, energy, and waves. Access daily agendas, content presentations, and practice tools.
+    </p>
+    <div class="card-links">
+      <a href="/Daily Plan/20252026/Daily Slides/APAgendas202526.html" class="card-link">→ Daily Agenda 2025-26</a>
+      <a href="/apphysics.html" class="card-link">→ AP Resource Warehouse</a>
+      <a href="/presindex.html#ap-physics-content-slides" class="card-link">→ All AP Presentations</a>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <div class="card-icon">⚛️</div>
+    <h3 class="card-title">Regents Physics</h3>
+    <p class="card-description">
+      NYS Regents Physics curriculum covering mechanics, electricity, waves, and modern physics.
+    </p>
+    <div class="card-links">
+      <a href="/Daily Plan/20252026/Daily Slides/RPAgendas202526.html" class="card-link">→ Daily Agenda 2025-26</a>
+      <a href="/presindex.html#regents-physics" class="card-link">→ All Regents Presentations</a>
+      <a href="/regentsTestPrep/unitstestprepquiz.html" class="card-link">→ Units & Equations Quiz</a>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <div class="card-icon">🌍</div>
+    <h3 class="card-title">Earth Science</h3>
+    <p class="card-description">
+      Study of Earth's systems including geology, meteorology, astronomy, and environmental science.
+    </p>
+    <div class="card-links">
+      <a href="/Daily Plan/20252026/Daily Slides/EarthSci202526.html" class="card-link">→ Daily Agenda 2025-26</a>
+      <a href="/earthscienceref.html" class="card-link">→ Earth Science Reference</a>
+      <a href="/presindex.html#earth-science" class="card-link">→ All ES Presentations</a>
+    </div>
+  </div>
+
+</div>
+
+---
+
+## 🎯 Interactive Tools & Test Prep
+
+<div class="card-grid">
+
+  <div class="content-card">
+    <div class="card-icon">🎮</div>
+    <h3 class="card-title">Fact Sheet Practice</h3>
+    <p class="card-description">
+      Interactive quiz tool for mastering equations and concepts from the AP Physics 1 fact sheet.
+    </p>
+    <div class="card-links">
+      <a href="/ap-physics-quiz/index.html" class="card-link">→ Launch Quiz Tool</a>
+      <a href="/ap-physics-quiz/factsheet-complete.html" class="card-link">→ View Fact Sheet</a>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <div class="card-icon">🔬</div>
+    <h3 class="card-title">Physics Simulations</h3>
+    <p class="card-description">
+      Interactive HTML simulations for visualizing physics concepts and solving ranking tasks.
+    </p>
+    <div class="card-links">
+      <a href="/SimulationResources.html" class="card-link">→ Browse All Simulations</a>
+      <a href="/AP Resource Pages/linearizationInteractive.html" class="card-link">→ Linearization Tool</a>
+      <a href="/AP Resource Pages/kinGraphs.html" class="card-link">→ Kinematic Graphs</a>
+    </div>
+  </div>
+
+  <div class="content-card">
+    <div class="card-icon">📖</div>
+    <h3 class="card-title">Study Resources</h3>
+    <p class="card-description">
+      Extra practice problems, data collection guides, and reassessment materials.
+    </p>
+    <div class="card-links">
+      <a href="/AP Resource Pages/apSBGPractice" class="card-link">→ AP Extra Practice</a>
+      <a href="/AP Resource Pages/datacollection.html" class="card-link">→ Data Collection Guide</a>
+      <a href="/regentsTestPrep/unitstestprepquiz.html" class="card-link">→ Regents Test Prep</a>
+    </div>
+  </div>
+
+</div>
+
+---
+
+## 📋 All Presentations
+
+Browse presentations organized by course and topic: **[View All Presentations →](/presindex.html)**
+
+---
+
+<p style="text-align: center; color: var(--text-muted); margin-top: 3rem; font-size: 0.9rem;">
+  Need help? Email me at <a href="mailto:nporter@schodack.k12.ny.us">nporter@schodack.k12.ny.us</a>
+</p>

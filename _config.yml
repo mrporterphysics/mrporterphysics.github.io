@@ -16,9 +16,11 @@ head_include: |
 
 header_pages:
   - index.md
-  - about.md
+  - courses/ap-physics.md
+  - courses/regents-physics.md
+  - courses/earth-science.md
+  - presindex.md
   - contact.md
-  - apphysics.md
 # plugins:
 #   - jekyll-paginate-v2
 #   - jekyll-sitemap

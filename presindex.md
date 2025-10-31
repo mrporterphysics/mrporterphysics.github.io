@@ -3,7 +3,7 @@
 
 ## AP Physics Content Slides:
 
-  - [Kinematics](/mrporterphysics.github.io/Presentations/APCVPM/talks/CVPM2025.html)
+  - [Kinematics](/Presentations/APCVPM/talks/CVPM2025.html)
   
   <!-- - [Linear Dynamics](/mrporterphysics.github.io/Presentations/Forces/talks/Dynamics2024.html)
   - [2D Motion](/mrporterphysics.github.io/Presentations/APCAPM/talks/twoDMotion.html)
@@ -17,8 +17,8 @@
 
 ## Regents Physics 
 
-- [Kinematics](/mrporterphysics.github.io/Presentations/APCVPM/talks/RPKinematics2025.html)
-- [2D Motion](/mrporterphysics.github.io/Presentations/Projectiles/talks/RP2DMotion2025.html)
+- [Kinematics](/Presentations/APCVPM/talks/RPKinematics2025.html)
+- [2D Motion](/Presentations/Projectiles/talks/RP2DMotion2025.html)
 <!-- - [2D Motion Review](/mrporterphysics.github.io/Presentations/Projectiles/talks/projectileReviewVirtualStations.html)
 - [Forces](/mrporterphysics.github.io/Presentations/Forces/talks/RPForces2024.html)
 - [Force Stations](/mrporterphysics.github.io/Presentations/Forces/talks/forcestations.html)
@@ -36,7 +36,7 @@
 
 
 - [Exploring the Sun](/Presentations/ES%20Presentations/Unit%201%20Origin/thesun.html)
-- [Rocks](/mrporterphysics.github.io/Presentations/ES%20Presentations/Rocks/Rocks2025.html)
+- [Rocks](/Presentations/ES Presentations/Rocks/Rocks2025.html)
 
 ---
 
