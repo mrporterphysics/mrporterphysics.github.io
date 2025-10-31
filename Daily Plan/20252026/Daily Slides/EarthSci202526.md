@@ -17,6 +17,41 @@ class:  twilight
 
 ---
 
+<!--- class: thanksgiving -->
+
+# 2025.11.03 **Earth Science**
+
+##### **❓ of the 📅**: What came first? The chicken or the egg?
+
+<div class ='columns'>
+
+ <div>
+
+### 📋 Agenda
+
+0. **Do now**: Hand in Kepler's Law Lab
+1. Finish State Lab Part II & Hand in _both_ parts
+2. Review Assignment for test   
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish State Lab_
+
+🥅 _Review for Test on Wednesday_
+
+### 📆 Upcoming
+
+- Test **Wednesday 11/5**
+
+</div>
+</div>
+
+---
+
 <!--- class: halloween --->
 
 ![bg](https://media3.giphy.com/media/KXco3gw03pCXJQBZe4/giphy.gif)
