@@ -21,7 +21,7 @@ math: mathjax
 
 # 2025.10.31 **Regents Physics** 🎃 👻 🍫
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What was your favorite Halloween costume?
 
 <div class ='columns'>
 
@@ -29,7 +29,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. Vector quiz
+2. Free fall notes & summary
+3. Free fall think sheet
 
 </div>
 
@@ -37,7 +39,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model free fall motion_
 
 ### 📆 Upcoming
 
