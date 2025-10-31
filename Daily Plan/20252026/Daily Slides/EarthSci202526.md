@@ -23,7 +23,7 @@ class:  twilight
 
 # **2025.10.31** Earth Science 👻 🎃 
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What are you dressing up as for Halloween? OR what was your all time favorite costume?
 
 <div class ='columns'>
 
