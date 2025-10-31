@@ -95,7 +95,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   margin: 0;
-  padding: 80px 20px 20px;
+  padding: 120px 20px 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -224,7 +224,7 @@ header {
 /* Main Content */
 main {
   max-width: 900px;
-  margin: 60px auto 20px;
+  margin: 0 auto 20px;
   padding: 0 20px;
 }
 
@@ -386,7 +386,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
-    padding: 70px 15px 15px;
+    padding: 150px 15px 15px;
   }
   
   .site-header {
