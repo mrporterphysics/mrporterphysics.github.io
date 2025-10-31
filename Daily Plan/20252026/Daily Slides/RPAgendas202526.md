@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: halloween--->
 
+![bg](https://media3.giphy.com/media/KXco3gw03pCXJQBZe4/giphy.gif)
+
+# 2025.10.31 **Regents Physics** 🎃 👻 🍫
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.10.30 **Regents Physics**
 
 ##### **❓ of the 📅**: Trick-or-treating or handing out candy?

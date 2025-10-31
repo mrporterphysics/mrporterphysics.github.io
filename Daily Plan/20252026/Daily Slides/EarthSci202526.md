@@ -19,6 +19,39 @@ class:  twilight
 
 <!--- class: halloween --->
 
+![bg](https://media3.giphy.com/media/KXco3gw03pCXJQBZe4/giphy.gif)
+
+# **2025.10.31** Earth Science*👻 🎃 
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Complete Part 1 of State Lab with your Partner
+2. Complete Part 2 of Lab - Individually
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Complete State Lab_
+
+### 📆 Upcoming
+
+- Astronomy Test Next **Wednesday 11/5**
+    - We will review Monday & Tuesday
+
+</div>
+</div>
+
+---
+
 # 2025.10.30 **Earth Science**
 
 ##### **❓ of the 📅**: Trick or treating or handing out candy?
