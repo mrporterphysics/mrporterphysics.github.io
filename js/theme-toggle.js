@@ -171,3 +171,115 @@ if (document.readyState === 'loading') {
 
 // Also initialize immediately for faster theme application
 window.themeManager = new ThemeManager();
+
+/**
+ * Mobile Menu Toggle Functionality
+ */
+class MobileMenu {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => this.setup());
+    } else {
+      this.setup();
+    }
+  }
+
+  setup() {
+    // Create hamburger button if it doesn't exist
+    this.createMenuToggle();
+
+    // Set up event listeners
+    this.setupEventListeners();
+  }
+
+  createMenuToggle() {
+    // Check if toggle already exists
+    if (document.querySelector('.menu-toggle')) {
+      return;
+    }
+
+    const header = document.querySelector('.site-header') || document.querySelector('header');
+    if (!header) return;
+
+    const toggle = document.createElement('button');
+    toggle.className = 'menu-toggle';
+    toggle.setAttribute('aria-label', 'Toggle navigation menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '☰';
+
+    // Insert before or after site-nav
+    const nav = header.querySelector('.site-nav');
+    if (nav) {
+      header.insertBefore(toggle, nav);
+    } else {
+      header.appendChild(toggle);
+    }
+  }
+
+  setupEventListeners() {
+    // Menu toggle click
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('.menu-toggle')) {
+        e.preventDefault();
+        this.toggleMenu();
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const nav = document.querySelector('.site-nav');
+      const toggle = document.querySelector('.menu-toggle');
+
+      if (nav && nav.classList.contains('active') &&
+          !nav.contains(e.target) &&
+          !toggle.contains(e.target)) {
+        this.closeMenu();
+      }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        this.closeMenu();
+      }
+    });
+
+    // Close menu on link click (mobile)
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('.site-nav .page-link')) {
+        // Small delay to allow navigation to start
+        setTimeout(() => this.closeMenu(), 150);
+      }
+    });
+  }
+
+  toggleMenu() {
+    const nav = document.querySelector('.site-nav');
+    const toggle = document.querySelector('.menu-toggle');
+
+    if (!nav || !toggle) return;
+
+    const isActive = nav.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    toggle.innerHTML = isActive ? '✕' : '☰';
+  }
+
+  closeMenu() {
+    const nav = document.querySelector('.site-nav');
+    const toggle = document.querySelector('.menu-toggle');
+
+    if (!nav || !toggle) return;
+
+    nav.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '☰';
+  }
+}
+
+// Initialize mobile menu
+window.mobileMenu = new MobileMenu();

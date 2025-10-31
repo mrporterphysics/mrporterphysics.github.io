@@ -3,6 +3,10 @@ layout: default
 title: Home
 ---
 
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div id="main-content" role="main" aria-label="Main content">
+
 <style>
 /* Inline styles to ensure they load */
 .quick-access {
@@ -232,3 +236,5 @@ Browse presentations organized by course and topic: **[View All Presentations â†
 <p style="text-align: center; color: var(--text-muted); margin-top: 3rem; font-size: 0.9rem;">
   Need help? Email me at <a href="mailto:nporter@schodack.k12.ny.us">nporter@schodack.k12.ny.us</a>
 </p>
+
+</div>
