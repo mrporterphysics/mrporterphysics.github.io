@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+<!--- class: thanksgiving-->
+
+
+#  ****
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 <!--- class: halloween--->
 
 ![bg](https://media3.giphy.com/media/KXco3gw03pCXJQBZe4/giphy.gif)

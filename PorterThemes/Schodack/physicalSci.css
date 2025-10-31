@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Workbench&display=swap');
 
+
 :root {
     /* Light theme colors */
     --light-background: #F2F0E5;
@@ -85,6 +86,14 @@
 
     
     --text-glow: 0 0 10px;
+    --thanksgiving-background: #FAF3E0;      /* warm cream */
+    --thanksgiving-text: #3E2723;            /* rich brown */
+    --thanksgiving-accent-orange: #D2691E;   /* burnt sienna */
+    --thanksgiving-accent-red: #A0522D;      /* russet/sienna */
+    --thanksgiving-accent-gold: #CD853F;     /* harvest gold */
+    --thanksgiving-accent-brown: #8B4513;    /* saddle brown */
+
+
 }
 
 /* Light theme default */
@@ -1010,4 +1019,105 @@ section.halloween table th {
 }
 section.halloween table tr:nth-child(even) td {
   background-color: rgba(138, 43, 226, 0.08) !important;
+}
+css/* Thanksgiving theme colors - warm autumnal harvest tones */
+:root {
+    --thanksgiving-background: #FAF3E0;      /* warm cream */
+    --thanksgiving-text: #3E2723;            /* rich brown */
+    --thanksgiving-accent-orange: #D2691E;   /* burnt sienna */
+    --thanksgiving-accent-red: #A0522D;      /* russet/sienna */
+    --thanksgiving-accent-gold: #CD853F;     /* harvest gold */
+    --thanksgiving-accent-brown: #8B4513;    /* saddle brown */
+}
+
+/* Thanksgiving theme base */
+section.thanksgiving {
+    background-color: var(--thanksgiving-background) !important;
+    color: var(--thanksgiving-text) !important;
+}
+
+/* Thanksgiving theme headers */
+section.thanksgiving h1 {
+    color: var(--thanksgiving-accent-brown) !important;
+    border-bottom: 2px solid var(--thanksgiving-accent-orange) !important;
+    padding-bottom: 0.1em;
+    font-size: 1.7em;
+}
+
+section.thanksgiving h2 {
+    color: var(--thanksgiving-accent-orange) !important;
+    font-size: 1.5em;
+}
+
+section.thanksgiving h3,
+section.thanksgiving h4,
+section.thanksgiving h5,
+section.thanksgiving h6 {
+    color: var(--thanksgiving-accent-red) !important;
+    font-size: 1.3em;
+}
+
+/* Thanksgiving theme links */
+section.thanksgiving a {
+    color: var(--thanksgiving-accent-orange) !important;
+}
+
+/* Thanksgiving theme code blocks */
+section.thanksgiving code,
+section.thanksgiving pre {
+    color: var(--thanksgiving-accent-brown) !important;
+    background-color: rgba(139, 69, 19, 0.1) !important;
+}
+
+/* Thanksgiving theme strong text */
+section.thanksgiving strong {
+    color: var(--thanksgiving-accent-red) !important;
+}
+
+/* Thanksgiving theme tables */
+section.thanksgiving table {
+    border: 2px solid var(--thanksgiving-accent-orange);
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+section.thanksgiving table > thead > tr > th,
+section.thanksgiving table th {
+    background-color: var(--thanksgiving-accent-brown);
+    color: var(--thanksgiving-background);
+    font-weight: bold;
+    padding: 0.8em;
+    text-align: left;
+}
+
+section.thanksgiving table > tbody > tr > td,
+section.thanksgiving table td {
+    padding: 0.8em;
+    border: 1px solid rgba(139, 69, 19, 0.3);
+    background-color: var(--thanksgiving-background);
+    color: var(--thanksgiving-text);
+}
+
+section.thanksgiving table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(205, 133, 63, 0.12);
+}
+
+/* Aggressive override to prevent inline Markdown table styles from breaking theme */
+section.thanksgiving table,
+section.thanksgiving table tr,
+section.thanksgiving table td,
+section.thanksgiving table th {
+    background-color: var(--thanksgiving-background) !important;
+    color: var(--thanksgiving-text) !important;
+}
+
+section.thanksgiving table th {
+    background-color: var(--thanksgiving-accent-brown) !important;
+    color: var(--thanksgiving-background) !important;
+}
+
+section.thanksgiving table tr:nth-child(even) td {
+    background-color: rgba(205, 133, 63, 0.12) !important;
 }

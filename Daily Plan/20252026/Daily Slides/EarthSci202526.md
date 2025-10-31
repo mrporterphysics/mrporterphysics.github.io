@@ -21,7 +21,7 @@ class:  twilight
 
 ![bg](https://media3.giphy.com/media/KXco3gw03pCXJQBZe4/giphy.gif)
 
-# **2025.10.31** Earth Science*👻 🎃 
+# **2025.10.31** Earth Science 👻 🎃 
 
 ##### **❓ of the 📅**: 
 
