@@ -3,6 +3,18 @@ title: Regents Physics
 layout: default
 ---
 
+<style>
+.card-link {
+  color: var(--accent-primary) !important;
+  text-decoration: none !important;
+}
+.card-link:hover {
+  color: var(--accent-hover) !important;
+  background: var(--bg-tertiary);
+  text-decoration: none !important;
+}
+</style>
+
 # Regents Physics
 
 <span class="course-badge badge-regents">NYS Regents</span>

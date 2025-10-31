@@ -3,6 +3,18 @@ title: AP Physics 1
 layout: default
 ---
 
+<style>
+.card-link {
+  color: var(--accent-primary) !important;
+  text-decoration: none !important;
+}
+.card-link:hover {
+  color: var(--accent-hover) !important;
+  background: var(--bg-tertiary);
+  text-decoration: none !important;
+}
+</style>
+
 # AP Physics 1
 
 <span class="course-badge badge-ap">AP Level</span>
