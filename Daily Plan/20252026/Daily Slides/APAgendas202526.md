@@ -49,6 +49,9 @@ math: mathjax
 
 ### 📆 Upcoming
 
+- Test **Wednesday** - Finish AP Classroom Progress Check
+- Sign up for quiz reassessments this week!
+
 </div>
 </div>
 

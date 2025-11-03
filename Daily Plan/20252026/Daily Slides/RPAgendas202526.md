@@ -17,10 +17,16 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+# 2025.11.03 **Regents Physics** Do Now
 
-#  ****
+## Physics Classroom - Free Fall Concept Builder
 
-##### **❓ of the 📅**: 
+---
+
+
+# 2025.11.03 **Regents Physics**
+
+##### **❓ of the 📅**: What came first? The chicken or the egg?
 
 <div class ='columns'>
 
@@ -28,7 +34,10 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. Do Now
+2. Free Fall Think Sheet
+3. PC -> Kinematics 6: Free Fall
+
 
 </div>
 
@@ -36,9 +45,11 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model and predict Free Fall Motion_
 
 ### 📆 Upcoming
+
+- Kinematics & Vectors Test on Thursday
 
 </div>
 </div>
