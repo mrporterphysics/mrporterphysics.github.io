@@ -19,6 +19,62 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.04 **Earth Science** Do Now
+
+1. Find a partner
+2. Go to a *vertical whiteboard* space (rolling boards, cabinet, front whiteboard, curved wall)
+3. Get a few (2-4) markers and an eraser
+3. Erase your board
+4. Wait patiently for your next set of instructions
+
+---
+
+# 2025.11.04 **Earth Science**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Whiteboard Summary Board
+2. Continue Posted Test Review  
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for Test_
+
+### 📆 Upcoming
+
+- Test tomorrow
+
+</div>
+</div>
+
+
+---
+
+# Whiteboard Summary:
+
+- What do we need to know about **the sun**, **stellar life cycle**, and **Kepler's Laws**?
+    - What are the **BIG IDEAS**?
+    - What are some *important details*?
+- Use words and pictures
+- Don't just copy your notes - lots of words isn't great, try to summarize and simplify.
+
+
+<mark>_⚠️ Do this first **without** any notes. Then review your notes and add to your board_<mark/>
+
+
+
+---
+
 # 2025.11.03 **Earth Science**
 
 ##### **❓ of the 📅**: What came first? The chicken or the egg?

@@ -341,20 +341,21 @@ Rank the situations from the ***greatest to the least horizontal distance*** tha
 
 ---
 
-# Vector Components
+# Components 
 
-<iframe src="
-" style="border:0px #ffffff none;" name="myiFrame" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="600px" width="1100px" allowfullscreen></iframe>
+- The X-axis velocity component ($v_x$) is constant and will not accelerated so it will stay the same the entire flight
+- The initial Y-axis velocity component will change as it accelerated by gravity 9.8 m/s² down. This is why we say ($v_{iy}$) and not just $v_y$ because it will change throughout the problem.
+
+![bg fit right:42%](../figures/cannon-v-to-viy-and-vx.gif)
 
 ---
 
+
 # Finding Vector Components
 
-![bg fit right:25%](image-6.png)
+![bg fit right:29%](image-6.png)
 
-## Practice: 
-
-Find the x & y components of the following velocities...
+Practice: Find the x & y components of the following velocities...
 
 1. A water balloon is launched with a speed of 40 m/s at an angle of 60 degrees to the horizontal.
 2. A motorcycle stunt person traveling 70 mi/hr jumps off a ramp at an angle of 35 degrees to the horizontal.
@@ -362,89 +363,44 @@ Find the x & y components of the following velocities...
 
 ---
 
-# Some Projectile Reminders & Facts:
 
-- When an object is in free-fall,
+# Projectile Fact Reminders
+
+<div class='columns'>
+<div>
+
+![center](../figures/Highest-Point.gif)
+
+</div>
+ 
+<div>
+
+![center](../figures/Lands-at-Same-Height.gif)
+
+</div>
+</div>
+
+---
+
+# **Some Projectile Reminders & Facts:**
+
+* When an object is in free-fall,
   - its **VERTICAL acceleration** is always $g$ or $10 \text{ m/s}^2$ near the surface of the earth.
   - its **HORIZONTAL acceleration** *is always zero*. Meaning the only equation you use for the horizontal motion is $\Delta x=vt$ 
+* Velocities in perpendicular directions add with the Pythagorean theorem
 
-- Velocities in perpendicular directions add with the Pythagorean theorem
-- The magnitude of an object's velocity is known as its speed
-- To approach a projectile problem, make two kinematics charts: one vertical, one horizontal.
-
----
-
-
-# [Concept Checker](https://www.physicsclassroom.com/Concept-Checkers/Interactives/Projectile-Simulator-3/Concept-Checker) 🤔 ✔️ <!--fit--->
-
-![bg blur](image-7.png)
+* The magnitude of an object's velocity is known as its speed
 
 ---
 
+## Some More Reminders from Free Fall 
 
-<div class='columns'>
-<div>
-
-A baseball is thrown from point S in right field to home plate. 
-
-![center](image-8.png)
-
-Use a coordinate system with up (+x) and left (+y), and the origin at home plate.
-Select the graph that best represents:
-1. $v_x$ vs. $t$
-2. $a_x$ vs. $t$
-3. $v_y$ vs. $t$
-4. $v_a$ vs. $t$
-
-</div>
- 
-<div>
-
-<br><br><br>
-
-![center width:800px](image-9.png)
-
-</div>
-</div>
-
----
-
-<div class='columns'>
-
-
-<div>
-
-An airplane is flying 1200 m above the ground at a speed of 200 m/s. It drops a bag that hits the ground after traveling a horizontal distance of 3130 m.
-
-![center](image-10.png)
-
-
-
-</div>
-
-<div>
-
-1. The plane’s speed is tripled.
-2. The plane is climbing straight up.
-3. The plane is flying level at an altitude of 1,100 m.
-4. The mass of the bag is increased.
-5. The bag is thrown from the plane with a $v_{0y}$ of 15 m/s down.
-
-</div>
-
-<div>
-
-(i) The $\Delta x$ will be greater than 3130 m.
-(ii) The $\Delta x$ will be less than 3130 m but not zero.
-(iii) The $\Delta x$ will be equal to 3130 m.
-(iv) The $\Delta x$ will be zero 
-(v) We cannot determine how this change will affect $\Delta x$.
-
-
-</div>
- 
-
-</div>
+* $a_y = g = -9.8 \text{ m/s/s}$ &rarr; Always when near the surface of the Earth
+* If object is _dropped_ $v_{iy} = 0$ 
+* If object is projected upwards it will slow down as it rises. The y-velocity will be zero at its heights point or peak
+    * You can treat $v_{fy} =0$ at the peak
+* If an object is projected upwards the velocity at which it is projected is equal and magnitude and opposite in direction when it returns to its initial height. 
+    * i.e. a ball projected upwards at $+30 \text{m/s}$ will have a downward velocity of $-30 \text{m/s}$ when it returns to its launch height
 
 ---
 
@@ -469,63 +425,21 @@ Determine
 
 ---
 
+# Thought experiments 🤔 
+
+1. On flat ground, which launch angle will give the maximum range?
+2. Can do different angles give the same range? What angles?
+
+---
+
 # Practice Time <!--fit--->
 
 # [Turd the Target 💩](https://www.physicsclassroom.com/Physics-Interactives/Vectors-and-Projectiles/Turd-the-Target-2/Turd-the-Target-2-Interactive) <!--fit--->
 
 ---
-
-# Frames of Reference
-
-
-
-
-<iframe width="1100" height="600" src="https://www.youtube.com/embed/bJMYoj4hHqU?si=gfVx_4cT7ErotqLZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ---
 
-<!--- _footer: Images from Physics Classroom --->
 
-# Relative Velocity 
+# [Concept Checker](https://www.physicsclassroom.com/Concept-Checkers/Interactives/Projectile-Simulator-3/Concept-Checker) 🤔 ✔️ <!--fit--->
 
-## Headwind and Tail Wind
-
-<div class='columns'>
-<div>
-
-![center w:500](image-11.png)
-
-</div>
- 
-<div>
-
-![center w:500](image-12.png)
-
-</div>
-</div>
-
----
-
-# Cross Wind...
-
-
-![center w:700](image-13.png)
-
----
-
-# Animation 
-
-![center w:600](../figures/plane.gif)
-
-
----
-
-# Classic Physics Problem **Riverboat**
-
-A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
-
-1. What is the resultant velocity of the motorboat?
-2. If the width of the river is 80 meters wide, then how much time does it take the boat to travel shore to shore?
-3. What distance downstream does the boat reach the opposite shore?
-
-![bg fit right:30%](image-15.png)
+![bg blur](image-7.png)

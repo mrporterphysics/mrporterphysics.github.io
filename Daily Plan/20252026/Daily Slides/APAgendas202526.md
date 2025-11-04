@@ -19,6 +19,92 @@ math: mathjax
 <!--- class: thanksgiving -->
 
 
+# 2025.11.04 **AP Physics** Do Now
+
+<div class='columns'>
+<div>
+
+Car A is traveling to the right at a constant velocity $v_A$. At time $t=0$, it passes Car B, which is at rest. At the same time ($t=0$), Car B begins to accelerate with a constant acceleration of magnitude $a_B$, as shown in Figure 1. Car B has a velocity of $v_B$ when it reaches the same position as Car A at time $t=t_f$, as shown in Figure 2. Which of the following, if any, is an expression for the 
+
+</div>
+ 
+<div>
+
+time it takes Car B to catch up top Car A?
+
+![center](image-28.png)
+
+**A.** $\frac{v_A}{a_B}$  **B.** $\frac{2v_A}{a_b}$ **C.** $\frac{2v_A^2}{a_B}$
+**D.** It cannot be determined without knowing the distance traveled by the cars
+</div>
+</div>
+
+---
+
+<div class='columns'>
+<div>
+
+Car A is traveling to the right at a constant velocity $v_A$. At time $t=0$, it passes Car B, which is at rest. At the same time ($t=0$), Car B begins to accelerate with a constant acceleration of magnitude $a_B$, as shown in Figure 1. Car B has a velocity of $v_B$ when it reaches the same position as Car A at time $t=t_f$, as shown in Figure 2. 
+
+</div>
+ 
+<div>
+
+![center](image-28.png)
+
+**_On the same axes, sketch the velocity graphs for each car. Label any important velocites or times._**
+
+</div>
+</div>
+
+
+
+---
+
+# 2025.11.04 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite holiday?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Hand Back Quizzes
+2. Projectiles Fired at an Angle
+3. TS Projectiles #11 -> End
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Projectiles Fired at an Angle_
+
+### 📆 Upcoming
+- Test Tomorrow -> Finish AP Classroom Assignment
+
+</div>
+</div>
+
+---
+
+# Quiz Reassessment - Extra Practice
+
+### 1.2 Displacement, Velocity, and Acceleration
+- Kinematic Equations 4
+- Kinematic Equations 5
+### 1.3 Representing Motion 
+- Concept Builder: Match that graph
+### 1.5 Vectors and Motion in Two Dimensions 
+- Vectors and Projectiles: Component Addition
+
+---
+
+
 # 2025.11.03 **AP Physics** Do Now
 
 ### A Coast Guard helicopter is flying at $106.6\text{ km/hr}$ at a height of $93\text{ meters}$ above the ocean water. The crew wishes to package a box of survival gear to some people aboard a shipwrecked vessel. What horizontal distance from the wreckage site should the helicopter release the package in order to land it at the site?
