@@ -17,6 +17,49 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+# 2025.11.05 **Regents Physics** Do Now
+
+### Recall 🧠 from last class without looking at your notes...
+
+1. What is the definition of an object in free fall?
+2. What is the acceleration of an object in free fall. 
+3. Considering upwards to be the positive direction sketch the position vs. time, velocity vs. time and acceleration vs. time graph for an object in free fall
+
+
+---
+
+
+# 2025.11.05 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite holiday?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Free Fall Worked Examples
+3. Physics Classroom Free Fall Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve problems with Free Fall Motion_
+
+### 📆 Upcoming
+
+- Test Tomorrow
+
+</div>
+</div>
+
+---
+
 # 2025.11.03 **Regents Physics** Do Now
 
 ## Physics Classroom - Free Fall Concept Builder

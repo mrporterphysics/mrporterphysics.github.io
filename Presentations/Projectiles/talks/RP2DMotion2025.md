@@ -563,6 +563,179 @@ A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
 
 ---
 
+# Regents Physics
+##  Free Fall Worked Examples
+
+---
+
+## Norms & Goals
+- Choose a positive direction; be consistent.
+- Use constant-acceleration relations:
+  - $d = v_i t + \tfrac12 a t^2$
+  - $v = v_i + a t$
+  - $v_f^2 = v_i^2 + 2 a d$
+- Gravity magnitude: $g = 9.80\ \mathrm{m/s^2}$ (neglect air resistance unless stated)
+
+---
+
+### A ball is dropped from rest from $h = 20.0\ \mathrm{m}$. Up is positive. Find:
+- time to impact
+- impact speed (with sign)
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+---
+### A rock is thrown straight up at $v_i = 12.0\ \mathrm{m/s}$ from ground level.
+
+
+- Time to the top. Hint: $v=0$ at peak.
+- Height at the top.
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<!-- You try:
+
+Reveal:
+- $t_{\text{top}} = \dfrac{0 - v_i}{-g} = 1.22\ \mathrm{s}$
+- $y_{\max} = v_i t - \tfrac12 g t^2 \approx 7.32\ \mathrm{m}$
+- Check: $y_{\max} = \dfrac{v_i^2}{2g} \approx 7.35\ \mathrm{m}$ -->
+
+---
+
+### Drop from $d = 30.0\ \mathrm{m}$. Down is positive. _What is the final velocity?_
+
+Template:
+- $v_f^2 = v_i^2 + 2 a d$
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<!-- 
+
+Reveal:
+- $v_i=0$, $a=+9.80$, $d=30.0$
+- $v_f^2 = 2(9.80)(30.0) = 588 \Rightarrow v_f = 24.3\ \mathrm{m/s}$ down -->
+
+---
+
+### Case A (drop): $v_i = 0$, $h = 10.0\ \mathrm{m}$
+### Case B (throw down): $v_i = 5.0\ \mathrm{m/s}$ down from $h = 10.0\ \mathrm{m}$
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<!-- You set up:
+- A: $0 = h + v_i t + \tfrac12 g t^2$
+- B: $0 = h + v_i t + \tfrac12 g t^2$ (same form, different $v_i$)
+
+Reveal times:
+- A: $t \approx 1.43\ \mathrm{s}$
+- B: physical root $t \approx 1.06\ \mathrm{s}$
+
+Prompt: What stayed the same? What changed? -->
+
+---
+
+### Error Analysis — Sign Convention
+Up is positive. Student sets $a=+9.80$ for an upward throw $v_i=8.0\ \mathrm{m/s}$ and claims speed increases going up.
+
+Diagnose:
+- With up positive, $a=-g$. Speed must decrease on the way up.
+
+Compute correct $t_{\text{top}}$:
+- $v = v_i + a t = 0 \Rightarrow t = \dfrac{-v_i}{a} = \dfrac{-8.0}{-9.80} = 0.816\ \mathrm{s}$
+
+---
+
+## 8) Subgoal-Labeled — Upward from a Ledge
+From $y_0=18\ \mathrm{m}$, throw up $v_i=10\ \mathrm{m/s}$. When does it hit ground?
+
+Subgoal 1:
+- $y(t) = 18 + 10 t - 4.90 t^2$
+
+Subgoal 2:
+- $0 = 18 + 10 t - 4.90 t^2$
+- $t = \dfrac{10 \pm \sqrt{100 + 352.8}}{9.80}$
+- Physical root $t \approx 3.06\ \mathrm{s}$
+
+Subgoal 3:
+- Reject negative time; check vs. $t_{\text{top}}$
+
+---
+
+## 9) Self-Explanation — Impact Speed Without Time
+Drop from $h=5.0\ \mathrm{m}$. Use $v_f^2 = v_i^2 + 2 a d$ only.
+
+Compute:
+- $v_f = \sqrt{2 g h} \approx 9.90\ \mathrm{m/s}$ down
+
+Explain:
+- Why does this avoid solving for $t$?
+- Why is speed positive while velocity may be negative?
+
+---
+
+## 10) Example–Problem Pair — Peak Time & Height
+Reference:
+- $t_{\text{top}} = \dfrac{v_i}{g}$, $y_{\max} = \dfrac{v_i^2}{2g}$
+
+Practice:
+- $v_i = 9.0\ \mathrm{m/s}$ → $t_{\text{top}} = 0.918\ \mathrm{s}$, $y_{\max} \approx 4.13\ \mathrm{m}$
+
+---
+
+## 11) Two-Object Coordination — Staggered Drops
+Ball A dropped at $t=0$. Ball B dropped at $t=0.50\ \mathrm{s}$ from same height. When is their separation $5.0\ \mathrm{m}$?
+
+Setup (for $t \ge 0.50$):
+- $y_A = y_0 - \tfrac12 g t^2$
+- $y_B = y_0 - \tfrac12 g (t-0.50)^2$
+- $\Delta y = \tfrac12 g\,[t^2 - (t-0.50)^2] = 5.0$
+
+Solve:
+- $\tfrac12 g (1.0 t - 0.25) = 5.0 \Rightarrow t \approx 1.27\ \mathrm{s}$
+
+---
+
+## 12) CER Prompt — Mass Independence in Free Fall
+Claim:
+- In vacuum, drop time from a given height is independent of mass.
+
+Evidence:
+- From rest: $t = \sqrt{\dfrac{2h}{g}}$
+
+Reasoning:
+- $a=-g$ depends on the field, not mass (ignoring drag). Contrast with air resistance case.
+
+---
+
+## Extension — Task Tracker Alignment Examples
+Vertical Leap (K22Q2):
+- Given peak height $d$, $v_i = \sqrt{2gd}$
+
+Round-Trip Catch Time (K22Q6):
+- Caught after total time $T$: $t_{\text{top}} = T/2$
+- $v_i = gT/2,\quad y_{\max} = gT^2/8$
+
+Rocket (K23Q1) piecewise:
+- Powered ascent $(0\to t_1)$: $v_1=a_1 t_1,\ y_1=\tfrac12 a_1 t_1^2$
+- Coast to peak: $t_{\text{peak}}=v_1/g,\ y_{\max}=y_1+\dfrac{v_1^2}{2g}$
+- Later time $t_3$:
+  - If $t_3\le t_1$: powered kinematics
+  - If $t_3>t_1$: $v(t_3)=v_1-g(t_3-t_1)$, $y(t_3)=y_1+v_1(t_3-t_1)-\tfrac12 g(t_3-t_1)^2$
+  - Distance fallen since peak: $\Delta y=\tfrac12 g (t_3-t_{\text{peak}})^2$
+
+---
+
+## Quick Checks & Prompts
+- Which equation matches knowns/unknowns?
+- Are signs consistent with your chosen positive direction?
+- Does the magnitude and unit make physical sense?
+
+
+---
+
 
 # Free Fall Kinematics 
 
