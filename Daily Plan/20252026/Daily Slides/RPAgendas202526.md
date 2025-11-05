@@ -22,7 +22,7 @@ math: mathjax
 ### Recall 🧠 from last class without looking at your notes...
 
 1. What is the definition of an object in free fall?
-2. What is the acceleration of an object in free fall. 
+2. What is the acceleration of an object in free fall?
 3. Considering upwards to be the positive direction sketch the position vs. time, velocity vs. time and acceleration vs. time graph for an object in free fall
 
 
