@@ -19,6 +19,44 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.08 **Earth Science** Do Now
+
+
+1. Hand in all Astronomy Packets:  
+    - Kepler's Law
+    - Sun
+    - Stellar Evolution
+    - Orbits (don't worry about it being incomplete)
+
+---
+
+# 2025.11.06 **Earth Science**
+
+##### **❓ of the 📅**: If you could have dinner with 1 person (past or present), who would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finding Earth 2.0 - Finish Performance Task Packet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Find Earth 2.0_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.04 **Earth Science** Do Now
 
 1. Find a partner
