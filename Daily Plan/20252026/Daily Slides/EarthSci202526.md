@@ -19,6 +19,46 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.10 **Earth Science** Do Now
+
+**Without asking a friend, or looking at your notes...** Write down on a whiteboard:
+
+1. What is the fuel for the sun?
+2. What are Kepler's 3 Laws
+3. What are the stages in the lifecycle a sun-like star?
+
+
+---
+
+# 2025.11.10 **Earth Science**
+
+##### **❓ of the 📅**: Cranberry Sauce? Yey or Ney? Homemade or Canned?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Kepler's Mathematical Relationship
+2. Orbits Packet - Explain 2 and Drawing Orbits
+3. Finish Performance Task Packet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model habitable planets based on mathematical relationshios of orbits_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.08 **Earth Science** Do Now
 
 

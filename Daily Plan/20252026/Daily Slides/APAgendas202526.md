@@ -18,6 +18,119 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.10 **AP Physics** Do Now
+
+Sharon Steady and Al Wayskachon won South’s recent egg toss contest held during Homecoming week. In their winning toss, Sharon gave the egg an underhand toss, releasing it with a velocity of 7.5 m/s at an angle of 30° to the horizontal. To the pleasure of the crowd, Al caught the egg at the same height as the toss without even a fracture to its shell.
+
+1. Calculate the time for the egg to reach the midpoint of the trajectory.
+2. Calculate the total time the egg is in the air.
+3. Calculate the horizontal distance which the egg traveled.
+4. Calculate the height of the egg (relative to the release point) when it was at the peak of its trajectory.
+
+---
+
+# 2025.11.10 **AP Physics**
+
+##### **❓ of the 📅**: Cranberry Sauce? Yay or Nay? Homemade or Canned?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Test Corrections
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make test corrections_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Test Corrections
+
+---
+
+## Why do corrections?
+- Learn from errors, not just the grade
+- Make thinking visible (CER + diagrams)
+- Target misconceptions and fix them
+- Build metacognitive habits to perform better next time
+
+
+---
+
+## Corrections Process
+
+We will use the same steps for every correction:
+1) **Decode the Problem**
+    1. Translate
+    2. Big Physics Ideas
+    3. Givens & Unknowns (units; axes/signs)
+    4. Sketch
+    5. Simplify & Diagram
+2) **Do the Physics**
+    1. Represent Mathematically (Solve Algebraically)
+    2. Solve & Evaluate
+3) **Explain & Learn**: CER + 4 C’s + Preventive Cue
+
+---
+
+## Where & When
+- Complete within ~1 week of test return
+- In school only (class, study hall, breakout space)
+- Start from scratch (no copying prior answers)
+
+---
+
+## Points-back policy (curve)
+- Awarded for high-quality corrections
+- Curve: $\sqrt{\frac{(\text{points earned} + \text{1/2 points back})}{\text{total points}}}$
+- Quality = correct solution + diagram + CER + error type + reflection
+
+---
+
+## Example - Together
+
+### Q10 - Boat across a river
+
+
+---
+
+## Quality Checklist
+- Correct solution from scratch
+- Named physics principle/fact
+- Accurate, labeled diagram
+- Clear CER
+- Error type + preventive cue
+- Unit/sign/limiting-case checks
+
+---
+
+## Final Reflection (Exam Wrapper)
+- Patterns across missed items
+- Strategy changes for next exam
+- Practice targets and timeline
+- Meet with Mr. Porter before submitting
+
+---
+
+# You’ve got this
+Think clearly, show your physics, learn deeply
+
+
+---
+
 
 # 2025.11.04 **AP Physics** Do Now
 
