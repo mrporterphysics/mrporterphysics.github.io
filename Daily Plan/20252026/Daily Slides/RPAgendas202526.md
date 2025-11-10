@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+# 2025.11.10 **Regents Physics**
+
+##### **❓ of the 📅**: Cranberry Sauce: Yey or Ney? Canned or Homemade?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now -> Free Fall Question
+2. Horizontally Launced Projectiles Demo & [Notes](../../../Presentations/Projectiles/talks/RP2DMotion2025.html#64)
+3. Group Whiteboard Practice
+4. Marble Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and Predict Projectile Motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.05 **Regents Physics** Do Now
 
 ### Recall 🧠 from last class without looking at your notes...
