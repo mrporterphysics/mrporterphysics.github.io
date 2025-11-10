@@ -822,6 +822,23 @@ Explain your reasoning.
 
 # **Launcher** Demo <!--fit--->
 
+---
+
+# What are the three possible outcomes?
+
+1) Right ball ($v_x > 0$) hits first 
+2) Left ball ($v_x =0$) hits first 
+3) Balls hit at the same time 
+
+---
+
+# What does each result imply about the **horizontal velocity's** effect on **flight time**?
+
+
+1. Right ball ($v_x > 0$) hits first 
+2. Left ball ($v_x =0$) hits first 
+3. Balls hit at the same time 
+
 
 ---
 
@@ -964,7 +981,7 @@ A pool ball leaves a 0.60-meter high table with an initial horizontal velocity o
 
 # Practice 
 
-## A soccer ball is kicked horizontally off a 22.0-meter high hill and lands a distance of 35.0 meters from the edge of the hill. Determine the initial horizontal velocity of the soccer ball.
+A soccer ball is kicked horizontally off a 22.0-meter high hill and lands a distance of 35.0 meters from the edge of the hill. Determine the initial horizontal velocity of the soccer ball.
 
 
 ---
@@ -990,6 +1007,19 @@ A stone is thrown horizontally to the right at a speed of 17.2 m/s from the top 
 2. How far from the base of the cliff does the stone hit the ground?
 3. What is the horizontal component of the stone's velocity just before it hits the ground?
 4. What is the vertical component of the stone's velocity just before it hits the ground?
+
+---
+
+### 🔑 **Key Ideas**:
+
+### A projectile is an object with the following characteristics:
+
+* The only force acting on it is the gravitational force; it is a free-falling object
+* The acceleration is directed downwards and has a magnitude of $9.8 \text{ m/s}^2$
+* Once projected, it continues its horizontal motion without any need of a force
+* As it travels through the air, its horizontal velocity remains constant
+* As it rises, its vertical velocity ($v_y$) decreases; as it falls, its $v_y$ increases
+
 
 ---
 
