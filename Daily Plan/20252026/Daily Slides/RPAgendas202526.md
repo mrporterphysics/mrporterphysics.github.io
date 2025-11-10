@@ -17,6 +17,15 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+# 2025.11.10 **Regents Physics** Do Now
+
+For years, the tallest drop tower in the United States was the Phoenix Shot Tower in Baltimore, Maryland. The shot tower was used from 1828 to 1892 to make lead shot for pistols and rifles and molded shot for cannons and other instruments of warfare. Molten lead was dropped from the top of the 234-foot (71.3 meter) tall tower into a vat of water. During its free fall, the lead would form a perfectly spherical droplet and solidify. 
+
+1. Determine the time of fall.
+2. Determine the speed of a lead shot upon hitting the water at the bottom.
+
+---
+
 # 2025.11.10 **Regents Physics**
 
 ##### **❓ of the 📅**: Cranberry Sauce: Yey or Ney? Canned or Homemade?
