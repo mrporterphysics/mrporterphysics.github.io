@@ -96,6 +96,34 @@ Line up 4 evenly spaced rings stands so that the ball goes through each ring sta
 
 ---
 
+<div class='columns'>
+<div>
+
+# Horizontal Launch Data
+
+</div>
+ 
+<div>
+
+| Height (m) |  Range (m) |
+|---|---| 
+| 1.003| 	2.650|
+| 1.003| 	2.659|
+| 1.003| 	2.713|
+| 1.003| 	2.720|
+| 1.003| 	2.723|
+| 1.003| 2.693|
+
+</div>
+</div>
+
+
+
+
+
+
+---
+
 # 2025.11.10 **AP Physics** Do Now
 
 Sharon Steady and Al Wayskachon won South’s recent egg toss contest held during Homecoming week. In their winning toss, Sharon gave the egg an underhand toss, releasing it with a velocity of 7.5 m/s at an angle of 30° to the horizontal. To the pleasure of the crowd, Al caught the egg at the same height as the toss without even a fracture to its shell.

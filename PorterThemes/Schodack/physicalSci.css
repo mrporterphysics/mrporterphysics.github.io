@@ -506,46 +506,57 @@ section table {
 
 section.dark table {
     border: 2px solid var(--dark-accent-purple) !important;
+    border-collapse: collapse;
 }
 
 section.twilight table {
     border: 2px solid var(--twilight-accent-blue);
+    border-collapse: collapse;
 }
 
 section.sepia table {
     border: 2px solid var(--sepia-accent-blue);
+    border-collapse: collapse;
 }
 
 section.highcontrast table {
     border: 2px solid var(--highcontrast-accent-blue);
+    border-collapse: collapse;
 }
 
 section.bluegray table {
     border: 2px solid var(--bluegray-accent-blue);
+    border-collapse: collapse;
 }
 
 section.soft table {
     border: 2px solid var(--soft-accent-blue);
+    border-collapse: collapse;
 }
 
 .twilight table {
     border: 2px solid var(--twilight-accent-blue);
+    border-collapse: collapse;
 }
 
 .sepia table {
     border: 2px solid var(--sepia-accent-blue);
+    border-collapse: collapse;
 }
 
 .highcontrast table {
     border: 2px solid var(--highcontrast-accent-blue);
+    border-collapse: collapse;
 }
 
 .bluegray table {
     border: 2px solid var(--bluegray-accent-blue);
+    border-collapse: collapse;
 }
 
 .soft table {
     border: 2px solid var(--soft-accent-blue);
+    
 }
 
 section table > thead > tr > th,
@@ -1071,11 +1082,12 @@ section.thanksgiving strong {
 
 /* Thanksgiving theme tables */
 section.thanksgiving table {
-    border: 2px solid var(--thanksgiving-accent-orange);
-    border-collapse: collapse;
+    border: 0px solid var(--thanksgiving-accent-orange);
+    border-collapse: collapse !important;
     margin: 1em 0;
     width: 100%;
     font-size: 0.9em;
+        
 }
 
 section.thanksgiving table > thead > tr > th,
@@ -1085,6 +1097,7 @@ section.thanksgiving table th {
     font-weight: bold;
     padding: 0.8em;
     text-align: left;
+    border-collapse: collapse;
 }
 
 section.thanksgiving table > tbody > tr > td,
@@ -1093,10 +1106,12 @@ section.thanksgiving table td {
     border: 1px solid rgba(139, 69, 19, 0.3);
     background-color: var(--thanksgiving-background);
     color: var(--thanksgiving-text);
+    border-collapse: collapse;
 }
 
 section.thanksgiving table > tbody > tr:nth-child(even) > td {
     background-color: rgba(205, 133, 63, 0.12);
+    border-collapse: collapse;
 }
 
 /* Aggressive override to prevent inline Markdown table styles from breaking theme */
@@ -1106,13 +1121,16 @@ section.thanksgiving table td,
 section.thanksgiving table th {
     background-color: var(--thanksgiving-background) !important;
     color: var(--thanksgiving-text) !important;
+    border-collapse: collapse;
 }
 
 section.thanksgiving table th {
     background-color: var(--thanksgiving-accent-brown) !important;
     color: var(--thanksgiving-background) !important;
+    border-collapse: collapse;
 }
 
 section.thanksgiving table tr:nth-child(even) td {
     background-color: rgba(205, 133, 63, 0.12) !important;
+    border-collapse: collapse;
 }
