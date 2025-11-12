@@ -42,6 +42,7 @@ math: mathjax
 1. Do Now
 2. Discussing Projectile Maxima
 3. Angled Projectile Motion Lab
+4. While waiting you should work on AP Workbook 1.M - 1.O 
 
 </div>
 
@@ -49,9 +50,11 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model Projectile Motion for angled launched projectiles_
 
 ### 📆 Upcoming
+
+- PC Projectile Motion HW Due Tuesday 11/18
 
 </div>
 </div>

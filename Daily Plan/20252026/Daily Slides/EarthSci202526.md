@@ -21,7 +21,8 @@ class:  twilight
 
 # 2025.11.12 **Earth Science** Do Now
 
-
+1. Take out Performance Organizer Task Packet
+1. What is one positive contribution you can make today to this class or your classmates?
 
 ---
 
