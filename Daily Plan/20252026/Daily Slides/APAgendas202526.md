@@ -18,6 +18,81 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.12 **AP Physics** Do Now
+
+
+## Thought experiments 🤔 for a projectile...
+
+1. On flat ground, which launch angle will give the maximum range?
+2. Can two different angles give the same range? What angles or combinations of angles?
+
+---
+
+# 2025.11.12 **AP Physics**
+
+##### **❓ of the 📅**: Vacation on the beach or adventure in the mountains? 🏖️ ⛰️
+
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Discussing Projectile Maxima
+3. Angled Projectile Motion Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<div class='columns'>
+<div>
+
+# Angled Launch Lab
+
+## Goal:
+
+Line up 4 evenly spaced rings stands so that the ball goes through each ring stand.
+
+
+
+</div>
+ 
+<div>
+
+
+<video controls src="IMG_5391.MOV" title="Projectile video" height = "650"></video>
+
+
+</div>
+</div>
+
+---
+
+# Lab Requirements & To Do
+
+1. Determine Launch Velocity based on landing data (derive an experession first)
+2. Derive expression for ring stand location
+3. Calculate the maximum range for the launcher based on given information
+3. Predict the height of your ring
+4. Measure and place your ring stand
+5. **THE BIG LAUNCH** -> Test as a class
+
+---
+
 # 2025.11.10 **AP Physics** Do Now
 
 Sharon Steady and Al Wayskachon won South’s recent egg toss contest held during Homecoming week. In their winning toss, Sharon gave the egg an underhand toss, releasing it with a velocity of 7.5 m/s at an angle of 30° to the horizontal. To the pleasure of the crowd, Al caught the egg at the same height as the toss without even a fracture to its shell.

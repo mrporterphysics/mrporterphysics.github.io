@@ -19,6 +19,42 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.12 **Earth Science** Do Now
+
+
+
+---
+
+# 2025.11.12 **Earth Science**
+
+##### **❓ of the 📅**: Vacation on the beach or adventure in the mountains? 🏖️ ⛰️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Performance Organizer Task Packet -> Find Earth 2.0
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish PTO_
+
+### 📆 Upcoming
+
+- Tests back tomorrow to go over
+
+
+</div>
+</div>
+
+---
+
 # 2025.11.10 **Earth Science** Do Now
 
 **Without asking a friend, or looking at your notes...** Write down on a whiteboard:
