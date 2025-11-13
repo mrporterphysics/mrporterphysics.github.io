@@ -42,6 +42,7 @@ class:  twilight
 
 1. Do Now
 2. Do Aliens Exist?
+3. Evolution of Life on Earth
 
 </div>
 
@@ -67,6 +68,52 @@ class:  twilight
 # Astrobiology
 
 <iframe width="1160" height="615" src="https://www.youtube.com/embed/3HN_zx4JJfM?si=kyfufCR-cbRB0kBO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+## Evolution of Life on Earth  
+
+**Directions:**
+
+1. Silently read or watch the “text” provided to you.  
+2. Record or annotate three details that are most important to the phenomenon being described for each text.  
+3. Share with your group. Each person should identify the details that they circled.  
+4. Discuss as a group, and determine the overall story. What is the phenomenon?
+
+---
+
+## **Are We Alone?**
+
+Does life exist somewhere outside of Earth? What about life that has technology and can communicate like humans?
+
+
+
+4.5 billion years passed and 5 mass extinctions occurred before humans appeared on Earth. So far we have yet to come in contact with any other beings from another planet or even find evidence that proves any sort of life exists elsewhere.
+
+---
+
+## So are we alone?
+
+Your task in this unit is to work with classmates to investigate some factors that influence the evolution of life on Earth and explain why modern human's emergence on Earth required nearly 4.5 billion years. Then use your findings to make and defend an argument about the probability of  intelligent life existing somewhere outside Earth.
+
+---
+
+## Developing an Initial Explanation 
+
+   
+**What set of conditions allowed for the evolution of humans on Earth, and why did it take so long?**
+
+Your first step in this investigation is to consider details from the Tell the Story texts and work with classmates to develop an initial model that illustrates your group's ideas about why it took so long for humans to appear on Earth.
+
+---
+
+# 🤔 Driving Questions 🚗
+
+Develop questions you have in order to figure out what was required for intelligent life to evolve on Earth and why did it take so long. 
+
+- Each question goes on a separate sticky note.
+- Put them on your whiteboard
+- Organize them
 
 ---
 
