@@ -19,6 +19,57 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+
+# 2025.11.13 **Earth Science** Do Now
+
+
+1. Have you ever wondered about whether life exists somewhere outside of Earth?
+2. Do you believe life exists somewhere outside of Earth? Why?
+3. Do you think we will ever find life on other planets or communicate with other intelligent life?
+
+
+---
+
+# 2025.11.13 **Earth Science**
+
+##### **❓ of the 📅**: Do you believe in Aliens?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Do Aliens Exist?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Do Aliens Exist?
+
+<iframe width="1000" height="615" src="https://www.youtube.com/embed/r904HcfQoqM?si=BKvFjamxvlRuzcIT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Astrobiology
+
+<iframe width="1160" height="615" src="https://www.youtube.com/embed/3HN_zx4JJfM?si=kyfufCR-cbRB0kBO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # 2025.11.12 **Earth Science** Do Now
 
 1. Take out Performance Organizer Task Packet
