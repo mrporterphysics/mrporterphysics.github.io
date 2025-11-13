@@ -18,6 +18,38 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.13  **AP Physics**
+
+##### **❓ of the 📅**: Do you believe in Aliens? 👽
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Get working on your lab
+2. AP Workbook 1.M-O
+3. Physics Classroom Homework
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model & Predict Projectile Motion_
+
+### 📆 Upcoming
+
+- Corrections Due Friday 11/21
+- PC Projectile Motion HW Due Tuesday 11/18
+
+</div>
+</div>
+
+---
+
 # 2025.11.12 **AP Physics** Do Now
 
 
