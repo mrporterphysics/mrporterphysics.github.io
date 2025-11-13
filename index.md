@@ -5,7 +5,69 @@ title: Home
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- Physics-themed SVG background decoration -->
+<svg class="hero-decoration" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="orbit-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:var(--accent-primary);stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:var(--accent-secondary);stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  <!-- Orbital paths -->
+  <ellipse cx="200" cy="200" rx="150" ry="80" stroke="var(--border-color)" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <ellipse cx="200" cy="200" rx="100" ry="50" stroke="var(--border-color)" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <circle cx="200" cy="200" r="15" fill="var(--accent-primary)" opacity="0.6"/>
+  <circle cx="320" cy="180" r="6" fill="var(--accent-secondary)" opacity="0.5"/>
+
+  <!-- Wave patterns -->
+  <path d="M 400 200 Q 450 150, 500 200 T 600 200 T 700 200" stroke="var(--accent-primary)" stroke-width="2" fill="none" opacity="0.2"/>
+  <path d="M 400 220 Q 450 170, 500 220 T 600 220 T 700 220" stroke="var(--accent-secondary)" stroke-width="2" fill="none" opacity="0.15"/>
+
+  <!-- Force vectors -->
+  <line x1="850" y1="250" x2="950" y2="150" stroke="var(--accent-primary)" stroke-width="2.5" opacity="0.3"/>
+  <polygon points="950,150 945,160 940,155" fill="var(--accent-primary)" opacity="0.3"/>
+  <line x1="850" y1="250" x2="950" y2="250" stroke="var(--success)" stroke-width="2.5" opacity="0.3"/>
+  <polygon points="950,250 945,255 945,245" fill="var(--success)" opacity="0.3"/>
+
+  <!-- Particles -->
+  <circle cx="1050" cy="150" r="4" fill="var(--accent-primary)" opacity="0.4"/>
+  <circle cx="1100" cy="200" r="5" fill="var(--accent-secondary)" opacity="0.4"/>
+  <circle cx="1080" cy="250" r="3" fill="var(--accent-primary)" opacity="0.4"/>
+</svg>
+
 <style>
+.hero-decoration {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .hero-decoration {
+    display: none;
+  }
+}
+
+.hero-section {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Inline styles to ensure they load */
 .quick-access {
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
@@ -131,11 +193,12 @@ title: Home
 }
 </style>
 
-<div id="main-content"></div>
+<div id="main-content" style="position: relative; z-index: 1;"></div>
 
-# Physics with Mr. Porter
-
-Welcome to your central hub for physics resources, daily agendas, interactive simulations, and study tools.
+<div class="hero-section">
+  <h1 style="font-size: 2.8rem; margin-bottom: 0.5rem; color: var(--text-primary);">Physics with Mr. Porter</h1>
+  <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem;">Your central hub for physics education—featuring daily agendas, interactive simulations, comprehensive resources, and tools designed to make learning physics engaging and accessible.</p>
+</div>
 
 ---
 
