@@ -17,6 +17,73 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+
+# 2025.11.13 **Regents Physics** Do Now
+
+### Determine the launch speed of a horizontally launched projectile that lands 26 meters from the base of a 20-meter high cliff.
+
+**_Hints_:**
+
+1. Find flight time using y-information
+2. Use time and horizontal displacement to find the launch velocity. 
+
+---
+
+# 2025.11.13 **Regents Physics**
+
+##### **❓ of the 📅**: Do you believe in Aliens 👽?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Marble Lab
+3. Physics Classroom - Horizontal Projectiles 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model & Predict Horizontal Projectiles_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+# Lab: Marble Off the Table ￼
+
+### Question: 
+
+How can we determine the marble’s horizontal launch speed and predict its landing spot from a new height?
+
+### Purpose: 
+
+Use the constant-velocity model horizontally and constant-acceleration model vertically to measure launch speed and predict range from different heights.
+
+---
+
+# Lab Notebook Instructions ￼
+
+- Title, date, partners, equipment list: ruler track, marble, carbon paper, meterstick.
+
+- Sketch setup with labeled heights and reference line.
+
+- Raw tables for all trials; clearly show calculations for $t$, $v_{launch}$, predictions.
+
+- Final claim-evidence-reasoning tying models to your results.
+
+---
+
+
 # 2025.11.10 **Regents Physics** Do Now
 
 For years, the tallest drop tower in the United States was the Phoenix Shot Tower in Baltimore, Maryland. The shot tower was used from 1828 to 1892 to make lead shot for pistols and rifles and molded shot for cannons and other instruments of warfare. Molten lead was dropped from the top of the 234-foot (71.3 meter) tall tower into a vat of water. During its free fall, the lead would form a perfectly spherical droplet and solidify. 
