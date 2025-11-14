@@ -19,6 +19,37 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.12.14 **Earth Science**
+
+##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?
+
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Finish PTO Asnwers
+2. Discuss Answers
+3. Read through PTO and ask clarifying questions
+4. Driving Question Board
+5. Craters
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look for driving questions about life outside of earth_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2025.11.13 **Earth Science** Do Now
 
