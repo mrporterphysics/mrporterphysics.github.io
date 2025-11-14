@@ -19,7 +19,7 @@
         </nav>
 
         <!-- Page header with course theme -->
-        <header class="subpage-header" style="background-image: {{ page.header_gradient }};">
+        <header class="subpage-header">
           <h1>{{ page.title }}</h1>
           <p class="subpage-description">{{ page.description }}</p>
         </header>
@@ -45,23 +45,31 @@
       }
 
       .subpage-header {
-        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+        background-image:
+          radial-gradient(ellipse at 80% 20%, var(--fx-blue-light) 0%, transparent 40%),
+          radial-gradient(circle at 20% 80%, var(--fx-cyan-light) 0%, transparent 35%),
+          linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+        background-blend-mode: soft-light, soft-light, normal;
         border-radius: 16px;
         padding: 3rem 2rem;
         margin-bottom: 3rem;
         text-align: center;
-        background-blend-mode: soft-light, normal;
         border: 2px solid var(--border-color);
+        position: relative;
+        z-index: 1;
       }
 
       .subpage-header h1 {
         font-size: 3.5rem;
         font-weight: 900;
         margin-bottom: 1rem;
+        color: var(--text-primary);
         background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        position: relative;
+        z-index: 2;
       }
 
       .subpage-description {
@@ -74,6 +82,13 @@
 
       .subpage-content {
         margin-bottom: 4rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .wrapper {
+        position: relative;
+        z-index: 1;
       }
 
       .page-navigation {

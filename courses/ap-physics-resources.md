@@ -4,7 +4,6 @@ title: AP Physics Resources
 course_name: AP Physics 1
 course_url: /courses/ap-physics.html
 description: Comprehensive collection of study materials, practice problems, and review resources for AP Physics 1
-header_gradient: "radial-gradient(ellipse at 85% 15%, var(--fx-blue-light) 0%, transparent 40%), radial-gradient(circle at 10% 80%, var(--fx-cyan-light) 0%, transparent 35%), linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%)"
 ---
 
 ## 📚 Essential Documents
