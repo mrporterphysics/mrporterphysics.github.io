@@ -51,6 +51,71 @@ class:  twilight
 
 ---
 
+
+## Group Synthesis: Tell the Story
+In table groups:
+- Share circled details; look for overlaps and disagreements
+- Decide on the most important ideas (limit 5–7)
+- Write your “story of the phenomenon” with:
+  - Sequence of events
+  - Causes and effects
+  - Stability and change (what stayed consistent vs. what shifted)
+- Optional: labeled diagram with arrows/annotations
+
+---
+
+
+## Performance Task: Preview
+You will:
+- Explain why modern humans emerged after ~4.5 billion years and five mass extinctions
+- Make and defend an argument:
+  - Does life exist elsewhere?
+  - Does intelligent life exist elsewhere?
+  - Why haven’t we made contact?
+  - What can humans learn from these ideas?
+
+---
+
+## Initial Explanation (Individual → Group)
+Individually:
+- Draft a model (words and/or diagram) for why intelligent life took so long to evolve on Earth
+Include:
+- Environmental constraints (atmosphere, energy sources)
+- Biological innovations (complexity, nervous systems)
+- External events (mass extinctions)
+Then in groups:
+- Combine ideas into one collaborative model
+
+---
+
+## Model Quality Checklist
+Does your model:
+- Identify key turning points and prerequisites for intelligence?
+- Show cause/effect chains (not just a list)?
+- Use labels, arrows, and annotations for clarity?
+- Connect to Stability & Change (CCC7): What persisted vs. what shifted?
+
+---
+
+## Driving Question Board (DQB)
+Individually:
+- Write 3–5 specific questions needed to explain “why did it take so long?”
+- One question per sticky note
+As a class:
+- Share, sort, and categorize on chart paper or digital board
+- Create umbrella questions for each category
+
+---
+
+## Conferring Prompts (DQB)
+- Why do these questions belong together?
+- What category connects them?
+- Are we missing sub-questions?
+- Can we formulate an umbrella question for each cluster?
+
+
+---
+
 # 2025.11.13 **Earth Science** Do Now
 
 
