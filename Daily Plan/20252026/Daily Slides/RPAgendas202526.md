@@ -17,6 +17,40 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+# 2025.11.14 **Regents Physics**
+
+##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now -> Finish Marble Lab
+    - bring me notebook to stamp when you finish
+2. Think Sheet - Projectile Motion: Questions #1-8 & 11-14
+3. PC Horizontal Projectile Homework
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model & Predict horizontal projectile motion_
+
+### 📆 Upcoming
+
+- 	Vectors and Projectiles 5: HLP Problems Due **Tuesday**
+
+</div>
+</div>
+
+
+---
+
 
 # 2025.11.13 **Regents Physics** Do Now
 
