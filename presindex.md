@@ -1,7 +1,9 @@
-# Class Presentations List:
+---
+layout: default
+title: Class Presentations
+---
 
-
-## AP Physics Content Slides:
+## AP Physics Content Slides
 
   - [Kinematics](/Presentations/APCVPM/talks/CVPM2025.html)
   
