@@ -196,15 +196,15 @@ title: Home
 <div id="main-content" style="position: relative; z-index: 1;"></div>
 
 <div class="hero-section">
-  <h1 style="font-size: 2.8rem; margin-bottom: 0.5rem; color: var(--text-primary);">Physics with Mr. Porter</h1>
-  <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem;">Your central hub for physics education—featuring daily agendas, interactive simulations, comprehensive resources, and tools designed to make learning physics engaging and accessible.</p>
+  <h1 style="font-size: 5.5rem; font-weight: 900; margin-bottom: 1rem; background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 50%, var(--accent-secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.05;">Physics with<br>Mr. Porter</h1>
+  <p style="font-size: 1.35rem; font-weight: 300; color: var(--text-secondary); max-width: 680px; margin: 0 auto 2.5rem; line-height: 1.6;">Your central hub for physics education—featuring daily agendas, interactive simulations, comprehensive resources, and tools designed to make learning physics engaging and accessible.</p>
 </div>
 
 ---
 
 <div class="quick-access">
-  <h2>⚡ Quick Access</h2>
-  <p>Most frequently used resources for today's classes</p>
+  <h2 style="font-size: 2.2rem; font-weight: 700;">⚡ Quick Access</h2>
+  <p style="font-size: 1.1rem; font-weight: 400;">Most frequently used resources for today's classes</p>
   <div class="quick-access-grid">
     <a href="/Daily Plan/20252026/Daily Slides/APAgendas202526.html" class="quick-btn">📅 AP Agenda Today</a>
     <a href="/Daily Plan/20252026/Daily Slides/RPAgendas202526.html" class="quick-btn">📅 Regents Agenda</a>

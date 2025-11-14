@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content course-subpage" aria-label="Content">
+      <div class="wrapper">
+        <!-- Breadcrumb navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a> →
+          <a href="{{ page.course_url }}">{{ page.course_name }}</a> →
+          <span>{{ page.title }}</span>
+        </nav>
+
+        <!-- Page header with course theme -->
+        <header class="subpage-header" style="background-image: {{ page.header_gradient }};">
+          <h1>{{ page.title }}</h1>
+          <p class="subpage-description">{{ page.description }}</p>
+        </header>
+
+        <!-- Main content -->
+        <article class="subpage-content">
+          {{ content }}
+        </article>
+
+        <!-- Back navigation -->
+        <nav class="page-navigation">
+          <a href="{{ page.course_url }}" class="nav-btn">← Back to {{ page.course_name }}</a>
+          <a href="/" class="nav-btn">← Back to Home</a>
+        </nav>
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+    <style>
+      .course-subpage {
+        animation: fadeInUp 0.6s ease-out backwards;
+      }
+
+      .breadcrumb {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      .breadcrumb a {
+        color: var(--accent-primary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .breadcrumb a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+
+      .subpage-header {
+        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        background-blend-mode: soft-light, normal;
+        border: 2px solid var(--border-color);
+      }
+
+      .subpage-header h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .subpage-description {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+        font-weight: 400;
+      }
+
+      .subpage-content {
+        margin-bottom: 4rem;
+      }
+
+      .page-navigation {
+        display: flex;
+        gap: 1rem;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 2px solid var(--border-color);
+        flex-wrap: wrap;
+      }
+
+      .nav-btn {
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        border: 2px solid var(--border-color);
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .nav-btn:hover {
+        background: var(--accent-primary);
+        color: var(--bg-primary);
+        border-color: var(--accent-primary);
+        transform: translateX(-4px);
+      }
+
+      @media (max-width: 768px) {
+        .subpage-header h1 {
+          font-size: 2.5rem;
+        }
+
+        .subpage-description {
+          font-size: 1.1rem;
+        }
+
+        .page-navigation {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+  </body>
+
+</html>

@@ -131,45 +131,54 @@ button:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Typography */
+/* Typography - Distinctive Font Pairings */
 body {
-  font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
-  font-size: 16px;
+  font-family: 'Space Grotesk', 'IBM Plex Mono', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  line-height: 1.7; /* Improved from 1.6 for better readability */
+  line-height: 1.7;
   margin: 0;
   padding: 120px 20px 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  /* Atmospheric layered background */
+  background-image:
+    linear-gradient(135deg, transparent 0%, var(--bg-secondary) 50%, transparent 100%),
+    repeating-linear-gradient(45deg, transparent, transparent 60px, var(--border-color) 60px, var(--border-color) 61px);
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+  font-family: 'Crimson Pro', serif;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
+  font-weight: 900;
   margin-bottom: 1.5rem;
+  line-height: 1.05;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 1.25rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.875rem;
 }
@@ -177,22 +186,34 @@ h4 {
 p {
   margin-bottom: 1rem;
   color: var(--text-secondary);
-  line-height: 1.8; /* Extra line-height for paragraph text */
-  max-width: 75ch; /* Optimal reading width */
+  line-height: 1.8;
+  max-width: 75ch;
+}
+
+/* Code elements use monospace */
+code, pre, .monospace {
+  font-family: 'Fira Code', 'IBM Plex Mono', monospace;
 }
 
 /* Header and Navigation */
 header {
-  background-color: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
+  background:
+    linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  border-bottom: 2px solid var(--border-color);
   padding: 15px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px var(--shadow);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px var(--shadow);
+  backdrop-filter: blur(12px);
   transition: all 0.3s ease;
+  /* Physics-themed subtle pattern */
+  background-image:
+    radial-gradient(circle at 20% 50%, var(--accent-primary) 0%, transparent 20%),
+    radial-gradient(circle at 80% 50%, var(--accent-secondary) 0%, transparent 20%),
+    linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  background-blend-mode: soft-light, soft-light, normal;
 }
 
 .site-header {
@@ -663,38 +684,70 @@ footer {
 @media (max-width: 768px) {
   body {
     padding: 150px 15px 15px;
+    font-size: 16px;
   }
-  
+
   .site-header {
     padding: 0 15px;
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .site-nav {
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   h1 {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+  }
+
+  h2 {
     font-size: 2rem;
   }
-  
-  h2 {
-    font-size: 1.75rem;
+
+  h3 {
+    font-size: 1.5rem;
   }
-  
+
   main, .wrapper {
     padding: 0 15px;
   }
 
   .card-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .quick-access-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem !important;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem !important;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .card-icon {
+    font-size: 2.8rem;
+  }
+
+  .card-description {
+    font-size: 1rem;
+  }
+
+  /* Simplify backgrounds on mobile for performance */
+  body {
+    background-image: none;
+    background-color: var(--bg-primary);
   }
 }
 
@@ -755,38 +808,84 @@ footer {
 .content-card {
   background: var(--bg-secondary);
   border: 2px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   gap: 1rem;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* Layered atmospheric background */
+  background-image:
+    radial-gradient(circle at 80% 20%, var(--accent-primary) 0%, transparent 30%),
+    linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  background-blend-mode: soft-light, normal;
 }
 
 .content-card:hover {
   border-color: var(--accent-primary);
-  box-shadow: 0 8px 16px var(--shadow-hover);
-  transform: translateY(-4px);
+  box-shadow: 0 12px 28px var(--shadow-hover);
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Physics-specific course card themes */
+.content-card:nth-child(1) {
+  /* AP Physics - Dynamic energy theme */
+  background-image:
+    radial-gradient(ellipse at 85% 15%, var(--fx-blue-light) 0%, transparent 40%),
+    radial-gradient(circle at 10% 80%, var(--fx-cyan-light) 0%, transparent 35%),
+    linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+.content-card:nth-child(2) {
+  /* Regents Physics - Wave pattern theme */
+  background-image:
+    radial-gradient(ellipse at 90% 20%, var(--fx-green-light) 0%, transparent 35%),
+    radial-gradient(circle at 15% 85%, var(--fx-cyan-light) 0%, transparent 40%),
+    linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+.content-card:nth-child(3) {
+  /* Earth Science - Earth tones theme */
+  background-image:
+    radial-gradient(circle at 75% 25%, var(--fx-orange-light) 0%, transparent 35%),
+    radial-gradient(ellipse at 20% 90%, var(--fx-cyan-light) 0%, transparent 40%),
+    linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+/* Interactive tool cards also get themes */
+.content-card:nth-child(4),
+.content-card:nth-child(5),
+.content-card:nth-child(6) {
+  background-image:
+    radial-gradient(circle at 80% 20%, var(--accent-secondary) 0%, transparent 35%),
+    linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
 }
 
 .card-icon {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   line-height: 1;
+  filter: drop-shadow(0 2px 4px var(--shadow));
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
+  font-family: 'Crimson Pro', serif;
+  letter-spacing: -0.01em;
 }
 
 .card-description {
   color: var(--text-secondary);
   margin: 0;
   flex-grow: 1;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  font-weight: 400;
 }
 
 .card-links {
@@ -912,14 +1011,161 @@ hr {
   header {
     display: none;
   }
-  
+
   body {
     padding: 0;
     background: white;
     color: black;
   }
-  
+
   .theme-toggle {
     display: none;
+  }
+}
+
+/* CSS Animations - Orchestrated Page Load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Staggered animations for homepage elements */
+.hero-section {
+  animation: fadeInUp 0.8s ease-out 0.1s backwards;
+}
+
+.quick-access {
+  animation: fadeInScale 0.8s ease-out 0.3s backwards;
+}
+
+.content-card {
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.content-card:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.content-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.content-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.content-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.content-card:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.content-card:nth-child(6) {
+  animation-delay: 0.9s;
+}
+
+/* Navigation items animate in */
+.site-nav > * {
+  animation: slideInRight 0.5s ease-out backwards;
+}
+
+.site-nav > *:nth-child(1) { animation-delay: 0.1s; }
+.site-nav > *:nth-child(2) { animation-delay: 0.15s; }
+.site-nav > *:nth-child(3) { animation-delay: 0.2s; }
+.site-nav > *:nth-child(4) { animation-delay: 0.25s; }
+.site-nav > *:nth-child(5) { animation-delay: 0.3s; }
+.site-nav > *:nth-child(6) { animation-delay: 0.35s; }
+
+/* Enhanced hover effects */
+.content-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.content-card:hover::before {
+  left: 100%;
+}
+
+/* Quick access buttons with shimmer effect */
+.quick-btn {
+  position: relative;
+  overflow: hidden;
+  background-size: 200% auto;
+}
+
+.quick-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.quick-btn:hover::after {
+  left: 100%;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
