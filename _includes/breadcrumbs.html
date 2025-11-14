@@ -1,0 +1,32 @@
+{% unless page.url == "/" %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">Home</a>
+
+  {% assign crumbs = page.url | split: '/' %}
+  {% assign crumb_path = '' %}
+
+  {% for crumb in crumbs offset: 1 %}
+    {% if crumb != '' and crumb != 'index.html' %}
+      {% assign crumb_path = crumb_path | append: '/' | append: crumb %}
+
+      {% if forloop.last %}
+        <span class="breadcrumb-separator">→</span>
+        <span class="breadcrumb-current">{{ page.title | default: crumb | replace: '-', ' ' | replace: '.html', '' | replace: '.md', '' | capitalize }}</span>
+      {% else %}
+        <span class="breadcrumb-separator">→</span>
+        {% assign crumb_title = crumb | replace: '-', ' ' | replace: '20252026', '2025-26' | replace: '20242025', '2024-25' | capitalize %}
+
+        {% if crumb == "courses" %}
+          <span class="breadcrumb-current">{{ crumb_title }}</span>
+        {% elsif crumb == "Daily Plan" %}
+          <span class="breadcrumb-current">{{ crumb_title }}</span>
+        {% elsif crumb == "Presentations" %}
+          <span class="breadcrumb-current">{{ crumb_title }}</span>
+        {% else %}
+          <a href="{{ crumb_path }}">{{ crumb_title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</nav>
+{% endunless %}

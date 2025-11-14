@@ -11,9 +11,11 @@
       <div class="wrapper">
         <!-- Breadcrumb navigation -->
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a> →
-          <a href="{{ page.course_url }}">{{ page.course_name }}</a> →
-          <span>{{ page.title }}</span>
+          <a href="/">Home</a>
+          <span class="breadcrumb-separator">→</span>
+          <a href="{{ page.course_url }}">{{ page.course_name }}</a>
+          <span class="breadcrumb-separator">→</span>
+          <span class="breadcrumb-current">{{ page.title }}</span>
         </nav>
 
         <!-- Page header with course theme -->
@@ -40,24 +42,6 @@
     <style>
       .course-subpage {
         animation: fadeInUp 0.6s ease-out backwards;
-      }
-
-      .breadcrumb {
-        font-size: 0.95rem;
-        color: var(--text-muted);
-        margin-bottom: 2rem;
-        font-family: 'Space Grotesk', sans-serif;
-      }
-
-      .breadcrumb a {
-        color: var(--accent-primary);
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
-
-      .breadcrumb a:hover {
-        color: var(--accent-hover);
-        text-decoration: underline;
       }
 
       .subpage-header {
