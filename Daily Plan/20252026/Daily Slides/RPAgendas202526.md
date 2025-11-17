@@ -17,6 +17,45 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+
+# 2025.11.17 **Regents Physics** Do Now
+
+## **Physics Classroom**:	_Mission VP8 Velocity and Acceleration of a Projectil_
+
+---
+
+# 2025.11.17 **Regents Physics**
+#### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now -> Mission VP8 Velocity and Acceleration of a Projectile
+2. Hand back tests & go over 
+3. [Projectiles at an angle](../../../Presentations/Projectiles/talks/RP2DMotion2025.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model projectiles_
+
+### 📆 Upcoming
+
+- Quiz **Friday** on Projectiles
+- PC H. Proj Due Wednesday
+- PC A. Projectiles due Friday
+
+</div>
+</div>
+
+---
+
 # 2025.11.14 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?
