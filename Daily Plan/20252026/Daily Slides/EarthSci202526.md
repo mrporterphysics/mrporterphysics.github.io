@@ -19,6 +19,37 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.18 **Earth Science**
+
+##### **❓ of the 📅**: If everyone in your family was a zoo animal, which animal would they all be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Open Google Maps
+	1. Canvas -> Unit 2 -> Resources -> Engage Links -> Open each in a new tab
+2. Engage Crater Observations & Share Out
+3. Start Radioactive dating
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make observations and inferences about crater impacts on different planetary objects_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.17 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
