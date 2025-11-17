@@ -19,6 +19,192 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.17 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. **DO NOW** Review your model with your lab group and be prepared to share
+1. Present models to class
+2. Driving Questions
+3. Craters 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Examine images of Mars, the Moon, and Earth._
+
+🥅 _Identify patterns in crater presence and appearance._ 
+
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+## Initial Explanation (Individual → Group)
+Individually:
+- Draft a model (words and/or diagram) for why intelligent life took so long to evolve on Earth
+Include:
+- Environmental constraints (atmosphere, energy sources)
+- Biological innovations (complexity, nervous systems)
+- External events (mass extinctions)
+Then in groups:
+- Combine ideas into one collaborative model
+
+---
+
+## Model Quality Checklist
+Does your model:
+- Identify key turning points and prerequisites for intelligence?
+- Show cause/effect chains (not just a list)?
+- Use labels, arrows, and annotations for clarity?
+- Connect to Stability & Change (CCC7): What persisted vs. what shifted?
+
+---
+
+## Driving Question Board (DQB)
+Individually:
+- Write 3–5 specific questions needed to explain “why did it take so long?”
+- One question per sticky note
+As a class:
+- Share, sort, and categorize on chart paper or digital board
+- Create umbrella questions for each category
+
+---
+
+## Conferring Prompts (DQB)
+- Why do these questions belong together?
+- What category connects them?
+- Are we missing sub-questions?
+- Can we formulate an umbrella question for each cluster?
+
+---
+
+## Engage: Craters and Earth's History
+
+### Essential Questions
+- Why do we see so many craters on the Moon and Mars, but not on Earth?
+- How often have asteroids struck Earth in the past?
+
+---
+
+## Investigative Phenomenon
+
+- On Earth, about **128** impact craters have been discovered.
+- On **Mars**, there are **>300,000**.
+- On the **Moon**, there are **>1,000,000**.
+
+What do these differences suggest about stability and change in the solar system?
+
+---
+
+## Today’s Goal
+
+- Examine images of **Mars**, the **Moon**, and **Earth**.
+- Identify **patterns** in crater presence and appearance.
+- Develop **initial claims** for why Earth shows fewer craters despite similar ages of oldest minerals.
+
+---
+
+## What You’ll Do
+
+1. Individually complete a See–Think–Wonder using the handout:
+   - See: What do you observe in the crater images for Mars, Moon, Earth?
+   - Think: What patterns or ideas do these observations make you think of?
+   - Wonder: What questions do you have about crater differences?
+
+2. In groups, discuss and agree on **one important idea** to share.
+
+3. Use the **Domino Discover** routine to surface class-wide trends.
+
+---
+
+
+## See–Think–Wonder: Guidance
+
+- See:
+  - Count and compare crater density, size, depth, and distribution.
+  - Note surface features (erosion, water, atmosphere indicators).
+
+- Think:
+  - Consider possible reasons for differences across bodies.
+  - Connect to **stability and change** of planetary surfaces.
+
+- Wonder:
+  - Ask about formation times, bombardment periods, and surface processes.
+
+---
+
+## Initial Claim (Draft)
+
+- Write a brief **claim** answering:
+  - “Why are there so few craters on Earth compared to Mars and the Moon?”
+
+- Support with at least two **observations** from your See–Think–Wonder.
+
+---
+
+## Group Share: Domino Discover
+
+- Each group shares their one key idea.
+- Classmates:
+  - Repeat/rephrase the idea for clarity.
+  - Ask clarifying questions.
+  - Note trends across groups.
+
+Goal: Surface **patterns** and **questions** that set up our investigation.
+
+<!---
+
+## Look & Listen For
+
+- “The Moon has almost 10,000× Earth’s craters and >3× Mars.”
+- “Crater size/depth seem larger on Moon and Mars.”
+- “Age alone may not explain differences—oldest minerals are similar (~4.4–4.6 BYA).”
+- “Maybe Earth’s surface changes more over time.”
+
+
+## Discussion Prompts
+
+- If Mars, Earth, and the Moon formed around the same time,
+  why does the Moon have so many more craters?
+- If many asteroids hit the Moon ~3.75–4.0 BYA, what likely happened on Earth and Mars?
+- What evidence could confirm or refute your claim?
+
+--->
+
+
+
+---
+
+## Success Criteria
+
+By the end of Engage, you can:
+- Identify key **patterns** in crater data across bodies.
+- State a defensible **initial claim** supported by observations.
+- Pose **investigable questions** about Earth’s crater record.
+
+---
+
+## Setting Up the Next Step
+
+Next, we will analyze the **age, composition, and density** of rocks from Earth, Moon, and other objects to test our claims and explore the solar system’s early history.
+
+
+---
+
 # 2025.12.14 **Earth Science**
 
 ##### **❓ of the 📅**: If you could safely travel at the speed of light, where would you go first?
@@ -73,45 +259,6 @@ You will:
   - Does intelligent life exist elsewhere?
   - Why haven’t we made contact?
   - What can humans learn from these ideas?
-
----
-
-## Initial Explanation (Individual → Group)
-Individually:
-- Draft a model (words and/or diagram) for why intelligent life took so long to evolve on Earth
-Include:
-- Environmental constraints (atmosphere, energy sources)
-- Biological innovations (complexity, nervous systems)
-- External events (mass extinctions)
-Then in groups:
-- Combine ideas into one collaborative model
-
----
-
-## Model Quality Checklist
-Does your model:
-- Identify key turning points and prerequisites for intelligence?
-- Show cause/effect chains (not just a list)?
-- Use labels, arrows, and annotations for clarity?
-- Connect to Stability & Change (CCC7): What persisted vs. what shifted?
-
----
-
-## Driving Question Board (DQB)
-Individually:
-- Write 3–5 specific questions needed to explain “why did it take so long?”
-- One question per sticky note
-As a class:
-- Share, sort, and categorize on chart paper or digital board
-- Create umbrella questions for each category
-
----
-
-## Conferring Prompts (DQB)
-- Why do these questions belong together?
-- What category connects them?
-- Are we missing sub-questions?
-- Can we formulate an umbrella question for each cluster?
 
 
 ---

@@ -18,6 +18,39 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.17 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Finish AP Workbook 1.M - 1.O
+2. Mallet Ball
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Projectile Motion_
+
+🥅 _Explore the causes of different types of motion_ 
+
+### 📆 Upcoming
+
+- PC Homework Due Wednesday
+- Quiz Friday -> Projectile Motion
+
+</div>
+</div>
+
+---
+
 # 2025.11.13  **AP Physics**
 
 ##### **❓ of the 📅**: Do you believe in Aliens? 👽
