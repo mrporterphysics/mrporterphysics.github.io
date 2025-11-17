@@ -20,7 +20,7 @@ math: mathjax
 
 # 2025.11.17 **Regents Physics** Do Now
 
-## **Physics Classroom**:	_Mission VP8 Velocity and Acceleration of a Projectil_
+## **Physics Classroom**:	_Mission VP8 Velocity and Acceleration of a Projectile_
 
 ---
 
@@ -36,6 +36,7 @@ math: mathjax
 1. Do Now -> Mission VP8 Velocity and Acceleration of a Projectile
 2. Hand back tests & go over 
 3. [Projectiles at an angle](../../../Presentations/Projectiles/talks/RP2DMotion2025.html)
+4. Projectiles Think Sheet
 
 </div>
 
