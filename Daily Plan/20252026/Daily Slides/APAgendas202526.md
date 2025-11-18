@@ -18,8 +18,41 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.19 **AP Physics**
 
+##### **❓ of the 📅**: If everyone in your family was a zoo animal, which animal would they all be?
 
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. N1L Review
+3. [Notes](../../../Presentations/Forces/talks/Dynamics2025.html):
+    - Common Forces
+    - Force Diagrams
+4. FBD Card Sort
+5. Monkey Diagram Practice 🐒
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify forces and use FBDs to represent forces acting on objects_
+
+### 📆 Upcoming
+
+- PC Homework Due Wednesday
+- Quiz Friday -> Projectile Motion
+
+</div>
+</div>
+
+---
 
 # 2025.11.18 **AP Physics** Do Now
 

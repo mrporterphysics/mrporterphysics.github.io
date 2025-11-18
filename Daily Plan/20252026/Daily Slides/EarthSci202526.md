@@ -19,6 +19,195 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.19 **Earth Science** Do Now
+
+
+
+---
+
+# 2025.11.19 **Earth Science**
+
+##### **❓ of the 📅**: What was your favorite recess game from elementary school?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Explore 1: Composition, Age, and Craters
+
+## Guiding Question
+What can the composition and age of rocks from objects in the solar system tell us about its past?
+
+---
+
+## Today’s Goals
+- Collect and analyze data on rock ages, composition, and density from Earth, Moon, and other objects.
+- Use evidence to explain why craters on other bodies remain stable but craters on Earth change.
+- Prepare to model the early solar system.
+
+---
+
+## Materials and Resources
+- Handout: Early Solar System Investigation.
+- Online simulation: [Radioactive Dating Game (PhET)](https://phet.colorado.edu/en/simulations/radioactive-dating-game).
+- Class routine: Domino Discover for whole-class synthesis.
+
+---
+
+## Part 1a — Radiometric Decay (Simulation)
+Tasks:
+- Explore decay of Carbon-14 and Uranium-238.
+- Record half-life behavior and decay patterns.
+
+Prompts:
+- What patterns do you notice in how fast Carbon-14 changed? Uranium-238?
+- How are their rates different, and why does that matter for dating?
+
+---
+
+## Part 1b — Relative Dating (Rock Layers)
+Tasks:
+- Examine fossil ages within layered rocks.
+- Connect layer position to relative age.
+
+Prompts:
+- What pattern do you notice within the same layer?
+- What pattern occurs as you go to lower layers?
+- Which isotope is appropriate for different-aged samples—and why?
+
+---
+
+## Part 2 — Ages Across the Solar System
+Tasks:
+- Compare ages of minerals from Earth, Moon, Mars, meteorites.
+- Note tectonic activity, water, atmosphere presence on different objects.
+
+Prompts:
+- What do ages suggest about formation timing of Earth and other objects?
+- How might water/atmosphere/tectonics relate to crater counts we observe?
+
+---
+
+## Part 3 — Moon Impact Melt Rocks
+Tasks:
+- Analyze ages of impact melt rocks (3.75–4.0 billion years).
+
+Prompts:
+- What does this suggest about asteroid activity in the early solar system?
+- How might similar impacts have affected Mars and Earth?
+
+---
+
+## See–Think–Wonder
+- See: What do you notice in the age, composition, and decay data?
+- Think: What do these patterns imply about solar system history?
+- Wonder: What questions do these data raise about crater stability and change?
+
+Complete your STW on the handout; be ready to share one key idea.
+
+---
+
+## Domino Discover (Whole-Class)
+- Share one important idea from your group’s Summary.
+- Listen for trends, inferences, and questions.
+- Aim: Surface key evidence needed for tomorrow’s explanations.
+
+<!---
+Look & Listen For:
+- C‑14 half-life ≈ 5,700 years; U‑238 half-life ≈ 4.5 billion years.
+- Different isotopes for different age ranges (organic vs. very old rocks).
+- Object ages cluster around ~4.40–4.59 BYA → formation window.
+- Moon melt rocks 3.75–4.0 BYA → intense bombardment.
+- Age alone doesn’t explain crater differences (Moon ≫ Mars ≥ Earth).
+--->
+
+---
+
+# Explain 1: Age and the Heavy Bombardment
+
+## Guiding Question
+How old are the solar system and the impact craters?
+
+---
+
+## What We’ve Figured Out (Recap)
+- Earth, Moon, and Mars formed around the same time (~4.5 BYA).
+- Radiometric dating provides consistent ages across multiple bodies.
+- Moon’s impact melt rocks date a major bombardment to ~4.0 BYA.
+- Crater differences need more than “age” to explain them.
+
+---
+
+## Modeling Task (Triads)
+Handout: Explaining the Craters in the Inner Solar System
+
+Steps:
+1) Answer the six guiding questions on page 1.
+2) Read the short text; use Think–Talk–Open Exchange to compare evidence and claims.
+3) Build a brief model of the early inner solar system and its impact history.
+
+Optional context video:
+- [The Late Heavy Bombardment](https://www.youtube.com/watch?v=NafhLy22DJQ)
+
+---
+
+## Discussion Prompts
+- What evidence supports a Late Heavy Bombardment (~4.0 BYA)?
+- If the Moon and Mars show many ancient craters, what should we infer about Earth?
+- Where is Earth’s evidence—and why might it be missing from the surface?
+
+---
+
+## Class Consensus Discussion (Structure)
+1) Select groups to share; a peer restates each share.
+2) Class asks clarifying questions.
+3) Confer in table groups; then whole-class consensus.
+
+Focus:
+- Link evidence to claims with clear scientific reasoning.
+- Make ideas public and visible; elevate accurate explanations.
+
+---
+
+## Key Points to Make Public
+- Oldest minerals across Earth/Moon/Mars/other objects ≈ **4.5 BYA** → co-formation from the same dust disk.
+- The **Late Heavy Bombardment (~4.0 BYA)** evidenced by dated Moon melt rocks.
+- Inner bodies (Mars, Venus) show craters; proximity implies Earth was bombarded too.
+- Earth’s surface has changed (hydrologic + geologic processes), which can erase or alter ancient crater evidence.
+
+---
+
+## Summary Task (Individual)
+- Write a short explanation: “What was the early solar system like, and what does the evidence suggest about Earth’s impact history?”
+- Include:
+  - Evidence (ages, isotopes, melt rock dates).
+  - Reasoning (why this evidence supports your claim).
+  - Clarify where Earth’s surface record may be incomplete and why.
+
+---
+
+
+---
+
 # 2025.11.18 **Earth Science**
 
 ##### **❓ of the 📅**: If everyone in your family was a zoo animal, which animal would they all be?
@@ -47,6 +236,121 @@ class:  twilight
 
 </div>
 </div>
+
+
+---
+
+
+## Engage: Craters and Earth's History
+
+### Essential Questions
+- Why do we see so many craters on the Moon and Mars, but not on Earth?
+- How often have asteroids struck Earth in the past?
+
+---
+
+## Investigative Phenomenon
+
+- On Earth, about **128** impact craters have been discovered.
+- On **Mars**, there are **>300,000**.
+- On the **Moon**, there are **>1,000,000**.
+
+What do these differences suggest about stability and change in the solar system?
+
+---
+
+## Today’s Goal
+
+- Examine images of **Mars**, the **Moon**, and **Earth**.
+- Identify **patterns** in crater presence and appearance.
+- Develop **initial claims** for why Earth shows fewer craters despite similar ages of oldest minerals.
+
+---
+
+## What You’ll Do
+
+1. Individually complete a See–Think–Wonder using the handout:
+   - See: What do you observe in the crater images for Mars, Moon, Earth?
+   - Think: What patterns or ideas do these observations make you think of?
+   - Wonder: What questions do you have about crater differences?
+
+2. In groups, discuss and agree on **one important idea** to share.
+
+3. Use the **Domino Discover** routine to surface class-wide trends.
+
+---
+
+
+## See–Think–Wonder: Guidance
+
+- See:
+  - Count and compare crater density, size, depth, and distribution.
+  - Note surface features (erosion, water, atmosphere indicators).
+
+- Think:
+  - Consider possible reasons for differences across bodies.
+  - Connect to **stability and change** of planetary surfaces.
+
+- Wonder:
+  - Ask about formation times, bombardment periods, and surface processes.
+
+---
+
+## Initial Claim (Draft)
+
+- Write a brief **claim** answering:
+  - “Why are there so few craters on Earth compared to Mars and the Moon?”
+
+- Support with at least two **observations** from your See–Think–Wonder.
+
+---
+
+## Group Share: Domino Discover
+
+- Each group shares their one key idea.
+- Classmates:
+  - Repeat/rephrase the idea for clarity.
+  - Ask clarifying questions.
+  - Note trends across groups.
+
+Goal: Surface **patterns** and **questions** that set up our investigation.
+
+<!---
+
+## Look & Listen For
+
+- “The Moon has almost 10,000× Earth’s craters and >3× Mars.”
+- “Crater size/depth seem larger on Moon and Mars.”
+- “Age alone may not explain differences—oldest minerals are similar (~4.4–4.6 BYA).”
+- “Maybe Earth’s surface changes more over time.”
+
+
+## Discussion Prompts
+
+- If Mars, Earth, and the Moon formed around the same time,
+  why does the Moon have so many more craters?
+- If many asteroids hit the Moon ~3.75–4.0 BYA, what likely happened on Earth and Mars?
+- What evidence could confirm or refute your claim?
+
+--->
+
+
+
+---
+
+## Success Criteria
+
+By the end of Engage, you can:
+- Identify key **patterns** in crater data across bodies.
+- State a defensible **initial claim** supported by observations.
+- Pose **investigable questions** about Earth’s crater record.
+
+---
+
+## Setting Up the Next Step
+
+Next, we will analyze the **age, composition, and density** of rocks from Earth, Moon, and other objects to test our claims and explore the solar system’s early history.
+
 
 ---
 
