@@ -258,141 +258,89 @@ You can do this in ***2 sentences***
 
 ---
 
-# Force Names <!--fit--->
+# Common Forces <!--fit--->
 
 ---
 
 # Make a Table 
 
-| Force Name          | Symbol | Type       | Description | Equation |
-| ------------------- | ------ | ---------- | ----------- | -------- |
-| Gravitational Force | $F_g$  | Long Range | ...         | ...         |
-| 9 total Forces  | | | 
-
-
----
-
-# Gravitational Force $\vec{F}_g$ or $mg$
-
-### **Type:** Long Range force
-
-
-### **Description** 
-
-Attractive force between all objects with mass. 
-
-### **Equation** 
-
-TBD
-
----
-
-# Normal Force $\vec{F}_N$ or $N$
-
-### **Type**: Contact, compression
-
-
-### **Description** 
-"Perpendicular Force" occurs because atoms are compressed and want to return to their original position. ***Always perpendicular to the surfaces in contact***
-
-### **Equation** 
-None 
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| Force | ... | ... | ... | ...  |
 
 ---
 
 
-# Spring Force $\vec{F}_s$
-
-### **Type**: Contact, stretch or compression
 
 
-### **Description** 
-Spring is stretched or compressed and wants to return to "natural" length
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| gravitational | $\vec{F}_G$ | Two objects with mass interact. One object is often the Earth.         | Toward the center of Earth (or other large object)                           | *Field* (mediated by gravitational fields) |
 
-### **Equation** 
-TBD
+
 
 ---
 
-# Tension Force $\vec{F}_T$ or $T$
-
-### **Type**: Contact, stretch
-
-
-### **Description** 
-Atomic Structure is stretched and wants to return to natural length
-
-### **Equation** 
-None
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| electric      | $\vec{F}_E$ | Two objects with electric charge interact.                             | Along line connecting the two objects (attraction or repulsion)              | *Field* (mediated by electric fields)      |
 
 ---
 
 
-# Friction Force $\vec{F}_f$ or $f$
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| magnetic      | $\vec{F}_M$ | Two objects with magnetic poles interact.                              | Along line connecting the two objects (attraction or repulsion)              | *Field* (mediated by magnetic fields)      |
 
-### **Type**: Contact, shear
-
-
-### **Description** 
-Irregular surfaces interlock to slow or prevent sliding of two surfaces relative to eachother **Always parallel to the surfaces in contact**
-
-### *Equation* 
-None
 
 ---
 
-# Drag Force $\vec{F}_d$
-
-### **Type**: Contact
-
-
-### **Description** 
-Fluid/gas Friction, resists objects motion through a fluid/gas
-
-### **Equation** 
-None
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| normal        | $\vec{F}_N$ | Two solid surfaces compress one another                                | Perpendicular to the surface                                                 | contact                                    |
 
 ---
 
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| tension       | $\vec{F}_T$ | An object (often a rope) gets stretched                                | Along the rope (or rope-like object)                                         | contact                                    |
+---
 
-# Bouyant Force $\vec{F}_B$
-
-### **Type**: Contact
-
-
-### **Description** 
-Fluid/Gas Normal Force
-
-### **Equation** 
-None
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| friction      | $\vec{F}_f$ | Two surfaces “catch” on one another and shear each other               | Parallel to the surface                                                      | contact                                    |
 
 ---
 
 
-# Electrostatic Force $\vec{F}_e$
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| Buoyant       | $\vec{F}_B$ | Upward force exerted by a fluid that opposes the weight of an immersed object | Upwards                                                                      | contact                                    |
+---
 
-### **Type**: Long Rance
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| lift          | $\vec{F}_L$ | Air (or other fluid) pushes an object up                               | Up (opposite the direction of the gravitational force exerted on the object) | contact                                    |
 
-
-### **Description** 
-Attractice or resistive force because objects have charge
-
-### **Equation** 
-None 
 
 ---
 
-# Magnetic Force $\vec{F}_M$
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| thrust        | $\vec{F}_t$ | Air (or other fluid) pushes an object along the direction of motion    | Along the direction of motion                                                | contact                                    |
 
-### **Type**: Long Range
+---
+
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| drag          | $\vec{F}_D$ | Air (or other fluid) pushes an object opposite the direction of motion | Opposite the direction of motion                                             | contact                                    |
 
 
-### **Description** 
-Attractive or repulsive force because of moving charge
+---
 
-### **Equation** 
-None 
-
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| Applied       | $\vec{F}_A$ | Any other generic push or pull not listed above                        | Depends on context                                                           | contact                                    |
 
 ---
 

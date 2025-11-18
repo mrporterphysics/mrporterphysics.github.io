@@ -19,6 +19,8 @@ math: mathjax
 <!--- class: thanksgiving -->
 
 
+
+
 # 2025.11.18 **AP Physics** Do Now
 
 0. Get Lab Notebook
@@ -33,7 +35,7 @@ math: mathjax
 
 # 2025.11.18 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What was your favorite recess game from elementary school?
 
 <div class ='columns'>
 
