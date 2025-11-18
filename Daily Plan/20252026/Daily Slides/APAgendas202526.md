@@ -18,9 +18,56 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+
+# 2025.11.18 **AP Physics** Do Now
+
+0. Get Lab Notebook
+1. Scenario: _You roll a bowling ball at a slow to moderate speed on a smooth floor_
+    1. Will the ball roll with a constant velocity, with negligible acceleration, or will it accelerate?
+    2. What data can you collect to definitively answer this question? 
+        - Devise a quick experiment (with multiple data points)
+        - What will you graph?
+        - What will your data look like to support your hypothesis in question _i_?
+
+---
+
+# 2025.11.18 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Mallet Ball
+3. Pivot - Balanced vs. Unbalanced Forces
+4. [Notes](../../../Presentations/Forces/talks/Dynamics2025.html) & Discussion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe the causal relationship for motion_
+
+### 📆 Upcoming
+
+- PC Homework Due Wednesday
+- Quiz Friday -> Projectile Motion
+
+
+</div>
+</div>
+
+---
+
 # 2025.11.17 **AP Physics**
 
-##### **❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
+**❓ of the 📅**: Would you rather be able to see microscopic things or distant galaxies with your naked eye?
 
 <div class ='columns'>
 

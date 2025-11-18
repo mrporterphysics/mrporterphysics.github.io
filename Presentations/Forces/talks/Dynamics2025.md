@@ -1,6 +1,6 @@
 ---
 marp: true
-title: Dynamics 2024-25
+title: Dynamics 2025
 theme: gaia
 class: invert
 paginate: true
@@ -30,7 +30,7 @@ strong{
 
 ## A causual model for motion <!--fit--->
 
-### Mr. Porter - AP Physics 2024
+### Mr. Porter - AP Physics 2025
 
 
 ---
