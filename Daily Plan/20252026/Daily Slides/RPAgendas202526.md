@@ -17,6 +17,40 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+# 2025.11.19 **Regents Physics**
+
+##### **❓ of the 📅**: What was your favorite recess game from elementary school?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Examples - solving projectile motion questions
+3. Think Sheet - Projectile Motion Practice 
+3. Physics Classroom Projectile Motion Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Solving Projectile motion questions_
+
+### 📆 Upcoming
+
+- Quiz **Friday** on Projectiles
+- PC H. Proj Due Wednesday
+- PC A. Projectiles due Friday
+
+</div>
+</div>
+
+
+---
+
 
 # 2025.11.17 **Regents Physics** Do Now
 
