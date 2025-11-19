@@ -42,7 +42,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Do Now
-2. Pivot & Phet - Balanced vs. Unabalanced Forces
+2. Pivot & Phet - Balanced vs. Unbalanced Forces
 3. [Notes](../../../Presentations/Forces/talks/Dynamics2025.html):
     - Common Forces
     - Force Diagrams
