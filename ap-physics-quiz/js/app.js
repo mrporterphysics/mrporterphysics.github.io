@@ -241,8 +241,8 @@ const PhysicsQuizApp = {
                 warnings++;
             }
 
-            if (!question.difficulty || isNaN(parseInt(question.difficulty))) {
-                console.warn(`Line ${index + 1}: Invalid difficulty level`);
+            if (question.difficulty && isNaN(parseInt(question.difficulty))) {
+                console.warn(`Line ${index + 1}: Invalid difficulty level: "${question.difficulty}"`);
                 warnings++;
             }
         });

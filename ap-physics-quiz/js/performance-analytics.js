@@ -3,15 +3,15 @@
  * Provides detailed learning analytics by topic, question type, and difficulty
  */
 
-const PerformanceAnalytics = {
+window.PerformanceAnalytics = {
     // Initialize the analytics system
-    init: function() {
+    init: function () {
         this.updateAnalyticsDisplay();
         this.setupEventListeners();
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for question completion events
         document.addEventListener('questionAnswered', (event) => {
             this.updateAnalyticsDisplay();
@@ -24,10 +24,10 @@ const PerformanceAnalytics = {
     },
 
     // Update the analytics display with comprehensive data
-    updateAnalyticsDisplay: function() {
+    updateAnalyticsDisplay: function () {
         try {
             const stats = QuizStorage.getStatistics();
-            
+
             if (stats.totalQuestions === 0) {
                 this.showEmptyState();
                 return;
@@ -38,14 +38,14 @@ const PerformanceAnalytics = {
             this.renderQuestionTypeAnalytics(stats);
             this.renderDifficultyAnalytics(stats);
             this.renderTrendAnalysis(stats);
-            
+
         } catch (error) {
             Utils.handleError(error, 'PerformanceAnalytics.updateAnalyticsDisplay');
         }
     },
 
     // Show empty state when no data is available
-    showEmptyState: function() {
+    showEmptyState: function () {
         const statsDisplay = document.getElementById('stats-display');
         if (statsDisplay) {
             statsDisplay.innerHTML = `
@@ -59,10 +59,10 @@ const PerformanceAnalytics = {
     },
 
     // Render overall performance metrics
-    renderOverallPerformance: function(stats) {
+    renderOverallPerformance: function (stats) {
         const accuracy = ((stats.correctAnswers / stats.totalQuestions) * 100).toFixed(1);
         const avgTimeFormatted = this.formatTime(stats.averageTime);
-        
+
         const statsDisplay = document.getElementById('stats-display');
         if (statsDisplay) {
             statsDisplay.innerHTML = `
@@ -93,9 +93,9 @@ const PerformanceAnalytics = {
     },
 
     // Render topic-specific analytics
-    renderTopicAnalytics: function(stats) {
+    renderTopicAnalytics: function (stats) {
         const topicData = this.calculateTopicMetrics(stats.topicStats);
-        
+
         const detailedAnalytics = document.getElementById('detailed-analytics');
         if (detailedAnalytics && Object.keys(topicData).length > 0) {
             const topicHTML = `
@@ -124,9 +124,9 @@ const PerformanceAnalytics = {
     },
 
     // Render question type analytics
-    renderQuestionTypeAnalytics: function(stats) {
+    renderQuestionTypeAnalytics: function (stats) {
         const typeData = this.calculateQuestionTypeMetrics(stats.questionTypeStats);
-        
+
         const detailedAnalytics = document.getElementById('detailed-analytics');
         if (detailedAnalytics && Object.keys(typeData).length > 0) {
             const typeHTML = `
@@ -151,9 +151,9 @@ const PerformanceAnalytics = {
     },
 
     // Render difficulty level analytics
-    renderDifficultyAnalytics: function(stats) {
+    renderDifficultyAnalytics: function (stats) {
         const difficultyData = stats.difficultyStats;
-        
+
         const detailedAnalytics = document.getElementById('detailed-analytics');
         if (detailedAnalytics) {
             const difficultyHTML = `
@@ -161,10 +161,10 @@ const PerformanceAnalytics = {
                     <h4>⭐ Difficulty Level Performance</h4>
                     <div class="difficulty-analytics-grid">
                         ${[1, 2, 3].map(level => {
-                            const data = difficultyData[level] || { correct: 0, total: 0 };
-                            const accuracy = data.total > 0 ? ((data.correct / data.total) * 100).toFixed(1) : 0;
-                            const stars = '★'.repeat(level) + '☆'.repeat(3 - level);
-                            return `
+                const data = difficultyData[level] || { correct: 0, total: 0 };
+                const accuracy = data.total > 0 ? ((data.correct / data.total) * 100).toFixed(1) : 0;
+                const stars = '★'.repeat(level) + '☆'.repeat(3 - level);
+                return `
                                 <div class="difficulty-metric difficulty-${level}">
                                     <div class="difficulty-header">
                                         <span class="difficulty-stars">${stars}</span>
@@ -176,7 +176,7 @@ const PerformanceAnalytics = {
                                     </div>
                                 </div>
                             `;
-                        }).join('')}
+            }).join('')}
                     </div>
                 </div>
             `;
@@ -185,7 +185,7 @@ const PerformanceAnalytics = {
     },
 
     // Render trend analysis
-    renderTrendAnalysis: function(stats) {
+    renderTrendAnalysis: function (stats) {
         const detailedAnalytics = document.getElementById('detailed-analytics');
         if (detailedAnalytics) {
             const streakInfo = stats.streaks || { current: 0, best: 0 };
@@ -222,9 +222,9 @@ const PerformanceAnalytics = {
     },
 
     // Calculate topic-specific metrics
-    calculateTopicMetrics: function(topicStats) {
+    calculateTopicMetrics: function (topicStats) {
         const metrics = {};
-        
+
         Object.entries(topicStats).forEach(([topic, stats]) => {
             if (stats.total > 0) {
                 metrics[topic] = {
@@ -235,14 +235,14 @@ const PerformanceAnalytics = {
                 };
             }
         });
-        
+
         return metrics;
     },
 
     // Calculate question type metrics
-    calculateQuestionTypeMetrics: function(typeStats) {
+    calculateQuestionTypeMetrics: function (typeStats) {
         const metrics = {};
-        
+
         Object.entries(typeStats).forEach(([type, stats]) => {
             if (stats.total > 0) {
                 metrics[type] = {
@@ -252,35 +252,35 @@ const PerformanceAnalytics = {
                 };
             }
         });
-        
+
         return metrics;
     },
 
     // Generate session report
-    generateSessionReport: function() {
+    generateSessionReport: function () {
         const stats = QuizStorage.getStatistics();
         const sessionStats = this.calculateSessionStats(stats);
-        
+
         this.showSessionReport(sessionStats);
     },
 
     // Calculate session-specific statistics
-    calculateSessionStats: function(stats) {
+    calculateSessionStats: function (stats) {
         const progress = QuizStorage.getProgress();
         const sessionStart = progress.sessionStartTime || Date.now();
         const sessionDuration = Date.now() - sessionStart;
-        
+
         return {
             questionsAnswered: progress.totalAttempted || 0,
             correctAnswers: progress.correctAnswers || 0,
             sessionDuration: sessionDuration,
-            accuracy: progress.totalAttempted > 0 ? 
+            accuracy: progress.totalAttempted > 0 ?
                 ((progress.correctAnswers / progress.totalAttempted) * 100).toFixed(1) : 0
         };
     },
 
     // Show session completion report
-    showSessionReport: function(sessionStats) {
+    showSessionReport: function (sessionStats) {
         const modal = document.createElement('div');
         modal.className = 'session-report-modal';
         modal.innerHTML = `
@@ -308,21 +308,21 @@ const PerformanceAnalytics = {
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Event handlers
         modal.querySelector('.close-report').addEventListener('click', () => {
             document.body.removeChild(modal);
         });
-        
+
         modal.querySelector('.continue-studying').addEventListener('click', () => {
             document.body.removeChild(modal);
         });
     },
 
     // Helper functions
-    formatTime: function(milliseconds) {
+    formatTime: function (milliseconds) {
         if (milliseconds < 1000) return '< 1s';
         const seconds = Math.floor(milliseconds / 1000);
         if (seconds < 60) return `${seconds}s`;
@@ -331,11 +331,11 @@ const PerformanceAnalytics = {
         return `${minutes}m ${remainingSeconds}s`;
     },
 
-    capitalizeFirst: function(str) {
+    capitalizeFirst: function (str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     },
 
-    getQuestionTypeIcon: function(type) {
+    getQuestionTypeIcon: function (type) {
         const icons = {
             'mc': '🔤',
             'tf': '✓✗',
@@ -345,7 +345,7 @@ const PerformanceAnalytics = {
         return icons[type] || '❓';
     },
 
-    getQuestionTypeName: function(type) {
+    getQuestionTypeName: function (type) {
         const names = {
             'mc': 'Multiple Choice',
             'tf': 'True/False',

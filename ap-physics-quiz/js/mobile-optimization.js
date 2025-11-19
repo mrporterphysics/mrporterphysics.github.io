@@ -3,7 +3,7 @@
  * Enhances performance and user experience on mobile devices
  */
 
-const MobileOptimization = {
+window.MobileOptimization = {
     // Device and performance detection
     deviceInfo: {
         isMobile: false,
@@ -31,7 +31,7 @@ const MobileOptimization = {
     },
 
     // Initialize mobile optimization
-    init: function() {
+    init: function () {
         this.detectDevice();
         this.detectPerformance();
         this.applyOptimizations();
@@ -41,18 +41,18 @@ const MobileOptimization = {
     },
 
     // Detect device capabilities
-    detectDevice: function() {
+    detectDevice: function () {
         const userAgent = navigator.userAgent.toLowerCase();
         const screenWidth = window.screen.width;
         const screenHeight = window.screen.height;
-        
+
         // Mobile detection
         this.deviceInfo.isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent) ||
-                                  (screenWidth <= 768 && screenHeight <= 1024);
-        
+            (screenWidth <= 768 && screenHeight <= 1024);
+
         // Tablet detection
         this.deviceInfo.isTablet = /ipad|android(?!.*mobile)|tablet/i.test(userAgent) ||
-                                  (screenWidth >= 768 && screenWidth <= 1024);
+            (screenWidth >= 768 && screenWidth <= 1024);
 
         // Screen size categorization
         if (screenWidth <= 480) {
@@ -66,9 +66,9 @@ const MobileOptimization = {
         }
 
         // Low-end device detection (basic heuristics)
-        this.deviceInfo.isLowEndDevice = navigator.hardwareConcurrency <= 2 || 
-                                        navigator.deviceMemory <= 2 ||
-                                        /android 4|android 5|ios 9|ios 10/i.test(userAgent);
+        this.deviceInfo.isLowEndDevice = navigator.hardwareConcurrency <= 2 ||
+            navigator.deviceMemory <= 2 ||
+            /android 4|android 5|ios 9|ios 10/i.test(userAgent);
 
         // Connection detection
         if (navigator.connection) {
@@ -79,10 +79,10 @@ const MobileOptimization = {
     },
 
     // Detect performance capabilities
-    detectPerformance: function() {
+    detectPerformance: function () {
         // Measure page load time
         if (performance && performance.timing) {
-            this.performanceMetrics.pageLoadTime = 
+            this.performanceMetrics.pageLoadTime =
                 performance.timing.loadEventEnd - performance.timing.navigationStart;
         }
 
@@ -93,15 +93,15 @@ const MobileOptimization = {
     },
 
     // Apply performance optimizations based on device
-    applyOptimizations: function() {
+    applyOptimizations: function () {
         if (this.deviceInfo.isMobile || this.deviceInfo.isLowEndDevice) {
             // Enable mobile-specific optimizations
             this.optimizations.reducedAnimations = true;
             this.optimizations.simplifiedUI = true;
-            
+
             // Add performance classes to body
             document.body.classList.add('mobile-optimized');
-            
+
             if (this.deviceInfo.isLowEndDevice) {
                 document.body.classList.add('low-end-device');
             }
@@ -123,7 +123,7 @@ const MobileOptimization = {
     },
 
     // Setup responsive event handlers
-    setupResponsiveHandlers: function() {
+    setupResponsiveHandlers: function () {
         // Viewport change handler
         window.addEventListener('resize', Utils.debounce(() => {
             this.handleViewportChange();
@@ -145,21 +145,21 @@ const MobileOptimization = {
     },
 
     // Setup performance monitoring
-    setupPerformanceMonitoring: function() {
+    setupPerformanceMonitoring: function () {
         // Monitor question render time
         const originalDisplayQuestion = window.QuizUI && window.QuizUI.displayQuestion;
         if (originalDisplayQuestion) {
-            window.QuizUI.displayQuestion = function(question) {
+            window.QuizUI.displayQuestion = function (question) {
                 const startTime = performance.now();
                 const result = originalDisplayQuestion.call(this, question);
                 const endTime = performance.now();
-                
+
                 MobileOptimization.performanceMetrics.questionRenderTime = endTime - startTime;
-                
+
                 if (MobileOptimization.performanceMetrics.questionRenderTime > 100) {
                     console.warn('Slow question render:', MobileOptimization.performanceMetrics.questionRenderTime + 'ms');
                 }
-                
+
                 return result;
             };
         }
@@ -168,7 +168,7 @@ const MobileOptimization = {
         if (performance.memory) {
             setInterval(() => {
                 this.performanceMetrics.memoryUsage = performance.memory.usedJSHeapSize;
-                
+
                 // Warn if memory usage is high
                 if (this.performanceMetrics.memoryUsage > 50 * 1024 * 1024) { // 50MB
                     console.warn('High memory usage detected');
@@ -179,7 +179,7 @@ const MobileOptimization = {
     },
 
     // Enhance touch experience
-    enhanceTouchExperience: function() {
+    enhanceTouchExperience: function () {
         if (!this.deviceInfo.isMobile) return;
 
         // Add touch-friendly classes
@@ -199,7 +199,7 @@ const MobileOptimization = {
     },
 
     // Improve touch target sizes
-    improveTouchTargets: function() {
+    improveTouchTargets: function () {
         const style = document.createElement('style');
         style.textContent = `
             .touch-device .btn {
@@ -231,7 +231,7 @@ const MobileOptimization = {
     },
 
     // Setup swipe gestures for navigation
-    setupSwipeGestures: function() {
+    setupSwipeGestures: function () {
         let startX = 0;
         let startY = 0;
         let endX = 0;
@@ -245,10 +245,10 @@ const MobileOptimization = {
         document.addEventListener('touchend', (e) => {
             endX = e.changedTouches[0].screenX;
             endY = e.changedTouches[0].screenY;
-            
+
             const deltaX = endX - startX;
             const deltaY = endY - startY;
-            
+
             // Only process horizontal swipes that are longer than vertical
             if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 100) {
                 if (deltaX > 0) {
@@ -263,14 +263,14 @@ const MobileOptimization = {
     },
 
     // Handle swipe gestures
-    handleSwipeRight: function() {
+    handleSwipeRight: function () {
         const prevButton = document.getElementById('prev-question');
         if (prevButton && prevButton.style.display !== 'none' && !prevButton.disabled) {
             prevButton.click();
         }
     },
 
-    handleSwipeLeft: function() {
+    handleSwipeLeft: function () {
         const nextButton = document.getElementById('next-question');
         if (nextButton && nextButton.style.display !== 'none' && !nextButton.disabled) {
             nextButton.click();
@@ -278,7 +278,7 @@ const MobileOptimization = {
     },
 
     // Optimize scrolling performance
-    optimizeScrolling: function() {
+    optimizeScrolling: function () {
         // Add smooth scrolling
         const style = document.createElement('style');
         style.textContent = `
@@ -296,7 +296,7 @@ const MobileOptimization = {
     },
 
     // Prevent input zoom on iOS
-    preventInputZoom: function() {
+    preventInputZoom: function () {
         if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
             const viewport = document.querySelector('meta[name=viewport]');
             if (viewport) {
@@ -306,7 +306,7 @@ const MobileOptimization = {
     },
 
     // Enable reduced motion for performance
-    enableReducedMotion: function() {
+    enableReducedMotion: function () {
         const style = document.createElement('style');
         style.textContent = `
             .mobile-optimized *,
@@ -321,9 +321,9 @@ const MobileOptimization = {
     },
 
     // Enable slow connection optimizations
-    enableSlowConnectionMode: function() {
+    enableSlowConnectionMode: function () {
         document.body.classList.add('slow-connection');
-        
+
         // Disable non-essential animations
         const style = document.createElement('style');
         style.textContent = `
@@ -343,7 +343,7 @@ const MobileOptimization = {
     },
 
     // Handle viewport changes
-    handleViewportChange: function() {
+    handleViewportChange: function () {
         const newWidth = window.innerWidth;
         let newScreenSize = this.deviceInfo.screenSize;
 
@@ -365,7 +365,7 @@ const MobileOptimization = {
     },
 
     // Handle orientation changes
-    handleOrientationChange: function() {
+    handleOrientationChange: function () {
         // Recalculate layout after orientation change
         if (window.QuizUI && typeof window.QuizUI.updateLayout === 'function') {
             window.QuizUI.updateLayout();
@@ -376,7 +376,7 @@ const MobileOptimization = {
     },
 
     // Handle network changes
-    handleNetworkChange: function() {
+    handleNetworkChange: function () {
         const connection = navigator.connection;
         this.deviceInfo.connectionType = connection.effectiveType;
 
@@ -390,7 +390,7 @@ const MobileOptimization = {
     },
 
     // Performance cleanup
-    performCleanup: function() {
+    performCleanup: function () {
         // Clear old performance entries
         if (performance.clearResourceTimings) {
             performance.clearResourceTimings();
@@ -406,7 +406,7 @@ const MobileOptimization = {
     },
 
     // Clear old cached data
-    clearOldCaches: function() {
+    clearOldCaches: function () {
         try {
             // Clear old statistics data (keep recent)
             const stats = QuizStorage.getStatistics();
@@ -428,7 +428,7 @@ const MobileOptimization = {
     },
 
     // Add mobile-specific UI enhancements
-    addMobileUI: function() {
+    addMobileUI: function () {
         if (!this.deviceInfo.isMobile) return;
 
         // Add mobile navigation helper
@@ -457,7 +457,7 @@ const MobileOptimization = {
     },
 
     // Get performance report
-    getPerformanceReport: function() {
+    getPerformanceReport: function () {
         return {
             deviceInfo: this.deviceInfo,
             metrics: this.performanceMetrics,
@@ -467,7 +467,7 @@ const MobileOptimization = {
     },
 
     // Get performance recommendations
-    getPerformanceRecommendations: function() {
+    getPerformanceRecommendations: function () {
         const recommendations = [];
 
         if (this.performanceMetrics.questionRenderTime > 100) {

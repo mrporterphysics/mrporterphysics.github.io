@@ -3,21 +3,21 @@
  * Handles correct answer streaks and personal best tracking
  */
 
-const StreakTracker = {
+window.StreakTracker = {
     // Initialize the streak tracking system
-    init: function() {
+    init: function () {
         this.updateStreakDisplay();
         this.setupEventListeners();
     },
 
     // Update the streak display
-    updateStreakDisplay: function() {
+    updateStreakDisplay: function () {
         try {
             const stats = QuizStorage.getStatistics();
             const streaks = stats.streaks || { current: 0, best: 0 };
-            
+
             this.renderStreakCounter(streaks);
-            
+
             // Show streak display if there's any streak activity
             const streakDisplay = document.getElementById('streak-display');
             if (streakDisplay && (streaks.current > 0 || streaks.best > 0)) {
@@ -29,20 +29,20 @@ const StreakTracker = {
     },
 
     // Render the streak counter
-    renderStreakCounter: function(streaks) {
+    renderStreakCounter: function (streaks) {
         const currentElement = document.getElementById('current-streak');
         const personalBestElement = document.getElementById('personal-best');
-        
+
         if (currentElement) {
             currentElement.textContent = streaks.current;
-            
+
             // Add visual effects for milestones
             this.addStreakEffects(currentElement, streaks.current);
         }
-        
+
         if (personalBestElement) {
             personalBestElement.textContent = `Best: ${streaks.best}`;
-            
+
             // Highlight when personal best is achieved
             if (streaks.current > 0 && streaks.current === streaks.best) {
                 personalBestElement.style.color = 'var(--gr)';
@@ -55,10 +55,10 @@ const StreakTracker = {
     },
 
     // Add visual effects for streak milestones
-    addStreakEffects: function(element, streak) {
+    addStreakEffects: function (element, streak) {
         // Remove existing classes
         element.classList.remove('streak-fire', 'streak-hot', 'streak-blazing');
-        
+
         if (streak >= 10) {
             element.classList.add('streak-blazing');
             element.style.color = 'var(--re)';
@@ -76,12 +76,12 @@ const StreakTracker = {
     },
 
     // Handle correct answer (increment streak)
-    onCorrectAnswer: function() {
+    onCorrectAnswer: function () {
         const stats = QuizStorage.getStatistics();
         const streaks = stats.streaks || { current: 0, best: 0 };
-        
+
         streaks.current++;
-        
+
         // Update personal best if needed
         if (streaks.current > streaks.best) {
             streaks.best = streaks.current;
@@ -90,15 +90,15 @@ const StreakTracker = {
 
         // Show milestone achievements
         this.checkMilestoneAchievements(streaks.current);
-        
+
         // Update statistics
         QuizStorage.updateStatistics({
             ...stats,
             streaks: streaks
         });
-        
+
         this.updateStreakDisplay();
-        
+
         // Dispatch streak event for other components
         document.dispatchEvent(new CustomEvent('streakUpdated', {
             detail: { current: streaks.current, best: streaks.best }
@@ -106,26 +106,26 @@ const StreakTracker = {
     },
 
     // Handle incorrect answer (reset streak)
-    onIncorrectAnswer: function() {
+    onIncorrectAnswer: function () {
         const stats = QuizStorage.getStatistics();
         const streaks = stats.streaks || { current: 0, best: 0 };
-        
+
         const previousStreak = streaks.current;
         streaks.current = 0;
-        
+
         // Update statistics
         QuizStorage.updateStatistics({
             ...stats,
             streaks: streaks
         });
-        
+
         this.updateStreakDisplay();
-        
+
         // Show encouragement if had a good streak
         if (previousStreak >= 3) {
             this.showEncouragementMessage(previousStreak);
         }
-        
+
         // Dispatch streak reset event
         document.dispatchEvent(new CustomEvent('streakReset', {
             detail: { previousStreak: previousStreak, best: streaks.best }
@@ -133,16 +133,16 @@ const StreakTracker = {
     },
 
     // Check for milestone achievements
-    checkMilestoneAchievements: function(streak) {
+    checkMilestoneAchievements: function (streak) {
         const milestones = [3, 5, 10, 15, 20, 25, 50];
-        
+
         if (milestones.includes(streak)) {
             this.showMilestoneAchievement(streak);
         }
     },
 
     // Show milestone achievement
-    showMilestoneAchievement: function(streak) {
+    showMilestoneAchievement: function (streak) {
         const messages = {
             3: { icon: '🔥', text: 'On Fire!', subtext: '3 in a row!' },
             5: { icon: '⚡', text: 'Hot Streak!', subtext: '5 correct answers!' },
@@ -160,7 +160,7 @@ const StreakTracker = {
     },
 
     // Show personal best achievement
-    showPersonalBestAchievement: function(best) {
+    showPersonalBestAchievement: function (best) {
         this.showAchievementModal({
             icon: '🏅',
             text: 'New Personal Best!',
@@ -169,20 +169,20 @@ const StreakTracker = {
     },
 
     // Show encouragement message when streak is broken
-    showEncouragementMessage: function(streak) {
+    showEncouragementMessage: function (streak) {
         const messages = [
             `Great ${streak}-question streak! Keep it up!`,
             `You had ${streak} in a row - you're getting stronger!`,
             `${streak} correct answers shows you're learning well!`,
             `Don't worry about the streak - ${streak} in a row is impressive!`
         ];
-        
+
         const message = messages[Math.floor(Math.random() * messages.length)];
         this.showMotivationalMessage(message);
     },
 
     // Show achievement modal
-    showAchievementModal: function(achievement) {
+    showAchievementModal: function (achievement) {
         // Create temporary achievement display
         const modal = document.createElement('div');
         modal.className = 'achievement-modal';
@@ -193,12 +193,12 @@ const StreakTracker = {
                 <div class="achievement-subtext">${achievement.subtext}</div>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Animate in
         setTimeout(() => modal.classList.add('show'), 10);
-        
+
         // Remove after delay
         setTimeout(() => {
             modal.classList.remove('show');
@@ -207,7 +207,7 @@ const StreakTracker = {
     },
 
     // Show motivational message
-    showMotivationalMessage: function(message) {
+    showMotivationalMessage: function (message) {
         // Use existing feedback system if available
         if (typeof QuizUI !== 'undefined' && QuizUI.showFeedback) {
             QuizUI.showFeedback(message, 'info');
@@ -217,7 +217,7 @@ const StreakTracker = {
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for question answered events
         document.addEventListener('questionAnswered', (event) => {
             if (event.detail && event.detail.isCorrect !== undefined) {
@@ -228,7 +228,7 @@ const StreakTracker = {
                 }
             }
         });
-        
+
         // Listen for quiz reset
         document.addEventListener('quizReset', () => {
             // Optionally reset streak on quiz reset
@@ -237,16 +237,16 @@ const StreakTracker = {
     },
 
     // Reset streak (for new quiz sessions)
-    resetStreak: function() {
+    resetStreak: function () {
         const stats = QuizStorage.getStatistics();
         stats.streaks = { current: 0, best: stats.streaks?.best || 0 };
-        
+
         QuizStorage.updateStatistics(stats);
         this.updateStreakDisplay();
     },
 
     // Get current streak stats
-    getStats: function() {
+    getStats: function () {
         const stats = QuizStorage.getStatistics();
         return stats.streaks || { current: 0, best: 0 };
     }

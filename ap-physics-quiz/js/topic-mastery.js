@@ -3,22 +3,22 @@
  * Displays topic-based progress meters and learning analytics
  */
 
-const TopicMastery = {
+window.TopicMastery = {
     // Initialize the topic mastery system
-    init: function() {
+    init: function () {
         this.updateMasteryDisplay();
         this.setupEventListeners();
     },
 
     // Update the mastery display with current progress
-    updateMasteryDisplay: function() {
+    updateMasteryDisplay: function () {
         try {
             const stats = QuizStorage.getStatistics();
             const topicStats = this.calculateTopicMastery(stats);
-            
+
             this.renderMasteryMeters(topicStats);
             this.renderOverallStats(stats);
-            
+
             // Show the mastery section if there's progress to display
             const masterySection = document.getElementById('topic-mastery');
             if (masterySection && Object.keys(topicStats).length > 0) {
@@ -30,16 +30,16 @@ const TopicMastery = {
     },
 
     // Calculate mastery percentages for each topic
-    calculateTopicMastery: function(stats) {
+    calculateTopicMastery: function (stats) {
         const topicMastery = {};
-        
+
         if (!stats.topicStats) return topicMastery;
 
         for (const [topic, topicData] of Object.entries(stats.topicStats)) {
             if (topicData.total > 0) {
                 const percentage = Math.round((topicData.correct / topicData.total) * 100);
                 const masteryLevel = this.getMasteryLevel(percentage);
-                
+
                 topicMastery[topic] = {
                     percentage: percentage,
                     correct: topicData.correct,
@@ -54,14 +54,14 @@ const TopicMastery = {
     },
 
     // Determine mastery level based on percentage
-    getMasteryLevel: function(percentage) {
+    getMasteryLevel: function (percentage) {
         if (percentage >= 80) return 'high';
         if (percentage >= 60) return 'medium';
         return 'low';
     },
 
     // Render the mastery meters
-    renderMasteryMeters: function(topicStats) {
+    renderMasteryMeters: function (topicStats) {
         const container = document.getElementById('mastery-meters');
         if (!container) return;
 
@@ -83,7 +83,7 @@ const TopicMastery = {
     },
 
     // Render overall statistics
-    renderOverallStats: function(stats) {
+    renderOverallStats: function (stats) {
         const container = document.getElementById('mastery-meters');
         if (!container || !stats.topicStats) return;
 
@@ -120,14 +120,14 @@ const TopicMastery = {
     },
 
     // Format topic name for display
-    formatTopicName: function(topic) {
-        return topic.split('-').map(word => 
+    formatTopicName: function (topic) {
+        return topic.split('-').map(word =>
             word.charAt(0).toUpperCase() + word.slice(1)
         ).join(' ');
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for answer submissions to update mastery display
         document.addEventListener('questionAnswered', () => {
             setTimeout(() => this.updateMasteryDisplay(), 100);
@@ -140,12 +140,12 @@ const TopicMastery = {
     },
 
     // Get recommendations for topics to focus on
-    getRecommendations: function() {
+    getRecommendations: function () {
         const stats = QuizStorage.getStatistics();
         const topicStats = this.calculateTopicMastery(stats);
-        
+
         const recommendations = [];
-        
+
         for (const [topic, data] of Object.entries(topicStats)) {
             if (data.level === 'low' && data.attempted >= 3) {
                 recommendations.push({

@@ -3,21 +3,21 @@
  * Provides contextual hints and help for struggling students
  */
 
-const HintSystem = {
+window.HintSystem = {
     // Hint levels for progressive disclosure
     hintLevels: ['concept', 'approach', 'formula', 'solution'],
-    
+
     // Current hint state
     currentHints: {},
-    
+
     // Initialize the hint system
-    init: function() {
+    init: function () {
         this.setupEventListeners();
         this.addHintButtonToUI();
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for question display to reset hints
         document.addEventListener('questionDisplayed', (event) => {
             this.resetHints();
@@ -33,7 +33,7 @@ const HintSystem = {
     },
 
     // Add hint button to the quiz interface
-    addHintButtonToUI: function() {
+    addHintButtonToUI: function () {
         const controlCenter = document.querySelector('.control-center');
         if (controlCenter && !document.getElementById('hint-button')) {
             const hintButton = document.createElement('button');
@@ -42,7 +42,7 @@ const HintSystem = {
             hintButton.innerHTML = '💡 Get Hint';
             hintButton.style.display = 'none';
             hintButton.title = 'Get a helpful hint for this question';
-            
+
             // Insert before the submit button
             const submitButton = document.getElementById('submit-answer');
             if (submitButton) {
@@ -56,13 +56,13 @@ const HintSystem = {
     },
 
     // Update hint button based on current question
-    updateHintButton: function(question) {
+    updateHintButton: function (question) {
         const hintButton = document.getElementById('hint-button');
         if (hintButton && question) {
             // Show hint button for difficult questions or after wrong answers
             const shouldShow = this.shouldShowHintButton(question);
             hintButton.style.display = shouldShow ? 'inline-block' : 'none';
-            
+
             if (shouldShow) {
                 this.generateHintsForQuestion(question);
             }
@@ -70,30 +70,30 @@ const HintSystem = {
     },
 
     // Determine if hint button should be shown
-    shouldShowHintButton: function(question) {
+    shouldShowHintButton: function (question) {
         // Show for difficulty level 2 and 3 questions
         if (question.difficulty >= 2) return true;
-        
+
         // Show if student has attempted this question incorrectly before
         const stats = QuizStorage.getStatistics();
         const questionStats = stats.questionStats && stats.questionStats[question.id];
         if (questionStats && questionStats.attempts > questionStats.correct) return true;
-        
+
         // Show in learning mode
         const currentMode = this.getCurrentMode();
         if (currentMode === 'learning') return true;
-        
+
         return false;
     },
 
     // Get current quiz mode
-    getCurrentMode: function() {
+    getCurrentMode: function () {
         const activeMode = document.querySelector('.mode-btn.active');
         return activeMode ? activeMode.dataset.mode : 'learning';
     },
 
     // Generate hints for a specific question
-    generateHintsForQuestion: function(question) {
+    generateHintsForQuestion: function (question) {
         this.currentHints = {
             questionId: question.id,
             topic: question.topic,
@@ -105,9 +105,9 @@ const HintSystem = {
     },
 
     // Create contextual hints based on question content and topic
-    createHintsForQuestion: function(question) {
+    createHintsForQuestion: function (question) {
         const hints = [];
-        
+
         // Level 1: Concept hint
         hints.push({
             level: 'concept',
@@ -140,7 +140,7 @@ const HintSystem = {
     },
 
     // Generate concept-level hint
-    generateConceptHint: function(question) {
+    generateConceptHint: function (question) {
         const conceptHints = {
             'kinematics': 'Think about motion variables: position, velocity, acceleration, and time. What quantity is the question asking about?',
             'forces': 'Consider the forces acting on the object. Remember Newton\'s laws and think about equilibrium or acceleration.',
@@ -152,12 +152,12 @@ const HintSystem = {
             'fluids': 'Consider pressure, density, and flow. Remember Archimedes\' principle for buoyancy.',
             'waves': 'Waves carry energy and have properties like frequency, wavelength, and amplitude.'
         };
-        
+
         return conceptHints[question.topic] || 'Think about the fundamental physics concept involved in this question.';
     },
 
     // Generate approach-level hint
-    generateApproachHint: function(question) {
+    generateApproachHint: function (question) {
         const approachHints = {
             'tf': 'Read the statement carefully. Is it always true, sometimes true, or never true? Think of counterexamples.',
             'mc': 'Eliminate obviously wrong answers first. Use physics reasoning to choose between remaining options.',
@@ -166,7 +166,7 @@ const HintSystem = {
         };
 
         const typeHint = approachHints[question.type] || 'Break down the problem into smaller parts.';
-        
+
         // Add topic-specific approach hints
         const topicApproaches = {
             'kinematics': 'Identify what you know and what you need to find. Choose the appropriate kinematic equation.',
@@ -180,7 +180,7 @@ const HintSystem = {
     },
 
     // Generate formula-level hint
-    generateFormulaHint: function(question) {
+    generateFormulaHint: function (question) {
         const formulaHints = {
             'kinematics': 'Key equations: v = v₀ + at, x = v₀t + ½at², v² = v₀² + 2ax',
             'forces': 'Newton\'s laws: F = ma, For equilibrium: ΣF = 0',
@@ -197,7 +197,7 @@ const HintSystem = {
     },
 
     // Generate solution-level hint
-    generateSolutionHint: function(question) {
+    generateSolutionHint: function (question) {
         // This would ideally be customized per question, but we'll provide general guidance
         const solutionHints = {
             'kinematics': 'Substitute known values into the appropriate equation and solve for the unknown.',
@@ -211,7 +211,7 @@ const HintSystem = {
     },
 
     // Show the next available hint
-    showNextHint: function() {
+    showNextHint: function () {
         if (!this.currentHints || !this.currentHints.hints) return;
 
         const hintIndex = this.currentHints.hintsShown;
@@ -240,14 +240,14 @@ const HintSystem = {
     },
 
     // Display a hint to the user
-    displayHint: function(hint) {
+    displayHint: function (hint) {
         // Create or update hint container
         let hintContainer = document.getElementById('hint-container');
         if (!hintContainer) {
             hintContainer = document.createElement('div');
             hintContainer.id = 'hint-container';
             hintContainer.className = 'hint-container';
-            
+
             const questionContainer = document.querySelector('.question-container');
             if (questionContainer) {
                 questionContainer.appendChild(hintContainer);
@@ -267,13 +267,13 @@ const HintSystem = {
         `;
 
         hintContainer.appendChild(hintElement);
-        
+
         // Smooth scroll to hint
         hintElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     },
 
     // Show message when all hints are used
-    showAllHintsUsed: function() {
+    showAllHintsUsed: function () {
         const hintContainer = document.getElementById('hint-container');
         if (hintContainer) {
             const finalMessage = document.createElement('div');
@@ -294,7 +294,7 @@ const HintSystem = {
     },
 
     // Suggest hint after incorrect answer
-    suggestHint: function(questionId) {
+    suggestHint: function (questionId) {
         if (this.getCurrentMode() !== 'learning') return;
 
         const hintButton = document.getElementById('hint-button');
@@ -311,7 +311,7 @@ const HintSystem = {
     },
 
     // Show hint suggestion after wrong answer
-    showHintSuggestion: function() {
+    showHintSuggestion: function () {
         const suggestion = document.createElement('div');
         suggestion.className = 'hint-suggestion';
         suggestion.innerHTML = `
@@ -324,7 +324,7 @@ const HintSystem = {
         const questionContainer = document.querySelector('.question-container');
         if (questionContainer) {
             questionContainer.appendChild(suggestion);
-            
+
             // Auto-remove after 5 seconds
             setTimeout(() => {
                 if (suggestion.parentNode) {
@@ -335,9 +335,9 @@ const HintSystem = {
     },
 
     // Reset hints for new question
-    resetHints: function() {
+    resetHints: function () {
         this.currentHints = {};
-        
+
         // Clear hint container
         const hintContainer = document.getElementById('hint-container');
         if (hintContainer) {
@@ -362,7 +362,7 @@ const HintSystem = {
     },
 
     // Track hint usage for analytics
-    trackHintUsage: function(hint) {
+    trackHintUsage: function (hint) {
         try {
             let hintStats = Utils.storage.get('hint_stats', {
                 totalHintsUsed: 0,
@@ -380,14 +380,14 @@ const HintSystem = {
             hintStats.questionsWithHints = Array.from(hintStats.questionsWithHints);
 
             Utils.storage.set('hint_stats', hintStats);
-            
+
         } catch (error) {
             Utils.handleError(error, 'HintSystem.trackHintUsage');
         }
     },
 
     // Get hint usage analytics
-    getHintAnalytics: function() {
+    getHintAnalytics: function () {
         try {
             const stats = Utils.storage.get('hint_stats', {
                 totalHintsUsed: 0,
@@ -401,10 +401,10 @@ const HintSystem = {
                 questionsWithHints: stats.questionsWithHints.length,
                 levelBreakdown: stats.hintsByLevel,
                 topicBreakdown: stats.hintsByTopic,
-                averageHintsPerQuestion: stats.questionsWithHints.length > 0 ? 
+                averageHintsPerQuestion: stats.questionsWithHints.length > 0 ?
                     (stats.totalHintsUsed / stats.questionsWithHints.length).toFixed(1) : 0
             };
-            
+
         } catch (error) {
             Utils.handleError(error, 'HintSystem.getHintAnalytics');
             return null;

@@ -3,15 +3,15 @@
  * Allows students to bookmark questions for later review
  */
 
-const BookmarkSystem = {
+window.BookmarkSystem = {
     // Initialize the bookmark system
-    init: function() {
+    init: function () {
         this.setupEventListeners();
         this.updateBookmarkButton();
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         const bookmarkBtn = document.getElementById('bookmark-question');
         if (bookmarkBtn) {
             bookmarkBtn.addEventListener('click', () => this.toggleBookmark());
@@ -24,7 +24,7 @@ const BookmarkSystem = {
     },
 
     // Toggle bookmark for current question
-    toggleBookmark: function() {
+    toggleBookmark: function () {
         try {
             const currentQuestion = this.getCurrentQuestion();
             if (!currentQuestion) return;
@@ -49,7 +49,7 @@ const BookmarkSystem = {
     },
 
     // Add a bookmark
-    addBookmark: function(questionId) {
+    addBookmark: function (questionId) {
         const bookmarks = this.getBookmarks();
         if (!bookmarks.includes(questionId)) {
             bookmarks.push(questionId);
@@ -58,7 +58,7 @@ const BookmarkSystem = {
     },
 
     // Remove a bookmark
-    removeBookmark: function(questionId) {
+    removeBookmark: function (questionId) {
         const bookmarks = this.getBookmarks();
         const index = bookmarks.indexOf(questionId);
         if (index > -1) {
@@ -68,14 +68,14 @@ const BookmarkSystem = {
     },
 
     // Get all bookmarks
-    getBookmarks: function() {
+    getBookmarks: function () {
         return Utils.storage.get('quiz_bookmarks', []);
     },
 
     // Save bookmarks to storage
-    saveBookmarks: function(bookmarks) {
+    saveBookmarks: function (bookmarks) {
         Utils.storage.set('quiz_bookmarks', bookmarks);
-        
+
         // Dispatch event for other components
         document.dispatchEvent(new CustomEvent('bookmarksUpdated', {
             detail: { bookmarks: bookmarks }
@@ -83,18 +83,18 @@ const BookmarkSystem = {
     },
 
     // Check if question is bookmarked
-    isBookmarked: function(questionId) {
+    isBookmarked: function (questionId) {
         return this.getBookmarks().includes(questionId);
     },
 
     // Update bookmark button appearance
-    updateBookmarkButton: function() {
+    updateBookmarkButton: function () {
         const bookmarkBtn = document.getElementById('bookmark-question');
         const currentQuestion = this.getCurrentQuestion();
-        
+
         if (bookmarkBtn && currentQuestion) {
             const isBookmarked = this.isBookmarked(currentQuestion.id);
-            
+
             // Update button appearance
             if (isBookmarked) {
                 bookmarkBtn.innerHTML = '🔖';
@@ -109,7 +109,7 @@ const BookmarkSystem = {
     },
 
     // Get current question from QuizUI or PhysicsQuizApp
-    getCurrentQuestion: function() {
+    getCurrentQuestion: function () {
         if (typeof QuizUI !== 'undefined' && QuizUI.currentQuestion) {
             return QuizUI.currentQuestion;
         } else if (typeof PhysicsQuizApp !== 'undefined' && PhysicsQuizApp.currentQuestion) {
@@ -119,7 +119,7 @@ const BookmarkSystem = {
     },
 
     // Show feedback message
-    showFeedback: function(message, type) {
+    showFeedback: function (message, type) {
         if (typeof QuizUI !== 'undefined' && QuizUI.showFeedback) {
             QuizUI.showFeedback(message, type);
         } else {
@@ -128,14 +128,14 @@ const BookmarkSystem = {
     },
 
     // Get bookmarked questions with full question data
-    getBookmarkedQuestions: function() {
+    getBookmarkedQuestions: function () {
         try {
             const bookmarkIds = this.getBookmarks();
             if (bookmarkIds.length === 0) return [];
 
             // Get all questions from QuizData
             const allQuestions = typeof QuizData !== 'undefined' ? QuizData.questions : [];
-            
+
             return bookmarkIds.map(id => {
                 const question = allQuestions.find(q => q.id === id);
                 return question || null;
@@ -147,9 +147,9 @@ const BookmarkSystem = {
     },
 
     // Create bookmarked questions review mode
-    startBookmarkReview: function() {
+    startBookmarkReview: function () {
         const bookmarkedQuestions = this.getBookmarkedQuestions();
-        
+
         if (bookmarkedQuestions.length === 0) {
             this.showFeedback('No bookmarked questions to review', 'info');
             return;
@@ -158,7 +158,7 @@ const BookmarkSystem = {
         // Set up review mode with only bookmarked questions
         if (typeof QuizData !== 'undefined') {
             QuizData.setCustomQuestionSet(bookmarkedQuestions);
-            
+
             // Restart quiz with bookmarked questions
             if (typeof PhysicsQuizApp !== 'undefined' && PhysicsQuizApp.startQuiz) {
                 PhysicsQuizApp.startQuiz();
@@ -168,18 +168,18 @@ const BookmarkSystem = {
     },
 
     // Generate bookmark statistics
-    getBookmarkStats: function() {
+    getBookmarkStats: function () {
         const bookmarks = this.getBookmarks();
         const bookmarkedQuestions = this.getBookmarkedQuestions();
-        
+
         const topicCounts = {};
         const typeCounts = {};
-        
+
         bookmarkedQuestions.forEach(question => {
             // Count by topic
             const topic = question.topic || 'unknown';
             topicCounts[topic] = (topicCounts[topic] || 0) + 1;
-            
+
             // Count by type
             const type = question.type || 'unknown';
             typeCounts[type] = (typeCounts[type] || 0) + 1;
@@ -194,9 +194,9 @@ const BookmarkSystem = {
     },
 
     // Export bookmarks as text
-    exportBookmarks: function() {
+    exportBookmarks: function () {
         const bookmarkedQuestions = this.getBookmarkedQuestions();
-        
+
         if (bookmarkedQuestions.length === 0) {
             this.showFeedback('No bookmarks to export', 'info');
             return;
@@ -230,7 +230,7 @@ const BookmarkSystem = {
     },
 
     // Clear all bookmarks
-    clearAllBookmarks: function() {
+    clearAllBookmarks: function () {
         if (confirm('Are you sure you want to remove all bookmarks? This cannot be undone.')) {
             this.saveBookmarks([]);
             this.updateBookmarkButton();

@@ -3,7 +3,7 @@
  * Integrated with fact sheet content for AP Physics learning
  */
 
-const StudyGuides = {
+window.StudyGuides = {
     // Study guide data organized by topic
     guideData: {
         kinematics: {
@@ -329,13 +329,13 @@ const StudyGuides = {
     },
 
     // Initialize study guides system
-    init: function() {
+    init: function () {
         this.addStudyGuideAccess();
         this.setupEventListeners();
     },
 
     // Add study guide access to the main interface
-    addStudyGuideAccess: function() {
+    addStudyGuideAccess: function () {
         const studyResources = document.querySelector('.study-resources');
         if (studyResources) {
             const guideLink = document.createElement('a');
@@ -346,11 +346,11 @@ const StudyGuides = {
                 e.preventDefault();
                 this.showStudyGuideMenu();
             });
-            
+
             const resourceLinks = studyResources.querySelector('.resource-links');
             if (resourceLinks) {
                 resourceLinks.appendChild(guideLink);
-                
+
                 const guideDescription = document.createElement('p');
                 guideDescription.className = 'text-muted';
                 guideDescription.textContent = 'Topic-based study guides with integrated practice questions';
@@ -360,7 +360,7 @@ const StudyGuides = {
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for topic selection to show relevant study guide
         document.addEventListener('subjectSelected', (event) => {
             const subject = event.detail.subject;
@@ -371,7 +371,7 @@ const StudyGuides = {
     },
 
     // Add quick access to study guide for selected topic
-    addQuickGuideAccess: function(topic) {
+    addQuickGuideAccess: function (topic) {
         const startScreen = document.getElementById('start-screen');
         if (startScreen && !document.getElementById('quick-guide-access')) {
             const quickAccess = document.createElement('div');
@@ -386,14 +386,14 @@ const StudyGuides = {
                     </button>
                 </div>
             `;
-            
+
             const startButton = document.querySelector('.start-btn').parentNode;
             startButton.parentNode.insertBefore(quickAccess, startButton);
         }
     },
 
     // Show study guide menu
-    showStudyGuideMenu: function() {
+    showStudyGuideMenu: function () {
         const modal = document.createElement('div');
         modal.className = 'study-guide-modal';
         modal.innerHTML = `
@@ -421,14 +421,14 @@ const StudyGuides = {
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Event handlers
         modal.querySelector('.close-menu').addEventListener('click', () => {
             document.body.removeChild(modal);
         });
-        
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 document.body.removeChild(modal);
@@ -437,14 +437,14 @@ const StudyGuides = {
     },
 
     // Show specific study guide
-    showStudyGuide: function(topic) {
+    showStudyGuide: function (topic) {
         const guide = this.guideData[topic];
         if (!guide) return;
-        
+
         // Close any existing modals
         const existingModals = document.querySelectorAll('.study-guide-modal, .study-guide-viewer');
         existingModals.forEach(modal => modal.remove());
-        
+
         const modal = document.createElement('div');
         modal.className = 'study-guide-viewer';
         modal.innerHTML = `
@@ -511,42 +511,42 @@ const StudyGuides = {
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Event handlers
         modal.querySelector('.close-guide').addEventListener('click', () => {
             document.body.removeChild(modal);
         });
-        
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 document.body.removeChild(modal);
             }
         });
-        
+
         // Track study guide usage
         this.trackGuideUsage(topic);
     },
 
     // Start topic-specific practice
-    startTopicPractice: function(topic) {
+    startTopicPractice: function (topic) {
         // Close guide modal
         const modal = document.querySelector('.study-guide-viewer');
         if (modal) modal.remove();
-        
+
         // Set topic filter and start quiz
         const topicButton = document.querySelector(`[data-subject="${topic}"]`);
         if (topicButton) {
             // Clear other selections
             document.querySelectorAll('.subject-btn').forEach(btn => btn.classList.remove('active'));
             topicButton.classList.add('active');
-            
+
             // Set learning mode
             document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
             const learningMode = document.querySelector('[data-mode="learning"]');
             if (learningMode) learningMode.classList.add('active');
-            
+
             // Start the quiz
             const startButton = document.getElementById('start-quiz');
             if (startButton) startButton.click();
@@ -554,17 +554,17 @@ const StudyGuides = {
     },
 
     // Open specific fact sheet section
-    openFactSheetSection: function(sectionName) {
+    openFactSheetSection: function (sectionName) {
         // This would integrate with the existing fact sheet system
         const factSheetUrl = 'factsheet-complete.html#' + sectionName.replace(/\s+/g, '-').toLowerCase();
         window.open(factSheetUrl, '_blank');
     },
 
     // Print study guide
-    printGuide: function(topic) {
+    printGuide: function (topic) {
         const guide = this.guideData[topic];
         if (!guide) return;
-        
+
         const printWindow = window.open('', '_blank');
         printWindow.document.write(`
             <!DOCTYPE html>
@@ -604,50 +604,50 @@ const StudyGuides = {
             </body>
             </html>
         `);
-        
+
         printWindow.document.close();
         printWindow.print();
     },
 
     // Track study guide usage
-    trackGuideUsage: function(topic) {
+    trackGuideUsage: function (topic) {
         try {
             let guideStats = Utils.storage.get('study_guide_stats', {
                 totalGuideViews: 0,
                 topicViews: {},
                 lastAccessed: {}
             });
-            
+
             guideStats.totalGuideViews++;
             guideStats.topicViews[topic] = (guideStats.topicViews[topic] || 0) + 1;
             guideStats.lastAccessed[topic] = new Date().toISOString();
-            
+
             Utils.storage.set('study_guide_stats', guideStats);
-            
+
         } catch (error) {
             Utils.handleError(error, 'StudyGuides.trackGuideUsage');
         }
     },
 
     // Get study guide analytics
-    getGuideAnalytics: function() {
+    getGuideAnalytics: function () {
         try {
             const stats = Utils.storage.get('study_guide_stats', {
                 totalGuideViews: 0,
                 topicViews: {},
                 lastAccessed: {}
             });
-            
+
             return {
                 totalViews: stats.totalGuideViews,
                 mostViewedTopics: Object.entries(stats.topicViews)
-                    .sort(([,a], [,b]) => b - a)
+                    .sort(([, a], [, b]) => b - a)
                     .slice(0, 3),
                 recentlyAccessed: Object.entries(stats.lastAccessed)
-                    .sort(([,a], [,b]) => new Date(b) - new Date(a))
+                    .sort(([, a], [, b]) => new Date(b) - new Date(a))
                     .slice(0, 5)
             };
-            
+
         } catch (error) {
             Utils.handleError(error, 'StudyGuides.getGuideAnalytics');
             return null;

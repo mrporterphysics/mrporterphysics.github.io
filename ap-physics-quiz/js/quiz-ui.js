@@ -423,16 +423,7 @@ const QuizUI = {
             // Show feedback
             this.showAnswerFeedback(isCorrect, cleanAnswer, this.currentQuestion);
 
-            // Show explanation if in learning mode
-            try {
-                const settings = QuizStorage.getSettings();
-                if (settings.mode === 'learning' && this.currentQuestion.explanation) {
-                    this.showExplanation(this.currentQuestion.explanation);
-                }
-            } catch (settingsError) {
-                Utils.handleError(settingsError, 'QuizUI.submitAnswer - settings');
-                // Continue without explanation
-            }
+            // Explanation is now shown in the feedback modal, no need for separate call
 
             // Dispatch event for other components (streak tracker, topic mastery)
             document.dispatchEvent(new CustomEvent('questionAnswered', {
@@ -516,6 +507,9 @@ const QuizUI = {
         const feedbackEl = this.elements.displays.feedback;
         if (!feedbackEl) return;
 
+        // Add correct/incorrect class to feedback element
+        feedbackEl.className = 'feedback ' + (isCorrect ? 'correct' : 'incorrect');
+
         let html = `
             <div class="feedback-header ${isCorrect ? 'correct' : 'incorrect'}">
                 <span class="feedback-icon">${isCorrect ? '✅' : '❌'}</span>
@@ -542,6 +536,27 @@ const QuizUI = {
             `;
         }
 
+        // Add explanation if available (in learning mode)
+        const settings = QuizStorage.getSettings();
+        if (settings.mode === 'learning' && question.explanation) {
+            const explanationContent = Utils.renderMarkdown ? Utils.renderMarkdown(question.explanation) : question.explanation;
+            html += `
+                <div class="feedback-explanation">
+                    <h4 style="color: var(--bg-primary); margin: 16px 0 8px 0; font-size: 1.1rem;">Explanation:</h4>
+                    <div class="markdown-content" style="color: var(--bg-primary); opacity: 0.95;">${explanationContent}</div>
+                </div>
+            `;
+        }
+
+        // Add Next button in the modal
+        html += `
+            <div class="feedback-actions" style="margin-top: 20px; display: flex; justify-content: center;">
+                <button id="feedback-next-btn" class="btn-primary" style="padding: 12px 32px; font-size: 1rem;">
+                    Next Question →
+                </button>
+            </div>
+        `;
+
         feedbackEl.innerHTML = html;
         feedbackEl.style.display = 'block';
 
@@ -550,6 +565,36 @@ const QuizUI = {
         setTimeout(() => {
             feedbackEl.classList.remove('feedback-show');
         }, 100);
+
+        // Render math in explanation if present
+        this.renderMathContent();
+
+        // Setup Next button click handler
+        const nextBtn = document.getElementById('feedback-next-btn');
+        if (nextBtn) {
+            nextBtn.onclick = () => {
+                this.closeFeedbackModal();
+                // Trigger the actual next question
+                const actualNextBtn = this.elements.controls.nextBtn;
+                if (actualNextBtn && actualNextBtn.onclick) {
+                    actualNextBtn.onclick();
+                }
+            };
+        }
+
+        // Hide the regular next button since it's now in the modal
+        if (this.elements.controls.nextBtn) {
+            this.elements.controls.nextBtn.style.display = 'none';
+        }
+    },
+
+    // Close feedback modal
+    closeFeedbackModal: function () {
+        const feedbackEl = this.elements.displays.feedback;
+        if (feedbackEl) {
+            feedbackEl.style.display = 'none';
+            feedbackEl.className = 'feedback';
+        }
     },
 
     // Show explanation
@@ -777,9 +822,10 @@ const QuizUI = {
             console.error('Math rendering failed:', error);
             this.mathRenderingEnabled = false;
         }
-    };
+    }
+};
 
-    // Export for module use
-    if(typeof module !== 'undefined' && module.exports) {
-        module.exports = QuizUI;
+// Export for module use
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = QuizUI;
 }

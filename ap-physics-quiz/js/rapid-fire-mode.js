@@ -3,7 +3,7 @@
  * Fast-paced formula and fact memorization system
  */
 
-const RapidFireMode = {
+window.RapidFireMode = {
     // Rapid fire settings
     settings: {
         timePerQuestion: 10, // seconds
@@ -28,19 +28,19 @@ const RapidFireMode = {
     },
 
     // Initialize rapid fire mode
-    init: function() {
+    init: function () {
         this.addRapidFireModeToUI();
         this.setupEventListeners();
     },
 
     // Add rapid fire mode to the mode selection
-    addRapidFireModeToUI: function() {
+    addRapidFireModeToUI: function () {
         const modeOptions = document.querySelector('.mode-options');
         if (modeOptions && !document.querySelector('[data-mode="rapid-fire"]')) {
             const rapidFireButton = document.createElement('button');
             rapidFireButton.className = 'mode-btn';
             rapidFireButton.dataset.mode = 'rapid-fire';
-            
+
             rapidFireButton.innerHTML = `
                 <div class="btn-emoji">⚡</div>
                 <div class="btn-content">
@@ -48,9 +48,9 @@ const RapidFireMode = {
                     <span>Fast-paced formula memorization</span>
                 </div>
             `;
-            
+
             modeOptions.appendChild(rapidFireButton);
-            
+
             // Add click handler
             rapidFireButton.addEventListener('click', () => {
                 document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
@@ -60,7 +60,7 @@ const RapidFireMode = {
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for quiz start to check if rapid fire mode is selected
         document.addEventListener('quizStartRequested', (event) => {
             const activeMode = document.querySelector('.mode-btn.active');
@@ -79,7 +79,7 @@ const RapidFireMode = {
     },
 
     // Show rapid fire setup modal
-    showRapidFireSetup: function() {
+    showRapidFireSetup: function () {
         const modal = document.createElement('div');
         modal.className = 'rapid-fire-modal';
         modal.innerHTML = `
@@ -184,7 +184,7 @@ const RapidFireMode = {
     },
 
     // Start rapid fire session
-    startRapidFire: function(setupModal) {
+    startRapidFire: function (setupModal) {
         // Get settings from setup modal
         const focus = setupModal.querySelector('input[name="focus"]:checked').value;
         this.settings.timePerQuestion = parseInt(setupModal.querySelector('#rf-time-per-question').value);
@@ -223,7 +223,7 @@ const RapidFireMode = {
     },
 
     // Generate questions for rapid fire based on focus area
-    generateRapidFireQuestions: function(focus) {
+    generateRapidFireQuestions: function (focus) {
         let questions = [];
 
         switch (focus) {
@@ -239,13 +239,13 @@ const RapidFireMode = {
             case 'mixed':
             default:
                 // Try to get questions from main app, fallback to custom questions
-                const allQuestions = (window.PhysicsQuizApp && window.PhysicsQuizApp.questions) ? 
+                const allQuestions = (window.PhysicsQuizApp && window.PhysicsQuizApp.questions) ?
                     window.PhysicsQuizApp.questions : [];
-                
+
                 if (allQuestions.length > 0) {
                     // Mix of all available questions, prioritizing shorter ones
-                    questions = allQuestions.filter(q => 
-                        q.type === 'tf' || 
+                    questions = allQuestions.filter(q =>
+                        q.type === 'tf' ||
                         (q.type === 'fill' && q.question.length < 150) ||
                         (q.type === 'mc' && q.question.length < 200)
                     );
@@ -265,7 +265,7 @@ const RapidFireMode = {
     },
 
     // Create formula-focused rapid fire questions
-    createFormulaQuestions: function() {
+    createFormulaQuestions: function () {
         const formulas = [
             { question: 'What is the formula for velocity?', answer: 'v = d/t', type: 'fill' },
             { question: 'What is the formula for acceleration?', answer: 'a = Δv/Δt', type: 'fill' },
@@ -290,7 +290,7 @@ const RapidFireMode = {
     },
 
     // Create definition-focused questions
-    createDefinitionQuestions: function() {
+    createDefinitionQuestions: function () {
         const definitions = [
             { question: 'True or False: Velocity is a vector quantity', answer: 'true', type: 'tf' },
             { question: 'True or False: Speed is the same as velocity', answer: 'false', type: 'tf' },
@@ -313,7 +313,7 @@ const RapidFireMode = {
     },
 
     // Create unit-focused questions
-    createUnitQuestions: function() {
+    createUnitQuestions: function () {
         const units = [
             { question: 'What are the SI units of velocity?', answer: 'm/s', type: 'fill' },
             { question: 'What are the SI units of acceleration?', answer: 'm/s²', type: 'fill' },
@@ -335,10 +335,10 @@ const RapidFireMode = {
     },
 
     // Show rapid fire interface
-    showRapidFireInterface: function() {
+    showRapidFireInterface: function () {
         const startScreen = document.getElementById('start-screen');
         const quizScreen = document.getElementById('quiz-screen');
-        
+
         if (startScreen) startScreen.style.display = 'none';
         if (quizScreen) {
             quizScreen.style.display = 'block';
@@ -350,7 +350,7 @@ const RapidFireMode = {
     },
 
     // Add rapid fire specific UI elements
-    addRapidFireElements: function() {
+    addRapidFireElements: function () {
         const progressContainer = document.querySelector('.progress-container');
         if (progressContainer) {
             // Add rapid fire timer and stats
@@ -369,7 +369,7 @@ const RapidFireMode = {
                     <div class="rf-streak">Streak: <span id="rf-streak">0</span></div>
                 </div>
             `;
-            
+
             progressContainer.appendChild(rfStats);
         }
 
@@ -393,7 +393,7 @@ const RapidFireMode = {
     },
 
     // Display current rapid fire question
-    displayRapidFireQuestion: function() {
+    displayRapidFireQuestion: function () {
         const question = this.session.questions[this.session.currentQuestionIndex];
         if (!question) {
             this.endRapidFire();
@@ -428,16 +428,16 @@ const RapidFireMode = {
     },
 
     // Start/reset the countdown timer
-    startTimer: function() {
+    startTimer: function () {
         if (!this.settings.showTimer) return;
 
         this.clearTimer();
         this.session.timeRemaining = this.settings.timePerQuestion;
-        
+
         this.session.timerInterval = setInterval(() => {
             this.session.timeRemaining--;
             this.updateTimerDisplay();
-            
+
             if (this.session.timeRemaining <= 0) {
                 this.timeUp();
             }
@@ -445,7 +445,7 @@ const RapidFireMode = {
     },
 
     // Reset timer for new question
-    resetTimer: function() {
+    resetTimer: function () {
         this.session.timeRemaining = this.settings.timePerQuestion;
         this.updateTimerDisplay();
         if (this.session.active) {
@@ -454,13 +454,13 @@ const RapidFireMode = {
     },
 
     // Update timer display
-    updateTimerDisplay: function() {
+    updateTimerDisplay: function () {
         const timer = document.getElementById('rf-timer');
         const timerFill = document.getElementById('rf-timer-fill');
-        
+
         if (timer) {
             timer.textContent = `⏱️ ${this.session.timeRemaining}`;
-            
+
             // Color coding for urgency
             if (this.session.timeRemaining <= 3) {
                 timer.classList.add('urgent');
@@ -468,7 +468,7 @@ const RapidFireMode = {
                 timer.classList.remove('urgent');
             }
         }
-        
+
         if (timerFill) {
             const percentage = (this.session.timeRemaining / this.settings.timePerQuestion) * 100;
             timerFill.style.width = `${percentage}%`;
@@ -476,9 +476,9 @@ const RapidFireMode = {
     },
 
     // Handle time up
-    timeUp: function() {
+    timeUp: function () {
         this.clearTimer();
-        
+
         if (this.settings.autoAdvance) {
             this.recordAnswer(null, false); // Record as incorrect
             this.nextQuestion();
@@ -488,7 +488,7 @@ const RapidFireMode = {
     },
 
     // Clear timer
-    clearTimer: function() {
+    clearTimer: function () {
         if (this.session.timerInterval) {
             clearInterval(this.session.timerInterval);
             this.session.timerInterval = null;
@@ -496,7 +496,7 @@ const RapidFireMode = {
     },
 
     // Handle rapid fire keyboard shortcuts
-    handleRapidFireKeyboard: function(event) {
+    handleRapidFireKeyboard: function (event) {
         if (event.code === 'Space') {
             event.preventDefault();
             this.submitCurrentAnswer();
@@ -510,15 +510,15 @@ const RapidFireMode = {
     },
 
     // Submit current answer in rapid fire mode
-    submitCurrentAnswer: function() {
+    submitCurrentAnswer: function () {
         if (window.QuizUI && typeof window.QuizUI.getUserAnswer === 'function') {
             const userAnswer = window.QuizUI.getUserAnswer();
             if (userAnswer !== null) {
                 const question = this.session.questions[this.session.currentQuestionIndex];
                 const isCorrect = window.QuizUI.checkAnswer(userAnswer, question);
-                
+
                 this.recordAnswer(userAnswer, isCorrect);
-                
+
                 if (this.settings.pauseOnIncorrect && !isCorrect) {
                     this.showIncorrectFeedback(() => this.nextQuestion());
                 } else {
@@ -529,7 +529,7 @@ const RapidFireMode = {
     },
 
     // Record answer and update stats
-    recordAnswer: function(userAnswer, isCorrect) {
+    recordAnswer: function (userAnswer, isCorrect) {
         this.session.answers.push({
             questionIndex: this.session.currentQuestionIndex,
             userAnswer: userAnswer,
@@ -549,24 +549,24 @@ const RapidFireMode = {
     },
 
     // Update rapid fire statistics display
-    updateRapidFireStats: function() {
+    updateRapidFireStats: function () {
         const scoreDisplay = document.getElementById('rf-score');
         const streakDisplay = document.getElementById('rf-streak');
-        
+
         if (scoreDisplay) {
             scoreDisplay.textContent = this.session.score;
         }
-        
+
         if (streakDisplay) {
             streakDisplay.textContent = this.session.streak;
         }
     },
 
     // Move to next question
-    nextQuestion: function() {
+    nextQuestion: function () {
         this.clearTimer();
         this.session.currentQuestionIndex++;
-        
+
         if (this.session.currentQuestionIndex >= this.session.questions.length) {
             this.endRapidFire();
         } else {
@@ -575,13 +575,13 @@ const RapidFireMode = {
     },
 
     // Skip current question
-    skipQuestion: function() {
+    skipQuestion: function () {
         this.recordAnswer(null, false);
         this.nextQuestion();
     },
 
     // Toggle pause
-    togglePause: function() {
+    togglePause: function () {
         const pauseBtn = document.getElementById('rf-pause');
         if (!pauseBtn) return;
 
@@ -601,7 +601,7 @@ const RapidFireMode = {
     },
 
     // Show pause overlay
-    showPauseOverlay: function() {
+    showPauseOverlay: function () {
         const overlay = document.createElement('div');
         overlay.id = 'rf-pause-overlay';
         overlay.className = 'rf-pause-overlay';
@@ -616,7 +616,7 @@ const RapidFireMode = {
     },
 
     // Hide pause overlay
-    hidePauseOverlay: function() {
+    hidePauseOverlay: function () {
         const overlay = document.getElementById('rf-pause-overlay');
         if (overlay) {
             document.body.removeChild(overlay);
@@ -624,21 +624,21 @@ const RapidFireMode = {
     },
 
     // End rapid fire session
-    endRapidFire: function() {
+    endRapidFire: function () {
         this.clearTimer();
         this.session.active = false;
-        
+
         const endTime = Date.now();
         const totalTime = endTime - this.session.startTime;
-        
+
         this.showRapidFireResults(totalTime);
     },
 
     // Show rapid fire results
-    showRapidFireResults: function(totalTime) {
+    showRapidFireResults: function (totalTime) {
         const accuracy = ((this.session.score / this.session.questions.length) * 100).toFixed(1);
         const avgTimePerQuestion = (totalTime / this.session.questions.length / 1000).toFixed(1);
-        
+
         const modal = document.createElement('div');
         modal.className = 'rapid-fire-results-modal';
         modal.innerHTML = `
@@ -673,53 +673,53 @@ const RapidFireMode = {
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Event handlers
         modal.querySelector('#rf-play-again').addEventListener('click', () => {
             document.body.removeChild(modal);
             this.showRapidFireSetup();
         });
-        
+
         modal.querySelector('#rf-back-to-menu').addEventListener('click', () => {
             document.body.removeChild(modal);
             this.returnToMainMenu();
         });
-        
+
         modal.querySelector('#rf-review-answers').addEventListener('click', () => {
             this.showAnswerReview(modal);
         });
-        
+
         // Save rapid fire stats
         this.saveRapidFireStats();
     },
 
     // Quit rapid fire session
-    quitRapidFire: function() {
+    quitRapidFire: function () {
         if (confirm('Are you sure you want to quit this Rapid Fire round?')) {
             this.endRapidFire();
         }
     },
 
     // Return to main menu
-    returnToMainMenu: function() {
+    returnToMainMenu: function () {
         const startScreen = document.getElementById('start-screen');
         const quizScreen = document.getElementById('quiz-screen');
-        
+
         if (quizScreen) {
             quizScreen.style.display = 'none';
             quizScreen.classList.remove('rapid-fire-mode');
         }
-        
+
         if (startScreen) {
             startScreen.style.display = 'block';
         }
-        
+
         // Clean up rapid fire elements
         const rfStats = document.getElementById('rapid-fire-stats');
         if (rfStats) rfStats.remove();
-        
+
         // Reset session
         this.session = {
             active: false,
@@ -736,7 +736,7 @@ const RapidFireMode = {
     },
 
     // Save rapid fire statistics
-    saveRapidFireStats: function() {
+    saveRapidFireStats: function () {
         try {
             let rfStats = Utils.storage.get('rapid_fire_stats', {
                 totalRounds: 0,
@@ -770,14 +770,14 @@ const RapidFireMode = {
             rfStats.recentScores = rfStats.recentScores.slice(0, 10);
 
             Utils.storage.set('rapid_fire_stats', rfStats);
-            
+
         } catch (error) {
             Utils.handleError(error, 'RapidFireMode.saveRapidFireStats');
         }
     },
 
     // Utility functions
-    shuffleArray: function(array) {
+    shuffleArray: function (array) {
         const shuffled = [...array];
         for (let i = shuffled.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -786,7 +786,7 @@ const RapidFireMode = {
         return shuffled;
     },
 
-    showMessage: function(message, type) {
+    showMessage: function (message, type) {
         if (window.QuizUI && typeof window.QuizUI.showFeedback === 'function') {
             window.QuizUI.showFeedback(message, type);
         }

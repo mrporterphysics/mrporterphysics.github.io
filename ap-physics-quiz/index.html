@@ -1,33 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AP Physics 1 Quiz - Interactive Practice Tool</title>
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles-flexoki.css">
-    
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Math rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+        integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"
+        integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx"
+        crossorigin="anonymous"></script>
+
     <!-- Markdown processing (for future use) -->
     <script src="https://cdn.jsdelivr.net/npm/marked@9.1.2/marked.min.js"></script>
 </head>
+
 <body>
+    <!-- Physics-themed SVG background decoration -->
+    <svg class="hero-decoration" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+            <linearGradient id="orbit-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:var(--accent-primary);stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:var(--accent-secondary);stop-opacity:0.05" />
+            </linearGradient>
+        </defs>
+        <!-- Orbital paths -->
+        <ellipse cx="200" cy="200" rx="150" ry="80" stroke="var(--border-color)" stroke-width="1.5" fill="none"
+            opacity="0.3" />
+        <ellipse cx="200" cy="200" rx="100" ry="50" stroke="var(--border-color)" stroke-width="1.5" fill="none"
+            opacity="0.3" />
+        <circle cx="200" cy="200" r="15" fill="var(--accent-primary)" opacity="0.6" />
+        <circle cx="320" cy="180" r="6" fill="var(--accent-secondary)" opacity="0.5" />
+
+        <!-- Wave patterns -->
+        <path d="M 400 200 Q 450 150, 500 200 T 600 200 T 700 200" stroke="var(--accent-primary)" stroke-width="2"
+            fill="none" opacity="0.2" />
+        <path d="M 400 220 Q 450 170, 500 220 T 600 220 T 700 220" stroke="var(--accent-secondary)" stroke-width="2"
+            fill="none" opacity="0.15" />
+
+        <!-- Force vectors -->
+        <line x1="850" y1="250" x2="950" y2="150" stroke="var(--accent-primary)" stroke-width="2.5" opacity="0.3" />
+        <polygon points="950,150 945,160 940,155" fill="var(--accent-primary)" opacity="0.3" />
+        <line x1="850" y1="250" x2="950" y2="250" stroke="var(--success)" stroke-width="2.5" opacity="0.3" />
+        <polygon points="950,250 945,255 945,245" fill="var(--success)" opacity="0.3" />
+
+        <!-- Particles -->
+        <circle cx="1050" cy="150" r="4" fill="var(--accent-primary)" opacity="0.4" />
+        <circle cx="1100" cy="200" r="5" fill="var(--accent-secondary)" opacity="0.4" />
+        <circle cx="1080" cy="250" r="3" fill="var(--accent-primary)" opacity="0.4" />
+    </svg>
+
+    <header>
+        <div class="site-header">
+            <a href="../index.html" class="site-title">
+                <span class="site-logo">⚛️</span>
+                Mr. Porter Physics
+            </a>
+            <nav class="site-nav">
+                <a href="../index.html" class="page-link">Home</a>
+                <a href="../courses/ap-physics-1.html" class="page-link">AP Physics 1</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="app-container">
-        <header>
+        <div class="quiz-header">
             <h1>AP Physics 1 Quiz</h1>
             <p class="text-center text-muted">Interactive practice tool with comprehensive fact sheet integration</p>
-            
+
             <!-- Quick Links -->
             <div class="quick-links text-center">
                 <a href="factsheet-complete.html" target="_blank" class="btn btn-secondary">
                     📚 View AP Physics 1 Fact Sheet
                 </a>
             </div>
-        </header>
+        </div>
 
         <!-- Start Screen -->
         <div id="start-screen">
@@ -192,7 +251,7 @@
                 <div class="progress-bar-container">
                     <div id="progress-bar" class="progress-bar"></div>
                 </div>
-                
+
                 <!-- Streak Counter -->
                 <div id="streak-display" class="streak-display" style="display: none;">
                     <div id="current-streak" class="streak-counter">0</div>
@@ -211,7 +270,7 @@
                     <span class="breadcrumb-separator">›</span>
                     <span id="breadcrumb-type">Multiple Choice</span>
                 </div>
-                
+
                 <!-- Question Header -->
                 <div class="question-header">
                     <div id="question-type" class="question-type">
@@ -258,7 +317,7 @@
                 <button id="prev-question" class="btn btn-secondary">
                     ← Previous
                 </button>
-                
+
                 <div class="control-center">
                     <button id="bookmark-question" class="btn btn-secondary" title="Bookmark this question">
                         📖
@@ -270,7 +329,7 @@
                         Next →
                     </button>
                 </div>
-                
+
                 <button id="reset-quiz" class="btn btn-secondary">
                     Reset Quiz
                 </button>
@@ -293,37 +352,41 @@
     </div>
 
     <!-- Core JavaScript Modules -->
-    <script src="js/fallback-data.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/quiz-storage.js"></script>
-    <script src="js/quiz-data.js"></script>
-    <script src="js/fallback-data.js"></script>
-    <script src="js/quiz-ui.js"></script>
-    
+    <!-- Core JavaScript Modules -->
+    <script src="js/fallback-data.js?v=1"></script>
+    <script src="js/utils.js?v=1"></script>
+    <script src="js/quiz-storage.js?v=1"></script>
+    <script src="js/quiz-data.js?v=1"></script>
+    <script src="js/quiz-ui.js?v=1"></script>
+
     <!-- Fact Sheet Integration -->
     <script src="js/factsheet-integration.js"></script>
-    
+
     <!-- UX Enhancement Modules -->
-    <script src="js/topic-mastery.js"></script>
-    <script src="js/streak-tracker.js"></script>
-    <script src="js/bookmark-system.js"></script>
-    <script src="js/performance-analytics.js"></script>
-    <script src="js/spaced-repetition.js"></script>
-    <script src="js/hint-system.js"></script>
-    <script src="js/rapid-fire-mode.js"></script>
-    <script src="js/study-guides.js"></script>
-    <script src="js/achievement-system.js"></script>
-    <script src="js/mobile-optimization.js"></script>
-    
+    <script src="js/topic-mastery.js?v=1"></script>
+    <script src="js/streak-tracker.js?v=1"></script>
+    <script src="js/bookmark-system.js?v=1"></script>
+    <script src="js/performance-analytics.js?v=1"></script>
+    <script src="js/spaced-repetition.js?v=1"></script>
+    <script src="js/hint-system.js?v=1"></script>
+    <script src="js/rapid-fire-mode.js?v=1"></script>
+    <script src="js/study-guides.js?v=1"></script>
+    <script src="js/achievement-system.js?v=1"></script>
+    <script src="js/mobile-optimization.js?v=1"></script>
+
     <!-- Main Application -->
-    <script src="js/app.js"></script>
-    
+    <!-- Main Application -->
+    <script src="js/app.js?v=1"></script>
+
+    <!-- Test Runner (Dev Tool) -->
+    <script src="js/test-runner.js?v=1"></script>
+
     <!-- Global Error Handling -->
     <script>
         // Global error handler for unhandled JavaScript errors
-        window.addEventListener('error', function(event) {
+        window.addEventListener('error', function (event) {
             Utils.handleError(event.error || new Error(event.message), 'Global error handler');
-            
+
             // Show user-friendly error message
             if (window.PhysicsQuizApp && typeof PhysicsQuizApp.showMessage === 'function') {
                 PhysicsQuizApp.showMessage('An unexpected error occurred. The application will continue working.', 'warning');
@@ -331,9 +394,9 @@
         });
 
         // Global handler for unhandled promise rejections
-        window.addEventListener('unhandledrejection', function(event) {
+        window.addEventListener('unhandledrejection', function (event) {
             Utils.handleError(event.reason, 'Unhandled promise rejection');
-            
+
             // Show user-friendly error message
             if (window.PhysicsQuizApp && typeof PhysicsQuizApp.showMessage === 'function') {
                 PhysicsQuizApp.showMessage('A background operation failed. Some features may not work as expected.', 'warning');
@@ -341,12 +404,12 @@
         });
 
         // Monitor page load for critical errors
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             // Check if essential elements loaded
-            setTimeout(function() {
+            setTimeout(function () {
                 const essentialElements = ['start-screen', 'quiz-screen'];
                 const missingElements = essentialElements.filter(id => !document.getElementById(id));
-                
+
                 if (missingElements.length > 0) {
                     console.error('Missing essential elements:', missingElements);
                     if (window.PhysicsQuizApp && typeof PhysicsQuizApp.showCriticalError === 'function') {
@@ -360,7 +423,7 @@
             }, 1000);
         });
     </script>
-    
+
     <!-- Theme Toggle Script -->
     <script>
         // Simple theme toggle functionality
@@ -377,28 +440,26 @@
 
         // Add theme toggle button
         document.addEventListener('DOMContentLoaded', () => {
-            const header = document.querySelector('header');
-            if (header) {
+            const nav = document.querySelector('.site-nav');
+            if (nav) {
                 const themeBtn = document.createElement('button');
                 themeBtn.innerHTML = '🌙';
-                themeBtn.className = 'btn btn-secondary';
-                themeBtn.style.position = 'absolute';
-                themeBtn.style.top = '20px';
-                themeBtn.style.right = '20px';
+                themeBtn.className = 'btn btn-secondary theme-toggle';
+                themeBtn.style.padding = '8px 12px';
+                themeBtn.style.marginLeft = '10px';
                 themeBtn.onclick = toggleTheme;
                 themeBtn.title = 'Toggle theme';
-                header.style.position = 'relative';
-                header.appendChild(themeBtn);
+                nav.appendChild(themeBtn);
             }
         });
     </script>
-    
+
     <!-- Fact Sheet Links System -->
-    
+
     <!-- Application Initialization -->
     <script>
         // Initialize the main application when DOM is ready
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             if (window.PhysicsQuizApp) {
                 PhysicsQuizApp.init();
             } else {
@@ -408,4 +469,5 @@
     </script>
     <script src="js/fact-sheet-links.js"></script>
 </body>
+
 </html>

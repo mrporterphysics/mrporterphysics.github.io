@@ -17,7 +17,7 @@ const FactSheetLinks = {
             keywords: ['kinematic equation', 'uniformly accelerated', 'constant acceleration'],
             url: 'factsheet-complete.html#kinematic-equations'
         },
-        
+
         // Forces sections
         'force-definitions': {
             title: 'Force Definitions',
@@ -39,7 +39,7 @@ const FactSheetLinks = {
             keywords: ['friction', 'static friction', 'kinetic friction', 'coefficient'],
             url: 'factsheet-complete.html#friction'
         },
-        
+
         // Energy sections
         'work-energy': {
             title: 'Work and Energy',
@@ -56,42 +56,42 @@ const FactSheetLinks = {
             keywords: ['power', 'watt', 'rate of work', 'rate of energy'],
             url: 'factsheet-complete.html#power'
         },
-        
+
         // Momentum sections
         'momentum': {
             title: 'Momentum',
             keywords: ['momentum', 'impulse', 'collision', 'conservation of momentum'],
             url: 'factsheet-complete.html#momentum'
         },
-        
+
         // Rotation sections
         'rotation': {
             title: 'Rotational Motion',
             keywords: ['rotation', 'angular', 'torque', 'moment of inertia', 'rotational'],
             url: 'factsheet-complete.html#rotation'
         },
-        
+
         // Gravitation sections
         'gravitation': {
             title: 'Gravitation',
             keywords: ['gravity', 'gravitational', 'universal gravitation', 'orbital'],
             url: 'factsheet-complete.html#gravitation'
         },
-        
+
         // Simple Harmonic Motion sections
         'shm': {
             title: 'Simple Harmonic Motion',
             keywords: ['harmonic', 'oscillation', 'spring', 'pendulum', 'periodic'],
             url: 'factsheet-complete.html#shm'
         },
-        
+
         // Waves sections
         'waves': {
             title: 'Waves',
             keywords: ['wave', 'frequency', 'wavelength', 'amplitude', 'wave speed'],
             url: 'factsheet-complete.html#waves'
         },
-        
+
         // Fluids sections
         'fluids': {
             title: 'Fluids',
@@ -104,14 +104,14 @@ const FactSheetLinks = {
     linkUsage: {},
 
     // Initialize the system
-    init: function() {
+    init: function () {
         this.loadUsageData();
         this.setupEventListeners();
         console.log('Fact Sheet Links system initialized');
     },
 
     // Find relevant fact sheet sections for a question
-    findRelevantSections: function(question) {
+    findRelevantSections: function (question) {
         const relevantSections = [];
         const questionText = (question.question + ' ' + (question.explanation || '')).toLowerCase();
         const questionTopic = question.topic ? question.topic.toLowerCase() : '';
@@ -126,10 +126,10 @@ const FactSheetLinks = {
             }
 
             // Check keyword matches
-            const keywordMatches = section.keywords.filter(keyword => 
+            const keywordMatches = section.keywords.filter(keyword =>
                 questionText.includes(keyword.toLowerCase())
             ).length;
-            
+
             score += keywordMatches * 3;
 
             // Check partial topic matches
@@ -160,16 +160,16 @@ const FactSheetLinks = {
     },
 
     // Create fact sheet link elements for a question
-    createFactSheetLinks: function(question) {
+    createFactSheetLinks: function (question) {
         const relevantSections = this.findRelevantSections(question);
-        
+
         if (relevantSections.length === 0) {
             return null;
         }
 
         const linksContainer = document.createElement('div');
         linksContainer.className = 'fact-sheet-links';
-        
+
         const header = document.createElement('div');
         header.className = 'fact-sheet-links-header';
         header.innerHTML = '<i class="icon">📋</i> Related Fact Sheet Sections:';
@@ -184,7 +184,7 @@ const FactSheetLinks = {
             linkButton.innerHTML = `<i class="icon">🔗</i> ${section.title}`;
             linkButton.setAttribute('data-section-id', section.id);
             linkButton.setAttribute('data-section-url', section.url);
-            
+
             linkButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.openFactSheetSection(section.id, section.url, section.title);
@@ -198,32 +198,32 @@ const FactSheetLinks = {
     },
 
     // Open fact sheet section in new tab
-    openFactSheetSection: function(sectionId, url, title) {
+    openFactSheetSection: function (sectionId, url, title) {
         // Track usage
         this.trackLinkUsage(sectionId);
-        
+
         // Open in new tab
         window.open(url, '_blank');
-        
+
         // Show brief confirmation
         this.showLinkConfirmation(title);
     },
 
     // Track fact sheet link usage
-    trackLinkUsage: function(sectionId) {
+    trackLinkUsage: function (sectionId) {
         if (!this.linkUsage[sectionId]) {
             this.linkUsage[sectionId] = 0;
         }
         this.linkUsage[sectionId]++;
-        
+
         // Save to storage
         Utils.storage.set('fact_sheet_link_usage', this.linkUsage);
-        
+
         console.log(`Fact sheet link used: ${sectionId} (${this.linkUsage[sectionId]} times)`);
     },
 
     // Show link confirmation message
-    showLinkConfirmation: function(title) {
+    showLinkConfirmation: function (title) {
         // Remove any existing confirmation
         const existingConfirmation = document.querySelector('.fact-sheet-confirmation');
         if (existingConfirmation) {
@@ -251,12 +251,12 @@ const FactSheetLinks = {
     },
 
     // Load usage data from storage
-    loadUsageData: function() {
+    loadUsageData: function () {
         this.linkUsage = Utils.storage.get('fact_sheet_link_usage', {});
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for question display events to add links
         document.addEventListener('questionDisplayed', (event) => {
             const question = event.detail.question;
@@ -265,7 +265,7 @@ const FactSheetLinks = {
     },
 
     // Add links to currently displayed question
-    addLinksToQuestion: function(question) {
+    addLinksToQuestion: function (question) {
         // Remove any existing fact sheet links
         const existingLinks = document.querySelector('.fact-sheet-links');
         if (existingLinks) {
@@ -275,9 +275,11 @@ const FactSheetLinks = {
         // Create new links
         const linksElement = this.createFactSheetLinks(question);
         if (linksElement) {
-            // Find the best place to insert links (after explanation or question text)
-            let insertTarget = document.querySelector('.question-explanation');
-            if (!insertTarget || insertTarget.style.display === 'none') {
+            // Insert after answer options for better UX flow
+            let insertTarget = document.querySelector('#answer-options');
+
+            // Fallback to question text if answer options not found
+            if (!insertTarget) {
                 insertTarget = document.querySelector('.question-text');
             }
 
@@ -288,7 +290,7 @@ const FactSheetLinks = {
     },
 
     // Get usage statistics
-    getUsageStatistics: function() {
+    getUsageStatistics: function () {
         const stats = {
             totalClicks: Object.values(this.linkUsage).reduce((sum, count) => sum + count, 0),
             sectionsUsed: Object.keys(this.linkUsage).length,
@@ -305,9 +307,9 @@ const FactSheetLinks = {
     },
 
     // Show usage analytics
-    showUsageAnalytics: function() {
+    showUsageAnalytics: function () {
         const stats = this.getUsageStatistics();
-        
+
         const modal = document.createElement('div');
         modal.className = 'modal-overlay active';
         modal.innerHTML = `

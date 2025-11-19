@@ -3,24 +3,24 @@
  * Implements intelligent question scheduling based on student performance
  */
 
-const SpacedRepetition = {
+window.SpacedRepetition = {
     // SRS intervals in days (modified SM-2 algorithm)
     intervals: [1, 3, 7, 14, 30, 60, 120],
-    
+
     // Minimum ease factor
     minEase: 1.3,
-    
+
     // Default ease factor for new questions
     defaultEase: 2.5,
 
     // Initialize the spaced repetition system
-    init: function() {
+    init: function () {
         this.setupEventListeners();
         this.scheduleReviewNotifications();
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for question answers to update SRS data
         document.addEventListener('questionAnswered', (event) => {
             const { questionId, isCorrect, timeSpent } = event.detail;
@@ -32,10 +32,10 @@ const SpacedRepetition = {
     },
 
     // Update SRS data for a question based on answer performance
-    updateQuestionSRS: function(questionId, isCorrect, timeSpent) {
+    updateQuestionSRS: function (questionId, isCorrect, timeSpent) {
         try {
             const srsData = this.getSRSData();
-            
+
             if (!srsData[questionId]) {
                 // Initialize new question
                 srsData[questionId] = {
@@ -52,7 +52,7 @@ const SpacedRepetition = {
             }
 
             const question = srsData[questionId];
-            
+
             // Update answer statistics
             question.totalAnswers++;
             if (isCorrect) question.correctAnswers++;
@@ -68,16 +68,16 @@ const SpacedRepetition = {
                 } else {
                     question.interval = Math.round(question.interval * question.ease);
                 }
-                
+
                 question.repetitions++;
-                
+
                 // Adjust ease based on time taken and difficulty
                 const timeAdjustment = this.calculateTimeAdjustment(timeSpent);
                 question.ease = Math.max(this.minEase, question.ease + timeAdjustment);
-                
+
                 // Update difficulty classification
                 question.difficulty = this.classifyDifficulty(question);
-                
+
             } else {
                 // Incorrect answer: reset repetitions, decrease ease
                 question.repetitions = 0;
@@ -88,16 +88,16 @@ const SpacedRepetition = {
 
             // Calculate next review date
             question.nextReview = Date.now() + (question.interval * 24 * 60 * 60 * 1000);
-            
+
             this.saveSRSData(srsData);
-            
+
         } catch (error) {
             Utils.handleError(error, 'SpacedRepetition.updateQuestionSRS');
         }
     },
 
     // Calculate time adjustment for ease factor
-    calculateTimeAdjustment: function(timeSpent) {
+    calculateTimeAdjustment: function (timeSpent) {
         // Faster answers (< 10 seconds) increase ease more
         if (timeSpent < 10000) return 0.1;
         // Medium time (10-30 seconds) slight increase
@@ -107,7 +107,7 @@ const SpacedRepetition = {
     },
 
     // Classify question difficulty based on performance
-    classifyDifficulty: function(question) {
+    classifyDifficulty: function (question) {
         const accuracy = question.correctAnswers / question.totalAnswers;
         const avgTime = question.averageTime;
 
@@ -118,7 +118,7 @@ const SpacedRepetition = {
     },
 
     // Get questions due for review
-    getQuestionsForReview: function(maxQuestions = 20) {
+    getQuestionsForReview: function (maxQuestions = 20) {
         try {
             const srsData = this.getSRSData();
             const now = Date.now();
@@ -136,9 +136,9 @@ const SpacedRepetition = {
 
             // Sort by priority (higher priority first)
             dueQuestions.sort((a, b) => b.priority - a.priority);
-            
+
             return dueQuestions.slice(0, maxQuestions).map(q => q.id);
-            
+
         } catch (error) {
             Utils.handleError(error, 'SpacedRepetition.getQuestionsForReview');
             return [];
@@ -146,32 +146,32 @@ const SpacedRepetition = {
     },
 
     // Calculate review priority for a question
-    calculatePriority: function(questionData, now) {
+    calculatePriority: function (questionData, now) {
         const daysSinceLastReview = (now - questionData.lastReviewed) / (24 * 60 * 60 * 1000);
         const accuracy = questionData.correctAnswers / Math.max(1, questionData.totalAnswers);
-        
+
         // Higher priority for:
         // - Questions overdue for longer
         // - Questions with lower accuracy
         // - Questions marked as struggling
         let priority = daysSinceLastReview * 10;
-        
+
         if (accuracy < 0.5) priority *= 2;
         if (questionData.difficulty === 'struggling') priority *= 1.5;
-        
+
         return priority;
     },
 
     // Add spaced repetition review mode to the UI
-    addReviewModeToUI: function() {
+    addReviewModeToUI: function () {
         const modeOptions = document.querySelector('.mode-options');
         if (modeOptions && !document.querySelector('[data-mode="spaced-review"]')) {
             const reviewButton = document.createElement('button');
             reviewButton.className = 'mode-btn';
             reviewButton.dataset.mode = 'spaced-review';
-            
+
             const dueCount = this.getQuestionsForReview().length;
-            
+
             reviewButton.innerHTML = `
                 <div class="btn-emoji">🧠</div>
                 <div class="btn-content">
@@ -179,9 +179,9 @@ const SpacedRepetition = {
                     <span>Spaced repetition (${dueCount} due)</span>
                 </div>
             `;
-            
+
             modeOptions.appendChild(reviewButton);
-            
+
             // Add click handler
             reviewButton.addEventListener('click', () => {
                 document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
@@ -191,7 +191,7 @@ const SpacedRepetition = {
     },
 
     // Get SRS analytics for display
-    getSRSAnalytics: function() {
+    getSRSAnalytics: function () {
         try {
             const srsData = this.getSRSData();
             const analytics = {
@@ -209,13 +209,13 @@ const SpacedRepetition = {
 
             Object.values(srsData).forEach(data => {
                 analytics[data.difficulty]++;
-                
+
                 if (data.nextReview <= now) analytics.dueToday++;
                 else if (data.nextReview <= now + oneWeek) analytics.dueThisWeek++;
             });
 
             return analytics;
-            
+
         } catch (error) {
             Utils.handleError(error, 'SpacedRepetition.getSRSAnalytics');
             return null;
@@ -223,7 +223,7 @@ const SpacedRepetition = {
     },
 
     // Generate personalized study recommendations
-    getStudyRecommendations: function() {
+    getStudyRecommendations: function () {
         const analytics = this.getSRSAnalytics();
         const recommendations = [];
 
@@ -261,18 +261,18 @@ const SpacedRepetition = {
     },
 
     // Schedule review notifications (mock implementation)
-    scheduleReviewNotifications: function() {
+    scheduleReviewNotifications: function () {
         // In a real implementation, this would set up browser notifications
         // or integrate with a notification service
         const dueCount = this.getQuestionsForReview().length;
-        
+
         if (dueCount > 0) {
             console.log(`📚 SRS Reminder: ${dueCount} questions are due for review`);
         }
     },
 
     // Update the due count in the UI
-    updateDueCountInUI: function() {
+    updateDueCountInUI: function () {
         const reviewButton = document.querySelector('[data-mode="spaced-review"]');
         if (reviewButton) {
             const dueCount = this.getQuestionsForReview().length;
@@ -284,26 +284,26 @@ const SpacedRepetition = {
     },
 
     // Storage management
-    getSRSData: function() {
+    getSRSData: function () {
         return Utils.storage.get('srs_data', {});
     },
 
-    saveSRSData: function(data) {
+    saveSRSData: function (data) {
         return Utils.storage.set('srs_data', data);
     },
 
     // Export SRS data for backup
-    exportSRSData: function() {
+    exportSRSData: function () {
         const srsData = this.getSRSData();
         const exportData = {
             version: '1.0',
             exportDate: new Date().toISOString(),
             srsData: srsData
         };
-        
+
         const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
-        
+
         const a = document.createElement('a');
         a.href = url;
         a.download = `ap-physics-srs-${new Date().toISOString().split('T')[0]}.json`;
@@ -314,7 +314,7 @@ const SpacedRepetition = {
     },
 
     // Import SRS data from backup
-    importSRSData: function(fileInput) {
+    importSRSData: function (fileInput) {
         const file = fileInput.files[0];
         if (!file) return;
 

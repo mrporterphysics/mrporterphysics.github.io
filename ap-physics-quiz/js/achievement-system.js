@@ -3,7 +3,7 @@
  * Provides motivation through badges, levels, and progress tracking
  */
 
-const AchievementSystem = {
+window.AchievementSystem = {
     // Achievement definitions
     achievements: {
         // Learning Milestones
@@ -91,7 +91,7 @@ const AchievementSystem = {
             description: 'Achieve 85%+ accuracy in Kinematics (15+ questions)',
             icon: '🚀',
             type: 'topic_mastery',
-            condition: (stats) => this.checkTopicMastery(stats, 'kinematics', 0.85, 15),
+            condition: (stats) => AchievementSystem.checkTopicMastery(stats, 'kinematics', 0.85, 15),
             points: 80
         },
         'forces_master': {
@@ -100,7 +100,7 @@ const AchievementSystem = {
             description: 'Achieve 85%+ accuracy in Forces (15+ questions)',
             icon: '⚡',
             type: 'topic_mastery',
-            condition: (stats) => this.checkTopicMastery(stats, 'forces', 0.85, 15),
+            condition: (stats) => AchievementSystem.checkTopicMastery(stats, 'forces', 0.85, 15),
             points: 80
         },
         'energy_master': {
@@ -109,7 +109,7 @@ const AchievementSystem = {
             description: 'Achieve 85%+ accuracy in Energy (15+ questions)',
             icon: '🔋',
             type: 'topic_mastery',
-            condition: (stats) => this.checkTopicMastery(stats, 'energy', 0.85, 15),
+            condition: (stats) => AchievementSystem.checkTopicMastery(stats, 'energy', 0.85, 15),
             points: 80
         },
 
@@ -120,7 +120,7 @@ const AchievementSystem = {
             description: 'Study for 3 consecutive days',
             icon: '📚',
             type: 'habit',
-            condition: (stats) => this.checkConsecutiveDays(3),
+            condition: (stats) => AchievementSystem.checkConsecutiveDays(3),
             points: 50
         },
         'study_guide_explorer': {
@@ -129,7 +129,7 @@ const AchievementSystem = {
             description: 'View 5 different study guides',
             icon: '🗺️',
             type: 'exploration',
-            condition: (stats) => this.checkStudyGuideUsage(5),
+            condition: (stats) => AchievementSystem.checkStudyGuideUsage(5),
             points: 40
         },
         'rapid_fire_champion': {
@@ -138,7 +138,7 @@ const AchievementSystem = {
             description: 'Complete a Rapid Fire round with 80%+ accuracy',
             icon: '⚡',
             type: 'mode_mastery',
-            condition: (stats) => this.checkRapidFirePerformance(0.8),
+            condition: (stats) => AchievementSystem.checkRapidFirePerformance(0.8),
             points: 60
         },
 
@@ -149,7 +149,7 @@ const AchievementSystem = {
             description: 'Use fact sheet references 25 times',
             icon: '📋',
             type: 'engagement',
-            condition: (stats) => this.checkFactSheetUsage(25),
+            condition: (stats) => AchievementSystem.checkFactSheetUsage(25),
             points: 45
         },
         'hint_graduate': {
@@ -158,7 +158,7 @@ const AchievementSystem = {
             description: 'Answer correctly without hints 50 times',
             icon: '🎓',
             type: 'independence',
-            condition: (stats) => this.checkHintlessCorrect(50),
+            condition: (stats) => AchievementSystem.checkHintlessCorrect(50),
             points: 70
         }
     },
@@ -177,7 +177,7 @@ const AchievementSystem = {
     levelThresholds: [0, 100, 250, 500, 750, 1200, 1800, 2500, 3500, 5000, 7500],
 
     // Initialize achievement system
-    init: function() {
+    init: function () {
         this.loadUserProgress();
         this.setupEventListeners();
         this.addAchievementDisplay();
@@ -185,7 +185,7 @@ const AchievementSystem = {
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Listen for question answers to update progress
         document.addEventListener('questionAnswered', (event) => {
             this.checkForNewAchievements();
@@ -203,18 +203,18 @@ const AchievementSystem = {
     },
 
     // Add achievement display to UI
-    addAchievementDisplay: function() {
+    addAchievementDisplay: function () {
         const header = document.querySelector('header');
         if (header && !document.getElementById('achievement-display')) {
             const achievementDisplay = document.createElement('div');
             achievementDisplay.id = 'achievement-display';
             achievementDisplay.className = 'achievement-display';
-            
+
             const level = this.userProgress.level;
             const points = this.userProgress.totalPoints;
             const nextLevelPoints = this.levelThresholds[level] || this.levelThresholds[this.levelThresholds.length - 1];
-            const progress = ((points - (this.levelThresholds[level - 1] || 0)) / 
-                            (nextLevelPoints - (this.levelThresholds[level - 1] || 0))) * 100;
+            const progress = ((points - (this.levelThresholds[level - 1] || 0)) /
+                (nextLevelPoints - (this.levelThresholds[level - 1] || 0))) * 100;
 
             achievementDisplay.innerHTML = `
                 <div class="level-display" onclick="AchievementSystem.showAchievementModal()">
@@ -227,18 +227,18 @@ const AchievementSystem = {
                     </div>
                 </div>
                 <div class="recent-badges" id="recent-badges">
-                    ${this.userProgress.recentAchievements.slice(0, 3).map(id => 
-                        `<span class="mini-badge" title="${this.achievements[id].title}">${this.achievements[id].icon}</span>`
-                    ).join('')}
+                    ${this.userProgress.recentAchievements.slice(0, 3).map(id =>
+                `<span class="mini-badge" title="${this.achievements[id].title}">${this.achievements[id].icon}</span>`
+            ).join('')}
                 </div>
             `;
-            
+
             header.appendChild(achievementDisplay);
         }
     },
 
     // Check for new achievements
-    checkForNewAchievements: function() {
+    checkForNewAchievements: function () {
         const stats = QuizStorage.getStatistics();
         const newAchievements = [];
 
@@ -257,39 +257,39 @@ const AchievementSystem = {
     },
 
     // Unlock an achievement
-    unlockAchievement: function(achievement) {
+    unlockAchievement: function (achievement) {
         this.userProgress.unlockedAchievements.push(achievement.id);
         this.userProgress.recentAchievements.unshift(achievement.id);
         this.userProgress.recentAchievements = this.userProgress.recentAchievements.slice(0, 10);
         this.userProgress.totalPoints += achievement.points;
-        
+
         this.saveUserProgress();
         this.updateLevel();
     },
 
     // Update user level based on points
-    updateLevel: function() {
+    updateLevel: function () {
         const oldLevel = this.userProgress.level;
         let newLevel = 1;
-        
+
         for (let i = 0; i < this.levelThresholds.length; i++) {
             if (this.userProgress.totalPoints >= this.levelThresholds[i]) {
                 newLevel = i + 1;
             }
         }
-        
+
         this.userProgress.level = newLevel;
-        
+
         if (newLevel > oldLevel) {
             this.showLevelUp(newLevel);
         }
-        
+
         this.updateAchievementDisplay();
         this.saveUserProgress();
     },
 
     // Show achievement unlocked notification
-    showAchievementUnlocked: function(achievements) {
+    showAchievementUnlocked: function (achievements) {
         achievements.forEach((achievement, index) => {
             setTimeout(() => {
                 const notification = document.createElement('div');
@@ -305,12 +305,12 @@ const AchievementSystem = {
                         </div>
                     </div>
                 `;
-                
+
                 document.body.appendChild(notification);
-                
+
                 // Animate in
                 setTimeout(() => notification.classList.add('show'), 100);
-                
+
                 // Auto remove after 5 seconds
                 setTimeout(() => {
                     notification.classList.remove('show');
@@ -320,13 +320,13 @@ const AchievementSystem = {
                         }
                     }, 300);
                 }, 5000);
-                
+
             }, index * 1000); // Stagger multiple achievements
         });
     },
 
     // Show level up notification
-    showLevelUp: function(newLevel) {
+    showLevelUp: function (newLevel) {
         const notification = document.createElement('div');
         notification.className = 'level-up-notification';
         notification.innerHTML = `
@@ -338,12 +338,12 @@ const AchievementSystem = {
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(notification);
-        
+
         // Animate in
         setTimeout(() => notification.classList.add('show'), 100);
-        
+
         // Auto remove after 4 seconds
         setTimeout(() => {
             notification.classList.remove('show');
@@ -356,14 +356,14 @@ const AchievementSystem = {
     },
 
     // Show achievement modal
-    showAchievementModal: function() {
+    showAchievementModal: function () {
         const modal = document.createElement('div');
         modal.className = 'achievement-modal';
-        
+
         const unlockedCount = this.userProgress.unlockedAchievements.length;
         const totalCount = Object.keys(this.achievements).length;
         const completionPercentage = Math.round((unlockedCount / totalCount) * 100);
-        
+
         modal.innerHTML = `
             <div class="achievement-panel">
                 <div class="panel-header">
@@ -387,14 +387,14 @@ const AchievementSystem = {
                 </div>
             </div>
         `;
-        
+
         document.body.appendChild(modal);
-        
+
         // Event handlers
         modal.querySelector('.close-modal').addEventListener('click', () => {
             document.body.removeChild(modal);
         });
-        
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 document.body.removeChild(modal);
@@ -403,7 +403,7 @@ const AchievementSystem = {
     },
 
     // Render achievement categories
-    renderAchievementCategories: function() {
+    renderAchievementCategories: function () {
         const categories = {
             'milestone': { name: '📈 Milestones', achievements: [] },
             'accuracy': { name: '🎯 Accuracy', achievements: [] },
@@ -430,8 +430,8 @@ const AchievementSystem = {
                     <h4>${category.name}</h4>
                     <div class="achievement-grid">
                         ${category.achievements.map(achievement => {
-                            const unlocked = this.userProgress.unlockedAchievements.includes(achievement.id);
-                            return `
+                const unlocked = this.userProgress.unlockedAchievements.includes(achievement.id);
+                return `
                                 <div class="achievement-card ${unlocked ? 'unlocked' : 'locked'}">
                                     <div class="achievement-icon">${achievement.icon}</div>
                                     <div class="achievement-title">${achievement.title}</div>
@@ -440,21 +440,21 @@ const AchievementSystem = {
                                     ${unlocked ? '<div class="unlock-check">✓</div>' : ''}
                                 </div>
                             `;
-                        }).join('')}
+            }).join('')}
                     </div>
                 </div>
             `).join('');
     },
 
     // Update achievement display in header
-    updateAchievementDisplay: function() {
+    updateAchievementDisplay: function () {
         const display = document.getElementById('achievement-display');
         if (display) {
             const level = this.userProgress.level;
             const points = this.userProgress.totalPoints;
             const nextLevelPoints = this.levelThresholds[level] || this.levelThresholds[this.levelThresholds.length - 1];
-            const progress = ((points - (this.levelThresholds[level - 1] || 0)) / 
-                            (nextLevelPoints - (this.levelThresholds[level - 1] || 0))) * 100;
+            const progress = ((points - (this.levelThresholds[level - 1] || 0)) /
+                (nextLevelPoints - (this.levelThresholds[level - 1] || 0))) * 100;
 
             const levelInfo = display.querySelector('.level-info');
             const progressFill = display.querySelector('.level-progress-fill');
@@ -472,7 +472,7 @@ const AchievementSystem = {
             }
 
             if (recentBadges) {
-                recentBadges.innerHTML = this.userProgress.recentAchievements.slice(0, 3).map(id => 
+                recentBadges.innerHTML = this.userProgress.recentAchievements.slice(0, 3).map(id =>
                     `<span class="mini-badge" title="${this.achievements[id].title}">${this.achievements[id].icon}</span>`
                 ).join('');
             }
@@ -480,41 +480,41 @@ const AchievementSystem = {
     },
 
     // Helper functions for achievement conditions
-    checkTopicMastery: function(stats, topic, threshold, minQuestions) {
+    checkTopicMastery: function (stats, topic, threshold, minQuestions) {
         const topicStats = stats.topicStats && stats.topicStats[topic];
         if (!topicStats || topicStats.total < minQuestions) return false;
         return (topicStats.correct / topicStats.total) >= threshold;
     },
 
-    checkConsecutiveDays: function(days) {
+    checkConsecutiveDays: function (days) {
         // This would require more sophisticated date tracking
         // For now, return based on total study time
         const stats = QuizStorage.getStatistics();
         return stats.totalQuestions >= days * 10; // Approximate
     },
 
-    checkStudyGuideUsage: function(count) {
+    checkStudyGuideUsage: function (count) {
         const guideStats = Utils.storage.get('study_guide_stats', { totalGuideViews: 0 });
         return guideStats.totalGuideViews >= count;
     },
 
-    checkRapidFirePerformance: function(accuracy) {
+    checkRapidFirePerformance: function (accuracy) {
         const rfStats = Utils.storage.get('rapid_fire_stats', { recentScores: [] });
         return rfStats.recentScores.some(score => score.accuracy >= accuracy * 100);
     },
 
-    checkFactSheetUsage: function(count) {
+    checkFactSheetUsage: function (count) {
         // This would integrate with fact sheet usage tracking
         return false; // Placeholder
     },
 
-    checkHintlessCorrect: function(count) {
+    checkHintlessCorrect: function (count) {
         // This would require tracking questions answered without hints
         return false; // Placeholder
     },
 
     // Storage management
-    loadUserProgress: function() {
+    loadUserProgress: function () {
         const saved = Utils.storage.get('achievement_progress', {});
         this.userProgress = {
             level: saved.level || 1,
@@ -526,15 +526,15 @@ const AchievementSystem = {
         };
     },
 
-    saveUserProgress: function() {
+    saveUserProgress: function () {
         Utils.storage.set('achievement_progress', this.userProgress);
     },
 
     // Get achievement statistics
-    getAchievementStats: function() {
+    getAchievementStats: function () {
         const unlocked = this.userProgress.unlockedAchievements.length;
         const total = Object.keys(this.achievements).length;
-        
+
         return {
             level: this.userProgress.level,
             totalPoints: this.userProgress.totalPoints,
