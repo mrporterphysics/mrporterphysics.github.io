@@ -98,41 +98,29 @@ If Carbon-14 goes through 2 half lives...
 
 ---
 
+
+---
+
+## Limits to Radiometric Dating
+
+* After 10 half-lives, there is so little original substance remaining that it is hard to trace
+* Carbon-14 is great to use because it is found in many places
+* However, it is only effective in dating up to 50,000 years ago. Beyond that it is useless.
+* For the oldest rocks, we use the other radioactive isotopes when we can find it in the rock.
+* Problem is these other isotopes are not as abundant
+* If we cannot determine absolute ages, we then will determine relative ages.
+
+---
+
+# Other Radio Active Elements <!--fit--->
+
+## Page 15 on reference table...
+
+---
+
+
 ![bg fit](image-3.png)
 
----
-
-## Assumptions and Calibration
-
-- Closed system: no gain/loss of C after death.
-- Known initial C-14/C-12 ratio (requires standards).
-- Calibration with tree-ring data and other archives accounts for past atmospheric variation.
-
----
-
-## Other Radiometric Methods
-
-- **Uranium–Lead**: zircon crystals; ages from millions to billions of years.
-- **Potassium–Argon / Argon–Argon**: volcanic rocks; >100,000 years.
-- **Rubidium–Strontium, Samarium–Neodymium**: metamorphic/igneous contexts.
-
----
-
-## Applications
-
-- **Archeology**: dating artifacts and human remains.
-- **Paleontology**: constraining fossil ages via volcanic layers.
-- **Quaternary geology**: glacial/interglacial timelines.
-- **Climate records**: lake sediments, peat, cave deposits.
-
----
-
-## Limits and Sources of Error
-
-- Contamination (modern carbon, conservation materials).
-- Reservoir effects (marine vs terrestrial carbon).
-- Measurement precision, sample preservation.
-- Beyond method range → large uncertainty.
 
 ---
 
