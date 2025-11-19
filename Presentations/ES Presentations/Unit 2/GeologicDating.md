@@ -2,13 +2,113 @@
 marp: true
 theme: physicalSci
 paginate: true
-title: Geologic Dating — Absolute
+title: Geologic Dating
 author: Mr. Porter
 class: twilight
 ---
 
-# Geologic Dating — Absolute
+# Geologic Dating
 ### Regents Earth Science
+
+- **Relative Dating**: Determining the order of past events without determining their absolute age.
+- **Absolute Dating**: Determining the numerical age of rocks and fossils.
+
+---
+
+# Part 1: Relative Dating
+
+---
+
+## Relative vs. Absolute Dating
+
+- **Relative Dating**
+  - "This rock is older than that rock."
+  - Uses laws of stratigraphy.
+  - No specific numbers.
+
+- **Absolute Dating**
+  - "This rock is 1.2 million years old."
+  - Uses radiometric dating.
+  - Specific numbers.
+
+---
+
+## Principles of Relative Dating
+
+1. **Law of Superposition**
+2. **Principle of Original Horizontality**
+3. **Principle of Cross-Cutting Relationships**
+4. **Inclusions**
+5. **Unconformities**
+
+---
+
+## Law of Superposition
+
+- In an undeformed sequence of sedimentary rocks, each layer is **older** than the one above it and **younger** than the one below it.
+- *Bottom = Oldest*
+- *Top = Youngest*
+
+![bg right:40% fit](assets/relative_dating_superposition.png)
+
+---
+
+## Principle of Original Horizontality
+
+- Layers of sediment are generally deposited in a **horizontal** position.
+- If rock layers are flat, it means they have not been disturbed.
+- If they are folded or tilted, the disturbance happened **after** deposition.
+
+---
+
+## Principle of Cross-Cutting Relationships
+
+- An igneous intrusion or a fault that cuts through rock layers is **younger** than the rocks it cuts.
+- The "cutter" is younger than the "cuttee".
+
+![bg right:40% fit](assets/relative_dating_cross_cutting.png)
+
+---
+
+## Inclusions
+
+- Pieces of one rock unit that are contained within another.
+- The rock containing the inclusion is **younger** than the inclusion itself.
+- The inclusion had to exist *before* it could get stuck in the new rock.
+
+---
+
+## Unconformities
+
+- A break in the geologic record created when rock layers are eroded or when sediment is not deposited for a long period of time.
+- Represents a "gap" in time.
+- **Angular Unconformity**: Tilted or folded sedimentary rocks are overlain by younger, more flat-lying strata.
+
+![bg right:40% fit](assets/relative_dating_unconformity.png)
+
+---
+
+## Index Fossils
+
+- Fossils used to define and identify geologic periods.
+- **Characteristics of a good index fossil:**
+    1. Widespread geographically (found everywhere).
+    2. Existed for a short period of time (short geologic range).
+    3. Abundant (easy to find).
+    4. Easy to identify.
+
+---
+
+<!--
+TODO: Add specific examples or practice questions from the "Relative Dating" PDF.
+Since the text extraction was limited, please review the original PDF and add any specific diagrams or questions here.
+-->
+
+# Part 2: Absolute Dating
+
+---
+
+## Absolute Dating Basics
 
 - Absolute dating determines the numerical age of rocks and fossils.
 - Common methods: radiometric dating (e.g., radiocarbon, uranium–lead, potassium–argon).
@@ -16,19 +116,33 @@ class: twilight
 
 ---
 
-## Relative vs. Absolute Dating
+## Radioactive Decay Basics
 
-- Relative dating orders events without exact ages (e.g., superposition, cross-cutting).
-- Absolute dating assigns a measurable age (years).
-- Both methods are complementary in geologic investigations.
+- Unstable **parent** isotopes decay into stable **daughter** isotopes.
+- Decay follows an exponential law characterized by **half-life**.
+- **Half-life**: time for half of the parent atoms to decay.
+
+![bg right:40% fit](assets/absolute_dating_decay_process.png)
 
 ---
 
-## Radioactive Decay Basics
+## Visualizing Half-Life
 
-- Unstable parent isotopes decay into stable daughter isotopes.
-- Decay follows an exponential law characterized by half-life.
-- Half-life: time for half of the parent atoms to decay.
+- As time passes, the amount of parent isotope decreases by half for each half-life.
+- The curve never truly reaches zero.
+
+![bg right:40% fit](assets/absolute_dating_half_life_graph.png)
+
+---
+
+## Counting Half-Lives
+
+- **0 Half-Lives**: 100% Parent
+- **1 Half-Life**: 50% Parent, 50% Daughter
+- **2 Half-Lives**: 25% Parent, 75% Daughter
+- **3 Half-Lives**: 12.5% Parent, 87.5% Daughter
+
+![bg right:40% fit](assets/absolute_dating_counting_half_lives.png)
 
 ---
 
@@ -38,7 +152,6 @@ class: twilight
 - After death, C-14 decays; no new C-14 is added.
 - Effective dating range: up to ~50,000 years.
 - Measured via ratio of C-14 to stable C-12/C-13.
-
 
 ---
 
@@ -52,18 +165,18 @@ class: twilight
 
 ## Other Radiometric Methods
 
-- Uranium–Lead: zircon crystals; ages from millions to billions of years.
-- Potassium–Argon / Argon–Argon: volcanic rocks; >100,000 years.
-- Rubidium–Strontium, Samarium–Neodymium: metamorphic/igneous contexts.
+- **Uranium–Lead**: zircon crystals; ages from millions to billions of years.
+- **Potassium–Argon / Argon–Argon**: volcanic rocks; >100,000 years.
+- **Rubidium–Strontium, Samarium–Neodymium**: metamorphic/igneous contexts.
 
 ---
 
 ## Applications
 
-- Archeology: dating artifacts and human remains.
-- Paleontology: constraining fossil ages via volcanic layers.
-- Quaternary geology: glacial/interglacial timelines.
-- Climate records: lake sediments, peat, cave deposits.
+- **Archeology**: dating artifacts and human remains.
+- **Paleontology**: constraining fossil ages via volcanic layers.
+- **Quaternary geology**: glacial/interglacial timelines.
+- **Climate records**: lake sediments, peat, cave deposits.
 
 ---
 
@@ -106,7 +219,7 @@ class: twilight
 - B) Organic materials up to ~50,000 years
 - C) Metallic artifacts from the Bronze Age
 - D) Zircon crystals in granite  
-Answer: B
+**Answer: B**
 
 ---
 
@@ -117,7 +230,7 @@ Answer: B
 - B) 5,730 years
 - C) 57,300 years
 - D) 730 years  
-Answer: B
+**Answer: B**
 
 ---
 
@@ -128,7 +241,7 @@ Answer: B
 - B) 5,730 years
 - C) 11,460 years
 - D) 17,190 years  
-Answer: C
+**Answer: C**
 
 ---
 
@@ -139,7 +252,7 @@ Answer: C
 - B) It is the time for all parent atoms to decay.
 - C) It is constant for a given isotope.
 - D) It increases as more atoms decay.  
-Answer: C
+**Answer: C**
 
 ---
 
@@ -150,7 +263,7 @@ Answer: C
 - B) To convert BP to CE only
 - C) To adjust for sample mass
 - D) To remove contamination automatically  
-Answer: A
+**Answer: A**
 
 ---
 
@@ -175,4 +288,3 @@ Answer: A
 - Plan: measure simulated decay and fit an exponential model.
 - Materials: counters, graphing tools, sample scenarios.
 - Safety: handling and data integrity (no actual radioisotopes).
-
