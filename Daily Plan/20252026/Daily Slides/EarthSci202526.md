@@ -27,7 +27,7 @@ Keep working on radio active dating
 
 # 2025.11.19 **Earth Science**
 
-##### **❓ of the 📅**: What was your favorite recess game from elementary school?
+###### **❓ of the 📅**: What was your favorite recess game from elementary school?
 
 <div class ='columns'>
 
@@ -35,7 +35,11 @@ Keep working on radio active dating
 
 #### 📋 Agenda
 
-1. 
+1. Early Solar System Investigation; complete and discuss
+    - Part 1a: Decay Rate
+    - Part 1b: Dating Game
+2. [Geologic Dating Notes](../../../Presentations/ES%20Presentations/Unit%202/GeologicDating.html)
+3. Part 2: The age of rocks in the solar system
 
 </div>
 
@@ -43,7 +47,7 @@ Keep working on radio active dating
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Use relative and absolute dating to start looking at Earth's History_
 
 ### 📆 Upcoming
 
