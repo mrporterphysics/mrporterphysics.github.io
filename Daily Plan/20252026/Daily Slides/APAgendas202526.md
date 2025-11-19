@@ -18,6 +18,19 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.19 **AP Physics** Do Now
+
+### Whiteboard Assigned situation(s) 
+
+| Group                      | Whitebard Situations           |
+| -------------------------- | -------------------- |
+| Haylee, Tyler, Mason, Kyle | Speed up Situation   |
+| Nadine, Max, Ryan          | Slow Down Situations |
+| Arianna, Arletta, Antonio  | 90º Turn             |
+| Emma, Olivia, Jonah        | Circle Question      |
+
+---
+
 # 2025.11.19 **AP Physics**
 
 ##### **❓ of the 📅**: If everyone in your family was a zoo animal, which animal would they all be?
@@ -29,12 +42,11 @@ math: mathjax
 #### 📋 Agenda
 
 1. Do Now
-2. N1L Review
+2. Pivot & Phet - Balanced vs. Unabalanced Forces
 3. [Notes](../../../Presentations/Forces/talks/Dynamics2025.html):
     - Common Forces
     - Force Diagrams
 4. FBD Card Sort
-5. Monkey Diagram Practice 🐒
 
 </div>
 
