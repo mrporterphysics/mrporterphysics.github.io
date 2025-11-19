@@ -43,6 +43,33 @@ const Utils = {
             .replace(/data:/gi, '')           // Remove data: protocol for safety
             .replace(/on\w+\s*=/gi, '');      // Remove event handlers like onclick=
     },
+
+    // Render Markdown content safely
+    renderMarkdown: function(text) {
+        if (!text) return '';
+        if (typeof marked !== 'undefined' && marked.parse) {
+            try {
+                // Configure marked for safety if possible, or rely on simple sanitization before/after
+                return marked.parse(text);
+            } catch (e) {
+                console.error('Markdown rendering failed:', e);
+                return text;
+            }
+        }
+        return text;
+    },
+
+    // Generate a deterministic hash from a string (for stable IDs)
+    simpleHash: function(str) {
+        let hash = 0;
+        if (str.length === 0) return hash;
+        for (let i = 0; i < str.length; i++) {
+            const char = str.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash; // Convert to 32bit integer
+        }
+        return Math.abs(hash).toString(36);
+    },
     
     // Sanitize HTML content (for use in innerHTML)
     sanitizeHTML: function(html) {

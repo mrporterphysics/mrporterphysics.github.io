@@ -25,7 +25,7 @@ const QuizData = {
     // Available topics by course
     TOPICS: {
         'ap-physics': [
-            'kinematics', 'forces', 'energy', 'momentum', 'rotation', 
+            'kinematics', 'forces', 'energy', 'momentum', 'rotation',
             'gravitation', 'shm', 'fluids', 'waves', 'general'
         ],
         'earth-science': [
@@ -34,16 +34,16 @@ const QuizData = {
     },
 
     // Load questions from provided data array
-    loadQuestions: function(questionsArray) {
+    loadQuestions: function (questionsArray) {
         Utils.performance.start('loadQuestions');
-        
+
         try {
             this.questions = questionsArray.map(q => this.processQuestion(q));
             this.applyFilters();
-            
+
             console.log(`Loaded ${this.questions.length} questions`);
             Utils.performance.end('loadQuestions');
-            
+
             return true;
         } catch (error) {
             Utils.handleError(error, 'QuizData.loadQuestions');
@@ -52,14 +52,15 @@ const QuizData = {
     },
 
     // Process and validate a single question
-    processQuestion: function(questionData) {
+    processQuestion: function (questionData) {
         return {
-            id: questionData.id || this.generateId(),
+            id: questionData.id || this.generateId(questionData.question),
             type: (questionData.type || 'mc').toLowerCase(),
-            question: Utils.sanitizeString(questionData.question || ''),
+            // Don't sanitize here, we'll sanitize/render when displaying
+            question: questionData.question || '',
             answer: questionData.answer || '',
             topic: (questionData.topic || 'general').toLowerCase(),
-            explanation: Utils.sanitizeString(questionData.explanation || ''),
+            explanation: questionData.explanation || '',
             options: this.extractOptions(questionData),
             alternateAnswers: this.parseAlternateAnswers(questionData.alternateAnswers),
             difficulty: parseInt(questionData.difficulty) || 1,
@@ -71,7 +72,7 @@ const QuizData = {
     },
 
     // Extract options for multiple choice questions
-    extractOptions: function(questionData) {
+    extractOptions: function (questionData) {
         const options = [];
         ['optionA', 'optionB', 'optionC', 'optionD', 'optionE'].forEach(key => {
             if (questionData[key] && questionData[key].trim()) {
@@ -82,25 +83,26 @@ const QuizData = {
     },
 
     // Parse alternate answers
-    parseAlternateAnswers: function(alternateAnswers) {
+    parseAlternateAnswers: function (alternateAnswers) {
         if (!alternateAnswers) return [];
-        
+
         if (Array.isArray(alternateAnswers)) return alternateAnswers;
-        
+
         if (typeof alternateAnswers === 'string') {
             return alternateAnswers.split(',').map(answer => answer.trim());
         }
-        
+
         return [];
     },
 
-    // Generate a unique ID for questions without one
-    generateId: function() {
-        return Date.now().toString(36) + Math.random().toString(36).substr(2);
+    // Generate a stable ID based on question content
+    generateId: function (questionText) {
+        if (!questionText) return Date.now().toString(36);
+        return 'q_' + Utils.simpleHash(questionText);
     },
 
     // Robust string normalization for filtering
-    normalizeString: function(str) {
+    normalizeString: function (str) {
         if (typeof str !== 'string') return '';
         return str.trim().toLowerCase()
             .replace(/\s+/g, ' ')  // Replace multiple whitespace with single space
@@ -108,45 +110,45 @@ const QuizData = {
             .trim();
     },
     // Apply current filters to questions
-    applyFilters: function() {
+    applyFilters: function () {
         Utils.performance.start('applyFilters');
-        
+
         this.filteredQuestions = this.questions.filter(question => {
             // Ensure question has required properties
             if (!question || !question.topic) {
                 console.warn('Question missing topic:', question);
                 return false;
             }
-            
+
             // Course filter - not needed if all questions are from the same dataset
-            
+
             // Subject filter (single topic selection)
             if (this.currentFilters.subject !== 'all') {
                 const questionTopic = this.normalizeString(question.topic);
                 const filterSubject = this.normalizeString(this.currentFilters.subject);
-                
+
                 if (questionTopic !== filterSubject) {
                     return false;
                 }
             }
-            
+
             // Topic filter (multiple topics - overridden by subject filter)
             if (this.currentFilters.topics.length > 0 && this.currentFilters.subject === 'all') {
                 const questionTopic = this.normalizeString(question.topic);
                 const normalizedTopics = this.currentFilters.topics.map(t => this.normalizeString(t));
-                
+
                 if (!normalizedTopics.includes(questionTopic)) {
                     return false;
                 }
             }
-            
+
             // Type filter
             if (this.currentFilters.types.length > 0) {
                 if (!this.currentFilters.types.includes(question.type)) {
                     return false;
                 }
             }
-            
+
             // Difficulty filter
             if (this.currentFilters.difficulty !== 'all') {
                 const targetDifficulty = parseInt(this.currentFilters.difficulty);
@@ -155,28 +157,28 @@ const QuizData = {
                     return false;
                 }
             }
-            
+
             return true;
         });
-        
+
         console.log(`Filtered to ${this.filteredQuestions.length} questions`);
         Utils.performance.end('applyFilters');
     },
 
     // Update filters
-    setFilters: function(filters) {
+    setFilters: function (filters) {
         this.currentFilters = { ...this.currentFilters, ...filters };
         this.applyFilters();
     },
 
     // Get filtered questions for review mode (missed questions only)
-    getReviewQuestions: function() {
+    getReviewQuestions: function () {
         const missedIds = QuizStorage.getMissedQuestions();
         return this.questions.filter(q => missedIds.includes(q.id));
     },
 
     // Get questions by specific criteria
-    getQuestionsByCriteria: function(criteria) {
+    getQuestionsByCriteria: function (criteria) {
         return this.questions.filter(question => {
             for (const [key, value] of Object.entries(criteria)) {
                 if (Array.isArray(value)) {
@@ -190,76 +192,76 @@ const QuizData = {
     },
 
     // Shuffle questions
-    shuffle: function() {
+    shuffle: function () {
         this.filteredQuestions = Utils.shuffleArray(this.filteredQuestions);
     },
 
     // Get question by ID
-    getQuestionById: function(id) {
+    getQuestionById: function (id) {
         return this.questions.find(q => q.id == id);
     },
 
     // Get available topics for current course
-    getAvailableTopics: function(course = null) {
+    getAvailableTopics: function (course = null) {
         const targetCourse = course || this.currentFilters.course;
         return this.TOPICS[targetCourse] || [];
     },
 
     // Get statistics about current question set
-    getDataStats: function() {
+    getDataStats: function () {
         const stats = {
             total: this.questions.length,
             filtered: this.filteredQuestions.length,
             byType: {},
             byTopic: {},
-            byDifficulty: {1: 0, 2: 0, 3: 0}
+            byDifficulty: { 1: 0, 2: 0, 3: 0 }
         };
-        
+
         this.filteredQuestions.forEach(question => {
             // Type statistics
             stats.byType[question.type] = (stats.byType[question.type] || 0) + 1;
-            
+
             // Topic statistics
             stats.byTopic[question.topic] = (stats.byTopic[question.topic] || 0) + 1;
-            
+
             // Difficulty statistics
             stats.byDifficulty[question.difficulty]++;
         });
-        
+
         return stats;
     },
 
     // Validate question data integrity
-    validateQuestion: function(question) {
+    validateQuestion: function (question) {
         const errors = [];
-        
+
         if (!question.id) errors.push('Missing ID');
         if (!question.question) errors.push('Missing question text');
         if (!question.answer) errors.push('Missing answer');
         if (!question.type || !this.QUESTION_TYPES[question.type]) {
             errors.push('Invalid or missing question type');
         }
-        
+
         // Type-specific validations
         if (question.type === 'mc' && question.options.length < 2) {
             errors.push('Multiple choice question needs at least 2 options');
         }
-        
+
         if (question.difficulty && (question.difficulty < 1 || question.difficulty > 3)) {
             errors.push('Difficulty must be 1, 2, or 3');
         }
-        
+
         return errors;
     },
 
     // Batch validate all questions
-    validateAllQuestions: function() {
+    validateAllQuestions: function () {
         const validationResults = {
             valid: 0,
             invalid: 0,
             errors: []
         };
-        
+
         this.questions.forEach((question, index) => {
             const errors = this.validateQuestion(question);
             if (errors.length > 0) {
@@ -273,12 +275,12 @@ const QuizData = {
                 validationResults.valid++;
             }
         });
-        
+
         return validationResults;
     },
 
     // Export current dataset
-    exportData: function() {
+    exportData: function () {
         return {
             questions: this.questions,
             filters: this.currentFilters,

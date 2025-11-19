@@ -17,26 +17,26 @@ const PhysicsQuizApp = {
     },
 
     // Initialize the application
-    init: function() {
+    init: function () {
         console.log('Initializing Physics Quiz App...');
         Utils.performance.start('appInit');
-        
+
         try {
             // Application health check
             const healthReport = Utils.validateApplicationHealth();
             if (healthReport.overall === 'critical') {
-                this.showCriticalError('Application Health Check Failed', 
-                    'Critical system components are not available. Please refresh the page.', 
+                this.showCriticalError('Application Health Check Failed',
+                    'Critical system components are not available. Please refresh the page.',
                     () => window.location.reload());
                 return;
             }
-            
+
             // Show loading state
             this.showLoadingState('Initializing application...');
-            
+
             // Initialize storage with error handling
             this.initializeStorageWithErrorHandling();
-            
+
             // Initialize network monitoring
             Utils.networkStatus.init();
             Utils.networkStatus.addListener((isOnline) => {
@@ -46,7 +46,7 @@ const PhysicsQuizApp = {
                     this.showMessage('Network connection lost - some features may not work', 'warning');
                 }
             });
-            
+
             // Load questions
             this.loadQuestions()
                 .then(() => {
@@ -54,7 +54,7 @@ const PhysicsQuizApp = {
                     this.initializeUI();
                     this.initializeFactSheetIntegration();
                     this.initializePhase7Modules();
-                    
+
                     this.isInitialized = true;
                     this.hideLoadingState();
                     console.log('Physics Quiz App initialized successfully');
@@ -63,26 +63,26 @@ const PhysicsQuizApp = {
                 .catch(error => {
                     this.hideLoadingState();
                     Utils.handleError(error, 'PhysicsQuizApp.init');
-                    this.showCriticalError('Failed to load questions', 
-                        'Please check your connection and refresh the page to try again.', 
+                    this.showCriticalError('Failed to load questions',
+                        'Please check your connection and refresh the page to try again.',
                         () => window.location.reload());
                 });
         } catch (error) {
             this.hideLoadingState();
             Utils.handleError(error, 'PhysicsQuizApp.init');
-            this.showCriticalError('Application failed to initialize', 
-                'There was a critical error. Please refresh the page.', 
+            this.showCriticalError('Application failed to initialize',
+                'There was a critical error. Please refresh the page.',
                 () => window.location.reload());
         }
     },
 
     // Initialize storage with comprehensive error handling
-    initializeStorageWithErrorHandling: function() {
+    initializeStorageWithErrorHandling: function () {
         try {
             QuizStorage.init();
         } catch (error) {
             Utils.handleError(error, 'Storage initialization');
-            
+
             // Try to clear corrupted storage
             try {
                 localStorage.clear();
@@ -96,77 +96,77 @@ const PhysicsQuizApp = {
     },
 
     // Load questions from CSV file with comprehensive error handling
-    loadQuestions: function() {
+    loadQuestions: function () {
         return new Promise((resolve, reject) => {
             Utils.performance.start('loadCSV');
-            
+
             // Network timeout handler
             const timeoutController = new AbortController();
             const timeoutId = setTimeout(() => {
                 timeoutController.abort();
             }, 15000); // 15 second timeout
-            
-            fetch(this.config.csvPath, { 
+
+            fetch(this.config.csvPath, {
                 signal: timeoutController.signal,
                 cache: 'no-cache' // Ensure fresh data
             })
                 .then(response => {
                     clearTimeout(timeoutId);
-                    
+
                     if (!response.ok) {
-                        const errorMsg = response.status === 404 
+                        const errorMsg = response.status === 404
                             ? 'Question file not found. Please check the installation.'
                             : `Server error (${response.status}). Please try again later.`;
                         throw new Error(errorMsg);
                     }
-                    
+
                     if (!response.headers.get('content-type')?.includes('text')) {
                         throw new Error('Invalid file format. Expected CSV file.');
                     }
-                    
+
                     return response.text();
                 })
                 .then(csvData => {
                     this.showLoadingState('Processing questions...');
-                    
+
                     // Validate CSV data
                     if (!csvData || csvData.trim().length === 0) {
                         throw new Error('CSV file is empty or corrupted');
                     }
-                    
+
                     const questions = this.parseCSVDirectly(csvData);
-                    
+
                     if (questions.length === 0) {
                         throw new Error('No valid questions found in CSV file');
                     }
-                    
+
                     // Validate question data quality
                     const validation = this.validateQuestionsData(questions);
                     if (validation.criticalErrors > 0) {
                         throw new Error(`${validation.criticalErrors} questions have critical errors. Data integrity compromised.`);
                     }
-                    
+
                     // Load questions with error handling
                     const loadSuccess = QuizData.loadQuestions(questions);
                     if (!loadSuccess) {
                         throw new Error('Failed to process question data');
                     }
-                    
+
                     this.questionsLoaded = true;
-                    
+
                     // Show warnings for non-critical issues
                     if (validation.warnings > 0) {
                         this.showMessage(`Loaded ${questions.length} questions (${validation.warnings} minor issues detected)`, 'warning');
                     } else {
                         console.log(`✅ Loaded ${questions.length} questions successfully`);
                     }
-                    
+
                     Utils.performance.end('loadCSV');
                     resolve(questions);
                 })
                 .catch(error => {
                     clearTimeout(timeoutId);
-                    
+
                     if (error.name === 'AbortError') {
                         Utils.handleError(new Error('Request timeout'), 'PhysicsQuizApp.loadQuestions');
                         // Try fallback data for timeout as well
@@ -203,157 +203,173 @@ const PhysicsQuizApp = {
     },
 
     // Validate questions data for quality and integrity
-    validateQuestionsData: function(questions) {
+    validateQuestionsData: function (questions) {
         let criticalErrors = 0;
         let warnings = 0;
         const validTypes = ['tf', 'mc', 'fill', 'matching'];
-        
+
         questions.forEach((question, index) => {
             // Critical validations - these prevent the app from working
             if (!question.question || question.question.trim().length === 0) {
                 console.error(`Line ${index + 1}: Missing question text`);
                 criticalErrors++;
             }
-            
+
             if (!question.answer || question.answer.toString().trim().length === 0) {
                 console.error(`Line ${index + 1}: Missing answer`);
                 criticalErrors++;
             }
-            
+
             if (!question.type || !validTypes.includes(question.type.toLowerCase())) {
                 console.error(`Line ${index + 1}: Invalid question type: ${question.type}`);
                 criticalErrors++;
             }
-            
+
             // Warning validations - these affect quality but don't break functionality
             if (!question.explanation || question.explanation.trim().length === 0) {
                 console.warn(`Line ${index + 1}: Missing explanation`);
                 warnings++;
             }
-            
+
             if (question.type === 'mc' && (!question.optionA || !question.optionB)) {
                 console.warn(`Line ${index + 1}: Multiple choice question missing options`);
                 warnings++;
             }
-            
+
             if (!question.topic || question.topic === 'undefined' || question.topic.trim().length === 0) {
                 console.warn(`Line ${index + 1}: Missing or invalid topic`);
                 warnings++;
             }
-            
+
             if (!question.difficulty || isNaN(parseInt(question.difficulty))) {
                 console.warn(`Line ${index + 1}: Invalid difficulty level`);
                 warnings++;
             }
         });
-        
+
         console.log(`Validation complete: ${criticalErrors} critical errors, ${warnings} warnings`);
         return { criticalErrors, warnings, total: questions.length };
     },
-    // Parse CSV data directly with enhanced error handling
-    parseCSVDirectly: function(csvData) {
-        Utils.performance.start('parseCSV');
-        
-        try {
-            const lines = csvData.split('\n').filter(line => line.trim());
-            if (lines.length < 2) {
-                throw new Error('CSV file must contain at least a header and one data row');
-            }
-            
-            // Parse header with validation
-            const headers = this.parseCSVLine(lines[0]);
-            if (headers.length === 0) {
-                throw new Error('CSV header is empty or malformed');
-            }
-            
-            const expectedHeaders = ['id', 'type', 'question', 'answer', 'topic'];
-            const missingHeaders = expectedHeaders.filter(h => !headers.includes(h));
-            if (missingHeaders.length > 0) {
-                console.warn('Missing expected headers:', missingHeaders);
-            }
-            
-            const questions = [];
-            let parseErrors = 0;
-            
-            // Parse data rows with error recovery
-            for (let i = 1; i < lines.length; i++) {
-                try {
-                    const values = this.parseCSVLine(lines[i]);
-                    
-                    if (values.length === 0) continue; // Skip empty lines
-                    
-                    if (values.length < headers.length) {
-                        console.warn(`Line ${i + 1}: Expected ${headers.length} columns, got ${values.length}`);
-                        parseErrors++;
-                        if (parseErrors > 10) {
-                            throw new Error('Too many parsing errors. CSV file may be corrupted.');
-                        }
-                        continue;
+    // Parse CSV text directly
+    parseCSVDirectly: function (csvText) {
+        const lines = [];
+        let currentLine = [];
+        let currentField = '';
+        let inQuotes = false;
+
+        // Normalize line endings
+        const text = csvText.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+
+        for (let i = 0; i < text.length; i++) {
+            const char = text[i];
+            const nextChar = text[i + 1];
+
+            if (inQuotes) {
+                if (char === '"') {
+                    if (nextChar === '"') {
+                        // Escaped quote
+                        currentField += '"';
+                        i++;
+                    } else {
+                        // End of quotes
+                        inQuotes = false;
                     }
-                    
-                    const question = {};
-                    headers.forEach((header, index) => {
-                        question[header] = values[index] ? values[index].trim() : '';
-                    });
-                    
-                    // Skip empty questions but don't count as errors
-                    if (!question.question || !question.answer) {
-                        continue;
+                } else {
+                    currentField += char;
+                }
+            } else {
+                if (char === '"') {
+                    inQuotes = true;
+                } else if (char === ',') {
+                    currentLine.push(currentField.trim());
+                    currentField = '';
+                } else if (char === '\n') {
+                    currentLine.push(currentField.trim());
+                    if (currentLine.some(field => field !== '')) {
+                        lines.push(currentLine);
                     }
-                    
-                    questions.push(question);
-                } catch (error) {
-                    parseErrors++;
-                    console.warn(`Error parsing line ${i + 1}:`, error.message);
-                    
-                    if (parseErrors > 10) {
-                        throw new Error('Too many parsing errors. CSV file may be corrupted.');
-                    }
+                    currentLine = [];
+                    currentField = '';
+                } else {
+                    currentField += char;
                 }
             }
-            
-            if (questions.length === 0) {
-                throw new Error('No valid questions could be parsed from CSV file');
-            }
-            
-            if (parseErrors > 0) {
-                console.log(`⚠️ CSV parsing completed with ${parseErrors} errors`);
-            }
-            
-            Utils.performance.end('parseCSV');
-            return questions;
-        } catch (error) {
-            Utils.performance.end('parseCSV');
-            Utils.handleError(error, 'parseCSVDirectly');
-            throw error;
         }
+
+        // Handle last field/line
+        if (currentField || currentLine.length > 0) {
+            currentLine.push(currentField.trim());
+            if (currentLine.some(field => field !== '')) {
+                lines.push(currentLine);
+            }
+        }
+
+        if (lines.length < 2) {
+            Utils.performance.end('parseCSV');
+            return []; // Need at least header and one row
+        }
+
+        const headers = lines[0].map(h => h.toLowerCase().trim());
+        const result = [];
+
+        for (let i = 1; i < lines.length; i++) {
+            const row = lines[i];
+            // Allow for some flexibility in row length, but warn if significantly off
+            if (row.length < headers.length - 2) {
+                console.warn(`Skipping malformed CSV line ${i + 1}: Not enough fields`);
+                continue;
+            }
+
+            const obj = {};
+            headers.forEach((header, index) => {
+                if (index < row.length) {
+                    obj[header] = row[index];
+                }
+            });
+            result.push(obj);
+        }
+
+        Utils.performance.end('parseCSV');
+        return result;
     },
 
-    // Parse a single CSV line (handles quoted fields)
-    parseCSVLine: function(line) {
+    // Helper not strictly needed with new parser but kept for compatibility if called elsewhere
+    parseCSVLine: function (text) {
+        // This is a simplified version of the logic above for a single line
+        // But since we parse the whole text at once now, this might be unused
+        // We'll keep a basic implementation just in case
         const result = [];
         let current = '';
         let inQuotes = false;
-        
-        for (let i = 0; i < line.length; i++) {
-            const char = line[i];
-            
-            if (char === '"') {
-                inQuotes = !inQuotes;
-            } else if (char === ',' && !inQuotes) {
-                result.push(current.trim());
-                current = '';
+
+        for (let i = 0; i < text.length; i++) {
+            const char = text[i];
+            if (inQuotes) {
+                if (char === '"' && text[i + 1] === '"') {
+                    current += '"';
+                    i++;
+                } else if (char === '"') {
+                    inQuotes = false;
+                } else {
+                    current += char;
+                }
             } else {
-                current += char;
+                if (char === '"') {
+                    inQuotes = true;
+                } else if (char === ',') {
+                    result.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
             }
         }
-        
         result.push(current.trim());
         return result;
     },
 
     // Setup event listeners
-    setupEventListeners: function() {
+    setupEventListeners: function () {
         // Course selection buttons
         document.querySelectorAll('.course-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -393,25 +409,25 @@ const PhysicsQuizApp = {
         // Navigation buttons
         const nextBtn = document.getElementById('next-question');
         const prevBtn = document.getElementById('prev-question');
-        
+
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
                 this.nextQuestion();
             });
         }
-        
+
         if (prevBtn) {
             prevBtn.addEventListener('click', () => {
                 this.previousQuestion();
             });
 
-        // Reset quiz button
-        const resetBtn = document.getElementById('reset-quiz');
-        if (resetBtn) {
-            resetBtn.addEventListener('click', () => {
-                this.resetQuiz();
-            });
-        }
+            // Reset quiz button
+            const resetBtn = document.getElementById('reset-quiz');
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                    this.resetQuiz();
+                });
+            }
         }
 
         // Settings
@@ -425,7 +441,7 @@ const PhysicsQuizApp = {
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
             if (e.ctrlKey || e.metaKey) return; // Skip if modifier keys are pressed
-            
+
             switch (e.key) {
                 case 'ArrowRight':
                     e.preventDefault();
@@ -446,7 +462,7 @@ const PhysicsQuizApp = {
     },
 
     // Initialize fact sheet integration
-    initializeFactSheetIntegration: function() {
+    initializeFactSheetIntegration: function () {
         if (typeof FactSheetIntegration !== 'undefined') {
             FactSheetIntegration.init().then(success => {
                 if (success) {
@@ -462,9 +478,9 @@ const PhysicsQuizApp = {
 
     // Initialize Phase 7 modules
     // Initialize Phase 7 modules with comprehensive dependency handling
-    initializePhase7Modules: function() {
+    initializePhase7Modules: function () {
         console.log('Initializing Phase 7 modules...');
-        
+
         const modules = [
             {
                 name: 'AchievementSystem',
@@ -473,14 +489,14 @@ const PhysicsQuizApp = {
                 global: 'AchievementSystem'
             },
             {
-                name: 'MobileOptimization', 
+                name: 'MobileOptimization',
                 displayName: 'Mobile Optimization',
                 required: false,
                 global: 'MobileOptimization'
             },
             {
                 name: 'FactSheetLinks',
-                displayName: 'Fact Sheet Links', 
+                displayName: 'Fact Sheet Links',
                 required: false,
                 global: 'FactSheetLinks'
             },
@@ -521,10 +537,10 @@ const PhysicsQuizApp = {
                 global: 'RapidFireMode'
             }
         ];
-        
+
         let initializedCount = 0;
         let failedCount = 0;
-        
+
         modules.forEach(module => {
             try {
                 // Check if module is available in global scope
@@ -542,16 +558,16 @@ const PhysicsQuizApp = {
             } catch (error) {
                 console.warn(`❌ ${module.displayName} failed to initialize:`, error);
                 failedCount++;
-                
+
                 // Continue initialization even if one module fails
                 if (module.required) {
                     console.error(`Critical module ${module.displayName} failed - some features may not work`);
                 }
             }
         });
-        
+
         console.log(`Phase 7 module initialization complete: ${initializedCount} initialized, ${failedCount} failed`);
-        
+
         // Return initialization status
         return {
             success: failedCount === 0,
@@ -562,29 +578,29 @@ const PhysicsQuizApp = {
     },
 
     // Initialize UI
-    initializeUI: function() {
+    initializeUI: function () {
         this.updateQuestionCounter();
         this.updateProgressBar();
-        
+
         // Initialize QuizUI if available
         if (typeof QuizUI !== 'undefined') {
             QuizUI.init();
         }
-        
+
         // Load user settings
         const settings = QuizStorage.getSettings();
         this.applySavedSettings(settings);
     },
 
     // Apply saved user settings
-    applySavedSettings: function(settings) {
+    applySavedSettings: function (settings) {
         // Set mode
         const modeRadio = document.querySelector(`input[name="mode"][value="${settings.mode}"]`);
         if (modeRadio) {
             modeRadio.checked = true;
             this.switchMode(settings.mode);
         }
-        
+
         // Apply theme
         if (settings.theme && typeof window.setTheme === 'function') {
             window.setTheme(settings.theme);
@@ -592,43 +608,43 @@ const PhysicsQuizApp = {
     },
 
     // Switch between courses
-    switchCourse: function(course) {
+    switchCourse: function (course) {
         console.log(`Switching to course: ${course}`);
-        
+
         // Update active course button
         document.querySelectorAll('.course-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.course === course);
         });
-        
+
         // Update settings
         QuizStorage.updateSetting('course', course);
-        
+
         // Update filters
         QuizData.setFilters({ course: course });
-        
+
         // Reset quiz
         this.resetQuiz();
     },
 
     // Switch quiz modes
-    switchMode: function(mode) {
+    switchMode: function (mode) {
         console.log(`Switching to mode: ${mode}`);
         QuizStorage.updateSetting('mode', mode);
-        
+
         // Update UI based on mode
         const explanationElements = document.querySelectorAll('.explanation');
         const shouldShowExplanations = mode === 'learning';
-        
+
         explanationElements.forEach(el => {
             el.style.display = shouldShowExplanations ? 'block' : 'none';
         });
     },
 
     // Get current form settings
-    getCurrentFormSettings: function() {
+    getCurrentFormSettings: function () {
         const activeMode = document.querySelector('.mode-btn.active');
         const activeSubject = document.querySelector('.subject-btn.active');
-        
+
         return {
             mode: activeMode ? activeMode.dataset.mode : 'learning',
             subject: activeSubject ? activeSubject.dataset.subject : 'all'
@@ -636,20 +652,20 @@ const PhysicsQuizApp = {
     },
 
     // Start the quiz
-    startQuiz: function() {
+    startQuiz: function () {
         console.log('Starting quiz...');
-        
+
         // Get current settings from form and save them
         const formSettings = this.getCurrentFormSettings();
         QuizStorage.updateSetting('mode', formSettings.mode);
         QuizStorage.updateSetting('subject', formSettings.subject);
-        
+
         // Apply subject filter to question data
         QuizData.setFilters({ subject: formSettings.subject });
-        
+
         const settings = QuizStorage.getSettings();
         let questionsToUse;
-        
+
         if (settings.mode === 'review') {
             questionsToUse = QuizData.getReviewQuestions();
             if (questionsToUse.length === 0) {
@@ -662,60 +678,60 @@ const PhysicsQuizApp = {
                 QuizData.shuffle(); // Shuffle for test mode
             }
         }
-        
+
         if (questionsToUse.length === 0) {
             this.showMessage('No questions available with current filters.', 'warning');
             return;
         }
-        
+
         // Reset progress
         QuizStorage.resetProgress();
         this.currentQuestionIndex = 0;
-        
+
         // Show first question
         this.showQuestion(0);
-        
+
         // Update UI
         this.hideStartScreen();
         this.showQuizScreen();
     },
 
     // Show a specific question
-    showQuestion: function(index) {
+    showQuestion: function (index) {
         const questions = this.getActiveQuestions();
-        
+
         if (questions.length === 0) {
             console.error('No questions available for current filters');
-            this.showCriticalError('No questions available', 
-                'No questions match the current filters. Please try a different subject or refresh the page.', 
+            this.showCriticalError('No questions available',
+                'No questions match the current filters. Please try a different subject or refresh the page.',
                 () => window.location.reload());
             return;
         }
-        
+
         if (index < 0 || index >= questions.length) {
             console.error(`Invalid question index: ${index} (total: ${questions.length})`);
             return;
         }
-        
+
         this.currentQuestionIndex = index;
         this.currentQuestion = questions[index];
-        
+
         // Use QuizUI to display question if available
         if (typeof QuizUI !== 'undefined') {
             QuizUI.displayQuestion(this.currentQuestion);
         } else {
             this.displayQuestionFallback(this.currentQuestion);
         }
-        
+
         this.updateQuestionCounter();
         this.updateProgressBar();
     },
 
     // Fallback question display (basic HTML)
-    displayQuestionFallback: function(question) {
+    displayQuestionFallback: function (question) {
         const container = document.getElementById('question-container');
         if (!container) return;
-        
+
         let html = `
             <div class="question-header">
                 <span class="question-type">${QuizData.QUESTION_TYPES[question.type]?.name || question.type}</span>
@@ -724,7 +740,7 @@ const PhysicsQuizApp = {
             </div>
             <div class="question-text">${question.question}</div>
         `;
-        
+
         if (question.type === 'mc' && question.options.length > 0) {
             html += '<div class="options">';
             question.options.forEach((option, index) => {
@@ -747,23 +763,23 @@ const PhysicsQuizApp = {
                 </div>
             `;
         }
-        
+
         container.innerHTML = html;
     },
 
     // Get currently active questions based on mode
-    getActiveQuestions: function() {
+    getActiveQuestions: function () {
         const settings = QuizStorage.getSettings();
-        
+
         if (settings.mode === 'review') {
             return QuizData.getReviewQuestions();
         }
-        
+
         return QuizData.filteredQuestions;
     },
 
     // Navigate to next question
-    nextQuestion: function() {
+    nextQuestion: function () {
         const questions = this.getActiveQuestions();
         if (this.currentQuestionIndex < questions.length - 1) {
             this.showQuestion(this.currentQuestionIndex + 1);
@@ -771,14 +787,14 @@ const PhysicsQuizApp = {
     },
 
     // Navigate to previous question
-    previousQuestion: function() {
+    previousQuestion: function () {
         if (this.currentQuestionIndex > 0) {
             this.showQuestion(this.currentQuestionIndex - 1);
         }
     },
 
     // Reset quiz to beginning
-    resetQuiz: function() {
+    resetQuiz: function () {
         this.currentQuestionIndex = 0;
         this.currentQuestion = null;
         QuizStorage.resetProgress();
@@ -787,7 +803,7 @@ const PhysicsQuizApp = {
     },
 
     // Update question counter display
-    updateQuestionCounter: function() {
+    updateQuestionCounter: function () {
         const counter = document.getElementById('question-counter');
         if (counter) {
             const questions = this.getActiveQuestions();
@@ -796,7 +812,7 @@ const PhysicsQuizApp = {
     },
 
     // Update progress bar
-    updateProgressBar: function() {
+    updateProgressBar: function () {
         const progressBar = document.getElementById('progress-bar');
         if (progressBar) {
             const questions = this.getActiveQuestions();
@@ -806,43 +822,43 @@ const PhysicsQuizApp = {
     },
 
     // UI state management
-    showStartScreen: function() {
+    showStartScreen: function () {
         const startScreen = document.getElementById('start-screen');
         if (startScreen) startScreen.style.display = 'block';
     },
 
-    hideStartScreen: function() {
+    hideStartScreen: function () {
         const startScreen = document.getElementById('start-screen');
         if (startScreen) startScreen.style.display = 'none';
     },
 
-    showQuizScreen: function() {
+    showQuizScreen: function () {
         const quizScreen = document.getElementById('quiz-screen');
         if (quizScreen) quizScreen.style.display = 'block';
     },
 
-    hideQuizScreen: function() {
+    hideQuizScreen: function () {
         const quizScreen = document.getElementById('quiz-screen');
         if (quizScreen) quizScreen.style.display = 'none';
     },
 
     // Show settings modal
-    showSettings: function() {
+    showSettings: function () {
         console.log('Opening settings...');
         // Implementation for settings modal
     },
 
     // Display messages to user
-    showMessage: function(message, type = 'info') {
+    showMessage: function (message, type = 'info') {
         console.log(`${type.toUpperCase()}: ${message}`);
-        
+
         // You can implement a toast notification system here
         const messageEl = document.getElementById('message-display');
         if (messageEl) {
             messageEl.textContent = message;
             messageEl.className = `message ${type}`;
             messageEl.style.display = 'block';
-            
+
             setTimeout(() => {
                 messageEl.style.display = 'none';
             }, 3000);
@@ -850,41 +866,41 @@ const PhysicsQuizApp = {
     },
 
     // Show error messages
-    showError: function(message) {
+    showError: function (message) {
         this.showMessage(message, 'error');
     },
 
     // Show loading state with message
-    showLoadingState: function(message = 'Loading...') {
+    showLoadingState: function (message = 'Loading...') {
         const loadingEl = document.getElementById('loading-state') || this.createLoadingElement();
         const messageEl = loadingEl.querySelector('.loading-message');
-        
+
         if (messageEl) {
             messageEl.textContent = message;
         }
-        
+
         loadingEl.style.display = 'flex';
-        
+
         // Disable interactions
         document.body.style.pointerEvents = 'none';
         loadingEl.style.pointerEvents = 'auto';
     },
 
     // Hide loading state
-    hideLoadingState: function() {
+    hideLoadingState: function () {
         const loadingEl = document.getElementById('loading-state');
         if (loadingEl) {
             loadingEl.style.display = 'none';
         }
-        
+
         // Re-enable interactions
         document.body.style.pointerEvents = 'auto';
     },
 
     // Create loading element if it doesn't exist
-    createLoadingElement: function() {
+    createLoadingElement: function () {
         let loadingEl = document.getElementById('loading-state');
-        
+
         if (!loadingEl) {
             loadingEl = document.createElement('div');
             loadingEl.id = 'loading-state';
@@ -897,32 +913,32 @@ const PhysicsQuizApp = {
             `;
             document.body.appendChild(loadingEl);
         }
-        
+
         return loadingEl;
     },
 
     // Show critical error with recovery options
-    showCriticalError: function(title, message, recoveryAction = null) {
+    showCriticalError: function (title, message, recoveryAction = null) {
         const errorModal = this.createErrorModal(title, message, recoveryAction);
         document.body.appendChild(errorModal);
         errorModal.style.display = 'flex';
-        
+
         // Disable other interactions
         document.body.style.pointerEvents = 'none';
         errorModal.style.pointerEvents = 'auto';
     },
 
     // Create error modal
-    createErrorModal: function(title, message, recoveryAction) {
+    createErrorModal: function (title, message, recoveryAction) {
         const modal = document.createElement('div');
         modal.className = 'error-modal-overlay';
-        
+
         const recoveryButton = recoveryAction ? `
             <button class="btn btn-primary" onclick="this.parentElement.parentElement.parentElement.remove(); document.body.style.pointerEvents = 'auto';">
                 Try Again
             </button>
         ` : '';
-        
+
         modal.innerHTML = `
             <div class="error-modal">
                 <div class="error-modal-header">
@@ -940,7 +956,7 @@ const PhysicsQuizApp = {
                 </div>
             </div>
         `;
-        
+
         if (recoveryAction) {
             modal.querySelector('.btn-primary').onclick = () => {
                 modal.remove();
@@ -948,28 +964,28 @@ const PhysicsQuizApp = {
                 recoveryAction();
             };
         }
-        
+
         return modal;
     },
 
     // Enhanced input validation
-    validateUserInput: function(input, type = 'text') {
+    validateUserInput: function (input, type = 'text') {
         if (input === null || input === undefined) return { valid: false, error: 'Input is required' };
-        
+
         const trimmed = String(input).trim();
-        
+
         switch (type) {
             case 'answer':
                 if (trimmed.length === 0) return { valid: false, error: 'Answer cannot be empty' };
                 if (trimmed.length > 500) return { valid: false, error: 'Answer is too long (max 500 characters)' };
                 return { valid: true, value: trimmed };
-                
+
             case 'number':
                 const num = parseFloat(trimmed);
                 if (isNaN(num)) return { valid: false, error: 'Must be a valid number' };
                 if (!isFinite(num)) return { valid: false, error: 'Number must be finite' };
                 return { valid: true, value: num };
-                
+
             case 'text':
             default:
                 if (trimmed.length === 0) return { valid: false, error: 'Input cannot be empty' };
@@ -978,14 +994,14 @@ const PhysicsQuizApp = {
     },
 
     // Safe DOM manipulation with error handling
-    safeElementOperation: function(elementId, operation, fallback = null) {
+    safeElementOperation: function (elementId, operation, fallback = null) {
         try {
             const element = document.getElementById(elementId);
             if (!element) {
                 console.warn(`Element with ID '${elementId}' not found`);
                 return fallback;
             }
-            
+
             return operation(element);
         } catch (error) {
             Utils.handleError(error, `safeElementOperation(${elementId})`);
@@ -994,7 +1010,7 @@ const PhysicsQuizApp = {
     },
 
     // Get application statistics
-    getAppStats: function() {
+    getAppStats: function () {
         return {
             questionsLoaded: this.questionsLoaded,
             totalQuestions: QuizData.questions.length,

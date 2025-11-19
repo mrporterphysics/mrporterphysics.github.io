@@ -15,7 +15,7 @@ const QuizUI = {
     isInitialized: false,
 
     // Initialize UI components
-    init: function() {
+    init: function () {
         console.log('Initializing Quiz UI...');
         this.cacheElements();
         this.setupMathRendering();
@@ -24,10 +24,10 @@ const QuizUI = {
     },
 
     // Get readable name for question type
-    getQuestionTypeName: function(type) {
+    getQuestionTypeName: function (type) {
         const typeNames = {
             'tf': 'True/False',
-            'mc': 'Multiple Choice', 
+            'mc': 'Multiple Choice',
             'fill': 'Fill in the Blank',
             'matching': 'Matching'
         };
@@ -35,7 +35,7 @@ const QuizUI = {
     },
 
     // Cache DOM elements for performance
-    cacheElements: function() {
+    cacheElements: function () {
         this.elements.displays = {
             question: document.getElementById('question-text'),
             questionType: document.getElementById('question-type'),
@@ -62,14 +62,14 @@ const QuizUI = {
     // Display a question in the UI
 
     // Validate required DOM elements exist
-    validateRequiredElements: function() {
+    validateRequiredElements: function () {
         const requiredElements = [
             'question-text', 'answer-options', 'question-counter',
             'submit-answer', 'feedback', 'explanation'
         ];
-        
+
         const missingElements = requiredElements.filter(id => !document.getElementById(id));
-        
+
         if (missingElements.length > 0) {
             console.error('Missing critical DOM elements:', missingElements);
             this.showError('Critical UI elements are missing. Please refresh the page.');
@@ -79,17 +79,17 @@ const QuizUI = {
     },
 
     // Show error message to user
-    showError: function(message) {
+    showError: function (message) {
         const errorContainer = document.querySelector('.app-container') || document.body;
         const errorDiv = document.createElement('div');
         errorDiv.className = 'error-message';
         errorDiv.style.cssText = 'background: #ff4444; color: white; padding: 15px; margin: 10px; border-radius: 5px; text-align: center;';
         errorDiv.textContent = message;
         errorContainer.insertBefore(errorDiv, errorContainer.firstChild);
-        
+
         setTimeout(() => errorDiv.remove(), 5000);
     },
-    displayQuestion: function(question) {
+    displayQuestion: function (question) {
         // Validate DOM elements first
         if (!this.validateRequiredElements()) {
             return false;
@@ -118,12 +118,15 @@ const QuizUI = {
         // Add fact sheet integration if available
         this.addFactSheetIntegration(question);
 
+        // Add report issue button
+        this.addReportButton(question);
+
         // Update UI state
         this.updateUIState(question);
 
         // Render any math content
         this.renderMathContent();
-        
+
         // Dispatch event for fact sheet links integration
         document.dispatchEvent(new CustomEvent('questionDisplayed', {
             detail: { question: question }
@@ -131,7 +134,7 @@ const QuizUI = {
     },
 
     // Clear previous question display
-    clearQuestionDisplay: function() {
+    clearQuestionDisplay: function () {
         if (this.elements.displays.options) {
             this.elements.displays.options.innerHTML = '';
         }
@@ -145,7 +148,7 @@ const QuizUI = {
     },
 
     // Display question header information
-    displayQuestionHeader: function(question) {
+    displayQuestionHeader: function (question) {
         // Question type
         if (this.elements.displays.questionType) {
             const typeInfo = QuizData.QUESTION_TYPES[question.type];
@@ -160,7 +163,7 @@ const QuizUI = {
         if (this.elements.displays.questionTopic) {
             this.elements.displays.questionTopic.textContent = topicName;
         }
-        
+
         // Update breadcrumbs
         if (this.elements.displays.breadcrumbTopic) {
             this.elements.displays.breadcrumbTopic.textContent = topicName;
@@ -176,25 +179,30 @@ const QuizUI = {
                 <span class="stars">${stars}</span>
                 <span class="difficulty-text">Level ${question.difficulty}</span>
             `;
-            
+
             // Add difficulty class for color coding
             this.elements.displays.questionDifficulty.className = `question-difficulty difficulty-${question.difficulty}`;
         }
+    },
 
 
     // Display question text
-    displayQuestionText: function(question) {
+    displayQuestionText: function (question) {
         const questionElement = this.elements.displays.question;
-        
+
         if (questionElement) {
-            questionElement.innerHTML = question.question;
+            if (Utils.renderMarkdown) {
+                questionElement.innerHTML = Utils.renderMarkdown(question.question);
+            } else {
+                questionElement.innerHTML = question.question;
+            }
         } else {
             console.error('Question text element not found');
         }
     },
 
     // Display answer interface based on question type
-    displayAnswerInterface: function(question) {
+    displayAnswerInterface: function (question) {
         const container = this.elements.displays.options;
         if (!container) return;
 
@@ -222,7 +230,7 @@ const QuizUI = {
     },
 
     // Create multiple choice interface
-    createMultipleChoiceInterface: function(question) {
+    createMultipleChoiceInterface: function (question) {
         if (!question.options || question.options.length === 0) {
             return '<p class="error">No options available for this question</p>';
         }
@@ -244,7 +252,7 @@ const QuizUI = {
     },
 
     // Create true/false interface
-    createTrueFalseInterface: function(question) {
+    createTrueFalseInterface: function (question) {
         return `
             <div class="tf-options">
                 <label class="option-label" data-value="true">
@@ -260,7 +268,7 @@ const QuizUI = {
     },
 
     // Create fill-in-the-blank interface
-    createFillInBlankInterface: function(question) {
+    createFillInBlankInterface: function (question) {
         return `
             <div class="fill-interface">
                 <input type="text" id="fill-answer" class="fill-input" 
@@ -274,7 +282,7 @@ const QuizUI = {
     },
 
     // Create matching interface (simplified version)
-    createMatchingInterface: function(question) {
+    createMatchingInterface: function (question) {
         // This is a simplified implementation
         // A full matching interface would require more complex logic
         return `
@@ -287,7 +295,7 @@ const QuizUI = {
     },
 
     // Add fact sheet integration if available
-    addFactSheetIntegration: function(question) {
+    addFactSheetIntegration: function (question) {
         const questionContainer = this.elements.displays.question?.parentElement;
         if (!questionContainer) return;
 
@@ -304,14 +312,48 @@ const QuizUI = {
                 const factSheetSection = document.createElement('div');
                 factSheetSection.className = 'fact-sheet-section';
                 factSheetSection.appendChild(factSheetButton);
-                
+
                 questionContainer.appendChild(factSheetSection);
             }
         }
     },
 
+    // Add report issue button
+    addReportButton: function (question) {
+        const container = document.querySelector('.question-header') || this.elements.displays.question?.parentElement;
+        if (!container) return;
+
+        // Remove existing button if any
+        const existingBtn = document.getElementById('report-issue-btn');
+        if (existingBtn) existingBtn.remove();
+
+        const reportBtn = document.createElement('button');
+        reportBtn.id = 'report-issue-btn';
+        reportBtn.className = 'report-btn';
+        reportBtn.innerHTML = '🚩 Report';
+        reportBtn.title = 'Report an issue with this question';
+        reportBtn.style.cssText = 'background:none; border:none; color:var(--tx-3, #888); cursor:pointer; font-size:0.8em; margin-left:10px; opacity:0.7; transition:opacity 0.2s;';
+
+        reportBtn.onmouseover = () => reportBtn.style.opacity = '1';
+        reportBtn.onmouseout = () => reportBtn.style.opacity = '0.7';
+
+        reportBtn.onclick = () => {
+            const subject = encodeURIComponent(`Issue with Question ${question.id}`);
+            const body = encodeURIComponent(`Question ID: ${question.id}\nType: ${question.type}\nTopic: ${question.topic}\n\nIssue description:\n`);
+            window.open(`https://github.com/mrporterphysics/mrporterphysics.github.io/issues/new?title=${subject}&body=${body}`, '_blank');
+        };
+
+        // Try to append to difficulty container for better layout
+        const difficultyEl = this.elements.displays.questionDifficulty;
+        if (difficultyEl && difficultyEl.parentNode) {
+            difficultyEl.parentNode.appendChild(reportBtn);
+        } else {
+            container.appendChild(reportBtn);
+        }
+    },
+
     // Setup answer handling
-    setupAnswerHandlers: function() {
+    setupAnswerHandlers: function () {
         // Submit answer button
         if (this.elements.controls.submitBtn) {
             this.elements.controls.submitBtn.onclick = () => {
@@ -346,7 +388,7 @@ const QuizUI = {
     },
 
     // Submit the current answer with comprehensive error handling
-    submitAnswer: function() {
+    submitAnswer: function () {
         try {
             if (!this.currentQuestion) {
                 console.error('No current question to submit answer for');
@@ -357,7 +399,7 @@ const QuizUI = {
             // Validate user input with enhanced validation
             const userAnswer = this.getUserAnswer();
             const validation = Utils.validateUserInput(userAnswer, 'answer');
-            
+
             if (!validation.isValid) {
                 this.showFeedback(`Input Error: ${validation.errors.join(', ')}`, 'warning');
                 return;
@@ -365,11 +407,11 @@ const QuizUI = {
 
             const cleanAnswer = validation.value;
             const isCorrect = this.checkAnswer(cleanAnswer, this.currentQuestion);
-            
+
             // Update storage with error handling
             try {
                 QuizStorage.updateProgress(this.currentQuestion.id, isCorrect);
-                
+
                 if (!isCorrect) {
                     QuizStorage.addMissedQuestion(this.currentQuestion.id);
                 }
@@ -411,7 +453,7 @@ const QuizUI = {
     },
 
     // Get user's answer from the UI
-    getUserAnswer: function() {
+    getUserAnswer: function () {
         const question = this.currentQuestion;
         if (!question) return null;
 
@@ -439,13 +481,13 @@ const QuizUI = {
     },
 
     // Check if answer is correct
-    checkAnswer: function(userAnswer, question) {
+    checkAnswer: function (userAnswer, question) {
         if (question.type === 'tf') {
             // Simplified and bulletproof True/False checking
             // Convert both to strings and compare directly
             const userStr = String(userAnswer).toLowerCase();
             const correctStr = String(question.answer).toLowerCase().trim();
-            
+
             console.log('TF Final Check:', {
                 userAnswer: userAnswer,
                 userStr: userStr,
@@ -453,7 +495,7 @@ const QuizUI = {
                 correctStr: correctStr,
                 match: userStr === correctStr
             });
-            
+
             // Direct string comparison - most reliable
             return userStr === correctStr;
         }
@@ -470,7 +512,7 @@ const QuizUI = {
     },
 
     // Show answer feedback
-    showAnswerFeedback: function(isCorrect, userAnswer, question) {
+    showAnswerFeedback: function (isCorrect, userAnswer, question) {
         const feedbackEl = this.elements.displays.feedback;
         if (!feedbackEl) return;
 
@@ -485,13 +527,13 @@ const QuizUI = {
             // Format True/False answers for display
             let displayUserAnswer = userAnswer;
             let displayCorrectAnswer = question.answer;
-            
+
             if (question.type === 'tf') {
                 displayUserAnswer = userAnswer === true ? 'True' : 'False';
                 const correctBool = String(question.answer).toLowerCase().trim() === 'true';
                 displayCorrectAnswer = correctBool ? 'True' : 'False';
             }
-            
+
             html += `
                 <div class="feedback-details">
                     <p><strong>Your answer:</strong> ${displayUserAnswer}</p>
@@ -511,21 +553,26 @@ const QuizUI = {
     },
 
     // Show explanation
-    showExplanation: function(explanationText) {
+    showExplanation: function (explanationText) {
         const explanationEl = this.elements.displays.explanation;
         if (!explanationEl || !explanationText) return;
+
+        const content = Utils.renderMarkdown ? Utils.renderMarkdown(explanationText) : explanationText;
 
         explanationEl.innerHTML = `
             <div class="explanation-content">
                 <h4>Explanation:</h4>
-                <p>${explanationText}</p>
+                <div class="markdown-content">${content}</div>
             </div>
         `;
         explanationEl.style.display = 'block';
+
+        // Re-run math rendering on the explanation
+        this.renderMathContent();
     },
 
     // Show general feedback message
-    showFeedback: function(message, type = 'info') {
+    showFeedback: function (message, type = 'info') {
         const feedbackEl = this.elements.displays.feedback;
         if (!feedbackEl) return;
 
@@ -542,21 +589,21 @@ const QuizUI = {
     },
 
     // Disable answer inputs after submission
-    disableAnswerInputs: function() {
+    disableAnswerInputs: function () {
         document.querySelectorAll('.option-input, .fill-input').forEach(input => {
             input.disabled = true;
         });
     },
 
     // Enable answer inputs
-    enableAnswerInputs: function() {
+    enableAnswerInputs: function () {
         document.querySelectorAll('.option-input, .fill-input').forEach(input => {
             input.disabled = false;
         });
     },
 
     // Show next button
-    showNextButton: function() {
+    showNextButton: function () {
         if (this.elements.controls.nextBtn) {
             this.elements.controls.nextBtn.style.display = 'inline-block';
         }
@@ -566,7 +613,7 @@ const QuizUI = {
     },
 
     // Show submit button
-    showSubmitButton: function() {
+    showSubmitButton: function () {
         if (this.elements.controls.submitBtn) {
             this.elements.controls.submitBtn.style.display = 'inline-block';
         }
@@ -576,7 +623,7 @@ const QuizUI = {
     },
 
     // Update UI state for new question
-    updateUIState: function(question) {
+    updateUIState: function (question) {
         this.enableAnswerInputs();
         this.showSubmitButton();
 
@@ -589,7 +636,7 @@ const QuizUI = {
     },
 
     // Toggle question bookmark
-    toggleBookmark: function() {
+    toggleBookmark: function () {
         if (!this.currentQuestion) return;
 
         QuizStorage.toggleBookmark(this.currentQuestion.id);
@@ -601,14 +648,14 @@ const QuizUI = {
 
     // Setup math rendering
     // Enhanced math rendering setup with availability checks
-    setupMathRendering: function() {
+    setupMathRendering: function () {
         console.log('Setting up math rendering...');
-        
+
         // Check for KaTeX availability
         if (typeof katex !== 'undefined' && katex.renderToString) {
             this.mathRenderingEnabled = true;
             console.log('✅ KaTeX is available - math rendering enabled');
-            
+
             // Test KaTeX functionality with a simple expression
             try {
                 katex.renderToString('x = 1', { displayMode: false });
@@ -622,28 +669,28 @@ const QuizUI = {
             console.log('⚠️ KaTeX not available - math will display as plain text');
             this.showMathFallbackWarning();
         }
-        
+
         // Set up retry mechanism for delayed KaTeX loading
         if (!this.mathRenderingEnabled) {
             this.setupMathRenderingRetry();
         }
     },
-    
+
     // Setup retry mechanism for KaTeX loading
-    setupMathRenderingRetry: function() {
+    setupMathRenderingRetry: function () {
         let retryCount = 0;
         const maxRetries = 3;
         const retryDelay = 1000; // 1 second
-        
+
         const retryInterval = setInterval(() => {
             retryCount++;
-            
+
             if (typeof katex !== 'undefined' && katex.renderToString) {
                 console.log('✅ KaTeX became available on retry', retryCount);
                 this.mathRenderingEnabled = true;
                 this.hideMathFallbackWarning();
                 clearInterval(retryInterval);
-                
+
                 // Re-render any existing math content
                 this.renderMathContent();
             } else if (retryCount >= maxRetries) {
@@ -652,18 +699,18 @@ const QuizUI = {
             }
         }, retryDelay);
     },
-    
+
     // Show warning when KaTeX is not available
-    showMathFallbackWarning: function() {
+    showMathFallbackWarning: function () {
         const warningDiv = document.createElement('div');
         warningDiv.id = 'math-fallback-warning';
         warningDiv.className = 'warning-message';
         warningDiv.style.cssText = 'background: #fff3cd; color: #856404; padding: 10px; margin: 5px; border-radius: 4px; border: 1px solid #ffeaa7; font-size: 0.9em; text-align: center;';
         warningDiv.innerHTML = '⚠️ Math rendering unavailable - formulas will display as plain text';
-        
+
         const container = document.querySelector('.app-container') || document.body;
         container.insertBefore(warningDiv, container.firstChild);
-        
+
         // Auto-hide after 5 seconds
         setTimeout(() => {
             if (document.getElementById('math-fallback-warning')) {
@@ -671,9 +718,9 @@ const QuizUI = {
             }
         }, 5000);
     },
-    
+
     // Hide the math fallback warning
-    hideMathFallbackWarning: function() {
+    hideMathFallbackWarning: function () {
         const warning = document.getElementById('math-fallback-warning');
         if (warning) {
             warning.remove();
@@ -681,7 +728,7 @@ const QuizUI = {
     },
 
     // Enhanced math content rendering with error handling
-    renderMathContent: function() {
+    renderMathContent: function () {
         if (!this.mathRenderingEnabled || typeof katex === 'undefined') {
             return;
         }
@@ -690,38 +737,38 @@ const QuizUI = {
             // Render math in question text, options, and explanations
             document.querySelectorAll('.question-text, .option-text, .explanation-content').forEach(element => {
                 if (!element.innerHTML) return;
-                
+
                 let html = element.innerHTML;
                 let mathFound = false;
-                
+
                 // Replace display math ($$ ... $$) first (to avoid conflicts)
                 html = html.replace(/\$\$([^$]+)\$\$/g, (match, math) => {
                     mathFound = true;
                     try {
-                        return katex.renderToString(math.trim(), { 
+                        return katex.renderToString(math.trim(), {
                             displayMode: true,
-                            throwOnError: false 
+                            throwOnError: false
                         });
                     } catch (error) {
                         console.warn('KaTeX display math error:', error.message, 'for:', math);
                         return `<span class="math-error" title="Math rendering error">${match}</span>`;
                     }
                 });
-                
+
                 // Replace inline math ($ ... $)
                 html = html.replace(/\$([^$]+)\$/g, (match, math) => {
                     mathFound = true;
                     try {
-                        return katex.renderToString(math.trim(), { 
+                        return katex.renderToString(math.trim(), {
                             displayMode: false,
-                            throwOnError: false 
+                            throwOnError: false
                         });
                     } catch (error) {
                         console.warn('KaTeX inline math error:', error.message, 'for:', math);
                         return `<span class="math-error" title="Math rendering error">${match}</span>`;
                     }
                 });
-                
+
                 if (mathFound) {
                     element.innerHTML = html;
                 }
@@ -730,9 +777,9 @@ const QuizUI = {
             console.error('Math rendering failed:', error);
             this.mathRenderingEnabled = false;
         }
-};
+    };
 
-// Export for module use
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = QuizUI;
+    // Export for module use
+    if(typeof module !== 'undefined' && module.exports) {
+        module.exports = QuizUI;
 }
