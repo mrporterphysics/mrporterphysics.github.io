@@ -21,7 +21,7 @@ class:  twilight
 
 # 2025.11.19 **Earth Science** Do Now
 
-
+Keep working on radio active dating
 
 ---
 
