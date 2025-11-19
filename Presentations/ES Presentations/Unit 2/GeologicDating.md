@@ -15,7 +15,128 @@ class: twilight
 
 ---
 
-# Part 1: Relative Dating
+
+<!--
+TODO: Add specific examples or practice questions from the "Relative Dating" PDF.
+Since the text extraction was limited, please review the original PDF and add any specific diagrams or questions here.
+-->
+
+# Part 2: Absolute Dating
+
+---
+
+## Absolute Dating Basics
+
+- Absolute dating determines the numerical age of rocks and fossils.
+- Common methods: radiometric dating (e.g., radiocarbon, uranium–lead, potassium–argon).
+- Used to build a timeline of Earth’s history.
+
+---
+
+## Radioactive Decay Basics
+
+- Unstable **parent** isotopes decay into stable **daughter** isotopes.
+- Decay follows an exponential law characterized by **half-life**.
+- **Half-life**: time for half of the parent atoms to decay.
+
+![bg right:40% fit vertical](image.png)
+
+
+---
+
+## Visualizing Half-Life
+
+- As time passes, the amount of parent isotope decreases by half for each half-life.
+- The curve never truly reaches zero.
+
+![bg fit right](image-2.png)
+
+
+
+---
+
+## Counting Half-Lives
+
+- **0 Half-Lives**: 100% Parent
+- **1 Half-Life**: 50% Parent, 50% Daughter
+- **2 Half-Lives**: 25% Parent, 75% Daughter
+- **3 Half-Lives**: 12.5% Parent, 87.5% Daughter
+
+
+
+![bg right:40% fit](assets/absolute_dating_counting_half_lives.png)
+
+---
+
+## Radiocarbon (Carbon-14) Dating
+
+- Carbon-14 is produced in the atmosphere and incorporated into living organisms.
+- After death, C-14 decays; no new C-14 is added.
+- Effective dating range: up to ~50,000 years.
+- Measured via ratio of C-14 to stable C-12/C-13.
+
+---
+
+## Example
+
+### Carbon has a half life of $5.7 \times 10^3$ years
+
+If Carbon-14 goes through 2 half lives...
+
+1) How many years will go by?
+    * 5,700 x 2 = 11,400 years
+2) What % of the original mass will remain?
+    * 25%
+3) What % of daughter product will you have?
+    * 75%
+4) What is the daughter product?
+    * Nitrogen-14
+
+---
+
+<iframe width="1100" height="600" src="https://www.youtube.com/embed/phZeE7Att_s?si=WPMtXoAPdP8jUNG_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+![bg fit](image-3.png)
+
+---
+
+## Assumptions and Calibration
+
+- Closed system: no gain/loss of C after death.
+- Known initial C-14/C-12 ratio (requires standards).
+- Calibration with tree-ring data and other archives accounts for past atmospheric variation.
+
+---
+
+## Other Radiometric Methods
+
+- **Uranium–Lead**: zircon crystals; ages from millions to billions of years.
+- **Potassium–Argon / Argon–Argon**: volcanic rocks; >100,000 years.
+- **Rubidium–Strontium, Samarium–Neodymium**: metamorphic/igneous contexts.
+
+---
+
+## Applications
+
+- **Archeology**: dating artifacts and human remains.
+- **Paleontology**: constraining fossil ages via volcanic layers.
+- **Quaternary geology**: glacial/interglacial timelines.
+- **Climate records**: lake sediments, peat, cave deposits.
+
+---
+
+## Limits and Sources of Error
+
+- Contamination (modern carbon, conservation materials).
+- Reservoir effects (marine vs terrestrial carbon).
+- Measurement precision, sample preservation.
+- Beyond method range → large uncertainty.
+
+---
+
+# Part 2: Relative Dating
 
 ---
 
@@ -99,127 +220,7 @@ class: twilight
 
 ---
 
-<!--
-TODO: Add specific examples or practice questions from the "Relative Dating" PDF.
-Since the text extraction was limited, please review the original PDF and add any specific diagrams or questions here.
--->
 
-# Part 2: Absolute Dating
-
----
-
-## Absolute Dating Basics
-
-- Absolute dating determines the numerical age of rocks and fossils.
-- Common methods: radiometric dating (e.g., radiocarbon, uranium–lead, potassium–argon).
-- Used to build a timeline of Earth’s history.
-
----
-
-## Radioactive Decay Basics
-
-- Unstable **parent** isotopes decay into stable **daughter** isotopes.
-- Decay follows an exponential law characterized by **half-life**.
-- **Half-life**: time for half of the parent atoms to decay.
-
-![bg right:40% fit](assets/absolute_dating_decay_process.png)
-
----
-
-## Visualizing Half-Life
-
-- As time passes, the amount of parent isotope decreases by half for each half-life.
-- The curve never truly reaches zero.
-
-![bg right:40% fit](assets/absolute_dating_half_life_graph.png)
-
----
-
-## Counting Half-Lives
-
-- **0 Half-Lives**: 100% Parent
-- **1 Half-Life**: 50% Parent, 50% Daughter
-- **2 Half-Lives**: 25% Parent, 75% Daughter
-- **3 Half-Lives**: 12.5% Parent, 87.5% Daughter
-
-![bg right:40% fit](assets/absolute_dating_counting_half_lives.png)
-
----
-
-## Radiocarbon (Carbon-14) Dating
-
-- Carbon-14 is produced in the atmosphere and incorporated into living organisms.
-- After death, C-14 decays; no new C-14 is added.
-- Effective dating range: up to ~50,000 years.
-- Measured via ratio of C-14 to stable C-12/C-13.
-
----
-
-## Assumptions and Calibration
-
-- Closed system: no gain/loss of C after death.
-- Known initial C-14/C-12 ratio (requires standards).
-- Calibration with tree-ring data and other archives accounts for past atmospheric variation.
-
----
-
-## Other Radiometric Methods
-
-- **Uranium–Lead**: zircon crystals; ages from millions to billions of years.
-- **Potassium–Argon / Argon–Argon**: volcanic rocks; >100,000 years.
-- **Rubidium–Strontium, Samarium–Neodymium**: metamorphic/igneous contexts.
-
----
-
-## Applications
-
-- **Archeology**: dating artifacts and human remains.
-- **Paleontology**: constraining fossil ages via volcanic layers.
-- **Quaternary geology**: glacial/interglacial timelines.
-- **Climate records**: lake sediments, peat, cave deposits.
-
----
-
-## Limits and Sources of Error
-
-- Contamination (modern carbon, conservation materials).
-- Reservoir effects (marine vs terrestrial carbon).
-- Measurement precision, sample preservation.
-- Beyond method range → large uncertainty.
-
----
-
-## Case Study: Interpreting a Radiocarbon Result
-
-- Report example: 12,300 ± 120 BP (before present, 1950).
-- Calibrated age range provided (e.g., 14,200–13,900 cal BP).
-- Contextualize with stratigraphy and other evidence.
-
----
-
-## Video: How Does Radiocarbon Dating Work?
-
-- Instant Egghead #28
-- Key takeaways: production, decay, measurement, calibration.
-- Use as preview or reinforcement.
-
----
-
-# Time To Climb (Optional)
-
-- Gamified quiz to reinforce half-life and method limits.
-- Use Nearpod’s “Time To Climb” for engagement.
-
----
-
-## Quiz: Standard Multiple Choice
-
-1) Radiocarbon dating is most effective for dating:
-- A) Igneous rocks > 100 million years
-- B) Organic materials up to ~50,000 years
-- C) Metallic artifacts from the Bronze Age
-- D) Zircon crystals in granite  
-**Answer: B**
 
 ---
 
@@ -230,7 +231,7 @@ Since the text extraction was limited, please review the original PDF and add an
 - B) 5,730 years
 - C) 57,300 years
 - D) 730 years  
-**Answer: B**
+<!-- **Answer: B** -->
 
 ---
 
@@ -241,7 +242,7 @@ Since the text extraction was limited, please review the original PDF and add an
 - B) 5,730 years
 - C) 11,460 years
 - D) 17,190 years  
-**Answer: C**
+<!-- **Answer: C** -->
 
 ---
 
@@ -252,7 +253,7 @@ Since the text extraction was limited, please review the original PDF and add an
 - B) It is the time for all parent atoms to decay.
 - C) It is constant for a given isotope.
 - D) It increases as more atoms decay.  
-**Answer: C**
+<!-- **Answer: C** -->
 
 ---
 
@@ -263,7 +264,7 @@ Since the text extraction was limited, please review the original PDF and add an
 - B) To convert BP to CE only
 - C) To adjust for sample mass
 - D) To remove contamination automatically  
-**Answer: A**
+<!-- **Answer: A** -->
 
 ---
 
