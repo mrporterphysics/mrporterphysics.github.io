@@ -18,6 +18,37 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.21 **AP Physics**
+
+##### **❓ of the 📅**: What was the last movie you went to? What did you think?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Projectile Motion Quiz
+2. [Forces & Force Diagram notes]((../../../Presentations/Forces/talks/Dynamics2025.html))
+3. Force Diagram Card Sort
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Check projectile motion understanding_
+
+🥅 _Model forces vectorially_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.19 **AP Physics** Do Now
 
 ### Whiteboard Assigned situation(s) 

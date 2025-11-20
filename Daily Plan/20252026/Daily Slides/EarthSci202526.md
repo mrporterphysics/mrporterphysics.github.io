@@ -19,6 +19,35 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.21 **Earth Science**
+
+##### **❓ of the 📅**: What was the last movie you went to? What did you think?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Continue & Finish Candium Lab
+2. Radioactive Dating Practice Sheet
+3. Part 2: The Age of Rocks in the Solar system
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Radiometric Dating with Candium_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.20 **Earth Science** Do Now
 
 Based on the simulation from yesterday...
