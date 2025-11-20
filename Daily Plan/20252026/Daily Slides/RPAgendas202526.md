@@ -17,6 +17,80 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+2025.11.20 **Regents Physics** Do Now
+
+<div class='columns'>
+<div>
+
+### Horizontal Launch Data
+ 
+The data table to the right displays launch information for a horizontally launched projectile from a height of $1.003 \text{ m}$. The range for each launch is listed. 
+
+**Determine the average launch velocity of the projectile launcher**
+
+***Complete this in your lab notebook*** (Hit the Target Lab)
+
+</div>
+ 
+<div>
+
+| Height (m) |  Range (m) |
+|---|---| 
+| 1.003| 	2.650|
+| 1.003| 	2.659|
+| 1.003| 	2.713|
+| 1.003| 	2.720|
+| 1.003| 	2.723|
+| 1.003| 2.693|
+
+</div>
+</div>
+
+
+---
+
+# 2025.11.20 **Regents Physics**
+
+##### **❓ of the 📅**: If you were a photographer, what would you take photos of all day?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Find Launch Velocity
+2. Hit the Target Lab - Angled Projectile
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use projectile motion to make & test predictions_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Hit the Target Lab
+Given x to a vertical board, what height y hits the target?
+
+
+## Purpose
+Predict the board height y at distance x for an angled launch using projectile models and prior **$v_i$**.
+
+## Setup & Measurements
+- Measure: x, θ, reference line for y
+- Retrieve **$v_i$** from do now & test with class
+- Sketch the setup with labeled quantities
+
+---
+
 # 2025.11.19 **Regents Physics**
 
 ##### **❓ of the 📅**: What was your favorite recess game from elementary school?

@@ -19,6 +19,44 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.20 **Earth Science** Do Now
+
+Based on the simulation from yesterday...
+
+Describe what a half-life is in your own words. 
+
+**Do this on your own <mark>without</mark> help of your neighbors**
+
+---
+
+# 2025.11.20 **Earth Science**
+
+##### **❓ of the 📅**: If you were a photographer, what would you take photos of all day?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes/Presentation on Radioactive Dating
+2. Absolute Dating Lab - Candium
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model radioactive dating_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.19 **Earth Science** Do Now
 
 Keep working on radio active dating
