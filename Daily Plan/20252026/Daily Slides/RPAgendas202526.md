@@ -72,6 +72,10 @@ The data table to the right displays launch information for a horizontally launc
 
 ### 📆 Upcoming
 
+- Quiz **Friday** on Projectiles
+- PC H. Proj Due Wednesday
+- PC A. Projectiles due Friday
+
 </div>
 </div>
 
