@@ -29,7 +29,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Projectile Motion Quiz
-2. [Forces & Force Diagram notes]((../../../Presentations/Forces/talks/Dynamics2025.html))
+2. [Forces & Force Diagram notes](../../../Presentations/Forces/talks/Dynamics2025.html)
 3. Force Diagram Card Sort
 
 </div>
