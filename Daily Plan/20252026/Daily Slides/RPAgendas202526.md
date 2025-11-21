@@ -17,6 +17,37 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+# 2025.11.21 **Regents Physics**
+
+##### **❓ of the 📅**: What was the last movie you went to? What did you think?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Up Lab
+2. Quiz
+3. Weekend.
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Test Predictions for lab_
+
+🥅 _Show what you know on quiz_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 2025.11.20 **Regents Physics** Do Now
 
 <div class='columns'>
