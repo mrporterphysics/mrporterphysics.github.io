@@ -18,6 +18,93 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.25 **AP Physcis** Do Now
+
+### Physics Classroom Force Diagram Practice:
+
+1. Balanced vs. Unbalanced Forces Concept Builder
+2. Recognizing Forces Concept Builder
+3. Match That Free Body Diagram Concept Builder
+
+
+---
+
+# 2025.11.25 **AP Physcis**
+
+##### **❓ of the 📅**: What dessert is your favorite at Thanksgiving?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Copy Down FBDs in Packet from card sort
+2. Monkey Questions
+2. $F_g$ Lab
+3. $F_s$ Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Force Diagrams_:t
+
+🥅 _Model gravitational and spring forces experimentally_
+
+### 📆 Upcoming
+
+##  🦃🍗🍽️🍞🥧🥔🍠
+
+
+</div>
+</div>
+
+---
+
+# Force of Gravity Lab
+- Goal: Model how gravitational force depends on mass
+- Context: Compare Earth, Moon, Mars
+
+---
+
+# Force of Gravity vs. Weight vs. Mass
+
+- <mark>**Force of Gravity**</mark> - an attractive force between **any** two objects with mass
+- <mark>**Weight**</mark> - $\vec{F}_g$ between celestial object and object of interest 
+  - (i.e. your weight is the $\vec{F}_g$ between Earth and you)
+- <mark>**Mass**</mark> - How much matter an object contains, a measurement of how much "stuff" an object is made of
+
+---
+
+# Question
+How does weight (gravitational force) depend on mass and the local gravitational field?
+
+---
+
+# Purpose
+- Measure F and m for several objects
+- Build a model from data (F vs. m)
+- Interpret slope (if linear)
+
+---
+
+# Spring Force Lab
+
+### Purpose:
+
+Determine the relationship between the stretch displacement of your spring and the force that is used to stretch the spring. 
+
+### Materials
+- two springs (to compare results)
+- assorted masses (your known forces)
+- ruler/meterstick 
+
+---
+
 # 2025.11.24 **AP Physics** Do Now
 
 Water skiers are pulled at a _constant speed_ by a towrope attached to a speedboat. Because the weight of the skiers and the type of skis they are using varies, they experience different resistive forces from the water. Values for this resistive force (RF) and for the speed of the skiers are given.
