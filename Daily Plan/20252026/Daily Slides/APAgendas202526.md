@@ -18,6 +18,46 @@ math: mathjax
 
 <!--- class: thanksgiving -->
 
+# 2025.11.24 **AP Physics** Do Now
+
+Water skiers are pulled at a _constant speed_ by a towrope attached to a speedboat. Because the weight of the skiers and the type of skis they are using varies, they experience different resistive forces from the water. Values for this resistive force (RF) and for the speed of the skiers are given.
+
+![center](image-29.png)
+
+**Rank the tension in the towrope.** <mark>_Explain your reasoning_</mark>
+
+---
+
+# 2025.11.24 **AP Physics**
+
+##### **❓ of the 📅**: What is the _MVF_ (most valuable food) on the Thanksgiving dinner table?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. How to draw force diagrams
+3. Force Diagrams Card Sort
+4. Monkey Force Diagram Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn how to draw the three force diagrams_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.21 **AP Physics**
 
 ##### **❓ of the 📅**: What was the last movie you went to? What did you think?

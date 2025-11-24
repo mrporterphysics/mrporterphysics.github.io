@@ -1134,3 +1134,115 @@ section.thanksgiving table tr:nth-child(even) td {
     background-color: rgba(205, 133, 63, 0.12) !important;
     border-collapse: collapse;
 }
+
+/* Christmas/Holiday theme colors */
+:root {
+    --christmas-background: #DFF0D8;      /* soft sage green */
+    --christmas-text: #1B3B1B;            /* deep evergreen */
+    --christmas-accent-red: #C41E3A;      /* classic Christmas red */
+    --christmas-accent-green: #0D4E28;    /* darker forest green */
+    --christmas-accent-gold: #B8860B;     /* darker gold for contrast */
+    --christmas-accent-silver: #6B7F8C;   /* silvery blue-gray */
+}
+
+/* Christmas theme base */
+section.christmas {
+    background-color: var(--christmas-background) !important;
+    color: var(--christmas-text) !important;
+}
+
+/* Christmas theme headers - differentiated colors */
+section.christmas h1 {
+    color: var(--christmas-accent-red) !important;
+    border-bottom: 2px solid var(--christmas-accent-green) !important;
+    padding-bottom: 0.1em;
+    font-size: 1.7em;
+}
+
+section.christmas h2 {
+    color: var(--christmas-accent-green) !important;
+    font-size: 1.5em;
+}
+
+section.christmas h3 {
+    color: var(--christmas-accent-gold) !important;
+    font-size: 1.3em;
+}
+
+section.christmas h4,
+section.christmas h5,
+section.christmas h6 {
+    color: var(--christmas-accent-silver) !important;
+    font-size: 1.3em;
+}
+
+/* Christmas theme links */
+section.christmas a {
+    color: var(--christmas-accent-red) !important;
+}
+
+/* Christmas theme code blocks */
+section.christmas code,
+section.christmas pre {
+    color: var(--christmas-accent-green) !important;
+    background-color: rgba(13, 78, 40, 0.12) !important;
+}
+
+/* Christmas theme strong text */
+section.christmas strong {
+    color: var(--christmas-accent-red) !important;
+}
+
+/* Christmas theme tables */
+section.christmas table {
+    border: 2px solid var(--christmas-accent-green);
+    border-collapse: collapse !important;
+    margin: 1em 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+section.christmas table > thead > tr > th,
+section.christmas table th {
+    background-color: var(--christmas-accent-red);
+    color: var(--christmas-background);
+    font-weight: bold;
+    padding: 0.8em;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+section.christmas table > tbody > tr > td,
+section.christmas table td {
+    padding: 0.8em;
+    border: 1px solid rgba(13, 78, 40, 0.25);
+    background-color: var(--christmas-background);
+    color: var(--christmas-text);
+    border-collapse: collapse;
+}
+
+section.christmas table > tbody > tr:nth-child(even) > td {
+    background-color: rgba(196, 30, 58, 0.08);
+    border-collapse: collapse;
+}
+
+/* Aggressive override to prevent inline Markdown table styles from breaking theme */
+section.christmas table,
+section.christmas table tr,
+section.christmas table td,
+section.christmas table th {
+    background-color: var(--christmas-background) !important;
+    color: var(--christmas-text) !important;
+    border-collapse: collapse;
+}
+
+section.christmas table th {
+    background-color: var(--christmas-accent-red) !important;
+    color: var(--christmas-background) !important;
+    border-collapse: collapse;
+}
+
+section.christmas table tr:nth-child(even) td {
+    background-color: rgba(196, 30, 58, 0.08) !important;
+    border-collapse: collapse;
+}

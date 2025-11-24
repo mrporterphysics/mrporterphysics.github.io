@@ -19,6 +19,35 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.24 **Earth Science**
+
+#### **❓ of the 📅**: What is the _MVF_ (most valuable food) on the Thanksgiving dinner table?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Finish Post Lab Practice Sheet
+2. Unit 2 | Part 2 | (pages 11-18)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine the age of the inner solar system with radiometric dating_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.21 **Earth Science**
 
 ##### **❓ of the 📅**: What was the last movie you went to? What did you think?
