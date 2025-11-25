@@ -17,6 +17,38 @@ math: mathjax
 
 <!--- class: thanksgiving-->
 
+# 2025.11.26 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite Thanksgiving dessert 🥧?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Mallet Ball](../../../Presentations/Forces/talks/RPForces2025.html)
+    - Introduction - CA vs. CV
+    - The Experiment
+    - Discussing results and making our descriptive model
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model how interactions between object affect motion_
+
+### 📆 Upcoming
+
+##  🦃🍗🍽️🍞🥧🥔🍠
+
+</div>
+</div>
+
+---
+
 # 2025.11.21 **Regents Physics**
 
 ##### **❓ of the 📅**: What was the last movie you went to? What did you think?

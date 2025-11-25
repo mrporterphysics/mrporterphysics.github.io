@@ -1,119 +1,218 @@
 /* 
 @theme forces-dark
+@author Antigravity
+@description A professional, high-contrast dark theme for Physics presentations.
 */
-@import 'uncover';
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Fira+Sans:wght@500;700&family=JetBrains+Mono&display=swap');
-@import url('https://unpkg.com/mermaid/dist/mermaid.min.js');
 
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
-  --background-color: #1a1a2e;
-  --text-color: #e6e6e6;
-  --primary-color: #4d9de0;
-  --secondary-color: #7fe0a1;
-  --tertiary-color: #e0b94d;
-  --code-bg: #2a2a3e;
+  /* Color Palette - Science/Dark Mode */
+  --bg-primary: #1e1e2e;
+  /* Deep Slate */
+  --bg-secondary: #25253a;
+  /* Slightly lighter slate for code/blocks */
+  --text-primary: #e6e6e6;
+  /* High contrast off-white */
+  --text-secondary: #a0a0b0;
+  /* Muted text */
+
+  /* Accent Colors */
+  --accent-blue: #4db6ac;
+  /* Teal/Cyan - Primary Accent */
+  --accent-gold: #ffd54f;
+  /* Amber - Highlights/Energy */
+  --accent-red: #e57373;
+  /* Soft Red - Forces/Alerts */
+  --accent-green: #81c784;
+  /* Soft Green - Success/Correct */
+  --accent-purple: #9575cd;
+  /* Purple - Concepts */
+
+  /* Functional Colors */
+  --code-bg: #282838;
+  --border-color: #3f3f55;
+  --shadow-color: rgba(0, 0, 0, 0.4);
 }
 
-section::after {
-    content: '<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script><script>mermaid.initialize({startOnLoad:true});</script>';
-  }
-
-.mermaid {
-    text-align: center;
-  }
-
-
 section {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 30px;
-  padding: 40px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  line-height: 1.5;
+  padding: 50px;
+  background-image:
+    radial-gradient(circle at 90% 10%, rgba(77, 182, 172, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 10% 90%, rgba(149, 117, 205, 0.05) 0%, transparent 20%);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
 }
 
 h1 {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 700;
-  font-size: 60px;
-  color: var(--primary-color);
-  margin-bottom: 0.5em;
+  font-size: 2.2em;
+  font-weight: 800;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-bottom: 3px solid var(--accent-blue);
+  padding-bottom: 0.2em;
+  display: inline-block;
 }
 
 h2 {
-  font-family: 'Fira Sans', sans-serif;
-  font-weight: 500;
-  font-size: 48px;
-  color: var(--secondary-color);
+  font-size: 1.6em;
+  font-weight: 600;
+  color: var(--accent-gold);
 }
 
 h3 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  color: var(--tertiary-color);
+  font-size: 1.3em;
+  font-weight: 600;
+  color: var(--accent-purple);
 }
 
 strong {
-  color: var(--primary-color);
+  color: var(--accent-gold);
   font-weight: 700;
 }
 
-h1 strong {
-    color:var(--tertiary-color);
-    font-weight: 800;
-}
-
-code {
-  font-family: 'JetBrains Mono', monospace;
-  background-color: var(--code-bg);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-}
-
-ul, ol {
-  margin-left: 30px;
-  line-height: 1.6;
-}
-
-li {
-  margin-bottom: 0.5em;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-blockquote {
-  border-left: 4px solid var(--secondary-color);
-  padding-left: 20px;
-  margin-left: 0;
+em {
+  color: var(--accent-blue);
   font-style: italic;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1em 0;
+/* Code & Formulas */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--code-bg);
+  color: var(--accent-green);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  font-size: 0.9em;
 }
 
-th, td {
-  border: 1px solid var(--tertiary-color);
-  padding: 8px 12px;
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: 0.8em;
+}
+
+.formula {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--bg-secondary);
+  border-left: 5px solid var(--accent-gold);
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 1.2em;
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* Lists */
+ul,
+ol {
+  margin-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+ul>li::marker {
+  color: var(--accent-blue);
+  content: "➤  ";
+  font-size: 0.8em;
+}
+
+ol>li::marker {
+  color: var(--accent-gold);
+  font-weight: bold;
+}
+
+/* Blockquotes (Laws/Definitions) */
+blockquote {
+  background: linear-gradient(to right, rgba(77, 182, 172, 0.1), transparent);
+  border-left: 6px solid var(--accent-blue);
+  margin: 1.5em 0;
+  padding: 0.5em 1em;
+  color: var(--text-primary);
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+
+blockquote::before {
+  content: "“";
+  color: var(--accent-blue);
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.2em;
+  vertical-align: -0.4em;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1em 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+th,
+td {
+  padding: 12px 15px;
   text-align: left;
+  border-bottom: 1px solid var(--border-color);
 }
 
 th {
-  background-color: var(--code-bg);
-  color: var(--primary-color);
+  background-color: var(--bg-secondary);
+  color: var(--accent-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
 }
 
-.columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
-  gap: 1rem;
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Images */
+img {
+  border-radius: 8px;
+  box-shadow: 0 8px 16px var(--shadow-color);
+  max-width: 100%;
+  border: 1px solid var(--border-color);
 }
 
 img[alt~="center"] {
@@ -121,14 +220,97 @@ img[alt~="center"] {
   margin: 0 auto;
 }
 
-.formula {
-  color: var(--tertiary-color);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.1em;
+/* Layout Utilities */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
 }
 
-.highlight {
-  background-color: rgba(77, 157, 224, 0.2);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
+.columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Slide Classes */
+
+/* Title Slide */
+section.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #2a2a3e 0%, var(--bg-primary) 100%);
+}
+
+section.title h1 {
+  font-size: 3.5em;
+  border-bottom: none;
+  margin-bottom: 0.2em;
+  background: linear-gradient(120deg, var(--accent-blue), var(--accent-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section.title h2 {
+  font-size: 2em;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Section Divider */
+section.section {
+  background-color: var(--accent-blue);
+  color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.section h1 {
+  color: var(--bg-primary);
+  border-bottom-color: var(--bg-primary);
+  font-size: 3em;
+}
+
+/* Mermaid Diagrams */
+.mermaid {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer/Header */
+header,
+footer {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  height: 50px;
+  font-size: 18px;
+  color: var(--text-secondary);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  top: 20px;
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--border-color);
+}
+
+footer {
+  bottom: 20px;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+}
+
+/* MathJax */
+mjx-container {
+  color: var(--accent-gold) !important;
+  font-size: 1.1em;
 }
