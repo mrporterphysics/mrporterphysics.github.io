@@ -29,7 +29,7 @@ class:  twilight
 
 #### 📋 Agenda
 
-1. Do Now
+1. Do Now - Finish Part 2 Packet
 2. Relative Dating [Notes](../../../Presentations/ES%20Presentations/Unit%202/GeologicDating.html)
 2. Relative Dating Labs
 
@@ -39,7 +39,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Learn about relative dating_
 
 ### 📆 Upcoming
 
