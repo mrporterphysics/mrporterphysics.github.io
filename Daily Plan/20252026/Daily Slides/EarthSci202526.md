@@ -19,6 +19,35 @@ class:  twilight
 
 <!--- class: thanksgiving -->
 
+# 2025.11.25 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite Thanksgiving Dessert?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Relative Dating [Notes](../../../Presentations/ES%20Presentations/Unit%202/GeologicDating.html)
+2. Relative Dating Labs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.11.24 **Earth Science**
 
 #### **❓ of the 📅**: What is the _MVF_ (most valuable food) on the Thanksgiving dinner table?
