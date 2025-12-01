@@ -17,7 +17,39 @@ class:  twilight
 
 ---
 
+<!--- class: christmas--->
+
+# 2025.12.01 **Earth Science**
+
+##### **❓ of the 📅**: What won Thanksgiving?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Review whiteboard from Tuesdy and be prepared to present
+2. [Relative Dating](../../../Presentations/ES%20Presentations/Unit%202/GeologicDating.html)
+3. Sequence of Events Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify the sequence of events using Relative Dating_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- class: thanksgiving -->
+
 
 # 2025.11.25 **Earth Science**
 
