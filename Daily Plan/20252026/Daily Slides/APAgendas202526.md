@@ -16,6 +16,60 @@ math: mathjax
 
 ---
 
+<!--- class: christmas --->
+
+
+# 2025.12.02 **AP Physics** Do Now
+
+<div class='columns'>
+<div>
+
+#### _A fan cart is on its track with te fan on_
+
+1. Draw the free body and vector addition diagrams for the cart
+1. What do the forces predict about the motion of the fan cart?
+2. Get your lab notebook
+
+</div>
+ 
+<div>
+
+![center](https://www.vernier.com/wp-content/uploads/2023/12/product.dts-cfan-kit._hero.001.jpg)
+
+</div>
+</div>
+
+---
+
+# 2025.12.02 **AP Physics**
+
+##### **❓ of the 📅**: What won your Thanksgiving?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Unbalanced Force Lab
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect Data for Unbalanced Force Lab_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- class: thanksgiving -->
 
 # 2025.11.25 **AP Physcis** Do Now

@@ -19,6 +19,36 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.02 **Earth Science**
+
+##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review - Relative Dating
+2. Sequence of Events Practice
+3. Sequence of Events Lab
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine the sequence of events using relative dating_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.01 **Earth Science**
 
 ##### **❓ of the 📅**: What won Thanksgiving?
