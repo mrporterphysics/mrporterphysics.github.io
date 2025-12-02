@@ -19,7 +19,7 @@ class:  twilight
 
 <!--- class: christmas--->
 
-# 2025.12.02 **Earth Science**
+# 2025.12.03 **Earth Science**
 
 ##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
 

@@ -19,7 +19,7 @@ math: mathjax
 <!--- class: christmas --->
 
 
-# 2025.12.02 **AP Physics** Do Now
+# 2025.12.03 **AP Physics** Do Now
 
 <div class='columns'>
 <div>
@@ -41,7 +41,7 @@ math: mathjax
 
 ---
 
-# 2025.12.02 **AP Physics**
+# 2025.12.03 **AP Physics**
 
 ##### **❓ of the 📅**: What won your Thanksgiving?
 
