@@ -19,6 +19,35 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.04 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite type of cookie? 🍪
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Work on Sequence of Events Lab
+2. Discuss Correlation
+3. Correlation Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the sequence of events and relative age of bedrock_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.03 **Earth Science**
 
 ##### **❓ of the 📅**: What would your talent be if you were Miss or Mister World?
@@ -31,7 +60,7 @@ class:  twilight
 
 1. Review - Relative Dating
 2. Sequence of Events Practice
-3. Sequence of Events Lab
+3. Sequence of Events Labf
 
 
 </div>

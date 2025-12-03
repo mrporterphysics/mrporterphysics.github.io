@@ -19,12 +19,12 @@ math: mathjax
 <!--- class: christmas --->
 
 
-# 2025.12.03 **AP Physics** Do Now
+# 2025.12.04 **AP Physics** Do Now
 
 <div class='columns'>
 <div>
 
-#### _A fan cart is on its track with te fan on_
+#### _A fan cart is on its track with the fan on._ Assume the track is frictionless.
 
 1. Draw the free body and vector addition diagrams for the cart
 1. What do the forces predict about the motion of the fan cart?
@@ -35,6 +35,37 @@ math: mathjax
 <div>
 
 ![center](https://www.vernier.com/wp-content/uploads/2023/12/product.dts-cfan-kit._hero.001.jpg)
+
+</div>
+</div>
+
+---
+
+# 2025.12.04 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite type of cookie? 🍪
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Fan Cart Lab 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model unbalanced forces with a fan cart_
+
+### 📆 Upcoming
+
+**🎵 Band Kids**: 
+- Packet pages: 1, 3-4, 11, 15
 
 </div>
 </div>
