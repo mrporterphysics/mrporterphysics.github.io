@@ -185,9 +185,10 @@ graph TD
   - Easier to start/stop light cart
 ---
 
-# 📝 Worksheet: Inertia & Mass <!--fit--->
+# 📝 Worksheet: 
 
-## Complete Independently
+## Inertia & Mass
+
 
 ---
 
@@ -195,11 +196,10 @@ graph TD
 
 Students typically have many pre-conceived notions regarding concepts in Physics. It has always proven useful to bring these ideas to the forefront of your mind and to make an effort to evaluate their correctness. The following statements pertain in one way or another to common notions regarding central concepts of this unit. Identify each statement as being either true (T) or false (F).
 
-1. Fill out on sheet and then click answers into Google Form (linked in daily slides) and [here](https://forms.gle/rrFSUb9QNnRGdoni8).
 
 ---
 
-# ⚖️ Mini Experiment: **Mass vs. Weight**
+# ⚖️ Lab: **Mass vs. Weight**
 
 ## Objective: 
 

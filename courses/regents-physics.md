@@ -34,7 +34,7 @@ New York State Regents Physics curriculum covering fundamental concepts in mecha
 ### Mechanics
 - [Kinematics](/Presentations/APCVPM/talks/RPKinematics2025.html)
 - [2D Motion & Projectiles](/Presentations/Projectiles/talks/RP2DMotion2025.html)
-- [Forces & Newton's Laws](/Presentations/Forces/talks/RPForces2024.html)
+- [Forces & Newton's Laws](/Presentations/Forces/talks/RPForces2025.html)
 - [Energy](/Presentations/APETM/talks/RPEnergy2025.html)
 - [Momentum](/Presentations/Momentum/talks/RPmomentum2025.html)
 - [Rotation](/Presentations/AP Rotation Representation/talks/Rotation2025.html)
