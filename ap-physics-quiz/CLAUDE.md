@@ -19,7 +19,16 @@ This is an advanced interactive web-based quiz application for AP Physics 1 stud
 - **Phase 6**: Advanced Tools & Interactive Features ✅
 - **Phase 7**: Engagement & Optimization ✅
 
-### **Latest Updates (August 28, 2025)**
+### **Latest Updates (December 4, 2024)**
+- **✅ Double Initialization Bug Fixed**: Resolved duplicate DOMContentLoaded init calls in app.js
+- **✅ Theme Toggle Fixed**: Icon now correctly shows sun/moon based on current theme state
+- **✅ Next Button Fixed**: Feedback modal now properly triggers next question via PhysicsQuizApp
+- **✅ Keyboard Shortcuts Added**: New modal with help for all shortcuts (1-5 keys, T/F, arrows, Escape)
+- **✅ Answer Selection Animation**: Added pulse animation feedback when selecting quiz options
+- **✅ Start Screen Stats**: Shows question count by topic and user accuracy on start screen
+- **✅ Subject Filter Integration**: Changing topic filter now updates stats display dynamically
+
+### **Previous Updates (August 28, 2025)**
 - **✅ Question Loading Issue Fixed**: Resolved filtering bug causing "Loading question..." to persist
 - **✅ Filtering System Enhanced**: Added robust string normalization and case-insensitive matching
 - **✅ Phase 7 Integration**: Achievement system, mobile optimization, and fact sheet links fully operational
@@ -185,5 +194,5 @@ id,type,question,answer,topic,explanation,optionA,optionB,optionC,optionD,option
 
 ---
 
-*Last Updated: August 28, 2025*
-*Status: All 7 Development Phases Complete ✅ | Production Ready | Critical Bug Fixes Applied*
+*Last Updated: December 4, 2024*
+*Status: All 7 Development Phases Complete ✅ | Production Ready | UX Improvements Applied*

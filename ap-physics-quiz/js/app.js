@@ -388,13 +388,17 @@ const PhysicsQuizApp = {
             });
         });
 
-        // Subject selection buttons  
+        // Subject selection buttons
         document.querySelectorAll('.subject-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 // Remove active class from all subject buttons
                 document.querySelectorAll('.subject-btn').forEach(b => b.classList.remove('active'));
                 // Add active class to clicked button
                 e.currentTarget.classList.add('active');
+                // Update filter and refresh stats display
+                const subject = e.currentTarget.dataset.subject;
+                QuizData.setFilters({ subject: subject });
+                this.updateStartScreenStats();
             });
         });
 
@@ -581,6 +585,7 @@ const PhysicsQuizApp = {
     initializeUI: function () {
         this.updateQuestionCounter();
         this.updateProgressBar();
+        this.updateStartScreenStats();
 
         // Initialize QuizUI if available
         if (typeof QuizUI !== 'undefined') {
@@ -590,6 +595,34 @@ const PhysicsQuizApp = {
         // Load user settings
         const settings = QuizStorage.getSettings();
         this.applySavedSettings(settings);
+    },
+
+    // Update stats display on start screen
+    updateStartScreenStats: function () {
+        const statsDisplay = document.getElementById('stats-display');
+        if (!statsDisplay) return;
+
+        const filteredQuestions = QuizData.filteredQuestions.length;
+        const stats = QuizData.getDataStats();
+        const userStats = QuizStorage.getStatistics();
+
+        // Build topic breakdown
+        const topicCounts = Object.entries(stats.byTopic)
+            .map(([topic, count]) => `${topic.charAt(0).toUpperCase() + topic.slice(1)}: ${count}`)
+            .join(' • ');
+
+        // Calculate user accuracy if they've answered questions
+        let accuracyText = '';
+        if (userStats.totalQuestions > 0) {
+            const accuracy = ((userStats.correctAnswers / userStats.totalQuestions) * 100).toFixed(0);
+            accuracyText = `<p><strong>Your accuracy:</strong> ${accuracy}% (${userStats.correctAnswers}/${userStats.totalQuestions})</p>`;
+        }
+
+        statsDisplay.innerHTML = `
+            <p><strong>${filteredQuestions}</strong> questions available</p>
+            <p class="text-muted" style="font-size: 0.9em;">${topicCounts}</p>
+            ${accuracyText}
+        `;
     },
 
     // Apply saved user settings
@@ -1023,10 +1056,8 @@ const PhysicsQuizApp = {
     }
 };
 
-// Initialize app when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    PhysicsQuizApp.init();
-});
+// Note: Initialization is handled by the inline script in index.html
+// to ensure all modules are loaded first
 
 // Global access for debugging
 window.PhysicsQuizApp = PhysicsQuizApp;

@@ -634,6 +634,20 @@ header {
   border-color: var(--bl);
   background: var(--bl);
   color: var(--bg);
+  animation: selectPulse 0.3s ease-out;
+}
+
+@keyframes selectPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(67, 133, 190, 0.4);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .option-input {
@@ -1314,6 +1328,45 @@ button,
 
 .mb-2 {
   margin-bottom: 1rem;
+}
+
+/* Keyboard shortcuts modal */
+.keyboard-help-btn {
+  padding: 8px 12px;
+}
+
+.shortcuts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.shortcut-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: var(--ui);
+  border-radius: 6px;
+}
+
+.shortcut-item kbd {
+  display: inline-block;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: 600;
+  background: var(--bg);
+  border: 1px solid var(--ui-3);
+  border-radius: 4px;
+  box-shadow: 0 2px 0 var(--ui-3);
+  min-width: 28px;
+  text-align: center;
+}
+
+.shortcut-item span {
+  color: var(--tx-2);
 }
 
 /* Math rendering */

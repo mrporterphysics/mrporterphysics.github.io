@@ -574,10 +574,9 @@ const QuizUI = {
         if (nextBtn) {
             nextBtn.onclick = () => {
                 this.closeFeedbackModal();
-                // Trigger the actual next question
-                const actualNextBtn = this.elements.controls.nextBtn;
-                if (actualNextBtn && actualNextBtn.onclick) {
-                    actualNextBtn.onclick();
+                // Trigger the actual next question via PhysicsQuizApp
+                if (window.PhysicsQuizApp && typeof PhysicsQuizApp.nextQuestion === 'function') {
+                    PhysicsQuizApp.nextQuestion();
                 }
             };
         }

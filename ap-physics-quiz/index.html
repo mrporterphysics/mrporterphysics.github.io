@@ -71,6 +71,9 @@
             <nav class="site-nav">
                 <a href="../index.html" class="page-link">Home</a>
                 <a href="../courses/ap-physics-1.html" class="page-link">AP Physics 1</a>
+                <button type="button" class="btn btn-secondary keyboard-help-btn" title="Keyboard shortcuts">
+                    ⌨️
+                </button>
             </nav>
         </div>
     </header>
@@ -344,14 +347,41 @@
         <!-- Settings Modal (Future Implementation) -->
         <div id="settings-modal" class="modal">
             <div class="modal-content">
-                <button class="modal-close">&times;</button>
+                <button type="button" class="modal-close">&times;</button>
                 <h3>Quiz Settings</h3>
                 <p>Settings panel coming soon...</p>
             </div>
         </div>
+
+        <!-- Keyboard Shortcuts Modal -->
+        <div id="keyboard-shortcuts-modal" class="modal">
+            <div class="modal-content">
+                <button type="button" class="modal-close" onclick="document.getElementById('keyboard-shortcuts-modal').style.display='none'">&times;</button>
+                <h3>Keyboard Shortcuts</h3>
+                <div class="shortcuts-list">
+                    <div class="shortcut-item">
+                        <kbd>→</kbd> <span>Next question</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>←</kbd> <span>Previous question</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Enter</kbd> <span>Submit answer (when typing)</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>R</kbd> <span>Reset quiz</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>1-5</kbd> <span>Select answer option (MC)</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>T / F</kbd> <span>Select True/False</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Core JavaScript Modules -->
     <!-- Core JavaScript Modules -->
     <script src="js/fallback-data.js?v=1"></script>
     <script src="js/utils.js?v=1"></script>
@@ -374,7 +404,6 @@
     <script src="js/achievement-system.js?v=1"></script>
     <script src="js/mobile-optimization.js?v=1"></script>
 
-    <!-- Main Application -->
     <!-- Main Application -->
     <script src="js/app.js?v=1"></script>
 
@@ -426,15 +455,24 @@
 
     <!-- Theme Toggle Script -->
     <script>
-        // Simple theme toggle functionality
+        // Theme toggle functionality with proper icon updates
+        function updateThemeIcon(theme) {
+            const themeBtn = document.querySelector('.theme-toggle');
+            if (themeBtn) {
+                themeBtn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+                themeBtn.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+            }
+        }
+
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
         }
 
-        // Load saved theme
+        // Load saved theme immediately (before DOMContentLoaded)
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
 
@@ -443,13 +481,13 @@
             const nav = document.querySelector('.site-nav');
             if (nav) {
                 const themeBtn = document.createElement('button');
-                themeBtn.innerHTML = '🌙';
                 themeBtn.className = 'btn btn-secondary theme-toggle';
                 themeBtn.style.padding = '8px 12px';
                 themeBtn.style.marginLeft = '10px';
                 themeBtn.onclick = toggleTheme;
-                themeBtn.title = 'Toggle theme';
                 nav.appendChild(themeBtn);
+                // Set initial icon based on current theme
+                updateThemeIcon(savedTheme);
             }
         });
     </script>
@@ -465,6 +503,68 @@
             } else {
                 console.error("PhysicsQuizApp not loaded");
             }
+
+            // Keyboard shortcuts modal
+            const keyboardHelpBtn = document.querySelector('.keyboard-help-btn');
+            const keyboardModal = document.getElementById('keyboard-shortcuts-modal');
+
+            if (keyboardHelpBtn && keyboardModal) {
+                keyboardHelpBtn.addEventListener('click', () => {
+                    keyboardModal.style.display = 'block';
+                });
+
+                // Close on backdrop click
+                keyboardModal.addEventListener('click', (e) => {
+                    if (e.target === keyboardModal) {
+                        keyboardModal.style.display = 'none';
+                    }
+                });
+            }
+
+            // Enhanced keyboard shortcuts for quiz
+            document.addEventListener('keydown', (e) => {
+                // Skip if typing in an input field or modifier keys pressed
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+                const quizScreen = document.getElementById('quiz-screen');
+                if (!quizScreen || quizScreen.style.display === 'none') return;
+
+                // Number keys 1-5 for selecting MC options
+                if (e.key >= '1' && e.key <= '5') {
+                    const optionIndex = parseInt(e.key) - 1;
+                    const options = document.querySelectorAll('input[name="mc-answer"]');
+                    if (options[optionIndex]) {
+                        options[optionIndex].checked = true;
+                        options[optionIndex].dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                }
+
+                // T/F keys for True/False questions
+                if (e.key.toLowerCase() === 't') {
+                    const trueOption = document.querySelector('input[name="tf-answer"][value="true"]');
+                    if (trueOption) {
+                        trueOption.checked = true;
+                        trueOption.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                }
+                if (e.key.toLowerCase() === 'f') {
+                    const falseOption = document.querySelector('input[name="tf-answer"][value="false"]');
+                    if (falseOption) {
+                        falseOption.checked = true;
+                        falseOption.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                }
+
+                // Escape to close modals
+                if (e.key === 'Escape') {
+                    if (keyboardModal) keyboardModal.style.display = 'none';
+                    const feedbackModal = document.getElementById('feedback');
+                    if (feedbackModal && feedbackModal.style.display !== 'none') {
+                        if (window.QuizUI) QuizUI.closeFeedbackModal();
+                    }
+                }
+            });
         });
     </script>
     <script src="js/fact-sheet-links.js"></script>
