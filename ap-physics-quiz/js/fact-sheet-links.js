@@ -274,17 +274,30 @@ const FactSheetLinks = {
 
         // Create new links
         const linksElement = this.createFactSheetLinks(question);
-        if (linksElement) {
-            // Insert after answer options for better UX flow
-            let insertTarget = document.querySelector('#answer-options');
+        if (!linksElement) return;
 
-            // Fallback to question text if answer options not found
-            if (!insertTarget) {
-                insertTarget = document.querySelector('.question-text');
-            }
+        // Find the fact-sheet-container - it should be after answer-options in the DOM
+        const factSheetContainer = document.getElementById('fact-sheet-container');
 
-            if (insertTarget && insertTarget.parentNode) {
-                insertTarget.parentNode.insertBefore(linksElement, insertTarget.nextSibling);
+        if (factSheetContainer) {
+            // Clear and append to the designated container
+            factSheetContainer.innerHTML = '';
+            factSheetContainer.appendChild(linksElement);
+        } else {
+            // Container not found - create it and insert after answer-options
+            const answerOptions = document.getElementById('answer-options');
+            if (answerOptions && answerOptions.parentNode) {
+                const container = document.createElement('div');
+                container.id = 'fact-sheet-container';
+                container.className = 'fact-sheet-section';
+                container.appendChild(linksElement);
+
+                // Insert the container after answer-options
+                if (answerOptions.nextSibling) {
+                    answerOptions.parentNode.insertBefore(container, answerOptions.nextSibling);
+                } else {
+                    answerOptions.parentNode.appendChild(container);
+                }
             }
         }
     },

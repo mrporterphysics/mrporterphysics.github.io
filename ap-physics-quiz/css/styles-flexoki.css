@@ -466,6 +466,15 @@ header {
   flex-direction: column;
 }
 
+/* Explicit ordering for question container children */
+.question-container .question-breadcrumb { order: 1; }
+.question-container .question-header { order: 2; }
+.question-container .question-text { order: 3; }
+.question-container .answer-options { order: 4; }
+.question-container .fact-sheet-section { order: 5; }
+.question-container .fact-sheet-links { order: 6; }
+.question-container #fact-sheet-container { order: 5; }
+
 .question-header {
   display: flex;
   align-items: center;
@@ -610,8 +619,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* Ensure answer options appear before fact sheet links */
-  order: 5;
 }
 
 .option-label {
@@ -936,8 +943,6 @@ button,
 .fact-sheet-section {
   margin: 16px 0;
   text-align: center;
-  /* Move below answer options using flexbox order */
-  order: 10;
 }
 
 /* Hide the Reference button as it's redundant with direct links */

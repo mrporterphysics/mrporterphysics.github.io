@@ -296,24 +296,27 @@ const QuizUI = {
 
     // Add fact sheet integration if available
     addFactSheetIntegration: function (question) {
-        const questionContainer = this.elements.displays.question?.parentElement;
-        if (!questionContainer) return;
+        // Use the specific ID to find the fact sheet container
+        let factSheetSection = document.getElementById('fact-sheet-container');
 
-        // Remove existing fact sheet section
-        const existingFactSheetSection = questionContainer.querySelector('.fact-sheet-section');
-        if (existingFactSheetSection) {
-            existingFactSheetSection.remove();
+        // Fallback to class-based search within question container
+        if (!factSheetSection) {
+            const questionContainer = this.elements.displays.question?.parentElement;
+            if (questionContainer) {
+                factSheetSection = questionContainer.querySelector('.fact-sheet-section');
+            }
         }
+
+        if (!factSheetSection) return;
+
+        // Clear existing content but don't remove the element
+        factSheetSection.innerHTML = '';
 
         // Add new fact sheet integration if available
         if (typeof FactSheetIntegration !== 'undefined') {
             const factSheetButton = FactSheetIntegration.createFactSheetButton(question);
             if (factSheetButton) {
-                const factSheetSection = document.createElement('div');
-                factSheetSection.className = 'fact-sheet-section';
                 factSheetSection.appendChild(factSheetButton);
-
-                questionContainer.appendChild(factSheetSection);
             }
         }
     },
