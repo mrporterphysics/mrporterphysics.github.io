@@ -15,6 +15,55 @@ math: mathjax
 
 ---
 
+<!--- class: christmas --->
+
+
+
+# 2025.12.04 **Regents Physics** Do Now
+
+Water skiers are pulled at a _constant speed_ by a towrope attached to a speedboat. Because the weight of the skiers and the type of skis they are using varies, they experience different resistive forces from the water. Values for this resistive force (RF) and for the speed of the skiers are given.
+
+![center](image-29.png)
+
+**Rank the tension in the towrope.** <mark>_Explain your reasoning_</mark>
+
+---
+
+
+
+# 2025.12.04 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite type of cookie? 🍪
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+1. Inertia: Notes & Think Sheet
+2. Mass vs. Weight Lab
+3. Weight Notes
+4. Mass vs. Weight Think Sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the force of gravity near the surface of the Earth_
+
+### 📆 Homework
+
+- PC -> Newton's Laws 1: Mass and Weight
+
+</div>
+</div>
+
+---
+
 <!--- class: thanksgiving-->
 
 # 2025.11.26 **Regents Physics**
