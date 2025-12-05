@@ -18,6 +18,44 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.08 **AP Physics** Do Now
+
+## 🏁 Finish your lab!
+
+---
+
+# 2025.12.08 **AP Physics**
+
+##### **❓ of the 📅**: QUESTIONHERE
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish lab
+2. Board Meeting
+2. Using N2L to solve force problems
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use N2L to solve force problems_
+
+### 📆 Upcoming
+
+- [ ] Newton's Laws 1: Mass and Weight	CalcPad	
+- [ ] Newton's Laws 2: Equations as a Guide to Thinking
+
+</div>
+</div>
+
+---
+
 
 # 2025.12.04 **AP Physics** Do Now
 
