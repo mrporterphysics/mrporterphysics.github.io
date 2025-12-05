@@ -31,7 +31,7 @@ class:  twilight
 #### 📋 Agenda
 
 1. Finish Correlation Lab
-2. Regents Questions Practice - In Canvas
+2. Relative Dating - Regents Practice Questions Practice - In Canvas 
 3. Fin. 🏁
 
 </div>

@@ -383,32 +383,78 @@ $$\boxed{1\textrm{ Newton} = 1\textrm{ kg} \cdot 1 \textrm{ m/s}^2}$$
 
 # Types of Forces
 
-| Force & Symbol | Description | 
-|---|---------| 
-| Gravity $F_g$ | The force of gravity is the force with which the earth, moon, or other massively large object attracts another object towards itself. By definition, this is the weight of the object. All objects upon earth experience a force of gravity that is directed "downward" towards the center of the earth. | 
-| Applied Force $F_app$ | An applied force is a force that is applied to an object by a person or another object. If a person is pushing a desk across the room, then there is an applied force acting upon the object. The applied force is the force exerted on the desk by the person. | 
+---
+
+
+
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| gravitational | $\vec{F}_G$ | Two objects with mass interact. One object is often the Earth.         | Toward the center of Earth (or other large object)                           | *Field* (mediated by gravitational fields) |
+
+
+
+---
+
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| electric      | $\vec{F}_E$ | Two objects with electric charge interact.                             | Along line connecting the two objects (attraction or repulsion)              | *Field* (mediated by electric fields)      |
 
 ---
 
 
-| Force & Symbol | Description | 
-|---|---------| 
-| Normal $F_N$ | The normal force is the support force exerted upon an object that is in contact with another stable object. For example, if a book is resting upon a surface, then the surface is exerting an upward force upon the book in order to support the weight of the book. On occasions, a normal force is exerted horizontally between two objects that are in contact with each other. For instance, if a person leans against a wall, the wall pushes horizontally on the person. | 
-|Tension $F_T$ | The tension force is the force that is transmitted through a string, rope, cable or wire when it is pulled tight by forces acting from opposite ends. The tension force is directed along the length of the wire and pulls equally on the objects on the opposite ends of the wire. | 
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| magnetic      | $\vec{F}_M$ | Two objects with magnetic poles interact.                              | Along line connecting the two objects (attraction or repulsion)              | *Field* (mediated by magnetic fields)      |
+
 
 ---
 
-| Force & Symbol | Description | 
-|---|---------| 
-| Friction $F_f$ | The friction force is the force exerted by a surface as an object moves across it or makes an effort to move across it. There are at least two types of friction force - sliding and static friction. Though it is not always the case, the friction force often opposes the motion of an object.  Friction results from the two surfaces being pressed together closely, causing intermolecular attractive forces between molecules of different surfaces. As such, friction depends upon the nature of the two surfaces and upon the degree to which they are pressed together. | 
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| normal        | $\vec{F}_N$ | Two solid surfaces compress one another                                | Perpendicular to the surface                                                 | contact                                    |
 
 ---
 
-| Force & Symbol | Description | 
-|---|---------| 
-| Spring $F_f$ | The spring force is the force exerted by a compressed or stretched spring upon any object that is attached to it. An object that compresses or stretches a spring is always acted upon by a force that restores the object to its rest or equilibrium position.  | 
-| Air Resistance (Drag) $F_D$| The air resistance is a special type of frictional force that acts upon objects as they travel through the air. The force of air resistance is often observed to oppose the motion of an object. This force will frequently be neglected due to its negligible magnitude (and due to the fact that it is mathematically difficult to predict its value). | 
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| tension       | $\vec{F}_T$ | An object (often a rope) gets stretched                                | Along the rope (or rope-like object)                                         | contact                                    |
+---
 
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| friction      | $\vec{F}_f$ | Two surfaces “catch” on one another and shear each other               | Parallel to the surface                                                      | contact                                    |
+
+---
+
+
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| Buoyant       | $\vec{F}_B$ | Upward force exerted by a fluid that opposes the weight of an immersed object | Upwards                                                                      | contact                                    |
+---
+
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| lift          | $\vec{F}_L$ | Air (or other fluid) pushes an object up                               | Up (opposite the direction of the gravitational force exerted on the object) | contact                                    |
+
+
+---
+
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| thrust        | $\vec{F}_t$ | Air (or other fluid) pushes an object along the direction of motion    | Along the direction of motion                                                | contact                                    |
+
+---
+
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| drag          | $\vec{F}_D$ | Air (or other fluid) pushes an object opposite the direction of motion | Opposite the direction of motion                                             | contact                                    |
+
+
+---
+
+| Type of Force | Symbol      | When is this force present?                                            | In which direction is this force?                                            | Field or Contact Force?                    |
+| :------------ | ----------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------- | :----------------------------------------- |
+| Applied       | $\vec{F}_A$ | Any other generic push or pull not listed above                        | Depends on context                                                           | contact                                    |
 
 --- 
 
