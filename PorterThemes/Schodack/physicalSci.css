@@ -1193,6 +1193,10 @@ section.christmas strong {
     color: var(--christmas-accent-red) !important;
 }
 
+section.christmas h1 strong {
+    color: var(--christmas-accent-green) !important;
+}
+
 /* Christmas theme tables */
 section.christmas table {
     border: 2px solid var(--christmas-accent-green);

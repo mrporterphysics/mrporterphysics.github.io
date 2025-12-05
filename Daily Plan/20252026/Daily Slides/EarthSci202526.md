@@ -19,6 +19,36 @@ class:  twilight
 
 <!--- class: christmas--->
 
+
+# 2025.12.05 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite holiday themed movie? Have you stared binging yet?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Correlation Lab
+2. Regents Questions Practice - In Canvas
+3. Fin. 🏁
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Relative Dating Rock outcrops_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.04 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite type of cookie? 🍪

@@ -17,7 +17,46 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.05 **Regents Physics** Do Now
 
+## Think Sheet Packet: <mark>Pages 3 & 4</mark>
+
+---
+
+# 2025.12.05 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite holiday themed movie? Have you started binging yet?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Finish Weight Lab
+    - Compelete Notebook
+    - Whiteboard Results
+    - Board Meeting
+3. Force Definitions
+4. Practice - Identifying Forces
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Differentiate between mass and weight_
+
+🥅 _Define different forces_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
 
 # 2025.12.04 **Regents Physics** Do Now
 
