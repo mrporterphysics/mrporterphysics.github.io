@@ -17,6 +17,12 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.08 **Regents Physics** Do Now
+
+## **Page 11** in _Think Sheet_ Packet
+
+---
+
 # 2025.12.08 **Regnts Phyiscs**
 
 ##### **❓ of the 📅**: What is the longest trip you've taken?
