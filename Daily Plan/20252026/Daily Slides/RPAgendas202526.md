@@ -17,6 +17,41 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.08 **Regnts Phyiscs**
+
+##### **❓ of the 📅**: What is the longest trip you've taken?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. [Identifying Forces]((../../../Presentations/Forces/talks/RPForces2025.html))
+    - Think sheet in paris
+    - PC: Recognizing Forces
+3. Drawing Free Body Diagrams 
+    - Demo & Practice: PC: Match that Free-body 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Represent Forces with Vector Diagrams_
+
+### 📆 Upcoming
+
+- **Due Tomorrow**: 
+  - PC: Newton's Laws 1: Mass and Weight 
+
+</div>
+</div>
+
+---
+
 # 2025.12.05 **Regents Physics** Do Now
 
 ## Think Sheet Packet: <mark>Pages 3 & 4</mark>

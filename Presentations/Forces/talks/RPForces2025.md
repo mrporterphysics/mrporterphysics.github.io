@@ -478,19 +478,17 @@ $$\boxed{1\textrm{ Newton} = 1\textrm{ kg} \cdot 1 \textrm{ m/s}^2}$$
 
 # Net Force with Force Diagrams
 
-![w:800](image-12.png)
+![w:800 center](image-12.png)
 
-- 1200 N + -800 N = 400 N
-- 600 N + -800 N = -200 N
-- 50 N + -50 N = 0 N
-- 20 N + 0 N = 20 N
+- A. 1200 N + -800 N = 400 N
+- B. 600 N + -800 N = -200 N
+- Cy. 50 N + -50 N = 0 N
+- Cx. 20 N + 0 N = 20 N
 
 ---
 
 # Drawing Free Body Diagrams 
 
-<div class='columns'>
-<div>
 
 A special type of force diagram that **represents all the forces acting upon an object**. Arrows represent the forces. The force arrows …
 
@@ -498,14 +496,11 @@ A special type of force diagram that **represents all the forces acting upon an 
 - … are pointing in the direction of the force,
 - … and have a length that is in proportion to their relative strength (longer arrows are stronger forces).
 
-</div>
- 
-<div>
 
-![alt text](image-14.png)
 
-</div>
-</div>
+![bg fit right:30%](image-14.png)
+
+
 
 ---
 
