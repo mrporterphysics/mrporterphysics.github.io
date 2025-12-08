@@ -11,7 +11,8 @@ math: mathjax
 
 # Lesson 1 — Engage
 ## Where did everything come from?
-- Prompt: Has the universe always been the same?
+
+### _Has the universe always been the same?_
 - Task:
   - Write an initial claim: How did the universe form and lead to stars and planets?
   - Choose your best idea and put it on your mini whiteboard.
@@ -28,10 +29,11 @@ math: mathjax
 ---
 
 ## Video: How Many Stars?
-- Watch 0:00–2:51
-- Quick reflection:
-  - What surprised you?
-  - What does “many stars → many planets” suggest?
+
+<iframe width="1000" height="400" src="https://www.youtube.com/embed/h-5o9TEnGrE?si=bjg5xYmfI5htSY5G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- What surprised you?
+- What does “many stars → many planets” suggest?
 
 ---
 

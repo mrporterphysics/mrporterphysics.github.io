@@ -19,6 +19,34 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.08 **Earth Science**
+
+##### **❓ of the 📅**: What's the longest trip you've been on?d
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How many stars?
+2. Exploring Light Spectra from other galaxies 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Find patterns in light from other galaxies. Connect sound waves to light waves._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2025.12.05 **Earth Science**
 
