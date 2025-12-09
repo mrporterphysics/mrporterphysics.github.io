@@ -19,6 +19,51 @@ math: mathjax
 <!--- class: christmas --->
 
 
+# 2025.12.10 **AP Physics** Do Now 
+
+A person who weighs 600 N is standing on a scale in an elevator. The elevator is identical in both cases. In both cases the elevator is moving downward, but in Case A it is accelerating upward and in Case B it is accelerating downward (at $2 \text{ m/s}^2$).
+
+![center w:500](image-30.png)
+
+**Will the scale reading be (i) greater in Case A, (ii) greater in Case B, or (iii) the same in both cases? _____  Explain your reasoning.**
+
+---
+
+# 2025.12.10 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. AP Workbook 2.A - 2.E - feel free to work with whoever you'd like
+3. Mini Lesson - N3L
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define N3L_
+
+🥅 _Introduce Friction Equation and Ideas_
+
+### 📆 Upcoming
+
+- Quiz Friday: Projectile Question & Forces
+- PC Homework
+
+</div>
+</div>
+
+---
+
 
 # 2025.12.09 **AP Physics** Do Now 
 

@@ -19,6 +19,39 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.09 **Earth Science**
+
+##### **❓ of the 📅**: How often do you dance?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish going through models 1-4
+    - Model 2: [Sound Waves](https://phet.colorado.edu/sims/html/sound-waves/latest/sound-waves_all.html)
+    - Use board for blocked link 4
+4. CER (page 15) on whiteboard with lab table
+5. Discuss as a class
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use models of light and sound to determine if the Universe is expanding_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.08 **Earth Science**
 
 ##### **❓ of the 📅**: What's the longest trip you've been on?d
