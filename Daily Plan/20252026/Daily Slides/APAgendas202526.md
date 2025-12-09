@@ -18,6 +18,47 @@ math: mathjax
 
 <!--- class: christmas --->
 
+
+
+# 2025.12.09 **AP Physics** Do Now 
+
+In the N2L packet from yesterday - complete top row (givens & diagrams) for **Question #2**
+
+---
+
+# 2025.12.09 **AP Physics**
+
+##### **❓ of the 📅**: How often do you dance?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. N2L Packet 3-6
+3. N2L Packet 7 & 8 on whiteboard with lab group
+4. Start Physics Classroom Homework
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use N2L to model physical situations and make predictions about forces and motion_
+
+### 📆 Upcoming
+
+- PC Homework: Assignments Posted
+- Bring in AP Workbook Unit 2 Tomorrow
+
+</div>
+</div>
+
+---
+
 # 2025.12.08 **AP Physics** Do Now
 
 ## 🏁 Finish your lab!
