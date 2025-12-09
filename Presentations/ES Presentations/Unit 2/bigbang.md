@@ -137,17 +137,19 @@ math: mathjax
 ---
 
 ## Balloon Model Activity
-- Inflate = expansion
-- Inferences:
+* Inflate = expansion
+* Inferences:
   - Earlier universe: smaller, denser, hotter
   - Galaxies closer in the past; at the beginning → clumped
 
 ---
 
+
 ## Conservation Principles
-- Energy isn’t created/destroyed; it moves/changes
-- Matter isn’t created/destroyed; it moves/changes
-- Implication:
+
+* Energy isn’t created/destroyed; it moves/changes
+* Matter isn’t created/destroyed; it moves/changes
+* Implication:
   - Early H, He, and energy should persist today (possibly transformed)
 
 ---
@@ -170,11 +172,15 @@ math: mathjax
 
 ---
 
+<iframe width="1100" height="600" src="https://www.youtube.com/embed/HdPzOWlLrbE?si=gI4nqdSGdOnSX66i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 ## Consensus (Evidence)
-- Prompts:
+* Prompts:
   - How did conservation help link evidence to claims?
   - Which evidence most strongly supports Big Bang?
-- Key points:
+* Key points:
   - H:He ratio aligns with early-universe formation
   - Stretched waves explain microwave background
   - Evidence supports a small, hot, dense early universe
