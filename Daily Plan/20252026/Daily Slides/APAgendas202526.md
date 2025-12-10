@@ -40,6 +40,7 @@ A person who weighs 600 N is standing on a scale in an elevator. The elevator is
 #### 📋 Agenda
 
 1. Do Now
+1. Discuss & Go Over 7&8 Angled Questions
 2. AP Workbook 2.A - 2.E - feel free to work with whoever you'd like
 3. Mini Lesson - N3L
 
