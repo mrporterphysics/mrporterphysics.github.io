@@ -17,6 +17,14 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.10 **Regents Physics** Do Now
+
+## List the forces acting on the **sled** for the following situation:
+
+![center](a-cartoon-of-a-dog-pulling-a-sled-with-a-rabbit-in-it.gif)
+
+---
+
 # 2025.12.10 **Regents Physics**
 
 ##### **❓ of the 📅**: Have you every had a surprise party? Were you surprised?
