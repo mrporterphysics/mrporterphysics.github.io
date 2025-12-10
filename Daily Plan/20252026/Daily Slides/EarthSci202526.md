@@ -29,6 +29,7 @@ class:  twilight
 
 #### 📋 Agenda
 
+0. Finish CER from yesterday
 1. If the universe is expanding...how did it start?
     - [Slides](../../../Presentations/ES%20Presentations/Unit%202/bigbang.html)
 
@@ -38,7 +39,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Discuss the model of the beginning of the universe_
 
 ### 📆 Upcoming
 
