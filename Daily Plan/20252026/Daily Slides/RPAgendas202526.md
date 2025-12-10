@@ -17,6 +17,37 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.10 **Regents Physics**
+
+##### **❓ of the 📅**: Have you every had a surprise party? Were you surprised?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How to make Free Body Diagrams
+2. Think Sheet page 15 - FBDs
+3. Fan Cart Pivot Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model forces with diagrams_
+
+🥅 _Find a mathematical relationship between unbalanced force and acceleration_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.08 **Regents Physics** Do Now
 
 ## **Page 11** in _Think Sheet_ Packet
