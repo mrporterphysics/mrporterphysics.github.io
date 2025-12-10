@@ -31,7 +31,7 @@ A person who weighs 600 N is standing on a scale in an elevator. The elevator is
 
 # 2025.12.10 **AP Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Have you ever had a surprise party? (that was an actual surprise)
 
 <div class ='columns'>
 
