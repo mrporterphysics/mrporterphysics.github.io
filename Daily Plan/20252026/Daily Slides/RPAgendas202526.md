@@ -17,6 +17,40 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.11 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Pivot Lab
+2. Discuss Results
+3. Define N3L
+4. Newton's Laws Packet: pages (12-14,16)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model N2L from experimental data_
+
+### 📆 Upcoming
+
+- PC Homework Due Wed 12/17
+    - Newton's Laws 2 
+    - Newton's Laws 3
+
+</div>
+</div>
+
+---
+
 # 2025.12.10 **Regents Physics** Do Now
 
 ## List the forces acting on the **sled** for the following situation:
