@@ -19,6 +19,35 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.11 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. If the universe is expanding...how did it start?
+    - [Slides](../../../Presentations/ES%20Presentations/Unit%202/bigbang.html)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.10 **Earth Science**
 
 ##### **❓ of the 📅**: Question
