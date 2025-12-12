@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.12 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz 
+2. Page 13 Newton's Laws Packet
+2. Page 14: Together -> hwo to solve N2L with Free Body Diagrms
+3. Page 16-18
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use N2L and FBDs to solve problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.11 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?
