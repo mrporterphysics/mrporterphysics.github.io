@@ -19,6 +19,39 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.12 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Reading
+2. Video
+3. Part 3 & Computational Modeling
+4. Part 4 & [Murmur of a Bang](https://imagine.gsfc.nasa.gov/educators/programs/cosmictimes/online_edition/1965/murmur.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Develop an explanation for the beginning of the universe_
+
+### 📆 Upcoming
+- Quiz Thursday:
+    - Dating (Abs & Relative)
+    - Big Bang Theory
+
+</div>
+</div>
+
+---
+
 # 2025.12.11 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?
