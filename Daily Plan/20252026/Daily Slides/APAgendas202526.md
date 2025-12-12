@@ -18,6 +18,38 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.12 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?  
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Go Over AP Workbook
+2. Friction Notes
+3. Practice with Friction Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Frictional Forces_
+
+🥅 _Identify difference between static and kinetic friction_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2025.12.10 **AP Physics** Do Now 
 
