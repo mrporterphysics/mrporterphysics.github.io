@@ -19,6 +19,38 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.15 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite holiday song?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish up packet
+2. Big Bang & Absolute Dating Practice
+    - Canvas: **Quiz Practice: BB, Dating**
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Regents Questions_
+
+### 📆 Upcoming
+
+- Quiz *Thursday**
+    - Big Bang, Relatie Dating, Absolute Dating
+
+</div>
+</div>
+
+---
+
 # 2025.12.12 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?
