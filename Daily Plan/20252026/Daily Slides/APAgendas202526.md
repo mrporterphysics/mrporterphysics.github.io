@@ -18,6 +18,63 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.15 **AP Physics** Do Now
+
+<div class='columns'>
+<div>
+
+A spaceship is attached to two cargo pods by rods. At the instant shown, the speed of the pods and of the spaceship is 300 m/s. In Case A the acceleration of the ship and of the pods is 3 m/s to the left, while in Case B it is 2 m/s to the right. All masses are given in terms of M, the mass of an empty pod.
+
+</div>
+ 
+<div>
+
+![](image-31.png)
+
+</div>
+</div>
+
+**Will the tension or compression at point P in the tow rod be (i) greater in Case A, (ii) greater in Case B, or (iii) the same in both cases? Explain your reasoning.**
+
+---
+
+
+# 2025.12.15 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite holiday song?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Friction Notes
+3. Friction Practice - PC:
+    - Newton's Laws 8
+    - Set F2D6: Angled Forces 1
+    - Set F2D7: Angled Forces 2
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model friction qualitatively and quantitatively_
+
+### 📆 Upcoming
+
+- PC: Two Body Questions (think train questions)
+- Finish Assignments from Today's class
+- Quiz Thursday
+
+</div>
+</div>
+
+---
+
 # 2025.12.12 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?  

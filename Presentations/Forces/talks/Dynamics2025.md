@@ -597,33 +597,9 @@ List the cases where the scale reading is **equal to** than 500 N.
 
 ##### Rank the **magnitude of the normal force** exerted on the walls by the boxes. 
 
----
-
-#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on the boxes as shown. 
-
-![center](../figures/wallboxes.png)
-
-##### Rank the **magnitude of the normal force** on each box from greatest to least. 
 
 ---
 
-#### Ignoring the normal force...which box(es) do you think is the **most** difficult to hold up? Why?
-
-![center](../figures/wallboxes.png)
-
-
----
-
-#### In both cases below, Grace pulls the same large crate across a floor at a constant speed of $1.48 \textrm{ m/s}$.
-
-![center](../figures/grace.png)
-
-
-##### Is the magnitude of the force exerted by Grace on the rope (i) _greater_ in Case A, (ii) _greater_ in Case B, or (iii) _the same_ in both cases?
-
-##### Explain your reasoning.
-
----
 
 ![bg fit](image-3.png)
 
@@ -682,30 +658,16 @@ $$ \boxed{F_f \le \mu F_N} $$
 
 ---
 
-# Friction Lab 
 
-#### **Objective**
+#### In both cases below, Grace pulls the same large crate across a floor at a constant speed of $1.48 \textrm{ m/s}$.
 
-Determine the coefficient of static friction between your block and a two flat surfaces in the classroom.
+![center](../figures/grace.png)
 
-<div class='columns'>
-<div>
 
-#### **Materials** 
+##### Is the magnitude of the force exerted by Grace on the rope (i) _greater_ in Case A, (ii) _greater_ in Case B, or (iii) _the same_ in both cases?
 
-- Wooden block
-- Electronic Force Sensor
+##### Explain your reasoning.
 
-</div>
- 
-<div>
-
-#### **Hypothesis**
-
-Which surface will have a greater coefficient of friction?
-
-</div>
-</div>
 
 ---
 
@@ -747,6 +709,39 @@ Consider the free-body diagram for an object accelerating across a surface. The 
 #### Consider the free-body diagram shown at the right. If the applied force is 97.7 N at an angle of 27.4 degrees, the force of gravity is 110 N and the coefficient of friction is 0.369, then **what is the acceleration (in m/s/s) of the object?** 
 
 ![bg fit right](image.png)
+
+---
+
+
+
+---
+
+
+
+# Friction Lab 
+
+#### **Objective**
+
+Determine the coefficient of static friction between your block and a two flat surfaces in the classroom.
+
+<div class='columns'>
+<div>
+
+#### **Materials** 
+
+- Wooden block
+- Electronic Force Sensor
+
+</div>
+ 
+<div>
+
+#### **Hypothesis**
+
+Which surface will have a greater coefficient of friction?
+
+</div>
+</div>
 
 
 ---
