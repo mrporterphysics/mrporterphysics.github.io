@@ -18,6 +18,67 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.16 **AP Physics** Do Now
+
+Two identical blocks, 1 and 2, are connected by a massless string. In Case A, a student pulls on a string attached to block 2 so that the blocks travel to the right across a desk at a constant speed of 10 cm/s. In Case B, the student pulls on a string attached to block 1 so that the same blocks travel across the same desk to the left at a constant speed of 20 cm/s.  
+
+<div class='columns'>
+<div>
+
+Will the tension in the diagonal string connecting the two blocks be (i) **_greater_** **in Case A**, (ii) **_greater_** **in Case B**, or (iii) **_the same_** **in both cases**?  Explain your reasoning.
+
+</div>
+ 
+<div>
+
+![center w:500](image-32.png)
+
+</div>
+</div>
+
+---
+
+# 2025.12.16 **AP Physics**
+
+##### **❓ of the 📅**: What is the best gift you **given**?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+1. AP Workbook: 2.F, 2.G, 2.I & 2.M
+2. AP Workbook 2.N
+	1. Complete
+	2. Design your own experiment to find the $\mu$ of your block for two surfaces
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with friction_
+
+🥅 _Experimently model static friction_
+
+### 📆 Upcoming
+
+- Finish PC
+- Quiz Thursday
+
+</div>
+</div>
+
+
+
+
+
+
+---
+
 # 2025.12.15 **AP Physics** Do Now
 
 <div class='columns'>

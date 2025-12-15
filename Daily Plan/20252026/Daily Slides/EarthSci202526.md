@@ -19,6 +19,35 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.16 **Earth Science**
+
+##### **❓ of the 📅**: What is the best gift that you have **given**?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Calculating Redshift Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use mathematical models to measure and calculate the redshift and relative velocities of different galaxies_
+
+### 📆 Upcoming
+
+- Quiz **Thursday**
+
+</div>
+</div>
+
+---
+
 # 2025.12.15 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite holiday song?
