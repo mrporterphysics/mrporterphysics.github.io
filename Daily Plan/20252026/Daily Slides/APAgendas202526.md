@@ -50,7 +50,7 @@ A spaceship is attached to two cargo pods by rods. At the instant shown, the spe
 #### 📋 Agenda
 
 1. Do Now
-2. Friction Notes
+2. [Friction Notes](../../../Presentations/Forces/talks/APForces.html)
 3. Friction Practice - PC:
     - Newton's Laws 8
     - Set F2D6: Angled Forces 1
