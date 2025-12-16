@@ -17,6 +17,37 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.16 **Regents Physics**
+
+##### **❓ of the 📅**: What is the best gift you have **given**?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Page 16 in Newton's Laws Packet
+2. Solving N2L Questions: pages 17 & 18
+    - Example then independent/partner work
+3. Physics Classroom Time
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use N2L to solve problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.12 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather live in a floating city in the sky or an underwater city?
