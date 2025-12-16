@@ -49,10 +49,11 @@ Will the tension in the diagonal string connecting the two blocks be (i) **_grea
 #### 📋 Agenda
 
 1. Do Now 
+2. Angled Force Examples
+    - PC Angled Forces 1
+3. PC Work time ~ 30-40 minutes
 1. AP Workbook: 2.F, 2.G, 2.I & 2.M
-2. AP Workbook 2.N
-	1. Complete
-	2. Design your own experiment to find the $\mu$ of your block for two surfaces
+
 
 </div>
 
