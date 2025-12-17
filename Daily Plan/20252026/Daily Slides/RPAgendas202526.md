@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.17 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite family holiday tradition?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Friction Introduction
+3. Friction Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Static Friciton and determine $\mu_s$ for two surfaces_
+
+### 📆 Upcoming 
+
+
+</div>
+</div>
+
+---
+
 # 2025.12.16 **Regents Physics**
 
 ##### **❓ of the 📅**: What is the best gift you have **given**?
