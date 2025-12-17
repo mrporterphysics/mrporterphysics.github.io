@@ -681,37 +681,15 @@ $$\boxed{a = \frac{F_{net}}{m}}$$
 
 ---
 
-#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on the boxes as shown. 
+# What is Friction?
 
-![center](../figures/wallboxes.png)
-
-##### Rank the **magnitude of the normal force** exerted on the walls by the boxes. 
+## The friction force is the force exerted by a surface as an object moves across it or makes an effort to move across it. 
 
 ---
 
-#### Boxes are held at rest against rough, vertical walls by forces pushing horizontally on the boxes as shown. 
+# What is Friction?
 
-![center](../figures/wallboxes.png)
-
-##### Rank the **magnitude of the normal force** on each box from greatest to least. 
-
----
-
-#### Ignoring the normal force...which box(es) do you think is the **most** difficult to hold up? Why?
-
-![center](../figures/wallboxes.png)
-
-
----
-
-#### In both cases below, Grace pulls the same large crate across a floor at a constant speed of $1.48 \textrm{ m/s}$.
-
-![center](../figures/grace.png)
-
-
-##### Is the magnitude of the force exerted by Grace on the rope (i) _greater_ in Case A, (ii) _greater_ in Case B, or (iii) _the same_ in both cases?
-
-##### Explain your reasoning.
+## Friction results from the two surfaces being pressed together closely, causing intermolecular attractive forces between molecules of different surfaces. As such, friction depends upon the nature of the two surfaces and upon the degree to which they are pressed together. 
 
 ---
 
@@ -723,10 +701,37 @@ $$\boxed{a = \frac{F_{net}}{m}}$$
 
 ---
 
-![bg fit](../figures/Kinetic-vs-Static-Friction.gif)
+# Two Types of Friction 
+
+
+<div class='columns'>
+<div>
+
+## Kinetic Friction
+
+- Kinetic Friction results when two surfaces are sliding relative to each other 
+<br><br><br><br><br><br>
+
+</div>
+<div>
+
+## Static Friction
+
+- Static friction results when the surfaces of two objects are at rest relative to one another and a force exists on one of the objects to set it into motion relative to the other object. 
+<br><br>
+
+</div>
+ 
+
+</div>
 
 ---
 
+![bg fit](../figures/Kinetic-vs-Static-Friction.gif)
+
+
+
+---
 
 ![bg fit](../figures/StaticFriction.gif)
 
@@ -742,6 +747,7 @@ $$ \boxed{F_f \le \mu F_N} $$
 
 * $\le$ is only for **static friction**
   * Why? Only need friction to **balance** so you don't need the _maximum_ amount of static friction 
+* $F_f = \mu F_N$ is for **kinetic friction**
 * $\mu$ (greek letter mu, pronouced "_mew_") - **coefficient of friction**
   * how likely surface pairs are to interlock
   * _always_ less than 1 
@@ -749,13 +755,6 @@ $$ \boxed{F_f \le \mu F_N} $$
 
 
 ---
-
-![bg fit](../figures/Testing-Friction-1.gif)
-![bg fit](../figures/Testing-Friction-08%20(1).gif)
-
----
-
-
 
 # Common $\mu$ Values
 
@@ -765,7 +764,37 @@ $$ \boxed{F_f \le \mu F_N} $$
 
 ![bg fit right](../figures/mus.png)
 
+---
 
+![bg fit](../figures/Testing-Friction-1.gif)
+![bg fit](../figures/Testing-Friction-08%20(1).gif)
+
+---
+
+# Friction Lab 
+
+#### **Objective**
+
+Determine the coefficient of static friction between your block and a two flat surfaces in the classroom.
+
+<div class='columns'>
+<div>
+
+#### **Materials** 
+
+- Wooden block
+- Electronic Force Sensor
+
+</div>
+ 
+<div>
+
+#### **Hypothesis**
+
+Which surface will have a greater coefficient of friction?
+
+</div>
+</div>
 
 ---
 
@@ -809,32 +838,6 @@ Consider the free-body diagram for an object accelerating across a surface. The 
 
 # [Static Friction Lab Example](https://thephysicsaviary.com/Physics/Programs/Labs/ForceFriction/) <!--fit--->
 
----
-
-# Friction Lab 
-
-#### **Objective**
-
-Determine the coefficient of static friction between your block and a two flat surfaces in the classroom.
-
-<div class='columns'>
-<div>
-
-#### **Materials** 
-
-- Wooden block
-- Electronic Force Sensor
-
-</div>
- 
-<div>
-
-#### **Hypothesis**
-
-Which surface will have a greater coefficient of friction?
-
-</div>
-</div>
 
 ---
 
