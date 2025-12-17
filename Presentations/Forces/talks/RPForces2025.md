@@ -798,6 +798,18 @@ Which surface will have a greater coefficient of friction?
 
 ---
 
+<iframe
+      src="https://thephysicsaviary.com/Physics/Programs/Labs/FrictionLab/"
+      width = "1100"
+      height = "600"
+      allowfullscreen
+      loading="eager"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+
+---
+
 #### Friction Practice 
 
 Consider the free-body diagram for an object accelerating across a surface. The object has a mass of 2.12-kg. There is a forward thrust force of 50.0 N. The coefficient of friction between the object and the surface is 0.365. Determine the …
