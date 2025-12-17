@@ -19,6 +19,50 @@ class:  twilight
 
 <!--- class: christmas--->
 
+# 2025.12.17 **Earth Science**
+
+##### **❓ of the 📅**: What is your family tradition over the holidays?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Whiteboard Summary - Dating & The Big Bang
+2. Practice Regents Questions on Canvas
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for Quiz Tomorrow_
+
+### 📆 Upcoming
+
+- Quiz tomorrow
+
+</div>
+</div>
+
+---
+
+# Whiteboard Summary:
+
+- What do we need to know about **relative dating**, **absolute dating**, the **Big Bang Theory** and associated ideas?
+    - What are the **BIG IDEAS**?
+    - What are some *important details*?
+        - i.e. what is evidence supporting the BBT?
+- Use words and pictures
+- Don't just copy your notes - lots of words isn't great, try to summarize and simplify.
+
+
+<mark>_⚠️ Do this first **without** any notes for **10 Minutes**. Then review your notes and add to your board_<mark/>
+
+---
+
 # 2025.12.16 **Earth Science**
 
 ##### **❓ of the 📅**: What is the best gift that you have **given**?
