@@ -17,6 +17,35 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.18 **Regents Physics**
+
+##### **❓ of the 📅**: Real, fake or no Christmas tree? If you don't celebrate do you decorate for something else?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Friction Lab
+2. Discuss & Review
+3. Newton's Laws Packet - Friciton - page 19
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.17 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your favorite family holiday tradition?
