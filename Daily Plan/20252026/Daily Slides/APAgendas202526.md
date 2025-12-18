@@ -18,6 +18,36 @@ math: mathjax
 
 <!--- class: christmas --->
 
+# 2025.12.18 **AP Physics**
+
+##### **❓ of the 📅**: Real, fake or no Christmas tree? If you don't celebrate do you decorate for something else?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz 
+2. TBD - Based on Time:
+    - Workbook (some of 2.F, 2.G, 2.I & 2.M)
+    - Friction Lab...?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Quiz_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.12.16 **AP Physics** Do Now
 
 Two identical blocks, 1 and 2, are connected by a massless string. In Case A, a student pulls on a string attached to block 2 so that the blocks travel to the right across a desk at a constant speed of 10 cm/s. In Case B, the student pulls on a string attached to block 1 so that the same blocks travel across the same desk to the left at a constant speed of 20 cm/s.  
