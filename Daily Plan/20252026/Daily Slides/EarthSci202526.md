@@ -21,21 +21,12 @@ class:  twilight
 
 ![bg fit blur opacity](https://media.tenor.com/eZcKDgDWLBQAAAAC/fire-place.gif)
 
-<!-- <div class = 'bg'> -->
+
 
 # 2025.12.19 **Earth Science**
 
 ##### **❓ of the 📅**: What cookies are you leaving for Santa :santa:?
 
-<style>
-  /* 1) Solid color */
-  .bg {
-    background-color: #f0f4ff71;
-    padding: 4px;
-    border-radius: 8px;
-  }
-
-</style>
 
 <div class ='columns'>
 
@@ -69,7 +60,7 @@ class:  twilight
 
 **No devices unless you are completing school work.**
 
-</div>
+
 
 ---
 
