@@ -18,6 +18,38 @@ math: mathjax
 
 <!--- class: christmas --->
 
+![bg fit blur opacity](https://media.tenor.com/eZcKDgDWLBQAAAAC/fire-place.gif)
+
+# 2025.12.19 **AP Physics**
+
+##### **❓ of the 📅**: What type of cookie did you leave for Santa 🎅?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Go over workbook question
+2. Board Games or color -- no computer games
+
+</div>
+
+<div>
+
+#### 🎯 Goals
+
+🥅 _Ease into break_
+
+### 📆 Upcoming
+
+- Happy vacation 🎅 🎄 ⛷️ 🕎
+
+</div>
+</div>
+
+---
+
 # 2025.12.18 **AP Physics**
 
 ##### **❓ of the 📅**: Real, fake or no Christmas tree? If you don't celebrate do you decorate for something else?
