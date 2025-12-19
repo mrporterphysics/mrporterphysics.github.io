@@ -19,6 +19,60 @@ class:  twilight
 
 <!--- class: christmas--->
 
+![bg fit blur ](https://media.tenor.com/eZcKDgDWLBQAAAAC/fire-place.gif)
+
+<div class = 'bg'>
+
+# 2025.12.19 **Earth Science**
+
+##### **❓ of the 📅**: What cookies are you leaving for Santa :santa:?
+
+<style>
+  /* 1) Solid color */
+  .bg {
+    background-color: #f0f4ff71;
+    padding: 4px;
+    border-radius: 8px;
+  }
+
+</style>
+
+<div class ='columns'>
+
+<div>
+
+#### 📋 Agenda
+
+1. Hand in any labs you haven't finished or are missing in the gradebook
+2. Options:
+    - Finish Work You Owe
+    - Color
+    - Play a board game
+
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Have a nice break!_
+
+### 📆 Upcoming
+
+- Vacation 🏂 ❄️ 🏀 🎄 🕎
+
+</div>
+</div>
+
+**No devices unless you are completing school work.**
+
+</div>
+
+---
+
 # 2025.12.17 **Earth Science**
 
 ##### **❓ of the 📅**: What is your family tradition over the holidays?

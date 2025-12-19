@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Workbench&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Instrument+Serif:ital@0;1&display=swap');
 
 
 :root {
@@ -135,8 +136,16 @@ section.soft {
 }
 
 /* Headers */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Mono', monospace;
+h1 {
+    font-family: "BBH Bogle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1 {
