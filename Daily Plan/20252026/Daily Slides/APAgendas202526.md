@@ -22,7 +22,7 @@ math: mathjax
 
 # 2025.12.19 **AP Physics**
 
-##### **❓ of the 📅**: What type of cookie did you leave for Santa 🎅?
+##### **❓ of the 📅**: What type of cookie 🍪 did you leave for Santa 🎅?
 
 <div class ='columns'>
 
