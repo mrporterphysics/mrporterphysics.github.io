@@ -19,9 +19,9 @@ class:  twilight
 
 <!--- class: christmas--->
 
-![bg fit blur ](https://media.tenor.com/eZcKDgDWLBQAAAAC/fire-place.gif)
+![bg fit blur opacity](https://media.tenor.com/eZcKDgDWLBQAAAAC/fire-place.gif)
 
-<div class = 'bg'>
+<!-- <div class = 'bg'> -->
 
 # 2025.12.19 **Earth Science**
 
