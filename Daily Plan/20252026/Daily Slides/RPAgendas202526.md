@@ -15,6 +15,43 @@ math: mathjax
 
 ---
 
+
+# 2026.01.05 **Regents Physics**
+
+##### **❓ of the 📅**: Do you have any New Year *Resolutions*?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review [Friction](../../../Presentations/Forces/talks/RPForces2025.html#66)
+2. Fricion Think Sheet (Packet)
+3. Friction Physics Classroom
+  -> NL11 - Friction and Mu 1
+  ->s NL8 - Newton's 2nd Law Horizontal Acceleration
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Remember what we were doing_
+
+🥅 _Use model of friction to make predictions_
+
+
+### 📆 Upcoming
+
+- Finish any physics classroom work you owe...
+
+</div>
+</div>
+
+---
+
 <!--- class: christmas --->
 
 # 2025.12.18 **Regents Physics**
@@ -45,6 +82,7 @@ math: mathjax
 </div>
 
 ---
+
 
 # 2025.12.17 **Regents Physics**
 
