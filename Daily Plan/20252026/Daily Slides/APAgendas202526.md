@@ -16,6 +16,40 @@ math: mathjax
 
 ---
 
+# 2026.01.05 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - AP Workbook:
+    - 2.G & 2.I
+2. Inclined Planes
+    - Introduction
+    - Pivot
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Remember what we were doing before break... :confounded:_
+
+🥅 _Model forces on inclined planes_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- class: christmas --->
 
 ![bg fit blur opacity](https://media.tenor.com/eZcKDgDWLBQAAAAC/fire-place.gif)

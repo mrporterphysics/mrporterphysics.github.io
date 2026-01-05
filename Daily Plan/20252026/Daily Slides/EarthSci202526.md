@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.01.05 **Earth Science**
+
+##### **❓ of the 📅**: Do you have New Year's Resolution?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. New Seats
+1. [Earth's Interior](../../../Presentations/ES%20Presentations/Unit%203%20Earth's%20Interior/EarthInterior.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Earth's Interior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- class: christmas--->
 
 ![bg fit blur opacity](https://media.tenor.com/eZcKDgDWLBQAAAAC/fire-place.gif)
