@@ -18,7 +18,7 @@ math: mathjax
 
 # 2026.01.05 **AP Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Do you have any New Year Resolutions?
 
 <div class ='columns'>
 
