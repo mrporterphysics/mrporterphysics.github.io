@@ -15,6 +15,51 @@ math: mathjax
 
 ---
 
+# 2026.01.06 **Regents**
+
+##### **❓ of the 📅**: Questions
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Friction Questions
+    - Check answers as you go (Note: 🔑 is using 9.8 m/s/s)
+2. Angled Force Questions -> How to and practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model force situations with angled forces_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Angled Question Example:
+
+Ben Laborin works at the South bookstore during the summer months to help prepare for Fall sales. Books from one supplier are shipped to the school in large crates equipped with rope handles on all sides. On one occasion, Ben momentarily pulled with a force of 716.0 N at an angle of 33.3° above the horizontal to accelerate a 96.6-kg crate of books. The coefficient of friction between the crates and the vinyl floor is 0.442. Determine the acceleration experienced by the crate. 
+
+1. Setup this question on your problem-solving template
+
+---
+
+# Example 2
+
+Renee is on Spring Break and pulling her 30.6-kg suitcase through the airport at a constant speed of 0.30 m/s. She pulls on the strap with 119 N of force at an angle of 37.2° above the horizontal. 
+
+1. Determine the normal force experienced by the suitcase.
+2. Determine the total resistance force (friction and air resistance) experienced by the suitcase.
+
+---
 
 # 2026.01.05 **Regents Physics**
 
