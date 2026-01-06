@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.01.06 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Earthquake Simulation & Discuss as class
+2. Density column videos
+3. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.05 **Earth Science**
 
 ##### **❓ of the 📅**: Do you have New Year's Resolution?
