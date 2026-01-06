@@ -16,6 +16,48 @@ math: mathjax
 
 ---
 
+# 2026.01.06 **AP Physics** Do Now 
+
+1. Open Pivot: _**Forces on Object on Ramp**_ and complete Part 1: Preliminary Questions
+    - For all of the diagrams, just draw on a mini whiteboard. In pivot write "on mini whiteboard" for those questions. 
+
+Wait before starting Part 2:
+
+---
+
+# 2026.01.06 **AP Physics**
+
+##### **❓ of the 📅**: What secrets do you think your pet would spill about you, if they could talk? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Incline Plane Pivot
+    - Check in after Part 2 to discuss with Mr. Porter
+3. Notes on [Inclined Planes](../../../Presentations/Forces/talks/Dynamics2025.html#77)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model forces on inclines_
+
+### 📆 Upcoming
+
+- Physics Classroom: Incline Planes
+- AP Classroom Unit 2 Review...
+
+</div>
+</div>
+
+---
+
 # 2026.01.05 **AP Physics**
 
 ##### **❓ of the 📅**: Do you have any New Year Resolutions?
