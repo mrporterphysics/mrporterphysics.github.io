@@ -868,44 +868,43 @@
               <line x1="50" y1="200" x2="250" y2="100" stroke="var(--tx)" stroke-width="3" />
               <line x1="50" y1="200" x2="300" y2="200" stroke="var(--tx)" stroke-width="2" />
 
-              <!-- Object on incline -->
-              <rect x="140" y="130" width="20" height="15" fill="var(--ui-3)" stroke="var(--tx)" stroke-width="1"
-                transform="rotate(-26.57 150 137.5)" />
+              <!-- Object on incline (center at approximately 150, 150) -->
+              <rect x="140" y="143" width="20" height="15" fill="var(--ui-3)" stroke="var(--tx)" stroke-width="1"
+                transform="rotate(-26.57 150 150)" />
 
-              <!-- Weight vector (mg) pointing straight down -->
-              <line x1="150" y1="137" x2="150" y2="190" stroke="var(--bl)" stroke-width="3"
+              <!-- Weight vector (mg) pointing straight down from object center -->
+              <line x1="150" y1="150" x2="150" y2="210" stroke="var(--bl)" stroke-width="3"
                 marker-end="url(#arrowWeight)" />
-              <text x="155" y="165" font-size="12" fill="var(--bl)" font-weight="bold">mg</text>
+              <text x="155" y="185" font-size="12" fill="var(--bl)" font-weight="bold">mg</text>
 
-              <!-- Component parallel to incline (mg sin θ) -->
-              <line x1="150" y1="137" x2="200" y2="155" stroke="var(--re)" stroke-width="2"
+              <!-- Component parallel to incline (mg sin θ) - pointing DOWN the ramp -->
+              <!-- Ramp direction: from (250,100) toward (50,200), so down-left. Unit vector approx (-0.894, 0.447) -->
+              <line x1="150" y1="150" x2="105" y2="172" stroke="var(--re)" stroke-width="2"
                 marker-end="url(#arrowParallel)" stroke-dasharray="4,4" />
-              <text x="175" y="150" font-size="11" fill="var(--re)">mg sin θ</text>
+              <text x="100" y="148" font-size="11" fill="var(--re)">mg sin θ</text>
 
-              <!-- Component perpendicular to incline (mg cos θ) -->
-              <line x1="150" y1="137" x2="125" y2="120" stroke="var(--gr)" stroke-width="2" marker-end="url(#arrowPerp)"
+              <!-- Component perpendicular to incline (mg cos θ) - pointing INTO the ramp (opposite to normal) -->
+              <!-- Perpendicular into ramp: unit vector approx (0.447, 0.894) pointing down-right into surface -->
+              <line x1="150" y1="150" x2="172" y2="195" stroke="var(--gr)" stroke-width="2" marker-end="url(#arrowPerp)"
                 stroke-dasharray="4,4" />
-              <text x="95" y="115" font-size="11" fill="var(--gr)">mg cos θ</text>
+              <text x="178" y="178" font-size="11" fill="var(--gr)">mg cos θ</text>
 
-              <!-- Normal force (perpendicular to surface, outward) -->
-              <line x1="150" y1="137" x2="175" y2="120" stroke="var(--cy)" stroke-width="2"
+              <!-- Normal force (perpendicular to surface, pointing OUT of ramp) -->
+              <!-- Normal points up-left, perpendicular to surface: unit vector approx (-0.447, -0.894) -->
+              <line x1="150" y1="150" x2="128" y2="105" stroke="var(--cy)" stroke-width="2"
                 marker-end="url(#arrowNormal)" />
-              <text x="180" y="125" font-size="11" fill="var(--cy)">FN</text>
+              <text x="105" y="100" font-size="11" fill="var(--cy)">F<tspan baseline-shift="sub" font-size="8">N</tspan></text>
 
-              <!-- Angle θ at bottom -->
-              <path d="M 70 200 A 20 20 0 0 0 75 195" stroke="var(--tx)" stroke-width="1" fill="none" />
-              <text x="85" y="195" font-size="12" fill="var(--tx)">θ</text>
+              <!-- Angle θ at bottom of ramp -->
+              <path d="M 80 200 A 30 30 0 0 0 87 185" stroke="var(--tx)" stroke-width="1" fill="none" />
+              <text x="92" y="192" font-size="12" fill="var(--tx)">θ</text>
 
-              <!-- Angle θ at object (for components) -->
-              <path d="M 150 155 A 15 15 0 0 1 160 150" stroke="var(--tx)" stroke-width="1" fill="none" />
-              <text x="165" y="165" font-size="10" fill="var(--tx)">θ</text>
-
-              <!-- Right angle indicator for perpendicular component -->
-              <path d="M 140 125 L 135 130 L 140 135" stroke="var(--tx-2)" stroke-width="1" fill="none" />
+              <!-- Right angle indicator between normal and ramp surface -->
+              <path d="M 143 138 L 138 143 L 143 148" stroke="var(--tx-2)" stroke-width="1" fill="none" />
             </svg>
           </div>
           <p style="text-align: center; font-size: 0.9em; color: var(--tx-2);">
-            Weight components on inclined plane: parallel = \(mg \sin \theta\), perpendicular = \(mg \cos \theta\)
+            Weight components on inclined plane: parallel = \(mg \sin \theta\) (down ramp), perpendicular = \(mg \cos \theta\) (into ramp)
           </p>
         </div>
 
