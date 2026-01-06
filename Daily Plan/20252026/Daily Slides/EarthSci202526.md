@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.01.06 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What secrets do you think your pet 🐕 🐶 🐈 🐱 would spill about you, if they could talk? 🐟 🦜 🐍 🐸 🐮 🐄 🐖 🐐 🐔
 
 <div class ='columns'>
 
@@ -29,7 +29,8 @@ class:  twilight
 
 1. Finish Earthquake Simulation & Discuss as class
 2. Density column videos
-3. 
+3. [P Wave vs. S Wave](../../../Presentations/ES%20Presentations/Unit%203%20Earth's%20Interior/EarthInterior.html)
+4. Forming a model
 
 </div>
 
@@ -37,12 +38,13 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Use information from Earthquakes and their waves to model Earth's Interior_
 
 ### 📆 Upcoming
 
 </div>
 </div>
+
 
 ---
 

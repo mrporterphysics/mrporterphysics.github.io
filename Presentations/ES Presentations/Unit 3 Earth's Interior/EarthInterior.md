@@ -98,17 +98,17 @@ Record: Diagram the motion over time and annotate reflections/refractions.
 
 Tip: Tie seismic evidence (P vs. S behavior, reflections) to density-based layering.
 
-—
+---
 
-Slide 12: Explain 1 — What do differences in seismic waves tell us?
+### Explain 1 — What do differences in seismic waves tell us?
 - Goal: Build a model of Earth’s interior using evidence about how energy drives motion of matter in P and S waves.
 - Focus:
   - P waves: Longitudinal; travel through solids and liquids; change speed/reflect with layers.
   - S waves: Transverse; travel only through solids; disappear near the core.
 
-—
+---
 
-Slide 13: Explain 1 — Modeling P and S Waves (Human Model)
+### Explain 1 — Modeling P and S Waves (Human Model)
 - Observe a human-model demo (or video) of P and S wave motion. [Demonstrating P and S waves](https://www.youtube.com/watch?v=gjRGIpP-Qfw&feature=emb_logo)
 - Record in See-Think-Wonder:
   - **See:** How molecules move in each wave type.
@@ -117,16 +117,16 @@ Slide 13: Explain 1 — Modeling P and S Waves (Human Model)
 
 Prompt: Connect “movement of matter” to “energy from the earthquake.”
 
-—
+---
 
-Slide 14: Explain 1 — Density & Gravity (from Explore)
+###  Explain 1 — Density & Gravity (from Explore)
 - Key idea: Denser materials have more mass in the same space; gravity pulls them toward Earth’s center.
 - Implication: Earth’s interior layered by density (heavy metals deeper; lighter silicate rocks near surface).
 - Bridge: Seismic patterns + density evidence → infer phase and composition of layers.
 
-—
+---
 
-Slide 15: Explain 1 — Build Your Model of Earth’s Interior
+### Explain 1 — Build Your Model of Earth’s Interior
 - Model requirements:
   - At least 3 layers: solid crust, solid mantle, liquid outer core (inner core phase not determined yet).
   - Show where P and S waves do/do not propagate.
@@ -138,9 +138,9 @@ Slide 15: Explain 1 — Build Your Model of Earth’s Interior
 
 Deliverable: Diagram + brief written explanation tying evidence to each model feature.
 
-—
+---
 
-Slide 16: Explain 1 — Class Consensus Discussion
+### Explain 1 — Class Consensus Discussion
 - Steps:
   1) Selected groups present models.
   2) Peers restate; ask clarifying questions.
@@ -149,13 +149,3 @@ Slide 16: Explain 1 — Class Consensus Discussion
   - Earth has distinct interior layers.
   - P and S wave behavior reveals phase differences.
   - Layers stack by density; energy (earthquakes) drives motion of matter through them.
-
-—
-
-Slide 17: Exit Check (Summary Task prompts)
-- In 3–5 sentences, explain how seismic evidence and density patterns support your Earth interior model.
-- Identify one claim you’re most confident in and the evidence that supports it.
-- Note one question you still have about Earth’s interior to explore next.
-
----
-

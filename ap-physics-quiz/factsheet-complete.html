@@ -104,25 +104,29 @@
 
     .equation-item {
       background: var(--bg);
-      padding: 10px;
+      padding: 12px 15px;
       border-radius: 4px;
       text-align: center;
-      font-family: 'Fira Code', monospace;
       border: 1px solid var(--ui-3);
+      font-size: 1.1em;
     }
 
     .definition-box {
       background: var(--ui-2);
       border-left: 4px solid var(--blue-ui);
-      padding: 15px;
+      padding: 15px 20px;
       margin: 15px 0;
       border-radius: 0 6px 6px 0;
+    }
+
+    .definition-box strong {
+      color: var(--blue-ui);
     }
 
     .important-note {
       background: linear-gradient(90deg, var(--orange-ui-2) 0%, transparent 100%);
       border-left: 4px solid var(--orange-ui);
-      padding: 15px;
+      padding: 15px 20px;
       margin: 15px 0;
       border-radius: 0 6px 6px 0;
     }
@@ -132,6 +136,59 @@
       border-radius: 6px;
       padding: 20px;
       margin: 15px 0;
+    }
+
+    /* Equation display styling */
+    .equation-display {
+      background: var(--ui-2);
+      border: 1px solid var(--ui-3);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .equation-display .katex {
+      font-size: 1.3em;
+    }
+
+    /* Formula box with centered equation */
+    .formula-box .katex-display {
+      margin: 10px 0;
+    }
+
+    /* Inline equations */
+    .katex {
+      font-size: 1.1em;
+    }
+
+    /* Table styling */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: var(--bg);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .data-table th {
+      background: var(--ui-2);
+      padding: 12px 15px;
+      text-align: left;
+      font-weight: 600;
+      border: 1px solid var(--ui-3);
+    }
+
+    .data-table td {
+      padding: 12px 15px;
+      border: 1px solid var(--ui-3);
+      vertical-align: top;
+    }
+
+    .data-table tr:nth-child(even) {
+      background: var(--ui-1);
     }
 
     .concept-list ul {
@@ -282,25 +339,23 @@
           <li><a href="#kinematics">1. Kinematics</a></li>
           <li><a href="#dynamics">2. Dynamics</a></li>
           <li><a href="#circular-motion">3. Circular Motion</a></li>
-          <li><a href="#conservation">4. Conservation Laws</a></li>
+          <li><a href="#conservation">4. What is Conserved?</a></li>
           <li><a href="#energy">5. Energy</a></li>
           <li><a href="#momentum">6. Momentum</a></li>
           <li><a href="#rotation">7. Rotation</a></li>
           <li><a href="#shm">8. Simple Harmonic Motion</a></li>
           <li><a href="#fluids">9. Fluids</a></li>
-          <li><a href="#graphs">10. Graph Analysis</a></li>
+          <li><a href="#graphs">10. Graph Types</a></li>
         </ul>
       </div>
 
       <div class="nav-section">
-        <h4>Key Equations</h4>
+        <h4>Key Topics</h4>
         <ul class="nav-links">
-          <li><a href="#kinematic-equations">Kinematic Equations</a></li>
-          <li><a href="#force-equations">Force & Motion</a></li>
-          <li><a href="#energy-equations">Energy & Work</a></li>
-          <li><a href="#momentum-equations">Momentum & Impulse</a></li>
-          <li><a href="#rotation-equations">Rotational Motion</a></li>
-          <li><a href="#wave-equations">Waves & SHM</a></li>
+          <li><a href="#algebraic-kinematics">Algebraic Kinematics</a></li>
+          <li><a href="#gravitation">Gravitation & Orbits</a></li>
+          <li><a href="#friction">Friction & Inclines</a></li>
+          <li><a href="#two-body">Two-Body Problems</a></li>
         </ul>
       </div>
     </nav>
@@ -318,27 +373,26 @@
         <div class="key-equations">
           <h4>Key Kinematic Equations</h4>
           <div class="equation-list">
-            <div class="equation-item">v = v₀ + at</div>
-            <div class="equation-item">x = v₀t + ½at²</div>
-            <div class="equation-item">v² = v₀² + 2ax</div>
-            <div class="equation-item">x = ½(v₀ + v)t</div>
-            <div class="equation-item">Δx = vt (constant speed)</div>
+            <div class="equation-item">\(v_f = v_0 + at\)</div>
+            <div class="equation-item">\(x = v_0 t + \frac{1}{2}at^2\)</div>
+            <div class="equation-item">\(v_f^2 = v_0^2 + 2ax\)</div>
+            <div class="equation-item">\(x = \frac{1}{2}(v_0 + v_f)t\)</div>
+            <div class="equation-item">\(\Delta x = vt\) (constant speed)</div>
           </div>
         </div>
 
         <h2 id="kinematic-definitions">1.1 Kinematic Definitions</h2>
 
         <div class="definition-box">
-          <strong>Displacement (Δx or Δy):</strong> How far an object ends up from its initial position, regardless of
-          total distance traveled.
+          <strong>Displacement (\(\Delta x\) or \(\Delta y\)):</strong> How far an object ends up from its initial position, regardless of total distance traveled.
         </div>
 
         <div class="definition-box">
-          <strong>Average velocity (v̄):</strong> Displacement divided by time interval: v̄ = Δx/Δt
+          <strong>Average velocity (\(\bar{v}\)):</strong> Displacement divided by the time interval over which that displacement occurred: \(\bar{v} = \frac{\Delta x}{\Delta t}\)
         </div>
 
         <div class="definition-box">
-          <strong>Instantaneous velocity (v):</strong> How fast an object is moving at a specific moment in time.
+          <strong>Instantaneous velocity (\(v\)):</strong> How fast an object is moving at a specific moment in time.
         </div>
 
         <div class="definition-box">
@@ -504,42 +558,114 @@
           </ul>
         </div>
 
-        <h2 id="projectile-motion">1.7 Projectile Motion</h2>
+        <h2 id="special-equations">1.5 Special Equations for Displacement</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>When an object is moving at a constant speed \(v\), its displacement is given by \(\Delta x = vt\)
+              <ul>
+                <li>This includes horizontal components of projectile motion</li>
+              </ul>
+            </li>
+            <li>When an object starts at rest and speeds up, or when an object slows to a stop, its displacement is given by either \(x = \frac{1}{2}at^2\) or \(x = v_0 t + \frac{1}{2}at^2\)</li>
+          </ul>
+        </div>
+
+        <h2 id="algebraic-kinematics">1.6 Algebraic Kinematics</h2>
+
+        <div class="concept-list">
+          <p>You must follow these steps to solve an algebraic kinematics calculation:</p>
+          <ol>
+            <li>Define a positive direction, i.e. the direction "away from the detector." Label that direction.</li>
+            <li>Indicate in words what portion of motion you are considering, e.g. "motion from launch to the peak of the flight."</li>
+            <li>Fill out a cross diagram chart, including signs and units, of the five kinematics variables:
+              <ul>
+                <li>\(\Delta x\) [displacement]</li>
+                <li>\(v_0\) [initial velocity]</li>
+                <li>\(a\) [acceleration]</li>
+                <li>\(v_f\) [final velocity]</li>
+                <li>\(t\) [time for motion to happen]</li>
+              </ul>
+            </li>
+            <li>If three of the five variables are known, the problem is solvable; use the kinematics equations to solve.</li>
+          </ol>
+        </div>
 
         <div class="key-equations">
-          <h4>Projectile Motion Key Points</h4>
-          <div class="concept-list">
-            <ul>
-              <li><strong>Vertical acceleration:</strong> g ≈ 10 m/s² (downward)</li>
-              <li><strong>Horizontal acceleration:</strong> 0 (no air resistance)</li>
-              <li><strong>Horizontal motion:</strong> Δx = v₀t (constant velocity)</li>
-              <li><strong>Independent motions:</strong> Horizontal and vertical components separate</li>
-              <li><strong>Velocity addition:</strong> Use Pythagorean theorem: v = √(vₓ² + vᵧ²)</li>
-            </ul>
+          <h4>Kinematics Equations</h4>
+          <div class="equation-list">
+            <div class="equation-item">\(v_f = v_0 + at\)</div>
+            <div class="equation-item">\(x = v_0 t + \frac{1}{2}at^2\)</div>
+            <div class="equation-item">\(v_f^2 = v_0^2 + 2ax\)</div>
+            <div class="equation-item">\(x = \frac{1}{2}t(v_0 + v_f)\)</div>
           </div>
         </div>
 
-        <h2 id="rotational-kinematics">1.8 Rotational Kinematics</h2>
-
-        <div class="definition-box">
-          <strong>Angular displacement (θ):</strong> Angle through which object rotates (radians)
+        <div class="important-note">
+          The fourth equation \(x = \frac{1}{2}t(v_0 + v_f)\) is the area of a velocity vs. time graph written as the area of a trapezoid.
         </div>
 
-        <div class="definition-box">
-          <strong>Angular velocity (ω):</strong> Rate of angular displacement (rad/s)
-        </div>
+        <h2 id="projectile-motion">1.7 Projectile Motion</h2>
 
-        <div class="definition-box">
-          <strong>Angular acceleration (α):</strong> Rate of change of angular velocity (rad/s²)
-        </div>
-
-        <div class="formula-box">
-          <h4>Linear-Angular Relationships:</h4>
+        <div class="concept-list">
+          <p>When an object is in free-fall:</p>
           <ul>
-            <li>Linear displacement: x = rθ</li>
-            <li>Linear speed: v = rω</li>
-            <li>Linear acceleration: a = rα</li>
+            <li>Its <strong>VERTICAL</strong> acceleration is always \(g\) or 10 m/s² near the surface of the earth.</li>
+            <li>Its <strong>HORIZONTAL</strong> acceleration is always zero. Meaning the only equation you use for the horizontal motion is \(\Delta x = vt\)</li>
           </ul>
+        </div>
+
+        <div class="concept-list">
+          <ul>
+            <li>Velocities in perpendicular directions add with the Pythagorean theorem, just like perpendicular forces.</li>
+            <li>The magnitude of an object's velocity is known as its speed.</li>
+            <li>To approach a projectile problem, make two kinematics charts: one vertical, one horizontal.</li>
+          </ul>
+        </div>
+
+        <h2 id="rotational-kinematics">1.8 Rotational Kinematics - Definitions</h2>
+
+        <div class="definition-box">
+          <strong>Angular displacement (\(\theta\)):</strong> Indicates the angle through which an object has rotated. It is measured in radians.
+        </div>
+
+        <div class="definition-box">
+          <strong>Average angular velocity (\(\bar{\omega}\)):</strong> Angular displacement divided by the time interval over which that angular displacement occurred. It is measured in rad/s.
+        </div>
+
+        <div class="definition-box">
+          <strong>Instantaneous angular velocity (\(\omega\)):</strong> How fast an object is rotating at a specific moment in time.
+        </div>
+
+        <div class="definition-box">
+          <strong>Angular Acceleration (\(\alpha\)):</strong> Tells how much an object's angular speed changes in one second. It is measured in rad/s².
+        </div>
+
+        <div class="important-note">
+          Angular acceleration and centripetal acceleration are independent. Angular acceleration changes an object's rotational speed, while centripetal acceleration changes an object's direction of motion.
+        </div>
+
+        <div class="key-equations">
+          <h4>Rotational Kinematics Equations</h4>
+          <div class="equation-list">
+            <div class="equation-item">\(\omega_f = \omega_0 + \alpha t\)</div>
+            <div class="equation-item">\(\theta = \omega_0 t + \frac{1}{2}\alpha t^2\)</div>
+            <div class="equation-item">\(\omega_f^2 = \omega_0^2 + 2\alpha\theta\)</div>
+          </div>
+        </div>
+
+        <h2 id="angular-linear">1.9 Relationship Between Angular and Linear Motion</h2>
+
+        <div class="definition-box">
+          <strong>Linear displacement:</strong> \(x = r\theta\), where \(r\) is the distance from the rotational axis.
+        </div>
+
+        <div class="definition-box">
+          <strong>Linear speed:</strong> \(v = r\omega\)
+        </div>
+
+        <div class="definition-box">
+          <strong>Linear acceleration:</strong> \(a = r\alpha\)
         </div>
       </section>
 
@@ -550,10 +676,10 @@
         <div class="key-equations">
           <h4>Key Force Equations</h4>
           <div class="equation-list">
-            <div class="equation-item">F = ma</div>
-            <div class="equation-item">W = mg</div>
-            <div class="equation-item">f = μN</div>
-            <div class="equation-item">Fᶜ = mv²/r</div>
+            <div class="equation-item">\(F = ma\)</div>
+            <div class="equation-item">\(W = mg\)</div>
+            <div class="equation-item">\(f = \mu N\)</div>
+            <div class="equation-item">\(F_c = \frac{mv^2}{r}\)</div>
           </div>
         </div>
 
@@ -568,47 +694,87 @@
         </div>
 
         <div class="important-note">
-          <strong>Equilibrium condition:</strong> Net force equals zero (ΣF = 0)
+          <strong>Equilibrium condition:</strong> Net force equals zero \((\Sigma F = 0)\)
         </div>
 
         <h2 id="newtons-laws">2.2 Newton's Second Law</h2>
 
-        <div class="formula-box">
-          <h4>Newton's Second Law: F = ma</h4>
+        <div class="concept-list">
           <ul>
-            <li>Net force is in the direction of acceleration</li>
-            <li>F and a are vectors pointing in same direction</li>
-            <li>Force causes acceleration, not velocity</li>
+            <li>For all forces other than the force of the earth, objects must be in contact in order to experience a force.</li>
+            <li>An object's acceleration is in the direction in which forces are unbalanced.</li>
+            <li>The net force is in the direction in which the forces are unbalanced.</li>
+            <li>The net force is in the direction of acceleration.</li>
           </ul>
         </div>
 
-        <h2 id="force-problem-solving">2.3 Solving Force Problems</h2>
+        <div class="formula-box">
+          <h4>Newton's Second Law:</h4>
+          <p style="text-align: center; font-size: 1.3em;"><strong>\(\Sigma F = ma\)</strong></p>
+        </div>
+
+        <h2 id="force-problem-solving">2.3 Solving Problems with Forces</h2>
 
         <div class="concept-list">
-          <h3>Problem-Solving Strategy:</h3>
+          <h3>The two-step problem solving process:</h3>
           <ol>
-            <li>Draw free-body diagram</li>
-            <li>Choose coordinate system</li>
-            <li>Apply Newton's second law in each direction</li>
-            <li>Solve the resulting equations</li>
+            <li>Draw a free-body diagram.
+              <ul>
+                <li>1a. Break angled forces into components, if necessary.</li>
+              </ul>
+            </li>
+            <li>Write two equations, one for Newton's second law in each direction:
+              <ul>
+                <li>(up forces) − (down forces) = \(ma_y\)</li>
+                <li>(left forces) − (right forces) = \(ma_x\)</li>
+              </ul>
+            </li>
           </ol>
         </div>
 
-        <h2 id="mass-vs-weight">2.4 Mass vs Weight</h2>
-
-        <div class="definition-box">
-          <strong>Mass (m):</strong> Intrinsic property, measured in kg
-        </div>
-
-        <div class="definition-box">
-          <strong>Weight (W):</strong> Force due to gravity, W = mg, measured in N
-        </div>
-
         <div class="important-note">
-          Mass and weight are different! Weight depends on gravitational field strength.
+          Note that you should never get a "negative" force, so start the equations in the direction of acceleration. If acceleration is downward, write (down forces) − (up forces) = ma instead.
         </div>
 
-        <h2 id="forces-types">2.5-2.10 Types of Forces</h2>
+        <h2 id="mass-vs-weight">2.4 Mass and Weight</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li><strong>Mass</strong> tells how much material is contained in an object.</li>
+            <li>The units of mass are <strong>kilograms (kg)</strong>.</li>
+            <li><strong>Weight</strong> is the force of a planet acting on an object (in newtons).</li>
+            <li>On earth's surface, the gravitational field is <strong>10 N/kg</strong>. This means that on earth, 1 kg of mass weighs 10 N.</li>
+          </ul>
+        </div>
+
+        <h2 id="normal-force">2.5 Normal Force</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>A normal force is the force of a surface on an object in contact with that surface.</li>
+            <li>A normal force acts perpendicular to a surface.</li>
+            <li>A platform scale (i.e. bathroom scale) reads the normal force.</li>
+          </ul>
+        </div>
+
+        <h2 id="adding-forces">2.6 Adding Perpendicular Forces</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>To determine the resultant force, use the Pythagorean theorem on the horizontal and vertical components.</li>
+            <li>The "magnitude" of a force means the amount of the resultant force.</li>
+          </ul>
+        </div>
+
+        <h2 id="xy-components">2.7 x- and y-components</h2>
+
+        <div class="concept-list">
+          <p>When the angle of the diagonal force is measured from the horizontal:</p>
+          <ul>
+            <li>The horizontal component of the force is the magnitude of the force times \(\cos \theta\) or \(F_x = F \cos \theta\)</li>
+            <li>The vertical component of the force is the magnitude of the force times \(\sin \theta\) or \(F_y = F \sin \theta\)</li>
+          </ul>
+        </div>
 
         <div class="diagram-box" style="margin: 20px 0;">
           <h4>Force Components</h4>
@@ -656,29 +822,26 @@
             </svg>
           </div>
           <p style="text-align: center; font-size: 0.9em; color: var(--tx-2);">
-            When angle θ is measured from horizontal: Fx = F cos θ, Fy = F sin θ
+            When angle \(\theta\) is measured from horizontal: \(F_x = F \cos \theta\), \(F_y = F \sin \theta\)
           </p>
         </div>
 
+        <h2 id="fbd">2.8 A Free-Body Diagram Includes:</h2>
+
         <div class="concept-list">
-          <h3>Normal Force (N):</h3>
-          <ul>
-            <li>Contact force perpendicular to surface</li>
-            <li>Does NOT always equal weight</li>
-            <li>Equals perpendicular component of all forces</li>
-          </ul>
+          <ol>
+            <li>A labeled arrow representing each force. Each arrow begins on the object and points in the direction in which the force acts.</li>
+            <li>A list of the forces, indicating the object applying the force and the object experiencing the force.</li>
+          </ol>
+        </div>
 
-          <h3>Friction Force (f):</h3>
-          <ul>
-            <li>f = μN (μₛ for static, μₖ for kinetic)</li>
-            <li>Opposes motion, acts parallel to surface</li>
-            <li>Static friction ≥ kinetic friction (μₛ > μₖ)</li>
-          </ul>
+        <h2 id="inclined-planes">2.9 Inclined Planes</h2>
 
-          <h3>Inclined Plane Components:</h3>
+        <div class="concept-list">
+          <p>When an object is on a ramp, break the object's weight into components parallel to and perpendicular to the incline. Do not use x and y axes.</p>
           <ul>
-            <li>Parallel to incline: mg sin θ</li>
-            <li>Perpendicular to incline: mg cos θ</li>
+            <li>The component of the object's weight parallel to the incline is \(mg \sin \theta\)</li>
+            <li>The component of the object's weight perpendicular to the incline is \(mg \cos \theta\)</li>
           </ul>
         </div>
 
@@ -742,18 +905,44 @@
             </svg>
           </div>
           <p style="text-align: center; font-size: 0.9em; color: var(--tx-2);">
-            Weight components on inclined plane: parallel = mg sin θ, perpendicular = mg cos θ
+            Weight components on inclined plane: parallel = \(mg \sin \theta\), perpendicular = \(mg \cos \theta\)
           </p>
+        </div>
+
+        <h2 id="friction">2.10 Friction Force</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>The force of friction is the force of a surface on an object acting along the surface.</li>
+            <li>The force of friction acts in the opposite direction of an object's motion (relative to a surface).</li>
+            <li>The coefficient of friction is not a force.</li>
+            <li>The coefficient of friction is a number that tells how sticky two surfaces are.</li>
+            <li>The force of friction is equal to the coefficient of friction times the normal force: \(F_f = \mu F_N\)</li>
+            <li>The coefficient of kinetic friction is used when an object is moving; the coefficient of static friction is used when an object is not moving. Both types of coefficients of friction obey the same equation.</li>
+            <li>The coefficient of static friction can take on any value up to a maximum, which depends on the properties of the materials in contact.</li>
+            <li>For two specific surfaces in contact, the maximum coefficient of static friction is greater than the coefficient of kinetic friction.</li>
+          </ul>
         </div>
 
         <h2 id="newtons-third">2.11 Newton's Third Law</h2>
 
-        <div class="important-note">
-          <strong>For every action, there is an equal and opposite reaction.</strong>
+        <div class="concept-list">
           <ul>
-            <li>Action-reaction pairs act on DIFFERENT objects</li>
-            <li>Equal in magnitude, opposite in direction</li>
-            <li>Occur simultaneously</li>
+            <li>Newton's Third Law says that the force of object A on object B is equal to the force of object B on object A.</li>
+            <li>A "Third Law Force Pair" is a pair of forces that obeys Newton's third law.</li>
+            <li>Two forces in a third law force pair can never act on the same object.</li>
+          </ul>
+        </div>
+
+        <h2 id="two-body">2.12 Two-Body Problems</h2>
+
+        <div class="concept-list">
+          <p>In a two-body problem, usually:</p>
+          <ul>
+            <li>Draw one free body diagram per object</li>
+            <li>Write \(F_{net} = ma\) for each object separately.</li>
+            <li>Acceleration is the same for each object</li>
+            <li>One rope = one tension</li>
           </ul>
         </div>
       </section>
@@ -762,58 +951,92 @@
       <section id="circular-motion" class="section">
         <h1>3. Circular Motion</h1>
 
-        <div class="key-equations">
-          <h4>Circular Motion Equations</h4>
-          <div class="equation-list">
-            <div class="equation-item">aᶜ = v²/r = ω²r</div>
-            <div class="equation-item">Fᶜ = maᶜ = mv²/r</div>
-            <div class="equation-item">T = 2π/ω</div>
-            <div class="equation-item">f = 1/T</div>
-          </div>
+        <div class="concept-list">
+          <ul>
+            <li>An object moving at constant speed \(v\) in a circle of radius \(r\) has an acceleration of magnitude \(\frac{v^2}{r}\), directed toward the center of the circle.</li>
+            <li><strong>Centripetal Force</strong> is the net force that creates uniform circular motion.
+              <ul>
+                <li>The centripetal force is the sum of all of the radial forces (forces along the radius)</li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
-        <div class="definition-box">
-          <strong>Centripetal acceleration (aᶜ):</strong> Acceleration directed toward center of circular path
+        <h2 id="gravitation">3.1 Gravitation</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>All massive objects attract each other with a gravitational force.</li>
+            <li>The gravitational force \(F_G\) of one object on another is given by:</li>
+          </ul>
         </div>
 
-        <div class="definition-box">
-          <strong>Centripetal force (Fᶜ):</strong> Net force toward center providing centripetal acceleration
+        <div class="formula-box">
+          <p style="text-align: center; font-size: 1.3em;"><strong>\(F_G = \frac{Gm_1m_2}{r^2}\)</strong></p>
+          <ul>
+            <li>\(m\) is the mass of an object</li>
+            <li>\(r\) is the distance between the centers of the two objects</li>
+            <li>\(G\) is the universal gravitation constant, \(6.7 \times 10^{-11} \, \text{Nm}^2/\text{kg}^2\)</li>
+          </ul>
+        </div>
+
+        <div class="concept-list">
+          <ul>
+            <li>The gravitational field \(g\) near an object of mass \(M\) is given by: \(g = \frac{GM}{d^2}\)
+              <ul>
+                <li>where \(d\) represents the distance from the object's center to anywhere you're considering.</li>
+              </ul>
+            </li>
+            <li>The weight of an object near a planet is given by \(mg\), where \(g\) is the gravitational field due to the planet at the object's location.</li>
+            <li>The gravitational field near a planet is always equal to the free-fall acceleration.</li>
+            <li><strong>Gravitational mass</strong> is measured by measuring an object's weight using \(W = mg\)</li>
+            <li><strong>Inertial mass</strong> is measured by measuring the net force on an object, measuring the object's acceleration, and using \(F_{net} = ma\).</li>
+            <li><em>In all experiments ever performed, gravitational mass is equal to inertial mass.</em></li>
+          </ul>
+        </div>
+
+        <h2 id="orbits">3.2 Orbits</h2>
+
+        <div class="concept-list">
+          <h3>In a circular orbit of a satellite around a planet, consider the planet-satellite system:</h3>
+          <ul>
+            <li>Kinetic energy is constant (same speed)</li>
+            <li>Gravitational potential energy is constant (same orbital radius)</li>
+            <li>Angular momentum \(mvr\) is constant (no external torques)</li>
+            <li>Total mechanical energy is constant (no external work, and no internal energy)</li>
+          </ul>
         </div>
 
         <div class="important-note">
+          To find the speed of a circular orbit, set gravitational force equal to \(ma\), with \(a = \frac{v^2}{r}\).
+        </div>
+
+        <div class="concept-list">
+          <h3>In an elliptical orbit of a satellite around a planet, consider the planet-satellite system:</h3>
           <ul>
-            <li>Centripetal force is NOT a separate force - it's the NET force toward center</li>
-            <li>Examples: tension, friction, gravity, normal force can provide centripetal force</li>
-            <li>At constant speed, acceleration still exists (direction changes)</li>
+            <li>Kinetic energy is NOT constant (speed changes)</li>
+            <li>Gravitational potential energy is NOT constant (orbital radius changes)</li>
+            <li>Angular momentum \(mvr\) is constant (no external torques)</li>
+            <li>Total mechanical energy is constant (no external work, and no internal energy)</li>
           </ul>
+        </div>
+
+        <div class="definition-box">
+          <strong>Escape velocity</strong> is the minimum speed necessary for an object on the surface of a planet to reach a position far away from the planet. To find escape velocity, set total mechanical energy of an object-planet system to zero:
+          <p style="text-align: center; margin-top: 10px;"><strong>\(-\frac{GMm}{r} + \frac{1}{2}mv^2 = 0\)</strong></p>
         </div>
       </section>
 
       <!-- Conservation Laws Section -->
       <section id="conservation" class="section">
-        <h1>4. Conservation Laws</h1>
+        <h1>4. What is Conserved?</h1>
 
-        <div class="important-note">
-          <strong>Conservation principles are fundamental laws of physics that state certain quantities remain constant
-            in isolated systems.</strong>
-        </div>
-
-        <h2>4.1 Conservation of Energy</h2>
-        <div class="definition-box">
-          In the absence of non-conservative forces, total mechanical energy remains constant:
-          <br>E = K + U = constant
-        </div>
-
-        <h2>4.2 Conservation of Momentum</h2>
-        <div class="definition-box">
-          In the absence of external forces, total momentum of a system remains constant:
-          <br>Σpᵢ = Σpf = constant
-        </div>
-
-        <h2>4.3 Conservation of Angular Momentum</h2>
-        <div class="definition-box">
-          In the absence of external torques, total angular momentum remains constant:
-          <br>L = Iω = constant
+        <div class="concept-list">
+          <ul>
+            <li><strong>Mechanical energy</strong> is conserved when there is no net work done by external forces. (And when there's no internal energy conversion.)</li>
+            <li><strong>Angular momentum</strong> is conserved when no net external torque acts.</li>
+            <li><strong>Momentum</strong> in a direction is conserved when no net external force acts in that direction.</li>
+          </ul>
         </div>
       </section>
 
@@ -821,54 +1044,81 @@
       <section id="energy" class="section">
         <h1>5. Energy</h1>
 
-        <div class="key-equations">
-          <h4>Energy Equations</h4>
-          <div class="equation-list">
-            <div class="equation-item">K = ½mv²</div>
-            <div class="equation-item">U = mgh</div>
-            <div class="equation-item">W = F·d = Fd cos θ</div>
-            <div class="equation-item">P = W/t = F·v</div>
-          </div>
-        </div>
+        <h2>5.1 Equations for Different Forms of Energy</h2>
 
-        <h2>5.1 Kinetic Energy (K)</h2>
-        <div class="definition-box">
-          Energy of motion: K = ½mv²
-        </div>
-
-        <h2>5.2 Potential Energy (U)</h2>
         <div class="concept-list">
-          <h3>Gravitational Potential Energy:</h3>
+          <p>All forms of energy have units of joules, abbreviated J.</p>
           <ul>
-            <li>U = mgh (near Earth's surface)</li>
-            <li>Reference point is arbitrary (often ground level)</li>
-            <li>Only changes in potential energy matter physically</li>
-          </ul>
-
-          <h3>Elastic Potential Energy:</h3>
-          <ul>
-            <li>U = ½kx² (for springs)</li>
-            <li>x is displacement from equilibrium</li>
-            <li>k is spring constant</li>
+            <li><strong>Kinetic energy:</strong> \(K = \frac{1}{2}mv^2\). Here, \(m\) is the mass of the object, and \(v\) is its speed.</li>
+            <li><strong>Gravitational potential energy:</strong> \(U_g = mgh\). Here, \(m\) is the mass of the object, \(g\) is the gravitational field strength, and \(h\) is the vertical height of the object above its lowest position.</li>
+            <li>The term <strong>mechanical energy</strong> refers to the sum of a system's kinetic and potential energy.</li>
+            <li><strong>Spring potential energy:</strong> \(U_s = \frac{1}{2}kx^2\). Here, \(k\) is the spring constant, and \(x\) is the distance the spring is stretched or compressed from its equilibrium position.</li>
+            <li><strong>Rotational kinetic energy:</strong> \(K_r = \frac{1}{2}I\omega^2\). Here, \(I\) is the rotational inertia of the object, and \(\omega\) is the angular speed of the object.</li>
+            <li><strong>Internal energy</strong> is heat energy that causes an increase in the temperature of the system.</li>
           </ul>
         </div>
 
-        <h2>5.3 Work (W)</h2>
-        <div class="definition-box">
-          Work is energy transferred to or from an object: W = F·d cos θ
-        </div>
+        <h2>5.2 Work-Energy Theorem</h2>
 
-        <div class="important-note">
+        <div class="concept-list">
+          <h3>Problem-solving process:</h3>
           <ul>
-            <li>Work is positive when force and displacement are in same direction</li>
-            <li>Work is negative when force opposes displacement</li>
-            <li>Only component of force parallel to displacement does work</li>
+            <li>Define the object or system being described.</li>
+            <li>Define the two positions you're considering.</li>
+            <li>Draw an annotated energy bar chart.</li>
+            <li>Write an equation based on the energy bar chart, with one term per bar:
+              <ul>
+                <li>\(E_{initial} \pm Work = E_{final}\)</li>
+              </ul>
+            </li>
           </ul>
         </div>
 
-        <h2>5.4 Power (P)</h2>
-        <div class="definition-box">
-          Rate of energy transfer: P = W/t = F·v
+        <h2>5.3 Definition of Work</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li><strong>Positive work</strong> is done by a force parallel to an object's displacement.</li>
+            <li><strong>Negative work</strong> is done by a force antiparallel to an object's displacement.</li>
+            <li><strong>No work</strong> is done by a force acting perpendicular to an object's displacement.</li>
+            <li>Work is a scalar quantity – it can be positive or negative, but does not have a direction.</li>
+            <li>The area under a force vs. displacement graph is work.</li>
+          </ul>
+        </div>
+
+        <h2>5.4 Power</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>Power is defined as the amount of work done in one second, or energy used in one second: \(P = \frac{W}{t}\)</li>
+            <li>The units of power are joules per second, which are also written as watts.</li>
+            <li>An alternate way of calculating power when a constant force acts is \(P = F\bar{v}\)</li>
+          </ul>
+        </div>
+
+        <h2>5.5 Gravitational Potential Energy</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>Near the surface of a planet, the potential energy of a planet-object system is \(mgh\), with \(h = 0\) at the lowest point of the motion.</li>
+            <li>Away from the surface, the potential energy of a planet-object system is treated differently:
+              <ul>
+                <li>PE is larger the farther from the planet's center.</li>
+                <li>PE has a negative value (except when the object is way far away from the planet, in which case PE is zero).</li>
+                <li>The equation for potential energy is \(PE = -\frac{GMm}{r}\). Don't use this equation unless you must derive an expression. The negative sign is confusing.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <h2>5.6 Energy in a Collision</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>In an elastic collision, mechanical energy of the system is conserved.</li>
+            <li>Collisions for which objects stick together can not be elastic.</li>
+            <li>Collisions for which objects bounce off each other may or may not be elastic.</li>
+          </ul>
         </div>
       </section>
 
@@ -876,43 +1126,38 @@
       <section id="momentum" class="section">
         <h1>6. Momentum</h1>
 
-        <div class="key-equations">
-          <h4>Momentum Equations</h4>
-          <div class="equation-list">
-            <div class="equation-item">p = mv</div>
-            <div class="equation-item">J = Δp = F·Δt</div>
-            <div class="equation-item">F = Δp/Δt</div>
-          </div>
-        </div>
-
-        <h2>6.1 Momentum (p)</h2>
-        <div class="definition-box">
-          Momentum is mass times velocity: p = mv (vector quantity)
-        </div>
-
-        <h2>6.2 Impulse (J)</h2>
-        <div class="definition-box">
-          Impulse equals change in momentum: J = Δp = F·Δt
-        </div>
-
-        <div class="important-note">
-          <strong>Impulse-Momentum Theorem:</strong> The impulse on an object equals its change in momentum
-        </div>
-
-        <h2>6.3 Collisions</h2>
         <div class="concept-list">
-          <h3>Elastic Collisions:</h3>
           <ul>
-            <li>Both momentum AND kinetic energy are conserved</li>
-            <li>Objects bounce apart</li>
-            <li>Relative speed before = relative speed after</li>
+            <li>Momentum is equal to mass times velocity: \(p = mv\)</li>
+            <li>The standard units of momentum are newton·seconds, abbreviated N·s. (Equivalent to kg·m/s)</li>
+            <li>The direction of an object's momentum is always the same as its direction of motion.</li>
           </ul>
+        </div>
 
-          <h3>Inelastic Collisions:</h3>
+        <h2>6.1 Impulse</h2>
+
+        <div class="concept-list">
           <ul>
-            <li>Only momentum is conserved</li>
-            <li>Kinetic energy decreases (converted to other forms)</li>
-            <li>Objects may stick together (completely inelastic)</li>
+            <li>Impulse, \(J\), can be calculated in either of two ways:
+              <ol>
+                <li>Impulse is equal to the change in an object's momentum</li>
+                <li>Impulse is equal to the force experienced multiplied by the time interval of collision, \(J = F\Delta t\)</li>
+              </ol>
+            </li>
+            <li>Impulse has the same units as momentum, N·s.</li>
+            <li>Impulse is the area under a force vs. time graph.</li>
+          </ul>
+        </div>
+
+        <h2>6.2 Conservation of Momentum in Collisions</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>When no external forces act on a system of objects, the system's momentum can not change.</li>
+            <li>The total momentum of two objects before a collision is equal to the objects' total momentum after the collision.</li>
+            <li>Momentum is a vector: that is, total momentum of two objects moving in the same direction adds together; total momentum of two objects moving in opposite directions subtracts.</li>
+            <li>A system's center of mass obeys Newton's second law: that is, the velocity of the center of mass only changes when an external net force acts on the system.</li>
+            <li>The location of the center of mass is given by \(M_{tot}x_{cm} = m_1x_1 + m_2x_2 + ...\)</li>
           </ul>
         </div>
       </section>
@@ -921,53 +1166,61 @@
       <section id="rotation" class="section">
         <h1>7. Rotation</h1>
 
-        <div class="key-equations">
-          <h4>Rotational Equations</h4>
-          <div class="equation-list">
-            <div class="equation-item">τ = rF sin θ = r⊥F</div>
-            <div class="equation-item">I = Σmr²</div>
-            <div class="equation-item">K = ½Iω²</div>
-            <div class="equation-item">L = Iω</div>
-          </div>
+        <h2>7.1 Torque</h2>
+
+        <div class="definition-box">
+          The <strong>torque</strong> provided by a force is given by \(\tau = Fd_{\perp}\), where \(d_{\perp}\) refers to the "lever arm"
         </div>
 
-        <h2>7.1 Torque (τ)</h2>
-        <div class="definition-box">
-          Torque is rotational force: τ = rF sin θ = r⊥F
+        <h2>7.2 Rotational Inertia</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>Rotational inertia \(I\) represents an object's resistance to angular acceleration.</li>
+            <li>For a point particle, rotational inertia is \(MR^2\), where \(M\) is the particle's mass, and \(R\) is the distance from the axis of rotation.</li>
+            <li>Rotational inertia of multiple objects add together algebraically.</li>
+          </ul>
         </div>
 
         <div class="important-note">
-          <ul>
-            <li>r⊥ is perpendicular distance from rotation axis to line of force</li>
-            <li>Positive torque causes counterclockwise rotation</li>
-            <li>Net torque causes angular acceleration: τ = Iα</li>
-          </ul>
+          <strong>Parallel Axis Theorem:</strong> If you know an object's rotational inertia about its center of mass, the rotational inertia \(I'\) about a parallel axis is given by \(I' = I_{cm} + Md^2\), where \(d\) is the distance from the new axis to the center of mass.
         </div>
 
-        <h2>7.2 Moment of Inertia (I)</h2>
+        <h2>7.3 Newton's Second Law for Rotation</h2>
+
         <div class="definition-box">
-          Rotational inertia: resistance to angular acceleration
+          An angular acceleration is caused by a net torque: \(\alpha = \frac{\tau_{net}}{I}\)
         </div>
+
+        <h2>7.4 Angular Momentum</h2>
 
         <div class="concept-list">
-          <h3>Common Moments of Inertia:</h3>
           <ul>
-            <li>Point mass: I = mr²</li>
-            <li>Rod (center): I = (1/12)mL²</li>
-            <li>Rod (end): I = (1/3)mL²</li>
-            <li>Disk: I = (1/2)mr²</li>
-            <li>Sphere: I = (2/5)mr²</li>
+            <li>Before calculating angular momentum, it is necessary to define a rotational axis.</li>
+            <li>The angular momentum \(L\) of an object is given by:
+              <ul>
+                <li>\(I\omega\) for an extended object</li>
+                <li>\(mvr\) for a point object. For an object moving in a straight line at constant speed, \(r\) represents the "distance of closest approach."</li>
+              </ul>
+            </li>
           </ul>
         </div>
 
-        <h2>7.3 Rotational Kinetic Energy</h2>
-        <div class="definition-box">
-          K = ½Iω²
+        <h2>7.5 Conservation of Angular Momentum</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>When no torques act external to a system, angular momentum of the system cannot change.</li>
+            <li>Angular momentum is a vector – angular momentums in the same sense add, angular momentums in opposite senses subtract.</li>
+            <li><strong>Angular momentum is conserved separately from linear momentum. Do not combine them in a single equation.</strong></li>
+          </ul>
         </div>
 
-        <h2>7.4 Angular Momentum (L)</h2>
+        <h2>7.6 Angular Impulse</h2>
+
         <div class="definition-box">
-          L = Iω (conserved when no external torques act)
+          The impulse-momentum theorem can be written for angular momentum, too: \(\tau \Delta t = \Delta L\)<br>
+          A change in angular momentum equals the net torque multiplied by the time the torque is applied.
         </div>
       </section>
 
@@ -975,58 +1228,52 @@
       <section id="shm" class="section">
         <h1>8. Simple Harmonic Motion</h1>
 
-        <div class="key-equations">
-          <h4>SHM Equations</h4>
-          <div class="equation-list">
-            <div class="equation-item">F = -kx</div>
-            <div class="equation-item">T = 2π√(m/k)</div>
-            <div class="equation-item">T = 2π√(L/g)</div>
-            <div class="equation-item">x = A cos(ωt + φ)</div>
-          </div>
-        </div>
-
-        <h2>8.1 Spring Force</h2>
-        <div class="definition-box">
-          <strong>Hooke's Law:</strong> F = -kx
-        </div>
-
-        <div class="important-note">
-          <ul>
-            <li>k is spring constant (N/m)</li>
-            <li>x is displacement from equilibrium</li>
-            <li>Negative sign indicates restoring force</li>
-          </ul>
-        </div>
-
-        <h2>8.2 Mass-Spring System</h2>
-        <div class="definition-box">
-          Period: T = 2π√(m/k)
-        </div>
-
-        <div class="important-note">
-          Period is independent of amplitude!
-        </div>
-
-        <h2>8.3 Simple Pendulum</h2>
-        <div class="definition-box">
-          Period: T = 2π√(L/g) (for small angles)
-        </div>
-
-        <div class="important-note">
-          <ul>
-            <li>Period is independent of mass and amplitude (small angles)</li>
-            <li>L is length of pendulum</li>
-            <li>Only valid for angles < 15°</li>
-          </ul>
-        </div>
-
-        <h2>8.4 Energy in SHM</h2>
         <div class="concept-list">
           <ul>
-            <li>Total energy: E = ½kA² (constant)</li>
-            <li>At equilibrium: all kinetic energy</li>
-            <li>At maximum displacement: all potential energy</li>
-            <li>Energy oscillates between kinetic and potential</li>
+            <li>Many objects that vibrate back-and-forth exhibit simple harmonic motion. The pendulum and the mass-on-a-spring are the most common examples of simple harmonic motion.</li>
+            <li>An object in simple harmonic motion makes a position-time graph in the shape of a sine function. The equation for position as a function of time is \(x = A \cos(2\pi ft)\).</li>
+            <li>An object in simple harmonic motion experiences a net force whose:
+              <ul>
+                <li>magnitude increases as a linear function of distance from the equilibrium position</li>
+                <li>direction always points toward the equilibrium position</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="concept-list">
+          <h3>Definitions involving simple harmonic motion:</h3>
+          <ul>
+            <li><strong>Amplitude (A):</strong> The maximum distance from the equilibrium position reached by an object in simple harmonic motion</li>
+            <li><strong>Period (T):</strong> The time for an object to complete one entire vibration.</li>
+            <li><strong>Frequency (f):</strong> How many entire vibrations an object makes each second.</li>
+          </ul>
+        </div>
+
+        <div class="formula-box">
+          <ul>
+            <li>The period of an object on a spring is given by the equation \(T_s = 2\pi\sqrt{\frac{m}{k}}\). The mass attached to the spring is \(m\); the spring constant of the spring is \(k\).</li>
+            <li>The period of a pendulum is given by the equation \(T_p = 2\pi\sqrt{\frac{\ell}{g}}\). The length of the pendulum is \(\ell\); the gravitational field is \(g\).</li>
+          </ul>
+        </div>
+
+        <h2>8.1 Force of a Spring</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>A spring pulls with more force the farther the spring is stretched or compressed.</li>
+            <li>The force of a spring is given by the equation \(F = kx\). Here, \(k\) is the spring constant of the spring, and \(x\) is the distance the spring is stretched or compressed from its equilibrium position.</li>
+            <li>The spring constant is a property of a spring, and is always the same for the same spring.</li>
+            <li>The standard units of the spring constant are N/m.</li>
+          </ul>
+        </div>
+
+        <h2>8.2 Vertical Springs</h2>
+
+        <div class="concept-list">
+          <ul>
+            <li>When dealing with an object hanging vertically from a spring, it's easiest to consider the spring-earth-object system.</li>
+            <li>The potential energy of the spring-earth-object system is \(PE = \frac{1}{2}kx^2\), where \(x\) is measured from the position where the object would hang in equilibrium.</li>
           </ul>
         </div>
       </section>
@@ -1035,100 +1282,85 @@
       <section id="fluids" class="section">
         <h1>9. Fluids</h1>
 
-        <div class="key-equations">
-          <h4>Fluid Equations</h4>
-          <div class="equation-list">
-            <div class="equation-item">P = P₀ + ρgh</div>
-            <div class="equation-item">Fᵦ = ρfluid·Vdisplaced·g</div>
-            <div class="equation-item">A₁v₁ = A₂v₂</div>
-            <div class="equation-item">ρ = m/V</div>
-          </div>
-        </div>
+        <h2>9.1 Static Fluids</h2>
 
-        <h2>9.1 Pressure</h2>
-        <div class="definition-box">
-          Pressure increases with depth: P = P₀ + ρgh
-        </div>
-
-        <div class="important-note">
+        <div class="concept-list">
           <ul>
-            <li>P₀ is atmospheric pressure</li>
-            <li>ρ is fluid density</li>
-            <li>h is depth below surface</li>
+            <li>The pressure in a static column of fluid is \(P = P_0 + \rho gh\); Here the \(\rho gh\) term is called the "gauge pressure," meaning the pressure above atmospheric.</li>
+            <li>Density, \(\rho\), is defined as mass/volume. Thus, mass can be expressed as \(\rho V\).</li>
+            <li>The buoyant force on an object is equal to the weight of the fluid displaced.</li>
+            <li>The equation for the buoyant force is \(F_B = \rho Vg\), where \(\rho\) is the density of the FLUID and \(V\) is the volume SUBMERGED.</li>
           </ul>
         </div>
 
-        <h2>9.2 Buoyant Force</h2>
-        <div class="definition-box">
-          <strong>Archimedes' Principle:</strong> Fᵦ = ρfluid·Vdisplaced·g
-        </div>
+        <h2>9.2 Flowing Fluids</h2>
 
-        <div class="important-note">
+        <div class="concept-list">
           <ul>
-            <li>Buoyant force equals weight of displaced fluid</li>
-            <li>Object floats if ρobject < ρfluid</li>
-            <li>Object sinks if ρobject > ρfluid</li>
+            <li>The continuity principle is a statement of conservation of mass: the volume flow rate (or mass flow rate) must be the same everywhere.</li>
+            <li>The continuity principle for flow of cross sectional area \(A\) and speed \(v\) says \(A_1v_1 = A_2v_2\).</li>
+            <li>Bernoulli's equation is a statement of conservation of energy.</li>
+            <li>Bernoulli's equation says \(P + \rho gh + \frac{1}{2}\rho v^2\) is constant at any two locations.</li>
           </ul>
-        </div>
-
-        <h2>9.3 Fluid Flow</h2>
-        <div class="definition-box">
-          <strong>Continuity Equation:</strong> A₁v₁ = A₂v₂
-        </div>
-
-        <div class="important-note">
-          Flow rate is constant in a pipe (conservation of mass)
-        </div>
-
-        <h2>9.4 Bernoulli's Principle</h2>
-        <div class="definition-box">
-          As fluid speed increases, pressure decreases
         </div>
       </section>
 
       <!-- Graph Analysis Section -->
       <section id="graphs" class="section">
-        <h1>10. Graph Analysis</h1>
+        <h1>10. Five Types of Graphs to Know</h1>
 
-        <h2>10.1 Motion Graphs</h2>
         <div class="concept-list">
-          <h3>Position-Time Graphs:</h3>
-          <ul>
-            <li>Slope = velocity</li>
-            <li>Curved line = changing velocity (acceleration)</li>
-            <li>Horizontal line = at rest</li>
-            <li>Straight line = constant velocity</li>
-          </ul>
-
-          <h3>Velocity-Time Graphs:</h3>
-          <ul>
-            <li>Slope = acceleration</li>
-            <li>Area under curve = displacement</li>
-            <li>Horizontal line = constant velocity</li>
-            <li>Straight line = constant acceleration</li>
-          </ul>
+          <p>The table below summarizes the five types of mathematical relationships you need to know for AP Physics 1:</p>
         </div>
 
-        <h2>10.2 Force Graphs</h2>
-        <div class="concept-list">
-          <h3>Force-Time Graphs:</h3>
-          <ul>
-            <li>Area under curve = impulse</li>
-            <li>Impulse = change in momentum</li>
-          </ul>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+          <thead>
+            <tr style="background: var(--ui-2);">
+              <th style="border: 1px solid var(--ui-3); padding: 12px; text-align: left;">Graph Shape</th>
+              <th style="border: 1px solid var(--ui-3); padding: 12px; text-align: left;">Written Relationship</th>
+              <th style="border: 1px solid var(--ui-3); padding: 12px; text-align: left;">Modification to Linearize</th>
+              <th style="border: 1px solid var(--ui-3); padding: 12px; text-align: left;">Algebraic Relationship</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">Horizontal line</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">As \(x\) increases, \(y\) remains the same. There is no relationship between the variables.</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">None</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">\(y = b\), or \(y\) is constant</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">Straight line (positive slope)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">As \(x\) increases, \(y\) increases proportionally. \(y\) is directly proportional to \(x\) OR as \(x\) increases \(y\) increases linearly with \(x\)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">None</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">\(y = mx + b\)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">Curved (decreasing, concave up)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">As \(x\) increases, \(y\) decreases. \(y\) is inversely proportional to \(x\)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">Graph \(y\) vs. \(\frac{1}{x}\), or \(y\) vs. \(x^{-1}\)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">\(y = \frac{m}{x} + b\)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">Curved (increasing, concave up)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">\(y\) is proportional to the square of \(x\).</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">Graph \(y\) vs. \(x^2\)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">\(y = mx^2 + b\)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">Curved (increasing, concave down)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">The square of \(y\) is proportional to \(x\).</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">Graph \(y^2\) vs. \(x\)</td>
+              <td style="border: 1px solid var(--ui-3); padding: 12px;">\(y^2 = mx + b\)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="important-note">
+          <strong>**There are no exponential relationships in AP Physics 1**</strong>
         </div>
 
-        <h2>10.3 Energy Graphs</h2>
-        <div class="concept-list">
-          <h3>Energy-Position Graphs:</h3>
-          <ul>
-            <li>Total energy line is horizontal (if conservative)</li>
-            <li>Turning points where K = 0</li>
-            <li>Equilibrium where dU/dx = 0</li>
-          </ul>
-        </div>
-
-        <h2>10.4 Five Types of Mathematical Relationships</h2>
+        <h2>Visual Representations of Graph Types</h2>
         <div class="diagram-box" style="margin: 20px 0;">
           <div class="graph-relationships"
             style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
@@ -1144,7 +1376,7 @@
                 <text x="5" y="15" font-size="10" fill="var(--tx-2)">y</text>
                 <line x1="20" y1="40" x2="100" y2="40" stroke="var(--bl)" stroke-width="2" />
               </svg>
-              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">y = b</p>
+              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">\(y = b\)</p>
               <p style="font-size: 0.7em; margin: 2px 0; color: var(--tx-3);">No relationship</p>
             </div>
 
@@ -1159,7 +1391,7 @@
                 <text x="5" y="15" font-size="10" fill="var(--tx-2)">y</text>
                 <line x1="15" y1="70" x2="95" y2="20" stroke="var(--gr)" stroke-width="2" />
               </svg>
-              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">y = mx + b</p>
+              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">\(y = mx + b\)</p>
               <p style="font-size: 0.7em; margin: 2px 0; color: var(--tx-3);">Direct proportional</p>
             </div>
 
@@ -1172,10 +1404,11 @@
                 <line x1="10" y1="80" x2="10" y2="10" stroke="var(--tx-2)" stroke-width="1" />
                 <text x="60" y="95" font-size="10" fill="var(--tx-2)">x</text>
                 <text x="5" y="15" font-size="10" fill="var(--tx-2)">y</text>
-                <path d="M 15 15 Q 30 25 50 40 Q 80 60 100 75" stroke="var(--re)" stroke-width="2" fill="none" />
+                <!-- y = 1/x curve: starts high, drops steeply, then levels off asymptotically (concave up, decreasing) -->
+                <path d="M 15 15 C 18 45 25 60 40 68 C 55 74 75 76 100 77" stroke="var(--re)" stroke-width="2" fill="none" />
               </svg>
-              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">y = m(1/x) + b</p>
-              <p style="font-size: 0.7em; margin: 2px 0; color: var(--tx-3);">Graph y vs 1/x</p>
+              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">\(y = \frac{m}{x} + b\)</p>
+              <p style="font-size: 0.7em; margin: 2px 0; color: var(--tx-3);">Graph \(y\) vs \(\frac{1}{x}\)</p>
             </div>
 
             <!-- Quadratic Relationship -->
@@ -1187,10 +1420,11 @@
                 <line x1="10" y1="80" x2="10" y2="10" stroke="var(--tx-2)" stroke-width="1" />
                 <text x="60" y="95" font-size="10" fill="var(--tx-2)">x</text>
                 <text x="5" y="15" font-size="10" fill="var(--tx-2)">y</text>
-                <path d="M 15 75 Q 40 50 60 35 Q 80 25 100 20" stroke="var(--pu)" stroke-width="2" fill="none" />
+                <!-- y = x² curve: starts flat at origin, curves up steeply (concave up) -->
+                <path d="M 15 75 Q 50 75 70 55 Q 85 35 100 15" stroke="var(--pu)" stroke-width="2" fill="none" />
               </svg>
-              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">y = mx² + b</p>
-              <p style="font-size: 0.7em; margin: 2px 0; color: var(--tx-3);">Graph y vs x²</p>
+              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">\(y = mx^2 + b\)</p>
+              <p style="font-size: 0.7em; margin: 2px 0; color: var(--tx-3);">Graph \(y\) vs \(x^2\)</p>
             </div>
 
             <!-- Square Root Relationship -->
@@ -1202,10 +1436,11 @@
                 <line x1="10" y1="80" x2="10" y2="10" stroke="var(--tx-2)" stroke-width="1" />
                 <text x="60" y="95" font-size="10" fill="var(--tx-2)">x</text>
                 <text x="5" y="15" font-size="10" fill="var(--tx-2)">y</text>
-                <path d="M 15 75 Q 35 60 50 50 Q 70 40 95 35" stroke="var(--cy)" stroke-width="2" fill="none" />
+                <!-- y = √x curve: starts steep at origin, levels off (concave down) -->
+                <path d="M 15 75 Q 25 40 45 30 Q 70 20 100 15" stroke="var(--cy)" stroke-width="2" fill="none" />
               </svg>
-              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">y² = mx + b</p>
-              <p style="font-size: 0.7em; margin: 2px 0; color: var(--tx-3);">Graph y² vs x</p>
+              <p style="font-size: 0.8em; margin: 5px 0; color: var(--tx-2);">\(y^2 = mx + b\)</p>
+              <p style="font-size: 0.7em; margin: 2px 0; color: var(--tx-3);">Graph \(y^2\) vs \(x\)</p>
             </div>
 
           </div>
@@ -1215,78 +1450,9 @@
         </div>
       </section>
 
-      <!-- Quick Reference Equations -->
-      <section id="equations-reference" class="section">
-        <h1>Quick Reference - Key Equations</h1>
-
-        <div class="equation-reference">
-          <div class="equation-category">
-            <h3 id="kinematic-equations">Kinematics</h3>
-            <ul>
-              <li>v = v₀ + at</li>
-              <li>x = x₀ + v₀t + ½at²</li>
-              <li>v² = v₀² + 2a(x - x₀)</li>
-              <li>x = x₀ + ½(v₀ + v)t</li>
-            </ul>
-          </div>
-
-          <div class="equation-category">
-            <h3 id="force-equations">Forces & Motion</h3>
-            <ul>
-              <li>F = ma</li>
-              <li>W = mg</li>
-              <li>f = μN</li>
-              <li>Fᶜ = mv²/r</li>
-              <li>τ = rF sin θ</li>
-            </ul>
-          </div>
-
-          <div class="equation-category">
-            <h3 id="energy-equations">Energy & Work</h3>
-            <ul>
-              <li>K = ½mv²</li>
-              <li>U = mgh</li>
-              <li>U = ½kx²</li>
-              <li>W = Fd cos θ</li>
-              <li>P = W/t</li>
-            </ul>
-          </div>
-
-          <div class="equation-category">
-            <h3 id="momentum-equations">Momentum & Impulse</h3>
-            <ul>
-              <li>p = mv</li>
-              <li>J = Δp = FΔt</li>
-              <li>F = Δp/Δt</li>
-            </ul>
-          </div>
-
-          <div class="equation-category">
-            <h3 id="rotation-equations">Rotation</h3>
-            <ul>
-              <li>K = ½Iω²</li>
-              <li>L = Iω</li>
-              <li>v = rω</li>
-              <li>a = rα</li>
-            </ul>
-          </div>
-
-          <div class="equation-category">
-            <h3 id="wave-equations">Waves & SHM</h3>
-            <ul>
-              <li>F = -kx</li>
-              <li>T = 2π√(m/k)</li>
-              <li>T = 2π√(L/g)</li>
-              <li>v = fλ</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <div class="cross-reference" style="text-align: center; margin: 40px 0;">
-        <p><strong>Complete AP Physics 1 Fact Sheet</strong> - All sections with detailed content for comprehensive
-          review.</p>
-        <p>Sections included: <a href="#kinematics" class="section-link">Kinematics</a> • <a href="#dynamics"
+        <p><strong>AP Physics 1 Fact Sheet - for 2025 Exam</strong></p>
+        <p>Sections: <a href="#kinematics" class="section-link">Kinematics</a> • <a href="#dynamics"
             class="section-link">Dynamics</a> • <a href="#circular-motion" class="section-link">Circular Motion</a> • <a
             href="#conservation" class="section-link">Conservation</a> • <a href="#energy"
             class="section-link">Energy</a> • <a href="#momentum" class="section-link">Momentum</a> • <a
@@ -1303,6 +1469,8 @@
       renderMathInElement(document.body, {
         delimiters: [
           { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "\\(", right: "\\)", display: false },
           { left: "$", right: "$", display: false }
         ]
       });
