@@ -15,6 +15,38 @@ math: mathjax
 
 ---
 
+# 2026.01.07 **Regents Physics**
+
+##### **❓ of the 📅**: What second rate super power would you want?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Practice Question (⏲️ 20 min)
+2. Spring Force Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the forces on a spring_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+
+---
+
 # 2026.01.06 **Regents**
 
 ##### **❓ of the 📅**: Questions
