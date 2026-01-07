@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.01.07 **Earth Science**
+
+##### **❓ of the 📅**: What second rate super power would you want?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Density Column See-think-wonder
+2. [P Wave vs. S Wave](../../../Presentations/ES%20Presentations/Unit%203%20Earth's%20Interior/EarthInterior.html)
+3. Developing a Model of Earth's Interior
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the Earth's Interior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.06 **Earth Science**
 
 ##### **❓ of the 📅**: What secrets do you think your pet 🐕 🐶 🐈 🐱 would spill about you, if they could talk? 🐟 🦜 🐍 🐸 🐮 🐄 🐖 🐐 🐔
