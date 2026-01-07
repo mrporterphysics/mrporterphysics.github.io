@@ -43,7 +43,20 @@ math: mathjax
 
 ---
 
+# Spring Force Lab
 
+**Question**: How does applied force relate to spring stretch?
+
+**Purpose**:
+
+- Determine F–∆x relationship for two springs
+
+**Materials**
+
+- 2 springs, mass hangers, masses
+- Spring scale, balance
+- Meter stick/ruler
+- Support and clamp
 
 ---
 
