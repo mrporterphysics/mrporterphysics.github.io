@@ -16,6 +16,40 @@ math: mathjax
 
 ---
 
+# 2026.01.09 **AP Physics**
+
+##### **❓ of the 📅**: If you could live anywhere, where would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Finish AP FRQ 
+2. AP Workbook 2.L
+	1. Complete workbook in lab group and perform experiment (collect actual data - 2 springs and a rubberband)
+	2. Whiteboard and present results
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create a mathematical model for spring forces_
+
+### 📆 Upcoming
+
+- Forces Quiz Tuesday
+- AP Classroom Review Unlocked
+    - Forces Test **Tuesday 1/20**
+
+</div>
+</div>
+
+---
+
 # 2026.01.08 **AP Physics** Do Now #1
 
 Anna Litical and Noah Formula now place a 2-kg brick on a wooden board and incline the board at 35$^\circ$ above the horizontal. The coefficient of friction between the brick and the board is 0.3. Use the structure provided at the right to determine the

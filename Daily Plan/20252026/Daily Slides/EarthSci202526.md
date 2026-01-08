@@ -19,6 +19,34 @@ class:  twilight
 
 # 2026.01.08 **Earth Science**
 
+##### **❓ of the 📅**: If you could live anywhere, where would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Rock Sorting - What are layers made of?
+2. Magnetic Earth
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Earth's Interior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2026.01.08 **Earth Science**
+
 ##### **❓ of the 📅**: _If you found that food was falling from the sky, what food would you want to be falling? What food would you **NOT** want to be falling?_
 
 <div class ='columns'>
