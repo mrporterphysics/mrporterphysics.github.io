@@ -17,6 +17,84 @@ class:  twilight
 
 ---
 
+# 2026.01.08 **Earth Science**
+
+##### **❓ of the 📅**: _If you found that food was falling from the sky, what food would you want to be falling? What food would you **NOT** want to be falling?_
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Questions & Whiteboard Model
+2. Consensus Discussion on our Models
+3. Summary Task Reflection
+4. Sorting Earth's Layers
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Earth's Interior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Consensus Meeting 
+
+1. We select a few different groups’ ideas.
+2. The first group shares out their work.
+3. One person repeats or reiterates what the first group shared.
+4. Class members ask clarifying questions about the work.
+
+Repeat steps 2-4 for each group that is sharing work.
+
+5. Everyone confers in table groups.
+6. Engage in whole-class discussion about the ideas that were shared, in order to come to agreement.
+
+<!---
+Pause the discussion and ask for clarification, particularly of the following key points:
+
+- There are different parts to the interior of the Earth
+- Not all earthquake waves can travel through the different parts of the Earth
+- Based on our observations we know that P-waves and S-waves can only travel through certain materials
+- Knowing this allows us to determine the state of matter of each of the sections of - Earth’s interior (solid outside layers and a liquid core)
+- There are at least 3 layers in Earth
+
+--->
+
+---
+
+# 🔑 Key Points 
+
+- There are different parts to the interior of the Earth
+- Not all earthquake waves can travel through the different parts of the Earth
+- Based on our observations we know that P-waves and S-waves can only travel through certain materials
+- Knowing this allows us to determine the state of matter of each of the sections of - Earth’s interior (solid outside layers and a liquid core)
+- There are at least 3 layers in Earth
+
+---
+
+# Summary Task <!--fit---> 
+
+---
+
+# What is the composition of Earth's Interior Layers?
+
+
+1. Organize Rock and Mineral Cards
+2. Look at rock samples
+
+
+---
+
 # 2026.01.07 **Earth Science**
 
 ##### **❓ of the 📅**: What second rate super power would you want?

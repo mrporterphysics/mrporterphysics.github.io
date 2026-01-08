@@ -16,6 +16,108 @@ math: mathjax
 
 ---
 
+# 2026.01.08 **AP Physics** Do Now #1
+
+Anna Litical and Noah Formula now place a 2-kg brick on a wooden board and incline the board at 35$^\circ$ above the horizontal. The coefficient of friction between the brick and the board is 0.3. Use the structure provided at the right to determine the
+
+
+<div class='columns'>
+<div>
+
+1. force of gravity (Fgrav).
+1. parallel component of gravity (Fparallel).
+1. perpendicular component of gravity (Fperpendicular).
+1. normal force (Fnorm).
+1. friction force (Ffrict).
+1. net force & acceleration
+
+
+</div>
+ 
+<div>
+
+![center w:300](image-35.png)
+
+</div>
+</div>
+
+
+
+---
+
+# 2026.01.08 **AP Physics** Dow Now #2
+
+A person exerts a force $F_p$ on a rope to pull a block of mass $m$ up a ramp. The rope makes an angle $\theta_2$ to the ramp and the ramp makes an angle $\theta_1$, to the horizontal, as shown. The force of kinetic friction between the block and the ramp has magnitude $F_f$. Which of the following expressions is equal to the magnitude of the acceleration $a$ of the block?
+
+<div class='columns'>
+<div>
+
+1. $\frac{F_p \cos \theta_2 + F_f}{m} - g \sin \theta_1$
+1. $\frac{F_p \cos \theta_2 - F_f}{m} - g \sin \theta_1$
+1. $\frac{F_p \cos \theta_2 + F_f}{m} + g \sin \theta_1$
+1. $\frac{F_p \cos \theta_2 - F_f}{m} + g \sin \theta_1$
+
+</div>
+ 
+ 
+<div>
+
+
+![center](image-33.png)
+
+</div>
+</div>
+
+<!---
+
+ANSWER: B
+
+Fnet = ma
+Fpx - Ff - Fgx = ma
+Fpcostheta - Ff - mg sin theta = ma
+
+--->
+
+
+---
+
+# 2026.01.08 **AP Physics**
+
+##### **❓ of the 📅**: _If you found that food was falling from the sky, what food would you want to be falling? What food would you **NOT** want to be falling?_
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+1. Review [Inclined Planes](../../../Presentations/Forces/talks/Dynamics2025.html#77)
+1. Einstein on a Ramp
+    - Whiteboard w/ Group, enter answers in pivot
+1. AP Workbook 2.H
+1. AP FRQ Practice Question
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use Incline Plane Models to solve problems_
+
+### 📆 Upcoming
+
+- Forces Quiz Tuesday
+- AP Classroom Review Unlocked
+    - Forces Test **Tuesday 1/20**
+
+</div>
+</div>
+
+---
+
 # 2026.01.06 **AP Physics** Do Now 
 
 1. Open Pivot: _**Forces on Object on Ramp**_ and complete Part 1: Preliminary Questions
