@@ -853,6 +853,18 @@ Consider the free-body diagram for an object accelerating across a surface. The 
 
 ---
 
+# Spring Force - Hooke's Law
+
+$$\boxed{F_s = kx}$$
+
+- $F_s$: Spring Force (Newtons, N)
+- $k$: Spring Constant (Newtons per meter, N/m)
+- $x$: Change in spring length from equilibrium position (meters, m)
+
+> _Hookean_ Springs are springs that follow Hooke's Law (equation), not intercept and proportional relationship between $F_s$ and $x$. 
+
+---
+
 # Newton's 3rd Law: **Force Pairs**
 
 ## _"For every action, there is an equal and opposite action."_

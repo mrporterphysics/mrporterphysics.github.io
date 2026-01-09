@@ -15,6 +15,40 @@ math: mathjax
 
 ---
 
+# 2026.01.09 **Regents Physics**
+
+##### **❓ of the 📅**: If you could live anywhere where would you choose?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish up spring force lab
+2. Whiteboard Lab Results and present
+3. Hooke's Law
+4. Physics Classroom Practice:
+    - Set F2D6 - Fnet = m•a with Angled Forces 1
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model forces on a spring_
+
+### 📆 Upcoming
+- Forces quiz at some point next week (Tuesday?)
+
+</div>
+</div>
+
+---
+
 # 2026.01.07 **Regents Physics**
 
 ##### **❓ of the 📅**: What second rate super power would you want?
