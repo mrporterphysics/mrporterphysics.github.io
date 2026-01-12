@@ -17,6 +17,78 @@ class:  twilight
 
 ---
 
+# 2026.01.13 **Earth Science**
+
+##### **❓ of the 📅**: QUESTIONNNNNNNNNNNNNNNNN
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Explaining Krakatoa
+    - Complete Part 1
+    - Discuss
+    - Part 2
+    - CER
+2. How do materials move to create new islands?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# CER - Krakatoa
+
+## On a whiteboard...
+
+- ### **Claim**: where did the new islands come for?
+
+- ### **Evidence**: what is evidence for your claim?
+
+- ### **Reasoning**: what scientific principles, or ideas from Earth's layers support your evidence?
+
+---
+
+# Reference Table Charts <!--fit--->
+
+---
+
+![bg fit left:75%](image-36.png)
+
+## Page 11 - Model of Earth's Interior 
+
+---
+
+![center w:1000](image-37.png)
+
+Page 11 - Cross Section of Earth's Surface and Interior
+
+---
+
+![center w:800](image-38.png)
+
+Page 14 - Rock Cycle
+
+---
+
+![bg fit left:75%](image-39.png)
+
+Page 13 - Mineral Composition of Igneous Rocks
+
+---
+
 # 2026.01.12 **Earth Science**
 
 ##### **❓ of the 📅**: Who would you haunt if you had to be a ghost 👻?
