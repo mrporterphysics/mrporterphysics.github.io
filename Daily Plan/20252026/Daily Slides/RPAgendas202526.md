@@ -15,6 +15,40 @@ math: mathjax
 
 ---
 
+# 2026.01.12 **Regents Physics**
+
+##### **❓ of the 📅**: Who would you haunt if you had to be a ghost 👻?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish PC: F2D6 - **Fnet = m•a with Angled Forces 1**
+2. Notes on Inclined Planes
+3. Physics Classroom Think Sheet and Regents Practice 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Forces on an Inclined Plane_
+
+### 📆 Upcoming
+
+- Quiz Tomorrow:
+    - N2L
+    - Spring Force
+    - Angled Force Question (will be in parts)
+
+</div>
+</div>
+
+---
+
 # 2026.01.09 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could live anywhere where would you choose?

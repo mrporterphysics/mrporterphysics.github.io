@@ -1140,9 +1140,12 @@ $$F_{g\parallel} = mg\sin\theta$$
 
 ---
 
-Lab partners Anna Litical and Noah Formula placed a 0.25-kg glider on their air track and inclined the track at 10.4° above the horizontal. Use the structure provided at the right to determine the …
+Lab partners Anna Litical and Noah Formula placed a 2.5-kg glider on their air track and inclined the track at 20° above the horizontal. Use the structure provided at the right to determine the …
 
-![bg fit right:35%](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/ForcesIn2D/F2D10Q1.png)
+
+
+<div class='columns'>
+<div>
 
 1. Force of gravity 
 2. Parallel component of gravity
@@ -1150,3 +1153,16 @@ Lab partners Anna Litical and Noah Formula placed a 0.25-kg glider on their air 
 4. Normal Force 
 5. Net Force
 5. Acceleration
+
+</div>
+ 
+<div>
+
+![invert center w:350](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/ForcesIn2D/F2D10Q1.png)
+
+$$F_{g\perp} = mg\cos\theta$$
+
+$$F_{g\parallel} = mg\sin\theta$$
+
+</div>
+</div>
