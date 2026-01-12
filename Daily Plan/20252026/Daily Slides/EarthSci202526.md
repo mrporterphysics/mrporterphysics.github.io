@@ -17,6 +17,52 @@ class:  twilight
 
 ---
 
+# 2026.01.12 **Earth Science**
+
+##### **❓ of the 📅**: Who would you haunt if you had to be a ghost 👻?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Magnets Experiment and Follow Up Questions
+2. Discuss Results as a class
+    - Update Model of Earth
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Update our model of Earth's Layers_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Layers of Earth
+
+## 🗣️ Discuss as a Lab group
+
+- Your see-think-wonder; what are some important ideas
+- How can you update your model of Earth's layers based on the rock cards and magnets exploration?
+
+## 🖊️ Whiteboard:
+
+✅ One Important Idea 
+
+✅ Your updated model of earth
+
+**_Be prepared to share your model and important idea_**
+
+---
+
 # 2026.01.08 **Earth Science**
 
 ##### **❓ of the 📅**: If you could live anywhere, where would it be?
