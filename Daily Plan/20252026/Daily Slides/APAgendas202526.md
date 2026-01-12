@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2026.01.13 **AP Physics**
+
+##### **❓ of the 📅**: You **_have_** to sing karaoke, what song do you pick? 🎤
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Finish Spring Force Lab
+2. Quiz
+3. Notes - Accelerating Systems - Modified Atwood Machine
+3. AP Workbook: 2.M, 2.J (In that reverse order)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Modeling Forces on Accelerating Systems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.09 **AP Physics**
 
 ##### **❓ of the 📅**: If you could live anywhere, where would it be?

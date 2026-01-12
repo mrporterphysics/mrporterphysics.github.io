@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.01.13 **Earth Science**
 
-##### **❓ of the 📅**: QUESTIONNNNNNNNNNNNNNNNN
+##### **❓ of the 📅**: You **_have_** to sing karaoke, what song do you pick? 🎤
 
 <div class ='columns'>
 
@@ -27,6 +27,7 @@ class:  twilight
 
 #### 📋 Agenda
 
+0. Discuss Layers from Yesterday
 1. Explaining Krakatoa
     - Complete Part 1
     - Discuss
