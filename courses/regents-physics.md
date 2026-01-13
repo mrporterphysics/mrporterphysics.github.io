@@ -55,6 +55,15 @@ New York State Regents Physics curriculum covering fundamental concepts in mecha
 <div class="card-grid">
 
   <div class="content-card">
+    <div class="card-icon">🎴</div>
+    <h3 class="card-title">Equation Flashcards</h3>
+    <p class="card-description">Memorize all 54 equations with audio support and spaced repetition</p>
+    <div class="card-links">
+      <a href="/equation-flashcards/" class="card-link">→ Study Equations</a>
+    </div>
+  </div>
+
+  <div class="content-card">
     <div class="card-icon">📝</div>
     <h3 class="card-title">Units & Equations Quiz</h3>
     <p class="card-description">Practice essential units and equations for the Regents exam</p>
