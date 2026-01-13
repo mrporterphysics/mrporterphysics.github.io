@@ -44,10 +44,7 @@ Complete with your lab group and whiteboard
 
 ---
 
-# Circular Motion
-
-
-<iframe width="800" height="500" src="https://www.youtube.com/embed/SQGWjn8AP70" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![](https://youtu.be/SQGWjn8AP70?si=XlQlpPJ0MbT9_Njv)
 
 
 ---
@@ -58,7 +55,7 @@ Complete with your lab group and whiteboard
 
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BOkX_BnNKzU?si=V8ZhPc1vQ1GbE0ch" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+![](https://www.youtube.com/watch?v=BOkX_BnNKzU)
 
 ---
 

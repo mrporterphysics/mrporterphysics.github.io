@@ -61,6 +61,15 @@ $$ F_s = kx$$
 
 ---
 
+A spring is attached to the ceiling of an elevator, and a block of mass M is suspended from the spring. The cases are identical except that in Case A the elevator is moving upward with a constant speed of 7 m/s, while in Case B the elevator is moving downward with a constant speed of 9 m/s.  Will the spring be stretched (i) more in Case A, (ii) more in Case B, or (iii) the same in both cases? 
+
+Explain your reasoning.
+
+
+![bg fit right:30%](image-40.png)
+
+---
+
 # 2026.01.09 **AP Physics**
 
 ##### **❓ of the 📅**: If you could live anywhere, where would it be?
