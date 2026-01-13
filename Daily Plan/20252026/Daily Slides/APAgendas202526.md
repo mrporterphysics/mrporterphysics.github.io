@@ -46,6 +46,19 @@ math: mathjax
 
 ---
 
+# Hooke's Law
+
+$$ \boxed{\vec{F}_s = - k\Delta \vec{x}} $$
+
+or Magnitude:
+
+$$ F_s = kx$$ 
+
+
+## *Does your spring and/or your rubberband follow Hooke's Law?*
+
+---
+
 # 2026.01.09 **AP Physics**
 
 ##### **❓ of the 📅**: If you could live anywhere, where would it be?
