@@ -41,6 +41,8 @@ math: mathjax
 
 ### 📆 Upcoming
 
+- Start AP Classroom Progress Checks!
+
 </div>
 </div>
 
