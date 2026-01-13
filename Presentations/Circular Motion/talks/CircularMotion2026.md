@@ -61,11 +61,8 @@ Complete with your lab group and whiteboard
 
 # Velocity
 
-<iframe src="https://phet.colorado.edu/sims/html/keplers-laws/latest/keplers-laws_en.html"
-        width="1050"
-        height="600"
-        allowfullscreen>
-</iframe>
+[What direction is the velocity for circular motion?](https://phet.colorado.edu/sims/html/keplers-laws/latest/keplers-laws_en.html)
+
 
 
 ---

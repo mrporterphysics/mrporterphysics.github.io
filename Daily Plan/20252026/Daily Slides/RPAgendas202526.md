@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.01.13 **Regents Physics**
+
+##### **❓ of the 📅**: You **_have_** to sing karaoke, what song do you pick? 🎤
+
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Inclined Planes Notes
+3. Inclined Planes Think Sheet  
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the forces of objects on ramps_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.12 **Regents Physics**
 
 ##### **❓ of the 📅**: Who would you haunt if you had to be a ghost 👻?
