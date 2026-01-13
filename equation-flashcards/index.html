@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accessible flashcard application for memorizing Regents Physics equations with text-to-speech support">
+    <title>Physics Equation Flashcards - Mr. Porter's Physics</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/flashcard-styles.css">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="data/regents-equations.csv" as="fetch" crossorigin>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header role="banner" class="site-header">
+        <div class="header-container">
+            <h1 class="site-title">
+                <a href="../index.html">Mr. Porter's Physics</a>
+            </h1>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../ap-physics-quiz/index.html">AP Physics Quiz</a></li>
+                    <li><a href="#" class="active" aria-current="page">Equation Flashcards</a></li>
+                </ul>
+            </nav>
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon" aria-hidden="true">🌙</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main id="main-content" role="main" class="main-content">
+        <div class="container">
+            <!-- Page title and description -->
+            <header class="page-header">
+                <h2>Physics Equation Flashcards</h2>
+                <p class="page-description">
+                    Memorize all 54 equations from the Regents Physics Reference Table with audio support and spaced repetition.
+                </p>
+            </header>
+
+            <!-- Mode selection -->
+            <section class="mode-selection" role="region" aria-labelledby="mode-title">
+                <h3 id="mode-title" class="sr-only">Study Mode Selection</h3>
+                <div class="mode-buttons">
+                    <button type="button" id="mode-sequential" class="mode-btn active"
+                            aria-pressed="true" aria-describedby="sequential-desc">
+                        <span class="mode-icon" aria-hidden="true">📚</span>
+                        <span class="mode-label">Sequential Review</span>
+                    </button>
+                    <button type="button" id="mode-srs" class="mode-btn"
+                            aria-pressed="false" aria-describedby="srs-desc">
+                        <span class="mode-icon" aria-hidden="true">🧠</span>
+                        <span class="mode-label">Spaced Repetition</span>
+                    </button>
+                </div>
+                <div class="mode-descriptions">
+                    <p id="sequential-desc" class="mode-description">
+                        Go through all equations in order with simple forward/backward navigation.
+                    </p>
+                    <p id="srs-desc" class="mode-description">
+                        Smart scheduling shows difficult equations more frequently for efficient learning.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Flashcard area -->
+            <section class="flashcard-section" role="region" aria-labelledby="card-title">
+                <!-- Card container -->
+                <article id="card-container" class="flashcard show-front"
+                         role="region" aria-labelledby="card-title">
+
+                    <!-- Card front -->
+                    <div id="card-front" class="card-face card-front" aria-hidden="false">
+                        <header class="card-header">
+                            <span id="equation-category" class="category-badge" role="status">Loading...</span>
+                            <h3 id="card-title" class="sr-only">Equation Flashcard</h3>
+                        </header>
+                        <div class="card-content">
+                            <h4 id="equation-name" class="equation-name">Loading equations...</h4>
+                        </div>
+                    </div>
+
+                    <!-- Card back -->
+                    <div id="card-back" class="card-face card-back" aria-hidden="true">
+                        <div class="card-content">
+                            <div class="equation-formula">
+                                <h4 class="sr-only">Equation</h4>
+                                <p id="equation-formula" class="formula-text"></p>
+                            </div>
+                            <div class="equation-variables">
+                                <h4>Variables:</h4>
+                                <div id="equation-variables"></div>
+                            </div>
+                            <div id="equation-notes" class="equation-notes" style="display: none;">
+                                <h4>Note:</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card controls -->
+                <nav class="card-controls" role="navigation" aria-label="Flashcard controls">
+                    <div class="control-row">
+                        <button type="button" id="play-audio-btn" class="control-btn"
+                                aria-label="Play audio description of equation" aria-describedby="audio-hint">
+                            <span class="audio-icon" aria-hidden="true">🔊</span>
+                            <span class="btn-label">Play Audio (A)</span>
+                        </button>
+
+                        <button type="button" id="flip-card-btn" class="control-btn primary"
+                                aria-label="Flip card to show details" aria-describedby="flip-hint">
+                            <span class="flip-icon" aria-hidden="true">↻</span>
+                            <span class="btn-label">Flip Card (Space)</span>
+                        </button>
+                    </div>
+
+                    <div class="control-row">
+                        <button type="button" id="prev-card-btn" class="control-btn"
+                                aria-label="Previous equation">
+                            <span aria-hidden="true">←</span>
+                            <span class="btn-label">Previous</span>
+                        </button>
+
+                        <button type="button" id="next-card-btn" class="control-btn"
+                                aria-label="Next equation">
+                            <span class="btn-label">Next</span>
+                            <span aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </nav>
+
+                <!-- Progress indicator -->
+                <div class="progress-section" role="region" aria-labelledby="progress-label">
+                    <h4 id="progress-label" class="sr-only">Study Progress</h4>
+                    <div id="progress-bar" class="progress-bar" role="progressbar"
+                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                         aria-valuetext="0 of 0 equations">
+                        <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <p id="progress-text" class="progress-text" aria-live="polite">0 of 0</p>
+                </div>
+
+                <!-- SRS Rating buttons (hidden by default) -->
+                <div id="rating-container" class="rating-container" role="radiogroup"
+                     aria-labelledby="rating-label" style="display: none;" aria-hidden="true">
+                    <h4 id="rating-label">How difficult was this equation?</h4>
+                    <div class="rating-buttons">
+                        <button type="button" class="rating-btn" data-rating="1"
+                                aria-label="Very easy - press 1">
+                            <span class="rating-number">1</span>
+                            <span class="rating-label">Very Easy</span>
+                        </button>
+                        <button type="button" class="rating-btn" data-rating="2"
+                                aria-label="Easy - press 2">
+                            <span class="rating-number">2</span>
+                            <span class="rating-label">Easy</span>
+                        </button>
+                        <button type="button" class="rating-btn" data-rating="3"
+                                aria-label="Medium - press 3">
+                            <span class="rating-number">3</span>
+                            <span class="rating-label">Medium</span>
+                        </button>
+                        <button type="button" class="rating-btn" data-rating="4"
+                                aria-label="Hard - press 4">
+                            <span class="rating-number">4</span>
+                            <span class="rating-label">Hard</span>
+                        </button>
+                        <button type="button" class="rating-btn" data-rating="5"
+                                aria-label="Very hard - press 5">
+                            <span class="rating-number">5</span>
+                            <span class="rating-label">Very Hard</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hints and tooltips -->
+            <div id="audio-hint" class="sr-only">
+                Plays audio pronunciation of the equation using text-to-speech
+            </div>
+            <div id="flip-hint" class="sr-only">
+                Shows full equation details including variables and units
+            </div>
+        </div>
+    </main>
+
+    <!-- Sidebar / Settings -->
+    <aside role="complementary" class="sidebar" aria-label="Application settings">
+        <button type="button" class="sidebar-toggle" aria-label="Open settings" onclick="FlashcardApp.openSettings()">
+            <span aria-hidden="true">⚙️</span>
+            Settings
+        </button>
+
+        <button type="button" class="sidebar-toggle" aria-label="Show keyboard shortcuts" onclick="FlashcardKeyboard.showKeyboardHelp()">
+            <span aria-hidden="true">⌨️</span>
+            Shortcuts (H)
+        </button>
+
+        <button type="button" class="sidebar-toggle" aria-label="View statistics" onclick="FlashcardApp.showStatistics()">
+            <span aria-hidden="true">📊</span>
+            Statistics
+        </button>
+    </aside>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Mr. Porter's Physics | <a href="https://github.com/mrporterphysics">GitHub</a></p>
+            <p class="accessibility-note">Built with accessibility in mind for all students</p>
+        </div>
+    </footer>
+
+    <!-- ARIA Live Regions for screen reader announcements -->
+    <div aria-live="polite" aria-atomic="true" id="card-announcer" class="sr-only"></div>
+    <div aria-live="polite" aria-atomic="false" id="progress-announcer" class="sr-only"></div>
+    <div aria-live="assertive" aria-atomic="true" id="audio-announcer" class="sr-only"></div>
+
+    <!-- Statistics container (hidden by default) -->
+    <div id="stats-container" style="display: none;"></div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal" role="dialog" aria-labelledby="settings-title"
+         aria-modal="true" aria-hidden="true" style="display: none;">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2 id="settings-title">Settings</h2>
+                <button type="button" class="modal-close" aria-label="Close settings"
+                        onclick="FlashcardApp.closeSettings()">×</button>
+            </header>
+            <div class="modal-body">
+                <form id="settings-form">
+                    <fieldset>
+                        <legend>Audio Settings</legend>
+
+                        <div class="setting-row">
+                            <label for="speech-rate">Speech Rate</label>
+                            <input type="range" id="speech-rate" min="0.5" max="2.0" step="0.1" value="1.0"
+                                   aria-valuemin="0.5" aria-valuemax="2.0" aria-valuenow="1.0">
+                            <output for="speech-rate" id="rate-display">1.0x</output>
+                        </div>
+
+                        <div class="setting-row">
+                            <label>
+                                <input type="checkbox" id="auto-read-toggle" checked>
+                                Auto-play audio on card flip
+                            </label>
+                        </div>
+
+                        <div class="setting-row">
+                            <label for="voice-select">Voice</label>
+                            <select id="voice-select" aria-label="Select text-to-speech voice">
+                                <option>Loading voices...</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Study Settings</legend>
+
+                        <div class="setting-row">
+                            <label>
+                                <input type="checkbox" id="shuffle-cards-toggle">
+                                Shuffle cards in sequential mode
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Data Management</legend>
+
+                        <div class="setting-row">
+                            <button type="button" class="btn-secondary" onclick="FlashcardApp.exportData()">
+                                Export Progress
+                            </button>
+                            <button type="button" class="btn-secondary" onclick="FlashcardApp.importData()">
+                                Import Progress
+                            </button>
+                        </div>
+
+                        <div class="setting-row">
+                            <button type="button" class="btn-danger" onclick="FlashcardApp.resetAllData()">
+                                Reset All Data
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <footer class="modal-footer">
+                <button type="button" class="btn-primary" onclick="FlashcardApp.saveSettings()">
+                    Save Settings
+                </button>
+                <button type="button" class="btn-secondary" onclick="FlashcardApp.closeSettings()">
+                    Cancel
+                </button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JavaScript modules (load in order) -->
+    <script src="js/utils.js"></script>
+    <script src="js/flashcard-storage.js"></script>
+    <script src="js/flashcard-data.js"></script>
+    <script src="js/flashcard-audio.js"></script>
+    <script src="js/flashcard-ui.js"></script>
+    <script src="js/flashcard-keyboard.js"></script>
+    <script src="js/flashcard-sequential.js"></script>
+    <script src="js/flashcard-spaced-repetition.js"></script>
+    <script src="js/flashcard-app.js"></script>
+
+    <!-- Rating button event listeners -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ratingButtons = document.querySelectorAll('.rating-btn');
+            ratingButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const rating = parseInt(btn.dataset.rating);
+                    document.dispatchEvent(new CustomEvent('ratingSelected', {
+                        detail: { rating }
+                    }));
+                });
+            });
+        });
+    </script>
+</body>
+</html>
