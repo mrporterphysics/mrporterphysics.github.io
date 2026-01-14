@@ -205,23 +205,23 @@ const FlashcardAudio = {
             processed = processed.replace(regex, pronunciation);
         }
 
-        // Handle common variable patterns
+        // Handle common variable patterns (use word boundaries to avoid replacing inside words)
         processed = processed
             .replace(/v₀/g, ' v-naught ')
             .replace(/v_0/g, ' v-naught ')
-            .replace(/vf/g, ' v-final ')
-            .replace(/vi/g, ' v-initial ')
+            .replace(/\bvf\b/g, ' v-final ')
+            .replace(/\bvi\b/g, ' v-initial ')
             .replace(/v̄/g, ' v-bar ')
-            .replace(/Fnet/g, ' F-net ')
-            .replace(/Fc/g, ' F-centripetal ')
-            .replace(/Ff/g, ' F-friction ')
-            .replace(/Fg/g, ' F-gravity ')
-            .replace(/FN/g, ' F-normal ')
-            .replace(/KE/g, ' kinetic energy ')
-            .replace(/PE/g, ' potential energy ')
-            .replace(/PEs/g, ' potential energy spring ')
-            .replace(/ET/g, ' total energy ')
-            .replace(/Req/g, ' R-equivalent ');
+            .replace(/\bFnet\b/g, ' F-net ')
+            .replace(/\bFc\b/g, ' F-centripetal ')
+            .replace(/\bFf\b/g, ' F-friction ')
+            .replace(/\bFg\b/g, ' F-gravity ')
+            .replace(/\bFN\b/g, ' F-normal ')
+            .replace(/\bKE\b/g, ' kinetic energy ')
+            .replace(/\bPE\b/g, ' potential energy ')
+            .replace(/\bPEs\b/g, ' potential energy spring ')
+            .replace(/\bET\b/g, ' total energy ')
+            .replace(/\bReq\b/g, ' R-equivalent ');
 
         // Clean up multiple spaces
         processed = processed.replace(/\s+/g, ' ').trim();

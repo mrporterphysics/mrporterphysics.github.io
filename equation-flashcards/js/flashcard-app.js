@@ -25,6 +25,9 @@ const FlashcardApp = {
             // Set up mode selection
             this.setupModeSelection();
 
+            // Set up category filter
+            this.setupCategoryFilter();
+
             // Start in saved mode or default to sequential
             const savedMode = FlashcardStorage.getSetting('studyMode', 'sequential');
             this.switchMode(savedMode);
@@ -88,6 +91,66 @@ const FlashcardApp = {
         document.addEventListener('switchMode', (e) => {
             this.switchMode(e.detail.mode);
         });
+    },
+
+    // Set up category filter
+    setupCategoryFilter: function() {
+        const categoryFilter = document.getElementById('category-filter');
+
+        if (!categoryFilter) {
+            console.warn('⚠️ Category filter element not found');
+            return;
+        }
+
+        // Populate category options
+        const categories = FlashcardData.getCategories();
+
+        // Clear existing options (keep "All Units")
+        categoryFilter.innerHTML = '<option value="all">All Units</option>';
+
+        // Add category options with friendly names
+        categories.forEach(category => {
+            const option = document.createElement('option');
+            option.value = category;
+            // Convert category to display name (e.g., "static-electricity" → "Static Electricity")
+            option.textContent = this.formatCategoryName(category);
+            categoryFilter.appendChild(option);
+        });
+
+        // Set saved filter value
+        const savedCategory = FlashcardStorage.getSetting('categoryFilter', 'all');
+        categoryFilter.value = savedCategory;
+
+        // Add change event listener
+        categoryFilter.addEventListener('change', (e) => {
+            const selectedCategory = e.target.value;
+            console.log(`🔍 Filtering by category: ${selectedCategory}`);
+
+            // Update filter in data module
+            FlashcardData.setFilter('category', selectedCategory);
+
+            // Clear the saved session to force recreation with new filter
+            FlashcardStorage.clearSession();
+
+            // Restart current mode with filtered data
+            this.switchMode(this.currentMode);
+
+            // Announce filter change
+            const announcement = selectedCategory === 'all'
+                ? 'Showing all equations'
+                : `Filtering to ${this.formatCategoryName(selectedCategory)} equations only`;
+            Utils.announceToScreenReader(announcement, 'polite');
+        });
+
+        console.log(`📚 Category filter populated with ${categories.length} categories`);
+    },
+
+    // Format category name for display
+    formatCategoryName: function(category) {
+        return category
+            .split(/[-_\s]+/)
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
     },
 
     // Switch study mode

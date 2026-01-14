@@ -208,9 +208,6 @@ const FlashcardUI = {
         if (!this.currentEquation) return;
 
         const side = this.isShowingFront ? 'front' : 'back';
-        console.log(`🔊 Playing audio for ${side} side (isShowingFront: ${this.isShowingFront})`);
-        console.log(`   Front text would be: "${this.currentEquation.name}"`);
-        console.log(`   Back text would be: "${this.currentEquation.audioDescription}"`);
         FlashcardAudio.speakEquation(this.currentEquation, side);
     },
 

@@ -71,6 +71,20 @@
                 </div>
             </section>
 
+            <!-- Category filter -->
+            <section class="filter-section" role="region" aria-labelledby="filter-title">
+                <h3 id="filter-title" class="sr-only">Study Filters</h3>
+                <div class="filter-controls">
+                    <label for="category-filter" class="filter-label">
+                        <span class="filter-icon" aria-hidden="true">📚</span>
+                        Study by Unit:
+                    </label>
+                    <select id="category-filter" class="filter-select" aria-label="Filter equations by physics unit">
+                        <option value="all">All Units</option>
+                    </select>
+                </div>
+            </section>
+
             <!-- Flashcard area -->
             <section class="flashcard-section" role="region" aria-labelledby="card-title">
                 <!-- Card container -->
@@ -306,15 +320,15 @@
     </div>
 
     <!-- JavaScript modules (load in order) -->
-    <script src="js/utils.js"></script>
-    <script src="js/flashcard-storage.js"></script>
-    <script src="js/flashcard-data.js"></script>
-    <script src="js/flashcard-audio.js"></script>
-    <script src="js/flashcard-ui.js"></script>
-    <script src="js/flashcard-keyboard.js"></script>
-    <script src="js/flashcard-sequential.js"></script>
-    <script src="js/flashcard-spaced-repetition.js"></script>
-    <script src="js/flashcard-app.js"></script>
+    <script src="js/utils.js?v=4"></script>
+    <script src="js/flashcard-storage.js?v=4"></script>
+    <script src="js/flashcard-data.js?v=4"></script>
+    <script src="js/flashcard-audio.js?v=4"></script>
+    <script src="js/flashcard-ui.js?v=4"></script>
+    <script src="js/flashcard-keyboard.js?v=4"></script>
+    <script src="js/flashcard-sequential.js?v=4"></script>
+    <script src="js/flashcard-spaced-repetition.js?v=4"></script>
+    <script src="js/flashcard-app.js?v=4"></script>
 
     <!-- Rating button event listeners -->
     <script>

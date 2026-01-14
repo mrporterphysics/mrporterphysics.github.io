@@ -14,7 +14,12 @@ const FlashcardSequential = {
         // Load or create session
         this.session = FlashcardStorage.getSession();
 
-        if (!this.session || this.session.mode !== 'sequential') {
+        // Check if we need to create a new session
+        const needsNewSession = !this.session ||
+                               this.session.mode !== 'sequential' ||
+                               this.filtersChanged();
+
+        if (needsNewSession) {
             this.createNewSession();
         }
 
@@ -308,7 +313,25 @@ const FlashcardSequential = {
         return FlashcardStorage.saveSession(this.session);
     },
 
+    // Check if filters have changed since last session
+    filtersChanged: function() {
+        if (!this.session) {
+            return false;
+        }
+
+        if (!this.session.filters) {
+            return true;
+        }
+
+        const currentFilters = FlashcardData.currentFilters;
+        const savedFilters = this.session.filters;
+
+        return currentFilters.category !== savedFilters.category ||
+               currentFilters.difficulty !== savedFilters.difficulty;
+    },
+
     // Cleanup
+
     cleanup: function() {
         this.saveSession();
         console.log('🧹 Sequential mode cleaned up');
