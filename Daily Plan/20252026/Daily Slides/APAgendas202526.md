@@ -16,6 +16,54 @@ math: mathjax
 
 ---
 
+
+# **DO NOW** Modified Atwood Machine **2026.01.15**
+
+## On your Whiteboard <mark>***as a group***</mark>...
+
+### Predict the ***tension*** of the string and the ***acceleration*** of the lab cart. 
+
+Givens:
+
+- Cart: 316.2 grams
+- Mass: 92.5 grams
+
+---
+
+# 2026.01.15 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather always be slightly late or super early?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Notes on Modified Atwood Machines
+3. AP Workbook: 2.M & 2.J (in that order)
+3. Physics Classroom: Two Body Problmes in Two Dimensions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Atwood Machines_
+
+### 📆 Upcoming
+
+- AP Classroom Review Unlocked
+    - Forces Test **Tuesday 1/20**
+
+
+</div>
+</div>
+
+---
+
 # 2026.01.14 **AP Physics**
 
 ##### **❓ of the 📅**: ***If you could redesign the human body, what one improvement would you make?***
@@ -43,19 +91,6 @@ math: mathjax
 
 </div>
 </div>
-
----
-
-# Modified Atwood Machine
-
-## On your Whiteboard...
-
-### Predict the ***tension*** of the string and the ***acceleration*** of the lab cart. 
-
-Givens:
-
-- Cart: 316.2 grams
-- Mass: 92.5 grams
 
 ---
 

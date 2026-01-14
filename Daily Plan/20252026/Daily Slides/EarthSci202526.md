@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.01.15 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather always be slightly late or super early?    
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How do materials move to create new islands (pages 33-39)
+2. Consensus meeting: share out on how rocks and minerals rearrange themselves in the crust and mantle of Earth
+3. _Who is at **risk**?_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _odel & describe how rocks change and move near the surface of the Earth_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.14 **Earth Science**
 
 ##### **❓ of the 📅**: ***If you could redesign the human body, what one improvement would you make?***
