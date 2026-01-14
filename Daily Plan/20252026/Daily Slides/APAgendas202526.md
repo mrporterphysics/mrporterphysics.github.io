@@ -46,7 +46,7 @@ math: mathjax
 
 ---
 
-# Atwood Machine
+# Modified Atwood Machine
 
 ## On your Whiteboard...
 
