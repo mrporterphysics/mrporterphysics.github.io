@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2026.01.14 **AP Physics**
+
+##### **❓ of the 📅**: ***If you could redesign the human body, what one improvement would you make?***
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz 
+2. Notes on Atwood Machines
+3. AP Workbook: 2.M & 2.J (in that order)
+3. Physics Classroom: Two Body Problmes in Two Dimensions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Atwood Machines_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.13 **AP Physics**
 
 ##### **❓ of the 📅**: You **_have_** to sing karaoke, what song do you pick? 🎤

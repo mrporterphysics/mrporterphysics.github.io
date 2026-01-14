@@ -8,12 +8,80 @@ class:  twilight
 ---
 
 
+
 # Earth Science 🌎 <!--fit--->
 
 ## 🧑‍🏫 Mr. Porter
 
 ### 📆 2025-26
 
+---
+
+# 2026.01.14 **Earth Science**
+
+##### **❓ of the 📅**: ***If you could redesign the human body, what one improvement would you make?***
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How do materials move to create new islands (pages 33-39)
+2. Consensus meeting: share out on how rocks and minerals rearrange themselves in the crust and mantle of Earth
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model & describe how rocks change and move near the surface of the Earth_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+# Where did Krakatoa’s new islands come from?
+
+- The new islands formed after Krakatoa erupted came from the upper parts of Earth: the crust and the mantle.
+- The crust and mantle are made of rock—and rock is usually solid.
+- For new islands to appear, some of that rock had to melt into magma, move, and then solidify again near the surface.
+
+_We will be looking at the details of this process today_
+
+---
+
+
+# Reference Table Charts <!--fit--->
+
+---
+
+![bg fit left:75%](image-36.png)
+
+## Page 11 - Model of Earth's Interior 
+
+---
+
+![center w:1000](image-37.png)
+
+Page 11 - Cross Section of Earth's Surface and Interior
+
+---
+
+![center w:800](image-38.png)
+
+Page 14 - Rock Cycle
+
+---
+
+![bg fit left:75%](image-39.png)
+
+Page 13 - Mineral Composition of Igneous Rocks
 
 ---
 
@@ -59,34 +127,6 @@ class:  twilight
 - ### **Evidence**: what is evidence for your claim?
 
 - ### **Reasoning**: what scientific principles, or ideas from Earth's layers support your evidence?
-
----
-
-# Reference Table Charts <!--fit--->
-
----
-
-![bg fit left:75%](image-36.png)
-
-## Page 11 - Model of Earth's Interior 
-
----
-
-![center w:1000](image-37.png)
-
-Page 11 - Cross Section of Earth's Surface and Interior
-
----
-
-![center w:800](image-38.png)
-
-Page 14 - Rock Cycle
-
----
-
-![bg fit left:75%](image-39.png)
-
-Page 13 - Mineral Composition of Igneous Rocks
 
 ---
 
