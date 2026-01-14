@@ -46,6 +46,19 @@ math: mathjax
 
 ---
 
+# Atwood Machine
+
+## On your Whiteboard...
+
+### Predict the ***tension*** of the string and the ***acceleration*** of the lab cart. 
+
+Givens:
+
+- Cart: 316.2 grams
+- Mass: 92.5 grams
+
+---
+
 # 2026.01.13 **AP Physics**
 
 ##### **❓ of the 📅**: You **_have_** to sing karaoke, what song do you pick? 🎤
