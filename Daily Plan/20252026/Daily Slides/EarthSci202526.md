@@ -17,6 +17,40 @@ class:  twilight
 
 ---
 
+# 2026.01.16 **Earth Science**
+
+##### **❓ of the 📅**: If you could go to the Olympics, what sport would you want to do?
+
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Present Models to Class
+2. Regents Practice Questions
+    - ✏️ Answer 
+    - 👀 Check Answers
+    - 🤔 Ask Questions
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Summarize and Practice with Earth's Interior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.15 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather always be slightly late or super early?    

@@ -15,6 +15,41 @@ math: mathjax
 
 ---
 
+# 2026.01.16 **Regents Physics**
+
+##### **❓ of the 📅**: If you could go to the Olympics, what sport would you want to do?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish N3L Pivot & Discuss
+2. Station Review
+    - Work at station with partner(s) for assigned time, then check answer key
+    - 🔁 Rotate to next station
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define N3L_
+🥅 _Review for Test_
+
+### 📆 Upcoming
+
+- Test Friday 1/23
+    - PC Review Assigned as **extra practice**
+    - We'll Review Thursday Next Week
+
+</div>
+</div>
+
+---
+
 # 2026.01.15 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather always be slightly late or super early?   
