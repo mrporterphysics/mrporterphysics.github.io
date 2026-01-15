@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.01.15 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather always be slightly late or super early?   
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Inclined Plane Regents Questions 
+1. Pivot - Exploring Newton's Third Law
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define N3L_
+
+### 📆 Upcoming
+- Forces test at the end of next week
+
+</div>
+</div>
+
+---
+
 # 2026.01.13 **Regents Physics**
 
 ##### **❓ of the 📅**: You **_have_** to sing karaoke, what song do you pick? 🎤
