@@ -28,6 +28,8 @@ class:  twilight
 
 #### 📋 Agenda
 
+0. Hand Back Quizzes (_finally_)
+    - Corrections available
 1. Present Models to Class
 2. Regents Practice Questions
     - ✏️ Answer 
@@ -45,6 +47,8 @@ class:  twilight
 🥅 _Summarize and Practice with Earth's Interior_
 
 ### 📆 Upcoming
+
+- Quiz Corrections for $\frac{1}{2}$ points back due 1/23 -> Must stay after to go over your corrections with me. 
 
 </div>
 </div>
