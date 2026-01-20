@@ -16,6 +16,40 @@ math: mathjax
 
 ---
 
+# 2026.01.20 **AP Physics**
+
+##### **❓ of the 📅**: What's the most ***unusual*** thing you've ever eaten?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. FRQ Practice 
+    - Random Partners
+    - Complete FRQ on whiteboard
+    - Compare Answers to neighbors when instructed
+    - New Problem & New Partner
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prep for the Test_
+
+### 📆 Upcoming
+
+- Test tomorrow - AP Classroom Progress Check Due
+    - Reminder that these are **mandatory** for test corrections
+
+</div>
+</div>
+
+---
+
 
 # **DO NOW** Modified Atwood Machine **2026.01.15**
 

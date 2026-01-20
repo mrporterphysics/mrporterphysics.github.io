@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2026.01.20 **Earth Science**
+
+##### **❓ of the 📅**: What's the most ***unusual*** thing you've ever eaten?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Global Patterns of Seismic Activity
+2. Seismic Activity in the Ocean
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model what is happening with seismic activity in the ocean 🌊_
+
+### 📆 Upcoming
+
+- Quiz Corrections for $\frac{1}{2}$ points back due 1/23 -> Must stay after to go over your corrections with me. 
+
+</div>
+</div>
+
+---
+
 # 2026.01.16 **Earth Science**
 
 ##### **❓ of the 📅**: If you could go to the Olympics, what sport would you want to do?
