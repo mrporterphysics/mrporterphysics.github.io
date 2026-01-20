@@ -26,11 +26,12 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. FRQ Practice 
+1. FRQ Practice (2013, 2008, 2019)
     - Random Partners
     - Complete FRQ on whiteboard
     - Compare Answers to neighbors when instructed
     - New Problem & New Partner
+
 
 </div>
 
