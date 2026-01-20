@@ -15,6 +15,42 @@ math: mathjax
 
 ---
 
+# 2026.01.20 **Regents Physics**
+
+##### **❓ of the 📅**: What's the most ***unusual*** thing you've ever eaten?  
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Circular Motion Notes
+2. Circular Motion Think Sheets:
+    - Speed & Velocity 
+    - Acceleration 
+    - Circular Motion and Inertia
+    - The Centripetal Force Requirement
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model objects moving in a circle_
+
+🥅 _Define Uniform motion_
+
+### 📆 Upcoming
+
+- Test Friday - Forces
+
+</div>
+</div>
+
+---
+
 # 2026.01.16 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could go to the Olympics, what sport would you want to do?
