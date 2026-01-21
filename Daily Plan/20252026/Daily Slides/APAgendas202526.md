@@ -32,6 +32,10 @@ math: mathjax
 
 ---
 
+![center w:1200](image-41.png)
+
+---
+
 # 2026.01.20 **AP Physics**
 
 ##### **❓ of the 📅**: What's the most ***unusual*** thing you've ever eaten?
