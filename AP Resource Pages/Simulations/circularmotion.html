@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centripetal Motion Interactive</title>
+    <style>
+        :root {
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-200: #DAD4BA;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-green: #879A39;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --accent-primary: var(--fx-blue);
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+            --canvas-bg: #FFFCF0;
+        }
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: #B5A988;
+            --border-color: var(--fx-base-850);
+            --accent-primary: #205EA6;
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+            --canvas-bg: #1C1B1A;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Fira Code', 'SF Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
+        }
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 { font-size: 2em; font-weight: 700; color: var(--text-primary); }
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .theme-toggle::before { content: '☀️ Light'; }
+        [data-theme="dark"] .theme-toggle::before { content: '🌙 Dark'; }
+        .question {
+            background-color: var(--bg-tertiary);
+            padding: 25px;
+            border-left: 4px solid var(--accent-primary);
+        }
+        .question h2 { color: var(--accent-primary); margin-bottom: 15px; font-size: 1.3em; }
+        .question p { color: var(--text-secondary); }
+        .content { padding: 30px; }
+        .simulation-container {
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px solid var(--border-color);
+        }
+        .simulation-container h3 { color: var(--accent-primary); margin-bottom: 15px; }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: var(--canvas-bg);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+        .controls {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .control-group {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        label { min-width: 150px; font-weight: 600; color: var(--text-primary); }
+        input[type="range"] { width: 200px; accent-color: var(--accent-primary); }
+        button {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 5px;
+            font-family: inherit;
+        }
+        button:hover { transform: translateY(-1px); }
+        button.secondary {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+        button.success { background-color: var(--success); border-color: var(--success); }
+        .value-display { min-width: 80px; font-weight: 600; color: var(--accent-primary); }
+        .explanation {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--accent-secondary);
+        }
+        .explanation h3 { color: var(--accent-secondary); margin-bottom: 10px; }
+        .explanation ul { margin-left: 25px; color: var(--text-secondary); }
+        .explanation li { margin: 8px 0; }
+        .info-box {
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--warning);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .info-box strong { color: var(--warning); }
+        .legend { display: flex; flex-wrap: wrap; gap: 20px; margin: 15px 0; padding: 15px; background-color: var(--bg-tertiary); border-radius: 6px; }
+        .legend-item { display: flex; align-items: center; gap: 8px; }
+        .legend-color { width: 30px; height: 4px; border-radius: 2px; }
+        .section-tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            cursor: pointer;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+        .tab-btn.active { background-color: var(--accent-primary); color: var(--bg-primary); border-color: var(--accent-primary); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .equation { font-size: 1.2em; text-align: center; padding: 15px; background-color: var(--bg-primary); border-radius: 6px; margin: 10px 0; font-family: 'Times New Roman', serif; }
+        .step-indicator { display: flex; justify-content: center; gap: 10px; margin: 15px 0; }
+        .step-dot { width: 12px; height: 12px; border-radius: 50%; background-color: var(--border-color); }
+        .step-dot.active { background-color: var(--accent-primary); }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .column { background-color: var(--bg-secondary); border-radius: 8px; padding: 15px; border: 1px solid var(--border-color); }
+        .column h4 { color: var(--accent-primary); margin-bottom: 10px; text-align: center; }
+        .score-display { font-size: 1.5em; text-align: center; padding: 15px; background-color: var(--bg-primary); border-radius: 6px; margin: 10px 0; }
+        .score-display .hits { color: var(--success); }
+        .score-display .attempts { color: var(--text-muted); }
+        .game-message { text-align: center; font-size: 1.2em; padding: 10px; margin: 10px 0; border-radius: 6px; }
+        .game-message.success { background-color: rgba(135, 154, 57, 0.2); color: var(--success); }
+        .game-message.miss { background-color: rgba(209, 77, 65, 0.2); color: var(--error); }
+        footer { background-color: var(--bg-tertiary); border-top: 1px solid var(--border-color); padding: 20px; text-align: center; color: var(--text-muted); }
+        @media (max-width: 900px) { .two-column { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Centripetal Motion Interactive</h1>
+            <button class="theme-toggle" onclick="toggleTheme()"></button>
+        </header>
+        <div class="question">
+            <h2>Exploring Centripetal Acceleration</h2>
+            <p>In uniform circular motion, an object moves at <strong>constant speed</strong> but is constantly <strong>accelerating</strong>. 
+            How can this be? Explore these simulations to understand why acceleration doesn't just mean "speeding up" — it means any change in velocity, including direction.</p>
+        </div>
+        <div class="content">
+            <div class="section-tabs">
+                <button class="tab-btn active" onclick="showTab('game')">1. Tangent Release Game</button>
+                <button class="tab-btn" onclick="showTab('ucm')">2. Uniform Circular Motion</button>
+                <button class="tab-btn" onclick="showTab('vectors')">3. Vector Subtraction Proof</button>
+            </div>
+
+            <!-- Section 1: Game (now first) -->
+            <div id="game" class="tab-content active">
+                <div class="simulation-container">
+                    <h3>🎯 Target Practice: Release to Hit the Target!</h3>
+                    <canvas id="game-canvas" width="700" height="500"></canvas>
+                    <div class="score-display">
+                        Score: <span class="hits" id="hits">0</span> / <span class="attempts" id="attempts">0</span>
+                        <span id="accuracy"></span>
+                    </div>
+                    <div class="game-message" id="game-message" style="display: none;"></div>
+                    <div class="controls">
+                        <div class="control-group">
+                            <label>Rotation Speed:</label>
+                            <input type="range" id="game-speed" min="0.5" max="2.5" value="1.2" step="0.1">
+                            <span class="value-display" id="game-speed-display">1.2x</span>
+                        </div>
+                        <div class="control-group">
+                            <button class="success" onclick="releaseObject()">🎯 Release!</button>
+                            <button onclick="newTarget()">New Target</button>
+                            <button class="secondary" onclick="toggleVelocityHint()" id="hint-btn">Show Velocity Vector</button>
+                            <button class="secondary" onclick="resetGame()">Reset Score</button>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <strong>How to Play:</strong> Press "Release!" when you think the object will travel toward the target. Which direction will it go when released? Try it and find out!
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>What Did You Notice?</h3>
+                    <ul>
+                        <li>Did the object fly outward from the center? Or did it go a different direction?</li>
+                        <li><strong>Key insight:</strong> Released objects travel <strong>tangent</strong> to the circle — NOT outward!</li>
+                        <li>There is no "centrifugal force" pushing things out. That feeling is just your inertia!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 2: UCM -->
+            <div id="ucm" class="tab-content">
+                <div class="simulation-container">
+                    <h3>Uniform Circular Motion: Velocity is Always Tangent</h3>
+                    <canvas id="ucm-canvas" width="700" height="500"></canvas>
+                    <div class="legend">
+                        <div class="legend-item"><div class="legend-color" style="background-color: #4385BE;"></div><span>Velocity (v)</span></div>
+                        <div class="legend-item"><div class="legend-color" style="background-color: #D14D41;"></div><span>Centripetal acceleration (ac)</span></div>
+                        <div class="legend-item"><div class="legend-color" style="background-color: #879A39;"></div><span>Radius</span></div>
+                    </div>
+                    <div class="controls">
+                        <div class="control-group">
+                            <label>Speed:</label>
+                            <input type="range" id="ucm-speed" min="0.5" max="3" value="1.5" step="0.1">
+                            <span class="value-display" id="ucm-speed-display">1.5 m/s</span>
+                        </div>
+                        <div class="control-group">
+                            <label>Radius:</label>
+                            <input type="range" id="ucm-radius" min="80" max="180" value="120" step="10">
+                            <span class="value-display" id="ucm-radius-display">1.2 m</span>
+                        </div>
+                        <div class="control-group">
+                            <button onclick="toggleUCM()">Play/Pause</button>
+                            <button class="secondary" onclick="resetUCM()">Reset</button>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <strong>Current Values:</strong><br>
+                        Speed |v| = <span id="ucm-v-mag">1.50</span> m/s &nbsp;|&nbsp; Centripetal Acceleration |ac| = <span id="ucm-a-mag">0.00</span> m/s²
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>Key Concepts</h3>
+                    <ul>
+                        <li><strong>Velocity is always tangent</strong> to the circular path.</li>
+                        <li><strong>Acceleration points toward the center</strong> — this is centripetal acceleration.</li>
+                        <li>v and ac are always perpendicular.</li>
+                        <li>ac = v²/r &nbsp;(Notice how the vectors change size with the sliders!)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 3: Vectors -->
+            <div id="vectors" class="tab-content">
+                <div class="simulation-container">
+                    <h3>Proving Centripetal Acceleration Points Toward Center</h3>
+                    <div class="two-column">
+                        <div class="column">
+                            <h4>Circular Motion</h4>
+                            <canvas id="circle-canvas" width="400" height="400"></canvas>
+                        </div>
+                        <div class="column">
+                            <h4>Vector Subtraction: Δv = vf − vi</h4>
+                            <canvas id="vector-canvas" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="step-indicator">
+                        <div class="step-dot active" id="step1"></div>
+                        <div class="step-dot" id="step2"></div>
+                        <div class="step-dot" id="step3"></div>
+                        <div class="step-dot" id="step4"></div>
+                        <div class="step-dot" id="step5"></div>
+                        <div class="step-dot" id="step6"></div>
+                    </div>
+                    <div class="controls">
+                        <div class="control-group">
+                            <button onclick="prevVectorStep()">◀ Previous</button>
+                            <button onclick="nextVectorStep()">Next ▶</button>
+                            <button class="secondary" onclick="autoPlayVectors()">Auto Play</button>
+                            <button class="secondary" onclick="resetVectors()">Reset</button>
+                        </div>
+                    </div>
+                    <div class="info-box" id="vector-explanation">
+                        <strong>Step 1:</strong> The object moves clockwise. At position A, velocity v<sub>i</sub> is tangent to the circle.
+                    </div>
+                </div>
+                <div class="explanation">
+                    <h3>The Mathematical Proof</h3>
+                    <div class="equation">a = Δv / Δt = (v<sub>f</sub> − v<sub>i</sub>) / Δt = (v<sub>f</sub> + (−v<sub>i</sub>)) / Δt</div>
+                    <p>Even though |v<sub>i</sub>| = |v<sub>f</sub>| (same speed), the direction changes. Using tip-to-tail vector addition with v<sub>f</sub> + (−v<sub>i</sub>), the resultant Δv always points toward the center!</p>
+                </div>
+            </div>
+        </div>
+        <footer>AP Physics 1: Circular Motion and Gravitation</footer>
+    </div>
+    
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            drawAll();
+        }
+        (function() {
+            document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+        })();
+
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function getColors() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            return {
+                bg: isDark ? '#1C1B1A' : '#FFFCF0',
+                text: isDark ? '#FFFCF0' : '#1C1B1A',
+                muted: isDark ? '#B5A988' : '#6F6144',
+                blue: '#4385BE', red: '#D14D41', green: '#879A39',
+                orange: '#DA702C', purple: '#8B7EC8', magenta: '#CE5D97',
+                circle: isDark ? '#403E39' : '#DAD4BA'
+            };
+        }
+
+        function drawArrow(ctx, x1, y1, x2, y2, color, lw) {
+            const angle = Math.atan2(y2 - y1, x2 - x1);
+            ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = lw;
+            ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(x2, y2);
+            ctx.lineTo(x2 - 12 * Math.cos(angle - Math.PI/6), y2 - 12 * Math.sin(angle - Math.PI/6));
+            ctx.lineTo(x2 - 12 * Math.cos(angle + Math.PI/6), y2 - 12 * Math.sin(angle + Math.PI/6));
+            ctx.closePath(); ctx.fill();
+        }
+
+        function drawAll() { drawUCM(); drawGame(); drawVectorScene(); }
+
+        // === UCM ===
+        const ucmCanvas = document.getElementById('ucm-canvas');
+        const ucmCtx = ucmCanvas.getContext('2d');
+        let ucmAngle = 0, ucmSpeed = 1.5, ucmRadius = 120, ucmRunning = true;
+
+        document.getElementById('ucm-speed').addEventListener('input', e => {
+            ucmSpeed = parseFloat(e.target.value);
+            document.getElementById('ucm-speed-display').textContent = ucmSpeed.toFixed(1) + ' m/s';
+        });
+        document.getElementById('ucm-radius').addEventListener('input', e => {
+            ucmRadius = parseFloat(e.target.value);
+            document.getElementById('ucm-radius-display').textContent = (ucmRadius/100).toFixed(1) + ' m';
+        });
+
+        function toggleUCM() { ucmRunning = !ucmRunning; if (ucmRunning) animateUCM(); }
+        function resetUCM() { ucmAngle = 0; ucmRunning = true; }
+
+        function drawUCM() {
+            const c = getColors(), cx = ucmCanvas.width/2, cy = ucmCanvas.height/2;
+            ucmCtx.fillStyle = c.bg; ucmCtx.fillRect(0, 0, ucmCanvas.width, ucmCanvas.height);
+            ucmCtx.strokeStyle = c.circle; ucmCtx.lineWidth = 2; ucmCtx.setLineDash([5,5]);
+            ucmCtx.beginPath(); ucmCtx.arc(cx, cy, ucmRadius, 0, Math.PI*2); ucmCtx.stroke(); ucmCtx.setLineDash([]);
+            ucmCtx.fillStyle = c.muted; ucmCtx.beginPath(); ucmCtx.arc(cx, cy, 5, 0, Math.PI*2); ucmCtx.fill();
+            ucmCtx.font = '14px monospace'; ucmCtx.fillText('Center', cx+10, cy+5);
+            
+            const x = cx + ucmRadius * Math.cos(ucmAngle), y = cy - ucmRadius * Math.sin(ucmAngle);
+            ucmCtx.strokeStyle = c.green; ucmCtx.lineWidth = 2;
+            ucmCtx.beginPath(); ucmCtx.moveTo(cx, cy); ucmCtx.lineTo(x, y); ucmCtx.stroke();
+            
+            // Scale vectors based on speed and radius
+            const vScale = 25 * ucmSpeed; // velocity scales with speed
+            const aScale = 15 * (ucmSpeed * ucmSpeed) / (ucmRadius / 100); // acceleration scales with v²/r
+            
+            const vx = -Math.sin(ucmAngle) * vScale, vy = -Math.cos(ucmAngle) * vScale;
+            const ax = (cx - x) / ucmRadius * aScale, ay = (cy - y) / ucmRadius * aScale;
+            
+            drawArrow(ucmCtx, x, y, x + vx, y + vy, c.blue, 3);
+            ucmCtx.fillStyle = c.blue; ucmCtx.font = 'bold 18px monospace'; ucmCtx.fillText('v', x + vx + 10, y + vy);
+            drawArrow(ucmCtx, x, y, x + ax, y + ay, c.red, 3);
+            ucmCtx.fillStyle = c.red; ucmCtx.fillText('ac', x + ax + 10, y + ay);
+            
+            ucmCtx.fillStyle = c.orange; ucmCtx.beginPath(); ucmCtx.arc(x, y, 12, 0, Math.PI*2); ucmCtx.fill();
+            ucmCtx.strokeStyle = c.text; ucmCtx.lineWidth = 2; ucmCtx.stroke();
+            
+            document.getElementById('ucm-v-mag').textContent = ucmSpeed.toFixed(2);
+            document.getElementById('ucm-a-mag').textContent = (ucmSpeed*ucmSpeed/(ucmRadius/100)).toFixed(2);
+        }
+
+        function animateUCM() {
+            if (!ucmRunning) return;
+            ucmAngle += ucmSpeed / (ucmRadius/100) * 0.016;
+            drawUCM();
+            requestAnimationFrame(animateUCM);
+        }
+
+        // === GAME ===
+        const gameCanvas = document.getElementById('game-canvas');
+        const gameCtx = gameCanvas.getContext('2d');
+        let gameAngle = 0, gameSpeed = 1.2, gameRunning = true, objectReleased = false;
+        let releaseX, releaseY, releaseVx, releaseVy, releaseTime = 0;
+        let targetX, targetY, hits = 0, attempts = 0;
+        let showVelocityHint = false;
+        const gameR = 100, gameCx = 200, gameCy = 250;
+
+        document.getElementById('game-speed').addEventListener('input', e => {
+            gameSpeed = parseFloat(e.target.value);
+            document.getElementById('game-speed-display').textContent = gameSpeed.toFixed(1) + 'x';
+        });
+
+        function toggleVelocityHint() {
+            showVelocityHint = !showVelocityHint;
+            document.getElementById('hint-btn').textContent = showVelocityHint ? 'Hide Velocity Vector' : 'Show Velocity Vector';
+        }
+
+        function initTarget() {
+            targetX = 350 + Math.random() * 280;
+            targetY = 80 + Math.random() * 340;
+        }
+
+        function newTarget() {
+            objectReleased = false; releaseTime = 0; gameRunning = true;
+            initTarget(); document.getElementById('game-message').style.display = 'none';
+            animateGame();
+        }
+
+        function resetGame() {
+            hits = 0; attempts = 0;
+            document.getElementById('hits').textContent = '0';
+            document.getElementById('attempts').textContent = '0';
+            document.getElementById('accuracy').textContent = '';
+            newTarget();
+        }
+
+        function releaseObject() {
+            if (objectReleased) return;
+            releaseX = gameCx + gameR * Math.cos(gameAngle);
+            releaseY = gameCy - gameR * Math.sin(gameAngle);
+            const vMag = 200 * gameSpeed;
+            releaseVx = -Math.sin(gameAngle) * vMag;
+            releaseVy = -Math.cos(gameAngle) * vMag;
+            objectReleased = true; releaseTime = 0;
+            attempts++; document.getElementById('attempts').textContent = attempts;
+        }
+
+        function drawGame() {
+            const c = getColors();
+            gameCtx.fillStyle = c.bg; gameCtx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+            gameCtx.strokeStyle = c.circle; gameCtx.lineWidth = 2; gameCtx.setLineDash([5,5]);
+            gameCtx.beginPath(); gameCtx.arc(gameCx, gameCy, gameR, 0, Math.PI*2); gameCtx.stroke(); gameCtx.setLineDash([]);
+            
+            // Target
+            gameCtx.fillStyle = c.red; gameCtx.globalAlpha = 0.3;
+            gameCtx.beginPath(); gameCtx.arc(targetX, targetY, 25, 0, Math.PI*2); gameCtx.fill();
+            gameCtx.globalAlpha = 1; gameCtx.strokeStyle = c.red; gameCtx.lineWidth = 3;
+            gameCtx.beginPath(); gameCtx.arc(targetX, targetY, 25, 0, Math.PI*2); gameCtx.stroke();
+            gameCtx.beginPath(); gameCtx.arc(targetX, targetY, 15, 0, Math.PI*2); gameCtx.stroke();
+            gameCtx.beginPath(); gameCtx.arc(targetX, targetY, 5, 0, Math.PI*2); gameCtx.stroke();
+            
+            if (!objectReleased) {
+                const x = gameCx + gameR * Math.cos(gameAngle), y = gameCy - gameR * Math.sin(gameAngle);
+                
+                // Draw velocity vector hint (only if enabled)
+                if (showVelocityHint) {
+                    const vx = -Math.sin(gameAngle) * 120, vy = -Math.cos(gameAngle) * 120;
+                    gameCtx.globalAlpha = 0.6;
+                    gameCtx.setLineDash([4, 4]);
+                    drawArrow(gameCtx, x, y, x + vx, y + vy, c.blue, 2);
+                    gameCtx.setLineDash([]);
+                    gameCtx.globalAlpha = 1;
+                    gameCtx.fillStyle = c.blue; gameCtx.font = 'bold 14px monospace';
+                    gameCtx.fillText('v', x + vx + 5, y + vy);
+                }
+                
+                // Draw object
+                gameCtx.fillStyle = c.orange; gameCtx.beginPath(); gameCtx.arc(x, y, 15, 0, Math.PI*2); gameCtx.fill();
+                gameCtx.strokeStyle = c.text; gameCtx.lineWidth = 2; gameCtx.stroke();
+            } else {
+                const curX = releaseX + releaseVx * releaseTime, curY = releaseY + releaseVy * releaseTime;
+                gameCtx.strokeStyle = c.magenta; gameCtx.lineWidth = 2; gameCtx.setLineDash([5,3]);
+                gameCtx.beginPath(); gameCtx.moveTo(releaseX, releaseY); gameCtx.lineTo(curX, curY); gameCtx.stroke();
+                gameCtx.setLineDash([]);
+                gameCtx.fillStyle = c.magenta; gameCtx.beginPath(); gameCtx.arc(curX, curY, 15, 0, Math.PI*2); gameCtx.fill();
+                gameCtx.strokeStyle = c.text; gameCtx.stroke();
+            }
+            gameCtx.fillStyle = c.text; gameCtx.font = '14px monospace';
+            gameCtx.fillText('Press Release! at the right moment to hit the target.', 20, 30);
+        }
+
+        function animateGame() {
+            if (!objectReleased) {
+                gameAngle += gameSpeed * 2 * 0.016;
+            } else {
+                releaseTime += 0.016;
+                const curX = releaseX + releaseVx * releaseTime, curY = releaseY + releaseVy * releaseTime;
+                const dx = curX - targetX, dy = curY - targetY;
+                if (Math.sqrt(dx*dx + dy*dy) < 35) {
+                    hits++; document.getElementById('hits').textContent = hits;
+                    document.getElementById('accuracy').textContent = ` (${((hits/attempts)*100).toFixed(0)}%)`;
+                    const msg = document.getElementById('game-message');
+                    msg.textContent = '🎯 HIT!'; msg.className = 'game-message success'; msg.style.display = 'block';
+                    gameRunning = false; setTimeout(newTarget, 1500);
+                }
+                if (curX < -50 || curX > 750 || curY < -50 || curY > 550) {
+                    const msg = document.getElementById('game-message');
+                    msg.textContent = 'Miss! Objects travel TANGENT, not outward.';
+                    msg.className = 'game-message miss'; msg.style.display = 'block';
+                    gameRunning = false; setTimeout(newTarget, 2000);
+                }
+            }
+            drawGame();
+            if (gameRunning) requestAnimationFrame(animateGame);
+        }
+
+        // === VECTORS ===
+        const circleCanvas = document.getElementById('circle-canvas');
+        const circleCtx = circleCanvas.getContext('2d');
+        const vectorCanvas = document.getElementById('vector-canvas');
+        const vectorCtx = vectorCanvas.getContext('2d');
+        let vectorStep = 1;
+
+        const stepText = [
+            "<strong>Step 1:</strong> Object moves clockwise. At A, velocity v<sub>i</sub> is tangent to the circle.",
+            "<strong>Step 2:</strong> After time Δt, object is at B with v<sub>f</sub>. Same speed, different direction!",
+            "<strong>Step 3:</strong> Δv = v<sub>f</sub> − v<sub>i</sub>. But how do we subtract vectors? Rewrite as addition: Δv = v<sub>f</sub> + (−v<sub>i</sub>)",
+            "<strong>Step 4:</strong> Here are the two vectors we need to add: v<sub>f</sub> and −v<sub>i</sub> (which points opposite to v<sub>i</sub>)",
+            "<strong>Step 5:</strong> Tip-to-tail method: Start with v<sub>f</sub>, then place −v<sub>i</sub> at the tip of v<sub>f</sub>",
+            "<strong>Step 6:</strong> Draw Δv from the tail of v<sub>f</sub> to the tip of −v<sub>i</sub>. Look: Δv points toward the CENTER!"
+        ];
+
+        function updateStep() {
+            for (let i = 1; i <= 6; i++) document.getElementById('step'+i).classList.toggle('active', i <= vectorStep);
+            document.getElementById('vector-explanation').innerHTML = stepText[vectorStep-1];
+        }
+        function nextVectorStep() { if (vectorStep < 6) { vectorStep++; updateStep(); drawVectorScene(); } }
+        function prevVectorStep() { if (vectorStep > 1) { vectorStep--; updateStep(); drawVectorScene(); } }
+        function resetVectors() { vectorStep = 1; updateStep(); drawVectorScene(); }
+        function autoPlayVectors() {
+            vectorStep = 1; updateStep(); drawVectorScene();
+            function next() { if (vectorStep < 6) { setTimeout(() => { vectorStep++; updateStep(); drawVectorScene(); next(); }, 2500); } }
+            next();
+        }
+
+        function drawVectorScene() {
+            const c = getColors();
+            const cx = 200, cy = 200, r = 120;
+            const angA = 60 * Math.PI/180, angB = 0;
+            const xA = cx + r*Math.cos(angA), yA = cy - r*Math.sin(angA);
+            const xB = cx + r*Math.cos(angB), yB = cy - r*Math.sin(angB);
+            const vLen = 70;
+            // vi at position A, vf at position B (clockwise motion)
+            const vix = Math.sin(angA)*vLen, viy = Math.cos(angA)*vLen;
+            const vfx = Math.sin(angB)*vLen, vfy = Math.cos(angB)*vLen;
+
+            // Circle diagram
+            circleCtx.fillStyle = c.bg; circleCtx.fillRect(0, 0, 400, 400);
+            circleCtx.strokeStyle = c.circle; circleCtx.lineWidth = 2; circleCtx.setLineDash([5,5]);
+            circleCtx.beginPath(); circleCtx.arc(cx, cy, r, 0, Math.PI*2); circleCtx.stroke(); circleCtx.setLineDash([]);
+            circleCtx.fillStyle = c.muted; circleCtx.beginPath(); circleCtx.arc(cx, cy, 5, 0, Math.PI*2); circleCtx.fill();
+            circleCtx.font = '12px monospace'; circleCtx.fillText('C', cx-15, cy+5);
+            circleCtx.fillStyle = c.text; circleCtx.font = 'bold 14px monospace'; circleCtx.fillText('Clockwise motion', cx-55, 30);
+
+            if (vectorStep >= 1) {
+                circleCtx.fillStyle = c.blue; circleCtx.beginPath(); circleCtx.arc(xA, yA, 8, 0, Math.PI*2); circleCtx.fill();
+                circleCtx.fillStyle = c.text; circleCtx.font = 'bold 16px monospace'; circleCtx.fillText('A', xA-20, yA-10);
+                drawArrow(circleCtx, xA, yA, xA+vix, yA+viy, c.blue, 3);
+                circleCtx.fillStyle = c.blue; circleCtx.font = 'bold 14px monospace'; circleCtx.fillText('vi', xA+vix+5, yA+viy+15);
+            }
+            if (vectorStep >= 2) {
+                circleCtx.strokeStyle = c.orange; circleCtx.lineWidth = 3;
+                circleCtx.beginPath(); circleCtx.arc(cx, cy, r, -angA, -angB, false); circleCtx.stroke();
+                circleCtx.fillStyle = c.green; circleCtx.beginPath(); circleCtx.arc(xB, yB, 8, 0, Math.PI*2); circleCtx.fill();
+                circleCtx.fillStyle = c.text; circleCtx.font = 'bold 16px monospace'; circleCtx.fillText('B', xB+15, yB-5);
+                drawArrow(circleCtx, xB, yB, xB+vfx, yB+vfy, c.green, 3);
+                circleCtx.fillStyle = c.green; circleCtx.font = 'bold 14px monospace'; circleCtx.fillText('vf', xB+vfx+5, yB+vfy+15);
+            }
+            if (vectorStep >= 6) {
+                const midAng = 30*Math.PI/180, midX = cx+r*Math.cos(midAng), midY = cy-r*Math.sin(midAng);
+                circleCtx.setLineDash([4,4]); circleCtx.strokeStyle = c.red; circleCtx.lineWidth = 2;
+                circleCtx.beginPath(); circleCtx.moveTo(midX, midY); circleCtx.lineTo(cx, cy); circleCtx.stroke();
+                circleCtx.setLineDash([]);
+                const ax = (cx-midX)/r*50, ay = (cy-midY)/r*50;
+                drawArrow(circleCtx, midX, midY, midX+ax, midY+ay, c.red, 3);
+                circleCtx.fillStyle = c.red; circleCtx.font = 'bold 14px monospace'; circleCtx.fillText('ac', midX+ax-20, midY+ay-5);
+            }
+
+            // Vector diagram - scaffolded steps
+            vectorCtx.fillStyle = c.bg; vectorCtx.fillRect(0, 0, 400, 400);
+            
+            if (vectorStep < 3) {
+                vectorCtx.fillStyle = c.muted; vectorCtx.font = '16px monospace'; vectorCtx.textAlign = 'center';
+                vectorCtx.fillText('Vector diagram appears', 200, 190);
+                vectorCtx.fillText('in Step 3...', 200, 220);
+                vectorCtx.textAlign = 'left';
+                return;
+            }
+            
+            const sc = 0.9;
+            
+            // Step 3: Show the equation transformation with vectors (Physics Classroom style - 2 rows)
+            if (vectorStep === 3) {
+                const rowY1 = 100, rowY2 = 220;
+                const leftMargin = 30;
+                
+                // Row 1: Δv = vf minus vi
+                vectorCtx.fillStyle = c.text; vectorCtx.font = 'bold 16px monospace';
+                vectorCtx.fillText('\u0394v =', leftMargin, rowY1);
+                
+                // vf vector pointing down
+                const vf1X = 110, vf1Y = rowY1 - 30;
+                drawArrow(vectorCtx, vf1X, vf1Y, vf1X + vfx*0.6, vf1Y + vfy*0.6, c.green, 3);
+                vectorCtx.fillStyle = c.green; vectorCtx.font = 'bold 12px monospace';
+                vectorCtx.fillText('vf', vf1X + vfx*0.6 + 5, vf1Y + vfy*0.6 + 5);
+                
+                vectorCtx.fillStyle = c.text; vectorCtx.font = '14px monospace';
+                vectorCtx.fillText('minus', 180, rowY1);
+                
+                // vi vector
+                const vi1X = 260, vi1Y = rowY1 - 30;
+                drawArrow(vectorCtx, vi1X, vi1Y, vi1X + vix*0.6, vi1Y + viy*0.6, c.blue, 3);
+                vectorCtx.fillStyle = c.blue; vectorCtx.font = 'bold 12px monospace';
+                vectorCtx.fillText('vi', vi1X + vix*0.6 + 5, vi1Y + viy*0.6 + 5);
+                
+                // Row 2: Δv = vf plus (-vi)
+                vectorCtx.fillStyle = c.text; vectorCtx.font = 'bold 16px monospace';
+                vectorCtx.fillText('\u0394v =', leftMargin, rowY2);
+                
+                // vf vector
+                const vf2X = 110, vf2Y = rowY2 - 30;
+                drawArrow(vectorCtx, vf2X, vf2Y, vf2X + vfx*0.6, vf2Y + vfy*0.6, c.green, 3);
+                vectorCtx.fillStyle = c.green; vectorCtx.font = 'bold 12px monospace';
+                vectorCtx.fillText('vf', vf2X + vfx*0.6 + 5, vf2Y + vfy*0.6 + 5);
+                
+                vectorCtx.fillStyle = c.text; vectorCtx.font = '14px monospace';
+                vectorCtx.fillText('plus', 180, rowY2);
+                
+                // -vi vector (flipped direction from vi)
+                const nvi2X = 260 + vix*0.6, nvi2Y = rowY2 - 30 + viy*0.6;
+                drawArrow(vectorCtx, nvi2X, nvi2Y, nvi2X - vix*0.6, nvi2Y - viy*0.6, c.magenta, 3);
+                vectorCtx.fillStyle = c.magenta; vectorCtx.font = 'bold 12px monospace';
+                vectorCtx.fillText('\u2212vi', nvi2X - vix*0.6 - 25, nvi2Y - viy*0.6 - 5);
+                
+                // Explanation text
+                vectorCtx.fillStyle = c.muted; vectorCtx.font = '14px monospace';
+                vectorCtx.fillText('Subtraction becomes addition', 80, 320);
+                vectorCtx.fillText('of the negative vector!', 80, 340);
+                vectorCtx.fillText('Now use tip-to-tail method...', 80, 370);
+                
+                return;
+            }
+            
+            // Step 4: Show the two vectors we need to add (clean layout)
+            if (vectorStep === 4) {
+                vectorCtx.fillStyle = c.text; vectorCtx.font = 'bold 16px monospace';
+                vectorCtx.fillText('Vectors to add:', 130, 40);
+                
+                // vf vector - centered left
+                const vfStartX = 80, vfStartY = 140;
+                drawArrow(vectorCtx, vfStartX, vfStartY, vfStartX + vfx, vfStartY + vfy, c.green, 4);
+                vectorCtx.fillStyle = c.green; vectorCtx.font = 'bold 16px monospace';
+                vectorCtx.fillText('vf', vfStartX + vfx + 10, vfStartY + vfy);
+                
+                // Plus sign
+                vectorCtx.fillStyle = c.text; vectorCtx.font = 'bold 28px monospace';
+                vectorCtx.fillText('+', 185, 180);
+                
+                // -vi vector - centered right (starts at arrowhead end, points back)
+                const nviEndX = 250, nviEndY = 140;
+                const nviStartX = nviEndX + vix, nviStartY = nviEndY + viy;
+                drawArrow(vectorCtx, nviStartX, nviStartY, nviEndX, nviEndY, c.magenta, 4);
+                vectorCtx.fillStyle = c.magenta; vectorCtx.font = 'bold 16px monospace';
+                vectorCtx.fillText('\u2212vi', nviEndX - 30, nviEndY - 10);
+                
+                // Instruction
+                vectorCtx.fillStyle = c.muted; vectorCtx.font = '14px monospace';
+                vectorCtx.fillText('Next: Place tail of \u2212vi', 100, 320);
+                vectorCtx.fillText('at tip of vf', 100, 340);
+                
+                return;
+            }
+            
+            // Step 5: Show tip-to-tail construction
+            if (vectorStep === 5) {
+                vectorCtx.fillStyle = c.text; vectorCtx.font = 'bold 16px monospace';
+                vectorCtx.fillText('Tip-to-tail addition:', 115, 40);
+                
+                // Draw vf
+                const startX = 100, startY = 140;
+                const vfEndX = startX + vfx, vfEndY = startY + vfy;
+                drawArrow(vectorCtx, startX, startY, vfEndX, vfEndY, c.green, 4);
+                vectorCtx.fillStyle = c.green; vectorCtx.font = 'bold 14px monospace';
+                vectorCtx.fillText('vf', startX - 25, startY + vfy/2);
+                
+                // Draw -vi from tip of vf
+                const nviEndX = vfEndX - vix, nviEndY = vfEndY - viy;
+                drawArrow(vectorCtx, vfEndX, vfEndY, nviEndX, nviEndY, c.magenta, 4);
+                vectorCtx.fillStyle = c.magenta; vectorCtx.font = 'bold 14px monospace';
+                vectorCtx.fillText('\u2212vi', vfEndX + 10, vfEndY - viy/2);
+                
+                // Dot at connection
+                vectorCtx.fillStyle = c.orange;
+                vectorCtx.beginPath();
+                vectorCtx.arc(vfEndX, vfEndY, 5, 0, Math.PI * 2);
+                vectorCtx.fill();
+                
+                // Connection label
+                vectorCtx.fillStyle = c.muted; vectorCtx.font = '12px monospace';
+                vectorCtx.fillText('tip of vf', vfEndX + 20, vfEndY + 30);
+                vectorCtx.fillText('= tail of \u2212vi', vfEndX + 20, vfEndY + 45);
+                
+                // Instruction
+                vectorCtx.fillStyle = c.text; vectorCtx.font = '14px monospace';
+                vectorCtx.fillText('Next: Draw resultant \u0394v from', 70, 330);
+                vectorCtx.fillText('tail of vf to tip of \u2212vi', 70, 350);
+                
+                return;
+            }
+            
+            // Step 6: Show complete addition with resultant
+            if (vectorStep === 6) {
+                vectorCtx.fillStyle = c.text; vectorCtx.font = 'bold 16px monospace';
+                vectorCtx.fillText('Complete addition:', 110, 35);
+                
+                // Draw vf
+                const startX = 80, startY = 200;
+                drawArrow(vectorCtx, startX, startY, startX+vfx*sc, startY+vfy*sc, c.green, 3);
+                vectorCtx.fillStyle = c.green; vectorCtx.font = 'bold 12px monospace';
+                vectorCtx.fillText('vf', startX+vfx*sc/2-20, startY+vfy*sc/2-5);
+                
+                // Draw -vi from tip of vf
+                const tipX = startX+vfx*sc, tipY = startY+vfy*sc;
+                drawArrow(vectorCtx, tipX, tipY, tipX-vix*sc, tipY-viy*sc, c.magenta, 3);
+                vectorCtx.fillStyle = c.magenta; vectorCtx.font = 'bold 12px monospace';
+                vectorCtx.fillText('\u2212vi', tipX-vix*sc/2+5, tipY-viy*sc/2-5);
+                
+                // Draw resultant Δv
+                const endX = tipX-vix*sc, endY = tipY-viy*sc;
+                drawArrow(vectorCtx, startX, startY, endX, endY, c.red, 4);
+                vectorCtx.fillStyle = c.red; vectorCtx.font = 'bold 16px monospace';
+                vectorCtx.fillText('\u0394v', startX-35, (startY+endY)/2+5);
+                
+                // Conclusion box
+                vectorCtx.fillStyle = c.red; vectorCtx.font = 'bold 14px monospace';
+                vectorCtx.fillText('\u0394v points toward', 220, 160);
+                vectorCtx.fillText('the CENTER!', 220, 180);
+                
+                vectorCtx.strokeStyle = c.red; vectorCtx.lineWidth = 2;
+                vectorCtx.strokeRect(210, 140, 160, 55);
+                
+                vectorCtx.fillStyle = c.text; vectorCtx.font = '14px monospace';
+                vectorCtx.fillText('Therefore:', 220, 240);
+                vectorCtx.fillText('a = \u0394v/\u0394t', 220, 265);
+                vectorCtx.fillText('also points to center!', 220, 290);
+                vectorCtx.font = 'bold 14px monospace';
+                vectorCtx.fillText('This is centripetal', 220, 330);
+                vectorCtx.fillText('acceleration!', 220, 350);
+            }
+        }
+
+        // Init
+        initTarget();
+        drawUCM(); animateUCM();
+        drawGame(); animateGame();
+        updateStep(); drawVectorScene();
+    </script>
+</body>
+</html>
