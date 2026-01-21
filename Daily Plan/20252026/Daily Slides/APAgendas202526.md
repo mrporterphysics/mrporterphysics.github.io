@@ -16,6 +16,22 @@ math: mathjax
 
 ---
 
+# 2026.01.21 **AP Physics**
+
+##### **❓ of the 📅**: You got this.
+
+#### 📋 Agenda
+
+1. Test
+    - Write in the boxed area
+    - There is a graph printed
+    - Ignore the very last question (pendulum)
+
+</div>
+</div>
+
+---
+
 # 2026.01.20 **AP Physics**
 
 ##### **❓ of the 📅**: What's the most ***unusual*** thing you've ever eaten?
