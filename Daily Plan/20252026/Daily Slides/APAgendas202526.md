@@ -31,7 +31,7 @@ math: mathjax
     - [Circ. Simulations](https://www.mrporterphysics.com/AP%20Resource%20Pages/Simulations/circularmotion.html)
     - Masking Tape Game
 1. AP Workbook 3.B
-    - [Simulation Link]()
+    - [Simulation Link](https://www.mrporterphysics.com/AP%20Resource%20Pages/Simulations/AP3BDirectionAccAndVelo.html)
 3. Notes 
 4. Workbook 3.C
 
@@ -41,12 +41,13 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model circular motion kinematically_
 
 ### 📆 Upcoming
 
 - _Buffet Quiz_ on **Tuesday** Next Week
-  - like a buffet, you pick the standards you need to assess
+  - like a buffet, you pick the standards you want
+  - check canvas for averages
 
 </div>
 </div>
