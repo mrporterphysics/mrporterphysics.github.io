@@ -18,7 +18,7 @@ math: mathjax
 
 # 2026.01.22 **AP Physics**
 
-##### **❓ of the 📅**: QUESDTION
+##### **❓ of the 📅**: Who is your celebrity crush?
 
 <div class ='columns'>
 
