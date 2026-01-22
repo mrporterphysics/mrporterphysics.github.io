@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+# 2026.01.22 **Regents Physics**
+
+##### **❓ of the 📅**: Who is your celebrity crush?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Day Options:
+    a. APlusPhysics Packet -> Answer Key in back
+    b. Physics Classroom Review Questions
+    c. Something else you'd find useful, you can run it past me
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review & Study for Forces Test_
+
+### 📆 Upcoming
+
+- Test Tomorrow
+
+</div>
+</div>
+
+
+---
+
 # 2026.01.20 **Regents Physics**
 
 ##### **❓ of the 📅**: What's the most ***unusual*** thing you've ever eaten?  
