@@ -17,7 +17,7 @@ class:  twilight
 
 ---
 
-# 2026.01.20 **Earth Science**
+# 2026.01.22 **Earth Science**
 
 ##### **❓ of the 📅**: What's the most ***unusual*** thing you've ever eaten?
 

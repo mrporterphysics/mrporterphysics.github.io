@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direction of Acceleration and Velocity</title>
+    <style>
+        /* Flexoki Color Scheme */
+        :root {
+            /* Base Colors */
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+
+            /* Accent Colors */
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+
+        /* Light Theme */
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --border-hover: var(--fx-base-300);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+            --shadow-hover: rgba(28, 27, 26, 0.15);
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
+        }
+        
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+        
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .theme-toggle::before {
+            content: '☀️ Light';
+        }
+        
+        [data-theme="dark"] .theme-toggle::before {
+            content: '🌙 Dark';
+        }
+        
+        .question {
+            background-color: var(--bg-tertiary);
+            padding: 20px 25px;
+            border-left: 4px solid var(--accent-primary);
+            margin: 0;
+        }
+        
+        .question h2 {
+            color: var(--accent-primary);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        .question p {
+            line-height: 1.7;
+            font-size: 0.95em;
+            color: var(--text-secondary);
+        }
+        
+        .content {
+            padding: 25px;
+        }
+
+        .simulation-area {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 800px) {
+            .simulation-area {
+                flex-direction: column;
+            }
+        }
+
+        .canvas-container {
+            flex: 1;
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+        }
+        
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: var(--bg-primary);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+
+        .controls-panel {
+            width: 280px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 800px) {
+            .controls-panel {
+                width: 100%;
+            }
+        }
+
+        .control-section {
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+        }
+
+        .control-section h3 {
+            color: var(--accent-primary);
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .preset-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .preset-btn {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8em;
+            font-weight: 500;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .preset-btn:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+        }
+
+        .preset-btn.active {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            flex: 1;
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+
+        .action-btn.secondary {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            border-color: var(--border-color);
+        }
+
+        .action-btn.secondary:hover {
+            background-color: var(--bg-tertiary);
+            border-color: var(--border-hover);
+        }
+
+        .status-display {
+            background-color: var(--bg-secondary);
+            border-radius: 6px;
+            padding: 12px;
+            margin-top: 10px;
+        }
+
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 0.85em;
+        }
+
+        .status-label {
+            color: var(--text-muted);
+        }
+
+        .status-value {
+            color: var(--error);
+            font-weight: 600;
+        }
+
+        .status-value.speed-up {
+            color: var(--success);
+        }
+
+        .status-value.constant {
+            color: var(--accent-primary);
+        }
+
+        .status-value.slow-down {
+            color: var(--error);
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+
+        .legend-color {
+            width: 25px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .legend-color.velocity {
+            background-color: var(--fx-blue);
+        }
+
+        .legend-color.acceleration {
+            background-color: var(--fx-red);
+        }
+
+        .legend-color.trail {
+            background-color: var(--fx-purple);
+        }
+        
+        .explanation {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid var(--accent-secondary);
+        }
+        
+        .explanation h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 1em;
+        }
+        
+        .explanation ul {
+            margin-left: 20px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        
+        .explanation li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
+        .key-concept {
+            background-color: var(--bg-tertiary);
+            border: 2px solid var(--success);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .key-concept h3 {
+            color: var(--success);
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .key-concept p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-color);
+            padding: 15px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .content {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            .preset-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Direction of Acceleration and Velocity</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+        
+        <div class="question">
+            <h2>Scenario</h2>
+            <p>A car is traveling along a road. Select different combinations of velocity and acceleration directions to see how the car's speed and direction of motion change over time.</p>
+        </div>
+        
+        <div class="content">
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color velocity"></div>
+                    <span>Velocity (v)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color acceleration"></div>
+                    <span>Acceleration (a)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color trail"></div>
+                    <span>Path</span>
+                </div>
+            </div>
+
+            <div class="simulation-area">
+                <div class="canvas-container">
+                    <canvas id="simulation" width="500" height="400"></canvas>
+                </div>
+
+                <div class="controls-panel">
+                    <div class="control-section">
+                        <h3>Worksheet Scenarios</h3>
+                        <div class="preset-buttons">
+                            <button class="preset-btn active" onclick="selectScenario(1)">Scenario 1</button>
+                            <button class="preset-btn" onclick="selectScenario(2)">Scenario 2</button>
+                            <button class="preset-btn" onclick="selectScenario(3)">Scenario 3</button>
+                            <button class="preset-btn" onclick="selectScenario(4)">Scenario 4</button>
+                        </div>
+                    </div>
+
+                    <div class="control-section">
+                        <h3>Playback</h3>
+                        <div class="action-buttons">
+                            <button class="action-btn" id="playPauseBtn" onclick="togglePlayPause()">▶ Play</button>
+                            <button class="action-btn secondary" onclick="resetSimulation()">↺ Reset</button>
+                        </div>
+                        <div class="status-display">
+                            <div class="status-row">
+                                <span class="status-label">Speed:</span>
+                                <span class="status-value" id="speedStatus">—</span>
+                            </div>
+                            <div class="status-row">
+                                <span class="status-label">Turning:</span>
+                                <span class="status-value" id="turnStatus">—</span>
+                            </div>
+                            <div class="status-row">
+                                <span class="status-label">Angle (a, v):</span>
+                                <span class="status-value" id="angleStatus">—</span>
+                            </div>
+                            <div class="status-row">
+                                <span class="status-label">Current Speed:</span>
+                                <span class="status-value" id="currentSpeed">—</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="explanation">
+                <h3>How to Interpret the Motion</h3>
+                <ul>
+                    <li><strong>Angle between a and v:</strong> Acute (&lt; 90°) → speeding up; Obtuse (&gt; 90°) → slowing down; Right angle (90°) → constant speed</li>
+                    <li><strong>Turning direction:</strong> If <strong>a</strong> points left of <strong>v</strong> → counterclockwise; If <strong>a</strong> points right of <strong>v</strong> → clockwise</li>
+                    <li><strong>Watch the path:</strong> The purple trail shows how the car curves based on the acceleration direction</li>
+                </ul>
+            </div>
+
+            <div class="key-concept">
+                <h3>Key Concept</h3>
+                <p>An object in uniform circular motion (constant speed) has acceleration directed toward the center of the circle, perpendicular to velocity. This <strong>centripetal acceleration</strong> changes direction without changing speed.</p>
+            </div>
+        </div>
+        
+        <footer>
+            AP Physics 1 | Unit 3: Circular Motion and Gravitation | 3.B Direction of Acceleration and Velocity
+        </footer>
+    </div>
+    
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            draw();
+        }
+        
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+
+        // Get theme-aware colors
+        function getColors() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            return {
+                bg: isDark ? '#100F0F' : '#FFFCF0',
+                grid: isDark ? '#343331' : '#E6E2CC',
+                car: isDark ? '#9C8F70' : '#575142',
+                carFront: isDark ? '#4385BE' : '#205EA6',
+                velocity: '#4385BE',
+                acceleration: '#D14D41',
+                trail: '#8B7EC8',
+                text: isDark ? '#FFFCF0' : '#1C1B1A',
+                textMuted: isDark ? '#9C8F70' : '#847759'
+            };
+        }
+
+        const canvas = document.getElementById('simulation');
+        const ctx = canvas.getContext('2d');
+
+        // Simulation state
+        let isPlaying = false;
+        let animationId = null;
+
+        // Car state
+        let car = {
+            x: 250,
+            y: 200,
+            vx: 0,
+            vy: 0,
+            speed: 50, // pixels per second (reduced from 80)
+            angle: 0,  // direction of velocity
+            accelMagnitude: 25, // pixels per second squared (reduced from 60)
+            accelAngle: 0 // direction of acceleration relative to world
+        };
+
+        // Trail for showing path
+        let trail = [];
+        const maxTrailLength = 200;
+
+        // Scenarios from the worksheet
+        const scenarios = {
+            1: { // v right, a up (perpendicular) - constant speed, counterclockwise
+                velAngle: 0,
+                accelAngle: -Math.PI / 2,
+                speedChange: 'Constant Speed',
+                turnDirection: 'Counterclockwise',
+                description: 'a ⊥ v (90°)'
+            },
+            2: { // v right, a up-right (acute) - speeding up, counterclockwise
+                velAngle: 0,
+                accelAngle: -Math.PI / 4,
+                speedChange: 'Speeding Up',
+                turnDirection: 'Counterclockwise',
+                description: 'a · v acute (45°)'
+            },
+            3: { // v down, a left (perpendicular) - constant speed, clockwise
+                velAngle: Math.PI / 2,
+                accelAngle: Math.PI,
+                speedChange: 'Constant Speed',
+                turnDirection: 'Clockwise',
+                description: 'a ⊥ v (90°)'
+            },
+            4: { // v right, a up-left (obtuse) - slowing down, counterclockwise
+                velAngle: 0,
+                accelAngle: -3 * Math.PI / 4,
+                speedChange: 'Slowing Down',
+                turnDirection: 'Counterclockwise',
+                description: 'a · v obtuse (135°)'
+            }
+        };
+
+        let currentScenario = 1;
+
+        function selectScenario(num) {
+            currentScenario = num;
+            
+            // Update button states
+            document.querySelectorAll('.preset-btn').forEach((btn, index) => {
+                btn.classList.toggle('active', index === num - 1);
+            });
+            
+            resetSimulation();
+        }
+
+        function initCar() {
+            const scenario = scenarios[currentScenario];
+            
+            // Start position based on scenario - centered for circular motion
+            if (currentScenario === 1) {
+                // v right, a up - will curve up then left, start lower right
+                car.x = 350;
+                car.y = 300;
+            } else if (currentScenario === 2) {
+                // v right, a up-right - spirals out counterclockwise, start center-left
+                car.x = 150;
+                car.y = 250;
+            } else if (currentScenario === 3) {
+                // v down, a left - will curve left then up, start upper right
+                car.x = 400;
+                car.y = 100;
+            } else {
+                // v right, a up-left - spirals in counterclockwise, start lower left
+                car.x = 120;
+                car.y = 300;
+            }
+            
+            car.angle = scenario.velAngle;
+            car.speed = 50;
+            car.vx = car.speed * Math.cos(car.angle);
+            car.vy = car.speed * Math.sin(car.angle);
+            car.accelAngle = scenario.accelAngle;
+            
+            trail = [];
+            
+            updateStatusDisplay();
+        }
+
+        function updateStatusDisplay() {
+            const scenario = scenarios[currentScenario];
+            
+            // Calculate angle between a and v
+            let angleDiff = car.accelAngle - car.angle;
+            // Normalize to -PI to PI
+            while (angleDiff > Math.PI) angleDiff -= 2 * Math.PI;
+            while (angleDiff < -Math.PI) angleDiff += 2 * Math.PI;
+            const angleDegrees = Math.abs(angleDiff) * 180 / Math.PI;
+            
+            const speedStatus = document.getElementById('speedStatus');
+            const turnStatus = document.getElementById('turnStatus');
+            const angleStatus = document.getElementById('angleStatus');
+            const currentSpeedEl = document.getElementById('currentSpeed');
+            
+            speedStatus.textContent = scenario.speedChange;
+            speedStatus.className = 'status-value';
+            if (scenario.speedChange === 'Speeding Up') speedStatus.classList.add('speed-up');
+            else if (scenario.speedChange === 'Constant Speed') speedStatus.classList.add('constant');
+            else speedStatus.classList.add('slow-down');
+            
+            turnStatus.textContent = scenario.turnDirection;
+            turnStatus.className = 'status-value';
+            
+            angleStatus.textContent = angleDegrees.toFixed(0) + '°';
+            angleStatus.className = 'status-value';
+            
+            currentSpeedEl.textContent = car.speed.toFixed(1) + ' px/s';
+            currentSpeedEl.className = 'status-value';
+        }
+
+        function togglePlayPause() {
+            isPlaying = !isPlaying;
+            const btn = document.getElementById('playPauseBtn');
+            btn.textContent = isPlaying ? '⏸ Pause' : '▶ Play';
+            
+            if (isPlaying) {
+                lastTime = 0;
+                animationId = requestAnimationFrame(animate);
+            } else {
+                cancelAnimationFrame(animationId);
+            }
+        }
+
+        function resetSimulation() {
+            isPlaying = false;
+            const btn = document.getElementById('playPauseBtn');
+            btn.textContent = '▶ Play';
+            cancelAnimationFrame(animationId);
+            
+            initCar();
+            draw();
+        }
+
+        let lastTime = 0;
+
+        function animate(currentTime) {
+            if (!isPlaying) return;
+            
+            // On first frame, just set lastTime and continue
+            if (lastTime === 0) {
+                lastTime = currentTime;
+                animationId = requestAnimationFrame(animate);
+                return;
+            }
+            
+            const dt = Math.min((currentTime - lastTime) / 1000, 0.05); // Cap dt to avoid jumps
+            lastTime = currentTime;
+            
+            update(dt);
+            draw();
+            
+            animationId = requestAnimationFrame(animate);
+        }
+
+        function update(dt) {
+            // Add current position to trail
+            trail.push({ x: car.x, y: car.y });
+            if (trail.length > maxTrailLength) {
+                trail.shift();
+            }
+            
+            // Calculate acceleration components
+            const ax = car.accelMagnitude * Math.cos(car.accelAngle);
+            const ay = car.accelMagnitude * Math.sin(car.accelAngle);
+            
+            // Update velocity
+            car.vx += ax * dt;
+            car.vy += ay * dt;
+            
+            // Calculate new speed and angle
+            car.speed = Math.sqrt(car.vx * car.vx + car.vy * car.vy);
+            car.angle = Math.atan2(car.vy, car.vx);
+            
+            // Prevent speed from going negative (car stops)
+            if (car.speed < 3) {
+                car.speed = 3;
+                car.vx = car.speed * Math.cos(car.angle);
+                car.vy = car.speed * Math.sin(car.angle);
+            }
+            
+            // Cap speed
+            if (car.speed > 120) {
+                car.speed = 120;
+                car.vx = car.speed * Math.cos(car.angle);
+                car.vy = car.speed * Math.sin(car.angle);
+            }
+            
+            // Update position
+            car.x += car.vx * dt;
+            car.y += car.vy * dt;
+            
+            // Wrap around edges
+            const margin = 50;
+            if (car.x < -margin) car.x = canvas.width + margin;
+            if (car.x > canvas.width + margin) car.x = -margin;
+            if (car.y < -margin) car.y = canvas.height + margin;
+            if (car.y > canvas.height + margin) car.y = -margin;
+            
+            // Update acceleration direction to always maintain same relative angle to velocity
+            const scenario = scenarios[currentScenario];
+            const relativeAccelAngle = scenario.accelAngle - scenario.velAngle;
+            car.accelAngle = car.angle + relativeAccelAngle;
+            
+            updateStatusDisplay();
+        }
+
+        function draw() {
+            const colors = getColors();
+            
+            // Clear canvas
+            ctx.fillStyle = colors.bg;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw grid
+            drawGrid(colors);
+            
+            // Draw trail
+            drawTrail(colors);
+            
+            // Draw car
+            drawCar(colors);
+            
+            // Draw vectors
+            drawVectors(colors);
+            
+            // Draw scenario info
+            drawScenarioInfo(colors);
+        }
+
+        function drawGrid(colors) {
+            ctx.strokeStyle = colors.grid;
+            ctx.lineWidth = 1;
+            
+            const gridSize = 50;
+            
+            for (let x = 0; x <= canvas.width; x += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+            
+            for (let y = 0; y <= canvas.height; y += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            }
+        }
+
+        function drawTrail(colors) {
+            if (trail.length < 2) return;
+            
+            ctx.strokeStyle = colors.trail;
+            ctx.lineWidth = 3;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            
+            ctx.beginPath();
+            ctx.moveTo(trail[0].x, trail[0].y);
+            
+            for (let i = 1; i < trail.length; i++) {
+                // Check for wrapping (large jumps)
+                const dx = trail[i].x - trail[i-1].x;
+                const dy = trail[i].y - trail[i-1].y;
+                if (Math.abs(dx) > 100 || Math.abs(dy) > 100) {
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(trail[i].x, trail[i].y);
+                } else {
+                    ctx.lineTo(trail[i].x, trail[i].y);
+                }
+            }
+            ctx.stroke();
+        }
+
+        function drawCar(colors) {
+            ctx.save();
+            ctx.translate(car.x, car.y);
+            ctx.rotate(car.angle);
+            
+            // Car body
+            ctx.fillStyle = colors.car;
+            ctx.beginPath();
+            ctx.roundRect(-20, -10, 40, 20, 4);
+            ctx.fill();
+            
+            // Front indicator
+            ctx.fillStyle = colors.carFront;
+            ctx.beginPath();
+            ctx.roundRect(12, -6, 6, 12, 2);
+            ctx.fill();
+            
+            // Wheels
+            ctx.fillStyle = colors.text;
+            ctx.fillRect(-15, -13, 8, 4);
+            ctx.fillRect(-15, 9, 8, 4);
+            ctx.fillRect(7, -13, 8, 4);
+            ctx.fillRect(7, 9, 8, 4);
+            
+            ctx.restore();
+        }
+
+        function drawVectors(colors) {
+            const vectorScale = 1.0;
+            
+            // Velocity vector
+            const vLength = car.speed * vectorScale;
+            const vx = vLength * Math.cos(car.angle);
+            const vy = vLength * Math.sin(car.angle);
+            drawArrow(car.x, car.y, vx, vy, colors.velocity, 'v', colors);
+            
+            // Acceleration vector
+            const aLength = car.accelMagnitude * vectorScale * 1.5;
+            const ax = aLength * Math.cos(car.accelAngle);
+            const ay = aLength * Math.sin(car.accelAngle);
+            drawArrow(car.x, car.y, ax, ay, colors.acceleration, 'a', colors);
+        }
+
+        function drawArrow(x, y, dx, dy, color, label, colors) {
+            const length = Math.sqrt(dx * dx + dy * dy);
+            if (length < 5) return;
+            
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = 4;
+            ctx.lineCap = 'round';
+            
+            // Offset start point slightly from car center
+            const offsetDist = 25;
+            const angle = Math.atan2(dy, dx);
+            const startX = x + offsetDist * Math.cos(angle);
+            const startY = y + offsetDist * Math.sin(angle);
+            
+            // Draw line
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + dx, startY + dy);
+            ctx.stroke();
+            
+            // Draw arrowhead
+            const headLength = 15;
+            ctx.beginPath();
+            ctx.moveTo(startX + dx, startY + dy);
+            ctx.lineTo(
+                startX + dx - headLength * Math.cos(angle - Math.PI / 6),
+                startY + dy - headLength * Math.sin(angle - Math.PI / 6)
+            );
+            ctx.lineTo(
+                startX + dx - headLength * Math.cos(angle + Math.PI / 6),
+                startY + dy - headLength * Math.sin(angle + Math.PI / 6)
+            );
+            ctx.closePath();
+            ctx.fill();
+            
+            // Label
+            ctx.font = 'bold 18px "Fira Code", monospace';
+            ctx.fillStyle = color;
+            const labelX = startX + dx + 20 * Math.cos(angle);
+            const labelY = startY + dy + 20 * Math.sin(angle);
+            ctx.fillText(label, labelX - 6, labelY + 6);
+        }
+
+        function drawScenarioInfo(colors) {
+            ctx.font = '14px "Fira Code", monospace';
+            ctx.fillStyle = colors.textMuted;
+            ctx.fillText(`Scenario ${currentScenario}`, 15, 25);
+        }
+
+        // Initialize
+        initCar();
+        draw();
+    </script>
+</body>
+</html>

@@ -4,7 +4,7 @@ title: Circular Motion 2024
 theme: uncover
 class: invert
 paginate: true
-footer: 
+footer: AP Physics 1 | Unit 3: Circular Motion 
 transition: reveal
 math: mathjax
 ---

@@ -16,6 +16,43 @@ math: mathjax
 
 ---
 
+# 2026.01.22 **AP Physics**
+
+##### **❓ of the 📅**: QUESDTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. New Lab [Groups](https://grouper.school/presentations/RrhYEJEtMFBp9gg3u9Og) 
+1. AP Workbook 3.A
+    - [Circ. Simulations](https://www.mrporterphysics.com/AP%20Resource%20Pages/Simulations/circularmotion.html)
+    - Masking Tape Game
+1. AP Workbook 3.B
+    - [Simulation Link]()
+3. Notes 
+4. Workbook 3.C
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+- _Buffet Quiz_ on **Tuesday** Next Week
+  - like a buffet, you pick the standards you need to assess
+
+</div>
+</div>
+
+---
+
 # 2026.01.21 **AP Physics**
 
 ##### **❓ of the 📅**: You got this.
