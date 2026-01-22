@@ -9,5 +9,6 @@
 ## AP Workbook Simulations
 - [AP Workbook 1.J & 1.K Simulation](/AP Resource Pages/Simulations/apworkbook1jk.html)
 - [AP Workbook 1.L Linearizing Graphs](/AP Resource Pages/Simulations/Apworkbook1LLinearization.html)
+- [AP Workbook 3.B Direction of Acceleration and Velocity](/AP%20Resource%20Pages/Simulations/AP3BDirectionAccAndVelo.html)
 
 ## AP Free Respoonse
