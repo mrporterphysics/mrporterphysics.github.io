@@ -17,6 +17,63 @@ class:  twilight
 
 ---
 
+# 2026.01.26 **Earth Science**
+
+##### **❓ of the 📅**: QUESSTIONNNN
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2026.01.23 **Earth Science**
+
+##### **❓ of the 📅**: Who is your celebrity crush?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Part 3 
+2. Part 4 & _Making Sense of the Seimic Activity in the Ocean_ 👀, 🤔, 💭
+3. Class Share Out: _**What do you think is happening in these areas that is creating the patterns you observed?**_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the sea floor seismic activity_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.01.22 **Earth Science**
 
 ##### **❓ of the 📅**: What's the most ***unusual*** thing you've ever eaten?
