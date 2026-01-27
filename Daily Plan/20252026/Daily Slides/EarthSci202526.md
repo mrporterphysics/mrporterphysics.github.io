@@ -17,9 +17,9 @@ class:  twilight
 
 ---
 
-# 2026.01.26 **Earth Science**
+# 2026.01.27 **Earth Science**
 
-##### **❓ of the 📅**: QUESSTIONNNN
+##### **❓ of the 📅**: If you could make _one_ chore disappear, what would it be?
 
 <div class ='columns'>
 

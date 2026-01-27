@@ -155,57 +155,32 @@ h1 {
     padding-bottom: 0.1em;
 }
 
-.dark h1 {
+section.dark h1 {
     color: var(--dark-accent-purple);
     border-bottom-color: var(--dark-accent-blue);
 }
 
-.twilight h1 {
+section.twilight h1 {
     color: var(--twilight-accent-purple) !important;
     border-bottom-color: var(--twilight-accent-blue) !important;
 }
 
-.sepia h1 {
+section.sepia h1 {
     color: var(--sepia-accent-purple) !important;
     border-bottom-color: var(--sepia-accent-blue) !important;
 }
 
-.highcontrast h1 {
+section.highcontrast h1 {
     color: var(--highcontrast-accent-purple) !important;
     border-bottom-color: var(--highcontrast-accent-blue) !important;
 }
 
-.bluegray h1 {
+section.bluegray h1 {
     color: var(--bluegray-accent-purple) !important;
     border-bottom-color: var(--bluegray-accent-blue) !important;
 }
 
-.soft h1 {
-    color: var(--soft-accent-purple) !important;
-    border-bottom-color: var(--soft-accent-blue) !important;
-}
-
-.twilight h1 {
-    color: var(--twilight-accent-purple) !important;
-    border-bottom-color: var(--twilight-accent-blue) !important;
-}
-
-.sepia h1 {
-    color: var(--sepia-accent-purple) !important;
-    border-bottom-color: var(--sepia-accent-blue) !important;
-}
-
-.highcontrast h1 {
-    color: var(--highcontrast-accent-purple) !important;
-    border-bottom-color: var(--highcontrast-accent-blue) !important;
-}
-
-.bluegray h1 {
-    color: var(--bluegray-accent-purple) !important;
-    border-bottom-color: var(--bluegray-accent-blue) !important;
-}
-
-.soft h1 {
+section.soft h1 {
     color: var(--soft-accent-purple) !important;
     border-bottom-color: var(--soft-accent-blue) !important;
 }
@@ -215,47 +190,27 @@ h2 {
     font-size: 1.5em;
 }
 
-.dark h2 {
+section.dark h2 {
     color: var(--dark-accent-blue);
 }
 
-.twilight h2 {
+section.twilight h2 {
     color: var(--twilight-accent-blue) !important;
 }
 
-.sepia h2 {
+section.sepia h2 {
     color: var(--sepia-accent-blue) !important;
 }
 
-.highcontrast h2 {
+section.highcontrast h2 {
     color: var(--highcontrast-accent-blue) !important;
 }
 
-.bluegray h2 {
+section.bluegray h2 {
     color: var(--bluegray-accent-blue) !important;
 }
 
-.soft h2 {
-    color: var(--soft-accent-blue) !important;
-}
-
-.twilight h2 {
-    color: var(--twilight-accent-blue) !important;
-}
-
-.sepia h2 {
-    color: var(--sepia-accent-blue) !important;
-}
-
-.highcontrast h2 {
-    color: var(--highcontrast-accent-blue) !important;
-}
-
-.bluegray h2 {
-    color: var(--bluegray-accent-blue) !important;
-}
-
-.soft h2 {
+section.soft h2 {
     color: var(--soft-accent-blue) !important;
 }
 
@@ -264,47 +219,27 @@ h3, h4, h5, h6 {
     font-size: 1.3em;
 }
 
-.dark h3, .dark h4, .dark h5, .dark h6 {
+section.dark h3, section.dark h4, section.dark h5, section.dark h6 {
     color: var(--dark-accent-green);
 }
 
-.twilight h3, .twilight h4, .twilight h5, .twilight h6 {
+section.twilight h3, section.twilight h4, section.twilight h5, section.twilight h6 {
     color: var(--twilight-accent-green) !important;
 }
 
-.sepia h3, .sepia h4, .sepia h5, .sepia h6 {
+section.sepia h3, section.sepia h4, section.sepia h5, section.sepia h6 {
     color: var(--sepia-accent-green) !important;
 }
 
-.highcontrast h3, .highcontrast h4, .highcontrast h5, .highcontrast h6 {
+section.highcontrast h3, section.highcontrast h4, section.highcontrast h5, section.highcontrast h6 {
     color: var(--highcontrast-accent-green) !important;
 }
 
-.bluegray h3, .bluegray h4, .bluegray h5, .bluegray h6 {
+section.bluegray h3, section.bluegray h4, section.bluegray h5, section.bluegray h6 {
     color: var(--bluegray-accent-green) !important;
 }
 
-.soft h3, .soft h4, .soft h5, .soft h6 {
-    color: var(--soft-accent-green) !important;
-}
-
-.twilight h3, .twilight h4, .twilight h5, .twilight h6 {
-    color: var(--twilight-accent-green) !important;
-}
-
-.sepia h3, .sepia h4, .sepia h5, .sepia h6 {
-    color: var(--sepia-accent-green) !important;
-}
-
-.highcontrast h3, .highcontrast h4, .highcontrast h5, .highcontrast h6 {
-    color: var(--highcontrast-accent-green) !important;
-}
-
-.bluegray h3, .bluegray h4, .bluegray h5, .bluegray h6 {
-    color: var(--bluegray-accent-green) !important;
-}
-
-.soft h3, .soft h4, .soft h5, .soft h6 {
+section.soft h3, section.soft h4, section.soft h5, section.soft h6 {
     color: var(--soft-accent-green) !important;
 }
 
@@ -313,47 +248,27 @@ a {
     color: var(--light-accent-blue);
 }
 
-.dark a {
+section.dark a {
     color: var(--dark-accent-blue);
 }
 
-.twilight a {
+section.twilight a {
     color: var(--twilight-accent-blue) !important;
 }
 
-.sepia a {
+section.sepia a {
     color: var(--sepia-accent-blue) !important;
 }
 
-.highcontrast a {
+section.highcontrast a {
     color: var(--highcontrast-accent-blue) !important;
 }
 
-.bluegray a {
+section.bluegray a {
     color: var(--bluegray-accent-blue) !important;
 }
 
-.soft a {
-    color: var(--soft-accent-blue) !important;
-}
-
-.twilight a {
-    color: var(--twilight-accent-blue) !important;
-}
-
-.sepia a {
-    color: var(--sepia-accent-blue) !important;
-}
-
-.highcontrast a {
-    color: var(--highcontrast-accent-blue) !important;
-}
-
-.bluegray a {
-    color: var(--bluegray-accent-blue) !important;
-}
-
-.soft a {
+section.soft a {
     color: var(--soft-accent-blue) !important;
 }
 
@@ -365,57 +280,32 @@ code, pre {
     border-radius: 4px;
 }
 
-.dark code, .dark pre {
+section.dark code, section.dark pre {
     color: var(--dark-accent-green);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.twilight code, .twilight pre {
+section.twilight code, section.twilight pre {
     color: var(--twilight-accent-green) !important;
     background-color: rgba(0, 0, 0, 0.08) !important;
 }
 
-.sepia code, .sepia pre {
+section.sepia code, section.sepia pre {
     color: var(--sepia-accent-green) !important;
     background-color: rgba(60, 58, 54, 0.08) !important;
 }
 
-.highcontrast code, .highcontrast pre {
+section.highcontrast code, section.highcontrast pre {
     color: var(--highcontrast-accent-green) !important;
     background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-.bluegray code, .bluegray pre {
+section.bluegray code, section.bluegray pre {
     color: var(--bluegray-accent-green) !important;
     background-color: rgba(44, 48, 53, 0.08) !important;
 }
 
-.soft code, .soft pre {
-    color: var(--soft-accent-green) !important;
-    background-color: rgba(0, 0, 0, 0.06) !important;
-}
-
-.twilight code, .twilight pre {
-    color: var(--twilight-accent-green) !important;
-    background-color: rgba(0, 0, 0, 0.08) !important;
-}
-
-.sepia code, .sepia pre {
-    color: var(--sepia-accent-green) !important;
-    background-color: rgba(60, 58, 54, 0.08) !important;
-}
-
-.highcontrast code, .highcontrast pre {
-    color: var(--highcontrast-accent-green) !important;
-    background-color: rgba(0, 0, 0, 0.1) !important;
-}
-
-.bluegray code, .bluegray pre {
-    color: var(--bluegray-accent-green) !important;
-    background-color: rgba(44, 48, 53, 0.08) !important;
-}
-
-.soft code, .soft pre {
+section.soft code, section.soft pre {
     color: var(--soft-accent-green) !important;
     background-color: rgba(0, 0, 0, 0.06) !important;
 }
@@ -431,47 +321,27 @@ strong {
     color: var(--light-accent-red);
 }
 
-.dark strong {
+section.dark strong {
     color: var(--dark-accent-red);
 }
 
-.twilight strong {
+section.twilight strong {
     color: var(--twilight-accent-red) !important;
 }
 
-.sepia strong {
+section.sepia strong {
     color: var(--sepia-accent-red) !important;
 }
 
-.highcontrast strong {
+section.highcontrast strong {
     color: var(--highcontrast-accent-red) !important;
 }
 
-.bluegray strong {
+section.bluegray strong {
     color: var(--bluegray-accent-red) !important;
 }
 
-.soft strong {
-    color: var(--soft-accent-red) !important;
-}
-
-.twilight strong {
-    color: var(--twilight-accent-red) !important;
-}
-
-.sepia strong {
-    color: var(--sepia-accent-red) !important;
-}
-
-.highcontrast strong {
-    color: var(--highcontrast-accent-red) !important;
-}
-
-.bluegray strong {
-    color: var(--bluegray-accent-red) !important;
-}
-
-.soft strong {
+section.soft strong {
     color: var(--soft-accent-red) !important;
 }
 
@@ -543,30 +413,6 @@ section.soft table {
     border-collapse: collapse;
 }
 
-.twilight table {
-    border: 2px solid var(--twilight-accent-blue);
-    border-collapse: collapse;
-}
-
-.sepia table {
-    border: 2px solid var(--sepia-accent-blue);
-    border-collapse: collapse;
-}
-
-.highcontrast table {
-    border: 2px solid var(--highcontrast-accent-blue);
-    border-collapse: collapse;
-}
-
-.bluegray table {
-    border: 2px solid var(--bluegray-accent-blue);
-    border-collapse: collapse;
-}
-
-.soft table {
-    border: 2px solid var(--soft-accent-blue);
-    
-}
 
 section table > thead > tr > th,
 section table th {
@@ -613,35 +459,6 @@ section.soft table th {
     color: var(--soft-background);
 }
 
-.twilight table > thead > tr > th,
-.twilight table th {
-    background-color: var(--twilight-accent-purple);
-    color: var(--twilight-background);
-}
-
-.sepia table > thead > tr > th,
-.sepia table th {
-    background-color: var(--sepia-accent-purple);
-    color: var(--sepia-background);
-}
-
-.highcontrast table > thead > tr > th,
-.highcontrast table th {
-    background-color: var(--highcontrast-accent-purple);
-    color: var(--highcontrast-background);
-}
-
-.bluegray table > thead > tr > th,
-.bluegray table th {
-    background-color: var(--bluegray-accent-purple);
-    color: var(--bluegray-background);
-}
-
-.soft table > thead > tr > th,
-.soft table th {
-    background-color: var(--soft-accent-purple);
-    color: var(--soft-background);
-}
 
 section table > tbody > tr > td,
 section table td {
@@ -692,40 +509,6 @@ section.soft table td {
     color: var(--soft-text);
 }
 
-.twilight table > tbody > tr > td,
-.twilight table td {
-    border: 1px solid rgba(42, 40, 38, 0.2);
-    background-color: var(--twilight-background);
-    color: var(--twilight-text);
-}
-
-.sepia table > tbody > tr > td,
-.sepia table td {
-    border: 1px solid rgba(60, 58, 54, 0.2);
-    background-color: var(--sepia-background);
-    color: var(--sepia-text);
-}
-
-.highcontrast table > tbody > tr > td,
-.highcontrast table td {
-    border: 1px solid rgba(37, 36, 34, 0.2);
-    background-color: var(--highcontrast-background);
-    color: var(--highcontrast-text);
-}
-
-.bluegray table > tbody > tr > td,
-.bluegray table td {
-    border: 1px solid rgba(44, 48, 53, 0.2);
-    background-color: var(--bluegray-background);
-    color: var(--bluegray-text);
-}
-
-.soft table > tbody > tr > td,
-.soft table td {
-    border: 1px solid rgba(69, 67, 64, 0.2);
-    background-color: var(--soft-background);
-    color: var(--soft-text);
-}
 
 section table > tbody > tr:nth-child(even) > td {
     background-color: rgba(0, 0, 0, 0.05);
@@ -759,25 +542,6 @@ section.soft table > tbody > tr:nth-child(even) > td {
     background-color: rgba(69, 67, 64, 0.04);
 }
 
-.twilight table > tbody > tr:nth-child(even) > td {
-    background-color: rgba(42, 40, 38, 0.05);
-}
-
-.sepia table > tbody > tr:nth-child(even) > td {
-    background-color: rgba(60, 58, 54, 0.05);
-}
-
-.highcontrast table > tbody > tr:nth-child(even) > td {
-    background-color: rgba(37, 36, 34, 0.08);
-}
-
-.bluegray table > tbody > tr:nth-child(even) > td {
-    background-color: rgba(44, 48, 53, 0.05);
-}
-
-.soft table > tbody > tr:nth-child(even) > td {
-    background-color: rgba(69, 67, 64, 0.04);
-}
 
 /* Override any inline styles */
 section.dark table,
@@ -831,32 +595,32 @@ section.sun {
 }
 
 /* Sun theme headers */
-.sun h1 {
+section.sun h1 {
     color: var(--sun-accent-purple) !important;
     border-bottom-color: var(--sun-accent-blue) !important;
 }
 
-.sun h2 {
+section.sun h2 {
     color: var(--sun-accent-blue) !important;
 }
 
-.sun h3, .sun h4, .sun h5, .sun h6 {
+section.sun h3, section.sun h4, section.sun h5, section.sun h6 {
     color: var(--sun-accent-green) !important;
 }
 
 /* Sun theme links */
-.sun a {
+section.sun a {
     color: var(--sun-accent-blue) !important;
 }
 
 /* Sun theme code blocks */
-.sun code, .sun pre {
+section.sun code, section.sun pre {
     color: var(--sun-accent-green) !important;
     background-color: rgba(218, 165, 32, 0.15) !important;
 }
 
 /* Sun theme strong text */
-.sun strong {
+section.sun strong {
     color: var(--sun-accent-red) !important;
 }
 
@@ -890,32 +654,32 @@ section.green {
 }
 
 /* Green theme headers */
-.green h1 {
+section.green h1 {
     color: var(--green-accent-purple) !important;
     border-bottom-color: var(--green-accent-blue) !important;
 }
 
-.green h2 {
+section.green h2 {
     color: var(--green-accent-blue) !important;
 }
 
-.green h3, .green h4, .green h5, .green h6 {
+section.green h3, section.green h4, section.green h5, section.green h6 {
     color: var(--green-accent-green) !important;
 }
 
 /* Green theme links */
-.green a {
+section.green a {
     color: var(--green-accent-blue) !important;
 }
 
 /* Green theme code blocks */
-.green code, .green pre {
+section.green code, section.green pre {
     color: var(--green-accent-green) !important;
     background-color: rgba(27, 67, 50, 0.08) !important;
 }
 
 /* Green theme strong text */
-.green strong {
+section.green strong {
     color: var(--green-accent-red) !important;
 }
 
