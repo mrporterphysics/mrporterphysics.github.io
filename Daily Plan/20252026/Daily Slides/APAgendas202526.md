@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2026.01.26 **AP Physics**
+
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Buffet Quiz
+2. Centripetal Forces 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Centripetal Forces_
+
+### 📆 Upcoming
+
+HW Physics Classroom: 
+- 
+
+</div>
+</div>
+
+---
+
 # 2026.01.22 **AP Physics**
 
 ##### **❓ of the 📅**: Who is your celebrity crush?

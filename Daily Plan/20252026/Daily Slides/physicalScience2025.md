@@ -31,7 +31,7 @@ class: green
 1. Fill out index card & Survival Island
 1. Mathematical Modeling
 2. Experimental Design
-3. Ball Bounce Lab?
+3. Ball Bounce Lab - Time Dependent
 
 </div>
 
@@ -41,6 +41,10 @@ class: green
 
 🥅 _Create a linear model to make predictions_
 
+| Block                                       | Start                                      | End                                       |
+| ------------------------------------------- | ------------------------------------------ | ----------------------------------------- |
+| Block 1                                     | 9:40 a.m.                                  | 10:37 a.m.                                |
+| Block 2                                     | 10:40 a.m.                                 | 11:37 a.m.                                |
 
 </div>
 </div>

@@ -27,7 +27,8 @@ class:  twilight
 
 #### 📋 Agenda
 
-1. 
+1. What explains the patterns in the age of the ocean floor?
+2. Coastal and Continental Seismic Activty
 
 </div>
 
