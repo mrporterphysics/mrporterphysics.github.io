@@ -16,9 +16,9 @@ math: mathjax
 
 ---
 
-# 2026.01.26 **AP Physics**
+# 2026.01.27 **AP Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: If you could make _one_ chore disappear, what would it be?
 
 <div class ='columns'>
 
@@ -26,7 +26,8 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Buffet Quiz
+1. Buffet Quiz 🍽️ 
+    1. Work on Physics Classroom or Test Corrections when waiting
 2. Centripetal Forces 
 
 </div>
@@ -40,7 +41,10 @@ math: mathjax
 ### 📆 Upcoming
 
 HW Physics Classroom: 
-- 
+- Set CG1: Linear Speed	
+-	Set CG2: Centripetal Acceleration 1
+
+**Test Corrections** Due Friday 2/6
 
 </div>
 </div>
