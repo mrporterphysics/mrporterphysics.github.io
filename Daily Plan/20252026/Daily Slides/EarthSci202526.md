@@ -28,7 +28,9 @@ class:  twilight
 #### 📋 Agenda
 
 1. What explains the patterns in the age of the ocean floor?
-2. Coastal and Continental Seismic Activty
+    - Read paragraph & discuss with group -> construct model
+    - Draw model on whiteboard & answer 3 questions
+2. Summary Task
 
 </div>
 
@@ -36,7 +38,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model ocean plates_
 
 ### 📆 Upcoming
 
