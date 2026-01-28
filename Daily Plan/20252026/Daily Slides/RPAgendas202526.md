@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.01.28 **Regents Physics**
+
+##### **❓ of the 📅**: Should you eat rice with a fork 🍴, a spoon 🥄, or chopsticks 🥢?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Centripetal Acceleration
+2. Physics Classroom Practice   
+3. Introducing Centripetal Forces
+3. Think Sheets
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model circular motion with centripetal forces and acceleration_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.22 **Regents Physics**
 
 ##### **❓ of the 📅**: Who is your celebrity crush?
