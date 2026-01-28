@@ -17,6 +17,55 @@ class: green
 
 ---
 
+# Physical Science Do Now
+
+## If you missed last class please answer the following on an index card:
+
+1. What do you like to be called? What Emoji describes you?	
+2. The class is stranded on a deserted island. What special skill(s) can you bring to this dire situation?	
+3. What is unique about you that leads to your happiest times and best performances at school?	
+4. What is unique about you that allows you to work well in groups for the success of the group as a whole?	
+5. What has a teacher done for you in the past which has allowed you to learn?
+
+---
+
+# 2026.01.29 **Physical Science**
+
+##### **❓ of the 📅**: What is your go to take out order? 🍟🍕🥢🍣🍔🍗
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Fill out index card
+1. Mathematical Modeling Slides
+2. Mathematical Modeling with Desmos -> _Spot the Mathematical Model_
+3. Introduce Ball Bounce Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine the appropriate mathematical model for given data sets_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+# Links to Desmos Graphs
+
+Links for [Graph 1](https://www.desmos.com/calculator/mvl8sk6qer) || [Graph 2](https://www.desmos.com/calculator/5gxv44prt1) || [Graph 3](https://www.desmos.com/calculator/zhwpyvtq8l) || [Graph 4](https://www.desmos.com/calculator/nj6olrzfpy) || [Graph 5](https://www.desmos.com/calculator/xg0tlbvbci)
+
+---
+
 # 2026.01.27 **Physical Science**
 
 ##### ❓ of the 📅: Sweet of savory for breakfast? 🍳 🥯 🥞
@@ -76,6 +125,3 @@ class: green
 
 ---
 
-# Links to Desmos Graphs
-
-Links for [Graph 1](https://www.desmos.com/calculator/mvl8sk6qer) || [Graph 2](https://www.desmos.com/calculator/5gxv44prt1) || [Graph 3](https://www.desmos.com/calculator/zhwpyvtq8l) || [Graph 4](https://www.desmos.com/calculator/nj6olrzfpy) || [Graph 5](https://www.desmos.com/calculator/xg0tlbvbci)
