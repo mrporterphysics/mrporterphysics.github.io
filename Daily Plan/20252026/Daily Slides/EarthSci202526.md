@@ -17,6 +17,38 @@ class:  twilight
 
 ---
 
+# 2026.01.28 **Earth Science**
+
+##### **❓ of the 📅**: Should you eat rice with a fork, a spoon or chopsticks?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. [Plate Motion Simulator](https://sepup.lawrencehallofscience.org/geology-unit-plate-boundaries/)
+1. Present Model Summaries
+2. Summary Task
+3. _Continental Seismic Activity_
+    - Complete Parts 1-4
+    - Whole Class Summary (Share out 👀🤔💭)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Tectonic Plate Movement_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.27 **Earth Science**
 
 ##### **❓ of the 📅**: If you could make _one_ chore disappear, what would it be?

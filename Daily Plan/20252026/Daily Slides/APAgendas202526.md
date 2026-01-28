@@ -16,6 +16,33 @@ math: mathjax
 
 ---
 
+# 2026.01.28 **AP Physics**
+
+##### **❓ of the 📅**: Questions
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.27 **AP Physics**
 
 ##### **❓ of the 📅**: If you could make _one_ chore disappear, what would it be?
