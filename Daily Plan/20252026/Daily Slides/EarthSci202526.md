@@ -49,6 +49,27 @@ class:  twilight
 
 ---
 
+# Discussion & Models <!--fit--->
+
+---
+
+# Key Points 🔑
+
+* Empirical evidence from radiometric dating tells us that ocean crust is youngest along mid-ocean ridges and gets older as you look further away from those ridges  
+* Measuring the rate of change of the sea floor gives us evidence that new crust is being formed very slowly  
+* That evidence supports the idea that plates are moving away from each other at these areas, and that new crust is being formed in between, very slowly  
+* Empirical evidence shows that earthquakes happen along mid-ocean ridges  
+
+---
+
+# Key Points 🔑 (continued)
+* The earthquakes that happen under Iceland, which is on the Atlantic mid-ocean ridge, are shallow and distributed evenly across the ridge.  
+* That evidence supports the idea that there is a shallow space between the two sides of the mid-ocean ridge  
+* The evidence shows that there is a lot of volcanic activity in Iceland  
+* That evidence supports the idea that magma can rise in the space between the two sides of the mid-ocean ridge, which could form the new crust in that area
+
+---
+
 # 2026.01.27 **Earth Science**
 
 ##### **❓ of the 📅**: If you could make _one_ chore disappear, what would it be?
