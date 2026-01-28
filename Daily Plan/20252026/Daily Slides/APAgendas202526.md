@@ -18,7 +18,7 @@ math: mathjax
 
 # 2026.01.28 **AP Physics**
 
-##### **❓ of the 📅**: Questions
+##### **❓ of the 📅**: Should you eat rice with a fork 🍴, a spoon 🥄, or chopsticks 🥢?
 
 <div class ='columns'>
 
@@ -26,7 +26,10 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. Review -> Tangential Velocity, Centripetal Acceleration
+2. Define Uniform Circular Motion
+3. Centripetal vs. Centrifugal
+3. Circular Motion Derivations - Vertical Circles
 
 </div>
 
@@ -34,9 +37,15 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model vertical circles_
 
 ### 📆 Upcoming
+
+HW PC (due **Friday**): 
+- Set CG1: Linear Speed	
+-	Set CG2: Centripetal Acceleration 1
+
+**Test Corrections** Due Friday 2/6
 
 </div>
 </div>
