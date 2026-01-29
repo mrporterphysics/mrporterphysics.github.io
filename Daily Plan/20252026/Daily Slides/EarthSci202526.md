@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.01.29 **Earth Science**
+
+##### **❓ of the 📅**: What is your go to take out order? 🍟🍕🥢🍣🍔🍗
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 👀🤔💭 Finish through see-think-wonder from yesterday
+2. Discuss Findings
+    - remember to have _evidence_ for your claims
+3. Draw Model on whiteboard
+    - cite evidence (page number or simulation resource)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Continental Crust Boundaries_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.01.28 **Earth Science**
 
 ##### **❓ of the 📅**: Should you eat rice with a fork, a spoon or chopsticks?
