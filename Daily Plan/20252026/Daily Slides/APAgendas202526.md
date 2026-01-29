@@ -16,6 +16,47 @@ math: mathjax
 
 ---
 
+# 2026.01.30 **AP Physics** Do Now
+
+A skateboarder is skating over a circular bump. At the instant shown, she is at the top of the bump and is moving with a speed of 5 m/s.  **Is the normal force exerted on the skateboarder by the bump (i) greater than, (ii) less than, or (iii) equal to the weight of the skateboarder?**  Explain your reasoning.
+
+![center](image-42.png)
+
+---
+
+# 2026.01.30 **AP Physics**
+
+##### **❓ of the 📅**: What luxury is totally worth the price?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Do Now
+1. Recap
+2. Numerical $F_c$ Calculations
+3. AP Workbook 3.D & 3.E  
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model centripetal motion_
+
+### 📆 Upcoming
+
+**Test Corrections** Due Friday 2/6
+
+</div>
+</div>
+
+---
+
+
 # 2026.01.28 **AP Physics**
 
 ##### **❓ of the 📅**: Should you eat rice with a fork 🍴, a spoon 🥄, or chopsticks 🥢?

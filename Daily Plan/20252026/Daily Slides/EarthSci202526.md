@@ -17,6 +17,112 @@ class:  twilight
 
 ---
 
+# 2026.01.30 **Earth Science**
+
+##### **❓ of the 📅**: What luxury is totally worth the price?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Present Updated Models
+2. Plate Tectonic Theory
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Some Key 🔑 Ideas:
+
+- Earthquakes and volcanic activity happen when plates collide
+- In these areas, it appears that one plate goes underneath another one, and earthquakes form there
+- On the surface, there are mountains and volcanoes
+- Continental crust is the oldest, probably because it is furthest from the midocean ridges but hasn’t collided yet
+
+---
+
+# Reminder: 
+
+## _We are looking for areas that are most at risk for tectonic activty and its associated natural distasters (i.e. earthquakes, volcanoes, and tsunamis)_
+
+---
+
+# 📖 Read Part 1 <!--fit--->
+
+---
+
+# How mountain ranges are formed at convergent plate boundaries <!--fit--->
+
+
+<iframe width="1100" height="515" src="https://www.youtube.com/embed/r9Uu-Gp2ztg?si=LxqOzy49AtN7FTRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
+# [📺 Birth of a Tsunami](https://ny.pbslearningmedia.org/resource/nvkq.vid.earth.tsunami/birth-of-a-tsunami/) <!--fit--->
+
+---
+
+# [📺 Plate Tectonics and Volcanoes | The Next Pompeii](https://ny.pbslearningmedia.org/resource/nvtnp-sci-volcanotectonics/plate-tectonics-and-volcanoes-the-next-pompeii/) <!--fit--->
+
+---
+
+# 🤔 How do these theories connect to the evidence you've seen so far? <!--fit--->
+
+## Complete _Part 1_ 
+
+## and 
+
+## Class Discuss
+
+---
+
+# Part 2 
+
+## Work _individually_. When everyone in your group finishes compare answers. Put your combined answers on a whiteboard
+
+---
+
+# Key Points 🔑
+
+* Earthquakes occur at all types of plate boundaries.  
+* Volcanoes form and erupt at oceanic-continental convergent plate boundaries.  
+* This further confirms ideas about the earthquake-volcanic eruption phenomenon in Iceland we observed during the Engage phase and volcanic eruptions we have observed during the unit launch, like Krakatoa.  
+* Mountains form at convergent plate boundaries.  
+* Mid-ocean ridges, like the Mid-Atlantic Ridge where Iceland is located, form at divergent oceanic-oceanic plate boundaries.  
+
+---
+
+# Key Points 🔑
+
+* Tsunamis are caused by volcano collapses, underwater volcanic eruption, or plates slipping. This helps us explain the occurrence of tsunamis in the unit launch, like the Japan and Krakatoa tsunamis.  
+* Mountains form at convergent plate boundaries  
+* The amount of time it takes for surface features to form and hazards to occur is directly associated with the time scale of the process that causes them.  
+* Some of these phenomena happen very slowly and some happen very suddenly.  
+
+---
+
+# Key Points 🔑
+
+* Surface features can disappear or change form, but natural hazards are not reversible.  
+* When an oceanic plate converges with a continental plate the oceanic plate goes underneath because it is more dense.  
+* Volcanoes form at divergent plate boundaries because when the plates move apart, the heat from Earth (magma) which has a lot of pressure built up is like a pressure cooker and is able to come up to the surface.
+
+---
+
 # 2026.01.29 **Earth Science**
 
 ##### **❓ of the 📅**: What is your go to take out order? 🍟🍕🥢🍣🍔🍗
