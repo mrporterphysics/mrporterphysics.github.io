@@ -59,6 +59,41 @@ class: green
 
 ---
 
+# Ball Bounce Lab 🏀
+
+### Question:
+
+How is the bounce height of a ball related to the release height of the ball?
+
+### Purpose:
+
+To determine the type of relationship (linear, quadratic, inverse, or constant) that relates the bounce height to the release height.
+
+### In your Notebook
+
+<div class='columns'>
+<div>
+
+1. Write question and purpose
+2. Write out your **detailed** procedure -> include a sketch
+
+</div>
+ 
+<div>
+
+3. Data Table & Graph
+4. Mathematical Model
+5. Conclusion
+
+</div>
+</div>
+
+---
+
+
+
+---
+
 
 # Links to Desmos Graphs
 

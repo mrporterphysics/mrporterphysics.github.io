@@ -15,6 +15,41 @@ math: mathjax
 
 ---
 
+# 2026.01.29 **Regents Physics**
+
+##### **❓ of the 📅**: What is your go to take out order? 🍟🍕🥢🍣🍔🍗
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Centripetal Force Notes 
+2. Introducing Centripetal Forces
+	1. Cup Game
+	2. Swinging Rubber Stoppers
+3. Think Sheets:
+	1. Inertia & Cent Force
+4. Math Behind Centripetal Forces
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Mathematically Model Centripetal Forces_
+
+### 📆 Upcoming
+
+- PC (started yesterday) Due Tomorrow
+
+</div>
+</div>
+
+---
+
 # 2026.01.28 **Regents Physics**
 
 ##### **❓ of the 📅**: Should you eat rice with a fork 🍴, a spoon 🥄, or chopsticks 🥢?
