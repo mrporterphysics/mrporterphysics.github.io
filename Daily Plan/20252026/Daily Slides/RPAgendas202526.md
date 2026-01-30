@@ -15,6 +15,46 @@ math: mathjax
 
 ---
 
+
+# 2026.01.30 **Regents Physics** Do Now
+
+A skateboarder is skating over a circular bump. At the instant shown, she is at the top of the bump and is moving with a speed of 5 m/s.  **Is the <u>normal force</u> exerted on the skateboarder by the bump (i) _greater_ than, (ii) _less_ than, or (iii) _equal to_ the <u>weight of the skateboarder</u>?**  Explain your reasoning.
+
+![center](image-42.png)
+
+---
+
+# 2026.01.30 **Regents Physics**
+
+##### **❓ of the 📅**: What luxury is worth the price?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Centripetal Force Math & Examples
+3. Think Sheet - Mathematics of Circular Motion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model centripetal forcs mathematically_
+
+### 📆 Upcoming
+
+- Circular Motion Quiz next week
+
+</div>
+</div>
+
+---
+
 # 2026.01.29 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your go to take out order? 🍟🍕🥢🍣🍔🍗
