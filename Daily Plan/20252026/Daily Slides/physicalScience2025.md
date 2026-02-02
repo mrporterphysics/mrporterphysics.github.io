@@ -17,6 +17,65 @@ class: green
 
 ---
 
+# 2026.02.02 **Physical Science 📏**
+
+##### **❓ of the 📅**: List _two_ pet peeves.
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Lab Notebooks - About
+2. [Data Collection Best Practices]() 
+2. Ball Bounce Lab
+    - Must have data by end of class
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Design a controlled experiment & collect data._
+
+</div>
+</div>
+
+---
+
+
+# Ball Bounce Lab 🏀
+
+### Question:
+
+How is the bounce height of a ball related to the release height of the ball?
+
+### Purpose:
+
+To determine the type of relationship (linear, quadratic, inverse, or constant) that relates the bounce height to the release height.
+
+### In your Notebook
+
+<div class='columns'>
+<div>
+
+1. Write question and purpose
+2. Write out your **detailed** procedure -> include a sketch
+
+</div>
+ 
+<div>
+
+3. Data Table & Graph
+    - Use a ruler and an <mark>**entire**</mark> page for your graph.
+
+</div>
+</div>
+
+---
+
 # Physical Science Do Now
 
 ## If you missed last class please answer the following on an index card:
