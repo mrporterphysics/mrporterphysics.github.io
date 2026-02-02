@@ -16,6 +16,75 @@ math: mathjax
 
 ---
 
+# 2026.02.02 **AP Physics** Do Now
+
+
+<div class='columns'>
+<div>
+
+A sled slides along a vertical circular track of radius $r$, as shown. There is negligible friction between the sled and the track. At the bottommost point of the track, the sled has speed $v_b$. Which of the following graphs best show the normal force exerted by the track on the sled at the bottommost point of the track as a function of $v_b$?
+
+</div>
+ 
+<div>
+
+![center](image-43.png)
+
+A. ![alt text](image-44.png) B. ![alt text](image-45.png)
+
+C. ![alt text](image-46.png) D. ![alt text](image-47.png)
+
+</div>
+</div>
+
+---
+
+**A motor swings a ball on a string in a vertical circle such that the tension in the string is constant throughout the ball's motion. Which of the following  correctly indicates at which point the ball has the greatest speed and provides a valid justification?**
+
+A. At the topmost point, because the tension force and gravitational force are both directed toward the center of the ball's motion.
+B. At the topmost point, because the net force on the ball is zero.
+C. At the bottommost point, because the tension offsets the gravitational force.
+D. At the bottommost point, because the net force on the ball is a maximum.
+
+![bg fit right:15%](image-48.png)
+
+---
+
+# 2026.02.02 **AP Physics**
+
+##### **❓ of the 📅**: What are two of your pet peeves?
+
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Workbook Day:
+    - 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model horizontal circular motion_
+
+### 📆 Upcoming
+
+- Quiz **Thursday**
+- Physics Classroom:
+    - a
+    - a
+
+</div>
+</div>
+
+---
+
 # 2026.01.30 **AP Physics** Do Now
 
 A skateboarder is skating over a circular bump. At the instant shown, she is at the top of the bump and is moving with a speed of 5 m/s.  **Is the normal force exerted on the skateboarder by the bump (i) greater than, (ii) less than, or (iii) equal to the weight of the skateboarder?**  Explain your reasoning.
