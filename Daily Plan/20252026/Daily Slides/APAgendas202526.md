@@ -63,7 +63,8 @@ D. At the bottommost point, because the net force on the ball is a maximum.
 
 1. Do Now 
 2. Workbook Day:
-    - 
+    - Goal: 3.F - 3.H
+    - Stretch Goal: 3.I
 
 </div>
 
@@ -76,9 +77,8 @@ D. At the bottommost point, because the net force on the ball is a maximum.
 ### 📆 Upcoming
 
 - Quiz **Thursday**
-- Physics Classroom:
-    - a
-    - a
+- PC Circular and Satellite Motion **1**: N2L Analysis
+- PC Circular and Satellite Motion **3**: N2L Analysis
 
 </div>
 </div>

@@ -19,6 +19,68 @@ class:  twilight
 
 # 2026.02.02 **Earth Science**
 
+##### **❓ of the 📅**: Are you ready for spring yet?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do you think ALL surface features have been formed at tectonic plate boundaries?
+2. Constructing New York State
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model how landforms in NYS Formed_
+
+### 📆 Upcoming
+
+- Quiz **<mark>Friday</mark>** on Plate Tectonics, Earthquakes, Volcanoes, etc
+
+</div>
+</div>
+
+---
+
+# Questions: 
+
+- ## _Do you think ALL surface features have been formed at tectonic plate boundaries?_ 
+
+- ## _What other processes might contribute to landforms?_
+
+- ## _How do you think mountains form in areas FAR from plate boundaries, like the Adirondacks?_
+
+
+---
+ 
+# Constructing New York State <!--fit--->
+
+## Complete _Part 1_ with your lab table. 
+
+---
+
+# Domino Discover
+
+## 💡 Ideas
+
+* Volcanic eruptions: quick (1-10 years), can destroy and create land
+* Tectonic plate motion: very slow (tens of thousands of years), creates continents, ridges, mountains
+* Erosion: long time scale (hundreds to thousands of years), wears away mountains/craters
+
+---
+
+# Part 2: Video & Card Sort  <!--fit--->
+
+
+---
+
+# 2026.02.02 **Earth Science**
+
 ##### **❓ of the 📅**: What are two of your pet peeves?
 
 
