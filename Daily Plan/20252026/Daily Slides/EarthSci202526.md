@@ -17,6 +17,28 @@ class:  twilight
 
 ---
 
+# 2026.02.02 **Earth Science**
+
+##### **❓ of the 📅**: What are two of your pet peeves?
+
+
+#### 📋 Agenda
+
+1. Finish Part 2 Model. Be Sure to include
+    - Evidence from all of the investigations
+    - Evidence from the maps and diagrams
+    - An explanation of how evidence connects to seismic activity
+2. Check Model with [Rubric](https://docs.google.com/document/d/1FI9UUIBk9Xv1kLSeKn2PC_GbLYjhwTIfRl_VEgAjv8g/edit?tab=t.0)
+
+
+### 🎯 Goals
+
+🥅 _Model Seismic Activity with Plate Tectonics_
+
+
+
+---
+
 # 2026.01.30 **Earth Science**
 
 ##### **❓ of the 📅**: What luxury is totally worth the price?

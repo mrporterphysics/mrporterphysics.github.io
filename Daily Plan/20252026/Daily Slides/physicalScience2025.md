@@ -76,6 +76,18 @@ To determine the type of relationship (linear, quadratic, inverse, or constant) 
 
 ---
 
+# Data Table Example:
+
+| Drop Height (cm) | Bounce Height 1 (cm) | Bounce Height 2 (cm) | Bounce Height 3 (cm) | Average (cm) |
+| ---------------- | -------------------- | -------------------- | -------------------- | ------------ |
+| 20               |                      |                      |                      |              |
+| 40               |                      |                      |                      |              |
+| 60               |                      |                      |                      |              |
+| 80               |                      |                      |                      |              |
+| ...              |                      |                      |                      |              |
+
+---
+
 # Physical Science Do Now
 
 ## If you missed last class please answer the following on an index card:
