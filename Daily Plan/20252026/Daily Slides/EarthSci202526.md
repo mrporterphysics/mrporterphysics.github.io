@@ -74,6 +74,14 @@ class:  twilight
 
 ---
 
+## Mountains and other surface features can form far from plate boundaries. For example, despite New York State’s position in the middle of the North American Plate, it has mountains, rivers, and dramatic cliffs.
+
+
+![center w:850](image-49.png)
+
+
+---
+
 # Part 2: Video & Card Sort  <!--fit--->
 
 
