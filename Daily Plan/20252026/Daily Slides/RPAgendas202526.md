@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+# 2026.02.03 **Regents Physics**
+
+##### **❓ of the 📅**: Are you ready for spring yet?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ⏲️ **20 Minutes**: APlusPhysics Regents Practice Questions
+2. Pivot - Universal Law of Gravitation
+3. Discuss & Notes on ULG
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Centripetal Motion_
+
+### 📆 Upcoming
+- HW:
+    - _PC: Circular and Satellite Motion 1: Force Analysis_
+- Quiz Thursday - Circular Motion
+
+
+</div>
+</div>
+
+---
+
 
 # 2026.01.30 **Regents Physics** Do Now
 
