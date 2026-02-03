@@ -16,6 +16,53 @@ math: mathjax
 
 ---
 
+# 2026.02.03 **AP Physics**
+
+##### **❓ of the 📅**: Are you ready for spring yet? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Conical Pendulum - Flying Farm Animals 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model a conical pendulum_
+
+### 📆 Upcoming
+
+- Quiz **Thursday**
+- PC Circular and Satellite Motion **1**: N2L Analysis
+- PC Circular and Satellite Motion **3**: N2L Analysis
+
+</div>
+</div>
+
+---
+
+# Conical Pendulum - Flying Farm Animals 
+
+<div class='columns'>
+<div>
+
+## *The buffalo farm has recently acquired some flying animals and needs to test the length of the flying animals' leashes. The farm is trying to find a way to predict how long it takes for the animals to complete one circle while attached to their loop.* 
+
+## **Your goal is to predict the time it takes for your animal to take 10 swings based on the length of your animal's string**.
+
+
+### Materials:
+
+- Meterstick, Stopwatch, Flying Farm Animal
+
+---
+
 # 2026.02.02 **AP Physics** Do Now
 
 
