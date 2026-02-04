@@ -17,6 +17,38 @@ math: mathjax
 
 # 2026.02.03 **Regents Physics**
 
+##### **❓ of the 📅**: Question
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Pivot 
+2. Universal Law of Gravitation
+3. Practice with ULG
+4. Prep for quiz tomorrow
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create ULG_
+
+### 📆 Upcoming
+- HW _PC: Circular and Satellite Motion 1: Force Analysis_
+- Quiz Thursday - Circular Motion
+
+</div>
+</div>
+
+---
+
+# 2026.02.03 **Regents Physics**
+
 ##### **❓ of the 📅**: Are you ready for spring yet?
 
 <div class ='columns'>

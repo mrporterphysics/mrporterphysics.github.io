@@ -17,6 +17,38 @@ class: green
 
 ---
 
+# 2025.02.04 **Physical Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Collecting Data - if you haven't
+2. How to average
+3. Graphing Best Practices
+4. Graph your lab data; draw best fit; find equations
+5. Write lab conclusions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Graph data_
+
+🥅 _Determine mathematical relationship_
+
+
+</div>
+</div>
+
+---
+
 # 2026.02.02 **Physical Science 📏**
 
 ##### **❓ of the 📅**: List _two_ pet peeves.
