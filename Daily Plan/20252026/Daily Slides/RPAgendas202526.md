@@ -17,7 +17,7 @@ math: mathjax
 
 # 2026.02.03 **Regents Physics**
 
-##### **❓ of the 📅**: Question
+##### **❓ of the 📅**: Who is your favorite disney character?
 
 <div class ='columns'>
 
