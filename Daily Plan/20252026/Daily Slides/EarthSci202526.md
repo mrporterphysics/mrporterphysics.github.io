@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2026.02.05 **Earth Science**
+
+##### **❓ of the 📅**: What is the best board game?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish _Constructing NYS_
+2. [Optional] Model Summary Board
+2. Regents Practice
+3. _Who's Most at Risk?_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prep for quiz tomorrow_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.04 **Earth Science**
 
 ##### **❓ of the 📅**: Which Disney princess would you choose to be?
