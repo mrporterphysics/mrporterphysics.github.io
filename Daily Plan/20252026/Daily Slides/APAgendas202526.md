@@ -16,6 +16,38 @@ math: mathjax
 
 ---
 
+# 2026.02.05 **AP Physics**
+
+##### **❓ of the 📅**: Which Disney Princess would you choose to be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Conical Pendulum Lab
+    - Get checked by me when finished
+2. Quiz 
+3. Universal Law of Gravitation
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Gravity_
+
+### 📆 Upcoming
+
+- PC Homework Due
+
+</div>
+</div>
+
+---
+
 # 2026.02.03 **AP Physics**
 
 ##### **❓ of the 📅**: Are you ready for spring yet? 
