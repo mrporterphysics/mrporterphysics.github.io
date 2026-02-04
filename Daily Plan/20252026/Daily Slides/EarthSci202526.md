@@ -17,7 +17,40 @@ class:  twilight
 
 ---
 
-# 2026.02.02 **Earth Science**
+# 2026.02.04 **Earth Science**
+
+##### **❓ of the 📅**: Which Disney princess would you choose to be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Constructing NYS 
+    - Video & Card Sort
+2. Start _Who is Most at Risk?_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Construct History of NYS Bedrock_
+
+### 📆 Upcoming
+
+
+- Quiz **<mark>Friday</mark>** on Plate Tectonics, Earthquakes, Volcanoes, etc
+    - We will do some practice tomorrow
+
+</div>
+</div>
+
+---
+
+# 2026.02.03 **Earth Science**
 
 ##### **❓ of the 📅**: Are you ready for spring yet?
 
