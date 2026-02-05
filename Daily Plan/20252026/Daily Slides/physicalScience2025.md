@@ -17,6 +17,61 @@ class: green
 
 ---
 
+# 2026.02.06 **Physical Science**
+
+##### **❓ of the 📅**: Do you lick or bite your ice cream? 
+
+<div class='columns'>
+<div>
+
+#### 📋 Agenda
+
+1. Finish graphing ball bounce data
+2. Whiteboard Results & Discuss as class
+2. Write Ball Bounce Conlusion & Discussion
+2. Get Lab Checked by Mr. Porter
+4. CER Notes & Practice
+
+</div>
+ 
+<div>
+
+
+### 🎯 Goals
+
+🥅 _Determine Mathematical Models_
+
+
+</div>
+</div>
+
+
+
+
+
+---
+
+# Ball Bounce Lab Whiteboard
+
+- **Sketch** Your Graph
+- Write the equation for your best fit
+- Think & Discuss with Lab Partners:
+    - What does your **slope** represent? 
+    - Do you have a vertical intercept? If so what might it represent?
+
+---
+
+# Ball Bounce Lab: **Conclusion** 
+
+1. Identify the type of relationship (_linear, quadratic, inverse, none_) between the bounce height and the release height. Support your answer with evidence and reasoning.
+
+2. Write the equation for your ball. Explain the significance of the slope. (What would it mean for a ball to have a steeper or shallower slope?)
+
+3. Predict the bounce height for a drop height of 250 cm. 
+
+
+---
+
 # 2025.02.04 **Physical Science**
 
 ##### **❓ of the 📅**: 

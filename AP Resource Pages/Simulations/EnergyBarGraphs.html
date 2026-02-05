@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Bar Charts — Interactive Worksheet</title>
+    <style>
+        :root {
+            --fx-paper: #FFFCF0; --fx-base-50: #F2F0E5; --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC; --fx-base-200: #DAD4BA; --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988; --fx-base-500: #9C8F70; --fx-base-600: #847759;
+            --fx-base-700: #6F6144; --fx-base-800: #575142; --fx-base-850: #403E39;
+            --fx-base-900: #343331; --fx-base-950: #1C1B1A; --fx-black: #100F0F;
+            --fx-red: #D14D41; --fx-orange: #DA702C; --fx-yellow: #D0A215;
+            --fx-green: #879A39; --fx-cyan: #3AA99F; --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8; --fx-magenta: #CE5D97;
+            --bg-primary: var(--fx-paper); --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100); --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700); --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200); --accent-primary: var(--fx-blue);
+            --shadow: rgba(28,27,26,0.1);
+            --color-ug: #4385BE; --color-us: #66800B; --color-k: #D14D41;
+            --color-wext: #8B7EC8; --color-q: #DA702C; --color-echem: #CE5D97;
+        }
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black); --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900); --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200); --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850); --accent-primary: #4385BE;
+            --shadow: rgba(16,15,15,0.3);
+            --color-ug: #5BA2E0; --color-us: #98B636; --color-k: #E06050;
+            --color-wext: #A899DD; --color-q: #E8863A; --color-echem: #E07AB0;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Fira Code','SF Mono','Monaco','Inconsolata','Roboto Mono', monospace;
+            background: var(--bg-primary); color: var(--text-primary);
+            line-height: 1.6; padding: 16px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header {
+            background: var(--bg-tertiary); border: 1px solid var(--border-color);
+            border-radius: 8px; padding: 24px 30px; margin-bottom: 16px;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+        }
+        h1 { font-size: 1.6em; font-weight: 700; }
+        .header-controls { display: flex; gap: 8px; align-items: center; }
+        .theme-toggle, .reset-all-btn {
+            background: var(--bg-secondary); border: 1px solid var(--border-color);
+            color: var(--text-primary); padding: 6px 12px; border-radius: 6px;
+            cursor: pointer; font-size: 0.8rem; font-family: inherit;
+        }
+        .theme-toggle:hover, .reset-all-btn:hover { background: var(--accent-primary); color: var(--bg-primary); }
+        .progress-bar {
+            background: var(--bg-secondary); border: 1px solid var(--border-color);
+            border-radius: 8px; padding: 12px 20px; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 12px; font-size: 0.85em;
+        }
+        .progress-track { flex: 1; height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; }
+        .progress-fill { height: 100%; background: var(--color-us); border-radius: 4px; transition: width 0.4s ease; }
+        .guide-toggle {
+            background: var(--bg-secondary); border: 1px solid var(--border-color);
+            border-radius: 8px; margin-bottom: 16px; overflow: hidden;
+        }
+        .guide-toggle summary {
+            padding: 12px 20px; cursor: pointer; font-weight: 600; font-size: 0.95em;
+            color: var(--accent-primary); list-style: none;
+        }
+        .guide-toggle summary::before { content: "▶ "; }
+        .guide-toggle[open] summary::before { content: "▼ "; }
+        .guide-content { padding: 0 20px 16px; font-size: 0.85em; color: var(--text-secondary); line-height: 1.8; }
+        .guide-content p { margin-bottom: 8px; }
+        .problem-card {
+            background: var(--bg-secondary); border: 1px solid var(--border-color);
+            border-radius: 8px; margin-bottom: 16px; overflow: hidden;
+        }
+        .problem-header {
+            background: var(--bg-tertiary); padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+        }
+        .problem-header h2 { font-size: 1.15em; font-weight: 700; }
+        .problem-status { font-size: 0.8em; padding: 3px 10px; border-radius: 12px; }
+        .problem-status.complete { background: var(--color-us); color: #fff; }
+        .problem-status.incomplete { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); }
+        .problem-scenario {
+            padding: 16px 20px; font-size: 0.9em; color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-primary);
+        }
+        .part-container { padding: 20px; border-bottom: 1px solid var(--border-color); }
+        .part-container:last-child { border-bottom: none; }
+        .part-label { font-weight: 700; font-size: 1em; margin-bottom: 6px; }
+        .part-desc { font-size: 0.85em; color: var(--text-secondary); margin-bottom: 16px; }
+        .system-def {
+            display: inline-block; background: var(--bg-tertiary); border: 1px solid var(--border-color);
+            border-radius: 4px; padding: 2px 8px; font-size: 0.8em; margin-bottom: 12px; color: var(--text-muted);
+        }
+        /* Bar Chart */
+        .chart-wrapper {
+            display: flex; align-items: center; justify-content: center;
+            gap: 4px; flex-wrap: wrap; margin: 12px 0;
+        }
+        .chart-section { text-align: center; }
+        .section-label { font-size: 0.7em; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; letter-spacing: 0.5px; text-transform: uppercase; }
+        .bars-row { display: flex; gap: 2px; justify-content: center; }
+        .bar-col { display: flex; flex-direction: column; align-items: center; width: 40px; }
+        .cells-container { display: flex; flex-direction: column; border: 1px solid var(--border-color); border-radius: 3px; overflow: hidden; }
+        .cell {
+            width: 38px; height: 24px; border-bottom: 1px solid var(--border-color);
+            cursor: pointer; transition: background 0.15s;
+        }
+        .cell:first-child { border-top: none; }
+        .cell:last-child { border-bottom: none; }
+        .cell:hover { opacity: 0.8; filter: brightness(1.1); }
+        .cell.filled-ug { background: var(--color-ug); }
+        .cell.filled-us { background: var(--color-us); }
+        .cell.filled-k { background: var(--color-k); }
+        .cell.filled-wext { background: var(--color-wext); }
+        .cell.filled-q { background: var(--color-q); }
+        .cell.filled-echem { background: var(--color-echem); }
+        .cell.neg-zone { background: var(--bg-primary); }
+        .zero-line { width: 100%; height: 3px; background: var(--text-primary); flex-shrink: 0; }
+        .bar-label { font-size: 0.75em; font-weight: 600; margin-top: 4px; color: var(--text-secondary); }
+        .bar-label sub { font-size: 0.7em; }
+        .operator { font-size: 1.5em; font-weight: 700; padding: 0 6px; color: var(--text-muted); align-self: center; margin-top: 14px; }
+        .chart-value { font-size: 0.65em; color: var(--text-muted); margin-top: 1px; min-height: 14px; }
+        /* Buttons & Feedback */
+        .part-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+        .check-btn {
+            background: var(--accent-primary); color: #fff; border: none;
+            padding: 8px 20px; border-radius: 6px; cursor: pointer;
+            font-family: inherit; font-size: 0.85em; font-weight: 600;
+        }
+        .check-btn:hover { filter: brightness(1.15); }
+        .reset-btn {
+            background: transparent; color: var(--text-muted); border: 1px solid var(--border-color);
+            padding: 8px 16px; border-radius: 6px; cursor: pointer;
+            font-family: inherit; font-size: 0.85em;
+        }
+        .reset-btn:hover { border-color: var(--text-secondary); color: var(--text-secondary); }
+        .feedback {
+            margin-top: 12px; padding: 12px 16px; border-radius: 6px;
+            font-size: 0.85em; display: none; line-height: 1.7;
+        }
+        .feedback.show { display: block; }
+        .feedback.correct { background: rgba(135,154,57,0.15); border: 1px solid var(--color-us); color: var(--color-us); }
+        .feedback.incorrect { background: rgba(209,77,65,0.12); border: 1px solid var(--fx-red); color: var(--fx-red); }
+        .feedback.partial { background: rgba(208,162,21,0.12); border: 1px solid var(--fx-yellow); color: var(--fx-yellow); }
+        .equation-display {
+            margin-top: 10px; padding: 10px 14px; background: var(--bg-tertiary);
+            border-radius: 6px; font-size: 0.85em; display: none;
+        }
+        .equation-display.show { display: block; }
+        .equation-display .eq-label { font-weight: 600; color: var(--accent-primary); }
+        .hint-text { font-size: 0.8em; color: var(--text-muted); font-style: italic; margin-top: 4px; }
+        footer {
+            background: var(--bg-tertiary); border: 1px solid var(--border-color);
+            border-radius: 8px; padding: 16px; text-align: center;
+            color: var(--text-muted); font-size: 0.8em; margin-top: 16px;
+        }
+        /* Diagrams */
+        .diagram-container {
+            display: flex; justify-content: center; padding: 16px 0 8px;
+        }
+        .diagram-container svg {
+            max-width: 100%; height: auto;
+        }
+        .diagram-container svg text {
+            font-family: 'Fira Code','SF Mono','Monaco','Inconsolata','Roboto Mono', monospace;
+        }
+        .diagram-container svg .stroke { stroke: var(--text-primary); fill: none; }
+        .diagram-container svg .fill-obj { fill: var(--text-secondary); stroke: var(--text-primary); }
+        .diagram-container svg .fill-ground { fill: var(--bg-tertiary); stroke: var(--text-primary); }
+        .diagram-container svg .fill-spring { fill: var(--color-us); stroke: var(--color-us); opacity: 0.8; }
+        .diagram-container svg .txt { fill: var(--text-primary); }
+        .diagram-container svg .txt-label { fill: var(--accent-primary); font-weight: 700; }
+        .diagram-container svg .txt-dim { fill: var(--text-muted); }
+        .diagram-container svg .dashed { stroke-dasharray: 6,4; }
+        .diagram-container svg .arrow { fill: var(--fx-red); stroke: var(--fx-red); }
+        .diagram-container svg .arrow-v { fill: var(--color-k); stroke: var(--color-k); }
+        .diagram-container svg .cord { stroke: var(--fx-purple); stroke-width: 2; fill: none; }
+        .part-diagram { padding: 8px 0 4px; display: flex; justify-content: center; }
+        .part-diagram svg { max-width: 100%; height: auto; }
+        .part-diagram svg text { font-family: 'Fira Code','SF Mono','Monaco','Inconsolata','Roboto Mono', monospace; }
+        .part-diagram svg .stroke { stroke: var(--text-primary); fill: none; }
+        .part-diagram svg .fill-obj { fill: var(--text-secondary); stroke: var(--text-primary); }
+        .part-diagram svg .txt { fill: var(--text-primary); }
+        .part-diagram svg .txt-label { fill: var(--accent-primary); font-weight: 700; }
+        .part-diagram svg .txt-dim { fill: var(--text-muted); }
+        .part-diagram svg .dashed { stroke-dasharray: 6,4; }
+
+        @media (max-width: 700px) {
+            .chart-wrapper { gap: 2px; }
+            .bar-col { width: 32px; }
+            .cell { width: 30px; height: 20px; }
+            .operator { font-size: 1.2em; padding: 0 3px; }
+            header { padding: 16px; }
+            h1 { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>⚡ Energy Bar Charts</h1>
+        <div class="header-controls">
+            <button class="reset-all-btn" onclick="resetAll()">Reset All</button>
+            <button class="theme-toggle" onclick="toggleTheme()"></button>
+        </div>
+    </header>
+
+    <div class="progress-bar">
+        <span>Progress:</span>
+        <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+        <span id="progressText">0 / 18</span>
+    </div>
+
+    <details class="guide-toggle">
+        <summary>How to Create Energy Bar Graphs (Reference Guide)</summary>
+        <div class="guide-content">
+            <p>Energy bar graphs visually track how the <strong>total energy of a system</strong> is stored in different forms at different moments in time.</p>
+            <p><strong>Step 1 — Define the System:</strong> Decide what's in your system (object, Earth, spring, etc.). Everything outside is the surroundings.</p>
+            <p><strong>Step 2 — Choose Energy Types:</strong> U<sub>g</sub> (gravitational), U<sub>s</sub> (elastic), K (kinetic), Q (thermal/internal).</p>
+            <p><strong>Step 3 — Pick Snapshots:</strong> Choose initial and final moments. Label them clearly.</p>
+            <p><strong>Step 4 — Set a Scale:</strong> The sum of bar heights must equal the total energy. Use the same scale for initial and final.</p>
+            <p><strong>Step 5 — Draw Initial Bars:</strong> Which energy types are present at the start? Set their heights.</p>
+            <p><strong>Step 6 — Draw Final Bars:</strong> Use conservation of energy. Total initial + Work = Total final.</p>
+            <p><strong>Step 7 — Friction:</strong> If friction is present, some mechanical energy becomes thermal energy (Q). The Q bar grows as K and/or U shrink.</p>
+            <p><strong>Key Rule:</strong> Click cells in each column to set bar heights. Initial Energy + External Work = Final Energy.</p>
+        </div>
+    </details>
+
+    <div id="problems"></div>
+
+    <details class="guide-toggle" style="margin-top:16px">
+        <summary>🧪 Sandbox — Make Your Own Bar Chart</summary>
+        <div style="padding:20px">
+            <p style="font-size:0.85em;color:var(--text-secondary);margin-bottom:12px">Create your own scenario. No answer checking — just explore energy conservation!</p>
+            <div id="sandbox"></div>
+        </div>
+    </details>
+
+    <footer>Interactive Energy Bar Charts Worksheet — AP Physics 1 — Energy Transfer Model<br>©Modeling Instruction | Digital Version</footer>
+</div>
+
+<script>
+// ─── DIAGRAMS ───
+const DIAGRAMS = {
+1: `<svg viewBox="0 0 520 260" width="520" height="260" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground -->
+  <line x1="20" y1="220" x2="500" y2="220" class="stroke" stroke-width="2"/>
+  <line x1="20" y1="220" x2="20" y2="30" class="stroke dashed" stroke-width="1" opacity="0.4"/>
+  <!-- Spring -->
+  <polyline points="40,220 48,210 56,195 64,210 72,195 80,210 88,195 96,210 104,220" class="fill-spring" fill="none" stroke-width="2.5"/>
+  <!-- Track from spring up into loop -->
+  <path d="M104,220 L160,220 Q180,220 195,200 L220,140" class="stroke" stroke-width="2"/>
+  <!-- Vertical loop -->
+  <circle cx="270" cy="120" r="50" class="stroke" stroke-width="2"/>
+  <!-- Track continues out -->
+  <path d="M320,120 Q340,90 360,120 L400,200 L440,220" class="stroke" stroke-width="2" opacity="0.4"/>
+  <!-- Cart at A (on spring) -->
+  <rect x="96" y="206" width="30" height="14" rx="3" class="fill-obj" stroke-width="1.5"/>
+  <circle cx="102" cy="222" r="4" class="fill-obj" stroke-width="1"/>
+  <circle cx="120" cy="222" r="4" class="fill-obj" stroke-width="1"/>
+  <!-- Cart at B (top of loop) -->
+  <rect x="255" y="58" width="30" height="14" rx="3" class="fill-obj" stroke-width="1.5"/>
+  <circle cx="261" cy="74" r="4" class="fill-obj" stroke-width="1"/>
+  <circle cx="279" cy="74" r="4" class="fill-obj" stroke-width="1"/>
+  <!-- Labels -->
+  <text x="100" y="248" class="txt-label" font-size="14" text-anchor="middle">A</text>
+  <text x="270" y="50" class="txt-label" font-size="14" text-anchor="middle">B</text>
+  <!-- Velocity arrows -->
+  <line x1="285" y1="65" x2="310" y2="65" class="arrow-v" stroke-width="2"/>
+  <polygon points="310,60 318,65 310,70" class="arrow-v"/>
+  <text x="314" y="58" class="txt-dim" font-size="10">v</text>
+  <!-- Height indicator -->
+  <line x1="35" y1="220" x2="35" y2="65" class="stroke dashed" stroke-width="1" opacity="0.3"/>
+  <text x="14" y="145" class="txt-dim" font-size="11" text-anchor="middle" transform="rotate(-90,14,145)">height</text>
+</svg>`,
+
+2: `<svg viewBox="0 0 480 240" width="480" height="240" xmlns="http://www.w3.org/2000/svg">
+  <!-- y-axis -->
+  <line x1="40" y1="210" x2="40" y2="30" class="stroke" stroke-width="1.5"/>
+  <polygon points="37,35 40,25 43,35" class="txt" style="fill:var(--text-primary)"/>
+  <text x="30" y="22" class="txt" font-size="13" font-weight="700">y</text>
+  <!-- Hill / incline -->
+  <line x1="40" y1="210" x2="420" y2="80" class="stroke" stroke-width="2.5"/>
+  <!-- Ground line at bottom -->
+  <line x1="20" y1="210" x2="60" y2="210" class="stroke" stroke-width="1" opacity="0.5"/>
+  <!-- Hatching on hill surface -->
+  <line x1="80" y1="202" x2="72" y2="210" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="120" y1="189" x2="112" y2="197" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="160" y1="176" x2="152" y2="184" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="163" x2="192" y2="171" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="240" y1="150" x2="232" y2="158" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="280" y1="137" x2="272" y2="145" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="320" y1="124" x2="312" y2="132" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="360" y1="111" x2="352" y2="119" class="stroke" stroke-width="1" opacity="0.3"/>
+  <!-- Car at A (bottom) -->
+  <rect x="55" y="186" width="50" height="20" rx="5" class="fill-obj" stroke-width="1.5" transform="rotate(-18.4,80,196)"/>
+  <circle cx="65" cy="210" r="6" class="fill-obj" stroke-width="1.5"/>
+  <circle cx="95" cy="204" r="6" class="fill-obj" stroke-width="1.5"/>
+  <!-- Car at B (top) -->
+  <rect x="335" y="62" width="50" height="20" rx="5" class="fill-obj" stroke-width="1.5" transform="rotate(-18.4,360,72)"/>
+  <circle cx="345" cy="86" r="6" class="fill-obj" stroke-width="1.5"/>
+  <circle cx="375" cy="80" r="6" class="fill-obj" stroke-width="1.5"/>
+  <!-- Labels -->
+  <text x="80" y="238" class="txt-label" font-size="14" text-anchor="middle">A</text>
+  <text x="360" y="56" class="txt-label" font-size="14" text-anchor="middle">B</text>
+  <!-- Dimension labels -->
+  <text x="80" y="222" class="txt-dim" font-size="10" text-anchor="middle">y&#x2090; = 0, v&#x2090; > 0</text>
+  <text x="370" y="45" class="txt-dim" font-size="10" text-anchor="middle">y&#x2092; > 0, v&#x2092; = 0</text>
+  <!-- Velocity arrow at A -->
+  <line x1="110" y1="193" x2="140" y2="183" class="arrow-v" stroke-width="2"/>
+  <polygon points="138,177 146,181 139,186" class="arrow-v"/>
+  <!-- Dashed height line -->
+  <line x1="350" y1="80" x2="350" y2="210" class="stroke dashed" stroke-width="1" opacity="0.3"/>
+  <text x="342" y="150" class="txt-dim" font-size="10" text-anchor="end">h</text>
+</svg>`,
+
+3: `<svg viewBox="0 0 480 250" width="480" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- y-axis -->
+  <line x1="40" y1="210" x2="40" y2="30" class="stroke" stroke-width="1.5"/>
+  <polygon points="37,35 40,25 43,35" class="txt" style="fill:var(--text-primary)"/>
+  <text x="30" y="22" class="txt" font-size="13" font-weight="700">y</text>
+  <!-- Hill / incline -->
+  <line x1="40" y1="210" x2="420" y2="80" class="stroke" stroke-width="2.5"/>
+  <!-- Hatching -->
+  <line x1="120" y1="189" x2="112" y2="197" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="200" y1="163" x2="192" y2="171" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="280" y1="137" x2="272" y2="145" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="360" y1="111" x2="352" y2="119" class="stroke" stroke-width="1" opacity="0.3"/>
+  <!-- Person (stick figure) at A pushing -->
+  <circle cx="52" cy="172" r="7" class="stroke" stroke-width="1.5"/>
+  <line x1="52" y1="179" x2="52" y2="200" class="stroke" stroke-width="1.5"/>
+  <line x1="52" y1="200" x2="42" y2="212" class="stroke" stroke-width="1.5"/>
+  <line x1="52" y1="200" x2="62" y2="208" class="stroke" stroke-width="1.5"/>
+  <line x1="52" y1="188" x2="70" y2="185" class="stroke" stroke-width="1.5"/>
+  <line x1="52" y1="188" x2="42" y2="195" class="stroke" stroke-width="1.5"/>
+  <!-- Car at A (bottom) -->
+  <rect x="72" y="184" width="50" height="20" rx="5" class="fill-obj" stroke-width="1.5" transform="rotate(-18.4,97,194)"/>
+  <circle cx="82" cy="208" r="6" class="fill-obj" stroke-width="1.5"/>
+  <circle cx="112" cy="202" r="6" class="fill-obj" stroke-width="1.5"/>
+  <!-- Brake lines on wheels -->
+  <line x1="78" y1="206" x2="86" y2="210" class="stroke" stroke-width="2" style="stroke:var(--fx-red)"/>
+  <line x1="108" y1="200" x2="116" y2="204" class="stroke" stroke-width="2" style="stroke:var(--fx-red)"/>
+  <!-- Car at B (top) -->
+  <rect x="335" y="62" width="50" height="20" rx="5" class="fill-obj" stroke-width="1.5" transform="rotate(-18.4,360,72)"/>
+  <circle cx="345" cy="86" r="6" class="fill-obj" stroke-width="1.5"/>
+  <circle cx="375" cy="80" r="6" class="fill-obj" stroke-width="1.5"/>
+  <!-- Brake lines on top car too -->
+  <line x1="341" y1="84" x2="349" y2="88" class="stroke" stroke-width="2" style="stroke:var(--fx-red)"/>
+  <line x1="371" y1="78" x2="379" y2="82" class="stroke" stroke-width="2" style="stroke:var(--fx-red)"/>
+  <!-- Labels -->
+  <text x="95" y="238" class="txt-label" font-size="14" text-anchor="middle">A</text>
+  <text x="360" y="53" class="txt-label" font-size="14" text-anchor="middle">B</text>
+  <text x="95" y="248" class="txt-dim" font-size="9" text-anchor="middle">h&#x2090; = 0, v&#x2090; = 0</text>
+  <text x="370" y="42" class="txt-dim" font-size="9" text-anchor="middle">h&#x2092; > 0, v&#x2092; = 0</text>
+  <!-- Push arrow -->
+  <line x1="64" y1="185" x2="74" y2="183" class="arrow-v" stroke-width="2.5"/>
+</svg>`,
+
+4: `<svg viewBox="0 0 320 300" width="320" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- y-axis -->
+  <line x1="50" y1="260" x2="50" y2="20" class="stroke" stroke-width="1.5"/>
+  <polygon points="47,25 50,15 53,25" class="txt" style="fill:var(--text-primary)"/>
+  <text x="40" y="14" class="txt" font-size="13" font-weight="700">y</text>
+  <!-- Ground / zero line -->
+  <line x1="30" y1="230" x2="260" y2="230" class="stroke" stroke-width="1" opacity="0.4"/>
+  <!-- Spring (compressed) at A -->
+  <rect x="110" y="234" width="60" height="26" rx="2" class="fill-ground" stroke-width="1"/>
+  <polyline points="120,260 128,250 136,240 144,250 152,240 160,250 160,234" class="fill-spring" fill="none" stroke-width="2.5"/>
+  <!-- Bricks at A (on spring) -->
+  <rect x="113" y="210" width="54" height="24" rx="1" class="fill-obj" stroke-width="1.5"/>
+  <!-- Brick pattern -->
+  <line x1="140" y1="210" x2="140" y2="222" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <line x1="127" y1="222" x2="127" y2="234" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <line x1="153" y1="222" x2="153" y2="234" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <line x1="113" y1="222" x2="167" y2="222" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <!-- Bricks at B (in air) -->
+  <rect x="113" y="65" width="54" height="24" rx="1" class="fill-obj" stroke-width="1.5"/>
+  <line x1="140" y1="65" x2="140" y2="77" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <line x1="127" y1="77" x2="127" y2="89" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <line x1="153" y1="77" x2="153" y2="89" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <line x1="113" y1="77" x2="167" y2="77" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <!-- Dashed trail between A and B -->
+  <line x1="140" y1="210" x2="140" y2="95" class="stroke dashed" stroke-width="1" opacity="0.3"/>
+  <!-- Velocity arrow at B -->
+  <line x1="140" y1="60" x2="140" y2="38" class="arrow-v" stroke-width="2"/>
+  <polygon points="135,42 140,32 145,42" class="arrow-v"/>
+  <!-- Labels -->
+  <text x="178" y="227" class="txt-label" font-size="14">A</text>
+  <text x="178" y="82" class="txt-label" font-size="14">B</text>
+  <text x="196" y="240" class="txt-dim" font-size="9">h&#x2090; = 0</text>
+  <text x="196" y="252" class="txt-dim" font-size="9">v&#x2090; = 0</text>
+  <text x="196" y="75" class="txt-dim" font-size="9">h&#x2092; > 0</text>
+  <text x="196" y="87" class="txt-dim" font-size="9">v&#x2092; > 0</text>
+</svg>`,
+
+// Problem 4c variant - zero at position B
+"4c": `<svg viewBox="0 0 320 300" width="320" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- y-axis -->
+  <line x1="50" y1="260" x2="50" y2="20" class="stroke" stroke-width="1.5"/>
+  <polygon points="47,25 50,15 53,25" class="txt" style="fill:var(--text-primary)"/>
+  <text x="40" y="14" class="txt" font-size="13" font-weight="700">y</text>
+  <!-- Zero line at B's level (higher up) -->
+  <line x1="30" y1="100" x2="260" y2="100" class="stroke" stroke-width="1.5" opacity="0.5"/>
+  <text x="268" y="104" class="txt-dim" font-size="10">y = 0</text>
+  <!-- Ground -->
+  <line x1="95" y1="230" x2="185" y2="230" class="stroke" stroke-width="1" opacity="0.3"/>
+  <!-- Spring at A -->
+  <rect x="110" y="234" width="60" height="26" rx="2" class="fill-ground" stroke-width="1"/>
+  <polyline points="120,260 128,250 136,240 144,250 152,240 160,250 160,234" class="fill-spring" fill="none" stroke-width="2.5"/>
+  <!-- Bricks at A -->
+  <rect x="113" y="210" width="54" height="24" rx="1" class="fill-obj" stroke-width="1.5"/>
+  <line x1="140" y1="210" x2="140" y2="222" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <line x1="113" y1="222" x2="167" y2="222" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <!-- Bricks at B (at zero line) -->
+  <rect x="113" y="76" width="54" height="24" rx="1" class="fill-obj" stroke-width="1.5"/>
+  <line x1="140" y1="76" x2="140" y2="88" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <line x1="113" y1="88" x2="167" y2="88" class="stroke" stroke-width="0.5" opacity="0.4"/>
+  <!-- Dashed trail -->
+  <line x1="140" y1="210" x2="140" y2="105" class="stroke dashed" stroke-width="1" opacity="0.3"/>
+  <!-- Velocity arrow -->
+  <line x1="140" y1="71" x2="140" y2="49" class="arrow-v" stroke-width="2"/>
+  <polygon points="135,53 140,43 145,53" class="arrow-v"/>
+  <!-- Labels -->
+  <text x="178" y="227" class="txt-label" font-size="14">A</text>
+  <text x="178" y="93" class="txt-label" font-size="14">B</text>
+  <text x="196" y="240" class="txt-dim" font-size="9">h&#x2090; &lt; 0</text>
+  <text x="196" y="86" class="txt-dim" font-size="9">h&#x2092; = 0</text>
+</svg>`,
+
+5: `<svg viewBox="0 0 480 260" width="480" height="260" xmlns="http://www.w3.org/2000/svg">
+  <!-- y-axis -->
+  <line x1="50" y1="230" x2="50" y2="30" class="stroke" stroke-width="1.5"/>
+  <polygon points="47,35 50,25 53,35" class="txt" style="fill:var(--text-primary)"/>
+  <text x="40" y="22" class="txt" font-size="13" font-weight="700">y</text>
+  <!-- Ground line -->
+  <line x1="30" y1="220" x2="100" y2="220" class="stroke" stroke-width="1" opacity="0.4"/>
+  <!-- Incline -->
+  <line x1="55" y1="220" x2="420" y2="70" class="stroke" stroke-width="2.5"/>
+  <!-- Hatching -->
+  <line x1="120" y1="198" x2="112" y2="206" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="180" y1="173" x2="172" y2="181" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="240" y1="148" x2="232" y2="156" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="300" y1="123" x2="292" y2="131" class="stroke" stroke-width="1" opacity="0.3"/>
+  <line x1="360" y1="98" x2="352" y2="106" class="stroke" stroke-width="1" opacity="0.3"/>
+  <!-- Spring at bottom (compressed against wall) -->
+  <rect x="55" y="205" width="10" height="30" class="fill-ground" stroke-width="1"/>
+  <polyline points="65,224 73,218 81,224 89,218 97,224" class="fill-spring" fill="none" stroke-width="2.5" transform="rotate(-22,80,220)"/>
+  <!-- Crate at A (on spring) -->
+  <rect x="88" y="195" width="40" height="22" rx="2" class="fill-obj" stroke-width="1.5" transform="rotate(-22,108,206)"/>
+  <!-- Crate at B (partway up) -->
+  <rect x="260" y="115" width="40" height="22" rx="2" class="fill-obj" stroke-width="1.5" transform="rotate(-22,280,126)"/>
+  <!-- Velocity arrow at B -->
+  <line x1="300" y1="120" x2="330" y2="108" class="arrow-v" stroke-width="2"/>
+  <polygon points="327,102 336,104 330,112" class="arrow-v"/>
+  <!-- Labels -->
+  <text x="100" y="248" class="txt-label" font-size="14" text-anchor="middle">A</text>
+  <text x="280" y="108" class="txt-label" font-size="14" text-anchor="middle">B</text>
+  <text x="100" y="260" class="txt-dim" font-size="9" text-anchor="middle">h&#x2090; = 0, v&#x2090; = 0</text>
+  <text x="295" y="100" class="txt-dim" font-size="9" text-anchor="middle">h&#x2092; > 0, v&#x2092; > 0</text>
+  <!-- Height dashed line -->
+  <line x1="270" y1="130" x2="270" y2="220" class="stroke dashed" stroke-width="1" opacity="0.3"/>
+</svg>`,
+
+6: `<svg viewBox="0 0 360 320" width="360" height="320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Platform at top -->
+  <rect x="30" y="40" width="80" height="12" class="fill-ground" stroke-width="1.5"/>
+  <rect x="30" y="52" width="12" height="250" class="fill-ground" stroke-width="1.5"/>
+  <!-- y-axis left of platform -->
+  <line x1="18" y1="300" x2="18" y2="20" class="stroke" stroke-width="1.5"/>
+  <polygon points="15,25 18,15 21,25" class="txt" style="fill:var(--text-primary)"/>
+  <text x="11" y="14" class="txt" font-size="13" font-weight="700">y</text>
+  <!-- Ground / zero line -->
+  <line x1="10" y1="300" x2="300" y2="300" class="stroke" stroke-width="1" opacity="0.4"/>
+  <text x="305" y="304" class="txt-dim" font-size="9">0</text>
+  <!-- Jumper at A (on platform, at rest) -->
+  <circle cx="90" cy="30" r="8" class="stroke" stroke-width="1.5"/>
+  <line x1="90" y1="38" x2="90" y2="60" class="stroke" stroke-width="1.5"/>
+  <line x1="90" y1="60" x2="80" y2="50" class="stroke" stroke-width="1.5"/>
+  <line x1="90" y1="60" x2="100" y2="50" class="stroke" stroke-width="1.5"/>
+  <line x1="90" y1="48" x2="80" y2="40" class="stroke" stroke-width="1.5"/>
+  <line x1="90" y1="48" x2="100" y2="40" class="stroke" stroke-width="1.5"/>
+  <!-- y-axis for cord (right side) -->
+  <line x1="145" y1="300" x2="145" y2="20" class="stroke" stroke-width="1" opacity="0.3"/>
+  <text x="148" y="14" class="txt-dim" font-size="10">cord stretch (y)</text>
+  <!-- Cord from platform to jumper B -->
+  <path d="M90,52 Q95,100 100,140 Q110,180 115,200 Q120,220 120,245" class="cord" stroke-width="2"/>
+  <!-- Jumper at B (bottom, cord stretched) -->
+  <circle cx="120" cy="250" r="8" class="stroke" stroke-width="1.5"/>
+  <line x1="120" y1="258" x2="120" y2="280" class="stroke" stroke-width="1.5"/>
+  <line x1="120" y1="280" x2="110" y2="296" class="stroke" stroke-width="1.5"/>
+  <line x1="120" y1="280" x2="130" y2="296" class="stroke" stroke-width="1.5"/>
+  <line x1="120" y1="268" x2="110" y2="260" class="stroke" stroke-width="1.5"/>
+  <line x1="120" y1="268" x2="130" y2="260" class="stroke" stroke-width="1.5"/>
+  <!-- Labels -->
+  <text x="110" y="30" class="txt-label" font-size="14">A</text>
+  <text x="140" y="256" class="txt-label" font-size="14">B</text>
+  <text x="110" y="16" class="txt-dim" font-size="9">h&#x2090; > 0, v&#x2090; = 0</text>
+  <text x="145" y="270" class="txt-dim" font-size="9">h&#x2092; > 0, v&#x2092; = 0</text>
+  <!-- Height indicators -->
+  <line x1="75" y1="45" x2="75" y2="300" class="stroke dashed" stroke-width="1" opacity="0.2"/>
+  <line x1="135" y1="260" x2="135" y2="300" class="stroke dashed" stroke-width="1" opacity="0.2"/>
+</svg>`
+};
+
+// Sub-part specific diagrams (only where different from the main problem diagram)
+const PART_DIAGRAMS = {};
+
+// ─── PROBLEM DATA ───
+const PROBLEMS = [
+{
+    id: 1,
+    title: "Problem 1: Spring Launches Roller Coaster",
+    scenario: "A spring launches a roller coaster cart from rest into a vertical loop. Position A is at the bottom (spring compressed, cart at rest). Position B is at the top of the loop (cart moving).",
+    parts: [
+        { id:"1a", label:"(a)", desc:"The track is frictionless.", system:"cart + Earth + track + spring",
+          answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>" },
+        { id:"1b", label:"(b)", desc:"The system does NOT include the spring.", system:"cart + Earth + track (no spring)",
+          answer:{ iUg:"zero", iUs:"zero", iK:"zero", wext:"pos", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
+          conserve:true, eq:"W<sub>ext</sub> = U<sub>g,f</sub> + K<sub>f</sub>",
+          hint:"Since the spring is outside the system, it does positive external work on the system." },
+        { id:"1c", label:"(c)", desc:"Same system as (a), but the track is no longer frictionless.", system:"cart + Earth + track + spring",
+          answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"pos" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub> + Q" },
+        { id:"1d", label:"(d)", desc:"Same as (a), but the final position is lower on the track (not at the top of the loop). Scale bars consistently with (a).", system:"cart + Earth + track + spring",
+          answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>",
+          hint:"Since the cart is lower than in (a), U<sub>g,f</sub> should be smaller and K<sub>f</sub> should be larger than your answer to (a)." }
+    ]
+},
+{
+    id: 2,
+    title: "Problem 2: Car Rolls Up a Hill",
+    scenario: "A moving car rolls up a hill until it stops. Position A is at the bottom (car moving, y<sub>A</sub>=0, v<sub>A</sub>>0). Position B is at the top (car stopped, y<sub>B</sub>>0, v<sub>B</sub>=0). The engine is off and the car is in neutral.",
+    parts: [
+        { id:"2a", label:"(a)", desc:"No friction.", system:"car + road + Earth",
+          answer:{ iUg:"zero", iUs:"zero", iK:"pos", wext:"zero", fUg:"pos", fUs:"zero", fK:"zero", fQ:"zero" },
+          conserve:true, eq:"K<sub>i</sub> = U<sub>g,f</sub>" },
+        { id:"2b", label:"(b)", desc:"Same system, now with friction.", system:"car + road + Earth",
+          answer:{ iUg:"zero", iUs:"zero", iK:"pos", wext:"zero", fUg:"pos", fUs:"zero", fK:"zero", fQ:"pos" },
+          conserve:true, eq:"K<sub>i</sub> = U<sub>g,f</sub> + Q" }
+    ]
+},
+{
+    id: 3,
+    title: "Problem 3: Person Pushes Car Up Hill",
+    scenario: "A person pushes a car, with the parking brake on, up a hill. Position A is at the bottom (h<sub>A</sub>=0, v<sub>A</sub>=0). Position B is at the top (h<sub>B</sub>>0, v<sub>B</sub>=0).",
+    parts: [
+        { id:"3a", label:"(a)", desc:"The person is NOT part of the system.", system:"car + road + Earth (no person)",
+          answer:{ iUg:"zero", iUs:"zero", iK:"zero", wext:"pos", fUg:"pos", fUs:"zero", fK:"zero", fQ:"pos" },
+          conserve:true, eq:"W<sub>ext</sub> = U<sub>g,f</sub> + Q",
+          hint:"The person does positive work on the system. The parking brake creates friction (thermal energy)." },
+        { id:"3b", label:"(b)", desc:"The person IS part of the system.", system:"car + road + Earth + person",
+          initialBars:['iUg','iUs','iK','iEchem'],
+          answer:{ iUg:"zero", iUs:"zero", iK:"zero", iEchem:"pos", wext:"zero", fUg:"pos", fUs:"zero", fK:"zero", fQ:"pos" },
+          conserve:true, eq:"E<sub>chem,i</sub> = U<sub>g,f</sub> + Q",
+          hint:"With the person in the system, their chemical (food) energy is the source. There is no external work since everything is inside the system." }
+    ]
+},
+{
+    id: 4,
+    title: "Problem 4: Bricks Launched by Spring",
+    scenario: "A load of bricks rests on a tightly coiled spring and is launched into the air. Position A is at the bottom (spring compressed, h<sub>A</sub>=0, v<sub>A</sub>=0). Position B is in the air above (h<sub>B</sub>>0, v<sub>B</sub>>0).",
+    parts: [
+        { id:"4a", label:"(a)", desc:"No friction.", system:"spring + bricks + Earth",
+          answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>" },
+        { id:"4b", label:"(b)", desc:"Now with friction.", system:"spring + bricks + Earth",
+          answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"pos" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub> + Q" },
+        { id:"4c", label:"(c)", desc:"Same as (a) but now height 0 is at position B. This means h<sub>A</sub> < 0. No friction.", system:"spring + bricks + Earth",
+          answer:{ iUg:"neg", iUs:"pos", iK:"zero", wext:"zero", fUg:"zero", fUs:"zero", fK:"pos", fQ:"zero" },
+          conserve:true, allowNeg:true, eq:"U<sub>s,i</sub> + U<sub>g,i</sub> = K<sub>f</sub> &nbsp;(where U<sub>g,i</sub> &lt; 0)",
+          hint:"Since h<sub>A</sub> < 0, the initial U<sub>g</sub> is negative! Click below the zero line to make a negative bar." },
+        { id:"4d", label:"(d)", desc:"Same as (a) but for a system that does NOT include Earth. No friction.", system:"spring + bricks (no Earth)",
+          answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"neg", fUg:"zero", fUs:"zero", fK:"pos", fQ:"zero" },
+          conserve:true, allowNeg:true, eq:"U<sub>s,i</sub> + W<sub>gravity</sub> = K<sub>f</sub>",
+          hint:"Without Earth in the system, there is no U<sub>g</sub>. Gravity is an external force that does negative work (force is down, displacement is up)." }
+    ]
+},
+{
+    id: 5,
+    title: "Problem 5: Crate Propelled Up Hill by Spring",
+    scenario: "A crate is propelled up a hill by a tightly coiled spring. Position A is at the bottom (spring compressed, h<sub>A</sub>=0, v<sub>A</sub>=0). Position B is partway up the hill (h<sub>B</sub>>0, v<sub>B</sub>>0).",
+    parts: [
+        { id:"5a", label:"(a)", desc:"No friction.", system:"spring + hill + crate + Earth",
+          answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>" },
+        { id:"5b", label:"(b)", desc:"System does NOT include the spring. With friction.", system:"hill + crate + Earth (no spring)",
+          answer:{ iUg:"zero", iUs:"zero", iK:"zero", wext:"pos", fUg:"pos", fUs:"zero", fK:"pos", fQ:"pos" },
+          conserve:true, eq:"W<sub>spring</sub> = U<sub>g,f</sub> + K<sub>f</sub> + Q",
+          hint:"The spring does positive external work. Friction converts some energy to thermal." }
+    ]
+},
+{
+    id: 6,
+    title: "Problem 6: Bungee Jumper",
+    scenario: "A bungee jumper falls off a platform and reaches the limit of stretch of the cord. Position A is at the top (h<sub>A</sub>>0, v<sub>A</sub>=0). Position B is at the bottom with the cord fully stretched (h<sub>B</sub>>0, v<sub>B</sub>=0).",
+    parts: [
+        { id:"6a", label:"(a)", desc:"Frictionless.", system:"jumper + Earth + cord",
+          answer:{ iUg:"pos", iUs:"zero", iK:"zero", wext:"zero", fUg:"pos", fUs:"pos", fK:"zero", fQ:"zero" },
+          conserve:true, eq:"U<sub>g,i</sub> = U<sub>g,f</sub> + U<sub>s,f</sub>",
+          hint:"The jumper starts high (large U<sub>g</sub>) and ends lower (small U<sub>g</sub>) with the cord stretched (U<sub>s</sub>). At the limit of stretch, v=0 so K=0. Make sure U<sub>g,i</sub> > U<sub>g,f</sub>." },
+        { id:"6b", label:"(b)", desc:"The cord is NOT part of the system.", system:"jumper + Earth (no cord)",
+          answer:{ iUg:"pos", iUs:"zero", iK:"zero", wext:"neg", fUg:"pos", fUs:"zero", fK:"zero", fQ:"zero" },
+          conserve:true, allowNeg:true, eq:"U<sub>g,i</sub> + W<sub>cord</sub> = U<sub>g,f</sub>",
+          hint:"The cord does negative work on the jumper (upward force, downward displacement during stretching). Without the cord in the system, there is no U<sub>s</sub>." }
+    ]
+}
+];
+
+// ─── STATE ───
+const state = {}; // state[partId] = { iUg:0, iUs:0, iK:0, wext:0, fUg:0, fUs:0, fK:0, fQ:0 }
+const completed = new Set();
+const DEFAULT_BAR_KEYS = ['iUg','iUs','iK','wext','fUg','fUs','fK','fQ'];
+const ALL_BAR_KEYS = ['iUg','iUs','iK','iEchem','wext','fUg','fUs','fK','fQ'];
+const MAX_POS = 8, MAX_NEG = -3;
+const BAR_COLORS = { iUg:'ug', iUs:'us', iK:'k', iEchem:'echem', wext:'wext', fUg:'ug', fUs:'us', fK:'k', fQ:'q' };
+const BAR_LABELS = { iUg:'U<sub>g</sub>', iUs:'U<sub>s</sub>', iK:'K', iEchem:'E<sub>chem</sub>', wext:'W<sub>ext</sub>', fUg:'U<sub>g</sub>', fUs:'U<sub>s</sub>', fK:'K', fQ:'Q' };
+
+function initState(partId) {
+    if (!state[partId]) state[partId] = { iUg:0, iUs:0, iK:0, iEchem:0, wext:0, fUg:0, fUs:0, fK:0, fQ:0 };
+}
+
+// ─── RENDERING ───
+function renderAll() {
+    const container = document.getElementById('problems');
+    container.innerHTML = '';
+    PROBLEMS.forEach(prob => {
+        const card = document.createElement('div');
+        card.className = 'problem-card';
+        const completedParts = prob.parts.filter(p => completed.has(p.id)).length;
+        const totalParts = prob.parts.length;
+        const statusClass = completedParts === totalParts ? 'complete' : 'incomplete';
+        const statusText = completedParts === totalParts ? '✓ Complete' : `${completedParts}/${totalParts}`;
+        const diagramHTML = DIAGRAMS[prob.id] ? `<div class="diagram-container">${DIAGRAMS[prob.id]}</div>` : '';
+        card.innerHTML = `
+            <div class="problem-header">
+                <h2>${prob.title}</h2>
+                <span class="problem-status ${statusClass}" id="status-${prob.id}">${statusText}</span>
+            </div>
+            <div class="problem-scenario">${prob.scenario}${diagramHTML}</div>
+        `;
+        prob.parts.forEach(part => {
+            initState(part.id);
+            const partDiagramHTML = DIAGRAMS[part.id] ? `<div class="part-diagram">${DIAGRAMS[part.id]}</div>` : '';
+            const partDiv = document.createElement('div');
+            partDiv.className = 'part-container';
+            partDiv.id = `part-${part.id}`;
+            partDiv.innerHTML = `
+                <div class="part-label">${part.label}</div>
+                <div class="part-desc">${part.desc}</div>
+                ${partDiagramHTML}
+                <div class="system-def">System: ${part.system}</div>
+                ${renderBarChart(part)}
+                <div class="part-actions">
+                    <button class="check-btn" onclick="checkAnswer('${part.id}')">Check Answer</button>
+                    <button class="reset-btn" onclick="resetPart('${part.id}')">Reset</button>
+                </div>
+                <div class="feedback" id="fb-${part.id}"></div>
+                <div class="equation-display" id="eq-${part.id}"></div>
+            `;
+            card.appendChild(partDiv);
+        });
+        container.appendChild(card);
+    });
+    // Sandbox
+    renderSandbox();
+    updateProgress();
+}
+
+function getPartBarLayout(part) {
+    return {
+        initialBars: part.initialBars || ['iUg','iUs','iK'],
+        workBars: part.workBars || ['wext'],
+        finalBars: part.finalBars || ['fUg','fUs','fK','fQ']
+    };
+}
+
+function getPartAllKeys(part) {
+    const layout = getPartBarLayout(part);
+    return [...layout.initialBars, ...layout.workBars, ...layout.finalBars];
+}
+
+function renderBarChart(part) {
+    const allowNeg = part.allowNeg || false;
+    const minVal = allowNeg ? MAX_NEG : 0;
+    const layout = getPartBarLayout(part);
+
+    function renderSection(label, keys) {
+        const cols = keys.map(k => renderColumn(part.id, k, minVal)).join('');
+        return `<div class="chart-section"><div class="section-label">${label}</div><div class="bars-row">${cols}</div></div>`;
+    }
+
+    return `<div class="chart-wrapper">
+        ${renderSection('Initial Energy', layout.initialBars)}
+        <div class="operator">+</div>
+        ${renderSection('Work', layout.workBars)}
+        <div class="operator">=</div>
+        ${renderSection('Final Energy', layout.finalBars)}
+    </div>`;
+}
+
+function renderColumn(partId, key, minVal) {
+    const val = state[partId][key];
+    const colorClass = `filled-${BAR_COLORS[key]}`;
+
+    // Positive cells (top to bottom: MAX_POS down to 1)
+    let posCells = '';
+    for (let h = MAX_POS; h >= 1; h--) {
+        const filled = (val > 0 && h <= val) ? colorClass : '';
+        posCells += `<div class="cell ${filled}" data-part="${partId}" data-key="${key}" data-h="${h}" onclick="clickCell('${partId}','${key}',${h})"></div>`;
+    }
+
+    // Negative cells (-1 down to minVal)
+    let negSection = '';
+    if (minVal < 0) {
+        let negCells = '';
+        for (let h = -1; h >= minVal; h--) {
+            const filled = (val < 0 && h >= val) ? colorClass : '';
+            negCells += `<div class="cell neg-zone ${filled}" data-part="${partId}" data-key="${key}" data-h="${h}" onclick="clickCell('${partId}','${key}',${h})"></div>`;
+        }
+        negSection = `<div class="cells-container" style="border-top:none;border-radius:0 0 3px 3px">${negCells}</div>`;
+    }
+
+    const displayVal = val !== 0 ? val : '';
+    return `<div class="bar-col">
+        <div class="cells-container">${posCells}</div>
+        <div class="zero-line"></div>
+        ${negSection}
+        <div class="bar-label">${BAR_LABELS[key]}</div>
+        <div class="chart-value">${displayVal}</div>
+    </div>`;
+}
+
+// (Column rendering handled by renderColumn above)
+
+// Rebuild a single column's visual without re-rendering everything
+function updateColumn(partId, key) {
+    const part = findPart(partId);
+    const partContainer = document.getElementById(`part-${partId}`);
+    if (!partContainer) return;
+    // Find all cells for this key and update
+    const cells = partContainer.querySelectorAll(`[data-part="${partId}"][data-key="${key}"]`);
+    const val = state[partId][key];
+    const colorClass = `filled-${BAR_COLORS[key]}`;
+    cells.forEach(cell => {
+        const h = parseInt(cell.dataset.h);
+        cell.classList.remove('filled-ug','filled-us','filled-k','filled-echem','filled-wext','filled-q');
+        if (h > 0 && val > 0 && h <= val) cell.classList.add(colorClass);
+        else if (h < 0 && val < 0 && h >= val) cell.classList.add(colorClass);
+    });
+    // Update value display — use part-specific bar order
+    const allCols = partContainer.querySelectorAll('.bar-col');
+    const barOrder = part ? getPartAllKeys(part) : DEFAULT_BAR_KEYS;
+    const idx = barOrder.indexOf(key);
+    if (idx >= 0 && allCols[idx]) {
+        const valDisplay = allCols[idx].querySelector('.chart-value');
+        if (valDisplay) valDisplay.textContent = val !== 0 ? val : '';
+    }
+}
+
+// ─── INTERACTION ───
+function clickCell(partId, key, h) {
+    initState(partId);
+    const current = state[partId][key];
+    if (current === h) {
+        state[partId][key] = 0; // Toggle off
+    } else {
+        state[partId][key] = h;
+    }
+    updateColumn(partId, key);
+    // Clear feedback when user changes bars
+    const fb = document.getElementById(`fb-${partId}`);
+    if (fb) { fb.className = 'feedback'; fb.innerHTML = ''; }
+    const eq = document.getElementById(`eq-${partId}`);
+    if (eq) { eq.className = 'equation-display'; }
+    // Update sandbox summary if this is the sandbox
+    if (partId === 'sandbox') updateSandboxSummary();
+}
+
+// ─── ANSWER CHECKING ───
+function findPart(partId) {
+    for (const prob of PROBLEMS) {
+        for (const part of prob.parts) {
+            if (part.id === partId) return part;
+        }
+    }
+    return null;
+}
+
+function checkAnswer(partId) {
+    const part = findPart(partId);
+    if (!part) return;
+    const s = state[partId];
+    const ans = part.answer;
+    const fb = document.getElementById(`fb-${partId}`);
+    const eq = document.getElementById(`eq-${partId}`);
+    let errors = [];
+    let allCorrect = true;
+
+    // Check each bar's qualitative pattern — use the part's specific bar keys
+    const partKeys = getPartAllKeys(part);
+    for (const key of partKeys) {
+        const expected = ans[key];
+        if (expected === undefined) continue; // skip keys not in the answer
+        const actual = s[key];
+        const label = BAR_LABELS[key];
+        if (expected === 'zero' && actual !== 0) {
+            errors.push(`${label} should be zero`);
+            allCorrect = false;
+        } else if (expected === 'pos' && actual <= 0) {
+            errors.push(`${label} should be positive (above zero)`);
+            allCorrect = false;
+        } else if (expected === 'neg' && actual >= 0) {
+            errors.push(`${label} should be negative (below zero)`);
+            allCorrect = false;
+        }
+    }
+
+    // Check conservation if applicable
+    if (part.conserve && allCorrect) {
+        const layout = getPartBarLayout(part);
+        const sumInitial = layout.initialBars.reduce((sum, k) => sum + s[k], 0);
+        const work = layout.workBars.reduce((sum, k) => sum + s[k], 0);
+        const sumFinal = layout.finalBars.reduce((sum, k) => sum + s[k], 0);
+        if (Math.abs(sumInitial + work - sumFinal) > 0.01) {
+            errors.push(`Energy is not conserved: Initial (${sumInitial}) + Work (${work}) ≠ Final (${sumFinal}). The totals must be equal.`);
+            allCorrect = false;
+        }
+    }
+
+    // Special check for 6a: initial Ug should be greater than final Ug
+    if (partId === '6a' && allCorrect && s.iUg <= s.fUg) {
+        errors.push(`Initial U<sub>g</sub> should be greater than final U<sub>g</sub> (the jumper falls to a lower height)`);
+        allCorrect = false;
+    }
+
+    // Display feedback
+    if (allCorrect) {
+        fb.className = 'feedback show correct';
+        fb.innerHTML = '✓ Correct! Well done.';
+        completed.add(partId);
+    } else {
+        fb.className = 'feedback show incorrect';
+        fb.innerHTML = '<strong>Not quite.</strong> Check these issues:<br>• ' + errors.join('<br>• ');
+        if (part.hint) fb.innerHTML += `<br><span class="hint-text">Hint: ${part.hint}</span>`;
+        completed.delete(partId);
+    }
+
+    // Always show equation after checking
+    eq.className = 'equation-display show';
+    let eqHTML = `<span class="eq-label">Energy Conservation Equation:</span> &nbsp; ${part.eq}`;
+    if (part.hint && allCorrect) eqHTML += `<br><span class="hint-text">${part.hint}</span>`;
+    // Special note for 3b
+    if (!part.conserve) {
+        eqHTML += `<br><span class="hint-text">Note: ${part.hint}</span>`;
+    }
+    eq.innerHTML = eqHTML;
+
+    updateProgress();
+    updateProblemStatuses();
+}
+
+function resetPart(partId) {
+    state[partId] = { iUg:0, iUs:0, iK:0, iEchem:0, wext:0, fUg:0, fUs:0, fK:0, fQ:0 };
+    completed.delete(partId);
+    // Re-render just this part
+    const part = findPart(partId);
+    if (!part) return;
+    const partKeys = getPartAllKeys(part);
+    partKeys.forEach(k => updateColumn(partId, k));
+    const fb = document.getElementById(`fb-${partId}`);
+    if (fb) { fb.className = 'feedback'; fb.innerHTML = ''; }
+    const eq = document.getElementById(`eq-${partId}`);
+    if (eq) { eq.className = 'equation-display'; }
+    updateProgress();
+    updateProblemStatuses();
+}
+
+function resetAll() {
+    if (!confirm('Reset all problems? This will clear all your work.')) return;
+    PROBLEMS.forEach(prob => prob.parts.forEach(part => {
+        state[part.id] = { iUg:0, iUs:0, iK:0, iEchem:0, wext:0, fUg:0, fUs:0, fK:0, fQ:0 };
+        completed.delete(part.id);
+    }));
+    renderAll();
+}
+
+function updateProgress() {
+    const total = PROBLEMS.reduce((sum, p) => sum + p.parts.length, 0);
+    const done = completed.size;
+    const pct = total > 0 ? (done / total * 100) : 0;
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressText').textContent = `${done} / ${total}`;
+}
+
+function updateProblemStatuses() {
+    PROBLEMS.forEach(prob => {
+        const el = document.getElementById(`status-${prob.id}`);
+        if (!el) return;
+        const completedParts = prob.parts.filter(p => completed.has(p.id)).length;
+        const totalParts = prob.parts.length;
+        if (completedParts === totalParts) {
+            el.className = 'problem-status complete';
+            el.textContent = '✓ Complete';
+        } else {
+            el.className = 'problem-status incomplete';
+            el.textContent = `${completedParts}/${totalParts}`;
+        }
+    });
+}
+
+// ─── SANDBOX ───
+function renderSandbox() {
+    const sandbox = document.getElementById('sandbox');
+    const partId = 'sandbox';
+    initState(partId);
+    const part = { id: partId, allowNeg: true };
+    const s = state[partId];
+    const sumI = s.iUg + s.iUs + s.iK;
+    const sumF = s.fUg + s.fUs + s.fK + s.fQ;
+    const balanced = (sumI + s.wext) === sumF;
+    sandbox.innerHTML = renderBarChart(part) +
+        `<div class="part-actions"><button class="reset-btn" onclick="resetPart('sandbox');renderSandbox()">Reset</button></div>
+         <div id="sandbox-summary" style="margin-top:8px;font-size:0.8em;color:var(--text-muted)">
+            Initial: ${sumI} &nbsp;|&nbsp;
+            Work: ${s.wext} &nbsp;|&nbsp;
+            Final: ${sumF} &nbsp;|&nbsp;
+            Balanced: ${balanced ? '✓ Yes' : '✗ No'}
+         </div>`;
+}
+
+function updateSandboxSummary() {
+    const el = document.getElementById('sandbox-summary');
+    if (!el) return;
+    const s = state['sandbox'];
+    if (!s) return;
+    const sumI = s.iUg + s.iUs + s.iK;
+    const sumF = s.fUg + s.fUs + s.fK + s.fQ;
+    const balanced = (sumI + s.wext) === sumF;
+    el.innerHTML = `Initial: ${sumI} &nbsp;|&nbsp; Work: ${s.wext} &nbsp;|&nbsp; Final: ${sumF} &nbsp;|&nbsp; Balanced: ${balanced ? '✓ Yes' : '✗ No'}`;
+}
+
+// ─── THEME ───
+function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch(e) {}
+}
+(function() {
+    try {
+        const saved = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', saved);
+    } catch(e) {}
+})();
+
+// ─── INIT ───
+renderAll();
+</script>
+</body>
+</html>
