@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.02.06 **Earth Science**
+
+##### **❓ of the 📅**: Hanging out by a camp fire, bonfire, or fireplace?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Complete _Who's at risk?_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Test our understanding of plate tectonics, earthquakes and volcanoes._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.05 **Earth Science**
 
 ##### **❓ of the 📅**: What is the best board game?

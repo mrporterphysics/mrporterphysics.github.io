@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2026.02.06 **AP Physics**
+
+##### **❓ of the 📅**: Hanging out by a camp fire, bonfire, or fireplace?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ULG 
+2. ULG Workbook:
+3. Satellite Motion: 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model orbits objects with centripetal motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.05 **AP Physics**
 
 ##### **❓ of the 📅**: Which Disney Princess would you choose to be?
