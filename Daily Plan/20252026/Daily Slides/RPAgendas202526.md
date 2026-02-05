@@ -15,6 +15,38 @@ math: mathjax
 
 ---
 
+# 2026.02.05 **Regents Physics**
+
+##### **❓ of the 📅**: Which Disney Princess would you choose to be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz -> Circular Motion
+2. Universal Law of Gravitation Notes
+3. Think Sheets:
+	1. Universal Gravitation
+	2. Inverse Square Law
+4. [Time Dependent] Regents Practice Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model ULG_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.03 **Regents Physics**
 
 ##### **❓ of the 📅**: Who is your favorite disney character?
