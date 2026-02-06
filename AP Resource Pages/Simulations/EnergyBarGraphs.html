@@ -248,46 +248,111 @@
 // ─── DIAGRAMS ───
 const DIAGRAMS = {
 
-1: `<svg viewBox="0 0 520 270" width="520" height="270" xmlns="http://www.w3.org/2000/svg">
+1: `<svg viewBox="0 0 520 280" width="520" height="280" xmlns="http://www.w3.org/2000/svg">
   <!-- Ground -->
-  <line x1="20" y1="220" x2="500" y2="220" class="stroke" stroke-width="2"/>
-  <!-- Spring (animated compressed→relaxed) -->
-  <polyline class="fill-spring" fill="none" stroke-width="2.5">
-    <animate attributeName="points" values="40,220 48,210 56,195 64,210 72,195 80,210 88,195 96,210 104,220;40,220 48,210 56,195 64,210 72,195 80,210 88,195 96,210 104,220;40,220 48,215 56,210 64,215 72,210 80,215 88,210 96,215 104,220;40,220 48,215 56,210 64,215 72,210 80,215 88,210 96,215 104,220;40,220 48,210 56,195 64,210 72,195 80,210 88,195 96,210 104,220;40,220 48,210 56,195 64,210 72,195 80,210 88,195 96,210 104,220" keyTimes="0;0.1;0.3;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
-  </polyline>
-  <!-- Track flat + curve to loop -->
-  <path d="M104,220 L160,220 Q180,220 195,200 L220,140" class="stroke" stroke-width="2"/>
-  <!-- Loop -->
-  <circle cx="270" cy="120" r="50" class="stroke" stroke-width="2"/>
-  <!-- Track exit (faded) -->
-  <path d="M320,120 Q340,90 360,120 L400,200 L440,220" class="stroke" stroke-width="2" opacity="0.25"/>
+  <line x1="20" y1="230" x2="500" y2="230" class="stroke" stroke-width="2"/>
+  <!-- Spring wall -->
+  <rect x="28" y="210" width="8" height="22" class="fill-ground" stroke-width="1"/>
+  <!-- Coiled spring (animated compressed→relaxed) -->
+  <path class="fill-spring" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" values="M36,222 A6,6 0 0,1 44,222 A6,6 0 0,0 52,222 A6,6 0 0,1 60,222 A6,6 0 0,0 68,222 A6,6 0 0,1 76,222 A6,6 0 0,0 84,222;M36,222 A6,6 0 0,1 44,222 A6,6 0 0,0 52,222 A6,6 0 0,1 60,222 A6,6 0 0,0 68,222 A6,6 0 0,1 76,222 A6,6 0 0,0 84,222;M36,222 A6,6 0 0,1 48,222 A6,6 0 0,0 60,222 A6,6 0 0,1 72,222 A6,6 0 0,0 84,222 A6,6 0 0,1 96,222 A6,6 0 0,0 108,222;M36,222 A6,6 0 0,1 48,222 A6,6 0 0,0 60,222 A6,6 0 0,1 72,222 A6,6 0 0,0 84,222 A6,6 0 0,1 96,222 A6,6 0 0,0 108,222;M36,222 A6,6 0 0,1 44,222 A6,6 0 0,0 52,222 A6,6 0 0,1 60,222 A6,6 0 0,0 68,222 A6,6 0 0,1 76,222 A6,6 0 0,0 84,222;M36,222 A6,6 0 0,1 44,222 A6,6 0 0,0 52,222 A6,6 0 0,1 60,222 A6,6 0 0,0 68,222 A6,6 0 0,1 76,222 A6,6 0 0,0 84,222" keyTimes="0;0.08;0.22;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <!-- Track: flat from spring → curves up to meet loop at bottom (270,190) -->
+  <path d="M84,230 L180,230 Q220,230 240,210 Q255,197 270,190" class="stroke" stroke-width="2"/>
+  <!-- Loop (center 270,140 r=50) -->
+  <circle cx="270" cy="140" r="50" class="stroke" stroke-width="2"/>
+  <!-- Track exit: from bottom of loop going right and down (faded) -->
+  <path d="M270,190 Q310,200 340,220 L450,230" class="stroke" stroke-width="2" opacity="0.25"/>
   <!-- Height indicator -->
-  <line x1="35" y1="220" x2="35" y2="65" class="stroke dashed" stroke-width="1" opacity="0.2"/>
-  <text x="14" y="145" class="txt-dim" font-size="11" text-anchor="middle" transform="rotate(-90,14,145)">height</text>
-  <!-- Ghost at A -->
+  <line x1="35" y1="230" x2="35" y2="85" class="stroke dashed" stroke-width="1" opacity="0.2"/>
+  <text x="14" y="160" class="txt-dim" font-size="11" text-anchor="middle" transform="rotate(-90,14,160)">height</text>
+  <!-- Ghost at A (next to spring) -->
   <g opacity="0.25" fill="none" stroke="var(--text-primary)">
-    <rect x="96" y="206" width="30" height="14" rx="3" stroke-width="1.5" stroke-dasharray="4,3"/>
-    <circle cx="102" cy="222" r="4" stroke-width="1" stroke-dasharray="3,2"/>
-    <circle cx="120" cy="222" r="4" stroke-width="1" stroke-dasharray="3,2"/>
+    <rect x="78" y="216" width="30" height="14" rx="3" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <circle cx="84" cy="232" r="4" stroke-width="1" stroke-dasharray="3,2"/>
+    <circle cx="102" cy="232" r="4" stroke-width="1" stroke-dasharray="3,2"/>
   </g>
-  <!-- Ghost at B -->
+  <!-- Ghost at B (top of loop, 270,90) -->
   <g opacity="0.25" fill="none" stroke="var(--text-primary)">
-    <rect x="255" y="58" width="30" height="14" rx="3" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <rect x="255" y="76" width="30" height="14" rx="3" stroke-width="1.5" stroke-dasharray="4,3"/>
     <circle cx="261" cy="74" r="4" stroke-width="1" stroke-dasharray="3,2"/>
     <circle cx="279" cy="74" r="4" stroke-width="1" stroke-dasharray="3,2"/>
   </g>
+  <!-- Velocity lines at B (trailing behind cart moving leftward at top of loop) -->
+  <g opacity="0.3" stroke="var(--color-k)" stroke-width="1.5" stroke-linecap="round">
+    <line x1="290" y1="80" x2="300" y2="80"/>
+    <line x1="290" y1="84" x2="303" y2="84"/>
+    <line x1="290" y1="88" x2="300" y2="88"/>
+  </g>
   <!-- Labels -->
-  <text x="111" y="248" class="txt-label" font-size="15" text-anchor="middle" font-weight="800">A</text>
-  <text x="111" y="260" class="txt-dim" font-size="9" text-anchor="middle">v = 0</text>
-  <text x="270" y="50" class="txt-label" font-size="15" text-anchor="middle" font-weight="800">B</text>
-  <text x="310" y="60" class="txt-dim" font-size="9">v &gt; 0</text>
-  <!-- Animated cart -->
+  <text x="93" y="258" class="txt-label" font-size="15" text-anchor="middle" font-weight="800">A</text>
+  <text x="93" y="270" class="txt-dim" font-size="9" text-anchor="middle">v = 0</text>
+  <text x="270" y="68" class="txt-label" font-size="15" text-anchor="middle" font-weight="800">B</text>
+  <text x="310" y="78" class="txt-dim" font-size="9">v &gt; 0</text>
+  <!-- Animated cart: flat→curve up→enters loop at bottom (270,190)→
+       goes LEFT up the left side (220,140)→over top (270,90)=B
+       Path: straight run, curve up to loop bottom, then CCW arc (sweep=0) to top -->
   <g>
-    <animateMotion path="M111,214 L160,214 C185,214 208,190 215,160 C222,130 235,85 270,68" dur="5s" repeatCount="indefinite" keyTimes="0;0.1;0.55;0.82;0.83;1" keyPoints="0;0;1;1;0;0" calcMode="linear"/>
+    <animateMotion path="M93,224 L180,224 Q220,224 240,204 Q255,191 270,184 A50,50 0 0,0 270,84" dur="5s" rotate="auto" repeatCount="indefinite" keyTimes="0;0.08;0.55;0.82;0.83;1" keyPoints="0;0;1;1;0;0" calcMode="spline" keySplines="0 0 1 1;0 0.6 0.4 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
     <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.80;0.82;0.84;0.86;1" dur="5s" repeatCount="indefinite"/>
     <rect x="-15" y="-7" width="30" height="14" rx="3" class="fill-obj" stroke-width="1.5"/>
-    <circle cx="-9" cy="8" r="4" class="fill-obj" stroke-width="1"/>
-    <circle cx="9" cy="8" r="4" class="fill-obj" stroke-width="1"/>
+    <circle cx="-9" cy="9" r="4" class="fill-obj" stroke-width="1"/>
+    <circle cx="9" cy="9" r="4" class="fill-obj" stroke-width="1"/>
+  </g>
+</svg>`,
+
+"1d": `<svg viewBox="0 0 520 280" width="520" height="280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ground -->
+  <line x1="20" y1="230" x2="500" y2="230" class="stroke" stroke-width="2"/>
+  <!-- Spring wall -->
+  <rect x="28" y="210" width="8" height="22" class="fill-ground" stroke-width="1"/>
+  <!-- Coiled spring (animated compressed→relaxed) — same as Problem 1 -->
+  <path class="fill-spring" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" values="M36,222 A6,6 0 0,1 44,222 A6,6 0 0,0 52,222 A6,6 0 0,1 60,222 A6,6 0 0,0 68,222 A6,6 0 0,1 76,222 A6,6 0 0,0 84,222;M36,222 A6,6 0 0,1 44,222 A6,6 0 0,0 52,222 A6,6 0 0,1 60,222 A6,6 0 0,0 68,222 A6,6 0 0,1 76,222 A6,6 0 0,0 84,222;M36,222 A6,6 0 0,1 48,222 A6,6 0 0,0 60,222 A6,6 0 0,1 72,222 A6,6 0 0,0 84,222 A6,6 0 0,1 96,222 A6,6 0 0,0 108,222;M36,222 A6,6 0 0,1 48,222 A6,6 0 0,0 60,222 A6,6 0 0,1 72,222 A6,6 0 0,0 84,222 A6,6 0 0,1 96,222 A6,6 0 0,0 108,222;M36,222 A6,6 0 0,1 44,222 A6,6 0 0,0 52,222 A6,6 0 0,1 60,222 A6,6 0 0,0 68,222 A6,6 0 0,1 76,222 A6,6 0 0,0 84,222;M36,222 A6,6 0 0,1 44,222 A6,6 0 0,0 52,222 A6,6 0 0,1 60,222 A6,6 0 0,0 68,222 A6,6 0 0,1 76,222 A6,6 0 0,0 84,222" keyTimes="0;0.08;0.22;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <!-- Track: flat from spring → curves up to meet loop at bottom — same as Problem 1 -->
+  <path d="M84,230 L180,230 Q220,230 240,210 Q255,197 270,190" class="stroke" stroke-width="2"/>
+  <!-- Loop (center 270,140 r=50) — same as Problem 1 -->
+  <circle cx="270" cy="140" r="50" class="stroke" stroke-width="2"/>
+  <!-- Track exit (faded) -->
+  <path d="M270,190 Q310,200 340,220 L450,230" class="stroke" stroke-width="2" opacity="0.25"/>
+  <!-- Height indicator -->
+  <line x1="35" y1="230" x2="35" y2="85" class="stroke dashed" stroke-width="1" opacity="0.2"/>
+  <text x="14" y="160" class="txt-dim" font-size="11" text-anchor="middle" transform="rotate(-90,14,160)">height</text>
+  <!-- Dashed line showing B height (~2 o'clock position, upper-right of loop at 295,97) -->
+  <line x1="295" y1="97" x2="295" y2="230" class="stroke dashed" stroke-width="1" opacity="0.2"/>
+  <!-- Ghost at A (next to spring) — same as Problem 1 -->
+  <g opacity="0.25" fill="none" stroke="var(--text-primary)">
+    <rect x="78" y="216" width="30" height="14" rx="3" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <circle cx="84" cy="232" r="4" stroke-width="1" stroke-dasharray="3,2"/>
+    <circle cx="102" cy="232" r="4" stroke-width="1" stroke-dasharray="3,2"/>
+  </g>
+  <!-- Ghost at B (~2 o'clock on loop, upper-right, 295,97) -->
+  <g opacity="0.25" fill="none" stroke="var(--text-primary)">
+    <rect x="280" y="90" width="30" height="14" rx="3" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <circle cx="286" cy="88" r="4" stroke-width="1" stroke-dasharray="3,2"/>
+    <circle cx="304" cy="88" r="4" stroke-width="1" stroke-dasharray="3,2"/>
+  </g>
+  <!-- Velocity lines at B (trailing behind cart) -->
+  <g opacity="0.3" stroke="var(--color-k)" stroke-width="1.5" stroke-linecap="round">
+    <line x1="313" y1="92" x2="323" y2="92"/>
+    <line x1="313" y1="96" x2="326" y2="96"/>
+    <line x1="313" y1="100" x2="323" y2="100"/>
+  </g>
+  <!-- Labels -->
+  <text x="93" y="258" class="txt-label" font-size="15" text-anchor="middle" font-weight="800">A</text>
+  <text x="93" y="270" class="txt-dim" font-size="9" text-anchor="middle">v = 0</text>
+  <text x="320" y="90" class="txt-label" font-size="15" font-weight="800">B</text>
+  <text x="320" y="104" class="txt-dim" font-size="9">v &gt; 0</text>
+  <!-- Animated cart: same path as Problem 1, but arc stops at ~2 o'clock (295,97)
+       instead of going all the way to the top.
+       CCW arc (sweep=0) from bottom (270,184) to (295,97) is less than half circle → large-arc=0 -->
+  <g>
+    <animateMotion path="M93,224 L180,224 Q220,224 240,204 Q255,191 270,184 A50,50 0 0,0 295,91" dur="5s" rotate="auto" repeatCount="indefinite" keyTimes="0;0.08;0.55;0.82;0.83;1" keyPoints="0;0;1;1;0;0" calcMode="spline" keySplines="0 0 1 1;0 0.6 0.4 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
+    <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.80;0.82;0.84;0.86;1" dur="5s" repeatCount="indefinite"/>
+    <rect x="-15" y="-7" width="30" height="14" rx="3" class="fill-obj" stroke-width="1.5"/>
+    <circle cx="-9" cy="9" r="4" class="fill-obj" stroke-width="1"/>
+    <circle cx="9" cy="9" r="4" class="fill-obj" stroke-width="1"/>
   </g>
 </svg>`,
 
@@ -327,13 +392,13 @@ const DIAGRAMS = {
   <text x="80" y="250" class="txt-dim" font-size="9" text-anchor="middle">y = 0, v &gt; 0</text>
   <text x="360" y="56" class="txt-label" font-size="15" text-anchor="middle" font-weight="800">B</text>
   <text x="370" y="45" class="txt-dim" font-size="9" text-anchor="middle">y &gt; 0, v = 0</text>
-  <!-- Animated car -->
+  <!-- Animated car: follows slope path with deceleration -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;280 -124;280 -124;0 0;0 0" keyTimes="0;0.1;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite"/>
+    <animateMotion path="M80,196 L360,72" dur="5s" repeatCount="indefinite" keyTimes="0;0.1;0.55;0.82;0.83;1" keyPoints="0;0;1;1;0;0" calcMode="spline" keySplines="0 0 1 1;0.3 0 0.8 1;0 0 1 1;0 0 1 1;0 0 1 1" rotate="auto"/>
     <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.80;0.82;0.84;0.86;1" dur="5s" repeatCount="indefinite"/>
-    <rect x="55" y="186" width="50" height="20" rx="5" class="fill-obj" stroke-width="1.5" transform="rotate(-18.4,80,196)"/>
-    <circle cx="65" cy="210" r="6" class="fill-obj" stroke-width="1.5"/>
-    <circle cx="95" cy="204" r="6" class="fill-obj" stroke-width="1.5"/>
+    <rect x="-25" y="-14" width="50" height="20" rx="5" class="fill-obj" stroke-width="1.5"/>
+    <circle cx="-15" cy="8" r="6" class="fill-obj" stroke-width="1.5"/>
+    <circle cx="15" cy="8" r="6" class="fill-obj" stroke-width="1.5"/>
   </g>
 </svg>`,
 
@@ -366,26 +431,26 @@ const DIAGRAMS = {
   <text x="90" y="250" class="txt-dim" font-size="9" text-anchor="middle">h = 0, v = 0</text>
   <text x="360" y="53" class="txt-label" font-size="15" text-anchor="middle" font-weight="800">B</text>
   <text x="370" y="42" class="txt-dim" font-size="9" text-anchor="middle">h &gt; 0, v = 0</text>
-  <!-- Animated person + car group -->
+  <!-- Animated person + car group: follows slope with acceleration from rest -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;263 -122;263 -122;0 0;0 0" keyTimes="0;0.1;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite"/>
+    <animateMotion path="M97,194 L360,72" dur="5s" repeatCount="indefinite" keyTimes="0;0.1;0.55;0.82;0.83;1" keyPoints="0;0;1;1;0;0" calcMode="spline" keySplines="0 0 1 1;0 0.2 0.6 1;0 0 1 1;0 0 1 1;0 0 1 1" rotate="auto"/>
     <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.80;0.82;0.84;0.86;1" dur="5s" repeatCount="indefinite"/>
-    <!-- Person (stick figure) pushing -->
-    <circle cx="52" cy="172" r="7" class="stroke" stroke-width="1.5"/>
-    <line x1="52" y1="179" x2="52" y2="200" class="stroke" stroke-width="1.5"/>
-    <line x1="52" y1="200" x2="42" y2="212" class="stroke" stroke-width="1.5"/>
-    <line x1="52" y1="200" x2="62" y2="208" class="stroke" stroke-width="1.5"/>
-    <line x1="52" y1="188" x2="70" y2="185" class="stroke" stroke-width="1.5"/>
-    <line x1="52" y1="188" x2="42" y2="195" class="stroke" stroke-width="1.5"/>
+    <!-- Person (stick figure) pushing — positioned left of car -->
+    <circle cx="-40" cy="-22" r="7" class="stroke" stroke-width="1.5"/>
+    <line x1="-40" y1="-15" x2="-40" y2="2" class="stroke" stroke-width="1.5"/>
+    <line x1="-40" y1="2" x2="-50" y2="14" class="stroke" stroke-width="1.5"/>
+    <line x1="-40" y1="2" x2="-30" y2="10" class="stroke" stroke-width="1.5"/>
+    <line x1="-40" y1="-6" x2="-24" y2="-9" class="stroke" stroke-width="1.5"/>
+    <line x1="-40" y1="-6" x2="-50" y2="0" class="stroke" stroke-width="1.5"/>
     <!-- Push arrow -->
-    <line x1="64" y1="185" x2="74" y2="183" class="arrow-v" stroke-width="2.5"/>
-    <!-- Car -->
-    <rect x="72" y="184" width="50" height="20" rx="5" class="fill-obj" stroke-width="1.5" transform="rotate(-18.4,97,194)"/>
-    <circle cx="82" cy="208" r="6" class="fill-obj" stroke-width="1.5"/>
-    <circle cx="112" cy="202" r="6" class="fill-obj" stroke-width="1.5"/>
+    <line x1="-28" y1="-9" x2="-18" y2="-11" class="arrow-v" stroke-width="2.5"/>
+    <!-- Car body -->
+    <rect x="-25" y="-14" width="50" height="20" rx="5" class="fill-obj" stroke-width="1.5"/>
+    <circle cx="-15" cy="8" r="6" class="fill-obj" stroke-width="1.5"/>
+    <circle cx="15" cy="8" r="6" class="fill-obj" stroke-width="1.5"/>
     <!-- Brake marks -->
-    <line x1="78" y1="206" x2="86" y2="210" class="stroke" stroke-width="2" style="stroke:var(--fx-red)"/>
-    <line x1="108" y1="200" x2="116" y2="204" class="stroke" stroke-width="2" style="stroke:var(--fx-red)"/>
+    <line x1="-19" y1="6" x2="-11" y2="10" class="stroke" stroke-width="2" style="stroke:var(--fx-red)"/>
+    <line x1="11" y1="6" x2="19" y2="10" class="stroke" stroke-width="2" style="stroke:var(--fx-red)"/>
   </g>
 </svg>`,
 
@@ -396,19 +461,19 @@ const DIAGRAMS = {
   <text x="40" y="14" class="txt" font-size="13" font-weight="700">y</text>
   <!-- Ground / zero line -->
   <line x1="30" y1="230" x2="260" y2="230" class="stroke" stroke-width="1" opacity="0.4"/>
-  <!-- Spring platform -->
-  <rect x="110" y="234" width="60" height="26" rx="2" class="fill-ground" stroke-width="1"/>
-  <!-- Spring (animated compressed→relaxed) -->
-  <polyline class="fill-spring" fill="none" stroke-width="2.5">
-    <animate attributeName="points" values="120,260 128,250 136,240 144,250 152,240 160,250 160,234;120,260 128,250 136,240 144,250 152,240 160,250 160,234;120,260 130,256 140,252 150,256 160,252 165,248 165,234;120,260 130,256 140,252 150,256 160,252 165,248 165,234;120,260 128,250 136,240 144,250 152,240 160,250 160,234;120,260 128,250 136,240 144,250 152,240 160,250 160,234" keyTimes="0;0.1;0.3;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
-  </polyline>
+  <!-- Spring base plate -->
+  <rect x="115" y="256" width="50" height="6" rx="1" class="fill-ground" stroke-width="1"/>
+  <!-- Coiled spring (animated compressed→relaxed, vertical orientation) -->
+  <path class="fill-spring" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" values="M140,256 A8,4 0 0,1 140,248 A8,4 0 0,0 140,240 A8,4 0 0,1 140,232 A8,4 0 0,0 140,224;M140,256 A8,4 0 0,1 140,248 A8,4 0 0,0 140,240 A8,4 0 0,1 140,232 A8,4 0 0,0 140,224;M140,256 A8,3 0 0,1 140,250 A8,3 0 0,0 140,244 A8,3 0 0,1 140,238 A8,3 0 0,0 140,232;M140,256 A8,3 0 0,1 140,250 A8,3 0 0,0 140,244 A8,3 0 0,1 140,238 A8,3 0 0,0 140,232;M140,256 A8,4 0 0,1 140,248 A8,4 0 0,0 140,240 A8,4 0 0,1 140,232 A8,4 0 0,0 140,224;M140,256 A8,4 0 0,1 140,248 A8,4 0 0,0 140,240 A8,4 0 0,1 140,232 A8,4 0 0,0 140,224" keyTimes="0;0.08;0.20;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+  </path>
   <!-- Dashed trail A to B -->
   <line x1="140" y1="210" x2="140" y2="95" class="stroke dashed" stroke-width="1" opacity="0.15"/>
-  <!-- Ghost at A -->
+  <!-- Ghost at A (sitting on spring) -->
   <g opacity="0.25" fill="none" stroke="var(--text-primary)">
-    <rect x="113" y="210" width="54" height="24" rx="1" stroke-width="1.5" stroke-dasharray="4,3"/>
-    <line x1="140" y1="210" x2="140" y2="222" stroke-width="0.5" stroke-dasharray="3,2"/>
-    <line x1="113" y1="222" x2="167" y2="222" stroke-width="0.5" stroke-dasharray="3,2"/>
+    <rect x="113" y="200" width="54" height="24" rx="1" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="140" y1="200" x2="140" y2="212" stroke-width="0.5" stroke-dasharray="3,2"/>
+    <line x1="113" y1="212" x2="167" y2="212" stroke-width="0.5" stroke-dasharray="3,2"/>
   </g>
   <!-- Ghost at B -->
   <g opacity="0.25" fill="none" stroke="var(--text-primary)">
@@ -417,8 +482,8 @@ const DIAGRAMS = {
     <line x1="113" y1="77" x2="167" y2="77" stroke-width="0.5" stroke-dasharray="3,2"/>
   </g>
   <!-- Labels -->
-  <text x="178" y="228" class="txt-label" font-size="15" font-weight="800">A</text>
-  <text x="196" y="240" class="txt-dim" font-size="9">h = 0, v = 0</text>
+  <text x="178" y="218" class="txt-label" font-size="15" font-weight="800">A</text>
+  <text x="196" y="230" class="txt-dim" font-size="9">h = 0, v = 0</text>
   <text x="178" y="82" class="txt-label" font-size="15" font-weight="800">B</text>
   <text x="196" y="75" class="txt-dim" font-size="9">h &gt; 0, v &gt; 0</text>
   <!-- Velocity arrow at B (static indicator) -->
@@ -426,15 +491,15 @@ const DIAGRAMS = {
     <line x1="140" y1="60" x2="140" y2="42" class="arrow-v" stroke-width="2"/>
     <polygon points="135,46 140,36 145,46" class="arrow-v"/>
   </g>
-  <!-- Animated bricks -->
+  <!-- Animated bricks: fast launch from spring, decelerates going up -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -145;0 -145;0 0;0 0" keyTimes="0;0.1;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -135;0 -135;0 0;0 0" keyTimes="0;0.08;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0 0.8 0.5 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
     <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.80;0.82;0.84;0.86;1" dur="5s" repeatCount="indefinite"/>
-    <rect x="113" y="210" width="54" height="24" rx="1" class="fill-obj" stroke-width="1.5"/>
-    <line x1="140" y1="210" x2="140" y2="222" class="stroke" stroke-width="0.5" opacity="0.4"/>
-    <line x1="127" y1="222" x2="127" y2="234" class="stroke" stroke-width="0.5" opacity="0.4"/>
-    <line x1="153" y1="222" x2="153" y2="234" class="stroke" stroke-width="0.5" opacity="0.4"/>
-    <line x1="113" y1="222" x2="167" y2="222" class="stroke" stroke-width="0.5" opacity="0.4"/>
+    <rect x="113" y="200" width="54" height="24" rx="1" class="fill-obj" stroke-width="1.5"/>
+    <line x1="140" y1="200" x2="140" y2="212" class="stroke" stroke-width="0.5" opacity="0.4"/>
+    <line x1="127" y1="212" x2="127" y2="224" class="stroke" stroke-width="0.5" opacity="0.4"/>
+    <line x1="153" y1="212" x2="153" y2="224" class="stroke" stroke-width="0.5" opacity="0.4"/>
+    <line x1="113" y1="212" x2="167" y2="212" class="stroke" stroke-width="0.5" opacity="0.4"/>
   </g>
 </svg>`,
 
@@ -448,12 +513,12 @@ const DIAGRAMS = {
   <text x="268" y="104" class="txt-dim" font-size="10">y = 0</text>
   <!-- Ground -->
   <line x1="95" y1="230" x2="185" y2="230" class="stroke" stroke-width="1" opacity="0.3"/>
-  <!-- Spring platform -->
-  <rect x="110" y="234" width="60" height="26" rx="2" class="fill-ground" stroke-width="1"/>
-  <!-- Spring (animated) -->
-  <polyline class="fill-spring" fill="none" stroke-width="2.5">
-    <animate attributeName="points" values="120,260 128,250 136,240 144,250 152,240 160,250 160,234;120,260 128,250 136,240 144,250 152,240 160,250 160,234;120,260 130,256 140,252 150,256 160,252 165,248 165,234;120,260 130,256 140,252 150,256 160,252 165,248 165,234;120,260 128,250 136,240 144,250 152,240 160,250 160,234;120,260 128,250 136,240 144,250 152,240 160,250 160,234" keyTimes="0;0.1;0.3;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
-  </polyline>
+  <!-- Spring base plate -->
+  <rect x="115" y="256" width="50" height="6" rx="1" class="fill-ground" stroke-width="1"/>
+  <!-- Coiled spring (animated compressed→relaxed) -->
+  <path class="fill-spring" fill="none" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" values="M140,256 A8,4 0 0,1 140,248 A8,4 0 0,0 140,240 A8,4 0 0,1 140,232 A8,4 0 0,0 140,224;M140,256 A8,4 0 0,1 140,248 A8,4 0 0,0 140,240 A8,4 0 0,1 140,232 A8,4 0 0,0 140,224;M140,256 A8,3 0 0,1 140,250 A8,3 0 0,0 140,244 A8,3 0 0,1 140,238 A8,3 0 0,0 140,232;M140,256 A8,3 0 0,1 140,250 A8,3 0 0,0 140,244 A8,3 0 0,1 140,238 A8,3 0 0,0 140,232;M140,256 A8,4 0 0,1 140,248 A8,4 0 0,0 140,240 A8,4 0 0,1 140,232 A8,4 0 0,0 140,224;M140,256 A8,4 0 0,1 140,248 A8,4 0 0,0 140,240 A8,4 0 0,1 140,232 A8,4 0 0,0 140,224" keyTimes="0;0.08;0.20;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+  </path>
   <!-- Dashed trail -->
   <line x1="140" y1="210" x2="140" y2="105" class="stroke dashed" stroke-width="1" opacity="0.15"/>
   <!-- Ghost at A -->
@@ -480,7 +545,7 @@ const DIAGRAMS = {
   </g>
   <!-- Animated bricks -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -134;0 -134;0 0;0 0" keyTimes="0;0.1;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -134;0 -134;0 0;0 0" keyTimes="0;0.08;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0 0.8 0.5 1;0 0 1 1;0 0 1 1;0 0 1 1"/>
     <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.80;0.82;0.84;0.86;1" dur="5s" repeatCount="indefinite"/>
     <rect x="113" y="210" width="54" height="24" rx="1" class="fill-obj" stroke-width="1.5"/>
     <line x1="140" y1="210" x2="140" y2="222" class="stroke" stroke-width="0.5" opacity="0.4"/>
@@ -505,10 +570,12 @@ const DIAGRAMS = {
   <line x1="360" y1="98" x2="352" y2="106" class="stroke" stroke-width="1" opacity="0.3"/>
   <!-- Spring wall -->
   <rect x="55" y="205" width="10" height="30" class="fill-ground" stroke-width="1"/>
-  <!-- Spring (animated) -->
-  <polyline class="fill-spring" fill="none" stroke-width="2.5" transform="rotate(-22,80,220)">
-    <animate attributeName="points" values="65,224 73,218 81,224 89,218 97,224;65,224 73,218 81,224 89,218 97,224;65,222 72,220 79,222 86,220 90,222;65,222 72,220 79,222 86,220 90,222;65,224 73,218 81,224 89,218 97,224;65,224 73,218 81,224 89,218 97,224" keyTimes="0;0.1;0.3;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
-  </polyline>
+  <!-- Coiled spring (animated compressed→relaxed, rotated to slope angle) -->
+  <g transform="rotate(-22,65,220)">
+    <path class="fill-spring" fill="none" stroke-width="2.5" stroke-linecap="round">
+      <animate attributeName="d" values="M65,220 A5,5 0 0,1 73,220 A5,5 0 0,0 81,220 A5,5 0 0,1 89,220 A5,5 0 0,0 97,220;M65,220 A5,5 0 0,1 73,220 A5,5 0 0,0 81,220 A5,5 0 0,1 89,220 A5,5 0 0,0 97,220;M65,220 A5,5 0 0,1 73,220 A5,5 0 0,0 81,220 A5,5 0 0,1 86,220;M65,220 A5,5 0 0,1 73,220 A5,5 0 0,0 81,220 A5,5 0 0,1 86,220;M65,220 A5,5 0 0,1 73,220 A5,5 0 0,0 81,220 A5,5 0 0,1 89,220 A5,5 0 0,0 97,220;M65,220 A5,5 0 0,1 73,220 A5,5 0 0,0 81,220 A5,5 0 0,1 89,220 A5,5 0 0,0 97,220" keyTimes="0;0.08;0.22;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+    </path>
+  </g>
   <!-- Height dashed line -->
   <line x1="270" y1="130" x2="270" y2="220" class="stroke dashed" stroke-width="1" opacity="0.2"/>
   <!-- Ghost at A -->
@@ -529,11 +596,11 @@ const DIAGRAMS = {
     <line x1="300" y1="120" x2="325" y2="110" class="arrow-v" stroke-width="2"/>
     <polygon points="322,104 332,107 325,114" class="arrow-v"/>
   </g>
-  <!-- Animated crate -->
+  <!-- Animated crate: follows slope with spring-launch acceleration -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;172 -80;172 -80;0 0;0 0" keyTimes="0;0.1;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite"/>
+    <animateMotion path="M108,206 L280,126" dur="5s" repeatCount="indefinite" keyTimes="0;0.08;0.55;0.82;0.83;1" keyPoints="0;0;1;1;0;0" calcMode="spline" keySplines="0 0 1 1;0 0.7 0.4 1;0 0 1 1;0 0 1 1;0 0 1 1" rotate="auto"/>
     <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.80;0.82;0.84;0.86;1" dur="5s" repeatCount="indefinite"/>
-    <rect x="88" y="195" width="40" height="22" rx="2" class="fill-obj" stroke-width="1.5" transform="rotate(-22,108,206)"/>
+    <rect x="-20" y="-11" width="40" height="22" rx="2" class="fill-obj" stroke-width="1.5"/>
   </g>
 </svg>`,
 
@@ -550,44 +617,95 @@ const DIAGRAMS = {
   <text x="305" y="304" class="txt-dim" font-size="9">0</text>
   <!-- Height indicators -->
   <line x1="75" y1="45" x2="75" y2="300" class="stroke dashed" stroke-width="1" opacity="0.15"/>
-  <line x1="135" y1="260" x2="135" y2="300" class="stroke dashed" stroke-width="1" opacity="0.15"/>
-  <!-- Animated bungee cord -->
-  <path class="cord" stroke-width="2">
-    <animate attributeName="d" values="M90,52 Q90,55 90,58 Q90,61 90,64 Q90,67 90,70;M90,52 Q90,55 90,58 Q90,61 90,64 Q90,67 90,70;M90,52 Q95,100 100,140 Q110,180 115,200 Q120,225 120,250;M90,52 Q95,100 100,140 Q110,180 115,200 Q120,225 120,250;M90,52 Q90,55 90,58 Q90,61 90,64 Q90,67 90,70;M90,52 Q90,55 90,58 Q90,61 90,64 Q90,67 90,70" keyTimes="0;0.1;0.55;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+  <line x1="145" y1="232" x2="145" y2="300" class="stroke dashed" stroke-width="1" opacity="0.15"/>
+  <!-- Animated bungee cord — platform (90,52) to ankle.
+       All keyframes use identical path structure (M + 3 Q commands) so SVG can interpolate smoothly.
+       Ankle world pos: starts (90,48), ends (120,232). -->
+  <path class="cord" stroke-width="2.5">
+    <animate attributeName="d" values="M90,52 Q90,53 90,54 Q90,55 90,56 Q90,57 90,58;M90,52 Q90,53 90,54 Q90,55 90,56 Q90,57 90,58;M90,52 Q92,70 95,100 Q100,140 108,175 Q114,205 120,232;M90,52 Q92,70 95,100 Q100,140 108,175 Q114,205 120,232;M90,52 Q90,53 90,54 Q90,55 90,56 Q90,57 90,58;M90,52 Q90,53 90,54 Q90,55 90,56 Q90,57 90,58" keyTimes="0;0.1;0.55;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
   </path>
-  <!-- Ghost jumper at A -->
+  <!-- Ghost jumper at A — standing on platform edge, upright -->
   <g opacity="0.25" fill="none" stroke="var(--text-primary)" stroke-dasharray="3,2">
-    <circle cx="90" cy="22" r="8" stroke-width="1.5"/>
-    <line x1="90" y1="30" x2="90" y2="52" stroke-width="1.5"/>
-    <line x1="90" y1="52" x2="80" y2="42" stroke-width="1.5"/>
-    <line x1="90" y1="52" x2="100" y2="42" stroke-width="1.5"/>
-    <line x1="90" y1="40" x2="80" y2="32" stroke-width="1.5"/>
-    <line x1="90" y1="40" x2="100" y2="32" stroke-width="1.5"/>
+    <!-- Head -->
+    <circle cx="90" cy="8" r="7" stroke-width="1.5"/>
+    <!-- Body -->
+    <line x1="90" y1="15" x2="90" y2="34" stroke-width="1.5"/>
+    <!-- Arms out -->
+    <line x1="90" y1="20" x2="78" y2="26" stroke-width="1.5"/>
+    <line x1="90" y1="20" x2="102" y2="26" stroke-width="1.5"/>
+    <!-- Legs — one leg has cord attachment point -->
+    <line x1="90" y1="34" x2="83" y2="48" stroke-width="1.5"/>
+    <line x1="90" y1="34" x2="97" y2="48" stroke-width="1.5"/>
+    <!-- Cord attachment mark on left ankle -->
+    <circle cx="83" y="48" r="2" stroke-width="1"/>
   </g>
-  <!-- Ghost jumper at B -->
+  <!-- Ghost jumper at B — upside down, hanging by ankle -->
   <g opacity="0.25" fill="none" stroke="var(--text-primary)" stroke-dasharray="3,2">
-    <circle cx="120" cy="250" r="8" stroke-width="1.5"/>
-    <line x1="120" y1="258" x2="120" y2="280" stroke-width="1.5"/>
-    <line x1="120" y1="280" x2="110" y2="296" stroke-width="1.5"/>
-    <line x1="120" y1="280" x2="130" y2="296" stroke-width="1.5"/>
-    <line x1="120" y1="268" x2="110" y2="260" stroke-width="1.5"/>
-    <line x1="120" y1="268" x2="130" y2="260" stroke-width="1.5"/>
+    <!-- Ankle (top, where cord attaches) -->
+    <circle cx="120" cy="232" r="2" stroke-width="1"/>
+    <!-- Leg up to hip (upside down) -->
+    <line x1="120" y1="232" x2="120" y2="244" stroke-width="1.5"/>
+    <!-- Other leg dangling -->
+    <line x1="120" y1="244" x2="126" y2="232" stroke-width="1.5"/>
+    <!-- Body (torso hangs down) -->
+    <line x1="120" y1="244" x2="120" y2="262" stroke-width="1.5"/>
+    <!-- Arms hanging down -->
+    <line x1="120" y1="256" x2="112" y2="268" stroke-width="1.5"/>
+    <line x1="120" y1="256" x2="128" y2="268" stroke-width="1.5"/>
+    <!-- Head at bottom -->
+    <circle cx="120" cy="270" r="7" stroke-width="1.5"/>
   </g>
   <!-- Labels -->
-  <text x="115" y="22" class="txt-label" font-size="15" font-weight="800">A</text>
-  <text x="115" y="12" class="txt-dim" font-size="9">h &gt; 0, v = 0</text>
-  <text x="145" y="260" class="txt-label" font-size="15" font-weight="800">B</text>
-  <text x="145" y="274" class="txt-dim" font-size="9">h &gt; 0, v = 0</text>
-  <!-- Animated jumper (stick figure) -->
+  <text x="118" y="8" class="txt-label" font-size="15" font-weight="800">A</text>
+  <text x="118" y="-2" class="txt-dim" font-size="9">h &gt; 0, v = 0</text>
+  <text x="150" y="250" class="txt-label" font-size="15" font-weight="800">B</text>
+  <text x="150" y="264" class="txt-dim" font-size="9">h &gt; 0, v = 0</text>
+  <!-- Animated jumper — transitions from upright standing to upside-down hanging -->
   <g>
-    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;30 228;30 228;0 0;0 0" keyTimes="0;0.1;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;30 184;30 184;0 0;0 0" keyTimes="0;0.1;0.55;0.82;0.83;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;0.42 0 1 0.6;0 0 1 1;0 0 1 1;0 0 1 1"/>
     <animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.80;0.82;0.84;0.86;1" dur="5s" repeatCount="indefinite"/>
-    <circle cx="90" cy="22" r="8" class="stroke" stroke-width="1.5"/>
-    <line x1="90" y1="30" x2="90" y2="52" class="stroke" stroke-width="1.5"/>
-    <line x1="90" y1="52" x2="80" y2="42" class="stroke" stroke-width="1.5"/>
-    <line x1="90" y1="52" x2="100" y2="42" class="stroke" stroke-width="1.5"/>
-    <line x1="90" y1="40" x2="80" y2="32" class="stroke" stroke-width="1.5"/>
-    <line x1="90" y1="40" x2="100" y2="32" class="stroke" stroke-width="1.5"/>
+    <!-- Ankle / cord attachment — stays at top when flipped -->
+    <circle cx="90" cy="48" r="2" class="stroke" stroke-width="1.5" style="stroke:var(--fx-purple)"/>
+    <!-- Leg from ankle to hip: animate from upright to inverted -->
+    <line class="stroke" stroke-width="2">
+      <animate attributeName="x1" values="83;83;90;90;83;83" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="48;48;48;48;48;48" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="90;90;90;90;90;90" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="34;34;60;60;34;34" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Other leg -->
+    <line class="stroke" stroke-width="2">
+      <animate attributeName="x1" values="97;97;96;96;97;97" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="48;48;48;48;48;48" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="90;90;90;90;90;90" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="34;34;60;60;34;34" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Body/torso -->
+    <line class="stroke" stroke-width="2">
+      <animate attributeName="x1" values="90;90;90;90;90;90" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="34;34;60;60;34;34" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="90;90;90;90;90;90" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="15;15;78;78;15;15" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Left arm -->
+    <line class="stroke" stroke-width="2">
+      <animate attributeName="x1" values="90;90;90;90;90;90" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="20;20;72;72;20;20" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="78;78;82;82;78;78" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="26;26;84;84;26;26" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Right arm -->
+    <line class="stroke" stroke-width="2">
+      <animate attributeName="x1" values="90;90;90;90;90;90" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y1" values="20;20;72;72;20;20" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="102;102;98;98;102;102" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="26;26;84;84;26;26" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Head: animate from top to bottom -->
+    <circle r="7" class="stroke" stroke-width="2">
+      <animate attributeName="cx" values="90;90;90;90;90;90" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="8;8;85;85;8;8" keyTimes="0;0.1;0.35;0.82;0.84;1" dur="5s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>`
 
@@ -830,7 +948,7 @@ function renderColumn(partId, key, minVal) {
 // Rebuild a single column's visual without re-rendering everything
 function updateColumn(partId, key) {
     const part = findPart(partId);
-    const partContainer = document.getElementById(`part-${partId}`);
+    const partContainer = document.getElementById(`part-${partId}`) || document.getElementById(partId);
     if (!partContainer) return;
     // Find all cells for this key and update
     const cells = partContainer.querySelectorAll(`[data-part="${partId}"][data-key="${key}"]`);

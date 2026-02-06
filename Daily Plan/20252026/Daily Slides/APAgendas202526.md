@@ -18,7 +18,7 @@ math: mathjax
 
 # 2026.02.06 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What is your favorite superbowl snack?
 
 <div class ='columns'>
 
@@ -26,7 +26,11 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. ULG Review
+2. AP FRQ Practice - Complete with Lab group - we will go over with rubric towards end of class. 
+    - 2018 # 1 
+    - 2022 # 2 
+
 
 </div>
 
