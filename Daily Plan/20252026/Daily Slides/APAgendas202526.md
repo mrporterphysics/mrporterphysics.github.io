@@ -18,6 +18,33 @@ math: mathjax
 
 # 2026.02.06 **AP Physics**
 
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2026.02.06 **AP Physics**
+
 ##### **❓ of the 📅**: Hanging out by a camp fire, bonfire, or fireplace?
 
 <div class ='columns'>

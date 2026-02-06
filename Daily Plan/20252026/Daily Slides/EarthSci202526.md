@@ -19,6 +19,33 @@ class:  twilight
 
 # 2026.02.06 **Earth Science**
 
+##### **❓ of the 📅**: What is the best superbowl snack?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Crush your quiz 💪_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2026.02.05 **Earth Science**
+
 ##### **❓ of the 📅**: Hanging out by a camp fire, bonfire, or fireplace?
 
 <div class ='columns'>
