@@ -96,6 +96,11 @@
             display: inline-block; background: var(--bg-tertiary); border: 1px solid var(--border-color);
             border-radius: 4px; padding: 2px 8px; font-size: 0.8em; margin-bottom: 12px; color: var(--text-muted);
         }
+        .ref-summary {
+            display: block; background: var(--bg-tertiary); border: 1px dashed var(--border-color);
+            border-radius: 4px; padding: 4px 10px; font-size: 0.78em; margin-bottom: 8px; color: var(--text-muted);
+        }
+        .ref-summary.ref-pending { font-style: italic; opacity: 0.6; }
         /* Bar Chart */
         .chart-wrapper {
             display: flex; align-items: center; justify-content: center;
@@ -113,6 +118,11 @@
         .cell:first-child { border-top: none; }
         .cell:last-child { border-bottom: none; }
         .cell:hover { opacity: 0.8; filter: brightness(1.1); }
+        .cell.touched-zero { position: relative; }
+        .cell.touched-zero::after {
+            content: ''; position: absolute; bottom: 3px; left: 50%; transform: translateX(-50%);
+            width: 6px; height: 6px; border-radius: 50%; background: var(--text-muted); opacity: 0.5;
+        }
         .cell.neg-zone { background: var(--bg-primary); }
         .cell.filled-ug { background: var(--color-ug); }
         .cell.filled-us { background: var(--color-us); }
@@ -724,18 +734,30 @@ const PROBLEMS = [
     parts: [
         { id:"1a", label:"(a)", desc:"The track is frictionless.", system:"cart + Earth + track + spring",
           answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
-          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>",
+          whyWrong:{ iUg:"The cart starts at the bottom (h = 0), so there is no gravitational PE.", iUs:"The spring is compressed at A, storing elastic PE.", iK:"The cart starts at rest (v = 0), so no kinetic energy.", wext:"The spring is part of the system, so there is no external work.", fUg:"The cart is at the top of the loop (h > 0), so it has gravitational PE.", fUs:"The spring is relaxed at B — no elastic PE stored.", fK:"The cart is moving at the top (v > 0), so it has kinetic energy.", fQ:"No friction, so no thermal energy is generated." } },
         { id:"1b", label:"(b)", desc:"The system does NOT include the spring.", system:"cart + Earth + track (no spring)",
           answer:{ iUg:"zero", iUs:"zero", iK:"zero", wext:"pos", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
           conserve:true, eq:"W<sub>ext</sub> = U<sub>g,f</sub> + K<sub>f</sub>",
-          hint:"Since the spring is outside the system, it does positive external work on the system." },
+          hint:"Since the spring is outside the system, it does positive external work on the system.",
+          whyWrong:{ iUg:"Cart starts at h = 0.", iUs:"The spring is NOT in this system — spring PE cannot appear. Its effect shows up as external work instead.", iK:"Cart starts at rest (v = 0).", wext:"The spring is outside the system, so its push on the cart is positive external work.", fUg:"At the top of the loop (h > 0), the cart has gravitational PE.", fUs:"Without the spring in the system, there is no elastic PE.", fK:"Cart is moving at B (v > 0).", fQ:"Track is frictionless, so no thermal energy." } },
         { id:"1c", label:"(c)", desc:"Same system as (a), but the track is no longer frictionless.", system:"cart + Earth + track + spring",
           answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"pos" },
-          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub> + Q" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub> + Q",
+          compareWith:{ ref:"1a", checks:[
+            { key:"iUs", relation:"equal", refKey:"iUs", reason:"Same spring compression as (a), so initial U<sub>s</sub> should be the same." }
+          ]},
+          whyWrong:{ iUg:"Cart starts at h = 0.", iUs:"Spring is compressed — elastic PE.", iK:"Cart starts at rest.", wext:"Everything is in the system — no external work.", fUg:"Cart is at the top of the loop (h > 0).", fUs:"Spring is relaxed at B.", fK:"Cart is moving at B (v > 0).", fQ:"Friction converts some mechanical energy into thermal energy." } },
         { id:"1d", label:"(d)", desc:"Same as (a), but the final position is lower on the track (not at the top of the loop). Scale bars consistently with (a).", system:"cart + Earth + track + spring",
           answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
           conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>",
-          hint:"Since the cart is lower than in (a), U<sub>g,f</sub> should be smaller and K<sub>f</sub> should be larger than your answer to (a)." }
+          hint:"Since the cart is lower than in (a), U<sub>g,f</sub> should be smaller and K<sub>f</sub> should be larger than your answer to (a).",
+          compareWith:{ ref:"1a", checks:[
+            { key:"iUs", relation:"equal", refKey:"iUs", reason:"Same spring compression as (a)." },
+            { key:"fUg", relation:"less", refKey:"fUg", reason:"The cart is at a lower height than the top of the loop, so U<sub>g</sub> should be smaller than in (a)." },
+            { key:"fK", relation:"greater", refKey:"fK", reason:"Since less energy goes to U<sub>g</sub>, more goes to K. The cart is moving faster at this lower position." }
+          ]},
+          whyWrong:{ iUg:"Cart starts at h = 0.", iUs:"Same compressed spring as in (a).", iK:"Cart starts at rest.", wext:"Everything is in the system.", fUg:"The cart is above the ground, so it has gravitational PE.", fUs:"Spring is relaxed at B.", fK:"The cart is moving at B.", fQ:"Track is frictionless." } }
     ]
 },
 {
@@ -745,10 +767,16 @@ const PROBLEMS = [
     parts: [
         { id:"2a", label:"(a)", desc:"No friction.", system:"car + road + Earth",
           answer:{ iUg:"zero", iUs:"zero", iK:"pos", wext:"zero", fUg:"pos", fUs:"zero", fK:"zero", fQ:"zero" },
-          conserve:true, eq:"K<sub>i</sub> = U<sub>g,f</sub>" },
+          conserve:true, eq:"K<sub>i</sub> = U<sub>g,f</sub>",
+          whyWrong:{ iUg:"Car starts at y = 0.", iUs:"No spring in this problem.", iK:"Car is moving at A (v > 0) — kinetic energy.", wext:"Engine is off and everything is in the system — no external work.", fUg:"Car is at the top of the hill (y > 0).", fUs:"No spring.", fK:"Car has stopped at B (v = 0) — no kinetic energy.", fQ:"No friction." } },
         { id:"2b", label:"(b)", desc:"Same system, now with friction.", system:"car + road + Earth",
           answer:{ iUg:"zero", iUs:"zero", iK:"pos", wext:"zero", fUg:"pos", fUs:"zero", fK:"zero", fQ:"pos" },
-          conserve:true, eq:"K<sub>i</sub> = U<sub>g,f</sub> + Q" }
+          conserve:true, eq:"K<sub>i</sub> = U<sub>g,f</sub> + Q",
+          compareWith:{ ref:"2a", checks:[
+            { key:"iK", relation:"equal", refKey:"iK", reason:"Same initial speed as (a)." },
+            { key:"fUg", relation:"less", refKey:"fUg", reason:"Some kinetic energy is lost to friction (Q), so less energy is available for U<sub>g</sub>. The car doesn't roll as high." }
+          ]},
+          whyWrong:{ iUg:"Car starts at y = 0.", iUs:"No spring.", iK:"Car is moving at A (v > 0).", wext:"Engine is off, everything in system.", fUg:"Car at the top (y > 0).", fUs:"No spring.", fK:"Car has stopped at B (v = 0).", fQ:"Friction between tires and road converts some kinetic energy to thermal energy." } }
     ]
 },
 {
@@ -759,12 +787,14 @@ const PROBLEMS = [
         { id:"3a", label:"(a)", desc:"The person is NOT part of the system.", system:"car + road + Earth (no person)",
           answer:{ iUg:"zero", iUs:"zero", iK:"zero", wext:"pos", fUg:"pos", fUs:"zero", fK:"zero", fQ:"pos" },
           conserve:true, eq:"W<sub>ext</sub> = U<sub>g,f</sub> + Q",
-          hint:"The person does positive work on the system. The parking brake creates friction (thermal energy)." },
+          hint:"The person does positive work on the system. The parking brake creates friction (thermal energy).",
+          whyWrong:{ iUg:"Starts at h = 0.", iUs:"No spring.", iK:"Starts at rest (v = 0).", wext:"The person pushes the car — since the person is outside the system, this is positive external work.", fUg:"Car ends at h > 0.", fUs:"No spring.", fK:"Car ends at rest (v = 0) — parking brake keeps it stopped.", fQ:"The parking brake creates friction, generating thermal energy." } },
         { id:"3b", label:"(b)", desc:"The person IS part of the system.", system:"car + road + Earth + person",
           initialBars:['iUg','iUs','iK','iEchem'],
           answer:{ iUg:"zero", iUs:"zero", iK:"zero", iEchem:"pos", wext:"zero", fUg:"pos", fUs:"zero", fK:"zero", fQ:"pos" },
           conserve:true, eq:"E<sub>chem,i</sub> = U<sub>g,f</sub> + Q",
-          hint:"With the person in the system, their chemical (food) energy is the source. There is no external work since everything is inside the system." }
+          hint:"With the person in the system, their chemical (food) energy is the source. There is no external work since everything is inside the system.",
+          whyWrong:{ iUg:"Starts at h = 0.", iUs:"No spring.", iK:"Starts at rest.", iEchem:"The person's muscles use chemical (food) energy — this is the energy source when the person is in the system.", wext:"The person is now inside the system, so there is no external work. All energy transfers are internal.", fUg:"Car ends at h > 0.", fUs:"No spring.", fK:"Car ends at rest — parking brake.", fQ:"Parking brake friction generates thermal energy." } }
     ]
 },
 {
@@ -774,18 +804,22 @@ const PROBLEMS = [
     parts: [
         { id:"4a", label:"(a)", desc:"No friction.", system:"spring + bricks + Earth",
           answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
-          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>",
+          whyWrong:{ iUg:"Bricks start at h = 0.", iUs:"Spring is compressed, storing elastic PE.", iK:"Bricks start at rest (v = 0).", wext:"Everything is in the system.", fUg:"Bricks are at h > 0.", fUs:"Spring is relaxed — no elastic PE.", fK:"Bricks are still moving at B (v > 0).", fQ:"No friction." } },
         { id:"4b", label:"(b)", desc:"Now with friction.", system:"spring + bricks + Earth",
           answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"pos" },
-          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub> + Q" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub> + Q",
+          whyWrong:{ iUg:"Bricks start at h = 0.", iUs:"Spring is compressed.", iK:"Bricks start at rest.", wext:"Everything in system.", fUg:"Bricks at h > 0.", fUs:"Spring relaxed.", fK:"Bricks moving at B.", fQ:"Friction converts some energy to thermal energy." } },
         { id:"4c", label:"(c)", desc:"Same as (a) but now height 0 is at position B. This means h<sub>A</sub> < 0. No friction.", system:"spring + bricks + Earth",
           answer:{ iUg:"neg", iUs:"pos", iK:"zero", wext:"zero", fUg:"zero", fUs:"zero", fK:"pos", fQ:"zero" },
           conserve:true, allowNeg:true, eq:"U<sub>s,i</sub> + U<sub>g,i</sub> = K<sub>f</sub> &nbsp;(where U<sub>g,i</sub> &lt; 0)",
-          hint:"Since h<sub>A</sub> < 0, the initial U<sub>g</sub> is negative! Click below the zero line to make a negative bar." },
+          hint:"Since h<sub>A</sub> < 0, the initial U<sub>g</sub> is negative! Click below the zero line to make a negative bar.",
+          whyWrong:{ iUg:"Position A is below B, and B is defined as h = 0. So h_A < 0, making gravitational PE negative. Click below the zero line.", iUs:"Spring is compressed.", iK:"Bricks start at rest.", wext:"Everything in system.", fUg:"At B, h = 0, so gravitational PE is zero.", fUs:"Spring relaxed.", fK:"Bricks are moving at B.", fQ:"No friction." } },
         { id:"4d", label:"(d)", desc:"Same as (a) but for a system that does NOT include Earth. No friction.", system:"spring + bricks (no Earth)",
           answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"neg", fUg:"zero", fUs:"zero", fK:"pos", fQ:"zero" },
           conserve:true, allowNeg:true, eq:"U<sub>s,i</sub> + W<sub>gravity</sub> = K<sub>f</sub>",
-          hint:"Without Earth in the system, there is no U<sub>g</sub>. Gravity is an external force that does negative work (force is down, displacement is up)." }
+          hint:"Without Earth in the system, there is no U<sub>g</sub>. Gravity is an external force that does negative work (force is down, displacement is up).",
+          whyWrong:{ iUg:"Earth is NOT in the system, so gravitational PE does not exist. Gravity acts as an external force instead.", iUs:"Spring is compressed.", iK:"Bricks start at rest.", wext:"Without Earth in the system, gravity does negative external work (force is downward, displacement is upward).", fUg:"Earth is not in the system — no gravitational PE.", fUs:"Spring relaxed.", fK:"Bricks moving at B.", fQ:"No friction." } }
     ]
 },
 {
@@ -795,11 +829,13 @@ const PROBLEMS = [
     parts: [
         { id:"5a", label:"(a)", desc:"No friction.", system:"spring + hill + crate + Earth",
           answer:{ iUg:"zero", iUs:"pos", iK:"zero", wext:"zero", fUg:"pos", fUs:"zero", fK:"pos", fQ:"zero" },
-          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>" },
+          conserve:true, eq:"U<sub>s,i</sub> = U<sub>g,f</sub> + K<sub>f</sub>",
+          whyWrong:{ iUg:"Crate starts at h = 0.", iUs:"Spring is compressed.", iK:"Crate starts at rest.", wext:"Everything in system.", fUg:"Crate at h > 0.", fUs:"Spring relaxed.", fK:"Crate moving at B.", fQ:"No friction." } },
         { id:"5b", label:"(b)", desc:"System does NOT include the spring. With friction.", system:"hill + crate + Earth (no spring)",
           answer:{ iUg:"zero", iUs:"zero", iK:"zero", wext:"pos", fUg:"pos", fUs:"zero", fK:"pos", fQ:"pos" },
           conserve:true, eq:"W<sub>spring</sub> = U<sub>g,f</sub> + K<sub>f</sub> + Q",
-          hint:"The spring does positive external work. Friction converts some energy to thermal." }
+          hint:"The spring does positive external work. Friction converts some energy to thermal.",
+          whyWrong:{ iUg:"Crate starts at h = 0.", iUs:"Spring is NOT in the system — no elastic PE can appear.", iK:"Crate starts at rest.", wext:"The spring is outside the system, so it does positive work launching the crate up the hill.", fUg:"Crate at h > 0.", fUs:"Spring not in system.", fK:"Crate moving at B.", fQ:"Friction converts some energy to thermal energy." } }
     ]
 },
 {
@@ -810,11 +846,13 @@ const PROBLEMS = [
         { id:"6a", label:"(a)", desc:"Frictionless.", system:"jumper + Earth + cord",
           answer:{ iUg:"pos", iUs:"zero", iK:"zero", wext:"zero", fUg:"pos", fUs:"pos", fK:"zero", fQ:"zero" },
           conserve:true, eq:"U<sub>g,i</sub> = U<sub>g,f</sub> + U<sub>s,f</sub>",
-          hint:"The jumper starts high (large U<sub>g</sub>) and ends lower (small U<sub>g</sub>) with the cord stretched (U<sub>s</sub>). At the limit of stretch, v=0 so K=0. Make sure U<sub>g,i</sub> > U<sub>g,f</sub>." },
+          hint:"The jumper starts high (large U<sub>g</sub>) and ends lower (small U<sub>g</sub>) with the cord stretched (U<sub>s</sub>). At the limit of stretch, v=0 so K=0. Make sure U<sub>g,i</sub> > U<sub>g,f</sub>.",
+          whyWrong:{ iUg:"Jumper starts high (h > 0) — gravitational PE.", iUs:"Cord is slack at the start (not stretched) — no elastic PE.", iK:"Jumper starts at rest (v = 0).", wext:"Cord is in the system — no external work.", fUg:"Jumper is at a lower height but still above ground (h_B > 0), so there is some gravitational PE but less than initial.", fUs:"The cord is fully stretched at B, storing elastic PE.", fK:"Jumper is momentarily at rest at the bottom of the fall (v = 0).", fQ:"No friction." } },
         { id:"6b", label:"(b)", desc:"The cord is NOT part of the system.", system:"jumper + Earth (no cord)",
           answer:{ iUg:"pos", iUs:"zero", iK:"zero", wext:"neg", fUg:"pos", fUs:"zero", fK:"zero", fQ:"zero" },
           conserve:true, allowNeg:true, eq:"U<sub>g,i</sub> + W<sub>cord</sub> = U<sub>g,f</sub>",
-          hint:"The cord does negative work on the jumper (upward force, downward displacement during stretching). Without the cord in the system, there is no U<sub>s</sub>." }
+          hint:"The cord does negative work on the jumper (upward force, downward displacement during stretching). Without the cord in the system, there is no U<sub>s</sub>.",
+          whyWrong:{ iUg:"Jumper starts high (h > 0).", iUs:"Cord is NOT in the system — no elastic PE can appear.", iK:"Jumper starts at rest.", wext:"The cord is outside the system and does negative work on the jumper (cord tension pulls upward while jumper moves downward).", fUg:"Jumper at lower height but still above ground (h_B > 0).", fUs:"Cord is NOT in the system — no elastic PE.", fK:"Jumper at rest at B (v = 0).", fQ:"No friction." } }
     ]
 }
 ];
@@ -822,6 +860,8 @@ const PROBLEMS = [
 // ─── STATE ───
 const state = {}; // state[partId] = { iUg:0, iUs:0, iK:0, wext:0, fUg:0, fUs:0, fK:0, fQ:0 }
 const completed = new Set();
+const touched = {}; // touched[partId] = Set of keys the student has clicked
+const STORAGE_KEY = 'energyBarGraphs_v1';
 const DEFAULT_BAR_KEYS = ['iUg','iUs','iK','wext','fUg','fUs','fK','fQ'];
 const ALL_BAR_KEYS = ['iUg','iUs','iK','iEchem','wext','fUg','fUs','fK','fQ'];
 const MAX_POS = 8, MAX_NEG = -3;
@@ -830,6 +870,43 @@ const BAR_LABELS = { iUg:'U<sub>g</sub>', iUs:'U<sub>s</sub>', iK:'K', iEchem:'E
 
 function initState(partId) {
     if (!state[partId]) state[partId] = { iUg:0, iUs:0, iK:0, iEchem:0, wext:0, fUg:0, fUs:0, fK:0, fQ:0 };
+}
+function initTouched(partId) {
+    if (!touched[partId]) touched[partId] = new Set();
+}
+
+// ─── PERSISTENCE ───
+function saveProgress() {
+    try {
+        const data = { version: 1, state: state, completed: Array.from(completed), touched: {} };
+        for (const partId in touched) {
+            data.touched[partId] = Array.from(touched[partId]);
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch(e) {}
+}
+function loadProgress() {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const data = JSON.parse(raw);
+        if (data.version !== 1) return;
+        const validIds = new Set();
+        PROBLEMS.forEach(p => p.parts.forEach(part => validIds.add(part.id)));
+        if (data.state) {
+            for (const partId in data.state) {
+                if (validIds.has(partId)) state[partId] = data.state[partId];
+            }
+        }
+        if (data.completed) {
+            data.completed.forEach(id => { if (validIds.has(id)) completed.add(id); });
+        }
+        if (data.touched) {
+            for (const partId in data.touched) {
+                if (validIds.has(partId)) touched[partId] = new Set(data.touched[partId]);
+            }
+        }
+    } catch(e) {}
 }
 
 // ─── RENDERING ───
@@ -862,6 +939,7 @@ function renderAll() {
                 <div class="part-desc">${part.desc}</div>
                 ${partDiagramHTML}
                 <div class="system-def">System: ${part.system}</div>
+                ${renderRefSummary(part)}
                 ${renderBarChart(part)}
                 <div class="part-actions">
                     <button class="check-btn" onclick="checkAnswer('${part.id}')">Check Answer</button>
@@ -892,6 +970,43 @@ function getPartAllKeys(part) {
     return [...layout.initialBars, ...layout.workBars, ...layout.finalBars];
 }
 
+function renderRefSummary(part) {
+    if (!part.compareWith) return '';
+    const refId = part.compareWith.ref;
+    const refLabel = refId.replace(/^\d+/,'');
+    if (!completed.has(refId)) {
+        return `<div class="ref-summary ref-pending" id="ref-${part.id}">Complete (${refLabel}) first to see reference values here.</div>`;
+    }
+    const refState = state[refId];
+    if (!refState) return '';
+    const refPart = findPart(refId);
+    if (!refPart) return '';
+    const layout = getPartBarLayout(refPart);
+    const formatBars = (keys) => keys
+        .filter(k => refState[k] !== 0)
+        .map(k => `${BAR_LABELS[k]}=${refState[k]}`)
+        .join(', ');
+    const initial = formatBars(layout.initialBars);
+    const work = formatBars(layout.workBars);
+    const final = formatBars(layout.finalBars);
+    let parts = [];
+    if (initial) parts.push(initial);
+    if (work) parts.push(work);
+    if (final) parts.push('→ ' + final);
+    return `<div class="ref-summary" id="ref-${part.id}">Your (${refLabel}) answer: ${parts.join(' + ')}</div>`;
+}
+
+function refreshRefSummaries(completedPartId) {
+    PROBLEMS.forEach(prob => {
+        prob.parts.forEach(part => {
+            if (part.compareWith && part.compareWith.ref === completedPartId) {
+                const el = document.getElementById(`ref-${part.id}`);
+                if (el) el.outerHTML = renderRefSummary(part);
+            }
+        });
+    });
+}
+
 function renderBarChart(part) {
     const allowNeg = part.allowNeg || false;
     const minVal = allowNeg ? MAX_NEG : 0;
@@ -916,10 +1031,12 @@ function renderColumn(partId, key, minVal) {
     const colorClass = `filled-${BAR_COLORS[key]}`;
 
     // Positive cells (top to bottom: MAX_POS down to 1)
+    const isTouchedZero = val === 0 && touched[partId] && touched[partId].has(key);
     let posCells = '';
     for (let h = MAX_POS; h >= 1; h--) {
         const filled = (val > 0 && h <= val) ? colorClass : '';
-        posCells += `<div class="cell ${filled}" data-part="${partId}" data-key="${key}" data-h="${h}" onclick="clickCell('${partId}','${key}',${h})"></div>`;
+        const tzClass = (h === 1 && isTouchedZero) ? 'touched-zero' : '';
+        posCells += `<div class="cell ${filled} ${tzClass}" data-part="${partId}" data-key="${key}" data-h="${h}" onclick="clickCell('${partId}','${key}',${h})"></div>`;
     }
 
     // Negative cells (-1 down to minVal)
@@ -954,11 +1071,13 @@ function updateColumn(partId, key) {
     const cells = partContainer.querySelectorAll(`[data-part="${partId}"][data-key="${key}"]`);
     const val = state[partId][key];
     const colorClass = `filled-${BAR_COLORS[key]}`;
+    const isTouchedZero = val === 0 && touched[partId] && touched[partId].has(key);
     cells.forEach(cell => {
         const h = parseInt(cell.dataset.h);
-        cell.classList.remove('filled-ug','filled-us','filled-k','filled-echem','filled-wext','filled-q');
+        cell.classList.remove('filled-ug','filled-us','filled-k','filled-echem','filled-wext','filled-q','touched-zero');
         if (h > 0 && val > 0 && h <= val) cell.classList.add(colorClass);
         else if (h < 0 && val < 0 && h >= val) cell.classList.add(colorClass);
+        if (h === 1 && isTouchedZero) cell.classList.add('touched-zero');
     });
     // Update value display — use part-specific bar order
     const allCols = partContainer.querySelectorAll('.bar-col');
@@ -973,6 +1092,8 @@ function updateColumn(partId, key) {
 // ─── INTERACTION ───
 function clickCell(partId, key, h) {
     initState(partId);
+    initTouched(partId);
+    touched[partId].add(key);
     const current = state[partId][key];
     if (current === h) {
         state[partId][key] = 0; // Toggle off
@@ -987,6 +1108,7 @@ function clickCell(partId, key, h) {
     if (eq) { eq.className = 'equation-display'; }
     // Update sandbox summary if this is the sandbox
     if (partId === 'sandbox') updateSandboxSummary();
+    saveProgress();
 }
 
 // ─── ANSWER CHECKING ───
@@ -997,6 +1119,29 @@ function findPart(partId) {
         }
     }
     return null;
+}
+
+function checkMagnitudes(partId, part, s) {
+    if (!part.compareWith) return [];
+    const ref = part.compareWith.ref;
+    if (!completed.has(ref)) return [];
+    const refState = state[ref];
+    if (!refState) return [];
+    const warnings = [];
+    for (const check of part.compareWith.checks) {
+        const val = s[check.key];
+        const refVal = refState[check.refKey];
+        const label = BAR_LABELS[check.key];
+        const refLabel = BAR_LABELS[check.refKey];
+        if (check.relation === 'less' && val >= refVal) {
+            warnings.push(`${label} (${val}) should be less than your (${ref.replace(/^\d+/,'')}) answer for ${refLabel} (${refVal}). ${check.reason}`);
+        } else if (check.relation === 'greater' && val <= refVal) {
+            warnings.push(`${label} (${val}) should be greater than your (${ref.replace(/^\d+/,'')}) answer for ${refLabel} (${refVal}). ${check.reason}`);
+        } else if (check.relation === 'equal' && val !== refVal) {
+            warnings.push(`${label} (${val}) should equal your (${ref.replace(/^\d+/,'')}) answer for ${refLabel} (${refVal}). ${check.reason}`);
+        }
+    }
+    return warnings;
 }
 
 function checkAnswer(partId) {
@@ -1013,17 +1158,18 @@ function checkAnswer(partId) {
     const partKeys = getPartAllKeys(part);
     for (const key of partKeys) {
         const expected = ans[key];
-        if (expected === undefined) continue; // skip keys not in the answer
+        if (expected === undefined) continue;
         const actual = s[key];
         const label = BAR_LABELS[key];
+        const explanation = part.whyWrong && part.whyWrong[key] ? part.whyWrong[key] : '';
         if (expected === 'zero' && actual !== 0) {
-            errors.push(`${label} should be zero`);
+            errors.push(explanation || `${label} should be zero`);
             allCorrect = false;
         } else if (expected === 'pos' && actual <= 0) {
-            errors.push(`${label} should be positive (above zero)`);
+            errors.push(explanation || `${label} should be positive (above zero)`);
             allCorrect = false;
         } else if (expected === 'neg' && actual >= 0) {
-            errors.push(`${label} should be negative (below zero)`);
+            errors.push(explanation || `${label} should be negative (below zero)`);
             allCorrect = false;
         }
     }
@@ -1046,11 +1192,26 @@ function checkAnswer(partId) {
         allCorrect = false;
     }
 
+    // Cross-part magnitude checks (only when qualitative + conservation are correct)
+    let magnitudeErrors = [];
+    if (allCorrect) {
+        magnitudeErrors = checkMagnitudes(partId, part, s);
+        if (magnitudeErrors.length > 0) {
+            allCorrect = false;
+        }
+    }
+
     // Display feedback
     if (allCorrect) {
         fb.className = 'feedback show correct';
         fb.innerHTML = '✓ Correct! Well done.';
         completed.add(partId);
+    } else if (magnitudeErrors.length > 0 && errors.length === 0) {
+        // Directions correct but magnitudes wrong — show as partial (yellow)
+        fb.className = 'feedback show partial';
+        fb.innerHTML = '<strong>Almost! Your directions are correct, but check the magnitudes:</strong><br>• ' + magnitudeErrors.join('<br>• ');
+        if (part.hint) fb.innerHTML += `<br><span class="hint-text">Hint: ${part.hint}</span>`;
+        completed.delete(partId);
     } else {
         fb.className = 'feedback show incorrect';
         fb.innerHTML = '<strong>Not quite.</strong> Check these issues:<br>• ' + errors.join('<br>• ');
@@ -1070,11 +1231,14 @@ function checkAnswer(partId) {
 
     updateProgress();
     updateProblemStatuses();
+    if (allCorrect) refreshRefSummaries(partId);
+    saveProgress();
 }
 
 function resetPart(partId) {
     state[partId] = { iUg:0, iUs:0, iK:0, iEchem:0, wext:0, fUg:0, fUs:0, fK:0, fQ:0 };
     completed.delete(partId);
+    if (touched[partId]) touched[partId].clear();
     // Re-render just this part
     const part = findPart(partId);
     if (!part) return;
@@ -1086,6 +1250,8 @@ function resetPart(partId) {
     if (eq) { eq.className = 'equation-display'; }
     updateProgress();
     updateProblemStatuses();
+    refreshRefSummaries(partId);
+    saveProgress();
 }
 
 function resetAll() {
@@ -1093,7 +1259,9 @@ function resetAll() {
     PROBLEMS.forEach(prob => prob.parts.forEach(part => {
         state[part.id] = { iUg:0, iUs:0, iK:0, iEchem:0, wext:0, fUg:0, fUs:0, fK:0, fQ:0 };
         completed.delete(part.id);
+        if (touched[part.id]) touched[part.id].clear();
     }));
+    try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
     renderAll();
 }
 
@@ -1168,7 +1336,20 @@ function toggleTheme() {
 })();
 
 // ─── INIT ───
+loadProgress();
 renderAll();
+// Restore feedback for previously completed parts
+completed.forEach(partId => {
+    const part = findPart(partId);
+    if (!part) return;
+    const fb = document.getElementById(`fb-${partId}`);
+    const eq = document.getElementById(`eq-${partId}`);
+    if (fb) { fb.className = 'feedback show correct'; fb.innerHTML = '✓ Correct! Well done.'; }
+    if (eq) {
+        eq.className = 'equation-display show';
+        eq.innerHTML = `<span class="eq-label">Energy Conservation Equation:</span> &nbsp; ${part.eq}`;
+    }
+});
 </script>
 </body>
 </html>
