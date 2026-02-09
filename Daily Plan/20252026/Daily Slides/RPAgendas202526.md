@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.02.09 **Regents Physics**
+
+##### **❓ of the 📅**: What was your favorite commercial last night?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Think Sheets:
+    - Universal Gravitation
+    - Inverse Square Law
+2. Regents Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with ULG_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.05 **Regents Physics**
 
 ##### **❓ of the 📅**: Which Disney Princess would you choose to be?
