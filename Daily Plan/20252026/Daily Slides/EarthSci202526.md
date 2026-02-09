@@ -54,6 +54,20 @@ class:  twilight
 
 ---
 
+## Where do you think the **energy** <!--fit--->
+
+## to **split** this continent <!--fit--->
+
+## apart is _coming from_? <!--fit--->
+
+---
+
+# Modeling Earth’s Interior Processes
+
+## Look at model 1-4 to investigate the movement of matter and use it to model the movement of Earth's Tectonic Plates
+
+---
+
 # 2026.02.06 **Earth Science**
 
 ##### **❓ of the 📅**: What is the best superbowl snack?
