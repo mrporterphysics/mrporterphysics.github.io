@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.02.10 **Regents Physics**
+
+##### **❓ of the 📅**: If you could be famous, what would you want to be famous for?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Work](../../../Presentations/APETM/talks/RPEnergy2026.html)
+2. Work Think Sheet (pages 1-4)
+3. Start Physics Classroom on Work
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define & learn how to calculate work_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.09 **Regents Physics**
 
 ##### **❓ of the 📅**: What was your favorite commercial last night?
