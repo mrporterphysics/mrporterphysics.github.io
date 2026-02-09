@@ -26,7 +26,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Introduction to [Energy](/Presentations/APETM/talks/APEnergy2026.html) 
+1. Introduction to [Energy](../../../Presentations/APETM/talks/APEnergy2026.html) 
     - What is it?
     - How do we define it?
 2. Flavors of Energy
