@@ -1,7 +1,7 @@
 ---
 marp: true
 title: Energy 2025
-theme: forces-dark
+theme: chalk
 paginate: true
 footer: 
 transition: reveal

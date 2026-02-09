@@ -6,11 +6,10 @@ title: Class Presentations
 ## AP Physics Content Slides
 
   - [Kinematics](/Presentations/APCVPM/talks/CVPM2025.html)
-  
+  - [Energy](/mrporterphysics.github.io/Presentations/APETM/talks/APEnergy2026.html)
   <!-- - [Linear Dynamics](/mrporterphysics.github.io/Presentations/Forces/talks/Dynamics2024.html)
   - [2D Motion](/mrporterphysics.github.io/Presentations/APCAPM/talks/twoDMotion.html)
   - [Circular Motion](/mrporterphysics.github.io/Presentations/Circular%20Motion/talks/CircularMotion2024-25.html)
-  - [Energy](/mrporterphysics.github.io/Presentations/APETM/talks/APEnergy2025.html)
   - [Momentum](/mrporterphysics.github.io/Presentations/Momentum/talks/APmomentum2025.html)
   - [Rotation](/mrporterphysics.github.io/Presentations/AP%20Rotation%20Representation/talks/Rotation2025.html)
   - [Oscillation](/mrporterphysics.github.io/Presentations/AP%20SHM/talks/SHM2025.html)

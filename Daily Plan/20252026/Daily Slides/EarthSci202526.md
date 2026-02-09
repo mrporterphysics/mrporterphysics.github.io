@@ -17,6 +17,43 @@ class:  twilight
 
 ---
 
+# 2026.02.09 **Earth Science**
+
+##### **❓ of the 📅**: What was your favorite Super Bowl commercial?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Who's at risk
+2. New Seats
+3. Energy in Earth's Interior
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine who is at risk of seismic activity_
+
+🥅 _Review models of Earth's Interior Processes_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Great Rift Valley
+
+<iframe width="1100" height="515" src="https://www.youtube.com/embed/arQoxEl8w-s?si=ai7r7fNmMXYCooj_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # 2026.02.06 **Earth Science**
 
 ##### **❓ of the 📅**: What is the best superbowl snack?
