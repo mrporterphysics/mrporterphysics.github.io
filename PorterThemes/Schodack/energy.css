@@ -1,0 +1,273 @@
+/* 
+@theme energy 
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Exo+2:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+/* --- Global Section / Slide --- */
+section {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.6;
+  padding: 60px 70px;
+  justify-content: start;
+}
+
+/* --- H1: Orbitron — Bold, futuristic, title-slide impact --- */
+section h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 2.2em;
+  color: #58a6ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 3px solid #f0b429;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+/* --- H1 with auto-scaling (<!-- fit -->) --- */
+section h1[data-auto-scaling] {
+  border-bottom: none;
+  padding-bottom: 0;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* --- H2: Rajdhani — Geometric, section headers --- */
+section h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  color: #f0b429;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+/* --- H2 with auto-scaling (<!-- fit -->) --- */
+section h2[data-auto-scaling] {
+  letter-spacing: normal;
+}
+
+/* --- H3: Exo 2 — Clean, sub-topic headers --- */
+section h3 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  font-size: 1.35em;
+  color: #7ee787;
+  margin-bottom: 12px;
+}
+
+/* --- Body Text --- */
+section p {
+  margin-bottom: 14px;
+}
+
+/* --- Strong / Bold --- */
+section strong {
+  color: #f0b429;
+  font-weight: 600;
+}
+
+/* --- Emphasis / Italic --- */
+section em {
+  color: #a5d6ff;
+  font-style: italic;
+}
+
+/* --- Inline Code (equations, variables) --- */
+section code {
+  background-color: #161b22;
+  color: #ff7b72;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #30363d;
+}
+
+/* --- Code Blocks --- */
+section pre {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+section pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #c9d1d9;
+}
+
+/* --- Unordered Lists --- */
+section ul {
+  list-style-type: '⚡ ';
+  padding-left: 1.2em;
+}
+
+section ul li {
+  margin-bottom: 8px;
+  padding-left: 6px;
+}
+
+/* --- Ordered Lists --- */
+section ol li {
+  margin-bottom: 8px;
+}
+
+/* --- Links --- */
+section a {
+  color: #58a6ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+section a:hover {
+  color: #79c0ff;
+}
+
+/* --- Tables --- */
+section table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+  margin: 16px 0;
+}
+
+section table th {
+  background-color: #1a2233;
+  color: #f0b429;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 1.05em;
+  padding: 10px 16px;
+  border: 1px solid #30363d;
+  text-align: left;
+}
+
+section table td {
+  padding: 8px 16px;
+  border: 1px solid #30363d;
+  background-color: #0d1117;
+}
+
+section table tr:nth-child(even) td {
+  background-color: #131922;
+}
+
+/* --- Blockquotes (key equations / definitions) --- */
+section blockquote {
+  border-left: 4px solid #f0b429;
+  background-color: #161b22;
+  margin: 20px 0;
+  padding: 16px 24px;
+  border-radius: 0 8px 8px 0;
+  font-style: normal;
+  color: #e6edf3;
+}
+
+section blockquote strong {
+  color: #58a6ff;
+}
+
+/* --- Images --- */
+section img {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Horizontal Rule (slide divider accent) --- */
+section hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #58a6ff, #f0b429, #7ee787);
+  margin: 24px 0;
+}
+
+/* --- Math (KaTeX) --- */
+section .katex {
+  color: #e6edf3;
+  font-size: 1.05em;
+}
+
+/* ============================================
+   TITLE SLIDE (add class: <!-- _class: title -->)
+   ============================================ */
+section.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(ellipse at center bottom, #111d2e 0%, #0d1117 70%);
+}
+
+section.title h1 {
+  font-size: 3.2em;
+  border-bottom: none;
+  padding-bottom: 0;
+  background: linear-gradient(135deg, #58a6ff, #f0b429);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+
+section.title h2 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  color: #8b949e;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ============================================
+   SECTION DIVIDER (add class: <!-- _class: divider -->)
+   ============================================ */
+section.divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(160deg, #0d1117 40%, #111d2e 100%);
+}
+
+section.divider h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.4em;
+  color: #f0b429;
+  letter-spacing: 2px;
+}
+
+/* ============================================
+   FOOTER / SLIDE NUMBER
+   ============================================ */
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14px;
+  color: #484f58;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+header {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14px;
+  color: #484f58;
+}
+
+footer {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 14px;
+  color: #484f58;
+}

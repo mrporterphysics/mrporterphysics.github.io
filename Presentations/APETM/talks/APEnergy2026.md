@@ -1,9 +1,9 @@
 ---
 marp: true
-title: Energy 2025
-theme: chalk
+title: Energy 2026
+theme: energy
 paginate: true
-footer: 
+footer: MH AP Physics | Energy | 2025-26
 transition: reveal
 math: mathjax
 ---
@@ -35,7 +35,7 @@ section.left h2, section.left p,{
 
 ## _A model conservation and non-uniform motion_ <!--fit--->
 
-### Mr. Porter - AP Physics 2024
+### Mr. Porter - AP Physics 2026
 
 ---
 
@@ -50,9 +50,9 @@ Assume you know the spring constant and mass
 
 
 
-# How do we use the  <!--fit--->
+# How do we use the <!--fit--->
 
-# word **energy** <!--fit--->
+## **word** energy <!--fit--->
 
 # <!--fit---> in everyday language?
 
@@ -271,109 +271,6 @@ $$ \boxed{W = F_{\parallel}d = Fd \cos \theta } $$
 
 ---
 
-
-# Cart Launcher 🚀 Lab
-
-🥅: Determine the compression distance of each hoop spring to launch the carts at the ***same*** speed. 
-
-🔍 Model the situation:
-
-- Draw diagrams to model your cart-spring system
-- Use equations to solve for the launch speed of your cart
-- Determine what we need to measure to make the prediction
-
----
-
-# Spring Constant 
-
-## How can you determine the **spring constant** of your spring?
-
----
-
-# Cart Launcher
-
-🥅: Determine the compression distance of your groups spring so that all carts in the classroom are launched at the same speed.
-
-❌ Same Force
-
----
-
-
-# Cart Launcher
-
-🥅: Determine the compression distance of your groups spring so that all carts in the classroom are launched at the same speed.
-
-❌ Same Force
-
-❌ Same Distance
-
----
-
-
-# Cart Launcher
-
-🥅: Determine the compression distance of your groups spring so that all carts in the classroom are launched at the same speed.
-
-❌ Same Force
-
-❌ Same Distance
-
-❓ What other graphical properties can we try?
-
----
-
-# 🔺 Area
-
-$$Area = \frac{1}{2}Fx$$ 
-
-and...
-
-$$F_S = kx$$
----
-
-# <!---fit---> Did it work?
-
----
-
-# <!---fit---> What does the area represent?
-
-# <!---fit---> What would the result be for larger areas? Smaller areas?
-
-# <!---fit---> Describe in your own words.
-
----
-
-# Work 
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/72TFWvU3wUYdUuxejTTIzt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
----
-
-# What is it?
-
-## **Area** of a **Force vs. displacement** graph is **WORK**
-
-Work is the change in energy of a system...
-
---- 
-
-# Work 
-
-* Area of Force vs. displacement graph
-* $W = \Delta E_T$ 
-* For **constant** or average forces: $W = Fd$
-* Note: only force **parallel** to displacement does work: $F \cos \theta d = W$
-
----
-
-# Work 
-
-# **$\boxed{\Delta E = W = F_{\parallel}d = Fd\cos \theta}$** <!--fit--->
-
-
-
----
-
 # Conservation <!--fit--->
 
 ---
@@ -386,7 +283,7 @@ Work is the change in energy of a system...
 
 # Conservation of Cake 🍰 <!--fit--->
 
-## For Fiona's Birthday (Sat) we are cutting an imaginary birthday cake into 21 pieces
+## For Ryan's Birthday we are cutting an imaginary birthday cake into 21 pieces
 
 
 What changes? What remains constant?
@@ -468,19 +365,19 @@ $$W_{ext} = (K_f - K_i) + (U_f - U_i)$$
 
 # Elastic (Spring) Potential Energy 
 
-# **$\boxed{U_s = \frac{1}{2}kx^2}$** <!--fit--->
+## **$\boxed{U_s = \frac{1}{2}kx^2}$** 
 
 ---
 
 # Kinetic Energy 
 
-# **$\boxed{K = \frac{1}{2}mv^2}$** <!--fit--->
+## **$\boxed{K = \frac{1}{2}mv^2}$** 
 
 ---
 
 # Gravitational Potential Energy 
 
-# **$\boxed{\Delta U_g = mg\Delta y }$** <!--fit--->
+## **$\boxed{\Delta U_g = mg\Delta y }$** 
 
 ---
 
@@ -666,3 +563,113 @@ $$P = \frac{W}{t} = \frac{Fd}{t} = F\bar{v}$$
 2. Spread out to the different staircases (there are 4 by my count) - no more than 2 per group 
 3. No skippinng stairs
 4. **BE SAFE** and use good judgement
+
+
+
+---
+
+
+---
+
+---
+
+
+
+# Cart Launcher 🚀 Lab
+
+🥅: Determine the compression distance of each hoop spring to launch the carts at the ***same*** speed. 
+
+🔍 Model the situation:
+
+- Draw diagrams to model your cart-spring system
+- Use equations to solve for the launch speed of your cart
+- Determine what we need to measure to make the prediction
+
+---
+
+# Spring Constant 
+
+## How can you determine the **spring constant** of your spring?
+
+---
+
+# Cart Launcher
+
+🥅: Determine the compression distance of your groups spring so that all carts in the classroom are launched at the same speed.
+
+❌ Same Force
+
+---
+
+
+# Cart Launcher
+
+🥅: Determine the compression distance of your groups spring so that all carts in the classroom are launched at the same speed.
+
+❌ Same Force
+
+❌ Same Distance
+
+---
+
+
+# Cart Launcher
+
+🥅: Determine the compression distance of your groups spring so that all carts in the classroom are launched at the same speed.
+
+❌ Same Force
+
+❌ Same Distance
+
+❓ What other graphical properties can we try?
+
+---
+
+# 🔺 Area
+
+$$Area = \frac{1}{2}Fx$$ 
+
+and...
+
+$$F_S = kx$$
+---
+
+# <!---fit---> Did it work?
+
+---
+
+# <!---fit---> What does the area represent?
+
+# <!---fit---> What would the result be for larger areas? Smaller areas?
+
+# <!---fit---> Describe in your own words.
+
+---
+
+# Work 
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/72TFWvU3wUYdUuxejTTIzt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+---
+
+# What is it?
+
+## **Area** of a **Force vs. displacement** graph is **WORK**
+
+Work is the change in energy of a system...
+
+--- 
+
+# Work 
+
+* Area of Force vs. displacement graph
+* $W = \Delta E_T$ 
+* For **constant** or average forces: $W = Fd$
+* Note: only force **parallel** to displacement does work: $F \cos \theta d = W$
+
+---
+
+# Work 
+
+# **$\boxed{\Delta E = W = F_{\parallel}d = Fd\cos \theta}$** <!--fit--->
+

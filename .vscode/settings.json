@@ -19,7 +19,8 @@
       "./PorterThemes/Schodack/earthSci.css",
       "./PorterThemes/Schodack/fluidsTheme.css",
       "./PorterThemes/Schodack/momentum.css",
-      "./PorterThemes/Schodack/physics2024.css"
+      "./PorterThemes/Schodack/physics2024.css",
+      "./PorterThemes/Schodack/energy.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"

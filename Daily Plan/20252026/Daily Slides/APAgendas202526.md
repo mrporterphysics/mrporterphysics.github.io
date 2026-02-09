@@ -16,6 +16,40 @@ math: mathjax
 
 ---
 
+# 2026.02.09 **AP Physics**
+
+##### **❓ of the 📅**: What was your favorite commercial last night?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Introduction to [Energy](/Presentations/APETM/talks/APEnergy2026.html) 
+    - What is it?
+    - How do we define it?
+2. Flavors of Energy
+3. Work 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define energy and the ways it is stored_
+
+### 📆 Upcoming
+
+- PC Circular and Satellite Motion 4
+- PC Circular and Satellite Motion 5
+
+</div>
+</div>
+
+---
+
 # 2026.02.06 **AP Physics**
 
 ##### **❓ of the 📅**: What is your favorite superbowl snack?
