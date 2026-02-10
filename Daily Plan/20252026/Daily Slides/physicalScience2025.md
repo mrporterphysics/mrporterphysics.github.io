@@ -1,5 +1,5 @@
 ---
-title: Physical Science 2025
+title: Physical Science 2026
 marp: true
 theme: physicalSci
 paginate: true
@@ -13,7 +13,38 @@ class: green
 
 ### Maple Hill High School
 
-#### Spring 2025
+#### Spring 2026
+
+---
+
+# 2026.02.10 **Physical Science**
+
+##### **❓ of the 📅**: If you could live anywhere in the world for a year, where would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review your lab results
+2. Ball Bounce Lab - Board Meeting
+3. Claim-Evidence-Reasoning
+4. Soup-Salad-Sandwich
+5. CER Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make scientific arguments_
+
+### 📆 Upcoming
+
+</div>
+</div>
 
 ---
 

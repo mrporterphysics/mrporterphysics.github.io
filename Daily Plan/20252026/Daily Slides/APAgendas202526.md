@@ -16,6 +16,45 @@ math: mathjax
 
 ---
 
+
+---
+
+# 2026.02.11 **AP Physics**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Energy Conservation 
+3. Energy Bar Graphs - [Interactive](https://www.mrporterphysics.com/AP%20Resource%20Pages/Simulations/EnergyBarGraphs.html)
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Identify Energy Storage_
+
+🥅 _Model conservation of energy and the work-energy theorem graphically_
+
+### 📆 Upcoming
+
+- Quiz **Friday** -> Workbook 3.M & 3.O are good practice
+- Physics Classroom Due Friday
+
+</div>
+</div>
+
+---
+
 # 2026.02.09 **AP Physics**
 
 ##### **❓ of the 📅**: What was your favorite commercial last night?
