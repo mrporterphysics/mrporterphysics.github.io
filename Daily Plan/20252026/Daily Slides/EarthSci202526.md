@@ -17,6 +17,53 @@ class:  twilight
 
 ---
 
+# 2026.02.11 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite family tradition?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Discuss Part 1 - Explaining the Great Rift Valley
+2. Part 2 - Complete & Whiteboard
+3. Summary Task
+4. Minerals, Energy, and Human Populations
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Energy in the Earth_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 🔑 Key Points - Explaining the Great Rift Valley
+
+*  There are differences in temperature in Earth’s interior which cause differences in density of the matter inside Earth.
+* The temperature is highest in the core, so it transfers heat to the mantle which is lower in temperature.
+* When mantle rock is heated by the core, it expands and becomes less dense.
+* Lower temperature rock that is more dense is pulled down by gravity and forces the hotter less dense rock up.
+
+---
+
+# 🔑 Key Points - Explaining the Great Rift Valley (cont.)
+
+* When the hotter less dense rock is forced up close to Earth’ surface it can come out as new crust at divergent plate boundaries, which drives those plates toward convergent plate boundaries with another plate.
+* As rock rises and gets closer to earth’s surface it cools because it transfers heat to the cooler surroundings and becomes more dense. Gravity then causes it to start sinking and be part of the cycle of sinking and rising rock in Earth’s mantle that forces Earth’s massive plates to move and cause natural hazards and surface features.
+
+
+---
+
 # 2026.02.10 **Earth Science**
 
 ##### **❓ of the 📅**: If you could be famous, what would you want to be famous for?   
