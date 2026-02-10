@@ -43,7 +43,7 @@ math: mathjax
 
 🥅 _Identify Energy Storage_
 
-🥅 _Model conservation of energy and the work-energy theorem graphically_
+🥅 _Model cons. of energy & the work-energy theorem graphically_
 
 ### 📆 Upcoming
 

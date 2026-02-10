@@ -17,6 +17,39 @@ class:  twilight
 
 ---
 
+# 2026.02.10 **Earth Science**
+
+##### **❓ of the 📅**: If you could be famous, what would you want to be famous for?   
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish See-Think-Wonder
+    - prepare **three** important ideas to share 
+2. Explaining the Great Rift Valley
+    - Part 1 - ⏸️ and discuss
+    - Part 2 - ⏸️ and discuss
+    - Summary
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the motion of plate tectonics with convection currents_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.02.09 **Earth Science**
 
 ##### **❓ of the 📅**: What was your favorite Super Bowl commercial?
