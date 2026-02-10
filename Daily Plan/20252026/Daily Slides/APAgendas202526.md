@@ -16,12 +16,19 @@ math: mathjax
 
 ---
 
+# 2026.02.11 **AP Physics** Do Now
+
+A performer on a skateboard is launched by a spring initially compressed a distance $\Delta x$ as shown. His speed on the horizontal portion of the ramp is $v$, and he rises to a height $H$ after he leaves the ramp. Ignore friction effects.
+
+![center](image-50.png)
+
+- Pick three moments in time (A, B, C) and identify the energy storage methods at each moment. Draw a pie graph if you prefer.
 
 ---
 
 # 2026.02.11 **AP Physics**
 
-##### **❓ of the 📅**: QUESTION
+##### **❓ of the 📅**: What's your favorite family tradition?
 
 <div class ='columns'>
 
