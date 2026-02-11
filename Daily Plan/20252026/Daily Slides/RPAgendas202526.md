@@ -15,6 +15,75 @@ math: mathjax
 
 ---
 
+# 2026.02.11 **Regents Physics**
+
+##### **❓ of the 📅**: Do you have any family traditions?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. POWER 💪
+    - Notes
+    - Think Sheets: Power; Power & Work Calcs
+3. Powerhouse Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Measure your power 🏃‍♂️_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+## Question
+
+**What is my power requirement for climbing a staircase – both by walking and by running?**
+
+We will compare how quickly you can do the same amount of work in two different ways.
+
+---
+
+## Purpose
+
+- Determine the power you generate when you climb a staircase **walking**.  
+- Determine the power you generate when you climb the **same staircase running**.  
+- Compare the two and relate them to the concepts of **work** and **power**.
+
+---
+
+## Safety
+
+- No horseplay or pushing.  
+- Use the **handrail** to prevent falls.  
+- Move with control, especially during the running trial.  
+- Be aware of others on the staircase.
+
+---
+
+## Lab Notebook Checklist
+
+Your notebook should include:
+
+✅ Title, Question, and Purpose.  
+✅ Labeled data table with units.  
+✅ All calculations with formulas and units.  
+✅ Answers to all reflection/analysis questions.  
+✅ A clear conclusion comparing walking vs. running power and summarizing what you learned.
+
+
+---
+
 # 2026.02.10 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could be famous, what would you want to be famous for?
