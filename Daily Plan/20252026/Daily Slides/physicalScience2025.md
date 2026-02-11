@@ -17,6 +17,86 @@ class: green
 
 ---
 
+# 2026.02.12 **Physical Science**
+
+##### **❓ of the 📅**: QUIESTIOON
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. CER - Do Now
+2. Buggy Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the motion of a toy car_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Dune Buggy Lab 🚗 
+
+## Question
+
+How far does you dune buggy travel in a specified number of seconds?
+
+## Purpose
+
+To use collected distance-time data for a Dune Buggy car in order to predict the time it takes the Dune Buggy to travel a specified distance.
+
+---
+
+## Procedure
+
+Write a procedure to collect distance and time data. Remember to include multiple data points and average your trials
+
+## Data
+
+Distance time data table
+
+## Graph
+
+Distance vs. time graph - put distance on the y-axis and time on the x-axis
+
+---
+
+## Mathematical Model
+
+What is the equation of your best fit line?
+
+## Prediction and Calcuations
+
+Show work to calculate distance for time assigned to you by Mr. Porter
+
+## Conclusions
+
+Claim-Evidence-Reasoning
+
+---
+ 
+### Claim:
+I predicted that it would take my Dune Buggy car ____ seconds to travel the specified distance of _____ cm.
+ 
+### Evidence:
+(Discuss values from your Data section … identifying the data that you used to determine the prediction. Use specifics in your discussion.)
+
+### Reasoning:
+(Explain in a few sentences why this evidence provides logical support for believing that your claim is true.  And while you’re at it, you ought to mention how well … or not well … that you did.)
+ 
+
+---
+
 # 2026.02.10 **Physical Science**
 
 ##### **❓ of the 📅**: If you could live anywhere in the world for a year, where would it be?
