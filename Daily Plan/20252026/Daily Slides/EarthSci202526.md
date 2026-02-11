@@ -61,6 +61,13 @@ class:  twilight
 * When the hotter less dense rock is forced up close to Earth’ surface it can come out as new crust at divergent plate boundaries, which drives those plates toward convergent plate boundaries with another plate.
 * As rock rises and gets closer to earth’s surface it cools because it transfers heat to the cooler surroundings and becomes more dense. Gravity then causes it to start sinking and be part of the cycle of sinking and rising rock in Earth’s mantle that forces Earth’s massive plates to move and cause natural hazards and surface features.
 
+---
+
+![bg fit](image-52.png)
+
+---
+
+![bg fit](image-51.png)
 
 ---
 
