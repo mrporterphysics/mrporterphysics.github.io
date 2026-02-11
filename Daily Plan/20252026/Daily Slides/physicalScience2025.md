@@ -19,7 +19,7 @@ class: green
 
 # 2026.02.12 **Physical Science**
 
-##### **❓ of the 📅**: QUIESTIOON
+##### **❓ of the 📅**: If you could be a fly on the wall, anywhere in the world, where would you be?
 
 <div class ='columns'>
 
