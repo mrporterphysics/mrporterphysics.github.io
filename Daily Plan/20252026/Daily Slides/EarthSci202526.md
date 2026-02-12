@@ -17,6 +17,40 @@ class:  twilight
 
 ---
 
+# 2026.02.13 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Science Valentines
+    - Google your scienentist: 
+        - _what did they discover?_ 
+        - **explain your pun**
+2. Present Yesterday's Board
+3. Performance Task - Graded
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Who is at risk?_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.02.12 **Earth Science**
 
 ##### **❓ of the 📅**: If you could be a fly on the wall, anywhere in the world, where would you be?   
