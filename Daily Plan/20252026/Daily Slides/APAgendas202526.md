@@ -16,6 +16,117 @@ math: mathjax
 
 ---
 
+
+
+<div class='columns'>
+<div>
+
+# 2026.02.12 **AP Physics** Do Now
+
+Starting from rest, Angel and Britney skateboard down a hill as shown. Angel rides down the steep side while Britney rides down the shallow side. Angel has more mass than Britney. Assume that friction and air resistance are negligible.
+
+Is the...(i) greater for Angel, (ii) greater for Britney, or (iii) the same for both skateboarders?
+
+
+
+</div>
+ 
+<div>
+
+![center w:350](image-53.png)
+
+1. **...speed at the bottom of the hill...**
+
+3. **...work done by the gravitational force on the skateboarder...**
+
+4. **...work done by the normal force on the skateboarder**
+
+5. **...kinetic energy at the bottom of the hill...**
+
+</div>
+</div>
+
+---
+
+In each case below, an arrow has been shot from the top of a building either up at a 45º angle, straight out horizontally, or down at a 45º angle. All arrows are identical and are shot at the same speed, and the heights of the buildings and the direction the arrows are shot are given. Ignore air resistance.
+
+![center w:500](image-55.png)
+
+**Rank the speed of the arrows just before they hit the ground below.**
+
+---
+
+For extra excitement, a new roller coaster ride is designed to launch the riders over an alligator-infested lagoon. The frictionless coaster starts at rest at point A. The coaster lands on a ramp on the other side of the lagoon.
+
+![center](image-54.png)
+
+**After it is airborne, will the maximum height of the coaster be (i) greater than, (ii) less than, or (iii) equal to the height at point A?** 
+
+**Explain your reasoning.**
+
+---
+
+In the figures below, identical boxes of mass 10 kg are moving at the same initial velocity to the right on a flat surface. The same magnitude force, $F$, is applied to each box for the distance, $d$, indicated in the figures.
+
+![center w:700](image-56.png)
+
+**Rank the work done on the box by F while the box moves the indicated distance.**
+
+---
+
+# 2026.02.12 **AP Physics**
+
+##### **❓ of the 📅**: If you could be a fly on the wall, anywhere in the world, where would you be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Tic Tac Bounce
+3. Energy Equations & Quantitative Problem-Solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use energy to model and predict situations_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Tic Tac Bounce
+
+<div class='columns'>
+<div>
+
+1. Drop your tic tac and observe its motion -- what do you notice is interesting about the bounce?
+2. Draw a bar graph for the energy of the tic tac -- use it to explain the interesting phenomenon. 
+3. Make a CER statement explaining the phenomenon. 
+
+</div>
+ 
+<div>
+
+<video height = "550 px" controls src="IMG-0136.MOV" title="Title"></video>
+
+</div>
+</div>
+
+
+
+
+
+---
+
 # 2026.02.11 **AP Physics** Do Now
 
 A performer on a skateboard is launched by a spring initially compressed a distance $\Delta x$ as shown. His speed on the horizontal portion of the ramp is $v$, and he rises to a height $H$ after he leaves the ramp. Ignore friction effects.
