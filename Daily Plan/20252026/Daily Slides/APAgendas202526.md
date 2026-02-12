@@ -16,7 +16,39 @@ math: mathjax
 
 ---
 
+# 2026.02.13 **AP Physics**
 
+##### **❓ of the 📅**: Do you believe Friday the 13th is bad luck? **_What are your plans for break?_**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Circ Motion Quiz
+2. Finish Energy Calculation Worksheet
+3. AP Workbook 4.B & 4.K
+4. Angel vs. Brittany 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Circ Motion_
+
+🥅 _Make predictions with Energy Conservation_
+
+### 📆 Upcoming
+
+BREAKKKKKKKK!!!
+
+</div>
+</div>
+
+---
 
 <div class='columns'>
 <div>
