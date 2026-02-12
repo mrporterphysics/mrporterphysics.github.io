@@ -17,6 +17,33 @@ class: green
 
 ---
 
+# 2026.02.12 **Physical Science** Do Now
+
+1. Which statement below is the best example of a Claim?
+A. We had fun dropping the ball from different heights.
+B. As the drop height increases, the fall time increases.
+C. We measured five different heights using a meter stick.
+D. The tallest member of our group held the ball for the highest drops.
+
+2. Which statement below is the best example of Evidence?
+A. Gravity causes objects to fall.
+B. Our data table shows that when height doubled, fall time increased.
+C. This experiment was challenging but educational.
+D. Some of our measurements might have been off.
+
+---
+
+# 2026.02.12 **Physical Science** Do Now
+
+3. Which statement below is the best example of Reasoning?
+A. We used a stopwatch to measure the time.
+B. Taller heights mean longer fall times.
+C. Objects in free fall accelerate due to gravity, so greater distances require more time to travel.
+D. Our graph showed a clear pattern.
+
+
+---
+
 # 2026.02.12 **Physical Science**
 
 ##### **❓ of the 📅**: If you could be a fly on the wall, anywhere in the world, where would you be?
@@ -28,6 +55,7 @@ class: green
 #### 📋 Agenda
 
 1. CER - Do Now
+1. Physics Valentine
 2. Buggy Lab
 
 </div>
