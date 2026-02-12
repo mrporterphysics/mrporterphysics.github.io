@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2026.02.12 **Earth Science**
+
+##### **❓ of the 📅**: If you could be a fly on the wall, anywhere in the world, where would you be?   
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Summary Task
+2. How do energy and minerals impact human populations?
+    - [World Population History](https://worldpopulationhistory.org/map/1/mercator/1/0/25/#)
+    - Read _Minerals, Energy, and Human Populations_ (page 21)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Evaluate evidence about the cycling of matter driven_
+🥅 _Explain how resource availability has guided the development of human populations._
+
+
+</div>
+</div>
+
+---
+
 # 2026.02.11 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite family tradition?
