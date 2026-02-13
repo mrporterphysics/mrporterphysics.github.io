@@ -15,6 +15,38 @@ math: mathjax
 
 ---
 
+# 2026.02.13 **Regents Physics**
+
+##### **❓ of the 📅**: Do you believe _Friday the 13th_ is bad luck? **_What are you doing over break?_**
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Science Valentines
+2. Powerhouse Lab
+3. PC: Work and Energy 1: Work and Power 
+    - Due Friday after break
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Determine how powerful you are 💪_
+
+### 📆 Upcoming
+
+_Break!!!!_
+
+</div>
+</div>
+
+---
+
 # 2026.02.11 **Regents Physics**
 
 ##### **❓ of the 📅**: Do you have any family traditions?
