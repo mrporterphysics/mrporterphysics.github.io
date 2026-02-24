@@ -17,6 +17,59 @@ class: green
 
 ---
 
+# 2026.02.25 **Physical Science**
+
+##### **❓ of the 📅**: What did you do over break?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pick up where you left off with the buggy lab - continue collecting data
+2. Graph Data
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect Buggy Lab Data_
+
+🥅 _Graph Buggy Lab Data_
+
+</div>
+</div>
+
+---
+
+
+# Dune Buggy Lab 🚗 
+
+## Question
+
+How far does you dune buggy travel in a specified number of seconds?
+
+## Purpose
+
+To use collected distance-time data for a Dune Buggy car in order to predict the time it takes the Dune Buggy to travel a specified distance.
+
+---
+
+ 
+### Claim:
+I predicted that it would take my Dune Buggy car ____ seconds to travel the specified distance of _____ cm.
+ 
+### Evidence:
+(Discuss values from your Data section … identifying the data that you used to determine the prediction. Use specifics in your discussion.)
+
+### Reasoning:
+(Explain in a few sentences why this evidence provides logical support for believing that your claim is true.  And while you’re at it, you ought to mention how well … or not well … that you did.)
+
+---
+
 # 2026.02.12 **Physical Science** Do Now
 
 1. Which statement below is the best example of a Claim?
@@ -92,7 +145,7 @@ Write a procedure to collect distance and time data. Remember to include multipl
 ## Data
 
 Distance time data table
-
+e
 ## Graph
 
 Distance vs. time graph - put distance on the y-axis and time on the x-axis
