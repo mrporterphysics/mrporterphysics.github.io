@@ -15,6 +15,34 @@ math: mathjax
 
 ---
 
+# 2026.02.24 **Regents Physics**
+
+##### **❓ of the 📅**: How was your break? Did you do anything fun?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes: Energy Types & Energy Conservation
+2. Energy Think Sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define energy types_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.13 **Regents Physics**
 
 ##### **❓ of the 📅**: Do you believe _Friday the 13th_ is bad luck? **_What are you doing over break?_**
