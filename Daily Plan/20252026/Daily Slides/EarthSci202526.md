@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.02.24 **Earth Science**
+
+##### **❓ of the 📅**: How was your break? Did you do anything fun?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish PTO (we started the day before break)
+2. Something quiet if you finish early
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish PTO for Earth's Interior and identify **who is at risk**._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.02.13 **Earth Science**
 
 ##### **❓ of the 📅**: 

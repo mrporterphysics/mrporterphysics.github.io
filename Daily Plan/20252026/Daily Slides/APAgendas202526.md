@@ -16,6 +16,40 @@ math: mathjax
 
 ---
 
+# 2026.02.24 **AP Physics**
+
+##### **❓ of the 📅**: How was your break? Did you do anything fun?  
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. AP Workbook
+    - 4.A: Work
+    - 4.B: Choosing Systems
+    - 4.C: Energy Graphs
+    - 4.F: Energy Transforms...
+    - 4.G: Energy & Circular
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Remember the things from our energy unit_
+
+### 📆 Upcoming
+
+- HW: Physics Classroom Energy Questions
+
+</div>
+</div>
+
+---
+
 # 2026.02.13 **AP Physics**
 
 ##### **❓ of the 📅**: Do you believe Friday the 13th is bad luck? **_What are your plans for break?_**
