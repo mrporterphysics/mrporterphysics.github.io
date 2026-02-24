@@ -232,9 +232,7 @@ $$\boxed{P = \frac{W}{t} = \frac{Fd}{t} = F\bar{v}}$$
 3. No skippinng stairs
 4. **BE SAFE** and use good judgement
 
----
-
-
+<!-- 
 # Hot Wheels Car:
 
 On your whiteboards:
@@ -280,7 +278,40 @@ Energy is like money...
 - Draw pie charts for how the energy is stored at three snapshots:
   - when the cart has been pulled back but is not moving
   - when the car is moving
-  - when the car as stopped
+  - when the car as stopped -->
+
+---
+
+# What is energy?
+
+## 🤷‍♂️ <!--fit--->
+
+---
+
+## _**Energy** is the ability to do work_ <!--fit--->
+
+---
+
+## 😑 <!--fit--->
+
+---
+
+# What is Energy?
+
+* Quantitative property
+* Can be transferred to/from/between objects
+* Is **conserved**
+* Measured in Joules (J)
+* Used to do work, heat, or change the state of an object or system
+
+---
+
+# Energy Storage Methods
+
+* Energy is like money...we store it in different manners
+* We often refer to these methods as "types" of energy
+
+
 
 ---
 
