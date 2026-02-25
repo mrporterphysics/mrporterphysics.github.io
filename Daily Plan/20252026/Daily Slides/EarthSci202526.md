@@ -17,6 +17,64 @@ class:  twilight
 
 ---
 
+# 2026.02.25 **Earth Science**
+
+##### **❓ of the 📅**: If one animal were suddenly super-sized, which would be the coolest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Hand Back Quiz
+2. Quiz Corrections
+3. Finish PTO (Homework after today)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Correct Volcano Quiz_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# Corrections:
+
+<div class='columns'>
+<div>
+
+## Process
+
+1. What is the correct answer? Explain in Claim - Evidence - Reasoning format 
+2. What was your original answer?
+3. What type of mistake was it?
+    - Conceptual, Clueless, Careless?
+
+</div>
+ 
+<div>
+
+## CER
+
+1. Claim - What is the answer to the question - in complete sentence format
+2. Evidence - What evidence is given to you to support your answer (from the question or reference table)
+3. How does your evidence support your answer (what is the scientific principle?)
+
+</div>
+</div>
+
+
+
+---
+
 # 2026.02.24 **Earth Science**
 
 ##### **❓ of the 📅**: How was your break? Did you do anything fun?
