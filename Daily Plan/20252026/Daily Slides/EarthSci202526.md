@@ -17,6 +17,53 @@ class:  twilight
 
 ---
 
+# 2026.02.26 **Earth Science**
+
+##### **❓ of the 📅**: If you could join any past or current music group which would you want to join?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 20 Minutes - Corrections
+2. Climate Change - Sharing Ideas
+3. Videos
+3. Tell a story - PTO initial data
+3. PTO Overview & Initial Model
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Introduce Climate Change Unit_
+
+### 📆 Upcoming
+
+- Corrections Due **Tuesday**
+- PTO Due **Monday**
+
+</div>
+</div>
+
+---
+
+# [How do you feel climate change?](https://www.youtube.com/watch?v=iS0dJ0divP8)
+
+<iframe width="1000" height="515" src="https://www.youtube.com/embed/iS0dJ0divP8?si=JG4BJ_8mJait38PU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# [Climate Change Devastates Refugee Communities](https://www.youtube.com/watch?v=9-oiZNzKl_s)
+
+<iframe width="1000" height="515" src="https://www.youtube.com/embed/9-oiZNzKl_s?si=9OgMAZuF7s_57d9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
 # 2026.02.25 **Earth Science**
 
 ##### **❓ of the 📅**: If one animal were suddenly super-sized, which would be the coolest?
