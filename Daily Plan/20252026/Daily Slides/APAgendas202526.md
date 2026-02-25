@@ -16,6 +16,165 @@ math: mathjax
 
 ---
 
+# 2026.02.25 AP Physics
+
+##### _Determine the spring constant $k$ of your pop up toy._
+
+- Use energy analysis
+- Available equipment: meterstick and/or ruler
+
+**Complete on whiteboard with your lab group.** Show all work. Include an energy bar graph
+
+![bg fit right](image-57.png)
+
+---
+
+
+# 2026.02.25 **AP Physics**
+
+##### **❓ of the 📅**: If one animal were suddenly super-sized, which would be the coolest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Go Over AP Workbook Questions from Yesterday
+3. Old AP Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with energy_
+
+### 📆 Upcoming
+
+- Energy Quiz **Tomorrow**
+- PC -> Work and Energy 3: Energy Analysis
+    - Due **Friday**
+
+</div>
+</div>
+
+
+---
+
+# 4.A
+
+<div class='columns'>
+<div>
+
+![center](image-58.png)
+
+</div>
+ 
+<div>
+
+![alt text](image-59.png)
+
+</div>
+</div>
+
+---
+
+# 4.B Choosing Systems 
+
+![center w:600](image-60.png)
+
+---
+
+# 4.C Energy Graphs 
+
+
+
+
+<div class='columns'>
+<div>
+
+![center w:575](image-61.png)
+
+</div>
+ 
+<div>
+
+![center](image-68.png)
+
+</div>
+</div>
+
+---
+
+# 4.C Energy Graphs
+
+<div class='columns'>
+<div>
+
+![center](image-69.png)
+
+</div>
+ 
+<div>
+
+![center](image-70.png)
+
+</div>
+</div>
+
+---
+
+# 4.F Energy Transformations
+
+![center w:1100](image-72.png)
+
+---
+
+# 4.F Energy Transformations
+
+<div class='columns'>
+<div>
+
+![center](image-63.png)
+
+</div>
+ 
+<div>
+
+![center](image-64.png)
+
+</div>
+</div>
+
+---
+
+# 4.G Circ Motion & Energy
+
+<div class='columns'>
+<div>
+
+![center w:500](image-65.png)
+
+</div>
+ 
+<div>
+
+![centter](image-66.png)
+
+</div>
+</div>
+
+---
+
+# 4.G Circ Motion
+
+![center](image-67.png)
+
+---
+
 # 2026.02.24 **AP Physics**
 
 ##### **❓ of the 📅**: How was your break? Did you do anything fun?  
