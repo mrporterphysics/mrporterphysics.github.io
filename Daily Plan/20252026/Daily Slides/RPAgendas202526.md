@@ -15,6 +15,62 @@ math: mathjax
 
 ---
 
+# 2026.02.27 **Regents Physcis**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2026.02.26 **Regents Physics**
+
+##### **❓ of the 📅**: If you could join any past or current music group which would you want to join?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Work-Energy Think Sheet & Go over answers
+2. How to analyze energy situations with bar graphs
+3. Practice with Energy Bar Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model energy situations with bar graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.24 **Regents Physics**
 
 ##### **❓ of the 📅**: How was your break? Did you do anything fun?
