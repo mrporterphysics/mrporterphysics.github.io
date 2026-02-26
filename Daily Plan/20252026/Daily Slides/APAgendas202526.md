@@ -16,6 +16,67 @@ math: mathjax
 
 ---
 
+
+# 2026.02.26 **AP Physics**
+
+##### **❓ of the 📅**: If you could join any past or current music group which would you want to join?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Block Launcher Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model work done by friction experimentally_
+
+### 📆 Upcoming
+
+- PC Homework
+
+</div>
+</div>
+
+---
+
+
+# Block Launcher Lab
+
+<div class='columns'>
+<div>
+
+## Objective:
+
+- Determine the coefficient of friction, $\mu_k$, between your block and the table. 
+
+</div>
+ 
+<div>
+
+## Available Tools
+
+- Spring Scale
+- Meterstick
+- Electronic Balance
+
+</div>
+</div>
+
+## **Physics:**
+
+- Work-Energy Theorem: What does work to slow the block to a stop?
+- What can  you measure? What can you graph where $\mu$ is in the slope?
+
+---
+
 # 2026.02.25 AP Physics
 
 ##### _Determine the spring constant $k$ of your pop up toy._
@@ -491,34 +552,6 @@ A performer on a skateboard is launched by a spring initially compressed a dista
 </div>
 
 ---
-
-# 2026.02.26 **AP Physics**
-
-##### **❓ of the 📅**: If you could join any past or current music group which would you want to join?
-
-<div class ='columns'>
-
- <div>
-
-#### 📋 Agenda
-
-1. Quiz
-2. Block Launcher Lab
-
-</div>
-
-<div>
-
-### 🎯 Goals
-
-🥅 _Model work done by friction experimentally_
-
-### 📆 Upcoming
-
-- PC Homework
-
-</div>
-</div>
 
 ---
 
