@@ -492,6 +492,36 @@ A performer on a skateboard is launched by a spring initially compressed a dista
 
 ---
 
+# 2026.02.26 **AP Physics**
+
+##### **❓ of the 📅**: If you could join any past or current music group which would you want to join?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Block Launcher Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model work done by friction experimentally_
+
+### 📆 Upcoming
+
+- PC Homework
+
+</div>
+</div>
+
+---
+
 # 2026.02.05 **AP Physics**
 
 ##### **❓ of the 📅**: Which Disney Princess would you choose to be?
