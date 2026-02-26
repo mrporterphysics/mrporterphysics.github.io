@@ -51,6 +51,18 @@ class:  twilight
 
 ---
 
+# What do you know?
+
+1. What effects does climate change have on humans and the natural environment?
+2. What is your current understanding of what is causing climate change?
+
+---
+
+# How do you think lingering skepticism can impact our abilities to respond to climate change?
+
+
+---
+
 # [How do you feel climate change?](https://www.youtube.com/watch?v=iS0dJ0divP8)
 
 <iframe width="1000" height="515" src="https://www.youtube.com/embed/iS0dJ0divP8?si=JG4BJ_8mJait38PU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
