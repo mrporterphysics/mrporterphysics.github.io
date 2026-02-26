@@ -17,6 +17,38 @@ class: green
 
 ---
 
+# 2026.02.27 **Physical Science**
+
+##### **❓ of the 📅**: What's your favorite food _combination_?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Buggy Lab Graph
+    - Graph, Best Fit Line, & calculate equation
+2. Buggy Predictions
+3. Conclusions
+4. Board Meeting -> Whiteboard your graph & equation
+5. Get Notebook Checked 💯
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create a mathematical model_
+
+🥅 _Use a mathematical model to make a prediction_
+
+</div>
+</div>
+
+---
+
 # 2026.02.25 **Physical Science**
 
 ##### **❓ of the 📅**: What did you do over break?
