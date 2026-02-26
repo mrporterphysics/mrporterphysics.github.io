@@ -15,9 +15,9 @@ math: mathjax
 
 ---
 
-# 2026.02.27 **Regents Physcis**
+# 2026.02.27 **Regents Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What's your favorite food _combination_?
 
 <div class ='columns'>
 
@@ -25,7 +25,11 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. Individual energy problem solving - Physics Classroom
+	- PC Work and Energy 1
+	- PC Work and Energy 2
+2. Using bar graphs to write conservation of energy equations
+3. Problem-solving with energy
 
 </div>
 
@@ -33,7 +37,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Solve energy problems quantitatively_
 
 ### 📆 Upcoming
 
