@@ -16,6 +16,57 @@ math: mathjax
 
 ---
 
+# 2026.03.02 **AP Physics** Do Now
+
+Shown below is a graph of velocity versus time for an object that moves along a straight, horizontal line under the perhaps intermittent action of a single force exerted by an external agent.
+
+![center w:475](image-73.png)
+
+**Rank the work done on the box by the external agent for the 5-second intervals shown on the graph.**
+
+---
+
+# 2026.03.02 **AP Physics** Do Now
+
+In the figures below, identical boxes of mass 10 kg are moving at the same initial velocity to the right on a flat surface. The same magnitude force, F, is applied to each box for the distance, d, indicated in the figures.
+
+![center w:500](image-74.png)
+
+**Rank the work done on the box by F while the box moves the indicated distance.**
+
+---
+
+# 2026.03.02 **AP Phyiscs**
+
+##### **❓ of the 📅**: If you were one of Snow White's dwarfs, which one would you be? _**Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey**_
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Block Launcher Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model work done by friction_
+
+### 📆 Upcoming
+
+- Energy Quiz 2 - Friday
+- PC: 
+
+</div>
+</div>
+
+---
+
 
 # 2026.02.26 **AP Physics**
 
