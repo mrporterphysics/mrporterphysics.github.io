@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.02.27 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review facts from yesterday and prepare to share one fact from each source
+2. Share out common facts and information
+3. Introducing PTO & Initial Model
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make an initial model of climate change_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.02.26 **Earth Science**
 
 ##### **❓ of the 📅**: If you could join any past or current music group which would you want to join?
