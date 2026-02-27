@@ -41,6 +41,10 @@ class:  twilight
 
 ### 📆 Upcoming
 
+- Corrections Due **Tuesday**
+- PTO Due **Monday**
+
+
 </div>
 </div>
 
