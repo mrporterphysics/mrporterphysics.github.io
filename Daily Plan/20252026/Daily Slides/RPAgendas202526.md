@@ -25,7 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Individual energy problem solving - Physics Classroom
+1. ⏲️ **40 Min**: Individual energy problem solving
 	- PC Work and Energy 1
 	- PC Work and Energy 2
 2. Using bar graphs to write conservation of energy equations
