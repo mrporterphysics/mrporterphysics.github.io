@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.02.27 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What's your favorite food _combination_?
 
 <div class ='columns'>
 
