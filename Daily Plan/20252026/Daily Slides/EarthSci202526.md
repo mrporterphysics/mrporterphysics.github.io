@@ -17,6 +17,40 @@ class:  twilight
 
 ---
 
+# 2026.03.02 **Earth Science**
+
+##### **❓ of the 📅**: If you were one of Snow White's dwarfs, which one would you be? _**Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey**_
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Initial Models
+2. Computational Model - Seasons Simulation
+    - page 12 in packet
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model what causes the seasons computationally_
+
+### 📆 Upcoming
+
+- Corrections Due **Tuesday**
+- PTO Due **Today**
+
+</div>
+</div>
+
+---
+
 # 2026.02.27 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite food _combination_?
