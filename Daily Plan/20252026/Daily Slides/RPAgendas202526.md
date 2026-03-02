@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.03.02 **Regents Physics**
+
+##### **❓ of the 📅**: If you were one of Snow White's dwarfs, which one would you be? _**Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey**_
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Problem-solving with energy
+2. Practice problem solving with energy
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use work-energy theorem to solve problems_
+
+### 📆 Upcoming
+
+- Quiz **Friday**
+
+</div>
+</div>
+
+---
+
 # 2026.02.27 **Regents Physics**
 
 ##### **❓ of the 📅**: What's your favorite food _combination_?
