@@ -17,6 +17,31 @@ class: green
 
 ---
 
+# 2026.03.02 **Physical Science**
+
+##### **❓ of the 📅**: If you were one of Snow White's dwarfs, which one would you be? _**Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey**_
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Graph & Conclusion for Buggy Lab (_should be done_)
+2. Whiteboard **Graph** and **Equation** from your lab
+3. Board Meeting: what do the **slope** and **intercept** represent?
+4. Bowling Ball Pivot
+
+
+
+### 🎯 Goals
+
+🥅 _Model constant velocity motion **graphically**_
+
+
+
+---
+
 # 2026.02.27 **Physical Science**
 
 ##### **❓ of the 📅**: What's your favorite food _combination_?
