@@ -16,6 +16,42 @@ math: mathjax
 
 ---
 
+# 2026.03.03 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉 🐲
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Block Launcher Lab
+	1. Complete & Get Checked
+2. Work on AP FRQ Practice while others finish the lab
+3. POWER 💪
+4. Powerhouse Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model work done by friction_
+
+🥅 _Measure your power_
+
+### 📆 Upcoming
+
+- PC Homework
+- Quiz Friday
+
+</div>
+</div>
+
+---
+
 # 2026.03.02 **AP Physics** Do Now
 
 Shown below is a graph of velocity versus time for an object that moves along a straight, horizontal line under the perhaps intermittent action of a single force exerted by an external agent.
