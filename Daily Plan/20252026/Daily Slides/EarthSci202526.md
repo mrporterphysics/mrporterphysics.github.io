@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.03.03 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉 🐲
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Complete Computational Model for the Seasons
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the seasons with a computational model_
+
+### 📆 Upcoming
+
+- Corrections Due **Today**
+
+</div>
+</div>
+
+---
+
 # 2026.03.02 **Earth Science**
 
 ##### **❓ of the 📅**: If you were one of Snow White's dwarfs, which one would you be? _**Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey**_
