@@ -26,6 +26,7 @@ math: mathjax
 
 #### 📋 Agenda
 
+0. Go Over Energy Quiz
 1. Finish Block Launcher Lab
 	1. Complete & Get Checked
 2. Work on AP FRQ Practice while others finish the lab
