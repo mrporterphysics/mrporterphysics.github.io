@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.03.04 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite type of food? (American, Italian, Chinese, Thai, Mexican, etc)
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Computational Model -> Share out see think wonder
+2. Angle of insolation lab with heat lamps
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model angle of insolation physically and connect to the seasons_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.03 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉 🐲

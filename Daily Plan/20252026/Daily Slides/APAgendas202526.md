@@ -18,6 +18,36 @@ math: mathjax
 
 # 2026.03.03 **AP Physics**
 
+##### **❓ of the 📅**: What's your favorite type of food? (American, Italian, Chinese, Thai, Mexican, etc)
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. What is POWER 💪
+2. Powerhouse Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Measure your power_
+
+### 📆 Upcoming
+
+- Quiz Friday
+
+</div>
+</div>
+
+---
+
+# 2026.03.03 **AP Physics**
+
 ##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉 🐲
 
 <div class ='columns'>
