@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+# 2026.03.04 **Regents Physics**
+
+##### **❓ of the 📅**: What's your favorite type of food? (American, Italian, Chinese, Thai, Mexican, etc)
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish up Energy Questions
+2. Share answers 
+3. Pop Up Toy Question
+3. Physics Classroom:
+    - Work and Energy 3 
+    - Work and Energy 4
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with energy conservation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.02 **Regents Physics**
 
 ##### **❓ of the 📅**: If you were one of Snow White's dwarfs, which one would you be? _**Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey**_
