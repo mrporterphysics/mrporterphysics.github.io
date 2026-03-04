@@ -29,10 +29,6 @@ math: mathjax
 1. What is POWER 💪
 2. Powerhouse Lab
 
-</div>
-
-<div>
-
 ### 🎯 Goals
 
 🥅 _Measure your power_
@@ -40,6 +36,20 @@ math: mathjax
 ### 📆 Upcoming
 
 - Quiz Friday
+
+</div>
+
+<div>
+
+| Block   | Start | End   |
+| ------- | ----- | ----- |
+| Block 1 | 9:40  | 10:33 |
+| Block 2 | 10:35 | 11:28 |
+| A Lunch | 11:30 | 12:00 |
+| Block 3 | 12:02 | 1:07  |
+| Block 3 | 11:30 | 12:36 |
+| B Lunch | 12:37 | 1:07  |
+| Block 4 | 1:09  | 2:00  |
 
 </div>
 </div>

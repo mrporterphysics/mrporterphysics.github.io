@@ -30,6 +30,9 @@ class:  twilight
 1. Computational Model -> Share out see think wonder
 2. Angle of insolation lab with heat lamps
 
+
+🔔 9:40-10:33 **No Advisory**
+
 </div>
 
 <div>

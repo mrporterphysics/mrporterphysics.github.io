@@ -377,10 +377,10 @@ img[alt~="center"] {
 /* Table styling - aggressive fix for dark mode */
 section table {
     border-collapse: collapse;
-    margin: 1em 0;
+    margin: .5em 0;
     width: 100%;
     font-size: 0.9em;
-    border: 2px solid var(--light-accent-blue);
+    
 }
 
 section.dark table {
@@ -419,7 +419,7 @@ section table th {
     background-color: var(--light-accent-purple);
     color: var(--light-background);
     font-weight: bold;
-    padding: 0.8em;
+    padding: 0.2em;
     text-align: left;
 }
 
@@ -462,7 +462,7 @@ section.soft table th {
 
 section table > tbody > tr > td,
 section table td {
-    padding: 0.8em;
+    padding: 0.3em;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--light-background);
 }
