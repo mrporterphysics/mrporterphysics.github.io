@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.03.05 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What is the worst style choice you have ever made?
 
 <div class ='columns'>
 
