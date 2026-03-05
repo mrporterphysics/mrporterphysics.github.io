@@ -17,6 +17,38 @@ class:  twilight
 
 ---
 
+# 2026.03.06 **Earth Science**
+
+##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish CER
+2. Present CER to class
+3. What causes the seasons -> in packet (page 24 -> End)
+	1. [📖 The Seasons - Reading](https://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/seasons.php)
+	2. [📺 Seasons - Video](https://www.youtube.com/watch?v=-O9XR0AAxXY)
+4. Make Whiteboard Model & Share to Class
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the reason for the seasons _
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.05 **Earth Science**
 
 ##### **❓ of the 📅**: What is the worst style choice you have ever made?

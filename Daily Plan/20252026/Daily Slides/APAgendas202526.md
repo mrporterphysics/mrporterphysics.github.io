@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2026.03.05 **AP Physics**
+
+##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Finish Power Lab
+3. AP Workbook Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Crush quiz 💪_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.03 **AP Physics**
 
 ##### **❓ of the 📅**: What's your favorite type of food? (American, Italian, Chinese, Thai, Mexican, etc)

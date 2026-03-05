@@ -17,6 +17,34 @@ math: mathjax
 
 # 2026.03.05 **Regents Physics**
 
+##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Finish Block Launcher Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Crush your quiz 💪_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2026.03.05 **Regents Physics**
+
 ##### **❓ of the 📅**: What is the worst style choice you have ever made?
 
 <div class ='columns'>
