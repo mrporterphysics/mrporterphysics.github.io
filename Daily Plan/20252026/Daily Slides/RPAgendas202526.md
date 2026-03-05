@@ -15,6 +15,63 @@ math: mathjax
 
 ---
 
+# 2026.03.05 **Regents Physics**
+
+##### **❓ of the 📅**: What is the worst style choice you have ever made?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Block Launcher Lab - Introduction
+2. Block Launcher Lab
+3. Physics Classroom Practice
+    - Work and Energy 3 
+    - Work and Energy 4
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use conservation of energy to find experimental constants_
+
+### 📆 Upcoming
+
+- Quiz Tomorrow
+
+</div>
+</div>
+
+---
+
+# Block Launcher Lab
+
+## _A block is launched by a rubber band on a horizontal table and slows to a stop due to friction_
+
+**In your lab notebook...**
+
+1. Draw a bar graph that represents this situation. 
+2. Write the energy conservation equation and substitute in the individual energy equations. 
+3. Sub in the equation for friction. 
+
+---
+
+# Block Launcher Lab
+
+## Question:
+
+What is the spring constant of the rubber band launcher?
+
+## Purpose:
+
+To determine the spring constant of a rubber band by analyzing how elastic potential energy converts to work done by friction, and to verify that value using a spring scale and Hooke’s law.
+
+---
+
 # 2026.03.04 **Regents Physics**
 
 ##### **❓ of the 📅**: What's your favorite type of food? (American, Italian, Chinese, Thai, Mexican, etc)
