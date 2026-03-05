@@ -17,6 +17,37 @@ class: green
 
 ---
 
+# 2026.03.05 **Physical Science**
+
+##### **❓ of the 📅**: What is the worst style choice you have ever made?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Get Caught Up
+    - Finish Buggy Lab! 
+    - Finish Rolling Ball Challenge 1
+2. Discussion of Buggy Lab & Rolling Ball Challenge
+    - _What is **velocity**_?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Get caught up_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.02 **Physical Science**
 
 ##### **❓ of the 📅**: If you were one of Snow White's dwarfs, which one would you be? _**Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy, Dopey**_
