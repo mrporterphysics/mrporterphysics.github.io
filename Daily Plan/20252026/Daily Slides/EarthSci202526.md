@@ -17,6 +17,42 @@ class:  twilight
 
 ---
 
+# 2026.03.05 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Angle of Insolation Lab
+2. Claim-Evidence-Reasoning: _What are the reasons for the seasons_?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain why we have seasons on Earth_
+
+</div>
+</div>
+
+---
+
+# What are the reasons for the seasons?
+
+Make a Claim-Evidence-Reasoning model explaining why we have seasons on Earth. Include evidence from both the **Angle of Insolation Lab** and the **Computational Model**.
+
+- Claim -> List reasons
+- Evidence -> From our physical and computational models
+- Reasoning -> Why/How does the evidence support your claims?
+
+---
+
 # 2026.03.04 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite type of food? (American, Italian, Chinese, Thai, Mexican, etc)
