@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.03.10 **Earth Science**
+
+##### **❓ of the 📅**: If you invited dragons to a taco party, would you give them _spicy_ 🌶️ salsa?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Orbital Investigation
+2. Share
+3. Orbital Factors Part 1
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use models to interpret data and make claims about energy_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.09 **Earth Science**
 
 ##### **❓ of the 📅**: If you could pick one of your stuffed animals (or toys) to come to life, which would it be?
