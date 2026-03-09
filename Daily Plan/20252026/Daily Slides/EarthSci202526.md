@@ -17,6 +17,57 @@ class:  twilight
 
 ---
 
+# 2026.03.09 **Earth Science**
+
+##### **❓ of the 📅**: If you could pick one of your stuffed animals (or toys) to come to life, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Radiation and Temperature During Earth's Past
+2. Orbital Factors Investigation
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Students use models of to collect empirical evidence in order to determine whether there is a causal relationship between orbital cycles and the amount of solar radiation reaching Earth._
+
+
+</div>
+</div>
+
+
+---
+
+# Northern Hemisphere Ice Coverage Over 400,000 years
+
+<iframe width="1000" height="515" src="https://www.youtube.com/embed/8lt3uhToMCI?si=B9eQQefOTFrA35Bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
+# 👀 🤔 💭 
+
+## <!--fit---> What **_pattern_** do you observe in the 
+## <!--fit---> **frequency** of interglacial and glacial periods?
+
+---
+
+# Orbital Factors Investigation 
+
+## As Earth orbits the Sun, the **shape** of the orbit, the **tilt** of Earth’s axis, and the **direction** in which Earth’s axis points change over the course of 10s and 100s of thousands of years.
+
+### _Your task is to **draw and describe** how each orbital factor changes the Earth’s position with respect to the Sun over time. Then, **develop a model** and **collect evidence** to help you determine whether Earth’s changing position with respect to the Sun can cause the patterns in the amount of radiation that reaches Earth’s surface at 65° N latitude._
+
+
+---
+
 # 2026.03.06 **Earth Science**
 
 ##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
