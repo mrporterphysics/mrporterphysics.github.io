@@ -26,10 +26,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. AP Workbook:
-    - 4.M, 4.E, 4.L
-2. Finish Power Lab
-
+1. Finish Power Lab
+2. Blowdart Collision Pivot - <mark>**Complete in Lab Notebook**</mark>
+3. [Momentum Slides](/mrporterphysics.github.io/Presentations/Momentum/talks/APmomentum2026.html)
 </div>
 
 <div>
@@ -39,6 +38,9 @@ math: mathjax
 🥅 _Wrap up energy_
 
 ### 📆 Upcoming
+
+- Homemwork:
+    - AP Workbook 4.M (go over in class tomorrow)
 
 </div>
 </div>
