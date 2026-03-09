@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2026.03.09 **AP Physics**
+
+##### **❓ of the 📅**: If you could pick one of your stuffed animals (or toys) to come to life, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. AP Workbook:
+    - 4.M, 4.E, 4.L
+2. Finish Power Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Wrap up energy_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.05 **AP Physics**
 
 ##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?

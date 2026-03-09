@@ -17,6 +17,33 @@ class: green
 
 ---
 
+# 2026.03.09 **Physical Science**
+
+##### **❓ of the 📅**: If you could pick one of your stuffed animals (or toys) to come to life, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. What is a position vs. time graph? What does it show?
+2. What happens when the object moves "backwardds"?
+3. Rolling Ball Challenge 2
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion in different directions_
+
+</div>
+</div>
+
+---
+
 # 2026.03.05 **Physical Science**
 
 ##### **❓ of the 📅**: What is the worst style choice you have ever made?
