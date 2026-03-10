@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.03.10 **Regents Physics**
+
+##### **❓ of the 📅**: If you invited dragons to a taco party, would you give them _spicy_ 🌶️ salsa?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Momentum & Impulse](../../../Presentations/Momentum/talks/RPmomentum2026.html) - Notes
+2. Impulse Think Sheets (1-4)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Momentum and impulse_
+
+🥅 _Qualitatively and quantitatively apply the impulse-momentum theorem_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.05 **Regents Physics**
 
 ##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
