@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.03.11 **Regents Physics**
+
+##### **❓ of the 📅**: What celebrity would you switch lives with?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now -> Physics Classroom -> Case Studies: Impulse and Force
+2. Discuss
+3. Think Sheet pages 5-6
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with the impulse-momentum theorem_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.10 **Regents Physics**
 
 ##### **❓ of the 📅**: If you invited dragons to a taco party, would you give them _spicy_ 🌶️ salsa?
