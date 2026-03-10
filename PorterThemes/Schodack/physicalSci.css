@@ -378,9 +378,9 @@ img[alt~="center"] {
 section table {
     border-collapse: collapse;
     margin: .5em 0;
-    width: 100%;
+    width: auto;
     font-size: 0.9em;
-    
+
 }
 
 section.dark table {
@@ -686,6 +686,7 @@ section.green strong {
 /* Green theme tables */
 section.green table {
     border: 2px solid var(--green-accent-blue);
+    width: fit-content !important;
 }
 
 section.green table > thead > tr > th,
@@ -764,7 +765,7 @@ section.halloween table {
   border: 2px solid var(--halloween-accent-purple);
   border-collapse: collapse;
   margin: 1em 0;
-  width: 100%;
+  width: auto;
   font-size: 0.9em;
 }
 
@@ -858,9 +859,9 @@ section.thanksgiving table {
     border: 0px solid var(--thanksgiving-accent-orange);
     border-collapse: collapse !important;
     margin: 1em 0;
-    width: 100%;
+    width: auto;
     font-size: 0.9em;
-        
+
 }
 
 section.thanksgiving table > thead > tr > th,
@@ -975,7 +976,7 @@ section.christmas table {
     border: 2px solid var(--christmas-accent-green);
     border-collapse: collapse !important;
     margin: 1em 0;
-    width: 100%;
+    width: auto;
     font-size: 0.9em;
 }
 

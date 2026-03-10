@@ -17,6 +17,188 @@ class: green
 
 ---
 
+# 2026.03.11 **Physical Science**
+
+##### **❓ of the 📅**: What celebrity would you switch lives with?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Buggy Lab V2
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect position and time data for an object moveing "backwards"_
+
+
+
+</div>
+</div>
+
+---
+
+
+# Dune Buggy Lab 2
+
+## **Position, Direction, and Negative Motion**
+
+---
+
+## Quick Recap: Lab 1
+
+In the first Dune Buggy Lab, you:
+
+- Measured **distance** at different times
+- Created a **distance vs. time** graph
+- Found the equation of your best-fit line
+- Used your equation to **predict** a time
+
+Your graph went **upward** and your slope was **positive**.
+
+---
+
+## A Question About Lab 1
+
+You sent your buggy down the hallway and measured how far it went.
+
+But think about this: if two buggies start at the same spot and travel the **same distance** but in **opposite directions**...
+
+Are they in the same place?
+
+---
+
+## Distance vs. Position
+
+| | Distance | Position |
+|---|---|---|
+| Answers | *How far?* | *Where?* |
+| Direction? | No | Yes |
+| Sign | Always positive | Positive or negative |
+
+**Distance** tells you how far something traveled.
+
+**Position** tells you *where* something is.
+
+---
+
+## An Example
+
+Imagine you stand at a piece of tape on the floor.
+
+You walk **3 meters to the right**.
+
+- Distance traveled: **3 m**
+- Position: **+3 m**
+
+Now start over. Walk **3 meters to the left**.
+
+- Distance traveled: **3 m**
+- Position: **-3 m**
+
+Same distance. Very different positions.
+
+---
+
+## What Is a Coordinate System?
+
+To measure **position**, you need two things:
+
+**1. An origin** — a reference point where position = 0
+
+**2. A positive direction** — one direction you call positive; the other is negative
+
+> This is just like a number line. The origin is zero, positive is to the right, negative is to the left.
+
+---
+
+## Setting Up Your Coordinate System
+
+In this lab, you will:
+
+- Mark your **origin** on the floor with tape
+- Choose and label a **positive direction**
+- Send your buggy in the **opposite** direction
+
+Your buggy travels in the **negative direction**.
+
+Every position you record will be a **negative number**.
+
+---
+
+## What Will Your Data Look Like?
+
+| Time (s) | Position, Trial 1 (cm) | Position, Trial 2 (cm) | Average (cm) |
+|---|---|---|---|
+| 1 | -28 | -26 | -27 |
+| 2 | -54 | -55 | -54.5 |
+| 3 | -81 | -83 | -82 |
+| ... | ... | ... | ... |
+
+All position values are **negative** and getting **more negative** over time.
+
+---
+
+## What Will Your Graph Look Like?
+
+In Lab 1, your graph went **up** (distance increased over time).
+
+In this lab, your position values get more and more **negative**.
+
+Your best-fit line will slope **downward**.
+
+> The slope of your line will be a **negative number**.
+
+---
+
+## Speed vs. Velocity
+
+In Lab 1, your slope represented **speed** — how fast the buggy moved.
+
+In this lab, your slope represents **velocity**.
+
+| | Speed | Velocity|
+|---|---|---|
+| Tells you | How fast | How fast *and which direction* |
+| Sign | Always positive | Positive or negative |
+
+A **negative velocity** means the object is moving in the **negative direction**.
+
+---
+
+## Your Task
+
+1. Set up a **coordinate system** (origin + positive direction)
+2. Send your buggy in the **negative direction**
+3. Collect **position vs. time** data (multiple trials)
+4. Graph **position vs. time** and draw a best-fit line
+5. Write the **equation** of your line
+6. Use your equation to **predict** the time to reach an assigned position
+7. **Test** your prediction
+
+---
+
+## Before You Start
+
+Things to remember:
+
+- Every position value should be **negative**
+- Start the buggy **before** the origin so it's at full speed
+- Collect data for **many** different time values
+- Run **multiple trials** at each time and average
+- Take your time — you need a good equation for your prediction
+
+**Go!**
+
+
+---
+
 # 2026.03.09 **Physical Science**
 
 ##### **❓ of the 📅**: If you could pick one of your stuffed animals (or toys) to come to life, which would it be?
