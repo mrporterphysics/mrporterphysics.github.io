@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.03.12 **Regents Physics**
+
+##### **❓ of the 📅**: Blue 🟦 or Read 🟥 for Hoops vs. Hunger?
+
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Paper Car Crash Introduction
+2. Paper Car Crash Design and begin building
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Build a crash test device_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.11 **Regents Physics**
 
 ##### **❓ of the 📅**: What celebrity would you switch lives with?

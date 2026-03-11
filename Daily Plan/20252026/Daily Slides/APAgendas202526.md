@@ -16,6 +16,42 @@ math: mathjax
 
 ---
 
+# 2026.03.12 **AP Physics**
+
+##### **❓ of the 📅**: Blue 🟦 or Read 🟥 for Hoops vs. Hunger?
+
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Impulse & Momentum Think Sheet
+2. AP Workbook 5.B, C, D
+
+Students who missed:
+1. Watch videos on AP Classroom
+2. Start Think Sheets
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with impulse and momentum_
+
+### 📆 Upcoming
+
+- Energy Progress Check Posted (due end of next week)
+
+</div>
+</div>
+
+---
+
+
 # 2026.03.10 **AP Physics**
 
 ##### **❓ of the 📅**: If you invited dragons to a taco party, would you give them _spicy_ 🌶️ salsa?
