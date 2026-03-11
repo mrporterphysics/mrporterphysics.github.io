@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2026.03.12 **Earth Science**
+
+##### **❓ of the 📅**: Blue 🟦 or Read 🟥 for Hoops vs. Hunger?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Orbital Factors Part 1
+    - Whiteboard your Summary
+2. Orbital Factors Part 2
+    - Note: link in canvas in module 4
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model orbital factors effect on Glacial Cycles_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.11 **Earth Science**
 
 ##### **❓ of the 📅**: What celebrity would you switch lives with? 

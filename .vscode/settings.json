@@ -20,7 +20,8 @@
       "./PorterThemes/Schodack/fluidsTheme.css",
       "./PorterThemes/Schodack/momentum.css",
       "./PorterThemes/Schodack/physics2024.css",
-      "./PorterThemes/Schodack/energy.css"
+      "./PorterThemes/Schodack/energy.css",
+      "./Presentations/Momentum/talks/momentum2.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"
