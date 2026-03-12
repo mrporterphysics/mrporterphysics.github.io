@@ -141,15 +141,9 @@ Before you start building, think about these:
 
 ---
 
-## The Competition
+## The Competition <!--fit--->
 
-**Round 1:** Ramp starting height at 200 cm — egg survives? Move on.
-
-**Round 2:** Ramp raised to 220 cm — higher speed, more momentum.
-
-**Round 3:** Ramp raised to 240 cm — even faster.
-
-Cars are eliminated when the egg cracks or breaks.
+### Winner has the **largest momentum** and a **Safe** egg! <!--fit--->
 
 ---
 
@@ -157,7 +151,7 @@ Cars are eliminated when the egg cracks or breaks.
 
 ## What You'll Calculate
 
-After the competition, you will:
+Before the competition, you will:
 
 - Measure your car's **mass** and the **track distance**
 - Time a practice run to find **average velocity**
@@ -173,12 +167,12 @@ $$p = m \cdot v$$
 - Sketch at least **two different designs** before you start
 - Build your car
 
-**Day 2** — Test and crash
+**Day 2** — Build and Test measurements 
 - Measure mass, check specs
 - Practice runs (no egg, no wall)
 - Crash competition with eggs
 
-**Day 3** — Analysis (if needed)
+**Day 3** — Crash 💥 & Analysis =
 
 ---
 
@@ -186,8 +180,10 @@ $$p = m \cdot v$$
 
 ## Before You Start
 
-Two sketches in your notebook first — **then** build.
+✅ Read over lab handout
 
-Think about the physics. Every design choice should connect back to **impulse, momentum, and force**.
+✅ Two sketches in your notebook first — **then** build.
 
-**Go!**
+✅ Think about the physics. Every design choice should connect back to **impulse, momentum, and force**.
+
+✅ **Go!**
