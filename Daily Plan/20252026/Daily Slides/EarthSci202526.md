@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.03.12 **Earth Science**
 
-##### **❓ of the 📅**: Blue 🟦 or Read 🟥 for Hoops vs. Hunger?
+##### **❓ of the 📅**: Blue 🟦 or Red 🟥 for Hoops vs. Hunger?
 
 <div class ='columns'>
 

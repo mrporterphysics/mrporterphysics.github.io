@@ -17,7 +17,7 @@ math: mathjax
 
 # 2026.03.12 **Regents Physics**
 
-##### **❓ of the 📅**: Blue 🟦 or Read 🟥 for Hoops vs. Hunger?
+##### **❓ of the 📅**: Blue 🟦 or Red 🟥 for Hoops vs. Hunger?
 
 
 <div class ='columns'>
