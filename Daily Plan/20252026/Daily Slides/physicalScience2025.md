@@ -17,6 +17,35 @@ class: green
 
 ---
 
+# 2026.03.16 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Graphing
+2. Test Prediction
+3. Discuss results of the lab
+	1. Name: velocity vs. speed
+	2. Name: Distance, displacement, position
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Buggy Lab V2_
+
+</div>
+</div>
+
+---
+
 # 2026.03.11 **Physical Science**
 
 ##### **❓ of the 📅**: What celebrity would you switch lives with?
