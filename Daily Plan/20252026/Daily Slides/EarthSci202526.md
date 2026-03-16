@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2026.03.16 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Orbital Factors Part 1
+    - Present Whiteboard Summaries
+2. Orbital Factors Part 2
+    - Note: link in canvas in module 4
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.12 **Earth Science**
 
 ##### **❓ of the 📅**: Blue 🟦 or Red 🟥 for Hoops vs. Hunger?
