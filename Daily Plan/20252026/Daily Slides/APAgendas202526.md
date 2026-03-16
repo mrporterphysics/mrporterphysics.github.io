@@ -16,6 +16,65 @@ math: mathjax
 
 ---
 
+# 2026.03.17  **AP Physics** Do Now
+
+<div class='columns'>
+<div>
+
+Amanda and Bertha are driving cars in a race. Their two cars, including Amanda and Bertha, have the same mass. At one point in the race, they both change their speeds by 10 m/s in 2 seconds. Ignore air friction.
+
+![center w:1000](image-75.png)
+
+</div>
+ 
+<div>
+
+1. Is the work done on Amanda’s car while speeding up (i) greater than, (ii) less than, or (iii) the same as the work done on Bertha’s car while speeding up?  Explain
+2. Is the impulse on Amanda’s car while speeding up (i) greater than, (ii) less than, or (iii) the same as the work done on Bertha’s car does while speeding up?  Explain
+
+
+</div>
+</div>
+
+
+
+
+---
+
+# 2026.03.17 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to see the past or the future when you touch an object?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Conservation of Momentum -> Problem Solving
+2. Momentum Bar Graphs
+3. Practice problem-solving momentum questions
+4. Physics Classroom Momentum Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use conservation of momentum to quantitatively solve problems_
+
+### 📆 Upcoming
+
+- Quiz Friday
+- PC: Momentum (2 Assignments)
+- AP Classroom - Energy
+
+</div>
+</div>
+
+---
+
 # 2026.03.16 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
