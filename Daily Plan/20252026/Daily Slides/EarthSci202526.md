@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.03.17 **Earth Science**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Part 2
+2. Notes on Earth Sun Dynamics  
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review what we have learned in this unit_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.16 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
