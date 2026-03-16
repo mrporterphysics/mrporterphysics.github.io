@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.03.17 **Earth Science**
 
-##### **❓ of the 📅**: QUESTION
+##### **❓ of the 📅**: Would you rather be able to see the past or the future when you touch an object?
 
 <div class ='columns'>
 
@@ -28,7 +28,8 @@ class:  twilight
 #### 📋 Agenda
 
 1. Finish Part 2
-2. Notes on Earth Sun Dynamics  
+    - Share Findings
+2. Notes on [Earth Sun Dynamics](../../../Presentations/ES%20Presentations/Unit%204%20Climate%20Change/earthsundynamics.html)  
 
 </div>
 
