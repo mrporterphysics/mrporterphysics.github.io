@@ -16,6 +16,48 @@ math: mathjax
 
 ---
 
+# 2026.03.16 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Paired Work - Random Partners
+2. Momentum Conservation
+3. Momentum Bar Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Introduce Conservation of Momentum_
+
+### 📆 Upcoming
+
+- Quiz Friday
+- PC: Momentum (2 Assignments)
+- AP Classroom - Energy
+
+
+</div>
+</div>
+
+---
+
+# Paired Quiz Review
+
+- Work through quiz with partner - put answers on one piece of paper
+- _**When prompted**_ compare answers with another group -> make any changes to your quiz <mark>**In another color**</mark>
+- Eventually Whiteboard assigned problem (or section of a problem)
+
+---
+
 # 2026.03.12 **AP Physics**
 
 ##### **❓ of the 📅**: Blue 🟦 or Red 🟥 for Hoops vs. Hunger?
