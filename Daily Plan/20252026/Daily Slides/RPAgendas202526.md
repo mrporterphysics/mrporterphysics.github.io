@@ -15,6 +15,38 @@ math: mathjax
 
 ---
 
+# 2026.03.17 **Regents Physics**   
+
+##### **❓ of the 📅**: Would you rather be able to see the past or the future when you touch an object?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Paper Car Project
+    - Finish Building
+    - Test down ramp
+    - Measure speed
+2. Document work in lab notebook
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Build & Test Paper Car_
+
+### 📆 Upcoming
+- Paper Car Crash Testing Tomorrow! Save the egg 🥚
+
+</div>
+</div>
+
+---
+
 # 2026.03.12 **Regents Physics**
 
 ##### **❓ of the 📅**: Blue 🟦 or Red 🟥 for Hoops vs. Hunger?
