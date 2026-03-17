@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.03.18 **Regents Physics**
+
+##### **❓ of the 📅**: If you could have dinner with anyone in the world, who would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Final tests and adjustments for paper car
+2. Crash Test Paper cars
+3. Finish lab notebook
+4. Impulse Physics Classroom work
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Crash Test Cars & Practice with Impulse & Momentum_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.17 **Regents Physics**   
 
 ##### **❓ of the 📅**: Would you rather be able to see the past or the future when you touch an object?
