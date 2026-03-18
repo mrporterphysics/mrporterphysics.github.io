@@ -141,15 +141,12 @@ style: |
 
 # The Big Questions
 
-From our Driving Question Board, we asked:
-
 - How do we know that climate change isn't happening because of **natural cycles**?
 - How has the amount of **radiation (sunlight)** reaching Earth varied in the past?
 - Does the amount of radiation the Sun produces **vary over time**?
 - Did natural factors contribute to **temperature changes** during Earth's past?
 - Do they contribute to **global warming today**?
 
-Today we begin investigating these questions with **data**.
 
 ---
 
@@ -173,7 +170,7 @@ Scientists also use **mathematical models** to calculate how much solar energy (
 - Scientists discovered a strong correlation between **summer insolation at 65°N** and the timing of **glacial-interglacial cycles**
 - Summer matters because it determines whether **ice melts faster than it accumulates**
 
-> **Key Idea:** If summer insolation at 65°N is high enough, more ice melts in summer than forms in winter → ice sheets **shrink**. If summer insolation is low, ice sheets **grow**.
+> **🔑 Key Idea:** If summer insolation at 65°N is high enough, more ice melts in summer than forms in winter → ice sheets **shrink**. If summer insolation is low, ice sheets **grow**.
 
 ---
 
@@ -215,8 +212,7 @@ What to look for:
 - **July insolation at 65°N** — rises and falls in a cyclical pattern
 - The two patterns appear to **rise and fall together**
 
-### See — Think — Wonder
-Use the graphic organizer to record your observations, ideas, and questions about the graph.
+![bg fit right](image.png)
 
 ---
 
@@ -301,6 +297,12 @@ NH tilted toward Sun at **aphelion** (farther)
 Precession changes **when** each hemisphere gets the most intense sunlight — not **how much** total energy Earth receives.
 
 </div>
+
+---
+
+
+<video height = "600" controls src="146_obliquity_with_border.m4v" title="Title"></video>
+
 
 ---
 

@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.03.18 **Earth Science**
+
+##### **❓ of the 📅**: If you could have dinner with anyone in the world, who would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes on [Earth Sun Dynamics](../../../Presentations/ES%20Presentations/Unit%204%20Climate%20Change/earthsundynamics.html)  
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and take notes on Earth Sun Dynamics_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.17 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be able to see the past or the future when you touch an object?
