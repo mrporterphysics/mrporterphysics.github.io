@@ -254,6 +254,10 @@ These are called **Milankovitch Cycles**, named after Serbian scientist **Miluti
 
 ---
 
+<video height = "600" controls src="149_axial_precession.m4v" title="Title"></video>
+
+---
+
 # Orbital Factor 1: Precession
 ### *The direction of Earth's tilt with respect to the Sun*
 
@@ -351,6 +355,10 @@ Earth's tilt varies between **22.1°** and **24.5°**
 Obliquity changes the **angle** at which sunlight strikes high latitudes, which changes how **concentrated** the energy is.
 
 </div>
+
+---
+
+<video height = "600" controls src="143_eccentricity_with_border.m4v" title="Title"></video>
 
 ---
 
