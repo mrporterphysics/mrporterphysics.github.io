@@ -664,6 +664,7 @@ We can now say we have established a **causal link**:
 # ELABORATE
 ## How well does activity from the Sun correlate with glacial-interglacial cycles?
 
+
 ---
 
 # Sunspots and Solar Radiation
@@ -684,6 +685,10 @@ The number of sunspots changes in a regular cycle:
 **Solar Minimum** — Lowest sunspot activity → least radiation
 
 </div>
+
+---
+
+![bg](image-1.png)
 
 ---
 

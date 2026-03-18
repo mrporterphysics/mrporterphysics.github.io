@@ -17,6 +17,32 @@ class:  twilight
 
 ---
 
+# 2026.03.19 **Earth Science**
+
+##### **❓ of the 📅**: What is one song you know all of the words to?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Notes
+2. Sun Spots
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Evaluate evidence for the causal relationship between changes in the amount of radiation from the Sun and the glacial-interglacial cycles._
+
+</div>
+</div>
+
+---
+
 # 2026.03.18 **Earth Science**
 
 ##### **❓ of the 📅**: If you could have dinner with anyone in the world, who would it be?

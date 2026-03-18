@@ -16,6 +16,50 @@ math: mathjax
 
 ---
 
+# 2026.03.19 **AP Physics** Do Now
+
+In Case A, a metal bullet penetrates a wooden block. In Case B, a rubber bullet with the same initial speed and mass bounces off of an identical wooden block.
+
+![center w:500](image-76.png)
+
+**Will the speed of the wooden block after the collision be (i) greater in Case A, (ii) greater in Case B, or (iii) the same in both cases? _____  _Explain your reasoning_.**
+
+---
+
+# 2026.03.19 **AP Physics**
+
+##### **❓ of the 📅**: What is one song you know all of the words to?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. AP Workbook: 5. E, F, G, M
+3. Remaining time you can use for Physics Classroom or AP Classroom 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with conservation of momentum_
+
+### 📆 Upcoming
+
+- Quiz Friday
+- PC: Momentum (2 Assignments)
+- AP Classroom - Energy
+
+
+</div>
+</div>
+
+---
+
 # 2026.03.17  **AP Physics** Do Now
 
 <div class='columns'>
