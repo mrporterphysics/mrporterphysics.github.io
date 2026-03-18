@@ -39,7 +39,7 @@ class: green
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Define our motion terms_
 
 ### 📆 Upcoming
 
