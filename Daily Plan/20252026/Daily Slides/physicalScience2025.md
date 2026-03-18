@@ -17,6 +17,37 @@ class: green
 
 ---
 
+# 2026.03.18 **Physical Science**
+
+##### **❓ of the 📅**: If you could have dinner with anyone in the world, who would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Lab
+1. Whiteboard & Discuss Results
+2. Motion Notes
+3. Distance vs. Displacement 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.16 **Physical Science**
 
 ##### **❓ of the 📅**: Would you rather live in a hot, sandy desert, or the North Pole?
