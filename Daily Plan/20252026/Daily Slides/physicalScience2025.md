@@ -17,6 +17,33 @@ class: green
 
 ---
 
+# 2026.03.19 **Physical Science**
+
+##### **❓ of the 📅**: Who's your march madness team? 🏀 ⛹️‍♂️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes - Motion Terms & Definitions
+2. Think Sheets
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define motion terms_
+
+
+</div>
+</div>
+
+---
+
 # 2026.03.18 **Physical Science**
 
 ##### **❓ of the 📅**: If you could have dinner with anyone in the world, who would it be?
