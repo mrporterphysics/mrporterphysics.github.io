@@ -15,6 +15,38 @@ math: mathjax
 
 ---
 
+# 2026.03.19 **Regents Physic**
+
+##### **❓ of the 📅**: What is one song you know all of the words to?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Work on your physics classroom (⏲️ 30 Minutes)
+2. Think Sheet: _Action-Reaction and Momentum Conservation_ (p. 7)
+3. Conservation of Momentum Introduction
+4. Practice with momentum conservation
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Impulse_
+
+🥅 _Introduce momentum conservation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.18 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could have dinner with anyone in the world, who would it be?
