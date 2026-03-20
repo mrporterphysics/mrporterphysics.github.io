@@ -17,6 +17,41 @@ class:  twilight
 
 ---
 
+# 2026.03.20 **Earth Science**
+
+##### **❓ of the 📅**: Who is your march madness team? 🏀 ⛹️‍♂️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Go Over Sunspots
+	1. Present Findings
+2. Performance Task Organizer
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish up with Earth-Sun Dynamics_
+
+</div>
+</div>
+
+---
+
+# PTO - Page 10
+
+
+Using the data about historical temperature changes over time, the changes in orbital factors over the past 9,000 years, the solar cycles, and the effect of solar factors on energy entering Earth’s systems, make and support a valid claim about the role of orbital factors and solar cycles on the melting of ice caps today.
+
+
+---
+
 # 2026.03.19 **Earth Science**
 
 ##### **❓ of the 📅**: What is one song you know all of the words to?
