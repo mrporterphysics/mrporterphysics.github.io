@@ -28,7 +28,7 @@ math: mathjax
 
 1. Quiz
 
-![center w:300](https://media.tenor.com/qKv8d4H6iDcAAAAC/test-your-knowledge-gill.gif)
+![w:300](https://media.tenor.com/qKv8d4H6iDcAAAAC/test-your-knowledge-gill.gif)![w:250](https://media.tenor.com/yaMpGv5uTSgAAAAC/friends-chandler.gif)
 
 
 </div>
