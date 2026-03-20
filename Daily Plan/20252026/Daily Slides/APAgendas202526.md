@@ -16,6 +16,38 @@ math: mathjax
 
 ---
 
+# 2026.03.20 **AP Physics**
+
+##### **❓ of the 📅**: Who's your march madness team? 🏀 ⛹️‍♂️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+
+![center w:300](https://media.tenor.com/qKv8d4H6iDcAAAAC/test-your-knowledge-gill.gif)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Take Quiz_
+
+### 📆 Upcoming
+
+- Finish AP Classroom if you haven't! (I will check who need extensions during your quiz)
+
+</div>
+</div>
+
+---
+
 # 2026.03.19 **AP Physics** Do Now
 
 In Case A, a metal bullet penetrates a wooden block. In Case B, a rubber bullet with the same initial speed and mass bounces off of an identical wooden block.
