@@ -16,6 +16,40 @@ math: mathjax
 
 ---
 
+# 2026.03.23 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather meet your travel back in time to meet your ancestors or to the future to meet your descendants?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Rotation Notes
+1. Physics Classroom:
+    - Concept Checks first 
+    - Calc Pad Second
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define rotational kinemtaic terms_
+
+### 📆 Upcoming
+
+- AP Classroom Momentum (will post today)
+- Energy & Momentum Test next week
+
+</div>
+</div>
+
+---
+
 # 2026.03.20 **AP Physics**
 
 ##### **❓ of the 📅**: Who's your march madness team? 🏀 ⛹️‍♂️

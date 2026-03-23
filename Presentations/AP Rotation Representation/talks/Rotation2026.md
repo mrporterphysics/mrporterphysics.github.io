@@ -139,6 +139,12 @@ The same as linear, but with their rotational twin!
 
 $$1 \text{ rev} = 360\degree = 2 \pi \text{ rad}$$
 
+
+***<mark>The kinematic equations assume $\text{rad/s}$</mark>***
+
+---
+
+
 ---
 
 # Torque 
