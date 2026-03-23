@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+# 2026.03.23 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather travel back in time to meet your meet your ancestors or to the future to meet your descendants?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Momentum Conservation (Puppy problem)
+2. Work through packet with tabel
+3. Whiteboard & present assigned question
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Quantitatively solve conservation of momentum questions_
+
+### 📆 Upcoming
+
+- Momentum Quiz Friday
+
+</div>
+</div>
+
+---
+
 # 2026.03.19 **Regents Physic**
 
 ##### **❓ of the 📅**: What is one song you know all of the words to?
