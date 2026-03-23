@@ -26,7 +26,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Rotation Notes
+1. Rotation [Notes](../../../Presentations/AP%20Rotation%20Representation/talks/Rotation2026.html)
 1. Physics Classroom:
     - Concept Checks first 
     - Calc Pad Second
