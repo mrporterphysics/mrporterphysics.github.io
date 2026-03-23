@@ -18,7 +18,7 @@ math: mathjax
 
 # 2026.03.23 **AP Physics**
 
-##### **❓ of the 📅**: Would you rather meet your travel back in time to meet your ancestors or to the future to meet your descendants?
+##### **❓ of the 📅**: Would you rather travel back in time to meet your meet your ancestors or to the future to meet your descendants?
 
 <div class ='columns'>
 
@@ -43,7 +43,7 @@ math: mathjax
 ### 📆 Upcoming
 
 - AP Classroom Momentum (will post today)
-- Energy & Momentum Test next week
+- Energy & Momentum Test next Wednesday
 
 </div>
 </div>
