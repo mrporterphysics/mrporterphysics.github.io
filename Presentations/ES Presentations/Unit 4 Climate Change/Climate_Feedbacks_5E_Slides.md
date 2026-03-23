@@ -136,6 +136,13 @@ PRIOR KNOWLEDGE: Students have already learned that orbital factors (Milankovitc
 
 ---
 
+# We are Warming
+
+<iframe width="1155" height="515" src="https://www.youtube.com/embed/Yp-eNd0VGzg?si=0jZs2DhEZnGnDSN9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
 <!-- _class: phase-title -->
 
 # ENGAGE
