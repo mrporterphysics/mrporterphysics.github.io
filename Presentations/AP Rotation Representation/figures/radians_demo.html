@@ -5,249 +5,548 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radian Definition Animation</title>
     <style>
+        :root {
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s ease, color 0.3s ease; }
+
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
             padding: 20px;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            line-height: 1.6;
         }
-        
+
         .container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            max-width: 1100px;
-            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
         }
-        
-        canvas {
-            margin: 20px auto;
-            display: block;
+
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        
+
         h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--text-primary);
         }
-        
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .theme-toggle::before { content: '☀️ Light'; }
+        [data-theme="dark"] .theme-toggle::before { content: '🌙 Dark'; }
+
+        .question {
+            background-color: var(--bg-tertiary);
+            padding: 25px;
+            border-left: 4px solid var(--accent-primary);
+        }
+        .question h2 { color: var(--accent-primary); margin-bottom: 10px; font-size: 1.2em; }
+        .question p { color: var(--text-secondary); font-size: 1.05em; line-height: 1.8; }
+
+        .content { padding: 30px; }
+
         .definition {
-            background-color: #f0f8ff;
-            padding: 15px;
-            border-left: 5px solid #3498db;
-            margin: 20px 0;
-            text-align: left;
-            font-size: 1.2em;
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-left: 4px solid var(--accent-secondary);
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 25px;
         }
-        
-        .controls {
-            margin: 20px 0;
+        .definition p { color: var(--text-secondary); margin-bottom: 8px; }
+        .definition p:last-child { margin-bottom: 0; }
+        .highlighted { font-weight: bold; color: var(--fx-red); }
+
+        .canvas-wrapper {
+            width: 100%;
+            background-color: var(--bg-primary);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        canvas { display: block; width: 100%; height: auto; }
+
+        .data-display {
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
         }
-        
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
+        .data-box {
+            background-color: var(--bg-tertiary);
+            padding: 15px 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            min-width: 220px;
+            text-align: center;
+        }
+        .data-box p { color: var(--text-secondary); margin: 5px 0; }
+        .data-box span { color: var(--accent-primary); font-weight: 600; }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .slider-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--bg-tertiary);
             padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .slider-group label { color: var(--text-primary); font-weight: 600; white-space: nowrap; }
+        .slider-group input[type="range"] { width: 200px; accent-color: var(--accent-primary); }
+        .slider-group .value { color: var(--accent-primary); font-weight: 600; min-width: 50px; text-align: right; }
+
+        button {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 10px 20px;
+            border-radius: 6px;
             font-size: 1em;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
         }
-        
-        button:hover {
-            background-color: #2980b9;
+        button:hover { background-color: var(--accent-hover); }
+
+        .callout {
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--warning);
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+            color: var(--warning);
+            font-weight: 600;
+            font-size: 1.1em;
+            display: none;
         }
-        
-        .highlighted {
-            font-weight: bold;
-            color: #e74c3c;
+        .callout.visible { display: block; }
+
+        footer {
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-color);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            h1 { font-size: 1.4em; }
+            .content { padding: 20px; }
+            .slider-group input[type="range"] { width: 140px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>What is a Radian?</h1>
-        
-        <div class="definition">
-            <p>A <span class="highlighted">radian</span> is defined as the angle subtended at the center of a circle when the arc length equals the radius of the circle.</p>
-            <p>1 radian ≈ 57.3° or exactly 180°/π</p>
+        <header>
+            <h1>What is a Radian?</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+
+        <div class="question">
+            <h2>Guiding Question</h2>
+            <p>Watch the green arc grow along the circle. At what angle does the arc length exactly equal the radius? How many radii fit around the full circumference?</p>
         </div>
-        
-        <canvas id="radianCanvas" width="1000" height="500"></canvas>
-        
-        <div class="controls">
-            <button id="playPauseBtn">Pause</button>
-            <button id="resetBtn">Reset</button>
+
+        <div class="content">
+            <div class="definition">
+                <p>A <span class="highlighted">radian</span> is the angle subtended at the center of a circle when the arc length equals the radius.</p>
+                <p>1 radian ≈ 57.3°&emsp;|&emsp;π radians = 180°&emsp;|&emsp;2π radians = 360°</p>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="radianCanvas" width="1000" height="500"></canvas>
+            </div>
+
+            <div class="data-display">
+                <div class="data-box">
+                    <p>Angle: <span id="angleRad">0.00</span> rad (<span id="angleDeg">0.00</span>°)</p>
+                </div>
+                <div class="data-box">
+                    <p>Arc Length: <span id="arcLen">0.00</span> r</p>
+                </div>
+                <div class="data-box">
+                    <p>Radius: <span id="radiusVal">1.00</span> r</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="playPauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+                <div class="slider-group">
+                    <label>Target Angle:</label>
+                    <input type="range" id="targetSlider" min="0.5" max="6.28" step="0.01" value="1">
+                    <span class="value" id="targetLabel">1.00 rad</span>
+                </div>
+            </div>
+
+            <div class="callout" id="callout"></div>
         </div>
+
+        <footer>Interactive Physics Simulation | Created for High School Physics</footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const canvas = document.getElementById('radianCanvas');
-            const ctx = canvas.getContext('2d');
-            const playPauseBtn = document.getElementById('playPauseBtn');
-            const resetBtn = document.getElementById('resetBtn');
-            
-            // Configuration
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            const radius = 150; // Larger radius for better visualization
-            
-            let isPlaying = true;
-            let angle = 0;
-            let targetAngle = 1; // 1 radian
-            let animationSpeed = 0.008; // Slightly slower for better visualization
-            let animationId;
-            let arcPoints = []; // Array to store points for the traced arc
-            
-            // Colors
-            const circleColor = '#3498db';
-            const radiusColor = '#e74c3c';
-            const arcColor = '#2ecc71';
-            const textColor = '#2c3e50';
-            
-            function drawScene() {
-                // Clear canvas
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // Draw circle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+        (function() {
+            const saved = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const canvas = document.getElementById('radianCanvas');
+        const ctx = canvas.getContext('2d');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const targetSlider = document.getElementById('targetSlider');
+        const targetLabel = document.getElementById('targetLabel');
+        const callout = document.getElementById('callout');
+
+        const angleRadEl = document.getElementById('angleRad');
+        const angleDegEl = document.getElementById('angleDeg');
+        const arcLenEl = document.getElementById('arcLen');
+
+        // Responsive sizing
+        const baseW = 1000, baseH = 500;
+
+        function getColors() {
+            const style = getComputedStyle(document.documentElement);
+            return {
+                text: style.getPropertyValue('--text-primary').trim() || '#1C1B1A',
+                textSec: style.getPropertyValue('--text-secondary').trim() || '#6F6144',
+                muted: style.getPropertyValue('--text-muted').trim() || '#847759',
+                blue: style.getPropertyValue('--fx-blue').trim() || '#4385BE',
+                red: style.getPropertyValue('--fx-red').trim() || '#D14D41',
+                green: style.getPropertyValue('--fx-green').trim() || '#879A39',
+                purple: style.getPropertyValue('--fx-purple').trim() || '#8B7EC8',
+                orange: style.getPropertyValue('--fx-orange').trim() || '#DA702C',
+                border: style.getPropertyValue('--border-color').trim() || '#DAD4BA',
+            };
+        }
+
+        // State
+        let isPlaying = true;
+        let angle = 0;
+        let targetAngle = 1;
+        const animationSpeed = 0.008;
+        let animationId;
+
+        // Circle layout
+        const circleX = baseW * 0.32;
+        const circleY = baseH * 0.5;
+        const radius = 150;
+
+        // Comparison area
+        const compX = baseW * 0.62;
+        const compY = baseH * 0.35;
+
+        function drawScene() {
+            ctx.clearRect(0, 0, baseW, baseH);
+            const c = getColors();
+
+            // --- Circle ---
+            ctx.beginPath();
+            ctx.arc(circleX, circleY, radius, 0, Math.PI * 2);
+            ctx.strokeStyle = c.border;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Center dot
+            ctx.beginPath();
+            ctx.arc(circleX, circleY, 4, 0, Math.PI * 2);
+            ctx.fillStyle = c.blue;
+            ctx.fill();
+
+            // Static radius (horizontal right)
+            ctx.beginPath();
+            ctx.moveTo(circleX, circleY);
+            ctx.lineTo(circleX + radius, circleY);
+            ctx.strokeStyle = c.red;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            // Rotating radius
+            const endX = circleX + radius * Math.cos(-angle);
+            const endY = circleY + radius * Math.sin(-angle);
+            ctx.beginPath();
+            ctx.moveTo(circleX, circleY);
+            ctx.lineTo(endX, endY);
+            ctx.strokeStyle = c.red;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            // Arc on circle (counter-clockwise in math = clockwise in canvas negative)
+            if (angle > 0.001) {
                 ctx.beginPath();
-                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-                ctx.strokeStyle = circleColor;
+                ctx.arc(circleX, circleY, radius, 0, -angle, true);
+                ctx.strokeStyle = c.green;
+                ctx.lineWidth = 5;
+                ctx.stroke();
+            }
+
+            // Pen dot at arc tip
+            ctx.beginPath();
+            ctx.arc(endX, endY, 6, 0, Math.PI * 2);
+            ctx.fillStyle = c.green;
+            ctx.fill();
+
+            // Angle arc indicator
+            const arcR = 30;
+            if (angle > 0.05) {
+                ctx.beginPath();
+                ctx.arc(circleX, circleY, arcR, 0, -angle, true);
+                ctx.strokeStyle = c.purple;
                 ctx.lineWidth = 2;
                 ctx.stroke();
-                
-                // Draw center point
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, 4, 0, Math.PI * 2);
-                ctx.fillStyle = circleColor;
-                ctx.fill();
-                
-                // Draw radius line
-                ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(centerX + radius * Math.cos(0), centerY - radius * Math.sin(0));
-                ctx.strokeStyle = radiusColor;
-                ctx.lineWidth = 3;
-                ctx.stroke();
-                
-                // We'll draw the arc with the arc length visual below
-                
-                // Draw second radius at the current angle - adjusted for counter-clockwise motion
-                ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(centerX + radius * Math.cos(-angle), centerY - radius * Math.sin(-angle));
-                ctx.strokeStyle = radiusColor;
-                ctx.lineWidth = 3;
-                ctx.stroke();
-                
-                // Calculate the end point of the rotating radius
-                const arcEndX = centerX + radius * Math.cos(-angle);
-                const arcEndY = centerY - radius * Math.sin(-angle);
-                
-                // Draw a small circle at the tip of the radius (like a pen)
-                ctx.beginPath();
-                ctx.arc(arcEndX, arcEndY, 5, 0, Math.PI * 2);
-                ctx.fillStyle = '#e74c3c'; // Same as radius color
-                ctx.fill();
-                
-                // Store the position history of the pen tip
-                if (isPlaying && arcPoints.length < 1000) { // Limit the number of points for performance
-                    arcPoints.push({ x: arcEndX, y: arcEndY });
-                }
-                
-                // Draw the traced path (arc) using the stored points
-                ctx.beginPath();
-                if (arcPoints.length > 0) {
-                    ctx.moveTo(arcPoints[0].x, arcPoints[0].y);
-                    for (let i = 1; i < arcPoints.length; i++) {
-                        ctx.lineTo(arcPoints[i].x, arcPoints[i].y);
-                    }
-                }
-                ctx.strokeStyle = arcColor;
-                ctx.lineWidth = 4;
-                ctx.stroke();
-                
-                // Draw a straight line below for comparison with radius
-                ctx.beginPath();
-                ctx.moveTo(centerX + radius + 20, centerY + 20);
-                ctx.lineTo(centerX + radius + 20 + radius * angle, centerY + 20);
-                ctx.strokeStyle = arcColor;
-                ctx.lineWidth = 4;
-                ctx.stroke();
-                
-                // Draw radius comparison line
-                ctx.beginPath();
-                ctx.moveTo(centerX + radius + 20, centerY + 40);
-                ctx.lineTo(centerX + radius + 20 + radius, centerY + 40);
-                ctx.strokeStyle = radiusColor;
-                ctx.lineWidth = 3;
-                ctx.stroke();
-                
-                // Add labels
-                ctx.font = '16px Arial';
-                ctx.fillStyle = textColor;
-                
-                // Angle in radians
-                ctx.fillText(`Angle: ${angle.toFixed(2)} radians (${(angle * 180 / Math.PI).toFixed(2)}°)`, centerX - 120, centerY - radius - 20);
-                
-                // Calculate current arc length
-                const arcLength = radius * angle;
-                ctx.fillText(`Arc Length: ${arcLength.toFixed(2)} units`, centerX - 120, centerY - radius - 50);
-                
-                // Arc length label
-                ctx.fillText('Arc Length = r × θ', centerX + radius + 20, centerY + 15);
-                
-                // Radius label
-                ctx.fillText('Radius (r)', centerX + radius + 20, centerY + 35);
-                
-                // When angle reaches 1 radian, show the definition highlight
-                if (Math.abs(angle - 1) < 0.02) {
-                    ctx.fillStyle = '#e74c3c';
-                    ctx.font = 'bold 16px Arial';
-                    ctx.fillText('When arc length equals radius, the angle is 1 radian!', centerX - 180, centerY + radius + 40);
-                }
+
+                // θ label
+                const midAngle = -angle / 2;
+                ctx.font = 'bold 16px "Fira Code", monospace';
+                ctx.fillStyle = c.purple;
+                ctx.textAlign = 'center';
+                ctx.fillText('θ', circleX + (arcR + 14) * Math.cos(midAngle), circleY + (arcR + 14) * Math.sin(midAngle) + 5);
             }
-            
-            function animate() {
-                if (isPlaying) {
-                    if (angle < targetAngle) {
-                        angle += animationSpeed;
-                    } else                     if (angle > targetAngle + 0.01) {
-                        angle = 0;
-                        arcPoints = []; // Clear the traced path for the next cycle
-                    }
+
+            // "r" label on static radius
+            ctx.font = '14px "Fira Code", monospace';
+            ctx.fillStyle = c.red;
+            ctx.textAlign = 'center';
+            ctx.fillText('r', circleX + radius / 2, circleY + 20);
+
+            // --- Comparison: straightened arc vs radius ---
+            const compW = radius * 1.1; // max display width for radius reference
+
+            // Label
+            ctx.font = 'bold 15px "Fira Code", monospace';
+            ctx.fillStyle = c.text;
+            ctx.textAlign = 'left';
+            ctx.fillText('Comparison', compX, compY - 30);
+
+            // Arc length (straightened) — green
+            const arcDisplayLen = Math.min(radius * angle, radius * 2.5 * Math.PI); // cap display
+            ctx.beginPath();
+            ctx.moveTo(compX, compY);
+            ctx.lineTo(compX + arcDisplayLen, compY);
+            ctx.strokeStyle = c.green;
+            ctx.lineWidth = 5;
+            ctx.stroke();
+
+            ctx.font = '13px "Fira Code", monospace';
+            ctx.fillStyle = c.green;
+            ctx.textAlign = 'left';
+            ctx.fillText('Arc length (straightened): s = rθ', compX, compY - 10);
+
+            // Arc length numeric
+            ctx.textAlign = 'right';
+            ctx.fillText(`= ${angle.toFixed(2)}r`, compX + Math.max(arcDisplayLen, 40) + 50, compY + 5);
+
+            // Radius reference — red
+            const refY = compY + 35;
+            ctx.beginPath();
+            ctx.moveTo(compX, refY);
+            ctx.lineTo(compX + radius, refY);
+            ctx.strokeStyle = c.red;
+            ctx.lineWidth = 3;
+            ctx.stroke();
+
+            ctx.font = '13px "Fira Code", monospace';
+            ctx.fillStyle = c.red;
+            ctx.textAlign = 'left';
+            ctx.fillText('Radius: r', compX, refY - 10);
+
+            // --- Key angle markers table ---
+            const tableY = compY + 80;
+            ctx.font = '13px "Fira Code", monospace';
+            ctx.textAlign = 'left';
+            ctx.fillStyle = c.textSec;
+            ctx.fillText('Key Angles:', compX, tableY);
+
+            const markers = [
+                { label: '1 rad', val: 1, deg: '57.3°' },
+                { label: 'π/2',   val: Math.PI/2, deg: '90°' },
+                { label: 'π',     val: Math.PI, deg: '180°' },
+                { label: '3π/2',  val: 3*Math.PI/2, deg: '270°' },
+                { label: '2π',    val: 2*Math.PI, deg: '360°' },
+            ];
+
+            markers.forEach((m, i) => {
+                const y = tableY + 22 + i * 20;
+                const active = Math.abs(angle - m.val) < 0.03;
+                ctx.fillStyle = active ? c.orange : c.muted;
+                ctx.font = active ? 'bold 13px "Fira Code", monospace' : '13px "Fira Code", monospace';
+                ctx.fillText(`${m.label}  =  ${m.deg}`, compX + 10, y);
+                if (active) {
+                    ctx.fillText('◄', compX + 180, y);
                 }
-                drawScene();
-                animationId = requestAnimationFrame(animate);
+            });
+
+            // --- Callout logic ---
+            const tolerance = 0.03;
+            if (Math.abs(angle - 1) < tolerance) {
+                callout.textContent = '✓ Arc length = radius → the angle is exactly 1 radian!';
+                callout.classList.add('visible');
+            } else if (Math.abs(angle - Math.PI) < tolerance) {
+                callout.textContent = '✓ At π radians (180°), the arc length equals half the circumference.';
+                callout.classList.add('visible');
+            } else if (Math.abs(angle - 2 * Math.PI) < tolerance) {
+                callout.textContent = '✓ At 2π radians (360°), the arc length equals the full circumference (2πr).';
+                callout.classList.add('visible');
+            } else {
+                callout.classList.remove('visible');
             }
-            
-            // Initialize the animation
-            animate();
-            
-            // Event listeners for buttons
-            playPauseBtn.addEventListener('click', function() {
-                isPlaying = !isPlaying;
-                playPauseBtn.textContent = isPlaying ? 'Pause' : 'Play';
-            });
-            
-            resetBtn.addEventListener('click', function() {
-                angle = 0;
-                isPlaying = true;
-                arcPoints = []; // Clear the traced path
-                playPauseBtn.textContent = 'Pause';
-            });
+        }
+
+        function animate() {
+            if (isPlaying) {
+                if (angle < targetAngle) {
+                    angle = Math.min(angle + animationSpeed, targetAngle);
+                }
+                // Animation stops cleanly at target — no dead zone
+            }
+
+            // Update data display
+            angleRadEl.textContent = angle.toFixed(2);
+            angleDegEl.textContent = (angle * 180 / Math.PI).toFixed(1);
+            arcLenEl.textContent = angle.toFixed(2);
+
+            drawScene();
+            animationId = requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Controls
+        playPauseBtn.addEventListener('click', function() {
+            isPlaying = !isPlaying;
+            playPauseBtn.textContent = isPlaying ? 'Pause' : 'Play';
         });
+
+        resetBtn.addEventListener('click', function() {
+            angle = 0;
+            isPlaying = true;
+            playPauseBtn.textContent = 'Pause';
+        });
+
+        targetSlider.addEventListener('input', function() {
+            targetAngle = parseFloat(this.value);
+            // Nice label
+            const frac = targetAngle / Math.PI;
+            let label;
+            if (Math.abs(targetAngle - 1) < 0.02) label = '1.00 rad';
+            else if (Math.abs(frac - 0.5) < 0.02) label = 'π/2';
+            else if (Math.abs(frac - 1) < 0.02) label = 'π';
+            else if (Math.abs(frac - 1.5) < 0.02) label = '3π/2';
+            else if (Math.abs(frac - 2) < 0.02) label = '2π';
+            else label = targetAngle.toFixed(2) + ' rad';
+            targetLabel.textContent = label;
+
+            // Reset animation to re-grow
+            angle = 0;
+            isPlaying = true;
+            playPauseBtn.textContent = 'Pause';
+        });
+    });
     </script>
 </body>
 </html>

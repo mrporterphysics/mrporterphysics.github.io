@@ -5,605 +5,579 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheel Rolling and Tire Track Animation</title>
     <style>
+        :root {
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+        }
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s ease, color 0.3s ease; }
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
             padding: 20px;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            line-height: 1.6;
         }
-        
         .container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            max-width: 1100px;
-            width: 100%;
+            max-width: 1200px; margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px; border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow); overflow: hidden;
         }
-        
-        canvas {
-            margin: 20px auto;
-            display: block;
-            border: 1px solid #ddd;
-            background-color: #fff;
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px; display: flex;
+            justify-content: space-between; align-items: center;
         }
-        
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+        h1 { font-size: 1.8em; font-weight: 700; }
+        .theme-toggle {
+            background: var(--bg-secondary); border: 1px solid var(--border-color);
+            color: var(--text-primary); padding: 8px 12px; border-radius: 6px;
+            cursor: pointer; font-size: 0.9rem; font-weight: 500;
         }
-        
-        .controls {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+        .theme-toggle::before { content: '☀️ Light'; }
+        [data-theme="dark"] .theme-toggle::before { content: '🌙 Dark'; }
+
+        .question {
+            background-color: var(--bg-tertiary); padding: 25px;
+            border-left: 4px solid var(--accent-primary);
         }
-        
-        button, select {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-        
-        button:hover, select:hover {
-            background-color: #2980b9;
-        }
-        
+        .question h2 { color: var(--accent-primary); margin-bottom: 10px; font-size: 1.2em; }
+        .question p { color: var(--text-secondary); font-size: 1.05em; line-height: 1.8; }
+
+        .content { padding: 30px; }
+
         .formulas {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: flex; justify-content: center; gap: 20px;
+            flex-wrap: wrap; margin-bottom: 25px;
         }
-        
         .formula {
-            background-color: #f8f9fa;
-            border-left: 5px solid #3498db;
-            padding: 10px 20px;
-            text-align: left;
-            border-radius: 0 5px 5px 0;
+            background-color: var(--bg-tertiary); border-left: 4px solid var(--accent-secondary);
+            padding: 15px 25px; border-radius: 0 8px 8px 0;
         }
-        
+        .formula p { color: var(--text-secondary); margin: 4px 0; }
+
+        .canvas-wrapper {
+            width: 100%; background-color: var(--bg-primary);
+            border-radius: 6px; border: 1px solid var(--border-color);
+            overflow: hidden; margin-bottom: 20px;
+        }
+        canvas { display: block; width: 100%; height: auto; }
+
         .data-display {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: flex; justify-content: center; gap: 20px;
+            flex-wrap: wrap; margin: 20px 0;
         }
-        
         .data-box {
-            background-color: #eef7ff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            min-width: 200px;
+            background-color: var(--bg-tertiary); padding: 15px 25px;
+            border-radius: 8px; border: 1px solid var(--border-color); min-width: 240px;
         }
-        
-        .highlighted {
-            font-weight: bold;
-            color: #e74c3c;
+        .data-box p { color: var(--text-secondary); margin: 5px 0; }
+        .data-box span { color: var(--accent-primary); font-weight: 600; }
+
+        .controls {
+            display: flex; justify-content: center; align-items: center;
+            gap: 15px; flex-wrap: wrap; margin: 20px 0;
         }
-        
+        button {
+            background-color: var(--accent-primary); color: var(--bg-primary);
+            border: 1px solid var(--accent-primary); padding: 10px 20px;
+            border-radius: 6px; font-size: 1em; font-weight: 600;
+            cursor: pointer; font-family: inherit;
+        }
+        button:hover { background-color: var(--accent-hover); }
+        select {
+            background-color: var(--bg-tertiary); color: var(--text-primary);
+            border: 1px solid var(--border-color); padding: 10px 15px;
+            border-radius: 6px; font-size: 1em; font-family: inherit; cursor: pointer;
+        }
+
         .checkbox-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 10px;
+            display: flex; align-items: center; gap: 8px;
+            background-color: var(--bg-tertiary); padding: 8px 15px;
+            border-radius: 6px; border: 1px solid var(--border-color);
         }
-        
-        input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
+        .checkbox-container label { color: var(--text-primary); font-weight: 500; cursor: pointer; font-size: 0.9em; }
+        input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent-primary); cursor: pointer; }
+
+        footer {
+            background-color: var(--bg-tertiary); border-top: 1px solid var(--border-color);
+            padding: 20px; text-align: center; color: var(--text-muted); font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            h1 { font-size: 1.4em; }
+            .content { padding: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Wheel Rolling and Tire Track Animation</h1>
-        
-        <div class="formulas">
-            <div class="formula">
-                <p>One complete rotation (2π radians) = circumference (2πr)</p>
-                <p>Linear distance = r × θ</p>
-                <p>Linear velocity = r × ω</p>
+        <header>
+            <h1>Rolling Wheel & Tire Tracks</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+
+        <div class="question">
+            <h2>Guiding Question</h2>
+            <p>Watch the red marker on the wheel. After one complete revolution, how far has the wheel traveled along the ground? How does this distance compare to the wheel's circumference?</p>
+        </div>
+
+        <div class="content">
+            <div class="formulas">
+                <div class="formula">
+                    <p>One full rotation (2π rad) = one circumference (2πr)</p>
+                    <p>Linear distance: <strong>s = r × θ</strong> &emsp;|&emsp; Linear velocity: <strong>v = r × ω</strong></p>
+                </div>
+            </div>
+
+            <div class="canvas-wrapper">
+                <canvas id="wheelCanvas" width="1000" height="420"></canvas>
+            </div>
+
+            <div class="data-display">
+                <div class="data-box">
+                    <p>Wheel Radius: <span id="wheelRadius">80</span> units</p>
+                    <p>θ (total): <span id="angularDisp">0.00</span> rad (<span id="angleInDeg">0.0</span>°)</p>
+                    <p>ω: <span id="angularVel">0.00</span> rad/s</p>
+                </div>
+                <div class="data-box">
+                    <p>Circumference (2πr): <span id="circumference">0.00</span> units</p>
+                    <p>Distance traveled: <span id="linearDist">0.00</span> units</p>
+                    <p>v: <span id="linearVel">0.00</span> units/s</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="playPauseBtn">Play</button>
+                <button id="resetBtn">Reset</button>
+                <select id="speedControl">
+                    <option value="0.5">Slow</option>
+                    <option value="1" selected>Normal</option>
+                    <option value="2">Fast</option>
+                </select>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="showMarkersCheckbox" checked>
+                    <label for="showMarkersCheckbox">Markers</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="showPathCheckbox" checked>
+                    <label for="showPathCheckbox">Tracks</label>
+                </div>
             </div>
         </div>
-        
-        <canvas id="wheelCanvas" width="1000" height="400"></canvas>
-        
-        <div class="data-display">
-            <div class="data-box">
-                <p>Wheel Radius: <span id="wheelRadius">80</span> units</p>
-                <p>Angular Displacement: <span id="angularDisp">0.00</span> rad (<span id="angleInDeg">0.00</span>°)</p>
-                <p>Angular Velocity: <span id="angularVel">0.00</span> rad/s</p>
-            </div>
-            <div class="data-box">
-                <p>Distance Traveled: <span id="linearDist">0.00</span> units</p>
-                <p>Linear Velocity: <span id="linearVel">0.00</span> units/s</p>
-                <p>Circumference: <span id="circumference">0.00</span> units</p>
-            </div>
-        </div>
-        
-        <div class="controls">
-            <button id="startBtn">Start</button>
-            <button id="playPauseBtn">Play</button>
-            <button id="resetBtn">Reset</button>
-            <select id="speedControl">
-                <option value="0.5">Slow</option>
-                <option value="1" selected>Normal</option>
-                <option value="2">Fast</option>
-            </select>
-            <div class="checkbox-container">
-                <input type="checkbox" id="showMarkersCheckbox" checked>
-                <label for="showMarkersCheckbox">Show Markers</label>
-            </div>
-            <div class="checkbox-container">
-                <input type="checkbox" id="showPathCheckbox" checked>
-                <label for="showPathCheckbox">Show Path</label>
-            </div>
-        </div>
+
+        <footer>Interactive Physics Simulation | Created for High School Physics</footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Canvas setup
-            const canvas = document.getElementById('wheelCanvas');
-            const ctx = canvas.getContext('2d');
-            
-            // Controls
-            const startBtn = document.getElementById('startBtn');
-            const playPauseBtn = document.getElementById('playPauseBtn');
-            const resetBtn = document.getElementById('resetBtn');
-            const speedControl = document.getElementById('speedControl');
-            const showMarkersCheckbox = document.getElementById('showMarkersCheckbox');
-            const showPathCheckbox = document.getElementById('showPathCheckbox');
-            
-            // Display elements
-            const wheelRadiusEl = document.getElementById('wheelRadius');
-            const angularDispEl = document.getElementById('angularDisp');
-            const angleInDegEl = document.getElementById('angleInDeg');
-            const angularVelEl = document.getElementById('angularVel');
-            const linearDistEl = document.getElementById('linearDist');
-            const linearVelEl = document.getElementById('linearVel');
-            const circumferenceEl = document.getElementById('circumference');
-            
-            // Configuration
-            const groundY = canvas.height - 80;  // Y position of the ground
-            const wheelRadius = 80;
-            const initialX = 200;  // Initial X position of wheel center
-            const linearVelocity = 100;  // pixels per second
-            
-            // Ensure the wheel starts with the red marker at the bottom (270°/3π/2)
-            const initialRotation = 0; // No extra rotation needed since we placed the marker at 270° directly
-            
-            // Calculate and display the circumference
-            const circumference = 2 * Math.PI * wheelRadius;
-            circumferenceEl.textContent = circumference.toFixed(2);
-            wheelRadiusEl.textContent = wheelRadius;
-            
-            // State variables
-            let isPlaying = false; // Start paused
-            let wheelX = initialX;
-            let totalRotation = initialRotation;  // Start with the red marker at the bottom
-            let lastTimestamp = 0;
-            let animationId;
-            let trackPoints = [];  // Points where the tire touches the ground
-            let trackMarkPoints = [];  // Points for tire tread marks
-            let wheelMarkers = [];  // Markers on the wheel
-            let blueTrackPoints = []; // Array to store blue marker tracks
-            
-            // Create markers on the wheel (like spokes or points on the tire)
-            function createWheelMarkers() {
-                wheelMarkers = [];
-                // In canvas, y increases downward, so we need to adjust our angles
-                // 0 degrees is to the right, 90 degrees is DOWN, 180 is left, 270 is UP
-                wheelMarkers.push({ angle: 0, color: '#3498db', size: 5 });        // 0° (right)
-                wheelMarkers.push({ angle: Math.PI/4, color: '#3498db', size: 5 }); // 45° (down-right)
-                wheelMarkers.push({ angle: Math.PI/2, color: '#e74c3c', size: 8 }); // 90° - RED MARKER (down/6 o'clock)
-                wheelMarkers.push({ angle: 3*Math.PI/4, color: '#3498db', size: 5 }); // 135° (down-left)
-                wheelMarkers.push({ angle: Math.PI, color: '#3498db', size: 5 });   // 180° (left)
-                wheelMarkers.push({ angle: 5*Math.PI/4, color: '#3498db', size: 5 }); // 225° (up-left)
-                wheelMarkers.push({ angle: 3*Math.PI/2, color: '#3498db', size: 5 }); // 270° (up/12 o'clock)
-                wheelMarkers.push({ angle: 7*Math.PI/4, color: '#3498db', size: 5 }); // 315° (up-right)
-            }
-            
-            // Create initial wheel markers
-            createWheelMarkers();
-            
-            // Draw the ground
-            function drawGround() {
-                // Draw the main ground line
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+        (function() {
+            const saved = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const canvas = document.getElementById('wheelCanvas');
+        const ctx = canvas.getContext('2d');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const speedControl = document.getElementById('speedControl');
+        const showMarkersCheckbox = document.getElementById('showMarkersCheckbox');
+        const showPathCheckbox = document.getElementById('showPathCheckbox');
+
+        const wheelRadiusEl = document.getElementById('wheelRadius');
+        const angularDispEl = document.getElementById('angularDisp');
+        const angleInDegEl = document.getElementById('angleInDeg');
+        const angularVelEl = document.getElementById('angularVel');
+        const linearDistEl = document.getElementById('linearDist');
+        const linearVelEl = document.getElementById('linearVel');
+        const circumferenceEl = document.getElementById('circumference');
+
+        const W = 1000, H = 420;
+        const groundY = H - 80;
+        const wheelRadius = 80;
+        const initialX = 160;
+        const linearVelocity = 100; // px/s
+        const circumference = 2 * Math.PI * wheelRadius;
+
+        circumferenceEl.textContent = circumference.toFixed(1);
+        wheelRadiusEl.textContent = wheelRadius;
+
+        // State
+        let isPlaying = false;
+        let wheelX = initialX;
+        let totalRotation = 0;
+        let lastTimestamp = 0;
+        let animationId;
+        let redTrackPoints = [];
+        let blueTrackPoints = [];
+
+        // Markers: red at bottom (π/2 in canvas coords), blue at other positions
+        const markerAngles = [0, Math.PI/4, Math.PI/2, 3*Math.PI/4, Math.PI, 5*Math.PI/4, 3*Math.PI/2, 7*Math.PI/4];
+        const RED_INDEX = 2; // π/2 = bottom
+
+        function getColors() {
+            const s = getComputedStyle(document.documentElement);
+            return {
+                text: s.getPropertyValue('--text-primary').trim() || '#1C1B1A',
+                textSec: s.getPropertyValue('--text-secondary').trim() || '#6F6144',
+                muted: s.getPropertyValue('--text-muted').trim() || '#847759',
+                blue: s.getPropertyValue('--fx-blue').trim() || '#4385BE',
+                red: s.getPropertyValue('--fx-red').trim() || '#D14D41',
+                green: s.getPropertyValue('--fx-green').trim() || '#879A39',
+                purple: s.getPropertyValue('--fx-purple').trim() || '#8B7EC8',
+                orange: s.getPropertyValue('--fx-orange').trim() || '#DA702C',
+                cyan: s.getPropertyValue('--fx-cyan').trim() || '#3AA99F',
+                border: s.getPropertyValue('--border-color').trim() || '#DAD4BA',
+                bg: s.getPropertyValue('--bg-primary').trim() || '#FFFCF0',
+            };
+        }
+
+        function drawGround(c) {
+            // Main ground line
+            ctx.beginPath();
+            ctx.moveTo(0, groundY);
+            ctx.lineTo(W, groundY);
+            ctx.strokeStyle = c.text;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Tick marks labeled in terms of radius and circumference
+            // Small ticks every radius, labeled r, 2r, 3r...
+            // Big red ticks every circumference from initialX
+            ctx.font = '11px "Fira Code", monospace';
+            ctx.textAlign = 'center';
+
+            // Circumference ticks (big, red) from initial position
+            for (let i = 0; i <= 3; i++) {
+                const x = initialX + i * circumference;
+                if (x > W) break;
+
                 ctx.beginPath();
-                ctx.moveTo(0, groundY);
-                ctx.lineTo(canvas.width, groundY);
-                ctx.strokeStyle = '#2c3e50';
-                ctx.lineWidth = 3;
+                ctx.moveTo(x, groundY);
+                ctx.lineTo(x, groundY + 18);
+                ctx.strokeStyle = c.red;
+                ctx.lineWidth = 2;
                 ctx.stroke();
-                
-                // Draw distance markers
-                ctx.font = '12px Arial';
-                ctx.fillStyle = '#555';
-                ctx.textAlign = 'center';
-                
-                for (let x = 0; x <= canvas.width; x += wheelRadius) {
-                    // Draw tick marks
+
+                if (i === 0) {
+                    ctx.fillStyle = c.red;
+                    ctx.fillText('start', x, groundY + 32);
+                } else {
+                    ctx.fillStyle = c.red;
+                    ctx.fillText(i === 1 ? 'C' : i + 'C', x, groundY + 32);
+                    // Also show 2πr label
+                    ctx.fillStyle = c.muted;
+                    ctx.font = '10px "Fira Code", monospace';
+                    ctx.fillText(i === 1 ? '(2πr)' : `(${i}·2πr)`, x, groundY + 44);
+                    ctx.font = '11px "Fira Code", monospace';
+                }
+            }
+
+            // Small radius ticks along ground (every r from start)
+            for (let i = 1; i <= Math.floor((W - initialX) / wheelRadius); i++) {
+                const x = initialX + i * wheelRadius;
+                // Skip if near a circumference tick
+                const nearCirc = Math.abs((i * wheelRadius) % circumference) < 5 ||
+                                 Math.abs((i * wheelRadius) % circumference - circumference) < 5;
+                if (nearCirc) continue;
+
+                ctx.beginPath();
+                ctx.moveTo(x, groundY);
+                ctx.lineTo(x, groundY + 8);
+                ctx.strokeStyle = c.muted;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                ctx.fillStyle = c.muted;
+                ctx.fillText(i + 'r', x, groundY + 20);
+            }
+        }
+
+        function drawWheel(c) {
+            const cx = wheelX;
+            const cy = groundY - wheelRadius;
+
+            // Wheel circle
+            ctx.beginPath();
+            ctx.arc(cx, cy, wheelRadius, 0, Math.PI * 2);
+            ctx.strokeStyle = c.text;
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+
+            // Center
+            ctx.beginPath();
+            ctx.arc(cx, cy, 4, 0, Math.PI * 2);
+            ctx.fillStyle = c.text;
+            ctx.fill();
+
+            // Reference line (center to bottom, 6 o'clock)
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(cx, cy + wheelRadius);
+            ctx.strokeStyle = c.border;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Radius spoke (rotating)
+            const spokeEndX = cx + wheelRadius * Math.cos(totalRotation);
+            const spokeEndY = cy + wheelRadius * Math.sin(totalRotation);
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(spokeEndX, spokeEndY);
+            ctx.strokeStyle = c.muted;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            // Draw markers
+            if (showMarkersCheckbox.checked) {
+                markerAngles.forEach((baseAngle, i) => {
+                    const a = baseAngle + totalRotation;
+                    const mx = cx + wheelRadius * Math.cos(a);
+                    const my = cy + wheelRadius * Math.sin(a);
+                    const isRed = (i === RED_INDEX);
+                    const size = isRed ? 8 : 5;
+                    const color = isRed ? c.red : c.blue;
+
                     ctx.beginPath();
-                    ctx.moveTo(x, groundY);
-                    ctx.lineTo(x, groundY + 10);
-                    ctx.strokeStyle = '#555';
+                    ctx.arc(mx, my, size, 0, Math.PI * 2);
+                    ctx.fillStyle = color;
+                    ctx.fill();
+                    ctx.strokeStyle = c.bg;
                     ctx.lineWidth = 1;
                     ctx.stroke();
-                    
-                    // Label ticks with distance values
-                    ctx.fillText(`${x}`, x, groundY + 25);
-                }
-                
-                // Draw circumference indicators
-                for (let x = initialX; x < canvas.width; x += circumference) {
-                    // Draw taller tick for each complete rotation point
-                    ctx.beginPath();
-                    ctx.moveTo(x, groundY);
-                    ctx.lineTo(x, groundY + 20);
-                    ctx.strokeStyle = '#e74c3c';
-                    ctx.lineWidth = 2;
-                    ctx.stroke();
-                }
-            }
-            
-            // Draw tire track marks on the ground
-            function drawTireTrack() {
-                if (!showPathCheckbox.checked) return;
-                
-                // Draw the continuous track
-                ctx.beginPath();
-                for (let i = 0; i < trackPoints.length; i++) {
-                    if (i === 0) {
-                        ctx.moveTo(trackPoints[i].x, trackPoints[i].y);
-                    } else {
-                        ctx.lineTo(trackPoints[i].x, trackPoints[i].y);
+
+                    // Track ground contact
+                    if (showPathCheckbox.checked && isPlaying && Math.abs(my - groundY) < 4) {
+                        if (isRed) {
+                            redTrackPoints.push({ x: mx, y: groundY - 2 });
+                        } else {
+                            blueTrackPoints.push({ x: mx, y: groundY + 4 });
+                        }
                     }
-                }
-                ctx.strokeStyle = '#aaa';
-                ctx.lineWidth = 1;
-                ctx.stroke();
-                
-                // Draw track marks as individual dots
-                for (const point of trackMarkPoints) {
-                    ctx.beginPath();
-                    ctx.arc(point.x, point.y, 3, 0, Math.PI * 2);
-                    ctx.fillStyle = '#e74c3c';
-                    ctx.fill();
-                }
-                
-                // Draw all stored blue track points
-                for (const point of blueTrackPoints) {
-                    ctx.beginPath();
-                    ctx.arc(point.x, point.y, 2, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(52, 152, 219, 0.5)'; // Semi-transparent blue
-                    ctx.fill();
-                }
+                });
             }
-            
-            // Draw the wheel
-            function drawWheel(x, rotation) {
-                // Save the current context state
-                ctx.save();
-                
-                // Draw the wheel
+        }
+
+        function drawTracks(c) {
+            if (!showPathCheckbox.checked) return;
+
+            // Red track marks
+            for (const pt of redTrackPoints) {
                 ctx.beginPath();
-                ctx.arc(x, groundY - wheelRadius, wheelRadius, 0, Math.PI * 2);
-                ctx.strokeStyle = '#2c3e50';
-                ctx.lineWidth = 3;
-                ctx.stroke();
-                
-                // Draw center point
-                ctx.beginPath();
-                ctx.arc(x, groundY - wheelRadius, 4, 0, Math.PI * 2);
-                ctx.fillStyle = '#2c3e50';
+                ctx.arc(pt.x, pt.y, 3.5, 0, Math.PI * 2);
+                ctx.fillStyle = c.red;
                 ctx.fill();
-                
-                // Draw a vertical line from center to bottom (6 o'clock reference)
-                // Note: In canvas, the y-axis increases downward, so "down" is positive y
+            }
+
+            // Blue track marks
+            for (const pt of blueTrackPoints) {
                 ctx.beginPath();
-                ctx.moveTo(x, groundY - wheelRadius);  // Center
-                ctx.lineTo(x, (groundY - wheelRadius) + wheelRadius); // Down to 6 o'clock
-                ctx.strokeStyle = '#aaaaaa';
-                ctx.lineWidth = 1;
-                ctx.stroke();
-                
-                // Draw wheel markers - carefully check for correct position
-                if (showMarkersCheckbox.checked) {
-                    for (const marker of wheelMarkers) {
-                        // Calculate position with correct orientation
-                        // In canvas, 0 is at the right and π/2 is at the bottom (coordinate system goes down)
-                        const markerAngle = marker.angle + rotation;
-                        const markerX = x + wheelRadius * Math.cos(markerAngle);
-                        const markerY = (groundY - wheelRadius) + wheelRadius * Math.sin(markerAngle);
-                        
-                        // Draw marker
+                ctx.arc(pt.x, pt.y, 2, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(67, 133, 190, 0.4)';
+                ctx.fill();
+            }
+
+            // Check for alignment with circumference marks
+            for (const pt of redTrackPoints) {
+                for (let n = 1; n <= 3; n++) {
+                    const circX = initialX + n * circumference;
+                    if (Math.abs(pt.x - circX) < 8) {
                         ctx.beginPath();
-                        ctx.arc(markerX, markerY, marker.size, 0, Math.PI * 2);
-                        ctx.fillStyle = marker.color;
+                        ctx.arc(pt.x, groundY - 16, 10, 0, Math.PI * 2);
+                        ctx.fillStyle = 'rgba(209, 77, 65, 0.25)';
                         ctx.fill();
-                        ctx.strokeStyle = '#fff';
-                        ctx.lineWidth = 1;
-                        ctx.stroke();
-                        
-                        // If this is the red marker, add a point to the track mark pattern
-                        if (marker.color === '#e74c3c' && showPathCheckbox.checked) {
-                            // Only add a track point if the marker touches or is near the ground
-                            if (Math.abs(markerY - groundY) < 5) {
-                                // Add the red marker's path point
-                                trackMarkPoints.push({ x: markerX, y: groundY - 2 });
-                                
-                                // Check if this mark aligns with a complete rotation point
-                                const rotationPoints = [];
-                                for (let x = initialX; x < canvas.width; x += circumference) {
-                                    rotationPoints.push(x);
-                                }
-                                
-                                // Highlight when the track mark aligns with a rotation point
-                                for (const rotPoint of rotationPoints) {
-                                    if (Math.abs(markerX - rotPoint) < 10) {
-                                        // Draw a special indicator when they align
-                                        ctx.beginPath();
-                                        ctx.arc(markerX, groundY - 15, 10, 0, Math.PI * 2);
-                                        ctx.fillStyle = 'rgba(231, 76, 60, 0.3)';
-                                        ctx.fill();
-                                        
-                                        ctx.font = 'bold 14px Arial';
-                                        ctx.fillStyle = '#e74c3c';
-                                        ctx.textAlign = 'center';
-                                        ctx.fillText('✓', markerX, groundY - 30);
-                                    }
-                                }
-                            }
-                        }
-                        // For blue markers, add points on the ground
-                        else if (showPathCheckbox.checked && marker.color === '#3498db') {
-                            const markerX = x + wheelRadius * Math.cos(markerAngle);
-                            const markerY = (groundY - wheelRadius) + wheelRadius * Math.sin(markerAngle);
-                            
-                            // Only add a track point if the marker touches or is near the ground
-                            if (Math.abs(markerY - groundY) < 5) {
-                                // Store the blue marker position when it touches the ground
-                                if (isPlaying) {
-                                    blueTrackPoints.push({ 
-                                        x: markerX, 
-                                        y: groundY + 5,
-                                        markerIndex: wheelMarkers.indexOf(marker)
-                                    });
-                                }
-                            }
-                        }
+                        ctx.font = 'bold 14px "Fira Code", monospace';
+                        ctx.fillStyle = c.red;
+                        ctx.textAlign = 'center';
+                        ctx.fillText('✓', pt.x, groundY - 30);
                     }
                 }
-                
-                // Draw a radius line to show rotation clearly
-                ctx.beginPath();
-                ctx.moveTo(x, groundY - wheelRadius);
-                ctx.lineTo(x + wheelRadius * Math.cos(rotation), (groundY - wheelRadius) + wheelRadius * Math.sin(rotation));
-                ctx.strokeStyle = '#7f8c8d';
-                ctx.lineWidth = 2;
-                ctx.stroke();
-                
-                // Restore the context state
-                ctx.restore();
-                
-                // Add point to track where the wheel touches the ground
-                if (showPathCheckbox.checked) {
-                    trackPoints.push({ x: x, y: groundY });
-                }
-                
-                return { x: x, y: groundY - wheelRadius };
             }
-            
-            // Draw the measurement indicators
-            function drawMeasurements(x, rotation) {
-                // Radian measurement arc
-                const arcRadius = 40;
-                
-                // Start the arc at 270 degrees (bottom) and draw clockwise
+        }
+
+        function drawMeasurements(c) {
+            const cx = wheelX;
+            const cy = groundY - wheelRadius;
+
+            // Angle arc from bottom (π/2)
+            if (totalRotation > 0.05) {
+                const arcR = 35;
                 ctx.beginPath();
-                ctx.arc(x, groundY - wheelRadius, arcRadius, 3*Math.PI/2, 3*Math.PI/2 + rotation, false);
-                ctx.strokeStyle = '#9b59b6';
+                ctx.arc(cx, cy, arcR, Math.PI / 2, Math.PI / 2 + totalRotation, false);
+                ctx.strokeStyle = c.purple;
                 ctx.lineWidth = 2;
                 ctx.stroke();
-                
-                // Linear distance line
-                const distanceTraveled = (wheelX - initialX);
+            }
+
+            // Linear distance arrow
+            const dist = wheelX - initialX;
+            if (dist > 5) {
                 ctx.beginPath();
-                ctx.moveTo(initialX, groundY - wheelRadius - 40);
-                ctx.lineTo(x, groundY - wheelRadius - 40);
-                ctx.strokeStyle = '#27ae60';
+                ctx.moveTo(initialX, cy - 50);
+                ctx.lineTo(wheelX, cy - 50);
+                ctx.strokeStyle = c.green;
                 ctx.lineWidth = 2;
                 ctx.stroke();
-                
-                // Draw arrowheads
-                drawArrow(initialX, groundY - wheelRadius - 40, x, groundY - wheelRadius - 40, '#27ae60');
-                
-                // Label distances
-                ctx.font = '14px Arial';
-                ctx.fillStyle = '#27ae60';
+
+                // Arrowheads
+                const headLen = 8;
+                ctx.beginPath();
+                ctx.moveTo(wheelX, cy - 50);
+                ctx.lineTo(wheelX - headLen, cy - 50 - 5);
+                ctx.moveTo(wheelX, cy - 50);
+                ctx.lineTo(wheelX - headLen, cy - 50 + 5);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(initialX, cy - 50);
+                ctx.lineTo(initialX + headLen, cy - 50 - 5);
+                ctx.moveTo(initialX, cy - 50);
+                ctx.lineTo(initialX + headLen, cy - 50 + 5);
+                ctx.stroke();
+
+                ctx.font = '13px "Fira Code", monospace';
+                ctx.fillStyle = c.green;
                 ctx.textAlign = 'center';
-                ctx.fillText(`Linear Distance: ${distanceTraveled.toFixed(1)} units`, (initialX + x) / 2, groundY - wheelRadius - 60);
-                
-                // Label angles
-                ctx.fillStyle = '#9b59b6';
-                ctx.fillText(`θ = ${rotation.toFixed(2)} rad`, x - arcRadius / 2, groundY - wheelRadius + arcRadius / 2);
+                ctx.fillText(`s = ${dist.toFixed(0)} units`, (initialX + wheelX) / 2, cy - 60);
             }
-            
-            // Helper to draw an arrow
-            function drawArrow(fromX, fromY, toX, toY, color) {
-                const headLength = 10;
-                const angle = Math.atan2(toY - fromY, toX - fromX);
-                
-                // Draw arrowhead at 'to' point
-                ctx.beginPath();
-                ctx.moveTo(toX, toY);
-                ctx.lineTo(toX - headLength * Math.cos(angle - Math.PI / 6), toY - headLength * Math.sin(angle - Math.PI / 6));
-                ctx.moveTo(toX, toY);
-                ctx.lineTo(toX - headLength * Math.cos(angle + Math.PI / 6), toY - headLength * Math.sin(angle + Math.PI / 6));
-                ctx.strokeStyle = color;
-                ctx.lineWidth = 2;
-                ctx.stroke();
-                
-                // Draw arrowhead at 'from' point (for the other direction)
-                ctx.beginPath();
-                ctx.moveTo(fromX, fromY);
-                ctx.lineTo(fromX + headLength * Math.cos(angle - Math.PI / 6), fromY + headLength * Math.sin(angle - Math.PI / 6));
-                ctx.moveTo(fromX, fromY);
-                ctx.lineTo(fromX + headLength * Math.cos(angle + Math.PI / 6), fromY + headLength * Math.sin(angle + Math.PI / 6));
-                ctx.strokeStyle = color;
-                ctx.lineWidth = 2;
-                ctx.stroke();
-            }
-            
-            // Update data display
-            function updateDataDisplay(rotation, angularVelocity, linearVel, distance) {
-                // Update angular quantities
-                angularDispEl.textContent = rotation.toFixed(2);
-                angleInDegEl.textContent = ((rotation * 180 / Math.PI) % 360).toFixed(2);
-                angularVelEl.textContent = angularVelocity.toFixed(2);
-                
-                // Update linear quantities
-                linearDistEl.textContent = distance.toFixed(2);
-                linearVelEl.textContent = linearVel.toFixed(2);
-            }
-            
-            // Animation loop
-            function update(timestamp) {
-                if (!lastTimestamp) lastTimestamp = timestamp;
-                
-                const timeDelta = (timestamp - lastTimestamp) / 1000; // Convert to seconds
-                lastTimestamp = timestamp;
-                
-                if (isPlaying) {
-                    // Update wheel position based on linear velocity and time
-                    const speedFactor = parseFloat(speedControl.value);
-                    const deltaX = linearVelocity * timeDelta * speedFactor;
-                    wheelX += deltaX;
-                    
-                    // Calculate rotation based on linear distance and wheel radius
-                    const deltaRotation = deltaX / wheelRadius;
-                    totalRotation += deltaRotation;
-                    
-                    // Wrap around if the wheel goes off-screen
-                    if (wheelX > canvas.width + wheelRadius) {
-                        wheelX = -wheelRadius;
-                        
-                        // Clear tracks when wheel wraps around
-                        trackPoints = [];
-                        trackMarkPoints = [];
-                        blueTrackPoints = [];
-                    }
-                }
-                
-                // Clear canvas
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // Draw scene elements
-                drawGround();
-                
-                // Add initial red marker point if we haven't started moving yet
-                if (wheelX === initialX && !isPlaying) {
-                    // Add an initial red dot at the bottom point of the wheel (270°/6 o'clock)
-                    const bottomPointX = initialX;
-                    const bottomPointY = groundY;
-                    
-                    ctx.beginPath();
-                    ctx.arc(bottomPointX, bottomPointY - 2, 3, 0, Math.PI * 2);
-                    ctx.fillStyle = '#e74c3c';
-                    ctx.fill();
-                }
-                
-                drawTireTrack();
-                const wheelCenter = drawWheel(wheelX, totalRotation);
-                drawMeasurements(wheelX, totalRotation);
-                
-                // Calculate and update displayed values
-                const angularVelocity = isPlaying ? (linearVelocity / wheelRadius) * parseFloat(speedControl.value) : 0;
-                const distanceTraveled = (wheelX - initialX);
-                
-                updateDataDisplay(totalRotation, angularVelocity, linearVelocity * parseFloat(speedControl.value), distanceTraveled);
-                
-                // Limit the number of track points for performance
-                if (trackPoints.length > 500) trackPoints.shift();
-                if (trackMarkPoints.length > 100) trackMarkPoints.shift();
-                if (blueTrackPoints.length > 1000) blueTrackPoints.shift();
-                
-                // Continue animation
-                animationId = requestAnimationFrame(update);
-            }
-            
-            // Initialize the animation
-            animationId = requestAnimationFrame(update);
-            
-            // Event listeners
-            startBtn.addEventListener('click', function() {
-                // Initial start
-                isPlaying = true;
-                playPauseBtn.textContent = 'Pause';
-                startBtn.disabled = true; // Disable after first use
-                lastTimestamp = 0;
-            });
-            
-            playPauseBtn.addEventListener('click', function() {
-                if (!isPlaying) {
-                    // If we're starting, change button text to Pause
-                    isPlaying = true;
-                    playPauseBtn.textContent = 'Pause';
-                    lastTimestamp = 0; // Reset timestamp to avoid jumps
-                } else {
-                    // If we're pausing, change button text to Play
-                    isPlaying = false;
-                    playPauseBtn.textContent = 'Play';
-                }
-            });
-            
-            resetBtn.addEventListener('click', function() {
-                wheelX = initialX;
-                totalRotation = initialRotation; // Reset to initial rotation with red marker at bottom
-                isPlaying = false;
-                playPauseBtn.textContent = 'Play';
-                startBtn.disabled = false; // Re-enable the start button
-                trackPoints = [];
-                trackMarkPoints = [];
-                blueTrackPoints = []; // Clear blue track points too
-                lastTimestamp = 0;
-            });
-            
-            speedControl.addEventListener('change', function() {
-                // Speed is handled directly in the update function
-            });
-            
-            showMarkersCheckbox.addEventListener('change', function() {
-                // Visibility of markers is handled in the drawing functions
-            });
-            
-            showPathCheckbox.addEventListener('change', function() {
-                if (!showPathCheckbox.checked) {
-                    // Clear tracks when turned off
-                    trackPoints = [];
-                    trackMarkPoints = [];
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, W, H);
+            const c = getColors();
+
+            drawGround(c);
+            drawTracks(c);
+            drawWheel(c);
+            drawMeasurements(c);
+        }
+
+        function update(timestamp) {
+            if (!lastTimestamp) lastTimestamp = timestamp;
+            const dt = (timestamp - lastTimestamp) / 1000;
+            lastTimestamp = timestamp;
+
+            if (isPlaying) {
+                const speed = parseFloat(speedControl.value);
+                const dx = linearVelocity * dt * speed;
+                wheelX += dx;
+                totalRotation += dx / wheelRadius;
+
+                // Wrap when off screen
+                if (wheelX > W + wheelRadius) {
+                    wheelX = -wheelRadius;
+                    totalRotation = 0;
+                    redTrackPoints = [];
                     blueTrackPoints = [];
                 }
-            });
+            }
+
+            // Update display — both radians and degrees are cumulative (no mod)
+            const speed = parseFloat(speedControl.value);
+            const omega = isPlaying ? (linearVelocity / wheelRadius) * speed : 0;
+            const dist = Math.max(0, wheelX - initialX);
+
+            angularDispEl.textContent = totalRotation.toFixed(2);
+            angleInDegEl.textContent = (totalRotation * 180 / Math.PI).toFixed(1); // cumulative, not mod 360
+            angularVelEl.textContent = omega.toFixed(2);
+            linearDistEl.textContent = dist.toFixed(1);
+            linearVelEl.textContent = (linearVelocity * speed).toFixed(1);
+
+            draw();
+            animationId = requestAnimationFrame(update);
+        }
+
+        animationId = requestAnimationFrame(update);
+
+        // Single play/pause button (no separate Start)
+        playPauseBtn.addEventListener('click', function() {
+            isPlaying = !isPlaying;
+            playPauseBtn.textContent = isPlaying ? 'Pause' : 'Play';
+            if (isPlaying) lastTimestamp = 0;
         });
+
+        resetBtn.addEventListener('click', function() {
+            wheelX = initialX;
+            totalRotation = 0;
+            isPlaying = false;
+            playPauseBtn.textContent = 'Play';
+            redTrackPoints = [];
+            blueTrackPoints = [];
+            lastTimestamp = 0;
+        });
+
+        showPathCheckbox.addEventListener('change', function() {
+            if (!showPathCheckbox.checked) {
+                redTrackPoints = [];
+                blueTrackPoints = [];
+            }
+        });
+    });
     </script>
 </body>
 </html>

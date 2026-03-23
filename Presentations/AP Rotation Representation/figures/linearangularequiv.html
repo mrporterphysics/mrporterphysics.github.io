@@ -5,442 +5,504 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linear and Angular Kinematics Relationship</title>
     <style>
+        :root {
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+        }
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; transition: background-color 0.3s ease, color 0.3s ease; }
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
             padding: 20px;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            line-height: 1.6;
         }
-        
         .container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            max-width: 1100px;
-            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
         }
-        
-        canvas {
-            margin: 20px auto;
-            display: block;
-        }
-        
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .controls {
-            margin: 20px 0;
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px;
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
-        
-        button, select {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
+        h1 { font-size: 1.8em; font-weight: 700; color: var(--text-primary); }
+        .theme-toggle {
+            background: var(--bg-secondary); border: 1px solid var(--border-color);
+            color: var(--text-primary); padding: 8px 12px; border-radius: 6px;
+            cursor: pointer; font-size: 0.9rem; font-weight: 500;
         }
-        
-        button:hover, select:hover {
-            background-color: #2980b9;
+        .theme-toggle::before { content: '☀️ Light'; }
+        [data-theme="dark"] .theme-toggle::before { content: '🌙 Dark'; }
+
+        .question {
+            background-color: var(--bg-tertiary); padding: 25px;
+            border-left: 4px solid var(--accent-primary);
         }
-        
+        .question h2 { color: var(--accent-primary); margin-bottom: 10px; font-size: 1.2em; }
+        .question p { color: var(--text-secondary); font-size: 1.05em; line-height: 1.8; }
+
+        .content { padding: 30px; }
+
         .formulas {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: flex; justify-content: center; gap: 20px;
+            flex-wrap: wrap; margin-bottom: 25px;
         }
-        
         .formula {
-            background-color: #f8f9fa;
-            border-left: 5px solid #3498db;
-            padding: 10px 20px;
-            text-align: left;
-            border-radius: 0 5px 5px 0;
+            background-color: var(--bg-tertiary); border-left: 4px solid var(--accent-secondary);
+            padding: 15px 25px; border-radius: 0 8px 8px 0;
         }
-        
+        .formula p { color: var(--text-secondary); margin: 4px 0; }
+        .formula strong { color: var(--text-primary); }
+
+        .canvas-wrapper {
+            width: 100%; background-color: var(--bg-primary);
+            border-radius: 6px; border: 1px solid var(--border-color);
+            overflow: hidden; margin-bottom: 20px;
+        }
+        canvas { display: block; width: 100%; height: auto; }
+
         .data-display {
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-            flex-wrap: wrap;
-            gap: 20px;
+            display: flex; justify-content: center; gap: 20px;
+            flex-wrap: wrap; margin: 20px 0;
         }
-        
         .data-box {
-            background-color: #eef7ff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            min-width: 200px;
+            background-color: var(--bg-tertiary); padding: 15px 25px;
+            border-radius: 8px; border: 1px solid var(--border-color); min-width: 220px;
         }
-        
-        .highlighted {
-            font-weight: bold;
-            color: #e74c3c;
+        .data-box p { color: var(--text-secondary); margin: 5px 0; }
+        .data-box span { color: var(--accent-primary); font-weight: 600; }
+
+        .controls {
+            display: flex; justify-content: center; align-items: center;
+            gap: 15px; flex-wrap: wrap; margin: 20px 0;
+        }
+        button {
+            background-color: var(--accent-primary); color: var(--bg-primary);
+            border: 1px solid var(--accent-primary); padding: 10px 20px;
+            border-radius: 6px; font-size: 1em; font-weight: 600;
+            cursor: pointer; font-family: inherit;
+        }
+        button:hover { background-color: var(--accent-hover); }
+        select {
+            background-color: var(--bg-tertiary); color: var(--text-primary);
+            border: 1px solid var(--border-color); padding: 10px 15px;
+            border-radius: 6px; font-size: 1em; font-family: inherit; cursor: pointer;
+        }
+
+        footer {
+            background-color: var(--bg-tertiary); border-top: 1px solid var(--border-color);
+            padding: 20px; text-align: center; color: var(--text-muted); font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            h1 { font-size: 1.4em; }
+            .content { padding: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Linear and Angular Kinematics Relationship</h1>
-        
-        <div class="formulas">
-            <div class="formula">
-                <p>Linear Displacement: <strong>s = r·θ</strong></p>
-                <p>Linear Velocity: <strong>v = r·ω</strong></p>
-                <p>Linear Acceleration: <strong>a = r·α</strong></p>
+        <header>
+            <h1>Linear ↔ Angular Kinematics</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+
+        <div class="question">
+            <h2>Guiding Question</h2>
+            <p>As the point moves around the circle, a corresponding point moves along a straight line. How does the linear displacement compare to the angular displacement? What role does the radius play?</p>
+        </div>
+
+        <div class="content">
+            <div class="formulas">
+                <div class="formula">
+                    <p><strong>s = r·θ</strong> &ensp;(displacement)</p>
+                    <p><strong>v = r·ω</strong> &ensp;(velocity)</p>
+                    <p><strong>a = r·α</strong> &ensp;(acceleration)</p>
+                </div>
+                <div class="formula">
+                    <p><strong>θ</strong> — angular displacement (rad)</p>
+                    <p><strong>ω</strong> — angular velocity (rad/s)</p>
+                    <p><strong>α</strong> — angular acceleration (rad/s²)</p>
+                </div>
             </div>
-            <div class="formula">
-                <p>Angular Displacement: <strong>θ</strong> (radians)</p>
-                <p>Angular Velocity: <strong>ω</strong> (radians/s)</p>
-                <p>Angular Acceleration: <strong>α</strong> (radians/s²)</p>
+
+            <div class="canvas-wrapper">
+                <canvas id="kinematicsCanvas" width="1000" height="480"></canvas>
+            </div>
+
+            <div class="data-display">
+                <div class="data-box">
+                    <p>θ: <span id="angularDisp">0.00</span> rad</p>
+                    <p>ω: <span id="angularVel">0.00</span> rad/s</p>
+                </div>
+                <div class="data-box">
+                    <p>s: <span id="linearDisp">0.00</span> units</p>
+                    <p>v: <span id="linearVel">0.00</span> units/s</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="playPauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+                <select id="speedControl">
+                    <option value="0.5">Slow</option>
+                    <option value="1" selected>Normal</option>
+                    <option value="2">Fast</option>
+                </select>
             </div>
         </div>
-        
-        <canvas id="kinematicsCanvas" width="1000" height="500"></canvas>
-        
-        <div class="data-display">
-            <div class="data-box">
-                <p>Angular Displacement: <span id="angularDisp">0.00</span> rad</p>
-                <p>Angular Velocity: <span id="angularVel">0.00</span> rad/s</p>
-            </div>
-            <div class="data-box">
-                <p>Linear Displacement: <span id="linearDisp">0.00</span> units</p>
-                <p>Linear Velocity: <span id="linearVel">0.00</span> units/s</p>
-            </div>
-        </div>
-        
-        <div class="controls">
-            <button id="playPauseBtn">Pause</button>
-            <button id="resetBtn">Reset</button>
-            <select id="speedControl">
-                <option value="0.5">Slow</option>
-                <option value="1" selected>Normal</option>
-                <option value="2">Fast</option>
-            </select>
-        </div>
+
+        <footer>Interactive Physics Simulation | Created for High School Physics</footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const canvas = document.getElementById('kinematicsCanvas');
-            const ctx = canvas.getContext('2d');
-            const playPauseBtn = document.getElementById('playPauseBtn');
-            const resetBtn = document.getElementById('resetBtn');
-            const speedControl = document.getElementById('speedControl');
-            
-            // Display elements
-            const angularDispEl = document.getElementById('angularDisp');
-            const angularVelEl = document.getElementById('angularVel');
-            const linearDispEl = document.getElementById('linearDisp');
-            const linearVelEl = document.getElementById('linearVel');
-            
-            // Configuration
-            const centerX = canvas.width / 2 - 200;  // Shifted left to make room for linear path
-            const centerY = canvas.height / 2;
-            const radius = 120;
-            const initialAngularVelocity = 0.5;  // radians per second
-            
-            // State variables
-            let isPlaying = true;
-            let angle = 0;
-            let angularVelocity = initialAngularVelocity;
-            let lastTimestamp = 0;
-            let animationId;
-            let tracePoints = [];
-            let linearTracePoints = [];
-            
-            // Colors
-            const wheelColor = '#3498db';
-            const spokeColor = '#e74c3c';
-            const pointColor = '#2ecc71';
-            const traceColor = '#9b59b6';
-            const linearPathColor = '#f39c12';
-            
-            function drawWheel() {
-                // Draw the wheel (circle)
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        }
+        (function() {
+            const saved = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const canvas = document.getElementById('kinematicsCanvas');
+        const ctx = canvas.getContext('2d');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const speedControl = document.getElementById('speedControl');
+
+        const angularDispEl = document.getElementById('angularDisp');
+        const angularVelEl = document.getElementById('angularVel');
+        const linearDispEl = document.getElementById('linearDisp');
+        const linearVelEl = document.getElementById('linearVel');
+
+        const W = 1000, H = 480;
+
+        // Circle config
+        const circleX = 180;
+        const circleY = H / 2;
+        const radius = 120;
+        const angularVelocityBase = 0.5; // rad/s
+
+        // Linear path config — fits exactly 2π worth of arc = one full revolution
+        const pathStartX = circleX + radius + 60;
+        const pathEndX = W - 30;
+        const pathY = circleY;
+        const pathLen = pathEndX - pathStartX;
+
+        // State
+        let isPlaying = true;
+        let angle = 0;
+        const maxAngle = 2 * Math.PI; // stop after one full revolution
+        let lastTimestamp = 0;
+        let animationId;
+        let circTracePoints = [];
+        let finished = false;
+
+        function getColors() {
+            const s = getComputedStyle(document.documentElement);
+            return {
+                text: s.getPropertyValue('--text-primary').trim() || '#1C1B1A',
+                textSec: s.getPropertyValue('--text-secondary').trim() || '#6F6144',
+                muted: s.getPropertyValue('--text-muted').trim() || '#847759',
+                blue: s.getPropertyValue('--fx-blue').trim() || '#4385BE',
+                red: s.getPropertyValue('--fx-red').trim() || '#D14D41',
+                green: s.getPropertyValue('--fx-green').trim() || '#879A39',
+                purple: s.getPropertyValue('--fx-purple').trim() || '#8B7EC8',
+                orange: s.getPropertyValue('--fx-orange').trim() || '#DA702C',
+                cyan: s.getPropertyValue('--fx-cyan').trim() || '#3AA99F',
+                border: s.getPropertyValue('--border-color').trim() || '#DAD4BA',
+                bg: s.getPropertyValue('--bg-primary').trim() || '#FFFCF0',
+            };
+        }
+
+        // Fractional labels for the linear path
+        const tickMarks = [
+            { frac: 0,          label: '0' },
+            { frac: Math.PI/2,  label: 'π/2' },
+            { frac: Math.PI,    label: 'π' },
+            { frac: 3*Math.PI/2,label: '3π/2' },
+            { frac: 2*Math.PI,  label: '2π' },
+        ];
+
+        function angleToPathX(a) {
+            return pathStartX + (a / maxAngle) * pathLen;
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, W, H);
+            const c = getColors();
+
+            // --- Circle ---
+            ctx.beginPath();
+            ctx.arc(circleX, circleY, radius, 0, Math.PI * 2);
+            ctx.strokeStyle = c.border;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Center
+            ctx.beginPath();
+            ctx.arc(circleX, circleY, 4, 0, Math.PI * 2);
+            ctx.fillStyle = c.blue;
+            ctx.fill();
+
+            // Reference spoke (horizontal)
+            ctx.beginPath();
+            ctx.moveTo(circleX, circleY);
+            ctx.lineTo(circleX + radius, circleY);
+            ctx.strokeStyle = c.muted;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // Rotating spoke
+            const spokeX = circleX + radius * Math.cos(angle);
+            const spokeY = circleY + radius * Math.sin(angle);
+            ctx.beginPath();
+            ctx.moveTo(circleX, circleY);
+            ctx.lineTo(spokeX, spokeY);
+            ctx.strokeStyle = c.red;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Arc trace on circle
+            if (angle > 0.01) {
                 ctx.beginPath();
-                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-                ctx.strokeStyle = wheelColor;
+                ctx.arc(circleX, circleY, radius, 0, angle);
+                ctx.strokeStyle = c.purple;
                 ctx.lineWidth = 3;
                 ctx.stroke();
-                
-                // Draw center point
-                ctx.beginPath();
-                ctx.arc(centerX, centerY, 4, 0, Math.PI * 2);
-                ctx.fillStyle = wheelColor;
-                ctx.fill();
             }
-            
-            function drawSpokes() {
-                // Draw main spoke (reference)
+
+            // Point on circle
+            ctx.beginPath();
+            ctx.arc(spokeX, spokeY, 7, 0, Math.PI * 2);
+            ctx.fillStyle = c.green;
+            ctx.fill();
+            ctx.strokeStyle = c.bg;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            // Label: Circular Motion
+            ctx.font = 'bold 14px "Fira Code", monospace';
+            ctx.fillStyle = c.text;
+            ctx.textAlign = 'center';
+            ctx.fillText('Circular Motion', circleX, circleY - radius - 20);
+
+            // Angle arc
+            if (angle > 0.1) {
                 ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(centerX + radius, centerY);
-                ctx.strokeStyle = '#aaaaaa';
-                ctx.lineWidth = 1;
-                ctx.stroke();
-                
-                // Draw rotating spoke
-                const spokeEndX = centerX + radius * Math.cos(angle);
-                const spokeEndY = centerY + radius * Math.sin(angle);
-                
-                ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.lineTo(spokeEndX, spokeEndY);
-                ctx.strokeStyle = spokeColor;
+                ctx.arc(circleX, circleY, 28, 0, angle);
+                ctx.strokeStyle = c.purple;
                 ctx.lineWidth = 2;
                 ctx.stroke();
-                
-                return { x: spokeEndX, y: spokeEndY };
+
+                const midA = angle / 2;
+                ctx.font = '13px "Fira Code", monospace';
+                ctx.fillStyle = c.purple;
+                ctx.fillText('θ', circleX + 42 * Math.cos(midA), circleY + 42 * Math.sin(midA) + 4);
             }
-            
-            function drawPoint(x, y) {
-                // Draw a point on the wheel's rim
+
+            // --- Linear Path ---
+            // Background line
+            ctx.beginPath();
+            ctx.moveTo(pathStartX, pathY);
+            ctx.lineTo(pathEndX, pathY);
+            ctx.strokeStyle = c.border;
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Tick marks with proper fraction labels
+            tickMarks.forEach(t => {
+                const x = angleToPathX(t.frac);
                 ctx.beginPath();
-                ctx.arc(x, y, 6, 0, Math.PI * 2);
-                ctx.fillStyle = pointColor;
-                ctx.fill();
-                ctx.strokeStyle = '#fff';
-                ctx.lineWidth = 1;
+                ctx.moveTo(x, pathY - 8);
+                ctx.lineTo(x, pathY + 8);
+                ctx.strokeStyle = c.muted;
+                ctx.lineWidth = 1.5;
                 ctx.stroke();
-            }
-            
-            function drawTrace(points) {
-                // Draw the circular trace of the point
-                if (points.length < 2) return;
-                
-                ctx.beginPath();
-                ctx.moveTo(points[0].x, points[0].y);
-                
-                for (let i = 1; i < points.length; i++) {
-                    ctx.lineTo(points[i].x, points[i].y);
-                }
-                
-                ctx.strokeStyle = traceColor;
-                ctx.lineWidth = 2;
-                ctx.stroke();
-            }
-            
-            function drawLinearPath() {
-                // Draw the linear path (unwrapped circumference)
-                const startX = centerX + radius + 50;
-                const startY = centerY;
-                const pathLength = radius * 4 * Math.PI;  // 2 full rotations
-                
-                // Draw horizontal line
-                ctx.beginPath();
-                ctx.moveTo(startX, startY);
-                ctx.lineTo(startX + pathLength, startY);
-                ctx.strokeStyle = linearPathColor;
-                ctx.lineWidth = 3;
-                ctx.stroke();
-                
-                // Draw tick marks
-                for (let i = 0; i <= 8; i++) {
-                    const tickX = startX + (i * radius * Math.PI / 2);
-                    ctx.beginPath();
-                    ctx.moveTo(tickX, startY - 5);
-                    ctx.lineTo(tickX, startY + 5);
-                    ctx.strokeStyle = '#555';
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                    
-                    // Label ticks with radian values
-                    ctx.fillStyle = '#555';
-                    ctx.font = '12px Arial';
-                    ctx.textAlign = 'center';
-                    ctx.fillText(`${(i * Math.PI / 2).toFixed(1)}π`, tickX, startY + 20);
-                }
-                
-                return { startX, startY, pathLength };
-            }
-            
-            function drawLinearPoint(linearPath, angle) {
-                // Calculate position on linear path
-                const linearX = linearPath.startX + (radius * angle);
-                const linearY = linearPath.startY;
-                
-                // Draw point on linear path
-                ctx.beginPath();
-                ctx.arc(linearX, linearY, 6, 0, Math.PI * 2);
-                ctx.fillStyle = pointColor;
-                ctx.fill();
-                ctx.strokeStyle = '#fff';
-                ctx.lineWidth = 1;
-                ctx.stroke();
-                
-                return { x: linearX, y: linearY };
-            }
-            
-            function drawLinearTrace(points) {
-                // Draw the linear trace
-                if (points.length < 2) return;
-                
-                ctx.beginPath();
-                ctx.moveTo(points[0].x, points[0].y);
-                
-                for (let i = 1; i < points.length; i++) {
-                    ctx.lineTo(points[i].x, points[i].y);
-                }
-                
-                ctx.strokeStyle = traceColor;
-                ctx.lineWidth = 2;
-                ctx.stroke();
-            }
-            
-            function drawConnectionLine(circularPoint, linearPoint) {
-                // Draw dashed line connecting the two points
-                ctx.beginPath();
-                ctx.moveTo(circularPoint.x, circularPoint.y);
-                ctx.lineTo(linearPoint.x, linearPoint.y);
-                ctx.setLineDash([5, 3]);
-                ctx.strokeStyle = '#2c3e50';
-                ctx.lineWidth = 1;
-                ctx.stroke();
-                ctx.setLineDash([]);
-            }
-            
-            function drawLabels() {
-                // Add labels
-                ctx.font = '16px Arial';
-                ctx.fillStyle = '#2c3e50';
+
+                ctx.font = '12px "Fira Code", monospace';
+                ctx.fillStyle = c.textSec;
                 ctx.textAlign = 'center';
-                
-                // Label for wheel
-                ctx.fillText('Circular Motion', centerX, centerY - radius - 20);
-                
-                // Label for linear path
-                ctx.fillText('Equivalent Linear Motion', centerX + radius + 200, centerY - radius - 20);
-                
-                // Formula reminder
-                ctx.font = '14px Arial';
-                ctx.fillStyle = '#e74c3c';
-                ctx.textAlign = 'left';
-                ctx.fillText('s = r·θ', centerX + radius + 50, centerY + 50);
-                ctx.fillText('v = r·ω', centerX + radius + 50, centerY + 70);
-            }
-            
-            function updateDataDisplay(timeDelta) {
-                // Calculate and display kinematic quantities
-                const linearDisplacement = radius * angle;
-                const linearVelocity = radius * angularVelocity;
-                
-                angularDispEl.textContent = angle.toFixed(2);
-                angularVelEl.textContent = angularVelocity.toFixed(2);
-                linearDispEl.textContent = linearDisplacement.toFixed(2);
-                linearVelEl.textContent = linearVelocity.toFixed(2);
-            }
-            
-            function update(timestamp) {
-                if (!lastTimestamp) lastTimestamp = timestamp;
-                
-                const timeDelta = (timestamp - lastTimestamp) / 1000; // Convert to seconds
-                lastTimestamp = timestamp;
-                
-                if (isPlaying) {
-                    // Update angle based on angular velocity and time
-                    angle += angularVelocity * timeDelta * parseFloat(speedControl.value);
-                    
-                    // Keep angle within a reasonable range (0 to 4π)
-                    if (angle > 4 * Math.PI) {
-                        angle = 0;
-                        tracePoints = [];
-                        linearTracePoints = [];
-                    }
-                }
-                
-                // Clear canvas
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // Draw components
-                drawWheel();
-                const linearPath = drawLinearPath();
-                const spokeEnd = drawSpokes();
-                
-                // Store trace points
-                if (isPlaying && angle > 0) {
-                    tracePoints.push({ x: spokeEnd.x, y: spokeEnd.y });
-                    
-                    // Limit the number of points for performance
-                    if (tracePoints.length > 300) tracePoints.shift();
-                }
-                
-                // Draw point on the wheel
-                drawPoint(spokeEnd.x, spokeEnd.y);
-                
-                // Draw trace
-                drawTrace(tracePoints);
-                
-                // Draw linear point and trace
-                const linearPoint = drawLinearPoint(linearPath, angle);
-                
-                if (isPlaying && angle > 0) {
-                    linearTracePoints.push(linearPoint);
-                    
-                    // Limit the number of points for performance
-                    if (linearTracePoints.length > 300) linearTracePoints.shift();
-                }
-                
-                drawLinearTrace(linearTracePoints);
-                
-                // Draw connection between the two points
-                drawConnectionLine(spokeEnd, linearPoint);
-                
-                // Draw labels
-                drawLabels();
-                
-                // Update displayed data
-                updateDataDisplay(timeDelta);
-                
-                // Continue animation
-                animationId = requestAnimationFrame(update);
-            }
-            
-            // Initialize the animation
-            animationId = requestAnimationFrame(update);
-            
-            // Event listeners for buttons
-            playPauseBtn.addEventListener('click', function() {
-                isPlaying = !isPlaying;
-                playPauseBtn.textContent = isPlaying ? 'Pause' : 'Play';
-                
-                if (isPlaying) {
-                    lastTimestamp = 0; // Reset timestamp to avoid large jumps
-                }
+                ctx.fillText(t.label, x, pathY + 24);
             });
-            
-            resetBtn.addEventListener('click', function() {
+
+            // Trace on linear path (full, not shifting)
+            if (angle > 0.01) {
+                ctx.beginPath();
+                ctx.moveTo(pathStartX, pathY);
+                ctx.lineTo(angleToPathX(angle), pathY);
+                ctx.strokeStyle = c.purple;
+                ctx.lineWidth = 4;
+                ctx.stroke();
+            }
+
+            // Point on linear path
+            const linPtX = angleToPathX(angle);
+            ctx.beginPath();
+            ctx.arc(linPtX, pathY, 7, 0, Math.PI * 2);
+            ctx.fillStyle = c.green;
+            ctx.fill();
+            ctx.strokeStyle = c.bg;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
+            // Label: Equivalent Linear Motion
+            ctx.font = 'bold 14px "Fira Code", monospace';
+            ctx.fillStyle = c.text;
+            ctx.textAlign = 'center';
+            ctx.fillText('Equivalent Linear Motion (s = rθ)', (pathStartX + pathEndX) / 2, pathY - radius - 20);
+
+            // Dashed connection line
+            ctx.beginPath();
+            ctx.moveTo(spokeX, spokeY);
+            ctx.lineTo(linPtX, pathY);
+            ctx.setLineDash([5, 4]);
+            ctx.strokeStyle = c.muted;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Formula reminder
+            ctx.font = '13px "Fira Code", monospace';
+            ctx.fillStyle = c.orange;
+            ctx.textAlign = 'left';
+            ctx.fillText('s = r·θ', pathStartX, pathY + 50);
+            ctx.fillText('v = r·ω', pathStartX, pathY + 68);
+
+            // Finished message
+            if (finished) {
+                ctx.font = 'bold 14px "Fira Code", monospace';
+                ctx.fillStyle = c.orange;
+                ctx.textAlign = 'center';
+                ctx.fillText('✓ One full revolution (2π rad) = one circumference (2πr)', (pathStartX + pathEndX) / 2, pathY + 90);
+            }
+        }
+
+        function update(timestamp) {
+            if (!lastTimestamp) lastTimestamp = timestamp;
+            const dt = (timestamp - lastTimestamp) / 1000;
+            lastTimestamp = timestamp;
+
+            if (isPlaying && !finished) {
+                const speed = parseFloat(speedControl.value);
+                angle += angularVelocityBase * dt * speed;
+                if (angle >= maxAngle) {
+                    angle = maxAngle;
+                    finished = true;
+                    isPlaying = false;
+                    playPauseBtn.textContent = 'Play';
+                }
+            }
+
+            // Update display
+            const linearDisp = radius * angle;
+            const speed = parseFloat(speedControl.value);
+            const currentOmega = isPlaying ? angularVelocityBase * speed : 0;
+            angularDispEl.textContent = angle.toFixed(2);
+            angularVelEl.textContent = currentOmega.toFixed(2);
+            linearDispEl.textContent = linearDisp.toFixed(1);
+            linearVelEl.textContent = (radius * currentOmega).toFixed(1);
+
+            draw();
+            animationId = requestAnimationFrame(update);
+        }
+
+        animationId = requestAnimationFrame(update);
+
+        playPauseBtn.addEventListener('click', function() {
+            if (finished) {
+                // Restart from zero
                 angle = 0;
+                finished = false;
                 isPlaying = true;
                 playPauseBtn.textContent = 'Pause';
-                tracePoints = [];
-                linearTracePoints = [];
                 lastTimestamp = 0;
-                angularVelocity = initialAngularVelocity;
-            });
-            
-            speedControl.addEventListener('change', function() {
-                // Angular velocity adjustment is handled in the update function
-            });
+            } else {
+                isPlaying = !isPlaying;
+                playPauseBtn.textContent = isPlaying ? 'Pause' : 'Play';
+                if (isPlaying) lastTimestamp = 0;
+            }
         });
+
+        resetBtn.addEventListener('click', function() {
+            angle = 0;
+            finished = false;
+            isPlaying = true;
+            playPauseBtn.textContent = 'Pause';
+            lastTimestamp = 0;
+        });
+    });
     </script>
 </body>
 </html>

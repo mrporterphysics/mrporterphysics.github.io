@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.03.23 **Earth Science**
 
-##### **❓ of the 📅**: QUESTION
+##### **❓ of the 📅**: Would you rather meet your travel back in time to meet your ancestors or to the future to meet your descendants?
 
 <div class ='columns'>
 
@@ -28,6 +28,8 @@ class:  twilight
 #### 📋 Agenda
 
 1. Start [Climate Feedbacks](../../../Presentations/ES%20Presentations/Unit%204%20Climate%20Change/Climate_Feedbacks_5E_Slides.html)
+1. We are warming - graph analysis
+2. Carbon Dioxide and Air Temperature Investigation
 
 </div>
 
@@ -35,9 +37,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
-
-### 📆 Upcoming
+🥅 _Construct an explanation using empirical evidence from data, models, and text, describing how human activities have caused greenhouse gas levels to increase and their impact on climate._
 
 </div>
 </div>
