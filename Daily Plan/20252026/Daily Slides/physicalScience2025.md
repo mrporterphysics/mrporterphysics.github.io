@@ -17,6 +17,35 @@ class: green
 
 ---
 
+# 2026.03.24 **Physical Science**
+
+##### **❓ of the 📅**: If you had a pet parrot, what would you want it to say? 🦜
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Speed vs. Velocity Notes
+2. Speed vs. Velocity Think Sheet
+3. Acceleration
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Distinguish between speed and velocity_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.19 **Physical Science**
 
 ##### **❓ of the 📅**: Who's your march madness team? 🏀 ⛹️‍♂️

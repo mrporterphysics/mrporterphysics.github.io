@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.03.24 **Regents Physics**
+
+##### **❓ of the 📅**: If you had a pet parrot, what would you want it to say?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Practice - Momentum
+2. Start Static Electricity - Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice momentum_
+
+🥅 _Introduce Static Electricity_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.23 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather travel back in time to meet your meet your ancestors or to the future to meet your descendants?
