@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.03.25 **Earth Science**
+
+##### **❓ of the 📅**: Who do you think is the best superhero? 🦸 🦸‍♀️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 1. Finish Part III
+2. Share out See-Think-Wonder and analysis
+3. Notes/Slides
+4. CER: _What is the relationship between human activities and temperature increase since the Industrial Revolution?_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Construct an explanation describing how human activities have caused greenhouse gas levels to increase and their impact on climate._
+
+
+</div>
+</div>
+
+---
+
 # 2026.03.24 **Earth Science**
 
 ##### **❓ of the 📅**: If you had a pet parrot, what would you want it to say? 🦜
