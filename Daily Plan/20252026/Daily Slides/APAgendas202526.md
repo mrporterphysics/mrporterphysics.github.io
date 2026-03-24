@@ -27,6 +27,14 @@ A weight is tied to a rope that is wrapped around a pulley. The pulley is initia
 
 ---
 
+The figures below show hollow spheres (not drawn to scale) that are rolling at a constant rate without slipping. The spheres all have the same mass, but their radii as well as their linear and angular speeds vary.
+
+![center](image-78.png)
+
+**Rank the <u>radius</u> of the spheres.**
+
+---
+
 # 2026.03.25 **AP Physics**
 
 ##### **❓ of the 📅**: Who do you think is the best superhero? 🦸 🦸‍♀️
