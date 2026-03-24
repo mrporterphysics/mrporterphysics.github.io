@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.03.24 **Earth Science**
+
+##### **❓ of the 📅**: If you had a pet parrot, what would you want it to say? 🦜
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Part 3 (Simulation)
+1. Complete See-Think-Wonder
+    - Whiteboard:
+        - 1 Important Idea
+        - 1 Question or something you found interesting
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Carbon Cycle_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.23 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather meet your travel back in time to meet your ancestors or to the future to meet your descendants?

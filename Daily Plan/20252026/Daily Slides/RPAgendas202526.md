@@ -17,7 +17,7 @@ math: mathjax
 
 # 2026.03.24 **Regents Physics**
 
-##### **❓ of the 📅**: If you had a pet parrot, what would you want it to say?
+##### **❓ of the 📅**: If you had a pet parrot, what would you want it to say? 🦜
 
 <div class ='columns'>
 
