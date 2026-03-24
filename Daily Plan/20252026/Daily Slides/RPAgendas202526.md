@@ -26,7 +26,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Regents Practice - Momentum
-2. Start Static Electricity - Notes
+2. Start Static Electricity - [Notes](../../../Presentations/RP%20Static%20Electricity/staticE2026.html)
 
 </div>
 
