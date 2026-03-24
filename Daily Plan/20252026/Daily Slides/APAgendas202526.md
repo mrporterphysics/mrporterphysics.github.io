@@ -16,6 +16,48 @@ math: mathjax
 
 ---
 
+# 2026.03.25 **AP Physics** Do Now
+
+A weight is tied to a rope that is wrapped around a pulley. The pulley is initially rotating counterclockwise and is pulling the weight up. The tension in the rope creates a torque on the pulley that opposes this rotation. The weight slows down, stops momentarily, and then moves back downward.
+
+1. Graph of the angular velocity ($\omega$) versus time for the period from the initial instant shown until the weight comes back down to the same height. Take the initial angular velocity as positive. 
+2. Graph the angular acceleration ($\alpha$) versus time for the same time period.
+
+![bg fit right:15%](image-77.png)
+
+---
+
+# 2026.03.25 **AP Physics**
+
+##### **❓ of the 📅**: Who do you think is the best superhero? 🦸 🦸‍♀️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Physics Classroom from yesterday
+2. PC: Rotation Problems Requiring the Big 4 Equations
+3. PC: Using the Big 4 Eqns and Linear Relationships
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Get comfortable with angular kinematic problem solving_
+
+### 📆 Upcoming
+- AP Classroom Momentum 
+- Energy & Momentum Test next ***Wednesday***
+
+</div>
+</div>
+
+---
+
 # 2026.03.23 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather travel back in time to meet your meet your ancestors or to the future to meet your descendants?
