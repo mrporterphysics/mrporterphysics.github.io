@@ -17,6 +17,34 @@ class: green
 
 ---
 
+# 2026.03.26 **Physical Science**
+
+##### **❓ of the 📅**: Should we prioritize space exploration or ocean exploration?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Dot Diagrams
+2. Position vs. Time Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Represent motion graphically and pictorially_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.24 **Physical Science**
 
 ##### **❓ of the 📅**: If you had a pet parrot, what would you want it to say?  🦜
