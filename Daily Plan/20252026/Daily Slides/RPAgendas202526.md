@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.03.25 **Regents Physics**
+
+##### **❓ of the 📅**: Who do you think is the best superhero? 🦸 🦸‍♀️
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Sticky Tape Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore charged objects_
+
+### 📆 Upcoming
+
+- Momentum Quiz Friday (Juniors - schedule a make up with me)
+
+</div>
+</div>
+
+---
+
 # 2026.03.24 **Regents Physics**
 
 ##### **❓ of the 📅**: If you had a pet parrot, what would you want it to say? 🦜
