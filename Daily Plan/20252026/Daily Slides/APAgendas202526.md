@@ -13,6 +13,36 @@ math: mathjax
 
 ## 👨‍🏫 Mr. Porter
 
+---
+
+# 2026.03.26 **AP Physics**
+
+##### **❓ of the 📅**: Should we prioritize space exploration or ocean exploration?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Card Sort
+2. Torque
+3. Pivot - Torque
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and measure torque_
+
+### 📆 Upcoming
+- AP Classroom Momentum 
+- Energy & Momentum Test next ***Wednesday***
+
+</div>
+</div>
 
 ---
 

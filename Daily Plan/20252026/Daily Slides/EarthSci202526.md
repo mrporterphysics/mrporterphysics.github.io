@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2026.03.26 **Earth Science**
+
+##### **❓ of the 📅**: Should we prioritize space exploration or ocean exploration? 🌊 🪐
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Skip to page 23 -> We're going outside!
+1. CER pg. 17
+    - Whiteboard each part of CER in a different color
+2. Complete page 22 & share answers (each group 1Q)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make a scientific argument_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.25 **Earth Science**
 
 ##### **❓ of the 📅**: Who do you think is the best superhero? 🦸 🦸‍♀️
