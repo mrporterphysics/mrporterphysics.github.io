@@ -17,6 +17,36 @@ class: green
 
 ---
 
+# 2026.03.30 **Physical Science**
+
+##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Dot Diagram Review
+2. Walk the graph lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Read and interpret position vs. time graphs_
+
+🥅 _Describe motion narratively and pictorially_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.26 **Physical Science**
 
 ##### **❓ of the 📅**: Should we prioritize space exploration or ocean exploration?

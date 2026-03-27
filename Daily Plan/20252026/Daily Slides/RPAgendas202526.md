@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+# 2026.03.30 **Regents Physics**
+
+##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Notes - How to Charge
+2. van de graaf
+3. Charge Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with conservation of charge_
+
+🥅 _Convert between elementary charge and Coulombs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.27 **Regents Physics**
 
 ##### **❓ of the 📅**: How many pairs of shoes do you own?
