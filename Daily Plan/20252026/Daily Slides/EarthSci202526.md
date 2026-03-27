@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.03.27 **Earth Science**
+
+##### **❓ of the 📅**: How many pairs of shoes do you own?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish CER and Present
+2. Ice and Radiation Experiment
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Analyze models and datasets of surfaces on Earth in order to figure out how different surfaces change the surrounding system and impact temperature on Earth._
+
+
+</div>
+</div>
+
+---
+
 # 2026.03.26 **Earth Science**
 
 ##### **❓ of the 📅**: Should we prioritize space exploration or ocean exploration? 🌊 🪐
