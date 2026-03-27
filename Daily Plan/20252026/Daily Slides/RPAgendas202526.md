@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.03.27 **Regents Physics**
+
+##### **❓ of the 📅**: How many pairs of shoes do you own?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Momentum Quiz
+2. Finish Sticky Tape Lab
+3. Weekend.
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Momentum quiz_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.25 **Regents Physics**
 
 ##### **❓ of the 📅**: Who do you think is the best superhero? 🦸 🦸‍♀️
