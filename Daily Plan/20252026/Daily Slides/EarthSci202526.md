@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.03.30 **Earth Science**
+
+##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Graphing Lab Data
+2. Sea Ice Extent Spreadsheet
+3. Making Sense (See-Think-Wonder)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _What impact does ice have on solar ratdiation reaching Earth?_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.27 **Earth Science**
 
 ##### **❓ of the 📅**: How many pairs of shoes do you own?
