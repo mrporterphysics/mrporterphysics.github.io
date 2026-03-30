@@ -25,6 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
+1. Review Charge Notes
 1. Notes - How to Charge
 2. van de graaf
 3. Charge Practice
