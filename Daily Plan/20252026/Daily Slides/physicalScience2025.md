@@ -51,12 +51,33 @@ class: green
 
 # Walk the Graph 🚶
 
+<div class='columns'>
+<div>
+
 ## Written Description
 
 1. your **starting position** (close or far away from the sensor)
 2. the **direction** you moved (towards or away from the sensor)
 3. the **type of motion** (at rest, constant speed, changing speed)
 4. the **relative speed** (slow, fast, or not moving)
+
+</div>
+ 
+<div>
+
+## Example 
+
+1. I started close to the sensor
+2. I walked away from the sensor
+3. I walked with a constant speed
+4. I walked slo 
+
+
+</div>
+</div>
+
+
+
 
 ---
 
