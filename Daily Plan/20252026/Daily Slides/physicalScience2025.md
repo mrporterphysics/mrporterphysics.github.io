@@ -46,6 +46,18 @@ class: green
 </div>
 </div>
 
+
+---
+
+# Walk the Graph 🚶
+
+## Written Description
+
+1. your **starting position** (close or far away from the sensor)
+2. the **direction** you moved (towards or away from the sensor)
+3. the **type of motion** (at rest, constant speed, changing speed)
+4. the **relative speed** (slow, fast, or not moving)
+
 ---
 
 # 2026.03.26 **Physical Science**
