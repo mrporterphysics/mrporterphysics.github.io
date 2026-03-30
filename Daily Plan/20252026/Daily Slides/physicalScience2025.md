@@ -29,6 +29,7 @@ class: green
 
 1. Dot Diagram Review
 2. Walk the graph lab
+    - [www.graphicalanalysis.app](https://graphicalanalysis.app/)
 
 </div>
 
