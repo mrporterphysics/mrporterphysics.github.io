@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.03.31 **AP Physics**
+
+##### **❓ of the 📅**: Is cereal a type of soup?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Static Equilibrium Notes
+2. Balancing Act Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Apply Static Equilibrium to a meter stick_
+
+### 📆 Upcoming
+
+- Test ***TOMORROW***!
+
+</div>
+</div>
+
+---
+
 # 2026.03.26 **AP Physics**
 
 ##### **❓ of the 📅**: Should we prioritize space exploration or ocean exploration?

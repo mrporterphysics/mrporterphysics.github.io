@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.03.31 **Earth Science**
+
+##### **❓ of the 📅**: Is cereal a type of soup?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Lab Questions and See-think-wonder
+2. [Documenting Glacial Change](https://ny.pbslearningmedia.org/resource/ipy07.sci.ess.earthsys.glacierphoto/documenting-glacial-change/)
+3. Present See-Think-Wonder
+4. Write your cause-and-effect model 
+    - Card Sort
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the impact ice has on solar radiation reaching Earth_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.30 **Earth Science**
 
 ##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?

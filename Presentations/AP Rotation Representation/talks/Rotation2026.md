@@ -173,6 +173,26 @@ $$ \boxed{\tau = r_\perp F = r F \sin \theta}$$
 * $r$ is distance between point force is exerted and axis of rotation
 * $F \sin \theta$ is Force perpendicular to axis of rotation
 
+---
+
+
+# Static Equilibrium 
+
+* Object remains at rest 
+* Sum of forces = zero (balanced forces)
+    * $\Sigma F = F_1 + F_2 + F_3 + \ldots = 0$
+    * $\Sigma \tau = \tau_1 + \tau_2 + \tau_3 + \ldots = 0$
+* Sum of torques = zero (balanced torques)
+
+
+---
+
+Consider the beam shown below to be in equilibrium (Net Torque = 0) around the fulcrum at Point A. The mass of the beam is 6.5 kg, the mass of the resting mass is 43 kg, and the distance between vertical yellow marks is 49 cm.
+
+![center w:600](image-6.png)
+
+What is the magnitude of force F?
+
 
 
 ---
@@ -259,25 +279,6 @@ For a 1-dimensional case with objects along a line, this simplifies to:
 
 $$x_{cm} = \frac{m_1 x_1 + m_2 x_2 + m_3 x_3 + ... + m_n x_n}{m_1 + m_2 + m_3 + ... + m_n}$$
 
-
----
-
-# Static Equilibrium 
-
-* Object remains at rest 
-* Sum of forces = zero (balanced forces)
-    * $\Sigma F = F_1 + F_2 + F_3 + \ldots = 0$
-    * $\Sigma \tau = \tau_1 + \tau_2 + \tau_3 + \ldots = 0$
-* Sum of torques = zero (balanced torques)
-
-
----
-
-Consider the beam shown below to be in equilibrium (Net Torque = 0) around the fulcrum at Point A. The mass of the beam is 6.5 kg, the mass of the resting mass is 43 kg, and the distance between vertical yellow marks is 49 cm.
-
-![center w:600](image-6.png)
-
-What is the magnitude of force F?
 
 ---
 
