@@ -17,6 +17,36 @@ class: green
 
 ---
 
+# 2026.04.01 **Physical Science**
+
+##### **❓ of the 📅**: What was your favorite April Fool's Day prank?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Walk the Graph Lab
+    - Conclusions Questions 
+    - Get Checked ✔️ and graded 💯 by Mr. Porter
+2. Class walk the graph competition
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Walk given position vs. time graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.30 **Physical Science**
 
 ##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
