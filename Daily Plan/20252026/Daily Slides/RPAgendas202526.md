@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.03.31 **Regents Physics**
+
+##### **❓ of the 📅**: Is cereal a type of soup?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Pivots - Coulomb's Law
+    - Distance vs. Force
+    - Charge vs. Force
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Experimentally determine Coulomb's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.30 **Regents Physics**
 
 ##### **❓ of the 📅**: What small pleasure makes you ridiculously happy?
