@@ -17,6 +17,38 @@ class:  twilight
 
 ---
 
+# 2026.04.01 **Earth Science**
+
+##### **❓ of the 📅**: What was your favorite April Fool's Day prank?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Present Lab Results to Class
+2. Cause and Effect Model
+3. Write Explanation:
+    - First ***individually***
+    - Then share with group
+    - Then group explanation on whiteboard
+3. Share Explanation
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Construct an explanation for how positive feedback loops related to albedo effect are currently causing the Arctic to warm at twice the rate of the rest of the planet._
+
+
+</div>
+</div>
+
+---
+
 # 2026.03.31 **Earth Science**
 
 ##### **❓ of the 📅**: Is cereal a type of soup?
