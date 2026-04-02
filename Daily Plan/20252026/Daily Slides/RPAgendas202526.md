@@ -17,6 +17,34 @@ math: mathjax
 
 # 2026.04.02 **Regents Physics**
 
+##### **❓ of the 📅**: If you were a super-hero, what powers would you have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Coulomb's Law -> What did we find in the pivot
+2. Coulomb's Law Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and apply Coulomb's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+# 2026.04.02 **Regents Physics**
+
 ##### **❓ of the 📅**: Do you collect anything?
 
 <div class ='columns'>

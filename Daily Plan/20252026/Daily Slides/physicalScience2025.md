@@ -30,7 +30,7 @@ class: green
 1. Calculating Slopes - Notes
 2. Think Sheet
 3. Acceleration
-4. Think Shee
+4. Think Sheet
 
 </div>
 
