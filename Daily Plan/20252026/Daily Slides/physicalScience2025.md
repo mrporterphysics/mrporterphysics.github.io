@@ -17,6 +17,36 @@ class: green
 
 ---
 
+# 2026.04.13 **Physical Science**
+
+##### **❓ of the 📅**: If you were a super-hero, what powers would you have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Calculating Slopes - Notes
+2. Think Sheet
+3. Acceleration
+4. Think Shee
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Calculate Slope of Position vs. time Graphs_
+
+🥅 _Define acceleration_
+
+</div>
+</div>
+
+---
+
 # 2026.04.01 **Physical Science**
 
 ##### **❓ of the 📅**: What was your favorite April Fool's Day prank?
