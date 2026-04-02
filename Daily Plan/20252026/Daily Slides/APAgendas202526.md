@@ -15,6 +15,34 @@ math: mathjax
 
 ---
 
+# 2026.04.02 **AP Physics**
+
+##### **❓ of the 📅**: Do you collect anything?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Balancing Act Lab
+2. AP Workbook 7.B
+3. Speed Dating Practice Static Equilibrium Problems
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Static Equilibrium_
+
+
+</div>
+</div>
+
+---
+
 # 2026.03.31 **AP Physics**
 
 ##### **❓ of the 📅**: Is cereal a type of soup?
