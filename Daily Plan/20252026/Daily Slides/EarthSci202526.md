@@ -17,6 +17,38 @@ class:  twilight
 
 ---
 
+# 2026.04.02 **Earth Science**
+
+##### **❓ of the 📅**: Do you collect anything?    
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Help Mr. Porter with Tables
+1. [Documenting Glacial Change](https://ny.pbslearningmedia.org/resource/ipy07.sci.ess.earthsys.glacierphoto/documenting-glacial-change/)
+1. Finish Cause & Effect Cards
+    - Add to packet
+    - Whiteboard to present
+2. Review Our Findings so Far
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model more climate change_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.01 **Earth Science**
 
 ##### **❓ of the 📅**: What was your favorite April Fool's Day prank?
