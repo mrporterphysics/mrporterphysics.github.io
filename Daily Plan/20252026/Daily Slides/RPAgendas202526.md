@@ -15,6 +15,34 @@ math: mathjax
 
 ---
 
+# 2026.04.02 **Regents Physics**
+
+##### **❓ of the 📅**: Do you collect anything?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Pivots
+2. Coulomb's Law
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Coulomb's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.03.31 **Regents Physics**
 
 ##### **❓ of the 📅**: Is cereal a type of soup?
