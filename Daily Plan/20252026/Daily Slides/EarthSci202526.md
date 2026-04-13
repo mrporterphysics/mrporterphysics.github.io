@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.04.13 **Earth Science**
+
+##### **❓ of the 📅**: If you were a super-hero, what powers would you have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Did we present our cause & effect models?
+1. Greenhouse Gas Feedback Mechanisms
+    - page 32 - 35 (part 1) -> complete reservoirs as a group and whiteboard
+    - discuss
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the combined effects of greenhouse gas and albedo feedback loops to explain the rapid rate of change of Earth’s temperature and make claims about what could happen in the future based on historical and current evidence._
+
+
+</div>
+</div>
+
+
+---
+
 # 2026.04.02 **Earth Science**
 
 ##### **❓ of the 📅**: Do you collect anything?    
