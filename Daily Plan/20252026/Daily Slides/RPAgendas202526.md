@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.04.14 **Regents Physics**
+
+##### **❓ of the 📅**: What would be on your ultimate ice cream sundae? 🍨 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Mapping the Electic Field
+2. Electric Field Notes
+3. Electric Field Practice      
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and calculate electric field_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.02 **Regents Physics**
 
 ##### **❓ of the 📅**: If you were a super-hero, what powers would you have?
