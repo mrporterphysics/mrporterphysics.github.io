@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Balance Issue — AP Physics 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --cream:#f2ede1;
+    --bone:#e8dcc0;
+    --cobalt:#1e4fc8;
+    --cobalt-l:#2f68e0;
+    --navy:#0c1d47;
+    --ochre:#d9a441;
+    --ochre-d:#b5832a;
+    --peach:#ecc6a8;
+    --peach-d:#c99571;
+    --sage:#aab082;
+    --sage-d:#8b9066;
+    --olive:#1a2214;
+    --clay:#d06a3e;
+    --maroon:#2c0f14;
+    --serif:"Fraunces", Georgia, serif;
+    --mono:"JetBrains Mono", ui-monospace, monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{
+    height:100%;overflow:hidden;
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    background:#000;
+  }
+
+  .mag{
+    display:flex;width:100vw;height:100vh;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+  }
+  .mag::-webkit-scrollbar{display:none}
+  .page{
+    flex:0 0 100vw;width:100vw;height:100vh;
+    scroll-snap-align:start;position:relative;overflow:hidden;
+  }
+
+  .folio{
+    position:absolute;top:0;left:0;right:0;
+    padding:28px 40px;display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+    z-index:10;mix-blend-mode:difference;color:#fff;
+  }
+  .folio .dash{flex:1;height:1px;background:currentColor;opacity:.4;margin:0 20px}
+  .foot{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:28px 40px 70px;display:flex;justify-content:space-between;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+    z-index:10;mix-blend-mode:difference;color:#fff;
+  }
+
+  /* ============ PAGE 1 — COVER ============ */
+  #p1{background:var(--ink);color:var(--cream)}
+  #p1 .folio,#p1 .foot{mix-blend-mode:normal;color:var(--cream);opacity:.7}
+  #p1 .cover{
+    position:absolute;inset:0;padding:100px 40px 110px;
+    display:grid;grid-template-rows:1fr auto;
+  }
+  #p1 .masthead{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(80px,12.5vw,220px);
+    line-height:0.82;letter-spacing:-0.055em;align-self:end;
+  }
+  #p1 .masthead em{font-style:italic;color:var(--cobalt-l);font-variation-settings:"SOFT" 100}
+  #p1 .sub{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    border-top:1px solid rgba(242,237,225,.25);padding-top:24px;margin-top:40px;
+  }
+  #p1 .sub .lede{max-width:460px;font-size:14px;line-height:1.5;opacity:.85}
+  #p1 .sub .issue{text-align:right;font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;line-height:1.9;opacity:.75}
+
+  /* Cover decoration: rotating asymmetric barbell with COM dot */
+  #p1 .barbell-stage{
+    position:absolute;top:13%;right:5%;
+    width:460px;height:320px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  #p1 .barbell{
+    position:absolute;width:100%;height:100%;
+    animation:spin 16s linear infinite;
+    transform-origin:64% 50%; /* rotates around COM, not geometric center */
+  }
+  #p1 .rod{
+    position:absolute;top:50%;left:10%;right:10%;height:6px;
+    background:var(--cream);transform:translateY(-50%);
+  }
+  #p1 .ball{
+    position:absolute;top:50%;border-radius:50%;transform:translateY(-50%);
+    background:var(--cobalt);
+    box-shadow:inset -10px -15px 30px rgba(0,0,0,.35),0 0 60px rgba(30,79,200,.3);
+  }
+  #p1 .small{left:5%;width:70px;height:70px}
+  #p1 .big{right:0;width:160px;height:160px}
+  #p1 .com-dot{
+    position:absolute;top:50%;left:64%;transform:translate(-50%,-50%);
+    width:14px;height:14px;border-radius:50%;
+    background:var(--cream);
+    box-shadow:0 0 0 3px var(--ink),0 0 0 4px var(--cobalt-l),0 0 30px var(--cream);
+    z-index:5;
+  }
+  #p1 .com-label{
+    position:absolute;top:calc(50% + 22px);left:64%;transform:translateX(-50%);
+    font-family:var(--mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--cobalt-l);white-space:nowrap;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ============ PAGE 2 — OPENING ============ */
+  #p2{background:var(--cream);color:var(--ink)}
+  #p2 .wrap{
+    position:absolute;inset:0;padding:110px 40px 110px;
+    display:grid;grid-template-columns:1.15fr 1fr;gap:60px;
+  }
+  #p2 .quote{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(48px,6vw,104px);
+    line-height:0.92;letter-spacing:-0.035em;align-self:center;
+  }
+  #p2 .quote em{font-style:italic;color:var(--cobalt);font-variation-settings:"SOFT" 100}
+  #p2 .quote .mark{font-size:1.4em;line-height:0;position:relative;top:.2em;opacity:.4}
+  #p2 .right{display:flex;flex-direction:column;justify-content:space-between;align-self:stretch;padding-top:40px}
+  #p2 .kicker{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    padding-bottom:14px;border-bottom:1px solid var(--ink);margin-bottom:24px;
+  }
+  #p2 .body{font-size:17px;line-height:1.55;max-width:420px}
+  #p2 .body p+p{margin-top:14px}
+  #p2 .body em{font-style:italic;color:var(--cobalt)}
+  #p2 .drop{
+    float:left;font-family:var(--serif);font-weight:300;
+    font-size:88px;line-height:.75;padding:8px 8px 0 0;
+    font-style:italic;color:var(--cobalt);font-variation-settings:"SOFT" 100;
+  }
+  #p2 .byline{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase}
+
+  /* ============ PAGE 3 — THE DEFINITION (ochre, right-heavy split) ============ */
+  #p3{background:var(--ochre);color:var(--ink);display:grid;grid-template-columns:38% 62%}
+  #p3 .left{
+    background:var(--ochre-d);
+    padding:110px 44px 110px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    position:relative;color:var(--cream);
+  }
+  #p3 .left .tag{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;opacity:.65}
+  #p3 .left h2{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(46px,4.6vw,80px);line-height:.92;letter-spacing:-0.035em;
+  }
+  #p3 .left h2 em{font-style:italic;color:var(--cobalt-l);font-variation-settings:"SOFT" 100}
+  #p3 .left .note{font-size:14px;line-height:1.55;opacity:.85;max-width:340px}
+  #p3 .right{
+    padding:110px 48px;
+    display:flex;flex-direction:column;justify-content:center;
+    position:relative;
+  }
+  #p3 .eq{
+    font-family:var(--serif);font-style:italic;font-variation-settings:"SOFT" 100;
+    font-size:clamp(80px,10vw,170px);
+    line-height:.95;letter-spacing:-0.035em;
+    color:var(--ink);
+  }
+  #p3 .eq .frac{
+    display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;
+    margin:0 8px;
+  }
+  #p3 .eq .frac .top,#p3 .eq .frac .bot{padding:0 16px}
+  #p3 .eq .frac .top{border-bottom:4px solid var(--ink);padding-bottom:8px}
+  #p3 .eq .frac .bot{padding-top:8px}
+  #p3 .eq .var{color:var(--cobalt)}
+  #p3 .gloss{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:32px;
+    margin-top:40px;padding-top:24px;
+    border-top:1px solid rgba(10,10,10,.3);
+  }
+  #p3 .gloss div{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;line-height:1.7}
+  #p3 .gloss b{display:block;font-family:var(--serif);font-style:italic;font-size:22px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--cobalt);margin-bottom:4px;font-variation-settings:"SOFT" 100}
+
+  /* ============ PAGE 4 — WHY IT MATTERS (dark navy) ============ */
+  #p4{background:var(--navy);color:var(--cream)}
+  #p4 .wrap{
+    position:absolute;inset:0;padding:110px 40px 110px;
+    display:grid;grid-template-rows:auto 1fr auto;
+  }
+  #p4 .head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1px solid rgba(242,237,225,.2);padding-bottom:20px;
+  }
+  #p4 .head h3{font-family:var(--serif);font-weight:300;font-style:italic;font-size:42px;font-variation-settings:"SOFT" 100}
+  #p4 .head .no{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;opacity:.6}
+  #p4 .big{
+    align-self:center;text-align:center;
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(140px,19vw,320px);
+    line-height:.82;letter-spacing:-0.045em;
+  }
+  #p4 .big em{font-style:italic;color:var(--cobalt-l);font-variation-settings:"SOFT" 100}
+  #p4 .big sub{font-size:.42em;vertical-align:baseline;font-style:normal}
+  #p4 .cols{
+    display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;
+    padding-top:24px;border-top:1px solid rgba(242,237,225,.2);
+  }
+  #p4 .cols p{font-size:14px;line-height:1.55;opacity:.85}
+  #p4 .cols p b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--cobalt-l);margin-bottom:8px;font-weight:500}
+
+  /* ============ PAGE 5 — THE BOAT (peach split, art on right) ============ */
+  #p5{background:var(--peach);color:var(--ink);display:grid;grid-template-columns:52% 48%}
+  #p5 .text{
+    padding:110px 48px 110px;
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  #p5 .chapter{font-family:var(--mono);font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--cobalt)}
+  #p5 h2{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(54px,5.6vw,96px);line-height:.88;letter-spacing:-0.035em;margin-top:20px;
+  }
+  #p5 h2 em{font-style:italic;font-variation-settings:"SOFT" 100}
+  #p5 .body{max-width:480px;font-size:16px;line-height:1.6;margin-top:28px}
+  #p5 .body p+p{margin-top:12px}
+  #p5 .body em{font-style:italic;color:var(--cobalt)}
+  #p5 .numbers{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    margin-top:auto;padding-top:28px;border-top:1px solid rgba(10,10,10,.3);
+  }
+  #p5 .numbers div{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase}
+  #p5 .numbers b{display:block;font-family:var(--serif);font-style:italic;font-weight:300;font-size:36px;letter-spacing:-0.01em;text-transform:none;margin-bottom:2px;font-variation-settings:"SOFT" 100;color:var(--cobalt)}
+  #p5 .art{
+    background:var(--peach-d);position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;padding:60px 30px;
+  }
+  #p5 .art svg{width:100%;max-width:520px;height:auto}
+  #p5 .art .caption{
+    position:absolute;bottom:40px;left:40px;right:40px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--ink);opacity:.75;
+  }
+
+  /* ============ PAGE 6 — CATALOG (sage, hero + sidebar) ============ */
+  #p6{background:var(--sage);color:var(--ink);display:grid;grid-template-columns:1fr 1fr}
+  #p6 .hero{
+    padding:110px 48px 110px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    background:var(--sage-d);position:relative;
+    border-right:1px solid rgba(10,10,10,.25);
+  }
+  #p6 .hero .tag{font-family:var(--mono);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--cobalt)}
+  #p6 .hero .num{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:150px;line-height:.8;color:var(--cobalt);
+    font-variation-settings:"SOFT" 100;margin-top:20px;
+  }
+  #p6 .hero h4{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(40px,4.4vw,70px);
+    line-height:.92;letter-spacing:-0.025em;margin-top:18px;
+  }
+  #p6 .hero h4 em{font-style:italic;font-variation-settings:"SOFT" 100}
+  #p6 .hero p{font-size:15px;line-height:1.6;max-width:480px;margin-top:18px;opacity:.88}
+  #p6 .hero svg{
+    position:absolute;right:30px;bottom:100px;width:180px;height:auto;opacity:.9;
+  }
+  #p6 .side{display:grid;grid-template-rows:1fr 1fr}
+  #p6 .item{
+    padding:80px 48px 40px;
+    display:flex;flex-direction:column;justify-content:center;
+    position:relative;
+  }
+  #p6 .item:first-child{border-bottom:1px solid rgba(10,10,10,.25)}
+  #p6 .item .tag{font-family:var(--mono);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--cobalt);margin-bottom:10px}
+  #p6 .item .n{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:64px;line-height:.85;color:var(--cobalt);
+    font-variation-settings:"SOFT" 100;
+    position:absolute;top:60px;right:48px;
+  }
+  #p6 .item h5{
+    font-family:var(--serif);font-weight:400;font-size:32px;
+    line-height:1;letter-spacing:-0.02em;margin-bottom:12px;
+  }
+  #p6 .item h5 em{font-style:italic}
+  #p6 .item p{font-size:14px;line-height:1.55;max-width:460px;opacity:.82}
+  #p6 .title-strip{
+    position:absolute;top:60px;left:0;right:0;
+    display:flex;justify-content:center;pointer-events:none;z-index:5;
+  }
+  #p6 .title-strip span{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+    padding:6px 18px;background:var(--sage);
+  }
+
+  /* ============ PAGE 7 — EARTH-MOON STAT (dark olive) ============ */
+  #p7{background:var(--olive);color:var(--cream)}
+  #p7 .wrap{
+    position:absolute;inset:0;padding:110px 40px 110px;
+    display:grid;grid-template-rows:auto 1fr auto;
+  }
+  #p7 .tagline{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--cobalt-l);
+  }
+  #p7 .stat{
+    align-self:center;text-align:center;
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(220px,34vw,560px);
+    line-height:.78;letter-spacing:-0.06em;
+  }
+  #p7 .stat em{font-style:italic;color:var(--cobalt-l);font-variation-settings:"SOFT" 100}
+  #p7 .stat .unit{font-size:.13em;vertical-align:super;letter-spacing:0.1em;font-style:normal;font-family:var(--mono);opacity:.7;text-transform:uppercase}
+  #p7 .caption{
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;
+    padding-top:24px;border-top:1px solid rgba(242,237,225,.2);
+    font-size:14px;line-height:1.55;
+  }
+  #p7 .caption b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--cobalt-l);margin-bottom:8px;font-weight:500}
+  #p7 .caption p{opacity:.85}
+
+  /* ============ PAGE 8 — WORKED PROBLEM (clay) ============ */
+  #p8{background:var(--clay);color:var(--ink)}
+  #p8 .wrap{
+    position:absolute;inset:0;padding:110px 40px 110px;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:48px;
+  }
+  #p8 .left{display:flex;flex-direction:column;justify-content:space-between}
+  #p8 .left .kicker{font-family:var(--mono);font-size:11px;letter-spacing:0.25em;text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+  #p8 .left h2{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(56px,6.2vw,108px);line-height:.88;letter-spacing:-0.04em;margin-top:30px;
+  }
+  #p8 .left h2 em{font-style:italic;font-variation-settings:"SOFT" 100}
+  #p8 .left .prompt{font-size:16px;line-height:1.6;max-width:520px;margin-top:30px}
+  #p8 .left .prompt em{font-style:italic;background:rgba(10,10,10,.1);padding:0 4px}
+  #p8 .diagram{
+    margin-top:32px;max-width:540px;
+  }
+  #p8 .byline{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;opacity:.65;margin-top:20px}
+  #p8 .right{
+    background:var(--ink);color:var(--cream);
+    padding:40px 36px;display:flex;flex-direction:column;gap:14px;align-self:stretch;
+  }
+  #p8 .right .label{font-family:var(--mono);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--clay);margin-bottom:6px}
+  #p8 .right .row{padding-bottom:12px;border-bottom:1px solid rgba(242,237,225,.15)}
+  #p8 .right .val{font-family:var(--serif);font-weight:300;font-size:22px;letter-spacing:-0.01em;line-height:1.2}
+  #p8 .right .val em{font-style:italic;color:var(--clay);font-variation-settings:"SOFT" 100}
+  #p8 .right .ans{margin-top:auto;padding-top:18px;border-top:2px solid var(--clay)}
+  #p8 .right .ans .val{font-size:44px;color:var(--clay)}
+  #p8 .right .ans .val small{font-size:.5em;opacity:.75}
+
+  /* ============ PAGE 9 — PITFALLS (dark maroon) ============ */
+  #p9{background:var(--maroon);color:var(--cream)}
+  #p9 .wrap{
+    position:absolute;inset:0;padding:110px 40px 110px;
+    display:grid;grid-template-columns:1fr 2fr;gap:60px;
+  }
+  #p9 .title{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(60px,6.8vw,124px);line-height:.85;letter-spacing:-0.04em;align-self:start;
+  }
+  #p9 .title em{font-style:italic;color:var(--cobalt-l);font-variation-settings:"SOFT" 100}
+  #p9 .title .sub{
+    display:block;font-family:var(--mono);font-size:11px;letter-spacing:0.25em;
+    text-transform:uppercase;margin-top:24px;opacity:.6;
+  }
+  #p9 .list{display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+  #p9 .item{
+    display:grid;grid-template-columns:80px 1fr;gap:24px;
+    padding:20px 0;border-top:1px solid rgba(242,237,225,.2);
+  }
+  #p9 .item:last-child{border-bottom:1px solid rgba(242,237,225,.2)}
+  #p9 .item .n{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:56px;line-height:.85;color:var(--cobalt-l);font-variation-settings:"SOFT" 100;
+  }
+  #p9 .item h5{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:-0.01em;margin-bottom:4px}
+  #p9 .item p{font-size:14px;line-height:1.55;opacity:.78;max-width:640px}
+  #p9 .item em{font-style:italic;color:var(--cobalt-l)}
+
+  /* ============ PAGE 10 — BACK COVER ============ */
+  #p10{background:var(--ink);color:var(--cream)}
+  #p10 .wrap{
+    position:absolute;inset:0;padding:110px 40px 110px;
+    display:grid;grid-template-rows:1fr auto auto;
+  }
+  #p10 .end{
+    align-self:center;text-align:center;
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(78px,9.4vw,172px);line-height:.85;letter-spacing:-0.045em;
+  }
+  #p10 .end em{font-style:italic;color:var(--cobalt-l);font-variation-settings:"SOFT" 100}
+  #p10 .parting{
+    text-align:center;font-size:16px;line-height:1.6;max-width:580px;margin:40px auto 0;opacity:.75;
+  }
+  #p10 .colophon{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    padding-top:28px;margin-top:40px;border-top:1px solid rgba(242,237,225,.25);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;line-height:1.8;
+  }
+  #p10 .colophon b{display:block;color:var(--cobalt-l);margin-bottom:6px;font-weight:500}
+  #p10 .arc{
+    position:absolute;bottom:-340px;left:50%;transform:translateX(-50%);
+    width:820px;height:820px;border-radius:50%;
+    border:1px solid rgba(242,237,225,.1);pointer-events:none;
+  }
+  #p10 .arc::before,#p10 .arc::after{
+    content:"";position:absolute;inset:80px;border-radius:50%;
+    border:1px solid rgba(242,237,225,.08);
+  }
+  #p10 .arc::after{inset:160px;border-color:rgba(30,79,200,.25)}
+  #p10 .arc-dot{
+    position:absolute;top:38%;left:50%;transform:translateX(-50%);
+    width:14px;height:14px;border-radius:50%;background:var(--cobalt-l);
+    box-shadow:0 0 30px rgba(30,79,200,.6);
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    position:fixed;bottom:28px;left:50%;transform:translateX(-50%);
+    display:flex;gap:10px;z-index:100;
+    padding:10px 16px;background:rgba(242,237,225,.08);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    border-radius:100px;border:1px solid rgba(242,237,225,.15);
+  }
+  .nav button{
+    width:8px;height:8px;border-radius:50%;
+    background:rgba(242,237,225,.35);border:none;cursor:pointer;padding:0;
+    transition:all .3s ease;
+  }
+  .nav button:hover{background:rgba(242,237,225,.6);transform:scale(1.2)}
+  .nav button.active{background:var(--cobalt-l);width:28px;border-radius:10px}
+
+  .hint{
+    position:fixed;top:28px;right:32px;z-index:100;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+    color:rgba(242,237,225,.6);
+    display:flex;gap:10px;align-items:center;mix-blend-mode:difference;
+  }
+  .hint kbd{
+    display:inline-block;padding:3px 7px;
+    border:1px solid currentColor;border-radius:3px;
+    font-family:var(--mono);font-size:9px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hint"><kbd>←</kbd><kbd>→</kbd> TURN PAGE</div>
+
+<main class="mag" id="mag">
+
+  <!-- ============ PAGE 1 — COVER ============ -->
+  <section class="page" id="p1">
+    <div class="folio">
+      <span>The Balance Issue</span>
+      <span class="dash"></span>
+      <span>Vol. I — No. 09</span>
+    </div>
+    <div class="barbell-stage">
+      <div class="barbell">
+        <div class="rod"></div>
+        <div class="ball small"></div>
+        <div class="ball big"></div>
+      </div>
+      <div class="com-dot"></div>
+      <div class="com-label">cm</div>
+    </div>
+    <div class="cover">
+      <div></div>
+      <div>
+        <h1 class="masthead">The <em>average</em><br>point of<br>everything.</h1>
+        <div class="sub">
+          <p class="lede">A physics magazine about one modest piece of arithmetic — the weighted average of position — that quietly governs how planets orbit, how high jumpers clear the bar, and why you cannot push a boat with the person already standing in it.</p>
+          <p class="issue">
+            AP Physics 1<br>
+            Unit 5 · Momentum<br>
+            April MMXXVI
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>$0.00</span>
+      <span>MR. PORTER PRESS</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 2 — OPENING ============ -->
+  <section class="page" id="p2">
+    <div class="folio">
+      <span>02 — Opening</span><span class="dash"></span><span>The Balance Issue</span>
+    </div>
+    <div class="wrap">
+      <h2 class="quote"><span class="mark">“</span>Every object has a <em>quiet point</em> where all of its mass pretends to live.<span class="mark">”</span></h2>
+      <div class="right">
+        <div>
+          <div class="kicker">Editor's Letter</div>
+          <div class="body">
+            <p><span class="drop">T</span>here is an address where your body's mass, for all of Newton's purposes, is filed. It is not your belt buckle, though it's nearby. It moves when you raise your arms. It leaves your body entirely when you arch backwards to clear a high-jump bar. Find it, and you can treat yourself — or a car, or a galaxy — as a single particle.</p>
+            <p>The quantity is called the <em>center of mass</em>. It is the weighted average of where all the mass of a system sits, and it is the object that Newton's second law was secretly written about all along. <em>F_net = ma</em> is a promise about this one point. Everything else is noise around it.</p>
+            <p>This issue teaches you to compute it, to trust it, and to use it to answer problems that look impossible from any other angle.</p>
+          </div>
+        </div>
+        <div class="byline">— N. Porter, Editor</div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Two</span><span>Read slowly ⟶</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 3 — THE DEFINITION ============ -->
+  <section class="page" id="p3">
+    <div class="left">
+      <div>
+        <div class="tag">§ 01 · First Principle</div>
+        <h2 style="margin-top:24px">A <em>weighted</em> average of position. Nothing more.</h2>
+      </div>
+      <p class="note">Every particle contributes to the total in proportion to its own mass. A heavy particle pulls the answer hard; a light one barely whispers. Add up the pulls, divide by the total mass, and you have the address of the whole system.</p>
+    </div>
+    <div class="right">
+      <div class="folio" style="color:var(--ink);mix-blend-mode:normal;opacity:.55">
+        <span>03 — The Definition</span><span class="dash"></span><span>First Principle</span>
+      </div>
+      <div class="eq">
+        <span class="var">x</span><sub style="font-size:.4em">cm</sub>&nbsp;=&nbsp;
+        <span class="frac">
+          <span class="top"><span class="var">∑m</span><sub style="font-size:.5em">i</sub><span class="var">x</span><sub style="font-size:.5em">i</sub></span>
+          <span class="bot"><span class="var">M</span></span>
+        </span>
+      </div>
+      <div class="gloss">
+        <div><b>xᵢ</b>position of<br>each particle</div>
+        <div><b>mᵢ</b>mass of<br>each particle</div>
+        <div><b>M</b>total mass<br>of the system</div>
+      </div>
+    </div>
+    <div class="foot" style="color:var(--ink);mix-blend-mode:normal;opacity:.55">
+      <span>Page Three</span><span>Works in x, y, z independently</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 4 — WHY IT MATTERS (dark navy) ============ -->
+  <section class="page" id="p4">
+    <div class="folio">
+      <span>04 — Why It Matters</span><span class="dash"></span><span>The Shortcut</span>
+    </div>
+    <div class="wrap">
+      <div class="head">
+        <h3>One point, <em>one law.</em></h3>
+        <span class="no">Feature · 04</span>
+      </div>
+      <div class="big"><em>F</em><sub>ext</sub>&nbsp;=&nbsp;<em>Ma</em><sub>cm</sub></div>
+      <div class="cols">
+        <p><b>The promise</b>No matter how complicated the internal motion — limbs flailing, parts colliding, pieces rotating — the center of mass moves as if the whole mass were a single particle there.</p>
+        <p><b>Internal forces</b>They never appear in this equation. Pushes and pulls between the parts of a system cancel in pairs. The only thing that can accelerate the center of mass is a force from outside.</p>
+        <p><b>The consequence</b>If no outside force acts, the center of mass cruises at constant velocity forever. A closed system can rearrange itself in every way — and its center of mass never wavers.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Four</span><span>Newton, quietly</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 5 — THE BOAT ============ -->
+  <section class="page" id="p5">
+    <div class="text">
+      <div>
+        <div class="chapter">Case Study · 05</div>
+        <h2>A person walks across a <em>boat.</em></h2>
+        <div class="body">
+          <p>A person stands at one end of a stationary boat floating on still water. There is no friction between the boat and the water. The person walks to the other end. Where does the boat end up?</p>
+          <p>No outside horizontal force acts on the person-boat system. That means the <em>center of mass cannot move</em>. If the person shifts right, the boat must shift left by whatever amount keeps the weighted average of position fixed. The heavier the boat, the less it shifts; the heavier the person, the more.</p>
+          <p>For a 60-kg person on a 120-kg, 4.0-m boat, the boat slides backwards by exactly <em>4⁄3 m</em> while the person walks forward relative to the water. Not a trick — an accounting identity.</p>
+        </div>
+      </div>
+      <div class="numbers">
+        <div><b>0</b>external F</div>
+        <div><b>fixed</b>center of mass</div>
+        <div><b>1.33</b>meters of boat</div>
+      </div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
+        <!-- BEFORE -->
+        <text x="20" y="40" font-family="JetBrains Mono" font-size="11" fill="#0a0a0a" opacity=".75" letter-spacing="1.5">BEFORE</text>
+        <!-- boat -->
+        <path d="M80 90 Q85 115 120 118 L380 118 Q415 115 420 90 Z" fill="none" stroke="#0a0a0a" stroke-width="2.5"/>
+        <!-- person at left end -->
+        <circle cx="110" cy="70" r="12" fill="#1e4fc8"/>
+        <rect x="104" y="82" width="12" height="18" fill="#1e4fc8"/>
+        <!-- COM marker -->
+        <line x1="250" y1="40" x2="250" y2="140" stroke="#0a0a0a" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <circle cx="250" cy="104" r="6" fill="#f2ede1" stroke="#0a0a0a" stroke-width="2"/>
+        <text x="258" y="55" font-family="JetBrains Mono" font-size="9" fill="#0a0a0a" letter-spacing="1">CM</text>
+
+        <!-- water line -->
+        <line x1="0" y1="130" x2="520" y2="130" stroke="#0a0a0a" stroke-width="1" opacity=".35"/>
+        <line x1="0" y1="138" x2="520" y2="138" stroke="#0a0a0a" stroke-width="1" opacity=".2"/>
+
+        <!-- gap -->
+        <line x1="40" y1="180" x2="480" y2="180" stroke="#0a0a0a" stroke-width="1" opacity=".3" stroke-dasharray="3 5"/>
+
+        <!-- AFTER -->
+        <text x="20" y="230" font-family="JetBrains Mono" font-size="11" fill="#0a0a0a" opacity=".75" letter-spacing="1.5">AFTER</text>
+        <!-- boat shifted left -->
+        <path d="M20 280 Q25 305 60 308 L320 308 Q355 305 360 280 Z" fill="none" stroke="#0a0a0a" stroke-width="2.5"/>
+        <!-- person at right end of boat -->
+        <circle cx="340" cy="260" r="12" fill="#1e4fc8"/>
+        <rect x="334" y="272" width="12" height="18" fill="#1e4fc8"/>
+        <!-- COM still in same place -->
+        <line x1="250" y1="230" x2="250" y2="330" stroke="#0a0a0a" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <circle cx="250" cy="294" r="6" fill="#f2ede1" stroke="#0a0a0a" stroke-width="2"/>
+        <text x="258" y="245" font-family="JetBrains Mono" font-size="9" fill="#0a0a0a" letter-spacing="1">CM</text>
+
+        <!-- water -->
+        <line x1="0" y1="320" x2="520" y2="320" stroke="#0a0a0a" stroke-width="1" opacity=".35"/>
+        <line x1="0" y1="328" x2="520" y2="328" stroke="#0a0a0a" stroke-width="1" opacity=".2"/>
+
+        <!-- shift arrow -->
+        <path d="M100 360 L60 360" stroke="#1e4fc8" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+        <defs>
+          <marker id="arr" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+            <path d="M0 0 L10 5 L0 10 Z" fill="#1e4fc8"/>
+          </marker>
+        </defs>
+        <text x="70" y="380" font-family="JetBrains Mono" font-size="10" fill="#1e4fc8" letter-spacing="1">BOAT SHIFTS</text>
+      </svg>
+      <div class="caption">Fig. 05 — The center of mass does not budge. The boat does.</div>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 6 — CATALOG (hero + sidebar) ============ -->
+  <section class="page" id="p6">
+    <div class="folio">
+      <span>06 — Three Wild Places</span><span class="dash"></span><span>Field Guide</span>
+    </div>
+    <div class="title-strip"><span>Field Guide · The CM Shows Up</span></div>
+
+    <div class="hero">
+      <div>
+        <div class="tag">Hero Case · 01</div>
+        <div class="num">i.</div>
+        <h4>The <em>high jumper</em> whose center of mass never clears the bar.</h4>
+        <p>A Fosbury Flop athlete arches backwards over the bar. As she does, her limbs and torso form a shape whose center of mass sits <i>below</i> her body. The bar passes through that empty region. Her body goes over — her center of mass passes under. The energy required is a fraction of what a jump with an upright body would cost, and it is one of the most beautiful applications of a weighted average in all of sport.</p>
+      </div>
+      <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- bar -->
+        <line x1="20" y1="80" x2="220" y2="80" stroke="#0a0a0a" stroke-width="3"/>
+        <!-- arched figure, passing over -->
+        <path d="M50 95 Q120 20 190 95" stroke="#0a0a0a" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <circle cx="50" cy="100" r="6" fill="#0a0a0a"/>
+        <circle cx="190" cy="100" r="6" fill="#0a0a0a"/>
+        <!-- COM marker below -->
+        <circle cx="120" cy="120" r="7" fill="none" stroke="#1e4fc8" stroke-width="2.5"/>
+        <line x1="115" y1="120" x2="125" y2="120" stroke="#1e4fc8" stroke-width="2"/>
+        <line x1="120" y1="115" x2="120" y2="125" stroke="#1e4fc8" stroke-width="2"/>
+        <text x="135" y="124" font-family="JetBrains Mono" font-size="10" fill="#1e4fc8" letter-spacing="1">CM</text>
+      </svg>
+    </div>
+
+    <div class="side">
+      <div class="item">
+        <div class="n">ii.</div>
+        <div class="tag">Shape · 02</div>
+        <h5>The <em>donut.</em></h5>
+        <p>A ring or a boomerang has its center of mass in its hollow center — a point where no part of the object exists. Newton doesn't mind. The weighted average is where it is whether or not mass sits there to occupy it.</p>
+      </div>
+      <div class="item">
+        <div class="n">iii.</div>
+        <div class="tag">Cosmos · 03</div>
+        <h5>The <em>binary</em> star.</h5>
+        <p>Two stars do not orbit each other. They both orbit their common center of mass — a point suspended between them, leaning toward the heavier one. If the masses are equal, the point is exactly halfway. If one star is a hundred times heavier, the point sits just outside its own surface.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Six</span><span>Three cases</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 7 — EARTH-MOON STAT ============ -->
+  <section class="page" id="p7">
+    <div class="folio">
+      <span>07 — By The Numbers</span><span class="dash"></span><span>Earth &amp; Moon</span>
+    </div>
+    <div class="wrap">
+      <div class="tagline">Feature Stat · The Earth-Moon Barycenter</div>
+      <div class="stat">4,671<span class="unit">km</span></div>
+      <div class="caption">
+        <div><b>What</b><p>The distance from the center of the Earth to the center of mass of the Earth-Moon system — the point about which they both orbit.</p></div>
+        <div><b>Where</b><p>Inside the Earth. The planet's radius is 6,371 km, so the barycenter sits about 1,700 km beneath the surface on the side facing the Moon at any given moment.</p></div>
+        <div><b>Why</b><p>It's the weighted average of two masses, one roughly 81 times larger than the other. The heavier body pulls the point close to itself — but not quite to its own center.</p></div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Seven</span><span>Earth wobbles slightly</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 8 — WORKED PROBLEM ============ -->
+  <section class="page" id="p8">
+    <div class="folio">
+      <span>08 — Worked Problem</span><span class="dash"></span><span>Practice</span>
+    </div>
+    <div class="wrap">
+      <div class="left">
+        <div>
+          <div class="kicker">Free Response · Exemplar</div>
+          <h2>Three masses, <em>one line.</em></h2>
+          <p class="prompt">Three small blocks sit on a frictionless rail along the x-axis. Block A (<em>3.0 kg</em>) is at <em>x = 0 m</em>. Block B (<em>2.0 kg</em>) is at <em>x = 2.0 m</em>. Block C (<em>5.0 kg</em>) is at <em>x = 6.0 m</em>. Find the x-coordinate of the system's center of mass.</p>
+          <svg class="diagram" viewBox="0 0 520 100" xmlns="http://www.w3.org/2000/svg">
+            <line x1="20" y1="60" x2="500" y2="60" stroke="#0a0a0a" stroke-width="2"/>
+            <!-- tick marks every meter -->
+            <g stroke="#0a0a0a" stroke-width="1" opacity=".5">
+              <line x1="40" y1="56" x2="40" y2="64"/>
+              <line x1="116" y1="56" x2="116" y2="64"/>
+              <line x1="192" y1="56" x2="192" y2="64"/>
+              <line x1="268" y1="56" x2="268" y2="64"/>
+              <line x1="344" y1="56" x2="344" y2="64"/>
+              <line x1="420" y1="56" x2="420" y2="64"/>
+              <line x1="496" y1="56" x2="496" y2="64"/>
+            </g>
+            <g font-family="JetBrains Mono" font-size="9" fill="#0a0a0a" opacity=".65" text-anchor="middle">
+              <text x="40" y="82">0</text>
+              <text x="116" y="82">1</text>
+              <text x="192" y="82">2</text>
+              <text x="268" y="82">3</text>
+              <text x="344" y="82">4</text>
+              <text x="420" y="82">5</text>
+              <text x="496" y="82">6</text>
+            </g>
+            <!-- Block A at 0, size proportional to mass (3kg) -->
+            <rect x="28" y="26" width="24" height="30" fill="#0a0a0a"/>
+            <text x="40" y="20" font-family="Fraunces" font-style="italic" font-size="14" fill="#0a0a0a" text-anchor="middle">A · 3 kg</text>
+            <!-- Block B at 2m (2kg) -->
+            <rect x="183" y="32" width="18" height="24" fill="#0a0a0a"/>
+            <text x="192" y="20" font-family="Fraunces" font-style="italic" font-size="14" fill="#0a0a0a" text-anchor="middle">B · 2 kg</text>
+            <!-- Block C at 6m (5kg) -->
+            <rect x="479" y="16" width="34" height="40" fill="#0a0a0a"/>
+            <text x="496" y="10" font-family="Fraunces" font-style="italic" font-size="14" fill="#0a0a0a" text-anchor="middle">C · 5 kg</text>
+          </svg>
+        </div>
+        <div class="byline">Strategy: plug into x_cm = ∑mᵢxᵢ / M</div>
+      </div>
+      <div class="right">
+        <div class="row">
+          <div class="label">Total Mass</div>
+          <div class="val">M = 3 + 2 + 5 <em>= 10 kg</em></div>
+        </div>
+        <div class="row">
+          <div class="label">Weighted Sum</div>
+          <div class="val">∑mᵢxᵢ</div>
+          <div class="val">= (3)(0) + (2)(2) + (5)(6)</div>
+          <div class="val">= 0 + 4 + 30 <em>= 34</em></div>
+        </div>
+        <div class="row">
+          <div class="label">Divide</div>
+          <div class="val">x_cm = 34 / 10</div>
+        </div>
+        <div class="ans">
+          <div class="label">Answer</div>
+          <div class="val"><em>3.4</em> <small>m</small></div>
+          <div class="val" style="font-size:12px;margin-top:6px;opacity:.7;font-family:var(--mono);font-style:normal;text-transform:uppercase;letter-spacing:.1em">Closer to C, as expected.</div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Eight</span><span>Show your work</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 9 — PITFALLS ============ -->
+  <section class="page" id="p9">
+    <div class="folio">
+      <span>09 — Pitfalls</span><span class="dash"></span><span>Don't Do This</span>
+    </div>
+    <div class="wrap">
+      <h2 class="title">Four <em>mistakes</em><br>the exam<br>loves.<span class="sub">Balance edition</span></h2>
+      <div class="list">
+        <div class="item">
+          <div class="n">i.</div>
+          <div>
+            <h5>Averaging positions without the masses.</h5>
+            <p>The center of mass is not the midpoint. It is a <em>weighted</em> average. Two masses at x = 0 and x = 10 don't have their CM at x = 5 unless the masses happen to be equal. Always multiply position by mass before adding.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="n">ii.</div>
+          <div>
+            <h5>Letting internal forces do work on the CM.</h5>
+            <p>A person pushing off the inside wall of a canoe does not accelerate the canoe-person system. Internal forces can rearrange the pieces all they like — they cannot change the velocity of the center of mass. Only an <em>external</em> force can.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="n">iii.</div>
+          <div>
+            <h5>Assuming the CM lies inside the object.</h5>
+            <p>For rings, horseshoes, boomerangs, and L-shaped brackets, the center of mass is in a location where <em>no mass exists</em>. That is perfectly legal. The formula doesn't require the answer to sit on top of matter.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="n">iv.</div>
+          <div>
+            <h5>Forgetting that x, y, and z are separate.</h5>
+            <p>A 2D system has both an x_cm and a y_cm, each computed independently with its own weighted sum. Mixing coordinates — using a distance from the origin instead of a signed position — is a favorite trap on multi-choice items.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Nine</span><span>Caveat discipulus</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 10 — BACK COVER ============ -->
+  <section class="page" id="p10">
+    <div class="arc"><div class="arc-dot"></div></div>
+    <div class="folio">
+      <span>10 — End Matter</span><span class="dash"></span><span>Back Cover</span>
+    </div>
+    <div class="wrap">
+      <div class="end">A system's <em>quiet point.</em></div>
+      <p class="parting">The center of mass is the one place where a complicated object agrees to behave simply. Find it, track it, and let Newton handle the rest. The three-mass problem you just solved is, at root, the same arithmetic that tells two stars where to orbit.</p>
+      <div class="colophon">
+        <div><b>Course</b>AP Physics 1<br>Unit 5 · Momentum</div>
+        <div><b>Equations</b>x_cm = ∑mᵢxᵢ/M<br>F_ext = Ma_cm</div>
+        <div><b>Skills</b>SP 2.2 · SP 5.1<br>Mathematical Routines</div>
+        <div><b>Next Issue</b>Impulse &amp; the<br>collision problem</div>
+      </div>
+    </div>
+    <div class="foot">
+      <span style="color:var(--cream);mix-blend-mode:normal;opacity:.5">End of Issue</span>
+      <span style="color:var(--cream);mix-blend-mode:normal;opacity:.5">— fin —</span>
+    </div>
+  </section>
+
+</main>
+
+<nav class="nav" id="nav"></nav>
+
+<script>
+  const mag = document.getElementById('mag');
+  const nav = document.getElementById('nav');
+  const pages = document.querySelectorAll('.page');
+  const total = pages.length;
+  let current = 0;
+
+  pages.forEach((_,i)=>{
+    const b = document.createElement('button');
+    b.setAttribute('aria-label','Page '+(i+1));
+    if(i===0) b.classList.add('active');
+    b.addEventListener('click',()=>goTo(i));
+    nav.appendChild(b);
+  });
+
+  function goTo(i){
+    i = Math.max(0, Math.min(total-1, i));
+    current = i;
+    mag.scrollTo({left: i*window.innerWidth, behavior:'smooth'});
+    updateDots();
+  }
+  function updateDots(){
+    nav.querySelectorAll('button').forEach((b,i)=>b.classList.toggle('active', i===current));
+  }
+
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight' || e.key==='PageDown' || e.key===' ') {e.preventDefault(); goTo(current+1);}
+    else if(e.key==='ArrowLeft' || e.key==='PageUp') {e.preventDefault(); goTo(current-1);}
+    else if(e.key==='Home'){e.preventDefault(); goTo(0);}
+    else if(e.key==='End'){e.preventDefault(); goTo(total-1);}
+  });
+
+  let t;
+  mag.addEventListener('scroll',()=>{
+    clearTimeout(t);
+    t = setTimeout(()=>{
+      current = Math.round(mag.scrollLeft/window.innerWidth);
+      updateDots();
+    },80);
+  });
+
+  mag.addEventListener('wheel',e=>{
+    if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
+      e.preventDefault();
+      mag.scrollLeft += e.deltaY;
+    }
+  },{passive:false});
+
+  window.addEventListener('resize',()=>goTo(current));
+</script>
+</body>
+</html>

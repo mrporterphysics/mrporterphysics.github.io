@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Angular Issue — AP Physics 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --cream:#f4efe6;
+    --bone:#ece4d3;
+    --orange:#d4531a;
+    --navy:#0e1e38;
+    --rose:#e8b5a3;
+    --sage:#c9d4bc;
+    --char:#161616;
+    --mustard:#d4a017;
+    --plum:#2a1825;
+    --serif:"Fraunces", Georgia, serif;
+    --mono:"JetBrains Mono", ui-monospace, monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{
+    height:100%;
+    overflow:hidden;
+    font-family:var(--serif);
+    -webkit-font-smoothing:antialiased;
+    background:#000;
+  }
+
+  .mag{
+    display:flex;
+    width:100vw;
+    height:100vh;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+  }
+  .mag::-webkit-scrollbar{display:none}
+
+  .page{
+    flex:0 0 100vw;
+    width:100vw;
+    height:100vh;
+    scroll-snap-align:start;
+    position:relative;
+    overflow:hidden;
+  }
+
+  /* Shared text styles */
+  .mono{font-family:var(--mono);font-weight:500;letter-spacing:0.02em;text-transform:uppercase;font-size:11px}
+  .display{font-family:var(--serif);font-weight:300;line-height:0.85;letter-spacing:-0.04em;font-variation-settings:"SOFT" 30}
+  .italic{font-style:italic;font-variation-settings:"SOFT" 100}
+
+  /* folio strip (top bar on each page) */
+  .folio{
+    position:absolute;top:0;left:0;right:0;
+    padding:28px 40px;
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+    z-index:10;
+    mix-blend-mode:difference;color:#fff;
+  }
+  .folio .dash{flex:1;height:1px;background:currentColor;opacity:.4;margin:0 20px}
+
+  .foot{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:28px 40px 70px;
+    display:flex;justify-content:space-between;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+    z-index:10;
+    mix-blend-mode:difference;color:#fff;
+  }
+
+  /* ============ PAGE 1 — COVER ============ */
+  #p1{background:var(--ink);color:var(--cream)}
+  #p1 .folio,#p1 .foot{mix-blend-mode:normal;color:var(--cream);opacity:.7}
+  #p1 .cover-grid{
+    position:absolute;inset:0;
+    display:grid;grid-template-rows:1fr auto;
+    padding:100px 40px 110px;
+  }
+  #p1 .masthead{
+    font-family:var(--serif);
+    font-weight:300;
+    font-size:clamp(80px,13vw,220px);
+    line-height:0.82;
+    letter-spacing:-0.055em;
+    align-self:end;
+  }
+  #p1 .masthead em{
+    font-style:italic;
+    color:var(--orange);
+    font-variation-settings:"SOFT" 100;
+  }
+  #p1 .sub{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    border-top:1px solid rgba(244,239,230,.25);
+    padding-top:24px;margin-top:40px;
+  }
+  #p1 .sub .lede{max-width:420px;font-size:14px;line-height:1.5;opacity:.85}
+  #p1 .sub .issue{text-align:right;font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;line-height:1.9;opacity:.75}
+  #p1 .orb{
+    position:absolute;
+    top:14%;right:6%;
+    width:360px;height:360px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,#ff7a3d 0%,#d4531a 40%,#8a2a05 80%);
+    box-shadow:inset -40px -60px 120px rgba(0,0,0,.6),0 0 120px rgba(212,83,26,.3);
+    animation:spin 18s linear infinite;
+  }
+  #p1 .orb::after{
+    content:"";position:absolute;inset:0;border-radius:50%;
+    background:conic-gradient(from 0deg,transparent 0 85%,rgba(255,255,255,.15) 90%,transparent 95%);
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* ============ PAGE 2 — OPENING ============ */
+  #p2{background:var(--cream);color:var(--ink)}
+  #p2 .wrap{
+    position:absolute;inset:0;
+    padding:110px 40px 110px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+  }
+  #p2 .quote{
+    font-family:var(--serif);
+    font-weight:300;
+    font-size:clamp(48px,6.2vw,108px);
+    line-height:0.92;
+    letter-spacing:-0.035em;
+    align-self:center;
+  }
+  #p2 .quote em{font-style:italic;color:var(--orange);font-variation-settings:"SOFT" 100}
+  #p2 .quote .mark{font-size:1.4em;line-height:0;position:relative;top:.2em;opacity:.4}
+  #p2 .right{
+    display:flex;flex-direction:column;justify-content:space-between;
+    align-self:stretch;padding-top:40px;
+  }
+  #p2 .kicker{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    padding-bottom:14px;border-bottom:1px solid var(--ink);margin-bottom:24px;
+  }
+  #p2 .body{
+    font-size:17px;line-height:1.55;max-width:380px;
+    font-weight:400;
+  }
+  #p2 .body p+p{margin-top:14px}
+  #p2 .byline{
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+  }
+  #p2 .drop{
+    float:left;
+    font-family:var(--serif);
+    font-weight:300;
+    font-size:86px;
+    line-height:.75;
+    padding:8px 8px 0 0;
+    font-style:italic;
+    color:var(--orange);
+  }
+
+  /* ============ PAGE 3 — THE LAW (split) ============ */
+  #p3{background:var(--orange);color:var(--cream);display:grid;grid-template-columns:42% 58%}
+  #p3 .left{
+    background:var(--ink);
+    padding:110px 44px 110px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    position:relative;
+  }
+  #p3 .left .tag{font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;opacity:.6}
+  #p3 .left h2{
+    font-family:var(--serif);font-weight:300;font-size:clamp(44px,4.6vw,78px);
+    line-height:.92;letter-spacing:-0.035em;
+  }
+  #p3 .left h2 em{font-style:italic;color:var(--orange);font-variation-settings:"SOFT" 100}
+  #p3 .left .note{font-size:14px;line-height:1.55;opacity:.75;max-width:340px}
+  #p3 .right{
+    padding:110px 48px;
+    display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+    position:relative;
+  }
+  #p3 .eq{
+    font-family:var(--serif);font-style:italic;font-variation-settings:"SOFT" 100;
+    font-size:clamp(200px,28vw,440px);
+    line-height:.78;letter-spacing:-0.05em;
+    color:var(--ink);
+  }
+  #p3 .eq sub{font-size:.4em;vertical-align:baseline}
+  #p3 .gloss{
+    display:grid;grid-template-columns:repeat(3,auto);gap:28px 44px;margin-top:30px;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--ink);
+  }
+  #p3 .gloss b{display:block;font-family:var(--serif);font-style:italic;font-size:22px;font-weight:400;letter-spacing:0;text-transform:none;margin-bottom:4px}
+
+  /* ============ PAGE 4 — MOMENT OF INERTIA (dark navy) ============ */
+  #p4{background:var(--navy);color:var(--cream)}
+  #p4 .wrap{
+    position:absolute;inset:0;
+    padding:110px 40px 110px;
+    display:grid;grid-template-rows:auto 1fr auto;
+  }
+  #p4 .head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1px solid rgba(244,239,230,.2);padding-bottom:20px;
+  }
+  #p4 .head h3{font-family:var(--serif);font-weight:300;font-style:italic;font-size:42px;font-variation-settings:"SOFT" 100}
+  #p4 .head .no{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;opacity:.6}
+  #p4 .mega{
+    align-self:center;
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(180px,26vw,420px);
+    line-height:.8;letter-spacing:-0.05em;
+    color:var(--cream);
+  }
+  #p4 .mega em{font-style:italic;color:var(--orange);font-variation-settings:"SOFT" 100}
+  #p4 .mega sup{font-size:.45em;vertical-align:super;line-height:0}
+  #p4 .cols{
+    display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:48px;
+    padding-top:24px;border-top:1px solid rgba(244,239,230,.2);
+  }
+  #p4 .cols p{font-size:14px;line-height:1.55;opacity:.85}
+  #p4 .cols p b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;font-weight:500}
+
+  /* ============ PAGE 5 — THE SKATER (split rose) ============ */
+  #p5{background:var(--rose);color:var(--ink);display:grid;grid-template-columns:1fr 1fr}
+  #p5 .art{
+    background:#c47961;
+    position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+  }
+  #p5 .art svg{width:72%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.2))}
+  #p5 .art .caption{
+    position:absolute;bottom:40px;left:44px;right:44px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--cream);opacity:.85;
+  }
+  #p5 .text{
+    padding:110px 48px 110px;
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  #p5 .text .chapter{font-family:var(--mono);font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--orange)}
+  #p5 .text h2{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(52px,5.4vw,92px);line-height:.9;letter-spacing:-0.035em;
+    margin-top:20px;
+  }
+  #p5 .text h2 em{font-style:italic;font-variation-settings:"SOFT" 100}
+  #p5 .text .body{max-width:460px;font-size:16px;line-height:1.6;margin-top:28px}
+  #p5 .text .body p+p{margin-top:12px}
+  #p5 .text .body em{font-style:italic;color:var(--orange)}
+  #p5 .numbers{
+    display:flex;gap:40px;margin-top:auto;padding-top:28px;border-top:1px solid rgba(10,10,10,.3);
+  }
+  #p5 .numbers div{font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase}
+  #p5 .numbers b{display:block;font-family:var(--serif);font-style:italic;font-weight:300;font-size:44px;letter-spacing:-0.02em;text-transform:none;margin-bottom:2px;font-variation-settings:"SOFT" 100}
+
+  /* ============ PAGE 6 — 2x2 QUADRANTS (sage) ============ */
+  #p6{background:var(--sage);color:var(--ink)}
+  #p6 .grid{
+    position:absolute;inset:0;
+    padding-top:64px;padding-bottom:60px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+  }
+  #p6 .q{
+    padding:50px 44px;
+    display:flex;flex-direction:column;justify-content:space-between;
+    position:relative;
+  }
+  #p6 .q:nth-child(1){border-right:1px solid rgba(10,10,10,.25);border-bottom:1px solid rgba(10,10,10,.25);background:#b8c4a7}
+  #p6 .q:nth-child(2){border-bottom:1px solid rgba(10,10,10,.25);background:var(--sage)}
+  #p6 .q:nth-child(3){border-right:1px solid rgba(10,10,10,.25);background:var(--sage)}
+  #p6 .q:nth-child(4){background:#b8c4a7}
+  #p6 .q .num{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:120px;line-height:.8;letter-spacing:-0.04em;
+    color:var(--orange);font-variation-settings:"SOFT" 100;
+  }
+  #p6 .q h4{
+    font-family:var(--serif);font-weight:400;
+    font-size:30px;line-height:1;letter-spacing:-0.02em;
+    margin-top:18px;
+  }
+  #p6 .q h4 em{font-style:italic}
+  #p6 .q p{font-size:13.5px;line-height:1.55;max-width:360px;margin-top:10px;opacity:.82}
+  #p6 .q .tag{
+    position:absolute;top:50px;right:44px;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    opacity:.55;
+  }
+  #p6 .title-strip{
+    position:absolute;top:60px;left:0;right:0;
+    display:flex;justify-content:center;
+    pointer-events:none;
+  }
+  #p6 .title-strip span{
+    background:var(--sage);padding:0 18px;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+  }
+
+  /* ============ PAGE 7 — STAT (dark charcoal) ============ */
+  #p7{background:var(--char);color:var(--cream)}
+  #p7 .wrap{
+    position:absolute;inset:0;
+    padding:110px 40px 110px;
+    display:grid;grid-template-rows:auto 1fr auto;
+  }
+  #p7 .tagline{
+    font-family:var(--mono);font-size:11px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--orange);
+  }
+  #p7 .stat{
+    align-self:center;
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(280px,42vw,680px);
+    line-height:.78;letter-spacing:-0.06em;
+    text-align:center;
+  }
+  #p7 .stat em{font-style:italic;color:var(--orange);font-variation-settings:"SOFT" 100}
+  #p7 .stat .unit{font-size:.12em;vertical-align:super;letter-spacing:0.1em;font-style:normal;font-family:var(--mono);opacity:.7;text-transform:uppercase}
+  #p7 .caption{
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;
+    padding-top:24px;border-top:1px solid rgba(244,239,230,.2);
+    font-size:14px;line-height:1.55;
+  }
+  #p7 .caption b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;font-weight:500}
+  #p7 .caption p{opacity:.85}
+
+  /* ============ PAGE 8 — THE PROBLEM (mustard) ============ */
+  #p8{background:var(--mustard);color:var(--ink)}
+  #p8 .wrap{
+    position:absolute;inset:0;
+    padding:110px 40px 110px;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:48px;
+  }
+  #p8 .left{display:flex;flex-direction:column;justify-content:space-between}
+  #p8 .left .kicker{font-family:var(--mono);font-size:11px;letter-spacing:0.25em;text-transform:uppercase;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+  #p8 .left h2{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(56px,6.2vw,108px);line-height:.88;letter-spacing:-0.04em;
+    margin-top:30px;
+  }
+  #p8 .left h2 em{font-style:italic;font-variation-settings:"SOFT" 100}
+  #p8 .left .prompt{
+    font-size:16px;line-height:1.6;max-width:500px;margin-top:30px;
+  }
+  #p8 .left .prompt em{font-style:italic;color:var(--ink);background:rgba(10,10,10,.08);padding:0 4px}
+  #p8 .right{
+    background:var(--ink);color:var(--cream);
+    padding:40px 36px;
+    display:flex;flex-direction:column;gap:20px;
+    align-self:stretch;
+  }
+  #p8 .right .label{font-family:var(--mono);font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--mustard);margin-bottom:6px}
+  #p8 .right .row{padding-bottom:16px;border-bottom:1px solid rgba(244,239,230,.15)}
+  #p8 .right .row:last-of-type{border-bottom:none}
+  #p8 .right .val{font-family:var(--serif);font-weight:300;font-size:26px;letter-spacing:-0.01em;line-height:1.1}
+  #p8 .right .val em{font-style:italic;color:var(--mustard);font-variation-settings:"SOFT" 100}
+  #p8 .right .ans{
+    margin-top:auto;padding-top:20px;border-top:2px solid var(--mustard);
+  }
+  #p8 .right .ans .val{font-size:48px;color:var(--mustard)}
+
+  /* ============ PAGE 9 — PITFALLS (dark plum) ============ */
+  #p9{background:var(--plum);color:var(--cream)}
+  #p9 .wrap{
+    position:absolute;inset:0;
+    padding:110px 40px 110px;
+    display:grid;grid-template-columns:1fr 2fr;gap:60px;
+  }
+  #p9 .title{
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(60px,7vw,128px);line-height:.85;letter-spacing:-0.04em;
+    align-self:start;
+  }
+  #p9 .title em{font-style:italic;color:var(--orange);font-variation-settings:"SOFT" 100}
+  #p9 .title .sub{
+    display:block;font-family:var(--mono);font-size:11px;letter-spacing:0.25em;
+    text-transform:uppercase;margin-top:24px;opacity:.6;
+  }
+  #p9 .list{display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+  #p9 .item{
+    display:grid;grid-template-columns:80px 1fr;gap:24px;
+    padding:20px 0;border-top:1px solid rgba(244,239,230,.2);
+  }
+  #p9 .item:last-child{border-bottom:1px solid rgba(244,239,230,.2)}
+  #p9 .item .n{
+    font-family:var(--serif);font-style:italic;font-weight:300;
+    font-size:56px;line-height:.85;color:var(--orange);
+    font-variation-settings:"SOFT" 100;
+  }
+  #p9 .item h5{font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:-0.01em;margin-bottom:4px}
+  #p9 .item p{font-size:14px;line-height:1.55;opacity:.78;max-width:640px}
+
+  /* ============ PAGE 10 — BACK COVER (dark) ============ */
+  #p10{background:var(--ink);color:var(--cream)}
+  #p10 .wrap{
+    position:absolute;inset:0;
+    padding:110px 40px 110px;
+    display:grid;grid-template-rows:1fr auto auto;
+  }
+  #p10 .end{
+    align-self:center;
+    font-family:var(--serif);font-weight:300;
+    font-size:clamp(80px,10vw,180px);line-height:.85;letter-spacing:-0.045em;
+    text-align:center;
+  }
+  #p10 .end em{font-style:italic;color:var(--orange);font-variation-settings:"SOFT" 100}
+  #p10 .parting{
+    text-align:center;font-size:16px;line-height:1.6;max-width:560px;margin:40px auto 0;
+    opacity:.75;
+  }
+  #p10 .colophon{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    padding-top:28px;margin-top:40px;border-top:1px solid rgba(244,239,230,.25);
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;line-height:1.8;
+  }
+  #p10 .colophon b{display:block;color:var(--orange);margin-bottom:6px;font-weight:500}
+  #p10 .ring{
+    position:absolute;bottom:-280px;left:50%;transform:translateX(-50%);
+    width:720px;height:720px;border-radius:50%;
+    border:1px solid rgba(244,239,230,.1);
+    pointer-events:none;
+  }
+  #p10 .ring::before,#p10 .ring::after{
+    content:"";position:absolute;inset:40px;border-radius:50%;
+    border:1px solid rgba(244,239,230,.08);
+  }
+  #p10 .ring::after{inset:90px;border-color:rgba(244,239,230,.06)}
+
+  /* ============ NAV DOTS ============ */
+  .nav{
+    position:fixed;
+    bottom:28px;left:50%;transform:translateX(-50%);
+    display:flex;gap:10px;
+    z-index:100;
+    padding:10px 16px;
+    background:rgba(244,239,230,.08);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border-radius:100px;
+    border:1px solid rgba(244,239,230,.15);
+  }
+  .nav button{
+    width:8px;height:8px;border-radius:50%;
+    background:rgba(244,239,230,.35);
+    border:none;cursor:pointer;padding:0;
+    transition:all .3s ease;
+  }
+  .nav button:hover{background:rgba(244,239,230,.6);transform:scale(1.2)}
+  .nav button.active{
+    background:var(--orange);
+    width:28px;border-radius:10px;
+  }
+
+  /* Hints */
+  .hint{
+    position:fixed;top:28px;right:32px;z-index:100;
+    font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;
+    color:rgba(244,239,230,.6);
+    display:flex;gap:10px;align-items:center;
+    mix-blend-mode:difference;
+  }
+  .hint kbd{
+    display:inline-block;padding:3px 7px;
+    border:1px solid currentColor;border-radius:3px;
+    font-family:var(--mono);font-size:9px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hint"><kbd>←</kbd><kbd>→</kbd> TURN PAGE</div>
+
+<main class="mag" id="mag">
+
+  <!-- ============ PAGE 1 — COVER ============ -->
+  <section class="page" id="p1">
+    <div class="folio">
+      <span>The Angular Issue</span>
+      <span class="dash"></span>
+      <span>Vol. I — No. 07</span>
+    </div>
+    <div class="orb"></div>
+    <div class="cover-grid">
+      <div></div>
+      <div>
+        <h1 class="masthead">Spin,<br>what <em>spins</em><br>stays spun.</h1>
+        <div class="sub">
+          <p class="lede">A physics magazine about the law that makes figure skaters glamorous and neutron stars terrifying. Conservation of angular momentum, explained without mercy.</p>
+          <p class="issue">
+            AP Physics 1<br>
+            Unit 7 · Rotation<br>
+            April MMXXVI
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>$0.00</span>
+      <span>MR. PORTER PRESS</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 2 — OPENING ============ -->
+  <section class="page" id="p2">
+    <div class="folio">
+      <span>02 — Opening</span><span class="dash"></span><span>The Angular Issue</span>
+    </div>
+    <div class="wrap">
+      <h2 class="quote"><span class="mark">“</span>A skater, a star, a hurricane — all bound by the same stubborn <em>arithmetic</em>.<span class="mark">”</span></h2>
+      <div class="right">
+        <div>
+          <div class="kicker">Editor's Letter</div>
+          <div class="body">
+            <p><span class="drop">T</span>here is a rule nature refuses to break. Push a spinning thing, pull its mass inward, stretch its arms into the cold — and the universe will keep its books balanced. Angular momentum in equals angular momentum out. No exceptions, no bargaining, no clever loopholes.</p>
+            <p>This issue is about that rule. You will meet it in an ice rink and again in a dying star. You will learn to write it down in one line, use it in one equation, and recognize the four moments when it rules the room. It is, quite possibly, the most elegant thing you will learn all year.</p>
+          </div>
+        </div>
+        <div class="byline">— N. Porter, Editor</div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Two</span><span>Read slowly ⟶</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 3 — THE LAW ============ -->
+  <section class="page" id="p3">
+    <div class="folio">
+      <span>03 — The Law</span><span class="dash"></span><span>Conservation</span>
+    </div>
+    <div class="left">
+      <div class="tag">§ 01 · First Principle</div>
+      <h2>When <em>no external torque</em> acts on a system, its total angular momentum stays constant.</h2>
+      <p class="note">Notice the loophole: <em>no external torque</em>. Internal forces can rearrange mass all they like. They can pull, push, squeeze, and fling. As long as nothing outside the system twists it, the bookkeeping stands.</p>
+    </div>
+    <div class="right">
+      <div class="eq">L=Iω</div>
+      <div class="gloss">
+        <div><b>L</b>angular<br>momentum</div>
+        <div><b>I</b>moment of<br>inertia</div>
+        <div><b>ω</b>angular<br>velocity</div>
+      </div>
+    </div>
+    <div class="foot" style="color:var(--cream);mix-blend-mode:normal;opacity:.7">
+      <span>Page Three</span><span>kg · m² / s</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 4 — MOMENT OF INERTIA ============ -->
+  <section class="page" id="p4">
+    <div class="folio">
+      <span>04 — Mass, Arranged</span><span class="dash"></span><span>Moment of Inertia</span>
+    </div>
+    <div class="wrap">
+      <div class="head">
+        <h3>The <em>geography</em> of mass.</h3>
+        <span class="no">Feature · 04</span>
+      </div>
+      <div class="mega">I&nbsp;=&nbsp;<em>∑mr<sup>2</sup></em></div>
+      <div class="cols">
+        <p><b>What it measures</b>How hard it is to change a rotation. Big <i>I</i>, stubborn spin. Small <i>I</i>, spins on a dime.</p>
+        <p><b>Why r² matters</b>Distance from the axis is <i>squared</i>. Doubling a radius quadruples inertia. Mass far away is expensive.</p>
+        <p><b>The trade</b>Since L is locked, shrinking <i>I</i> must grow <i>ω</i>. Pull mass in, and the spin runs wild.</p>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Four</span><span>Units: kg · m²</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 5 — THE SKATER ============ -->
+  <section class="page" id="p5">
+    <div class="folio">
+      <span>05 — The Skater</span><span class="dash"></span><span>Case Study</span>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="halo" cx="50%" cy="25%" r="55%">
+            <stop offset="0%" stop-color="#f4efe6" stop-opacity=".35"/>
+            <stop offset="100%" stop-color="#f4efe6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="200" cy="140" r="180" fill="url(#halo)"/>
+        <!-- head -->
+        <circle cx="200" cy="90" r="26" fill="#f4efe6"/>
+        <!-- body -->
+        <path d="M200 116 Q195 200 200 260 Q205 200 200 116" stroke="#f4efe6" stroke-width="32" stroke-linecap="round" fill="none"/>
+        <!-- arms pulled in -->
+        <path d="M200 150 Q175 180 185 215" stroke="#f4efe6" stroke-width="14" stroke-linecap="round" fill="none"/>
+        <path d="M200 150 Q225 180 215 215" stroke="#f4efe6" stroke-width="14" stroke-linecap="round" fill="none"/>
+        <!-- skirt -->
+        <path d="M175 250 L140 290 L260 290 L225 250 Z" fill="#f4efe6"/>
+        <!-- legs -->
+        <path d="M195 290 L190 380" stroke="#f4efe6" stroke-width="14" stroke-linecap="round"/>
+        <path d="M210 290 L220 370" stroke="#f4efe6" stroke-width="14" stroke-linecap="round"/>
+        <!-- blade -->
+        <path d="M175 390 L205 390" stroke="#f4efe6" stroke-width="4" stroke-linecap="round"/>
+        <path d="M210 380 L245 385" stroke="#f4efe6" stroke-width="4" stroke-linecap="round"/>
+        <!-- motion arcs -->
+        <path d="M80 200 Q200 120 320 200" stroke="#f4efe6" stroke-width="2" stroke-dasharray="4 8" fill="none" opacity=".5"/>
+        <path d="M60 240 Q200 140 340 240" stroke="#f4efe6" stroke-width="2" stroke-dasharray="4 8" fill="none" opacity=".3"/>
+      </svg>
+      <div class="caption">Fig. 05 — Mass withdrawn to the axis. Spin multiplies accordingly.</div>
+    </div>
+    <div class="text">
+      <div>
+        <div class="chapter">Case Study · 05</div>
+        <h2>The skater who <em>cheats</em> nothing.</h2>
+        <div class="body">
+          <p>Arms out, a skater rotates slowly. Arms in, she becomes a blur. The audience calls it grace. Physics calls it <em>bookkeeping</em>.</p>
+          <p>By drawing her mass toward the axis, she cuts her moment of inertia to perhaps a third of what it was. The ice exerts almost no torque on her. Therefore <i>L = Iω</i> must stay put — so <i>ω</i> must grow by the same factor. Her spin triples because it has nowhere else to go.</p>
+        </div>
+      </div>
+      <div class="numbers">
+        <div><b>÷3</b>inertia</div>
+        <div><b>×3</b>angular speed</div>
+        <div><b>=1</b>momentum</div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Five</span><span>The Skater</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 6 — 2x2 QUADRANTS ============ -->
+  <section class="page" id="p6">
+    <div class="folio">
+      <span>06 — Four Places It Happens</span><span class="dash"></span><span>Field Guide</span>
+    </div>
+    <div class="grid">
+      <div class="q">
+        <div class="num">01</div>
+        <div>
+          <h4>The <em>Diver</em></h4>
+          <p>Leaves the board in a layout, tucks mid-flight. Same L, smaller I — a tuck can nearly double angular speed for the two and a half somersault.</p>
+        </div>
+        <span class="tag">Sport</span>
+      </div>
+      <div class="q">
+        <div class="num">02</div>
+        <div>
+          <h4>The <em>Neutron Star</em></h4>
+          <p>A collapsing stellar core goes from a radius of 700,000 km to about 10 km. Inertia plummets by roughly ten orders of magnitude. It ends up spinning hundreds of times a second.</p>
+        </div>
+        <span class="tag">Astrophysics</span>
+      </div>
+      <div class="q">
+        <div class="num">03</div>
+        <div>
+          <h4>The <em>Stool</em></h4>
+          <p>A student sits on a rotating stool holding dumbbells. Pulls arms in: faster. Pushes arms out: slower. The demo that every physics classroom eventually buys.</p>
+        </div>
+        <span class="tag">Lab</span>
+      </div>
+      <div class="q">
+        <div class="num">04</div>
+        <div>
+          <h4>The <em>Hurricane</em></h4>
+          <p>Air spiraling toward a low-pressure center moves closer to the rotation axis. Inertia falls, rotation accelerates. The eye wall is angular momentum, tightened.</p>
+        </div>
+        <span class="tag">Weather</span>
+      </div>
+    </div>
+    <div class="title-strip"><span>Field Guide · Four Places It Happens</span></div>
+    <div class="foot">
+      <span>Page Six</span><span>2 × 2</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 7 — STAT ============ -->
+  <section class="page" id="p7">
+    <div class="folio">
+      <span>07 — By The Numbers</span><span class="dash"></span><span>Pulsar</span>
+    </div>
+    <div class="wrap">
+      <div class="tagline">Feature Stat · The Crab Pulsar</div>
+      <div class="stat">30<em>.2</em><span class="unit">Hz</span></div>
+      <div class="caption">
+        <div><b>Before</b><p>A massive star, radius near that of the Sun, rotating perhaps once a month.</p></div>
+        <div><b>After</b><p>A core of neutrons, radius ~10 km, spinning thirty full turns every second.</p></div>
+        <div><b>Why</b><p>Angular momentum had nowhere to go. Shrink the star, grow the spin. The equation does the rest.</p></div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Seven</span><span>L held constant</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 8 — THE PROBLEM ============ -->
+  <section class="page" id="p8">
+    <div class="folio">
+      <span>08 — Worked Problem</span><span class="dash"></span><span>Practice</span>
+    </div>
+    <div class="wrap">
+      <div class="left">
+        <div>
+          <div class="kicker">Free Response · Exemplar</div>
+          <h2>A student on a <em>stool.</em></h2>
+          <p class="prompt">A student sits on a frictionless rotating stool holding two 2-kg dumbbells at arm's length, 0.80 m from the rotation axis. The stool-student-dumbbell system has a base inertia of <em>3.0 kg·m²</em> and rotates at <em>1.2 rad/s</em>. The student pulls the dumbbells inward to 0.20 m from the axis. Find the new angular speed.</p>
+        </div>
+        <div class="byline" style="font-family:var(--mono);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;opacity:.6">Target: L conserved · no external torque</div>
+      </div>
+      <div class="right">
+        <div class="row">
+          <div class="label">Initial Inertia</div>
+          <div class="val">I₁ = 3.0 + 2(2)(0.8)² <em>= 5.56</em></div>
+        </div>
+        <div class="row">
+          <div class="label">Final Inertia</div>
+          <div class="val">I₂ = 3.0 + 2(2)(0.2)² <em>= 3.16</em></div>
+        </div>
+        <div class="row">
+          <div class="label">Conservation</div>
+          <div class="val">I₁ω₁ = I₂ω₂</div>
+        </div>
+        <div class="ans">
+          <div class="label">Answer</div>
+          <div class="val">ω₂ ≈ <em>2.11 rad/s</em></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Eight</span><span>Show your work</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 9 — PITFALLS ============ -->
+  <section class="page" id="p9">
+    <div class="folio">
+      <span>09 — Pitfalls</span><span class="dash"></span><span>Don't Do This</span>
+    </div>
+    <div class="wrap">
+      <h2 class="title">Four <em>mistakes</em><br>the exam<br>loves.<span class="sub">Memorize at your peril</span></h2>
+      <div class="list">
+        <div class="item">
+          <div class="n">i.</div>
+          <div>
+            <h5>Confusing energy with momentum.</h5>
+            <p>Angular momentum is conserved in the skater. Rotational kinetic energy is <em>not</em> — it actually increases, because the skater does work pulling her arms in. Two different quantities. Two different rules.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="n">ii.</div>
+          <div>
+            <h5>Forgetting to check for external torque.</h5>
+            <p>Conservation only applies when net external torque is zero. Friction, gravity on an off-axis point, a hand on the wheel — any of them breaks the law. Always justify that τ_ext = 0 before invoking I₁ω₁ = I₂ω₂.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="n">iii.</div>
+          <div>
+            <h5>Using linear intuition on rotating mass.</h5>
+            <p>Doubling the distance doesn't double the inertia — it <em>quadruples</em> it. The r² is not decoration. Where mass sits matters far more than how much of it there is.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="n">iv.</div>
+          <div>
+            <h5>Treating ω as a scalar on a whim.</h5>
+            <p>Angular momentum is a vector. In collisions and mergers on the AP exam, direction matters: two disks spinning the opposite way can cancel each other out. Pick a positive sense before you start.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <span>Page Nine</span><span>Caveat discipulus</span>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 10 — BACK COVER ============ -->
+  <section class="page" id="p10">
+    <div class="ring"></div>
+    <div class="folio">
+      <span>10 — End Matter</span><span class="dash"></span><span>Back Cover</span>
+    </div>
+    <div class="wrap">
+      <div class="end">Keep it <em>spinning.</em></div>
+      <p class="parting">You now own the most elegant conservation law in mechanics. Use it carefully, cite it honestly, and never forget to check whether the outside world is twisting your system before you swear that <i>L</i> is constant.</p>
+      <div class="colophon">
+        <div><b>Course</b>AP Physics 1<br>Unit 7 · Rotation</div>
+        <div><b>Equation</b>L = Iω<br>I₁ω₁ = I₂ω₂</div>
+        <div><b>Skills</b>SP 6.4 · SP 5.1<br>Conservation</div>
+        <div><b>Next Issue</b>Rolling without<br>slipping</div>
+      </div>
+    </div>
+    <div class="foot">
+      <span style="color:var(--cream);mix-blend-mode:normal;opacity:.5">End of Issue</span>
+      <span style="color:var(--cream);mix-blend-mode:normal;opacity:.5">— fin —</span>
+    </div>
+  </section>
+
+</main>
+
+<!-- NAV DOTS -->
+<nav class="nav" id="nav"></nav>
+
+<script>
+  const mag = document.getElementById('mag');
+  const nav = document.getElementById('nav');
+  const pages = document.querySelectorAll('.page');
+  const total = pages.length;
+  let current = 0;
+
+  // Build dots
+  pages.forEach((_,i)=>{
+    const b = document.createElement('button');
+    b.setAttribute('aria-label','Page '+(i+1));
+    if(i===0) b.classList.add('active');
+    b.addEventListener('click',()=>goTo(i));
+    nav.appendChild(b);
+  });
+
+  function goTo(i){
+    i = Math.max(0, Math.min(total-1, i));
+    current = i;
+    mag.scrollTo({left: i*window.innerWidth, behavior:'smooth'});
+    updateDots();
+  }
+  function updateDots(){
+    nav.querySelectorAll('button').forEach((b,i)=>{
+      b.classList.toggle('active', i===current);
+    });
+  }
+
+  // Arrow keys
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight' || e.key==='PageDown' || e.key===' ') {e.preventDefault(); goTo(current+1);}
+    else if(e.key==='ArrowLeft' || e.key==='PageUp') {e.preventDefault(); goTo(current-1);}
+    else if(e.key==='Home'){e.preventDefault(); goTo(0);}
+    else if(e.key==='End'){e.preventDefault(); goTo(total-1);}
+  });
+
+  // Track scroll for manual drag / trackpad
+  let t;
+  mag.addEventListener('scroll',()=>{
+    clearTimeout(t);
+    t = setTimeout(()=>{
+      current = Math.round(mag.scrollLeft/window.innerWidth);
+      updateDots();
+    },80);
+  });
+
+  // Also support wheel → horizontal
+  mag.addEventListener('wheel',e=>{
+    if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
+      e.preventDefault();
+      mag.scrollLeft += e.deltaY;
+    }
+  },{passive:false});
+
+  window.addEventListener('resize',()=>goTo(current));
+</script>
+</body>
+</html>
