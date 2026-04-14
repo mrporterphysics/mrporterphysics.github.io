@@ -17,6 +17,33 @@ class: green
 
 ---
 
+# 2026.04.15 **Physical Science**
+
+##### **❓ of the 📅**: Soft serve or hard ice cream? Bowl or cone? 🍨 :icecream:
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Acceleration Notes
+2. Acceleration think sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model acceleration_
+
+
+</div>
+</div>
+
+---
+
 # 2026.04.13 **Physical Science**
 
 ##### **❓ of the 📅**: If you were a super-hero, what powers would you have?
