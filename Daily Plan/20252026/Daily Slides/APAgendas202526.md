@@ -15,6 +15,47 @@ math: mathjax
 
 ---
 
+# 2026.04.14 **AP Physics** Do Now 
+
+Six identical massless rods are supported by a fulcrum and are tilted at the same angle to the horizontal. A mass is suspended from the left end of the rod, and the rods are held motionless by a downward force on the right end. Each rod is marked at 1-m intervals.
+
+![bg fit right](image-79.png)
+
+**Rank the magnitude of the vertical force F applied to the end of the rod.**
+<!---Answer: F > B > E > C > D > A.  In order for the rods to be held stationary the clockwise torques must balance the counter-clockwise torques. All of the forces that act on the rods are vertical forces, so we can take the distances as the number of meters between each force and the pivot. For cases C and E the force applied to the rod has to be equal to the weight of the mass. The applied force for cases D and A are less than the weight of the mass since the mass has a shorter lever arm and thus produces a smaller torque. Cases F and B need the largest applied force since that force acts with a short lever arm and the hanging masses have large lever arms.--->
+
+
+---
+
+
+# 2026.04.14 **AP Physics**
+
+##### **❓ of the 📅**: What would be on your ultimate ice cream sundae?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Do Now
+1. Paired Problem-Solving -> Static Equilibrium
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Static Equilibrium_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.02 **AP Physics**
 
 ##### **❓ of the 📅**: Do you collect anything?

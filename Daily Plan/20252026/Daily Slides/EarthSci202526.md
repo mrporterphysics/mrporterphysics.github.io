@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.04.14 **Earth Science**
+
+##### **❓ of the 📅**: What would be on your ultimate ice cream sundae? 🍨
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Whiteboard Reservoir Models & Present
+2. Part 2 - with Cards
+3. Disprove the Skeptics 
+4. PTO - Page 11
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the combined effects of greenhouse gas and albedo feedback loops to explain the rapid rate of change of Earth’s temperature and make claims about what could happen in the future based on historical and current evidence._
+
+
+</div>
+</div>
+
+---
+
 # 2026.04.13 **Earth Science**
 
 ##### **❓ of the 📅**: If you were a super-hero, what powers would you have?
