@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.04.15 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite month?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish part 2 from yesterday and Disprove the Skeptics 
+2. Find your Climate Change PTO and complete page 11
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Climate Feedbacks_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.14 **Earth Science**
 
 ##### **❓ of the 📅**: What would be on your ultimate ice cream sundae? 🍨
