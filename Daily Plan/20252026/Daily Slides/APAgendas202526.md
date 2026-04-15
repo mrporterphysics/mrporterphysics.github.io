@@ -25,7 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. A few more static equilibrium questions
+1. A few more static equilibrium questions (12 & 14...if you have time 15)
 2. Rotational 2nd Law & Moment of Inertia
 3. Practice
 
