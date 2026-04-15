@@ -495,11 +495,11 @@ A potter is shaping a bowl out of clay on a potter's wheel initially rotating at
 
 <div>
 
-![](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/RotationDynamics/PotterWheelBowl.png)
+![center w:375](https://www.physicsclassroom.com/PhysicsClassroom/media/CalcPad/RotationDynamics/PotterWheelBowl.png)
 
-1. What is $I_{wheel}$ (hint: $I = \frac{1}{2}MR^2$)
-2. What is total $I$?
-3. What is the $\Sigma \tau$ 
+1. What is $I_{wheel}$ (note: $I_{disk} = \frac{1}{2}MR^2$)
+2. What is total $I$ (add both objects?
+3. What is the $\Sigma \tau$?
 4. What is $\alpha$? Time to stop?
 
 </div>

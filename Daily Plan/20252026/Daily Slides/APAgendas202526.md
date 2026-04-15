@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.04.15 **AP Physics**
+
+##### **❓ of the 📅**: What's your favorite month?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. A few more static equilibrium questions
+2. Rotational 2nd Law & Moment of Inertia
+3. Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model rotational acceleration_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.14 **AP Physics** Do Now 
 
 Six identical massless rods are supported by a fulcrum and are tilted at the same angle to the horizontal. A mass is suspended from the left end of the rod, and the rods are held motionless by a downward force on the right end. Each rod is marked at 1-m intervals.
