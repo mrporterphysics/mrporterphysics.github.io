@@ -17,6 +17,30 @@ class:  twilight
 
 ---
 
+# 2026.04.16 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?  
+
+
+#### 📋 Agenda
+
+1. Regents Practice Questions Day (find in canvas **Modules -> Regents Review -> ess-12025-exam**):
+    1. Read and answer on mini whiteboard individually
+    2. Compare answers to lab table
+    3. Come to consensus as a table & share
+
+
+
+### 🎯 Goals
+
+🥅 _Practice with Regents Clusters_
+
+
+</div>
+</div>
+
+---
+
 # 2026.04.15 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite month?

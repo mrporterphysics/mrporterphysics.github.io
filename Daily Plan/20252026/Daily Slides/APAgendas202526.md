@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.04.16 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish PC Moment of Inertia Questions (both assignments)
+2. On your own 7.D
+3. Together: 7.E & 7.G
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.15 **AP Physics**
 
 ##### **❓ of the 📅**: What's your favorite month?
