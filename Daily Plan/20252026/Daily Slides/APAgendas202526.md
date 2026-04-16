@@ -25,9 +25,11 @@ math: mathjax
 
 #### 📋 Agenda
 
+0. AP Question - Static Equilibrium
 1. Finish PC Moment of Inertia Questions (both assignments)
 2. On your own 7.D
 3. Together: 7.E & 7.G
+4. AP Question - N2L Rotation
 
 </div>
 
@@ -35,7 +37,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Practice with Rotational Dynamics_
 
 ### 📆 Upcoming
 
