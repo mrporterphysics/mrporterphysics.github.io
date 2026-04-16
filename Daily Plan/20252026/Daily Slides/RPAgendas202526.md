@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.04.17 **Regents Physics**
+
+##### **❓ of the 📅**: What song is stuck in your head?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Regents Practice
+1. Charged Parallel Plates
+2. Electric Potential Difference
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 #  **2026.04.16** Regents Physics  
 
 ##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?

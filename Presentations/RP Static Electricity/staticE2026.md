@@ -321,6 +321,28 @@ $$ E = \frac{F_e}{q} $$
 
 ---
 
+# Parallel Plates
+
+<div class='columns'>
+<div>
+
+Between two large, oppositely charged parallel plates:
+
+- Electric field is approximately uniform (constant) between the plates (away from edges)
+- Field lines point from the positive plate (ou***t***) and i***n***to the negative plate
+
+</div>
+ 
+<div>
+
+![bg fit right:25%](image-17.png)
+
+
+
+
+
+---
+
 # Fields, Work, and Potential Energy
 
 ![center w:800](image.png)

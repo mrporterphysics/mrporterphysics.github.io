@@ -17,6 +17,32 @@ class: green
 
 ---
 
+# 2026.04.17 **Physical Science**
+
+##### **❓ of the 📅**: What song is stuck in your head?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Velocity Time Graph Notes
+2. Velocity Time Graphs worksheets
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Work with Velocity-Time Graphs_
+
+</div>
+</div>
+
+---
+
 # 2026.04.15 **Physical Science**
 
 ##### **❓ of the 📅**: Soft serve or hard ice cream? Bowl or cone? 🍨 :icecream:
