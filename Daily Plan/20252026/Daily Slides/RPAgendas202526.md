@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+#  **2026.04.16** Regents Physics  
+
+##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Review -> 2025 p. 2-3
+2. Electric Field Notes
+3. Electric Field Practice
+    - Think Sheet
+    - Regents
+    - Electric Field Hockey
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Discuss Electric Field_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.14 **Regents Physics**
 
 ##### **❓ of the 📅**: What would be on your ultimate ice cream sundae? 🍨 

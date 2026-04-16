@@ -273,6 +273,42 @@ $$ E = \frac{F_e}{q} $$
 
 ---
 
+# Common E-Field Diagrams
+
+![center w:800](image-9.png)
+
+--- 
+
+# Common E-Field Diagrams
+
+![center w: ](image-10.png)
+
+---
+
+# Common E-Field Diagrams
+
+![w:515](image-11.png) vs ![w:500](image-12.png)
+
+---
+
+# Common E-Field Diagrams
+
+![center w:700](image-13.png)
+
+---
+
+# Common E-Field Diagrams
+
+![center w:900](image-14.png)
+
+---
+
+# Common E-Field Diagrams
+
+![center w:700](image-15.png)
+
+---
+
 # Comparison to Gravity
 
 ## $E = \frac{F_e}{q}$ *vs.* $g = \frac{F_g}{m}$ <!---fit--->
