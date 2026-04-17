@@ -31,6 +31,8 @@ class:  twilight
     3. Come to consensus as a table & share
 
 
+19-23, 33-37, 46-50
+
 
 ### 🎯 Goals
 
