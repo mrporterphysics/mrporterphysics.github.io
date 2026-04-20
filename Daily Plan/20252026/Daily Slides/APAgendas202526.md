@@ -25,7 +25,11 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. 7.G - Review N2L Rot and Angular -> Linear Translation
+2. Parallel Axis Theorem
+2. Conservation of Angular Momentum -> Notes
+3. Workbook 7.I
+4. AP FRQ Example
 
 </div>
 
@@ -33,9 +37,11 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Introduce and explore conservation of angular momentum_
 
 ### 📆 Upcoming
+
+- **Homework:** AP Classroom -> Rotation Unit Progress Check
 
 </div>
 </div>

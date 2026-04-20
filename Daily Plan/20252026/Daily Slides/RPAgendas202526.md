@@ -15,6 +15,42 @@ math: mathjax
 
 ---
 
+# 2026.04.20 **Regents Physics**
+
+##### **❓ of the 📅**: If animals could talk, which one do you think would be the most annoying?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Practice Regents Questions -> 57-58, 66-67, 78-82
+2. Electric Potential Difference Notes
+	1. Drawing Comparison to Gravity
+3. Electrostatics - Potential Practice Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Electric Potential_
+
+### 📆 Upcoming
+
+- Electrostatics Quiz Friday:
+    - Conservation of Change
+    - Coulomb's Law
+    - Electric Field
+    - Electric Potential
+
+</div>
+</div>
+
+---
+
 # 2026.04.17 **Regents Physics**
 
 ##### **❓ of the 📅**: What song is stuck in your head?
