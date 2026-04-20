@@ -17,6 +17,33 @@ class: green
 
 ---
 
+# 2026.04.20 **Physical Science**
+
+##### **❓ of the 📅**: Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Velocity Time Graphs Workhseet
+2. Slope and Area from VT Graphs
+3. Slope & Area Worksheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Work with VT Graphs_
+
+</div>
+</div>
+
+---
+
 # 2026.04.17 **Physical Science**
 
 ##### **❓ of the 📅**: What song is stuck in your head?
