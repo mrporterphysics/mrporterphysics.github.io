@@ -15,6 +15,34 @@ math: mathjax
 
 ---
 
+# 2026.04.20 **AP Physics**
+
+##### **❓ of the 📅**: If animals could talk, which one do you think would be the most annoying?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.04.16 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather have unlimited battery life on all of your devices or have free WiFi wherever you go?

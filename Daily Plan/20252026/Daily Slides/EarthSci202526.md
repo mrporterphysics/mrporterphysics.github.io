@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.04.20 **Earth Science**
+
+##### **❓ of the 📅**: If animals could talk, which one do you think would be the most annoying?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Ocean Currents: _What impact does melting or freezing ice have on ocean currents?_
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Ocean Currents based on glacial melting_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2026.04.17 **Earth Science**
 
