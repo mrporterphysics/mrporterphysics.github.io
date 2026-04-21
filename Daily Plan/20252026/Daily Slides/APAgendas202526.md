@@ -15,6 +15,89 @@ math: mathjax
 
 ---
 
+<div class='columns'>
+<div style="font-size: 23.5px;"">
+
+A rod is attached to a pivot at one end and rests on a horizontal surface, as shown. Frictional forces are negligible. In Figure 1, a puck is launched perpendicularly to the rod and makes contact at the far edge of the rod while traveling with a speed $v$. The angular momentum of the puck with respect to the pivot immediately before impact is $L_1$. In Figure 2, the same puck is launched again at the rod but at an angle of 30° to the rod. The puck makes contact at the center of the rod while traveling with speed $v$. The angular momentum of the puck with respect to the pivot immediately before impact is $L_2$. Which of the following correctly represents $L_2$ in terms of $L_1$?
+
+</div>
+ 
+<div>
+
+![alt text](image-80.png)
+
+A. $L_2 = L_2$
+
+B. $L_2 = \frac{\sqrt{3}}{4}L_1$
+
+C. $L_2 = \frac{1}{2}L_1$
+
+D. $L_2 = \frac{1}{4}L_1$
+
+</div>
+</div>
+
+<!---
+Answer D
+Correct. The angular momentum of an object about a point is defined as L = rmusin e, which
+indicates that the angular momentum is proportional to both the distance to the rotation axis and
+the sine of the angle between the radial distance and the velocity. Therefore, in Figure 1
+L1 = lmusin (90°) = lmu, where l is the length of the rod. In figure 2,
+--->
+
+---
+
+A student with mass $m$ runs and jumps onto the outer edge of a stationary horizontal platform that is free to rotate about an axis at the center of the platform. The platform has mass $M$, radius $R$, and rotational inertia $\frac{1}{2}MR^2$. Immediately before landing on the platform the student has horizontal speed $v$ directed tangentially to the outer edge of the platform. Which of the following is equal to the angular momentum of the student about the platform's axis immediately before landing on the platform?
+
+
+A. $\frac{1}{2}Rmv$
+
+B. $Rmv$
+
+C. $\frac{1}{2}RMv$
+ 
+D. $RMv$ 
+
+<!--- B
+
+Correct. The definition of the angular momentum of an object about an axis is L = rmu sin e.In
+this case, the student's velocity is tangential to the edge, so A = 90°. Therefore, L= Rmv.
+--->
+
+---
+
+# 2026.04.21 **AP Physics**
+
+##### **❓ of the 📅**: Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Go Over 7.I
+3. Complet 7.C Then Notes
+4. 7.H, 7.J
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Rotational Kinetic Energy_
+
+### 📆 Upcoming
+
+- Rotation Progress Checks Posted
+
+</div>
+</div>
+
+---
+
 # 2026.04.20 **AP Physics**
 
 ##### **❓ of the 📅**: If animals could talk, which one do you think would be the most annoying?
