@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.04.22 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Present Findings from Videos
+2. Finish Explain 1
+	1. Students whiteboard and present findings
+	2. Present slide
+2. Start Explore 2
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Ocean currents_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.21 **Earth Science**
 
 ##### **❓ of the 📅**: Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?

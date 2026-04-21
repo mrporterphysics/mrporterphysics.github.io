@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.04.22 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Density Notes](../../../Presentations/Fluids/talk/APfluids2025.html)
+2. Workbook 8.A & 8.B
+3. Pressure Notes
+4. Workbook 8.C & 8.D
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Density_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <div class='columns'>
 <div style="font-size: 23.5px;"">
 
