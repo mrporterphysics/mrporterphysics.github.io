@@ -737,6 +737,31 @@ Explain your reasoning.
 
 ---
 
+<div class='columns'>
+<div>
+
+A miniature, solid globe with mass $0.25\text{ kg}$ and radius $0.10\text{ m}$ is spinning in place about a vertical axis with the equator horizontal, as shown. A point on the globe's equator, represented by the dot in the figure, has a linear speed of $4.0\text{ m/s}$. The rotational inertia of a solid sphere of mass $m$ and radius $r$ is $\frac{2}{5}mr^2$. The rotational kinetic energy of the globe is most nearly
+
+</div>
+ 
+<div>
+
+![center](image-12.png)
+
+A. 0.8 J
+
+B. 2.0 J
+
+C. 4.0 J
+
+D. 200 J
+
+</div>
+</div>
+
+
+---
+
 Four objects are placed in a row at the same height near the top of a ramp and are released from rest at the same time. The objects are a 1-kg solid sphere; a 1-kg hollow sphere; a 2-kg solid sphere; and a 1-kg thin hoop. All four objects have the same diameter, and the hoop has a width that is one-quarter its diameter. The time it takes the objects to reach the finish line near the bottom of the ramp is recorded. The moment of inertia for a solid sphere is $\frac{2}{5}MR^2$; for a hollow sphere it is $\frac{2}{3}MR^2$; and for a hoop it is $MR^2$.
 
 
