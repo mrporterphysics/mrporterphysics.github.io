@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.04.21 **Earth Science**
+
+##### **❓ of the 📅**: Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish watching videos and answering questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Ocean currents_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.20 **Earth Science**
 
 ##### **❓ of the 📅**: If animals could talk, which one do you think would be the most annoying?

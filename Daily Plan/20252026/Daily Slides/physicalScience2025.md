@@ -17,6 +17,180 @@ class: green
 
 ---
 
+# 2026.04.23 **Physical Science**
+
+##### **❓ of the 📅**: What was your favorite vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Spark timer lab
+    - Intro
+    - What is a spark timer?
+    - pick your vehicle
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect & Graph data_
+
+
+</div>
+</div>
+
+---
+
+
+# Spark Timer Acceleration Lab <!--fit--->
+
+## **Finding Acceleration from Position and Velocity Graphs**
+
+---
+
+## The Essential Question
+
+What is the **acceleration** of your fan cart (or pull-back truck)?
+
+> By the end of the lab, you should be able to answer this with a number *and* with graph evidence to back it up.
+
+---
+
+## Quick Refresher: Acceleration
+
+**Acceleration** = how quickly velocity is changing.
+
+- Velocity **constant** &rarr; acceleration is **zero**
+- Velocity **increasing** &rarr; acceleration is **positive** (speeding up)
+- Velocity **decreasing** &rarr; acceleration is **negative** (slowing down)
+
+Today we find acceleration by studying how *position* and *velocity* change over time.
+
+---
+
+## Your Tool: The Spark Timer
+
+A **spark timer** leaves a dot on paper tape at perfectly regular time intervals.
+
+- Our timer runs at **60 Hz** &rarr; one dot every **1/60 s** ≈ **0.0167 s**
+- The cart drags tape through the timer as it moves
+- The spacing of the dots tells you about the motion
+
+> Dots **evenly spaced** &rarr; constant velocity.
+> Dots **getting farther apart** &rarr; accelerating.
+
+---
+
+<!-- _class: impact -->
+
+## Two Parts
+
+**Part 1:** Collect spark-timer data. Graph *position vs. time* **by hand**.
+
+**Part 2:** Enter your data into **Graphical Analysis**. Use the *tangent tool* to find velocities, then graph *velocity vs. time* to find your **acceleration**.
+
+---
+
+## Part 1: Reading the Tape
+
+1. Pick a **clear starting dot**. Label it $t = 0$, position $= 0$.
+2. Measure the position of each later dot **from the starting dot** — not from the previous one.
+3. Record time and position in your lab notebook.
+
+> You can use every 2nd, 3rd, or 5th dot to keep your data manageable. Stay consistent, and adjust your time values accordingly.
+
+---
+
+## Part 1: The Hand-Drawn Graph
+
+Plot **position (cm)** on the $y$-axis and **time (s)** on the $x$-axis.
+
+- Label both axes — variable name **and** units
+- Choose a scale that fills most of the page
+- Draw a **smooth curve** through the points — do *not* connect the dots with straight segments
+
+Expect a **curve** if your object is accelerating.
+
+---
+
+## Part 2: Into Graphical Analysis
+
+1. Create two columns: **Time** and **Position**
+2. Enter the same data you used for your hand graph
+3. Plot **Position vs. Time** — it should come out as a curve, not a straight line
+
+---
+
+<!-- _class: equation -->
+
+## The Tangent Tool
+
+The **tangent** at a point on a curve has a slope equal to the **instantaneous velocity** at that moment.
+
+$$v = \text{slope of the tangent on the } x\text{-}t \text{ graph}$$
+
+Use the tangent tool at **5 or 6 points** spread across your curve. Record each (time, velocity) pair in your lab notebook.
+
+---
+
+<!-- _class: equation -->
+
+## Finding Your Acceleration
+
+Now plot your **velocity vs. time** data in Graphical Analysis.
+
+Add a **linear best-fit line**.
+
+$$a = \text{slope of the } v\text{-}t \text{ graph}$$
+
+That slope — with units like **cm/s²** or **m/s²** — **is** your object's acceleration.
+
+---
+
+<!-- _class: rules -->
+
+## Safety First
+
+- Spark timers use **high voltage**. Keep fingers and metal objects away from the contacts while the timer is running.
+- **Turn the timer off** before loading or unloading tape.
+- Keep the tape path clear so it doesn't whip or catch.
+- Don't let carts launch off the lab bench.
+
+---
+
+## In Your Lab Notebook
+
+- Title, Question, Purpose
+- Your procedure for **both parts**
+- Position-time table + **hand-drawn** position-time graph (Part 1)
+- Velocity-time table from the tangent tool (Part 2)
+- Printouts (or sketches) of both computer graphs
+- The **equation** of your v-t best-fit line
+- Your **acceleration**, with units
+- Answers to all Analysis questions
+- Conclusion that directly answers the Question
+
+---
+
+<!-- _class: go -->
+
+## Go Time
+
+Choose your object: **fan cart** or **pull-back truck**.
+
+Start with Part 1 — take your time on the tape measurements. Good data now saves pain in Part 2.
+
+**Let's find some acceleration.**
+
+
+
+---
+
 # 2026.04.20 **Physical Science**
 
 ##### **❓ of the 📅**: Which would you rather do: wash dishes, mow the lawn, clean the bathroom, or vacuum the house?
