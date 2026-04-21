@@ -26,7 +26,7 @@ A rod is attached to a pivot at one end and rests on a horizontal surface, as sh
 
 ![alt text](image-80.png)
 
-A. $L_2 = L_2$
+A. $L_2 = L_1$
 
 B. $L_2 = \frac{\sqrt{3}}{4}L_1$
 
@@ -78,7 +78,7 @@ this case, the student's velocity is tangential to the edge, so A = 90°. Theref
 
 1. Do Now
 2. Go Over 7.I
-3. Complet 7.C Then Notes
+3. Complete 7.C Then Notes
 4. 7.H, 7.J
 
 </div>
