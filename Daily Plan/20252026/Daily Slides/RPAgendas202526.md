@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.04.22 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents 2024
+2. Introduction to Circuits - Notes
+3. Electric Potential and Circuits Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Current & Electric Potential_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.20 **Regents Physics**
 
 ##### **❓ of the 📅**: If animals could talk, which one do you think would be the most annoying?

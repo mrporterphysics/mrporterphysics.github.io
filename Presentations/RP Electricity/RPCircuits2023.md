@@ -19,6 +19,7 @@ class: invert
     section{
         background-color: black;
         font-family: 'JetBrains Mono', monospace;
+        font-size: 2.4em;
     }
 
     h1{
@@ -35,13 +36,395 @@ class: invert
 
 </style>
 
-# Circuits ⚡ 🔌 <!---fit--->
 
-# A Model for Moving Charge 🔋 <!---fit--->
+# Electric Potential ⚡ <!-- fit -->
 
+# & Potential Difference 🔋 <!-- fit -->
 
-#### 👨‍🏫 Mr. Porter 
+#### 👨‍🏫 Mr. Porter
 #### 📆 2025 - Physics
+
+---
+
+# Where We Left Off... 🔙
+
+### From the *electrostatics* unit:
+
+* Charges create **electric fields** in the space around them
+* Fields exert *action-at-a-distance* forces on other charges
+* Field direction = direction a **positive test charge** would be pushed
+
+### ❓ Big question for this unit:
+### How does a field make charge *move* through a circuit?
+
+---
+
+# The Gravitational Analogy ⬇️
+
+### Before we talk about electric fields doing work...
+
+### Let's think about *gravity* doing work.
+
+* Earth creates a **gravitational field** around it
+* The field exerts forces on masses placed in it
+* Gravity is a *conservative force* (remember energy unit?)
+
+---
+
+# Gravity & Work ⚙️
+
+### Moving a mass **up** (against the field):
+* Requires *work* by an external force
+* Mass *gains* potential energy ⬆️
+
+### Moving a mass **down** (with the field):
+* Happens *naturally* — no external work needed
+* Mass *loses* potential energy ⬇️
+
+---
+
+<style scoped>section { font-size: 30px; }</style>
+
+# The Key Idea 🔑
+
+### Objects naturally move from **high PE** → **low PE**
+
+### Work is required to move objects from **low PE** → **high PE**
+
+### This is true for:
+* Masses in a *gravitational* field ⬇️
+* Charges in an *electric* field ⚡
+
+---
+
+# Electric Fields & Work 💼
+
+Consider a positive test charge near a positive source charge:
+- Moving it **toward** the source (against the field):
+    * Requires **work** ⚙️
+    * Charge *gains* electric PE ⬆️
+- Moving it **away** (with the field):
+    * Happens *naturally*
+    * Charge *loses* electric PE ⬇️
+
+---
+
+# High Energy vs. Low Energy ⚡
+
+### For a **positive** test charge:
+
+### Near a **(+) source charge**:
+* *Close* = HIGH electric PE
+* *Far* = LOW electric PE
+
+### Near a **(-) source charge**:
+* *Close* = LOW electric PE
+* *Far* = HIGH electric PE
+
+### Think: *which direction would the charge naturally go?*
+
+---
+
+# A Problem With Potential Energy ⚠️ <!--fit--->
+
+ Consider two masses at two heights:
+
+* A 1 kg mass held 2 m high
+* A 2 kg mass held 1 m high
+
+Both have the *same* potential energy!
+- $PE = mgh = (1)(9.8)(2) = (2)(9.8)(1) = 19.6 \text{ J}$
+
+So "high up" doesn't automatically mean "high PE"
+-  PE depends on **mass** *AND* **location**
+
+---
+
+# A Better Way: Potential ✨
+
+What if we defined a quantity that's **only about location**?
+
+**Gravitational potential** = $\dfrac{PE}{\text{mass}}$
+* Units: J/kg
+* Mass-independent
+* Purely location-dependent
+* Tells you *how much PE per kg* any mass would have there
+
+---
+
+# Electric Potential ⚡
+
+### Same idea, but for charges:
+
+### **Electric Potential** = $\dfrac{\text{Electric PE}}{\text{charge}}$
+
+* Charge-independent 🎯
+* Purely location-dependent
+* Tells you *how much PE per coulomb* any charge would have there
+
+### 📏 **Units: Joules / Coulomb = VOLT (V)**
+### *Named after Alessandro Volta*
+
+---
+
+# Electric Potential - Example 🧮
+
+### Suppose a location has an electric potential of **12 V**
+
+### That means: **every 1 coulomb** of charge placed there has **12 J** of PE
+
+| Charge at location | Electric PE  |
+|:---:|:---:|
+| 1 C  | 12 J |
+| 2 C  | 24 J |
+| 0.5 C | 6 J |
+| 3 C | 36 J |
+
+### The *potential* (V) is the same. The *PE* depends on the charge.
+
+---
+
+# Check Your Understanding 🧠
+
+### Electric potential is defined as the amount of ___.
+
+### a) electric potential energy
+### b) force acting upon a charge
+### c) *potential energy per charge*
+### d) force per charge
+
+---
+
+# From Potential → Potential *Difference* <!-- fit -->
+
+### In circuits, we don't care about potential at one point
+
+### We care about the *difference* between two points 🔄
+
+### 💡 The charge moves *between* locations. What matters is how much energy it gains or loses along the way.
+
+---
+
+# Electric Potential Difference 🎢
+
+### When work is done to move charge $q$ from one point to another:
+
+$$\boxed{\Delta V = \frac{W}{q}}$$
+
+- $\Delta V$ ➡️ electric potential difference (Volts, V)
+- $W$ ➡️ work done on the charge (Joules, J)
+- $q$ ➡️ charge moved (Coulombs, C)
+
+### Also called **voltage** 🔌
+
+---
+
+# What Does 1 Volt Mean? 📏
+
+### $1 \text{ V} = 1 \text{ J/C}$
+
+### If $\Delta V$ between two points is **1 volt**, then moving **1 C** between them changes the charge's PE by **1 J**.
+
+| $\Delta V$ | Energy change per 1 C moved |
+|:---:|:---:|
+| 1 V | 1 J |
+| 9 V | 9 J |
+| 12 V | 12 J |
+| 120 V | 120 J |
+
+---
+
+# Quick Practice 📝
+
+1. A battery does 48 J of work moving 4 C of charge from one terminal to the other. What is the potential difference across the battery?
+
+2. How much work is done by a 9 V battery moving 2 C of charge from its (-) to (+) terminal?
+
+3. A potential difference of 120 V exists between two points. How much charge must move between the points for 600 J of work to be done?
+
+---
+
+# Potential Difference in Circuits 🔋 <!-- fit -->
+
+### A **battery** creates a potential difference between its two terminals
+
+* *Chemical energy* → electrical PE
+* Does work on charges to *pump* them from (-) terminal to (+) terminal
+
+### (+) terminal = **high potential**
+### (-) terminal = **low potential**
+
+---
+
+<style scoped>section { font-size: 28px; }</style>
+
+# The Water Park Analogy 🎢💧
+
+### A battery is like a **pump** at a water park:
+
+| Water Park | Electric Circuit |
+|:---:|:---:|
+| Pump lifts water up | Battery raises charge to high V |
+| Water at top = high PE | Charge at (+) = high electric PE |
+| Water flows *down* naturally | Charge flows *through wires* naturally |
+| Water does work on paddles | Charge does work on bulbs/motors |
+| Water returns to pump | Charge returns to battery |
+
+---
+
+# Internal vs. External Circuit 🔄
+
+### **Internal Circuit** (inside the battery):
+* Charge moves (-) → (+)
+* Work done *on* the charge
+* Energy gained ⬆️
+
+### **External Circuit** (the wires and devices):
+* Charge moves (+) → (-)
+* Work done *by* the charge
+* Energy lost to light, heat, motion ⬇️
+
+---
+
+<style scoped>section { font-size: 30px; }</style>
+
+# Charge is a *Cycle* 🔄
+
+### A circuit is an **energy conversion system**:
+
+### 🔋 Battery: chemical → electrical PE
+### ⬇️
+### Wires carry charge to resistor
+### ⬇️
+### 💡 Resistor: electrical PE → light/heat/motion
+### ⬇️
+### Wires return charge to battery
+### ⬇️
+### *(repeat)*
+
+### ⚠️ Charge is **NOT** used up. Only *energy* is transformed.
+
+---
+
+# Voltage Drops 💧
+
+### As charge moves through a circuit element (like a bulb):
+
+* It *loses* electric PE
+* This is called a **voltage drop**
+
+### The charge enters at *high* potential
+### The charge leaves at *low* potential
+### The difference = how much energy was delivered per coulomb
+
+---
+
+# Conservation of Energy 🔄 <!-- fit -->
+
+### Energy gained in the battery = Energy lost in the circuit
+
+### **Voltage rise** (from battery) = **Sum of voltage drops** (across elements)
+
+### ⚡ *This is a preview of Kirchhoff's 2nd Law* ⚡
+
+### Whatever energy each coulomb of charge gets from the battery, it must give up by the time it returns.
+
+---
+
+# Electric Potential Diagrams 📊
+
+### A tool to show how potential changes around a circuit:
+
+* **x-axis**: position around the circuit
+* **y-axis**: electric potential (V)
+* (-) terminal set to 0 V
+* (+) terminal set to battery voltage
+
+### Each component's *voltage drop* appears as a downward step 📉
+
+---
+
+<style scoped>section { font-size: 28px; }</style>
+
+# Reading a Potential Diagram 📈
+
+### Circuit A: 1.5 V battery, one bulb
+* Rise at battery: +1.5 V
+* Drop at bulb: -1.5 V
+* Returns to 0 V ✅
+
+### Circuit B: 6 V battery, two bulbs
+* Rise at battery: +6 V
+* Drop at bulb 1 + bulb 2 = -6 V total
+* Returns to 0 V ✅
+
+### The drops *must* sum to the rise!
+
+---
+
+# Check Your Understanding 🧠
+
+### If a circuit were like a water park, the **battery voltage** would be comparable to:
+
+### a) the rate water flows
+### b) the speed water flows
+### c) the distance water flows
+### d) *the water pressure between top and bottom*
+### e) the hindrance of obstacles
+
+---
+
+# Check Your Understanding 🧠
+
+### True or False?
+
+1. The battery supplies the *charge* (electrons) that moves through the wires.
+2. Charge is used up as it passes through the light bulb.
+3. The battery supplies *energy* that raises charge from low to high voltage.
+4. Charge moves around a circuit at nearly the speed of light.
+
+---
+
+# Quick Practice 📝
+
+A 12 V car battery is connected to a light bulb.
+
+1. How much energy does each coulomb of charge gain in the battery?
+2. How much energy does each coulomb lose in the bulb?
+3. If 5 C of charge flow through the circuit, how much energy is transferred to the bulb?
+4. Where in the circuit is the electric potential 0 V?
+
+---
+
+# Quick Practice 📝
+
+### Complete each statement:
+
+1. A 9 V battery increases the PE of 1 C by ___ J.
+2. A 9 V battery increases the PE of 2 C by ___ J.
+3. A 9 V battery increases the PE of 0.5 C by ___ J.
+4. A ___ V battery increases the PE of 3 C by 18 J.
+5. A 1.5 V battery increases the PE of ___ C by 0.75 J.
+
+---
+
+# Key Takeaways 🎯
+
+### 1️⃣ **Electric potential (V)** = PE per coulomb at a location
+### 2️⃣ **Potential difference (ΔV)** = energy transferred per coulomb *between* two locations
+### 3️⃣ Batteries *pump* charge from low V → high V
+### 4️⃣ Circuit elements convert electrical PE → other forms
+### 5️⃣ Voltage *rises* = voltage *drops* (energy is conserved)
+
+---
+
+# Up Next: Current & Circuits ➡️ <!-- fit -->
+
+### Now that we know what *causes* charge to flow...
+
+### ...let's talk about *how fast* it flows.
+
+### ⚡ **Current** ⚡
 
 ---
 
