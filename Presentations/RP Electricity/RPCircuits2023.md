@@ -37,9 +37,7 @@ class: invert
 </style>
 
 
-# Electric Potential ⚡ <!-- fit -->
-
-# & Potential Difference 🔋 <!-- fit -->
+# Circuits
 
 #### 👨‍🏫 Mr. Porter
 #### 📆 2025 - Physics
