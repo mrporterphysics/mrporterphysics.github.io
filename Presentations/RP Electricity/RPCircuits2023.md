@@ -53,6 +53,8 @@ html: true
 * Happens *naturally* — no external work needed
 * Mass *loses* potential energy ⬇️
 
+
+
 ---
 
 <style scoped>section { font-size: 30px; }</style>
