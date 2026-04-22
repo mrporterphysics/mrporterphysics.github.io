@@ -1,41 +1,14 @@
 ---
 title: Regents - Circuits Slides 
 marp: true
-theme: gaia
+theme: magazine
 math: katex
 paginate: true
-class: invert
+class: char
+html: true
 ---
 
-<style>
-
-    @import 'base';
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Workbench&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Roboto&display=swap');
-    em{
-        color: #de6266;
-    }
-
-    section{
-        background-color: black;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 1.8em;
-    }
-
-    h1{
-        font-style:bold;
-    }
-
-
-    img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
-    }
-
-
-
-</style>
-
+<script src="../../PorterThemes/Schodack/magazine-autoscale.js"></script>
 
 # Circuits
 
@@ -52,8 +25,9 @@ class: invert
 * Fields exert *action-at-a-distance* forces on other charges
 * Field direction = direction a **positive test charge** would be pushed
 
+
 ### ❓ Big question for this unit:
-### How does a field make charge *move* through a circuit?
+#### How does a field make charge *move* through a circuit?
 
 ---
 
@@ -109,17 +83,17 @@ Consider a positive test charge near a positive source charge:
 
 # High Energy vs. Low Energy ⚡
 
-### For a **positive** test charge:
+## For a **positive** test charge:
 
-### Near a **(+) source charge**:
-* *Close* = HIGH electric PE
-* *Far* = LOW electric PE
+- Near a **(+) source charge**:
+    * *Close* = HIGH electric PE
+    * *Far* = LOW electric PE
 
-### Near a **(-) source charge**:
-* *Close* = LOW electric PE
-* *Far* = HIGH electric PE
+- Near a **(-) source charge**:
+    * *Close* = LOW electric PE
+    * *Far* = HIGH electric PE
 
-### Think: *which direction would the charge naturally go?*
+Think: *which direction would the charge naturally go?*
 
 ---
 
