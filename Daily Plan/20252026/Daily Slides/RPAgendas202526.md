@@ -26,7 +26,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Regents 2024
-2. Introduction to Circuits - Notes
+2. Introduction to Circuits - [Notes](../../../Presentations/RP%20Electricity/RPCircuits2023.html)
 3. Electric Potential and Circuits Practice
 
 </div>
