@@ -19,7 +19,7 @@ class: invert
     section{
         background-color: black;
         font-family: 'JetBrains Mono', monospace;
-        font-size: 2.4em;
+        font-size: 1.5em;
     }
 
     h1{
