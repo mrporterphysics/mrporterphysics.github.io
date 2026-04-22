@@ -379,7 +379,12 @@ img[alt~="center"] {
     gap: 1.5em;
 }
 
-/* Kicker — small uppercase mono label above a heading */
+/* .kicker — small uppercase mono label that sits above a heading.
+ *
+ *   <span class="kicker">Chapter 03 · The Law</span>
+ *
+ *   ## Conservation of Angular Momentum
+ */
 .kicker {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.6em;
@@ -393,7 +398,15 @@ img[alt~="center"] {
     display: block;
 }
 
-/* Folio — page header strip (date, section, issue) */
+/* .folio — magazine page header strip (issue / section / number).
+ * Use an inner <span class="dash"></span> for the connecting line.
+ *
+ *   <div class="folio">
+ *     <span>03 — The Law</span>
+ *     <span class="dash"></span>
+ *     <span>Conservation</span>
+ *   </div>
+ */
 .folio {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.5em;
@@ -415,7 +428,13 @@ img[alt~="center"] {
     margin: 0 1em;
 }
 
-/* Foot — page footer strip (mirror of folio) */
+/* .foot — mirror of .folio, sits at the bottom of the slide.
+ *
+ *   <div class="foot">
+ *     <span>Page Three</span>
+ *     <span>kg · m² / s</span>
+ *   </div>
+ */
 .foot {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.5em;
@@ -429,7 +448,10 @@ img[alt~="center"] {
     margin-top: 1.2em;
 }
 
-/* Byline — author / credit line */
+/* .byline — small author / credit line after a paragraph.
+ *
+ *   <p class="byline">— N. Porter, Editor</p>
+ */
 .byline {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.55em;
@@ -439,7 +461,11 @@ img[alt~="center"] {
     margin-top: 0.4em;
 }
 
-/* Caption — small uppercase caption for figures/images */
+/* .caption — small uppercase caption placed under figures/images.
+ *
+ *   ![skater diagram](skater.svg)
+ *   <p class="caption">Fig. 05 — Mass withdrawn to the axis.</p>
+ */
 .caption {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.55em;
@@ -450,7 +476,11 @@ img[alt~="center"] {
     max-width: 30em;
 }
 
-/* Lede — large opening paragraph */
+/* .lede — large opening paragraph that leads into a story.
+ * Italics inside render in the accent color.
+ *
+ *   <p class="lede">The rule nature *refuses* to break.</p>
+ */
 .lede {
     font-family: "Instrument Serif", serif;
     font-size: 1.35em;
@@ -462,7 +492,10 @@ img[alt~="center"] {
 }
 .lede em { color: var(--accent); font-style: italic; }
 
-/* Drop cap — oversized italic first letter */
+/* .drop — oversized italic drop cap on the first letter of a paragraph.
+ *
+ *   <p class="drop">There is a rule nature refuses to break...</p>
+ */
 .drop::first-letter,
 p.drop::first-letter {
     font-family: "Instrument Serif", serif;
@@ -475,7 +508,11 @@ p.drop::first-letter {
     color: var(--accent);
 }
 
-/* Display — editorial hero text */
+/* .display — editorial hero text (magazine masthead feel).
+ * Italics render in the accent color.
+ *
+ *   <div class="display">Spin, what *spins* stays spun.</div>
+ */
 .display {
     font-family: "BBH Bogle", serif;
     font-weight: 400;
@@ -485,7 +522,12 @@ p.drop::first-letter {
 }
 .display em { color: var(--accent); font-style: italic; }
 
-/* Stat — big centered number */
+/* .stat — huge centered number (by-the-numbers / feature stat).
+ * Italic renders in the accent color; use <span class="unit"> for a
+ * small superscript unit.
+ *
+ *   <div class="stat">30<em>.2</em><span class="unit">Hz</span></div>
+ */
 .stat {
     font-family: "Instrument Serif", serif;
     font-weight: 400;
@@ -507,7 +549,12 @@ p.drop::first-letter {
     color: var(--accent-soft);
 }
 
-/* Equation — large italic equation display */
+/* .eq — large italic equation display, centered.
+ * sub/sup inside render at 0.45em, upright.
+ *
+ *   <div class="eq">L = Iω</div>
+ *   <div class="eq">v<sub>f</sub>² = v<sub>i</sub>² + 2aΔx</div>
+ */
 .eq {
     font-family: "Instrument Serif", serif;
     font-style: italic;
@@ -520,7 +567,13 @@ p.drop::first-letter {
 }
 .eq sub, .eq sup { font-size: 0.45em; font-style: normal; }
 
-/* Pull quote — large italic quotation */
+/* .pullquote — large italic magazine-style pull quote with rules.
+ *
+ *   <div class="pullquote">
+ *   A skater, a star, a hurricane — all bound by the same
+ *   stubborn *arithmetic*.
+ *   </div>
+ */
 .pullquote {
     font-family: "Instrument Serif", serif;
     font-size: 2em;
@@ -535,7 +588,10 @@ p.drop::first-letter {
 }
 .pullquote em { color: var(--accent); }
 
-/* Rule — horizontal divider */
+/* .rule — simple horizontal divider (thinner than markdown ---).
+ *
+ *   <hr class="rule">
+ */
 .rule {
     border: 0;
     border-top: 1px solid var(--rule);
@@ -544,7 +600,11 @@ p.drop::first-letter {
     width: 100%;
 }
 
-/* Tag / pill — small bordered mono label */
+/* .tag — small bordered mono pill for categories / chips.
+ *
+ *   <span class="tag">Astrophysics</span>
+ *   <span class="tag">Unit 7</span>
+ */
 .tag {
     display: inline-block;
     font-family: "JetBrains Mono", monospace;
@@ -559,7 +619,11 @@ p.drop::first-letter {
     line-height: 1;
 }
 
-/* Answer box — boxed result (for worked problems) */
+/* .ans — boxed final answer for worked problems (pairs with
+ * the .given / .find / .solution scaffold further down).
+ *
+ *   <div class="ans">ω₂ ≈ *2.11 rad/s*</div>
+ */
 .ans {
     display: block;
     padding: 0.7em 0.9em;
@@ -573,7 +637,10 @@ p.drop::first-letter {
 }
 .ans em { color: var(--accent); font-style: italic; }
 
-/* Mono — uppercase mono span for inline labels */
+/* .mono — inline uppercase mono span for labels inside body copy.
+ *
+ *   Pressure is measured in <span class="mono">pascals</span>.
+ */
 .mono {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.75em;
@@ -582,7 +649,10 @@ p.drop::first-letter {
     font-weight: 500;
 }
 
-/* Fine — small auxiliary text */
+/* .fine — small dimmed auxiliary text (asides, footnotes).
+ *
+ *   <p class="fine">For derivation, see §7.4 in the textbook.</p>
+ */
 .fine {
     font-size: 0.72em;
     line-height: 1.45;
@@ -590,7 +660,10 @@ p.drop::first-letter {
     max-width: 32em;
 }
 
-/* Center helper */
+/* .center — quick text-align helper.
+ *
+ *   <p class="center">Between the lines.</p>
+ */
 .center { text-align: center; }
 
 /* =========================================================
@@ -629,22 +702,28 @@ section label {
 
 /* =========================================================
    AUTOSCALE SUPPORT
-   The JS (magazine-autoscale.js) sets inline font-size on
-   <section> to shrink overflowing slides. Because every size
-   above is in em, the h1/h2/body ratio is preserved.
-   Opt a slide out by adding class="no-autoscale".
+   magazine-autoscale.js shrinks a slide's inline font-size if
+   its content overflows. Because every size in this file is in
+   em, the h1/h2/body ratio is preserved while scaling.
+   Opt a slide out:
+     <!-- _class: no-autoscale -->
    ========================================================= */
 section.no-autoscale { /* JS skips these */ }
 
 /* =========================================================
    SLIDE LAYOUT CLASSES
-   Apply to <section> via Marp directive on the slide:
-     <!-- _class: hero  -->
-     <!-- _class: split -->
-     <!-- _class: quad  -->
+   Apply to the whole <section> via a Marp per-slide directive.
    ========================================================= */
 
-/* Hero — vertically centered, oversized display slide */
+/* section.hero — vertically centered, oversized display slide.
+ * Good for section dividers, cover pages, and single-idea slides.
+ * h1 here renders at 4.8em with no underline.
+ *
+ *   <!-- _class: hero -->
+ *
+ *   # Keep it *spinning*.
+ *   <p class="lede">The most elegant conservation law in mechanics.</p>
+ */
 section.hero {
     display: flex;
     flex-direction: column;
@@ -661,8 +740,24 @@ section.hero h1 {
 section.hero h2 { margin-top: 0; }
 section.hero .lede { font-size: 1.4em; }
 
-/* Split — full-bleed two-column, left panel inverts colors.
-   Write two <div> children inside the slide. */
+/* section.split — full-bleed two-column layout. The first child
+ * inverts colors (like reference page 3: dark panel + content panel).
+ * Put exactly two <div> children in the slide.
+ *
+ *   <!-- _class: split -->
+ *
+ *   <div>
+ *
+ *   <span class="kicker">§ 01 · First Principle</span>
+ *   ## When *no external torque* acts, L stays constant.
+ *
+ *   </div>
+ *   <div>
+ *
+ *   <div class="eq">L = Iω</div>
+ *
+ *   </div>
+ */
 section.split {
     padding: 0;
     display: grid;
@@ -688,7 +783,28 @@ section.split > *:first-child h4 { color: var(--bg); }
 section.split > *:first-child em,
 section.split > *:first-child strong { color: var(--accent-soft); }
 
-/* Quad — 2×2 grid with thin dividers. Write four <div> children. */
+/* section.quad — 2×2 grid with thin dividers between cells.
+ * Put exactly four <div> children in the slide.
+ *
+ *   <!-- _class: quad -->
+ *
+ *   <div>
+ *
+ *   <span class="kicker">01 · Sport</span>
+ *   ### The *Diver*
+ *   Same L, smaller I in a tuck — angular speed nearly doubles.
+ *
+ *   </div>
+ *   <div>
+ *
+ *   <span class="kicker">02 · Astrophysics</span>
+ *   ### The *Neutron Star*
+ *   A 700,000 km core shrinks to 10 km. I plummets; ω explodes.
+ *
+ *   </div>
+ *   <div>...</div>
+ *   <div>...</div>
+ */
 section.quad {
     padding: 0;
     display: grid;
@@ -709,7 +825,36 @@ section.quad > *:nth-child(3) { border-right: 1px solid var(--rule); }
 
 /* =========================================================
    TEACHING CALLOUTS
-   <div class="definition">…</div>   (also: .pitfall .warning .note .key)
+   Each class auto-labels itself via ::before (no heading needed).
+   Blank lines inside the <div> are required for markdown to render.
+   Available: .definition · .pitfall · .warning · .note · .key
+   .warning is an alias for .pitfall.
+
+     <div class="definition">
+
+     Angular momentum is the rotational analog of linear momentum:
+     *L = Iω*.
+
+     </div>
+
+     <div class="pitfall">
+
+     Don't forget to check that τ_ext = 0 before invoking
+     I₁ω₁ = I₂ω₂.
+
+     </div>
+
+     <div class="note">
+
+     Useful shortcut: for a point mass, I = mr².
+
+     </div>
+
+     <div class="key">
+
+     L is conserved whenever the *net external torque* is zero.
+
+     </div>
    ========================================================= */
 .definition,
 .pitfall,
@@ -751,8 +896,31 @@ section.quad > *:nth-child(3) { border-right: 1px solid var(--rule); }
 
 /* =========================================================
    WORKED-PROBLEM SCAFFOLD
-   <div class="given">…</div>   (also: .find .solution;
-   pairs with the existing .ans box)
+   Auto-labeled sections for free-response-style worked problems.
+   Chain them in order, then finish with the .ans box above.
+
+     <div class="given">
+
+     I₀ = 3.0 kg·m², ω₀ = 1.2 rad/s, m = 2 kg each dumbbell,
+     r₁ = 0.80 m, r₂ = 0.20 m.
+
+     </div>
+
+     <div class="find">
+
+     The new angular speed ω₂ after the student pulls the
+     dumbbells inward.
+
+     </div>
+
+     <div class="solution">
+
+     No external torque → I₁ω₁ = I₂ω₂. Compute I₁ and I₂,
+     then solve for ω₂.
+
+     </div>
+
+     <div class="ans">ω₂ ≈ *2.11 rad/s*</div>
    ========================================================= */
 .given,
 .find,
@@ -783,8 +951,16 @@ section.quad > *:nth-child(3) { border-right: 1px solid var(--rule); }
 .solution > :last-child { margin-bottom: 0; }
 
 /* =========================================================
-   NUMBERED STEPS  (italic Roman numerals, reference p.9)
-   <ol class="steps">…</ol>  or  <ul class="steps">…</ul>
+   NUMBERED STEPS  — italic Roman numerals (i. ii. iii. …) with
+   thin rules between each item. Matches the reference "pitfalls"
+   page. Works on <ol class="steps"> or <ul class="steps">.
+
+     <ol class="steps">
+     <li>Confusing energy with momentum (L is conserved, KE is not).</li>
+     <li>Forgetting to check that τ_ext = 0.</li>
+     <li>Using linear intuition on rotating mass — r² is not decoration.</li>
+     <li>Treating ω as a scalar when direction matters.</li>
+     </ol>
    ========================================================= */
 .steps {
     list-style: none;
@@ -817,7 +993,15 @@ section.quad > *:nth-child(3) { border-right: 1px solid var(--rule); }
 
 /* =========================================================
    PHYSICS INLINE NOTATION
-   <span class="vector">v</span>, <span class="units">m/s²</span>
+   Inline spans for typesetting vectors and units inside body copy.
+
+   .vector — bold italic serif with an overline (textbook vector):
+     The velocity <span class="vector">v</span> points tangent to the path.
+     <span class="vector">F</span><sub>net</sub> = m<span class="vector">a</span>
+
+   .units — small mono text in the soft-accent color:
+     g ≈ 9.8 <span class="units">m/s²</span>
+     L has units of <span class="units">kg·m²/s</span>
    ========================================================= */
 .vector {
     font-family: "Instrument Serif", serif;
@@ -838,11 +1022,32 @@ section.quad > *:nth-child(3) { border-right: 1px solid var(--rule); }
 }
 
 /* =========================================================
-   FRAGMENT REVEAL
-   Dimmed by default; add `.visible` to show, or put `.reveal`
-   on the parent <section> to reveal every fragment on that slide.
-   Intended for print build-ups (duplicate the slide, then
-   progressively promote `.fragment` → `.fragment visible`).
+   FRAGMENT REVEAL  — dimmed content that "reveals" on later
+   copies of a slide. Since Marp exports static slides, the
+   pattern is to duplicate the slide and promote fragments
+   progressively (or put `reveal` on the final slide to show all).
+
+   Baseline — fragments dimmed:
+
+     <!-- _class: ink -->
+
+     # Four mistakes the exam loves
+
+     <ol class="steps">
+     <li class="fragment">Confusing energy with momentum.</li>
+     <li class="fragment">Forgetting τ_ext = 0.</li>
+     <li class="fragment">Using linear intuition on r².</li>
+     <li class="fragment">Treating ω as a scalar.</li>
+     </ol>
+
+   Reveal one at a time — duplicate the slide and add `visible`:
+
+     <li class="fragment visible">Confusing energy with momentum.</li>
+     <li class="fragment">Forgetting τ_ext = 0.</li>
+
+   Reveal all at once — add `reveal` to the slide:
+
+     <!-- _class: "ink reveal" -->
    ========================================================= */
 .fragment {
     opacity: 0.28;

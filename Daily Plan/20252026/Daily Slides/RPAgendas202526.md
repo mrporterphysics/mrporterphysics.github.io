@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.04.23 **Regents Physics**
+
+##### **❓ of the 📅**: What was your favorite vacation?    
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 2024 Exam Page 2
+2. Finish Potential & Current Worksheets
+	1. Go Over
+3. Defining Electrical Resistance & Ohm's Law
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define variables in **Ohm's Law**_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.22 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
