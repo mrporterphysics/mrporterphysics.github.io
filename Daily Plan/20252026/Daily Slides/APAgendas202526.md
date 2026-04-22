@@ -25,6 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
+0. Sign into Bluebook & Verify Exams
 1. [Density Notes](../../../Presentations/Fluids/talk/APfluids2025.html)
 2. Workbook 8.A & 8.B
 3. Pressure Notes
@@ -39,6 +40,9 @@ math: mathjax
 🥅 _Density_
 
 ### 📆 Upcoming
+- Test Corrections (Note I have a meeting after school today)
+- Rotation Progress Checks (2 MC and a bunch of FRQ)
+    - This is **great** test prep
 
 </div>
 </div>
