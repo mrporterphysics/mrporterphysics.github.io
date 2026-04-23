@@ -192,13 +192,6 @@
                             <span>Immediate feedback and explanations</span>
                         </div>
                     </button>
-                    <button class="mode-btn" data-mode="test">
-                        <div class="btn-emoji">📝</div>
-                        <div class="btn-content">
-                            <strong>Test</strong>
-                            <span>No feedback until complete</span>
-                        </div>
-                    </button>
                     <button class="mode-btn" data-mode="review">
                         <div class="btn-emoji">🔄</div>
                         <div class="btn-content">
@@ -206,6 +199,16 @@
                             <span>Practice missed questions only</span>
                         </div>
                     </button>
+                </div>
+            </div>
+
+            <!-- Question Count Selection -->
+            <div class="count-selection">
+                <h3>🔢 Number of Questions</h3>
+                <div class="count-options">
+                    <button class="count-btn active" data-count="20">20</button>
+                    <button class="count-btn" data-count="50">50</button>
+                    <button class="count-btn" data-count="all">All</button>
                 </div>
             </div>
 
@@ -221,14 +224,6 @@
             <div class="quiz-stats">
                 <div id="stats-display" class="text-center text-muted">
                     <p>Loading question statistics...</p>
-                </div>
-            </div>
-
-            <!-- Topic Mastery Overview -->
-            <div id="topic-mastery" class="topic-mastery" style="display: none;">
-                <h4>📊 Topic Mastery</h4>
-                <div id="mastery-meters" class="mastery-meters">
-                    <!-- Dynamically populated -->
                 </div>
             </div>
 
@@ -253,13 +248,6 @@
                 </div>
                 <div class="progress-bar-container">
                     <div id="progress-bar" class="progress-bar"></div>
-                </div>
-
-                <!-- Streak Counter -->
-                <div id="streak-display" class="streak-display" style="display: none;">
-                    <div id="current-streak" class="streak-counter">0</div>
-                    <div class="streak-text">Current Streak</div>
-                    <div id="personal-best" class="personal-best">Best: 0</div>
                 </div>
             </div>
 
@@ -383,32 +371,22 @@
     </div>
 
     <!-- Core JavaScript Modules -->
-    <script src="js/fallback-data.js?v=1"></script>
-    <script src="js/utils.js?v=1"></script>
-    <script src="js/quiz-storage.js?v=1"></script>
-    <script src="js/quiz-data.js?v=1"></script>
-    <script src="js/quiz-ui.js?v=1"></script>
+    <script src="js/fallback-data.js?v=2"></script>
+    <script src="js/utils.js?v=2"></script>
+    <script src="js/quiz-storage.js?v=2"></script>
+    <script src="js/quiz-data.js?v=3"></script>
+    <script src="js/quiz-ui.js?v=2"></script>
 
     <!-- Fact Sheet Integration -->
-    <script src="js/factsheet-integration.js"></script>
+    <script src="js/factsheet-integration.js?v=2"></script>
 
-    <!-- UX Enhancement Modules -->
-    <script src="js/topic-mastery.js?v=1"></script>
-    <script src="js/streak-tracker.js?v=1"></script>
-    <script src="js/bookmark-system.js?v=1"></script>
-    <script src="js/performance-analytics.js?v=1"></script>
-    <script src="js/spaced-repetition.js?v=1"></script>
-    <script src="js/hint-system.js?v=1"></script>
-    <script src="js/rapid-fire-mode.js?v=1"></script>
-    <script src="js/study-guides.js?v=1"></script>
-    <script src="js/achievement-system.js?v=1"></script>
-    <script src="js/mobile-optimization.js?v=1"></script>
+    <!-- Kept UX Modules -->
+    <script src="js/bookmark-system.js?v=2"></script>
+    <script src="js/hint-system.js?v=2"></script>
+    <script src="js/study-guides.js?v=2"></script>
 
     <!-- Main Application -->
-    <script src="js/app.js?v=1"></script>
-
-    <!-- Test Runner (Dev Tool) -->
-    <script src="js/test-runner.js?v=1"></script>
+    <script src="js/app.js?v=2"></script>
 
     <!-- Global Error Handling -->
     <script>
@@ -521,7 +499,7 @@
                 });
             }
 
-            // Enhanced keyboard shortcuts for quiz
+            // Centralized keyboard shortcuts for quiz
             document.addEventListener('keydown', (e) => {
                 // Skip if typing in an input field or modifier keys pressed
                 if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
@@ -553,6 +531,30 @@
                     if (falseOption) {
                         falseOption.checked = true;
                         falseOption.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                }
+
+                // Arrow keys for next/previous
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const feedbackVisible = document.getElementById('feedback')?.style.display !== 'none';
+                    if (feedbackVisible) {
+                        // Advance from feedback modal
+                        document.getElementById('feedback-next-btn')?.click();
+                    } else if (window.PhysicsQuizApp) {
+                        PhysicsQuizApp.nextQuestion();
+                    }
+                }
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    if (window.PhysicsQuizApp) PhysicsQuizApp.previousQuestion();
+                }
+
+                // Enter submits answer (when not in input)
+                if (e.key === 'Enter') {
+                    const submitBtn = document.getElementById('submit-answer');
+                    if (submitBtn && submitBtn.style.display !== 'none') {
+                        submitBtn.click();
                     }
                 }
 

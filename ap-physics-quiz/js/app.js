@@ -53,7 +53,7 @@ const PhysicsQuizApp = {
                     this.setupEventListeners();
                     this.initializeUI();
                     this.initializeFactSheetIntegration();
-                    this.initializePhase7Modules();
+                    this.initializeOptionalModules();
 
                     this.isInitialized = true;
                     this.hideLoadingState();
@@ -231,7 +231,7 @@ const PhysicsQuizApp = {
                 warnings++;
             }
 
-            if (question.type === 'mc' && (!question.optionA || !question.optionB)) {
+            if (question.type === 'mc' && !(question.optiona || question.optionA) ) {
                 console.warn(`Line ${index + 1}: Multiple choice question missing options`);
                 warnings++;
             }
@@ -402,6 +402,24 @@ const PhysicsQuizApp = {
             });
         });
 
+        // Question count buttons
+        document.querySelectorAll('.count-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.count-btn').forEach(b => b.classList.remove('active'));
+                e.currentTarget.classList.add('active');
+            });
+        });
+
+        // Track answered questions for the results screen
+        document.addEventListener('questionAnswered', (event) => {
+            if (!this.sessionAnswers) this.sessionAnswers = [];
+            this.sessionAnswers.push({
+                question: event.detail.question,
+                userAnswer: event.detail.userAnswer,
+                isCorrect: event.detail.isCorrect
+            });
+        });
+
         // Start quiz button
         const startBtn = document.getElementById('start-quiz');
         if (startBtn) {
@@ -424,45 +442,16 @@ const PhysicsQuizApp = {
             prevBtn.addEventListener('click', () => {
                 this.previousQuestion();
             });
-
-            // Reset quiz button
-            const resetBtn = document.getElementById('reset-quiz');
-            if (resetBtn) {
-                resetBtn.addEventListener('click', () => {
-                    this.resetQuiz();
-                });
-            }
         }
 
-        // Settings
-        const settingsBtn = document.getElementById('settings-btn');
-        if (settingsBtn) {
-            settingsBtn.addEventListener('click', () => {
-                this.showSettings();
+        // Reset quiz button
+        const resetBtn = document.getElementById('reset-quiz');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                this.resetQuiz();
             });
         }
-
-        // Keyboard shortcuts
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey || e.metaKey) return; // Skip if modifier keys are pressed
-
-            switch (e.key) {
-                case 'ArrowRight':
-                    e.preventDefault();
-                    this.nextQuestion();
-                    break;
-                case 'ArrowLeft':
-                    e.preventDefault();
-                    this.previousQuestion();
-                    break;
-                case 'r':
-                    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-                        e.preventDefault();
-                        this.resetQuiz();
-                    }
-                    break;
-            }
-        });
+        // Keyboard shortcuts are handled centrally in index.html to avoid duplicate listeners
     },
 
     // Initialize fact sheet integration
@@ -480,105 +469,18 @@ const PhysicsQuizApp = {
         }
     },
 
-    // Initialize Phase 7 modules
-    // Initialize Phase 7 modules with comprehensive dependency handling
-    initializePhase7Modules: function () {
-        console.log('Initializing Phase 7 modules...');
-
-        const modules = [
-            {
-                name: 'AchievementSystem',
-                displayName: 'Achievement System',
-                required: false,
-                global: 'AchievementSystem'
-            },
-            {
-                name: 'MobileOptimization',
-                displayName: 'Mobile Optimization',
-                required: false,
-                global: 'MobileOptimization'
-            },
-            {
-                name: 'FactSheetLinks',
-                displayName: 'Fact Sheet Links',
-                required: false,
-                global: 'FactSheetLinks'
-            },
-            {
-                name: 'TopicMastery',
-                displayName: 'Topic Mastery',
-                required: false,
-                global: 'TopicMastery'
-            },
-            {
-                name: 'StreakTracker',
-                displayName: 'Streak Tracker',
-                required: false,
-                global: 'StreakTracker'
-            },
-            {
-                name: 'BookmarkSystem',
-                displayName: 'Bookmark System',
-                required: false,
-                global: 'BookmarkSystem'
-            },
-            {
-                name: 'HintSystem',
-                displayName: 'Hint System',
-                required: false,
-                global: 'HintSystem'
-            },
-            {
-                name: 'PerformanceAnalytics',
-                displayName: 'Performance Analytics',
-                required: false,
-                global: 'PerformanceAnalytics'
-            },
-            {
-                name: 'RapidFireMode',
-                displayName: 'Rapid Fire Mode',
-                required: false,
-                global: 'RapidFireMode'
-            }
-        ];
-
-        let initializedCount = 0;
-        let failedCount = 0;
-
-        modules.forEach(module => {
+    // Initialize optional modules (bookmarks, hints, fact sheet links)
+    initializeOptionalModules: function () {
+        ['BookmarkSystem', 'HintSystem', 'FactSheetLinks'].forEach(name => {
             try {
-                // Check if module is available in global scope
-                if (typeof window[module.global] !== 'undefined' && window[module.global].init) {
-                    window[module.global].init();
-                    console.log(`✅ ${module.displayName} initialized`);
-                    initializedCount++;
-                } else {
-                    console.log(`⏭️  ${module.displayName} not available - skipping`);
-                    if (module.required) {
-                        console.warn(`⚠️  Required module ${module.displayName} is missing`);
-                        failedCount++;
-                    }
+                if (typeof window[name] !== 'undefined' && typeof window[name].init === 'function') {
+                    window[name].init();
+                    console.log(`✅ ${name} initialized`);
                 }
             } catch (error) {
-                console.warn(`❌ ${module.displayName} failed to initialize:`, error);
-                failedCount++;
-
-                // Continue initialization even if one module fails
-                if (module.required) {
-                    console.error(`Critical module ${module.displayName} failed - some features may not work`);
-                }
+                console.warn(`${name} failed to initialize:`, error);
             }
         });
-
-        console.log(`Phase 7 module initialization complete: ${initializedCount} initialized, ${failedCount} failed`);
-
-        // Return initialization status
-        return {
-            success: failedCount === 0,
-            initialized: initializedCount,
-            failed: failedCount,
-            total: modules.length
-        };
     },
 
     // Initialize UI
@@ -625,18 +527,13 @@ const PhysicsQuizApp = {
         `;
     },
 
-    // Apply saved user settings
+    // Apply saved user settings — activate the button matching the saved mode
     applySavedSettings: function (settings) {
-        // Set mode
-        const modeRadio = document.querySelector(`input[name="mode"][value="${settings.mode}"]`);
-        if (modeRadio) {
-            modeRadio.checked = true;
-            this.switchMode(settings.mode);
-        }
-
-        // Apply theme
-        if (settings.theme && typeof window.setTheme === 'function') {
-            window.setTheme(settings.theme);
+        if (!settings || !settings.mode) return;
+        const modeBtn = document.querySelector(`.mode-btn[data-mode="${settings.mode}"]`);
+        if (modeBtn) {
+            document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+            modeBtn.classList.add('active');
         }
     },
 
@@ -677,10 +574,12 @@ const PhysicsQuizApp = {
     getCurrentFormSettings: function () {
         const activeMode = document.querySelector('.mode-btn.active');
         const activeSubject = document.querySelector('.subject-btn.active');
+        const activeCount = document.querySelector('.count-btn.active');
 
         return {
             mode: activeMode ? activeMode.dataset.mode : 'learning',
-            subject: activeSubject ? activeSubject.dataset.subject : 'all'
+            subject: activeSubject ? activeSubject.dataset.subject : 'all',
+            questionCount: activeCount ? activeCount.dataset.count : 'all'
         };
     },
 
@@ -706,16 +605,24 @@ const PhysicsQuizApp = {
                 return;
             }
         } else {
+            // Always shuffle so a 20-question quiz samples across the topic
+            QuizData.shuffle();
             questionsToUse = QuizData.filteredQuestions;
-            if (settings.mode === 'test') {
-                QuizData.shuffle(); // Shuffle for test mode
-            }
         }
 
         if (questionsToUse.length === 0) {
             this.showMessage('No questions available with current filters.', 'warning');
             return;
         }
+
+        // Apply question count limit (20 / 50 / all)
+        const limit = parseInt(formSettings.questionCount, 10);
+        if (settings.mode !== 'review' && !isNaN(limit) && limit > 0 && limit < questionsToUse.length) {
+            QuizData.filteredQuestions = questionsToUse.slice(0, limit);
+        }
+
+        // Track the session's question set so results can be computed
+        this.sessionAnswers = [];
 
         // Reset progress
         QuizStorage.resetProgress();
@@ -727,6 +634,55 @@ const PhysicsQuizApp = {
         // Update UI
         this.hideStartScreen();
         this.showQuizScreen();
+    },
+
+    // End quiz and show results screen
+    finishQuiz: function () {
+        const total = this.sessionAnswers ? this.sessionAnswers.length : 0;
+        const correct = this.sessionAnswers ? this.sessionAnswers.filter(a => a.isCorrect).length : 0;
+        const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+        // Build results HTML
+        const missed = this.sessionAnswers ? this.sessionAnswers.filter(a => !a.isCorrect) : [];
+        let missedHtml = '';
+        if (missed.length > 0) {
+            missedHtml = '<h3>Missed Questions</h3><ol class="results-missed">' +
+                missed.map(m => `<li>${m.question.question}</li>`).join('') +
+                '</ol>';
+        }
+
+        const quizScreen = document.getElementById('quiz-screen');
+        if (quizScreen) {
+            quizScreen.innerHTML = `
+                <div class="results-screen">
+                    <h2>Quiz Complete!</h2>
+                    <div class="results-score">
+                        <div class="score-big">${correct} / ${total}</div>
+                        <div class="score-pct">${pct}%</div>
+                    </div>
+                    ${missedHtml}
+                    <div class="results-actions">
+                        <button id="results-review-btn" class="btn btn-primary">Review Missed Questions</button>
+                        <button id="results-restart-btn" class="btn btn-secondary">Back to Start</button>
+                    </div>
+                </div>
+            `;
+
+            const restartBtn = document.getElementById('results-restart-btn');
+            if (restartBtn) {
+                restartBtn.onclick = () => window.location.reload();
+            }
+
+            const reviewBtn = document.getElementById('results-review-btn');
+            if (reviewBtn) {
+                if (missed.length === 0) {
+                    reviewBtn.disabled = true;
+                    reviewBtn.title = 'No missed questions';
+                } else {
+                    reviewBtn.onclick = () => window.location.reload();
+                }
+            }
+        }
     },
 
     // Show a specific question

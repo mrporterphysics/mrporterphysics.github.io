@@ -316,7 +316,7 @@ The difference = how much energy was delivered per coulomb
 
 # Current
 
-$$I = \frac{\Delta q}{t}$$
+$$\boxed{I = \frac{\Delta q}{t}}$$
 
 
 - I :arrow_right: Current (Amperes, A)

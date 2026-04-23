@@ -387,6 +387,100 @@ header {
   opacity: 0.9;
 }
 
+/* Question count selection */
+.count-selection {
+  margin: 24px 0;
+  padding: 16px;
+  background: var(--ui-2);
+  border-radius: 8px;
+}
+
+.count-selection h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+}
+
+.count-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.count-btn {
+  padding: 10px 24px;
+  background: var(--bg);
+  border: 2px solid var(--ui-3);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  min-width: 80px;
+  transition: all 0.2s ease;
+  color: inherit;
+}
+
+.count-btn:hover {
+  border-color: var(--bl);
+  background: var(--ui-2);
+  transform: translateY(-2px);
+}
+
+.count-btn.active {
+  border-color: var(--bl);
+  background: var(--bl);
+  color: var(--bg);
+}
+
+/* Results screen */
+.results-screen {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.results-screen h2 {
+  font-size: 2rem;
+  margin: 0 0 24px 0;
+}
+
+.results-score {
+  margin: 24px 0 32px;
+}
+
+.score-big {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--bl);
+  line-height: 1;
+}
+
+.score-pct {
+  font-size: 1.5rem;
+  color: var(--tx-2);
+  margin-top: 8px;
+}
+
+.results-missed {
+  text-align: left;
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 16px 24px;
+  background: var(--ui-2);
+  border-radius: 8px;
+}
+
+.results-missed li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.results-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
 /* Subject selection with emoji buttons */
 .subject-selection {
   margin: 24px 0;

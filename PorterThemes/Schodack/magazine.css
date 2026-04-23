@@ -667,6 +667,67 @@ p.drop::first-letter {
 .center { text-align: center; }
 
 /* =========================================================
+   MATH RENDERING  (MathJax + KaTeX safeguards)
+   Keep magazine text styling (italic recoloring, tight
+   letter-spacing, code backgrounds, max-widths) from leaking
+   into rendered equations. Without this, fractions and
+   operators can misalign because inherited letter-spacing or
+   line-height distorts MathJax's internal measurements.
+   ========================================================= */
+.MathJax,
+.MathJax_Display,
+mjx-container,
+mjx-math,
+mjx-assistive-mml,
+.katex,
+.katex-display,
+.katex-html {
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal !important;
+    line-height: normal;
+    color: inherit;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    max-width: none !important;
+    overflow: visible !important;
+}
+
+/* Display math — center, give it vertical breathing room */
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+    display: block;
+    margin: 0.55em auto;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Don't let em / i / strong recolor content inside math.
+ * MathJax / KaTeX sometimes emit these tags internally. */
+.MathJax em,  .MathJax i,  .MathJax strong,
+mjx-container em, mjx-container i, mjx-container strong,
+.katex em,    .katex i,    .katex strong {
+    color: inherit !important;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+/* Make sure code styling can't hit math that accidentally lands
+ * inside a code wrapper (e.g. from misparsed kramdown) */
+code mjx-container,
+code .MathJax,
+code .katex,
+pre mjx-container,
+pre .MathJax,
+pre .katex {
+    background: transparent !important;
+    color: var(--text) !important;
+    padding: 0 !important;
+}
+
+/* =========================================================
    EMOJI + FORM CONTROLS  (carried over from physicalSci.css)
    ========================================================= */
 .emoji {

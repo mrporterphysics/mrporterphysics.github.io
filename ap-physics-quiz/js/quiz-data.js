@@ -62,7 +62,7 @@ const QuizData = {
             topic: (questionData.topic || 'general').toLowerCase(),
             explanation: questionData.explanation || '',
             options: this.extractOptions(questionData),
-            alternateAnswers: this.parseAlternateAnswers(questionData.alternateAnswers),
+            alternateAnswers: this.parseAlternateAnswers(questionData.alternateanswers || questionData.alternateAnswers),
             difficulty: parseInt(questionData.difficulty) || 1,
             metadata: {
                 created: Date.now(),
@@ -71,12 +71,22 @@ const QuizData = {
         };
     },
 
-    // Extract options for multiple choice questions
+    // Extract options for multiple choice / matching questions.
+    // CSV headers are lowercased by the parser, so read optiona..optione.
+    // Camelcase fallbacks kept in case a caller supplies pre-processed data.
     extractOptions: function (questionData) {
         const options = [];
-        ['optionA', 'optionB', 'optionC', 'optionD', 'optionE'].forEach(key => {
-            if (questionData[key] && questionData[key].trim()) {
-                options.push(Utils.sanitizeString(questionData[key]));
+        const keyPairs = [
+            ['optiona', 'optionA'],
+            ['optionb', 'optionB'],
+            ['optionc', 'optionC'],
+            ['optiond', 'optionD'],
+            ['optione', 'optionE'],
+        ];
+        keyPairs.forEach(([lower, camel]) => {
+            const val = questionData[lower] ?? questionData[camel];
+            if (val && val.trim()) {
+                options.push(Utils.sanitizeString(val));
             }
         });
         return options;

@@ -210,6 +210,7 @@ const QuizUI = {
 
         switch (question.type) {
             case 'mc':
+            case 'matching':
                 html = this.createMultipleChoiceInterface(question);
                 break;
             case 'tf':
@@ -217,9 +218,6 @@ const QuizUI = {
                 break;
             case 'fill':
                 html = this.createFillInBlankInterface(question);
-                break;
-            case 'matching':
-                html = this.createMatchingInterface(question);
                 break;
             default:
                 html = '<p class="error">Unknown question type</p>';
@@ -281,18 +279,6 @@ const QuizUI = {
         `;
     },
 
-    // Create matching interface (simplified version)
-    createMatchingInterface: function (question) {
-        // This is a simplified implementation
-        // A full matching interface would require more complex logic
-        return `
-            <div class="matching-interface">
-                <p class="info">Matching questions require custom implementation</p>
-                <input type="text" id="matching-answer" class="fill-input" 
-                       placeholder="Enter your answer...">
-            </div>
-        `;
-    },
 
     // Add fact sheet integration if available
     addFactSheetIntegration: function (question) {
@@ -453,21 +439,17 @@ const QuizUI = {
 
         switch (question.type) {
             case 'mc':
+            case 'matching':
                 const mcChecked = document.querySelector('input[name="mc-answer"]:checked');
                 return mcChecked ? mcChecked.value : null;
 
             case 'tf':
                 const tfChecked = document.querySelector('input[name="tf-answer"]:checked');
-                const result = tfChecked ? (tfChecked.value === 'true') : null;
-                return result;
+                return tfChecked ? tfChecked.value : null; // string "true" or "false"
 
             case 'fill':
                 const fillInput = document.getElementById('fill-answer');
                 return fillInput ? fillInput.value.trim() : null;
-
-            case 'matching':
-                const matchingInput = document.getElementById('matching-answer');
-                return matchingInput ? matchingInput.value.trim() : null;
 
             default:
                 return null;
@@ -476,33 +458,21 @@ const QuizUI = {
 
     // Check if answer is correct
     checkAnswer: function (userAnswer, question) {
+        if (userAnswer === null || userAnswer === undefined) return false;
+
         if (question.type === 'tf') {
-            // Simplified and bulletproof True/False checking
-            // Convert both to strings and compare directly
-            const userStr = String(userAnswer).toLowerCase();
-            const correctStr = String(question.answer).toLowerCase().trim();
-
-            console.log('TF Final Check:', {
-                userAnswer: userAnswer,
-                userStr: userStr,
-                correctAnswer: question.answer,
-                correctStr: correctStr,
-                match: userStr === correctStr
-            });
-
-            // Direct string comparison - most reliable
-            return userStr === correctStr;
+            return String(userAnswer).toLowerCase().trim() === String(question.answer).toLowerCase().trim();
         }
 
         if (question.type === 'fill') {
             return Utils.answersMatch(userAnswer, question.answer, question.alternateAnswers);
         }
 
-        if (question.type === 'mc') {
-            return userAnswer === question.answer;
+        if (question.type === 'mc' || question.type === 'matching') {
+            return String(userAnswer).toUpperCase().trim() === String(question.answer).toUpperCase().trim();
         }
 
-        return false; // Default for unimplemented types
+        return false;
     },
 
     // Show answer feedback
@@ -521,14 +491,22 @@ const QuizUI = {
         `;
 
         if (!isCorrect) {
-            // Format True/False answers for display
             let displayUserAnswer = userAnswer;
             let displayCorrectAnswer = question.answer;
 
             if (question.type === 'tf') {
-                displayUserAnswer = userAnswer === true ? 'True' : 'False';
-                const correctBool = String(question.answer).toLowerCase().trim() === 'true';
-                displayCorrectAnswer = correctBool ? 'True' : 'False';
+                displayUserAnswer = String(userAnswer).toLowerCase() === 'true' ? 'True' : 'False';
+                displayCorrectAnswer = String(question.answer).toLowerCase().trim() === 'true' ? 'True' : 'False';
+            } else if ((question.type === 'mc' || question.type === 'matching') && question.options) {
+                // Show letter + option text for MC/matching
+                const userIdx = String(userAnswer).toUpperCase().charCodeAt(0) - 65;
+                const correctIdx = String(question.answer).toUpperCase().charCodeAt(0) - 65;
+                if (question.options[userIdx]) {
+                    displayUserAnswer = `${String(userAnswer).toUpperCase()}) ${question.options[userIdx]}`;
+                }
+                if (question.options[correctIdx]) {
+                    displayCorrectAnswer = `${String(question.answer).toUpperCase()}) ${question.options[correctIdx]}`;
+                }
             }
 
             html += `
@@ -551,11 +529,16 @@ const QuizUI = {
             `;
         }
 
-        // Add Next button in the modal
+        // Add Next button in the modal (label depends on whether it's the last question)
+        const app = window.PhysicsQuizApp;
+        const isLast = app && app.getActiveQuestions
+            ? app.currentQuestionIndex >= app.getActiveQuestions().length - 1
+            : false;
+        const btnLabel = isLast ? 'Finish Quiz' : 'Next Question →';
         html += `
             <div class="feedback-actions" style="margin-top: 20px; display: flex; justify-content: center;">
-                <button id="feedback-next-btn" class="btn-primary" style="padding: 12px 32px; font-size: 1rem;">
-                    Next Question →
+                <button id="feedback-next-btn" class="btn btn-primary" style="padding: 12px 32px; font-size: 1rem;">
+                    ${btnLabel}
                 </button>
             </div>
         `;
@@ -577,9 +560,10 @@ const QuizUI = {
         if (nextBtn) {
             nextBtn.onclick = () => {
                 this.closeFeedbackModal();
-                // Trigger the actual next question via PhysicsQuizApp
-                if (window.PhysicsQuizApp && typeof PhysicsQuizApp.nextQuestion === 'function') {
-                    PhysicsQuizApp.nextQuestion();
+                if (isLast && app && typeof app.finishQuiz === 'function') {
+                    app.finishQuiz();
+                } else if (app && typeof app.nextQuestion === 'function') {
+                    app.nextQuestion();
                 }
             };
         }
@@ -693,84 +677,35 @@ const QuizUI = {
         this.showFeedback(`Question ${isBookmarked ? 'bookmarked' : 'unbookmarked'}`, 'success');
     },
 
-    // Setup math rendering
-    // Enhanced math rendering setup with availability checks
+    // Setup math rendering. KaTeX is loaded with `defer`, so it may not be
+    // ready when this runs. We poll briefly and only surface a warning if it
+    // genuinely never arrives.
     setupMathRendering: function () {
-        console.log('Setting up math rendering...');
+        if (this.tryEnableKatex()) return;
 
-        // Check for KaTeX availability
-        if (typeof katex !== 'undefined' && katex.renderToString) {
-            this.mathRenderingEnabled = true;
-            console.log('✅ KaTeX is available - math rendering enabled');
-
-            // Test KaTeX functionality with a simple expression
-            try {
-                katex.renderToString('x = 1', { displayMode: false });
-                console.log('✅ KaTeX functionality test passed');
-            } catch (error) {
-                console.warn('⚠️ KaTeX test failed, disabling math rendering:', error);
-                this.mathRenderingEnabled = false;
-            }
-        } else {
-            this.mathRenderingEnabled = false;
-            console.log('⚠️ KaTeX not available - math will display as plain text');
-            this.showMathFallbackWarning();
-        }
-
-        // Set up retry mechanism for delayed KaTeX loading
-        if (!this.mathRenderingEnabled) {
-            this.setupMathRenderingRetry();
-        }
-    },
-
-    // Setup retry mechanism for KaTeX loading
-    setupMathRenderingRetry: function () {
-        let retryCount = 0;
-        const maxRetries = 3;
-        const retryDelay = 1000; // 1 second
-
-        const retryInterval = setInterval(() => {
-            retryCount++;
-
-            if (typeof katex !== 'undefined' && katex.renderToString) {
-                console.log('✅ KaTeX became available on retry', retryCount);
-                this.mathRenderingEnabled = true;
-                this.hideMathFallbackWarning();
-                clearInterval(retryInterval);
-
-                // Re-render any existing math content
+        let attempts = 0;
+        const maxAttempts = 10; // 10 × 500ms = 5s budget
+        const interval = setInterval(() => {
+            attempts++;
+            if (this.tryEnableKatex()) {
+                clearInterval(interval);
                 this.renderMathContent();
-            } else if (retryCount >= maxRetries) {
-                console.log('❌ KaTeX loading failed after', maxRetries, 'retries');
-                clearInterval(retryInterval);
+            } else if (attempts >= maxAttempts) {
+                clearInterval(interval);
+                console.warn('KaTeX never loaded - math will display as plain text');
             }
-        }, retryDelay);
+        }, 500);
     },
 
-    // Show warning when KaTeX is not available
-    showMathFallbackWarning: function () {
-        const warningDiv = document.createElement('div');
-        warningDiv.id = 'math-fallback-warning';
-        warningDiv.className = 'warning-message';
-        warningDiv.style.cssText = 'background: #fff3cd; color: #856404; padding: 10px; margin: 5px; border-radius: 4px; border: 1px solid #ffeaa7; font-size: 0.9em; text-align: center;';
-        warningDiv.innerHTML = '⚠️ Math rendering unavailable - formulas will display as plain text';
-
-        const container = document.querySelector('.app-container') || document.body;
-        container.insertBefore(warningDiv, container.firstChild);
-
-        // Auto-hide after 5 seconds
-        setTimeout(() => {
-            if (document.getElementById('math-fallback-warning')) {
-                this.hideMathFallbackWarning();
-            }
-        }, 5000);
-    },
-
-    // Hide the math fallback warning
-    hideMathFallbackWarning: function () {
-        const warning = document.getElementById('math-fallback-warning');
-        if (warning) {
-            warning.remove();
+    tryEnableKatex: function () {
+        if (typeof katex === 'undefined' || !katex.renderToString) return false;
+        try {
+            katex.renderToString('x = 1', { displayMode: false });
+            this.mathRenderingEnabled = true;
+            return true;
+        } catch (error) {
+            console.warn('KaTeX test failed:', error);
+            return false;
         }
     },
 

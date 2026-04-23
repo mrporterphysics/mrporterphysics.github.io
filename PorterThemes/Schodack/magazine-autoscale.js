@@ -75,7 +75,34 @@
         rafId = requestAnimationFrame(function () { rafId = null; fitAll(); });
     }
 
+    /* Wait until any math typesetter on the page has finished
+     * laying out equations. Running autoscale before math renders
+     * causes the measured scrollHeight to be wrong, which makes
+     * fractions and operators snap to a too-small font-size and
+     * then visibly overflow after MathJax inflates them. */
+    function waitForMath() {
+        var promises = [];
+
+        // MathJax v3+
+        if (window.MathJax && window.MathJax.startup && window.MathJax.startup.promise) {
+            promises.push(window.MathJax.startup.promise);
+        }
+        // MathJax v3 typeset queue
+        if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+            try { promises.push(window.MathJax.typesetPromise()); } catch (e) { /* ignore */ }
+        }
+        // KaTeX auto-render finishes synchronously on load, so a
+        // load-event tick is enough to catch it.
+        // Marp-core's math is typeset at build time (static HTML),
+        // so it needs no wait — but we still benefit from the
+        // webfont ready event below.
+
+        if (promises.length === 0) return Promise.resolve();
+        return Promise.all(promises).catch(function () { /* ignore */ });
+    }
+
     function init() {
+        // First pass — fits plain text slides immediately
         fitAll();
 
         window.addEventListener('resize', scheduleFitAll);
@@ -106,6 +133,15 @@
         if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
             document.fonts.ready.then(scheduleFitAll);
         }
+
+        // Refit after math typesetter finishes. Two rounds catch
+        // most edge cases: one on initial layout, and a safety
+        // pass for MathJax containers that resize their children
+        // after `mjx-container` is attached.
+        waitForMath().then(function () {
+            scheduleFitAll();
+            setTimeout(scheduleFitAll, 250);
+        });
     }
 
     if (document.readyState === 'loading') {
