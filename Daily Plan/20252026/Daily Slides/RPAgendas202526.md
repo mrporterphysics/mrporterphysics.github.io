@@ -26,6 +26,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. 2024 Exam Page 2
+2. Sparky the Electrician Mini Lab
 2. Finish Potential & Current Worksheets
 	1. Go Over
 3. Defining Electrical Resistance & Ohm's Law
@@ -42,6 +43,25 @@ math: mathjax
 
 </div>
 </div>
+
+---
+
+### Lab Sparky the Electrician
+
+
+**Question:**  
+What are the two requirements for an electric circuit?
+
+**Purpose:**  
+To identify the ***four*** successful arrangements of wire, bulb and battery which successfully light a bulb and a couple of unsuccessful arrangements AND to describe the commonalities of those arrangements by identifying the two requirements for an electric circuit.
+
+---
+
+# Analysis Questions 
+
+1. The Data section includes sketches of the four successful arrangements and at least two unsuccessful arrangements. 
+2. The Conclusion describes the two requirements for an electric circuit. 
+3. The Discussion of Results should explain why the unsuccessful arrangements were unsuccessful in terms of how they fail to meet the requirements; and uses one of the successful arrangements to elaborate on the meaning of each requirement.
 
 ---
 
