@@ -2,7 +2,7 @@
 title: Regents - Circuits Slides 
 marp: true
 theme: magazine
-math: katex
+math: mathjax
 paginate: true
 class: char
 html: true
