@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.04.23 **Earth Science**
+
+##### **❓ of the 📅**: What was your favorite vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Share Models - Match up with someone from another group and share your two models (we will do this we 3 different partners)
+2. Part 3 - Card Sort
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Develop a model and use it to provide a mechanistic account for how changes in an ocean current could have caused the sudden cooling event (Younger Dryas) as the Earth came out of its last glacial period_
+
+
+</div>
+</div>
+
+---
+
 # 2026.04.22 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
