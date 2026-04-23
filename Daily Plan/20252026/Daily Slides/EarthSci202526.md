@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.04.24 **Earth Science**
+
+##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Part 3
+2. Start Forecasting the Future 
+	1. Make a copy of the spreadsheet (**Everyone**)
+	2. Pause ⏸ after Part I -> Quick Class Discussion
+	3. Continue with Parts 2&3
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Analyze past and present sea level data and computational models of climate change to quantify the change and rates of change of climate variables to predict the magnitudes of human impact on climate._
+
+</div>
+</div>
+
+---
+
 # 2026.04.23 **Earth Science**
 
 ##### **❓ of the 📅**: What was your favorite vacation?
