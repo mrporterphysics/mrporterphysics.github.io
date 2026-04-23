@@ -266,8 +266,10 @@ const Utils = {
             if (userAnswer === canonical && alts.includes(correctAnswer)) return true;
         }
 
-        // Check if words are contained within each other (for partial matches)
-        if (userAnswer.length > 3 && correctAnswer.length > 3) {
+        // Loose substring match for word answers. Skip when either side is a
+        // math expression — "mv²" must not pass as "½mv²".
+        const looksMath = (s) => this.isMathematicalExpression(s);
+        if (userAnswer.length > 3 && correctAnswer.length > 3 && !looksMath(userAnswer) && !looksMath(correctAnswer)) {
             if (userAnswer.includes(correctAnswer) || correctAnswer.includes(userAnswer)) {
                 return true;
             }
@@ -280,11 +282,23 @@ const Utils = {
     mathExpressionsMatch: function(user, correct) {
         const userMath = this.normalizeMathExpression(user);
         const correctMath = this.normalizeMathExpression(correct);
-        
+
         if (userMath === correctMath) return true;
 
+        // Try flipping sides of an equation: "F=ma" should match "ma=F".
+        const flip = (s) => {
+            const parts = s.split('=');
+            return parts.length === 2 ? `${parts[1]}=${parts[0]}` : null;
+        };
+        const userFlipped = flip(userMath);
+        const correctFlipped = flip(correctMath);
+        if (userFlipped && userFlipped === correctMath) return true;
+        if (correctFlipped && correctFlipped === userMath) return true;
+
         const variations = this.getMathVariations(correctMath);
-        return variations.includes(userMath);
+        if (variations.includes(userMath)) return true;
+        if (userFlipped && variations.includes(userFlipped)) return true;
+        return false;
     },
 
     // Normalize mathematical expressions

@@ -15,6 +15,63 @@ math: mathjax
 
 ---
 
+# 2026.04.24 **AP Physics** Do Now
+
+![bg fit right:30%](image-81.png)
+
+The cubical box shown in the figure has edges with length 0.50 m. The box, which has negligible mass, is filled with 125 identical spheres that each has a density of 100 kg/m$^3$ and a radius of 0.050 m. The average density of the box with the spheres inside is most nearly
+
+A. 0.082 kg/m$^3$
+B. 6.5 kg/m$^3$
+C. 52 kg/m$^3$
+D. 100 kg/m$^3$
+
+---
+
+# 2026.04.24 **AP Physics** Do Now
+
+A cylindrical container is filled with water of density 1000 kg/m$^3$ to a depth of 0.05 m. If the container holds 0.40 kg of water, the radius of the container is most nearly
+
+A. 0.05 m
+B. 0.01m
+C. 0.008m
+D. 0.0004m
+
+---
+
+# 2026.04.24 **AP Physics**
+
+##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Go over 8.A & 8.B
+3. Pressure Intro
+4. Pressure vs. Depth Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Presssure_
+
+### 📆 Upcoming
+
+- Rotation Progress Checks
+- Finish Pressure Pivot
+
+</div>
+</div>
+
+---
+
 # 2026.04.22 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?

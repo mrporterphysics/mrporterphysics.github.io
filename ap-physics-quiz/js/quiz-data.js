@@ -64,6 +64,7 @@ const QuizData = {
             options: this.extractOptions(questionData),
             alternateAnswers: this.parseAlternateAnswers(questionData.alternateanswers || questionData.alternateAnswers),
             difficulty: parseInt(questionData.difficulty) || 1,
+            variables: this.parseVariables(questionData.variables),
             metadata: {
                 created: Date.now(),
                 lastModified: Date.now()
@@ -90,6 +91,17 @@ const QuizData = {
             }
         });
         return options;
+    },
+
+    // Parse variables hint (comma- or semicolon-separated list of symbols the
+    // student should express a fill-in-blank equation in terms of).
+    parseVariables: function (variables) {
+        if (!variables) return [];
+        if (Array.isArray(variables)) return variables;
+        return String(variables)
+            .split(/[,;]/)
+            .map(v => v.trim())
+            .filter(Boolean);
     },
 
     // Parse alternate answers

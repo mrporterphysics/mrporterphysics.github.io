@@ -810,6 +810,28 @@ header {
   color: var(--tx-2);
 }
 
+.fill-variables {
+  background: var(--bg-2);
+  border: 1px solid var(--ui);
+  border-left: 3px solid var(--bl);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: var(--tx);
+}
+
+.fill-variables code {
+  background: var(--bg);
+  border: 1px solid var(--ui);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin: 0 2px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9em;
+  color: var(--bl);
+}
+
 /* Buttons */
 button,
 .btn {

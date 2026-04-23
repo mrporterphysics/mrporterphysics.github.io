@@ -267,13 +267,18 @@ const QuizUI = {
 
     // Create fill-in-the-blank interface
     createFillInBlankInterface: function (question) {
+        const vars = Array.isArray(question.variables) ? question.variables : [];
+        const varsHtml = vars.length
+            ? `<div class="fill-variables"><strong>Express your answer in terms of:</strong> ${vars.map(v => `<code>${Utils.sanitizeString(v)}</code>`).join(', ')}</div>`
+            : '';
         return `
             <div class="fill-interface">
-                <input type="text" id="fill-answer" class="fill-input" 
-                       placeholder="Enter your answer..." 
+                ${varsHtml}
+                <input type="text" id="fill-answer" class="fill-input"
+                       placeholder="Enter your answer..."
                        autocomplete="off">
                 <div class="fill-hints">
-                    <small>Tip: Be precise with units and spelling</small>
+                    <small>Tip: Equations accept either side of <code>=</code>. Multiple equivalent forms are accepted.</small>
                 </div>
             </div>
         `;
