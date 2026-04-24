@@ -181,10 +181,14 @@ const Utils = {
             const numericResult = this.smartNumericalMatch(userStr, correctStr);
             if (numericResult) return true;
 
-            // 5. Enhanced text normalization and matching
+            // 5. Enhanced text normalization and matching. Skip for math
+            // expressions — advancedNormalize strips ½, ², etc, which would
+            // collapse distinct formulas (e.g. "mv²" vs "½mv²") into a false
+            // match.
+            const eitherIsMath = this.isMathematicalExpression(correctStr) || this.isMathematicalExpression(userStr);
             const normalizedUser = this.advancedNormalize(userStr);
             const normalizedCorrect = this.advancedNormalize(correctStr);
-            if (normalizedUser === normalizedCorrect) return true;
+            if (!eitherIsMath && normalizedUser === normalizedCorrect) return true;
 
             // 6. Check alternate answers with same algorithms
             const alternates = this.parseAlternateAnswers(alternateAnswers);
@@ -497,7 +501,7 @@ const Utils = {
         try {
             // 1. DOM Health Check
             const criticalElements = [
-                'start-screen', 'quiz-container', 'question-container',
+                'start-screen', 'quiz-screen', 'question-text',
                 'start-quiz', 'next-question', 'prev-question'
             ];
             

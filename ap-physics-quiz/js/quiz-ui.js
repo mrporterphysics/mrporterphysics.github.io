@@ -470,7 +470,10 @@ const QuizUI = {
         }
 
         if (question.type === 'fill') {
-            return Utils.answersMatch(userAnswer, question.answer, question.alternateAnswers);
+            // Strip trailing punctuation (period, comma, semicolon) that a
+            // student may append by sentence habit.
+            const cleaned = String(userAnswer).replace(/[.,;]+\s*$/, '').trim();
+            return Utils.answersMatch(cleaned, question.answer, question.alternateAnswers);
         }
 
         if (question.type === 'mc' || question.type === 'matching') {
