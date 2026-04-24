@@ -623,6 +623,7 @@ const PhysicsQuizApp = {
 
         // Track the session's question set so results can be computed
         this.sessionAnswers = [];
+        this.sessionStartedAt = Date.now();
 
         // Reset progress
         QuizStorage.resetProgress();
@@ -634,6 +635,16 @@ const PhysicsQuizApp = {
         // Update UI
         this.hideStartScreen();
         this.showQuizScreen();
+
+        // Fire anonymous analytics (fire-and-forget, never blocks).
+        try {
+            if (window.Analytics) {
+                window.Analytics.trackSessionStart({
+                    mode: formSettings.mode,
+                    subject: formSettings.subject
+                });
+            }
+        } catch (e) { /* never block quiz on analytics */ }
     },
 
     // End quiz and show results screen
@@ -641,6 +652,17 @@ const PhysicsQuizApp = {
         const total = this.sessionAnswers ? this.sessionAnswers.length : 0;
         const correct = this.sessionAnswers ? this.sessionAnswers.filter(a => a.isCorrect).length : 0;
         const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+        // Fire anonymous analytics for end-of-session (fire-and-forget).
+        try {
+            if (window.Analytics) {
+                const duration = this.sessionStartedAt ? Date.now() - this.sessionStartedAt : null;
+                window.Analytics.trackSessionEnd({
+                    mode: (QuizStorage.getSettings && QuizStorage.getSettings().mode) || 'unknown',
+                    durationMs: duration
+                });
+            }
+        } catch (e) { /* never block quiz on analytics */ }
 
         // Build results HTML
         const missed = this.sessionAnswers ? this.sessionAnswers.filter(a => !a.isCorrect) : [];

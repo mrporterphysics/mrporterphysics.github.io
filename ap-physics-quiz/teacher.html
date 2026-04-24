@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard — AP Physics 1 Quiz</title>
+
+    <link rel="stylesheet" href="css/styles-flexoki.css?v=2">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Dashboard-specific styles — kept in-page so teacher.html is fully
+           self-contained. If you move to multi-page, lift these to the stylesheet. */
+        .dash-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 24px 80px;
+        }
+
+        .dash-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .dash-title h1 {
+            margin: 0 0 4px 0;
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.2rem;
+            color: var(--text-primary);
+        }
+
+        .dash-title p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .dash-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dash-actions button {
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .dash-actions button:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .summary-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .summary-card .label {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .summary-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .summary-card .sublabel {
+            margin-top: 4px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .dash-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .dash-section h2 {
+            margin: 0 0 4px 0;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        .dash-section .section-sub {
+            margin: 0 0 20px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Per-topic bars */
+        .topic-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .topic-row {
+            display: grid;
+            grid-template-columns: 140px 1fr 100px;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .topic-name {
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: capitalize;
+        }
+
+        .topic-bar-track {
+            height: 22px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .topic-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            transition: width 0.4s ease;
+        }
+
+        .topic-bar-fill.low {
+            background: linear-gradient(90deg, #d14d41, #bc5215);
+        }
+
+        .topic-bar-fill.mid {
+            background: linear-gradient(90deg, #d0a215, #879a39);
+        }
+
+        .topic-stats {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: 'IBM Plex Mono', monospace;
+            text-align: right;
+        }
+
+        /* Per-question table */
+        .q-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+
+        .q-table th,
+        .q-table td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .q-table th {
+            background: var(--bg-tertiary);
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            position: sticky;
+            top: 0;
+        }
+
+        .q-table td.num {
+            font-family: 'IBM Plex Mono', monospace;
+            text-align: right;
+        }
+
+        .q-table .acc-pill {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .q-table .acc-pill.low {
+            background: rgba(209, 77, 65, 0.15);
+            color: #c3421c;
+        }
+
+        .q-table .acc-pill.mid {
+            background: rgba(208, 162, 21, 0.15);
+            color: #a47c00;
+        }
+
+        .q-table .acc-pill.high {
+            background: rgba(135, 154, 57, 0.15);
+            color: #6c8020;
+        }
+
+        .q-table-scroll {
+            max-height: 560px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        /* Activity sparkline */
+        .activity {
+            display: flex;
+            gap: 2px;
+            align-items: flex-end;
+            height: 80px;
+        }
+
+        .activity .bar {
+            flex: 1;
+            background: var(--accent-primary);
+            opacity: 0.8;
+            border-radius: 2px 2px 0 0;
+            min-height: 2px;
+            position: relative;
+        }
+
+        .activity .bar:hover {
+            opacity: 1;
+        }
+
+        .activity .bar .tip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.15s;
+            pointer-events: none;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .activity .bar:hover .tip {
+            opacity: 1;
+        }
+
+        /* Login gate */
+        .gate {
+            max-width: 440px;
+            margin: 120px auto;
+            padding: 32px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .gate h1 {
+            font-family: 'Crimson Pro', serif;
+            margin: 0 0 8px 0;
+        }
+
+        .gate p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-size: 0.92rem;
+        }
+
+        .gate input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        .gate .url-hint {
+            margin-top: 14px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .gate button {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent-primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 500;
+        }
+
+        .gate button:hover {
+            opacity: 0.9;
+        }
+
+        .gate .error {
+            color: #d14d41;
+            font-size: 0.85rem;
+            margin-top: 12px;
+            min-height: 1.2em;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .section-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .section-row {
+                grid-template-columns: 1fr;
+            }
+
+            .topic-row {
+                grid-template-columns: 110px 1fr 90px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .dash-wrap {
+                padding: 16px 12px 60px;
+            }
+
+            .summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .topic-row {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-bar label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .filter-bar input,
+        .filter-bar select {
+            padding: 6px 10px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.88rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Login gate (shown until teacher enters the right key) -->
+    <div id="gate" class="gate" style="display: none;">
+        <h1>Teacher Dashboard</h1>
+        <p>Enter your teacher key to view class analytics.<br>
+            This key must match <code>TEACHER_KEY</code> in your Apps Script.</p>
+
+        <input type="text" id="gate-url" placeholder="Apps Script Web App URL" />
+        <input type="password" id="gate-key" placeholder="Teacher key" autofocus />
+
+        <button id="gate-submit">View Dashboard</button>
+
+        <div class="error" id="gate-error"></div>
+
+        <p class="url-hint">
+            First time? Read
+            <a href="TEACHER-SETUP.md" target="_blank">TEACHER-SETUP.md</a>
+            to wire this up.
+        </p>
+    </div>
+
+    <!-- Main dashboard (shown after auth) -->
+    <div id="dashboard" class="dash-wrap" style="display: none;">
+        <div class="dash-header">
+            <div class="dash-title">
+                <h1>Teacher Dashboard</h1>
+                <p id="meta-line">Loading…</p>
+            </div>
+            <div class="dash-actions">
+                <button id="refresh-btn" title="Re-fetch from Google Sheets">↻ Refresh</button>
+                <button id="logout-btn" title="Forget the saved key on this browser">Sign out</button>
+            </div>
+        </div>
+
+        <div id="dashboard-body">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <div>Loading class data…</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Teacher dashboard client.
+         *
+         * Flow:
+         *   1. If no URL + key saved in localStorage, show the gate.
+         *   2. On submit, do a GET to the Apps Script with ?key=<key>.
+         *   3. If the response is ok, save URL+key and render.
+         *   4. Otherwise show an error.
+         *
+         * Key/URL are only ever stored in THIS browser's localStorage so the
+         * teacher doesn't retype each visit. They're never sent anywhere except
+         * the Apps Script URL the teacher themselves configured.
+         */
+        const LS_URL = 'apq_teacher_url';
+        const LS_KEY = 'apq_teacher_key';
+
+        const el = {
+            gate: document.getElementById('gate'),
+            dashboard: document.getElementById('dashboard'),
+            gateUrl: document.getElementById('gate-url'),
+            gateKey: document.getElementById('gate-key'),
+            gateSubmit: document.getElementById('gate-submit'),
+            gateError: document.getElementById('gate-error'),
+            body: document.getElementById('dashboard-body'),
+            metaLine: document.getElementById('meta-line'),
+            refreshBtn: document.getElementById('refresh-btn'),
+            logoutBtn: document.getElementById('logout-btn'),
+        };
+
+        function getCreds() {
+            return {
+                url: localStorage.getItem(LS_URL),
+                key: localStorage.getItem(LS_KEY),
+            };
+        }
+
+        function saveCreds(url, key) {
+            localStorage.setItem(LS_URL, url);
+            localStorage.setItem(LS_KEY, key);
+        }
+
+        function clearCreds() {
+            localStorage.removeItem(LS_URL);
+            localStorage.removeItem(LS_KEY);
+        }
+
+        async function fetchStats(url, key) {
+            // Apps Script doGet: /exec?key=SECRET
+            const sep = url.includes('?') ? '&' : '?';
+            const fetchUrl = `${url}${sep}key=${encodeURIComponent(key)}`;
+            const resp = await fetch(fetchUrl, { method: 'GET', redirect: 'follow' });
+            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+            const data = await resp.json();
+            if (!data.ok) throw new Error(data.error || 'Unknown error');
+            return data;
+        }
+
+        function escapeHtml(s) {
+            return String(s).replace(/[&<>"']/g, c => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[c]));
+        }
+
+        function pct(n) {
+            return (n * 100).toFixed(0) + '%';
+        }
+
+        function accClass(accuracy) {
+            if (accuracy < 0.5) return 'low';
+            if (accuracy < 0.75) return 'mid';
+            return 'high';
+        }
+
+        function renderSummary(totals, generatedAt) {
+            const avg = totals.attempts ? pct(totals.accuracy) : '—';
+            const hintRate = totals.attempts
+                ? pct(totals.hintsUsed / totals.attempts)
+                : '—';
+
+            el.metaLine.textContent = `Updated ${new Date(generatedAt).toLocaleString()}`;
+
+            return `
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="label">Unique Sessions</div>
+                        <div class="value">${totals.sessions.toLocaleString()}</div>
+                        <div class="sublabel">anonymous student sessions</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="label">Questions Answered</div>
+                        <div class="value">${totals.attempts.toLocaleString()}</div>
+                        <div class="sublabel">${totals.correct.toLocaleString()} correct</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="label">Class Accuracy</div>
+                        <div class="value">${avg}</div>
+                        <div class="sublabel">across all topics</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="label">Hint Usage</div>
+                        <div class="value">${hintRate}</div>
+                        <div class="sublabel">of attempts used a hint</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderTopicBars(topics) {
+            if (!topics || topics.length === 0) {
+                return `<div class="empty-state">No topic data yet. Students haven't answered enough questions.</div>`;
+            }
+
+            const sorted = [...topics].sort((a, b) => a.accuracy - b.accuracy);
+
+            return `
+                <div class="dash-section">
+                    <h2>Accuracy by Topic</h2>
+                    <p class="section-sub">Sorted hardest → easiest. Red bars need the most attention.</p>
+                    <div class="topic-bars">
+                        ${sorted.map(t => `
+                            <div class="topic-row">
+                                <div class="topic-name">${escapeHtml(t.topic)}</div>
+                                <div class="topic-bar-track">
+                                    <div class="topic-bar-fill ${accClass(t.accuracy)}" style="width: ${t.accuracy * 100}%"></div>
+                                </div>
+                                <div class="topic-stats">${pct(t.accuracy)} · ${t.attempts}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderActivity(days) {
+            if (!days || days.length === 0) {
+                return `<div class="dash-section">
+                    <h2>Activity</h2>
+                    <div class="empty-state">No activity yet.</div>
+                </div>`;
+            }
+
+            // Pad to the last 30 days so a mostly-empty chart still has a shape.
+            const byDate = {};
+            days.forEach(d => byDate[d.date] = d.count);
+            const padded = [];
+            const today = new Date();
+            for (let i = 29; i >= 0; i--) {
+                const d = new Date(today);
+                d.setDate(today.getDate() - i);
+                const key = d.toISOString().slice(0, 10);
+                padded.push({ date: key, count: byDate[key] || 0 });
+            }
+
+            const max = Math.max(1, ...padded.map(d => d.count));
+
+            return `
+                <div class="dash-section">
+                    <h2>Activity — Last 30 Days</h2>
+                    <p class="section-sub">Daily question attempts across the whole class.</p>
+                    <div class="activity">
+                        ${padded.map(d => `
+                            <div class="bar" style="height: ${Math.max(2, d.count / max * 80)}px">
+                                <div class="tip">${d.date}: ${d.count}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        // ========================
+        // Per-question table with filters
+        // ========================
+        let questionCache = [];
+
+        function renderQuestionTable(questions) {
+            questionCache = questions || [];
+
+            if (questionCache.length === 0) {
+                return `<div class="dash-section">
+                    <h2>Per-Question Performance</h2>
+                    <div class="empty-state">No question data yet.</div>
+                </div>`;
+            }
+
+            // Harvest topics for the filter dropdown.
+            const topics = [...new Set(questionCache.map(q => q.topic).filter(Boolean))].sort();
+
+            return `
+                <div class="dash-section">
+                    <h2>Per-Question Performance</h2>
+                    <p class="section-sub">Ranked hardest first. Great signal for what to reteach.</p>
+                    <div class="filter-bar">
+                        <label>Filter:
+                            <select id="q-topic-filter">
+                                <option value="">All topics</option>
+                                ${topics.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('')}
+                            </select>
+                        </label>
+                        <label>Min attempts:
+                            <input type="number" id="q-min-attempts" value="1" min="1" style="width: 72px" />
+                        </label>
+                        <label>Search:
+                            <input type="text" id="q-search" placeholder="question id…" />
+                        </label>
+                    </div>
+                    <div class="q-table-scroll">
+                        <table class="q-table" id="q-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Topic</th>
+                                    <th>Type</th>
+                                    <th class="num">Attempts</th>
+                                    <th class="num">Correct</th>
+                                    <th class="num">Accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody id="q-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+        }
+
+        function applyQuestionFilters() {
+            const topic = document.getElementById('q-topic-filter').value;
+            const minAttempts = parseInt(document.getElementById('q-min-attempts').value, 10) || 1;
+            const search = document.getElementById('q-search').value.trim().toLowerCase();
+
+            const filtered = questionCache
+                .filter(q => q.attempts >= minAttempts)
+                .filter(q => !topic || q.topic === topic)
+                .filter(q => !search || String(q.id).toLowerCase().includes(search));
+
+            const body = document.getElementById('q-table-body');
+            if (filtered.length === 0) {
+                body.innerHTML = `<tr><td colspan="6" class="empty-state">No questions match these filters.</td></tr>`;
+                return;
+            }
+
+            body.innerHTML = filtered.map(q => `
+                <tr>
+                    <td><code>${escapeHtml(q.id)}</code></td>
+                    <td>${escapeHtml(q.topic || '—')}</td>
+                    <td>${escapeHtml(q.type || '—')}</td>
+                    <td class="num">${q.attempts}</td>
+                    <td class="num">${q.correct}</td>
+                    <td class="num">
+                        <span class="acc-pill ${accClass(q.accuracy)}">${pct(q.accuracy)}</span>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderDashboard(data) {
+            el.body.innerHTML =
+                renderSummary(data.totals, data.generatedAt) +
+                `<div class="section-row">
+                    <div>${renderTopicBars(data.topics)}</div>
+                    <div>${renderActivity(data.days)}</div>
+                </div>` +
+                renderQuestionTable(data.questions);
+
+            const topicFilter = document.getElementById('q-topic-filter');
+            const minAttempts = document.getElementById('q-min-attempts');
+            const search = document.getElementById('q-search');
+            if (topicFilter) topicFilter.addEventListener('change', applyQuestionFilters);
+            if (minAttempts) minAttempts.addEventListener('input', applyQuestionFilters);
+            if (search) search.addEventListener('input', applyQuestionFilters);
+            applyQuestionFilters();
+        }
+
+        async function load() {
+            const { url, key } = getCreds();
+            if (!url || !key) {
+                showGate();
+                return;
+            }
+
+            el.gate.style.display = 'none';
+            el.dashboard.style.display = 'block';
+            el.body.innerHTML = `
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <div>Loading class data…</div>
+                </div>
+            `;
+
+            try {
+                const data = await fetchStats(url, key);
+                renderDashboard(data);
+            } catch (err) {
+                console.error(err);
+                el.body.innerHTML = `
+                    <div class="dash-section">
+                        <h2>Couldn't load data</h2>
+                        <p class="section-sub">${escapeHtml(err.message)}</p>
+                        <p>Most common causes:</p>
+                        <ul>
+                            <li>Apps Script URL is wrong (did you paste the full <code>…/exec</code> URL?)</li>
+                            <li>Teacher key doesn't match <code>TEACHER_KEY</code> in <code>Code.gs</code></li>
+                            <li>Apps Script deployment isn't set to "Anyone" for access</li>
+                        </ul>
+                        <p><button id="retry-btn">Re-enter credentials</button></p>
+                    </div>
+                `;
+                const retryBtn = document.getElementById('retry-btn');
+                if (retryBtn) retryBtn.onclick = () => { clearCreds(); showGate(); };
+            }
+        }
+
+        function showGate() {
+            el.gate.style.display = 'block';
+            el.dashboard.style.display = 'none';
+            const creds = getCreds();
+            if (creds.url) el.gateUrl.value = creds.url;
+            el.gateError.textContent = '';
+            setTimeout(() => el.gateKey.focus(), 50);
+        }
+
+        el.gateSubmit.addEventListener('click', async () => {
+            const url = el.gateUrl.value.trim();
+            const key = el.gateKey.value.trim();
+            if (!url || !key) {
+                el.gateError.textContent = 'Please enter both the URL and your key.';
+                return;
+            }
+
+            el.gateSubmit.disabled = true;
+            el.gateSubmit.textContent = 'Checking…';
+            el.gateError.textContent = '';
+
+            try {
+                const data = await fetchStats(url, key);
+                saveCreds(url, key);
+                el.gateSubmit.disabled = false;
+                el.gateSubmit.textContent = 'View Dashboard';
+                el.gate.style.display = 'none';
+                el.dashboard.style.display = 'block';
+                renderDashboard(data);
+                el.metaLine.textContent = `Updated ${new Date(data.generatedAt).toLocaleString()}`;
+            } catch (err) {
+                el.gateSubmit.disabled = false;
+                el.gateSubmit.textContent = 'View Dashboard';
+                el.gateError.textContent = `Login failed: ${err.message}`;
+            }
+        });
+
+        // Submit on Enter in either field.
+        [el.gateUrl, el.gateKey].forEach(inp => {
+            inp.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') el.gateSubmit.click();
+            });
+        });
+
+        el.refreshBtn.addEventListener('click', load);
+        el.logoutBtn.addEventListener('click', () => {
+            clearCreds();
+            showGate();
+        });
+
+        // Boot.
+        load();
+    </script>
+</body>
+
+</html>
