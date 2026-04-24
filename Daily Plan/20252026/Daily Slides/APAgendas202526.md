@@ -26,6 +26,20 @@ B. 6.5 kg/m$^3$
 C. 52 kg/m$^3$
 D. 100 kg/m$^3$
 
+
+<!---
+Answer C
+Correct. Density is the ratio of mass to volume. The volume of a sphere is V = tr, where ris
+the radius of the sphere. Therefore, the mass of each sphere is
+
+m = $T (0.05 m)® (100 kg/m") = 0.052 kg
+The average density of the box with the spheres inside is the ratio of the total mass to the total
+volume. There are 125 spheres, so the total mass of the box of spheres is
+(125) (0.052 kg) = 6.5 kg. Therefore, the density of the box with the spheres is:
+P=#=#= (05k= 52kg/m?
+
+--->
+
 ---
 
 # 2026.04.24 **AP Physics** Do Now
@@ -36,6 +50,18 @@ A. 0.05 m
 B. 0.01m
 C. 0.008m
 D. 0.0004m
+
+<!---
+Answer A
+Correct. Density is the ratio of mass to volume, p = m. The container is cylindrical, so the volume
+of water in the container will be given by V = r'h, where r is the radius of the cylinder and his
+the depth of the water. Therefore, the radius of the container is found by substituting the
+expression for volume into the density equation and solving for the radius:
+
+0.40 kg
+*= V Thp (0.05 m) 1000 kg/m
+r = 0.05 m
+--->
 
 ---
 

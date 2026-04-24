@@ -15,6 +15,38 @@ math: mathjax
 
 ---
 
+# 2026.04.24 **Regents Physics**
+
+##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents June 2024 - 22-30
+2. Go Over Think Sheets
+3. Electrical Resistance and Ohm's Law
+	1. Electrical Resistance Think Sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define resistance_
+
+🥅 _Mathematically Model Ohm's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.23 **Regents Physics**
 
 ##### **❓ of the 📅**: What was your favorite vacation?    
