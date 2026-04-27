@@ -15,6 +15,142 @@ math: mathjax
 
 ---
 
+<div class='columns'>
+<div>
+
+
+A rectangular box of uniform density can be placed on a table in any of the three orientations shown in the figure. The surface area of the box touching the table in each orientation is Ax, Ay, Az, for orientation X, Y, and Z, respectively, where Ax > Ay > Az. A student claims that the pressure exerted by the box on the table is greatest in Orientation X. Is the student's claim correct? Why or why not?
+
+</div>
+ 
+<div style="font-size: 25px;">
+
+
+![center w:300](image-82.png)
+
+
+A. Yes, because the pressure increases with increasing surface area in contact with the table.
+
+B. Yes, because the weight of the box is greatest in Orientation X.
+
+C. No, because the pressure is the same regardless of orientation.
+
+D. No, because the pressure decreases with increasing surface area in contact with
+the table.
+
+
+</div>
+</div>
+
+<!---
+Answer D
+Correct. Pressure is defined as P =A • Orientation X has the greatest area A in contact with
+the table, so will exert the smallest pressure of the three orientations.
+--->
+
+
+---
+
+<div class='columns'>
+<div>
+
+A tank with a rectangular base is filled to a depth of 3 m with water of density 1000 kg/m$^3$. The tank is open on top. The base of the tank is 4 m long by 2 m wide, as shown in the figure. The absolute pressure of the water at the bottom of the tank is most nearly
+
+</div>
+ 
+<div>
+
+![center](image-83.png)
+
+A. $30,000$ Pa
+
+B. $130,000$ Pa
+
+C. $240,000$ Pa
+
+D. $1.04 \times 10^6$ Pa
+
+</div>
+</div>
+
+<!---
+Answer B
+Correct. The absolute pressure is the pressure due to the water plus the pressure due to the
+atmosphere above the water:
+P= Po+ pgh = Patm + pgh
+P = 100,000 Pa + (1000 kg/m') (10 N/kg) (3 m).
+P = 130,000 Pa
+--->
+
+---
+
+<div class='columns'>
+<div style="font-size: 23.6px;">
+
+Three cylindrical containers are filled with water to the same height h, as shown. Container A is open at the top. Container B and Container C each have a solid cap, made of the same material and with the same thickness, that rests on the top surface of the water. Assume that the cap makes a seal with the edges of the container and that frictional forces between the cap and the container are negligible. The diameters of Container A and B are equal, while the diameter of Container C is greater than that of Containers A and B . Which of the following correctly compares the absolute pressure Pa. PB, and Pc at the bottom of Containers A, B, and C, respectively?
+
+</div>
+ 
+<div>
+
+![center](image-84.png)
+
+A. $P_A = P_B = P_C$
+
+B. $(P_A = P_B) > P_C$
+
+C. $(P_B = P_C) > P_A$
+
+D. $P_C > P_B > P_A$
+
+</div>
+</div>
+
+<!---
+
+Answer C
+Correct. The absolute pressure is the gauge pressure due to the fluid plus a reference pressure:
+P= Po+ pgh. In all three containers, the extra pressure at the bottom of the container due to the fluid is the same because the depth of the fluid is the same. Container A is open at the top, so the reference pressure is atmospheric pressure, and the absolute pressure at the bottom is equal to P = Patm + pgh. Containers B and C' both have caps, which also contribute to the reference
+pressure at the top of the fluid. The downward force exerted by the cap is equal to the weight of the cap. If the thickness of the cap is d, then the pressure can be described by Peap=Fe = man = PaYS = Papad = Peapd. Therefore, the absolute pressure at the bottom of Container B and Container C is the same, and equal to
+P = (Patm + Pcap) + pgh = Patm + Pcapgd + pgh.
+--->
+
+
+---
+
+# 2026.04.27 **AP Physic**
+
+##### **❓ of the 📅**: What food is underrated or underappreciated?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Nows
+2. Notes - Pressure
+3. Workbook 8.C & 8.D
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Under Pressure_
+
+### 📆 Upcoming
+
+- AP Exam Next Week!
+  - I'm after school all week to help with studying!
+  - Even a few MC before practice will help
+
+</div>
+</div>
+
+---
+
 # 2026.04.24 **AP Physics** Do Now
 
 ![bg fit right:30%](image-81.png)
