@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.04.27 **Earth Science**
+
+##### **❓ of the 📅**: What food is underrated or underappreciated?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Discuss Averages from Part I
+    -  What do you notice?
+	-  Is  this uniform across the planet?
+2. Continue on to part II and use simulations to answer questions
+	1. Whiteboard Analysis Questions to share
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+
+🥅 _Analyze past and present sea level data and computational models of climate change to quantify the change and rates of change of climate variables to predict the magnitudes of human impact on climate._
+
+</div>
+</div>
+
+---
+
 # 2026.04.24 **Earth Science**
 
 ##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
