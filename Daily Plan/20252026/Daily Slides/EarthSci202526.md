@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.04.28 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Practice Cluster
+2. Impacts of Melting Ice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Gather evidence from texts to construct an explanation about how hazards from climate change are predicted to impact human populations._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.27 **Earth Science**
 
 ##### **❓ of the 📅**: What food is underrated or underappreciated?
@@ -45,6 +73,10 @@ class:  twilight
 
 </div>
 </div>
+
+---
+
+<iframe width="1100" height="600" src="https://www.youtube.com/embed/dW5e61XSMHk?si=LVYkMfQZ_OOslaS3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
