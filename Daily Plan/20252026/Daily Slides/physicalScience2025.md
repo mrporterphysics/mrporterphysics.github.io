@@ -17,6 +17,37 @@ class: green
 
 ---
 
+# 2026.04.27 **Physical Science**
+
+##### **❓ of the 📅**: What food is underrated or underappreciated?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Spark Timer Lab:
+    1. Finish Graph
+    2. Make XT Graph on Graphical Analysis
+        - [https://graphicalanalysis.app/](https://graphicalanalysis.app/)
+    3. Make VT Graphs with Graphical Analyis
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Continue to analyze spark timer lab data_
+
+
+
+</div>
+</div>
+
+---
+
 # 2026.04.23 **Physical Science**
 
 ##### **❓ of the 📅**: What was your favorite vacation?
