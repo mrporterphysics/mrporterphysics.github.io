@@ -66,6 +66,15 @@ D. $13 \times 10^4$ Pa
 </div>
 </div>
 
+<!---
+Answer C
+Correct. The absolute pressure at the point of the submarine is the sum of the atmospheric
+pressure plus the pressure from the water above the submarine:
+Pabs = Patm + pgh
+Pabs = 1 x 10° Pa + (1000 kg/m')(10 N/kg) (2.0 m).
+Pabs = 120, 000 Pa
+--->
+
 ---
 
 A submarine whose top surface has an area of $7500$ m$^2$ is at a depth of $4000$ m below the surface of the ocean. Ocean water has a density of $1025$ kg/m$^3$. The force exerted on the top surface of the submarine by the water is most nearly
@@ -73,6 +82,7 @@ A submarine whose top surface has an area of $7500$ m$^2$ is at a depth of $4000
 A. $5.48 \times 10^3$ N
 B. $4.11 \times 10^7$ N
 C. $7.70 \times 10^7$ N
+D. $3.08 \times 10^{11}$ N
 
 <!---
 
