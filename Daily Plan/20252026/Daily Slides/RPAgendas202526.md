@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.04.28 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Resistance Think Sheet?
+1. Measuring current and potential difference
+1. Ohm's Law Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Find the relationship between voltage, current, and resistance experimentally_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.24 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
