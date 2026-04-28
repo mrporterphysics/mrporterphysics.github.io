@@ -16,6 +16,112 @@ math: mathjax
 ---
 
 <div class='columns'>
+<div style="font-size: 25px;">
+
+A student measures the absolute pressure at various depths below the surface of the water in a swimming pool. The distance below the surface is also measured for each location at which the pressure is measured. Which of the following correctly indicates and justifies a method that could be used to determine the density of the water? 
+
+A. Divide the pressure at the very bottom of the pool by the product of the depth of the water and $g$ because the pressure at the surface of the pool is zero.
+
+B. Divide the pressure at the very bottom of the pool by the depth of the water because the pressure at the surface of the pool is zero.
+
+C. Graph pressure as a function of distance below the surface and divide the slope of the line by $g$ because pressure is given by $P = P_{atm} + \rho gh$.
+
+D. Graph pressure as a function of distance below the surface. The density of the water is the slope of the line because pressure is given by $P = P_{atm} + \rho gh$.
+
+
+</div>
+ 
+</div>
+
+<!---
+Answer C
+Correct. The pressure difference between any two points in a fluid is equal to the product of fluid
+density, gravitational field strength, and vertical distance between the two points, AP = pgAh.
+Therefore, the slope of a line of a graph of pressure P as a function of distance h below the
+surface is equal to pg. Calculating the slope of the line and dividing by g will give the density p of
+the fluid.
+--->
+
+---
+
+<div class='columns'>
+<div>
+
+The swimming pool shown in the figure is filled to a depth of 5.0 m with water of density 1000 kg/m$^3$. A toy submarine is lowered into the water until it is 3.0 m from the bottom of the pool. What is the absolute pressure at the depth of the submarine?
+
+</div>
+ 
+<div>
+
+![center](image-85.png)
+
+A. $2.0 \times 10^4$ Pa
+
+B. $3.0 \times 10^4$ Pa
+
+C. $12 \times 10^4$ Pa
+
+D. $13 \times 10^4$ Pa
+
+</div>
+</div>
+
+---
+
+A submarine whose top surface has an area of $7500$ m$^2$ is at a depth of $4000$ m below the surface of the ocean. Ocean water has a density of $1025$ kg/m$^3$. The force exerted on the top surface of the submarine by the water is most nearly
+
+A. $5.48 \times 10^3$ N
+B. $4.11 \times 10^7$ N
+C. $7.70 \times 10^7$ N
+
+<!---
+
+Answer D
+Correct. Pressure of a fluid is given by P = Patm + pgh where p is the density of the fluid and h
+is the vertical distance beneath the surface of the fluid. The relationship between force and
+pressure is P = 4, where A is the area in contact with the fluid. Therefore, the force exerted on
+the top surface of the ship is F = PA = (Patm + pgh) A;
+E = 100,000 Pa + (1025 kg/m') (10 N/kg) (4000 m) (7500 m'); F = 3.08 × 10" N
+
+--->
+
+---
+
+
+# 2026.04.28 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Nows
+2. Pascal's Principle
+3. Workbook 8.D, F, G
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Buoyancy_
+
+### 📆 Upcoming
+
+- AP Exam Next Wednesday!
+  - I'm after school all week to help with studying!
+  - Even a few MC before practice will help
+
+</div>
+</div>
+
+---
+
+<div class='columns'>
 <div>
 
 
@@ -23,7 +129,7 @@ A rectangular box of uniform density can be placed on a table in any of the thre
 
 </div>
  
-<div style="font-size: 25px;">
+<div style="font-size: 26px;">
 
 
 ![center w:300](image-82.png)
@@ -35,8 +141,7 @@ B. Yes, because the weight of the box is greatest in Orientation X.
 
 C. No, because the pressure is the same regardless of orientation.
 
-D. No, because the pressure decreases with increasing surface area in contact with
-the table.
+D. No, because the pressure decreases with increasing surface area in contact with the table.
 
 
 </div>
