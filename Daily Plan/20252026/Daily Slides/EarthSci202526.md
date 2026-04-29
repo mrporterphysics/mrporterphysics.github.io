@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2026.04.29 **Earth Science**
+
+##### **❓ of the 📅**: Is it ever acceptable to eat pizza with a fork and knife?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review your notes from the readings
+2. As a group brainstorm answers to the following prompt: "_How will climate change impact populations?_"
+    - Support with evidence from **each** text
+3. Class discussion 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Gather evidence from texts to construct an explanation about how hazards from climate change are predicted to impact human populations._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.28 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?
