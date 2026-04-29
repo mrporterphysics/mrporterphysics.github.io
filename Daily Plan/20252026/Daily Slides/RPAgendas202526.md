@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.04.29 **Regents Physics**
+
+##### **❓ of the 📅**: Is it ever acceptable to eat pizza with a fork and knife?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Ohm's Law lab
+2. Notes on Ohm's Law
+3. Ohm's Law think sheets
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Ohm's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.28 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather be in a reality baking show contest or a dating show contest?

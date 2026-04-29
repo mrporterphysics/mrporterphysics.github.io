@@ -17,6 +17,34 @@ class: green
 
 ---
 
+# 2026.04.29 **Physical Science**
+
+##### **❓ of the 📅**: Is it ever acceptable to eat pizza with a fork and knife? 🍕 🍴
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Spark Timer Lab
+2. Discuss Results 
+3. Using Graphical Models to solve problems: [Desmos Link](https://www.desmos.com/calculator/nbvnlxy3cj)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model constant acceleration moton_
+
+
+</div>
+</div>
+
+---
+
 # 2026.04.27 **Physical Science**
 
 ##### **❓ of the 📅**: What food is underrated or underappreciated?
