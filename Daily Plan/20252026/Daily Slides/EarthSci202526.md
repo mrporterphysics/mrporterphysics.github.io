@@ -27,7 +27,7 @@ class:  twilight
 
 #### 📋 Agenda
 
-1. Review your notes from the readings
+1. Review your notes from the reading
 2. As a group brainstorm answers to the following prompt: "_How will climate change impact populations?_"
     - Support with evidence from **each** text
 3. Class discussion 
