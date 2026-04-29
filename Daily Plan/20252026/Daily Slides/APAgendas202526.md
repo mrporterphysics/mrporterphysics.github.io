@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+# 2026.04.30 **AP Physics**
+
+##### **❓ of the 📅**: Should pizza slices be triangles or squares?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now (Handout)
+2. Fluid Dynamics 
+	1. Continuity Equation
+	2. Bernoulli's Principle
+	3. Torricelli's Theorem
+3. Workbook 8.J, 8.O
+4. 8.H, L, N
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Fluid Dynamics_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <div class='columns'>
 <div style="font-size: 25px;">
 

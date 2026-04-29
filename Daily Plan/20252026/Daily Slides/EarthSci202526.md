@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.04.30 **Earth Science**
+
+##### **❓ of the 📅**: Should pizza slices be triangles or squares? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Discuss "_How will climate change impact populations?_"
+2. **Managing Other Climate Change Disruptions**
+	1. Watch two videos as a lab group and discuss
+3. Cluster Practice
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Gather evidence from texts to construct an explanation about how climate change is impacting food supply chains._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.29 **Earth Science**
 
 ##### **❓ of the 📅**: Is it ever acceptable to eat pizza with a fork and knife?
