@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.04.30 **Regents Physics**
+
+##### **❓ of the 📅**: Should pizza slices be triangles or squares?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Practice - #39-40, 45-50, 51-54
+2. Ohm's Law Notes
+3. Ohm's Law Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and practice with Ohm's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.29 **Regents Physics**
 
 ##### **❓ of the 📅**: Is it ever acceptable to eat pizza with a fork and knife?
