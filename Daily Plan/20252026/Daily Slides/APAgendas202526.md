@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+# 2026.05.01 **AP Physics**
+
+##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Simple Harmonic Motion - [Notes](../../../Presentations/AP%20SHM/talks/SHM2025.html)
+2. Choose your Pracitce:
+    - SHM - 6.H, 6.I
+    - Fluids - 8.J, O ,H, L, N
+    - AP Classroom Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prep for your test_
+
+### 📆 Upcoming
+
+- AP Exam Wednesday
+
+</div>
+</div>
+
+---
+
 # 2026.04.30 **AP Physics**
 
 ##### **❓ of the 📅**: Should pizza slices be triangles or squares?
