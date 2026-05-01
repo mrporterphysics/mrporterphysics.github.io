@@ -17,6 +17,36 @@ class:  twilight
 
 ---
 
+# 2026.05.01 **Earth Science**
+
+##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish PTO - if you haven't
+2. Practice Clusters
+    - #6-9 starts p. 7
+    - #10-13 p. 14
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice Regents Questions_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.30 **Earth Science**
 
 ##### **❓ of the 📅**: Should pizza slices be triangles or squares? 
