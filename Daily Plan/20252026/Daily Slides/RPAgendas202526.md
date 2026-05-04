@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+# 2026.05.04 **Regents Physics**
+
+##### **❓ of the 📅**: Do you have a favorite _Star Wars_ character?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mathematical Relationships in Circuits
+    - Applying $R = \frac{V}{I}$
+1. Circuits - Series vs. Parallel
+    - Kirchoff's Laws
+2. Series Circuits Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define and apply Kirchoff's Laws_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.04.30 **Regents Physics**
 
 ##### **❓ of the 📅**: Should pizza slices be triangles or squares?

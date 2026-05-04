@@ -92,11 +92,7 @@ D. 30 cm
 </div>
 
 <!---Answer B
-Correct. In the left figure, the center of mass of the ring-board system must be between the center
-of mass of the ring (at 30 cm) and the center of mass of the board (at 50 cm). In the right figure,
-the centers of mass of the board and the ring are both at cm, so the center of mass of the
-system is at 50 cm. Therefore, the change in the center of mass must be less than 20 cm but
-greater than zero.
+Correct. In the left figure, the center of mass of the ring-board system must be between the center of mass of the ring (at 30 cm) and the center of mass of the board (at 50 cm). In the right figure, the centers of mass of the board and the ring are both at cm, so the center of mass of the system is at 50 cm. Therefore, the change in the center of mass must be less than 20 cm but greater than zero.
 --->
 
 ---
