@@ -17,6 +17,38 @@ class:  twilight
 
 ---
 
+# 2026.05.04 **Earth Science**
+
+##### **❓ of the 📅**: What book, movie read/seen recently you would recommend and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. New Seats
+2. Practice Clusters - August 2025
+    - 1-5
+    - 11-15
+    - 21-26
+    - 27-30
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice for Regents_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.01 **Earth Science**
 
 ##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?
