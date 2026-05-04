@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+# 2026.05.05 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite meal to cook and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Notes on Parallel vs. Series Circuits
+2. Series Circuits
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model series circuits_
+
+### 📆 Upcoming
+
+- Quiz Friday on Static and Current Electricity
+
+</div>
+</div>
+
+---
+
 # 2026.05.04 **Regents Physics**
 
 ##### **❓ of the 📅**: Do you have a favorite _Star Wars_ character?

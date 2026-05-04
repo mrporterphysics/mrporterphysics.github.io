@@ -17,6 +17,32 @@ class: green
 
 ---
 
+# 2026.05.05 **Physical Science**
+
+##### **❓ of the 📅**: What is your favorite meal to cook and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Desmos Graph Predictions
+2. Pivot - Motion Graphs & Direction
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Constant Acceleration Motion_
+
+</div>
+</div>
+
+---
+
 # 2026.04.29 **Physical Science**
 
 ##### **❓ of the 📅**: Is it ever acceptable to eat pizza with a fork and knife? 🍕 🍴
