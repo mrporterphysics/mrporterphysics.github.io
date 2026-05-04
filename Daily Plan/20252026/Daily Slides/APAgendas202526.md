@@ -15,6 +15,40 @@ math: mathjax
 
 ---
 
+# 2026.05.04 **AP Physics**
+
+##### **❓ of the 📅**: Who is your favorite Star Wars character?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Center of Mass](../../../Presentations/AP%20Rotation%20Representation/talks/centerofmass.html)
+2. [FRQ Question Types](https://docs.google.com/file/d/1x7x_dgQGf5UawdqFfNc9qI69p9DLeul9/edit?filetype=mspresentation)
+3. Independent Review/Practice  
+
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review and calculate center of mass_
+
+</div>
+</div>
+
+#### ✏️ Notes for **AP Test** On <mark>***Wednesday***</mark>
+
+- On Wednesday go grab a calculator from JB
+- Make sure you switch to ***degree mode***
+
+---
+
 # 2026.05.01 **AP Physics**
 
 ##### **❓ of the 📅**: If you suddenly became a giant, what would be the biggest inconvenience?

@@ -79,7 +79,7 @@ section {
     background-color: var(--bg);
     color: var(--text);
     padding: 1.6em 2.2em;
-    font-size: 28px;
+  
     line-height: 1.42;
     letter-spacing: -0.004em;
     overflow: hidden;
@@ -159,7 +159,7 @@ section.char {
 h1 {
     font-family: "BBH Bogle", serif;
     font-weight: 400;
-    font-size: 3.2em;
+    font-size: 3.0em;
     line-height: 0.92;
     letter-spacing: -0.035em;
     color: var(--text);
@@ -172,7 +172,7 @@ h1 em, h1 i { color: var(--accent); font-style: italic; }
 h2 {
     font-family: "Instrument Serif", serif;
     font-weight: 400;
-    font-size: 2.1em;
+    font-size: 2.0em;
     line-height: 0.96;
     letter-spacing: -0.025em;
     color: var(--accent);
