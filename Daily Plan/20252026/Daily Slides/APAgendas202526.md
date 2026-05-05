@@ -15,6 +15,18 @@ math: mathjax
 
 ---
 
+# 2026.05.06 **AP Physics**
+
+##### **❓ of the 📅**: What was your childhood dream job? Is it still your dream job?
+
+
+#### 📋 Agenda
+
+1. Exam Today
+
+
+---
+
 # 2026.05.04 **AP Physics**
 
 ##### **❓ of the 📅**: Who is your favorite Star Wars character?

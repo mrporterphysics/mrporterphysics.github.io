@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+# 2026.05.06 **Regents Physics**
+
+##### **❓ of the 📅**: What was your childhood dream job? Is it still your dream job?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Parallel Circuits
+2. VIRP Table for Parallel Circuits
+3. Think Sheet - Parallel Circuits
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model and practice with Parallel circuits_
+
+### 📆 Upcoming
+
+- Electricity (Static and Current) quiz Friday
+
+</div>
+</div>
+
+---
+
 # 2026.05.05 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your favorite meal to cook and why?

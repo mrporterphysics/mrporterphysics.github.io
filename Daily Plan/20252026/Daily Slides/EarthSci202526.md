@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.05.06 **Earth Science**
+
+##### **❓ of the 📅**: What was your childhood dream job? Is it still your dream job?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Lab
+2. Create a model on your whiteboard explaining the phases of the moon (who, why, what when, where, etc)
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.05 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite meal to cook?
