@@ -27,8 +27,9 @@ class: green
 
 #### 📋 Agenda
 
+1. Pivot - Motion Graphs & Direction
 1. Finish Desmos Graph Predictions
-2. Pivot - Motion Graphs & Direction
+
 
 </div>
 
