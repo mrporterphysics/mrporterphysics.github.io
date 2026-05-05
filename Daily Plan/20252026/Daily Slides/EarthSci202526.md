@@ -37,7 +37,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model the Phases of the moon_
 
 ### 📆 Upcoming
 
