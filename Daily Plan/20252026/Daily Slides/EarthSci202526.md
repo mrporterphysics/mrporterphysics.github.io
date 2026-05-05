@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.05.05 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite meal to cook?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Lunar Phase Simulator Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the phases of the moon_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.04 **Earth Science**
 
 ##### **❓ of the 📅**: What book, movie read/seen recently you would recommend and why?
