@@ -277,7 +277,7 @@ blockquote {
   border-radius: var(--doodle-wobble-1);
   font-family: 'Caveat', cursive;
   font-weight: 500;
-  font-size: var(--doodle-fs-4);
+  font-size: var(--doodle-fs-5);
   color: var(--doodle-text);
   position: relative;
   transform: rotate(-0.7deg);

@@ -1,7 +1,7 @@
 ---
 title: Regents - Waves
 marp: true
-theme: artistic
+theme: doodle
 paginate: true
 math: mathjax
 
@@ -67,11 +67,11 @@ math: mathjax
 
 ---
 
-![center width:800](../figures/peoplewave.gif)
+![center width:725](../figures/peoplewave.gif)
 
-![center width:800](../figures/wavepulse.gif)
+![center width:725](../figures/wavepulse.gif)
 
-![center width:800](../figures/stringpulse.gif)
+![center width:725](../figures/stringpulse.gif)
 
 ---
 
@@ -164,11 +164,12 @@ math: mathjax
 
 ---
 
+
 # Wave Characteristics 
 
 
-* The ***frequency*** ($f$) is the number of waves passing a point per unit time. 
-    - Frequency is measured in Hertz (Hz) or 1/s (s$^{-1}$)
+
+
 * The ***period*** of a wave ($T$) is the time for one complete cycle to pass a point
     - It is the reciprocal of frequency. $T = \frac{1}{f}$, where $T$ is the period in second and $f$ is the frequency in hertz.
 

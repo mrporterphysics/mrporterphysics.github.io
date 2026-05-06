@@ -1,0 +1,617 @@
+/*
+@theme apothecary
+
+Earth-tone, vintage-mercantile aesthetic — burgundy + terracotta + sage on
+warm cream paper, with bold compact display type and tag-shaped labels.
+Inspired by botanical-aperitif packaging design.
+
+Fonts:
+  - Archivo Black     → display (h1/h2, tags, labels)
+  - Inter             → body, h4 (variable, weights 100..900)
+  - Source Serif 4    → italic accents (em, blockquote tagline)
+  - JetBrains Mono    → label-caps role (h5/h6, footer) and code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --apo-primary:    #C2502E;   /* terracotta — "POUR WITHOUT REGRET" tag */
+  --apo-secondary:  #8AA079;   /* sage — "SIP WITH INTENTION" tag */
+  --apo-accent:     #4A1212;   /* burgundy — dark hero backgrounds */
+  --apo-success:    #16A34A;
+  --apo-warning:    #D97706;
+  --apo-danger:     #DC2626;
+  --apo-surface:    #F0E8D2;   /* warm cream page */
+  --apo-text:       #1F1410;   /* warm espresso */
+  --apo-neutral:    #FAF5E8;   /* paper / cards (lighter cream) */
+
+  /* Internal extras */
+  --apo-paper:      #FAF5E8;
+  --apo-ink:        #1F1410;
+  --apo-muted:      #6B5B4F;   /* warm grey */
+  --apo-rule-color: rgba(31, 20, 16, 0.18);
+
+  /* Type scale: 14/16/20/24/32/44/56 — slide-friendly modular progression */
+  --apo-fs-1: 14px;
+  --apo-fs-2: 16px;
+  --apo-fs-3: 20px;
+  --apo-fs-4: 24px;
+  --apo-fs-5: 32px;
+  --apo-fs-6: 44px;
+  --apo-fs-7: 56px;
+
+  /* Spacing scale: 4/8/12/16/24/32 */
+  --apo-sp-1: 4px;
+  --apo-sp-2: 8px;
+  --apo-sp-3: 12px;
+  --apo-sp-4: 16px;
+  --apo-sp-5: 24px;
+  --apo-sp-6: 32px;
+
+  /* Rounded scale */
+  --apo-rounded-sm: 4px;
+  --apo-rounded-md: 8px;
+
+  /* Strokes */
+  --apo-rule:       2px solid var(--apo-ink);
+  --apo-rule-thick: 4px solid var(--apo-ink);
+  --apo-rule-soft:  1px solid var(--apo-rule-color);
+}
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--apo-surface);
+  /* very subtle paper noise */
+  background-image:
+    radial-gradient(rgba(31, 20, 16, 0.03) 1px, transparent 1.2px);
+  background-size: 6px 6px;
+  color: var(--apo-text);
+  font-size: var(--apo-fs-4);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: var(--apo-sp-6);
+  position: relative;
+}
+
+/* ---------- Headings (56 / 44 / 32 / 24) ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Archivo Black', 'Anton', Impact, sans-serif;
+  font-weight: 400;     /* Archivo Black has only 400 — already heavy */
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  margin: 0 0 var(--apo-sp-4) 0;
+  color: var(--apo-ink);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--apo-fs-7);
+  display: block;
+  letter-spacing: -0.005em;
+  color: var(--apo-ink);
+  padding-bottom: var(--apo-sp-3);
+  border-bottom: var(--apo-rule-thick);
+  margin-bottom: var(--apo-sp-5);
+}
+
+h2 {
+  font-size: var(--apo-fs-6);
+  letter-spacing: 0;
+  color: var(--apo-primary);
+}
+
+h3 {
+  font-size: var(--apo-fs-5);
+  color: var(--apo-ink);
+  letter-spacing: 0.01em;
+}
+
+h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: var(--apo-fs-3);
+  letter-spacing: 0.06em;
+  color: var(--apo-ink);
+}
+
+/* label-caps role — small, monospaced, uppercase, tracked */
+h5, h6 {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-size: var(--apo-fs-1);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--apo-muted);
+}
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--apo-sp-4) 0;
+  max-width: 65ch;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--apo-ink);
+}
+
+em {
+  font-family: 'Source Serif 4', 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--apo-muted);
+  font-size: 1.05em;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+a {
+  color: var(--apo-primary);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--apo-primary);
+  padding-bottom: 1px;
+  transition: color 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+a:hover { color: var(--apo-accent); border-bottom-color: var(--apo-accent); }
+a:focus-visible {
+  outline: 3px solid var(--apo-primary);
+  outline-offset: 3px;
+  border-radius: var(--apo-rounded-sm);
+}
+
+mark {
+  background: rgba(194, 80, 46, 0.20);
+  color: var(--apo-ink);
+  padding: 0 var(--apo-sp-1);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--apo-sp-4) 0;
+  list-style: none;
+}
+
+ul > li {
+  position: relative;
+  padding-left: var(--apo-sp-5);
+  margin-bottom: var(--apo-sp-2);
+}
+/* Filled triangle bullet — terracotta */
+ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid var(--apo-primary);
+}
+ul > li > ul > li::before { border-left-color: var(--apo-secondary); }
+ul > li > ul > li > ul > li::before { border-left-color: var(--apo-accent); }
+
+ol { counter-reset: apo-counter; }
+ol > li {
+  counter-increment: apo-counter;
+  position: relative;
+  padding-left: var(--apo-sp-6);
+  margin-bottom: var(--apo-sp-3);
+}
+ol > li::before {
+  content: counter(apo-counter, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.9em;
+  color: var(--apo-primary);
+  letter-spacing: -0.02em;
+}
+
+li { font-size: var(--apo-fs-4); }
+
+/* ---------- Blockquote (Tagline) ---------- */
+blockquote {
+  margin: var(--apo-sp-5) 0;
+  padding: var(--apo-sp-4) var(--apo-sp-5);
+  background: var(--apo-paper);
+  border-left: 6px solid var(--apo-secondary);
+  font-family: 'Source Serif 4', 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-size: var(--apo-fs-4);
+  color: var(--apo-ink);
+  border-radius: 0 var(--apo-rounded-md) var(--apo-rounded-md) 0;
+}
+blockquote p:last-child { margin-bottom: 0; }
+blockquote p { max-width: none; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.9em;
+  font-weight: 500;
+  background: rgba(194, 80, 46, 0.12);
+  color: var(--apo-accent);
+  padding: 1px var(--apo-sp-2);
+  border: 1px solid rgba(194, 80, 46, 0.30);
+  border-radius: var(--apo-rounded-sm);
+}
+pre {
+  background: var(--apo-paper);
+  color: var(--apo-ink);
+  border: var(--apo-rule);
+  border-radius: var(--apo-rounded-md);
+  padding: var(--apo-sp-4) var(--apo-sp-5);
+  font-size: var(--apo-fs-2);
+  line-height: 1.55;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  padding: 0;
+}
+kbd {
+  background: var(--apo-paper);
+  color: var(--apo-ink);
+  border: var(--apo-rule);
+  border-bottom-width: 3px;
+  border-radius: var(--apo-rounded-sm);
+  padding: 1px var(--apo-sp-2);
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--apo-sp-4) 0;
+  background: var(--apo-paper);
+  border: var(--apo-rule);
+  border-radius: var(--apo-rounded-md);
+  overflow: hidden;
+  font-size: var(--apo-fs-2);
+}
+thead th {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--apo-primary);
+  color: var(--apo-paper);
+  text-align: left;
+  padding: var(--apo-sp-3) var(--apo-sp-4);
+  border-bottom: var(--apo-rule);
+}
+tbody td {
+  padding: var(--apo-sp-3) var(--apo-sp-4);
+  border-bottom: var(--apo-rule-soft);
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: rgba(138, 160, 121, 0.10); }
+
+/* ---------- Horizontal rule ---------- */
+hr {
+  border: 0;
+  height: 4px;
+  background: var(--apo-ink);
+  margin: var(--apo-sp-5) 0;
+  border-radius: 2px;
+}
+
+/* ---------- Images & Media ---------- */
+img {
+  max-width: 100%;
+  background: var(--apo-paper);
+  border: var(--apo-rule-soft);
+  border-radius: var(--apo-rounded-md);
+}
+img[alt~="plain"] { background: none; border: 0; border-radius: 0; }
+img[alt~="frame"] {
+  padding: var(--apo-sp-3);
+  border: var(--apo-rule);
+  background: var(--apo-paper);
+}
+
+/* `![center …](…)` — center the image on the slide.
+   Lift the parent paragraph's max-width: 65ch so margin:auto centers
+   against the slide edges. */
+p:has(> img[alt~="center"]) {
+  max-width: none;
+  text-align: center;
+}
+img[alt~="center"] {
+  display: block;
+  margin: var(--apo-sp-4) auto;
+}
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--apo-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--apo-muted);
+}
+
+section::after {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--apo-fs-1);
+  color: var(--apo-muted);
+  letter-spacing: 0.10em;
+}
+
+/* ---------- Layout Utilities ---------- */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--apo-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--apo-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--apo-sp-4); }
+
+/* Card primitive — inspired by the green-bordered recipe card */
+.card {
+  background: var(--apo-paper);
+  border: 6px solid var(--apo-secondary);
+  border-radius: var(--apo-rounded-md);
+  padding: var(--apo-sp-5);
+  color: var(--apo-ink);
+}
+.card.terra   { border-color: var(--apo-primary); }
+.card.dark    { border-color: var(--apo-accent); background: var(--apo-accent); color: var(--apo-paper); }
+.card.dark h1, .card.dark h2, .card.dark h3, .card.dark h4 { color: var(--apo-paper); }
+.card.dark h2 { color: var(--apo-primary); }
+
+/* Tag — the signature "POUR WITHOUT REGRET" / "SIP WITH INTENTION" shape */
+.tag {
+  display: inline-block;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: var(--apo-fs-2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--apo-primary);
+  color: var(--apo-paper);
+  padding: var(--apo-sp-3) var(--apo-sp-5);
+  border-radius: var(--apo-rounded-sm);
+  line-height: 1.1;
+}
+.tag.sage     { background: var(--apo-secondary); }
+.tag.dark     { background: var(--apo-accent); }
+.tag.success  { background: var(--apo-success);  }
+.tag.warning  { background: var(--apo-warning);  }
+.tag.danger   { background: var(--apo-danger);   }
+
+/* Luggage-tag variant — circular hole punch on the left edge */
+.tag.luggage {
+  position: relative;
+  padding-left: calc(var(--apo-sp-5) + var(--apo-sp-4));
+}
+.tag.luggage::before {
+  content: "";
+  position: absolute;
+  left: var(--apo-sp-3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: var(--apo-surface);
+  border-radius: 50%;
+}
+
+/* Button — solid CTA */
+.btn,
+a.btn {
+  display: inline-block;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: var(--apo-fs-2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--apo-primary);
+  color: var(--apo-paper);
+  border: 0;
+  border-radius: var(--apo-rounded-sm);
+  padding: var(--apo-sp-3) var(--apo-sp-5);
+  text-decoration: none;
+  min-height: 44px;             /* WCAG touch target */
+  line-height: 24px;
+  transition: transform 120ms ease, background 120ms ease;
+}
+a.btn:hover { background: var(--apo-accent); transform: translateY(-1px); }
+a.btn:active { transform: translateY(0); }
+a.btn:focus-visible { outline: 3px solid var(--apo-accent); outline-offset: 3px; }
+a.btn.sage  { background: var(--apo-secondary); }
+a.btn.sage:hover  { background: var(--apo-accent); }
+a.btn.ghost {
+  background: transparent;
+  color: var(--apo-primary);
+  border: 2px solid var(--apo-primary);
+}
+a.btn.ghost:hover { background: var(--apo-primary); color: var(--apo-paper); }
+
+/* Callouts */
+.note, .warn, .danger, .success {
+  border-radius: var(--apo-rounded-md);
+  padding: var(--apo-sp-4) var(--apo-sp-5);
+  margin: var(--apo-sp-3) 0;
+  background: var(--apo-paper);
+  border-left: 6px solid;
+}
+.note    { border-left-color: var(--apo-secondary); }
+.warn    { border-left-color: var(--apo-warning);   background: #FCEFD8; }
+.danger  { border-left-color: var(--apo-danger);    background: #FBE3E3; }
+.success { border-left-color: var(--apo-success);   background: #E5F2E0; }
+
+/* Recipe-card primitive — mimics the screenshot's MELON-IAL card */
+.recipe {
+  background: var(--apo-paper);
+  border: 6px solid var(--apo-secondary);
+  border-radius: var(--apo-rounded-md);
+  padding: var(--apo-sp-5) var(--apo-sp-6);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--apo-sp-5);
+  color: var(--apo-ink);
+}
+.recipe .title-tag {
+  display: inline-block;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: var(--apo-fs-3);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: var(--apo-primary);
+  color: var(--apo-paper);
+  padding: var(--apo-sp-2) var(--apo-sp-4);
+  border-radius: var(--apo-rounded-sm);
+  margin-bottom: var(--apo-sp-3);
+}
+.recipe .subtitle {
+  font-family: 'Source Serif 4', 'Newsreader', Georgia, serif;
+  font-style: italic;
+  color: var(--apo-muted);
+  font-size: var(--apo-fs-3);
+  margin-bottom: var(--apo-sp-4);
+}
+
+/* ---------- Slide Variants ---------- */
+
+/* Lead / Title slide */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--apo-surface);
+}
+section.lead h1 {
+  font-size: clamp(64px, 9vw, 96px);
+  border-bottom: 0;
+  padding-bottom: 0;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  margin-bottom: var(--apo-sp-4);
+}
+section.lead h2 {
+  font-family: 'Source Serif 4', 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--apo-muted);
+  font-size: var(--apo-fs-5);
+}
+
+/* Centered slide */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Dark / Inverted — burgundy hero (top half of the screenshot) */
+section.invert,
+section.dark {
+  background-color: var(--apo-accent);
+  background-image: none;
+  color: var(--apo-paper);
+}
+section.invert h1, section.dark h1 {
+  color: var(--apo-paper);
+  border-bottom-color: var(--apo-paper);
+}
+section.invert h2, section.dark h2 { color: var(--apo-primary); }
+section.invert h3, section.dark h3 { color: var(--apo-paper); }
+section.invert h4, section.dark h4 { color: var(--apo-paper); }
+section.invert h5, section.dark h5,
+section.invert h6, section.dark h6 { color: rgba(250, 245, 232, 0.65); }
+section.invert strong, section.dark strong { color: var(--apo-paper); }
+section.invert em, section.dark em { color: rgba(250, 245, 232, 0.85); }
+section.invert a, section.dark a {
+  color: var(--apo-primary);
+  border-bottom-color: var(--apo-primary);
+}
+section.invert blockquote, section.dark blockquote {
+  background: rgba(250, 245, 232, 0.06);
+  color: var(--apo-paper);
+  border-left-color: var(--apo-primary);
+}
+section.invert code, section.dark code {
+  background: rgba(250, 245, 232, 0.10);
+  color: var(--apo-paper);
+  border-color: rgba(250, 245, 232, 0.25);
+}
+section.invert pre, section.dark pre {
+  background: rgba(0, 0, 0, 0.30);
+  color: var(--apo-paper);
+  border-color: rgba(250, 245, 232, 0.25);
+}
+section.invert hr, section.dark hr { background: var(--apo-paper); }
+section.invert footer, section.dark footer,
+section.invert::after, section.dark::after { color: rgba(250, 245, 232, 0.65); }
+
+/* Quote slide */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.quote blockquote {
+  background: transparent;
+  border: 0;
+  border-left: 0;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.25;
+  max-width: 80%;
+  text-align: center;
+  padding: var(--apo-sp-6);
+  color: var(--apo-ink);
+}
+
+/* ---------- Marp <!-- fit --> support ----------
+   Marp Core auto-scales h1 via the <marp-auto-scaling> custom element.
+   The scaler measures the heading's available width to decide how to scale
+   text, so h1 must be a full-width block — not inline-block / fit-content. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Accessibility ---------- */
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  a.btn:hover, a.btn:active { transform: none; }
+  a, .btn { transition: none; }
+}
+
+/* Visible focus rings */
+:focus-visible {
+  outline: 3px solid var(--apo-primary);
+  outline-offset: 3px;
+  border-radius: var(--apo-rounded-sm);
+}
+
+/* High contrast — flatten subtle textures */
+@media (prefers-contrast: more) {
+  :root {
+    --apo-muted: #4A3D34;
+    --apo-rule-color: rgba(31, 20, 16, 0.40);
+  }
+  section { background-image: none; }
+  a { text-decoration: underline; text-underline-offset: 3px; }
+}
