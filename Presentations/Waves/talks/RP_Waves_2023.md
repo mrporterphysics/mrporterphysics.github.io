@@ -1,16 +1,7 @@
 ---
 title: Regents - Waves
 marp: true
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
-    gap: 1rem;
-  }
-    img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
-    }
+theme: doodle
 paginate: true
 math: mathjax
 

@@ -23,7 +23,9 @@
       "./PorterThemes/Schodack/energy.css",
       "./Presentations/Momentum/talks/momentum2.css",
       "./PorterThemes/Schodack/magazine.css",
-      "./PorterThemes/Schodack/neobrutalism.css"
+      "./PorterThemes/Schodack/neobrutalism.css",
+      "./PorterThemes/Schodack/artistic.css",
+      "./PorterThemes/Schodack/doodle.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"

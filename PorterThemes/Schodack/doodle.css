@@ -1,0 +1,641 @@
+/*
+@theme doodle
+
+Hand-drawn, sketch-like style — wobbly borders, handwritten type,
+imperfect lines on bright paper. Tokens follow the typeui.sh
+"doodle" design system.
+
+Body type pairs Delius Swash Caps (display) with Patrick Hand
+(readable handwriting) per the skill's "prioritize accessibility
+over novelty" rule — Delius Swash Caps is ornamental and fails
+WCAG legibility at body sizes.
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color */
+  --doodle-primary:   #49B6E5;
+  --doodle-secondary: #263D5B;
+  --doodle-success:   #16A34A;
+  --doodle-warning:   #D97706;
+  --doodle-danger:    #DC2626;
+  --doodle-surface:   #FFFFFF;
+  --doodle-text:      #111827;
+  --doodle-muted:     #6B7280;
+  --doodle-paper:     #FFFDF7;   /* warm paper tone */
+  --doodle-ink:       #1B2A3F;   /* slightly softer than pure black for "pen" feel */
+
+  /* Marker / highlighter accents */
+  --doodle-marker-yellow: rgba(255, 230, 109, 0.65);
+  --doodle-marker-pink:   rgba(255, 158, 196, 0.55);
+  --doodle-marker-blue:   rgba(73, 182, 229, 0.40);
+
+  /* Type scale: 14/16/18/24/32/40 */
+  --doodle-fs-1: 14px;
+  --doodle-fs-2: 16px;
+  --doodle-fs-3: 18px;
+  --doodle-fs-4: 24px;
+  --doodle-fs-5: 32px;
+  --doodle-fs-6: 40px;
+
+  /* Spacing scale: 4/8/12/16/24/32 */
+  --doodle-sp-1: 4px;
+  --doodle-sp-2: 8px;
+  --doodle-sp-3: 12px;
+  --doodle-sp-4: 16px;
+  --doodle-sp-5: 24px;
+  --doodle-sp-6: 32px;
+
+  /* Hand-drawn wobbly border-radii (the "I drew this" effect) */
+  --doodle-wobble-1: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  --doodle-wobble-2: 15px 255px 15px 225px / 225px 15px 255px 15px;
+  --doodle-wobble-3: 30px 6px 24px 8px / 8px 24px 6px 30px;        /* tighter, for buttons */
+  --doodle-wobble-4: 6px 22px 10px 28px / 26px 8px 22px 6px;       /* alternate tight */
+
+  /* Sketch strokes */
+  --doodle-stroke: 2.5px solid var(--doodle-ink);
+  --doodle-stroke-bold: 4px solid var(--doodle-ink);
+  --doodle-dash: 2.5px dashed var(--doodle-ink);
+}
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Patrick Hand', 'Caveat', 'Comic Sans MS', cursive;
+  background-color: var(--doodle-paper);
+  /* very subtle blue-line paper texture */
+  background-image:
+    linear-gradient(to bottom, transparent 31px, rgba(73,182,229,0.10) 32px),
+    radial-gradient(ellipse at 8% 6%, rgba(38,61,91,0.04), transparent 40%);
+  background-size: 100% 32px, 100% 100%;
+  color: var(--doodle-text);
+  font-size: var(--doodle-fs-3);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: var(--doodle-sp-6);
+  position: relative;
+}
+
+/* Margin-line on the left like a notebook */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 56px;
+  width: 1px;
+  background: rgba(220, 38, 38, 0.20);
+  pointer-events: none;
+  z-index: 0;
+}
+
+section > * { position: relative; z-index: 1; }
+
+/* ---------- Headings (40 / 32 / 24 / 18) ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Delius Swash Caps', 'Caveat', cursive;
+  font-weight: 400;
+  color: var(--doodle-secondary);
+  line-height: 1.1;
+  margin: 0 0 var(--doodle-sp-4) 0;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: var(--doodle-fs-6);
+  font-size: clamp(40px, 5.5vw, 56px);
+  color: var(--doodle-secondary);
+  display: inline-block;
+  position: relative;
+  padding: 0 var(--doodle-sp-2) var(--doodle-sp-2);
+  transform: rotate(-1.5deg);
+}
+/* Hand-drawn squiggly underline (SVG inline) */
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 14px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'><path d='M2 8 C 20 2, 40 12, 60 6 S 100 12, 120 6 S 160 12, 198 7' stroke='%2349B6E5' stroke-width='3' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+h2 {
+  font-size: var(--doodle-fs-5);
+  color: var(--doodle-secondary);
+  display: inline-block;
+  background: var(--doodle-marker-yellow);
+  padding: 2px var(--doodle-sp-3) 4px;
+  transform: rotate(-0.5deg);
+  /* subtle "highlighter overshoot" via box-shadow */
+  box-shadow: -3px 0 0 var(--doodle-marker-yellow), 3px 0 0 var(--doodle-marker-yellow);
+}
+
+h3 {
+  font-family: 'Delius', 'Caveat', cursive;
+  font-size: var(--doodle-fs-4);
+  font-weight: 700;
+  color: var(--doodle-primary);
+}
+
+h4 {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: var(--doodle-fs-4);
+  color: var(--doodle-secondary);
+}
+
+h5, h6 {
+  font-family: 'Patrick Hand', cursive;
+  font-size: var(--doodle-fs-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--doodle-muted);
+}
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--doodle-sp-4) 0;
+  max-width: 65ch;
+}
+
+strong {
+  font-weight: 700;
+  background: var(--doodle-marker-yellow);
+  color: var(--doodle-text);
+  padding: 0 var(--doodle-sp-1);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+em {
+  font-family: 'Caveat', cursive;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--doodle-primary);
+  font-size: 1.15em;
+}
+
+a {
+  color: var(--doodle-primary);
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  /* squiggly underline using SVG */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6' preserveAspectRatio='none'><path d='M0 3 C 12 0, 24 6, 36 3 S 60 0, 72 3 S 96 6, 100 3' stroke='%2349B6E5' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 14px 6px;
+  padding-bottom: 4px;
+}
+a:hover { color: var(--doodle-secondary); }
+a:focus-visible {
+  outline: 3px dashed var(--doodle-primary);
+  outline-offset: 4px;
+  border-radius: var(--doodle-wobble-3);
+}
+
+mark {
+  background: var(--doodle-marker-pink);
+  color: var(--doodle-text);
+  padding: 0 var(--doodle-sp-1);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: var(--doodle-sp-5);
+  margin: 0 0 var(--doodle-sp-4) 0;
+}
+
+ul { list-style: none; }
+ul > li {
+  position: relative;
+  padding-left: var(--doodle-sp-5);
+  margin-bottom: var(--doodle-sp-2);
+}
+/* Hand-drawn checkmark/star/dot bullets — rotate through depths */
+ul > li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--doodle-primary);
+  font-size: 1.1em;
+  transform: rotate(-8deg);
+}
+ul > li > ul > li::before { content: "✿"; color: var(--doodle-warning); transform: rotate(6deg); }
+ul > li > ul > li > ul > li::before { content: "•"; color: var(--doodle-secondary); transform: none; }
+
+ol { list-style: none; counter-reset: doodle-counter; }
+ol > li {
+  counter-increment: doodle-counter;
+  position: relative;
+  padding-left: var(--doodle-sp-6);
+  margin-bottom: var(--doodle-sp-3);
+}
+ol > li::before {
+  content: counter(doodle-counter) ".";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-family: 'Delius Swash Caps', cursive;
+  font-size: var(--doodle-fs-4);
+  color: var(--doodle-primary);
+  transform: rotate(-4deg);
+}
+
+li { font-size: var(--doodle-fs-3); }
+
+/* ---------- Blockquote ---------- */
+blockquote {
+  margin: var(--doodle-sp-5) 0;
+  padding: var(--doodle-sp-4) var(--doodle-sp-5) var(--doodle-sp-4) var(--doodle-sp-6);
+  background: var(--doodle-surface);
+  border: var(--doodle-stroke);
+  border-radius: var(--doodle-wobble-1);
+  font-family: 'Caveat', cursive;
+  font-weight: 500;
+  font-size: var(--doodle-fs-4);
+  color: var(--doodle-text);
+  position: relative;
+  transform: rotate(-0.7deg);
+  box-shadow: 4px 4px 0 -1px var(--doodle-primary);
+}
+blockquote::before {
+  content: "\201C";
+  font-family: 'Delius Swash Caps', cursive;
+  font-size: 64px;
+  line-height: 1;
+  position: absolute;
+  top: -10px;
+  left: 8px;
+  color: var(--doodle-primary);
+}
+blockquote p:last-child { margin-bottom: 0; }
+blockquote p { max-width: none; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.9em;
+  font-weight: 500;
+  background: rgba(73, 182, 229, 0.14);
+  color: var(--doodle-secondary);
+  padding: 1px var(--doodle-sp-2);
+  border: 1.5px solid var(--doodle-primary);
+  border-radius: var(--doodle-wobble-3);
+}
+pre {
+  background: var(--doodle-surface);
+  color: var(--doodle-ink);
+  padding: var(--doodle-sp-4) var(--doodle-sp-5);
+  border: var(--doodle-stroke);
+  border-radius: var(--doodle-wobble-1);
+  box-shadow: 5px 5px 0 -1px var(--doodle-secondary);
+  overflow-x: auto;
+  font-size: var(--doodle-fs-2);
+  line-height: 1.55;
+  transform: rotate(-0.3deg);
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  padding: 0;
+}
+kbd {
+  background: var(--doodle-paper);
+  color: var(--doodle-ink);
+  border: 2px solid var(--doodle-ink);
+  border-radius: var(--doodle-wobble-3);
+  padding: 1px var(--doodle-sp-2);
+  font-size: 0.85em;
+  font-weight: 600;
+  box-shadow: 2px 2px 0 var(--doodle-ink);
+}
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--doodle-sp-4) 0;
+  background: var(--doodle-surface);
+  border: var(--doodle-stroke);
+  border-radius: var(--doodle-wobble-1);
+  font-size: var(--doodle-fs-2);
+  overflow: hidden;
+  box-shadow: 4px 4px 0 -1px var(--doodle-primary);
+}
+th, td {
+  padding: var(--doodle-sp-3) var(--doodle-sp-4);
+  border-bottom: var(--doodle-dash);
+  text-align: left;
+}
+thead th {
+  font-family: 'Delius Swash Caps', cursive;
+  font-weight: 400;
+  font-size: var(--doodle-fs-3);
+  background: rgba(73, 182, 229, 0.18);
+  color: var(--doodle-secondary);
+  border-bottom: var(--doodle-stroke);
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: rgba(255, 230, 109, 0.20); }
+
+/* ---------- Horizontal rule (squiggly!) ---------- */
+hr {
+  border: 0;
+  height: 14px;
+  margin: var(--doodle-sp-5) 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'><path d='M2 8 C 20 2, 40 12, 60 6 S 100 12, 120 6 S 160 12, 198 7' stroke='%23263D5B' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* ---------- Images ---------- */
+img {
+  max-width: 100%;
+  border: var(--doodle-stroke);
+  border-radius: var(--doodle-wobble-2);
+  background: var(--doodle-surface);
+  padding: var(--doodle-sp-2);
+  box-shadow: 5px 5px 0 -1px var(--doodle-primary);
+  transform: rotate(-1deg);
+}
+img[alt~="plain"] { border: 0; box-shadow: none; padding: 0; transform: none; border-radius: 0; }
+img[alt~="straight"] { transform: none; }
+img[alt~="tilt-right"] { transform: rotate(2deg); }
+img[alt~="center"] { display: block; margin: var(--doodle-sp-4) auto; }
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: var(--doodle-fs-2);
+  color: var(--doodle-muted);
+}
+
+section::after {
+  font-family: 'Delius Swash Caps', cursive;
+  font-weight: 400;
+  font-size: var(--doodle-fs-2);
+  color: var(--doodle-secondary);
+  background: var(--doodle-marker-blue);
+  padding: 2px var(--doodle-sp-2);
+  border-radius: var(--doodle-wobble-3);
+  transform: rotate(2deg);
+}
+
+/* ---------- Layout Utilities ---------- */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--doodle-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--doodle-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--doodle-sp-4); }
+
+/* Sticky note card */
+.card,
+.sticky {
+  background: #FFF59D;     /* sticky-note yellow */
+  border: var(--doodle-stroke);
+  border-radius: var(--doodle-wobble-1);
+  padding: var(--doodle-sp-5);
+  box-shadow: 5px 5px 0 -1px var(--doodle-secondary);
+  transform: rotate(-1.2deg);
+  font-family: 'Patrick Hand', cursive;
+}
+.sticky.pink   { background: #FFCDD2; }
+.sticky.blue   { background: #BBDEFB; }
+.sticky.green  { background: #C8E6C9; }
+.sticky.orange { background: #FFE0B2; }
+.card.plain    { background: var(--doodle-surface); transform: rotate(-0.5deg); }
+
+/* Tag / sticker */
+.tag {
+  display: inline-block;
+  font-family: 'Delius Swash Caps', cursive;
+  font-size: var(--doodle-fs-1);
+  font-weight: 400;
+  background: var(--doodle-primary);
+  color: var(--doodle-surface);
+  padding: 4px var(--doodle-sp-3);
+  border: 2px solid var(--doodle-ink);
+  border-radius: var(--doodle-wobble-3);
+  transform: rotate(-3deg);
+  box-shadow: 2px 2px 0 var(--doodle-ink);
+  letter-spacing: 0.04em;
+}
+.tag.success { background: var(--doodle-success); }
+.tag.warning { background: var(--doodle-warning); }
+.tag.danger  { background: var(--doodle-danger); }
+.tag.muted   { background: var(--doodle-paper); color: var(--doodle-ink); }
+
+/* Button — drawn / handwritten */
+.btn,
+a.btn {
+  display: inline-block;
+  font-family: 'Delius Swash Caps', cursive;
+  font-weight: 400;
+  font-size: var(--doodle-fs-3);
+  background: var(--doodle-primary);
+  color: var(--doodle-surface);
+  border: var(--doodle-stroke);
+  border-radius: var(--doodle-wobble-3);
+  padding: var(--doodle-sp-2) var(--doodle-sp-5);
+  text-decoration: none;          /* override squiggly underline */
+  background-image: none;
+  min-height: 44px;               /* WCAG touch target */
+  line-height: 28px;
+  box-shadow: 4px 4px 0 var(--doodle-ink);
+  transition: transform 100ms ease, box-shadow 100ms ease;
+  letter-spacing: 0.04em;
+}
+a.btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--doodle-ink); }
+a.btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--doodle-ink); }
+a.btn:focus-visible { outline: 3px dashed var(--doodle-secondary); outline-offset: 3px; }
+a.btn.ghost {
+  background: transparent;
+  color: var(--doodle-primary);
+}
+
+/* Callouts (with hand-drawn frames) */
+.note, .warn, .danger, .success {
+  background: var(--doodle-surface);
+  border: var(--doodle-stroke);
+  border-radius: var(--doodle-wobble-1);
+  padding: var(--doodle-sp-4) var(--doodle-sp-5);
+  margin: var(--doodle-sp-3) 0;
+  position: relative;
+  box-shadow: 4px 4px 0 -1px;
+}
+.note    { box-shadow-color: var(--doodle-primary);  box-shadow: 4px 4px 0 -1px var(--doodle-primary); }
+.warn    { box-shadow: 4px 4px 0 -1px var(--doodle-warning); background: #FFF8E1; }
+.danger  { box-shadow: 4px 4px 0 -1px var(--doodle-danger);  background: #FFEBEE; }
+.success { box-shadow: 4px 4px 0 -1px var(--doodle-success); background: #E8F5E9; }
+
+/* ---------- Slide Variants ---------- */
+
+/* Lead / cover slide */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--doodle-paper);
+  background-image:
+    radial-gradient(circle at 88% 12%, rgba(73,182,229,0.16), transparent 25%),
+    radial-gradient(circle at 12% 88%, rgba(255,230,109,0.30), transparent 25%);
+}
+section.lead::before { display: none; }
+section.lead h1 {
+  font-size: clamp(56px, 9vw, 88px);
+  transform: rotate(-2deg);
+  color: var(--doodle-secondary);
+}
+section.lead h2 {
+  font-family: 'Caveat', cursive;
+  background: transparent;
+  box-shadow: none;
+  color: var(--doodle-muted);
+  font-size: var(--doodle-fs-5);
+  transform: rotate(0deg);
+  padding: 0;
+  font-weight: 500;
+}
+
+/* Centered slide */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h1 { transform: rotate(-1deg); }
+
+/* Quote slide */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.quote blockquote {
+  font-size: var(--doodle-fs-5);
+  font-size: clamp(28px, 4vw, 40px);
+  max-width: 80%;
+  background: var(--doodle-surface);
+}
+
+/* Notebook — full notebook lines, no margin rule */
+section.notebook {
+  background-image:
+    linear-gradient(to bottom, transparent 31px, rgba(73,182,229,0.20) 32px);
+  background-size: 100% 32px;
+}
+
+/* Sketchbook — clean paper, no lines */
+section.sketchbook {
+  background-image: none;
+}
+section.sketchbook::before { display: none; }
+
+/* Inverted / chalkboard */
+section.invert,
+section.chalkboard {
+  background-color: #1F2937;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1.4px);
+  background-size: 4px 4px;
+  color: #F9FAFB;
+}
+section.invert::before, section.chalkboard::before {
+  background: rgba(220, 38, 38, 0.30);
+}
+section.invert h1, section.chalkboard h1 { color: #F9FAFB; }
+section.invert h2, section.chalkboard h2 {
+  background: var(--doodle-marker-blue);
+  color: #F9FAFB;
+  box-shadow: -3px 0 0 var(--doodle-marker-blue), 3px 0 0 var(--doodle-marker-blue);
+}
+section.invert h3, section.chalkboard h3 { color: var(--doodle-primary); }
+section.invert h4, section.invert h5, section.invert h6,
+section.chalkboard h4, section.chalkboard h5, section.chalkboard h6 { color: #E5E7EB; }
+section.invert a, section.chalkboard a { color: #93C5FD; }
+section.invert strong, section.chalkboard strong { background: var(--doodle-marker-yellow); color: var(--doodle-text); }
+section.invert blockquote, section.chalkboard blockquote { background: #111827; color: #F9FAFB; }
+section.invert code, section.chalkboard code { background: rgba(73,182,229,0.20); color: #F9FAFB; }
+section.invert pre, section.chalkboard pre { background: #111827; color: #F9FAFB; }
+section.invert table, section.chalkboard table { background: #111827; color: #F9FAFB; }
+section.invert thead th, section.chalkboard thead th { background: rgba(73,182,229,0.25); color: #F9FAFB; }
+section.invert tbody td, section.chalkboard tbody td { border-bottom-color: rgba(255,255,255,0.20); }
+section.invert footer, section.chalkboard footer,
+section.invert::after, section.chalkboard::after { color: #D1D5DB; }
+
+/* Sky — primary color background */
+section.sky {
+  background-color: var(--doodle-primary);
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.45), transparent 8%),
+    radial-gradient(circle at 70% 20%, rgba(255,255,255,0.55), transparent 6%),
+    radial-gradient(circle at 85% 60%, rgba(255,255,255,0.40), transparent 9%);
+  color: var(--doodle-secondary);
+}
+section.sky::before { background: rgba(255,255,255,0.40); }
+section.sky h1, section.sky h2 { color: var(--doodle-secondary); }
+section.sky h2 { background: rgba(255,255,255,0.65); box-shadow: -3px 0 0 rgba(255,255,255,0.65), 3px 0 0 rgba(255,255,255,0.65); }
+section.sky h3 { color: var(--doodle-surface); }
+section.sky strong { background: rgba(255,255,255,0.75); }
+
+/* ---------- Accessibility ---------- */
+
+/* Reduced motion: drop tilts and transitions */
+@media (prefers-reduced-motion: reduce) {
+  h1, h2, h3, h4, h5, h6,
+  blockquote, pre, img, .card, .sticky, .tag,
+  ol > li::before, ul > li::before,
+  section.lead h1, section.center h1,
+  section::after {
+    transform: none !important;
+  }
+  a.btn:hover, a.btn:active { transform: none; }
+  a, .btn { transition: none; }
+}
+
+/* Visible focus rings */
+:focus-visible {
+  outline: 3px dashed var(--doodle-primary);
+  outline-offset: 3px;
+}
+
+/* High contrast: flatten markers and squiggles */
+@media (prefers-contrast: more) {
+  :root {
+    --doodle-marker-yellow: #FFE066;
+    --doodle-marker-pink:   #FFB4D1;
+    --doodle-marker-blue:   #B3E0F2;
+    --doodle-muted: #374151;
+  }
+  a {
+    background-image: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
+  h1::after, hr {
+    background: var(--doodle-secondary);
+    border-radius: 2px;
+    height: 4px;
+  }
+}
