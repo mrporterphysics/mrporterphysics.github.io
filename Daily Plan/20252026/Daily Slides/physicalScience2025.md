@@ -17,6 +17,34 @@ class: green
 
 ---
 
+#  ****
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+
+1. Finish Pivot -> Motion Graphs & Direction
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model acceleration with multi-direction velocity_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.05 **Physical Science**
 
 ##### **❓ of the 📅**: What is your favorite meal to cook and why?

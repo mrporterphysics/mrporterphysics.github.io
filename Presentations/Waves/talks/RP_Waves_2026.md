@@ -22,7 +22,6 @@ math: mathjax
 
 ---
 
-
 # Waves
 
 <div class="columns">
