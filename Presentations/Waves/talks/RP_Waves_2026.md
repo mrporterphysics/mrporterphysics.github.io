@@ -94,24 +94,31 @@ math: mathjax
 
 ---
 
+
 # Wave Classifications 
 
 <div class="columns">
 
 <div>
 
+<div class = "sticky">
+
 ## Mechanical Waves 
 
 - *Mechanical Waves* need a material medium to travel through 
     - i.e. medium such as water, string, air 
 </div>
+</div>
 
 <div>
+
+<div class = "sticky">
 
 ## Electromagnetic Waves 
 
 - *Electromagnetic Waves* (such a light and radio waves) are periodic distrubances in an electromagnetic field and do not need a medium to travel through 
     - How the sun light gets to us through space!
+</div>
 </div>
 
 ---
@@ -122,6 +129,8 @@ math: mathjax
 
 <div>
 
+<div class ="sticky">
+
 ## Longitudinal Waves 
 
 - Particles in a *longitudinal wave* vibrate parallel to the direction of the wave motion.
@@ -129,10 +138,11 @@ math: mathjax
     - Sound 
     - Seismic P-Waves
     - Slinky
-
+</div>
 </div>
 
 <div>
+<div class="sticky">
 
 ## Transverse Waves
 
@@ -144,7 +154,7 @@ math: mathjax
     - Human Waves
 
 </div>
-
+</div>
 
 ---
 
@@ -167,11 +177,20 @@ math: mathjax
 
 # Wave Characteristics 
 
+<div class="sticky">
 
+* The ***frequency*** ($f$) is the number of waves passing a point per unit time. 
+    - Frequency is measured in Hertz (Hz) or 1/s (s$^{-1}$)
+</div>
 
+<br>
+
+<div class="sticky">
 
 * The ***period*** of a wave ($T$) is the time for one complete cycle to pass a point
     - It is the reciprocal of frequency. $T = \frac{1}{f}$, where $T$ is the period in second and $f$ is the frequency in hertz.
+
+</div>
 
 ---
 

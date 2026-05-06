@@ -7,9 +7,11 @@ paginate: true
 math: mathjax
 ---
 
-# The Physics of... <!---fit--->
+<!--- _class: lead --->
 
-## Final project description and requirements  <!--fit--->
+# The Physics of... 
+# Final project description and requirements
+
 ---
 
 # Description 
@@ -27,6 +29,8 @@ math: mathjax
 
 # You will hand in:
 
+<div card
+
 1. Project Proposal 📝
 3. Final Lab Report 📄 
 4. Final Poster 📊
@@ -35,10 +39,15 @@ math: mathjax
 
 # Project Requirements:
 
+
+<div class = "card">
+
 1. You complete some mathematical modeling -> need to collect quantitative data and model the situation (No model found is a possible outcome)
 2. You design an experiment to limit uncertainty
 	- _Repeating experiment may be necessary_
 3. You _should_ collect more data than you would for an regular lab
+
+</div>
 
 ---
 
