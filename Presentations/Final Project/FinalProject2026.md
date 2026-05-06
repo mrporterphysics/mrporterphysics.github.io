@@ -29,11 +29,13 @@ math: mathjax
 
 # You will hand in:
 
-<div card
+<div class = "card">
 
 1. Project Proposal 📝
 3. Final Lab Report 📄 
 4. Final Poster 📊
+
+</div>
 
 ---
 
