@@ -63,7 +63,7 @@ section {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
   background-color: var(--art-surface);
   color: var(--art-text);
-  font-size: var(--art-fs-4);
+  font-size: var(--art-fs-5);
   font-weight: 400;
   line-height: 1.55;
   padding: var(--art-sp-6);
@@ -98,7 +98,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--art-fs-7);
-  font-size: clamp(36px, 5.5vw, 64px);
   background: var(--art-gradient);
   -webkit-background-clip: text;
   background-clip: text;
@@ -108,7 +107,7 @@ h1 {
   letter-spacing: 0.04em;
   padding-bottom: var(--art-sp-3);
   position: relative;
-  display: inline-block;
+  display: block;
 }
 h1::after {
   content: "";
@@ -120,6 +119,14 @@ h1::after {
   background: var(--art-gradient);
   border-radius: 2px;
 }
+
+/* ---------- Marp <!-- fit --> support ----------
+   Marp Core auto-scales h1 via the <marp-auto-scaling> custom element. The
+   scaler measures the heading's available width to decide how to scale text.
+   With display: inline-block (or fit-content) the heading sizes to its
+   content, leaving the scaler nothing to fit into. So h1 stays display: block
+   above, and the inner custom element fills its host. */
+marp-auto-scaling { display: block; width: 100%; }
 
 h2 {
   font-size: var(--art-fs-6);
@@ -245,7 +252,7 @@ ol > li::before {
   line-height: 1;
 }
 
-li { font-size: var(--art-fs-4); }
+li { font-size: var(--art-fs-5); }
 
 /* ---------- Blockquote (Pull-quote / gallery card) ---------- */
 blockquote {
@@ -370,7 +377,19 @@ img[alt~="frame"] {
     0 1px 2px rgba(17,24,39,0.06),
     0 12px 32px rgba(17,24,39,0.12);
 }
-img[alt~="center"] { display: block; margin: var(--art-sp-4) auto; }
+
+/* `![center …](…)` — center the image on the slide.
+   The image's <p> wrapper is capped at max-width: 65ch for readable text;
+   drop that cap when the paragraph hosts a centered image so margin:auto
+   centers against the slide. */
+p:has(> img[alt~="center"]) {
+  max-width: none;
+  text-align: center;
+}
+img[alt~="center"] {
+  display: block;
+  margin: var(--art-sp-4) auto;
+}
 
 /* ---------- Footer & Pagination ---------- */
 footer {

@@ -5,16 +5,15 @@ Hand-drawn, sketch-like style — wobbly borders, handwritten type,
 imperfect lines on bright paper. Tokens follow the typeui.sh
 "doodle" design system.
 
-Body type pairs Delius Swash Caps (display) with Patrick Hand
-(readable handwriting) per the skill's "prioritize accessibility
-over novelty" rule — Delius Swash Caps is ornamental and fails
-WCAG legibility at body sizes.
+Fonts:
+  - Delius Swash Caps  → h1/h2 and body (per spec body-md)
+  - Caveat             → decorative emphasis (em, blockquote, h3/h4)
+  - JetBrains Mono     → label-caps (h5/h6, footer) and code
 */
 
 @import 'default';
-@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Delius&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Caveat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');
 
 /* ---------- Design Tokens ---------- */
 :root {
@@ -26,6 +25,7 @@ WCAG legibility at body sizes.
   --doodle-danger:    #DC2626;
   --doodle-surface:   #FFFFFF;
   --doodle-text:      #111827;
+  --doodle-neutral:   #FFFFFF;   /* alias of surface, for token-API completeness */
   --doodle-muted:     #6B7280;
   --doodle-paper:     #FFFDF7;   /* warm paper tone */
   --doodle-ink:       #1B2A3F;   /* slightly softer than pure black for "pen" feel */
@@ -51,7 +51,11 @@ WCAG legibility at body sizes.
   --doodle-sp-5: 24px;
   --doodle-sp-6: 32px;
 
-  /* Hand-drawn wobbly border-radii (the "I drew this" effect) */
+  /* Rounded scale (per spec) */
+  --doodle-rounded-sm: 4px;
+  --doodle-rounded-md: 8px;
+
+  /* Hand-drawn wobbly border-radii (the "I drew this" effect; layered on top of the rounded scale) */
   --doodle-wobble-1: 255px 15px 225px 15px / 15px 225px 15px 255px;
   --doodle-wobble-2: 15px 255px 15px 225px / 225px 15px 255px 15px;
   --doodle-wobble-3: 30px 6px 24px 8px / 8px 24px 6px 30px;        /* tighter, for buttons */
@@ -65,7 +69,7 @@ WCAG legibility at body sizes.
 
 /* ---------- Base Slide ---------- */
 section {
-  font-family: 'Patrick Hand', 'Caveat', 'Comic Sans MS', cursive;
+  font-family: 'Delius Swash Caps', 'Caveat', cursive;
   background-color: var(--doodle-paper);
   /* very subtle blue-line paper texture */
   background-image:
@@ -73,7 +77,7 @@ section {
     radial-gradient(ellipse at 8% 6%, rgba(38,61,91,0.04), transparent 40%);
   background-size: 100% 32px, 100% 100%;
   color: var(--doodle-text);
-  font-size: var(--doodle-fs-3);
+  font-size: var(--doodle-fs-4);
   font-weight: 400;
   line-height: 1.5;
   padding: var(--doodle-sp-6);
@@ -106,9 +110,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--doodle-fs-6);
-  font-size: clamp(40px, 5.5vw, 56px);
   color: var(--doodle-secondary);
-  display: inline-block;
+  display: block;
   position: relative;
   padding: 0 var(--doodle-sp-2) var(--doodle-sp-2);
   transform: rotate(-1.5deg);
@@ -129,7 +132,7 @@ h1::after {
 h2 {
   font-size: var(--doodle-fs-5);
   color: var(--doodle-secondary);
-  display: inline-block;
+  display: block;
   background: var(--doodle-marker-yellow);
   padding: 2px var(--doodle-sp-3) 4px;
   transform: rotate(-0.5deg);
@@ -137,8 +140,19 @@ h2 {
   box-shadow: -3px 0 0 var(--doodle-marker-yellow), 3px 0 0 var(--doodle-marker-yellow);
 }
 
+/* ---------- Marp <!-- fit --> support ----------
+   Marp Core (v3+) auto-scales h1 via the <marp-auto-scaling> custom element
+   inside the heading. The scaler measures the heading's available width to
+   decide how to scale text. If the heading's width is content-sized
+   (inline-block, fit-content), the scaler has no width to fit into and the
+   text won't grow. So the heading must take the full slide width.
+
+   The custom element ships its own shadow-DOM SVG; we just need to make sure
+   it can fill its host. */
+marp-auto-scaling { display: block; width: 100%; }
+
 h3 {
-  font-family: 'Delius', 'Caveat', cursive;
+  font-family: 'Caveat', cursive;
   font-size: var(--doodle-fs-4);
   font-weight: 700;
   color: var(--doodle-primary);
@@ -151,9 +165,11 @@ h4 {
   color: var(--doodle-secondary);
 }
 
+/* label-caps: small, monospaced, uppercase — matches spec's label-caps role */
 h5, h6 {
-  font-family: 'Patrick Hand', cursive;
-  font-size: var(--doodle-fs-3);
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-size: var(--doodle-fs-1);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--doodle-muted);
@@ -250,7 +266,7 @@ ol > li::before {
   transform: rotate(-4deg);
 }
 
-li { font-size: var(--doodle-fs-3); }
+li { font-size: var(--doodle-fs-4); }
 
 /* ---------- Blockquote ---------- */
 blockquote {
@@ -373,7 +389,19 @@ img {
 img[alt~="plain"] { border: 0; box-shadow: none; padding: 0; transform: none; border-radius: 0; }
 img[alt~="straight"] { transform: none; }
 img[alt~="tilt-right"] { transform: rotate(2deg); }
-img[alt~="center"] { display: block; margin: var(--doodle-sp-4) auto; }
+
+/* `![center …](…)` — center the image on the slide.
+   The image's <p> wrapper has max-width: 65ch (for readable line length on text),
+   which would otherwise cap the centering bounds. Drop that cap when the
+   paragraph hosts a centered image so margin:auto centers against the slide. */
+p:has(> img[alt~="center"]) {
+  max-width: none;
+  text-align: center;
+}
+img[alt~="center"] {
+  display: block;
+  margin: var(--doodle-sp-4) auto;
+}
 
 /* ---------- Footer & Pagination ---------- */
 footer {
@@ -412,7 +440,7 @@ section::after {
   padding: var(--doodle-sp-5);
   box-shadow: 5px 5px 0 -1px var(--doodle-secondary);
   transform: rotate(-1.2deg);
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Delius Swash Caps', 'Caveat', cursive;
 }
 .sticky.pink   { background: #FFCDD2; }
 .sticky.blue   { background: #BBDEFB; }

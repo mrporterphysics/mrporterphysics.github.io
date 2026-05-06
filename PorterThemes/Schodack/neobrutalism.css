@@ -26,11 +26,11 @@ neobrutalism design system.
   --nb-muted:     #4B5563;
 
   /* Type scale: 13/15/17/21/27/35 */
-  --nb-fs-1: 13px;
-  --nb-fs-2: 15px;
-  --nb-fs-3: 17px;
-  --nb-fs-4: 21px;
-  --nb-fs-5: 27px;
+  --nb-fs-1: 17px;
+  --nb-fs-2: 19px;
+  --nb-fs-3: 23px;
+  --nb-fs-4: 27px;
+  --nb-fs-5: 31px;
   --nb-fs-6: 35px;
 
   /* Spacing scale: 4/8/12/16/24/32 */

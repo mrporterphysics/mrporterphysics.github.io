@@ -1,7 +1,7 @@
 ---
 title: Regents - Waves
 marp: true
-theme: 
+theme: artistic
 paginate: true
 math: mathjax
 

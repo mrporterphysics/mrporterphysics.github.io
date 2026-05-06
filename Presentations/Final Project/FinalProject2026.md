@@ -99,6 +99,10 @@ math: mathjax
 
 # Calendar
 
+<style scoped>
+table {font-size:17px;}
+</style>
+
 | Monday                                 | Tuesday                                | Wednesday                              | Thursday                               | Friday                                            |
 | -------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- | ------------------------------------------------- |
 | **May 4**<br>                          | **May 5**                              | **May 6**                              | **May 7**                              | **May 8**<br>Introduce Project & Initial Research |
