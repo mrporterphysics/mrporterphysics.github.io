@@ -55,9 +55,13 @@ math: mathjax
 
 # Ideas...
 
+<style scoped>
+li {font-size:17px;}
+</style>
+
 <div class="columns">
 
-<div>
+<div class= "card">
 
 - What is the Best Paper Airplane Design?
 - Ben Scott Ping Pong Ball Accelerator
@@ -74,7 +78,7 @@ math: mathjax
 
 </div>
 
-<div>
+<div class="card">
 
 - How does tension affect the speed of mechanical waves through a string?
 - Physics of the Human Body (i.e. Torque and the Human Knee Joint - Pivot)
@@ -97,6 +101,8 @@ math: mathjax
 
 # Timeline 
 
+<div class = "card">
+
 1. Submit Project Proposal and Prelab Questions (Google Form)
 2. Design Experiment 
 3. Collect Data (follow LabWrite Guide) 
@@ -105,6 +111,8 @@ math: mathjax
 6. Complete Data Review meeting with Porter
 7. Write Lab Report in $\LaTeX$ on [Overleaf](https://www.overleaf.com/) with [NCSU LabWrite Process](https://labwrite.ncsu.edu/)
 8. Turn Lab Report into a Poster with $\LaTeX$ and Overleaf
+
+</div>
 
 ---
 
@@ -134,13 +142,13 @@ table {font-size:17px;}
 
 # Paper Example
 
-![bg fit right](../Final%20Project/paper1.png)
+![bg right:70%](../Final%20Project/paper1.png)
 
 ---
 
 # Poster Example
 
-![bg fit right](../Final%20Project/poster1.png)
+![bg right:70%](../Final%20Project/poster1.png)
 
 
 ---
