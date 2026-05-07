@@ -15,6 +15,33 @@ math: mathjax
 
 ---
 
+# 2026.05.07 **AP Physics**
+
+##### **❓ of the 📅**: Is tap water better than bottled water?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Board Games
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.06 **AP Physics**
 
 ##### **❓ of the 📅**: What was your childhood dream job? Is it still your dream job?
