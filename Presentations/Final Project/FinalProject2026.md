@@ -53,7 +53,7 @@ math: mathjax
 
 ---
 
-# Ideas...
+# 💡 Ideas...
 
 <style scoped>
 li {font-size:17px;}
@@ -119,13 +119,12 @@ li {font-size:17px;}
 # Calendar
 
 <style scoped>
-table {font-size:17px;}
+table {font-size:20px;}
 </style>
 
 | Monday                                 | Tuesday                                | Wednesday                              | Thursday                               | Friday                                            |
 | -------------------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- | ------------------------------------------------- |
-| **May 4**<br>                          | **May 5**                              | **May 6**                              | **May 7**                              | **May 8**<br>Introduce Project & Initial Research |
-| **May 11**<br>No Class                 | **May 12**<br>Project Proposal         | **May 13**<br>Experimental Design      | **May 14**<br>Research/Data Collection | **May 15**<br>No Class                            |
+| **May 11**<br>No Class                 | **May 12**<br>Introduce Project & Initial Research      | **May 13**<br>Project Proposal         | **May 14**<br>Experimental Design | **May 15**<br>No Class                            |
 | **May 18**<br>Research/Data Collection | **May 19**<br>Research/Data Collection | **May 20**<br>Research/Data Collection | **May 21**<br>No Class                 | **May 22**<br>No School                           |
 | **May 25**<br>No School                | **May 26**<br>No School                | **May 27**<br>Data Analysis            | **May 28**<br>Data Analysis            | **May 29**<br>No Class                            |
 | **June 1**<br>Lab Report Drafting      | **June 2**<br>Lab Report Drafting      | **June 3**<br>Lab Report Drafting      | **June 4**<br>No Class                 | **June 5**<br>Peer Reviews                        |

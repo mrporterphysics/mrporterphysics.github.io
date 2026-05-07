@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.05.08 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite thing to do on vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Notes
+2. Tracking the Tides 🌊 Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motions of the moon_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.07 **Earth Science**
 
 ##### **❓ of the 📅**: Is tap water better than bottled water?
