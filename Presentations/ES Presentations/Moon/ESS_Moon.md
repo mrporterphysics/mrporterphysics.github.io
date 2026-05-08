@@ -885,7 +885,7 @@ TIMING: ~5 minutes
 
 **Solar Eclipse**
 - Phase: **New moon**
-- Geometry: Moon → Earth → ☀️
+- Geometry: ☀️ → Moon → Earth  
 - Earth's shadow? No — *Moon's* shadow on Earth
 - Duration: minutes
 - Visible from: small region

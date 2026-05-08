@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.05.08 **Regents Physics**
+
+##### **❓ of the 📅**: What's your favorite thing to do on vacation?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Parallel Circuits
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Take quiz_
+
+🥅 _Model parallel circuits_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.06 **Regents Physics**
 
 ##### **❓ of the 📅**: What was your childhood dream job? Is it still your dream job?
