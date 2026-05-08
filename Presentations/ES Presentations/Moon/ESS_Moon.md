@@ -519,6 +519,13 @@ EXPECTED RESPONSES: Some students may ask about daylight saving time, time zones
 
 # The horizon diagram
 
+![bg fit right](image-7.png)
+
+---
+
+
+# The horizon diagram
+
 <div class="columns">
 <div class="col">
 
@@ -543,6 +550,8 @@ Key reference points:
 **Celestial equator** — line across the sky from due east, through south at moderate altitude, to due west. Where the Sun and Moon are *on average*.
 
 </div>
+
+
 
 </div>
 </div>
@@ -624,6 +633,7 @@ KEY POINT TO SURFACE: A FULL MOON RISES AT SUNSET. This is the single most usefu
 
 This is the central tool of the lab — and the central skill of this unit.
 
+
 <!--
 TEACHER MOVE: Draw a triangle on the board with the three corners labeled "PHASE," "TIME," "LOCATION." Cover any one corner — students must determine it from the other two. This becomes the routine for the rest of the unit.
 ROUTINE: "Two of these, and you can find the third." Use this phrasing repeatedly.
@@ -648,6 +658,11 @@ TEACHER MOVE: This is the central application. Set it up as a mystery. "Holmes i
 ROUTINE: Have students fill in their guided notes step-by-step alongside.
 TRANSITION: "Let's set up the geometry."
 -->
+
+---
+
+![w:1100](image-5.png)
+
 
 ---
 
@@ -809,6 +824,8 @@ TRANSITION: "Now flip the geometry — what about lunar eclipses?"
 
 **Duration**: Up to several hours.
 
+![w:475](image-8.png)
+
 </div>
 <div class="col">
 
@@ -941,6 +958,13 @@ TEACHER MOVE: This is subtle. The Moon's gravity at Earth's surface is tiny. Wha
 COMMON MISCONCEPTION: Students think the Moon "pulls the water up." That's only half the story. The other bulge — on the far side — needs explanation.
 TRANSITION: "Two bulges, not one. Let's see why."
 -->
+---
+
+![bg fit](image-10.png)
+
+---
+
+![bg fit](image-9.png)
 
 ---
 
