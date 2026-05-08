@@ -960,11 +960,9 @@ TRANSITION: "Two bulges, not one. Let's see why."
 -->
 ---
 
-![bg fit](image-10.png)
+![bg fit](image-11.png)
 
----
 
-![bg fit](image-9.png)
 
 ---
 
@@ -1049,6 +1047,14 @@ TEACHER MOVE: This is a key opportunity to revisit gravity. The Sun has WAY more
 DIFFERENTIATION: For advanced students, the 1/r³ dependence of tidal force is a worthwhile derivation. For Regents-level, just state it.
 TRANSITION: "When does the Sun line up with the Moon? Look at our phase chart..."
 -->
+
+---
+
+![bg fit](image-10.png)
+
+---
+
+![bg fit](image-9.png)
 
 ---
 
