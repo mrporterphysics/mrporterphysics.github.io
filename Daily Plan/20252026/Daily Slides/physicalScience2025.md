@@ -17,6 +17,35 @@ class: green
 
 ---
 
+# 2026.05.11 **Physical Science**
+
+##### **❓ of the 📅**: What's the number one thing on your bucket list?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Introduction to Forces
+2. Pass the Water Lab
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model how changes in motion occur_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.07 **Physical Science**
 
 ##### **❓ of the 📅**: Is tap water better than bottled water?
