@@ -132,41 +132,74 @@ footer: 'Weather  •  Regents Earth Science  •  Mr. Porter'
 <!--
 Welcome to the unit. The driving question intentionally previews where we'll land on Day 10.
 Connect to the previous unit on Climate Change — this unit is the consequence of that one.
-Total time: 10 class periods. 9 labs. 4 ESRT pages.
+Total time: 10 class periods. 9 labs.
+NYSSLS anchors: HS-ESS2-5 (water's properties), HS-ESS2-8 (air mass movements & weather changes), HS-ESS3-5 (climate change forecasts & impacts), HS-ESS2-4 (energy flow & climate).
+2024 ESRT pages we will live in: 18 (Weather Map Symbols), 19 (Planetary Wind Belts + Lower Atmosphere Cross Section).
 -->
 
 ---
 
 # Unit Roadmap
 
-| Topic | Days | Lab |
-|-------|------|-----|
-| **Earth's Atmosphere** | 1–2 | Atmospheric Layers |
-| **Energy & Phase Change** | 2–3 | Phase Change of Water |
-| **Atmospheric Moisture** | 3–4 | Sling Psychrometer |
-| **Cloud Formation** | 5–6 | Cloud Base Altitude |
-| **Weather Instruments** | 6 | Station Models |
-| **Mapping Weather** | 7–8 | Isotherms / Isobars; Fronts |
-| **Severe Storms** | 9–10 | Hurricane Katrina; Killer Typhoon |
+| Topic | Days | Lab | NYSSLS Anchor |
+|-------|------|-----|---------------|
+| **Earth's Atmosphere** | 1–2 | Atmospheric Layers | HS-ESS2-8 |
+| **Energy & Phase Change** | 2–3 | Phase Change of Water | HS-ESS2-5 |
+| **Atmospheric Moisture** | 3–4 | Sling Psychrometer | HS-ESS2-5 |
+| **Cloud Formation** | 5–6 | Cloud Base Altitude | HS-ESS2-5 |
+| **Weather Instruments** | 6 | Station Models | HS-ESS2-8 |
+| **Mapping Weather** | 7–8 | Isotherms / Isobars; Fronts | HS-ESS2-8 |
+| **Severe Storms** | 9–10 | Hurricane Katrina; Killer Typhoon | HS-ESS3-5 |
 
 <!--
 Show the full path. Tell students: "Each topic builds on the last. By Day 10 we'll answer the driving question with evidence we've gathered ourselves."
-NYS standards: HS-ESS2-5, HS-ESS2-8, HS-ESS3-5.
+Note the NYSSLS PE column — these are the Performance Expectations the new (June 2025+) Regents exam is built around.
+Per the Educator Guide blueprint: Weather & Climate is 11–20% of the exam; Earth's Systems (where HS-ESS2-5 lives) is 20–31%; Human Sustainability (HS-ESS3-5) is 20–31%.
 -->
 
 ---
 
 <!-- _class: phase-title -->
 
-# Day 1 — 2
+# Day 1
 
+## Weather Basics &
 ## Earth's Atmosphere
 
 <!--
-PHASE GOAL: Students can describe the structure of Earth's atmosphere — composition, layers, and the temperature/pressure profile from ESRT page 14.
+PHASE GOAL: Students can describe the structure of Earth's atmosphere — composition, layers — and explain where weather energy comes from and why systems move W→E across the US.
 GROUPING: Whole class for instruction; pairs for ESRT exercises.
-TIMING: ~30 min lecture, then 30 min lab.
-MATERIALS: ESRT, guided notes, Lab #1 packet.
+TIMING: ~30 min lecture, then 10 min ESRT scavenger.
+NYSSLS: HS-ESS2-8 (movement and interactions of air masses).
+-->
+
+---
+
+# Where Does Weather Come From?
+
+<div class="key-idea">
+
+**Energy source for all weather:** the **Sun**.
+Unequal heating of Earth's surface drives every weather pattern.
+
+</div>
+
+In the United States, weather systems generally move from **west to east**.
+
+**Why?** We sit in the **prevailing westerlies** — a planetary wind belt between 30° and 60° N latitude. *(ESRT page 19.)*
+
+<div class="vocab">
+
+**Weather** — the state of the atmosphere at a certain place and time.
+**Climate** — the long-term average of weather in a region.
+
+</div>
+
+<!--
+TEACHER MOVE: Anchor everything to the Sun. When the curriculum gets complicated, return here.
+EXPECTED RESPONSES: Some students will say "the jet stream" — yes, but the jet stream is itself driven by unequal solar heating + Earth's rotation. Don't punish the answer; build on it.
+COMMON MISCONCEPTION: "Weather happens because of clouds." Reverse: clouds happen because of weather (because of energy flow + moisture).
+TRANSITION: We're going to look at the atmosphere itself first, then build up to systems.
 -->
 
 ---
@@ -221,6 +254,8 @@ The boundaries are called **pauses**:
 - strato**pause**
 - meso**pause**
 
+**ESRT pg 19** shows the **Cross Section Model of Earth's Lower Atmosphere** — troposphere + stratosphere with the **tropopause**, **polar front jet stream**, and **subtropical jet stream**.
+
 </div>
 </div>
 
@@ -230,37 +265,13 @@ The boundaries are called **pauses**:
 TEACHER MOVE: Walk through the temperature direction in each layer. Pause at the stratosphere — temperature INCREASES with altitude there because ozone absorbs UV. This is the only layer where this happens (besides the thermosphere).
 EXPECTED RESPONSES: "Why does the stratosphere get warmer going up?" — because ozone absorbs UV.
 COMMON MISCONCEPTION: "It gets colder forever as you go up." Actually it zigzags — the stratosphere and thermosphere both warm with altitude.
+ESRT NOTE: The 2024 ESRT no longer has the standalone "Properties of the Atmosphere vs Altitude" graph. The cross-section on pg 19 is what students reference now.
 DIFFERENTIATION: The mnemonic lands well for students who struggle to memorize order.
 -->
 
 ---
 
-# Reading ESRT Page 14
-
-<div class="esrt">
-
-**ESRT pg 14 — Selected Properties of Earth's Atmosphere**
-
-Shows altitude (km), temperature (°C), and pressure (atm) from sea level up.
-
-</div>
-
-<div class="warning">
-
-**Quick reads to memorize:**
-- Sea level: T ≈ 15 °C, P = 1 atm
-- Tropopause: T ≈ −55 °C, P ≈ 0.2 atm
-- Stratopause: T ≈ 0 °C (warms up because of ozone)
-- Mesopause: T ≈ −90 °C (coldest point in atmosphere)
-
-</div>
-
-<!--
-TEACHER MOVE: Open the ESRT to page 14 with students. Cold-call: "What's the temperature at 30 km?" "What's the pressure at the tropopause?"
-ROUTINE: ESRT-fluency cold call. Use this on every ESRT-anchored slide in the unit.
-KEY POINT: This is the most-tested ESRT page in the weather unit. Build fluency now.
-TRANSITION: "We just looked up pressure decreasing with altitude. What about temperature changes — what does it cost to change temperature versus change phase?" → next slide.
--->
+![center w:1200](image-1.png)
 
 ---
 
@@ -271,90 +282,99 @@ TRANSITION: "We just looked up pressure decreasing with altitude. What about tem
 ## Energy & Phase Changes
 
 <!--
-PHASE GOAL: Students can identify endothermic vs exothermic phase changes and apply Q = mL.
-This sets up the rest of the unit — every weather process involves water changing phase, releasing or absorbing latent heat.
+PHASE GOAL: Students explain how phase changes transfer energy and predict whether a process absorbs (endothermic) or releases (exothermic) heat.
+This is the conceptual fuel of the entire unit. Hurricanes run on it. Clouds form because of it.
+NYSSLS: HS-ESS2-5 — "how water's structure, in all of its phases, affects its properties."
+NOTE: The 2024 ESRT does NOT include latent heat values (Hf, Hv) or the Q = mΔT / Q = mHf / Q = mHv equations. Students still need to understand these conceptually but won't look them up on the ESRT.
 -->
 
 ---
 
 # Phase Changes of Water
 
-Water exists in three phases on Earth — and weather is driven by the energy moved during phase changes.
+<div class="columns">
+<div class="col">
 
-<div class="key-idea">
-
-**Endothermic** (absorbs heat — surroundings cool):
+**Endothermic** (absorbs energy):
 - Melting (solid → liquid)
-- Vaporization (liquid → gas)
+- Evaporation (liquid → gas)
 - Sublimation (solid → gas)
 
-**Exothermic** (releases heat — surroundings warm):
+</div>
+<div class="col">
+
+**Exothermic** (releases energy):
 - Freezing (liquid → solid)
 - Condensation (gas → liquid)
 - Deposition (gas → solid)
 
 </div>
+</div>
+
+<div class="key-idea">
+
+**The energy used in a phase change does not change temperature** — it goes into rearranging molecular bonds. This hidden energy is called **latent heat**.
+
+</div>
 
 <!--
-TEACHER MOVE: Demo if possible — wet a paper towel, fan it, students put their hand on it. Why cold? Evaporation absorbs heat from your skin.
-COMMON MISCONCEPTION: "Heat and temperature are the same thing." They aren't. During a phase change, energy goes into BREAKING bonds, not into raising temperature.
-KEY POINT TO SURFACE: The energy released when water vapor CONDENSES (forms clouds) is the engine of every storm we'll study.
+TEACHER MOVE: Demo a phase change at the front bench — ice melting in a beaker while you read out a thermometer that stays at 0°C until all the ice is gone.
+KEY POINT: This is the conceptual heart of HS-ESS2-5. Water's three phases each affect Earth materials and surface processes differently because of the energy they carry/release at the boundaries.
+EXPECTED CHALLENGE: "If energy is going in, why doesn't the temperature go up?" — Energy is breaking intermolecular bonds, not increasing kinetic energy.
 -->
 
 ---
 
-# Latent Heat — ESRT Page 1
+# Latent Heat Values
 
-<div class="esrt">
+<div class="key-idea">
 
-**Heat of fusion** (water): $H_f = 334$ J/g
-*Energy to melt 1 g of ice at 0 °C.*
+**Heat of fusion (H_f):** 334 J/g
+Energy to melt 1 g of ice at 0 °C, OR released when 1 g of water freezes.
 
-**Heat of vaporization** (water): $H_v = 2260$ J/g
-*Energy to vaporize 1 g of water at 100 °C.*
+**Heat of vaporization (H_v):** 2260 J/g
+Energy to evaporate 1 g of water at 100 °C, OR released when 1 g of water vapor condenses.
 
 </div>
 
-The total heat for a phase change:
+<div class="warning">
 
-$$Q = m \cdot H_f \quad \text{or} \quad Q = m \cdot H_v$$
+**These values are NOT on the 2024 ESRT.** You need to know them — or recognize them in problem data.
 
-The total heat for a temperature change:
+Note: $H_v$ is nearly **7× larger** than $H_f$. That's why condensation in clouds releases enormous energy — and powers hurricanes.
 
-$$Q = m \cdot c \cdot \Delta T$$
+</div>
 
-(For liquid water, $c = 4.18$ J/g°C.)
+**Equations:**
+$$Q = m \cdot H_f \quad\text{(melting/freezing)}$$
+$$Q = m \cdot H_v \quad\text{(boiling/condensing)}$$
 
 <!--
-TEACHER MOVE: Walk through one combined problem on the board. Example: How much heat to take 50 g of ice at -10°C to water at 25°C? Three steps: warm ice (using c_ice = 2.1), melt ice (using H_f), warm water (using c_water).
-EXPECTED RESPONSES: Students often forget the c values are different for ice/water/steam.
-DIFFERENTIATION: Provide a worked example template for struggling students.
-TRANSITION: "If condensing water releases 2260 J/g, why does that matter for clouds and storms?" → preview hurricane discussion.
+TEACHER MOVE: Explicitly note that the 2024 ESRT dropped the equations table that was on pg 1 of older ESRTs. Students used to look these up. Now they need familiarity.
+KEY POINT: The 7x ratio is what makes hurricanes possible. Every gram of water vapor that condenses in an eyewall releases 2260 J. Multiply by tons per second.
+TRANSITION: We'll come back to this when we get to hurricanes on Day 9.
 -->
 
 ---
 
 # Worked Example — Latent Heat
 
-> **Q:** How much energy is released when 200 g of water vapor condenses at 100 °C?
+> **Q:** How much energy is released when 50 g of water vapor condenses in a cloud?
 
-**Step 1.** Identify what's happening: condensation = phase change → use $Q = mH_v$.
+**Step 1.** Identify the phase change. Vapor → liquid = **condensation**, which is **exothermic**.
+**Step 2.** Use $Q = m \cdot H_v$.
+**Step 3.** $Q = 50 \text{ g} \times 2260 \text{ J/g} = \mathbf{113{,}000 \text{ J}}$.
 
-**Step 2.** Plug in:
+<div class="key-idea">
 
-$$Q = (200 \text{ g})(2260 \text{ J/g}) = 452{,}000 \text{ J}$$
-
-**Step 3.** Sign: condensation is *exothermic*, so this energy is **released** to the surroundings.
-
-<div class="warning">
-
-This is exactly what happens inside a thunderstorm or hurricane — water vapor condensing in updrafts dumps massive amounts of heat back into the air, fueling the storm.
+**Sanity check:** 113 kJ from 50 g of water. A liter of water = 1000 g, so condensing 1 L of vapor releases **2.26 million joules** — enough to lift a small car 200 m. *This is why storms are powerful.*
 
 </div>
 
 <!--
-TEACHER MOVE: After working it, ask students to convert 452,000 J to kilojoules (452 kJ) and to relate it to a familiar quantity (about enough energy to warm 1 kg of water by 100°C).
-DISCUSSION: Land the conceptual punchline — phase change is the energy currency of the atmosphere.
+TEACHER MOVE: Drill the sign convention — students often write a negative for exothermic. For these problems, just report magnitude and label the process as releasing energy.
+COMMON MISCONCEPTION: "Condensation absorbs heat because water is heating up." Wrong direction — condensation RELEASES heat into the surrounding atmosphere.
+TRANSITION: We've shown phase changes release/absorb energy. Now let's connect that to humidity.
 -->
 
 ---
@@ -366,8 +386,9 @@ DISCUSSION: Land the conceptual punchline — phase change is the energy currenc
 ## Atmospheric Moisture
 
 <!--
-PHASE GOAL: Students can use the sling psychrometer + ESRT pg 12 to determine dew point and relative humidity.
-This is the most procedurally demanding section — anchor in repetition.
+PHASE GOAL: Students use the sling psychrometer (lab) to determine dew point and relative humidity from wet-bulb depression, and explain the relationship between temperature, dew point, and saturation.
+NYSSLS: HS-ESS2-5 (water properties affecting weather).
+IMPORTANT: 2024 ESRT does NOT include the dewpoint/RH tables that used to be on pg 12. Students learn the relationship through lab data, not table lookup.
 -->
 
 ---
@@ -421,56 +442,31 @@ A *zero* depression → *saturated* air (100% RH, dew point reached).
 <!--
 TEACHER MOVE: Demonstrate spinning the psychrometer. Show what happens when you breathe on the wet bulb (wet-bulb temperature rises — humid).
 SAFETY: Students must check their swing space before whirling these around.
-TRANSITION: "Now we use the readings to look up dew point and RH on ESRT page 12."
+ESRT NOTE: The 2024 ESRT removed the dewpoint/RH lookup tables. Students determine RH conceptually from depression size (or use a provided table in lab — but it's not on the reference tables anymore).
+TRANSITION: "If air is saturated and cools further, what happens?" → leads to clouds.
 -->
 
 ---
 
-# ESRT Page 12 — Dew Point and RH Tables
+# Three Key Relationships
 
-<div class="esrt">
+<div class="key-idea">
 
-Two charts on the same page:
-- **Top chart:** Dew Point (°C). Rows = dry-bulb T. Columns = wet-bulb depression.
-- **Bottom chart:** Relative Humidity (%). Same row/column structure.
+**1. Temperature vs RH (at constant moisture)**
+As temperature ↑ , RH ↓. **Inverse** relationship — warmer air can hold more, so a fixed amount of moisture becomes a smaller percentage of capacity.
 
-</div>
+**2. Dew point vs Moisture content**
+As dew point ↑, moisture content ↑. **Direct** relationship — dew point is a direct measure of how much water vapor is actually in the air.
 
-> **Q:** Dry bulb = 20 °C, wet bulb = 17 °C. Find dew point and RH.
-
-**Step 1.** Wet-bulb depression = 20 − 17 = **3 °C**.
-**Step 2.** Top table, row 20, column 3 → Dew point ≈ **14 °C**.
-**Step 3.** Bottom table, row 20, column 3 → RH ≈ **74 %**.
-
-<!--
-TEACHER MOVE: Project ESRT page 12. Walk through each step with the cursor on the actual page. Don't paraphrase the tables — students must SEE them.
-COMMON MISCONCEPTION: Students try to look up the wet-bulb temperature directly. Always compute the DEPRESSION first.
-ROUTINE: Have students do the next two on whiteboards and hold up.
--->
-
----
-
-# Quick Practice — Try These
-
-| # | Dry-Bulb (°C) | Wet-Bulb (°C) | Depression | Dew Point | RH (%) |
-|---|---------------|---------------|------------|-----------|--------|
-| 1 | 22            | 18            | ?          | ?         | ?      |
-| 2 | 16            | 11            | ?          | ?         | ?      |
-| 3 | 24            | 24            | ?          | ?         | ?      |
-
-<div class="warning">
-
-For #3: depression = 0 → air is saturated → dew point = dry-bulb temperature → RH = 100%.
+**3. Air temperature − Dew point**
+As (T_air − T_dewpoint) → 0, probability of precipitation ↑.
+When they're equal, air is saturated.
 
 </div>
 
 <!--
-TEACHER MOVE: Give students 3 minutes. Then take volunteers at the board.
-ANSWERS:
-1. Depression 4 → Dew ~15°C → RH ~67%
-2. Depression 5 → Dew ~6°C → RH ~52%
-3. Depression 0 → Dew = 24°C → RH = 100%
-DIFFERENTIATION: For struggling students, pair with strong students for the first one only.
+TEACHER MOVE: This slide is dense. Go one relationship at a time, with an example for each. RH inverse: a 60°F room with 50% RH cooled to 50°F has higher RH even though the moisture didn't change. Dew point direct: a desert at noon might have dew point of 0°F; the Gulf Coast at noon has dew point of 75°F.
+EXPECTED CHALLENGE: Students conflate "moisture content" with "humidity %." Dew point is the better metric for actual moisture.
 -->
 
 ---
@@ -482,7 +478,8 @@ DIFFERENTIATION: For struggling students, pair with strong students for the firs
 ## Cloud Formation
 
 <!--
-PHASE GOAL: Students explain why clouds form (rising air cools adiabatically until reaching dew point) and use the lapse-rate graph to find cloud base altitude.
+PHASE GOAL: Students explain why clouds form (rising air cools adiabatically until reaching dew point) and use the lapse-rate idea to estimate cloud base altitude.
+NOTE: 2024 ESRT no longer has the cloud base altitude graph. Concept still tested; lookup is not.
 -->
 
 ---
@@ -499,9 +496,12 @@ PHASE GOAL: Students explain why clouds form (rising air cools adiabatically unt
 
 When all three are present, water vapor condenses into tiny droplets — a cloud.
 
+**Clouds form most readily when air is rising, cool, and contains nuclei** — and when the temperature reaches the **dew point**.
+
 <!--
 TEACHER MOVE: Some students think clouds form spontaneously when humidity reaches 100%. They actually need a SURFACE — that's the role of condensation nuclei.
 INTERESTING NOTE: That's why cloud seeding (silver iodide) works — adding nuclei.
+NATURAL PROCESS NOTE: Precipitation is the natural process that cleans nuclei out of the atmosphere.
 -->
 
 ---
@@ -520,65 +520,43 @@ This is called **adiabatic cooling** (no heat is exchanged with the surroundings
 - **Dry adiabatic rate:** ~10 °C per km (dry-bulb T drops as air rises)
 - **Dew-point lapse rate:** ~2 °C per km (dew point drops more slowly)
 
+Because both fall but at different rates, they **converge** — and where they meet, **clouds form**.
+
 </div>
 
 <!--
-TEACHER MOVE: This is the critical concept. Use a bicycle pump analogy — when you compress air the pump gets hot; when you let it expand it cools.
+TEACHER MOVE: Use a bicycle pump analogy — when you compress air the pump gets hot; when you let it expand it cools.
 KEY POINT: The dew point falls more slowly than the dry-bulb temperature, so they CONVERGE as the parcel rises. Where they meet → cloud base.
 COMMON MISCONCEPTION: "The atmosphere gets cooler, so the air rising into it cools by mixing." Wrong — adiabatic = no heat exchange.
 -->
 
 ---
 
-# Finding Cloud Base — ESRT Page 12
-
-<div class="esrt">
-
-The **Generalized Graph for Determining Cloud Base Altitude** uses the two lapse rates.
-
-**Procedure:**
-1. From the surface dry-bulb T, follow the dry adiabat (steeper line) upward.
-2. From the surface dew point, follow the dew-point line (shallower) upward.
-3. They meet at the **cloud base altitude**.
-
-</div>
+# Estimating Cloud Base Altitude
 
 <div class="warning">
 
-**Faster way (algebra, when both rates are linear):**
+The 2024 ESRT no longer provides a cloud base graph. We estimate cloud base from the gap between surface temperature and surface dew point:
 
 $$h_{\text{cloud base}} \approx \frac{T_{\text{surface}} - T_{\text{dewpoint, surface}}}{8 \text{ °C/km}}$$
 
-(8 °C/km = 10 − 2; the rate at which the gap closes per km.)
+(8 °C/km = 10 − 2; the rate at which the gap closes per km of lift.)
 
 </div>
 
-<!--
-TEACHER MOVE: Walk through one example on the projected ESRT graph. T = 25°C, dewpoint = 15°C → gap = 10°C → cloud base ~1.25 km.
-TRANSITION: Tomorrow's lab will give students three cases to do on their own.
--->
+> **Q:** Surface T = 30 °C, dew point = 14 °C. At what altitude do clouds form?
 
----
-
-# Worked Example — Cloud Base
-
-> **Q:** Surface dry-bulb T = 30 °C, dew point = 14 °C. At what altitude do clouds form?
-
-**Method 1 (graph):** Plot both points at altitude 0 on ESRT pg 12. The lines converge near **2 km**.
-
-**Method 2 (algebra):**
-
-$$h \approx \frac{30 - 14}{8} = \frac{16}{8} = 2 \text{ km}$$
+$$h \approx \frac{30 - 14}{8} = 2 \text{ km}$$
 
 <div class="key-idea">
 
-**Both methods agree** — about 2 km, or roughly 6,500 feet.
+**The closer surface T and dew point are**, the **lower** the cloud base — and the more likely precipitation is at the surface.
 
 </div>
 
 <!--
-TEACHER MOVE: Note that the algebra method is *not* on the Regents — only the graph method counts for credit. But the algebra is a useful sanity check.
-EXPECTED CHALLENGE: Students may try to use just one lapse rate. Both are needed because BOTH temperatures fall as the parcel rises.
+TEACHER MOVE: Walk through the example. Note that this technique is a teaching tool — the 2024 exam won't ask students to compute this from a graph because the graph is gone. But the underlying relationship (lower temp-dewpoint gap → lower clouds → more precip likelihood) is squarely on HS-ESS2-8.
+DIFFERENTIATION: Strong students can do the algebra; struggling students just need the qualitative relationship.
 -->
 
 ---
@@ -591,7 +569,8 @@ EXPECTED CHALLENGE: Students may try to use just one lapse rate. Both are needed
 ## Station Models
 
 <!--
-PHASE GOAL: Students identify weather instruments and decode the standard station model (ESRT pg 13).
+PHASE GOAL: Students identify weather instruments and decode the standard station model (ESRT pg 18 in 2024 edition).
+NYSSLS: HS-ESS2-8 — using tools to collect weather data.
 -->
 
 ---
@@ -622,11 +601,11 @@ EXPECTED STUDENT RESPONSE: "Why is it named that way?" — historically, sailors
 
 ---
 
-# Decoding a Station Model — ESRT Pg 13
+# Decoding a Station Model — ESRT Pg 18
 
 <div class="esrt">
 
-A station model is a compact way to plot many weather variables at one location.
+A station model is a compact way to plot many weather variables at one location. **The full key is on ESRT page 18** in the 2024 edition.
 
 </div>
 
@@ -655,8 +634,9 @@ A barb pointing *north* with two flags = north wind at 20 knots.
 </div>
 
 <!--
-TEACHER MOVE: Project a station model and decode all variables on the spot. Then have students try.
+TEACHER MOVE: Project ESRT page 18 from the 2024 edition. Walk through each variable on a sample station.
 CONFERRING QUESTION: "Where is the wind coming from? Where is it going?"
+TEMPERATURE UNITS: The ESRT station model shows temperature in °F — Regents tradition; not a typo.
 -->
 
 ---
@@ -673,12 +653,45 @@ To decode:
 
 </div>
 
-> **Why?** Atmospheric pressure varies between roughly 950 and 1050 mb. The leading "9" or "10" is implied to save space.
+**ESRT pg 18 examples (2024 edition):**
+- `410` → 1041.0 mb
+- `103` → 1010.3 mb
+- `987` → 998.7 mb
+- `872` → 987.2 mb
 
 <!--
-TEACHER MOVE: This is the trickiest single rule on ESRT pg 13. Drill it. Have students decode 5 in a row on whiteboards: 234, 891, 002, 045, 762.
+TEACHER MOVE: This is the trickiest single rule on ESRT pg 18. Drill it. Have students decode 5 in a row on whiteboards: 234, 891, 002, 045, 762.
 ANSWERS: 1023.4, 989.1, 1000.2, 1004.5, 976.2
 COMMON MISTAKE: Students forget the decimal before the last digit. Always 3 digits → 4-digit number with decimal.
+WHY: Atmospheric pressure varies between roughly 950 and 1050 mb. The leading "9" or "10" is implied to save space.
+-->
+
+---
+
+# Pressure & Wind — Core Relationships
+
+<div class="key-idea">
+
+**Wind blows from HIGH pressure to LOW pressure.**
+
+**As air pressure increases, density increases.** Higher pressure means more molecules packed into the same volume.
+
+**Pressure gradient drives wind speed** — the steeper the pressure gradient (closer isobars on a map), the stronger the wind.
+
+</div>
+
+<div class="vocab">
+
+**The wind/wave relationship:**
+The stronger the wind, the higher the waves.
+Wind transfers energy to water surface — the connection between atmosphere and ocean.
+
+</div>
+
+<!--
+TEACHER MOVE: Two anchor relationships — pressure → density, and gradient → wind speed. Both come up on Regents exams in different guises.
+EXPECTED CONFUSION: "Why does air flow from high to low? Why not the other way?" — Pressure is force per area. High-pressure air is being pushed; it flows toward where there's less resistance (lower pressure).
+TRANSITION: We'll see this play out in air masses (high vs low pressure systems) next.
 -->
 
 ---
@@ -687,11 +700,12 @@ COMMON MISTAKE: Students forget the decimal before the last digit. Always 3 digi
 
 # Day 7 — 8
 
-## Air Masses &
+## Air Masses, Pressure Systems &
 ## Weather Fronts
 
 <!--
-PHASE GOAL: Students identify the major air masses affecting NYS and predict weather changes associated with each front type.
+PHASE GOAL: Students identify the major air masses affecting NYS, predict weather changes associated with each front type, and explain weather using H/L systems and planetary wind belts.
+NYSSLS: HS-ESS2-8 (air mass interactions → weather changes). This is the central PE of the unit.
 -->
 
 ---
@@ -721,6 +735,31 @@ EXPECTED RESPONSE: "What about hurricanes?" — they're tropical cyclones, not a
 
 ---
 
+# High and Low Pressure Systems
+
+| | **Low Pressure (L)** | **High Pressure (H)** |
+|---|---|---|
+| **Air temperature** | warm | cool |
+| **Air motion** | rising | sinking |
+| **Clouds?** | clouds, often precipitation | clear skies |
+| **NH wind rotation** | counterclockwise | clockwise |
+| **NH wind direction** | toward center (converging) | away from center (diverging) |
+| **Weather** | stormy | fair |
+
+<div class="key-idea">
+
+**Mnemonic:** *Lows = lousy weather. Highs = happy weather.*
+
+</div>
+
+<!--
+TEACHER MOVE: This 6-row table replaces the older paragraph format from the prior slide version. Pull it up alongside the H/L symbols from ESRT pg 18.
+KEY POINT: The Coriolis effect (Earth's rotation) deflects converging/diverging air, producing the spiral rotation patterns. In the Southern Hemisphere everything reverses.
+COMMON MISCONCEPTION: "Air goes UP into a low because it's lighter." No — air rises in a low because it's CONVERGING from all sides and has nowhere else to go.
+-->
+
+---
+
 # Weather Fronts — The Boundaries
 
 A **front** is the boundary between two air masses of different properties.
@@ -740,46 +779,49 @@ Four major front types:
 </div>
 
 <!--
-TEACHER MOVE: Use ESRT pg 13 to show the symbols. Cold front = blue triangles pointing in direction of motion. Warm front = red half-circles. Stationary = both, on opposite sides. Occluded = purple, alternating.
+TEACHER MOVE: Use ESRT pg 18 to show the symbols. Cold front = blue triangles pointing in direction of motion. Warm front = red half-circles. Stationary = both, on opposite sides. Occluded = purple, alternating.
 KEY POINT: At every front, the warm air is FORCED UP. Lifting → adiabatic cooling → cloud formation. Fronts make weather.
 -->
 
 ---
 
-# Front Symbols (ESRT pg 13)
+# Front Symbols — Identify A through E
+
+<div class="esrt">
+
+**On ESRT page 18, four front symbols appear.** On a weather map, you must identify each by its symbol AND its direction of motion (where applicable).
+
+</div>
 
 <div class="columns">
 <div class="col">
 
-**Cold front**
-Blue line + filled triangles
-Triangles point in direction of front's motion.
+**Cold front** — blue line + filled triangles
+*Triangles point in direction of motion.*
 
-**Warm front**
-Red line + filled semicircles
-Semicircles point in direction of motion.
+**Warm front** — red line + filled semicircles
+*Semicircles point in direction of motion.*
 
 </div>
 <div class="col">
 
-**Stationary front**
-Alternating triangles (blue) and semicircles (red), pointing OPPOSITE directions.
+**Stationary front** — alternating triangles (blue) and semicircles (red), pointing **OPPOSITE** directions
 
-**Occluded front**
-Purple line, alternating triangles & semicircles pointing the SAME direction.
+**Occluded front** — purple line, alternating triangles & semicircles pointing the **SAME** direction
 
 </div>
 </div>
 
 <div class="warning">
 
-On the Regents, you'll be asked to identify front type from the symbols, predict what air mass is on each side, and describe the weather change as the front passes.
+**Regents-style task:** Given a map with fronts labeled A, B, C, D, E — identify each front type, the direction of motion, and which air mass is on each side.
 
 </div>
 
 <!--
-TEACHER MOVE: Drawing practice — give students 4 unlabeled lines and have them add the correct symbols.
+TEACHER MOVE: Walk through the front symbol identification practice in guided notes. Students should be able to look at a labeled map and decode 5 fronts in under 2 minutes.
 DIFFERENTIATION: Color-coding the symbols by front type helps visual learners.
+HS-ESS2-8 LINK: This is core to "communicate information about air mass movements and weather changes."
 -->
 
 ---
@@ -808,38 +850,66 @@ CONFERRING QUESTION: "Why does the wind shift direction as the front passes?" �
 
 ---
 
-# High and Low Pressure Systems
+# Local Winds — Sea Breeze vs Land Breeze
 
 <div class="columns">
 <div class="col">
 
-**Low pressure (L):**
-- Air converges at surface, rises in the center
-- Rising air cools → clouds → precipitation
-- **Stormy, cloudy weather**
-- In Northern Hemisphere: counterclockwise inflow
+**Sea breeze (daytime):**
+- Land heats faster than water
+- Warm air over land rises (low pressure)
+- Cool air from sea flows toward land
+- **Wind blows from sea → land**
 
 </div>
 <div class="col">
 
-**High pressure (H):**
-- Air sinks in center, diverges at surface
-- Sinking air warms → no clouds
-- **Fair, clear weather**
-- In Northern Hemisphere: clockwise outflow
+**Land breeze (nighttime):**
+- Land cools faster than water
+- Warm air over water rises (low pressure)
+- Cool air from land flows toward sea
+- **Wind blows from land → sea**
 
 </div>
 </div>
 
 <div class="key-idea">
 
-**Mnemonic:** *Lows = lousy weather. Highs = happy weather.*
+**Same principle, opposite direction:** local winds always blow from **cooler (higher pressure)** toward **warmer (lower pressure)** surfaces.
 
 </div>
 
 <!--
-TEACHER MOVE: Coriolis effect (rotation of Earth) deflects winds. Highs and lows BOTH have inflow/outflow; the spiral patterns are due to Coriolis.
-COMMON MISCONCEPTION: "Air goes UP into a low because it's lighter." No — air rises in a low because it's CONVERGING from all sides and has nowhere else to go.
+TEACHER MOVE: Diagram on the board with sun-warmed land vs ocean. Use arrows to show convection cells.
+WHY IT MATTERS: This is the simplest example of pressure-driven wind — and it's identical to the mechanism that drives the planetary wind belts at much larger scale.
+GUIDED NOTES TIE-IN: Students label the daytime/nighttime diagrams in their packet.
+-->
+
+---
+
+# Planetary Wind Belts — ESRT Pg 19
+
+<div class="esrt">
+
+**ESRT page 19** shows the **Model of Generalized Planetary Wind Belts in the Troposphere** — three convection cells per hemisphere (Hadley, Ferrel, Polar) and the wind belts they produce.
+
+</div>
+
+| Latitude | Prevailing Wind | Vertical Motion |
+|---|---|---|
+| 0° (equator) | calm (ITCZ) | rising (L pressure) |
+| 0°–30° N | NE trades | — |
+| 30° N | calm (horse latitudes) | sinking (H pressure) |
+| 30°–60° N | **westerlies** ← *we live here* | — |
+| 60° N | calm (polar front) | rising (L pressure) |
+| 60°–90° N | polar easterlies | — |
+| 90° N (pole) | calm | sinking (H pressure) |
+
+<!--
+TEACHER MOVE: This is core HS-ESS2-8 content. ESRT pg 19 is the new home for what used to be on pg 14.
+QUICK PRACTICE: Have students name the prevailing wind at 45°N (westerlies), 45°S (westerlies, S hemisphere mirror), 20°N (NE trades), 75°N (polar easterlies).
+RISING/SINKING: Air RISES at the equator and at 60° (low pressure). Air SINKS at 30° and at the poles (high pressure).
+WHY WE LIVE WHERE WE LIVE: Continental US sits in the westerlies → weather moves W→E. Back to slide 3.
 -->
 
 ---
@@ -874,13 +944,13 @@ DIFFERENTIATION: Provide a partially-completed map with two contours already dra
 
 # Calculating Gradient
 
-<div class="esrt">
+<div class="warning">
 
-**ESRT pg 1 — Equations:**
-
-$$\text{Gradient} = \frac{\text{change in field value}}{\text{distance}}$$
+**Not on the 2024 ESRT** — the equations table is gone. But the concept is still core to HS-ESS2-8.
 
 </div>
+
+$$\text{Gradient} = \frac{\text{change in field value}}{\text{distance}}$$
 
 > **Q:** Two cities are 200 km apart. Temperatures are 10 °C and 22 °C. Find the temperature gradient.
 
@@ -891,11 +961,14 @@ $$\text{Gradient} = \frac{\text{change in field value}}{\text{distance}}$$
 
 **Always include units in the answer.** °C/km for temperature gradient; mb/km for pressure gradient.
 
+A *steep* gradient (closer lines) means **stronger winds** and **more dramatic weather**. This connects directly to severe storm formation.
+
 </div>
 
 <!--
 TEACHER MOVE: Pressure gradient is a common Regents question. Same formula — just plug in pressures.
-KEY POINT: A *steep* gradient (closer lines) means winds will be stronger. This connects to severe weather.
+KEY POINT: A steep gradient = stronger winds = closer to severe weather. This is the conceptual hand-off to the severe storms unit.
+EXAM NOTE: The 2024 ESRT removed the equations table from pg 1. Students need to recall this formula from memory now.
 -->
 
 ---
@@ -909,6 +982,7 @@ KEY POINT: A *steep* gradient (closer lines) means winds will be stronger. This 
 
 <!--
 PHASE GOAL: Students apply unit content to severe storms and construct an evidence-based argument about climate change impacts.
+NYSSLS: HS-ESS3-5 — "make valid and reliable scientific claims" about climate change and "associated future impacts to Earth systems." Also pulls HS-ESS2-4 (energy flow & climate).
 This is where everything we've learned converges.
 -->
 
@@ -940,13 +1014,14 @@ All three are the **same kind of storm**.
 <div class="key-idea">
 
 The energy source: **latent heat released when water vapor condenses** in the storm's eyewall.
-This is the same Q = m·H_v we calculated on Day 3.
+This is the same $Q = m \cdot H_v$ we calculated on Day 2.
 
 </div>
 
 <!--
-TEACHER MOVE: Make the explicit connection back to Day 2/3 — phase change drives the storm. Each gram of water vapor condensing releases 2260 J. Multiply by trillions of grams happening simultaneously.
+TEACHER MOVE: Make the explicit connection back to Day 2 — phase change drives the storm. Each gram of water vapor condensing releases 2260 J. Multiply by trillions of grams happening simultaneously.
 KEY POINT: Hurricanes weaken over land because they lose their energy source — warm ocean water.
+HURRICANES ARE INTENSE LOW PRESSURE SYSTEMS. Show the connection back to L systems (rising air, converging, counterclockwise rotation).
 -->
 
 ---
@@ -965,9 +1040,12 @@ KEY POINT: Hurricanes weaken over land because they lose their energy source —
 
 > **Storm surge:** wind-driven rise in seawater level. Often the deadliest aspect of a hurricane — it can flood coastal areas tens of kilometers inland.
 
+**Hurricanes cover a much larger geographic area than tornadoes**, even though tornadoes have higher peak wind speeds.
+
 <!--
 TEACHER MOVE: Show a satellite image and identify each part. Watch the Killer Typhoon clip if time permits.
 EXPECTED RESPONSE: "Why is the eye calm?" — air is sinking in the eye (clearing), while it's rising in the eyewall.
+HURRICANE vs TORNADO: Different scales. Hurricanes ~500 km across; tornadoes ~1 km. Both deadly for different reasons.
 -->
 
 ---
@@ -1035,7 +1113,7 @@ EXPECTED QUESTION: "Are tornadoes worse than hurricanes?" — different scales. 
 
 <div class="key-idea">
 
-**Three connections from this unit:**
+**Three connections from this unit (HS-ESS3-5, HS-ESS2-4):**
 
 1. **Warmer oceans** → more available latent heat → potentially stronger storms.
 2. **Warmer atmosphere** → holds more water vapor (recall: warm air holds more moisture) → heavier rainfall.
@@ -1051,8 +1129,8 @@ What's *less certain*: whether the **frequency** of storms will change. The stro
 
 <!--
 TEACHER MOVE: Reinforce that the science here is nuanced. The IPCC says high confidence in increased intensity, lower confidence in increased frequency.
+NYSSLS LINK: HS-ESS3-5 explicitly asks students to "make an evidence-based forecast of the current rate of global or regional climate change and associated future impacts to Earth systems." This slide IS that PE.
 This frames the unit-end CER prompt: argue for intensity OR frequency OR both, using evidence from the unit.
-KEY POINT: We have THREE independent lines of evidence from this unit alone: latent heat (Day 2-3), atmospheric moisture (Day 3-4), and the unit on climate change before this one.
 -->
 
 ---
@@ -1078,8 +1156,9 @@ Use evidence from this unit:
 
 <!--
 TEACHER MOVE: This is THE central conceptual move of the unit. Have students write their own CER paragraph using this scaffolding.
+NYSSLS ALIGNMENT: This synthesis is the unit summative for HS-ESS3-5. The CER is the assessment-of-record.
 ASSESSMENT: This claim, with this evidence chain, is the unit summative.
-TRANSITION TO NEXT UNIT: "If we're confident storms will get more intense, what should engineers and planners do about it?" — sets up the next unit.
+TRANSITION TO NEXT UNIT: "If we're confident storms will get more intense, what should engineers and planners do about it?" — sets up HS-ESS3-4 (designing technological solutions).
 -->
 
 ---
@@ -1108,10 +1187,12 @@ Display this slide for student reference. Keep up during exit ticket / quick rev
 <div class="vocab">
 
 station model · isotherm · isobar · gradient
-air mass · cP · mP · cT · mT
+air mass · cP · mP · cT · mT · cA
 front · cold front · warm front · stationary front · occluded front
 high-pressure system · low-pressure system
 convergence · divergence
+sea breeze · land breeze · prevailing westerlies · trade winds · polar easterlies
+Hadley cell · Ferrel cell · Polar cell
 tropical cyclone · hurricane · typhoon
 eye · eyewall · rain band · storm surge
 Saffir-Simpson scale
@@ -1121,7 +1202,7 @@ climate · climate change · sea surface temperature
 </div>
 
 <!--
-End of vocabulary. Total: ~50 terms. Students should master all of these for the unit assessment.
+End of vocabulary. Total: ~60 terms. Students should master all of these for the unit assessment.
 -->
 
 ---
@@ -1136,5 +1217,5 @@ End of vocabulary. Total: ~50 terms. Students should master all of these for the
 ### *"The atmosphere is a heat engine. We've spent two weeks learning how it runs — and what happens when we turn up the dial."*
 
 <!--
-Final slide. Brief reflection. Preview of the unit assessment.
+Final slide. Brief reflection. Preview of the unit assessment (the CER from slide before Vocab).
 -->

@@ -9,6 +9,7 @@ math: mathjax
 
 <!--- _class: lead --->
 
+
 # The Physics of... 
 # Final project description and requirements
 
@@ -152,7 +153,7 @@ table {font-size:20px;}
 
 ---
 
-# 2025.05.21 **AP Physics** Day 1
+# 2025.05.12 **AP Physics** Day 1
 
 ##### **❓ of the 📅**: What rule do you wish they would introduce into your favorite sport (or game)?
 
@@ -182,7 +183,7 @@ table {font-size:20px;}
 
 ---
 
-# 2025.05.21 **AP Physics** Day 2
+# 2025.05.13 **AP Physics** Day 2
 
 ##### **❓ of the 📅**: Any big Memorial Day Weekend Plans?
 
