@@ -25,7 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 📝 Notes - Wave Basics
+1. 📝 [Notes](../../../Presentations/Waves/talks/RP_Waves_2026.html) - Wave Basics
 2. Think Sheet - Basics
 3. 📝 Notes - Describing Waves
 4. Think Sheet - Describing
