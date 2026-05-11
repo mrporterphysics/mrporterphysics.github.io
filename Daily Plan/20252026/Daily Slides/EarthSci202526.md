@@ -17,6 +17,7 @@ class:  twilight
 
 ---
 
+
 # 2026.05.11 **Earth Science**
 
 ##### **❓ of the 📅**: What is the number one thing on your bucket list? 
@@ -41,7 +42,6 @@ class:  twilight
 
 </div>
 </div>
-
 
 ---
 
