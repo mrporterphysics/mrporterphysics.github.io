@@ -229,7 +229,7 @@ ul, ol {
   margin: 0 0 var(--doodle-sp-4) 0;
 }
 
-ul { list-style: none; }
+section ul { list-style: none; }
 ul > li {
   position: relative;
   padding-left: var(--doodle-sp-5);
@@ -248,7 +248,7 @@ ul > li::before {
 ul > li > ul > li::before { content: "✿"; color: var(--doodle-warning); transform: rotate(6deg); }
 ul > li > ul > li > ul > li::before { content: "•"; color: var(--doodle-secondary); transform: none; }
 
-ol { list-style: none; counter-reset: doodle-counter; }
+section ol { list-style: none; counter-reset: doodle-counter; }
 ol > li {
   counter-increment: doodle-counter;
   position: relative;
@@ -336,6 +336,42 @@ kbd {
   font-size: 0.85em;
   font-weight: 600;
   box-shadow: 2px 2px 0 var(--doodle-ink);
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ----------
+   The cursive body font (Delius Swash Caps) has unusual x-height and
+   advance-width metrics. MathJax computes inline math size relative
+   to the parent's font, so when the cursive falls back on Windows /
+   Chrome (or before webfonts load), inline equations render visibly
+   smaller than on macOS. Boost math with !important to override
+   MathJax's inline `font-size` style. */
+mjx-container,
+.MathJax,
+.katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+
+/* Inline math */
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),s
+.katex:not(.katex-display) {
+  font-size: 1.25em !important;
+  vertical-align: -0.05em;
+}
+
+/* Display (block) math */
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.35em !important;
+  margin: var(--doodle-sp-3) 0 !important;
+}
+
+/* Math inside headings should scale with the heading, not balloon */
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax {
+  font-size: 1em !important;
 }
 
 /* ---------- Tables ---------- */

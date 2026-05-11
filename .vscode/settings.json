@@ -26,7 +26,8 @@
       "./PorterThemes/Schodack/neobrutalism.css",
       "./PorterThemes/Schodack/artistic.css",
       "./PorterThemes/Schodack/doodle.css",
-      "./PorterThemes/Schodack/apothecary.css"
+      "./PorterThemes/Schodack/apothecary.css",
+      "./PorterThemes/Schodack/claymorphism.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"

@@ -162,7 +162,7 @@ ul, ol {
   margin: 0 0 var(--nb-sp-4) 0;
 }
 
-ul { list-style: none; }
+section ul { list-style: none; }
 ul > li {
   position: relative;
   margin: 0 0 var(--nb-sp-3) 0;
