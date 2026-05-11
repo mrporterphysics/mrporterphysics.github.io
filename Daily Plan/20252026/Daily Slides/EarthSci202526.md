@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.05.11 **Earth Science**
 
-##### **❓ of the 📅**: What is the number one thing on your bucket list?
+##### **❓ of the 📅**: What is the number one thing on your bucket list? 
 
 <div class ='columns'>
 
@@ -35,7 +35,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 _Make a graphical model of the cyclical nature of the tides._
+🥅 _Make a _graphical model_ of the cyclical nature of the tides._
 
 ### 📆 Upcoming
 
