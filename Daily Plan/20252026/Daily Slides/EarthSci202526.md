@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.05.11 **Earth Science**
+
+##### **❓ of the 📅**: What is the number one thing on your bucket list?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 🌊 🌔 Tracking the Tides Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make a graphical model of the cyclical nature of the tides._
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.05.08 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite thing to do on vacation?
