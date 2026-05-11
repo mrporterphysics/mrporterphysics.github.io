@@ -15,6 +15,40 @@ math: mathjax
 
 ---
 
+# 2026.05.11 **Regents Physics**
+
+##### **❓ of the 📅**: What is the number one thing on your bucket list?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 📝 Notes - Wave Basics
+2. Think Sheet - Basics
+3. 📝 Notes - Describing Waves
+4. Think Sheet - Describing
+5. Regents Questions    
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Waves_
+
+### 📆 Upcoming
+
+- Regents Field Test on Friday
+    - State Testing questions on **NEW** standards
+
+</div>
+</div>
+
+---
+
 # 2026.05.08 **Regents Physics**
 
 ##### **❓ of the 📅**: What's your favorite thing to do on vacation?
