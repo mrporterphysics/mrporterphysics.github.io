@@ -7,18 +7,13 @@ math: mathjax
 
 ---
 
+<!--- _class: lead--->
+
 ![bg](https://i.pinimg.com/originals/1a/69/1d/1a691d35add342af8bda0d77bb9e3d8b.gif)
 
 # Waves <!---fit--->
 
-## A Model For Periodic Motion
-
----
-
-# Quick Links 
-
-
-1. [Speed of Sound Lab](#tube-resonance-lab---determine-speed-of-sound)
+# A Model For Periodic Motion
 
 ---
 
