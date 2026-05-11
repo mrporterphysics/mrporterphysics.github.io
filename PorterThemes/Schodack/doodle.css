@@ -229,7 +229,7 @@ ul, ol {
   margin: 0 0 var(--doodle-sp-4) 0;
 }
 
-ul { list-style: none; }
+section ul { list-style: none; }
 ul > li {
   position: relative;
   padding-left: var(--doodle-sp-5);
@@ -248,7 +248,7 @@ ul > li::before {
 ul > li > ul > li::before { content: "✿"; color: var(--doodle-warning); transform: rotate(6deg); }
 ul > li > ul > li > ul > li::before { content: "•"; color: var(--doodle-secondary); transform: none; }
 
-ol { list-style: none; counter-reset: doodle-counter; }
+section ol { list-style: none; counter-reset: doodle-counter; }
 ol > li {
   counter-increment: doodle-counter;
   position: relative;

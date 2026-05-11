@@ -1,0 +1,703 @@
+/*
+@theme claymorphism
+
+Soft, rounded, "puffy" 3D shapes mimicking malleable colorful clay.
+Tokens follow the typeui.sh "claymorphism" design system.
+
+Signature: multi-layer shadows (outer drop + inner highlight + inner
+shade) on pillowy rounded surfaces over a pastel canvas.
+
+Fonts:
+  - Poppins         → display (h1/h2)
+  - Montserrat      → body, h3-h6, UI
+  - JetBrains Mono  → code and labels
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color */
+  --clay-primary:   #3B82F6;
+  --clay-secondary: #FFFFFF;
+  --clay-success:   #16A34A;
+  --clay-warning:   #D97706;
+  --clay-danger:    #DC2626;
+  --clay-surface:   #FFFFFF;
+  --clay-text:      #1C398E;
+  --clay-muted:     #6B7AA0;
+
+  /* Pastel clay accents — chosen to harmonize on the lavender canvas */
+  --clay-canvas:    #EEF2FF;   /* lavender slide background */
+  --clay-paper:     #FFFFFF;   /* card surface */
+  --clay-pink:      #FFC0E0;
+  --clay-sky:       #BFE0FF;
+  --clay-peach:     #FFD9B8;
+  --clay-mint:      #C8F0D2;
+  --clay-lilac:     #D9CFFF;
+  --clay-lemon:     #FFF1A8;
+
+  /* Type scale — tuned for slideshow viewing
+     (body bumped up, headings eased down vs the original desktop scale) */
+  --clay-fs-1: 14px;   /* label caps */
+  --clay-fs-2: 18px;   /* tables, code */
+  --clay-fs-3: 22px;   /* body — primary reading size */
+  --clay-fs-4: 24px;   /* h4 */
+  --clay-fs-5: 28px;   /* h3 */
+  --clay-fs-6: 32px;   /* h2 */
+  --clay-fs-7: 44px;   /* h1 max */
+
+  /* Spacing scale: 4/8/12/16/24/32 */
+  --clay-sp-1: 4px;
+  --clay-sp-2: 8px;
+  --clay-sp-3: 12px;
+  --clay-sp-4: 16px;
+  --clay-sp-5: 24px;
+  --clay-sp-6: 32px;
+
+  /* Radii — big and pillowy */
+  --clay-radius-sm:   12px;
+  --clay-radius:      20px;
+  --clay-radius-lg:   32px;
+  --clay-radius-pill: 999px;
+
+  /* Clay shadow recipes
+     The "popped out" feel comes from stacking:
+       1. inset top highlight   (white)
+       2. inset bottom shading  (text color, faint)
+       3. soft outer drop       (text color, near)
+       4. soft outer drop       (text color, far) */
+  --clay-shadow:
+    inset 0  6px 12px -6px rgba(255, 255, 255, 0.95),
+    inset 0 -6px 12px -6px rgba(28, 57, 142, 0.14),
+    0  4px 14px -4px rgba(28, 57, 142, 0.20),
+    0 16px 32px -8px rgba(28, 57, 142, 0.14);
+
+  --clay-shadow-sm:
+    inset 0  3px 6px -3px rgba(255, 255, 255, 0.95),
+    inset 0 -3px 6px -3px rgba(28, 57, 142, 0.12),
+    0 3px 10px -2px rgba(28, 57, 142, 0.18);
+
+  --clay-shadow-lg:
+    inset 0  10px 18px -10px rgba(255, 255, 255, 0.95),
+    inset 0 -10px 18px -10px rgba(28, 57, 142, 0.16),
+    0  8px 22px -6px rgba(28, 57, 142, 0.22),
+    0 28px 44px -12px rgba(28, 57, 142, 0.18);
+
+  /* "Pressed in" — pure inset for active state and "scooped" wells */
+  --clay-shadow-inset:
+    inset 0  4px 10px 0 rgba(28, 57, 142, 0.18),
+    inset 0 -3px  6px 0 rgba(255, 255, 255, 0.55);
+}
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--clay-canvas);
+  /* Soft warm gradient on cool canvas — feels like a lit clay surface */
+  background-image:
+    radial-gradient(ellipse 60% 50% at 12% 10%, rgba(255, 192, 224, 0.35), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 90%, rgba(191, 224, 255, 0.40), transparent 65%);
+  color: var(--clay-text);
+  font-size: var(--clay-fs-3);
+  font-weight: 400;
+  line-height: 1.55;
+  padding: var(--clay-sp-6);
+  position: relative;
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Montserrat', sans-serif;
+  color: var(--clay-text);
+  line-height: 1.15;
+  margin: 0 0 var(--clay-sp-4) 0;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: var(--clay-fs-7);
+  font-size: clamp(32px, 4.2vw, 44px);
+  display: inline-block;
+  padding: var(--clay-sp-3) var(--clay-sp-5);
+  background: var(--clay-paper);
+  border-radius: var(--clay-radius-lg);
+  box-shadow: var(--clay-shadow);
+  color: var(--clay-text);
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: var(--clay-fs-6);
+  color: var(--clay-primary);
+  /* underline as a clay pill bar */
+  position: relative;
+  padding-bottom: var(--clay-sp-3);
+}
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--clay-sp-2);
+  width: 64px;
+  height: 8px;
+  border-radius: var(--clay-radius-pill);
+  background: var(--clay-primary);
+  box-shadow: var(--clay-shadow-sm);
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: var(--clay-fs-5);
+  color: var(--clay-text);
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: var(--clay-fs-4);
+  color: var(--clay-text);
+}
+
+h5, h6 {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--clay-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--clay-muted);
+}
+
+/* ---------- Marp <!-- fit --> auto-scaling support ---------- */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--clay-sp-4) 0;
+  max-width: 65ch;
+}
+
+strong {
+  font-weight: 800;
+  color: var(--clay-primary);
+}
+
+em {
+  font-style: italic;
+  color: var(--clay-text);
+  font-weight: 500;
+}
+
+a {
+  color: var(--clay-primary);
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--clay-paper);
+  padding: 2px var(--clay-sp-2);
+  border-radius: var(--clay-radius-pill);
+  box-shadow: var(--clay-shadow-sm);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+a:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--clay-shadow);
+}
+a:active {
+  transform: translateY(1px);
+  box-shadow: var(--clay-shadow-inset);
+}
+a:focus-visible {
+  outline: 3px solid var(--clay-primary);
+  outline-offset: 3px;
+}
+
+mark {
+  background: var(--clay-lemon);
+  color: var(--clay-text);
+  padding: 0 var(--clay-sp-2);
+  border-radius: var(--clay-radius-sm);
+  box-shadow: var(--clay-shadow-sm);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: var(--clay-sp-5);
+  margin: 0 0 var(--clay-sp-4) 0;
+}
+
+section ul, section ol {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+/* Suppress browser ::marker so the default bullets/numbers can't bleed
+   through behind our custom ::before pseudo-counters */
+section ul > li::marker,
+section ol > li::marker { content: "" !important; }
+ul > li {
+  position: relative;
+  padding-left: var(--clay-sp-5);
+  margin-bottom: var(--clay-sp-3);
+}
+/* Clay-pebble bullets */
+ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--clay-primary);
+  box-shadow:
+    inset 0  2px 3px -1px rgba(255, 255, 255, 0.85),
+    inset 0 -2px 3px -1px rgba(28, 57, 142, 0.30),
+    0 2px 4px -1px rgba(28, 57, 142, 0.30);
+}
+ul > li > ul > li::before { background: var(--clay-pink); }
+ul > li > ul > li > ul > li::before { background: var(--clay-mint); }
+
+section ol { counter-reset: clay-counter; }
+ol > li {
+  counter-increment: clay-counter;
+  position: relative;
+  padding-left: var(--clay-sp-6);
+  margin-bottom: var(--clay-sp-3);
+  min-height: 28px;
+}
+ol > li::before {
+  content: counter(clay-counter);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--clay-primary);
+  color: var(--clay-secondary);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: var(--clay-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--clay-shadow-sm);
+}
+
+li { font-size: var(--clay-fs-3); }
+
+/* ---------- Blockquote (puffy clay card) ---------- */
+blockquote {
+  margin: var(--clay-sp-5) 0;
+  padding: var(--clay-sp-5) var(--clay-sp-6);
+  background: var(--clay-paper);
+  border: 0;
+  border-radius: var(--clay-radius-lg);
+  box-shadow: var(--clay-shadow);
+  font-size: var(--clay-fs-4);
+  font-weight: 500;
+  color: var(--clay-text);
+  position: relative;
+}
+blockquote::before {
+  content: "\201C";
+  font-family: 'Poppins', serif;
+  font-size: 72px;
+  line-height: 0.8;
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  color: var(--clay-primary);
+  opacity: 0.30;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.9em;
+  font-weight: 500;
+  background: var(--clay-paper);
+  color: var(--clay-text);
+  padding: 2px var(--clay-sp-2);
+  border-radius: var(--clay-radius-sm);
+  box-shadow: var(--clay-shadow-inset);
+}
+pre {
+  background: var(--clay-paper);
+  color: var(--clay-text);
+  padding: var(--clay-sp-5) var(--clay-sp-5);
+  border-radius: var(--clay-radius-lg);
+  box-shadow: var(--clay-shadow);
+  overflow-x: auto;
+  font-size: var(--clay-fs-2);
+  line-height: 1.55;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+kbd {
+  background: var(--clay-paper);
+  color: var(--clay-text);
+  padding: 2px var(--clay-sp-2);
+  border-radius: var(--clay-radius-sm);
+  font-size: 0.85em;
+  font-weight: 700;
+  box-shadow: var(--clay-shadow-sm);
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ----------
+   Keep math legible on the soft canvas — body font is Montserrat
+   so metrics are stable, but boost slightly for display math. */
+mjx-container,
+.MathJax,
+.katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.10em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.20em !important;
+  margin: var(--clay-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax {
+  font-size: 1em !important;
+}
+
+/* ---------- Tables ---------- */
+table {
+  /* Force real table layout so width: fit-content actually shrinks
+     to the columns. Marp's base CSS sets display: block on tables,
+     which would stretch the clay card past the content. */
+  display: table;
+  width: fit-content;
+  max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: var(--clay-sp-4) 0;
+  background: var(--clay-paper);
+  border-radius: var(--clay-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--clay-shadow);
+  font-size: var(--clay-fs-2);
+}
+th, td {
+  padding: var(--clay-sp-3) var(--clay-sp-5);
+  text-align: left;
+  border-bottom: 1px solid rgba(28, 57, 142, 0.10);
+}
+thead th {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  background: var(--clay-primary);
+  color: var(--clay-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 0;
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: rgba(59, 130, 246, 0.06); }
+
+/* ---------- Horizontal rule ---------- */
+hr {
+  border: 0;
+  height: 8px;
+  background: var(--clay-primary);
+  border-radius: var(--clay-radius-pill);
+  box-shadow: var(--clay-shadow-sm);
+  margin: var(--clay-sp-5) 0;
+  width: 96px;
+}
+
+/* ---------- Images ---------- */
+img {
+  max-width: 100%;
+  border-radius: var(--clay-radius-lg);
+  box-shadow: var(--clay-shadow);
+  background: var(--clay-paper);
+}
+img[alt~="plain"]  { box-shadow: none; border-radius: 0; }
+img[alt~="circle"] { border-radius: 50%; }
+img[alt~="center"] { display: block; margin: var(--clay-sp-4) auto; }
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--clay-fs-1);
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--clay-muted);
+  background: var(--clay-paper);
+  padding: var(--clay-sp-1) var(--clay-sp-3);
+  border-radius: var(--clay-radius-pill);
+  box-shadow: var(--clay-shadow-sm);
+}
+
+section::after {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--clay-fs-1);
+  color: var(--clay-text);
+  background: var(--clay-paper);
+  padding: 2px var(--clay-sp-3);
+  border-radius: var(--clay-radius-pill);
+  box-shadow: var(--clay-shadow-sm);
+}
+
+/* ---------- Layout Utilities ---------- */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--clay-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--clay-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--clay-sp-4); }
+
+/* Clay card */
+.card {
+  background: var(--clay-paper);
+  border-radius: var(--clay-radius-lg);
+  box-shadow: var(--clay-shadow);
+  padding: var(--clay-sp-5);
+}
+.card.pink   { background: var(--clay-pink); }
+.card.sky    { background: var(--clay-sky); }
+.card.peach  { background: var(--clay-peach); }
+.card.mint   { background: var(--clay-mint); }
+.card.lilac  { background: var(--clay-lilac); }
+.card.lemon  { background: var(--clay-lemon); }
+.card.primary {
+  background: var(--clay-primary);
+  color: var(--clay-secondary);
+}
+.card.primary h1, .card.primary h2, .card.primary h3 { color: var(--clay-secondary); }
+
+/* Tag — small pill */
+.tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: var(--clay-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  background: var(--clay-paper);
+  color: var(--clay-text);
+  padding: 4px var(--clay-sp-3);
+  border-radius: var(--clay-radius-pill);
+  box-shadow: var(--clay-shadow-sm);
+}
+.tag.primary { background: var(--clay-primary); color: var(--clay-secondary); }
+.tag.success { background: var(--clay-success); color: var(--clay-secondary); }
+.tag.warning { background: var(--clay-warning); color: var(--clay-secondary); }
+.tag.danger  { background: var(--clay-danger);  color: var(--clay-secondary); }
+
+/* Button — big puffy pill */
+.btn,
+a.btn {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: var(--clay-fs-3);
+  background: var(--clay-primary);
+  color: var(--clay-secondary);
+  padding: var(--clay-sp-3) var(--clay-sp-5);
+  border-radius: var(--clay-radius-pill);
+  text-decoration: none;
+  box-shadow: var(--clay-shadow);
+  min-height: 44px;
+  line-height: 24px;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+a.btn:hover  { transform: translateY(-2px); box-shadow: var(--clay-shadow-lg); }
+a.btn:active { transform: translateY(2px);  box-shadow: var(--clay-shadow-inset); }
+a.btn:focus-visible { outline: 3px solid var(--clay-text); outline-offset: 3px; }
+a.btn.ghost  { background: var(--clay-paper); color: var(--clay-primary); }
+a.btn.success { background: var(--clay-success); }
+a.btn.warning { background: var(--clay-warning); }
+a.btn.danger  { background: var(--clay-danger); }
+
+/* Callouts */
+.note, .warn, .danger, .success {
+  background: var(--clay-paper);
+  border-radius: var(--clay-radius);
+  box-shadow: var(--clay-shadow-sm);
+  padding: var(--clay-sp-4) var(--clay-sp-5);
+  margin: var(--clay-sp-3) 0;
+  position: relative;
+  padding-left: var(--clay-sp-6);
+}
+.note::before, .warn::before, .danger::before, .success::before {
+  content: "";
+  position: absolute;
+  left: var(--clay-sp-3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 70%;
+  border-radius: var(--clay-radius-pill);
+}
+.note::before    { background: var(--clay-primary); }
+.warn::before    { background: var(--clay-warning); }
+.danger::before  { background: var(--clay-danger); }
+.success::before { background: var(--clay-success); }
+
+/* Stat block */
+.stat {
+  background: var(--clay-paper);
+  border-radius: var(--clay-radius-lg);
+  box-shadow: var(--clay-shadow);
+  padding: var(--clay-sp-5);
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--clay-sp-1);
+}
+.stat .value {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: var(--clay-fs-7);
+  color: var(--clay-primary);
+  line-height: 1;
+}
+.stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--clay-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--clay-muted);
+}
+
+/* ---------- Slide Variants ---------- */
+
+/* Lead / title slide */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--clay-canvas);
+  background-image:
+    radial-gradient(circle at 18% 22%, var(--clay-pink) 0%, transparent 20%),
+    radial-gradient(circle at 80% 30%, var(--clay-sky) 0%, transparent 18%),
+    radial-gradient(circle at 75% 80%, var(--clay-peach) 0%, transparent 22%),
+    radial-gradient(circle at 20% 78%, var(--clay-mint) 0%, transparent 20%);
+}
+section.lead h1 {
+  font-size: clamp(40px, 5.5vw, 60px);
+  padding: var(--clay-sp-4) var(--clay-sp-6);
+}
+section.lead h2 {
+  background: var(--clay-paper);
+  color: var(--clay-muted);
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  padding: var(--clay-sp-2) var(--clay-sp-4);
+  border-radius: var(--clay-radius-pill);
+  box-shadow: var(--clay-shadow-sm);
+  display: inline-block;
+}
+section.lead h2::after { display: none; }
+
+/* Centered */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* Quote */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.quote blockquote {
+  font-size: clamp(24px, 3.5vw, 36px);
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Accent variants — single-color canvas */
+section.accent-pink   { background-color: #FFE3F1; background-image: none; }
+section.accent-sky    { background-color: #E1F1FF; background-image: none; }
+section.accent-peach  { background-color: #FFEEDB; background-image: none; }
+section.accent-mint   { background-color: #DFF4E5; background-image: none; }
+section.accent-lilac  { background-color: #EBE3FF; background-image: none; }
+section.accent-lemon  { background-color: #FFF9D9; background-image: none; }
+
+/* Invert / dark slide */
+section.invert {
+  background-color: #1C2541;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 12% 10%, rgba(255, 192, 224, 0.15), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 90%, rgba(191, 224, 255, 0.18), transparent 65%);
+  color: #E8EEFF;
+  --clay-text: #E8EEFF;
+  --clay-paper: #2A3960;
+  --clay-shadow:
+    inset 0  6px 12px -6px rgba(255, 255, 255, 0.18),
+    inset 0 -6px 12px -6px rgba(0, 0, 0, 0.45),
+    0  4px 14px -4px rgba(0, 0, 0, 0.45),
+    0 16px 32px -8px rgba(0, 0, 0, 0.35);
+  --clay-shadow-sm:
+    inset 0  3px 6px -3px rgba(255, 255, 255, 0.16),
+    inset 0 -3px 6px -3px rgba(0, 0, 0, 0.35),
+    0 3px 10px -2px rgba(0, 0, 0, 0.45);
+  --clay-shadow-inset:
+    inset 0  4px 10px 0 rgba(0, 0, 0, 0.55),
+    inset 0 -3px  6px 0 rgba(255, 255, 255, 0.12);
+}
+section.invert h2 { color: #93C5FD; }
+section.invert strong { color: #93C5FD; }
+section.invert a { background: var(--clay-paper); color: #93C5FD; }
+section.invert footer, section.invert::after { color: #B6C0E0; }
+
+/* ---------- Accessibility ---------- */
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  a, a.btn, .btn { transition: none; }
+  a:hover, a:active, a.btn:hover, a.btn:active { transform: none; }
+}
+
+/* Visible focus rings — strong 3px ring since clay shadows are soft */
+:focus-visible {
+  outline: 3px solid var(--clay-primary);
+  outline-offset: 3px;
+}
+
+/* High-contrast support */
+@media (prefers-contrast: more) {
+  :root {
+    --clay-muted: #1C398E;
+  }
+  a { text-decoration: underline; }
+  .card, blockquote, pre, table, .note, .warn, .danger, .success {
+    outline: 2px solid var(--clay-text);
+    outline-offset: -2px;
+  }
+}

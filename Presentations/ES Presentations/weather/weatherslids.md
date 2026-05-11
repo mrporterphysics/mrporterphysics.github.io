@@ -1,159 +1,122 @@
 ---
 marp: true
-theme: default
+theme: claymorphism
 paginate: true
 math: mathjax
 style: |
-  /* Flexoki dark palette */
-  :root {
-    --color-bg: #100F0F;
-    --color-bg-2: #1C1B1A;
-    --color-fg: #CECDC3;
-    --color-fg-dim: #878580;
-    --color-blue: #4385BE;
-    --color-cyan: #3AA99F;
-    --color-green: #879A39;
-    --color-yellow: #D0A215;
-    --color-orange: #DA702C;
-    --color-red: #D14D41;
-    --color-magenta: #CE5D97;
-    --color-purple: #8B7EC8;
-    --color-paper: #FFFCF0;
-  }
-  section {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-    font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', monospace;
-    font-size: 26px;
-    padding: 40px 60px;
-    line-height: 1.4;
-  }
-  h1 {
-    color: var(--color-blue);
-    font-size: 1.7em;
-    border-bottom: 3px solid var(--color-blue);
-    padding-bottom: 8px;
-    margin-bottom: 0.4em;
-  }
-  h2 { color: var(--color-cyan); font-size: 1.3em; }
-  h3 { color: var(--color-purple); font-size: 1.1em; }
-  strong { color: var(--color-yellow); }
-  em { color: var(--color-fg-dim); font-style: italic; }
-  code {
-    background: var(--color-bg-2);
-    color: var(--color-orange);
-    padding: 2px 6px;
-    border-radius: 3px;
-  }
-  blockquote {
-    border-left: 4px solid var(--color-orange);
-    background: var(--color-bg-2);
-    padding: 12px 20px;
-    margin: 12px 0;
-    font-size: 0.95em;
-    color: var(--color-fg);
-  }
-  blockquote strong { color: var(--color-orange); }
-  table {
-    font-size: 0.85em;
-    border-collapse: collapse;
-    width: 100%;
-    margin: 0.6em 0;
-  }
-  th {
-    background: var(--color-blue);
-    color: var(--color-bg);
-    padding: 8px 12px;
-    text-align: left;
-  }
-  td {
-    padding: 6px 12px;
-    border-bottom: 1px solid var(--color-bg-2);
-  }
-  tr:nth-child(even) { background: var(--color-bg-2); }
-  .columns { display: flex; gap: 40px; }
-  .col { flex: 1; }
-  ul, ol { margin: 0.3em 0; }
-  li { margin: 0.2em 0; }
+  /* Deck-specific extensions on top of the claymorphism theme.
+     Only defines the custom classes used in this deck body
+     (title-slide, phase-title, key-idea, warning, vocab, esrt,
+     columns/col) — base typography, slide background, h1-h6, code,
+     tables, blockquote, and lists all come from claymorphism.css. */
+
+  /* Two-column layout */
+  .columns { display: flex; gap: var(--clay-sp-5); align-items: stretch; }
+  .col { flex: 1; min-width: 0; }
+
+  /* Title slide: reuse the lead variant's pastel-blob canvas */
   section.title-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #100F0F 0%, #1C1B1A 100%);
+    background-image:
+      radial-gradient(circle at 18% 22%, var(--clay-pink) 0%, transparent 22%),
+      radial-gradient(circle at 80% 28%, var(--clay-sky) 0%, transparent 20%),
+      radial-gradient(circle at 78% 80%, var(--clay-peach) 0%, transparent 22%),
+      radial-gradient(circle at 22% 78%, var(--clay-mint) 0%, transparent 22%);
   }
   section.title-slide h1 {
-    border-bottom: none;
-    font-size: 2.4em;
-    color: var(--color-blue);
+    font-size: clamp(40px, 5.2vw, 60px);
+    padding: var(--clay-sp-4) var(--clay-sp-6);
   }
   section.title-slide h2 {
-    color: var(--color-fg-dim);
-    font-weight: normal;
-    font-size: 1.3em;
+    background: var(--clay-paper);
+    color: var(--clay-muted);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: var(--clay-fs-4);
+    padding: var(--clay-sp-2) var(--clay-sp-5);
+    border-radius: var(--clay-radius-pill);
+    box-shadow: var(--clay-shadow-sm);
+    margin-top: var(--clay-sp-4);
   }
+  section.title-slide h2::after { display: none; }
   section.title-slide h3 {
-    color: var(--color-yellow);
+    color: var(--clay-primary);
     font-style: italic;
-    font-size: 1.05em;
+    font-size: var(--clay-fs-4);
     max-width: 22em;
+    margin-top: var(--clay-sp-3);
   }
+
+  /* Phase-title slide: full-bleed primary clay */
   section.phase-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: var(--color-blue);
-    color: var(--color-bg);
+    background-color: var(--clay-primary);
+    background-image:
+      radial-gradient(ellipse 60% 50% at 12% 10%, rgba(255,255,255,0.20), transparent 60%),
+      radial-gradient(ellipse 50% 50% at 88% 90%, rgba(255,255,255,0.18), transparent 65%);
+    color: var(--clay-secondary);
   }
   section.phase-title h1 {
-    color: var(--color-bg);
-    border-bottom: 3px solid var(--color-bg);
-    font-size: 2.6em;
+    background: var(--clay-secondary);
+    color: var(--clay-primary);
+    font-size: clamp(40px, 5.5vw, 64px);
+    padding: var(--clay-sp-4) var(--clay-sp-6);
   }
   section.phase-title h2 {
-    color: rgba(16,15,15,0.75);
-    font-size: 1.2em;
+    color: var(--clay-secondary);
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(2px);
+    padding: var(--clay-sp-2) var(--clay-sp-5);
+    border-radius: var(--clay-radius-pill);
+    margin-top: var(--clay-sp-4);
+    font-size: var(--clay-fs-4);
   }
-  .key-idea {
-    background: rgba(135,154,57,0.15);
-    border-left: 4px solid var(--color-green);
-    padding: 12px 20px;
-    margin: 12px 0;
-    border-radius: 0 6px 6px 0;
+  section.phase-title h2::after { display: none; }
+  section.phase-title strong { color: var(--clay-secondary); }
+
+  /* Callouts — clay cards with a vertical accent pill */
+  .key-idea, .warning, .vocab, .esrt {
+    background: var(--clay-paper);
+    border-radius: var(--clay-radius);
+    box-shadow: var(--clay-shadow-sm);
+    padding: var(--clay-sp-4) var(--clay-sp-5);
+    padding-left: var(--clay-sp-6);
+    margin: var(--clay-sp-3) 0;
+    position: relative;
+    color: var(--clay-text);
   }
-  .key-idea strong { color: var(--color-green); }
-  .warning {
-    background: rgba(218,112,44,0.15);
-    border-left: 4px solid var(--color-orange);
-    padding: 12px 20px;
-    margin: 12px 0;
-    border-radius: 0 6px 6px 0;
+  .key-idea::before,
+  .warning::before,
+  .vocab::before,
+  .esrt::before {
+    content: "";
+    position: absolute;
+    left: var(--clay-sp-3);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 70%;
+    border-radius: var(--clay-radius-pill);
   }
-  .warning strong { color: var(--color-orange); }
-  .vocab {
-    background: rgba(139,126,200,0.15);
-    border-left: 4px solid var(--color-purple);
-    padding: 12px 20px;
-    margin: 12px 0;
-    border-radius: 0 6px 6px 0;
-  }
-  .vocab strong { color: var(--color-purple); }
-  .esrt {
-    background: rgba(67,133,190,0.15);
-    border-left: 4px solid var(--color-blue);
-    padding: 12px 20px;
-    margin: 12px 0;
-    border-radius: 0 6px 6px 0;
-    font-size: 0.92em;
-  }
-  .esrt strong { color: var(--color-blue); }
-  footer {
-    font-size: 0.55em;
-    color: var(--color-fg-dim);
-  }
+  .key-idea::before { background: var(--clay-success); }
+  .warning::before  { background: var(--clay-warning); }
+  .vocab::before    { background: var(--clay-lilac);   }
+  .esrt::before     { background: var(--clay-primary); }
+
+  .key-idea strong { color: var(--clay-success); }
+  .warning  strong { color: var(--clay-warning); }
+  .vocab    strong { color: var(--clay-text);    }
+  .esrt     strong { color: var(--clay-primary); }
+
+  .esrt { font-size: 0.95em; }
 footer: 'Weather  •  Regents Earth Science  •  Mr. Porter'
 ---
 
