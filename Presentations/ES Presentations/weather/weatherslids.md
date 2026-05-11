@@ -228,6 +228,8 @@ COMMON MISCONCEPTION: "We breathe oxygen." We breathe AIR; our bodies use the ox
 TRANSITION: "If gravity is pulling air molecules toward Earth, where would you expect most of the air to be?" → leads to layers.
 -->
 
+![bg fit right](image-2.png)
+
 ---
 
 # Five Layers — Bottom to Top
@@ -271,119 +273,24 @@ DIFFERENTIATION: The mnemonic lands well for students who struggle to memorize o
 
 ---
 
-![center w:1200](image-1.png)
+<!--- _class: center --->
+
+![center w:1300](image-1.png)
+
+---
+
+
+<!--- _class: center --->
+
+![center w:1000](image-3.png)
+
+---
 
 ---
 
 <!-- _class: phase-title -->
 
-# Day 2 — 3
-
-## Energy & Phase Changes
-
-<!--
-PHASE GOAL: Students explain how phase changes transfer energy and predict whether a process absorbs (endothermic) or releases (exothermic) heat.
-This is the conceptual fuel of the entire unit. Hurricanes run on it. Clouds form because of it.
-NYSSLS: HS-ESS2-5 — "how water's structure, in all of its phases, affects its properties."
-NOTE: The 2024 ESRT does NOT include latent heat values (Hf, Hv) or the Q = mΔT / Q = mHf / Q = mHv equations. Students still need to understand these conceptually but won't look them up on the ESRT.
--->
-
----
-
-# Phase Changes of Water
-
-<div class="columns">
-<div class="col">
-
-**Endothermic** (absorbs energy):
-- Melting (solid → liquid)
-- Evaporation (liquid → gas)
-- Sublimation (solid → gas)
-
-</div>
-<div class="col">
-
-**Exothermic** (releases energy):
-- Freezing (liquid → solid)
-- Condensation (gas → liquid)
-- Deposition (gas → solid)
-
-</div>
-</div>
-
-<div class="key-idea">
-
-**The energy used in a phase change does not change temperature** — it goes into rearranging molecular bonds. This hidden energy is called **latent heat**.
-
-</div>
-
-<!--
-TEACHER MOVE: Demo a phase change at the front bench — ice melting in a beaker while you read out a thermometer that stays at 0°C until all the ice is gone.
-KEY POINT: This is the conceptual heart of HS-ESS2-5. Water's three phases each affect Earth materials and surface processes differently because of the energy they carry/release at the boundaries.
-EXPECTED CHALLENGE: "If energy is going in, why doesn't the temperature go up?" — Energy is breaking intermolecular bonds, not increasing kinetic energy.
--->
-
----
-
-# Latent Heat Values
-
-<div class="key-idea">
-
-**Heat of fusion (H_f):** 334 J/g
-Energy to melt 1 g of ice at 0 °C, OR released when 1 g of water freezes.
-
-**Heat of vaporization (H_v):** 2260 J/g
-Energy to evaporate 1 g of water at 100 °C, OR released when 1 g of water vapor condenses.
-
-</div>
-
-<div class="warning">
-
-**These values are NOT on the 2024 ESRT.** You need to know them — or recognize them in problem data.
-
-Note: $H_v$ is nearly **7× larger** than $H_f$. That's why condensation in clouds releases enormous energy — and powers hurricanes.
-
-</div>
-
-**Equations:**
-$$Q = m \cdot H_f \quad\text{(melting/freezing)}$$
-$$Q = m \cdot H_v \quad\text{(boiling/condensing)}$$
-
-<!--
-TEACHER MOVE: Explicitly note that the 2024 ESRT dropped the equations table that was on pg 1 of older ESRTs. Students used to look these up. Now they need familiarity.
-KEY POINT: The 7x ratio is what makes hurricanes possible. Every gram of water vapor that condenses in an eyewall releases 2260 J. Multiply by tons per second.
-TRANSITION: We'll come back to this when we get to hurricanes on Day 9.
--->
-
----
-
-# Worked Example — Latent Heat
-
-> **Q:** How much energy is released when 50 g of water vapor condenses in a cloud?
-
-**Step 1.** Identify the phase change. Vapor → liquid = **condensation**, which is **exothermic**.
-**Step 2.** Use $Q = m \cdot H_v$.
-**Step 3.** $Q = 50 \text{ g} \times 2260 \text{ J/g} = \mathbf{113{,}000 \text{ J}}$.
-
-<div class="key-idea">
-
-**Sanity check:** 113 kJ from 50 g of water. A liter of water = 1000 g, so condensing 1 L of vapor releases **2.26 million joules** — enough to lift a small car 200 m. *This is why storms are powerful.*
-
-</div>
-
-<!--
-TEACHER MOVE: Drill the sign convention — students often write a negative for exothermic. For these problems, just report magnitude and label the process as releasing energy.
-COMMON MISCONCEPTION: "Condensation absorbs heat because water is heating up." Wrong direction — condensation RELEASES heat into the surrounding atmosphere.
-TRANSITION: We've shown phase changes release/absorb energy. Now let's connect that to humidity.
--->
-
----
-
-<!-- _class: phase-title -->
-
-# Day 3 — 4
-
-## Atmospheric Moisture
+# Atmospheric Moisture
 
 <!--
 PHASE GOAL: Students use the sling psychrometer (lab) to determine dew point and relative humidity from wet-bulb depression, and explain the relationship between temperature, dew point, and saturation.
@@ -628,7 +535,7 @@ A station model is a compact way to plot many weather variables at one location.
 - Full flag = 10 knots
 - Triangle ("pennant") = 50 knots
 
-A barb pointing *north* with two flags = north wind at 20 knots.
+A barb pointing *north* with two flags = north wind at 20 knots. 
 
 </div>
 </div>
