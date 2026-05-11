@@ -354,7 +354,7 @@ mjx-container,
 
 /* Inline math */
 mjx-container[display="false"],
-.MathJax:not(.MathJax_Display),
+.MathJax:not(.MathJax_Display),s
 .katex:not(.katex-display) {
   font-size: 1.25em !important;
   vertical-align: -0.05em;
