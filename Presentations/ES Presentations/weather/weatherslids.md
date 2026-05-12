@@ -279,12 +279,47 @@ DIFFERENTIATION: The mnemonic lands well for students who struggle to memorize o
 
 ---
 
-
 <!--- _class: center --->
 
 ![center w:1000](image-3.png)
 
 ---
+
+# Lab: Earth's Atmosphere
+
+<div class="esrt">
+
+**Learning Goal:** Identify the characteristics associated with each layer of Earth's atmosphere.
+
+</div>
+
+<div class="columns">
+<div class="col">
+
+**You will:**
+- Diagram the five atmospheric layers
+- Map temperature changes by altitude
+- Identify where common phenomena occur — weather, ozone, meteors, auroras
+- Use **ESRT pg 19** to locate the tropopause and jet streams
+
+</div>
+<div class="col">
+
+<div class="vocab">
+
+**ESRT:** pg 19 — Cross Section of Earth's Lower Atmosphere
+**NYSSLS:** HS-ESS2-8
+**Time:** ~30 min
+
+</div>
+
+</div>
+</div>
+
+<!--
+LAB INTRO: This is the anchor activity for the atmosphere block. Students should complete the diagram by the end of class.
+ASSESSMENT: Collect for completion; revisit common misconceptions before the next class.
+-->
 
 ---
 
@@ -378,6 +413,44 @@ EXPECTED CHALLENGE: Students conflate "moisture content" with "humidity %." Dew 
 
 ---
 
+# Lab: Sling Psychrometer
+
+<div class="esrt">
+
+**Learning Goal:** Use a sling psychrometer to measure wet-bulb depression, determine dew point and relative humidity, and explain the relationship between air temperature and the air's moisture-holding capacity.
+
+</div>
+
+<div class="columns">
+<div class="col">
+
+**You will:**
+- Take dry-bulb and wet-bulb readings inside, outside, and at a humid station (over a beaker of water)
+- Calculate wet-bulb depression for each
+- Determine dew point and RH from a provided lookup table
+- Explain why the same depression gives different RH at different temperatures
+
+</div>
+<div class="col">
+
+<div class="vocab">
+
+**Materials:** sling psychrometer, distilled water, lookup chart
+**NYSSLS:** HS-ESS2-5
+**Time:** full 80-min block
+
+</div>
+
+</div>
+</div>
+
+<!--
+LAB INTRO: The dewpoint/RH tables are no longer on the 2024 ESRT, so students use a printed lookup table in the lab. Keep the table for reference but emphasize that they need to UNDERSTAND the relationship, not memorize the numbers.
+SAFETY: Check swing space before whirling the psychrometers.
+-->
+
+---
+
 <!-- _class: phase-title -->
 
 # Cloud Formation
@@ -433,6 +506,44 @@ Because both fall but at different rates, they **converge** — and where they m
 TEACHER MOVE: Use a bicycle pump analogy — when you compress air the pump gets hot; when you let it expand it cools.
 KEY POINT: The dew point falls more slowly than the dry-bulb temperature, so they CONVERGE as the parcel rises. Where they meet → cloud base.
 COMMON MISCONCEPTION: "The atmosphere gets cooler, so the air rising into it cools by mixing." Wrong — adiabatic = no heat exchange.
+-->
+
+---
+
+# Lab: Cloud Base Altitude
+
+<div class="esrt">
+
+**Learning Goal:** Determine the height at which clouds will form using the temperature and moisture content of an air mass.
+
+</div>
+
+<div class="columns">
+<div class="col">
+
+**You will:**
+- Be given several surface air parcels with different T and dew points
+- Apply the dry adiabatic (~10 °C/km) and dew-point (~2 °C/km) lapse rates
+- Find the altitude where they converge — that's cloud base
+- Compare cases to identify what conditions favor low vs high cloud bases
+
+</div>
+<div class="col">
+
+<div class="vocab">
+
+**NYSSLS:** HS-ESS2-5
+**Time:** ~30 min
+**Concept:** Convergence of lapse rates → cloud base
+
+</div>
+
+</div>
+</div>
+
+<!--
+LAB INTRO: The cloud base graph was removed from the 2024 ESRT. Students do this algebraically or graphically using lab-provided axes.
+COMMON ERROR: Students apply only one lapse rate. Both temperatures fall as the parcel rises — that's why they converge.
 -->
 
 ---
@@ -575,6 +686,44 @@ Wind transfers energy to water surface — the connection between atmosphere and
 TEACHER MOVE: Two anchor relationships — pressure → density, and gradient → wind speed. Both come up on Regents exams in different guises.
 EXPECTED CONFUSION: "Why does air flow from high to low? Why not the other way?" — Pressure is force per area. High-pressure air is being pushed; it flows toward where there's less resistance (lower pressure).
 TRANSITION: We'll see this play out in air masses (high vs low pressure systems) next.
+-->
+
+---
+
+# Lab: Weather Instruments
+
+<div class="esrt">
+
+**Learning Goal:** Identify the instruments used to measure atmospheric conditions, and plot the measurements on a weather station model.
+
+</div>
+
+<div class="columns">
+<div class="col">
+
+**You will:**
+- Identify each weather instrument and what variable it measures
+- Build a station model from a set of given measurements
+- Decode existing station models — T, dew point, pressure, wind, sky cover, weather
+- Practice the 3-digit pressure code
+
+</div>
+<div class="col">
+
+<div class="vocab">
+
+**ESRT:** pg 18 — Key to Weather Map Symbols
+**NYSSLS:** HS-ESS2-8
+**Time:** ~40 min
+
+</div>
+
+</div>
+</div>
+
+<!--
+LAB INTRO: This lab is where the pressure-code drill pays off. Have students try a few before assuming they've got it.
+ASSESSMENT: Exit-ticket: give one fully-coded station model, have students decode all 6 variables.
 -->
 
 ---
@@ -731,6 +880,44 @@ CONFERRING QUESTION: "Why does the wind shift direction as the front passes?" �
 
 ---
 
+# Lab: Weather Fronts
+
+<div class="esrt">
+
+**Learning Goal:** Identify the atmospheric conditions associated with different types of weather fronts.
+
+</div>
+
+<div class="columns">
+<div class="col">
+
+**You will:**
+- Identify each front type from its symbol on a weather map
+- Diagram cross-sections of cold vs warm fronts
+- Predict the air mass on each side of a labeled front
+- Predict how T, pressure, wind, and clouds change as each front passes
+
+</div>
+<div class="col">
+
+<div class="vocab">
+
+**ESRT:** pg 18 — front symbols
+**NYSSLS:** HS-ESS2-8
+**Time:** ~40 min
+
+</div>
+
+</div>
+</div>
+
+<!--
+LAB INTRO: The cross-section drawings are the differentiator — they make students reason about WHY each front type produces its weather, not just identify symbols.
+ASSESSMENT: Exit-ticket — predict what's coming if a cold front is 200 km west and approaching at 30 km/h.
+-->
+
+---
+
 # Local Winds — Sea Breeze vs Land Breeze
 
 <div class="columns">
@@ -854,6 +1041,45 @@ EXAM NOTE: The 2024 ESRT removed the equations table from pg 1. Students need to
 
 ---
 
+# Lab: Mapping Weather Variables
+
+<div class="esrt">
+
+**Learning Goal:** Construct isobars and isotherms, and identify atmospheric circulation associated with high and low pressure systems.
+
+</div>
+
+<div class="columns">
+<div class="col">
+
+**You will:**
+- Plot station data on a weather map of the US
+- Construct isotherms and isobars following the isoline rules
+- Locate H and L pressure centers
+- Identify wind patterns — rotation, convergence, divergence — around each system
+- Calculate gradient between two points
+
+</div>
+<div class="col">
+
+<div class="vocab">
+
+**ESRT:** pg 18 (decoding station data)
+**NYSSLS:** HS-ESS2-8
+**Time:** full 80-min block
+
+</div>
+
+</div>
+</div>
+
+<!--
+LAB INTRO: This is the synthesis lab for HS-ESS2-8 — students collect, plot, and interpret weather data. It directly mirrors the type of task on the new Regents exam.
+COMMON ERROR: Students draw isolines THROUGH stations instead of BETWEEN them. Drill the rule.
+-->
+
+---
+
 <!-- _class: phase-title -->
 
 # Day 9 — 10
@@ -895,12 +1121,12 @@ All three are the **same kind of storm**.
 <div class="key-idea">
 
 The energy source: **latent heat released when water vapor condenses** in the storm's eyewall.
-This is the same $Q = m \cdot H_v$ we calculated on Day 2.
+This connects back to the Phase Change of Water lab.
 
 </div>
 
 <!--
-TEACHER MOVE: Make the explicit connection back to Day 2 — phase change drives the storm. Each gram of water vapor condensing releases 2260 J. Multiply by trillions of grams happening simultaneously.
+TEACHER MOVE: Make the explicit connection back to Day 2 — phase change drives the storm. Every gram of water vapor that condenses in the eyewall releases ~2260 J. Multiply by trillions of grams happening simultaneously.
 KEY POINT: Hurricanes weaken over land because they lose their energy source — warm ocean water.
 HURRICANES ARE INTENSE LOW PRESSURE SYSTEMS. Show the connection back to L systems (rising air, converging, counterclockwise rotation).
 -->
@@ -952,6 +1178,45 @@ The scale is based **only on wind speed** — it does not account for storm surg
 <!--
 TEACHER MOVE: This is a Regents-friendly table. Drill it briefly.
 KEY POINT: When categorizing in the lab, students will use ONLY wind speed — even if the storm has dropped pressure or had storm surge.
+-->
+
+---
+
+# Lab: Hurricane Katrina
+
+<div class="esrt">
+
+**Learning Goal:** Describe the relationship between atmospheric conditions and the location of a large-scale low-pressure system, and how those conditions affect wind speed and potential storm damage.
+
+</div>
+
+<div class="columns">
+<div class="col">
+
+**You will:**
+- Track Katrina's path across the Gulf of Mexico (Aug 2005)
+- Plot wind speed and pressure over time
+- Categorize the storm at each stage on the Saffir-Simpson scale
+- Explain why landfall caused rapid weakening
+- Identify the conditions that allowed it to intensify
+
+</div>
+<div class="col">
+
+<div class="vocab">
+
+**NYSSLS:** HS-ESS3-5
+**Time:** ~40 min
+**Connects to:** the climate CER on Day 10
+
+</div>
+
+</div>
+</div>
+
+<!--
+LAB INTRO: This is the case study that anchors the climate CER. Students should be able to argue: "the conditions that made Katrina catastrophic are the same conditions climate change is intensifying."
+HISTORICAL CONTEXT: ~1800 deaths; $125B damage. New Orleans flood walls failed. Storm surge of 8m+ in some areas.
 -->
 
 ---
@@ -1016,6 +1281,44 @@ This frames the unit-end CER prompt: argue for intensity OR frequency OR both, u
 
 ---
 
+# Lab: Killer Typhoon
+
+<div class="esrt">
+
+**Learning Goal:** Identify the conditions required for tropical cyclones to form and explain why some storms become "super-typhoons."
+
+</div>
+
+<div class="columns">
+<div class="col">
+
+**You will:**
+- Watch the *Killer Typhoon* documentary (Super Typhoon Haiyan, Philippines, 2013)
+- Answer guided questions about cyclone formation, structure, and intensity
+- Identify the Dvorak Scale and how it differs from Saffir-Simpson
+- Connect storm intensity to the four formation conditions (SST, depth, shear, latitude)
+
+</div>
+<div class="col">
+
+<div class="vocab">
+
+**Format:** documentary + Q&A
+**NYSSLS:** HS-ESS3-5
+**Time:** ~40 min
+
+</div>
+
+</div>
+</div>
+
+<!--
+LAB INTRO: Haiyan is one of the strongest tropical cyclones ever recorded (peak winds ~195 mph). It's the case study for "what happens when all four conditions align AND SST is anomalously high."
+TIE TO CLIMATE: Haiyan's intensity is consistent with predicted impacts of warmer SSTs. Lead into the Day 10 CER directly from this.
+-->
+
+---
+
 # Connecting It All — Day 10 Synthesis
 
 > **Driving question:** *Will there be more frequent and more intense severe storms in the future?*
@@ -1023,9 +1326,9 @@ This frames the unit-end CER prompt: argue for intensity OR frequency OR both, u
 Use evidence from this unit:
 
 1. **Sea surface temperatures are rising.** (From Climate Change unit.)
-2. **Warmer water releases more latent heat when it evaporates.** (Day 2.)
-3. **Warmer air holds more water vapor.** (Day 3.)
-4. **Hurricanes are powered by latent heat from warm seawater.** (Day 9.)
+2. **Warmer water releases more latent heat when it evaporates.** (Phase Change lab.)
+3. **Warmer air holds more water vapor.** (Sling Psychrometer lab.)
+4. **Hurricanes are powered by latent heat from warm seawater.** (Katrina + Killer Typhoon.)
 
 <div class="key-idea">
 

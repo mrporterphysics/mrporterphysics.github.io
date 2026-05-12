@@ -224,11 +224,6 @@ Draw the following 4 waves: A, B, C, and D
 3. D has the same period of A, but half the amplitude. 
 4. A should be drawn with 2 full waves 
 
-
----
-
-# Pivot - Wave Speed Experiment <!---fit--->
-
 ---
 
 # Wave Characteristics 
