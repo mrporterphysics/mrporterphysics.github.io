@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.05.12 **Regents Physics**
+
+##### **❓ of the 📅**: Which of the five senses would you say is your strongest? Weakest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Wave Equation
+2. Think Sheet
+3. Regents Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with wave equation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.11 **Regents Physics**
 
 ##### **❓ of the 📅**: What is the number one thing on your bucket list?
