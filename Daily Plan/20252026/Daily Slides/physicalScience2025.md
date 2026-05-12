@@ -17,6 +17,36 @@ class: green
 
 ---
 
+# 2026.05.12 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather lose both legs, both arms, or one of each?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Pass the Water Lab
+2. Forces Questions
+2. Forces Notes
+2. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.11 **Physical Science**
 
 ##### **❓ of the 📅**: What's the number one thing on your bucket list?
