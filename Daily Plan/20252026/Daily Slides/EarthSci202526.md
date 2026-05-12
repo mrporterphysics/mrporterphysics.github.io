@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.05.12 **Earth Science**
+
+##### **❓ of the 📅**: Which of the five senses would you say is your strongest? Weakest?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Tides Lab
+2. Regents Clusters Practice    
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Lab_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2026.05.11 **Earth Science**
 
