@@ -29,6 +29,9 @@ class:  twilight
 
 1. Finish Tides Lab
 2. Regents Clusters Practice    
+    - Cluster 1 -> p.21 #27-30
+    - Cluster 2 -> p.36 #31-35
+    - Cluster 3 -> p.46 #41-45
 
 </div>
 

@@ -380,9 +380,7 @@ EXPECTED CHALLENGE: Students conflate "moisture content" with "humidity %." Dew 
 
 <!-- _class: phase-title -->
 
-# Day 5 — 6
-
-## Cloud Formation
+# Cloud Formation
 
 <!--
 PHASE GOAL: Students explain why clouds form (rising air cools adiabatically until reaching dew point) and use the lapse-rate idea to estimate cloud base altitude.
@@ -439,41 +437,9 @@ COMMON MISCONCEPTION: "The atmosphere gets cooler, so the air rising into it coo
 
 ---
 
-# Estimating Cloud Base Altitude
-
-<div class="warning">
-
-The 2024 ESRT no longer provides a cloud base graph. We estimate cloud base from the gap between surface temperature and surface dew point:
-
-$$h_{\text{cloud base}} \approx \frac{T_{\text{surface}} - T_{\text{dewpoint, surface}}}{8 \text{ °C/km}}$$
-
-(8 °C/km = 10 − 2; the rate at which the gap closes per km of lift.)
-
-</div>
-
-> **Q:** Surface T = 30 °C, dew point = 14 °C. At what altitude do clouds form?
-
-$$h \approx \frac{30 - 14}{8} = 2 \text{ km}$$
-
-<div class="key-idea">
-
-**The closer surface T and dew point are**, the **lower** the cloud base — and the more likely precipitation is at the surface.
-
-</div>
-
-<!--
-TEACHER MOVE: Walk through the example. Note that this technique is a teaching tool — the 2024 exam won't ask students to compute this from a graph because the graph is gone. But the underlying relationship (lower temp-dewpoint gap → lower clouds → more precip likelihood) is squarely on HS-ESS2-8.
-DIFFERENTIATION: Strong students can do the algebra; struggling students just need the qualitative relationship.
--->
-
----
-
 <!-- _class: phase-title -->
 
-# Day 6 — 7
-
-## Weather Instruments &
-## Station Models
+# Weather Instruments & Station Models
 
 <!--
 PHASE GOAL: Students identify weather instruments and decode the standard station model (ESRT pg 18 in 2024 edition).
@@ -505,6 +471,16 @@ TEACHER MOVE: This is a high-yield Regents memorization point. Use the mnemonic:
 COMMON MISCONCEPTION: Students often reverse this. Drill it.
 EXPECTED STUDENT RESPONSE: "Why is it named that way?" — historically, sailors needed to know what was coming at them.
 -->
+
+---
+
+# Station Model p. 18
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+![bg fit](image-4.png)
+
+![bg fit](image-5.png)
 
 ---
 
@@ -605,10 +581,8 @@ TRANSITION: We'll see this play out in air masses (high vs low pressure systems)
 
 <!-- _class: phase-title -->
 
-# Day 7 — 8
 
-## Air Masses, Pressure Systems &
-## Weather Fronts
+# Air Masses, Pressure Systems &  Weather Fronts
 
 <!--
 PHASE GOAL: Students identify the major air masses affecting NYS, predict weather changes associated with each front type, and explain weather using H/L systems and planetary wind belts.
