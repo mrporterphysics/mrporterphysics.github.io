@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2025.05.13 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather lose both legs, both arms, or one of each?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Atmosphere Notes
+2. Atmosphere Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look at layers of the atmosphere_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.12 **Earth Science**
 
 ##### **❓ of the 📅**: Which of the five senses would you say is your strongest? Weakest?

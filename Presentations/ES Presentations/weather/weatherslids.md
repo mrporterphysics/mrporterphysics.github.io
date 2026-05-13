@@ -390,6 +390,14 @@ TRANSITION: "If air is saturated and cools further, what happens?" → leads to 
 
 ---
 
+
+
+![bg fit](image-6.png)
+
+![bg fit](image-7.png)
+
+---
+
 # Three Key Relationships
 
 <div class="key-idea">
@@ -767,7 +775,7 @@ EXPECTED RESPONSE: "What about hurricanes?" — they're tropical cyclones, not a
 
 # High and Low Pressure Systems
 
-| | **Low Pressure (L)** | **High Pressure (H)** |
+| | Low Pressure (L) | High Pressure (H)|
 |---|---|---|
 | **Air temperature** | warm | cool |
 | **Air motion** | rising | sinking |
@@ -828,16 +836,21 @@ KEY POINT: At every front, the warm air is FORCED UP. Lifting → adiabatic cool
 
 **Cold front** — blue line + filled triangles
 *Triangles point in direction of motion.*
+![center](image-8.png)
+
 
 **Warm front** — red line + filled semicircles
 *Semicircles point in direction of motion.*
+![center](image-9.png)
 
 </div>
 <div class="col">
 
 **Stationary front** — alternating triangles (blue) and semicircles (red), pointing **OPPOSITE** directions
+![center](image-10.png)
 
 **Occluded front** — purple line, alternating triangles & semicircles pointing the **SAME** direction
+![center](image-11.png)
 
 </div>
 </div>
@@ -1010,13 +1023,35 @@ DIFFERENTIATION: Provide a partially-completed map with two contours already dra
 
 ---
 
-# Calculating Gradient
+<!--- _class: center --->
 
-<div class="warning">
+<div class='columns'>
+<div>
 
-**Not on the 2024 ESRT** — the equations table is gone. But the concept is still core to HS-ESS2-8.
+# Isobars
+
+![](ll_analyze_slp_soln3_0.gif)
 
 </div>
+ 
+<div>
+
+# Isotherms
+
+![](image-13.png)
+
+</div>
+</div>
+
+
+
+
+
+---
+
+# Calculating Gradient
+
+
 
 $$\text{Gradient} = \frac{\text{change in field value}}{\text{distance}}$$
 
