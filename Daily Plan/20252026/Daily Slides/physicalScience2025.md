@@ -30,7 +30,7 @@ class: green
 1. Finish Pass the Water Lab
 2. Forces Questions
 2. Forces Notes
-2. 
+2. Forces worksheet
 
 </div>
 
@@ -38,7 +38,7 @@ class: green
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Define Newton's First Law_
 
 ### 📆 Upcoming
 
