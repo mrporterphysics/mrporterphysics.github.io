@@ -37,7 +37,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 _Explore humity and dew point_
+🥅 _Explore humidity and dew point_
 
 ### 📆 Upcoming
 
