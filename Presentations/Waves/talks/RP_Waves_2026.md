@@ -274,16 +274,6 @@ Draw the following 4 waves: A, B, C, and D
 
 ![center](https://upload.wikimedia.org/wikipedia/commons/9/92/Phase_shifter_using_IQ_modulator.gif)
 
-
----
-
-# Pivot - Pulse Reflections <!---fit--->
-
----
-
-
-# Pivot - Pulse "Collisions" <!---fit--->
-
 ---
 
 # Pulse Reflections 
@@ -337,14 +327,12 @@ Draw the following 4 waves: A, B, C, and D
 
 ---
 
-<iframe src="http://physics.bu.edu/~duffy/HTML5/interference_of_pulses.html" width = "1100px" height = "900px" ></iframe>
-
----
-
 # Constructive Interferece
 
 - Occurs at points where path distances to the two different sources differ by an even number of half wavelengths.
     - This means a phase difference of 0º or 360º for maximum constructive interference. 
+
+![center w:700](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0321-animated-gif-2_orig.gif)
 
 ---
 
@@ -353,6 +341,9 @@ Draw the following 4 waves: A, B, C, and D
 - Occurs when crests meet troughs or compressions meet rarefactions. 
     - This is where path differences to the two sources differ by an odd number of half wavelengths.
     - This is at 180º out of phase.
+
+
+![center w:600](https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0321-animated-gif-3_orig.gif)
 
 --- 
 

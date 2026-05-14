@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.05.14 **Regents Physics**
+
+##### **❓ of the 📅**: If someone were to make a movie of your life, what kind of movie would it be? (comedy, action, drama)?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Check Regents Questions 
+2. Wave behavior notes
+3. Wave Behavior Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore wave behaviors_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.12 **Regents Physics**
 
 ##### **❓ of the 📅**: Which of the five senses would you say is your strongest? Weakest?
