@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.05.13 **Earth Science**
+
+##### **❓ of the 📅**: If someone were to make a movie of your life, what kind of movie would it be? (comedy, action, drama)?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Atmosphere lab
+2. Notes - Moisture
+3. Lab - Sling Psychrometer
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore humity and dew point_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.05.13 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather lose both legs, both arms, or one of each?
