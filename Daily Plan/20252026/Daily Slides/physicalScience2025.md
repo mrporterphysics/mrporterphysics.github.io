@@ -17,6 +17,36 @@ class: green
 
 ---
 
+# 2026.05.15 **Physical Science**
+
+##### **❓ of the 📅**: What weird quirks did you pick up from your parents?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Forces Survey
+2. Forces Notes
+3. Intertia Practice
+3. Balanced vs. Unbalanced Forces
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.12 **Physical Science**
 
 ##### **❓ of the 📅**: Would you rather lose both legs, both arms, or one of each?
