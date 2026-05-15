@@ -473,7 +473,7 @@ NOTE: 2024 ESRT no longer has the cloud base altitude graph. Concept still teste
 
 <!--- _class: invert --->
 
-<iframe width="1000" height="515" src="https://www.youtube.com/embed/QC2x_RRnk8E?si=CJuzTIOABqpyuNCd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="1200" height="615" src="https://www.youtube.com/embed/QC2x_RRnk8E?si=CJuzTIOABqpyuNCd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
