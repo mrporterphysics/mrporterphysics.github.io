@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.05.18 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How Clouds Form
+2. Clouds Lab Sheet
+2. Weather Instruments & Station Models
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn how clouds form_
+
+🥅 _Create station models_
+
+
+
+</div>
+</div>
+
+---
+
 # 2026.05.15 **Earth Science**
 
 ##### **❓ of the 📅**: What weird quirks did you pick up from your parents?
