@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.05.18 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you invented a new ice cream flavor, what would it be?
 
 <div class ='columns'>
 

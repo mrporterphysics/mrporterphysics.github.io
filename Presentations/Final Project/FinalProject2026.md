@@ -153,72 +153,9 @@ table {font-size:20px;}
 
 ---
 
-# 2025.05.12 **AP Physics** Day 1
+# 2026.05.18   **AP Physics**
 
-##### **❓ of the 📅**: What rule do you wish they would introduce into your favorite sport (or game)?
-
-<div class = "columns">
-
-<div>
-
-#### 📋 Agenda
-
-1. Letter of Rec PSA
-1. Background Research
-2. Experimental Design
-    - Written plan
-</div>
-
-<div>
-
-#### 🎯 Goals 
-
-🥅 _Procedure written_
-
-
-
-</div>
-
-</div>
-
----
-
-# 2025.05.13 **AP Physics** Day 2
-
-##### **❓ of the 📅**: Any big Memorial Day Weekend Plans?
-
-<div class = "columns">
-
-<div>
-
-#### 📋 Agenda
-
-0. Submit Proposal
-1. Research
-2. Data Collection - Should be completed by the end of next week
-
-
-</div>
-
-<div>
-
-#### 🎯 Goals 
-
-🥅 _Continue Research_
-
-🥅 _Start Data Collection_
-
-
-
-</div>
-
-</div>
-
----
-
-# Day 3 - Experimental Design & Research 
-
-##### ❓of the 📅: *If you were ruler of your own country what would be the first law you would introduce?*
+##### ❓of the 📅: _If you invented a new ice cream flavor, what would it be?_
 
 1. ✅ Finish Research 
 2. ✅ Finish Experimental Design 
