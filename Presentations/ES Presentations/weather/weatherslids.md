@@ -468,6 +468,13 @@ PHASE GOAL: Students explain why clouds form (rising air cools adiabatically unt
 NOTE: 2024 ESRT no longer has the cloud base altitude graph. Concept still tested; lookup is not.
 -->
 
+
+---
+
+<!--- _class: invert --->
+
+<iframe width="1000" height="515" src="https://www.youtube.com/embed/QC2x_RRnk8E?si=CJuzTIOABqpyuNCd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ---
 
 # Three Ingredients for Cloud Formation
