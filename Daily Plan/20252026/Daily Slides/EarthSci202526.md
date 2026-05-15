@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.05.15 **Earth Science**
+
+##### **❓ of the 📅**: What weird quirks did you pick up from your parents?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Moisture Lab
+2. How do clouds form
+3. Clouds Lab Sheet
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe how clouds form_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.14 **Earth Science**
 
 ##### **❓ of the 📅**: If someone were to make a movie of your life, what kind of movie would it be? (comedy, action, drama)?
