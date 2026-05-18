@@ -15,6 +15,34 @@ math: mathjax
 
 ---
 
+# 2026.05.18 **Regents Physics**
+
+##### **❓ of the 📅**: If you invented a new ice cream flavor, what would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Standing Waves and Resonance
+2. Speed of Sound Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model resonance and calculate the speed of sound_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.14 **Regents Physics**
 
 ##### **❓ of the 📅**: If someone were to make a movie of your life, what kind of movie would it be? (comedy, action, drama)?
