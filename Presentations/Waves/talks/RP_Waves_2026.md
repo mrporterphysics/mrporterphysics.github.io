@@ -472,7 +472,7 @@ Draw the following 4 waves: A, B, C, and D
 - *Title, Purpose and Essential Question*
 - *Procedure*: should include step-by-step procedure and diagram of setup 
 - *Data section*: should include collected data; data should be organized and labeled. Calculations of speed should be organized, labeled and clearly shown.
-- Con*clusion and a Discussion of Results*:  should respond to the question raised in the Purpose section. The Discussion of Results should include an error analysis. The reliability of the results should be evaluated based upon the theoretical value for the speed of sound. A percent error calculation should be performed.
+- *Conclusion and a Discussion of Results*:  should respond to the question raised in the Purpose section. The Discussion of Results should include an error analysis. The reliability of the results should be evaluated based upon the theoretical value for the speed of sound. A percent error calculation should be performed.
 
 ---
 
@@ -513,7 +513,7 @@ Draw the following 4 waves: A, B, C, and D
 - *Title, Purpose and Essential Question*
 - *Procedure*: should include step-by-step procedure and diagram of setup 
 - *Data section*: should include collected data; data should be organized and labeled. Calculations of speed should be organized, labeled and clearly shown.
-- Con*clusion and a Discussion of Results*:  should respond to the question raised in the Purpose section. The Discussion of Results should include an error analysis. The reliability of the results should be evaluated based upon the theoretical value for the speed of sound. A percent error calculation should be performed.
+- *Conclusion and a Discussion of Results*:  should respond to the question raised in the Purpose section. The Discussion of Results should include an error analysis. The reliability of the results should be evaluated based upon the theoretical value for the speed of sound. A percent error calculation should be performed.
 
 
 
