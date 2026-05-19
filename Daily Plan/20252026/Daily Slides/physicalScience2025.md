@@ -17,6 +17,33 @@ class: green
 
 ---
 
+# 2026.05.19 **Physical Science**
+
+##### **❓ of the 📅**: Road trip or 'staycation'?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Balanced vs. Unbalanced Forces Pivot
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the result of balanced and unbalanced forces on a object with a simulation_
+
+
+
+</div>
+</div>
+
+---
+
 # 2026.05.15 **Physical Science**
 
 ##### **❓ of the 📅**: What weird quirks did you pick up from your parents?
