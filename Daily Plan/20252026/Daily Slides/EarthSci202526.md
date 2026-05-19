@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.05.19 **Earth Scienc**
+
+##### **❓ of the 📅**: Road trip or 'staycation'?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Weather Instruments
+2. Station Models
+3. Weather Instruments Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Decode weather station models_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.18 **Earth Science**
 
 ##### **❓ of the 📅**: If you invented a new ice cream flavor, what would it be?
