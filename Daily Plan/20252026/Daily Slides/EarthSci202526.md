@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.05.20 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite sandwich and why? 🥪
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Station Models
+2. Weather Fronts & Isolines & Gradients
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model weather fronts_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.19 **Earth Scienc**
 
 ##### **❓ of the 📅**: Road trip or 'staycation'?
