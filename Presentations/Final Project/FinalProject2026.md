@@ -169,16 +169,34 @@ table {font-size:20px;}
 
 
 
-# 5.28 Start Experimenting 
+# 2026.05.19 **AP Physics**
 
 ##### ❓of the 📅: What three items would you take with you on a deserted island?
 
+<div class='columns'>
+<div>
+
 ## 📋 Agenda
 
-1. Set up your experiment
-2. Start Taking Data
+1. Continue collecting data for your experiment
+    - take a photo of your experimental setup (yes take your phone out...but only for the photo!)
 
-## 🎯: Week Goal: Complete data collection
+
+</div>
+ 
+<div>
+
+## 🎯: Week Goal: 
+
+- Complete data collection
+
+</div>
+</div>
+
+
+
+
+
 
 ---
 
