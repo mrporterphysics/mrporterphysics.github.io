@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.05.20 **Regents Physics**
+
+##### **❓ of the 📅**: What's your favorite sandwich and why?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Tube Resonance Lab
+2. Doppler Effect
+3. E&M Spectrum
+3. Reflection & Refraction
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model more wave behavior_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.18 **Regents Physics**
 
 ##### **❓ of the 📅**: If you invented a new ice cream flavor, what would it be?
