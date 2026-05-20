@@ -493,7 +493,7 @@ Draw the following 4 waves: A, B, C, and D
 - Wave equation: $\boxed{v = f \lambda}$
     - We will graph as $L = v * \frac{1}{f}$ where $L = \frac{\lambda}{4}$
     * This means your slope is 4 $\times$ speed of sound
-        - $\frac{\text{slope}}{4} = v_{sound}$
+        - $slope = \frac{v_{sound}}{4}$
 - Speed of Sound Theoretical:
     - $v = 331 + (0.6 T)$ 
 
