@@ -831,7 +831,7 @@ KEY POINT: At every front, the warm air is FORCED UP. Lifting → adiabatic cool
 ---
 
 <div class='columns'>
-<div>
+<div class = 'col'>
 
 # Cold Front
 
@@ -839,7 +839,7 @@ KEY POINT: At every front, the warm air is FORCED UP. Lifting → adiabatic cool
 
 </div>
  
-<div>
+<div class = 'col'>
 
 # Warm Front
 
@@ -851,7 +851,7 @@ KEY POINT: At every front, the warm air is FORCED UP. Lifting → adiabatic cool
 ---
 
 <div class='columns'>
-<div>
+<div class = 'col'>
 
 # Stationary Front
 
@@ -859,7 +859,7 @@ KEY POINT: At every front, the warm air is FORCED UP. Lifting → adiabatic cool
 
 </div>
  
-<div>
+<div class = 'col'>
 
 # Occluded Front
 
