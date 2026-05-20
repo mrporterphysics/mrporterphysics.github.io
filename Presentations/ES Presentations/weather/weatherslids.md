@@ -830,6 +830,47 @@ KEY POINT: At every front, the warm air is FORCED UP. Lifting → adiabatic cool
 
 ---
 
+<div class='columns'>
+<div>
+
+# Cold Front
+
+![center w:550](coldfront.jpg)
+
+</div>
+ 
+<div>
+
+# Warm Front
+
+![center w:550](warmfront.jpg)
+
+</div>
+</div>
+
+---
+
+<div class='columns'>
+<div>
+
+# Stationary Front
+
+![center w:500](image-14.png)
+
+</div>
+ 
+<div>
+
+# Occluded Front
+
+![center w:500](image-15.png)
+
+</div>
+</div>
+
+
+---
+
 # Front Symbols — Identify A through E
 
 <div class="esrt">
