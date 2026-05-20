@@ -200,16 +200,30 @@ table {font-size:20px;}
 
 ---
 
-# 2025.05.29 - Collecting Data
+# 2025.05.20 **AP Physics**
 
 ##### ❓of the 📅: Which body of water: ocean, lake, pond, river, stream, pool?
 
+<div class='columns'>
+<div>
+
 ## 📋 Agenda
 
-1. Collect Data
-2. Analyze Data 
+1. Continue collecting data for your experiment
+    - take a photo of your experimental setup (yes take your phone out...but only for the photo!)
 
-### 🎯 Week Goal: Complete data collection
+
+</div>
+ 
+<div>
+
+## 🎯: Week Goal: 
+
+- Data collection
+
+</div>
+</div>
+
 
 ---
 
