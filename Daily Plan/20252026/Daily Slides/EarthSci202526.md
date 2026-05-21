@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.05.21 **Earth Science**
+
+##### **❓ of the 📅**: How many hotdogs 🌭 could you eat in a hotdog eating contest? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mapping weather variables
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create weather maps with isolines_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.20 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite sandwich and why? 🥪
