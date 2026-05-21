@@ -17,6 +17,36 @@ class: green
 
 ---
 
+# 2026.05.20 **Physical Science**
+
+##### **❓ of the 📅**: Do you have any plans for the long weekend?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Balanced vs. unbalanced forces
+2. Force Diagrams and Forces
+3. Force Diagrams and Identifying Forces 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model forces with diagrams_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.19 **Physical Science**
 
 ##### **❓ of the 📅**: Road trip or 'staycation'?

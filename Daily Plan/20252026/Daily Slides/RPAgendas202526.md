@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.05.21 **Regents Physics**
+
+##### **❓ of the 📅**: Do you have any fun plans for the long weekend?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Doppler Effect
+3. E&M Spectrum
+3. Reflection & Refraction
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model and define more wave behaviors_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.20 **Regents Physics**
 
 ##### **❓ of the 📅**: What's your favorite sandwich and why?
