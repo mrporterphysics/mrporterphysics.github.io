@@ -17,6 +17,35 @@ class: green
 
 ---
 
+# 2026.05.27 **Physical Science**
+
+##### **❓ of the 📅**: How was your long weekend?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Force Diagram Notes
+2. Force Diagram Practice
+3. Mass vs. Weight Notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model forces with force diagrams_
+
+
+
+</div>
+</div>
+
+---
+
 # 2026.05.20 **Physical Science**
 
 ##### **❓ of the 📅**: Do you have any plans for the long weekend?
