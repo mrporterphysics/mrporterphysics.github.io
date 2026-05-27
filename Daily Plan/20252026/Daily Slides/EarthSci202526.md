@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.05,27 **Earth Science**
+
+##### **❓ of the 📅**: How many hotdogs did you eat over Memorial Day Weekend?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mapping Weather Variables
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Map Weather Variables_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.21 **Earth Science**
 
 ##### **❓ of the 📅**: How many hotdogs 🌭 could you eat in a hotdog eating contest? 
