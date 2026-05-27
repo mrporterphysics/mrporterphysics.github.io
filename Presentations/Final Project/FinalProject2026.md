@@ -200,7 +200,7 @@ table {font-size:20px;}
 
 ---
 
-# 2025.05.20 **AP Physics**
+# 2025.05.27 **AP Physics**
 
 ##### ❓of the 📅: Which body of water: ocean, lake, pond, river, stream, pool?
 
@@ -211,6 +211,7 @@ table {font-size:20px;}
 
 1. Continue collecting data for your experiment
     - take a photo of your experimental setup (yes take your phone out...but only for the photo!)
+2. Start analyzing data
 
 
 </div>
@@ -219,7 +220,7 @@ table {font-size:20px;}
 
 ## 🎯: Week Goal: 
 
-- Data collection
+- Compelete data collection!
 
 </div>
 </div>
