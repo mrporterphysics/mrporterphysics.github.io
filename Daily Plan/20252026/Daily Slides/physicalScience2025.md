@@ -17,6 +17,33 @@ class: green
 
 ---
 
+# 2026.05.29 **Physical Science**
+
+##### **❓ of the 📅**: Would you rather be immune to all diseases or never feel physical pain?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mass vs. Weight
+2. Mass vs. Weight lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the relationship between mass and weight on Earth_
+
+
+</div>
+</div>
+
+---
+
 # 2026.05.27 **Physical Science**
 
 ##### **❓ of the 📅**: How was your long weekend?
