@@ -6,7 +6,7 @@ theme: apothecary
 math: mathjax
 ---
 
-
+<!--- _class: invert --->
 
 # Modern Physics <!--fit--->
 
@@ -18,7 +18,7 @@ math: mathjax
 
 <!-- class: left--->
 
- ***Einstein*** Published 4 Papers in 1905 that laid the foundation for modern physics:
+# **Einstein** Published 4 Papers in 1905 that laid the foundation for modern physics:
 * 6/9/1905 Photoelectric Effect: *On the Heuristic Viewpoint Concerning the Production and Transformation of Light*
 * 7/18/1905 *Brownian Motion: On the Motion of Small Particles Suspended in a Stationary Liquid, as Required by the Molecular Kinetic Theory of Heat*
 * 9/26/1905 S*pecial Relativity: On the Electrodynamics of Moving Bodies*

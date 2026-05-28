@@ -26,7 +26,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Diffraction
-2. Start Modern Physics
+2. Start [Modern Physics](../../../Presentations/RP%20Modern/rpmodern2023.html)
 
 </div>
 
