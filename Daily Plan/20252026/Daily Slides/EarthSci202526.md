@@ -17,6 +17,35 @@ class:  twilight
 
 ---
 
+# 2026.05.29 **Earth Science**
+
+##### **❓ of the 📅**: How was the field trip? (Bonus: Would you rather have invisibility or flight?)
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Weather Labs`
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Weather Labs_
+
+### 📆 Upcoming
+
+- State Weather Lab next week
+
+</div>
+</div>
+
+---
+
 # 2026.05,27 **Earth Science**
 
 ##### **❓ of the 📅**: How many hotdogs did you eat over Memorial Day Weekend?

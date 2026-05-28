@@ -15,6 +15,34 @@ math: mathjax
 
 ---
 
+# 2026.05.29 **Regents Physics**
+
+##### **❓ of the 📅**: Would you rather have invisibility or flight?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Diffraction
+2. Start Modern Physics
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Diffraction and Start Modern Physics_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.28 **Regents Physics**
 
 ##### **❓ of the 📅**: How was your Memorial Day Weekend? How many hotdogs 🌭 did you eat?

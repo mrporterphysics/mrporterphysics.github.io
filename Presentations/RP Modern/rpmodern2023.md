@@ -1,32 +1,12 @@
 ---
 title: Regents - Modern 2023
 marp: true
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1px, 1fr));
-    gap: 1rem;
-  }
-    img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
-    }
 paginate: true
-theme: uncover
+theme: apothecary
 math: mathjax
 ---
 
-<style>
-section.left {
-  text-align: left;
-}
-ol, ul {
-    text-align: left;
-    margin: 15px;
-}
-</style>
 
-<!-- _class: invert--->
 
 # Modern Physics <!--fit--->
 
