@@ -15,6 +15,34 @@ math: mathjax
 
 ---
 
+# 2026.05.28 **Regents Physics**
+
+##### **❓ of the 📅**: How was your Memorial Day Weekend? How many hotdogs 🌭 did you eat?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review Refraction & Snell's Law
+2. Think Sheets on Refraction
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with refraction and Snell's Law_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.21 **Regents Physics**
 
 ##### **❓ of the 📅**: Do you have any fun plans for the long weekend?
