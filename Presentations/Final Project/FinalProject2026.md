@@ -259,9 +259,6 @@ table {font-size:20px;}
 
 ---
 
-
-<!--- _header: 2025.06.03 - **AP Physics** --->
-
 # 2026.06.01 **AP Physics** Data Analysis
 
 ##### **❓of the 📅**: What would (does?) your super hero costume look like?
