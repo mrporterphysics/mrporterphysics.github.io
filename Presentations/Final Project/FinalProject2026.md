@@ -262,7 +262,7 @@ table {font-size:20px;}
 
 <!--- _header: 2025.06.03 - **AP Physics** --->
 
-# Data Analysis
+# 2026.06.01 **AP Physics** Data Analysis
 
 ##### **❓of the 📅**: What did you do over your long weekend?
 
@@ -317,6 +317,109 @@ table {font-size:20px;}
 </div>
 
 </div>
+
+---
+
+## The Function of a Lab Report
+ 
+- Establishes the **purpose** of the lab
+- Allows you to **analyze** a scientific concept
+- Gives you an opportunity to **write scientifically**, in a format very similar to that used by scientists
+- **Documents** what you have learned
+
+---
+
+## Parts of a Lab Report
+ 
+- **Title** — What is the report about?
+- **Abstract** — What is the essence of the report?
+- **Introduction** — What is the context in which the experiment takes place?
+- **Materials & Methods** — What did you do and how did you do it?
+- **Results** — What did you find?
+- **Discussion** — What does it mean?
+- **Conclusion** — What have I learned?
+- **References** — What sources were used?
+
+---
+
+
+## Scientific Article vs. Lab Report
+ 
+|            | Lab Report                          | Scientific Article                   |
+| ---------- | ----------------------------------- | ------------------------------------ |
+| **Writer** | Students                            | Professional scientists              |
+| **Subjects** | Frequently repeated experiments   | Original experiments                 |
+| **Reader** | Teacher and/or class peers          | Other scientists                     |
+| **Purpose** | To learn something about science   | To contribute knowledge to science   |
+
+---
+
+## The Scientific Method
+ 
+1. Identify a problem you would like to solve
+2. Formulate a hypothesis
+3. Test the hypothesis
+4. Collect and analyze the data — record what you collect from your experiment
+5. Make conclusions
+
+---
+
+## Looking at the Hypothesis
+ 
+- What is the role of the hypothesis?
+- What is the difference between a **hypothesis**, a **theory**, and a **law**?
+- What are some theories and laws with which you are familiar?
+
+
+---
+
+## How Is the Scientific Method Reflected in Scientific Writing?
+ 
+**Parts of a Scientific Journal Article:**
+ 
+- **Title** — What the article is about
+- **Abstract** — Summarizes the whole article
+- **Introduction** — Establishes the research area, the problem, its importance, and the guiding question or hypothesis
+- **Materials & Methods** — Describes the research procedure
+- **Results** — Reports the outcomes of the research procedure 
+- **Discussion** — Interprets the results, explaining them and comparing them to other experiments
+- **Conclusion** — Focuses the reader on what is important about the research and its contribution to the larger field
+- **References** — Lists the sources used in the article
+
+---
+
+## LabWrite 
+
+<div class='columns'>
+<div>
+
+![center w:200](image.png)
+
+</div>
+ 
+<div>
+
+![center w:300](image-1.png)
+
+</div>
+</div>
+
+You **should** write your lab _out of order_ to make more sense of your results!
+
+---
+
+## Writing Order
+
+1. Methods - What did you do?
+2. Results - What did you find?
+3. Introduction - What is the context?
+4. Discussion - Interpreting your results
+    - _"What did my data show, how do I interpret it scientifically, and what might have affected it?"_
+5. Conclusions - What did you learn?
+    - _"What did I learn from doing this lab and this report—about the concept and about scientific skills?”_
+6. Abstract - Summarize your lab report
+7. Title 
+8. References
 
 --- 
 
