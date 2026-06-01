@@ -17,6 +17,35 @@ class: green
 
 ---
 
+# 2026.06.02 **Physical Science**
+
+##### **❓ of the 📅**: What would (does?) your super hero costume look like?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Mass vs. Weight Lab
+2. Mass vs. Weight Notes & Think sheet
+2. Newton's Second Law
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Differentiate between mass and weight_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.29 **Physical Science**
 
 ##### **❓ of the 📅**: Would you rather be immune to all diseases or never feel physical pain?
