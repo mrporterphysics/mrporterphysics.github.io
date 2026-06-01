@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.06.01 **Earth Science**
+
+##### **❓ of the 📅**: What would your superhero costume look like?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Weather State Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Part 1 of State Lab_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.29 **Earth Science**
 
 ##### **❓ of the 📅**: How was the field trip? (Bonus: Would you rather have invisibility or flight?)
