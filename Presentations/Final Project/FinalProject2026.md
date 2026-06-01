@@ -264,7 +264,7 @@ table {font-size:20px;}
 
 # 2026.06.01 **AP Physics** Data Analysis
 
-##### **❓of the 📅**: What did you do over your long weekend?
+##### **❓of the 📅**: What would (does?) your super hero costume look like?
 
 <div class="columns">
 <div>
