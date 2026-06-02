@@ -257,7 +257,7 @@ table {font-size:20px;}
 
 
 
----
+---e
 
 # 2026.06.01 **AP Physics** Data Analysis
 
@@ -493,7 +493,7 @@ You **should** write your lab _out of order_ to make more sense of your results!
 
 # Why use $\LaTeX$?
 
-- support for typesetting extremely complex mathematics, tables and technical content for the physical sciences;
+- support for typesetting complex mathematics, tables and technical content for the physical sciences;
 - facilities for footnotes, cross-referencing and management of bibliographies;
 - ease of producing complicated, or tedious, document elements such as indexes, glossaries, table of contents, lists of figures;
 - being highly customizable for bespoke document production due to its intrinsic programmability and extensibility through thousands of free add-on packages.
@@ -549,6 +549,8 @@ Some of the \textbf{greatest}
 discoveries in \underline{science} 
 were made by \textbf{\textit{accident}}.
 ```
+
+![center w:1000](image-2.png)
 
 ---
 
@@ -650,6 +652,46 @@ E=m
 - Trig:
     - $\sin\theta \cos\theta \tan\theta$ `\sin\theta \cos\theta \tan\theta`
 
+---
+
+# Lists in $\LaTeX$
+
+
+```latex
+\documentclass{article}
+\begin{document}
+\begin{itemize}
+  \item The individual entries are indicated with a black dot, a so-called bullet.
+  \item The text in the entries may be of any length.
+\end{itemize}
+\end{document}
+```
+
+![center w:1000](image-3.png)
+
+---
+
+# Ordered Lists
+
+```latex
+
+\documentclass{article}
+\begin{document}
+\begin{enumerate}
+  \item This is the first entry in our list.
+  \item The list numbers increase with each entry we add.
+\end{enumerate}
+\end{document}
+
+```
+
+![center w:1000](image-4.png)
+
+---
+
+
+
+# [Overleaf's Intro to $\LaTeX$](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 
 ---
 
