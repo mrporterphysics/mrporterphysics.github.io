@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026.06.03 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite movie?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish State Exam
+2. Cluster Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice for Regents Exam_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.02 **Earth Science**
 
 ##### **❓ of the 📅**: What gross thing did you see recently?
