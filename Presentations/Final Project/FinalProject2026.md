@@ -257,7 +257,7 @@ table {font-size:20px;}
 
 
 
----e
+---
 
 # 2026.06.01 **AP Physics** Data Analysis
 
@@ -290,7 +290,7 @@ table {font-size:20px;}
 
 <!--- _header: 2023.06.02 - **AP Physics** --->
 
-# Day 9 - Writing Your Lab 📝
+# 2026.06.02 **Writing Your Lab** 📝
 
 ##### **❓of the 📅**: If you could share a meal with any 4 individuals, living or dead, who would they be?
 
