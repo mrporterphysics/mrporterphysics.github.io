@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.06.02 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What gross thing did you see recently?
 
 <div class ='columns'>
 
