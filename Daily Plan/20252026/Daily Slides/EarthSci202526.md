@@ -28,7 +28,12 @@ class:  twilight
 #### 📋 Agenda
 
 1. Finish State Exam
-2. Cluster Practice
+2. Cluster Practice:
+    - 16 -> 20
+    - 31 -> 35
+    - 41 -> 45 
+    - 36 -> 40
+    - 46 -> 50
 
 </div>
 
