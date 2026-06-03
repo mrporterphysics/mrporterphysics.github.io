@@ -17,6 +17,36 @@ class: green
 
 ---
 
+# 2026.06.04 **Physical Science**
+
+##### **❓ of the 📅**: What is your favorite Disney movie?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish up mass vs. weight and get it graded
+2. Mass vs. weight notes
+3. Mass vs. weight practice
+3. Newton's second law notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define Newton's Second Law_
+
+
+
+</div>
+</div>
+
+---
+
 # 2026.06.02 **Physical Science**
 
 ##### **❓ of the 📅**: What would (does?) your super hero costume look like?

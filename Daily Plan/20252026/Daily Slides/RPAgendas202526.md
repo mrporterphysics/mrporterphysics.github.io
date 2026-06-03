@@ -15,6 +15,33 @@ math: mathjax
 
 ---
 
+# 2026.06.04 **Regents Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.03 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite movie?
