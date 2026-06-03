@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.06.03 **Earth Science**
+
+##### **❓ of the 📅**: What's your favorite movie?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Questions #1-8
+2. Wave Particle Duality 19-29
+3. Models of the Atom notes
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the hydrogen atom_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.05.29 **Regents Physics**
 
 ##### **❓ of the 📅**: Would you rather have invisibility or flight?
