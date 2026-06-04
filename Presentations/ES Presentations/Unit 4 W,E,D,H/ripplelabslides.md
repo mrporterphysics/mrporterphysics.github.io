@@ -169,11 +169,15 @@ TRANSITION: Move to the two photos.
 **The Genesee River**
 Carves banks, carries sediment, builds new land downstream near Rochester.
 
+![center w:400](image-40.png)
+
 </div>
 <div class="col">
 
 **A NYC Rain Garden**
 Soaks up stormwater, slows runoff, sends clean water into the ground.
+
+![center w:400](image-41.png)
 
 </div>
 </div>

@@ -17,6 +17,34 @@ class:  twilight
 
 ---
 
+# 2026. ****
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Prep for Ripple Lab](../../../Presentations/ES%20Presentations/Unit%204%20W,E,D,H/ripplelabslides.html)
+2. Clusters
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.04 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite Disney movie?
