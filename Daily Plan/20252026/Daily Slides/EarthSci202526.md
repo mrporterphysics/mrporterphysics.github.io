@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.06.04 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite Disney movie?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Cluster Practice (August 2025)
+    - 31 -> 35
+    - 41 -> 45 
+    - 36 -> 40
+    - 46 -> 50
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prep for Regents Exam_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.03 **Earth Science**
 
 ##### **❓ of the 📅**: What's your favorite movie?
