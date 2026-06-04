@@ -17,7 +17,7 @@ math: mathjax
 
 # 2026.06.04 **Regents Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What is your favorite Disney movie?
 
 <div class ='columns'>
 
@@ -25,7 +25,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. Regents Practice -> 9-26
+2. Review Energy Levels
+3. Practice with Models of the Atom
 
 </div>
 
@@ -33,7 +35,9 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Regents Practice_
+
+🥅 _Work with models of Hydrogen and Mercury atom_
 
 ### 📆 Upcoming
 
