@@ -285,6 +285,10 @@ TIMING: ~3 min.
 
 ---
 
+![bg fit](image-44.png)
+
+---
+
 # Infiltration, Runoff & Retention
 
 <div class="vocab">
