@@ -177,7 +177,7 @@ Carves banks, carries sediment, builds new land downstream near Rochester.
 **A NYC Rain Garden**
 Soaks up stormwater, slows runoff, sends clean water into the ground.
 
-![center w:400](image-41.png)
+![center w:400](image-41.png) 
 
 </div>
 </div>
@@ -230,6 +230,26 @@ TEACHER MOVE: Use a river-bend sketch on the board. Fast water on the outside = 
 CONNECTION: This is exactly Q2 in Session 2 — students must describe BOTH processes.
 TIMING: ~3 min.
 -->
+
+---
+
+<div class='columns'>
+<div>
+
+<video width="520" height="340" controls>
+  <source src="sedimentationV5.mp4" type="video/mp4">
+</video>
+
+</div>
+ 
+<div>
+
+![](image-42.png)
+
+![](image-43.png)
+
+</div>
+</div>
 
 ---
 
