@@ -17,9 +17,9 @@ class:  twilight
 
 ---
 
-# 2026. ****
+# 2026.06.05 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Would you rather live without heat and AC or live without social media?
 
 <div class ='columns'>
 
@@ -27,6 +27,7 @@ class:  twilight
 
 #### 📋 Agenda
 
+0. August 2025 -> 36 - 40
 1. [Prep for Ripple Lab](../../../Presentations/ES%20Presentations/Unit%204%20W,E,D,H/ripplelabslides.html)
 2. Clusters
 
@@ -36,7 +37,7 @@ class:  twilight
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Prep for lab_
 
 ### 📆 Upcoming
 
