@@ -5,7 +5,7 @@
 - [Circular Motion Introduction](/AP%20Resource%20Pages/Simulations/circularmotion.html)
 - [Energy Bar Graphs](/AP%20Resource%20Pages/Simulations/EnergyBarGraphs.html)
 - [Speed of Sound](/AP%20Resource%20Pages/Simulations/speedofsoundlab.html)
-
+- [Energy Level Spectra](/AP%20Resource%20Pages/Simulations/energylevelspectra.html)
 
 ## AP Workbook Simulations
 - [AP Workbook 1.J & 1.K Simulation](/AP Resource Pages/Simulations/apworkbook1jk.html)
