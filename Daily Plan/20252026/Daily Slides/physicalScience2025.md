@@ -17,6 +17,35 @@ class: green
 
 ---
 
+# 2026.06.08 **Physical Science**
+
+##### **❓ of the 📅**: If you could have any meal at the snap of your fingers, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mass vs. Weight Summary & Practice
+2. Newton's Second Law
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model mass vs. weight_
+
+🥅 _Define N2L & use it to solve problems_
+
+
+</div>
+</div>
+
+---
+
 # 2026.06.04 **Physical Science**
 
 ##### **❓ of the 📅**: What is your favorite Disney movie?

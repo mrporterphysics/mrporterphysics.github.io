@@ -17,6 +17,33 @@ class:  twilight
 
 ---
 
+# 2026.06.08 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.05 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather live without heat and AC or live without social media?
