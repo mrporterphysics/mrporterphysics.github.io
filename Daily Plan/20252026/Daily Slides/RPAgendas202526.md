@@ -15,6 +15,33 @@ math: mathjax
 
 ---
 
+# 2026.06.09 **Regents Physics**
+
+##### **❓ of the 📅**: If you could start a charity, what would it be for?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. $E = mc^2$ and Mass-Energy Equivalence   
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Define energy and mass conservation_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.04 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your favorite Disney movie?
