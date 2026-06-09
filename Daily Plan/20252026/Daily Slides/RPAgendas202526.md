@@ -25,7 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. $E = mc^2$ and Mass-Energy Equivalence   
+1. Standard Model - Particle Physics
 
 </div>
 
