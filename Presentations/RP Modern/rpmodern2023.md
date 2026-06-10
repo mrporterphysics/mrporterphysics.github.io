@@ -374,7 +374,7 @@ An electron in a mercury atom drops from energy level f to energy level c by emi
 
 A mercury atom in the ground state absorbs 20 electronvolts of energy and is ionized by losing an electron. How much kinetic energy does this electron have after the  ionization?
 
-![bg left:35% fit](figures/mercury.png)
+![bg fit left:35%](figures/mercury.png)
 
 ---
 
@@ -443,7 +443,7 @@ Objects heated until they glow emit a continuous spectrum, described as blackbod
 * Mesons: Pion, neutral pion, Kaon, J/psi, Upsilon, Charmed meson, Bottom meson.
 
 
-![bg right:30% fit](figures/standardmodel.png)
+![bg fit right:30%](figures/standardmodel.png)
 
 ---
 
@@ -453,7 +453,7 @@ Objects heated until they glow emit a continuous spectrum, described as blackbod
 - Proton = uud
 - Neutron = udd
 
-![bg right:50% fit](figures/quarks.png)
+![bg fit right:50%](figures/quarks.png)
 
 ---
 
