@@ -15,6 +15,33 @@ math: mathjax
 
 ---
 
+# 2026.06.10 **Regents Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. $E = mc^2$
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Energy mass equivalence_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.09 **Regents Physics**
 
 ##### **❓ of the 📅**: If you could start a charity, what would it be for?
