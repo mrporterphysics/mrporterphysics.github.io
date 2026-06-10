@@ -17,6 +17,38 @@ class:  twilight
 
 ---
 
+# 2026.06.11 **Earth Science**
+
+##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Part C Investigation
+2. Finish and turn in lab
+3. Cluster Practice
+
+Note: Review website -> [https://reviewearthscience.com/](https://reviewearthscience.com/)
+- You will work on ESSRT Scavenger Hunt Tomorrow
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Investigation and Prep for Exam_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.08 **Earth Science**
 
 ##### **❓ of the 📅**: 
