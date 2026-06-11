@@ -17,6 +17,37 @@ class:  twilight
 
 ---
 
+# 2026.06.15 **Earth Science**
+
+##### **❓ of the 📅**: QUESTION
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Regents Review
+    - go to [https://reviewearthscience.com/](https://reviewearthscience.com/) and do some cluster practice, look up information you don't remember 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Review for the Regents_
+
+### 📆 Upcoming
+
+- Regents Exam Thursday!
+
+</div>
+</div>
+
+---
+
 # 2026.06.11 **Earth Science**
 
 ##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?
