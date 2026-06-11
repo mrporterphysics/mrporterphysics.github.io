@@ -15,6 +15,33 @@ math: mathjax
 
 ---
 
+# 2026.06.11 **Regents Physics**
+
+##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?   
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. $E = mc^2$
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Energy Mass Equivalence_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.10 **Regents Physics**
 
 ##### **❓ of the 📅**: 
