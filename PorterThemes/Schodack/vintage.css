@@ -1,0 +1,673 @@
+/*
+@theme vintage
+
+1950s–1990s nostalgia rendered as the iconic early-GUI desktop: teal #008080
+canvas, silver #C0C0C0 chrome, pure-black text, and Silkscreen pixel type. The
+signature is a 3D beveled-border system — raised buttons/windows and sunken
+fields built from the classic highlight/shadow colors — plus navy title bars, a
+dotted focus rectangle, an MS-DOS terminal for code, and a faint dither grain.
+Tokens follow the typeui.sh "vintage" design system.
+
+Contrast on the mid-tone palette: black-on-silver is 11.5:1, but teal and the
+semantic hues are mid-tone (weak as text on silver). So links and h2 use navy
+#000080 (8.8:1), teal stays a desktop BACKGROUND (white text, 4.77:1), and
+content sits on silver.
+
+Fonts:
+  - Silkscreen → display + all chrome (headings, title bars, buttons, labels)
+  - body uses a period-authentic readable stack (Tahoma / MS Sans Serif) —
+    Silkscreen is a pixel face, so per accessibility-over-novelty it carries
+    chrome, not paragraphs. (Set body to 'Silkscreen' if you want it literal.)
+  - JetBrains Mono → code / terminal / HUD counters
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --vt-primary:   #008080;   /* teal — the desktop */
+  --vt-secondary: #C0C0C0;   /* silver — chrome */
+  --vt-success:   #16A34A;
+  --vt-warning:   #D97706;
+  --vt-danger:    #DC2626;
+  --vt-surface:   #C0C0C0;
+  --vt-text:      #000000;
+  --vt-neutral:   #C0C0C0;
+
+  /* Named scheme */
+  --vt-teal:   #008080;
+  --vt-face:   #C0C0C0;      /* button/window face */
+  --vt-navy:   #000080;      /* active title bar */
+  --vt-navy-2: #1084D0;      /* title bar gradient end */
+  --vt-ink:    #000000;
+  --vt-paper:  #FFFFFF;      /* text fields / list views */
+
+  /* Win-style bevel colors */
+  --vt-hl:     #FFFFFF;      /* ButtonHighlight (outer top-left) */
+  --vt-light:  #DFDFDF;      /* ButtonLight (inner top-left) */
+  --vt-shadow: #808080;      /* ButtonShadow (inner bottom-right) */
+  --vt-dark:   #000000;      /* ButtonDkShadow (outer bottom-right) */
+
+  /* AA-safe text inks (on silver / white) */
+  --vt-link:        #000080;   /* navy, 8.8:1 on silver */
+  --vt-success-ink: #15803D;
+  --vt-warning-ink: #9A5410;
+  --vt-danger-ink:  #B91C1C;
+
+  --vt-muted: #3A3A3A;
+  --vt-faint: #545454;
+
+  /* Bevel recipes — the skeuomorphic core (sharp pixel edges) */
+  --vt-bevel-out:                         /* raised: button / panel */
+    inset 1px 1px 0 0 var(--vt-hl),
+    inset -1px -1px 0 0 var(--vt-dark),
+    inset 2px 2px 0 0 var(--vt-light),
+    inset -2px -2px 0 0 var(--vt-shadow);
+  --vt-bevel-in:                          /* sunken: field / well */
+    inset 1px 1px 0 0 var(--vt-shadow),
+    inset -1px -1px 0 0 var(--vt-hl),
+    inset 2px 2px 0 0 var(--vt-dark),
+    inset -2px -2px 0 0 var(--vt-light);
+  --vt-bevel-out-1:                       /* single-line raised (small) */
+    inset 1px 1px 0 0 var(--vt-hl),
+    inset -1px -1px 0 0 var(--vt-shadow);
+  --vt-bevel-in-1:                        /* single-line sunken (etched) */
+    inset 1px 1px 0 0 var(--vt-shadow),
+    inset -1px -1px 0 0 var(--vt-hl);
+
+  /* Body font — period-authentic, readable companion to Silkscreen */
+  --vt-body: 'Tahoma', 'Geneva', 'MS Sans Serif', Verdana, system-ui, sans-serif;
+
+  /* Type scale — 12/14/16/20/24/32, slide-tuned: 14/16/20/24/30/40/56 */
+  --vt-fs-1: 14px;   /* label-caps / pixel labels */
+  --vt-fs-2: 16px;   /* small — tables, code, captions */
+  --vt-fs-3: 20px;   /* body (Tahoma) */
+  --vt-fs-4: 24px;   /* h4 */
+  --vt-fs-5: 30px;   /* h3 */
+  --vt-fs-6: 40px;   /* h2 (Silkscreen) */
+  --vt-fs-7: 56px;   /* h1 (Silkscreen) */
+
+  /* Spacing scale: 4 / 8 / 12 / 16 / 24 / 32 */
+  --vt-sp-1: 4px;
+  --vt-sp-2: 8px;
+  --vt-sp-3: 12px;
+  --vt-sp-4: 16px;
+  --vt-sp-5: 24px;
+  --vt-sp-6: 32px;
+
+  /* Rounded — the era is SHARP; tokens exist but default is square */
+  --vt-radius: 0px;
+}
+
+/* Dark "High Contrast Black" tokens live with the `.dark`/`.invert` variant
+   near the end of the file. Silver is the default (class-based, no auto). */
+
+/* ---------- Base Slide — silver application interior ---------- */
+section {
+  font-family: var(--vt-body);
+  background-color: var(--vt-face);
+  /* faint dither grain */
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1.4px);
+  background-size: 3px 3px;
+  color: var(--vt-text);
+  font-size: var(--vt-fs-3);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: var(--vt-sp-6);
+  position: relative;
+}
+
+/* ---------- Headings — Silkscreen pixel type ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Silkscreen', 'Courier New', monospace;
+  font-weight: 700;
+  color: var(--vt-ink);
+  line-height: 1.2;
+  margin: 0 0 var(--vt-sp-4) 0;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-size: var(--vt-fs-7);
+  margin-bottom: var(--vt-sp-5);
+}
+
+h2 {
+  font-size: var(--vt-fs-6);
+  color: var(--vt-navy);
+  padding-bottom: var(--vt-sp-3);
+}
+/* etched (sunken groove) divider under h2 */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--vt-sp-3);
+  width: 160px;
+  height: 2px;
+  border-top: 1px solid var(--vt-shadow);
+  border-bottom: 1px solid var(--vt-hl);
+}
+
+h3 { font-size: var(--vt-fs-5); color: var(--vt-ink); }
+h4 { font-size: var(--vt-fs-4); color: var(--vt-ink); }
+
+/* label-caps role — pixel nameplate */
+h5, h6 {
+  font-family: 'Silkscreen', monospace;
+  font-weight: 400;
+  font-size: var(--vt-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--vt-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--vt-sp-4) 0;
+  max-width: 64ch;
+}
+
+strong { font-weight: 700; color: var(--vt-ink); }
+em { font-style: italic; color: var(--vt-ink); }
+
+a {
+  color: var(--vt-link);
+  font-weight: 700;
+  text-decoration: underline;
+}
+a:hover { color: #0A0AC0; }
+a:focus-visible {
+  outline: 2px dotted var(--vt-ink);   /* the Win focus rectangle */
+  outline-offset: 2px;
+}
+
+mark {
+  background: #FFFF00;                  /* highlighter yellow */
+  color: var(--vt-ink);
+  padding: 0 var(--vt-sp-1);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--vt-sp-4) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--vt-sp-5);
+  margin-bottom: var(--vt-sp-3);
+}
+/* tiny raised pixel chip bullet */
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 12px;
+  height: 12px;
+  background: var(--vt-teal);
+  box-shadow: var(--vt-bevel-out-1);
+}
+section ul > li > ul > li::before { background: var(--vt-navy); }
+section ul > li > ul > li > ul > li::before { background: var(--vt-face); }
+
+section ol { counter-reset: vt-counter; }
+section ol > li {
+  counter-increment: vt-counter;
+  position: relative;
+  padding-left: var(--vt-sp-6);
+  margin-bottom: var(--vt-sp-3);
+  min-height: 28px;
+}
+section ol > li::marker { content: ""; }
+/* raised pixel number key */
+section ol > li::before {
+  content: counter(vt-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 var(--vt-sp-2);
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out);
+  font-family: 'Silkscreen', monospace;
+  font-weight: 700;
+  font-size: var(--vt-fs-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--vt-fs-3); }
+
+/* ---------- Blockquote — sunken note field ---------- */
+blockquote {
+  margin: var(--vt-sp-5) 0;
+  padding: var(--vt-sp-4) var(--vt-sp-5);
+  background: var(--vt-paper);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-in);
+  border-left: 6px solid var(--vt-teal);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code — MS-DOS terminal ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.86em;
+  font-weight: 500;
+  background: var(--vt-paper);
+  color: var(--vt-ink);
+  padding: 0 var(--vt-sp-2);
+  box-shadow: var(--vt-bevel-in-1);
+}
+pre {
+  background: #000000;
+  color: #C0C0C0;
+  box-shadow: var(--vt-bevel-in);
+  padding: var(--vt-sp-4) var(--vt-sp-5);
+  font-size: var(--vt-fs-2);
+  line-height: 1.5;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+  padding: 0;
+}
+kbd {
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out-1);
+  padding: 1px var(--vt-sp-2);
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ---------- */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.08em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.18em !important;
+  margin: var(--vt-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables — list-view control ---------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: var(--vt-sp-4) 0;
+  background: var(--vt-paper);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-in);
+  font-size: var(--vt-fs-2);
+}
+thead th {
+  font-family: 'Silkscreen', monospace;
+  font-weight: 400;
+  text-align: left;
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out-1);   /* raised column header buttons */
+  padding: var(--vt-sp-3) var(--vt-sp-4);
+}
+tbody td {
+  padding: var(--vt-sp-2) var(--vt-sp-4);
+  border-bottom: 1px solid #D7D7D7;
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) td { background: #ECECEC; }
+
+/* ---------- Horizontal rule — etched groove ---------- */
+hr {
+  border: 0;
+  height: 2px;
+  width: 100%;
+  margin: var(--vt-sp-5) 0;
+  border-top: 1px solid var(--vt-shadow);
+  border-bottom: 1px solid var(--vt-hl);
+}
+
+/* ---------- Images & Media — sunken picture frame ---------- */
+img {
+  max-width: 100%;
+  background: var(--vt-paper);
+  padding: var(--vt-sp-2);
+  box-shadow: var(--vt-bevel-in);
+}
+img[alt~="plain"] { background: none; padding: 0; box-shadow: none; }
+img[alt~="raised"] { box-shadow: var(--vt-bevel-out); }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--vt-sp-4) auto; }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+p img, li img, strong img, em img {
+  background: none; padding: 0; box-shadow: none;
+  vertical-align: -0.15em; margin-right: 0.3em;
+}
+
+/* ---------- Footer & Pagination (taskbar HUD) ---------- */
+footer {
+  font-family: 'Silkscreen', monospace;
+  font-size: var(--vt-fs-1);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--vt-muted);
+}
+section::after {            /* page number — a raised pixel chip */
+  font-family: 'Silkscreen', monospace;
+  font-weight: 400;
+  font-size: var(--vt-fs-1);
+  color: var(--vt-ink);
+  background: var(--vt-face);
+  box-shadow: var(--vt-bevel-out-1);
+  padding: 2px var(--vt-sp-2);
+}
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--vt-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--vt-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--vt-sp-4); }
+.cards     { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--vt-sp-5); }
+
+/* ---------- Card — raised silver panel ---------- */
+.card {
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out);
+  padding: var(--vt-sp-5);
+}
+.card h2 { color: var(--vt-navy); }
+.card.well { background: var(--vt-paper); box-shadow: var(--vt-bevel-in); }
+
+/* ---------- Window — card with a title bar ----------
+   <div class="window"><div class="titlebar">README.TXT</div> …content… </div> */
+.window {
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out);
+  padding: var(--vt-sp-5);
+}
+.window > .titlebar {
+  margin: calc(-1 * var(--vt-sp-5)) calc(-1 * var(--vt-sp-5)) var(--vt-sp-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, var(--vt-navy), var(--vt-navy-2));
+  color: #FFFFFF;
+  font-family: 'Silkscreen', monospace;
+  font-size: var(--vt-fs-1);
+  padding: var(--vt-sp-2) var(--vt-sp-3);
+  position: relative;
+  padding-right: 30px;
+}
+.window > .titlebar::after {       /* close button */
+  content: "\00D7";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out-1);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* ---------- Kicker / eyebrow ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'Silkscreen', monospace;
+  font-size: var(--vt-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--vt-ink);
+  background: var(--vt-face);
+  box-shadow: var(--vt-bevel-out-1);
+  padding: 3px var(--vt-sp-3);
+  margin-bottom: var(--vt-sp-3);
+}
+
+/* ---------- Tag / badge — raised pixel chip ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'Silkscreen', monospace;
+  font-weight: 400;
+  font-size: var(--vt-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out);
+  padding: 3px var(--vt-sp-3);
+}
+.tag.teal    { background: var(--vt-teal); color: #fff; }
+.tag.navy    { background: var(--vt-navy); color: #fff; }
+.tag.success { background: var(--vt-success); color: #000; }
+.tag.warning { background: var(--vt-warning); color: #000; }
+.tag.danger  { background: var(--vt-danger);  color: #fff; }
+
+/* ---------- Stat block ---------- */
+.stat { display: inline-flex; flex-direction: column; gap: var(--vt-sp-2); }
+.stat .value {
+  font-family: 'Silkscreen', monospace;
+  font-weight: 700;
+  font-size: var(--vt-fs-7);
+  line-height: 1;
+  color: var(--vt-navy);
+}
+.stat .label {
+  font-family: 'Silkscreen', monospace;
+  font-size: var(--vt-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--vt-muted);
+}
+
+/* ---------- Button — raised silver; presses in (sunken) on click ---------- */
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Silkscreen', monospace;
+  font-weight: 400;
+  font-size: var(--vt-fs-2);
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out);
+  padding: var(--vt-sp-3) var(--vt-sp-5);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+}
+a.btn:hover  { background: #C8C8C8; }
+a.btn:active { box-shadow: var(--vt-bevel-in); transform: translate(1px, 1px); }
+a.btn:focus-visible { outline: 2px dotted var(--vt-ink); outline-offset: -6px; }
+a.btn.teal { background: var(--vt-teal); color: #fff; }
+a.btn.navy { background: var(--vt-navy); color: #fff; }
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  color: var(--vt-shadow);
+  text-shadow: 1px 1px 0 var(--vt-hl);   /* classic embossed disabled label */
+  cursor: not-allowed;
+}
+
+/* ---------- Callouts — raised panel + colored bar ---------- */
+.note, .warn, .danger, .success {
+  background: var(--vt-face);
+  color: var(--vt-ink);
+  box-shadow: var(--vt-bevel-out);
+  border-left: 6px solid var(--vt-navy);
+  padding: var(--vt-sp-4) var(--vt-sp-5);
+  margin: var(--vt-sp-3) 0;
+}
+.note    { border-left-color: var(--vt-navy); }
+.warn    { border-left-color: var(--vt-warning); }
+.danger  { border-left-color: var(--vt-danger); }
+.success { border-left-color: var(--vt-success); }
+
+/* ---------- Empty state — sunken plate ---------- */
+.empty {
+  background: var(--vt-paper);
+  box-shadow: var(--vt-bevel-in);
+  padding: var(--vt-sp-6);
+  text-align: center;
+  color: var(--vt-muted);
+  font-family: 'Silkscreen', monospace;
+}
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title — teal desktop + window ---------- */
+section.lead, section.desktop {
+  background-color: var(--vt-teal);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.4px);
+  background-size: 3px 3px;
+  color: #FFFFFF;
+}
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1, section.desktop h1 { color: #FFFFFF; }
+section.lead h2 {
+  font-family: var(--vt-body);
+  font-weight: 400;
+  font-size: var(--vt-fs-4);
+  color: #DDF2F2;
+  padding-bottom: 0;
+}
+section.lead h1 {
+  font-size: clamp(48px, 8vw, 84px);
+  line-height: 1.1;
+}
+section.lead h2::after { display: none; }
+section.lead a, section.desktop a { color: #FFFFFF; }
+section.lead a:focus-visible, section.desktop a:focus-visible { outline-color: #FFFFFF; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.quote blockquote {
+  background: var(--vt-paper);
+  box-shadow: var(--vt-bevel-in);
+  border-left: 8px solid var(--vt-teal);
+  font-family: 'Silkscreen', monospace;
+  font-size: clamp(24px, 3.6vw, 40px);
+  line-height: 1.4;
+  max-width: 90%;
+  color: var(--vt-ink);
+  padding: var(--vt-sp-5) var(--vt-sp-6);
+}
+
+/* ============================================================
+   Dark mode — "High Contrast Black":  <!-- _class: invert -->  (alias: dark)
+   ============================================================ */
+section.invert, section.dark {
+  --vt-face:   #2B2B2B;
+  --vt-paper:  #101010;
+  --vt-ink:    #FFFFFF;
+  --vt-text:   #FFFFFF;
+  --vt-muted:  #C8C8C8;
+  --vt-faint:  #A0A0A0;
+  --vt-hl:     #6E6E6E;
+  --vt-light:  #4A4A4A;
+  --vt-shadow: #000000;
+  --vt-dark:   #000000;
+  --vt-link:   #4DD0FF;          /* bright cyan link on black */
+  --vt-navy:   #003C9E;
+  --vt-teal:   #00B3B3;
+
+  background-color: #000000;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.4px);
+  background-size: 3px 3px;
+  color: var(--vt-text);
+}
+section.invert h2, section.dark h2 { color: var(--vt-teal); }
+section.invert pre, section.dark pre { background: #000; color: #E0E0E0; }
+section.invert .stat .value, section.dark .stat .value { color: var(--vt-teal); }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion — drop the button press nudge (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a.btn:active { transform: none; }
+}
+
+/* Visible focus rings — the classic dotted focus rectangle (WCAG 2.4.7) */
+:focus-visible {
+  outline: 2px dotted var(--vt-ink);
+  outline-offset: 2px;
+}
+
+/* High contrast — drop the dither grain, harden bevels to pure black/white */
+@media (prefers-contrast: more) {
+  :root {
+    --vt-muted: #000000;
+    --vt-faint: #1A1A1A;
+    --vt-light: #FFFFFF;
+    --vt-shadow: #000000;
+  }
+  section { background-image: none; }
+}
