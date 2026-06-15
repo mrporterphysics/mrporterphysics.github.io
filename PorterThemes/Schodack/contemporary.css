@@ -1,0 +1,803 @@
+/*
+@theme contemporary
+
+Current-era minimalist design system — clean surfaces, hairline borders,
+soft elevation, and a bold magenta→pink gradient accent. Built around
+Bento-grid layouts, first-class dark mode, and accessible, high-performance
+slides. Tokens follow the typeui.sh "contemporary" design system.
+
+Signature: Bento-grid utility (.bento) of variable-span tiles on a near-white
+canvas, an expressive Jost display scale, and a vivid #C800DF → #E60076
+gradient reserved for emphasis (lead title, buttons, key fills).
+
+Dark mode:
+  - Per-slide  →  <!-- _class: dark -->   (alias: invert)
+  - Whole deck →  add `class: dark` under the deck's front-matter, or set
+                  <!-- _class: dark --> on the first slide and reuse.
+  - Automatic  →  honors the OS `prefers-color-scheme: dark` for any slide
+                  that hasn't explicitly opted into `.light`.
+  Light is the default. Force a single slide light with <!-- _class: light -->.
+
+Fonts:
+  - Jost          → display (h1/h2/h3) and body — primary + display roles
+  - Overpass Mono → label-caps role (h5/h6, footer, tags) and code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --ct-primary:   #C800DF;   /* magenta — primary accent */
+  --ct-secondary: #E60076;   /* rose    — secondary accent */
+  --ct-success:   #16A34A;
+  --ct-warning:   #D97706;
+  --ct-danger:    #DC2626;
+  --ct-surface:   #FFFFFF;   /* card / tile surface */
+  --ct-text:      #111827;   /* ink */
+  --ct-neutral:   #FFFFFF;
+
+  /* Derived surfaces & ink */
+  --ct-canvas:    #F7F7FB;   /* slide background (cards read against it) */
+  --ct-surface-2: #F2F2F7;   /* recessed / alt tile */
+  --ct-muted:     #6B7280;   /* secondary text */
+  --ct-faint:     #9CA3AF;   /* tertiary text / placeholders */
+  --ct-on-accent: #FFFFFF;   /* text on gradient / solid accent fills */
+
+  /* Gradient stops (kept vivid in both modes — used for fills) */
+  --ct-grad-from: #C800DF;
+  --ct-grad-to:   #E60076;
+  --ct-gradient:  linear-gradient(135deg, var(--ct-grad-from), var(--ct-grad-to));
+  --ct-gradient-soft: linear-gradient(135deg,
+                        rgba(200, 0, 223, 0.12),
+                        rgba(230, 0, 118, 0.12));
+
+  /* Borders — hairline, the minimalist signature */
+  --ct-border:        1px solid rgba(17, 24, 39, 0.10);
+  --ct-border-strong: 1px solid rgba(17, 24, 39, 0.18);
+  --ct-border-color:  rgba(17, 24, 39, 0.10);
+
+  /* Elevation — soft, cheap shadows (no heavy blur for performance) */
+  --ct-shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.06),
+                  0 1px 3px rgba(17, 24, 39, 0.08);
+  --ct-shadow:    0 2px 6px -2px rgba(17, 24, 39, 0.10),
+                  0 8px 20px -6px rgba(17, 24, 39, 0.12);
+  --ct-shadow-lg: 0 18px 40px -12px rgba(17, 24, 39, 0.20);
+  --ct-glow:      0 10px 28px -8px rgba(200, 0, 223, 0.45);
+
+  /* Type scale — desktop-first expressive scale, tuned for slide viewing.
+     14 / 18 / 22 / 26 / 32 / 42 / 56 */
+  --ct-fs-1: 14px;   /* label-caps (Overpass Mono) */
+  --ct-fs-2: 18px;   /* small — tables, code, captions */
+  --ct-fs-3: 22px;   /* body — primary reading size */
+  --ct-fs-4: 26px;   /* h4 / lead-in */
+  --ct-fs-5: 32px;   /* h3 */
+  --ct-fs-6: 42px;   /* h2 */
+  --ct-fs-7: 56px;   /* h1 */
+
+  /* Spacing — comfortable density: 4 / 8 / 12 / 16 / 24 / 32 / 48 */
+  --ct-sp-1: 4px;
+  --ct-sp-2: 8px;
+  --ct-sp-3: 12px;
+  --ct-sp-4: 16px;
+  --ct-sp-5: 24px;
+  --ct-sp-6: 32px;
+  --ct-sp-7: 48px;
+
+  /* Rounded scale (spec sm/md + larger for tiles) */
+  --ct-radius-sm:   4px;
+  --ct-radius-md:   8px;
+  --ct-radius-lg:   16px;
+  --ct-radius-xl:   24px;
+  --ct-radius-pill: 999px;
+
+  /* Motion */
+  --ct-ease: 160ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Dark-mode tokens live with the `.dark`/`.invert` variant and the automatic
+   prefers-color-scheme block near the end of this file. Every component reads
+   from the tokens above, so the whole system flips by re-assigning them. */
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Jost', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--ct-canvas);
+  /* Faint corner glow of the brand gradient — minimal but playful. */
+  background-image:
+    radial-gradient(ellipse 42% 38% at 100% 0%, rgba(230, 0, 118, 0.06), transparent 70%),
+    radial-gradient(ellipse 46% 40% at 0% 100%, rgba(200, 0, 223, 0.06), transparent 70%);
+  color: var(--ct-text);
+  font-size: var(--ct-fs-3);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+  padding: var(--ct-sp-7);
+  position: relative;
+}
+
+/* ---------- Headings (56 / 42 / 32 / 26) ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Jost', sans-serif;
+  color: var(--ct-text);
+  line-height: 1.12;
+  margin: 0 0 var(--ct-sp-4) 0;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: var(--ct-fs-7);
+  margin-bottom: var(--ct-sp-5);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: var(--ct-fs-6);
+  padding-bottom: var(--ct-sp-3);
+  position: relative;
+}
+/* Short gradient tick under each h2 — the recurring accent motif */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--ct-sp-3);
+  width: 56px;
+  height: 4px;
+  border-radius: var(--ct-radius-pill);
+  background: var(--ct-gradient);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: var(--ct-fs-5);
+  color: var(--ct-text);
+}
+
+h4 {
+  font-weight: 500;
+  font-size: var(--ct-fs-4);
+  color: var(--ct-text);
+}
+
+/* label-caps role — small, monospaced, uppercase, tracked */
+h5, h6 {
+  font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 600;
+  font-size: var(--ct-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ct-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--ct-sp-4) 0;
+  max-width: 68ch;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--ct-primary);
+}
+
+em {
+  font-style: italic;
+  color: var(--ct-text);
+}
+
+a {
+  color: var(--ct-primary);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  background-image: linear-gradient(var(--ct-primary), var(--ct-primary));
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: color var(--ct-ease), background-size var(--ct-ease);
+}
+a:hover { color: var(--ct-secondary); background-size: 100% 2px; }
+a:focus-visible {
+  outline: 3px solid var(--ct-primary);
+  outline-offset: 3px;
+  border-radius: var(--ct-radius-sm);
+}
+
+mark {
+  background: var(--ct-gradient-soft);
+  color: inherit;
+  padding: 0 var(--ct-sp-1);
+  border-radius: var(--ct-radius-sm);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--ct-sp-4) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--ct-sp-5);
+  margin-bottom: var(--ct-sp-3);
+}
+/* Gradient square bullet, lightly rounded */
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--ct-gradient);
+}
+section ul > li > ul > li::before {
+  background: none;
+  border: 2px solid var(--ct-primary);
+}
+section ul > li > ul > li > ul > li::before {
+  background: var(--ct-faint);
+  border: 0;
+}
+
+section ol { counter-reset: ct-counter; }
+section ol > li {
+  counter-increment: ct-counter;
+  position: relative;
+  padding-left: var(--ct-sp-6);
+  margin-bottom: var(--ct-sp-3);
+  min-height: 28px;
+}
+section ol > li::marker { content: ""; }
+section ol > li::before {
+  content: counter(ct-counter);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--ct-radius-md);
+  background: var(--ct-surface);
+  border: var(--ct-border-strong);
+  color: var(--ct-primary);
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 600;
+  font-size: var(--ct-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--ct-fs-3); }
+
+/* ---------- Blockquote ---------- */
+blockquote {
+  margin: var(--ct-sp-5) 0;
+  padding: var(--ct-sp-4) var(--ct-sp-5);
+  background: var(--ct-surface);
+  border: var(--ct-border);
+  border-left: 4px solid var(--ct-primary);
+  border-radius: var(--ct-radius-md);
+  color: var(--ct-text);
+  box-shadow: var(--ct-shadow-sm);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'Overpass Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.9em;
+  font-weight: 500;
+  background: var(--ct-surface-2);
+  color: var(--ct-secondary);
+  padding: 1px var(--ct-sp-2);
+  border: var(--ct-border);
+  border-radius: var(--ct-radius-sm);
+}
+pre {
+  background: var(--ct-surface);
+  color: var(--ct-text);
+  border: var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+  box-shadow: var(--ct-shadow-sm);
+  padding: var(--ct-sp-4) var(--ct-sp-5);
+  font-size: var(--ct-fs-2);
+  line-height: 1.55;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  font-weight: 400;
+}
+kbd {
+  background: var(--ct-surface);
+  color: var(--ct-text);
+  border: var(--ct-border-strong);
+  border-bottom-width: 3px;
+  border-radius: var(--ct-radius-sm);
+  padding: 1px var(--ct-sp-2);
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ----------
+   Physics decks lean on display math — keep it crisp and a touch larger
+   than body so equations don't shrink against Jost's tall x-height. */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.08em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.18em !important;
+  margin: var(--ct-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: var(--ct-sp-4) 0;
+  background: var(--ct-surface);
+  border: var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+  overflow: hidden;
+  font-size: var(--ct-fs-2);
+  box-shadow: var(--ct-shadow-sm);
+}
+thead th {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--ct-fs-1);
+  background: var(--ct-surface-2);
+  color: var(--ct-muted);
+  text-align: left;
+  padding: var(--ct-sp-3) var(--ct-sp-4);
+  border-bottom: var(--ct-border-strong);
+}
+tbody td {
+  padding: var(--ct-sp-3) var(--ct-sp-4);
+  border-bottom: 1px solid var(--ct-border-color);
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: var(--ct-gradient-soft); }
+
+/* ---------- Horizontal rule ---------- */
+hr {
+  border: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--ct-border-color);
+  border-radius: var(--ct-radius-pill);
+  margin: var(--ct-sp-5) 0;
+}
+
+/* ---------- Images & Media ---------- */
+img {
+  max-width: 100%;
+  background: var(--ct-surface);
+  border: var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+}
+img[alt~="plain"]  { background: none; border: 0; border-radius: 0; }
+img[alt~="shadow"] { box-shadow: var(--ct-shadow); border: 0; }
+img[alt~="circle"] { border-radius: 50%; }
+img[alt~="round"]  { border-radius: var(--ct-radius-xl); }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--ct-sp-4) auto; }
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'Overpass Mono', monospace;
+  font-size: var(--ct-fs-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ct-faint);
+}
+section::after {            /* page numbers */
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 500;
+  font-size: var(--ct-fs-1);
+  color: var(--ct-faint);
+  letter-spacing: 0.10em;
+}
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+
+/* ---------- Bento grid (signature) ----------
+   <div class="bento"> … tiles … </div>
+   Default 4-column grid; size tiles with span helpers:
+     .col-2 / .col-3 / .col-4   (column span)
+     .row-2 / .row-3            (row span)
+     .span-2                    (alias: 2 cols × 2 rows — the hero tile)
+   Variants on the .bento container: .cols-2 .cols-3 .cols-6
+   Tile fills: .accent (gradient), .solid, .success/.warning/.danger, .quiet */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(96px, auto);
+  gap: var(--ct-sp-4);
+  margin: var(--ct-sp-4) 0;
+}
+.bento.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.bento.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.bento.cols-6 { grid-template-columns: repeat(6, 1fr); }
+
+.bento > * {
+  margin: 0;
+  background: var(--ct-surface);
+  border: var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+  box-shadow: var(--ct-shadow-sm);
+  padding: var(--ct-sp-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--ct-sp-2);
+  overflow: hidden;
+}
+.bento > * > :first-child { margin-top: 0; }
+.bento > * > :last-child  { margin-bottom: 0; }
+
+/* Span helpers */
+.bento .col-2, .bento .span-2 { grid-column: span 2; }
+.bento .col-3 { grid-column: span 3; }
+.bento .col-4 { grid-column: span 4; }
+.bento .row-2, .bento .span-2 { grid-row: span 2; }
+.bento .row-3 { grid-row: span 3; }
+
+/* Tile fills */
+.bento .accent {
+  background: var(--ct-gradient);
+  border: 0;
+  color: var(--ct-on-accent);
+  box-shadow: var(--ct-glow);
+}
+.bento .accent h1, .bento .accent h2, .bento .accent h3,
+.bento .accent h4, .bento .accent strong { color: var(--ct-on-accent); }
+.bento .accent h2::after { background: var(--ct-on-accent); opacity: 0.85; }
+
+.bento .solid   { background: var(--ct-text); color: var(--ct-canvas); border: 0; }
+.bento .quiet   { background: var(--ct-surface-2); box-shadow: none; }
+.bento .success { background: var(--ct-success); color: #fff; border: 0; }
+.bento .warning { background: var(--ct-warning); color: #fff; border: 0; }
+.bento .danger  { background: var(--ct-danger);  color: #fff; border: 0; }
+
+/* ---------- Simple column utilities ---------- */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--ct-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--ct-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--ct-sp-4); }
+
+/* ---------- Card ---------- */
+.card {
+  background: var(--ct-surface);
+  border: var(--ct-border);
+  border-radius: var(--ct-radius-lg);
+  box-shadow: var(--ct-shadow-sm);
+  padding: var(--ct-sp-5);
+}
+.card.accent {
+  background: var(--ct-gradient);
+  border: 0;
+  color: var(--ct-on-accent);
+  box-shadow: var(--ct-glow);
+}
+.card.accent h1, .card.accent h2, .card.accent h3, .card.accent strong {
+  color: var(--ct-on-accent);
+}
+.card.quiet { background: var(--ct-surface-2); box-shadow: none; }
+
+/* ---------- Kicker / eyebrow ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'Overpass Mono', monospace;
+  font-size: var(--ct-fs-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ct-secondary);
+  margin-bottom: var(--ct-sp-2);
+}
+
+/* ---------- Tag / badge ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 600;
+  font-size: var(--ct-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  background: var(--ct-surface-2);
+  color: var(--ct-text);
+  border: var(--ct-border);
+  padding: 4px var(--ct-sp-3);
+  border-radius: var(--ct-radius-pill);
+}
+.tag.accent  { background: var(--ct-gradient); color: var(--ct-on-accent); border: 0; }
+.tag.success { background: var(--ct-success); color: #fff; border: 0; }
+.tag.warning { background: var(--ct-warning); color: #fff; border: 0; }
+.tag.danger  { background: var(--ct-danger);  color: #fff; border: 0; }
+
+/* ---------- Stat block ---------- */
+.stat {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--ct-sp-1);
+}
+.stat .value {
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: var(--ct-fs-7);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  background: var(--ct-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat .label {
+  font-family: 'Overpass Mono', monospace;
+  font-size: var(--ct-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ct-muted);
+}
+/* On filled tiles the gradient clip would vanish — fall back to solid. */
+.bento .accent .stat .value, .bento .solid .stat .value,
+.card.accent .stat .value {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--ct-on-accent);
+}
+
+/* ---------- Button ---------- */
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: var(--ct-fs-2);
+  letter-spacing: 0.01em;
+  background: var(--ct-gradient);
+  color: var(--ct-on-accent);
+  border: 0;
+  border-radius: var(--ct-radius-pill);
+  padding: var(--ct-sp-3) var(--ct-sp-5);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+  background-image: var(--ct-gradient);
+  background-size: 100% 100%;
+  box-shadow: var(--ct-shadow-sm);
+  transition: transform var(--ct-ease), box-shadow var(--ct-ease);
+}
+a.btn:hover  { transform: translateY(-2px); box-shadow: var(--ct-glow); }
+a.btn:active { transform: translateY(0); box-shadow: var(--ct-shadow-sm); }
+a.btn:focus-visible { outline: 3px solid var(--ct-primary); outline-offset: 3px; }
+a.btn.ghost {
+  background: transparent;
+  color: var(--ct-primary);
+  border: var(--ct-border-strong);
+  box-shadow: none;
+}
+a.btn.ghost:hover { background: var(--ct-surface-2); transform: translateY(-2px); }
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success {
+  background: var(--ct-surface);
+  border: var(--ct-border);
+  border-left: 4px solid var(--ct-primary);
+  border-radius: var(--ct-radius-md);
+  box-shadow: var(--ct-shadow-sm);
+  padding: var(--ct-sp-4) var(--ct-sp-5);
+  margin: var(--ct-sp-3) 0;
+}
+.note    { border-left-color: var(--ct-primary); }
+.warn    { border-left-color: var(--ct-warning); }
+.danger  { border-left-color: var(--ct-danger); }
+.success { border-left-color: var(--ct-success); }
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title slide:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(56px, 8vw, 88px);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  /* Gradient display title — the playful hero moment */
+  background: var(--ct-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: var(--ct-sp-4);
+}
+section.lead h2 {
+  font-weight: 300;
+  font-size: var(--ct-fs-5);
+  color: var(--ct-muted);
+  letter-spacing: -0.01em;
+  padding-bottom: 0;
+}
+section.lead h2::after { display: none; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.quote blockquote {
+  background: transparent;
+  border: 0;
+  border-left: 0;
+  box-shadow: none;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300;
+  line-height: 1.3;
+  max-width: 82%;
+  text-align: center;
+  color: var(--ct-text);
+  padding: var(--ct-sp-5);
+}
+
+/* ============================================================
+   Dark mode
+   ============================================================ */
+
+/* Explicit opt-in — per slide or whole deck.
+   <!-- _class: dark -->  (alias: invert) */
+section.dark, section.invert {
+  --ct-primary:   #E879F9;
+  --ct-secondary: #FB7BB0;
+  --ct-surface:   #15151F;
+  --ct-surface-2: #1F1F2C;
+  --ct-text:      #F4F4F7;
+  --ct-neutral:   #15151F;
+  --ct-canvas:    #0B0B12;
+  --ct-muted:     #A1A1B5;
+  --ct-faint:     #6B6B80;
+  --ct-grad-from: #D726EC;
+  --ct-grad-to:   #F0317F;
+  --ct-gradient-soft: linear-gradient(135deg,
+                        rgba(232, 121, 249, 0.16),
+                        rgba(251, 123, 176, 0.16));
+  --ct-border:        1px solid rgba(255, 255, 255, 0.10);
+  --ct-border-strong: 1px solid rgba(255, 255, 255, 0.20);
+  --ct-border-color:  rgba(255, 255, 255, 0.10);
+  --ct-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.40);
+  --ct-shadow:    0 2px 6px -2px rgba(0, 0, 0, 0.50),
+                  0 10px 24px -8px rgba(0, 0, 0, 0.55);
+  --ct-shadow-lg: 0 22px 48px -14px rgba(0, 0, 0, 0.65);
+  --ct-glow:      0 12px 32px -8px rgba(232, 121, 249, 0.50);
+
+  background-color: var(--ct-canvas);
+  background-image:
+    radial-gradient(ellipse 42% 38% at 100% 0%, rgba(240, 49, 127, 0.12), transparent 70%),
+    radial-gradient(ellipse 46% 40% at 0% 100%, rgba(215, 38, 236, 0.12), transparent 70%);
+  color: var(--ct-text);
+}
+
+/* Automatic — follow the OS preference for any slide that has NOT explicitly
+   opted into light. Force light on a single slide with <!-- _class: light -->. */
+@media (prefers-color-scheme: dark) {
+  section:not(.light) {
+    --ct-primary:   #E879F9;
+    --ct-secondary: #FB7BB0;
+    --ct-surface:   #15151F;
+    --ct-surface-2: #1F1F2C;
+    --ct-text:      #F4F4F7;
+    --ct-neutral:   #15151F;
+    --ct-canvas:    #0B0B12;
+    --ct-muted:     #A1A1B5;
+    --ct-faint:     #6B6B80;
+    --ct-grad-from: #D726EC;
+    --ct-grad-to:   #F0317F;
+    --ct-gradient-soft: linear-gradient(135deg,
+                          rgba(232, 121, 249, 0.16),
+                          rgba(251, 123, 176, 0.16));
+    --ct-border:        1px solid rgba(255, 255, 255, 0.10);
+    --ct-border-strong: 1px solid rgba(255, 255, 255, 0.20);
+    --ct-border-color:  rgba(255, 255, 255, 0.10);
+    --ct-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.40);
+    --ct-shadow:    0 2px 6px -2px rgba(0, 0, 0, 0.50),
+                    0 10px 24px -8px rgba(0, 0, 0, 0.55);
+    --ct-shadow-lg: 0 22px 48px -14px rgba(0, 0, 0, 0.65);
+    --ct-glow:      0 12px 32px -8px rgba(232, 121, 249, 0.50);
+
+    background-color: var(--ct-canvas);
+    background-image:
+      radial-gradient(ellipse 42% 38% at 100% 0%, rgba(240, 49, 127, 0.12), transparent 70%),
+      radial-gradient(ellipse 46% 40% at 0% 100%, rgba(215, 38, 236, 0.12), transparent 70%);
+    color: var(--ct-text);
+  }
+}
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion — honor the user preference (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a, a.btn, .btn { transition: none; }
+  a.btn:hover, a.btn:active, a.btn.ghost:hover { transform: none; }
+}
+
+/* Visible focus rings everywhere (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 3px solid var(--ct-primary);
+  outline-offset: 3px;
+  border-radius: var(--ct-radius-sm);
+}
+
+/* High contrast — drop the soft glows/textures, firm up borders & muted text */
+@media (prefers-contrast: more) {
+  :root {
+    --ct-muted: #374151;
+    --ct-faint: #4B5563;
+    --ct-border:        1px solid rgba(17, 24, 39, 0.45);
+    --ct-border-strong: 2px solid rgba(17, 24, 39, 0.65);
+    --ct-border-color:  rgba(17, 24, 39, 0.45);
+  }
+  section { background-image: none; }
+  a { text-decoration: underline; text-underline-offset: 3px; }
+  .card, .bento > *, blockquote, pre, table, .note, .warn, .danger, .success {
+    box-shadow: none;
+  }
+}

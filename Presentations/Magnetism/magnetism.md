@@ -1,7 +1,7 @@
 ---
 title: Magnetism
 marp: true
-theme: physicalSci
+theme: astrotheme
 paginate: true
 math: mathjax
 class: 
