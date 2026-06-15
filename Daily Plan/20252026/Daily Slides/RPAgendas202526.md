@@ -25,7 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Magnetism
+1. [Magnetism](../../../Presentations/Magnetism/magnetism.html)
 2. Magnetism Practice
 3. Regents Practice
 

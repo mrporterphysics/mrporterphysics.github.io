@@ -38,7 +38,8 @@
       "./PorterThemes/Schodack/vibrant.css",
       "./PorterThemes/Schodack/skeumorphism.css",
       "./PorterThemes/Schodack/vintage.css",
-      "./PorterThemes/Schodack/storytelling.css"
+      "./PorterThemes/Schodack/storytelling.css",
+      "./PorterThemes/Schodack/lingo.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"

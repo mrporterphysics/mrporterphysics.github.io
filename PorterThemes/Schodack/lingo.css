@@ -1,0 +1,691 @@
+/*
+@theme lingo
+
+Duolingo-inspired — minimal, bright, and friendly. Big rounded shapes, a cheerful
+green/blue/gold/red/purple palette, Nunito, and the signature tactile 3D button:
+a solid color with a thick darker bottom that collapses as the button "presses
+in" on click. Tokens follow the typeui.sh "lingo" design system.
+
+Signature: 3D bottom-border buttons (press down on :active), rounded lesson-tile
+cards, a progress bar with a top sheen, circular icon badges, streak/XP chips,
+and green check-circle bullets.
+
+Contrast: Duolingo's brights are too luminous for white text (white-on-#58cc02
+is ~2:1). Prioritizing accessibility, bright fills take DARK ink text (#3c3c3c —
+green 5.2:1, gold 7:1), pale tints carry small chips, and deep shades carry
+colored text/links on white. The darker shade of each hue is the 3D bottom edge.
+
+Fonts:
+  - Nunito         → display + body (rounded, friendly) — primary + display
+  - JetBrains Mono → label-caps role (h5/h6, footer, chips), code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400..900;1,600..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --lg-primary:   #58CC02;   /* Feather green */
+  --lg-secondary: #CE82FF;   /* Beetle purple */
+  --lg-success:   #58CC02;
+  --lg-warning:   #FFC800;   /* Bee gold */
+  --lg-danger:    #FF4B4B;   /* Cardinal red */
+  --lg-surface:   #FFFFFF;
+  --lg-text:      #3C3C3C;   /* Eel (warm dark grey) */
+  --lg-neutral:   #FFFFFF;
+
+  /* Bright brand hues (fills, large, decoration) */
+  --lg-green:  #58CC02;
+  --lg-blue:   #1CB0F6;   /* Macaw */
+  --lg-purple: #CE82FF;
+  --lg-gold:   #FFC800;
+  --lg-orange: #FF9600;   /* Fox */
+  --lg-red:    #FF4B4B;
+
+  /* 3D bottom-edge shades (darker — no text sits on these) */
+  --lg-green-d:  #58A700;
+  --lg-blue-d:   #1899D6;
+  --lg-purple-d: #A568CC;
+  --lg-gold-d:   #E6A100;
+  --lg-orange-d: #E08600;
+  --lg-red-d:    #E63A3A;
+  --lg-line:     #E5E5E5;   /* card / track border */
+  --lg-line-d:   #D6D6D6;   /* secondary-button 3D edge */
+
+  /* AA-safe inks — colored TEXT, links, chip text on white */
+  --lg-green-ink:  #2B7A0A;
+  --lg-blue-ink:   #0A7AB5;
+  --lg-purple-ink: #8B2FC9;
+  --lg-red-ink:    #C42B2B;
+
+  /* Surfaces & ink */
+  --lg-ink:    #3C3C3C;
+  --lg-paper:  #FFFFFF;
+  --lg-canvas: #F7F8FA;
+  --lg-muted:  #777777;        /* Wolf grey — secondary text (4.6:1) */
+  --lg-faint:  #AFAFAF;
+  --lg-on-bright: #3C3C3C;     /* dark text on bright fills (AA) */
+
+  /* Type scale — 12/14/16/20/24/32, slide-tuned: 14/16/20/26/32/44/56 */
+  --lg-fs-1: 14px;   /* label-caps (JetBrains Mono) */
+  --lg-fs-2: 16px;   /* small — tables, code, captions */
+  --lg-fs-3: 20px;   /* body (Nunito) */
+  --lg-fs-4: 26px;   /* h4 */
+  --lg-fs-5: 32px;   /* h3 */
+  --lg-fs-6: 44px;   /* h2 */
+  --lg-fs-7: 56px;   /* h1 */
+
+  /* Spacing scale: 4/8/12/16/24/32 (+ 48) */
+  --lg-sp-1: 4px;
+  --lg-sp-2: 8px;
+  --lg-sp-3: 12px;
+  --lg-sp-4: 16px;
+  --lg-sp-5: 24px;
+  --lg-sp-6: 32px;
+  --lg-sp-7: 48px;
+
+  /* Rounded — big & friendly */
+  --lg-radius-sm:   8px;
+  --lg-radius-md:   16px;
+  --lg-radius-lg:   24px;
+  --lg-radius-pill: 999px;
+
+  /* Motion — quick, snappy (no decorative motion) */
+  --lg-ease: 70ms ease-out;
+}
+
+/* Dark "night" tokens live with the `.dark`/`.invert` variant near the end of
+   the file. Light is the default (class-based dark, no auto-switch). */
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Nunito', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--lg-canvas);
+  color: var(--lg-text);
+  font-size: var(--lg-fs-3);
+  font-weight: 500;
+  line-height: 1.55;
+  padding: var(--lg-sp-7);
+  position: relative;
+}
+
+/* ---------- Headings — rounded & bold ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  color: var(--lg-ink);
+  line-height: 1.15;
+  margin: 0 0 var(--lg-sp-4) 0;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: var(--lg-fs-7);
+  margin-bottom: var(--lg-sp-5);
+}
+
+h2 {
+  font-weight: 800;
+  font-size: var(--lg-fs-6);
+  color: var(--lg-green-ink);
+  padding-bottom: var(--lg-sp-3);
+}
+/* rounded green underline bar */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--lg-sp-3);
+  width: 72px;
+  height: 6px;
+  border-radius: var(--lg-radius-pill);
+  background: var(--lg-green);
+}
+
+h3 { font-size: var(--lg-fs-5); color: var(--lg-ink); }
+h4 { font-size: var(--lg-fs-4); color: var(--lg-ink); }
+
+/* label-caps role — monospaced, uppercase, tracked */
+h5, h6 {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 700;
+  font-size: var(--lg-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lg-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--lg-sp-4) 0;
+  max-width: 60ch;
+}
+
+strong { font-weight: 800; color: var(--lg-green-ink); }
+em { font-style: italic; color: var(--lg-text); }
+
+a {
+  color: var(--lg-blue-ink);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 3px solid var(--lg-blue);
+  padding-bottom: 1px;
+}
+a:hover { color: var(--lg-purple-ink); border-bottom-color: var(--lg-purple); }
+a:focus-visible {
+  outline: 3px solid var(--lg-blue-d);
+  outline-offset: 3px;
+  border-radius: var(--lg-radius-sm);
+}
+
+mark {
+  background: #FFF3BF;
+  color: var(--lg-ink);
+  padding: 0 var(--lg-sp-2);
+  border-radius: var(--lg-radius-sm);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--lg-sp-4) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: var(--lg-sp-3);
+}
+/* green check-circle bullet */
+section ul > li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--lg-green-ink);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+section ul > li > ul > li::before { background: var(--lg-blue-ink); }
+section ul > li > ul > li > ul > li::before { background: var(--lg-purple-ink); }
+
+section ol { counter-reset: lg-counter; }
+section ol > li {
+  counter-increment: lg-counter;
+  position: relative;
+  padding-left: 44px;
+  margin-bottom: var(--lg-sp-3);
+  min-height: 30px;
+}
+section ol > li::marker { content: ""; }
+section ol > li::before {
+  content: counter(lg-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--lg-blue-ink);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: var(--lg-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--lg-fs-3); }
+
+/* ---------- Blockquote — rounded card ---------- */
+blockquote {
+  margin: var(--lg-sp-5) 0;
+  padding: var(--lg-sp-4) var(--lg-sp-5);
+  background: var(--lg-paper);
+  color: var(--lg-ink);
+  border: 2px solid var(--lg-line);
+  border-left: 6px solid var(--lg-green);
+  border-radius: var(--lg-radius-md);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.84em;
+  font-weight: 600;
+  background: #EEF6E6;
+  color: var(--lg-green-ink);
+  padding: 1px var(--lg-sp-2);
+  border-radius: var(--lg-radius-sm);
+}
+pre {
+  background: var(--lg-paper);
+  color: var(--lg-ink);
+  border: 2px solid var(--lg-line);
+  border-radius: var(--lg-radius-md);
+  padding: var(--lg-sp-4) var(--lg-sp-5);
+  font-size: var(--lg-fs-2);
+  line-height: 1.55;
+  overflow-x: auto;
+}
+pre code { background: transparent; color: inherit; padding: 0; border-radius: 0; }
+kbd {
+  background: var(--lg-paper);
+  color: var(--lg-ink);
+  border: 2px solid var(--lg-line);
+  border-bottom-width: 4px;
+  border-radius: var(--lg-radius-sm);
+  padding: 1px var(--lg-sp-2);
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ---------- */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.08em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.18em !important;
+  margin: var(--lg-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables — rounded card ---------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: var(--lg-sp-4) 0;
+  background: var(--lg-paper);
+  color: var(--lg-ink);
+  border: 2px solid var(--lg-line);
+  border-radius: var(--lg-radius-md);
+  overflow: hidden;
+  font-size: var(--lg-fs-2);
+}
+thead th {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  text-align: left;
+  background: #EEF6E6;
+  color: var(--lg-green-ink);
+  padding: var(--lg-sp-3) var(--lg-sp-4);
+  border-bottom: 2px solid var(--lg-line);
+}
+tbody td {
+  padding: var(--lg-sp-3) var(--lg-sp-4);
+  border-bottom: 1px solid var(--lg-line);
+}
+tbody tr:last-child td { border-bottom: 0; }
+
+/* ---------- Horizontal rule — friendly rounded bar ---------- */
+hr {
+  border: 0;
+  height: 4px;
+  width: 100%;
+  margin: var(--lg-sp-5) 0;
+  background: var(--lg-line);
+  border-radius: var(--lg-radius-pill);
+}
+
+/* ---------- Images & Media ---------- */
+img {
+  max-width: 100%;
+  border-radius: var(--lg-radius-md);
+  border: 2px solid var(--lg-line);
+}
+img[alt~="plain"]  { border: 0; border-radius: 0; }
+img[alt~="circle"] { border-radius: 50%; }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--lg-sp-4) auto; }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+p img, li img, strong img, em img {
+  border: 0; border-radius: 0; vertical-align: -0.15em; margin-right: 0.3em;
+}
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--lg-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lg-faint);
+}
+section::after {            /* page numbers */
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: var(--lg-fs-1);
+  color: var(--lg-muted);
+}
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--lg-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--lg-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--lg-sp-4); }
+.cards     { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--lg-sp-5); }
+
+/* ---------- Card — rounded lesson tile with a 3D bottom ---------- */
+.card {
+  background: var(--lg-paper);
+  color: var(--lg-ink);
+  border: 2px solid var(--lg-line);
+  border-radius: var(--lg-radius-lg);
+  box-shadow: 0 4px 0 0 var(--lg-line);
+  padding: var(--lg-sp-5);
+}
+.card h2 { color: var(--lg-green-ink); }
+/* bright colored tiles — dark ink text (AA on these light hues) */
+.card.green  { background: #E8F8D8; border-color: #C5EBA0; box-shadow: 0 4px 0 0 #C5EBA0; }
+.card.blue   { background: #DDF3FE; border-color: #ACE3FB; box-shadow: 0 4px 0 0 #ACE3FB; }
+.card.purple { background: #F3E4FF; border-color: #E2C2FB; box-shadow: 0 4px 0 0 #E2C2FB; }
+.card.gold   { background: #FFF3C4; border-color: #FCE38A; box-shadow: 0 4px 0 0 #FCE38A; }
+.card.green h2  { color: var(--lg-green-ink); }
+.card.blue h2   { color: var(--lg-blue-ink); }
+.card.purple h2 { color: var(--lg-purple-ink); }
+
+/* ---------- Progress bar (lesson progress) ---------- */
+.progress {
+  height: 20px;
+  background: var(--lg-line);
+  border-radius: var(--lg-radius-pill);
+  overflow: hidden;
+}
+.progress > .fill {
+  height: 100%;
+  background: var(--lg-green);
+  border-radius: var(--lg-radius-pill);
+  box-shadow: inset 0 6px 0 rgba(255, 255, 255, 0.35);   /* top sheen */
+}
+
+/* ---------- Circular icon badge (holds an emoji / glyph) ---------- */
+.badge-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--lg-green);
+  color: var(--lg-on-bright);
+  font-size: 30px;
+  box-shadow: 0 4px 0 0 var(--lg-green-d);
+}
+.badge-circle.blue   { background: var(--lg-blue);   box-shadow: 0 4px 0 0 var(--lg-blue-d); }
+.badge-circle.purple { background: var(--lg-purple); box-shadow: 0 4px 0 0 var(--lg-purple-d); }
+.badge-circle.gold   { background: var(--lg-gold);   box-shadow: 0 4px 0 0 var(--lg-gold-d); }
+.badge-circle.red    { background: var(--lg-red);    box-shadow: 0 4px 0 0 var(--lg-red-d); }
+
+/* ---------- Kicker / eyebrow ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--lg-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--lg-green-ink);
+  margin-bottom: var(--lg-sp-3);
+}
+
+/* ---------- Chip — streak / XP / gems pill ---------- */
+.chip, .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--lg-sp-2);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: var(--lg-fs-2);
+  background: #EFEFEF;
+  color: var(--lg-ink);
+  border-radius: var(--lg-radius-pill);
+  padding: 4px var(--lg-sp-4);
+}
+.chip.green,  .tag.green  { background: #E8F8D8; color: var(--lg-green-ink); }
+.chip.blue,   .tag.blue   { background: #DDF3FE; color: var(--lg-blue-ink); }
+.chip.purple, .tag.purple { background: #F3E4FF; color: var(--lg-purple-ink); }
+.chip.gold,   .tag.gold   { background: #FFF3C4; color: #8A6A00; }
+.chip.red,    .tag.red    { background: #FFE0E0; color: var(--lg-red-ink); }
+
+/* ---------- Stat block ---------- */
+.stat { display: inline-flex; flex-direction: column; gap: var(--lg-sp-1); }
+.stat .value {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: var(--lg-fs-7);
+  line-height: 1;
+  color: var(--lg-green-ink);
+}
+.stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--lg-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--lg-muted);
+}
+
+/* ---------- Button — tactile 3D, presses in on click ---------- */
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: var(--lg-fs-2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--lg-green);
+  color: var(--lg-on-bright);
+  border: 0;
+  border-radius: var(--lg-radius-md);
+  box-shadow: 0 4px 0 0 var(--lg-green-d);
+  padding: var(--lg-sp-3) var(--lg-sp-6);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+  transition: filter var(--lg-ease), transform var(--lg-ease), box-shadow var(--lg-ease);
+}
+a.btn:hover  { filter: brightness(1.04); }
+a.btn:active { transform: translateY(4px); box-shadow: 0 0 0 0 var(--lg-green-d); }
+a.btn:focus-visible { outline: 3px solid var(--lg-blue-d); outline-offset: 3px; }
+a.btn.blue   { background: var(--lg-blue);   box-shadow: 0 4px 0 0 var(--lg-blue-d); }
+a.btn.purple { background: var(--lg-purple); box-shadow: 0 4px 0 0 var(--lg-purple-d); }
+a.btn.gold   { background: var(--lg-gold);   box-shadow: 0 4px 0 0 var(--lg-gold-d); }
+a.btn.orange { background: var(--lg-orange); box-shadow: 0 4px 0 0 var(--lg-orange-d); }
+a.btn.red    { background: var(--lg-red);    box-shadow: 0 4px 0 0 var(--lg-red-d); color: #fff; }
+a.btn.red:active   { box-shadow: 0 0 0 0 var(--lg-red-d); }
+a.btn.blue:active, a.btn.purple:active, a.btn.gold:active, a.btn.orange:active {
+  box-shadow: 0 0 0 0 transparent;
+}
+/* secondary / white button — gray 3D bottom */
+a.btn.white {
+  background: var(--lg-paper);
+  color: var(--lg-blue-ink);
+  border: 2px solid var(--lg-line);
+  box-shadow: 0 4px 0 0 var(--lg-line-d);
+}
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  background: var(--lg-line);
+  color: var(--lg-faint);
+  box-shadow: 0 4px 0 0 var(--lg-line-d);
+  cursor: not-allowed;
+}
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success {
+  background: var(--lg-paper);
+  color: var(--lg-ink);
+  border: 2px solid var(--lg-line);
+  border-left: 6px solid var(--lg-blue);
+  border-radius: var(--lg-radius-md);
+  padding: var(--lg-sp-4) var(--lg-sp-5);
+  margin: var(--lg-sp-3) 0;
+}
+.note    { border-left-color: var(--lg-blue);  background: #F2FAFE; }
+.warn    { border-left-color: var(--lg-gold);  background: #FFFBEC; }
+.danger  { border-left-color: var(--lg-red);   background: #FFF2F2; }
+.success { border-left-color: var(--lg-green); background: #F3FBEA; }
+
+/* ---------- Empty state ---------- */
+.empty {
+  border: 2px dashed var(--lg-line-d);
+  border-radius: var(--lg-radius-lg);
+  padding: var(--lg-sp-7);
+  text-align: center;
+  color: var(--lg-muted);
+  font-weight: 700;
+}
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(56px, 9vw, 96px);
+  line-height: 1.0;
+  color: var(--lg-green-ink);
+}
+section.lead h2 {
+  font-weight: 700;
+  font-size: var(--lg-fs-5);
+  color: var(--lg-muted);
+  padding-bottom: 0;
+}
+section.lead h2::after { display: none; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.quote blockquote {
+  background: transparent;
+  border: 0;
+  border-left: 8px solid var(--lg-green);
+  border-radius: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: clamp(30px, 4.5vw, 52px);
+  line-height: 1.2;
+  max-width: 90%;
+  color: var(--lg-ink);
+  padding: var(--lg-sp-3) var(--lg-sp-6);
+}
+
+/* ---------- Green hero:  <!-- _class: hero --> ---------- */
+section.hero {
+  background-color: var(--lg-green);
+  color: var(--lg-on-bright);
+}
+section.hero h1, section.hero h2, section.hero h3 { color: var(--lg-on-bright); }
+section.hero h2::after { background: var(--lg-on-bright); }
+section.hero strong { color: #1F5E00; }
+section.hero a { color: #1F5E00; border-bottom-color: #1F5E00; }
+
+/* ============================================================
+   Dark "night" mode:  <!-- _class: invert -->  (alias: dark)
+   ============================================================ */
+section.invert, section.dark {
+  --lg-ink:    #F7F7F7;
+  --lg-text:   #F7F7F7;
+  --lg-paper:  #202F36;        /* raised card */
+  --lg-canvas: #131F24;        /* Duolingo night */
+  --lg-muted:  #AFC2CC;
+  --lg-faint:  #6E828C;
+  --lg-line:   #37464F;
+  --lg-line-d: #2B383F;
+  --lg-green-ink:  #58CC02;     /* bright green is AA on the dark teal */
+  --lg-blue-ink:   #6FD3FF;
+  --lg-purple-ink: #D6A8FF;
+  --lg-red-ink:    #FF8A8A;
+
+  background-color: var(--lg-canvas);
+  color: var(--lg-text);
+}
+section.invert h3, section.dark h3,
+section.invert h4, section.dark h4 { color: var(--lg-ink); }
+section.invert code, section.dark code { background: #1B2D22; color: #8EE05B; }
+section.invert thead th, section.dark thead th { background: #1B2D22; color: #8EE05B; }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion — freeze the button press (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a.btn { transition: none; }
+  a.btn:hover, a.btn:active { transform: none; filter: none; }
+}
+
+/* Visible focus rings (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 3px solid var(--lg-blue-d);
+  outline-offset: 3px;
+  border-radius: var(--lg-radius-sm);
+}
+
+/* High contrast — firm up borders & muted text */
+@media (prefers-contrast: more) {
+  :root {
+    --lg-muted: #3C3C3C;
+    --lg-faint: #5A5A5A;
+    --lg-line:  #9A9A9A;
+    --lg-line-d:#6E6E6E;
+  }
+  a { text-decoration: underline; text-underline-offset: 3px; }
+}
