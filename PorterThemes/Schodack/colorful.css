@@ -1,0 +1,749 @@
+/*
+@theme colorful
+
+Vibrant, high-contrast, "premium" design system — bold blue→violet gradients,
+a tinted multi-hue card spectrum, and soft colored glows for engaging, modern
+slides. Tokens follow the typeui.sh "colorful" design system.
+
+Signature: a faint blue/violet/pink gradient mesh on the canvas, gradient
+display headings, pale-tint accent cards (blue/violet/pink/cyan/emerald/amber)
+with vibrant accent bars, and a rainbow rule. Distinct from `contemporary`
+(restrained, single magenta gradient) — this one is saturated and colorful.
+
+High-contrast by design: the raw brand hues (#3B82F6 / #8B5CF6) are reserved
+for gradient FILLS and large display, where AA only needs 3:1. For text, links,
+and white-on-color, AA-safe "ink" shades (#2563EB / #7C3AED, >= 5.2:1) are used.
+
+Fonts:
+  - Inter          → display (h1/h2/h3) and body — primary + display roles
+  - JetBrains Mono → label-caps role (h5/h6, footer, tags) and code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --col-primary:   #3B82F6;   /* blue */
+  --col-secondary: #8B5CF6;   /* violet */
+  --col-success:   #16A34A;
+  --col-warning:   #D97706;
+  --col-danger:    #DC2626;
+  --col-surface:   #FFFFFF;
+  --col-text:      #111827;
+  --col-neutral:   #FFFFFF;
+
+  /* AA-safe "ink" shades — use for TEXT on light & white-on-color fills.
+     (Raw primary/secondary are only ~3.7:1 with white — large text only.) */
+  --col-primary-ink:   #2563EB;   /* blue-600   — 5.2:1 white / on-white */
+  --col-secondary-ink: #7C3AED;   /* violet-600 — 5.7:1 */
+  --col-success-ink:   #15803D;   /* green-700  — 5.0:1 */
+  --col-warning-ink:   #B45309;   /* amber-700  — 5.0:1 */
+  --col-danger-ink:    #B91C1C;   /* red-700    — 6.4:1 */
+
+  /* Extended vibrant spectrum — accent bars, tints, decoration */
+  --col-blue:    #3B82F6;
+  --col-violet:  #8B5CF6;
+  --col-pink:    #EC4899;
+  --col-cyan:    #06B6D4;
+  --col-emerald: #10B981;
+  --col-amber:   #F59E0B;
+
+  /* Surfaces & ink */
+  --col-canvas:    #FFFFFF;
+  --col-surface-2: #F8FAFC;   /* slate-50 — recessed / alt panel */
+  --col-muted:     #475569;   /* slate-600 — secondary text (7.6:1) */
+  --col-faint:     #64748B;   /* slate-500 — labels / pagination */
+  --col-border:        1px solid rgba(15, 23, 42, 0.10);
+  --col-border-color:  rgba(15, 23, 42, 0.10);
+  --col-on-accent: #FFFFFF;   /* text on gradient / solid color fills */
+
+  /* Gradients */
+  --col-grad-from: #2563EB;   /* AA-safe FILL stops (white text >= 5.2:1) */
+  --col-grad-to:   #7C3AED;
+  --col-gradient:  linear-gradient(135deg, var(--col-grad-from), var(--col-grad-to));
+  --col-grad-bright: linear-gradient(135deg, #3B82F6, #8B5CF6);  /* text-clip / glow */
+  --col-grad-spectrum: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899, #F59E0B);
+  --col-grad-soft: linear-gradient(135deg,
+                     rgba(59, 130, 246, 0.12),
+                     rgba(139, 92, 246, 0.12));
+
+  /* Elevation — soft + colored glow (premium) */
+  --col-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06),
+                   0 2px 6px rgba(15, 23, 42, 0.08);
+  --col-shadow:    0 8px 24px -8px rgba(15, 23, 42, 0.18);
+  --col-shadow-lg: 0 20px 48px -14px rgba(15, 23, 42, 0.24);
+  --col-glow:      0 16px 40px -10px rgba(124, 58, 237, 0.40);
+
+  /* Type scale — 12/14/16/20/24/32 expressive base, slide-tuned upward:
+     14 / 18 / 22 / 26 / 32 / 42 / 56 */
+  --col-fs-1: 14px;   /* label-caps (JetBrains Mono) */
+  --col-fs-2: 18px;   /* small — tables, code, captions */
+  --col-fs-3: 22px;   /* body — primary reading size */
+  --col-fs-4: 26px;   /* h4 */
+  --col-fs-5: 32px;   /* h3 */
+  --col-fs-6: 42px;   /* h2 */
+  --col-fs-7: 56px;   /* h1 */
+
+  /* Spacing — 8pt baseline grid (+ 4 half-step): 4/8/16/24/32/48/64 */
+  --col-sp-1: 4px;
+  --col-sp-2: 8px;
+  --col-sp-3: 16px;
+  --col-sp-4: 24px;
+  --col-sp-5: 32px;
+  --col-sp-6: 48px;
+  --col-sp-7: 64px;
+
+  /* Rounded scale (spec sm/md + larger for premium cards) */
+  --col-radius-sm:   4px;
+  --col-radius-md:   8px;
+  --col-radius-lg:   16px;
+  --col-radius-xl:   24px;
+  --col-radius-pill: 999px;
+
+  /* Motion */
+  --col-ease: 160ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Dark-mode tokens live with the `.dark`/`.invert` variant near the end of the
+   file. Components read from the tokens above, so the system flips by
+   re-assigning them. Light is the default (class-based dark, no auto-switch). */
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--col-canvas);
+  /* Faint corner gradient mesh — colorful but keeps the center white for text */
+  background-image:
+    radial-gradient(ellipse 52% 46% at 0% 0%,   rgba(59, 130, 246, 0.10), transparent 60%),
+    radial-gradient(ellipse 52% 46% at 100% 0%, rgba(139, 92, 246, 0.10), transparent 60%),
+    radial-gradient(ellipse 56% 48% at 100% 100%, rgba(236, 72, 153, 0.08), transparent 62%);
+  color: var(--col-text);
+  font-size: var(--col-fs-3);
+  font-weight: 400;
+  line-height: 1.55;
+  padding: var(--col-sp-6);
+  position: relative;
+}
+
+/* ---------- Headings (56 / 42 / 32 / 26) ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  color: var(--col-text);
+  line-height: 1.12;
+  margin: 0 0 var(--col-sp-3) 0;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: var(--col-fs-7);
+  margin-bottom: var(--col-sp-4);
+  /* Gradient display title — the colorful signature (large text = AA 3:1) */
+  background: var(--col-grad-bright);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: var(--col-fs-6);
+  padding-bottom: var(--col-sp-2);
+}
+/* Gradient underline bar under each h2 */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--col-sp-2);
+  width: 64px;
+  height: 5px;
+  border-radius: var(--col-radius-pill);
+  background: var(--col-grad-bright);
+}
+
+h3 {
+  font-weight: 700;
+  font-size: var(--col-fs-5);
+  color: var(--col-secondary-ink);
+}
+
+h4 {
+  font-weight: 600;
+  font-size: var(--col-fs-4);
+  color: var(--col-text);
+}
+
+/* label-caps role — monospaced, uppercase, tracked */
+h5, h6 {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 600;
+  font-size: var(--col-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--col-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--col-sp-3) 0;
+  max-width: 66ch;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--col-primary-ink);
+}
+
+em {
+  font-style: italic;
+  color: var(--col-text);
+}
+
+a {
+  color: var(--col-primary-ink);
+  font-weight: 600;
+  text-decoration: none;
+  background-image: var(--col-gradient);
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 1px;
+  transition: color var(--col-ease), background-size var(--col-ease);
+}
+a:hover { color: var(--col-secondary-ink); background-size: 100% 100%;
+          background-image: var(--col-grad-soft); border-radius: var(--col-radius-sm); }
+a:focus-visible {
+  outline: 3px solid var(--col-primary-ink);
+  outline-offset: 3px;
+  border-radius: var(--col-radius-sm);
+}
+
+mark {
+  background: var(--col-grad-soft);
+  color: inherit;
+  padding: 0 var(--col-sp-1);
+  border-radius: var(--col-radius-sm);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--col-sp-3) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--col-sp-4);
+  margin-bottom: var(--col-sp-2);
+}
+/* Gradient rounded bullet */
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--col-radius-sm);
+  background: var(--col-grad-bright);
+}
+section ul > li > ul > li::before { background: var(--col-pink); }
+section ul > li > ul > li > ul > li::before { background: var(--col-amber); }
+
+section ol { counter-reset: col-counter; }
+section ol > li {
+  counter-increment: col-counter;
+  position: relative;
+  padding-left: var(--col-sp-5);
+  margin-bottom: var(--col-sp-2);
+  min-height: 30px;
+}
+section ol > li::marker { content: ""; }
+section ol > li::before {
+  content: counter(col-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--col-radius-pill);
+  background: var(--col-gradient);
+  color: var(--col-on-accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--col-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--col-fs-3); }
+
+/* ---------- Blockquote ---------- */
+blockquote {
+  margin: var(--col-sp-4) 0;
+  padding: var(--col-sp-3) var(--col-sp-4);
+  background: var(--col-surface-2);
+  border: var(--col-border);
+  border-left: 5px solid transparent;
+  border-image: var(--col-gradient) 1;
+  border-radius: 0 var(--col-radius-md) var(--col-radius-md) 0;
+  color: var(--col-text);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.88em;
+  font-weight: 500;
+  background: var(--col-surface-2);
+  color: var(--col-secondary-ink);
+  padding: 1px var(--col-sp-2);
+  border: var(--col-border);
+  border-radius: var(--col-radius-sm);
+}
+pre {
+  background: #0F172A;        /* slate-900 — code reads as a premium dark panel */
+  color: #E2E8F0;
+  border: 0;
+  border-radius: var(--col-radius-lg);
+  box-shadow: var(--col-shadow);
+  padding: var(--col-sp-4) var(--col-sp-4);
+  font-size: var(--col-fs-2);
+  line-height: 1.55;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  font-weight: 500;
+}
+kbd {
+  background: var(--col-surface);
+  color: var(--col-text);
+  border: var(--col-border);
+  border-bottom-width: 3px;
+  border-radius: var(--col-radius-sm);
+  padding: 1px var(--col-sp-2);
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ----------
+   Physics decks lean on display math — keep it crisp and slightly larger. */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.08em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.18em !important;
+  margin: var(--col-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: var(--col-sp-3) 0;
+  background: var(--col-surface);
+  border: var(--col-border);
+  border-radius: var(--col-radius-lg);
+  overflow: hidden;
+  font-size: var(--col-fs-2);
+  box-shadow: var(--col-shadow-sm);
+}
+thead th {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  background: var(--col-gradient);
+  color: var(--col-on-accent);
+  padding: var(--col-sp-2) var(--col-sp-3);
+}
+tbody td {
+  padding: var(--col-sp-2) var(--col-sp-3);
+  border-bottom: 1px solid var(--col-border-color);
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) td { background: var(--col-surface-2); }
+
+/* ---------- Horizontal rule — rainbow spectrum bar ---------- */
+hr {
+  border: 0;
+  height: 5px;
+  width: 100%;
+  background: var(--col-grad-spectrum);
+  border-radius: var(--col-radius-pill);
+  margin: var(--col-sp-5) 0;
+}
+
+/* ---------- Images & Media ---------- */
+img {
+  max-width: 100%;
+  background: var(--col-surface);
+  border: var(--col-border);
+  border-radius: var(--col-radius-lg);
+}
+img[alt~="plain"]  { background: none; border: 0; border-radius: 0; }
+img[alt~="shadow"] { box-shadow: var(--col-shadow); border: 0; }
+img[alt~="circle"] { border-radius: 50%; }
+img[alt~="glow"]   { box-shadow: var(--col-glow); border: 0; }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--col-sp-3) auto; }
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--col-fs-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--col-faint);
+}
+section::after {            /* page numbers */
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: var(--col-fs-1);
+  color: var(--col-faint);
+}
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+
+/* ---------- Columns & card grid ---------- */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--col-sp-4);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--col-sp-4); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--col-sp-3); }
+.cards     { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--col-sp-4); }
+
+/* ---------- Card (premium) ----------
+   Default white card. Tint variants add a pale wash + a vibrant top accent
+   bar; text stays ink-dark for high contrast. <div class="card violet"> … */
+.card {
+  background: var(--col-surface);
+  border: var(--col-border);
+  border-top: 4px solid var(--col-primary);
+  border-radius: var(--col-radius-lg);
+  box-shadow: var(--col-shadow-sm);
+  padding: var(--col-sp-4);
+  color: var(--col-text);
+}
+.card.blue    { border-top-color: var(--col-blue);    background: rgba(59, 130, 246, 0.10); }
+.card.violet  { border-top-color: var(--col-violet);  background: rgba(139, 92, 246, 0.10); }
+.card.pink    { border-top-color: var(--col-pink);    background: rgba(236, 72, 153, 0.10); }
+.card.cyan    { border-top-color: var(--col-cyan);    background: rgba(6, 182, 212, 0.12); }
+.card.emerald { border-top-color: var(--col-emerald); background: rgba(16, 185, 129, 0.12); }
+.card.amber   { border-top-color: var(--col-amber);   background: rgba(245, 158, 11, 0.14); }
+
+/* Gradient hero card — white text on the AA-safe gradient */
+.card.accent {
+  background: var(--col-gradient);
+  border: 0;
+  color: var(--col-on-accent);
+  box-shadow: var(--col-glow);
+}
+.card.accent h1, .card.accent h2, .card.accent h3, .card.accent h4,
+.card.accent strong { color: var(--col-on-accent); }
+.card.accent h2::after { background: rgba(255, 255, 255, 0.85); }
+
+/* Gradient-border card (premium outline) */
+.card.outline {
+  background:
+    linear-gradient(var(--col-surface), var(--col-surface)) padding-box,
+    var(--col-gradient) border-box;
+  border: 2px solid transparent;
+  border-top-width: 2px;
+}
+
+/* ---------- Kicker / eyebrow ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--col-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--col-primary-ink);
+  margin-bottom: var(--col-sp-2);
+}
+.kicker.violet { color: var(--col-secondary-ink); }
+.kicker.pink   { color: #BE185D; }
+
+/* ---------- Tag / badge ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: var(--col-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--col-surface-2);
+  color: var(--col-text);
+  border: var(--col-border);
+  padding: 4px var(--col-sp-2);
+  border-radius: var(--col-radius-pill);
+}
+/* Solid pills — use ink shades / gradient so white text stays AA */
+.tag.accent  { background: var(--col-gradient);     color: var(--col-on-accent); border: 0; }
+.tag.blue    { background: var(--col-primary-ink);  color: #fff; border: 0; }
+.tag.violet  { background: var(--col-secondary-ink); color: #fff; border: 0; }
+.tag.success { background: var(--col-success-ink);  color: #fff; border: 0; }
+.tag.warning { background: var(--col-warning-ink);  color: #fff; border: 0; }
+.tag.danger  { background: var(--col-danger-ink);   color: #fff; border: 0; }
+
+/* ---------- Stat block ---------- */
+.stat {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--col-sp-1);
+}
+.stat .value {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: var(--col-fs-7);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  background: var(--col-grad-bright);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--col-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--col-muted);
+}
+/* On filled tiles the gradient text-clip would vanish — fall back to solid. */
+.card.accent .stat .value {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--col-on-accent);
+}
+
+/* ---------- Button ---------- */
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: var(--col-fs-2);
+  background: var(--col-gradient);
+  color: var(--col-on-accent);
+  border: 0;
+  border-radius: var(--col-radius-pill);
+  padding: var(--col-sp-2) var(--col-sp-4);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+  box-shadow: var(--col-shadow-sm);
+  transition: transform var(--col-ease), box-shadow var(--col-ease);
+}
+a.btn:hover  { transform: translateY(-2px); box-shadow: var(--col-glow); }
+a.btn:active { transform: translateY(0); box-shadow: var(--col-shadow-sm); }
+a.btn:focus-visible { outline: 3px solid var(--col-primary-ink); outline-offset: 3px; }
+a.btn.ghost {
+  background: transparent;
+  color: var(--col-primary-ink);
+  border: 2px solid var(--col-primary-ink);
+  box-shadow: none;
+}
+a.btn.ghost:hover { background: var(--col-grad-soft); transform: translateY(-2px); }
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  background: var(--col-surface-2);
+  color: var(--col-faint);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success {
+  border: var(--col-border);
+  border-left: 5px solid var(--col-primary);
+  border-radius: var(--col-radius-md);
+  box-shadow: var(--col-shadow-sm);
+  padding: var(--col-sp-3) var(--col-sp-4);
+  margin: var(--col-sp-2) 0;
+}
+.note    { border-left-color: var(--col-primary); background: rgba(59, 130, 246, 0.08); }
+.warn    { border-left-color: var(--col-warning); background: rgba(217, 119, 6, 0.10); }
+.danger  { border-left-color: var(--col-danger);  background: rgba(220, 38, 38, 0.08); }
+.success { border-left-color: var(--col-success); background: rgba(22, 163, 74, 0.08); }
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title slide:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(56px, 8vw, 92px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--col-sp-3);
+}
+section.lead h2 {
+  font-weight: 400;
+  font-size: var(--col-fs-5);
+  color: var(--col-muted);
+  padding-bottom: 0;
+}
+section.lead h2::after { display: none; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.quote blockquote {
+  background: transparent;
+  border: 0;
+  border-image: none;
+  box-shadow: none;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 84%;
+  text-align: center;
+  color: var(--col-text);
+  padding: var(--col-sp-4);
+}
+
+/* ---------- Gradient hero slide:  <!-- _class: gradient --> ----------
+   Full-bleed blue→violet field, white content. */
+section.gradient {
+  background-color: #2563EB;
+  background-image: linear-gradient(135deg, #2563EB 0%, #7C3AED 55%, #DB2777 110%);
+  color: var(--col-on-accent);
+}
+section.gradient h1, section.gradient h2, section.gradient h3, section.gradient h4 {
+  color: var(--col-on-accent);
+  -webkit-text-fill-color: var(--col-on-accent);  /* defeat h1 gradient clip */
+}
+section.gradient h2::after { background: rgba(255, 255, 255, 0.9); }
+section.gradient h3 { color: rgba(255, 255, 255, 0.92); }
+section.gradient strong { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+section.gradient a { color: #fff; background-image: linear-gradient(#fff, #fff); }
+section.gradient blockquote { background: rgba(255, 255, 255, 0.12); color: #fff; }
+section.gradient footer, section.gradient::after { color: rgba(255, 255, 255, 0.8); }
+
+/* ============================================================
+   Dark mode — premium slate:  <!-- _class: invert -->  (alias: dark)
+   ============================================================ */
+section.invert, section.dark {
+  --col-text:      #F8FAFC;
+  --col-canvas:    #0F172A;   /* slate-900 */
+  --col-surface:   #1E293B;   /* slate-800 */
+  --col-surface-2: #172033;
+  --col-muted:     #CBD5E1;   /* slate-300 */
+  --col-faint:     #94A3B8;   /* slate-400 */
+  --col-border:        1px solid rgba(255, 255, 255, 0.12);
+  --col-border-color:  rgba(255, 255, 255, 0.12);
+  /* lighten accent TEXT shades for contrast on slate; FILL gradient stays */
+  --col-primary-ink:   #60A5FA;   /* blue-400 */
+  --col-secondary-ink: #A78BFA;   /* violet-400 */
+  --col-success-ink:   #4ADE80;
+  --col-warning-ink:   #FBBF24;
+  --col-danger-ink:    #F87171;
+  --col-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --col-shadow:    0 10px 28px -10px rgba(0, 0, 0, 0.6);
+  --col-glow:      0 16px 40px -10px rgba(139, 92, 246, 0.55);
+
+  background-color: var(--col-canvas);
+  background-image:
+    radial-gradient(ellipse 52% 46% at 0% 0%,   rgba(59, 130, 246, 0.18), transparent 60%),
+    radial-gradient(ellipse 52% 46% at 100% 0%, rgba(139, 92, 246, 0.18), transparent 60%),
+    radial-gradient(ellipse 56% 48% at 100% 100%, rgba(236, 72, 153, 0.14), transparent 62%);
+  color: var(--col-text);
+}
+/* h3 follows the lightened violet ink in dark mode */
+section.invert h3, section.dark h3 { color: var(--col-secondary-ink); }
+/* Tint cards: deepen the wash so it reads on slate, keep light text */
+section.invert .card.blue,    section.dark .card.blue    { background: rgba(59, 130, 246, 0.18); }
+section.invert .card.violet,  section.dark .card.violet  { background: rgba(139, 92, 246, 0.18); }
+section.invert .card.pink,    section.dark .card.pink    { background: rgba(236, 72, 153, 0.18); }
+section.invert .card.cyan,    section.dark .card.cyan    { background: rgba(6, 182, 212, 0.20); }
+section.invert .card.emerald, section.dark .card.emerald { background: rgba(16, 185, 129, 0.20); }
+section.invert .card.amber,   section.dark .card.amber   { background: rgba(245, 158, 11, 0.22); }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a, a.btn, .btn { transition: none; }
+  a.btn:hover, a.btn:active, a.btn.ghost:hover { transform: none; }
+}
+
+/* Visible focus rings everywhere (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 3px solid var(--col-primary-ink);
+  outline-offset: 3px;
+  border-radius: var(--col-radius-sm);
+}
+
+/* High contrast — drop the gradient mesh & glows, firm up borders & text */
+@media (prefers-contrast: more) {
+  :root {
+    --col-muted: #1E293B;
+    --col-faint: #334155;
+    --col-border:        1px solid rgba(15, 23, 42, 0.45);
+    --col-border-color:  rgba(15, 23, 42, 0.45);
+  }
+  section { background-image: none; }
+  a { text-decoration: underline; text-underline-offset: 3px; }
+  .card, blockquote, pre, table, .note, .warn, .danger, .success { box-shadow: none; }
+}

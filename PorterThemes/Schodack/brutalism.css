@@ -1,0 +1,694 @@
+/*
+@theme brutalism
+
+Raw, anti-design aesthetic inspired by 1950s béton-brut concrete architecture:
+monolithic blocks, exposed structure, heavy ink rules, hard edges, and abrupt
+"jarring" interactions. Functional minimalism over polish. Tokens follow the
+typeui.sh "brutalism" design system.
+
+Signature: a board-formed concrete canvas, oversized Darker Grotesque display
+type set flush-left, solid color slabs (rust / ochre / ink), and NO rounding or
+soft shadows — structure is shown, never hidden. Distinct from this repo's
+`neobrutalism` theme (vivid yellow, rounded tags, offset drop-shadows, rotation).
+
+Fonts:
+  - Darker Grotesque → display (h1/h2/h3) and body — primary + display roles
+  - JetBrains Mono   → label-caps role (h5/h6, footer, tags, counters) and code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --bru-primary:   #DD614C;   /* rust / terracotta — structural accent */
+  --bru-secondary: #DAA144;   /* ochre / mustard — secondary accent */
+  --bru-success:   #16A34A;
+  --bru-warning:   #D97706;
+  --bru-danger:    #DC2626;
+  --bru-surface:   #FFFFFF;   /* panel / card surface */
+  --bru-text:      #111827;   /* ink */
+  --bru-neutral:   #FFFFFF;
+
+  /* Derived surfaces & ink */
+  --bru-ink:        #111827;
+  --bru-paper:      #FFFFFF;
+  --bru-canvas:     #CFCCC4;   /* raw warm concrete — slide background */
+  --bru-canvas-2:   #C2BFB6;   /* shadowed concrete (alt panels) */
+  --bru-muted:      #4A4842;   /* concrete-dark — secondary text */
+  --bru-faint:      #6E6B62;   /* tertiary text */
+
+  /* Accent colors safe as TEXT on light (AA >= 4.5:1).
+     Raw rust/ochre are reserved for FILLS behind ink text. */
+  --bru-link:       #BD4B30;   /* deepened rust for inline links (~4.95:1) */
+
+  /* On-fill text — chosen so every solid block passes AA:
+     ink text on rust/ochre/success/warning; paper text on ink/danger. */
+  --bru-on-warm:    #111827;   /* on rust, ochre, success, warning */
+  --bru-on-dark:    #FFFFFF;   /* on ink, danger */
+
+  /* Type scale — desktop-first expressive scale, slide-tuned for the
+     condensed Darker Grotesque: 15 / 18 / 24 / 30 / 40 / 56 / 80 */
+  --bru-fs-1: 15px;   /* label-caps (JetBrains Mono) */
+  --bru-fs-2: 18px;   /* small — tables, code, captions */
+  --bru-fs-3: 24px;   /* body — primary reading size */
+  --bru-fs-4: 30px;   /* h4 */
+  --bru-fs-5: 40px;   /* h3 */
+  --bru-fs-6: 56px;   /* h2 */
+  --bru-fs-7: 80px;   /* h1 */
+
+  /* Spacing scale: 4 / 8 / 12 / 16 / 24 / 32 (+ 48 / 64 for slabs) */
+  --bru-sp-1: 4px;
+  --bru-sp-2: 8px;
+  --bru-sp-3: 12px;
+  --bru-sp-4: 16px;
+  --bru-sp-5: 24px;
+  --bru-sp-6: 32px;
+  --bru-sp-7: 48px;
+  --bru-sp-8: 64px;
+
+  /* Rounded scale (available per spec, but the aesthetic is SHARP —
+     default 0; sm/md used only on small mono chips where noted) */
+  --bru-radius-0:  0px;
+  --bru-radius-sm: 4px;
+  --bru-radius-md: 8px;
+
+  /* Structure — heavy ink rules, no shadow (unadorned) */
+  --bru-rule:       3px solid var(--bru-ink);
+  --bru-rule-thick: 6px solid var(--bru-ink);
+  --bru-rule-hair:  2px solid var(--bru-ink);
+}
+
+/* Dark-mode tokens live with the `.invert`/`.dark` variant near the end of
+   this file. Components read from the tokens above, so the system flips by
+   re-assigning them. (No automatic prefers-color-scheme — light is default.) */
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Darker Grotesque', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--bru-canvas);
+  /* Board-formed concrete: faint horizontal form-board seams + fine aggregate
+     speckle. Cheap, low-opacity — kept off in high-contrast mode. */
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(17, 24, 39, 0.05) 0,
+      rgba(17, 24, 39, 0.05) 1px,
+      transparent 1px,
+      transparent 96px),
+    radial-gradient(rgba(17, 24, 39, 0.06) 1px, transparent 1.4px);
+  background-size: 100% 96px, 6px 6px;
+  color: var(--bru-text);
+  font-size: var(--bru-fs-3);
+  font-weight: 500;
+  line-height: 1.4;
+  padding: var(--bru-sp-8);
+  position: relative;
+}
+
+/* ---------- Headings (80 / 56 / 40 / 30) ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Darker Grotesque', sans-serif;
+  color: var(--bru-ink);
+  line-height: 0.92;
+  margin: 0 0 var(--bru-sp-4) 0;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: var(--bru-fs-7);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  border-bottom: var(--bru-rule-thick);
+  padding-bottom: var(--bru-sp-3);
+  margin-bottom: var(--bru-sp-5);
+}
+
+h2 {
+  font-weight: 800;
+  font-size: var(--bru-fs-6);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  border-bottom: var(--bru-rule);
+  padding-bottom: var(--bru-sp-2);
+}
+
+h3 {
+  font-weight: 800;
+  font-size: var(--bru-fs-5);
+  color: var(--bru-ink);
+}
+
+h4 {
+  font-weight: 700;
+  font-size: var(--bru-fs-4);
+  color: var(--bru-ink);
+}
+
+/* label-caps role — monospaced, uppercase, tracked, functional */
+h5, h6 {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 700;
+  font-size: var(--bru-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--bru-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--bru-sp-4) 0;
+  max-width: 64ch;
+}
+
+strong {
+  font-weight: 800;
+  color: var(--bru-on-warm);     /* dark text — sits on the ochre highlight */
+  background: var(--bru-secondary);
+  padding: 0 var(--bru-sp-1);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+em {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--bru-ink);
+}
+
+a {
+  color: var(--bru-link);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+}
+a:hover {            /* hard invert — abrupt, anti-design */
+  background: var(--bru-ink);
+  color: var(--bru-paper);
+  text-decoration-color: var(--bru-paper);
+}
+a:focus-visible {
+  outline: 4px solid var(--bru-ink);
+  outline-offset: 2px;
+  background: var(--bru-secondary);
+  color: var(--bru-on-warm);
+}
+
+mark {
+  background: var(--bru-secondary);
+  color: var(--bru-on-warm);
+  padding: 0 var(--bru-sp-1);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--bru-sp-4) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--bru-sp-6);
+  margin-bottom: var(--bru-sp-3);
+}
+/* Hard filled square — raw, unrounded */
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 14px;
+  height: 14px;
+  background: var(--bru-ink);
+}
+section ul > li > ul > li::before { background: var(--bru-primary); }
+section ul > li > ul > li > ul > li::before { background: var(--bru-secondary); }
+
+section ol { counter-reset: bru-counter; }
+section ol > li {
+  counter-increment: bru-counter;
+  position: relative;
+  padding-left: var(--bru-sp-7);
+  margin-bottom: var(--bru-sp-3);
+  min-height: 32px;
+}
+section ol > li::marker { content: ""; }
+/* Exposed mono numerals in a hard ink box */
+section ol > li::before {
+  content: counter(bru-counter, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 34px;
+  height: 30px;
+  padding: 0 var(--bru-sp-2);
+  background: var(--bru-ink);
+  color: var(--bru-paper);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: var(--bru-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--bru-fs-3); }
+
+/* ---------- Blockquote ---------- */
+blockquote {
+  margin: var(--bru-sp-5) 0;
+  padding: var(--bru-sp-4) var(--bru-sp-5);
+  background: var(--bru-paper);
+  border: var(--bru-rule);
+  border-left: var(--bru-rule-thick);
+  border-left-color: var(--bru-primary);
+  color: var(--bru-ink);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.85em;
+  font-weight: 600;
+  background: var(--bru-paper);
+  color: var(--bru-ink);
+  padding: 1px var(--bru-sp-2);
+  border: var(--bru-rule-hair);
+}
+pre {
+  background: var(--bru-ink);
+  color: var(--bru-paper);
+  border: var(--bru-rule);
+  padding: var(--bru-sp-4) var(--bru-sp-5);
+  font-size: var(--bru-fs-2);
+  line-height: 1.5;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  font-weight: 500;
+}
+kbd {
+  background: var(--bru-paper);
+  color: var(--bru-ink);
+  border: var(--bru-rule-hair);
+  border-bottom-width: 4px;
+  padding: 1px var(--bru-sp-2);
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ----------
+   Physics decks lean on display math — keep it legible against the heavy
+   grotesque body and bump display equations slightly. */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.06em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.16em !important;
+  margin: var(--bru-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables (exposed grid) ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--bru-sp-4) 0;
+  background: var(--bru-paper);
+  border: var(--bru-rule);
+  font-size: var(--bru-fs-2);
+}
+th, td {
+  border: var(--bru-rule-hair);
+  padding: var(--bru-sp-2) var(--bru-sp-4);
+  text-align: left;
+}
+thead th {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: var(--bru-fs-1);
+  background: var(--bru-ink);
+  color: var(--bru-paper);
+  border-color: var(--bru-ink);
+}
+tbody tr:nth-child(even) td { background: var(--bru-canvas); }
+
+/* ---------- Horizontal rule ---------- */
+hr {
+  border: 0;
+  height: 6px;
+  width: 100%;
+  background: var(--bru-ink);
+  margin: var(--bru-sp-6) 0;
+}
+
+/* ---------- Images & Media ---------- */
+img {
+  max-width: 100%;
+  background: var(--bru-paper);
+  border: var(--bru-rule);
+}
+img[alt~="plain"]  { background: none; border: 0; }
+img[alt~="frame"]  { padding: var(--bru-sp-3); border: var(--bru-rule-thick); }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--bru-sp-4) auto; }
+
+/* Inline emoji (Marp twemoji) — keep raw treatment off so they read inline */
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+p img, li img, strong img, em img {
+  border: 0;
+  background: none;
+  vertical-align: -0.15em;
+  margin-right: 0.3em;
+}
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--bru-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--bru-muted);
+}
+section::after {            /* page numbers — hard mono numeral */
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: var(--bru-fs-1);
+  color: var(--bru-paper);
+  background: var(--bru-ink);
+  padding: 2px var(--bru-sp-2);
+}
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+
+/* ---------- Columns ---------- */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--bru-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--bru-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--bru-sp-4); }
+
+/* Intentionally "jarring" asymmetric split — wide + narrow */
+.split { display: grid; grid-template-columns: 2fr 1fr; gap: var(--bru-sp-5); }
+.split.flip { grid-template-columns: 1fr 2fr; }
+
+/* ---------- Card / Slab (monolithic panel) ---------- */
+.card {
+  background: var(--bru-paper);
+  border: var(--bru-rule);
+  padding: var(--bru-sp-5);
+  color: var(--bru-ink);
+}
+.slab {
+  padding: var(--bru-sp-6);
+  border: var(--bru-rule);
+  background: var(--bru-paper);
+  color: var(--bru-ink);
+}
+/* Solid color fills — ink text on warm colors, paper text on dark (all AA) */
+.card.primary,   .slab.primary   { background: var(--bru-primary);   color: var(--bru-on-warm); border: 0; }
+.card.secondary, .slab.secondary { background: var(--bru-secondary); color: var(--bru-on-warm); border: 0; }
+.card.ink,       .slab.ink       { background: var(--bru-ink);       color: var(--bru-on-dark); border: 0; }
+.card.primary h1, .card.primary h2, .card.primary h3, .card.primary h4,
+.slab.primary  h1, .slab.primary  h2, .slab.primary  h3, .slab.primary  h4,
+.card.secondary h1, .card.secondary h2, .card.secondary h3, .card.secondary h4,
+.slab.secondary h1, .slab.secondary h2, .slab.secondary h3, .slab.secondary h4 {
+  color: var(--bru-on-warm);
+}
+.card.ink h1, .card.ink h2, .card.ink h3, .card.ink h4,
+.slab.ink h1, .slab.ink h2, .slab.ink h3, .slab.ink h4 { color: var(--bru-on-dark); }
+
+/* ---------- Kicker / eyebrow ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--bru-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--bru-paper);
+  background: var(--bru-ink);
+  padding: 2px var(--bru-sp-3);
+  margin-bottom: var(--bru-sp-3);
+}
+
+/* ---------- Tag / badge (sharp mono chip) ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--bru-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  background: var(--bru-paper);
+  color: var(--bru-ink);
+  border: var(--bru-rule-hair);
+  padding: 3px var(--bru-sp-3);
+}
+.tag.primary   { background: var(--bru-primary);   color: var(--bru-on-warm); border: 0; }
+.tag.secondary { background: var(--bru-secondary); color: var(--bru-on-warm); border: 0; }
+.tag.ink       { background: var(--bru-ink);       color: var(--bru-on-dark); border: 0; }
+.tag.success   { background: var(--bru-success);   color: var(--bru-on-warm); border: 0; }
+.tag.warning   { background: var(--bru-warning);   color: var(--bru-on-warm); border: 0; }
+.tag.danger    { background: var(--bru-danger);    color: var(--bru-on-dark); border: 0; }
+
+/* ---------- Stat block ---------- */
+.stat {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--bru-sp-1);
+}
+.stat .value {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-weight: 900;
+  font-size: var(--bru-fs-7);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: var(--bru-primary);
+}
+.stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--bru-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bru-muted);
+}
+
+/* ---------- Button ---------- */
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: var(--bru-fs-2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--bru-ink);
+  color: var(--bru-paper);
+  border: var(--bru-rule);
+  border-color: var(--bru-ink);
+  padding: var(--bru-sp-3) var(--bru-sp-5);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+}
+a.btn:hover  { background: var(--bru-primary); color: var(--bru-on-warm); border-color: var(--bru-ink); }
+a.btn:active { transform: translate(2px, 2px); }
+a.btn:focus-visible { outline: 4px solid var(--bru-primary); outline-offset: 3px; }
+a.btn.ghost {
+  background: transparent;
+  color: var(--bru-ink);
+  border: var(--bru-rule);
+}
+a.btn.ghost:hover { background: var(--bru-ink); color: var(--bru-paper); }
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  background: var(--bru-canvas-2);
+  color: var(--bru-faint);
+  border-color: var(--bru-faint);
+  cursor: not-allowed;
+}
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success {
+  background: var(--bru-paper);
+  border: var(--bru-rule);
+  border-left: var(--bru-rule-thick);
+  padding: var(--bru-sp-4) var(--bru-sp-5);
+  margin: var(--bru-sp-3) 0;
+  color: var(--bru-ink);
+}
+.note    { border-left-color: var(--bru-primary); }
+.warn    { border-left-color: var(--bru-warning); }
+.danger  { border-left-color: var(--bru-danger); }
+.success { border-left-color: var(--bru-success); }
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title slide:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(72px, 11vw, 132px);
+  font-weight: 900;
+  line-height: 0.86;
+  letter-spacing: -0.03em;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: var(--bru-sp-4);
+}
+section.lead h2 {
+  font-weight: 500;
+  font-size: var(--bru-fs-5);
+  text-transform: none;
+  letter-spacing: -0.01em;
+  border-bottom: 0;
+  padding-bottom: 0;
+  color: var(--bru-muted);
+}
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.quote blockquote {
+  background: transparent;
+  border: 0;
+  border-left: var(--bru-rule-thick);
+  border-left-color: var(--bru-ink);
+  padding: var(--bru-sp-3) var(--bru-sp-6);
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  max-width: 90%;
+  color: var(--bru-ink);
+}
+
+/* ---------- Accent slides — full-bleed color blocks ---------- */
+section.accent-primary   { background-color: var(--bru-primary); background-image: none; color: var(--bru-on-warm); }
+section.accent-secondary { background-color: var(--bru-secondary); background-image: none; color: var(--bru-on-warm); }
+section.accent-primary h1, section.accent-primary h2, section.accent-primary h3,
+section.accent-secondary h1, section.accent-secondary h2, section.accent-secondary h3 {
+  color: var(--bru-ink);
+  border-color: var(--bru-ink);
+}
+section.accent-primary strong, section.accent-secondary strong {
+  background: var(--bru-ink); color: var(--bru-paper);
+}
+section.accent-primary a, section.accent-secondary a { color: var(--bru-ink); text-decoration-color: var(--bru-ink); }
+
+/* ============================================================
+   Dark mode — charcoal concrete:  <!-- _class: invert -->  (alias: dark)
+   ============================================================ */
+section.invert, section.dark {
+  --bru-ink:      #ECE9E1;   /* light "ink" on dark concrete */
+  --bru-paper:    #211F1C;   /* panel surface */
+  --bru-canvas:   #1A1916;   /* dark concrete slide bg */
+  --bru-canvas-2: #2A2823;
+  --bru-text:     #ECE9E1;
+  --bru-muted:    #B4AFA3;
+  --bru-faint:    #8A857A;
+  --bru-link:     #F0A085;   /* lightened rust for links on dark */
+  --bru-on-warm:  #111827;   /* warm fills stay light → keep dark text */
+  --bru-on-dark:  #111827;   /* "ink" is now light, so its text is dark */
+
+  --bru-rule:       3px solid var(--bru-ink);
+  --bru-rule-thick: 6px solid var(--bru-ink);
+  --bru-rule-hair:  2px solid var(--bru-ink);
+
+  background-color: var(--bru-canvas);
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.05) 0,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px,
+      transparent 96px),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.4px);
+  background-size: 100% 96px, 6px 6px;
+  color: var(--bru-text);
+}
+/* Keep the code block a dark panel in dark mode (the base rule would make it a
+   light slab once --bru-ink flips). Everything else resolves via the tokens. */
+section.invert pre, section.dark pre {
+  background: var(--bru-paper);
+  color: var(--bru-text);
+}
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion — the only motion is the active-press transform (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a.btn:active { transform: none; }
+}
+
+/* Visible focus rings everywhere (WCAG 2.4.7 / 2.4.11) — heavy & high-contrast */
+:focus-visible {
+  outline: 4px solid var(--bru-ink);
+  outline-offset: 2px;
+}
+
+/* High contrast — drop concrete texture, firm up muted text & rules */
+@media (prefers-contrast: more) {
+  :root {
+    --bru-muted: #2B2A26;
+    --bru-faint: #3A3833;
+    --bru-link:  #A8331F;
+  }
+  section { background-image: none; }
+}

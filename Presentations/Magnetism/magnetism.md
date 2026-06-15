@@ -1,13 +1,15 @@
 ---
 title: Magnetism
 marp: true
-theme: astrotheme
+theme: colorful
 paginate: true
 math: mathjax
 class: 
 ---
 
-# Magnetism 🧲 <!--fit--->
+<!--- _class: lead --->
+
+# Magnetism 🧲 
 
 ## Regents Physics
 
