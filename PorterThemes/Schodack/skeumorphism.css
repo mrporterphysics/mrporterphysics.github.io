@@ -1,0 +1,825 @@
+/*
+@theme skeumorphism
+
+Real-world mimicry — glossy 3D buttons, raised and recessed bevels, textured
+materials (brushed metal, linen, stitched leather), letterpressed type, and an
+LED readout. Depth is built from layered inset + outer shadows and light-
+simulating gradients. Tokens follow the typeui.sh "skeumorphism" design system.
+(Canonical spelling is "skeuomorphism"; the theme name matches the spec.)
+
+Signature: raised panels with a top highlight + ambient drop, debossed wells for
+code/quotes, glossy pill buttons that press in on click, 3D orb bullets, and
+material texture variants. Germania One sets carved-plaque headings.
+
+Contrast on the fiery palette: #FA3C00 is bright (3.7:1 with white), so glossy
+buttons use a darker red base (white text + engrave shadow stays >= 5:1), orange
+#F08321 takes DARK text, and deep #C5240A carries red text/links on light.
+
+Fonts:
+  - Germania One → display (h1/h2) — carved / antique
+  - Roboto       → body, h3/h4, lists, tables
+  - JetBrains Mono → label-caps role (h5/h6, footer), code, LED digits
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --sk-primary:   #FA3C00;   /* fiery red-orange */
+  --sk-secondary: #F08321;   /* orange */
+  --sk-success:   #16A34A;
+  --sk-warning:   #D97706;
+  --sk-danger:    #DC2626;
+  --sk-surface:   #FFFFFF;
+  --sk-text:      #111827;
+  --sk-neutral:   #FFFFFF;
+
+  /* AA-safe inks (text on light) + deep stops (gradient bottoms / edges) */
+  --sk-primary-ink:   #C5240A;   /* 5.8:1 on white */
+  --sk-primary-deep:  #931704;
+  --sk-secondary-ink: #9A5410;
+  --sk-secondary-deep:#B85E0E;
+  --sk-success-ink:   #15803D;
+  --sk-warning-ink:   #B45309;
+  --sk-danger-ink:    #B91C1C;
+
+  /* Surfaces & ink */
+  --sk-ink:    #111827;
+  --sk-muted:  #4B5563;
+  --sk-faint:  #6B7280;
+  --sk-canvas: #EAEAEE;        /* brushed light metal */
+  --sk-panel-top: #FFFFFF;     /* raised panel — lit top */
+  --sk-panel-bot: #ECECF1;     /* raised panel — shaded bottom */
+  --sk-well-top:  #E1E1E7;     /* recessed well — top (in shadow) */
+  --sk-well-bot:  #EFEFF3;     /* recessed well — bottom (lit) */
+  --sk-edge:      rgba(17, 24, 39, 0.14);
+  --sk-on-accent: #FFFFFF;
+  --sk-on-warm:   #2A1606;     /* dark text on orange / amber fills */
+
+  /* Material depth recipes */
+  --sk-raise:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px rgba(17, 24, 39, 0.05),
+    0 1px 2px rgba(17, 24, 39, 0.14),
+    0 10px 22px -8px rgba(17, 24, 39, 0.26);
+  --sk-raise-sm:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(17, 24, 39, 0.16),
+    0 4px 8px -3px rgba(17, 24, 39, 0.22);
+  --sk-inset:
+    inset 0 2px 5px rgba(17, 24, 39, 0.24),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.8);
+  /* engraved (letterpress) text — light highlight just below the glyph */
+  --sk-letterpress: 0 1px 0 rgba(255, 255, 255, 0.85);
+
+  /* Type scale — 12/14/16/20/24/32, slide-tuned: 14/18/22/26/32/44/58 */
+  --sk-fs-1: 14px;   /* label-caps (JetBrains Mono) */
+  --sk-fs-2: 18px;   /* small — tables, code, captions */
+  --sk-fs-3: 22px;   /* body (Roboto) */
+  --sk-fs-4: 26px;   /* h4 */
+  --sk-fs-5: 32px;   /* h3 */
+  --sk-fs-6: 44px;   /* h2 */
+  --sk-fs-7: 58px;   /* h1 (Germania One) */
+
+  /* Spacing scale: 4 / 8 / 12 / 16 / 24 / 32 (+ 48) */
+  --sk-sp-1: 4px;
+  --sk-sp-2: 8px;
+  --sk-sp-3: 12px;
+  --sk-sp-4: 16px;
+  --sk-sp-5: 24px;
+  --sk-sp-6: 32px;
+  --sk-sp-7: 48px;
+
+  /* Rounded scale (sm/md per spec + lg for panels) */
+  --sk-radius-sm: 4px;
+  --sk-radius-md: 8px;
+  --sk-radius-lg: 12px;
+  --sk-radius-pill: 999px;
+
+  /* Motion */
+  --sk-ease: 90ms ease-out;
+}
+
+/* Dark "gadget" tokens live with the `.dark`/`.invert` variant near the end of
+   the file. Light brushed-metal is the default (class-based dark, no auto). */
+
+/* ---------- Base Slide — brushed metal ---------- */
+section {
+  font-family: 'Roboto', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--sk-canvas);
+  background-image:
+    linear-gradient(180deg, #F2F2F6, #E3E3E9),
+    repeating-linear-gradient(90deg,
+      rgba(17, 24, 39, 0.018) 0 1px, transparent 1px 3px);
+  color: var(--sk-text);
+  font-size: var(--sk-fs-3);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: var(--sk-sp-7);
+  position: relative;
+}
+
+/* ---------- Headings — carved / letterpressed ---------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--sk-ink);
+  line-height: 1.06;
+  margin: 0 0 var(--sk-sp-4) 0;
+  text-shadow: var(--sk-letterpress);
+}
+
+h1 {
+  font-family: 'Germania One', system-ui, serif;
+  font-weight: 400;
+  font-size: var(--sk-fs-7);
+  letter-spacing: 0.01em;
+  margin-bottom: var(--sk-sp-5);
+}
+
+h2 {
+  font-family: 'Germania One', system-ui, serif;
+  font-weight: 400;
+  font-size: var(--sk-fs-6);
+  color: var(--sk-primary-ink);
+  padding-bottom: var(--sk-sp-3);
+}
+/* engraved groove divider under h2 */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--sk-sp-3);
+  width: 120px;
+  height: 0;
+  border-top: 2px solid rgba(17, 24, 39, 0.22);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: var(--sk-fs-5);
+  color: var(--sk-ink);
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: var(--sk-fs-4);
+  color: var(--sk-ink);
+}
+
+/* label-caps role — engraved metal nameplate text */
+h5, h6 {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 700;
+  font-size: var(--sk-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sk-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--sk-sp-4) 0;
+  max-width: 64ch;
+}
+
+strong { font-weight: 700; color: var(--sk-primary-ink); }
+em { font-style: italic; color: var(--sk-text); }
+
+a {
+  color: var(--sk-primary-ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(197, 36, 10, 0.5);
+  padding-bottom: 1px;
+  transition: color var(--sk-ease), border-color var(--sk-ease);
+}
+a:hover { color: var(--sk-primary); border-bottom-color: var(--sk-primary); }
+a:focus-visible {
+  outline: 3px solid #1D4ED8;
+  outline-offset: 2px;
+  border-radius: var(--sk-radius-sm);
+}
+
+mark {
+  background: linear-gradient(180deg, #FFE9A8, #FCD568);
+  color: var(--sk-on-warm);
+  padding: 0 var(--sk-sp-2);
+  border-radius: var(--sk-radius-sm);
+  box-shadow: var(--sk-raise-sm);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--sk-sp-4) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--sk-sp-6);
+  margin-bottom: var(--sk-sp-3);
+}
+/* glossy 3D orb bullet */
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 30%, #FF9166, var(--sk-primary) 56%, var(--sk-primary-deep));
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.32), 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+section ul > li > ul > li::before {
+  background: radial-gradient(circle at 34% 30%, #FFC181, var(--sk-secondary) 56%, var(--sk-secondary-deep));
+}
+section ul > li > ul > li > ul > li::before {
+  background: radial-gradient(circle at 34% 30%, #9FB6C9, #64748B 56%, #334155);
+}
+
+section ol { counter-reset: sk-counter; }
+section ol > li {
+  counter-increment: sk-counter;
+  position: relative;
+  padding-left: var(--sk-sp-7);
+  margin-bottom: var(--sk-sp-3);
+  min-height: 32px;
+}
+section ol > li::marker { content: ""; }
+/* raised round button numeral */
+section ol > li::before {
+  content: counter(sk-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #FF6A3D, var(--sk-primary-deep));
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--sk-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--sk-fs-3); }
+
+/* ---------- Blockquote — raised paper note ---------- */
+blockquote {
+  margin: var(--sk-sp-5) 0;
+  padding: var(--sk-sp-4) var(--sk-sp-5);
+  background: linear-gradient(180deg, var(--sk-panel-top), var(--sk-panel-bot));
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-edge);
+  border-left: 6px solid var(--sk-primary);
+  border-radius: var(--sk-radius-md);
+  box-shadow: var(--sk-raise);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code — debossed well ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.86em;
+  font-weight: 500;
+  background: linear-gradient(180deg, var(--sk-well-top), var(--sk-well-bot));
+  color: var(--sk-primary-ink);
+  padding: 1px var(--sk-sp-2);
+  border: 1px solid var(--sk-edge);
+  border-radius: var(--sk-radius-sm);
+  box-shadow: var(--sk-inset);
+}
+pre {
+  background: linear-gradient(180deg, var(--sk-well-top), var(--sk-well-bot));
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-edge);
+  border-radius: var(--sk-radius-md);
+  box-shadow: var(--sk-inset);
+  padding: var(--sk-sp-4) var(--sk-sp-5);
+  font-size: var(--sk-fs-2);
+  line-height: 1.55;
+  overflow-x: auto;
+}
+pre code {
+  background: none;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+kbd {
+  background: linear-gradient(180deg, #FFFFFF, #E6E6EC);
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-edge);
+  border-radius: var(--sk-radius-sm);
+  padding: 1px var(--sk-sp-2);
+  font-size: 0.85em;
+  font-weight: 700;
+  box-shadow: var(--sk-raise-sm);
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ---------- */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.08em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.18em !important;
+  margin: var(--sk-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables — raised panel, glossy header ---------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: var(--sk-sp-4) 0;
+  background: linear-gradient(180deg, var(--sk-panel-top), var(--sk-panel-bot));
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-edge);
+  border-radius: var(--sk-radius-md);
+  overflow: hidden;
+  box-shadow: var(--sk-raise);
+  font-size: var(--sk-fs-2);
+}
+thead th {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  background: linear-gradient(180deg, #FF6A3D, var(--sk-primary-deep));
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  padding: var(--sk-sp-3) var(--sk-sp-4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+tbody td {
+  padding: var(--sk-sp-3) var(--sk-sp-4);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) td { background: rgba(17, 24, 39, 0.03); }
+
+/* ---------- Horizontal rule — engraved groove ---------- */
+hr {
+  border: 0;
+  height: 0;
+  width: 100%;
+  margin: var(--sk-sp-5) 0;
+  border-top: 2px solid rgba(17, 24, 39, 0.20);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+/* ---------- Images & Media — framed & raised ---------- */
+img {
+  max-width: 100%;
+  background: var(--sk-panel-top);
+  padding: var(--sk-sp-2);
+  border: 1px solid var(--sk-edge);
+  border-radius: var(--sk-radius-md);
+  box-shadow: var(--sk-raise);
+}
+img[alt~="plain"]  { background: none; padding: 0; border: 0; box-shadow: none; }
+img[alt~="flat"]   { box-shadow: none; }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--sk-sp-4) auto; }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+p img, li img, strong img, em img {
+  background: none; padding: 0; border: 0; box-shadow: none;
+  vertical-align: -0.15em; margin-right: 0.3em;
+}
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--sk-fs-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sk-faint);
+  text-shadow: var(--sk-letterpress);
+}
+section::after {            /* page numbers */
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--sk-fs-1);
+  color: var(--sk-muted);
+  text-shadow: var(--sk-letterpress);
+}
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sk-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sk-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sk-sp-4); }
+.cards     { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--sk-sp-5); }
+
+/* ---------- Card — raised panel; material & state variants ---------- */
+.card {
+  position: relative;
+  background: linear-gradient(180deg, var(--sk-panel-top), var(--sk-panel-bot));
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-edge);
+  border-radius: var(--sk-radius-lg);
+  box-shadow: var(--sk-raise);
+  padding: var(--sk-sp-5);
+}
+.card h2 { color: var(--sk-primary-ink); }
+
+/* recessed well variant */
+.card.well {
+  background: linear-gradient(180deg, var(--sk-well-top), var(--sk-well-bot));
+  box-shadow: var(--sk-inset);
+}
+
+/* brushed metal */
+.card.metal {
+  background:
+    repeating-linear-gradient(90deg, rgba(17,24,39,0.04) 0 1px, transparent 1px 3px),
+    linear-gradient(180deg, #F4F5F7, #D9DBE0);
+}
+/* woven linen */
+.card.linen {
+  background:
+    repeating-linear-gradient(0deg,   rgba(17,24,39,0.04) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(90deg,  rgba(255,255,255,0.5) 0 1px, transparent 1px 4px),
+    linear-gradient(180deg, #FBFAF7, #EAE7DF);
+}
+/* stitched leather */
+.card.leather {
+  background:
+    radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1.5px) 0 0 / 5px 5px,
+    linear-gradient(180deg, #7C4A2C, #5C3620);
+  color: #FBEFE2;
+  border: 1px solid #3A2212;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), var(--sk-raise);
+}
+.card.leather::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 2px dashed rgba(251, 239, 226, 0.55);
+  border-radius: calc(var(--sk-radius-lg) - 4px);
+  pointer-events: none;
+}
+.card.leather h1, .card.leather h2, .card.leather h3, .card.leather h4,
+.card.leather strong { color: #FFE9D6; text-shadow: 0 1px 1px rgba(0,0,0,0.4); }
+
+/* ---------- LED readout ---------- */
+.led {
+  display: inline-block;
+  background: linear-gradient(180deg, #11201A, #060D0A);
+  border: 1px solid #02100A;
+  border-radius: var(--sk-radius-md);
+  box-shadow: var(--sk-inset);
+  padding: var(--sk-sp-3) var(--sk-sp-5);
+}
+.led .value, .led.value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: var(--sk-fs-6);
+  letter-spacing: 0.06em;
+  color: #46FF85;
+  text-shadow: 0 0 8px rgba(70, 255, 133, 0.85);
+  font-variant-numeric: tabular-nums;
+}
+.led.red .value, .led.red.value { color: #FF6B5C; text-shadow: 0 0 8px rgba(255, 107, 92, 0.85); }
+
+/* ---------- Kicker / nameplate ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--sk-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--sk-muted);
+  background: linear-gradient(180deg, #FFFFFF, #E4E4EA);
+  border: 1px solid var(--sk-edge);
+  border-radius: var(--sk-radius-sm);
+  box-shadow: var(--sk-raise-sm);
+  padding: 2px var(--sk-sp-3);
+  margin-bottom: var(--sk-sp-3);
+  text-shadow: var(--sk-letterpress);
+}
+
+/* ---------- Tag / badge — glossy gem ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--sk-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.35);
+  background: linear-gradient(180deg, #FF6A3D, var(--sk-primary-deep));
+  border: 1px solid var(--sk-primary-deep);
+  border-radius: var(--sk-radius-pill);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), var(--sk-raise-sm);
+  padding: 3px var(--sk-sp-4);
+}
+.tag.orange  { background: linear-gradient(180deg, #FFB05E, var(--sk-secondary-deep)); color: var(--sk-on-warm); text-shadow: 0 1px 0 rgba(255,255,255,0.35); }
+.tag.success { background: linear-gradient(180deg, #34D17A, #0F7A35); border-color: #0F7A35; }
+.tag.warning { background: linear-gradient(180deg, #F6B23E, #B45309); border-color: #B45309; color: var(--sk-on-warm); text-shadow: 0 1px 0 rgba(255,255,255,0.30); }
+.tag.danger  { background: linear-gradient(180deg, #F26D6D, #A81818); border-color: #A81818; }
+
+/* ---------- Stat block ---------- */
+.stat { display: inline-flex; flex-direction: column; gap: var(--sk-sp-1); }
+.stat .value {
+  font-family: 'Germania One', system-ui, serif;
+  font-weight: 400;
+  font-size: var(--sk-fs-7);
+  line-height: 1;
+  color: var(--sk-primary-ink);
+  text-shadow: var(--sk-letterpress);
+}
+.stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--sk-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sk-muted);
+}
+
+/* ---------- Button — glossy pill that presses in ---------- */
+.btn,
+a.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: var(--sk-fs-2);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.45);
+  background: linear-gradient(180deg, #D6380F 0%, #9E1A05 100%);
+  border: 1px solid #7A1303;
+  border-radius: var(--sk-radius-pill);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.28),
+    0 2px 3px rgba(0, 0, 0, 0.26),
+    0 6px 12px -4px rgba(0, 0, 0, 0.28);
+  padding: var(--sk-sp-3) var(--sk-sp-6);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform var(--sk-ease), box-shadow var(--sk-ease), filter var(--sk-ease);
+}
+/* glossy sheen on the top portion */
+a.btn::before {
+  content: "";
+  position: absolute;
+  left: 1px; right: 1px; top: 1px;
+  height: 46%;
+  border-radius: var(--sk-radius-pill) var(--sk-radius-pill) 50% 50% / var(--sk-radius-pill) var(--sk-radius-pill) 100% 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.38), rgba(255,255,255,0.04));
+  pointer-events: none;
+}
+a.btn:hover  { filter: brightness(1.06); }
+a.btn:active {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+a.btn:focus-visible { outline: 3px solid #1D4ED8; outline-offset: 3px; }
+/* orange (amber) glossy button — DARK text */
+a.btn.orange {
+  background: linear-gradient(180deg, #FFBE6E 0%, #D98417 100%);
+  border-color: #B85E0E;
+  color: var(--sk-on-warm);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+/* metal / neutral glossy button — DARK text */
+a.btn.metal {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D2D4DA 100%);
+  border-color: rgba(17, 24, 39, 0.25);
+  color: var(--sk-ink);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  background: linear-gradient(180deg, #DDDDE2, #C7C7CE);
+  border-color: rgba(17,24,39,0.2);
+  color: #8A8F9A;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+  box-shadow: var(--sk-raise-sm);
+  cursor: not-allowed;
+}
+.btn[disabled]::before, a.btn[aria-disabled="true"]::before { display: none; }
+
+/* ---------- Switch (decorative skeuo toggle) ---------- */
+.switch {
+  display: inline-block;
+  width: 64px; height: 32px;
+  border-radius: var(--sk-radius-pill);
+  background: linear-gradient(180deg, var(--sk-well-top), var(--sk-well-bot));
+  border: 1px solid var(--sk-edge);
+  box-shadow: var(--sk-inset);
+  position: relative;
+  vertical-align: middle;
+}
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 28px; height: 26px;
+  border-radius: var(--sk-radius-pill);
+  background: linear-gradient(180deg, #FFFFFF, #D7D9DF);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.9);
+}
+.switch.on { background: linear-gradient(180deg, #34D17A, #0F7A35); }
+.switch.on::after { left: auto; right: 2px; }
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success {
+  background: linear-gradient(180deg, var(--sk-panel-top), var(--sk-panel-bot));
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-edge);
+  border-left: 6px solid var(--sk-primary);
+  border-radius: var(--sk-radius-md);
+  box-shadow: var(--sk-raise-sm);
+  padding: var(--sk-sp-4) var(--sk-sp-5);
+  margin: var(--sk-sp-3) 0;
+}
+.note    { border-left-color: var(--sk-primary); }
+.warn    { border-left-color: var(--sk-warning); }
+.danger  { border-left-color: var(--sk-danger); }
+.success { border-left-color: var(--sk-success); }
+
+/* ---------- Empty state — debossed plate ---------- */
+.empty {
+  background: linear-gradient(180deg, var(--sk-well-top), var(--sk-well-bot));
+  box-shadow: var(--sk-inset);
+  border: 1px dashed var(--sk-faint);
+  border-radius: var(--sk-radius-md);
+  padding: var(--sk-sp-6);
+  text-align: center;
+  color: var(--sk-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(58px, 9vw, 100px);
+  line-height: 1.0;
+  margin-bottom: var(--sk-sp-4);
+}
+section.lead h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: var(--sk-fs-5);
+  color: var(--sk-muted);
+  padding-bottom: 0;
+}
+section.lead h2::after { display: none; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.quote blockquote {
+  background: linear-gradient(180deg, var(--sk-panel-top), var(--sk-panel-bot));
+  border: 1px solid var(--sk-edge);
+  border-left: 8px solid var(--sk-primary);
+  box-shadow: var(--sk-raise);
+  font-family: 'Germania One', serif;
+  font-size: clamp(30px, 4.5vw, 52px);
+  line-height: 1.12;
+  max-width: 88%;
+  color: var(--sk-ink);
+  padding: var(--sk-sp-5) var(--sk-sp-6);
+}
+
+/* ============================================================
+   Dark "gadget" mode:  <!-- _class: invert -->  (alias: dark)
+   ============================================================ */
+section.invert, section.dark {
+  --sk-ink:    #F3F4F6;
+  --sk-text:   #F3F4F6;
+  --sk-muted:  #AAB1BD;
+  --sk-faint:  #7E8593;
+  --sk-canvas: #202329;
+  --sk-panel-top: #34383F;     /* raised panel — lit top */
+  --sk-panel-bot: #23262C;
+  --sk-well-top:  #16181D;     /* recessed well */
+  --sk-well-bot:  #20232A;
+  --sk-edge:      rgba(0, 0, 0, 0.55);
+  --sk-primary-ink: #FF7A52;   /* lightened red for text on dark */
+  --sk-letterpress: 0 -1px 0 rgba(0, 0, 0, 0.6);   /* dark engrave on dark metal */
+  --sk-raise:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.5),
+    0 12px 24px -8px rgba(0, 0, 0, 0.6);
+  --sk-raise-sm:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.5);
+  --sk-inset:
+    inset 0 2px 6px rgba(0, 0, 0, 0.7),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+
+  background-color: var(--sk-canvas);
+  background-image:
+    linear-gradient(180deg, #292C33, #1C1F24),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0 1px, transparent 1px 3px);
+  color: var(--sk-text);
+}
+section.invert h1, section.dark h1,
+section.invert h3, section.dark h3,
+section.invert h4, section.dark h4 { color: var(--sk-ink); }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion — freeze the button press (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a, a.btn { transition: none; }
+  a.btn:active { transform: none; }
+}
+
+/* Visible focus rings — classic blue OS glow (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 3px solid #1D4ED8;
+  outline-offset: 3px;
+  border-radius: var(--sk-radius-sm);
+}
+
+/* High contrast — strip textures/gloss & bevels, flatten to firm surfaces */
+@media (prefers-contrast: more) {
+  :root {
+    --sk-muted: #1F2937;
+    --sk-faint: #374151;
+    --sk-edge:  rgba(17, 24, 39, 0.5);
+    --sk-raise:    0 0 0 1px rgba(17,24,39,0.5);
+    --sk-raise-sm: 0 0 0 1px rgba(17,24,39,0.5);
+    --sk-inset:    inset 0 0 0 1px rgba(17,24,39,0.5);
+    --sk-letterpress: none;
+  }
+  section { background-image: none; }
+  h1, h2, h3, h4, h5, h6, footer, section::after { text-shadow: none; }
+}

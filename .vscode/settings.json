@@ -35,7 +35,8 @@
       "./PorterThemes/Schodack/immersive.css",
       "./PorterThemes/Schodack/perspective.css",
       "./PorterThemes/Schodack/tetris.css",
-      "./PorterThemes/Schodack/vibrant.css"
+      "./PorterThemes/Schodack/vibrant.css",
+      "./PorterThemes/Schodack/skeumorphism.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"

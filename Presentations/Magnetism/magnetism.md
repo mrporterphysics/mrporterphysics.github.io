@@ -1,7 +1,7 @@
 ---
 title: Magnetism
 marp: true
-theme: dithered
+theme: skeumorphism
 paginate: true
 math: mathjax
 class: dark
