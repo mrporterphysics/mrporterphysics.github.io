@@ -19,7 +19,7 @@ class:  twilight
 
 # 2026.06.15 **Earth Science**
 
-##### **❓ of the 📅**: QUESTION
+##### **❓ of the 📅**: What is your favorite thing to do in the summer?
 
 <div class ='columns'>
 
