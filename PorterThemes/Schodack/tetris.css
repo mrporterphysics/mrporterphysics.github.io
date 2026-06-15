@@ -1,0 +1,778 @@
+/*
+@theme tetris
+
+Block-game inspired — playful tetromino colors, beveled blocks, a playfield
+grid, oversized Bangers display type, and a digital score-counter HUD. The most
+iconic game of history, as a slide theme. Tokens follow the typeui.sh "tetris"
+design system.
+
+Signature: the seven tetromino colors (I/O/T/S/Z/J/L), classic 3D beveled cells
+(inset light + dark) on cards / buttons / blocks, a faint periwinkle playfield
+grid, and decorative CSS tetromino pieces stamped from a single element.
+
+Color & contrast: surface is light periwinkle (#DFE7FF), text is deep blue
+(#1C398E, 8.4:1). On colored blocks, ink text sits on the LIGHT pieces
+(cyan/yellow/green/orange) and white on the DARK pieces (purple/red/blue) — all
+AA. The dark "well" (#1C202B) is the dark variant.
+
+Fonts:
+  - Bangers        → display + all headings / buttons / labels (the brand voice)
+  - Poppins        → body text — Bangers is an all-caps display face, so per the
+                     accessibility-over-novelty rule a readable companion carries
+                     paragraphs. (Swap body to Bangers if you want it literal.)
+  - JetBrains Mono → score/stat counters, footer, code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --tet-primary:   #1C202B;   /* charcoal — the playfield "well" */
+  --tet-secondary: #7107E7;   /* vivid purple (T-piece) */
+  --tet-success:   #16A34A;
+  --tet-warning:   #D97706;
+  --tet-danger:    #DC2626;
+  --tet-info:      #2563EB;
+  --tet-surface:   #DFE7FF;   /* light periwinkle */
+  --tet-text:      #1C398E;   /* deep blue */
+  --tet-neutral:   #DFE7FF;
+
+  /* Tetromino palette — the playful accent system.
+     Light pieces take INK text; dark pieces take WHITE text. */
+  --tet-i: #22CCD6;   /* cyan   (light) */
+  --tet-o: #F4C20D;   /* yellow (light) */
+  --tet-t: #7107E7;   /* purple (dark)  */
+  --tet-s: #22C55E;   /* green  (light) */
+  --tet-z: #DC2626;   /* red    (dark)  */
+  --tet-j: #2563EB;   /* blue   (dark)  */
+  --tet-l: #EA7A0C;   /* orange (light) */
+
+  /* Surfaces & ink */
+  --tet-ink:    #1C202B;       /* near-black for borders / text on light pieces */
+  --tet-paper:  #FFFFFF;
+  --tet-well:   #1C202B;       /* dark board */
+  --tet-canvas: #DFE7FF;
+  --tet-muted:  #3551A8;       /* mid blue — secondary text (AA on periwinkle) */
+  --tet-faint:  #4F6BC4;
+  --tet-on-light: #1C202B;     /* text on light pieces */
+  --tet-on-dark:  #FFFFFF;     /* text on dark pieces */
+
+  /* Block language — bevel (3D cell) + dark edge + hard board shadow */
+  --tet-edge:   rgba(28, 32, 43, 0.55);
+  --tet-bevel:
+    inset 4px 4px 0 0 rgba(255, 255, 255, 0.45),
+    inset -4px -4px 0 0 rgba(0, 0, 0, 0.26);
+  --tet-drop:    6px 6px 0 0 rgba(28, 32, 43, 0.30);
+  --tet-drop-lg: 10px 10px 0 0 rgba(28, 32, 43, 0.32);
+
+  /* Type scale — expressive, tuned for the tall Bangers caps:
+     15 / 18 / 22 / 30 / 40 / 56 / 80 */
+  --tet-fs-1: 15px;   /* label-caps / counters (JetBrains Mono) */
+  --tet-fs-2: 18px;   /* small — tables, code, captions */
+  --tet-fs-3: 22px;   /* body (Poppins) */
+  --tet-fs-4: 30px;   /* h4 */
+  --tet-fs-5: 40px;   /* h3 */
+  --tet-fs-6: 56px;   /* h2 */
+  --tet-fs-7: 80px;   /* h1 */
+
+  /* Spacing — compact density: 4 / 8 / 12 / 16 / 20 / 24 / 32 / 40 */
+  --tet-sp-1: 4px;
+  --tet-sp-2: 8px;
+  --tet-sp-3: 12px;
+  --tet-sp-4: 16px;
+  --tet-sp-5: 20px;
+  --tet-sp-6: 24px;
+  --tet-sp-7: 32px;
+  --tet-sp-8: 40px;
+
+  /* Rounded scale (sm/md per spec — blocks are crisp, slight 4px softening) */
+  --tet-radius-sm: 4px;
+  --tet-radius-md: 8px;
+
+  /* Decorative piece geometry */
+  --tb: 22px;   /* block size */
+  --ts: 24px;   /* step (block + 2px gap = visible cell grid) */
+
+  /* Motion */
+  --tet-ease: 110ms cubic-bezier(0.3, 0.9, 0.4, 1);
+}
+
+/* Dark "well" tokens live with the `.dark`/`.invert` variant near the end of
+   the file. Light periwinkle is the default (class-based dark, no auto-switch). */
+
+/* ---------- Base Slide — periwinkle playfield ---------- */
+section {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--tet-canvas);
+  /* faint cell grid of the well */
+  background-image:
+    linear-gradient(rgba(28, 57, 142, 0.07) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(28, 57, 142, 0.07) 2px, transparent 2px);
+  background-size: 48px 48px;
+  color: var(--tet-text);
+  font-size: var(--tet-fs-3);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: var(--tet-sp-8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Headings — Bangers display ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bangers', system-ui, sans-serif;
+  font-weight: 400;
+  color: var(--tet-text);
+  line-height: 0.98;
+  margin: 0 0 var(--tet-sp-3) 0;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: var(--tet-fs-7);
+  color: var(--tet-text);
+  margin-bottom: var(--tet-sp-5);
+  /* stacked hard shadow in tetromino colors — arcade marquee */
+  text-shadow:
+    3px 3px 0 var(--tet-i),
+    6px 6px 0 var(--tet-secondary);
+}
+
+h2 {
+  font-size: var(--tet-fs-6);
+  color: var(--tet-secondary);
+  padding-bottom: var(--tet-sp-2);
+}
+/* underline as a row of tetromino-colored blocks */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--tet-sp-2);
+  width: 132px;
+  height: 12px;
+  background-image: linear-gradient(90deg,
+    var(--tet-i)   0 25%,
+    var(--tet-o)   25% 50%,
+    var(--tet-s)   50% 75%,
+    var(--tet-z)   75% 100%);
+  border: 2px solid var(--tet-edge);
+}
+
+h3 { font-size: var(--tet-fs-5); color: var(--tet-text); }
+h4 { font-size: var(--tet-fs-4); color: var(--tet-text); }
+
+/* label-caps role — monospaced HUD labels */
+h5, h6 {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 700;
+  font-size: var(--tet-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--tet-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--tet-sp-4) 0;
+  max-width: 64ch;
+}
+
+strong { font-weight: 700; color: var(--tet-secondary); }
+em { font-style: italic; color: var(--tet-text); }
+
+a {
+  color: var(--tet-secondary);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 3px solid var(--tet-i);
+  padding-bottom: 1px;
+  transition: color var(--tet-ease), border-color var(--tet-ease);
+}
+a:hover { color: var(--tet-j); border-bottom-color: var(--tet-secondary); }
+a:focus-visible {
+  outline: 4px solid var(--tet-ink);
+  outline-offset: 3px;
+  border-radius: var(--tet-radius-sm);
+}
+
+mark {
+  background: var(--tet-o);
+  color: var(--tet-on-light);
+  padding: 0 var(--tet-sp-1);
+  border-radius: var(--tet-radius-sm);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--tet-sp-4) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--tet-sp-6);
+  margin-bottom: var(--tet-sp-3);
+}
+/* beveled block bullet, cycling tetromino colors by depth */
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 16px;
+  height: 16px;
+  background: var(--tet-i);
+  border: 2px solid var(--tet-edge);
+  box-shadow: var(--tet-bevel);
+}
+section ul > li > ul > li::before { background: var(--tet-o); }
+section ul > li > ul > li > ul > li::before { background: var(--tet-s); }
+
+section ol { counter-reset: tet-counter; }
+section ol > li {
+  counter-increment: tet-counter;
+  position: relative;
+  padding-left: var(--tet-sp-7);
+  margin-bottom: var(--tet-sp-3);
+  min-height: 30px;
+}
+section ol > li::marker { content: ""; }
+section ol > li::before {
+  content: counter(tet-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--tet-secondary);
+  color: var(--tet-on-dark);
+  border: 2px solid var(--tet-edge);
+  box-shadow: var(--tet-bevel);
+  border-radius: var(--tet-radius-sm);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: var(--tet-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--tet-fs-3); }
+
+/* ---------- Blockquote ---------- */
+blockquote {
+  margin: var(--tet-sp-5) 0;
+  padding: var(--tet-sp-4) var(--tet-sp-5);
+  background: var(--tet-paper);
+  color: var(--tet-ink);
+  border: 3px solid var(--tet-ink);
+  border-left: 12px solid var(--tet-secondary);
+  border-radius: var(--tet-radius-sm);
+  box-shadow: var(--tet-drop);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.84em;
+  font-weight: 500;
+  background: var(--tet-paper);
+  color: var(--tet-secondary);
+  padding: 1px var(--tet-sp-2);
+  border: 2px solid var(--tet-edge);
+  border-radius: var(--tet-radius-sm);
+}
+pre {
+  background: var(--tet-well);
+  color: #E6ECFF;
+  border: 3px solid var(--tet-ink);
+  border-radius: var(--tet-radius-sm);
+  box-shadow: var(--tet-drop);
+  padding: var(--tet-sp-4) var(--tet-sp-5);
+  font-size: var(--tet-fs-2);
+  line-height: 1.55;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  font-weight: 500;
+}
+kbd {
+  background: var(--tet-paper);
+  color: var(--tet-ink);
+  border: 2px solid var(--tet-ink);
+  border-bottom-width: 4px;
+  border-radius: var(--tet-radius-sm);
+  padding: 1px var(--tet-sp-2);
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ---------- */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+  color: var(--tet-text);
+}
+.card mjx-container, pre mjx-container, blockquote mjx-container { color: var(--tet-ink); }
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.08em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.18em !important;
+  margin: var(--tet-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--tet-sp-4) 0;
+  background: var(--tet-paper);
+  color: var(--tet-ink);
+  border: 3px solid var(--tet-ink);
+  border-radius: var(--tet-radius-sm);
+  overflow: hidden;
+  box-shadow: var(--tet-drop);
+  font-size: var(--tet-fs-2);
+}
+th, td {
+  border: 2px solid var(--tet-edge);
+  padding: var(--tet-sp-2) var(--tet-sp-4);
+  text-align: left;
+}
+thead th {
+  font-family: 'Bangers', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-size: var(--tet-fs-3);
+  background: var(--tet-secondary);
+  color: var(--tet-on-dark);
+  border-color: var(--tet-ink);
+}
+
+/* ---------- Horizontal rule — block strip ---------- */
+hr {
+  border: 0;
+  height: 16px;
+  width: 100%;
+  margin: var(--tet-sp-5) 0;
+  background-image: linear-gradient(90deg,
+    var(--tet-i)   0 14.28%, var(--tet-o)   14.28% 28.56%,
+    var(--tet-t)   28.56% 42.84%, var(--tet-s) 42.84% 57.12%,
+    var(--tet-z)   57.12% 71.4%, var(--tet-j) 71.4% 85.68%,
+    var(--tet-l)   85.68% 100%);
+  border: 2px solid var(--tet-edge);
+  border-radius: var(--tet-radius-sm);
+}
+
+/* ---------- Images & Media ---------- */
+img {
+  max-width: 100%;
+  background: var(--tet-paper);
+  border: 3px solid var(--tet-ink);
+  border-radius: var(--tet-radius-sm);
+  box-shadow: var(--tet-drop);
+}
+img[alt~="plain"] { background: none; border: 0; box-shadow: none; }
+img[alt~="flat"]  { box-shadow: none; }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--tet-sp-4) auto; }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+p img, li img, strong img, em img {
+  border: 0; background: none; box-shadow: none;
+  vertical-align: -0.15em; margin-right: 0.3em;
+}
+
+/* ---------- Footer & Pagination (HUD) ---------- */
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--tet-fs-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--tet-muted);
+}
+section::after {            /* page number — a HUD chip */
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: var(--tet-fs-1);
+  color: var(--tet-on-dark);
+  background: var(--tet-secondary);
+  border: 2px solid var(--tet-ink);
+  padding: 2px var(--tet-sp-2);
+  border-radius: var(--tet-radius-sm);
+}
+
+/* ============================================================
+   Tetromino pieces — decorative, stamped from one element.
+   <div class="piece l br"></div>  (z-index:-1, behind content)
+   ============================================================ */
+.piece {
+  position: absolute;
+  z-index: -1;
+  width: var(--tb);
+  height: var(--tb);
+  border-radius: 2px;
+  opacity: 0.9;
+}
+.piece.i {
+  background: var(--tet-i);
+  box-shadow: var(--ts) 0 0 var(--tet-i), calc(var(--ts)*2) 0 0 var(--tet-i), calc(var(--ts)*3) 0 0 var(--tet-i);
+}
+.piece.o {
+  background: var(--tet-o);
+  box-shadow: var(--ts) 0 0 var(--tet-o), 0 var(--ts) 0 var(--tet-o), var(--ts) var(--ts) 0 var(--tet-o);
+}
+.piece.t {
+  background: var(--tet-t);
+  box-shadow: var(--ts) 0 0 var(--tet-t), calc(var(--ts)*2) 0 0 var(--tet-t), var(--ts) var(--ts) 0 var(--tet-t);
+}
+.piece.s {
+  background: var(--tet-s);
+  box-shadow: var(--ts) 0 0 var(--tet-s), calc(var(--ts)*-1) var(--ts) 0 var(--tet-s), 0 var(--ts) 0 var(--tet-s);
+}
+.piece.z {
+  background: var(--tet-z);
+  box-shadow: var(--ts) 0 0 var(--tet-z), var(--ts) var(--ts) 0 var(--tet-z), calc(var(--ts)*2) var(--ts) 0 var(--tet-z);
+}
+.piece.j {
+  background: var(--tet-j);
+  box-shadow: 0 var(--ts) 0 var(--tet-j), var(--ts) var(--ts) 0 var(--tet-j), calc(var(--ts)*2) var(--ts) 0 var(--tet-j);
+}
+.piece.l {
+  background: var(--tet-l);
+  box-shadow: calc(var(--ts)*-2) var(--ts) 0 var(--tet-l), calc(var(--ts)*-1) var(--ts) 0 var(--tet-l), 0 var(--ts) 0 var(--tet-l);
+}
+.piece.sm { --tb: 14px; --ts: 16px; }
+.piece.lg { --tb: 32px; --ts: 34px; }
+.piece.tl { top: 40px;  left: 48px;  transform: rotate(-8deg); }
+.piece.tr { top: 40px;  right: 96px; transform: rotate(10deg); }
+.piece.bl { bottom: 64px; left: 56px; transform: rotate(12deg); }
+.piece.br { bottom: 56px; right: 80px; transform: rotate(-10deg); }
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--tet-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--tet-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--tet-sp-4); }
+.cards     { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--tet-sp-5); }
+
+/* ---------- Card — white block; color variants are beveled pieces ---------- */
+.card {
+  position: relative;
+  background: var(--tet-paper);
+  color: var(--tet-ink);
+  border: 3px solid var(--tet-ink);
+  border-radius: var(--tet-radius-sm);
+  box-shadow: var(--tet-drop);
+  padding: var(--tet-sp-5);
+}
+.card h1, .card h2, .card h3, .card h4 { color: var(--tet-ink); text-shadow: none; }
+.card h2 { color: var(--tet-secondary); }
+.card a { color: var(--tet-secondary); }
+.card strong { color: var(--tet-secondary); }
+
+/* Tetromino-colored, beveled block cards */
+.card.cyan, .card.yellow, .card.green, .card.orange,
+.card.purple, .card.red, .card.blue {
+  box-shadow: var(--tet-bevel), var(--tet-drop);
+  border-color: var(--tet-edge);
+}
+.card.cyan   { background: var(--tet-i); color: var(--tet-on-light); }
+.card.yellow { background: var(--tet-o); color: var(--tet-on-light); }
+.card.green  { background: var(--tet-s); color: var(--tet-on-light); }
+.card.orange { background: var(--tet-l); color: var(--tet-on-light); }
+.card.purple { background: var(--tet-t); color: var(--tet-on-dark); }
+.card.red    { background: var(--tet-z); color: var(--tet-on-dark); }
+.card.blue   { background: var(--tet-j); color: var(--tet-on-dark); }
+.card.cyan h1,   .card.cyan h2,   .card.cyan h3,   .card.cyan h4,   .card.cyan strong,
+.card.yellow h1, .card.yellow h2, .card.yellow h3, .card.yellow h4, .card.yellow strong,
+.card.green h1,  .card.green h2,  .card.green h3,  .card.green h4,  .card.green strong,
+.card.orange h1, .card.orange h2, .card.orange h3, .card.orange h4, .card.orange strong {
+  color: var(--tet-on-light);
+}
+.card.purple h1, .card.purple h2, .card.purple h3, .card.purple h4, .card.purple strong,
+.card.red h1,    .card.red h2,    .card.red h3,    .card.red h4,    .card.red strong,
+.card.blue h1,   .card.blue h2,   .card.blue h3,   .card.blue h4,   .card.blue strong {
+  color: var(--tet-on-dark);
+}
+
+/* ---------- Single beveled block (inline) ---------- */
+.block {
+  display: inline-block;
+  width: 28px; height: 28px;
+  vertical-align: middle;
+  background: var(--tet-i);
+  border: 2px solid var(--tet-edge);
+  box-shadow: var(--tet-bevel);
+  border-radius: 2px;
+}
+.block.o { background: var(--tet-o); } .block.t { background: var(--tet-t); }
+.block.s { background: var(--tet-s); } .block.z { background: var(--tet-z); }
+.block.j { background: var(--tet-j); } .block.l { background: var(--tet-l); }
+
+/* ---------- Kicker / eyebrow ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--tet-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--tet-on-dark);
+  background: var(--tet-ink);
+  border-radius: var(--tet-radius-sm);
+  padding: 2px var(--tet-sp-3);
+  margin-bottom: var(--tet-sp-3);
+}
+
+/* ---------- Tag / badge (beveled chip) ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--tet-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--tet-paper);
+  color: var(--tet-ink);
+  border: 2px solid var(--tet-ink);
+  border-radius: var(--tet-radius-sm);
+  padding: 3px var(--tet-sp-3);
+}
+.tag.purple  { background: var(--tet-t); color: var(--tet-on-dark); border-color: var(--tet-edge); box-shadow: var(--tet-bevel); }
+.tag.cyan    { background: var(--tet-i); color: var(--tet-on-light); border-color: var(--tet-edge); box-shadow: var(--tet-bevel); }
+.tag.success { background: var(--tet-success); color: #fff; }
+.tag.warning { background: var(--tet-warning); color: var(--tet-on-light); }
+.tag.danger  { background: var(--tet-danger);  color: #fff; }
+.tag.info    { background: var(--tet-info);    color: #fff; }
+
+/* ---------- Stat block — digital score counter ---------- */
+.stat { display: inline-flex; flex-direction: column; gap: var(--tet-sp-1); }
+.stat .value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: var(--tet-fs-7);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--tet-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--tet-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--tet-muted);
+}
+
+/* ---------- Button — beveled arcade block ---------- */
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bangers', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: var(--tet-fs-4);
+  letter-spacing: 0.03em;
+  background: var(--tet-secondary);
+  color: var(--tet-on-dark);
+  border: 3px solid var(--tet-ink);
+  border-radius: var(--tet-radius-sm);
+  box-shadow: var(--tet-bevel), var(--tet-drop);
+  padding: var(--tet-sp-2) var(--tet-sp-5);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+  transition: transform var(--tet-ease), box-shadow var(--tet-ease);
+}
+a.btn:hover  { transform: translate(-2px, -2px); box-shadow: var(--tet-bevel), var(--tet-drop-lg); }
+a.btn:active { transform: translate(3px, 3px);   box-shadow: var(--tet-bevel), 2px 2px 0 0 rgba(28,32,43,0.30); }
+a.btn:focus-visible { outline: 4px solid var(--tet-ink); outline-offset: 3px; }
+a.btn.cyan   { background: var(--tet-i); color: var(--tet-on-light); }
+a.btn.green  { background: var(--tet-s); color: var(--tet-on-light); }
+a.btn.red    { background: var(--tet-z); color: var(--tet-on-dark); }
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  background: #C7CEE6;
+  color: #586590;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success, .info {
+  background: var(--tet-paper);
+  color: var(--tet-ink);
+  border: 3px solid var(--tet-ink);
+  border-left: 12px solid var(--tet-secondary);
+  border-radius: var(--tet-radius-sm);
+  box-shadow: var(--tet-drop);
+  padding: var(--tet-sp-4) var(--tet-sp-5);
+  margin: var(--tet-sp-3) 0;
+}
+.note    { border-left-color: var(--tet-secondary); }
+.info    { border-left-color: var(--tet-info); }
+.warn    { border-left-color: var(--tet-warning); }
+.danger  { border-left-color: var(--tet-danger); }
+.success { border-left-color: var(--tet-success); }
+
+/* ---------- Empty / game-over state ---------- */
+.empty {
+  border: 3px dashed var(--tet-faint);
+  border-radius: var(--tet-radius-sm);
+  padding: var(--tet-sp-6);
+  text-align: center;
+  color: var(--tet-muted);
+  font-family: 'Bangers', sans-serif;
+  font-size: var(--tet-fs-4);
+}
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(80px, 12vw, 148px);
+  line-height: 0.92;
+  text-shadow:
+    4px 4px 0 var(--tet-i),
+    8px 8px 0 var(--tet-secondary),
+    12px 12px 0 var(--tet-z);
+  margin-bottom: var(--tet-sp-4);
+}
+section.lead h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: var(--tet-fs-4);
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--tet-muted);
+  padding-bottom: 0;
+}
+section.lead h2::after { display: none; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.quote blockquote {
+  background: transparent;
+  border: 0;
+  border-left: 12px solid var(--tet-secondary);
+  box-shadow: none;
+  font-family: 'Bangers', sans-serif;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+  max-width: 92%;
+  color: var(--tet-text);
+  padding: var(--tet-sp-3) var(--tet-sp-6);
+}
+
+/* ============================================================
+   Dark mode — the WELL:  <!-- _class: invert -->  (alias: dark)
+   ============================================================ */
+section.invert, section.dark {
+  --tet-text:   #E6ECFF;
+  --tet-ink:    #E6ECFF;       /* light "ink" — borders/text on dark */
+  --tet-paper:  #2A2F3E;       /* raised panel inside the well */
+  --tet-well:   #11131A;
+  --tet-canvas: #1C202B;
+  --tet-muted:  #AEB9E0;
+  --tet-faint:  #7E8AC0;
+  --tet-edge:   rgba(255, 255, 255, 0.30);
+  --tet-on-dark: #FFFFFF;
+  --tet-drop:    6px 6px 0 0 rgba(0, 0, 0, 0.5);
+  --tet-drop-lg: 10px 10px 0 0 rgba(0, 0, 0, 0.5);
+
+  background-color: var(--tet-canvas);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 2px, transparent 2px);
+  background-size: 48px 48px;
+  color: var(--tet-text);
+}
+section.invert h1, section.dark h1 { color: var(--tet-text); }
+section.invert h2, section.dark h2,
+section.invert a,  section.dark a,
+section.invert strong, section.dark strong { color: #C4B5FD; }
+section.invert code, section.dark code { color: #C4B5FD; }
+section.invert .stat .value, section.dark .stat .value { color: #C4B5FD; }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion — freeze the arcade button press (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a, a.btn { transition: none; }
+  a.btn:hover, a.btn:active { transform: none; }
+}
+
+/* Visible focus rings (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 4px solid var(--tet-ink);
+  outline-offset: 3px;
+  border-radius: var(--tet-radius-sm);
+}
+
+/* High contrast — drop the playfield grid & bevels, firm up borders */
+@media (prefers-contrast: more) {
+  :root {
+    --tet-muted: #1C398E;
+    --tet-faint: #1C398E;
+    --tet-bevel: 0 0 0 0 transparent;   /* no-op, keeps shadow lists valid */
+  }
+  section { background-image: none; }
+  h1, .stat .value { text-shadow: none; }
+}

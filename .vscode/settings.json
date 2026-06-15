@@ -33,7 +33,8 @@
       "./PorterThemes/Schodack/colorful.css",
       "./PorterThemes/Schodack/dithered.css",
       "./PorterThemes/Schodack/immersive.css",
-      "./PorterThemes/Schodack/perspective.css"
+      "./PorterThemes/Schodack/perspective.css",
+      "./PorterThemes/Schodack/tetris.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"
