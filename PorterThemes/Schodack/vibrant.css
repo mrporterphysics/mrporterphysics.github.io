@@ -1,0 +1,782 @@
+/*
+@theme vibrant
+
+Lively, warm, playful — chunky retro Fascinate display type, a purple + peach /
+coral / gold palette, organic gradient blobs and rotated "stickers" for dynamic
+energy, and bouncy interactions on a warm cream canvas. Tokens follow the
+typeui.sh "vibrant" design system.
+
+Signature: a warm gradient-mesh canvas, gradient Fascinate headings, soft
+tinted sticker cards (purple/peach/coral/pink/gold/teal), decorative gradient
+blobs, and pill components that bounce. Warmer + funkier than `colorful`
+(which is cool blue/violet and restrained).
+
+Two gradients, chosen for contrast:
+  - primary  purple→magenta  → WHITE text, AA-safe (>= 4.7:1): buttons, h1, stats
+  - warm     gold→coral→peach → DARK (brown) text only — all stops are light
+  - spectrum purple→pink→coral→gold → decoration only (blobs, bars), no text
+The brand purple #7C61D4 passes AA on white both as text and with white text.
+Peach/coral/gold are LIGHT — they take dark text, never white.
+
+Fonts:
+  - Fascinate → display (h1/h2, big quotes, stat values) — chunky retro
+  - Noto Sans → body, h3/h4, lists, tables
+  - Fira Code → label-caps role (h5/h6, footer), code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --vib-primary:   #7C61D4;   /* purple */
+  --vib-secondary: #EAAE87;   /* warm peach */
+  --vib-success:   #16A34A;
+  --vib-warning:   #D97706;
+  --vib-danger:    #DC2626;
+  --vib-surface:   #FFFFFF;
+  --vib-text:      #2F281D;   /* warm dark brown */
+  --vib-neutral:   #FFFFFF;
+
+  /* Warm vibrant spectrum */
+  --vib-purple: #7C61D4;
+  --vib-peach:  #EAAE87;   /* light */
+  --vib-coral:  #FB6F5C;   /* light-mid */
+  --vib-pink:   #EC4899;   /* mid */
+  --vib-gold:   #F4A828;   /* light */
+  --vib-teal:   #0FB5A6;   /* light-mid */
+  --vib-magenta:#A21CAF;   /* deep — gradient end for white text */
+
+  /* AA-safe text inks (on white / cream) */
+  --vib-primary-ink: #6A4FC4;   /* purple, ~5.1:1 on cream */
+  --vib-pink-ink:    #BE185D;
+  --vib-success-ink: #15803D;
+  --vib-warning-ink: #B45309;
+  --vib-danger-ink:  #B91C1C;
+
+  /* Surfaces & ink */
+  --vib-ink:    #2F281D;
+  --vib-paper:  #FFFFFF;
+  --vib-canvas: #FFFDF8;        /* warm cream */
+  --vib-muted:  #6B5E4C;        /* warm grey-brown — secondary text */
+  --vib-faint:  #8A7C68;
+  --vib-border:        1px solid rgba(47, 40, 29, 0.12);
+  --vib-border-color:  rgba(47, 40, 29, 0.12);
+  --vib-on-accent: #FFFFFF;     /* on the primary purple→magenta gradient */
+  --vib-on-warm:   #2F281D;     /* dark text on warm/light fills */
+
+  /* Gradients */
+  --vib-gradient:  linear-gradient(135deg, var(--vib-purple), var(--vib-magenta));
+  --vib-grad-warm: linear-gradient(135deg, #F4A828, #FB6F5C 60%, #EAAE87);
+  --vib-grad-spectrum: linear-gradient(100deg, #7C61D4, #EC4899, #FB6F5C, #F4A828);
+  --vib-grad-soft: linear-gradient(135deg,
+                     rgba(124, 97, 212, 0.14),
+                     rgba(236, 72, 153, 0.12));
+
+  /* Elevation — soft, warm-tinted shadows */
+  --vib-shadow-sm: 0 2px 6px rgba(47, 40, 29, 0.08);
+  --vib-shadow:    0 12px 30px -10px rgba(124, 97, 212, 0.28),
+                   0 4px 10px -6px rgba(47, 40, 29, 0.12);
+  --vib-shadow-lg: 0 24px 50px -12px rgba(124, 97, 212, 0.34);
+  --vib-glow:      0 14px 34px -8px rgba(236, 72, 153, 0.45);
+
+  /* Type scale — 14/16/18/24/32/40 base, slide-tuned: 14/18/22/26/32/44/60 */
+  --vib-fs-1: 14px;   /* label-caps (Fira Code) */
+  --vib-fs-2: 18px;   /* small — tables, code, captions */
+  --vib-fs-3: 22px;   /* body (Noto Sans) */
+  --vib-fs-4: 26px;   /* h4 */
+  --vib-fs-5: 32px;   /* h3 */
+  --vib-fs-6: 44px;   /* h2 */
+  --vib-fs-7: 60px;   /* h1 (Fascinate) */
+
+  /* Spacing — 2/4/8/12/16/24/32/48 */
+  --vib-sp-1: 2px;
+  --vib-sp-2: 4px;
+  --vib-sp-3: 8px;
+  --vib-sp-4: 12px;
+  --vib-sp-5: 16px;
+  --vib-sp-6: 24px;
+  --vib-sp-7: 32px;
+  --vib-sp-8: 48px;
+
+  /* Rounded — playful, generous */
+  --vib-radius-sm:   4px;
+  --vib-radius-md:   8px;
+  --vib-radius-lg:   16px;
+  --vib-radius-xl:   24px;
+  --vib-radius-pill: 999px;
+
+  /* Motion — bouncy overshoot */
+  --vib-bounce: 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Dark-mode tokens live with the `.dark`/`.invert` variant near the end of the
+   file. Light cream is the default (class-based dark, no auto-switch). */
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Noto Sans', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--vib-canvas);
+  /* warm gradient mesh — peach/coral/purple energy in the corners */
+  background-image:
+    radial-gradient(ellipse 50% 44% at 0% 0%,    rgba(124, 97, 212, 0.10), transparent 58%),
+    radial-gradient(ellipse 52% 46% at 100% 0%,  rgba(234, 174, 135, 0.20), transparent 58%),
+    radial-gradient(ellipse 56% 50% at 88% 100%, rgba(251, 111, 92, 0.14), transparent 60%);
+  color: var(--vib-text);
+  font-size: var(--vib-fs-3);
+  font-weight: 400;
+  line-height: 1.55;
+  padding: var(--vib-sp-8);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--vib-text);
+  line-height: 1.06;
+  margin: 0 0 var(--vib-sp-5) 0;
+  letter-spacing: 0;
+}
+
+h1 {
+  font-family: 'Fascinate', system-ui, cursive;
+  font-weight: 400;
+  font-size: var(--vib-fs-7);
+  margin-bottom: var(--vib-sp-6);
+  /* gradient retro title (purple→magenta — readable even as large text) */
+  background: var(--vib-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-family: 'Fascinate', system-ui, cursive;
+  font-weight: 400;
+  font-size: var(--vib-fs-6);
+  color: var(--vib-text);
+  padding-bottom: var(--vib-sp-3);
+}
+/* chunky rounded spectrum underline */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--vib-sp-3);
+  width: 96px;
+  height: 8px;
+  border-radius: var(--vib-radius-pill);
+  background: var(--vib-grad-spectrum);
+}
+
+h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 800;
+  font-size: var(--vib-fs-5);
+  color: var(--vib-primary-ink);
+}
+
+h4 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: var(--vib-fs-4);
+  color: var(--vib-text);
+}
+
+/* label-caps role — monospaced, uppercase, tracked */
+h5, h6 {
+  font-family: 'Fira Code', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 600;
+  font-size: var(--vib-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--vib-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--vib-sp-5) 0;
+  max-width: 66ch;
+}
+
+strong { font-weight: 800; color: var(--vib-primary-ink); }
+em { font-style: italic; color: var(--vib-text); }
+
+a {
+  color: var(--vib-primary-ink);
+  font-weight: 600;
+  text-decoration: none;
+  background-image: var(--vib-gradient);
+  background-size: 100% 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+  transition: color var(--vib-bounce), background-size var(--vib-bounce);
+}
+a:hover { color: var(--vib-pink-ink); background-size: 100% 100%;
+          background-image: var(--vib-grad-soft); border-radius: var(--vib-radius-sm); }
+a:focus-visible {
+  outline: 3px solid var(--vib-primary);
+  outline-offset: 3px;
+  border-radius: var(--vib-radius-sm);
+}
+
+mark {
+  background: var(--vib-grad-warm);
+  color: var(--vib-on-warm);
+  padding: 0 var(--vib-sp-3);
+  border-radius: var(--vib-radius-sm);
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--vib-sp-5) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--vib-sp-6);
+  margin-bottom: var(--vib-sp-4);
+}
+/* round gradient bullet */
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--vib-gradient);
+}
+section ul > li > ul > li::before { background: var(--vib-coral); }
+section ul > li > ul > li > ul > li::before { background: var(--vib-gold); }
+
+section ol { counter-reset: vib-counter; }
+section ol > li {
+  counter-increment: vib-counter;
+  position: relative;
+  padding-left: var(--vib-sp-7);
+  margin-bottom: var(--vib-sp-4);
+  min-height: 30px;
+}
+section ol > li::marker { content: ""; }
+section ol > li::before {
+  content: counter(vib-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--vib-gradient);
+  color: var(--vib-on-accent);
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: var(--vib-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--vib-fs-3); }
+
+/* ---------- Blockquote ---------- */
+blockquote {
+  margin: var(--vib-sp-6) 0;
+  padding: var(--vib-sp-5) var(--vib-sp-6);
+  background: var(--vib-paper);
+  color: var(--vib-text);
+  border: var(--vib-border);
+  border-left: 6px solid transparent;
+  border-image: var(--vib-gradient) 1;
+  border-radius: 0 var(--vib-radius-lg) var(--vib-radius-lg) 0;
+  box-shadow: var(--vib-shadow-sm);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'Fira Code', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.86em;
+  font-weight: 500;
+  background: rgba(124, 97, 212, 0.10);
+  color: var(--vib-primary-ink);
+  padding: 1px var(--vib-sp-3);
+  border-radius: var(--vib-radius-sm);
+}
+pre {
+  background: #2A2233;        /* warm plum panel */
+  color: #F3EAF7;
+  border: 0;
+  border-radius: var(--vib-radius-lg);
+  box-shadow: var(--vib-shadow);
+  padding: var(--vib-sp-5) var(--vib-sp-6);
+  font-size: var(--vib-fs-2);
+  line-height: 1.55;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+kbd {
+  background: var(--vib-paper);
+  color: var(--vib-text);
+  border: var(--vib-border);
+  border-bottom-width: 3px;
+  border-radius: var(--vib-radius-sm);
+  padding: 1px var(--vib-sp-3);
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ---------- */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.08em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.18em !important;
+  margin: var(--vib-sp-4) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: var(--vib-sp-5) 0;
+  background: var(--vib-paper);
+  color: var(--vib-text);
+  border: var(--vib-border);
+  border-radius: var(--vib-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--vib-shadow-sm);
+  font-size: var(--vib-fs-2);
+}
+thead th {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  background: var(--vib-gradient);
+  color: var(--vib-on-accent);
+  padding: var(--vib-sp-3) var(--vib-sp-5);
+}
+tbody td {
+  padding: var(--vib-sp-3) var(--vib-sp-5);
+  border-bottom: 1px solid var(--vib-border-color);
+}
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:nth-child(even) td { background: rgba(234, 174, 135, 0.12); }
+
+/* ---------- Horizontal rule — spectrum pill ---------- */
+hr {
+  border: 0;
+  height: 8px;
+  width: 100%;
+  margin: var(--vib-sp-6) 0;
+  background: var(--vib-grad-spectrum);
+  border-radius: var(--vib-radius-pill);
+}
+
+/* ---------- Images & Media ---------- */
+img {
+  max-width: 100%;
+  background: var(--vib-paper);
+  border: var(--vib-border);
+  border-radius: var(--vib-radius-lg);
+  box-shadow: var(--vib-shadow-sm);
+}
+img[alt~="plain"]  { background: none; border: 0; box-shadow: none; border-radius: 0; }
+img[alt~="glow"]   { box-shadow: var(--vib-glow); border: 0; }
+img[alt~="circle"] { border-radius: 50%; }
+img[alt~="tilt"]   { transform: rotate(-3deg); }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--vib-sp-5) auto; }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+p img, li img, strong img, em img {
+  border: 0; background: none; box-shadow: none;
+  vertical-align: -0.15em; margin-right: 0.3em;
+}
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'Fira Code', monospace;
+  font-size: var(--vib-fs-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--vib-faint);
+}
+section::after {            /* page numbers */
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  font-size: var(--vib-fs-1);
+  color: var(--vib-primary-ink);
+}
+
+/* ============================================================
+   Decorative blobs — organic gradient shapes for dynamic energy.
+   <div class="blob coral br"></div>  (z-index:-1, behind content)
+   ============================================================ */
+.blob {
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  background: var(--vib-grad-spectrum);
+  border-radius: 42% 58% 63% 37% / 45% 38% 62% 55%;
+  opacity: 0.5;
+  filter: blur(2px);
+}
+.blob.purple { background: var(--vib-purple); }
+.blob.peach  { background: var(--vib-peach); }
+.blob.coral  { background: var(--vib-coral); }
+.blob.pink   { background: var(--vib-pink); }
+.blob.gold   { background: var(--vib-gold); }
+.blob.teal   { background: var(--vib-teal); }
+.blob.sm { width: 120px; height: 120px; }
+.blob.lg { width: 300px; height: 300px; }
+.blob.tl { top: -48px;    left: -48px; }
+.blob.tr { top: -48px;    right: -48px; }
+.blob.bl { bottom: -48px; left: -48px; }
+.blob.br { bottom: -48px; right: -48px; }
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--vib-sp-6);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--vib-sp-6); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--vib-sp-5); }
+.cards     { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--vib-sp-6); }
+
+/* ---------- Card — soft tinted variants + gradient accent ---------- */
+.card {
+  position: relative;
+  background: var(--vib-paper);
+  color: var(--vib-text);
+  border: var(--vib-border);
+  border-top: 5px solid var(--vib-primary);
+  border-radius: var(--vib-radius-lg);
+  box-shadow: var(--vib-shadow-sm);
+  padding: var(--vib-sp-6);
+  transition: transform var(--vib-bounce), box-shadow var(--vib-bounce);
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--vib-shadow); }
+.card.purple { border-top-color: var(--vib-purple); background: rgba(124, 97, 212, 0.10); }
+.card.peach  { border-top-color: var(--vib-peach);  background: rgba(234, 174, 135, 0.22); }
+.card.coral  { border-top-color: var(--vib-coral);  background: rgba(251, 111, 92, 0.16); }
+.card.pink   { border-top-color: var(--vib-pink);   background: rgba(236, 72, 153, 0.12); }
+.card.gold   { border-top-color: var(--vib-gold);   background: rgba(244, 168, 40, 0.18); }
+.card.teal   { border-top-color: var(--vib-teal);   background: rgba(15, 181, 166, 0.14); }
+
+/* gradient hero card — white text on the AA-safe primary gradient */
+.card.accent {
+  background: var(--vib-gradient);
+  border: 0;
+  color: var(--vib-on-accent);
+  box-shadow: var(--vib-glow);
+}
+.card.accent h1, .card.accent h2, .card.accent h3, .card.accent h4,
+.card.accent strong { color: var(--vib-on-accent); }
+.card.accent h2::after { background: rgba(255, 255, 255, 0.85); }
+
+/* sticker — a playful rotated card; straightens on hover */
+.card.sticker { transform: rotate(-2.5deg); }
+.card.sticker:hover { transform: rotate(0deg) translateY(-4px); }
+
+/* ---------- Kicker / eyebrow ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'Fira Code', monospace;
+  font-size: var(--vib-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--vib-pink-ink);
+  margin-bottom: var(--vib-sp-3);
+}
+
+/* ---------- Tag / badge — pill ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  font-size: var(--vib-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(124, 97, 212, 0.12);
+  color: var(--vib-primary-ink);
+  border-radius: var(--vib-radius-pill);
+  padding: 4px var(--vib-sp-5);
+}
+.tag.accent  { background: var(--vib-gradient); color: var(--vib-on-accent); }
+.tag.pink    { background: var(--vib-pink);     color: #fff; }
+.tag.peach   { background: var(--vib-peach);    color: var(--vib-on-warm); }
+.tag.coral   { background: var(--vib-coral);    color: var(--vib-on-warm); }
+.tag.gold    { background: var(--vib-gold);     color: var(--vib-on-warm); }
+.tag.teal    { background: var(--vib-teal);     color: var(--vib-on-warm); }
+.tag.success { background: var(--vib-success-ink); color: #fff; }
+.tag.danger  { background: var(--vib-danger-ink);  color: #fff; }
+
+/* ---------- Stat block ---------- */
+.stat { display: inline-flex; flex-direction: column; gap: var(--vib-sp-2); }
+.stat .value {
+  font-family: 'Fascinate', system-ui, cursive;
+  font-weight: 400;
+  font-size: var(--vib-fs-7);
+  line-height: 1;
+  background: var(--vib-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat .label {
+  font-family: 'Fira Code', monospace;
+  font-size: var(--vib-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--vib-muted);
+}
+.card.accent .stat .value {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--vib-on-accent);
+}
+
+/* ---------- Button — bouncy pill ---------- */
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 800;
+  font-size: var(--vib-fs-2);
+  background: var(--vib-gradient);
+  color: var(--vib-on-accent);
+  border: 0;
+  border-radius: var(--vib-radius-pill);
+  box-shadow: var(--vib-shadow-sm);
+  padding: var(--vib-sp-4) var(--vib-sp-7);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+  transition: transform var(--vib-bounce), box-shadow var(--vib-bounce);
+}
+a.btn:hover  { transform: translateY(-3px) scale(1.03); box-shadow: var(--vib-glow); }
+a.btn:active { transform: translateY(0) scale(0.98); box-shadow: var(--vib-shadow-sm); }
+a.btn:focus-visible { outline: 3px solid var(--vib-primary); outline-offset: 3px; }
+/* warm variant — gold→coral→peach with DARK text (all stops are light) */
+a.btn.warm { background: var(--vib-grad-warm); color: var(--vib-on-warm); }
+a.btn.ghost {
+  background: transparent;
+  color: var(--vib-primary-ink);
+  border: 2px solid var(--vib-primary);
+  box-shadow: none;
+}
+a.btn.ghost:hover { background: var(--vib-grad-soft); }
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  background: #E7E2D8;
+  color: #8A7C68;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success {
+  background: var(--vib-paper);
+  color: var(--vib-text);
+  border: var(--vib-border);
+  border-left: 6px solid var(--vib-primary);
+  border-radius: var(--vib-radius-md);
+  box-shadow: var(--vib-shadow-sm);
+  padding: var(--vib-sp-5) var(--vib-sp-6);
+  margin: var(--vib-sp-4) 0;
+}
+.note    { border-left-color: var(--vib-primary); background: rgba(124, 97, 212, 0.08); }
+.warn    { border-left-color: var(--vib-warning); background: rgba(217, 119, 6, 0.10); }
+.danger  { border-left-color: var(--vib-danger);  background: rgba(220, 38, 38, 0.08); }
+.success { border-left-color: var(--vib-success); background: rgba(22, 163, 74, 0.08); }
+
+/* ---------- Empty state ---------- */
+.empty {
+  border: 2px dashed var(--vib-faint);
+  border-radius: var(--vib-radius-lg);
+  padding: var(--vib-sp-8);
+  text-align: center;
+  color: var(--vib-muted);
+  font-family: 'Fira Code', monospace;
+}
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(60px, 9vw, 104px);
+  line-height: 1.0;
+  margin-bottom: var(--vib-sp-5);
+}
+section.lead h2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: var(--vib-fs-5);
+  color: var(--vib-muted);
+  padding-bottom: 0;
+}
+section.lead h2::after { display: none; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.quote blockquote {
+  background: transparent;
+  border: 0;
+  border-image: none;
+  box-shadow: none;
+  font-family: 'Fascinate', system-ui, cursive;
+  font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.12;
+  max-width: 88%;
+  text-align: center;
+  color: var(--vib-text);
+  padding: var(--vib-sp-5);
+}
+
+/* ---------- Gradient hero slide:  <!-- _class: gradient --> ---------- */
+section.gradient {
+  background-color: #7C61D4;
+  background-image: linear-gradient(135deg, #7C61D4 0%, #A21CAF 55%, #EC4899 110%);
+  color: var(--vib-on-accent);
+}
+section.gradient h1, section.gradient h2, section.gradient h3, section.gradient h4 {
+  color: var(--vib-on-accent);
+  -webkit-text-fill-color: var(--vib-on-accent);   /* defeat h1 gradient clip */
+}
+section.gradient h2::after { background: rgba(255, 255, 255, 0.9); }
+section.gradient strong { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+section.gradient a { color: #fff; background-image: linear-gradient(#fff, #fff); }
+section.gradient blockquote { background: rgba(255, 255, 255, 0.12); color: #fff; }
+section.gradient footer, section.gradient::after { color: rgba(255, 255, 255, 0.85); }
+
+/* ============================================================
+   Dark mode — warm plum night:  <!-- _class: invert -->  (alias: dark)
+   ============================================================ */
+section.invert, section.dark {
+  --vib-text:    #F5EEE6;
+  --vib-canvas:  #1E1726;     /* deep aubergine */
+  --vib-paper:   #2A2233;     /* warm plum panel */
+  --vib-muted:   #C9BCD6;
+  --vib-faint:   #9C8FB0;
+  --vib-border:        1px solid rgba(255, 255, 255, 0.12);
+  --vib-border-color:  rgba(255, 255, 255, 0.12);
+  --vib-primary-ink: #B49DEE;   /* lightened purple for text/links on dark */
+  --vib-pink-ink:    #F472B6;
+  --vib-success-ink: #4ADE80;
+  --vib-warning-ink: #FBBF24;
+  --vib-danger-ink:  #F87171;
+  --vib-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --vib-shadow:    0 14px 32px -10px rgba(0, 0, 0, 0.6);
+  --vib-glow:      0 16px 40px -10px rgba(236, 72, 153, 0.5);
+
+  background-color: var(--vib-canvas);
+  background-image:
+    radial-gradient(ellipse 50% 44% at 0% 0%,    rgba(124, 97, 212, 0.22), transparent 58%),
+    radial-gradient(ellipse 52% 46% at 100% 0%,  rgba(234, 174, 135, 0.16), transparent 58%),
+    radial-gradient(ellipse 56% 50% at 88% 100%, rgba(251, 111, 92, 0.18), transparent 60%);
+  color: var(--vib-text);
+}
+section.invert h3, section.dark h3 { color: var(--vib-primary-ink); }
+/* deepen tint-card washes so they read on plum, keep light text */
+section.invert .card.purple, section.dark .card.purple { background: rgba(124, 97, 212, 0.22); }
+section.invert .card.peach,  section.dark .card.peach  { background: rgba(234, 174, 135, 0.16); }
+section.invert .card.coral,  section.dark .card.coral  { background: rgba(251, 111, 92, 0.18); }
+section.invert .card.pink,   section.dark .card.pink   { background: rgba(236, 72, 153, 0.18); }
+section.invert .card.gold,   section.dark .card.gold   { background: rgba(244, 168, 40, 0.20); }
+section.invert .card.teal,   section.dark .card.teal   { background: rgba(15, 181, 166, 0.20); }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion — drop the bounce, rotation, and hover lifts (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a, .card, a.btn { transition: none; }
+  .card:hover, .card.sticker:hover { transform: none; }
+  .card.sticker { transform: none; }
+  a.btn:hover, a.btn:active { transform: none; }
+}
+
+/* Visible focus rings (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 3px solid var(--vib-primary);
+  outline-offset: 3px;
+  border-radius: var(--vib-radius-sm);
+}
+
+/* High contrast — drop the gradient mesh, blobs & glows; firm up borders/text */
+@media (prefers-contrast: more) {
+  :root {
+    --vib-muted: #2F281D;
+    --vib-faint: #4A4234;
+    --vib-border:       1px solid rgba(47, 40, 29, 0.5);
+    --vib-border-color: rgba(47, 40, 29, 0.5);
+  }
+  section { background-image: none; }
+  .blob { display: none; }
+  a { text-decoration: underline; text-underline-offset: 3px; }
+  .card, blockquote, pre, table, .note, .warn, .danger, .success { box-shadow: none; }
+}

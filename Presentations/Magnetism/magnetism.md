@@ -1,7 +1,7 @@
 ---
 title: Magnetism
 marp: true
-theme: tetris
+theme: dithered
 paginate: true
 math: mathjax
 class: dark
