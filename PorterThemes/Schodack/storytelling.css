@@ -1,0 +1,819 @@
+/*
+@theme storytelling
+
+Narrative-driven, editorial design — dramatic Abril Fatface headlines, drop
+caps, pull quotes, a numbered "journey" spine, and a generous reading rhythm on
+a warm book-paper canvas. Built to guide the audience through a cohesive,
+emotionally resonant journey. Tokens follow the typeui.sh "storytelling" system.
+
+Signature: gradient drop caps (the story opener), a vertical journey timeline of
+numbered beats, large editorial pull quotes with a gradient quote mark, chapter
+markers, and a cinematic cover/chapter slide. Distinct from `colorful`/`dithered`
+(which share the blue/violet palette) via the serif-display editorial voice.
+
+Contrast: bright #3B82F6 / #8B5CF6 are reserved for large display & decoration
+(drop caps, spine, nodes); AA-safe inks #2563EB / #7C3AED carry text, links, and
+white-on-color (raw blue is only 3.7:1 with white).
+
+Fonts:
+  - Abril Fatface → display (h1/h2, drop caps, pull quotes) — dramatic didone
+  - Inter         → body, h3/h4 — clean, readable
+  - JetBrains Mono → label-caps role (chapter markers, h5/h6, footer), code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --st-primary:   #3B82F6;   /* blue */
+  --st-secondary: #8B5CF6;   /* violet */
+  --st-success:   #16A34A;
+  --st-warning:   #D97706;
+  --st-danger:    #DC2626;
+  --st-surface:   #FFFFFF;
+  --st-text:      #111827;
+  --st-neutral:   #FFFFFF;
+
+  /* AA-safe inks — text, links, white-on-color */
+  --st-primary-ink:   #2563EB;   /* 5.2:1 */
+  --st-secondary-ink: #7C3AED;   /* 5.7:1 */
+  --st-success-ink:   #15803D;
+  --st-warning-ink:   #B45309;
+  --st-danger-ink:    #B91C1C;
+
+  /* Surfaces & ink */
+  --st-ink:    #111827;
+  --st-paper:  #FFFFFF;
+  --st-canvas: #FCFBF7;        /* warm book paper */
+  --st-canvas-2: #F4F1EA;      /* deeper paper / alt panel */
+  --st-muted:  #57534E;        /* warm grey — secondary text (8:1) */
+  --st-faint:  #79736B;        /* captions / labels */
+  --st-rule:   rgba(17, 24, 39, 0.14);
+  --st-border:        1px solid rgba(17, 24, 39, 0.12);
+  --st-border-color:  rgba(17, 24, 39, 0.12);
+  --st-on-accent: #FFFFFF;
+
+  /* Gradients */
+  --st-gradient:  linear-gradient(135deg, var(--st-primary-ink), var(--st-secondary-ink));
+  --st-grad-bright: linear-gradient(135deg, #3B82F6, #8B5CF6);   /* large/decoration */
+  --st-grad-soft: linear-gradient(135deg,
+                    rgba(59, 130, 246, 0.10),
+                    rgba(139, 92, 246, 0.10));
+
+  /* Elevation — soft, paper-like */
+  --st-shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.06), 0 2px 8px rgba(17, 24, 39, 0.06);
+  --st-shadow:    0 10px 30px -12px rgba(17, 24, 39, 0.22);
+
+  /* Type scale — expressive editorial: 14/18/22/26/34/48/72 */
+  --st-fs-1: 14px;   /* label-caps (JetBrains Mono) */
+  --st-fs-2: 18px;   /* small — captions, tables, code */
+  --st-fs-3: 22px;   /* body — primary reading size */
+  --st-fs-4: 26px;   /* h4 / lead-in */
+  --st-fs-5: 34px;   /* h3 */
+  --st-fs-6: 48px;   /* h2 (Abril) */
+  --st-fs-7: 72px;   /* h1 (Abril) */
+
+  /* Spacing scale: 4/8/12/16/24/32 (+ 48/64 for editorial whitespace) */
+  --st-sp-1: 4px;
+  --st-sp-2: 8px;
+  --st-sp-3: 12px;
+  --st-sp-4: 16px;
+  --st-sp-5: 24px;
+  --st-sp-6: 32px;
+  --st-sp-7: 48px;
+  --st-sp-8: 64px;
+
+  /* Rounded scale */
+  --st-radius-sm: 4px;
+  --st-radius-md: 8px;
+  --st-radius-lg: 16px;
+  --st-radius-pill: 999px;
+
+  /* Motion */
+  --st-ease: 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Dark "night" tokens live with the `.dark`/`.invert` variant near the end of
+   the file. Warm paper is the default (class-based dark, no auto-switch). */
+
+/* ---------- Base Slide — book page ---------- */
+section {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--st-canvas);
+  color: var(--st-text);
+  font-size: var(--st-fs-3);
+  font-weight: 400;
+  line-height: 1.7;
+  padding: var(--st-sp-8);
+  position: relative;
+}
+
+/* ---------- Headings — editorial didone ---------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--st-ink);
+  margin: 0 0 var(--st-sp-4) 0;
+}
+
+h1 {
+  font-family: 'Abril Fatface', Georgia, serif;
+  font-weight: 400;
+  font-size: var(--st-fs-7);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--st-sp-5);
+}
+
+h2 {
+  font-family: 'Abril Fatface', Georgia, serif;
+  font-weight: 400;
+  font-size: var(--st-fs-6);
+  line-height: 1.08;
+  padding-bottom: var(--st-sp-3);
+}
+/* short gradient rule under h2 */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--st-sp-3);
+  width: 72px;
+  height: 4px;
+  border-radius: var(--st-radius-pill);
+  background: var(--st-grad-bright);
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: var(--st-fs-5);
+  letter-spacing: -0.01em;
+  color: var(--st-ink);
+}
+
+h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: var(--st-fs-4);
+  color: var(--st-ink);
+}
+
+/* label-caps role — chapter markers / monospaced labels */
+h5, h6 {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 600;
+  font-size: var(--st-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--st-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--st-sp-5) 0;
+  max-width: 62ch;          /* comfortable reading measure */
+}
+/* lead-in paragraph — larger opening line */
+p.lead-in, .lead-in > p {
+  font-size: var(--st-fs-4);
+  line-height: 1.55;
+  color: var(--st-ink);
+}
+
+strong { font-weight: 700; color: var(--st-primary-ink); }
+em { font-style: italic; color: var(--st-text); }
+
+a {
+  color: var(--st-primary-ink);
+  font-weight: 600;
+  text-decoration: none;
+  background-image: var(--st-gradient);
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 1px;
+  transition: color var(--st-ease), background-size var(--st-ease);
+}
+a:hover { color: var(--st-secondary-ink); background-size: 100% 100%;
+          background-image: var(--st-grad-soft); border-radius: var(--st-radius-sm); }
+a:focus-visible {
+  outline: 3px solid var(--st-primary-ink);
+  outline-offset: 3px;
+  border-radius: var(--st-radius-sm);
+}
+
+mark {
+  background: var(--st-grad-soft);
+  color: inherit;
+  padding: 0 var(--st-sp-2);
+  border-radius: var(--st-radius-sm);
+}
+
+/* ---------- Drop cap — the story opener ----------
+   <p class="dropcap">Once upon a time…</p> */
+.dropcap::first-letter,
+p.dropcap::first-letter {
+  font-family: 'Abril Fatface', Georgia, serif;
+  font-size: 3.6em;
+  line-height: 0.72;
+  float: left;
+  margin: 0.06em 0.10em 0 0;
+  background: var(--st-grad-bright);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--st-sp-5) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--st-sp-5);
+  margin-bottom: var(--st-sp-3);
+}
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--st-grad-bright);
+}
+section ul > li > ul > li::before { background: var(--st-secondary); }
+section ul > li > ul > li > ul > li::before { background: var(--st-faint); }
+
+section ol { counter-reset: st-counter; }
+section ol > li {
+  counter-increment: st-counter;
+  position: relative;
+  padding-left: var(--st-sp-6);
+  margin-bottom: var(--st-sp-3);
+  min-height: 30px;
+}
+section ol > li::marker { content: ""; }
+section ol > li::before {
+  content: counter(st-counter);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--st-gradient);
+  color: var(--st-on-accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--st-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--st-fs-3); }
+
+/* ---------- Blockquote — editorial pull quote ---------- */
+blockquote {
+  position: relative;
+  margin: var(--st-sp-6) 0;
+  padding: var(--st-sp-3) 0 var(--st-sp-3) var(--st-sp-7);
+  border-left: 4px solid transparent;
+  border-image: var(--st-gradient) 1;
+  font-family: 'Abril Fatface', Georgia, serif;
+  font-size: var(--st-fs-5);
+  line-height: 1.25;
+  color: var(--st-ink);
+}
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  left: var(--st-sp-3);
+  top: -0.15em;
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.4em;
+  line-height: 1;
+  background: var(--st-grad-bright);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+blockquote p { max-width: none; margin-bottom: var(--st-sp-2); }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.84em;
+  font-weight: 500;
+  background: var(--st-canvas-2);
+  color: var(--st-secondary-ink);
+  padding: 1px var(--st-sp-2);
+  border-radius: var(--st-radius-sm);
+}
+pre {
+  background: #1E1B2E;          /* deep ink panel */
+  color: #E9E7F5;
+  border: 0;
+  border-radius: var(--st-radius-md);
+  box-shadow: var(--st-shadow-sm);
+  padding: var(--st-sp-4) var(--st-sp-5);
+  font-size: var(--st-fs-2);
+  line-height: 1.6;
+  overflow-x: auto;
+}
+pre code { background: transparent; color: inherit; padding: 0; border-radius: 0; }
+kbd {
+  background: var(--st-paper);
+  color: var(--st-ink);
+  border: var(--st-border);
+  border-bottom-width: 3px;
+  border-radius: var(--st-radius-sm);
+  padding: 1px var(--st-sp-2);
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ---------- */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.08em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.18em !important;
+  margin: var(--st-sp-4) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables ---------- */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: var(--st-sp-5) 0;
+  background: var(--st-paper);
+  color: var(--st-ink);
+  border: var(--st-border);
+  border-radius: var(--st-radius-md);
+  overflow: hidden;
+  box-shadow: var(--st-shadow-sm);
+  font-size: var(--st-fs-2);
+}
+thead th {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: var(--st-fs-1);
+  text-align: left;
+  background: var(--st-canvas-2);
+  color: var(--st-muted);
+  padding: var(--st-sp-3) var(--st-sp-4);
+  border-bottom: 2px solid var(--st-rule);
+}
+tbody td {
+  padding: var(--st-sp-3) var(--st-sp-4);
+  border-bottom: 1px solid var(--st-border-color);
+}
+tbody tr:last-child td { border-bottom: 0; }
+
+/* ---------- Horizontal rule — scene break ---------- */
+hr {
+  border: 0;
+  height: var(--st-fs-4);
+  margin: var(--st-sp-6) auto;
+  text-align: center;
+}
+hr::before {
+  content: "\2042";              /* asterism / ornament for a scene break */
+  font-size: var(--st-fs-4);
+  color: var(--st-secondary-ink);
+  line-height: 1;
+}
+
+/* ---------- Images & Figures ---------- */
+img {
+  max-width: 100%;
+  border-radius: var(--st-radius-md);
+  box-shadow: var(--st-shadow);
+}
+img[alt~="plain"] { box-shadow: none; border-radius: 0; }
+img[alt~="round"] { border-radius: var(--st-radius-lg); }
+
+figure { margin: var(--st-sp-5) 0; }
+figcaption, .caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--st-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--st-faint);
+  margin-top: var(--st-sp-2);
+}
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--st-sp-5) auto; }
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+p img, li img, strong img, em img {
+  box-shadow: none; border-radius: 0;
+  vertical-align: -0.15em; margin-right: 0.3em;
+}
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--st-fs-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--st-faint);
+}
+section::after {            /* page number — "p. N" feel */
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: var(--st-fs-1);
+  color: var(--st-faint);
+}
+
+/* ============================================================
+   Narrative utilities
+   ============================================================ */
+
+/* ---------- Chapter marker / kicker ---------- */
+.chapter, .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-sp-3);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--st-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--st-primary-ink);
+  margin-bottom: var(--st-sp-4);
+}
+.chapter::before, .kicker.rule::before {
+  content: "";
+  width: 32px;
+  height: 3px;
+  border-radius: var(--st-radius-pill);
+  background: var(--st-grad-bright);
+}
+
+/* ---------- Journey — a numbered narrative spine ----------
+   <div class="journey">
+     <div class="beat"><h4>Beginning</h4><p>…</p></div>
+     <div class="beat"><h4>Middle</h4><p>…</p></div>
+   </div> */
+.journey {
+  counter-reset: st-beat;
+  position: relative;
+  padding-left: 60px;
+}
+.journey::before {                 /* the spine */
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border-radius: var(--st-radius-pill);
+  background: var(--st-grad-bright);
+}
+.journey > .beat {
+  counter-increment: st-beat;
+  position: relative;
+  margin-bottom: var(--st-sp-6);
+}
+.journey > .beat:last-child { margin-bottom: 0; }
+.journey > .beat::before {          /* node */
+  content: counter(st-beat);
+  position: absolute;
+  left: -60px;
+  top: -2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--st-gradient);
+  color: var(--st-on-accent);
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: var(--st-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 6px var(--st-canvas);   /* mask the spine behind the node */
+}
+.journey > .beat > :first-child { margin-top: 0; }
+.journey > .beat h4 { margin-bottom: var(--st-sp-2); }
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--st-sp-6);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--st-sp-6); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--st-sp-5); }
+.cards     { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--st-sp-6); }
+
+/* ---------- Card ---------- */
+.card {
+  background: var(--st-paper);
+  color: var(--st-ink);
+  border: var(--st-border);
+  border-radius: var(--st-radius-lg);
+  box-shadow: var(--st-shadow-sm);
+  padding: var(--st-sp-6);
+}
+.card.blue   { background: rgba(59, 130, 246, 0.08); }
+.card.violet { background: rgba(139, 92, 246, 0.08); }
+.card.accent {
+  background: var(--st-gradient);
+  border: 0;
+  color: var(--st-on-accent);
+  box-shadow: var(--st-shadow);
+}
+.card.accent h1, .card.accent h2, .card.accent h3, .card.accent h4,
+.card.accent strong { color: var(--st-on-accent); }
+.card.accent h2::after { background: rgba(255, 255, 255, 0.85); }
+
+/* ---------- Tag / badge ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: var(--st-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--st-canvas-2);
+  color: var(--st-ink);
+  border: var(--st-border);
+  border-radius: var(--st-radius-pill);
+  padding: 4px var(--st-sp-4);
+}
+.tag.accent  { background: var(--st-gradient);     color: var(--st-on-accent); border: 0; }
+.tag.blue    { background: var(--st-primary-ink);  color: #fff; border: 0; }
+.tag.violet  { background: var(--st-secondary-ink); color: #fff; border: 0; }
+.tag.success { background: var(--st-success-ink);  color: #fff; border: 0; }
+.tag.danger  { background: var(--st-danger-ink);   color: #fff; border: 0; }
+
+/* ---------- Stat block — editorial figure ---------- */
+.stat { display: inline-flex; flex-direction: column; gap: var(--st-sp-1); }
+.stat .value {
+  font-family: 'Abril Fatface', Georgia, serif;
+  font-weight: 400;
+  font-size: var(--st-fs-7);
+  line-height: 0.9;
+  background: var(--st-grad-bright);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--st-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--st-muted);
+}
+.card.accent .stat .value {
+  background: none; -webkit-background-clip: border-box; background-clip: border-box;
+  color: var(--st-on-accent);
+}
+
+/* ---------- Button ---------- */
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-sp-2);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: var(--st-fs-2);
+  background: var(--st-gradient);
+  color: var(--st-on-accent);
+  border: 0;
+  border-radius: var(--st-radius-pill);
+  box-shadow: var(--st-shadow-sm);
+  padding: var(--st-sp-3) var(--st-sp-6);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+  transition: transform var(--st-ease), box-shadow var(--st-ease);
+}
+a.btn:hover  { transform: translateY(-2px); box-shadow: var(--st-shadow); }
+a.btn:active { transform: translateY(0); }
+a.btn:focus-visible { outline: 3px solid var(--st-primary-ink); outline-offset: 3px; }
+a.btn.ghost {
+  background: transparent;
+  color: var(--st-primary-ink);
+  border: 2px solid var(--st-primary-ink);
+  box-shadow: none;
+}
+a.btn.ghost:hover { background: var(--st-grad-soft); }
+/* text link CTA — "Read on →" */
+a.btn.link {
+  background: none; box-shadow: none; padding: 0; min-height: 0;
+  color: var(--st-primary-ink); border-radius: 0;
+}
+a.btn.link::after { content: "\2192"; transition: transform var(--st-ease); }
+a.btn.link:hover { transform: none; }
+a.btn.link:hover::after { transform: translateX(4px); }
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  background: var(--st-canvas-2); color: var(--st-faint);
+  box-shadow: none; cursor: not-allowed;
+}
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success {
+  background: var(--st-paper);
+  color: var(--st-ink);
+  border: var(--st-border);
+  border-left: 5px solid var(--st-primary);
+  border-radius: var(--st-radius-md);
+  box-shadow: var(--st-shadow-sm);
+  padding: var(--st-sp-4) var(--st-sp-5);
+  margin: var(--st-sp-4) 0;
+}
+.note    { border-left-color: var(--st-primary); background: rgba(59, 130, 246, 0.06); }
+.warn    { border-left-color: var(--st-warning); background: rgba(217, 119, 6, 0.08); }
+.danger  { border-left-color: var(--st-danger);  background: rgba(220, 38, 38, 0.06); }
+.success { border-left-color: var(--st-success); background: rgba(22, 163, 74, 0.06); }
+
+/* ---------- Empty state ---------- */
+.empty {
+  border: 2px dashed var(--st-faint);
+  border-radius: var(--st-radius-lg);
+  padding: var(--st-sp-8);
+  text-align: center;
+  color: var(--st-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(64px, 9.5vw, 116px);
+  line-height: 0.98;
+}
+section.lead h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: var(--st-fs-5);
+  color: var(--st-muted);
+  padding-bottom: 0;
+}
+section.lead h2::after { display: none; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.quote blockquote {
+  border: 0;
+  border-image: none;
+  padding-left: 0;
+  font-size: clamp(36px, 5.5vw, 68px);
+  line-height: 1.12;
+  max-width: 16ch;
+}
+section.quote blockquote::before {
+  position: static;
+  display: block;
+  font-size: 1.4em;
+  margin-bottom: -0.2em;
+}
+
+/* ---------- Cover / Chapter — cinematic dark opener ----------
+   <!-- _class: cover -->  (alias: scene) */
+section.cover, section.scene {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #16132A;
+  background-image:
+    radial-gradient(ellipse 60% 60% at 15% 10%, rgba(59, 130, 246, 0.30), transparent 60%),
+    radial-gradient(ellipse 60% 60% at 90% 90%, rgba(139, 92, 246, 0.34), transparent 62%);
+  color: #FFFFFF;
+}
+section.cover h1, section.scene h1 {
+  font-size: clamp(64px, 10vw, 128px);
+  line-height: 0.96;
+  color: #FFFFFF;
+}
+section.cover h2, section.scene h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: var(--st-fs-5);
+  color: rgba(255, 255, 255, 0.82);
+  padding-bottom: 0;
+}
+section.cover h2::after, section.scene h2::after { display: none; }
+section.cover .chapter, section.scene .chapter,
+section.cover .kicker, section.scene .kicker { color: #C7B9FF; }
+section.cover strong, section.scene strong { color: #C7B9FF; }
+section.cover a, section.scene a { color: #fff; }
+
+/* ============================================================
+   Dark "night" mode:  <!-- _class: invert -->  (alias: dark)
+   ============================================================ */
+section.invert, section.dark {
+  --st-text:    #ECECF2;
+  --st-ink:     #F6F6FB;
+  --st-paper:   #211E33;
+  --st-canvas:  #16132A;     /* deep indigo night */
+  --st-canvas-2:#251F3E;
+  --st-muted:   #B9B5CC;
+  --st-faint:   #8C87A3;
+  --st-border:        1px solid rgba(255, 255, 255, 0.12);
+  --st-border-color:  rgba(255, 255, 255, 0.12);
+  --st-primary-ink:   #93B4FF;   /* lightened for text on night */
+  --st-secondary-ink: #C4B2FF;
+  --st-success-ink:   #4ADE80;
+  --st-warning-ink:   #FBBF24;
+  --st-danger-ink:    #F87171;
+  --st-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --st-shadow:    0 14px 34px -12px rgba(0, 0, 0, 0.6);
+
+  background-color: var(--st-canvas);
+  color: var(--st-text);
+}
+section.invert h3, section.dark h3 { color: var(--st-ink); }
+section.invert .journey > .beat::before,
+section.dark .journey > .beat::before { box-shadow: 0 0 0 6px var(--st-canvas); }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a, a.btn { transition: none; }
+  a.btn:hover, a.btn:active { transform: none; }
+  a.btn.link:hover::after { transform: none; }
+}
+
+/* Visible focus rings (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 3px solid var(--st-primary-ink);
+  outline-offset: 3px;
+  border-radius: var(--st-radius-sm);
+}
+
+/* High contrast — firm up borders & muted text, flatten soft tints */
+@media (prefers-contrast: more) {
+  :root {
+    --st-muted: #2B2A33;
+    --st-faint: #3A3947;
+    --st-border:       1px solid rgba(17, 24, 39, 0.5);
+    --st-border-color: rgba(17, 24, 39, 0.5);
+  }
+  a { text-decoration: underline; text-underline-offset: 3px; }
+  .card, blockquote, pre, table, .note, .warn, .danger, .success { box-shadow: none; }
+}
