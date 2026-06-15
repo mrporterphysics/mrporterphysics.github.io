@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.06.15 **Regents Physics**
+
+##### **❓ of the 📅**: What is your favorite thing to do over the summer?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Magnetism
+2. Magnetism Practice
+3. Regents Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Magnets_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.11 **Regents Physics**
 
 ##### **❓ of the 📅**: What is your ideal burger 🍔 (or veggie burger)?   

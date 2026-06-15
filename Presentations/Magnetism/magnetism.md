@@ -1,10 +1,10 @@
 ---
 title: Magnetism
 marp: true
-theme: colorful
+theme: perspective
 paginate: true
 math: mathjax
-class: 
+class: dark
 ---
 
 <!--- _class: lead --->
@@ -12,6 +12,8 @@ class:
 # Magnetism 🧲 
 
 ## Regents Physics
+
+### Mr. Porter
 
 ---
 

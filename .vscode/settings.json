@@ -30,7 +30,10 @@
       "./PorterThemes/Schodack/claymorphism.css",
       "./PorterThemes/Schodack/contemporary.css",
       "./PorterThemes/Schodack/brutalism.css",
-      "./PorterThemes/Schodack/colorful.css"
+      "./PorterThemes/Schodack/colorful.css",
+      "./PorterThemes/Schodack/dithered.css",
+      "./PorterThemes/Schodack/immersive.css",
+      "./PorterThemes/Schodack/perspective.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"

@@ -1,0 +1,786 @@
+/*
+@theme dithered
+
+Dot-pattern (halftone / ordered-dither) rendering — shades are simulated with
+a limited ink-on-paper palette for a nostalgic, retro, high-contrast feel.
+Tokens follow the typeui.sh "dithered" design system.
+
+Signature: a faint dot-textured paper canvas, dithered HALFTONE shadows (an
+offset block of dots instead of a soft drop-shadow), `shade-25/50/75` dot-density
+fills, and dithered heading rules — all built from layered radial-gradient dots,
+no images. Blue/violet are the limited accent channel.
+
+High-contrast by design: raw brand hues (#3B82F6 / #8B5CF6) are only ~3.7:1 on
+white, so AA-safe ink shades (#2563EB / #7C3AED, >= 5.2:1) carry text, links, and
+white-on-color. Text is kept solid (never halftone-clipped) for readability.
+
+Fonts:
+  - Space Grotesk → display (h1/h2/h3)
+  - Open Sans     → body, h4
+  - IBM Plex Mono → label-caps role (h5/h6, footer, counters) and code
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Color (per spec format) */
+  --dit-primary:   #3B82F6;   /* blue */
+  --dit-secondary: #8B5CF6;   /* violet */
+  --dit-success:   #16A34A;
+  --dit-warning:   #D97706;
+  --dit-danger:    #DC2626;
+  --dit-surface:   #FFFFFF;
+  --dit-text:      #111827;
+  --dit-neutral:   #FFFFFF;
+
+  /* AA-safe ink shades — for TEXT on paper & white-on-color fills */
+  --dit-primary-ink:   #2563EB;   /* 5.2:1 */
+  --dit-secondary-ink: #7C3AED;   /* 5.7:1 */
+  --dit-success-ink:   #15803D;
+  --dit-warning-ink:   #B45309;
+  --dit-danger-ink:    #B91C1C;
+
+  /* Ink / paper / dither */
+  --dit-ink:    #111827;
+  --dit-paper:  #FFFFFF;
+  --dit-muted:  #374151;   /* gray-700 — secondary text (~10:1) */
+  --dit-faint:  #4B5563;   /* gray-600 — labels / pagination */
+  --dit-border-color: #111827;
+  --dit-on-accent: #FFFFFF;
+
+  /* Dither dot color — swapped by accent / dark contexts so every dot
+     pattern (textures, shades, halftone shadows) recolors at once. */
+  --dit-dot: var(--dit-ink);
+
+  /* Type scale — 14/16/18/24/32/40, slide-tuned upward:
+     14 / 18 / 22 / 26 / 32 / 40 / 52 */
+  --dit-fs-1: 14px;   /* label-caps (IBM Plex Mono) */
+  --dit-fs-2: 18px;   /* small — tables, code, captions */
+  --dit-fs-3: 22px;   /* body — primary reading size */
+  --dit-fs-4: 26px;   /* h4 */
+  --dit-fs-5: 32px;   /* h3 */
+  --dit-fs-6: 40px;   /* h2 */
+  --dit-fs-7: 52px;   /* h1 */
+
+  /* Spacing scale: 4 / 8 / 12 / 16 / 24 / 32 (+ 48) */
+  --dit-sp-1: 4px;
+  --dit-sp-2: 8px;
+  --dit-sp-3: 12px;
+  --dit-sp-4: 16px;
+  --dit-sp-5: 24px;
+  --dit-sp-6: 32px;
+  --dit-sp-7: 48px;
+
+  /* Rounded scale (sm/md per spec — kept small for the crisp 1-bit look) */
+  --dit-radius-sm: 4px;
+  --dit-radius-md: 8px;
+
+  /* Structure — crisp ink borders (no soft shadows; elevation is dithered) */
+  --dit-rule:       2px solid var(--dit-ink);
+  --dit-rule-thick: 3px solid var(--dit-ink);
+
+  /* Motion */
+  --dit-ease: 120ms steps(3, end);   /* stepped — reads "digital", not smooth */
+}
+
+/* Dark-mode tokens live with the `.dark`/`.invert` variant near the end of the
+   file. Components read from the tokens above; the system flips by re-assigning
+   them. Light is the default (class-based dark, no auto-switch). */
+
+/* ---------- Base Slide ---------- */
+section {
+  font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, sans-serif;
+  background-color: var(--dit-paper);
+  /* Faint paper grain — a low-density dot field. Text stays high-contrast. */
+  background-image: radial-gradient(rgba(17, 24, 39, 0.10) 1px, transparent 1.5px);
+  background-size: 6px 6px;
+  color: var(--dit-text);
+  font-size: var(--dit-fs-3);
+  font-weight: 400;
+  line-height: 1.5;
+  padding: var(--dit-sp-7);
+  position: relative;
+}
+
+/* ---------- Headings (52 / 40 / 32 / 26) ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  color: var(--dit-ink);
+  line-height: 1.08;
+  margin: 0 0 var(--dit-sp-4) 0;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: var(--dit-fs-7);
+  margin-bottom: var(--dit-sp-5);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: var(--dit-fs-6);
+  padding-bottom: var(--dit-sp-3);
+}
+/* Dithered halftone underline bar */
+h2::after {
+  content: "";
+  display: block;
+  margin-top: var(--dit-sp-2);
+  width: 80px;
+  height: 8px;
+  background-color: transparent;
+  background-image:
+    radial-gradient(var(--dit-dot) 1.4px, transparent 1.5px),
+    radial-gradient(var(--dit-dot) 1.4px, transparent 1.5px);
+  background-size: 5px 5px, 5px 5px;
+  background-position: 0 0, 2.5px 2.5px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: var(--dit-fs-5);
+  color: var(--dit-primary-ink);
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: var(--dit-fs-4);
+  color: var(--dit-ink);
+}
+
+/* label-caps role — monospaced, uppercase, tracked */
+h5, h6 {
+  font-family: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-weight: 600;
+  font-size: var(--dit-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dit-muted);
+}
+
+/* Marp <!-- fit --> auto-scaling: the scaler needs a full-width block. */
+marp-auto-scaling { display: block; width: 100%; }
+
+/* ---------- Body & Inline ---------- */
+p {
+  margin: 0 0 var(--dit-sp-4) 0;
+  max-width: 66ch;
+}
+
+strong {
+  font-weight: 800;
+  color: var(--dit-ink);
+}
+
+em {
+  font-style: italic;
+  color: var(--dit-ink);
+}
+
+a {
+  color: var(--dit-primary-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-style: dotted;     /* retro dotted underline */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--dit-secondary-ink); text-decoration-style: solid; }
+a:focus-visible {
+  outline: 3px solid var(--dit-ink);
+  outline-offset: 2px;
+  border-radius: var(--dit-radius-sm);
+}
+
+/* Dithered highlight — light dot wash behind solid ink text */
+mark {
+  background-color: transparent;
+  background-image: radial-gradient(var(--dit-primary) 1.4px, transparent 1.6px);
+  background-size: 5px 5px;
+  color: var(--dit-ink);
+  padding: 0 var(--dit-sp-1);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 0;
+  margin: 0 0 var(--dit-sp-4) 0;
+  list-style: none;
+}
+
+section ul > li {
+  position: relative;
+  padding-left: var(--dit-sp-5);
+  margin-bottom: var(--dit-sp-3);
+}
+/* Hard pixel-square bullet */
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 12px;
+  height: 12px;
+  background: var(--dit-ink);
+}
+section ul > li > ul > li::before { background: var(--dit-primary); }
+section ul > li > ul > li > ul > li::before { background: var(--dit-secondary); }
+
+section ol { counter-reset: dit-counter; }
+section ol > li {
+  counter-increment: dit-counter;
+  position: relative;
+  padding-left: var(--dit-sp-6);
+  margin-bottom: var(--dit-sp-3);
+  min-height: 30px;
+}
+section ol > li::marker { content: ""; }
+/* Outlined mono numeral box */
+section ol > li::before {
+  content: counter(dit-counter, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 32px;
+  height: 30px;
+  padding: 0 var(--dit-sp-2);
+  background: var(--dit-paper);
+  border: var(--dit-rule);
+  color: var(--dit-ink);
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  font-size: var(--dit-fs-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { font-size: var(--dit-fs-3); }
+
+/* ---------- Blockquote ---------- */
+blockquote {
+  margin: var(--dit-sp-5) 0;
+  padding: var(--dit-sp-4) var(--dit-sp-5);
+  background: var(--dit-paper);
+  border: var(--dit-rule);
+  border-left: var(--dit-rule-thick);
+  border-left-color: var(--dit-primary-ink);
+  color: var(--dit-ink);
+}
+blockquote p { max-width: none; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Code ---------- */
+code, kbd, samp, pre {
+  font-family: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+code {
+  font-size: 0.86em;
+  font-weight: 500;
+  background: var(--dit-paper);
+  color: var(--dit-secondary-ink);
+  padding: 1px var(--dit-sp-2);
+  border: var(--dit-rule);
+}
+pre {
+  background: var(--dit-ink);
+  color: var(--dit-paper);
+  border: var(--dit-rule);
+  /* faint CRT scanlines */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 4px);
+  padding: var(--dit-sp-4) var(--dit-sp-5);
+  font-size: var(--dit-fs-2);
+  line-height: 1.55;
+  overflow-x: auto;
+}
+pre code {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  font-weight: 500;
+}
+kbd {
+  background: var(--dit-paper);
+  color: var(--dit-ink);
+  border: var(--dit-rule);
+  border-bottom-width: 4px;
+  padding: 1px var(--dit-sp-2);
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+/* ---------- Math (MathJax v3 + v2 + KaTeX) ----------
+   Physics decks lean on display math — keep it legible and a touch larger. */
+mjx-container, .MathJax, .katex {
+  font-family: 'STIX Two Math', 'Cambria Math', 'Latin Modern Math',
+               'Times New Roman', serif;
+}
+mjx-container[display="false"],
+.MathJax:not(.MathJax_Display),
+.katex:not(.katex-display) {
+  font-size: 1.06em !important;
+  vertical-align: -0.05em;
+}
+mjx-container[display="true"],
+.MathJax_Display,
+.katex-display {
+  font-size: 1.16em !important;
+  margin: var(--dit-sp-3) 0 !important;
+}
+h1 mjx-container, h2 mjx-container, h3 mjx-container,
+h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
+
+/* ---------- Tables (exposed grid) ---------- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: var(--dit-sp-4) 0;
+  background: var(--dit-paper);
+  border: var(--dit-rule);
+  font-size: var(--dit-fs-2);
+}
+th, td {
+  border: var(--dit-rule);
+  padding: var(--dit-sp-2) var(--dit-sp-4);
+  text-align: left;
+}
+thead th {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: var(--dit-fs-1);
+  background: var(--dit-ink);
+  color: var(--dit-paper);
+}
+/* Zebra rows rendered as a dither shade rather than a flat gray */
+tbody tr:nth-child(even) td {
+  background-image: radial-gradient(rgba(17, 24, 39, 0.16) 1px, transparent 1.4px);
+  background-size: 5px 5px;
+}
+
+/* ---------- Horizontal rule — dithered band ---------- */
+hr {
+  border: 0;
+  height: 10px;
+  width: 100%;
+  margin: var(--dit-sp-5) 0;
+  background-color: transparent;
+  background-image:
+    radial-gradient(var(--dit-dot) 1.6px, transparent 1.7px),
+    radial-gradient(var(--dit-dot) 1.6px, transparent 1.7px);
+  background-size: 6px 6px, 6px 6px;
+  background-position: 0 0, 3px 3px;
+}
+
+/* ---------- Images & Media ---------- */
+img {
+  max-width: 100%;
+  background: var(--dit-paper);
+  border: var(--dit-rule);
+}
+img[alt~="plain"]  { background: none; border: 0; }
+img[alt~="frame"]  { padding: var(--dit-sp-3); border: var(--dit-rule-thick); }
+/* `pixel` — nearest-neighbor scaling for crunchy retro upscales */
+img[alt~="pixel"]  { image-rendering: pixelated; image-rendering: crisp-edges; }
+
+p:has(> img[alt~="center"]) { max-width: none; text-align: center; }
+img[alt~="center"] { display: block; margin: var(--dit-sp-4) auto; }
+
+/* Inline emoji (Marp twemoji) — drop the frame so they read inline */
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img,
+p img, li img, strong img, em img {
+  border: 0; background: none; vertical-align: -0.15em; margin-right: 0.3em;
+}
+
+/* ---------- Footer & Pagination ---------- */
+footer {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--dit-fs-1);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--dit-faint);
+}
+section::after {            /* page numbers */
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: var(--dit-fs-1);
+  color: var(--dit-paper);
+  background: var(--dit-ink);
+  padding: 2px var(--dit-sp-2);
+}
+
+/* ============================================================
+   Dither shade utilities — simulate gray with ink dots
+   <span class="shade-50"> … </span>, or apply to a .card / slab.
+   Add .blue / .violet to recolor the dots.
+   ============================================================ */
+.shade-25, .shade-50, .shade-75 {
+  background-color: var(--dit-paper);
+}
+.shade-25 {
+  background-image: radial-gradient(var(--dit-dot) 1.1px, transparent 1.3px);
+  background-size: 7px 7px;
+}
+.shade-50 {
+  background-image:
+    radial-gradient(var(--dit-dot) 1.5px, transparent 1.6px),
+    radial-gradient(var(--dit-dot) 1.5px, transparent 1.6px);
+  background-size: 6px 6px, 6px 6px;
+  background-position: 0 0, 3px 3px;
+}
+.shade-75 {
+  background-image:
+    radial-gradient(var(--dit-dot) 2px, transparent 2.1px),
+    radial-gradient(var(--dit-dot) 2px, transparent 2.1px);
+  background-size: 6px 6px, 6px 6px;
+  background-position: 0 0, 3px 3px;
+}
+.shade-25.blue, .shade-50.blue, .shade-75.blue       { --dit-dot: var(--dit-primary); }
+.shade-25.violet, .shade-50.violet, .shade-75.violet { --dit-dot: var(--dit-secondary); }
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--dit-sp-5);
+}
+.columns-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--dit-sp-5); }
+.columns-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--dit-sp-4); }
+.cards     { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--dit-sp-5); }
+
+/* ---------- Card — crisp panel with a DITHERED halftone shadow ---------- */
+.card {
+  position: relative;
+  z-index: 0;
+  background: var(--dit-paper);
+  border: var(--dit-rule);
+  border-radius: var(--dit-radius-sm);
+  padding: var(--dit-sp-5);
+  color: var(--dit-ink);
+}
+/* the halftone "shadow": an offset block of dots behind the card */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translate(10px, 10px);
+  border-radius: var(--dit-radius-sm);
+  background-image:
+    radial-gradient(var(--dit-dot) 1.6px, transparent 1.7px),
+    radial-gradient(var(--dit-dot) 1.6px, transparent 1.7px);
+  background-size: 6px 6px, 6px 6px;
+  background-position: 0 0, 3px 3px;
+}
+.card.flat::after { display: none; }
+/* Solid fills — paper text on ink, white text on AA-safe accent inks */
+.card.ink    { background: var(--dit-ink);          color: var(--dit-paper); }
+.card.blue   { background: var(--dit-primary-ink);  color: var(--dit-on-accent); border-color: var(--dit-ink); }
+.card.violet { background: var(--dit-secondary-ink); color: var(--dit-on-accent); border-color: var(--dit-ink); }
+.card.ink h1, .card.ink h2, .card.ink h3, .card.ink h4,
+.card.blue h1, .card.blue h2, .card.blue h3, .card.blue h4,
+.card.violet h1, .card.violet h2, .card.violet h3, .card.violet h4 { color: inherit; }
+
+/* ---------- Kicker / eyebrow ---------- */
+.kicker {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--dit-fs-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--dit-paper);
+  background: var(--dit-ink);
+  padding: 2px var(--dit-sp-3);
+  margin-bottom: var(--dit-sp-3);
+}
+
+/* ---------- Tag / badge ---------- */
+.tag {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: var(--dit-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--dit-paper);
+  color: var(--dit-ink);
+  border: var(--dit-rule);
+  padding: 3px var(--dit-sp-3);
+}
+.tag.ink     { background: var(--dit-ink);          color: var(--dit-paper); }
+.tag.blue    { background: var(--dit-primary-ink);  color: #fff; border-color: var(--dit-ink); }
+.tag.violet  { background: var(--dit-secondary-ink); color: #fff; border-color: var(--dit-ink); }
+.tag.success { background: var(--dit-success-ink);  color: #fff; border-color: var(--dit-ink); }
+.tag.warning { background: var(--dit-warning-ink);  color: #fff; border-color: var(--dit-ink); }
+.tag.danger  { background: var(--dit-danger-ink);   color: #fff; border-color: var(--dit-ink); }
+
+/* ---------- Stat block ---------- */
+.stat {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--dit-sp-1);
+}
+.stat .value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: var(--dit-fs-7);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--dit-primary-ink);
+}
+.stat .label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: var(--dit-fs-1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--dit-muted);
+}
+
+/* ---------- Button ---------- */
+.btn,
+a.btn {
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  font-size: var(--dit-fs-2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--dit-ink);
+  color: var(--dit-paper);
+  border: var(--dit-rule);
+  border-radius: var(--dit-radius-sm);
+  padding: var(--dit-sp-2) var(--dit-sp-5);
+  min-height: 44px;            /* WCAG 2.2 target size */
+  text-decoration: none;
+  transition: transform var(--dit-ease);
+}
+/* halftone shadow under the button */
+a.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translate(6px, 6px);
+  border-radius: var(--dit-radius-sm);
+  background-image:
+    radial-gradient(var(--dit-dot) 1.4px, transparent 1.5px),
+    radial-gradient(var(--dit-dot) 1.4px, transparent 1.5px);
+  background-size: 5px 5px, 5px 5px;
+  background-position: 0 0, 2.5px 2.5px;
+}
+a.btn:hover  { transform: translate(3px, 3px); }     /* presses toward its shadow */
+a.btn:active { transform: translate(6px, 6px); }
+a.btn:focus-visible { outline: 3px solid var(--dit-primary-ink); outline-offset: 3px; }
+a.btn.accent { background: var(--dit-primary-ink); color: var(--dit-on-accent); }
+a.btn.ghost  { background: var(--dit-paper); color: var(--dit-ink); }
+.btn[disabled], .btn.disabled, a.btn[aria-disabled="true"] {
+  background: var(--dit-paper);
+  color: var(--dit-faint);
+  border-color: var(--dit-faint);
+  cursor: not-allowed;
+}
+.btn[disabled]::after, a.btn[aria-disabled="true"]::after { display: none; }
+
+/* ---------- Callouts ---------- */
+.note, .warn, .danger, .success {
+  background: var(--dit-paper);
+  border: var(--dit-rule);
+  border-left: var(--dit-rule-thick);
+  padding: var(--dit-sp-4) var(--dit-sp-5);
+  margin: var(--dit-sp-3) 0;
+  color: var(--dit-ink);
+}
+.note    { border-left-color: var(--dit-primary-ink); }
+.warn    { border-left-color: var(--dit-warning-ink); }
+.danger  { border-left-color: var(--dit-danger-ink); }
+.success { border-left-color: var(--dit-success-ink); }
+
+/* ---------- State patterns (empty / loading / error) ---------- */
+.empty {
+  border: 2px dashed var(--dit-faint);
+  border-radius: var(--dit-radius-sm);
+  padding: var(--dit-sp-6);
+  text-align: center;
+  color: var(--dit-muted);
+  font-family: 'IBM Plex Mono', monospace;
+}
+.skeleton {
+  border: var(--dit-rule);
+  border-radius: var(--dit-radius-sm);
+  min-height: 1.5em;
+  background-color: var(--dit-paper);
+  background-image: radial-gradient(var(--dit-dot) 1.1px, transparent 1.3px);
+  background-size: 7px 7px;
+}
+.is-error, .error {
+  color: var(--dit-danger-ink);
+  font-weight: 700;
+}
+
+/* ============================================================
+   Slide Variants
+   ============================================================ */
+
+/* ---------- Lead / Title slide:  <!-- _class: lead --> ---------- */
+section.lead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.lead h1 {
+  font-size: clamp(52px, 8vw, 84px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--dit-sp-4);
+}
+section.lead h2 {
+  font-weight: 400;
+  font-size: var(--dit-fs-5);
+  color: var(--dit-muted);
+  padding-bottom: 0;
+}
+section.lead h2::after { display: none; }
+
+/* ---------- Centered:  <!-- _class: center --> ---------- */
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.center h2::after { margin-left: auto; margin-right: auto; }
+
+/* ---------- Quote:  <!-- _class: quote --> ---------- */
+section.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.quote blockquote {
+  background: transparent;
+  border: 0;
+  border-left: var(--dit-rule-thick);
+  border-left-color: var(--dit-ink);
+  padding: var(--dit-sp-3) var(--dit-sp-6);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  max-width: 90%;
+  color: var(--dit-ink);
+}
+
+/* ---------- Inverted — 1-bit flip:  <!-- _class: invert -->  (alias: dark) ---------- */
+section.invert, section.dark {
+  --dit-ink:    #E5E7EB;   /* light "ink" */
+  --dit-paper:  #0E1116;   /* near-black paper */
+  --dit-text:   #E5E7EB;
+  --dit-muted:  #B6BDC9;
+  --dit-faint:  #8A93A3;
+  --dit-dot:    rgba(229, 231, 235, 0.85);
+  --dit-border-color: #E5E7EB;
+  --dit-primary-ink:   #60A5FA;   /* lightened accents on dark */
+  --dit-secondary-ink: #A78BFA;
+  --dit-success-ink:   #4ADE80;
+  --dit-warning-ink:   #FBBF24;
+  --dit-danger-ink:    #F87171;
+  --dit-rule:       2px solid var(--dit-ink);
+  --dit-rule-thick: 3px solid var(--dit-ink);
+  --dit-on-accent:  #0E1116;
+
+  background-color: var(--dit-paper);
+  background-image: radial-gradient(rgba(229, 231, 235, 0.12) 1px, transparent 1.5px);
+  background-size: 6px 6px;
+  color: var(--dit-text);
+}
+/* keep code panel dark-on-dark legible: invert it to a light slab */
+section.invert pre, section.dark pre {
+  background: var(--dit-ink);
+  color: var(--dit-paper);
+}
+section.invert pre, section.dark pre { background-image: none; }
+section.invert ul > li::before, section.dark ul > li::before { background: var(--dit-ink); }
+
+/* ---------- CRT phosphor (bonus retro):  <!-- _class: crt --> ---------- */
+section.crt {
+  --dit-ink:    #4ADE80;   /* phosphor green */
+  --dit-paper:  #04140A;
+  --dit-text:   #86EFAC;
+  --dit-muted:  #4ADE80;
+  --dit-faint:  #22C55E;
+  --dit-dot:    rgba(74, 222, 128, 0.7);
+  --dit-primary-ink:   #86EFAC;
+  --dit-secondary-ink: #86EFAC;
+  --dit-rule:       2px solid #4ADE80;
+  --dit-rule-thick: 3px solid #4ADE80;
+  --dit-on-accent:  #04140A;
+
+  background-color: var(--dit-paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(74, 222, 128, 0.10) 0,
+    rgba(74, 222, 128, 0.10) 1px,
+    transparent 1px,
+    transparent 4px);
+  color: var(--dit-text);
+  font-family: 'IBM Plex Mono', monospace;
+}
+section.crt h1, section.crt h2, section.crt h3, section.crt h4 { color: var(--dit-text); }
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Reduced motion — drop the button press transform (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  a.btn { transition: none; }
+  a.btn:hover, a.btn:active { transform: none; }
+}
+
+/* Visible focus rings everywhere (WCAG 2.4.7 / 2.4.11) */
+:focus-visible {
+  outline: 3px solid var(--dit-ink);
+  outline-offset: 2px;
+}
+
+/* High contrast — replace dot textures with flat fills, firm up muted text.
+   (Dither dots can read as low-contrast; honor the user's preference.) */
+@media (prefers-contrast: more) {
+  :root {
+    --dit-muted: #1F2937;
+    --dit-faint: #374151;
+  }
+  section { background-image: none; }
+  .shade-25, .shade-50, .shade-75, .skeleton { background-image: none; }
+  tbody tr:nth-child(even) td { background-image: none; background-color: #EEF0F3; }
+  .card::after, a.btn::after { background-image: none; background-color: var(--dit-faint); }
+  a { text-decoration-style: solid; }
+}
