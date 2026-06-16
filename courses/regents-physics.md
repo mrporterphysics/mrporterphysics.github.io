@@ -54,6 +54,15 @@ New York State Regents Physics curriculum covering fundamental concepts in mecha
 
 <div class="card-grid">
 
+<div class="content-card">
+    <div class="card-icon">🎴</div>
+    <h3 class="card-title">Fact Sheet & Review</h3>
+    <p class="card-description">Study for your Regents exam with the Fact Sheet</p>
+    <div class="card-links">
+      <a href="/regentsTestPrep/regents-physics-study-guide.html" class="card-link">→ Fact Sheet</a>
+    </div>
+  </div>
+
   <div class="content-card">
     <div class="card-icon">🎴</div>
     <h3 class="card-title">Equation Flashcards</h3>
