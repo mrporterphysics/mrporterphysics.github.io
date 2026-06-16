@@ -199,8 +199,13 @@ What is the period of a $60$ Hz electromagnetic wave traveling at $3 \times 10^8
 - The ***wavelength*** ($\lambda$, greek lambda, "lamb-duh") is the distance between corresponding points in phase on successive waves. 
     - Measured in meters. 
 
-![center](../figures/wavelength.jpg)
+![center w:700](image.png)
 
+---
+
+# Longitudinal Wavelength
+
+![center w:700](image-1.png)
 
 ---
 

@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regents Physics Study Guide — Mr. Porter's Physics</title>
+  <meta name="description" content="A complete, screen-reader accessible study guide for the New York State Regents Physics (Physical Setting/Physics) exam: kinematics, forces, energy, momentum, waves, optics, electricity, magnetism, and modern physics, with every reference-table equation.">
+
+  <!-- Brutalism theme (Schodack) -->
+  <link rel="stylesheet" href="../PorterThemes/Schodack/brutalism.css">
+
+  <!-- MathJax: renders the visual math. Every equation also has a plain-language
+       text reading in the page, so the guide is fully usable even if MathJax
+       does not load or if the reader uses a screen reader. -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      chtml: { displayAlign: 'left' },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+
+  <style>
+    /* ============================================================
+       Supplemental styles — adapt the brutalism SLIDE theme into a
+       long-form, accessible HTML DOCUMENT and add the accessible
+       equation components. All colors reuse brutalism tokens
+       (with fallbacks) so the page matches the theme exactly.
+       ============================================================ */
+
+    /* Use rem so the layout reflows when a low-vision reader zooms text. */
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    body {
+      margin: 0;
+      font-family: 'Darker Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      font-weight: 500;
+      font-size: 1.25rem;        /* ~20px base; Darker Grotesque is condensed */
+      line-height: 1.55;
+      color: var(--bru-text, #111827);
+      background-color: var(--bru-canvas, #CFCCC4);
+      background-image:
+        repeating-linear-gradient(to bottom,
+          rgba(17,24,39,0.05) 0, rgba(17,24,39,0.05) 1px,
+          transparent 1px, transparent 96px),
+        radial-gradient(rgba(17,24,39,0.06) 1px, transparent 1.4px);
+      background-size: 100% 96px, 6px 6px;
+      background-attachment: fixed;
+    }
+
+    .doc { max-width: 60rem; margin: 0 auto; padding: 1.5rem clamp(0.75rem, 3vw, 2rem) 4rem; }
+
+    /* Skip link — first focusable element for keyboard / screen-reader users */
+    .skip-link {
+      position: absolute; left: 0; top: -120px;
+      background: var(--bru-ink, #111827); color: var(--bru-paper, #fff);
+      font-family: 'JetBrains Mono', monospace; font-weight: 800;
+      padding: 0.75rem 1.25rem; z-index: 1000; text-decoration: none;
+      border: 3px solid var(--bru-paper, #fff);
+    }
+    .skip-link:focus { top: 0; }
+
+    /* Visually-hidden but available to assistive technology. Used to give a
+       complete spoken reading of every equation. */
+    .sr-only {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0);
+      white-space: nowrap; border: 0;
+    }
+
+    /* ---- Masthead ---- */
+    .masthead {
+      background: var(--bru-ink, #111827);
+      color: var(--bru-paper, #fff);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      border: 6px solid var(--bru-ink, #111827);
+      margin-bottom: 1.5rem;
+    }
+    .masthead .kicker {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em;
+      font-size: 0.8rem; background: var(--bru-primary, #DD614C);
+      color: #111827; padding: 0.25rem 0.6rem; margin-bottom: 1rem;
+    }
+    .masthead h1 {
+      font-family: 'Darker Grotesque', sans-serif; font-weight: 900;
+      font-size: clamp(2.75rem, 9vw, 5rem); line-height: 0.9;
+      text-transform: uppercase; letter-spacing: -0.02em;
+      color: var(--bru-paper, #fff); margin: 0 0 0.5rem; border: 0;
+    }
+    .masthead p.sub {
+      font-size: 1.3rem; color: #ECE9E1; max-width: 60ch; margin: 0.25rem 0 0;
+    }
+
+    /* ---- Intro / how-to cards ---- */
+    .intro { background: var(--bru-paper, #fff); border: 3px solid var(--bru-ink, #111827); padding: clamp(1rem, 3vw, 1.75rem); margin-bottom: 1.5rem; }
+    .intro h2 { font-size: 1.9rem; border: 0; margin-top: 0; }
+    .intro p { max-width: 70ch; }
+
+    /* ---- Table of contents ---- */
+    nav.toc {
+      background: var(--bru-secondary, #DAA144);
+      border: 3px solid var(--bru-ink, #111827);
+      padding: clamp(1rem, 3vw, 1.5rem);
+      margin-bottom: 2rem; color: #111827;
+    }
+    nav.toc h2 {
+      font-family: 'JetBrains Mono', monospace; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.1em; font-size: 1rem;
+      border: 0; margin: 0 0 0.75rem; color: #111827;
+    }
+    nav.toc ol {
+      list-style: decimal; padding-left: 1.5rem; margin: 0;
+      columns: 2; column-gap: 2rem;
+    }
+    @media (max-width: 38rem) { nav.toc ol { columns: 1; } }
+    nav.toc li { margin: 0 0 0.4rem; font-size: 1.1rem; break-inside: avoid; }
+    nav.toc a { color: #111827; text-decoration-thickness: 2px; font-weight: 700; }
+    nav.toc a:hover, nav.toc a:focus { background: #111827; color: var(--bru-secondary, #DAA144); }
+
+    /* ---- Topic sections rendered as stacked paper slabs ---- */
+    main .topic {
+      background: var(--bru-paper, #fff);
+      background-image: none;
+      border: 3px solid var(--bru-ink, #111827);
+      border-top: 10px solid var(--bru-ink, #111827);
+      padding: clamp(1rem, 3.5vw, 2rem);
+      margin: 0 0 1.75rem;
+      min-height: 0;
+      scroll-margin-top: 1rem;
+    }
+    main .topic > h2:first-child { margin-top: 0; }
+    main .topic h2 {
+      font-size: clamp(1.9rem, 5vw, 2.75rem); text-transform: uppercase;
+      border-bottom: 3px solid var(--bru-ink, #111827); padding-bottom: 0.4rem;
+    }
+    main .topic h3 {
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem); margin-top: 1.75rem;
+      color: var(--bru-ink, #111827);
+    }
+    main .topic h4 {
+      font-family: 'JetBrains Mono', monospace; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      font-size: 0.95rem; color: var(--bru-muted, #4A4842);
+      margin: 1.25rem 0 0.4rem;
+    }
+    main .topic p { max-width: 72ch; }
+    main .topic ul, main .topic ol { max-width: 72ch; }
+
+    /* Keep bold readable in dense prose: heavy ink, no highlight slab.
+       (The slide theme highlights every <strong>; that is too busy for a
+       long document.) Use <mark> for the few deliberate highlights. */
+    strong { background: transparent; color: var(--bru-ink, #111827); padding: 0; font-weight: 800; }
+    main .topic a { color: var(--bru-link, #BD4B30); }
+
+    /* "Added beyond the fact sheet" badge */
+    .added {
+      display: inline-block; vertical-align: middle;
+      font-family: 'JetBrains Mono', monospace; font-weight: 700;
+      font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+      background: var(--bru-primary, #DD614C); color: #111827;
+      padding: 0.2rem 0.5rem; margin-left: 0.5rem; border: 2px solid #111827;
+    }
+
+    /* ---- Accessible equation components ---- */
+
+    /* Display formula card */
+    figure.formula {
+      margin: 1rem 0; padding: 0.9rem 1.1rem;
+      background: var(--bru-canvas, #CFCCC4);
+      border: 2px solid var(--bru-ink, #111827);
+      border-left: 8px solid var(--bru-primary, #DD614C);
+    }
+    figure.formula .formula__math {
+      font-size: 1.15rem; overflow-x: auto; overflow-y: hidden; padding: 0.15rem 0;
+    }
+    figure.formula figcaption { margin-top: 0.5rem; }
+    .formula__name {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.7rem;
+      background: var(--bru-ink, #111827); color: var(--bru-paper, #fff);
+      padding: 0.15rem 0.5rem; margin-right: 0.5rem;
+    }
+    .formula__say { font-size: 1.05rem; color: var(--bru-ink, #111827); }
+    .formula__say::before { content: "reads as: "; font-weight: 700; }
+
+    /* Inline equation: visible math + hidden spoken reading */
+    .m .m-vis { white-space: nowrap; }
+
+    /* ---- Variable key (definition list) ---- */
+    dl.vars {
+      margin: 0.75rem 0 0; padding: 0.75rem 1rem;
+      background: var(--bru-canvas-2, #C2BFB6); border: 2px solid var(--bru-ink, #111827);
+      display: grid; grid-template-columns: max-content 1fr; gap: 0.2rem 0.9rem;
+      font-size: 1.05rem;
+    }
+    dl.vars dt { font-family: 'JetBrains Mono', monospace; font-weight: 700; }
+    dl.vars dd { margin: 0; }
+    dl.vars dt::after { content: " ="; color: var(--bru-muted, #4A4842); }
+
+    /* ---- Callouts ---- */
+    .callout {
+      background: var(--bru-paper, #fff);
+      border: 2px solid var(--bru-ink, #111827);
+      border-left: 8px solid var(--bru-secondary, #DAA144);
+      padding: 0.9rem 1.1rem; margin: 1rem 0;
+    }
+    .callout > :first-child { margin-top: 0; }
+    .callout > :last-child { margin-bottom: 0; }
+    .callout .label {
+      font-family: 'JetBrains Mono', monospace; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem;
+      display: block; margin-bottom: 0.35rem; color: var(--bru-muted, #4A4842);
+    }
+    .callout.tip   { border-left-color: var(--bru-success, #16A34A); }
+    .callout.watch { border-left-color: var(--bru-danger, #DC2626); }
+
+    /* Described-diagram block (text picture for a non-visual reader) */
+    .diagram {
+      background: var(--bru-canvas, #CFCCC4);
+      border: 2px dashed var(--bru-ink, #111827);
+      padding: 0.9rem 1.1rem; margin: 1rem 0;
+    }
+    .diagram .label {
+      font-family: 'JetBrains Mono', monospace; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem;
+      display: block; margin-bottom: 0.35rem; color: var(--bru-muted, #4A4842);
+    }
+
+    /* Visual figure: an image or SVG diagram paired with a full text
+       description. The visual is decorative for assistive tech (aria-hidden),
+       and the figcaption carries the screen-reader content — so a non-visual
+       reader gets the description and never hears the picture read twice. */
+    figure.vis {
+      margin: 1.25rem 0; padding: 0.9rem 1.1rem;
+      background: var(--bru-paper, #fff);
+      border: 2px solid var(--bru-ink, #111827);
+      border-left: 8px solid var(--bru-secondary, #DAA144);
+    }
+    figure.vis .vis__img,
+    figure.vis .vis__svg svg {
+      display: block; width: 100%; max-width: 640px; height: auto;
+      margin: 0 auto; border: 3px solid var(--bru-ink, #111827); background: #fff;
+    }
+    /* Small line-art GIFs: show at natural size, don't upscale/blur */
+    figure.vis .vis__img.gif { width: auto; max-width: 100%; }
+    figure.vis figcaption { margin-top: 0.6rem; }
+    figure.vis figcaption .label {
+      font-family: 'JetBrains Mono', monospace; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.75rem;
+      display: block; margin-bottom: 0.35rem; color: var(--bru-muted, #4A4842);
+    }
+    figure.vis figcaption p { margin: 0.3rem 0 0; }
+    figure.vis figcaption ul { margin: 0.3rem 0 0; }
+    /* Side-by-side diagrams (e.g. the hydrogen & mercury energy ladders) */
+    .vis-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; }
+    .vis-pair figure.vis { margin: 0; }
+    .vis-pair .vis__svg svg { max-width: 100%; }
+    @media (max-width: 40rem) { .vis-pair { grid-template-columns: 1fr; } }
+    /* Responsive grid for a set of small diagrams (e.g. electric-field types) */
+    .vis-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; align-items: start; }
+    .vis-grid figure.vis { margin: 0; }
+    .vis-grid .vis__svg svg { max-width: 100%; }
+    /* SVG diagram text uses the page sans; bold for titles, mono for tick labels */
+    .vis__svg text { font-family: 'Darker Grotesque', system-ui, sans-serif; }
+    .vis__svg .t-title { font-weight: 800; }
+    .vis__svg .t-mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* ---- Tables ---- */
+    table { font-size: 1.05rem; }
+    caption {
+      caption-side: top; text-align: left;
+      font-family: 'JetBrains Mono', monospace; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem;
+      color: var(--bru-ink, #111827); padding: 0.4rem 0;
+    }
+    th[scope="row"] { background: var(--bru-canvas, #CFCCC4); font-weight: 700; }
+    .table-scroll { overflow-x: auto; }
+
+    /* "Back to contents" link after each section */
+    .backtotop {
+      display: inline-block; margin-top: 1rem;
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+
+    /* ---- Footer ---- */
+    footer.page-foot {
+      background: var(--bru-ink, #111827); color: #ECE9E1;
+      border: 3px solid var(--bru-ink, #111827);
+      padding: 1.5rem; margin-top: 2rem; font-size: 1rem;
+    }
+    footer.page-foot a { color: var(--bru-link, #F0A085); }
+    footer.page-foot h2 { color: var(--bru-paper, #fff); font-size: 1.4rem; border: 0; margin-top: 0; }
+
+    /* ---- Focus visibility (reinforce brutalism) ---- */
+    a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+      outline: 4px solid var(--bru-primary, #DD614C); outline-offset: 2px;
+    }
+
+    /* ---- High contrast: drop the concrete texture ---- */
+    @media (prefers-contrast: more) {
+      body { background-image: none; }
+      figure.formula { border-left-width: 10px; }
+    }
+
+    /* ---- Print ---- */
+    @media print {
+      body { background: #fff; color: #000; }
+      .skip-link, nav.toc, .backtotop { display: none; }
+      main .topic, .intro, .masthead, footer.page-foot { border-color: #000; break-inside: avoid; }
+      .masthead, footer.page-foot { background: #fff; color: #000; }
+      .masthead h1, .masthead p.sub, footer.page-foot h2, footer.page-foot { color: #000; }
+      a { color: #000; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to study guide content</a>
+
+  <div class="doc">
+
+    <!-- ====================== MASTHEAD ====================== -->
+    <header class="masthead">
+      <span class="kicker">Mr. Porter&rsquo;s Physics &middot; 2025&ndash;26</span>
+      <h1>Regents Physics Study Guide</h1>
+      <p class="sub">A complete review of the Physical Setting/Physics core curriculum &mdash; every concept and every reference-table equation, written to be read aloud by a screen reader.</p>
+    </header>
+
+    <!-- ====================== HOW TO USE ====================== -->
+    <section class="intro" aria-labelledby="how-heading">
+      <h2 id="how-heading">How to use this guide</h2>
+      <p>This guide gathers everything on the Regents Physics fact sheet, fills in the
+        topics the fact sheet leaves out (refraction and optics, magnetism, and modern
+        physics), and lists every equation from the New York State
+        <em>Reference Tables for Physical Setting/Physics</em>.</p>
+      <p><strong>Reading the equations:</strong> every formula is shown two ways. There is a
+        visual version (rendered with MathJax) and a plain-language version written in words.
+        A screen reader reads the words &mdash; for example, the equation for Newton&rsquo;s second
+        law is read as &ldquo;net force equals mass times acceleration.&rdquo; You never need to
+        see the symbols to get the full meaning. Diagrams from the original fact sheet are
+        replaced with written descriptions in boxes labelled &ldquo;Described diagram.&rdquo;</p>
+      <p class="sr-only">Navigation tip: this page uses headings level 2 for each major topic
+        and level 3 for sub-topics, so you can jump between sections using your screen
+        reader&rsquo;s heading navigation. Tables include captions and row and column headers.</p>
+    </section>
+
+    <!-- ====================== TABLE OF CONTENTS ====================== -->
+    <nav class="toc" aria-labelledby="toc-heading">
+      <h2 id="toc-heading">On this page</h2>
+      <ol>
+        <li><a href="#math-tools">Measurement, units &amp; math tools</a></li>
+        <li><a href="#kinematics">Kinematics (motion)</a></li>
+        <li><a href="#dynamics">Forces &amp; Newton&rsquo;s laws</a></li>
+        <li><a href="#circular">Circular motion &amp; gravitation</a></li>
+        <li><a href="#energy">Work, energy &amp; power</a></li>
+        <li><a href="#momentum">Momentum &amp; impulse</a></li>
+        <li><a href="#conservation">What is conserved?</a></li>
+        <li><a href="#waves">Waves &amp; sound</a></li>
+        <li><a href="#optics">Light, reflection &amp; refraction</a></li>
+        <li><a href="#electricity">Electricity &amp; circuits</a></li>
+        <li><a href="#magnetism">Magnetism &amp; electromagnetism</a></li>
+        <li><a href="#modern">Modern physics</a></li>
+        <li><a href="#equations">Complete equation reference</a></li>
+        <li><a href="#data">Reference data tables</a></li>
+      </ol>
+    </nav>
+
+    <main id="main">
+
+      <!-- ================================================================
+           1. MEASUREMENT, UNITS & MATH TOOLS
+           ================================================================ -->
+      <section class="topic" id="math-tools" aria-labelledby="math-tools-h">
+        <h2 id="math-tools-h">1. Measurement, units &amp; math tools</h2>
+
+        <h3>Vectors and scalars</h3>
+        <ul>
+          <li>A <strong>vector</strong> is a physical quantity that has both a magnitude (size)
+            <em>and</em> a direction. Examples: displacement, velocity, acceleration, force, momentum.</li>
+          <li>A <strong>scalar</strong> is a physical quantity that has only a magnitude.
+            Examples: distance, speed, mass, time, energy.</li>
+          <li>A vector can be <strong>resolved</strong> into perpendicular components. The
+            resultant of two or more vectors is found by vector addition.</li>
+        </ul>
+
+        <h4>Components of any vector A at angle &theta; from the horizontal</h4>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ A_x = A\cos\theta \qquad A_y = A\sin\theta \]</div>
+          <figcaption>
+            <span class="formula__name">Vector components</span>
+            <span class="formula__say">the horizontal component equals A times the cosine of the angle; the vertical component equals A times the sine of the angle.</span>
+          </figcaption>
+        </figure>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 420 290" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="vcArrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L6,3 L0,6 Z" fill="#111827"/>
+                </marker>
+                <marker id="vcArrowR" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L6,3 L0,6 Z" fill="#DD614C"/>
+                </marker>
+              </defs>
+              <!-- axes -->
+              <line x1="60" y1="235" x2="392" y2="235" stroke="#9F9D96" stroke-width="1.5" marker-end="url(#vcArrow)"/>
+              <line x1="60" y1="235" x2="60" y2="40" stroke="#9F9D96" stroke-width="1.5" marker-end="url(#vcArrow)"/>
+              <text class="t-mono" x="396" y="240" font-size="12" fill="#4A4842">x</text>
+              <text class="t-mono" x="52" y="44" font-size="12" fill="#4A4842">y</text>
+              <!-- horizontal component Ax -->
+              <line x1="60" y1="235" x2="330" y2="235" stroke="#111827" stroke-width="3" marker-end="url(#vcArrow)"/>
+              <!-- vertical component Ay -->
+              <line x1="330" y1="235" x2="330" y2="80" stroke="#111827" stroke-width="3" marker-end="url(#vcArrow)"/>
+              <!-- resultant vector A -->
+              <line x1="60" y1="235" x2="330" y2="80" stroke="#DD614C" stroke-width="4.5" marker-end="url(#vcArrowR)"/>
+              <!-- angle arc -->
+              <path d="M106,235 A46,46 0 0 0 99.9,212.1" fill="none" stroke="#111827" stroke-width="2"/>
+              <text x="112" y="226" font-size="15" fill="#111827">&#952;</text>
+              <!-- right-angle marker at the foot -->
+              <polyline points="314,235 314,221 330,221" fill="none" stroke="#111827" stroke-width="1.5"/>
+              <!-- labels -->
+              <text class="t-title" x="178" y="142" font-size="19" fill="#BD4B30">A</text>
+              <text x="195" y="256" text-anchor="middle" font-size="14" fill="#111827">A<tspan font-size="10" dy="3">x</tspan><tspan dy="-3"> = A cos&#952;</tspan></text>
+              <text x="338" y="165" font-size="14" fill="#111827">A<tspan font-size="10" dy="3">y</tspan><tspan dy="-3"> = A sin&#952;</tspan></text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; resolving a vector into components</span>
+            <p>A vector <strong>A</strong> (the rust arrow) drawn from the origin up and to the
+              right at angle <em>&theta;</em> above the horizontal. It is the hypotenuse of a right
+              triangle. The horizontal leg along the x-axis is the <strong>horizontal component
+              A<sub>x</sub> = A&nbsp;cos&nbsp;&theta;</strong>; the vertical leg is the
+              <strong>vertical component A<sub>y</sub> = A&nbsp;sin&nbsp;&theta;</strong>. The two
+              components meet at a right angle, and together they add (tip-to-tail) to give the
+              original vector.</p>
+          </figcaption>
+        </figure>
+        <p>To get the magnitude of a resultant from two perpendicular components, use the
+          Pythagorean theorem (see math tools below). Perpendicular velocities and
+          perpendicular forces both add this way.</p>
+
+        <h3>The metric system &amp; SI units</h3>
+        <p>Physics uses SI units. The fundamental units you must know are the
+          <strong>meter</strong> (m) for length, the <strong>kilogram</strong> (kg) for mass,
+          and the <strong>second</strong> (s) for time. Other units (newton, joule, watt, volt,
+          and so on) are built from these.</p>
+        <p>Prefixes rename powers of ten &mdash; for example, 1 kilometer is
+          10<sup>3</sup> meters and 1 millimeter is 10<sup>&minus;3</sup> meters. The full
+          prefix list is in the <a href="#data-prefixes">reference data tables</a>.</p>
+
+        <h3>Geometry &amp; trigonometry you need</h3>
+        <p>These appear on the reference tables and are used throughout the course.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ A_{\text{rectangle}} = bh \qquad A_{\text{triangle}} = \tfrac{1}{2}bh \]</div>
+          <figcaption>
+            <span class="formula__name">Areas</span>
+            <span class="formula__say">area of a rectangle equals base times height; area of a triangle equals one-half base times height.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ A_{\text{circle}} = \pi r^2 \qquad C = 2\pi r \]</div>
+          <figcaption>
+            <span class="formula__name">Circle</span>
+            <span class="formula__say">area of a circle equals pi times the radius squared; circumference equals two pi times the radius.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ c^2 = a^2 + b^2 \]</div>
+          <figcaption>
+            <span class="formula__name">Pythagorean theorem</span>
+            <span class="formula__say">for a right triangle, the hypotenuse squared equals the sum of the squares of the two legs.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ \sin\theta = \frac{a}{c} \qquad \cos\theta = \frac{b}{c} \qquad \tan\theta = \frac{a}{b} \]</div>
+          <figcaption>
+            <span class="formula__name">Right-triangle trig</span>
+            <span class="formula__say">in a right triangle, the sine of an angle equals the opposite side over the hypotenuse; the cosine equals the adjacent side over the hypotenuse; the tangent equals the opposite side over the adjacent side.</span>
+          </figcaption>
+        </figure>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           2. KINEMATICS
+           ================================================================ -->
+      <section class="topic" id="kinematics" aria-labelledby="kinematics-h">
+        <h2 id="kinematics-h">2. Kinematics (motion)</h2>
+
+        <h3>Definitions</h3>
+        <ul>
+          <li><strong>Displacement</strong> (<span class="m"><span class="m-vis" aria-hidden="true">\(d\)</span><span class="sr-only">d</span></span>)
+            tells how far an object ends up from its starting position, regardless of the total
+            distance it travelled. Displacement is a vector; distance is a scalar.</li>
+          <li><strong>Average velocity</strong> (<span class="m"><span class="m-vis" aria-hidden="true">\(\bar v\)</span><span class="sr-only">v-bar</span></span>)
+            is displacement divided by the time interval over which it happened.</li>
+          <li><strong>Instantaneous velocity</strong> (<span class="m"><span class="m-vis" aria-hidden="true">\(v\)</span><span class="sr-only">v</span></span>)
+            is how fast an object is moving at one specific moment.</li>
+          <li><strong>Average speed</strong> is total distance divided by total time.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ \bar v = \frac{d}{t} \]</div>
+          <figcaption>
+            <span class="formula__name">Average velocity</span>
+            <span class="formula__say">average velocity equals displacement divided by time.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Position&ndash;time graphs</h3>
+        <ul>
+          <li><strong>How far</strong> the object is from the detector: read the value on the
+            <em>vertical axis</em>.</li>
+          <li><strong>How fast</strong> the object is moving: look at the <em>slope</em>
+            (steepness) of the line. For a curved graph, take the slope of a tangent line to get
+            instantaneous speed.</li>
+          <li><strong>Which way</strong> the object moves: look at the direction of the slope.
+            A line sloping up like a forward slash means moving <em>away</em> from the detector;
+            a line sloping down like a backslash means moving <em>toward</em> the detector.</li>
+          <li><strong>Curvature shows acceleration.</strong> Concave up (a U shape) means
+            positive acceleration; concave down (a frown shape) means negative acceleration.</li>
+        </ul>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="ptArrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L6,3 L0,6 Z" fill="#111827"/>
+                </marker>
+              </defs>
+              <!-- Panel A: speeding up, + -->
+              <g transform="translate(0,0)">
+                <text class="t-title" x="140" y="28" text-anchor="middle" font-size="17" fill="#111827">Speeding up &#183; +</text>
+                <line x1="50" y1="165" x2="50" y2="48" stroke="#111827" stroke-width="2.5" marker-end="url(#ptArrow)"/>
+                <line x1="50" y1="165" x2="252" y2="165" stroke="#111827" stroke-width="2.5" marker-end="url(#ptArrow)"/>
+                <text class="t-mono" x="38" y="52" font-size="13" fill="#111827">d</text>
+                <text class="t-mono" x="256" y="170" font-size="13" fill="#111827">t</text>
+                <path d="M62,160 Q200,160 238,62" fill="none" stroke="#DD614C" stroke-width="4.5"/>
+              </g>
+              <!-- Panel B: slowing down, + -->
+              <g transform="translate(280,0)">
+                <text class="t-title" x="140" y="28" text-anchor="middle" font-size="17" fill="#111827">Slowing down &#183; +</text>
+                <line x1="50" y1="165" x2="50" y2="48" stroke="#111827" stroke-width="2.5" marker-end="url(#ptArrow)"/>
+                <line x1="50" y1="165" x2="252" y2="165" stroke="#111827" stroke-width="2.5" marker-end="url(#ptArrow)"/>
+                <text class="t-mono" x="38" y="52" font-size="13" fill="#111827">d</text>
+                <text class="t-mono" x="256" y="170" font-size="13" fill="#111827">t</text>
+                <path d="M62,160 Q92,62 238,62" fill="none" stroke="#DD614C" stroke-width="4.5"/>
+              </g>
+              <!-- Panel C: speeding up, - -->
+              <g transform="translate(0,200)">
+                <text class="t-title" x="140" y="28" text-anchor="middle" font-size="17" fill="#111827">Speeding up &#183; &#8722;</text>
+                <line x1="50" y1="165" x2="50" y2="48" stroke="#111827" stroke-width="2.5" marker-end="url(#ptArrow)"/>
+                <line x1="50" y1="165" x2="252" y2="165" stroke="#111827" stroke-width="2.5" marker-end="url(#ptArrow)"/>
+                <text class="t-mono" x="38" y="52" font-size="13" fill="#111827">d</text>
+                <text class="t-mono" x="256" y="170" font-size="13" fill="#111827">t</text>
+                <path d="M62,62 Q200,62 238,160" fill="none" stroke="#DD614C" stroke-width="4.5"/>
+              </g>
+              <!-- Panel D: slowing down, - -->
+              <g transform="translate(280,200)">
+                <text class="t-title" x="140" y="28" text-anchor="middle" font-size="17" fill="#111827">Slowing down &#183; &#8722;</text>
+                <line x1="50" y1="165" x2="50" y2="48" stroke="#111827" stroke-width="2.5" marker-end="url(#ptArrow)"/>
+                <line x1="50" y1="165" x2="252" y2="165" stroke="#111827" stroke-width="2.5" marker-end="url(#ptArrow)"/>
+                <text class="t-mono" x="38" y="52" font-size="13" fill="#111827">d</text>
+                <text class="t-mono" x="256" y="170" font-size="13" fill="#111827">t</text>
+                <path d="M62,62 Q92,160 238,160" fill="none" stroke="#DD614C" stroke-width="4.5"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; the four basic position-time shapes</span>
+            <p>Four position-time curves for uniform acceleration (position <em>d</em> on the
+              vertical axis, time <em>t</em> on the horizontal axis). Described in words:</p>
+            <ul>
+              <li><strong>Speeding up in the positive direction:</strong> a curve that starts nearly
+                flat and bends upward more and more steeply (concave up, positive slope getting steeper).</li>
+              <li><strong>Slowing down in the positive direction:</strong> a curve that rises steeply
+                then flattens out (concave down, positive slope getting gentler).</li>
+              <li><strong>Speeding up in the negative direction:</strong> a curve that starts nearly
+                flat and bends downward more and more steeply (concave down, negative slope getting steeper).</li>
+              <li><strong>Slowing down in the negative direction:</strong> a curve that falls steeply
+                then flattens out (concave up, negative slope getting gentler).</li>
+            </ul>
+            <p>These four shapes can be combined to describe more complicated motion.</p>
+          </figcaption>
+        </figure>
+
+        <h3>Velocity&ndash;time graphs</h3>
+        <ul>
+          <li><strong>How fast (speed):</strong> read the value on the <em>vertical axis</em>.</li>
+          <li><strong>Which way:</strong> above the horizontal axis means moving away from the
+            detector; below the axis means moving toward the detector.</li>
+          <li><strong>How far (displacement):</strong> find the <em>area</em> between the line and
+            the horizontal axis.</li>
+          <li><strong>Acceleration</strong> is the <em>slope</em> of a velocity-time graph.</li>
+          <li>You cannot find the object&rsquo;s location from a velocity-time graph.</li>
+        </ul>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="vtArrow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L6,3 L0,6 Z" fill="#111827"/>
+                </marker>
+              </defs>
+              <text class="t-title" x="280" y="30" text-anchor="middle" font-size="19" fill="#111827">Velocity&#8211;time graph</text>
+              <!-- shaded area = displacement -->
+              <polygon points="70,260 70,212 470,92 470,260" fill="#DAA144" fill-opacity="0.5" stroke="none"/>
+              <!-- axes -->
+              <line x1="70" y1="260" x2="70" y2="58" stroke="#111827" stroke-width="2.5" marker-end="url(#vtArrow)"/>
+              <line x1="70" y1="260" x2="525" y2="260" stroke="#111827" stroke-width="2.5" marker-end="url(#vtArrow)"/>
+              <text class="t-mono" x="60" y="278" font-size="13" fill="#111827">0</text>
+              <text class="t-mono" x="33" y="160" font-size="14" fill="#111827" transform="rotate(-90 33 160)" text-anchor="middle">velocity (v)</text>
+              <text class="t-mono" x="490" y="278" font-size="14" fill="#111827">time (t)</text>
+              <!-- the line: constant positive acceleration -->
+              <line x1="70" y1="212" x2="470" y2="92" stroke="#111827" stroke-width="4.5"/>
+              <!-- area label -->
+              <text x="250" y="240" text-anchor="middle" font-size="16" fill="#111827">area = displacement</text>
+              <!-- slope label with leader -->
+              <line x1="330" y1="108" x2="312" y2="138" stroke="#DD614C" stroke-width="2"/>
+              <text class="t-title" x="335" y="104" font-size="16" fill="#BD4B30">slope = acceleration</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; reading a velocity-time graph</span>
+            <p>Velocity <em>v</em> is on the vertical axis and time <em>t</em> on the horizontal
+              axis. The straight line rising from left to right shows constant acceleration, and the
+              line&rsquo;s <strong>slope is the acceleration</strong>. The shaded region between the
+              line and the time axis is the <strong>displacement</strong>. A line <em>above</em> the
+              axis means moving away from the detector; <em>below</em> the axis means moving toward it.</p>
+          </figcaption>
+        </figure>
+
+        <h3>Acceleration</h3>
+        <ul>
+          <li>Acceleration tells how much an object&rsquo;s velocity changes each second.</li>
+          <li>When an object <strong>speeds up</strong>, its acceleration points in the direction
+            of motion. When it <strong>slows down</strong>, its acceleration points opposite the
+            motion.</li>
+          <li>In free fall near Earth&rsquo;s surface, acceleration is
+            <span class="m"><span class="m-vis" aria-hidden="true">\(g\)</span><span class="sr-only">g</span></span>,
+            about 9.81 m/s<sup>2</sup> (often rounded to 9.8, and to 10 for quick estimates).</li>
+          <li>Units of acceleration are meters per second squared (m/s<sup>2</sup>, also written m/s/s).</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ a = \frac{\Delta v}{t} \]</div>
+          <figcaption>
+            <span class="formula__name">Acceleration</span>
+            <span class="formula__say">acceleration equals the change in velocity divided by time.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Special equations for displacement</h3>
+        <ul>
+          <li>At <strong>constant speed</strong>, displacement is speed times time. This includes
+            the horizontal part of projectile motion.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ d = vt \]</div>
+          <figcaption>
+            <span class="formula__name">Constant speed</span>
+            <span class="formula__say">displacement equals velocity times time.</span>
+          </figcaption>
+        </figure>
+        <ul>
+          <li>When an object <strong>starts from rest and speeds up</strong>, or slows to a stop,
+            use one-half a t squared, or the fuller form below.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ d = \tfrac{1}{2}at^2 \qquad d = v_i t + \tfrac{1}{2}at^2 \]</div>
+          <figcaption>
+            <span class="formula__name">Accelerated displacement</span>
+            <span class="formula__say">displacement equals one-half acceleration times time squared; or displacement equals initial velocity times time plus one-half acceleration times time squared.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Algebraic kinematics &mdash; the method</h3>
+        <ol>
+          <li>Define a positive direction (usually &ldquo;away from the detector&rdquo;) and label it.</li>
+          <li>State in words which part of the motion you are analyzing, for example
+            &ldquo;from launch to the peak of the flight.&rdquo;</li>
+          <li>Fill out a chart of the five kinematics variables &mdash; with signs and units:
+            displacement <span class="m"><span class="m-vis" aria-hidden="true">\(d\)</span><span class="sr-only">d</span></span>,
+            initial velocity <span class="m"><span class="m-vis" aria-hidden="true">\(v_i\)</span><span class="sr-only">v-initial</span></span>,
+            acceleration <span class="m"><span class="m-vis" aria-hidden="true">\(a\)</span><span class="sr-only">a</span></span>,
+            final velocity <span class="m"><span class="m-vis" aria-hidden="true">\(v_f\)</span><span class="sr-only">v-final</span></span>,
+            and time <span class="m"><span class="m-vis" aria-hidden="true">\(t\)</span><span class="sr-only">t</span></span>.</li>
+          <li>If you know three of the five variables, the problem is solvable. Pick the equation
+            that uses what you have.</li>
+        </ol>
+
+        <h4>The three kinematics equations</h4>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ v_f = v_i + at \]</div>
+          <figcaption>
+            <span class="formula__name">No displacement</span>
+            <span class="formula__say">final velocity equals initial velocity plus acceleration times time.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ d = v_i t + \tfrac{1}{2}at^2 \]</div>
+          <figcaption>
+            <span class="formula__name">No final velocity</span>
+            <span class="formula__say">displacement equals initial velocity times time plus one-half acceleration times time squared.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ v_f^{\,2} = v_i^{\,2} + 2ad \]</div>
+          <figcaption>
+            <span class="formula__name">No time</span>
+            <span class="formula__say">final velocity squared equals initial velocity squared plus two times acceleration times displacement.</span>
+          </figcaption>
+        </figure>
+        <p>A fourth equation is sometimes handy &mdash; it is the area of a velocity-time graph
+          written as the area of a trapezoid:</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ d = \tfrac{1}{2}t\,(v_i + v_f) \]</div>
+          <figcaption>
+            <span class="formula__name">No acceleration</span>
+            <span class="formula__say">displacement equals one-half time times the quantity initial velocity plus final velocity.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Projectile motion</h3>
+        <ul>
+          <li>For an object in free fall, the <strong>vertical</strong> acceleration is always
+            <span class="m"><span class="m-vis" aria-hidden="true">\(g\)</span><span class="sr-only">g</span></span>
+            (about 9.81 m/s<sup>2</sup> downward near Earth).</li>
+          <li>The <strong>horizontal</strong> acceleration is always zero, so the only horizontal
+            equation you use is displacement equals velocity times time
+            (<span class="m"><span class="m-vis" aria-hidden="true">\(d=vt\)</span><span class="sr-only">d equals v t</span></span>).</li>
+          <li>If an object is dropped, its initial velocity is zero.</li>
+          <li>If launched upward, the speed it returns with at its original height equals the
+            launch speed, but in the opposite direction.</li>
+          <li>An object thrown upward slows as it rises; its vertical velocity is zero at the very
+            top, so you may treat final velocity as zero at the peak.</li>
+          <li>Velocities in perpendicular directions add with the Pythagorean theorem, just like
+            perpendicular forces. The magnitude of an object&rsquo;s velocity is its speed.</li>
+          <li><strong>Method:</strong> make two kinematics charts &mdash; one vertical, one
+            horizontal. Time is the quantity they share.</li>
+        </ul>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           3. DYNAMICS / FORCES
+           ================================================================ -->
+      <section class="topic" id="dynamics" aria-labelledby="dynamics-h">
+        <h2 id="dynamics-h">3. Forces &amp; Newton&rsquo;s laws (dynamics)</h2>
+
+        <h3>Equilibrium</h3>
+        <ul>
+          <li>An object is in <strong>equilibrium</strong> if it moves in a straight line at
+            constant speed &mdash; this includes staying at rest.</li>
+          <li>When an object is in equilibrium, the forces on it are <strong>balanced</strong>
+            (the net force is zero).</li>
+        </ul>
+
+        <h3>Newton&rsquo;s first law (inertia)</h3>
+        <p>An object stays at rest, or keeps moving at constant velocity, unless an unbalanced
+          force acts on it. An object&rsquo;s <strong>inertia</strong> &mdash; its resistance to a
+          change in motion &mdash; is directly proportional to its mass.</p>
+
+        <h3>Newton&rsquo;s second law</h3>
+        <ul>
+          <li>Except for gravity, objects must be in contact to exert a force on each other.</li>
+          <li>The <strong>net force</strong> and the <strong>acceleration</strong> point in the
+            same direction &mdash; the direction in which the forces are unbalanced.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ \sum F = ma \qquad\Longleftrightarrow\qquad a = \frac{F_{\text{net}}}{m} \]</div>
+          <figcaption>
+            <span class="formula__name">Newton&rsquo;s 2nd law</span>
+            <span class="formula__say">the sum of the forces (the net force) equals mass times acceleration; equivalently, acceleration equals net force divided by mass.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Solving force problems &mdash; the two-step process</h3>
+        <ol>
+          <li>Draw a <strong>free-body diagram</strong>. Break any angled forces into components
+            first if needed.</li>
+          <li>Write one Newton&rsquo;s-second-law equation for each direction. Start each equation
+            in the direction of acceleration so you never get a &ldquo;negative force&rdquo;:
+            <span class="sr-only">up forces minus down forces equals mass times the vertical acceleration; left forces minus right forces equals mass times the horizontal acceleration. If the acceleration is downward, write down forces minus up forces instead.</span></li>
+        </ol>
+        <figure class="formula" aria-hidden="true">
+          <div class="formula__math">\[ (\text{up forces}) - (\text{down forces}) = m a_y \]\[ (\text{left forces}) - (\text{right forces}) = m a_x \]</div>
+          <figcaption><span class="formula__name">Per-direction Newton&rsquo;s 2nd law</span></figcaption>
+        </figure>
+
+        <h4>A free-body diagram includes</h4>
+        <ol>
+          <li>A labelled arrow for each force, starting on the object and pointing the way the
+            force acts.</li>
+          <li>A list of the forces, naming the object applying each force and the object
+            experiencing it.</li>
+        </ol>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 420 330" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="fbdK" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#111827"/></marker>
+                <marker id="fbdR" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#DD614C"/></marker>
+                <marker id="fbdB" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2E6FE0"/></marker>
+              </defs>
+              <!-- surface -->
+              <line x1="120" y1="206" x2="300" y2="206" stroke="#9F9D96" stroke-width="2"/>
+              <g stroke="#9F9D96" stroke-width="1.5">
+                <line x1="128" y1="206" x2="120" y2="216"/>
+                <line x1="152" y1="206" x2="144" y2="216"/>
+                <line x1="176" y1="206" x2="168" y2="216"/>
+                <line x1="200" y1="206" x2="192" y2="216"/>
+                <line x1="224" y1="206" x2="216" y2="216"/>
+                <line x1="248" y1="206" x2="240" y2="216"/>
+                <line x1="272" y1="206" x2="264" y2="216"/>
+              </g>
+              <!-- the object -->
+              <rect x="160" y="141" width="100" height="64" fill="#E6E3DB" stroke="#111827" stroke-width="2.5"/>
+              <!-- force vectors from the centre -->
+              <line x1="210" y1="173" x2="210" y2="52"  stroke="#111827" stroke-width="4" marker-end="url(#fbdK)"/>
+              <line x1="210" y1="173" x2="210" y2="300" stroke="#111827" stroke-width="4" marker-end="url(#fbdK)"/>
+              <line x1="210" y1="173" x2="360" y2="173" stroke="#DD614C" stroke-width="4" marker-end="url(#fbdR)"/>
+              <line x1="210" y1="173" x2="60"  y2="173" stroke="#2E6FE0" stroke-width="4" marker-end="url(#fbdB)"/>
+              <circle cx="210" cy="173" r="4" fill="#111827"/>
+              <!-- labels -->
+              <text x="216" y="58"  font-size="14" fill="#111827">F<tspan font-size="10" dy="3">N</tspan><tspan dy="-3"> normal</tspan></text>
+              <text x="216" y="298" font-size="14" fill="#111827">F<tspan font-size="10" dy="3">g</tspan><tspan dy="-3"> weight</tspan></text>
+              <text x="300" y="162" text-anchor="middle" font-size="14" fill="#BD4B30">F<tspan font-size="10" dy="3">app</tspan><tspan dy="-3"> applied</tspan></text>
+              <text x="120" y="162" text-anchor="middle" font-size="14" fill="#2E6FE0">F<tspan font-size="10" dy="3">f</tspan><tspan dy="-3"> friction</tspan></text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; example free-body diagram</span>
+            <p>A box resting on a surface and being pushed to the right. Four labelled force arrows
+              start on the object and point the way each force acts: <strong>F<sub>N</sub></strong>
+              the normal force points straight up; <strong>F<sub>g</sub></strong> the weight points
+              straight down; <strong>F<sub>app</sub></strong> the applied push points right; and
+              <strong>F<sub>f</sub></strong> the force of friction points left, opposing the motion.
+              If the box moves at constant velocity the up and down arrows balance and the left and
+              right arrows balance; if any pair is unbalanced, the box accelerates in that direction.</p>
+          </figcaption>
+        </figure>
+
+        <h3>Mass and weight</h3>
+        <ul>
+          <li><strong>Mass</strong> is how much material is in an object, measured in kilograms (kg).
+            Mass does not change with location.</li>
+          <li><strong>Weight</strong> is the gravitational force a planet exerts on an object,
+            measured in newtons (N).</li>
+          <li>On Earth&rsquo;s surface the gravitational field is about 9.81 N/kg (often rounded to
+            10 N/kg), so 1 kg of mass weighs about 9.81 N.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ F_g = mg \qquad\Longleftrightarrow\qquad g = \frac{F_g}{m} \]</div>
+          <figcaption>
+            <span class="formula__name">Weight</span>
+            <span class="formula__say">weight equals mass times the gravitational field strength; equivalently, the gravitational field strength equals weight divided by mass.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Normal force</h3>
+        <ul>
+          <li>A <strong>normal force</strong> is the force of a surface pushing on an object that
+            touches it. It always acts <em>perpendicular</em> to the surface.</li>
+          <li>A platform (bathroom) scale reads the normal force.</li>
+        </ul>
+
+        <h3>Components of a diagonal force</h3>
+        <p>When a force&rsquo;s angle is measured from the horizontal:</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ F_x = F\cos\theta \qquad F_y = F\sin\theta \]</div>
+          <figcaption>
+            <span class="formula__name">Force components</span>
+            <span class="formula__say">the horizontal component of the force equals the force times the cosine of the angle; the vertical component equals the force times the sine of the angle.</span>
+          </figcaption>
+        </figure>
+        <p>To find the magnitude (the &ldquo;amount&rdquo;) of a resultant force from
+          perpendicular components, use the Pythagorean theorem.</p>
+
+        <h3>Inclined planes (ramps)</h3>
+        <p>On a ramp, break the object&rsquo;s <em>weight</em> into components parallel and
+          perpendicular to the incline &mdash; do <em>not</em> use horizontal/vertical axes.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ F_{\parallel} = mg\sin\theta \qquad F_{\perp} = mg\cos\theta \]</div>
+          <figcaption>
+            <span class="formula__name">Weight on a ramp</span>
+            <span class="formula__say">the component of weight parallel to the incline equals mass times g times the sine of the ramp angle; the component perpendicular to the incline equals mass times g times the cosine of the ramp angle.</span>
+          </figcaption>
+        </figure>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 490 360" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="incA" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#111827"/></marker>
+                <marker id="incB" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2E6FE0"/></marker>
+                <marker id="incR" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#DD614C"/></marker>
+                <marker id="incG" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker>
+              </defs>
+              <!-- ground -->
+              <line x1="40" y1="300" x2="470" y2="300" stroke="#111827" stroke-width="2"/>
+              <g stroke="#9F9D96" stroke-width="1.5">
+                <line x1="84" y1="300" x2="74" y2="312"/><line x1="120" y1="300" x2="110" y2="312"/>
+                <line x1="156" y1="300" x2="146" y2="312"/><line x1="192" y1="300" x2="182" y2="312"/>
+                <line x1="228" y1="300" x2="218" y2="312"/><line x1="264" y1="300" x2="254" y2="312"/>
+                <line x1="300" y1="300" x2="290" y2="312"/><line x1="336" y1="300" x2="326" y2="312"/>
+                <line x1="372" y1="300" x2="362" y2="312"/><line x1="408" y1="300" x2="398" y2="312"/>
+                <line x1="444" y1="300" x2="434" y2="312"/>
+              </g>
+              <!-- the incline (right triangle) -->
+              <polygon points="70,300 450,300 450,120" fill="#E6E3DB" stroke="#111827" stroke-width="2.5"/>
+              <!-- right-angle at the base corner -->
+              <polyline points="435,300 435,285 450,285" fill="none" stroke="#111827" stroke-width="1.5"/>
+              <!-- ramp angle theta -->
+              <path d="M120,300 A50,50 0 0 0 115.2,278.6" fill="none" stroke="#111827" stroke-width="2"/>
+              <text x="128" y="291" font-size="15" fill="#111827">&#952;</text>
+              <!-- the block -->
+              <polygon points="231.1,223.7 288.9,196.3 270.1,156.5 212.3,183.9" fill="#CFCCC4" stroke="#111827" stroke-width="2.5"/>
+              <!-- dotted rectangle completing the gravity components -->
+              <g stroke="#9F9D96" stroke-width="1.5" stroke-dasharray="2 4" fill="none">
+                <line x1="208.1" y1="210.2" x2="250.6" y2="300.1"/>
+                <line x1="293.2" y1="280.0" x2="250.6" y2="300.1"/>
+              </g>
+              <!-- gravity components (DOTTED) -->
+              <line x1="250.6" y1="190.1" x2="208.1" y2="210.2" stroke="#4A4842" stroke-width="3" stroke-dasharray="2 4" marker-end="url(#incG)"/>
+              <line x1="250.6" y1="190.1" x2="293.2" y2="280.0" stroke="#4A4842" stroke-width="3" stroke-dasharray="2 4" marker-end="url(#incG)"/>
+              <!-- real forces (solid) -->
+              <line x1="250.6" y1="190.1" x2="250.6" y2="300.1" stroke="#111827" stroke-width="4" marker-end="url(#incA)"/>
+              <line x1="250.6" y1="190.1" x2="208.0" y2="100.2" stroke="#2E6FE0" stroke-width="4" marker-end="url(#incB)"/>
+              <line x1="250.6" y1="190.1" x2="292.2" y2="170.4" stroke="#DD614C" stroke-width="4" marker-end="url(#incR)"/>
+              <circle cx="250.6" cy="190.1" r="3.5" fill="#111827"/>
+              <!-- labels -->
+              <text x="258" y="258" font-size="14" fill="#111827">F<tspan font-size="10" dy="3">g</tspan><tspan dy="-3"> = mg</tspan></text>
+              <text x="196" y="92"  text-anchor="end" font-size="14" fill="#2E6FE0">F<tspan font-size="10" dy="3">N</tspan><tspan dy="-3"> (normal)</tspan></text>
+              <text x="300" y="160" font-size="14" fill="#BD4B30">F<tspan font-size="10" dy="3">f</tspan><tspan dy="-3"> (friction)</tspan></text>
+              <text x="138" y="230" text-anchor="end" font-size="13" fill="#4A4842">mg sin&#952;</text>
+              <text x="302" y="286" font-size="13" fill="#4A4842">mg cos&#952;</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; forces on an inclined plane</span>
+            <p>A block rests on a ramp tilted at angle <em>&theta;</em> from the ground. Three real
+              forces act on it (solid arrows): the <strong>weight F<sub>g</sub> = mg</strong> points
+              straight down; the <strong>normal force F<sub>N</sub></strong> points away from and
+              perpendicular to the ramp surface; and <strong>friction F<sub>f</sub></strong> points
+              up along the surface, opposing the slide. The weight is then split into two
+              <strong>dotted components</strong> along the ramp&rsquo;s own axes: the parallel
+              component <strong>mg&nbsp;sin&nbsp;&theta;</strong> points down the slope (this is what
+              pulls the block down the ramp and is balanced by friction), and the perpendicular
+              component <strong>mg&nbsp;cos&nbsp;&theta;</strong> presses into the surface (balanced
+              by the normal force). The dotted rectangle shows that these two components add back to
+              the full weight.</p>
+          </figcaption>
+        </figure>
+
+        <h3>Friction</h3>
+        <ul>
+          <li>Friction is the force of a surface on an object, acting <em>along</em> the surface,
+            in the direction opposite the object&rsquo;s motion relative to that surface.</li>
+          <li>The <strong>coefficient of friction</strong> is <em>not</em> a force &mdash; it is a
+            number describing how &ldquo;sticky&rdquo; two surfaces are.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ F_f = \mu F_N \]</div>
+          <figcaption>
+            <span class="formula__name">Friction</span>
+            <span class="formula__say">the force of friction equals the coefficient of friction times the normal force.</span>
+          </figcaption>
+        </figure>
+        <ul>
+          <li>Use the <strong>kinetic</strong> coefficient when the object is moving and the
+            <strong>static</strong> coefficient when it is not. Both obey the same equation.</li>
+          <li>Static friction can take any value up to a maximum. For two given surfaces, the
+            maximum static coefficient is greater than the kinetic coefficient.</li>
+          <li>Values for common surfaces are in the
+            <a href="#data-friction">coefficients-of-friction table</a>.</li>
+        </ul>
+
+        <h3>Newton&rsquo;s third law</h3>
+        <ul>
+          <li>The force of object A on object B is equal in size and opposite in direction to the
+            force of object B on object A.</li>
+          <li>A <strong>third-law force pair</strong> is this pair of forces. The two forces in a
+            pair <em>never</em> act on the same object.</li>
+        </ul>
+
+        <h3>Two-body problems</h3>
+        <ul>
+          <li>Draw one free-body diagram per object.</li>
+          <li>Write net force equals mass times acceleration for each object separately.</li>
+          <li>The two objects share the same acceleration.</li>
+          <li>One rope means one tension.</li>
+        </ul>
+
+        <h3>Hooke&rsquo;s law (springs)</h3>
+        <p>The stretch or compression of a spring depends on the spring&rsquo;s stiffness (its
+          spring constant) and the force applied.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ F_s = kx \]</div>
+          <figcaption>
+            <span class="formula__name">Spring force</span>
+            <span class="formula__say">the force on a spring equals the spring constant times the distance the spring is stretched or compressed from its equilibrium position.</span>
+          </figcaption>
+        </figure>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           4. CIRCULAR MOTION & GRAVITATION
+           ================================================================ -->
+      <section class="topic" id="circular" aria-labelledby="circular-h">
+        <h2 id="circular-h">4. Circular motion &amp; gravitation</h2>
+
+        <h3>Uniform circular motion</h3>
+        <ul>
+          <li>An object moving at constant speed in a circle is still accelerating, because its
+            <em>direction</em> keeps changing.</li>
+          <li>This <strong>centripetal acceleration</strong> points toward the center of the circle.</li>
+          <li><strong>Centripetal force</strong> is the net force that produces circular motion.
+            It is the sum of all the <em>radial</em> forces (forces along the radius) and points
+            toward the center, perpendicular to the velocity.</li>
+        </ul>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 360 350" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="cmB" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2E6FE0"/></marker>
+                <marker id="cmR" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#DD614C"/></marker>
+              </defs>
+              <text class="t-mono" x="175" y="30" text-anchor="middle" font-size="12" fill="#4A4842">(moving clockwise)</text>
+              <!-- circular path -->
+              <circle cx="175" cy="190" r="110" fill="none" stroke="#111827" stroke-width="2.5" stroke-dasharray="6 5"/>
+              <!-- radius (faint) -->
+              <line x1="175" y1="80" x2="175" y2="190" stroke="#9F9D96" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <text class="t-mono" x="158" y="142" font-size="13" fill="#4A4842">r</text>
+              <!-- centre -->
+              <line x1="168" y1="190" x2="182" y2="190" stroke="#111827" stroke-width="1.5"/>
+              <line x1="175" y1="183" x2="175" y2="197" stroke="#111827" stroke-width="1.5"/>
+              <text class="t-mono" x="175" y="214" text-anchor="middle" font-size="12" fill="#4A4842">centre</text>
+              <!-- velocity (tangent) -->
+              <line x1="175" y1="80" x2="298" y2="80" stroke="#2E6FE0" stroke-width="4" marker-end="url(#cmB)"/>
+              <!-- centripetal force / acceleration (toward centre) -->
+              <line x1="175" y1="80" x2="175" y2="172" stroke="#DD614C" stroke-width="4" marker-end="url(#cmR)"/>
+              <!-- right-angle marker between v and Fc -->
+              <polyline points="190,80 190,95 175,95" fill="none" stroke="#111827" stroke-width="1.5"/>
+              <!-- object -->
+              <circle cx="175" cy="80" r="8" fill="#DD614C" stroke="#111827" stroke-width="1.5"/>
+              <!-- labels -->
+              <text x="236" y="64" text-anchor="middle" font-size="13" fill="#2E6FE0" class="t-title">velocity v (tangent)</text>
+              <text x="184" y="128" font-size="15" fill="#BD4B30" class="t-title">F<tspan font-size="11" dy="3">c</tspan><tspan dy="-3"> , a</tspan><tspan font-size="11" dy="3">c</tspan></text>
+              <text x="184" y="146" font-size="12" fill="#BD4B30">toward centre</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; vectors in uniform circular motion</span>
+            <p>An object travels clockwise around a circle. The <strong>velocity</strong> (blue
+              arrow) always points along the <em>tangent</em> to the circle &mdash; here, at the top
+              of the loop, it points to the right. The <strong>centripetal acceleration</strong> and
+              the <strong>centripetal force</strong> (rust arrow) both point <em>toward the
+              centre</em>, along the radius, at a right angle to the velocity. The speed stays
+              constant; it is the constantly changing direction that requires this inward force.</p>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ a_c = \frac{v^2}{r} \]</div>
+          <figcaption>
+            <span class="formula__name">Centripetal acceleration</span>
+            <span class="formula__say">centripetal acceleration equals speed squared divided by the radius of the circle.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ F_c = m a_c \]</div>
+          <figcaption>
+            <span class="formula__name">Centripetal force</span>
+            <span class="formula__say">centripetal force equals mass times centripetal acceleration.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Universal gravitation</h3>
+        <ul>
+          <li>Every object with mass attracts every other object with mass. Gravitational forces
+            are always <em>attractive</em>.</li>
+          <li>The force follows an <strong>inverse-square law</strong>: double the distance and the
+            force drops to one-quarter.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ F_g = \frac{G m_1 m_2}{r^2} \]</div>
+          <figcaption>
+            <span class="formula__name">Newton&rsquo;s law of gravitation</span>
+            <span class="formula__say">the gravitational force equals the universal gravitational constant times the product of the two masses, divided by the distance between their centers squared.</span>
+          </figcaption>
+        </figure>
+        <dl class="vars">
+          <dt>F<sub>g</sub></dt><dd>gravitational force, in newtons</dd>
+          <dt>G</dt><dd>universal gravitational constant, 6.67 &times; 10<sup>&minus;11</sup> N&middot;m<sup>2</sup>/kg<sup>2</sup></dd>
+          <dt>m<sub>1</sub>, m<sub>2</sub></dt><dd>the two masses, in kilograms</dd>
+          <dt>r</dt><dd>distance between the centers of the two objects, in meters</dd>
+        </dl>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           5. WORK, ENERGY & POWER
+           ================================================================ -->
+      <section class="topic" id="energy" aria-labelledby="energy-h">
+        <h2 id="energy-h">5. Work, energy &amp; power</h2>
+        <p>All forms of energy are measured in <strong>joules</strong> (J).</p>
+
+        <h3>Forms of energy</h3>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ KE = \tfrac{1}{2}mv^2 \]</div>
+          <figcaption>
+            <span class="formula__name">Kinetic energy</span>
+            <span class="formula__say">kinetic energy equals one-half mass times speed squared.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ \Delta PE = mg\,\Delta h \]</div>
+          <figcaption>
+            <span class="formula__name">Gravitational potential energy</span>
+            <span class="formula__say">the change in gravitational potential energy equals mass times g times the change in height. Take height equal to zero at the lowest point of the motion.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ PE_s = \tfrac{1}{2}kx^2 \]</div>
+          <figcaption>
+            <span class="formula__name">Spring potential energy</span>
+            <span class="formula__say">the potential energy stored in a spring equals one-half the spring constant times the stretch or compression squared.</span>
+          </figcaption>
+        </figure>
+        <ul>
+          <li><strong>Mechanical energy</strong> is the sum of a system&rsquo;s kinetic and
+            potential energy.</li>
+          <li><strong>Internal energy</strong> (Q) is heat energy that raises the temperature of
+            the system; work done against friction increases it.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ E_T = PE + KE + Q \]</div>
+          <figcaption>
+            <span class="formula__name">Total energy</span>
+            <span class="formula__say">total energy equals potential energy plus kinetic energy plus internal energy.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Work</h3>
+        <ul>
+          <li><strong>Positive work</strong> is done by a force parallel to the displacement.</li>
+          <li><strong>Negative work</strong> is done by a force opposite (antiparallel) to the
+            displacement.</li>
+          <li><strong>No work</strong> is done by a force perpendicular to the displacement.</li>
+          <li>Work is a <em>scalar</em> &mdash; it can be positive or negative but has no direction.</li>
+          <li>The <strong>area under a force-versus-displacement graph</strong> is the work done.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ W = Fd = \Delta E_T \]</div>
+          <figcaption>
+            <span class="formula__name">Work</span>
+            <span class="formula__say">work equals force times displacement, and also equals the change in the total energy of the system.</span>
+          </figcaption>
+        </figure>
+
+        <h3>The work&ndash;energy theorem &mdash; the method</h3>
+        <ol>
+          <li>Define the object or system you are describing.</li>
+          <li>Define the two positions (start and end) you are comparing.</li>
+          <li>Draw an annotated energy bar chart.</li>
+          <li>Write one equation with one term per bar:
+            <span class="sr-only">initial energy plus or minus work equals final energy.</span></li>
+        </ol>
+        <figure class="formula" aria-hidden="true">
+          <div class="formula__math">\[ E_{\text{initial}} \pm W = E_{\text{final}} \]</div>
+          <figcaption><span class="formula__name">Energy bookkeeping</span></figcaption>
+        </figure>
+
+        <h3>Power</h3>
+        <ul>
+          <li><strong>Power</strong> is the work done (or energy used) each second.</li>
+          <li>Units are joules per second, called <strong>watts</strong> (W).</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ P = \frac{W}{t} = \frac{Fd}{t} = F\bar v \]</div>
+          <figcaption>
+            <span class="formula__name">Power</span>
+            <span class="formula__say">power equals work divided by time, which also equals force times displacement divided by time, which also equals force times average velocity.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Energy in collisions</h3>
+        <ul>
+          <li>In an <strong>elastic</strong> collision, the system&rsquo;s mechanical (kinetic)
+            energy is conserved.</li>
+          <li>Collisions where objects <strong>stick together</strong> cannot be elastic
+            (they are <em>inelastic</em>).</li>
+          <li>Collisions where objects bounce apart may or may not be elastic.</li>
+        </ul>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           6. MOMENTUM & IMPULSE
+           ================================================================ -->
+      <section class="topic" id="momentum" aria-labelledby="momentum-h">
+        <h2 id="momentum-h">6. Momentum &amp; impulse</h2>
+
+        <h3>Momentum</h3>
+        <ul>
+          <li>Momentum is mass times velocity. Its direction is the same as the direction of motion.</li>
+          <li>Units are newton-seconds (N&middot;s), equivalent to kilogram-meters per second.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ p = mv \]</div>
+          <figcaption>
+            <span class="formula__name">Momentum</span>
+            <span class="formula__say">momentum equals mass times velocity.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Impulse</h3>
+        <p>Impulse can be found two ways: as the change in an object&rsquo;s momentum, or as the
+          net force multiplied by the time it acts. Impulse is the <strong>area under a
+          force-versus-time graph</strong>, and has the same units as momentum (N&middot;s).</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ J = F_{\text{net}}\,t = \Delta p = m\,\Delta v \]</div>
+          <figcaption>
+            <span class="formula__name">Impulse&ndash;momentum</span>
+            <span class="formula__say">impulse equals net force times time, which equals the change in momentum, which equals mass times the change in velocity.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Conservation of momentum</h3>
+        <ul>
+          <li>When no external force acts on a system, its total momentum cannot change.</li>
+          <li>The total momentum of two objects before a collision equals their total momentum
+            after.</li>
+          <li>Momentum is a vector: momenta in the same direction add; momenta in opposite
+            directions subtract.</li>
+          <li>A system&rsquo;s center of mass obeys Newton&rsquo;s second law &mdash; its velocity
+            changes only when an external net force acts.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ p_{\text{before}} = p_{\text{after}} \]</div>
+          <figcaption>
+            <span class="formula__name">Conservation of momentum</span>
+            <span class="formula__say">total momentum before equals total momentum after.</span>
+          </figcaption>
+        </figure>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           7. WHAT IS CONSERVED?
+           ================================================================ -->
+      <section class="topic" id="conservation" aria-labelledby="conservation-h">
+        <h2 id="conservation-h">7. What is conserved?</h2>
+        <ul>
+          <li><strong>Mechanical energy</strong> is conserved when no net work is done by external
+            forces (and there is no internal-energy conversion, such as friction heating).</li>
+          <li><strong>Momentum</strong> in a direction is conserved when no net external force acts
+            in that direction.</li>
+          <li><strong>Mass&ndash;energy</strong> is conserved &mdash; mass can convert to energy and
+            back, related by E equals m c squared.</li>
+          <li><strong>Charge</strong> is conserved &mdash; it can be moved or neutralized but not
+            created or destroyed.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ E = mc^2 \]</div>
+          <figcaption>
+            <span class="formula__name">Mass&ndash;energy</span>
+            <span class="formula__say">energy equals mass times the speed of light squared.</span>
+          </figcaption>
+        </figure>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           8. WAVES & SOUND
+           ================================================================ -->
+      <section class="topic" id="waves" aria-labelledby="waves-h">
+        <h2 id="waves-h">8. Waves &amp; sound</h2>
+
+        <h3>Wave anatomy</h3>
+        <ul>
+          <li><strong>Crests</strong> are the high points; <strong>troughs</strong> are the low points.</li>
+          <li><strong>Amplitude</strong> (A) is the distance from the midpoint to a crest or trough.
+            It determines the energy the wave carries.</li>
+          <li><strong>Wavelength</strong> (&lambda;) is the distance between identical parts of the
+            wave (for example, crest to crest).</li>
+          <li><strong>Frequency</strong> (f) is the number of waves passing a point each second,
+            measured in <strong>hertz</strong> (Hz).</li>
+          <li><strong>Period</strong> (T) is the time for one wavelength to pass a point.</li>
+        </ul>
+        <figure class="vis">
+          <img class="vis__img" src="assets/longwave.png" alt="" aria-hidden="true">
+          <figcaption>
+            <span class="label">Diagram &mdash; a transverse wave</span>
+            <p>A transverse wave drawn as a smooth curve travelling to the right along a dotted
+              horizontal <strong>equilibrium position</strong> line. The high points are
+              <strong>crests</strong> and the low points are <strong>troughs</strong>. The
+              <strong>amplitude (A)</strong> is the vertical distance from the equilibrium line up
+              to a crest. One <strong>wavelength (&lambda;)</strong> is the horizontal distance from
+              one crest to the next, or one trough to the next. An arrow labelled
+              &ldquo;Direction of Wave Travel&rdquo; points to the right; the medium itself moves up
+              and down, at right angles to the direction the wave travels.</p>
+          </figcaption>
+        </figure>
+
+        <h4>Key facts</h4>
+        <ul>
+          <li>When a wave moves from one material to another, its <strong>frequency stays the
+            same</strong>.</li>
+          <li>The <strong>speed</strong> of a wave depends on the material it travels through.</li>
+          <li>It is the <em>disturbance</em> that travels, not the material itself.</li>
+        </ul>
+
+        <h3>Relating frequency, period, wavelength, and speed</h3>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ f = \frac{1}{T} \qquad T = \frac{1}{f} \]</div>
+          <figcaption>
+            <span class="formula__name">Frequency &amp; period</span>
+            <span class="formula__say">frequency equals one divided by the period; the period equals one divided by the frequency.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ v = f\lambda \qquad v = \frac{\lambda}{T} \]</div>
+          <figcaption>
+            <span class="formula__name">Wave speed</span>
+            <span class="formula__say">wave speed equals frequency times wavelength; it also equals wavelength divided by the period.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Transverse and longitudinal waves</h3>
+        <ul>
+          <li>In a <strong>transverse</strong> wave the material vibrates at right angles to the
+            direction the wave travels. Waves on a string and all electromagnetic waves
+            (including light) are transverse.</li>
+          <li>In a <strong>longitudinal</strong> wave the material vibrates parallel to the wave&rsquo;s
+            direction. <strong>Sound</strong> waves are longitudinal.</li>
+          <li>All electromagnetic waves travel at 3.0 &times; 10<sup>8</sup> m/s in air or vacuum.
+            Light can travel through a vacuum; sound cannot.</li>
+          <li>The higher the tension in a string, the faster a wave moves along it.</li>
+        </ul>
+        <figure class="vis">
+          <img class="vis__img" src="assets/transversewave.png" alt="" aria-hidden="true">
+          <figcaption>
+            <span class="label">Diagram &mdash; a longitudinal wave</span>
+            <p>A longitudinal wave shown on a horizontal spring (slinky) stretched between two
+              <strong>fixed ends</strong>. The coils bunch together in <strong>compressions</strong>
+              and spread apart in <strong>rarefactions</strong>. One <strong>wavelength
+              (&lambda;)</strong> is the distance from one compression to the next. Arrows for
+              &ldquo;Direction of Wave Travel&rdquo; and &ldquo;Energy Transfer&rdquo; point to the
+              right, while individual particles oscillate <em>back and forth parallel</em> to that
+              direction, about their equilibrium position. <strong>Sound</strong> is a longitudinal
+              wave.</p>
+          </figcaption>
+        </figure>
+
+        <h3>The electromagnetic spectrum</h3>
+        <p>Visible light is one small slice of the electromagnetic spectrum. All electromagnetic
+          waves travel at 3.00 &times; 10<sup>8</sup> m/s in a vacuum; they differ only in frequency
+          and wavelength.</p>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img">
+              <text class="t-title" x="360" y="26" text-anchor="middle" font-size="19" fill="#111827">The electromagnetic spectrum</text>
+              <text class="t-mono" x="40" y="66" font-size="13" fill="#111827">long &#955;, low f</text>
+              <text class="t-mono" x="680" y="66" font-size="13" fill="#111827" text-anchor="end">short &#955;, high f</text>
+              <!-- region fills -->
+              <rect x="40"  y="80" width="91" height="70" fill="#E6E3DB"/>
+              <rect x="131" y="80" width="92" height="70" fill="#D8D4CA"/>
+              <rect x="223" y="80" width="91" height="70" fill="#C9C4B8"/>
+              <!-- visible: rainbow bands -->
+              <rect x="314"    y="80" width="15.34" height="70" fill="#E03B2E"/>
+              <rect x="329.34" y="80" width="15.34" height="70" fill="#EE7B30"/>
+              <rect x="344.68" y="80" width="15.34" height="70" fill="#F2C014"/>
+              <rect x="360.02" y="80" width="15.33" height="70" fill="#3FA34D"/>
+              <rect x="375.35" y="80" width="15.33" height="70" fill="#2E6FE0"/>
+              <rect x="390.68" y="80" width="15.32" height="70" fill="#7B3FE0"/>
+              <rect x="406" y="80" width="91" height="70" fill="#B9B4A6"/>
+              <rect x="497" y="80" width="92" height="70" fill="#6E6B62"/>
+              <rect x="589" y="80" width="91" height="70" fill="#2B2A26"/>
+              <!-- outer frame -->
+              <rect x="40" y="80" width="640" height="70" fill="none" stroke="#111827" stroke-width="2.5"/>
+              <!-- region labels -->
+              <text x="85.5"  y="170" text-anchor="middle" font-size="13" fill="#111827">Radio</text>
+              <text x="177"   y="170" text-anchor="middle" font-size="13" fill="#111827">Microwave</text>
+              <text x="268.5" y="170" text-anchor="middle" font-size="13" fill="#111827">Infrared</text>
+              <text x="360"   y="170" text-anchor="middle" font-size="13" fill="#111827">Visible</text>
+              <text x="451.5" y="170" text-anchor="middle" font-size="13" fill="#111827">Ultraviolet</text>
+              <text x="543"   y="170" text-anchor="middle" font-size="13" fill="#111827">X-rays</text>
+              <text x="634.5" y="170" text-anchor="middle" font-size="13" fill="#111827">Gamma</text>
+              <!-- zoom leaders to enlarged visible strip -->
+              <line x1="314" y1="150" x2="240" y2="210" stroke="#111827" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <line x1="406" y1="150" x2="480" y2="210" stroke="#111827" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <!-- enlarged visible bands -->
+              <rect x="240" y="210" width="40" height="30" fill="#E03B2E"/>
+              <rect x="280" y="210" width="40" height="30" fill="#EE7B30"/>
+              <rect x="320" y="210" width="40" height="30" fill="#F2C014"/>
+              <rect x="360" y="210" width="40" height="30" fill="#3FA34D"/>
+              <rect x="400" y="210" width="40" height="30" fill="#2E6FE0"/>
+              <rect x="440" y="210" width="40" height="30" fill="#7B3FE0"/>
+              <rect x="240" y="210" width="240" height="30" fill="none" stroke="#111827" stroke-width="2"/>
+              <text x="260" y="231" text-anchor="middle" font-size="13" fill="#fff" class="t-title">R</text>
+              <text x="300" y="231" text-anchor="middle" font-size="13" fill="#111827" class="t-title">O</text>
+              <text x="340" y="231" text-anchor="middle" font-size="13" fill="#111827" class="t-title">Y</text>
+              <text x="380" y="231" text-anchor="middle" font-size="13" fill="#fff" class="t-title">G</text>
+              <text x="420" y="231" text-anchor="middle" font-size="13" fill="#fff" class="t-title">B</text>
+              <text x="460" y="231" text-anchor="middle" font-size="13" fill="#fff" class="t-title">V</text>
+              <text class="t-mono" x="360" y="266" text-anchor="middle" font-size="13" fill="#111827">Red &#8776; 3.84&#215;10&#185;&#8308; Hz &#183; Violet &#8776; 7.69&#215;10&#185;&#8308; Hz</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; the electromagnetic spectrum</span>
+            <p>A horizontal bar divided into regions, from <strong>lowest frequency and longest
+              wavelength on the left to highest frequency and shortest wavelength on the
+              right</strong>: radio waves, microwaves, infrared, visible light, ultraviolet,
+              X-rays, and gamma rays. The visible-light slice is enlarged into its colours &mdash;
+              red, orange, yellow, green, blue, violet. <strong>Red</strong> has the longest
+              wavelength and lowest frequency (about 3.84 &times; 10<sup>14</sup> Hz);
+              <strong>violet</strong> has the shortest wavelength and highest frequency (about
+              7.69 &times; 10<sup>14</sup> Hz). Full values are in the
+              <a href="#data-emspectrum">electromagnetic-spectrum table</a>.</p>
+          </figcaption>
+        </figure>
+
+        <h3>Interference and superposition</h3>
+        <ul>
+          <li>Interference happens when waves arrive at the same point at the same time.</li>
+          <li><strong>Constructive interference:</strong> crest meets crest, giving a larger amplitude.</li>
+          <li><strong>Destructive interference:</strong> crest meets trough, giving a smaller amplitude.</li>
+          <li><strong>Superposition:</strong> where pulses overlap, add their displacements to find
+            the result.</li>
+          <li><strong>Beats:</strong> two waves of slightly different frequency interfere to make
+            beats. The beat frequency equals the difference between the two frequencies.</li>
+        </ul>
+
+        <h3>Standing waves <span class="added">resonance added from core curriculum</span></h3>
+        <ul>
+          <li>A <strong>standing wave</strong> appears to stay in one place. It forms when an
+            incident wave and its reflection overlap in a confined region (a special case of
+            interference).</li>
+          <li><strong>Nodes</strong> are the stationary points; <strong>antinodes</strong> are the
+            points of largest amplitude.</li>
+          <li>The <strong>fundamental</strong> is the lowest-frequency standing wave that fits in
+            the region. Wavelength is measured node-to-node-to-node.</li>
+          <li><strong>Resonance</strong> occurs when energy is transferred to a system at its
+            natural frequency, building a large-amplitude standing wave.</li>
+        </ul>
+        <p><strong>Identical boundary conditions at both ends</strong> (such as a string fixed at
+          both ends, or a pipe open at both ends):</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ f_1 = \frac{v}{2L} \]</div>
+          <figcaption>
+            <span class="formula__name">Fundamental (both ends alike)</span>
+            <span class="formula__say">the fundamental frequency equals the wave speed divided by two times the length. All whole-number multiples of the fundamental can exist as harmonics.</span>
+          </figcaption>
+        </figure>
+        <p><strong>Different boundary conditions at each end</strong> (such as a pipe closed at one
+          end and open at the other):</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ f_1 = \frac{v}{4L} \]</div>
+          <figcaption>
+            <span class="formula__name">Fundamental (ends different)</span>
+            <span class="formula__say">the fundamental frequency equals the wave speed divided by four times the length. Only the odd multiples of the fundamental can exist as harmonics.</span>
+          </figcaption>
+        </figure>
+
+        <h3>The Doppler effect</h3>
+        <ul>
+          <li>As a wave source <strong>approaches</strong>, an observer meets waves more often, so
+            the observed frequency is <em>higher</em>.</li>
+          <li>As a source <strong>moves away</strong>, the observed frequency is <em>lower</em>.</li>
+          <li>The source&rsquo;s actual frequency does not change &mdash; only the
+            <em>apparent</em> frequency does. The Doppler effect is not related to amplitude.</li>
+        </ul>
+        <p>These animations compare a stationary source with a moving one. (They loop; the written
+          description below each carries the information.)</p>
+        <div class="vis-pair">
+          <figure class="vis">
+            <img class="vis__img gif" src="assets/doppler-stationary.gif" alt="" aria-hidden="true">
+            <figcaption>
+              <span class="label">Animation &mdash; stationary source</span>
+              <p>A source that stays still emits circular wavefronts as evenly spaced concentric
+                circles. Because it is not moving, observers on every side measure the same
+                wavelength and frequency &mdash; there is no Doppler shift.</p>
+            </figcaption>
+          </figure>
+          <figure class="vis">
+            <img class="vis__img gif" src="assets/doppler-moving.gif" alt="" aria-hidden="true">
+            <figcaption>
+              <span class="label">Animation &mdash; moving source</span>
+              <p>As the source moves, the wavefronts <strong>bunch together ahead</strong> of it and
+                <strong>spread apart behind</strong> it. An observer the source is approaching meets
+                crests more often and hears a <strong>higher</strong> frequency (shorter wavelength);
+                an observer it is moving away from hears a <strong>lower</strong> frequency (longer
+                wavelength). The source&rsquo;s own frequency never changes.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <h3>Diffraction <span class="added">added from core curriculum</span></h3>
+        <p><strong>Diffraction</strong> is the spreading of waves as they pass an obstacle or go
+          through an opening. How much the wave spreads depends on the wavelength compared with the
+          size of the opening or obstacle: the closer they are in size, the more the wave spreads.</p>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="difA" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker>
+              </defs>
+              <!-- incoming straight (plane) wavefronts -->
+              <g stroke="#2E6FE0" stroke-width="2.5">
+                <line x1="40"  y1="55" x2="40"  y2="245"/>
+                <line x1="72"  y1="55" x2="72"  y2="245"/>
+                <line x1="104" y1="55" x2="104" y2="245"/>
+                <line x1="136" y1="55" x2="136" y2="245"/>
+                <line x1="168" y1="55" x2="168" y2="245"/>
+                <line x1="200" y1="55" x2="200" y2="245"/>
+              </g>
+              <!-- travel direction -->
+              <line x1="60" y1="272" x2="180" y2="272" stroke="#4A4842" stroke-width="2" marker-end="url(#difA)"/>
+              <text class="t-mono" x="62" y="289" font-size="11" fill="#4A4842">wave travel</text>
+              <!-- barrier with a gap -->
+              <line x1="232" y1="30"  x2="232" y2="134" stroke="#111827" stroke-width="6"/>
+              <line x1="232" y1="166" x2="232" y2="270" stroke="#111827" stroke-width="6"/>
+              <!-- diffracted circular wavefronts spreading from the gap -->
+              <g fill="none" stroke="#DD614C" stroke-width="2.5">
+                <path d="M232,114 A36,36 0 0 1 232,186"/>
+                <path d="M232,78  A72,72 0 0 1 232,222"/>
+                <path d="M232,42  A108,108 0 0 1 232,258"/>
+                <path d="M232,8   A142,142 0 0 1 232,292"/>
+              </g>
+              <!-- labels -->
+              <text class="t-mono" x="120" y="44" text-anchor="middle" font-size="12" fill="#2E6FE0">straight wavefronts in</text>
+              <text class="t-mono" x="248" y="40" font-size="12" fill="#111827">barrier</text>
+              <text class="t-mono" x="252" y="155" font-size="12" fill="#111827">gap</text>
+              <text class="t-mono" x="360" y="44" text-anchor="middle" font-size="12" fill="#BD4B30">waves spread out</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; diffraction through a gap</span>
+            <p>Straight (plane) wavefronts travel from the left toward a <strong>barrier</strong>
+              with a small <strong>gap</strong> in it. After passing through the opening the waves
+              are no longer straight &mdash; they bend and <strong>spread out in curved (circular)
+              wavefronts</strong> on the far side. The narrower the gap is compared with the
+              wavelength, the more the waves spread. The same spreading happens when waves pass the
+              edge of an obstacle.</p>
+          </figcaption>
+        </figure>
+
+        <h3>Sound</h3>
+        <ul>
+          <li><strong>Pitch</strong> depends on the sound wave&rsquo;s <em>frequency</em>.</li>
+          <li><strong>Loudness</strong> and the energy carried depend on the wave&rsquo;s
+            <em>amplitude</em>.</li>
+          <li>The speed of sound in air is about 331 m/s at STP (and roughly 340 m/s at ordinary
+            room temperature).</li>
+          <li>People hear sounds from tens up to thousands of hertz; most musical notes are in the
+            hundreds of hertz.</li>
+        </ul>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           9. LIGHT, REFLECTION & REFRACTION  (ADDED)
+           ================================================================ -->
+      <section class="topic" id="optics" aria-labelledby="optics-h">
+        <h2 id="optics-h">9. Light, reflection &amp; refraction <span class="added">added from core curriculum</span></h2>
+        <p>This whole topic is required by the New York State core curriculum but was not on the
+          fact sheet, so it is developed fully here.</p>
+
+        <h3>Reflection</h3>
+        <p>When a wave bounces off a surface, the angle it arrives at equals the angle it leaves at.
+          Both angles are measured from the <strong>normal</strong> &mdash; an imaginary line drawn
+          perpendicular to the surface.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ \theta_i = \theta_r \]</div>
+          <figcaption>
+            <span class="formula__name">Law of reflection</span>
+            <span class="formula__say">the angle of incidence equals the angle of reflection.</span>
+          </figcaption>
+        </figure>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="reflR" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#DD614C"/></marker>
+                <marker id="reflB" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2E6FE0"/></marker>
+              </defs>
+              <!-- mirror surface with hatching -->
+              <line x1="40" y1="210" x2="380" y2="210" stroke="#111827" stroke-width="3"/>
+              <g stroke="#9F9D96" stroke-width="1.5">
+                <line x1="56" y1="210" x2="46" y2="222"/><line x1="86" y1="210" x2="76" y2="222"/>
+                <line x1="116" y1="210" x2="106" y2="222"/><line x1="146" y1="210" x2="136" y2="222"/>
+                <line x1="176" y1="210" x2="166" y2="222"/><line x1="206" y1="210" x2="196" y2="222"/>
+                <line x1="236" y1="210" x2="226" y2="222"/><line x1="266" y1="210" x2="256" y2="222"/>
+                <line x1="296" y1="210" x2="286" y2="222"/><line x1="326" y1="210" x2="316" y2="222"/>
+                <line x1="356" y1="210" x2="346" y2="222"/>
+              </g>
+              <!-- normal -->
+              <line x1="210" y1="210" x2="210" y2="40" stroke="#111827" stroke-width="1.5" stroke-dasharray="6 5"/>
+              <text class="t-mono" x="216" y="52" font-size="12" fill="#4A4842">normal</text>
+              <!-- incident ray (toward P) -->
+              <line x1="80" y1="60" x2="210" y2="210" stroke="#DD614C" stroke-width="4" marker-end="url(#reflR)"/>
+              <!-- reflected ray (away from P) -->
+              <line x1="210" y1="210" x2="340" y2="60" stroke="#2E6FE0" stroke-width="4" marker-end="url(#reflB)"/>
+              <!-- angle arcs -->
+              <path d="M210,160 A50,50 0 0 0 177,172" fill="none" stroke="#111827" stroke-width="2"/>
+              <path d="M210,160 A50,50 0 0 1 243,172" fill="none" stroke="#111827" stroke-width="2"/>
+              <text x="176" y="150" font-size="14" fill="#111827">&#952;<tspan font-size="10" dy="3">i</tspan></text>
+              <text x="236" y="150" font-size="14" fill="#111827">&#952;<tspan font-size="10" dy="3">r</tspan></text>
+              <!-- ray labels -->
+              <text x="92" y="104" font-size="13" fill="#BD4B30">incident ray</text>
+              <text x="300" y="104" text-anchor="end" font-size="13" fill="#2E6FE0">reflected ray</text>
+              <text class="t-mono" x="60" y="234" font-size="12" fill="#4A4842">mirror</text>
+              <text class="t-title" x="210" y="262" text-anchor="middle" font-size="16" fill="#111827">&#952;<tspan font-size="11" dy="3">i</tspan><tspan dy="-3"> = </tspan>&#952;<tspan font-size="11" dy="3">r</tspan></text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; reflection ray diagram</span>
+            <p>A ray (the <strong>incident ray</strong>) strikes a flat mirror at a point. A dashed
+              <strong>normal</strong> line is drawn perpendicular to the mirror at that point. The
+              <strong>angle of incidence (&theta;<sub>i</sub>)</strong>, measured between the
+              incident ray and the normal, equals the <strong>angle of reflection
+              (&theta;<sub>r</sub>)</strong>, measured between the normal and the
+              <strong>reflected ray</strong>. Both angles are always measured from the normal, not
+              from the mirror surface.</p>
+          </figcaption>
+        </figure>
+
+        <h3>Refraction &mdash; why light bends</h3>
+        <ul>
+          <li>When a wave passes from one material into another, it can <strong>refract</strong>
+            (bend) because its <em>speed</em> changes.</li>
+          <li>Entering a slower (optically denser, higher-index) material, light bends
+            <em>toward</em> the normal. Entering a faster material, it bends <em>away</em> from the
+            normal.</li>
+          <li>Crossing into a new material, the <strong>frequency stays the same</strong>, while
+            the <strong>speed and wavelength change</strong>.</li>
+        </ul>
+
+        <h3>Index of refraction</h3>
+        <p>The <strong>absolute index of refraction</strong> (n) compares the speed of light in a
+          vacuum with its speed in a material. A larger n means light travels slower in that
+          material and bends more. Index of refraction is inversely proportional to wave speed.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ n = \frac{c}{v} \]</div>
+          <figcaption>
+            <span class="formula__name">Index of refraction</span>
+            <span class="formula__say">the absolute index of refraction equals the speed of light in a vacuum divided by the speed of light in the material.</span>
+          </figcaption>
+        </figure>
+
+        <h3>Snell&rsquo;s law</h3>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ n_1 \sin\theta_1 = n_2 \sin\theta_2 \]</div>
+          <figcaption>
+            <span class="formula__name">Snell&rsquo;s law</span>
+            <span class="formula__say">the index of refraction of the first medium times the sine of the angle in the first medium equals the index of refraction of the second medium times the sine of the angle in the second medium.</span>
+          </figcaption>
+        </figure>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <marker id="refrR" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#DD614C"/></marker>
+                <marker id="refrB" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2E6FE0"/></marker>
+              </defs>
+              <!-- denser medium 2 (shaded, below) -->
+              <rect x="40" y="160" width="340" height="140" fill="#9F9D96" fill-opacity="0.35"/>
+              <!-- boundary -->
+              <line x1="40" y1="160" x2="380" y2="160" stroke="#111827" stroke-width="2.5"/>
+              <!-- normal -->
+              <line x1="210" y1="40" x2="210" y2="290" stroke="#111827" stroke-width="1.5" stroke-dasharray="6 5"/>
+              <text class="t-mono" x="216" y="52" font-size="12" fill="#4A4842">normal</text>
+              <!-- un-bent continuation (faint) -->
+              <line x1="210" y1="160" x2="306" y2="248" stroke="#9F9D96" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <!-- incident ray (medium 1, toward P) -->
+              <line x1="90" y1="50" x2="210" y2="160" stroke="#DD614C" stroke-width="4" marker-end="url(#refrR)"/>
+              <!-- refracted ray (medium 2, bends toward normal) -->
+              <line x1="210" y1="160" x2="290" y2="290" stroke="#2E6FE0" stroke-width="4" marker-end="url(#refrB)"/>
+              <!-- angle arcs -->
+              <path d="M210,105 A55,55 0 0 0 169.5,123" fill="none" stroke="#111827" stroke-width="2"/>
+              <path d="M210,215 A55,55 0 0 0 238.8,206.9" fill="none" stroke="#111827" stroke-width="2"/>
+              <text x="170" y="110" font-size="14" fill="#111827">&#952;<tspan font-size="10" dy="3">1</tspan></text>
+              <text x="242" y="226" font-size="14" fill="#111827">&#952;<tspan font-size="10" dy="3">2</tspan></text>
+              <!-- medium + ray labels -->
+              <text x="48" y="150" font-size="13" fill="#111827">n<tspan font-size="10" dy="3">1</tspan><tspan dy="-3"> (e.g. air, faster)</tspan></text>
+              <text x="48" y="184" font-size="13" fill="#111827">n<tspan font-size="10" dy="3">2</tspan><tspan dy="-3"> (e.g. glass, slower)</tspan></text>
+              <text x="98" y="96" font-size="13" fill="#BD4B30">incident ray</text>
+              <text x="298" y="250" text-anchor="end" font-size="13" fill="#2E6FE0">refracted ray</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; refraction ray diagram (Snell&rsquo;s law)</span>
+            <p>An <strong>incident ray</strong> travels through medium 1 (lower index
+              n<sub>1</sub>, e.g. air) and strikes the boundary with a denser medium 2 (higher
+              index n<sub>2</sub>, e.g. glass). The dashed <strong>normal</strong> is perpendicular
+              to the boundary. Because the light slows down, the <strong>refracted ray</strong>
+              bends <em>toward</em> the normal, so the <strong>angle of refraction
+              &theta;<sub>2</sub> is smaller than the angle of incidence
+              &theta;<sub>1</sub></strong> (the faint dashed line shows the un-bent path for
+              comparison). The angles obey Snell&rsquo;s law,
+              n<sub>1</sub>&nbsp;sin&nbsp;&theta;<sub>1</sub> =
+              n<sub>2</sub>&nbsp;sin&nbsp;&theta;<sub>2</sub>, with both angles measured from the
+              normal.</p>
+          </figcaption>
+        </figure>
+        <p>The indices, speeds, and wavelengths in two media are related by:</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ \frac{n_2}{n_1} = \frac{v_1}{v_2} = \frac{\lambda_1}{\lambda_2} \]</div>
+          <figcaption>
+            <span class="formula__name">Two-media relationship</span>
+            <span class="formula__say">the ratio of the second index to the first equals the ratio of the first speed to the second speed, which also equals the ratio of the first wavelength to the second wavelength.</span>
+          </figcaption>
+        </figure>
+        <dl class="vars">
+          <dt>n</dt><dd>absolute index of refraction (no units)</dd>
+          <dt>c</dt><dd>speed of light in a vacuum, 3.00 &times; 10<sup>8</sup> m/s</dd>
+          <dt>v</dt><dd>speed of light in the material, in meters per second</dd>
+          <dt>&theta;</dt><dd>angle measured from the normal</dd>
+          <dt>&lambda;</dt><dd>wavelength, in meters</dd>
+        </dl>
+        <p>Common index values (air 1.00, water 1.33, crown glass 1.52, diamond 2.42, and more) are
+          in the <a href="#data-refraction">indices-of-refraction table</a>.</p>
+
+        <h3>Total internal reflection &amp; the critical angle</h3>
+        <p>When light tries to pass from a slower (higher-index) material into a faster
+          (lower-index) one &mdash; for example from water or glass into air &mdash; it bends away
+          from the normal. Past a certain incidence angle, called the <strong>critical
+          angle</strong>, the light can no longer escape and instead reflects entirely back inside.
+          This is <strong>total internal reflection</strong>, and it is how fiber-optic cables trap
+          light.</p>
+
+        <h3>Dispersion</h3>
+        <p>A material&rsquo;s index of refraction is slightly different for different colors
+          (frequencies) of light, so white light separates into a spectrum when it refracts. This
+          spreading by color is <strong>dispersion</strong> &mdash; it is what forms a rainbow and
+          what a prism does. Violet light bends the most, red the least.</p>
+
+        <h3>The electromagnetic spectrum</h3>
+        <p>Visible light is a small part of the electromagnetic spectrum. All electromagnetic waves
+          travel at the same speed in a vacuum (c). Ordered from <em>lowest</em> frequency
+          (longest wavelength) to <em>highest</em> frequency (shortest wavelength):
+          radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays.</p>
+        <p>Within visible light, from lowest to highest frequency the colors run red, orange,
+          yellow, green, blue, violet. So <strong>red</strong> has the longest wavelength and
+          lowest frequency; <strong>violet</strong> has the shortest wavelength and highest
+          frequency. Full values are in the
+          <a href="#data-emspectrum">electromagnetic-spectrum table</a>.</p>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           10. ELECTRICITY & CIRCUITS
+           ================================================================ -->
+      <section class="topic" id="electricity" aria-labelledby="electricity-h">
+        <h2 id="electricity-h">10. Electricity &amp; circuits</h2>
+
+        <h3>Electric charge</h3>
+        <ul>
+          <li>Charge is measured in <strong>coulombs</strong> (C).</li>
+          <li>Charge is <strong>conserved</strong> &mdash; it cannot be created or destroyed,
+            though positive charge can neutralize negative charge.</li>
+          <li>The smallest unit of charge is the elementary charge,
+            e = 1.60 &times; 10<sup>&minus;19</sup> C. Any measured charge is a whole-number
+            multiple of e; a result that is not a multiple of e should be rejected.</li>
+          <li>One coulomb equals 6.25 &times; 10<sup>18</sup> elementary charges. Lab charges are
+            usually microcoulombs or nanocoulombs.</li>
+        </ul>
+
+        <h3>Coulomb&rsquo;s law (force between charges)</h3>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ F_e = \frac{k q_1 q_2}{r^2} \]</div>
+          <figcaption>
+            <span class="formula__name">Coulomb&rsquo;s law</span>
+            <span class="formula__say">the electrostatic force equals Coulomb&rsquo;s constant times the product of the two charges, divided by the distance between their centers squared.</span>
+          </figcaption>
+        </figure>
+        <dl class="vars">
+          <dt>F<sub>e</sub></dt><dd>electrostatic force, in newtons</dd>
+          <dt>k</dt><dd>electrostatic (Coulomb&rsquo;s) constant, 8.99 &times; 10<sup>9</sup> N&middot;m<sup>2</sup>/C<sup>2</sup></dd>
+          <dt>q<sub>1</sub>, q<sub>2</sub></dt><dd>the two charges, in coulombs</dd>
+          <dt>r</dt><dd>distance between the centers of the charges, in meters</dd>
+        </dl>
+        <p>Like gravitation, the electric force follows an inverse-square law. Unlike gravity,
+          electric (and magnetic) forces can be either attractive or repulsive.</p>
+
+        <h3>Electric field <span class="added">added from core curriculum</span></h3>
+        <p>An <strong>electric field</strong> describes the force a charge would feel at a point in
+          space. Its strength is found with a small positive test charge; the field points the way
+          a positive charge would be pushed. The field between two oppositely charged parallel
+          plates is uniform.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ E = \frac{F_e}{q} \]</div>
+          <figcaption>
+            <span class="formula__name">Electric field strength</span>
+            <span class="formula__say">electric field strength equals the electrostatic force divided by the charge.</span>
+          </figcaption>
+        </figure>
+        <p>Field lines point the way a positive test charge would be pushed: <em>away</em> from
+          positive charges and <em>toward</em> negative charges. Where they are closer together the
+          field is stronger.</p>
+        <div class="vis-grid">
+          <figure class="vis">
+            <div class="vis__svg" aria-hidden="true">
+              <svg viewBox="0 0 230 200" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs><marker id="efA" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker></defs>
+                <g stroke="#4A4842" stroke-width="2" marker-end="url(#efA)">
+                  <line x1="135" y1="100" x2="205" y2="100"/><line x1="129.1" y1="114.1" x2="178.6" y2="163.6"/>
+                  <line x1="115" y1="120" x2="115" y2="190"/><line x1="100.9" y1="114.1" x2="51.4" y2="163.6"/>
+                  <line x1="95" y1="100" x2="25" y2="100"/><line x1="100.9" y1="85.9" x2="51.4" y2="36.4"/>
+                  <line x1="115" y1="80" x2="115" y2="10"/><line x1="129.1" y1="85.9" x2="178.6" y2="36.4"/>
+                </g>
+                <circle cx="115" cy="100" r="16" fill="#DD614C" stroke="#111827" stroke-width="2"/>
+                <text x="115" y="106" text-anchor="middle" font-size="18" font-weight="800" fill="#fff">+</text>
+              </svg>
+            </div>
+            <figcaption><span class="label">Positive point charge</span>
+              <p>Field lines point straight <strong>out, away</strong> from the charge, evenly in all directions.</p></figcaption>
+          </figure>
+          <figure class="vis">
+            <div class="vis__svg" aria-hidden="true">
+              <svg viewBox="0 0 230 200" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs><marker id="efB" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker></defs>
+                <g stroke="#4A4842" stroke-width="2" marker-end="url(#efB)">
+                  <line x1="205" y1="100" x2="135" y2="100"/><line x1="178.6" y1="163.6" x2="129.1" y2="114.1"/>
+                  <line x1="115" y1="190" x2="115" y2="120"/><line x1="51.4" y1="163.6" x2="100.9" y2="114.1"/>
+                  <line x1="25" y1="100" x2="95" y2="100"/><line x1="51.4" y1="36.4" x2="100.9" y2="85.9"/>
+                  <line x1="115" y1="10" x2="115" y2="80"/><line x1="178.6" y1="36.4" x2="129.1" y2="85.9"/>
+                </g>
+                <circle cx="115" cy="100" r="16" fill="#2E6FE0" stroke="#111827" stroke-width="2"/>
+                <text x="115" y="106" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">&#8722;</text>
+              </svg>
+            </div>
+            <figcaption><span class="label">Negative point charge</span>
+              <p>Field lines point straight <strong>in, toward</strong> the charge, from all directions.</p></figcaption>
+          </figure>
+          <figure class="vis">
+            <div class="vis__svg" aria-hidden="true">
+              <svg viewBox="0 0 250 200" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs><marker id="efC" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker></defs>
+                <g stroke="#4A4842" stroke-width="2" marker-end="url(#efC)">
+                  <line x1="61" y1="100" x2="37" y2="100"/><line x1="66.6" y1="86.6" x2="49.6" y2="69.6"/><line x1="66.6" y1="113.4" x2="49.6" y2="130.4"/>
+                  <line x1="80" y1="81" x2="80" y2="57"/><line x1="80" y1="119" x2="80" y2="143"/>
+                  <line x1="93.4" y1="86.6" x2="110.4" y2="69.6"/><line x1="93.4" y1="113.4" x2="110.4" y2="130.4"/>
+                  <line x1="189" y1="100" x2="213" y2="100"/><line x1="183.4" y1="86.6" x2="200.4" y2="69.6"/><line x1="183.4" y1="113.4" x2="200.4" y2="130.4"/>
+                  <line x1="170" y1="81" x2="170" y2="57"/><line x1="170" y1="119" x2="170" y2="143"/>
+                  <line x1="156.6" y1="86.6" x2="139.6" y2="69.6"/><line x1="156.6" y1="113.4" x2="139.6" y2="130.4"/>
+                </g>
+                <circle cx="125" cy="100" r="4" fill="none" stroke="#4A4842" stroke-width="1.5"/>
+                <text x="125" y="170" text-anchor="middle" font-size="11" fill="#4A4842" class="t-mono">neutral point</text>
+                <circle cx="80" cy="100" r="15" fill="#DD614C" stroke="#111827" stroke-width="2"/><text x="80" y="106" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">+</text>
+                <circle cx="170" cy="100" r="15" fill="#DD614C" stroke="#111827" stroke-width="2"/><text x="170" y="106" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">+</text>
+              </svg>
+            </div>
+            <figcaption><span class="label">Two positive charges</span>
+              <p>Lines point away from <em>both</em> charges; between them they oppose, leaving a
+                <strong>neutral point</strong> where the field is zero. Like charges repel.</p></figcaption>
+          </figure>
+          <figure class="vis">
+            <div class="vis__svg" aria-hidden="true">
+              <svg viewBox="0 0 250 200" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs><marker id="efD" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker></defs>
+                <g stroke="#4A4842" stroke-width="2" marker-end="url(#efD)">
+                  <line x1="37" y1="100" x2="61" y2="100"/><line x1="49.6" y1="69.6" x2="66.6" y2="86.6"/><line x1="49.6" y1="130.4" x2="66.6" y2="113.4"/>
+                  <line x1="80" y1="57" x2="80" y2="81"/><line x1="80" y1="143" x2="80" y2="119"/>
+                  <line x1="110.4" y1="69.6" x2="93.4" y2="86.6"/><line x1="110.4" y1="130.4" x2="93.4" y2="113.4"/>
+                  <line x1="213" y1="100" x2="189" y2="100"/><line x1="200.4" y1="69.6" x2="183.4" y2="86.6"/><line x1="200.4" y1="130.4" x2="183.4" y2="113.4"/>
+                  <line x1="170" y1="57" x2="170" y2="81"/><line x1="170" y1="143" x2="170" y2="119"/>
+                  <line x1="139.6" y1="69.6" x2="156.6" y2="86.6"/><line x1="139.6" y1="130.4" x2="156.6" y2="113.4"/>
+                </g>
+                <circle cx="125" cy="100" r="4" fill="none" stroke="#4A4842" stroke-width="1.5"/>
+                <text x="125" y="170" text-anchor="middle" font-size="11" fill="#4A4842" class="t-mono">neutral point</text>
+                <circle cx="80" cy="100" r="15" fill="#2E6FE0" stroke="#111827" stroke-width="2"/><text x="80" y="107" text-anchor="middle" font-size="19" font-weight="800" fill="#fff">&#8722;</text>
+                <circle cx="170" cy="100" r="15" fill="#2E6FE0" stroke="#111827" stroke-width="2"/><text x="170" y="107" text-anchor="middle" font-size="19" font-weight="800" fill="#fff">&#8722;</text>
+              </svg>
+            </div>
+            <figcaption><span class="label">Two negative charges</span>
+              <p>Lines point toward <em>both</em> charges; between them is a <strong>neutral
+                point</strong> where the field cancels. Like charges repel.</p></figcaption>
+          </figure>
+          <figure class="vis">
+            <div class="vis__svg" aria-hidden="true">
+              <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs><marker id="efE" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker></defs>
+                <g stroke="#4A4842" stroke-width="2" fill="none" marker-end="url(#efE)">
+                  <line x1="93" y1="100" x2="165" y2="100"/>
+                  <path d="M90,90 Q130,62 170,90"/>
+                  <path d="M84,84 Q130,36 176,84"/>
+                  <path d="M90,110 Q130,138 170,110"/>
+                  <path d="M84,116 Q130,164 176,116"/>
+                  <line x1="63" y1="100" x2="28" y2="100"/>
+                  <line x1="232" y1="100" x2="197" y2="100"/>
+                </g>
+                <circle cx="78" cy="100" r="15" fill="#DD614C" stroke="#111827" stroke-width="2"/><text x="78" y="106" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">+</text>
+                <circle cx="182" cy="100" r="15" fill="#2E6FE0" stroke="#111827" stroke-width="2"/><text x="182" y="107" text-anchor="middle" font-size="19" font-weight="800" fill="#fff">&#8722;</text>
+              </svg>
+            </div>
+            <figcaption><span class="label">Positive and negative (a dipole)</span>
+              <p>Field lines run <strong>from the positive charge to the negative charge</strong>,
+                curving through the space between them. Opposite charges attract.</p></figcaption>
+          </figure>
+          <figure class="vis">
+            <div class="vis__svg" aria-hidden="true">
+              <svg viewBox="0 0 250 200" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs><marker id="efF" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker></defs>
+                <text x="125" y="38" text-anchor="middle" font-size="15" font-weight="800" fill="#DD614C" class="t-mono">+ &#160; + &#160; + &#160; + &#160; +</text>
+                <rect x="40" y="46" width="170" height="7" fill="#111827"/>
+                <g stroke="#4A4842" stroke-width="2.5" marker-end="url(#efF)">
+                  <line x1="65" y1="60" x2="65" y2="140"/><line x1="100" y1="60" x2="100" y2="140"/>
+                  <line x1="135" y1="60" x2="135" y2="140"/><line x1="170" y1="60" x2="170" y2="140"/>
+                  <line x1="200" y1="60" x2="200" y2="140"/>
+                </g>
+                <rect x="40" y="147" width="170" height="7" fill="#111827"/>
+                <text x="125" y="174" text-anchor="middle" font-size="15" font-weight="800" fill="#2E6FE0" class="t-mono">&#8722; &#160; &#8722; &#160; &#8722; &#160; &#8722; &#160; &#8722;</text>
+              </svg>
+            </div>
+            <figcaption><span class="label">Charged parallel plates</span>
+              <p>Between two oppositely charged plates the field is <strong>uniform</strong> &mdash;
+                evenly spaced, parallel lines pointing from the positive plate to the negative plate.</p></figcaption>
+          </figure>
+        </div>
+
+        <h3>Voltage, current, and resistance</h3>
+        <ul>
+          <li><strong>Voltage</strong> (potential difference) is provided by a battery and measured
+            in volts. Rigorously, voltage is <em>energy per charge</em>.</li>
+          <li><strong>Current</strong> is the flow of charge through a conductor, measured in amps.
+            Rigorously, current is <em>charge per time</em>.</li>
+          <li><strong>Resistance</strong> opposes current and is measured in ohms (&Omega;). It is
+            provided by resistors, lamps, and other devices.</li>
+          <li><strong>Power</strong> is <em>energy per time</em>.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ V = \frac{W}{q} \]</div>
+          <figcaption>
+            <span class="formula__name">Potential difference</span>
+            <span class="formula__say">voltage equals work (electrical energy) divided by charge.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ I = \frac{\Delta q}{t} \]</div>
+          <figcaption>
+            <span class="formula__name">Current</span>
+            <span class="formula__say">current equals the amount of charge that flows divided by the time.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ V = IR \qquad\Longleftrightarrow\qquad R = \frac{V}{I} \]</div>
+          <figcaption>
+            <span class="formula__name">Ohm&rsquo;s law</span>
+            <span class="formula__say">voltage equals current times resistance; equivalently, resistance equals voltage divided by current.</span>
+          </figcaption>
+        </figure>
+        <p>At constant temperature, common metal conductors obey Ohm&rsquo;s law.</p>
+
+        <h3>Resistivity &mdash; what makes resistance</h3>
+        <p>The resistance of a wire depends on its material and shape: longer and thinner wires
+          have more resistance.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ R = \frac{\rho L}{A} \]</div>
+          <figcaption>
+            <span class="formula__name">Resistance of a wire</span>
+            <span class="formula__say">resistance equals the resistivity times the length of the conductor, divided by its cross-sectional area.</span>
+          </figcaption>
+        </figure>
+        <dl class="vars">
+          <dt>&rho;</dt><dd>resistivity, a property of the material, in ohm-meters</dd>
+          <dt>L</dt><dd>length of the conductor, in meters</dd>
+          <dt>A</dt><dd>cross-sectional area, in square meters</dd>
+        </dl>
+        <p>Material resistivities are in the
+          <a href="#data-resistivity">resistivities table</a>.</p>
+
+        <h3>Electrical power and energy</h3>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ P = VI = I^2 R = \frac{V^2}{R} \]</div>
+          <figcaption>
+            <span class="formula__name">Electrical power</span>
+            <span class="formula__say">power equals voltage times current, which equals current squared times resistance, which equals voltage squared divided by resistance.</span>
+          </figcaption>
+        </figure>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ W = Pt = VIt = I^2Rt = \frac{V^2 t}{R} \]</div>
+          <figcaption>
+            <span class="formula__name">Electrical energy</span>
+            <span class="formula__say">electrical energy equals power times time, which equals voltage times current times time, which equals current squared times resistance times time, which equals voltage squared times time divided by resistance.</span>
+          </figcaption>
+        </figure>
+        <p>The <strong>brightness</strong> of a bulb depends on the power it dissipates.</p>
+
+        <h3>Series circuits</h3>
+        <p>Components in a <strong>series</strong> circuit lie in a single path. The same current
+          flows through every part.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ I = I_1 = I_2 = I_3 = \dots \]\[ V = V_1 + V_2 + V_3 + \dots \]\[ R_{eq} = R_1 + R_2 + R_3 + \dots \]</div>
+          <figcaption>
+            <span class="formula__name">Series rules</span>
+            <span class="formula__say">in series, the total current equals the current through each resistor; the battery voltage equals the sum of the voltages across the resistors; and the equivalent resistance equals the sum of the individual resistances.</span>
+          </figcaption>
+        </figure>
+        <p>The sum of voltage changes around any loop is zero
+          (<strong>Kirchhoff&rsquo;s loop rule</strong>), which is conservation of energy.</p>
+
+        <h3>Parallel circuits</h3>
+        <p>In a <strong>parallel</strong> circuit the path for current divides and then rejoins.
+          Every branch has the same voltage, and the equivalent resistance is <em>less</em> than
+          any single branch.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ I = I_1 + I_2 + I_3 + \dots \]\[ V = V_1 = V_2 = V_3 = \dots \]\[ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots \]</div>
+          <figcaption>
+            <span class="formula__name">Parallel rules</span>
+            <span class="formula__say">in parallel, the total current equals the sum of the branch currents; the voltage is the same across every branch; and one divided by the equivalent resistance equals the sum of one divided by each resistance.</span>
+          </figcaption>
+        </figure>
+        <p>Current into a junction equals current out of it
+          (<strong>Kirchhoff&rsquo;s junction rule</strong>), which is conservation of charge.</p>
+
+        <h3>Kirchhoff&rsquo;s rules in action</h3>
+        <p>These animations illustrate the two rules. (They loop continuously; the written
+          description below each one carries all the information.)</p>
+
+        <h4>Junction rule (1st law) &mdash; conservation of charge</h4>
+        <div class="vis-pair">
+          <figure class="vis">
+            <img class="vis__img gif" src="assets/kircho1.gif" alt="" aria-hidden="true">
+            <figcaption>
+              <span class="label">Animation &mdash; current at a T-junction</span>
+              <p>Current flows in along one wire and splits to flow out along the other two. The
+                total current arriving at the junction equals the total current leaving it.</p>
+            </figcaption>
+          </figure>
+          <figure class="vis">
+            <img class="vis__img gif" src="assets/kircho3.gif" alt="" aria-hidden="true">
+            <figcaption>
+              <span class="label">Animation &mdash; current at a four-way junction</span>
+              <p>Currents flow in and out along four wires. However the current divides, the amount
+                entering the junction always equals the amount leaving &mdash; charge cannot pile up.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <h4>Loop rule (2nd law) &mdash; conservation of energy</h4>
+        <div class="vis-pair">
+          <figure class="vis">
+            <img class="vis__img gif" src="assets/kirch22d.gif" alt="" aria-hidden="true">
+            <figcaption>
+              <span class="label">Animation &mdash; voltages around one loop</span>
+              <p>A single-loop circuit with a battery and two resistors, labelled with voltages. The
+                battery raises the potential by <strong>+4&nbsp;V</strong>; the two resistors drop it
+                by <strong>1&nbsp;V</strong> and <strong>3&nbsp;V</strong>. Around the loop the rises
+                and drops add to zero: +4 &minus; 1 &minus; 3 = 0.</p>
+            </figcaption>
+          </figure>
+          <figure class="vis">
+            <img class="vis__img gif" src="assets/kirch2lp.gif" alt="" aria-hidden="true">
+            <figcaption>
+              <span class="label">Animation &mdash; more than one loop</span>
+              <p>A battery with two resistors in parallel, showing that a circuit can contain several
+                closed loops. The loop rule applies to <em>each</em> loop: around any loop, the
+                voltage rises equal the voltage drops.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <h3>Meters</h3>
+        <ul>
+          <li>An <strong>ammeter</strong> measures current and is connected in <em>series</em> with
+            the element.</li>
+          <li>A <strong>voltmeter</strong> measures voltage and is connected in <em>parallel</em>
+            with the element.</li>
+        </ul>
+        <p>Circuit symbols (cell, battery, switch, voltmeter, ammeter, resistor, variable resistor,
+          lamp) are described in the
+          <a href="#data-circuitsymbols">circuit-symbols table</a>.</p>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           11. MAGNETISM  (ADDED)
+           ================================================================ -->
+      <section class="topic" id="magnetism" aria-labelledby="magnetism-h">
+        <h2 id="magnetism-h">11. Magnetism &amp; electromagnetism <span class="added">added from core curriculum</span></h2>
+        <ul>
+          <li><strong>Moving electric charges produce magnetic fields.</strong> An electric current
+            in a wire creates a magnetic field around it.</li>
+          <li>The magnetic field of a permanent magnet points <strong>out of the north
+            (north-seeking) pole and into the south (south-seeking) pole</strong> outside the
+            magnet.</li>
+          <li><strong>Electromagnetic induction:</strong> relative motion between a conductor and a
+            magnetic field can produce a potential difference (voltage) in the conductor. This is
+            how generators work; the link between electricity and magnetism also runs motors.</li>
+          <li>Magnetic forces, like electric forces, can be <strong>attractive or
+            repulsive</strong> &mdash; unlike gravity, which is only attractive. (Like poles repel;
+            opposite poles attract.)</li>
+          <li>Energy can be stored in <strong>electric and magnetic fields</strong> and carried
+            through conductors or space.</li>
+        </ul>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 380 264" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs><marker id="bmA" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker></defs>
+              <!-- field loops: leave N (left), enter S (right) -->
+              <g stroke="#4A4842" stroke-width="2" fill="none" marker-end="url(#bmA)">
+                <path d="M115,110 C150,72 230,72 265,110"/>
+                <path d="M112,108 C150,40 230,40 268,108"/>
+                <path d="M108,112 C150,14 230,14 272,112"/>
+                <path d="M115,154 C150,192 230,192 265,154"/>
+                <path d="M112,156 C150,224 230,224 268,156"/>
+                <path d="M108,152 C150,250 230,250 272,152"/>
+              </g>
+              <!-- the magnet -->
+              <rect x="110" y="110" width="80" height="44" fill="#DD614C" stroke="#111827" stroke-width="2"/>
+              <rect x="190" y="110" width="80" height="44" fill="#2E6FE0" stroke="#111827" stroke-width="2"/>
+              <text x="150" y="139" text-anchor="middle" font-size="22" font-weight="800" fill="#fff">N</text>
+              <text x="230" y="139" text-anchor="middle" font-size="22" font-weight="800" fill="#fff">S</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; field of a single bar magnet</span>
+            <p>A bar magnet with its <strong>north pole (N)</strong> on the left and
+              <strong>south pole (S)</strong> on the right. Outside the magnet, curved field lines
+              <strong>leave the north pole, loop around above and below, and return into the south
+              pole</strong>, forming closed loops. The lines are most crowded &mdash; the field is
+              strongest &mdash; at the poles.</p>
+          </figcaption>
+        </figure>
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs><marker id="bmB" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4A4842"/></marker></defs>
+              <!-- field lines across the gap, N (left magnet) -> S (right magnet) -->
+              <g stroke="#4A4842" stroke-width="2" fill="none" marker-end="url(#bmB)">
+                <line x1="195" y1="117" x2="263" y2="117"/>
+                <path d="M193,108 Q230,80 267,108"/>
+                <path d="M193,100 Q230,60 267,100"/>
+                <path d="M193,126 Q230,154 267,126"/>
+                <path d="M193,134 Q230,174 267,134"/>
+              </g>
+              <!-- left magnet: S | N (N faces the gap) -->
+              <rect x="40" y="95" width="75" height="44" fill="#2E6FE0" stroke="#111827" stroke-width="2"/>
+              <rect x="115" y="95" width="75" height="44" fill="#DD614C" stroke="#111827" stroke-width="2"/>
+              <text x="77" y="124" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">S</text>
+              <text x="152" y="124" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">N</text>
+              <!-- right magnet: S | N (S faces the gap) -->
+              <rect x="270" y="95" width="75" height="44" fill="#2E6FE0" stroke="#111827" stroke-width="2"/>
+              <rect x="345" y="95" width="75" height="44" fill="#DD614C" stroke="#111827" stroke-width="2"/>
+              <text x="307" y="124" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">S</text>
+              <text x="382" y="124" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">N</text>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; two bar magnets, opposite poles facing</span>
+            <p>Two bar magnets placed end to end with <strong>opposite poles facing</strong>: the
+              north pole of the left magnet faces the south pole of the right magnet. Field lines run
+              straight across the gap, <strong>from the N pole into the S pole</strong>, linking the
+              two magnets &mdash; <strong>opposite poles attract</strong>. (If like poles faced each
+              other, the field lines would bend sharply apart and the magnets would repel.)</p>
+          </figcaption>
+        </figure>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           12. MODERN PHYSICS  (ADDED)
+           ================================================================ -->
+      <section class="topic" id="modern" aria-labelledby="modern-h">
+        <h2 id="modern-h">12. Modern physics <span class="added">added from core curriculum</span></h2>
+        <p>This strand is required by the core curriculum and appears on the reference tables, but
+          the fact sheet only touched it. It is developed fully here.</p>
+
+        <h3>Quantization</h3>
+        <ul>
+          <li>On the atomic scale, energy and matter come in discrete amounts &mdash; they are
+            <strong>quantized</strong>, not continuous.</li>
+          <li>Charge is quantized too. At the atomic level charge comes in multiples of the
+            elementary charge (the charge on an electron or proton). At the subnuclear level,
+            <strong>quarks</strong> carry fractions of the elementary charge.</li>
+        </ul>
+
+        <h3>The dual nature of light</h3>
+        <p>Light behaves as both a <strong>wave</strong> (it diffracts and interferes) and a stream
+          of <strong>particles</strong> called <strong>photons</strong>. On the atomic level both
+          matter and energy show wave and particle characteristics. This wave&ndash;particle duality
+          is the foundation of quantum mechanics.</p>
+
+        <h3>Photons &mdash; the energy of light</h3>
+        <p>Energy is emitted and absorbed in discrete packets called photons. A photon&rsquo;s
+          energy is proportional to its frequency (so higher-frequency light, like ultraviolet,
+          carries more energy per photon than lower-frequency light, like infrared).</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ E_{\text{photon}} = hf = \frac{hc}{\lambda} \]</div>
+          <figcaption>
+            <span class="formula__name">Photon energy</span>
+            <span class="formula__say">the energy of a photon equals Planck&rsquo;s constant times the frequency, which also equals Planck&rsquo;s constant times the speed of light divided by the wavelength.</span>
+          </figcaption>
+        </figure>
+        <dl class="vars">
+          <dt>E<sub>photon</sub></dt><dd>energy of the photon, in joules (or electronvolts)</dd>
+          <dt>h</dt><dd>Planck&rsquo;s constant, 6.63 &times; 10<sup>&minus;34</sup> J&middot;s</dd>
+          <dt>f</dt><dd>frequency, in hertz</dd>
+          <dt>c</dt><dd>speed of light in a vacuum, 3.00 &times; 10<sup>8</sup> m/s</dd>
+          <dt>&lambda;</dt><dd>wavelength, in meters</dd>
+        </dl>
+        <p>The <strong>electronvolt</strong> (eV) is a small energy unit used for atoms:
+          1 eV = 1.60 &times; 10<sup>&minus;19</sup> J.</p>
+
+        <h3>Atomic energy levels &amp; spectra</h3>
+        <ul>
+          <li>Electrons in an atom can only have certain discrete energies, called
+            <strong>energy levels</strong>. The lowest is the <strong>ground state</strong>;
+            the level where the electron is freed from the atom is <strong>ionization</strong>
+            (taken as 0 eV).</li>
+          <li>When an electron drops from a higher level to a lower one, the atom emits a photon
+            whose energy is exactly the difference between the two levels. Absorbing a photon does
+            the reverse. This is why each element has its own pattern of spectral lines.</li>
+        </ul>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ E_{\text{photon}} = E_i - E_f \]</div>
+          <figcaption>
+            <span class="formula__name">Energy of a transition</span>
+            <span class="formula__say">the energy of the emitted or absorbed photon equals the initial energy level minus the final energy level.</span>
+          </figcaption>
+        </figure>
+        <p>The reference tables show these as <strong>ladder diagrams</strong> &mdash; horizontal
+          rungs on an energy axis whose spacing gets closer together as they approach the 0 eV
+          ionization line at the top:</p>
+        <div class="vis-pair">
+          <figure class="vis">
+            <div class="vis__svg" aria-hidden="true">
+              <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" role="img">
+                <text class="t-title" x="150" y="22" text-anchor="middle" font-size="18" fill="#111827">Hydrogen</text>
+                <text class="t-mono" x="150" y="40" text-anchor="middle" font-size="11" fill="#4A4842">ionization</text>
+                <!-- energy axis -->
+                <line x1="205" y1="40" x2="205" y2="348" stroke="#111827" stroke-width="2.5"/>
+                <!-- rungs (y scaled: 44 + (-E/13.60)*300) -->
+                <line x1="60" y1="44"  x2="205" y2="44"  stroke="#DD614C" stroke-width="2.5"/>
+                <line x1="60" y1="52.4" x2="205" y2="52.4" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="55.9" x2="205" y2="55.9" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="62.8" x2="205" y2="62.8" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="77.3" x2="205" y2="77.3" stroke="#111827" stroke-width="2.5"/>
+                <line x1="60" y1="119" x2="205" y2="119" stroke="#111827" stroke-width="2.5"/>
+                <line x1="60" y1="344" x2="205" y2="344" stroke="#111827" stroke-width="3"/>
+                <!-- left level labels -->
+                <text class="t-mono" x="54" y="48"  text-anchor="end" font-size="11" fill="#111827">n=&#8734;</text>
+                <text class="t-mono" x="54" y="62"  text-anchor="end" font-size="11" fill="#111827">n=4&#8211;6</text>
+                <text class="t-mono" x="54" y="81"  text-anchor="end" font-size="11" fill="#111827">n=3</text>
+                <text class="t-mono" x="54" y="123" text-anchor="end" font-size="11" fill="#111827">n=2</text>
+                <text class="t-mono" x="54" y="348" text-anchor="end" font-size="11" fill="#111827">n=1</text>
+                <!-- right eV labels -->
+                <text class="t-mono" x="212" y="48"  font-size="10" fill="#111827">0.00</text>
+                <text class="t-mono" x="212" y="62"  font-size="10" fill="#111827">&#8722;0.85&#8230;&#8722;0.38</text>
+                <text class="t-mono" x="212" y="81"  font-size="10" fill="#111827">&#8722;1.51</text>
+                <text class="t-mono" x="212" y="123" font-size="10" fill="#111827">&#8722;3.40</text>
+                <text class="t-mono" x="212" y="348" font-size="10" fill="#111827">&#8722;13.60</text>
+                <text class="t-mono" x="132" y="366" text-anchor="middle" font-size="11" fill="#4A4842">ground state &#183; eV</text>
+              </svg>
+            </div>
+            <figcaption>
+              <span class="label">Diagram &mdash; hydrogen energy levels</span>
+              <p>Horizontal rungs on an energy axis: the ground state n=1 sits at &minus;13.60 eV at
+                the bottom, up to ionization at n=&infin; and 0.00 eV at the top. The rungs crowd
+                together near the top &mdash; n=2 at &minus;3.40 eV, n=3 at &minus;1.51 eV, and
+                n=4, 5, 6 packed between &minus;0.85 and &minus;0.38 eV.</p>
+            </figcaption>
+          </figure>
+          <figure class="vis">
+            <div class="vis__svg" aria-hidden="true">
+              <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" role="img">
+                <text class="t-title" x="150" y="22" text-anchor="middle" font-size="18" fill="#111827">Mercury</text>
+                <text class="t-mono" x="150" y="40" text-anchor="middle" font-size="11" fill="#4A4842">ionization</text>
+                <line x1="205" y1="40" x2="205" y2="348" stroke="#111827" stroke-width="2.5"/>
+                <!-- rungs (y scaled: 44 + (-E/10.38)*300) -->
+                <line x1="60" y1="44"   x2="205" y2="44"   stroke="#DD614C" stroke-width="2.5"/>
+                <line x1="60" y1="89.1" x2="205" y2="89.1" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="89.4" x2="205" y2="89.4" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="115.7" x2="205" y2="115.7" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="121.5" x2="205" y2="121.5" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="151.2" x2="205" y2="151.2" stroke="#111827" stroke-width="2.5"/>
+                <line x1="60" y1="187.1" x2="205" y2="187.1" stroke="#111827" stroke-width="2.5"/>
+                <line x1="60" y1="203.5" x2="205" y2="203.5" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="209.9" x2="205" y2="209.9" stroke="#111827" stroke-width="2"/>
+                <line x1="60" y1="344"  x2="205" y2="344"  stroke="#111827" stroke-width="3"/>
+                <!-- left labels -->
+                <text class="t-mono" x="54" y="48"  text-anchor="end" font-size="11" fill="#111827">j</text>
+                <text class="t-mono" x="54" y="93"  text-anchor="end" font-size="11" fill="#111827">h, i</text>
+                <text class="t-mono" x="54" y="122" text-anchor="end" font-size="11" fill="#111827">f, g</text>
+                <text class="t-mono" x="54" y="155" text-anchor="end" font-size="11" fill="#111827">e</text>
+                <text class="t-mono" x="54" y="191" text-anchor="end" font-size="11" fill="#111827">d</text>
+                <text class="t-mono" x="54" y="210" text-anchor="end" font-size="11" fill="#111827">b, c</text>
+                <text class="t-mono" x="54" y="348" text-anchor="end" font-size="11" fill="#111827">a</text>
+                <!-- right eV labels -->
+                <text class="t-mono" x="212" y="48"  font-size="10" fill="#111827">0.00</text>
+                <text class="t-mono" x="212" y="93"  font-size="9"  fill="#111827">&#8722;1.57, &#8722;1.56</text>
+                <text class="t-mono" x="212" y="122" font-size="9"  fill="#111827">&#8722;2.68, &#8722;2.48</text>
+                <text class="t-mono" x="212" y="155" font-size="10" fill="#111827">&#8722;3.71</text>
+                <text class="t-mono" x="212" y="191" font-size="10" fill="#111827">&#8722;4.95</text>
+                <text class="t-mono" x="212" y="210" font-size="9"  fill="#111827">&#8722;5.74, &#8722;5.52</text>
+                <text class="t-mono" x="212" y="348" font-size="10" fill="#111827">&#8722;10.38</text>
+                <text class="t-mono" x="132" y="366" text-anchor="middle" font-size="11" fill="#4A4842">ground state &#183; eV</text>
+              </svg>
+            </div>
+            <figcaption>
+              <span class="label">Diagram &mdash; mercury energy levels</span>
+              <p>The ground state (level a) sits at &minus;10.38 eV at the bottom, up to ionization
+                (level j) at 0.00 eV at the top, with levels b through i bunched between about
+                &minus;5.74 and &minus;1.56 eV. All ten values are listed in the table.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <p>Exact values for every level are in the
+          <a href="#data-energylevels">energy-levels table</a>.</p>
+        <div class="callout tip">
+          <span class="label">Interactive simulation</span>
+          <p>See how electrons jumping between energy levels produce an element&rsquo;s spectral
+            lines:</p>
+          <p><a class="btn" href="../AP%20Resource%20Pages/Simulations/energylevelspectra.html" target="_blank" rel="noopener">Energy Levels &amp; Spectra simulation<span class="sr-only"> (opens in a new tab)</span></a></p>
+        </div>
+
+        <h3>Mass&ndash;energy equivalence</h3>
+        <p>Mass and energy are two forms of the same thing. The fundamental source of all the
+          energy in the universe is the conversion of mass into energy.</p>
+        <figure class="formula">
+          <div class="formula__math" aria-hidden="true">\[ E = mc^2 \]</div>
+          <figcaption>
+            <span class="formula__name">Mass&ndash;energy</span>
+            <span class="formula__say">energy equals mass times the speed of light squared.</span>
+          </figcaption>
+        </figure>
+        <p>The <strong>universal mass unit</strong> (u) is used for atomic masses;
+          1 u is equivalent to 9.31 &times; 10<sup>2</sup> MeV (megaelectronvolts) of energy.</p>
+
+        <h3>The Standard Model of particle physics</h3>
+        <p>The Standard Model explains what matter is made of. It has evolved from earlier models
+          of the atom and states that atomic particles are built from smaller subnuclear particles,
+          that the nucleus is a collection of quarks (which appear as protons and neutrons), and
+          that <strong>every particle has a matching antiparticle with the opposite charge</strong>.</p>
+
+        <figure class="vis">
+          <div class="vis__svg" aria-hidden="true">
+            <svg viewBox="0 0 520 384" xmlns="http://www.w3.org/2000/svg" role="img">
+              <!-- connectors -->
+              <g stroke="#111827" stroke-width="2" fill="none">
+                <line x1="260" y1="66" x2="175" y2="116"/>
+                <line x1="260" y1="66" x2="360" y2="116"/>
+                <line x1="175" y1="162" x2="100" y2="212"/>
+                <line x1="175" y1="162" x2="255" y2="212"/>
+                <line x1="100" y1="258" x2="100" y2="308"/>
+                <line x1="255" y1="258" x2="250" y2="308"/>
+              </g>
+              <!-- boxes -->
+              <rect x="205" y="20"  width="110" height="46" fill="#DAA144" stroke="#111827" stroke-width="2.5"/>
+              <rect x="115" y="116" width="120" height="46" fill="#fff" stroke="#111827" stroke-width="2.5"/>
+              <rect x="300" y="116" width="120" height="46" fill="#fff" stroke="#111827" stroke-width="2.5"/>
+              <rect x="40"  y="212" width="120" height="46" fill="#fff" stroke="#111827" stroke-width="2.5"/>
+              <rect x="195" y="212" width="120" height="46" fill="#fff" stroke="#111827" stroke-width="2.5"/>
+              <rect x="40"  y="308" width="120" height="46" fill="#fff" stroke="#111827" stroke-width="2.5"/>
+              <rect x="180" y="308" width="140" height="46" fill="#fff" stroke="#111827" stroke-width="2.5"/>
+              <!-- labels -->
+              <g text-anchor="middle" fill="#111827" class="t-title" font-size="16">
+                <text x="260" y="49">Matter</text>
+                <text x="175" y="145">Hadrons</text>
+                <text x="360" y="145">Leptons</text>
+                <text x="100" y="241">Baryons</text>
+                <text x="255" y="241">Mesons</text>
+              </g>
+              <g text-anchor="middle" fill="#111827" font-size="14">
+                <text x="100" y="337">three quarks</text>
+                <text x="250" y="337">quark + antiquark</text>
+              </g>
+              <g text-anchor="middle" fill="#4A4842" font-size="11">
+                <text x="100" y="372">e.g. proton, neutron</text>
+                <text x="250" y="372">e.g. pion</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption>
+            <span class="label">Diagram &mdash; classification of matter</span>
+            <p>Matter divides into two big families: <strong>hadrons</strong> and
+              <strong>leptons</strong>. Hadrons split again into <strong>baryons</strong> (made of
+              three quarks &mdash; protons and neutrons are baryons) and <strong>mesons</strong>
+              (made of one quark plus one antiquark). Leptons (such as the electron) are not made of
+              quarks.</p>
+          </figcaption>
+        </figure>
+        <ul>
+          <li><strong>Quarks</strong> come in six types. Up, charm, and top each carry a charge of
+            +2/3 of an elementary charge. Down, strange, and bottom each carry &minus;1/3.</li>
+          <li><strong>Leptons</strong> also come in six types. The electron, muon, and tau each
+            carry &minus;1 elementary charge. The three neutrinos (electron, muon, and tau
+            neutrinos) carry zero charge.</li>
+        </ul>
+        <p>The full quark and lepton charges are in the
+          <a href="#data-standardmodel">Standard Model table</a>.</p>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           13. COMPLETE EQUATION REFERENCE
+           ================================================================ -->
+      <section class="topic" id="equations" aria-labelledby="equations-h">
+        <h2 id="equations-h">13. Complete equation reference</h2>
+        <p>Every equation from the New York State <em>Reference Tables for Physical
+          Setting/Physics</em>, grouped by section. Each is shown visually and written in words.</p>
+
+        <h3>Mechanics</h3>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ \bar v = \frac{d}{t} \]</div><figcaption><span class="formula__name">Average velocity</span><span class="formula__say">average velocity equals displacement divided by time.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ a = \frac{\Delta v}{t} \]</div><figcaption><span class="formula__name">Acceleration</span><span class="formula__say">acceleration equals the change in velocity divided by time.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ v_f = v_i + at \]</div><figcaption><span class="formula__name">Final velocity</span><span class="formula__say">final velocity equals initial velocity plus acceleration times time.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ d = v_i t + \tfrac{1}{2}at^2 \]</div><figcaption><span class="formula__name">Displacement</span><span class="formula__say">displacement equals initial velocity times time plus one-half acceleration times time squared.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ v_f^{\,2} = v_i^{\,2} + 2ad \]</div><figcaption><span class="formula__name">Velocity&ndash;displacement</span><span class="formula__say">final velocity squared equals initial velocity squared plus two times acceleration times displacement.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ A_y = A\sin\theta \qquad A_x = A\cos\theta \]</div><figcaption><span class="formula__name">Vector components</span><span class="formula__say">the y-component of a vector equals the vector times the sine of the angle; the x-component equals the vector times the cosine of the angle.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ a = \frac{F_{\text{net}}}{m} \]</div><figcaption><span class="formula__name">Newton&rsquo;s 2nd law</span><span class="formula__say">acceleration equals net force divided by mass.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ F_f = \mu F_N \]</div><figcaption><span class="formula__name">Friction</span><span class="formula__say">the force of friction equals the coefficient of friction times the normal force.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ F_g = \frac{G m_1 m_2}{r^2} \]</div><figcaption><span class="formula__name">Gravitation</span><span class="formula__say">the gravitational force equals the gravitational constant times the two masses, divided by the distance between their centers squared.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ g = \frac{F_g}{m} \]</div><figcaption><span class="formula__name">Gravitational field</span><span class="formula__say">the gravitational field strength equals weight divided by mass.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ p = mv \]</div><figcaption><span class="formula__name">Momentum</span><span class="formula__say">momentum equals mass times velocity.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ p_{\text{before}} = p_{\text{after}} \]</div><figcaption><span class="formula__name">Momentum conservation</span><span class="formula__say">total momentum before equals total momentum after.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ J = F_{\text{net}}\,t = \Delta p \]</div><figcaption><span class="formula__name">Impulse</span><span class="formula__say">impulse equals net force times time, which equals the change in momentum.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ F_s = kx \]</div><figcaption><span class="formula__name">Spring force</span><span class="formula__say">the force on a spring equals the spring constant times the change in length from equilibrium.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ PE_s = \tfrac{1}{2}kx^2 \]</div><figcaption><span class="formula__name">Spring energy</span><span class="formula__say">spring potential energy equals one-half the spring constant times the change in length squared.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ F_c = m a_c \]</div><figcaption><span class="formula__name">Centripetal force</span><span class="formula__say">centripetal force equals mass times centripetal acceleration.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ a_c = \frac{v^2}{r} \]</div><figcaption><span class="formula__name">Centripetal acceleration</span><span class="formula__say">centripetal acceleration equals speed squared divided by the radius.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ \Delta PE = mg\,\Delta h \]</div><figcaption><span class="formula__name">Gravitational PE</span><span class="formula__say">change in gravitational potential energy equals mass times g times change in height.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ KE = \tfrac{1}{2}mv^2 \]</div><figcaption><span class="formula__name">Kinetic energy</span><span class="formula__say">kinetic energy equals one-half mass times speed squared.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ W = Fd = \Delta E_T \]</div><figcaption><span class="formula__name">Work</span><span class="formula__say">work equals force times displacement, which equals the change in total energy.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ E_T = PE + KE + Q \]</div><figcaption><span class="formula__name">Total energy</span><span class="formula__say">total energy equals potential energy plus kinetic energy plus internal energy.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ P = \frac{W}{t} = \frac{Fd}{t} = F\bar v \]</div><figcaption><span class="formula__name">Power</span><span class="formula__say">power equals work over time, which equals force times displacement over time, which equals force times average velocity.</span></figcaption></figure>
+
+        <h3>Electricity</h3>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ F_e = \frac{k q_1 q_2}{r^2} \]</div><figcaption><span class="formula__name">Coulomb&rsquo;s law</span><span class="formula__say">electrostatic force equals Coulomb&rsquo;s constant times the two charges divided by the distance between their centers squared.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ E = \frac{F_e}{q} \]</div><figcaption><span class="formula__name">Electric field</span><span class="formula__say">electric field strength equals electrostatic force divided by charge.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ V = \frac{W}{q} \]</div><figcaption><span class="formula__name">Potential difference</span><span class="formula__say">voltage equals work divided by charge.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ I = \frac{\Delta q}{t} \]</div><figcaption><span class="formula__name">Current</span><span class="formula__say">current equals charge divided by time.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ R = \frac{V}{I} \]</div><figcaption><span class="formula__name">Resistance (Ohm&rsquo;s law)</span><span class="formula__say">resistance equals voltage divided by current.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ R = \frac{\rho L}{A} \]</div><figcaption><span class="formula__name">Resistance of a wire</span><span class="formula__say">resistance equals resistivity times length divided by cross-sectional area.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ P = VI = I^2 R = \frac{V^2}{R} \]</div><figcaption><span class="formula__name">Electrical power</span><span class="formula__say">power equals voltage times current, which equals current squared times resistance, which equals voltage squared divided by resistance.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ W = Pt = VIt = I^2Rt = \frac{V^2 t}{R} \]</div><figcaption><span class="formula__name">Electrical energy</span><span class="formula__say">electrical energy equals power times time, which equals voltage times current times time, which equals current squared times resistance times time, which equals voltage squared times time divided by resistance.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ R_{eq} = R_1 + R_2 + R_3 + \dots \]</div><figcaption><span class="formula__name">Series resistance</span><span class="formula__say">in series, equivalent resistance equals the sum of the individual resistances.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \dots \]</div><figcaption><span class="formula__name">Parallel resistance</span><span class="formula__say">in parallel, one over the equivalent resistance equals the sum of one over each resistance.</span></figcaption></figure>
+
+        <h3>Waves</h3>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ v = f\lambda \]</div><figcaption><span class="formula__name">Wave speed</span><span class="formula__say">wave speed equals frequency times wavelength.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ T = \frac{1}{f} \]</div><figcaption><span class="formula__name">Period</span><span class="formula__say">the period equals one divided by the frequency.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ \theta_i = \theta_r \]</div><figcaption><span class="formula__name">Reflection</span><span class="formula__say">the angle of incidence equals the angle of reflection.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ n = \frac{c}{v} \]</div><figcaption><span class="formula__name">Index of refraction</span><span class="formula__say">the absolute index of refraction equals the speed of light in a vacuum divided by the speed in the material.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ n_1 \sin\theta_1 = n_2 \sin\theta_2 \]</div><figcaption><span class="formula__name">Snell&rsquo;s law</span><span class="formula__say">the first index times the sine of the first angle equals the second index times the sine of the second angle.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ \frac{n_2}{n_1} = \frac{v_1}{v_2} = \frac{\lambda_1}{\lambda_2} \]</div><figcaption><span class="formula__name">Two-media relationship</span><span class="formula__say">the ratio of the indices equals the inverse ratio of the speeds, which equals the ratio of the wavelengths.</span></figcaption></figure>
+
+        <h3>Modern physics</h3>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ E_{\text{photon}} = hf = \frac{hc}{\lambda} \]</div><figcaption><span class="formula__name">Photon energy</span><span class="formula__say">photon energy equals Planck&rsquo;s constant times frequency, which equals Planck&rsquo;s constant times the speed of light divided by wavelength.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ E_{\text{photon}} = E_i - E_f \]</div><figcaption><span class="formula__name">Energy transition</span><span class="formula__say">photon energy equals the initial energy level minus the final energy level.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ E = mc^2 \]</div><figcaption><span class="formula__name">Mass&ndash;energy</span><span class="formula__say">energy equals mass times the speed of light squared.</span></figcaption></figure>
+
+        <h3>Geometry &amp; trigonometry</h3>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ A = bh \quad\text{(rectangle)} \qquad A = \tfrac{1}{2}bh \quad\text{(triangle)} \]</div><figcaption><span class="formula__name">Areas</span><span class="formula__say">area of a rectangle equals base times height; area of a triangle equals one-half base times height.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ A = \pi r^2 \qquad C = 2\pi r \]</div><figcaption><span class="formula__name">Circle</span><span class="formula__say">area of a circle equals pi r squared; circumference equals two pi r.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ c^2 = a^2 + b^2 \]</div><figcaption><span class="formula__name">Pythagorean theorem</span><span class="formula__say">the hypotenuse squared equals the sum of the squares of the legs.</span></figcaption></figure>
+        <figure class="formula"><div class="formula__math" aria-hidden="true">\[ \sin\theta = \frac{a}{c} \quad \cos\theta = \frac{b}{c} \quad \tan\theta = \frac{a}{b} \]</div><figcaption><span class="formula__name">Right-triangle trig</span><span class="formula__say">sine equals opposite over hypotenuse; cosine equals adjacent over hypotenuse; tangent equals opposite over adjacent.</span></figcaption></figure>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+      <!-- ================================================================
+           14. REFERENCE DATA TABLES
+           ================================================================ -->
+      <section class="topic" id="data" aria-labelledby="data-h">
+        <h2 id="data-h">14. Reference data tables</h2>
+        <p>The constants, values, and data from the reference tables, as accessible tables with
+          row and column headers.</p>
+
+        <h3 id="data-constants">List of physical constants</h3>
+        <div class="table-scroll">
+          <table>
+            <caption>Physical constants used in Regents Physics</caption>
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Symbol</th><th scope="col">Value</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Universal gravitational constant</th><td>G</td><td>6.67 &times; 10<sup>&minus;11</sup> N&middot;m<sup>2</sup>/kg<sup>2</sup></td></tr>
+              <tr><th scope="row">Acceleration due to gravity</th><td>g</td><td>9.81 m/s<sup>2</sup></td></tr>
+              <tr><th scope="row">Speed of light in a vacuum</th><td>c</td><td>3.00 &times; 10<sup>8</sup> m/s</td></tr>
+              <tr><th scope="row">Speed of sound in air at STP</th><td></td><td>3.31 &times; 10<sup>2</sup> m/s</td></tr>
+              <tr><th scope="row">Mass of Earth</th><td></td><td>5.98 &times; 10<sup>24</sup> kg</td></tr>
+              <tr><th scope="row">Mass of the Moon</th><td></td><td>7.35 &times; 10<sup>22</sup> kg</td></tr>
+              <tr><th scope="row">Mean radius of Earth</th><td></td><td>6.37 &times; 10<sup>6</sup> m</td></tr>
+              <tr><th scope="row">Mean radius of the Moon</th><td></td><td>1.74 &times; 10<sup>6</sup> m</td></tr>
+              <tr><th scope="row">Mean distance &mdash; Earth to the Moon</th><td></td><td>3.84 &times; 10<sup>8</sup> m</td></tr>
+              <tr><th scope="row">Mean distance &mdash; Earth to the Sun</th><td></td><td>1.50 &times; 10<sup>11</sup> m</td></tr>
+              <tr><th scope="row">Electrostatic constant</th><td>k</td><td>8.99 &times; 10<sup>9</sup> N&middot;m<sup>2</sup>/C<sup>2</sup></td></tr>
+              <tr><th scope="row">1 elementary charge</th><td>e</td><td>1.60 &times; 10<sup>&minus;19</sup> C</td></tr>
+              <tr><th scope="row">1 coulomb</th><td>C</td><td>6.25 &times; 10<sup>18</sup> elementary charges</td></tr>
+              <tr><th scope="row">1 electronvolt</th><td>eV</td><td>1.60 &times; 10<sup>&minus;19</sup> J</td></tr>
+              <tr><th scope="row">Planck&rsquo;s constant</th><td>h</td><td>6.63 &times; 10<sup>&minus;34</sup> J&middot;s</td></tr>
+              <tr><th scope="row">1 universal mass unit</th><td>u</td><td>9.31 &times; 10<sup>2</sup> MeV</td></tr>
+              <tr><th scope="row">Rest mass of the electron</th><td>m<sub>e</sub></td><td>9.11 &times; 10<sup>&minus;31</sup> kg</td></tr>
+              <tr><th scope="row">Rest mass of the proton</th><td>m<sub>p</sub></td><td>1.67 &times; 10<sup>&minus;27</sup> kg</td></tr>
+              <tr><th scope="row">Rest mass of the neutron</th><td>m<sub>n</sub></td><td>1.67 &times; 10<sup>&minus;27</sup> kg</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="data-prefixes">Prefixes for powers of 10</h3>
+        <div class="table-scroll">
+          <table>
+            <caption>Metric prefixes</caption>
+            <thead>
+              <tr><th scope="col">Prefix</th><th scope="col">Symbol</th><th scope="col">Notation</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">tera</th><td>T</td><td>10<sup>12</sup></td></tr>
+              <tr><th scope="row">giga</th><td>G</td><td>10<sup>9</sup></td></tr>
+              <tr><th scope="row">mega</th><td>M</td><td>10<sup>6</sup></td></tr>
+              <tr><th scope="row">kilo</th><td>k</td><td>10<sup>3</sup></td></tr>
+              <tr><th scope="row">deci</th><td>d</td><td>10<sup>&minus;1</sup></td></tr>
+              <tr><th scope="row">centi</th><td>c</td><td>10<sup>&minus;2</sup></td></tr>
+              <tr><th scope="row">milli</th><td>m</td><td>10<sup>&minus;3</sup></td></tr>
+              <tr><th scope="row">micro</th><td>&micro;</td><td>10<sup>&minus;6</sup></td></tr>
+              <tr><th scope="row">nano</th><td>n</td><td>10<sup>&minus;9</sup></td></tr>
+              <tr><th scope="row">pico</th><td>p</td><td>10<sup>&minus;12</sup></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="data-friction">Approximate coefficients of friction</h3>
+        <div class="table-scroll">
+          <table>
+            <caption>Approximate coefficients of friction (kinetic and static)</caption>
+            <thead>
+              <tr><th scope="col">Surfaces</th><th scope="col">Kinetic</th><th scope="col">Static</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Rubber on concrete (dry)</th><td>0.68</td><td>0.90</td></tr>
+              <tr><th scope="row">Rubber on concrete (wet)</th><td>0.58</td><td>&mdash;</td></tr>
+              <tr><th scope="row">Rubber on asphalt (dry)</th><td>0.67</td><td>0.85</td></tr>
+              <tr><th scope="row">Rubber on asphalt (wet)</th><td>0.53</td><td>&mdash;</td></tr>
+              <tr><th scope="row">Rubber on ice</th><td>0.15</td><td>&mdash;</td></tr>
+              <tr><th scope="row">Waxed ski on snow</th><td>0.05</td><td>0.14</td></tr>
+              <tr><th scope="row">Wood on wood</th><td>0.30</td><td>0.42</td></tr>
+              <tr><th scope="row">Steel on steel</th><td>0.57</td><td>0.74</td></tr>
+              <tr><th scope="row">Copper on steel</th><td>0.36</td><td>0.53</td></tr>
+              <tr><th scope="row">Teflon on Teflon</th><td>0.04</td><td>&mdash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="data-refraction">Absolute indices of refraction</h3>
+        <p>Measured with light of frequency 5.09 &times; 10<sup>14</sup> Hz.</p>
+        <div class="table-scroll">
+          <table>
+            <caption>Absolute indices of refraction</caption>
+            <thead>
+              <tr><th scope="col">Material</th><th scope="col">Index (n)</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Air</th><td>1.00</td></tr>
+              <tr><th scope="row">Corn oil</th><td>1.47</td></tr>
+              <tr><th scope="row">Diamond</th><td>2.42</td></tr>
+              <tr><th scope="row">Ethyl alcohol</th><td>1.36</td></tr>
+              <tr><th scope="row">Glass, crown</th><td>1.52</td></tr>
+              <tr><th scope="row">Glass, flint</th><td>1.66</td></tr>
+              <tr><th scope="row">Glycerol</th><td>1.47</td></tr>
+              <tr><th scope="row">Lucite</th><td>1.50</td></tr>
+              <tr><th scope="row">Quartz, fused</th><td>1.46</td></tr>
+              <tr><th scope="row">Sodium chloride</th><td>1.54</td></tr>
+              <tr><th scope="row">Water</th><td>1.33</td></tr>
+              <tr><th scope="row">Zircon</th><td>1.92</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="data-resistivity">Resistivities at 20&deg;C</h3>
+        <div class="table-scroll">
+          <table>
+            <caption>Resistivities of materials at 20 degrees Celsius</caption>
+            <thead>
+              <tr><th scope="col">Material</th><th scope="col">Resistivity (&Omega;&middot;m)</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Aluminum</th><td>2.82 &times; 10<sup>&minus;8</sup></td></tr>
+              <tr><th scope="row">Copper</th><td>1.72 &times; 10<sup>&minus;8</sup></td></tr>
+              <tr><th scope="row">Gold</th><td>2.44 &times; 10<sup>&minus;8</sup></td></tr>
+              <tr><th scope="row">Nichrome</th><td>150. &times; 10<sup>&minus;8</sup></td></tr>
+              <tr><th scope="row">Silver</th><td>1.59 &times; 10<sup>&minus;8</sup></td></tr>
+              <tr><th scope="row">Tungsten</th><td>5.60 &times; 10<sup>&minus;8</sup></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="data-emspectrum">The electromagnetic spectrum</h3>
+        <p>Regions in order of increasing frequency (decreasing wavelength). All travel at
+          3.00 &times; 10<sup>8</sup> m/s in a vacuum.</p>
+        <div class="table-scroll">
+          <table>
+            <caption>Electromagnetic spectrum regions, lowest to highest frequency</caption>
+            <thead>
+              <tr><th scope="col">Region</th><th scope="col">Relative frequency &amp; wavelength</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Long radio waves</th><td>Lowest frequency, longest wavelength</td></tr>
+              <tr><th scope="row">Radio waves (AM, FM, TV)</th><td>Low frequency, long wavelength</td></tr>
+              <tr><th scope="row">Microwaves</th><td>&uarr; frequency increases, &darr; wavelength decreases</td></tr>
+              <tr><th scope="row">Infrared</th><td>Just below visible</td></tr>
+              <tr><th scope="row">Visible light</th><td>About 3.84 &times; 10<sup>14</sup> Hz (red) to 7.69 &times; 10<sup>14</sup> Hz (violet)</td></tr>
+              <tr><th scope="row">Ultraviolet</th><td>Just above visible</td></tr>
+              <tr><th scope="row">X-rays</th><td>High frequency, short wavelength</td></tr>
+              <tr><th scope="row">Gamma rays</th><td>Highest frequency, shortest wavelength</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <caption>Approximate frequencies of visible-light colors</caption>
+            <thead>
+              <tr><th scope="col">Color</th><th scope="col">Frequency (Hz)</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Red (longest wavelength)</th><td>3.84 &times; 10<sup>14</sup></td></tr>
+              <tr><th scope="row">Orange</th><td>4.82 &times; 10<sup>14</sup></td></tr>
+              <tr><th scope="row">Yellow</th><td>5.03 &times; 10<sup>14</sup></td></tr>
+              <tr><th scope="row">Green</th><td>5.20 &times; 10<sup>14</sup></td></tr>
+              <tr><th scope="row">Blue</th><td>6.10 &times; 10<sup>14</sup></td></tr>
+              <tr><th scope="row">Violet (shortest wavelength)</th><td>6.59&ndash;7.69 &times; 10<sup>14</sup></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="data-energylevels">Energy-level diagrams</h3>
+        <div class="table-scroll">
+          <table>
+            <caption>Energy levels for the hydrogen atom</caption>
+            <thead>
+              <tr><th scope="col">Level (n)</th><th scope="col">Energy (eV)</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">n = 1 (ground state)</th><td>&minus;13.60</td></tr>
+              <tr><th scope="row">n = 2</th><td>&minus;3.40</td></tr>
+              <tr><th scope="row">n = 3</th><td>&minus;1.51</td></tr>
+              <tr><th scope="row">n = 4</th><td>&minus;0.85</td></tr>
+              <tr><th scope="row">n = 5</th><td>&minus;0.54</td></tr>
+              <tr><th scope="row">n = 6</th><td>&minus;0.38</td></tr>
+              <tr><th scope="row">n = &infin; (ionization)</th><td>0.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <caption>A few energy levels for the mercury atom</caption>
+            <thead>
+              <tr><th scope="col">Level</th><th scope="col">Energy (eV)</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">a (ground state)</th><td>&minus;10.38</td></tr>
+              <tr><th scope="row">b</th><td>&minus;5.74</td></tr>
+              <tr><th scope="row">c</th><td>&minus;5.52</td></tr>
+              <tr><th scope="row">d</th><td>&minus;4.95</td></tr>
+              <tr><th scope="row">e</th><td>&minus;3.71</td></tr>
+              <tr><th scope="row">f</th><td>&minus;2.68</td></tr>
+              <tr><th scope="row">g</th><td>&minus;2.48</td></tr>
+              <tr><th scope="row">h</th><td>&minus;1.57</td></tr>
+              <tr><th scope="row">i</th><td>&minus;1.56</td></tr>
+              <tr><th scope="row">j (ionization)</th><td>0.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="data-standardmodel">Particles of the Standard Model</h3>
+        <p>Charges are given as multiples of the elementary charge, e. For every particle there is a
+          matching antiparticle with the opposite charge.</p>
+        <div class="table-scroll">
+          <table>
+            <caption>Quarks</caption>
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Symbol</th><th scope="col">Charge</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Up</th><td>u</td><td>+2/3 e</td></tr>
+              <tr><th scope="row">Charm</th><td>c</td><td>+2/3 e</td></tr>
+              <tr><th scope="row">Top</th><td>t</td><td>+2/3 e</td></tr>
+              <tr><th scope="row">Down</th><td>d</td><td>&minus;1/3 e</td></tr>
+              <tr><th scope="row">Strange</th><td>s</td><td>&minus;1/3 e</td></tr>
+              <tr><th scope="row">Bottom</th><td>b</td><td>&minus;1/3 e</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <caption>Leptons</caption>
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Symbol</th><th scope="col">Charge</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Electron</th><td>e</td><td>&minus;1 e</td></tr>
+              <tr><th scope="row">Muon</th><td>&mu;</td><td>&minus;1 e</td></tr>
+              <tr><th scope="row">Tau</th><td>&tau;</td><td>&minus;1 e</td></tr>
+              <tr><th scope="row">Electron neutrino</th><td>&nu;<sub>e</sub></td><td>0</td></tr>
+              <tr><th scope="row">Muon neutrino</th><td>&nu;<sub>&mu;</sub></td><td>0</td></tr>
+              <tr><th scope="row">Tau neutrino</th><td>&nu;<sub>&tau;</sub></td><td>0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <span class="label">Classification of matter</span>
+          <p>Matter &rarr; <strong>hadrons</strong> and <strong>leptons</strong>. Hadrons &rarr;
+            <strong>baryons</strong> (three quarks; protons and neutrons) and <strong>mesons</strong>
+            (one quark + one antiquark).</p>
+        </div>
+
+        <h3 id="data-circuitsymbols">Circuit symbols</h3>
+        <div class="table-scroll">
+          <table>
+            <caption>Standard circuit symbols and what they represent</caption>
+            <thead>
+              <tr><th scope="col">Component</th><th scope="col">How the symbol is drawn</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Cell</th><td>One long thin line (positive) and one short thick line (negative), side by side</td></tr>
+              <tr><th scope="row">Battery</th><td>Two or more cells in a row</td></tr>
+              <tr><th scope="row">Switch</th><td>A line with a break and a hinged segment that opens or closes the gap</td></tr>
+              <tr><th scope="row">Voltmeter</th><td>A circle with the letter V, connected in parallel</td></tr>
+              <tr><th scope="row">Ammeter</th><td>A circle with the letter A, connected in series</td></tr>
+              <tr><th scope="row">Resistor</th><td>A zig-zag line (or, internationally, a rectangle)</td></tr>
+              <tr><th scope="row">Variable resistor</th><td>A resistor with a diagonal arrow drawn across it</td></tr>
+              <tr><th scope="row">Lamp</th><td>A circle with an X inside</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <a class="backtotop" href="#toc-heading">&uarr; Back to contents</a>
+      </section>
+
+    </main>
+
+    <!-- ====================== FOOTER ====================== -->
+    <footer class="page-foot" aria-labelledby="foot-h">
+      <h2 id="foot-h">About this guide</h2>
+      <p>Built for Mr. Porter&rsquo;s Regents Physics (Physical Setting/Physics), 2025&ndash;26.
+        Content combines the class fact sheet with the New York State Physics Core Curriculum and
+        the 2006 <em>Reference Tables for Physical Setting/Physics</em>. Refraction and optics,
+        magnetism, electric fields, and modern physics were added to match the full core curriculum;
+        every reference-table equation is included.</p>
+      <p>Designed for screen-reader use: every equation has a written reading, every diagram has a
+        text description, and every data table has row and column headers. Styled with the Schodack
+        <em>brutalism</em> theme.</p>
+    </footer>
+
+  </div><!-- /.doc -->
+</body>
+</html>

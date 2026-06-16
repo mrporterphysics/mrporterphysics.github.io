@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site-root",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8011", "--directory", ".."],
+      "port": 8011
+    }
+  ]
+}
