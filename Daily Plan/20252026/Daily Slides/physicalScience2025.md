@@ -35,7 +35,7 @@ class: green
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Finish fan cart lab_
 
 ### 📆 Upcoming
 
