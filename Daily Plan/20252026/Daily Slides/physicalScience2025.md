@@ -17,6 +17,33 @@ class: green
 
 ---
 
+# 2026.06.16 **Physical Science**
+
+##### **❓ of the 📅**: Do you have any summer vacation plans?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Fan Cart Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.06.08 **Physical Science**
 
 ##### **❓ of the 📅**: If you could have any meal at the snap of your fingers, which would it be?
@@ -45,6 +72,7 @@ class: green
 </div>
 
 ---
+
 
 # 2026.06.04 **Physical Science**
 
