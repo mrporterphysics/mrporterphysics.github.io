@@ -103,7 +103,7 @@ For a comprehensive collection of all AP Physics materials, including past years
 
 ## 🔗 Quick Links
 
-- [Daily Agenda](/Daily Plan/20252026/Daily Slides/APAgendas202526.html)
+- [Daily Agenda](/Daily Plan/20262027/APAgendas202627.html)
 - [All Presentations](/presindex.html#ap-physics-content-slides)
 - [Lab Materials](/courses/ap-physics-labs.html)
 - [Course Overview](/courses/ap-physics.html)

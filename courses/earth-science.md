@@ -23,9 +23,9 @@ Comprehensive study of Earth's systems including geology, meteorology, astronomy
 
 ---
 
-## 📅 Current Year (2025-26)
+## 📅 Current Year (2026-27)
 
-- **[Daily Agenda](/Daily Plan/20252026/Daily Slides/EarthSci202526.html)** - Today's lesson plan, homework, and activities
+- **[Daily Agenda](/Daily Plan/20262027/EarthSci202627.html)** - Today's lesson plan, homework, and activities
 
 ---
 
@@ -82,7 +82,7 @@ Additional presentations for meteorology, oceanography, and environmental scienc
 
 - **[Earth Science Reference Tables](/earthscienceref.html)** - Official NYS reference materials
 - **[All ES Presentations](/presindex.html#earth-science)** - Complete presentation library
-- **[Daily Agenda](/Daily Plan/20252026/Daily Slides/EarthSci202526.html)** - Current schedule and assignments
+- **[Daily Agenda](/Daily Plan/20262027/EarthSci202627.html)** - Current schedule and assignments
 
 ---
 

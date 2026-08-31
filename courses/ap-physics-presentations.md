@@ -134,7 +134,7 @@ For comprehensive review presentations and practice materials:
 
 Access today's lesson and recent class slides:
 
-**[Daily Agenda 2025-26 →](/Daily Plan/20252026/Daily Slides/APAgendas202526.html)**
+**[Daily Agenda 2026-27 →](/Daily Plan/20262027/APAgendas202627.html)**
 
 ---
 

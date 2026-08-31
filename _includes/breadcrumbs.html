@@ -14,7 +14,7 @@
         <span class="breadcrumb-current">{{ page.title | default: crumb | replace: '-', ' ' | replace: '.html', '' | replace: '.md', '' | capitalize }}</span>
       {% else %}
         <span class="breadcrumb-separator">→</span>
-        {% assign crumb_title = crumb | replace: '-', ' ' | replace: '20252026', '2025-26' | replace: '20242025', '2024-25' | capitalize %}
+        {% assign crumb_title = crumb | replace: '-', ' ' | replace: '20262027', '2026-27' | replace: '20252026', '2025-26' | replace: '20242025', '2024-25' | capitalize %}
 
         {% if crumb == "courses" %}
           <span class="breadcrumb-current">{{ crumb_title }}</span>

@@ -206,9 +206,9 @@ title: Home
   <h2 style="font-size: 2.2rem; font-weight: 700;">⚡ Quick Access</h2>
   <p style="font-size: 1.1rem; font-weight: 400;">Most frequently used resources for today's classes</p>
   <div class="quick-access-grid">
-    <a href="/Daily Plan/20252026/Daily Slides/APAgendas202526.html" class="quick-btn">📅 AP Agenda Today</a>
-    <a href="/Daily Plan/20252026/Daily Slides/RPAgendas202526.html" class="quick-btn">📅 Regents Agenda</a>
-    <a href="/Daily Plan/20252026/Daily Slides/EarthSci202526.html" class="quick-btn">🌍 Earth Science</a>
+    <a href="/Daily Plan/20262027/APAgendas202627.html" class="quick-btn">📅 AP Agenda Today</a>
+    <a href="/Daily Plan/20262027/RPAgendas202627.html" class="quick-btn">📅 Regents Agenda</a>
+    <a href="/Daily Plan/20262027/EarthSci202627.html" class="quick-btn">🌍 Earth Science</a>
     <a href="/ap-physics-quiz/index.html" class="quick-btn">🎯 Fact Sheet Quiz</a>
     <a href="/ap-physics-quiz/factsheet-complete.html" class="quick-btn">📚 AP Fact Sheet</a>
     <a href="/SimulationResources.html" class="quick-btn">🔬 Simulations</a>
@@ -225,7 +225,7 @@ title: Home
     <h3 class="card-title">AP Physics 1</h3>
     <p class="card-description">College-level physics focusing on mechanics, energy, and waves. Access daily agendas, content presentations, and practice tools.</p>
     <div class="card-links">
-      <a href="/Daily Plan/20252026/Daily Slides/APAgendas202526.html" class="card-link">→ Daily Agenda 2025-26</a>
+      <a href="/Daily Plan/20262027/APAgendas202627.html" class="card-link">→ Daily Agenda 2026-27</a>
       <a href="/apphysics.html" class="card-link">→ AP Resource Warehouse</a>
       <a href="/presindex.html#ap-physics-content-slides" class="card-link">→ All AP Presentations</a>
     </div>
@@ -235,7 +235,7 @@ title: Home
     <h3 class="card-title">Regents Physics</h3>
     <p class="card-description">NYS Regents Physics curriculum covering mechanics, electricity, waves, and modern physics.</p>
     <div class="card-links">
-      <a href="/Daily Plan/20252026/Daily Slides/RPAgendas202526.html" class="card-link">→ Daily Agenda 2025-26</a>
+      <a href="/Daily Plan/20262027/RPAgendas202627.html" class="card-link">→ Daily Agenda 2026-27</a>
       <a href="/presindex.html#regents-physics" class="card-link">→ All Regents Presentations</a>
       <a href="/regentsTestPrep/unitstestprepquiz.html" class="card-link">→ Units & Equations Quiz</a>
     </div>
@@ -245,7 +245,7 @@ title: Home
     <h3 class="card-title">Earth Science</h3>
     <p class="card-description">Study of Earth's systems including geology, meteorology, astronomy, and environmental science.</p>
     <div class="card-links">
-      <a href="/Daily Plan/20252026/Daily Slides/EarthSci202526.html" class="card-link">→ Daily Agenda 2025-26</a>
+      <a href="/Daily Plan/20262027/EarthSci202627.html" class="card-link">→ Daily Agenda 2026-27</a>
       <a href="/earthscienceref.html" class="card-link">→ Earth Science Reference</a>
       <a href="/presindex.html#earth-science" class="card-link">→ All ES Presentations</a>
     </div>

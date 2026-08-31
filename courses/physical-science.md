@@ -23,9 +23,9 @@ An introductory science course exploring fundamental concepts in chemistry and p
 
 ---
 
-## 📅 Current Year (2025-26)
+## 📅 Current Year (2026-27)
 
-- **[Daily Agenda](#)** - Today's lesson plan, homework, and activities *(Coming Soon)*
+- **[Daily Agenda](/Daily Plan/20262027/physicalScience2027.html)** - Today's lesson plan, homework, and activities
 
 ---
 
