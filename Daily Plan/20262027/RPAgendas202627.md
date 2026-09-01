@@ -1,21 +1,23 @@
 ---
 title: Regents Physics 2026-27
 marp: true
-theme: physicalSci
-class: bluegray
+theme: physics-agenda
 paginate: true
 math: mathjax
 ---
 
-# Regents Physics 🔭 <!---fit--->
+<!-- _class: lead -->
 
-# **2026-2027** Agendas
+# Regents Physics 🔭 
 
-## 👨‍🏫 Mr. Porter
+## **2026-2027** Agendas
+
+### 👨‍🏫 Mr. Porter
+
 
 ---
 
-# 2025.09.04 **Regents Physics** 
+# 2026.09.08 **Regents Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
@@ -53,16 +55,16 @@ math: mathjax
 </div>
 
 ---
-<!--- background: black--->
+<!--- _class: paper--->
 # Do **Now** 
 
-1. Fill out index card:
+> 1. Fill out index card:
     1. Name
     2. Phone number to reach your parents/guardians if you sleep through the Regents
     3. Favorite Candy
     4. Favorite Emoji
     5. Emoji the describes your current mood
-2. Fill out Paper Quesionnaire
+> 2. Fill out Paper Quesionnaire
 
 ---
 
