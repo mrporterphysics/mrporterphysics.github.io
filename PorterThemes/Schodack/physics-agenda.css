@@ -1,6 +1,19 @@
 /* @theme physics-agenda */
+/* @auto-scaling true */
 /* Marp theme matching the Physics Week 3 deck.
-   Default slide = dark ink. Add `<!-- _class: paper -->` for the light variant. */
+
+   SLIDE CLASSES — put one on the slide with a Marp comment:
+
+     <!-- _class: paper -->    light background (default is dark ink)
+     <!-- _class: lead -->     big cover slide
+     <!-- _class: figure -->   one giant centred number, e.g. a countdown
+
+   BLOCK COMPONENTS — wrap content in a div; each is documented at its
+   rules below:  .columns  .do-now  .equations / .equation  .lab  .meta
+   .callout, plus > blockquote for a single Do Now prompt.
+
+   Headings scale to fit the slide width with `# Title <!--fit-->`
+   (enabled by the @auto-scaling line above). */
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
 
@@ -98,7 +111,31 @@ h5 strong {
   white-space: nowrap;
 }
 
-/* ── Two-column agenda body ─────────────────────────────────── */
+/* ── Two-column agenda body ──────────────────────────────────
+   Agenda on the left, goals / homework on the right. Blank lines around
+   each div are required or Marp will not parse the markdown inside.
+
+     <div class="columns">
+
+     <div>
+
+     #### AGENDA
+
+     1. Do Now
+     2. Survival Island
+
+     </div>
+
+     <div>
+
+     #### GOALS
+
+     Collaborate with a group
+
+     </div>
+
+     </div>
+*/
 .columns {
   display: grid;
   grid-template-columns: 1.15fr 1fr;
@@ -133,7 +170,7 @@ ol, ul { margin: 0; padding: 0; list-style: none; counter-reset: agenda; }
 ol > li, ul > li {
   font-size: var(--type-body);
   line-height: 1.25;
-  padding-left: 46px;
+  padding-left: 40px;
   position: relative;
   margin: 0 0 14px;
 }
@@ -142,16 +179,21 @@ ol > li::before {
   content: counter(agenda) ".";
   position: absolute;
   left: 0;
+  top: 0;
+  width: 30px;
+  text-align: right;
   font-family: var(--font-mono);
-  font-size: 21px;
+  font-size: 0.8em;
+  /* 0.8 x 1.5625 = the li's 1.25 line box, so the digits sit on the text baseline */
+  line-height: 1.5625;
   color: var(--accent);
 }
 ul > li::before {
   content: "";
   position: absolute;
-  left: 4px;
+  left: 8px;
   top: 0.55em;
-  width: 10px;
+  width: 12px;
   height: 2px;
   background: var(--accent);
 }
@@ -161,7 +203,12 @@ li > ul, li > ol { margin-top: 12px; }
 .columns p { margin: 0 0 12px; font-size: var(--type-body); line-height: 1.25; color: var(--text-on-ink); }
 .columns em { font-style: normal; color: var(--text-on-ink); }
 
-/* ── Do Now / prompt card ───────────────────────────────────── */
+/* ── Do Now / prompt card ────────────────────────────────────
+   A single full-width prompt. For 2-4 prompts side by side use .do-now.
+
+     > 1. Fill out the index card.
+     > 2. Answer the question of the day.
+*/
 blockquote {
   margin: 0;
   background: rgba(255, 255, 255, 0.05);
@@ -191,11 +238,26 @@ pre {
 pre code { font-size: 34px; }
 section.paper pre { border-color: #d8d2c4; }
 
-/* Giant countdown or figure: `<!-- _class: figure -->` */
+/* Giant countdown or figure — the h1 fills the slide:
+
+     <!-- _class: figure -->
+
+     # 5:00
+*/
 section.figure { justify-content: center; align-items: center; gap: 20px; }
 section.figure h1 { font-family: var(--font-mono); font-weight: 500; font-size: 200px; color: var(--accent); letter-spacing: -0.02em; }
 
-/* ── Safety / callout block ─────────────────────────────────── */
+/* ── Safety / callout block ──────────────────────────────────
+   Dark panel for safety notes, usually the right half of a .columns row.
+
+     <div class="callout">
+
+     #### SAFETY
+
+     Goggles on for the whole period.
+
+     </div>
+*/
 .callout {
   background: var(--ink);
   color: var(--paper);
@@ -207,6 +269,256 @@ section.figure h1 { font-family: var(--font-mono); font-weight: 500; font-size: 
   line-height: 1.3;
 }
 .callout h4, .callout h3 { color: var(--accent); }
+
+/* ── Do Now: 2-4 prompt columns ──────────────────────────────
+   One child <div> per column. The column count follows the number of
+   children, and the type steps down as columns are added; add
+   cols-2 / cols-3 / cols-4 to force a count. ###### is the accent label,
+   #### the card title — both optional.
+
+     <div class="do-now">
+
+     <div>
+
+     ###### PART 1
+
+     #### Warm-up
+
+     1. Copy today's objective.
+     2. Sketch the block on the bench.
+
+     </div>
+
+     <div>
+
+     ###### PART 2
+
+     #### Predict
+
+     Which surface needs the biggest pull? **Commit** before you test.
+
+     </div>
+
+     </div>
+*/
+div.do-now {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 26px;
+  flex: 1;
+  align-items: stretch;
+}
+div.do-now.cols-2, div.do-now.cols-3, div.do-now.cols-4 { grid-auto-flow: row; }
+div.do-now.cols-2 { grid-template-columns: repeat(2, 1fr); }
+div.do-now.cols-3 { grid-template-columns: repeat(3, 1fr); }
+div.do-now.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+div.do-now > div {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+section.paper div.do-now > div { background: var(--paper-card); box-shadow: 0 2px 0 #dcd6c8; }
+
+/* Type steps down as columns are added (nth-last-child counts the siblings) */
+div.do-now > div:first-child:nth-last-child(3),
+div.do-now > div:first-child:nth-last-child(3) ~ div { font-size: 23px; padding: 24px 26px; }
+div.do-now > div:first-child:nth-last-child(4),
+div.do-now > div:first-child:nth-last-child(4) ~ div { font-size: 21px; padding: 22px 24px; gap: 12px; }
+div.do-now > div:first-child:nth-last-child(4) li,
+div.do-now > div:first-child:nth-last-child(4) ~ div li { padding-left: 32px; }
+
+/* ── Equation box ────────────────────────────────────────────
+   A heading is the formula, the paragraph after it is the caption. The
+   formula can also be `backticked code` or $math$ — both pick up the
+   accent colour. Wrap several boxes in .equations for a 2-up grid; add
+   cols-1 for one full-width box or cols-3 for three across.
+
+     <div class="equations">
+
+     <div class="equation">
+
+     #### f<sub>s</sub> ≤ μ<sub>s</sub> N
+
+     Static. Matches the applied force until it maxes out.
+
+     </div>
+
+     <div class="equation">
+
+     $$ \sum F = ma $$
+
+     Net force, not any single force.
+
+     </div>
+
+     </div>
+*/
+div.equations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  flex: 1;
+  align-content: start;
+}
+div.equations.cols-1 { grid-template-columns: 1fr; }
+div.equations.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+div.equation {
+  border: 2px solid var(--ink-line);
+  padding: 26px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+section.paper div.equation { border-color: var(--paper-line); background: var(--paper-card); }
+
+div.equation h1,
+div.equation h2,
+div.equation h3,
+div.equation h4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--accent);
+}
+div.equation code { font-size: 42px; }
+div.equation mjx-container, div.equation .katex { font-size: 36px; color: var(--accent); }
+div.equation p { margin: 0; font-size: 22px; line-height: 1.3; color: var(--text-on-ink); }
+section.paper div.equation p { color: var(--dim-on-paper); }
+div.equation li { font-size: 22px; }
+sub, sup { font-size: 0.6em; line-height: 0; }
+
+/* ── Lab instructions: station / step cards ──────────────────
+   One child <div> per station or step: ###### label, #### title, then the
+   instructions. Same auto column count as .do-now, with cols-2 / cols-3 /
+   cols-4 to force it, or `stack` for full-width rows. Cards are white on
+   paper slides and tinted on dark ones.
+
+     <div class="lab">
+
+     <div>
+
+     ###### A
+
+     #### Bare lab bench
+
+     Pull the block at steady speed. Record the scale reading.
+
+     </div>
+
+     <div>
+
+     ###### B
+
+     #### Sandpaper strip
+
+     Same block, same pull. Note how much harder it is to start.
+
+     </div>
+
+     </div>
+*/
+div.lab {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 22px;
+  flex: 1;
+  align-items: stretch;
+}
+div.lab.cols-2, div.lab.cols-3, div.lab.cols-4 { grid-auto-flow: row; }
+div.lab.cols-2 { grid-template-columns: repeat(2, 1fr); }
+div.lab.cols-3 { grid-template-columns: repeat(3, 1fr); }
+div.lab.cols-4 { grid-template-columns: repeat(4, 1fr); }
+div.lab.stack { grid-auto-flow: row; grid-template-columns: 1fr; gap: 16px; }
+
+div.lab > div {
+  background: var(--paper-card);
+  color: var(--ink);
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+section:not(.paper) div.lab > div {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-on-ink);
+}
+div.lab > div:first-child:nth-last-child(4),
+div.lab > div:first-child:nth-last-child(4) ~ div { font-size: 21px; padding: 22px 24px; }
+
+/* Card label (###### A / STEP 1) and card title (#### Bare lab bench) */
+div.lab h5, div.lab h6, div.do-now h5, div.do-now h6 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--type-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+div.lab h2, div.lab h3, div.lab h4,
+div.do-now h2, div.do-now h3, div.do-now h4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: inherit;
+}
+
+/* Cards drive their own type scale, so lists and paragraphs inherit it */
+div.lab p, div.do-now p, div.lab li, div.do-now li { margin: 0; font-size: inherit; }
+div.lab li, div.do-now li { margin-bottom: 10px; }
+div.lab li:last-child, div.do-now li:last-child { margin-bottom: 0; }
+div.lab ol, div.lab ul, div.do-now ol, div.do-now ul { display: block; }
+/* Cards set their own text colour, so bold follows the card, not the slide */
+div.lab strong, div.do-now strong, div.equation strong { color: inherit; font-weight: 600; }
+
+/* Footer strip of run-time notes, usually under a .lab row. Each
+   paragraph becomes one item on the line:
+
+     <div class="meta">
+
+     15 min per rotation
+
+     Three trials each
+
+     </div>
+*/
+div.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 44px;
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  letter-spacing: 0.1em;
+  color: var(--dim-on-ink);
+  padding-right: 70px;
+}
+div.meta p { margin: 0; }
+section.paper div.meta { color: var(--dim-on-paper); }
 
 /* ── Tables (lab data) ──────────────────────────────────────── */
 table { width: 100%; border-collapse: collapse; font-size: 24px; }
@@ -247,3 +559,15 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { color: #ffc76b; }
 strong { color: var(--paper); font-weight: 600; }
 img { display: block; }
+
+/* Marp turns unicode emoji into <img class="emoji">; keep them on the line */
+img.emoji,
+img[data-marp-twemoji] {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin: 0 0.08em;
+  padding: 0;
+  vertical-align: -0.12em;
+  border: none;
+}

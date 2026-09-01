@@ -59,20 +59,22 @@ math: mathjax
 # Do **Now** 
 
 > 1. Fill out index card:
-    1. Name
-    2. Phone number to reach your parents/guardians if you sleep through the Regents
-    3. Favorite Candy
-    4. Favorite Emoji
-    5. Emoji the describes your current mood
+>    - Name
+>    - Phone number to reach your parents/guardians if you sleep through the Regents
+>    - Favorite Candy
+>    - Favorite Emoji
+>    - Emoji the describes your current mood
 > 2. Fill out Paper Quesionnaire
 
 ---
 
+<!--- _class: paper--->
+
 # Survival Island 🌴
 
-1. Share your *survival skill* that **you wrote down** with your group
-2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
-3. On your whiteboard present your plan (drawing, mind map, set of instructions)
+> 1. Share your *survival skill* that **you wrote down** with your group
+> 2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
+> 3. On your whiteboard present your plan (drawing, mind map, set of instructions)
     - Highlight everyone's skill
 
 ---
@@ -80,6 +82,8 @@ math: mathjax
 # Surivial Plan... <!--fit--->
 
 ---
+
+<!---class: lab-->
 
 # Pasta Bridge Lab 🍝
 
