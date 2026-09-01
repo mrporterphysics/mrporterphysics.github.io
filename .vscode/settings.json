@@ -39,7 +39,9 @@
       "./PorterThemes/Schodack/skeumorphism.css",
       "./PorterThemes/Schodack/vintage.css",
       "./PorterThemes/Schodack/storytelling.css",
-      "./PorterThemes/Schodack/lingo.css"
+      "./PorterThemes/Schodack/lingo.css",
+      "./PorterThemes/Schodack/agenda.css",
+      "./PorterThemes/Schodack/physics-agenda.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"
