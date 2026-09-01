@@ -2,7 +2,6 @@
 title: Regents Physics 2026-27
 marp: true
 theme: physics-agenda
-class: bluegray
 paginate: true
 math: mathjax
 ---
