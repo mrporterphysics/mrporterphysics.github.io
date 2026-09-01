@@ -1,0 +1,249 @@
+/* @theme physics-agenda */
+/* Marp theme matching the Physics Week 3 deck.
+   Default slide = dark ink. Add `<!-- _class: paper -->` for the light variant. */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+  --ink: #10141b;
+  --ink-line: #262d38;
+  --paper: #f4f1ea;
+  --paper-card: #ffffff;
+  --paper-line: #e6e0d2;
+  --accent: #f2a93b;
+  --dim-on-ink: #8b94a3;
+  --text-on-ink: #e8e3d6;
+  --dim-on-paper: #6b7280;
+
+  --font-display: Archivo, sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --type-title: 50px;
+  --type-lead: 100px;
+  --type-body: 27px;
+  --type-small: 22px;
+  --type-label: 18px;
+  --pad-y: 64px;
+  --pad-x: 74px;
+}
+
+section {
+  width: 1280px;
+  height: 720px;
+  padding: var(--pad-y) var(--pad-x) 54px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  text-wrap: pretty;
+}
+
+/* ── Light variant ──────────────────────────────────────────── */
+section.paper { background: var(--paper); color: var(--ink); }
+section.paper header, section.paper footer { color: var(--dim-on-paper); }
+section.paper h5 { border-color: var(--paper-line); }
+section.paper h3, section.paper h4, section.paper h6 { color: var(--dim-on-paper); }
+section.paper strong { color: var(--ink); }
+section.paper blockquote { background: var(--paper-card); box-shadow: 0 2px 0 #dcd6c8; }
+
+/* ── Title / day name ───────────────────────────────────────── */
+h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--type-title);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: inherit;
+}
+
+/* Big cover slide: `<!-- _class: lead -->` */
+section.lead { justify-content: center; gap: 26px; }
+section.lead h1 { font-size: var(--type-lead); }
+section.lead h2 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 21px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+section.lead p { margin: 0; font-size: 30px; color: #b9c0cb; max-width: 900px; }
+
+/* ── Question of the day: h5 becomes the full-width strip ───── */
+h5 {
+  margin: 0;
+  font-weight: 400;
+  font-size: var(--type-body);
+  line-height: 1.3;
+  color: inherit;
+  border-top: 2px solid var(--ink-line);
+  border-bottom: 2px solid var(--ink-line);
+  padding: 18px 0;
+}
+h5 strong {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--type-label);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+/* ── Two-column agenda body ─────────────────────────────────── */
+.columns {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 44px;
+  flex: 1;
+  align-items: start;
+}
+.columns > div { display: flex; flex-direction: column; gap: 16px; }
+
+/* Section labels inside the columns (Agenda / Goals / Upcoming) */
+.columns h2,
+.columns h3,
+.columns h4,
+h6 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: var(--type-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dim-on-ink);
+  border: 0;
+  padding: 0;
+}
+.columns h3 + *, .columns h4 + * { margin-top: 2px; }
+.columns > div > * + h2,
+.columns > div > * + h3,
+.columns > div > * + h4 { margin-top: 14px; }
+
+/* ── Lists ──────────────────────────────────────────────────── */
+ol, ul { margin: 0; padding: 0; list-style: none; counter-reset: agenda; }
+ol > li, ul > li {
+  font-size: var(--type-body);
+  line-height: 1.25;
+  padding-left: 46px;
+  position: relative;
+  margin: 0 0 14px;
+}
+ol > li { counter-increment: agenda; }
+ol > li::before {
+  content: counter(agenda) ".";
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: 21px;
+  color: var(--accent);
+}
+ul > li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.55em;
+  width: 10px;
+  height: 2px;
+  background: var(--accent);
+}
+li > ul, li > ol { margin-top: 12px; }
+
+/* Plain emphasized lines used as goals (e.g. `🥅 __text__`) */
+.columns p { margin: 0 0 12px; font-size: var(--type-body); line-height: 1.25; color: var(--text-on-ink); }
+.columns em { font-style: normal; color: var(--text-on-ink); }
+
+/* ── Do Now / prompt card ───────────────────────────────────── */
+blockquote {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px 36px;
+  border: 0;
+  font-size: 30px;
+  line-height: 1.35;
+}
+blockquote > p { margin: 0 0 18px; }
+blockquote > p:last-child { margin: 0; }
+blockquote strong { font-weight: 600; }
+
+/* ── Equations, timers, monospace figures ───────────────────── */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  background: none;
+  color: var(--accent);
+  padding: 0;
+}
+pre {
+  background: none;
+  border: 2px solid var(--ink-line);
+  padding: 28px 32px;
+  margin: 0;
+}
+pre code { font-size: 34px; }
+section.paper pre { border-color: #d8d2c4; }
+
+/* Giant countdown or figure: `<!-- _class: figure -->` */
+section.figure { justify-content: center; align-items: center; gap: 20px; }
+section.figure h1 { font-family: var(--font-mono); font-weight: 500; font-size: 200px; color: var(--accent); letter-spacing: -0.02em; }
+
+/* ── Safety / callout block ─────────────────────────────────── */
+.callout {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 30px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 25px;
+  line-height: 1.3;
+}
+.callout h4, .callout h3 { color: var(--accent); }
+
+/* ── Tables (lab data) ──────────────────────────────────────── */
+table { width: 100%; border-collapse: collapse; font-size: 24px; }
+th {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+  padding: 16px 18px;
+}
+td { padding: 18px; border-bottom: 2px solid var(--paper-line); background: var(--paper-card); }
+section:not(.paper) td { background: transparent; border-color: var(--ink-line); }
+
+/* ── Header, footer, pagination ─────────────────────────────── */
+header, footer {
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dim-on-ink);
+  padding: 0;
+}
+header { top: var(--pad-y); left: var(--pad-x); right: var(--pad-x); }
+footer { bottom: 34px; left: var(--pad-x); }
+section::after {
+  font-family: var(--font-mono);
+  font-size: var(--type-label);
+  color: var(--dim-on-ink);
+  right: var(--pad-x);
+  bottom: 30px;
+}
+
+/* ── Misc ───────────────────────────────────────────────────── */
+hr { border: 0; border-top: 2px solid var(--ink-line); margin: 6px 0; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: #ffc76b; }
+strong { color: var(--paper); font-weight: 600; }
+img { display: block; }

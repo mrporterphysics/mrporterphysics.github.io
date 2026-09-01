@@ -1,21 +1,22 @@
 ---
 title: Regents Physics 2026-27
 marp: true
-theme: physicalSci
+theme: physics-agenda
 class: bluegray
 paginate: true
 math: mathjax
 ---
 
-# Regents Physics 🔭 <!---fit--->
+# Regents Physics 🔭 
 
-# **2026-2027** Agendas
+## **2026-2027** Agendas
 
-## 👨‍🏫 Mr. Porter
+### 👨‍🏫 Mr. Porter
+
 
 ---
 
-# 2025.09.04 **Regents Physics** 
+# 2026.09.08 **Regents Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
