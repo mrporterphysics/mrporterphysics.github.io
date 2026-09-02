@@ -83,13 +83,12 @@ math: mathjax
 
 ---
 
-<!---class: lab-->
+<!--- _class: paper-->
 
-# Pasta Bridge Lab 🍝
+# Ball Bounce Lab
 
-## Objective: 
-
-* Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
+> ## Question:
+> Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.by finding the relationship between strength (number of marbles) and strands of pasta
 
 ---
 
@@ -234,12 +233,24 @@ math: mathjax
 ---
 
 
-# Pasta Bridge Lab 🍝
+# Ball Bounce Lab
 
-## Objective: 
+#### Question:
 
-* Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
-* Develop an experiment to compare at least two types of pasta. Create a hypothesis for which will be stronger. 
+Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
+
+---
+
+# Ball Bounce Lab
+
+#### Question:
+
+Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
+
+
+#### Background: 
+
+The coefficient of restitution (symbol: $e$) is a dimensionless quantity that describes how much energy is conserved in a collision, specifically how well an object bounces back after impact. It is used to characterize the elasticity of collisions between two bodies.
 
 ---
 
@@ -272,4 +283,4 @@ math: mathjax
 3. Create a culture of learning from each other
 
 </div>
-</div>
+</div> 

@@ -19,7 +19,7 @@ math: mathjax
 ---
 
 
-# DATE **Earth Science** 
+# 2026.09.09 **Earth Science** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
@@ -34,7 +34,7 @@ math: mathjax
 1. Do Now (fill out questionnaire & card)
 2. Question of the Day
 3. Grouping Game
-4. Survival Island
+4. Marshmallow Challenge
 </div>
 
 <div>
@@ -72,8 +72,8 @@ math: mathjax
 
 # Lab Grouping Game
 
-- There are 15 of you
-- Based on your cards get into ***LOGICAL*** groups of ***3***
+- There are 13 of you
+- Based on your cards get into ***LOGICAL*** groups of ***3*** (one group of 4)
 - Check **whole class** answer with Mr. Porter
     - 4 Chances to Check
 - Reorganize if necessary
@@ -98,10 +98,39 @@ math: mathjax
 ---
 
 
-# Survival Island 🌴
+# Marshmallow Challenge <!--fit--->
 
-1. Share your *survival skill* that **you wrote down** with your group
-2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
-3. On your whiteboard present your plan (drawing, mind map, set of instructions)
-    - Highlight everyone's skill
-4. Share Plan to the class
+---
+
+# Marshmallow Challenge
+
+## **Goal:** build the tallest free standing structure with **the entire** marshmallow on top (_the height of the marshmallow will be measured_)
+
+<div class='columns'>
+<div>
+
+### Rules:
+
+
+- 18 minutes
+- Tower must be free standing (not supported by anything other than prodived materials)
+- You may break apart pasta
+- You do not have to use all of the materials
+- Marshmallow cannot be broken apart and must be placed on top of the structure
+
+</div>
+ 
+<div>
+
+### Materials
+
+- 1 meter of tape
+- 1 meter of string
+- 20 pieces of pasta
+- 1 marshmallow
+
+</div>
+</div>
+
+---
+
