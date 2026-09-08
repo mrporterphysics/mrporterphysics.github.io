@@ -28,8 +28,9 @@ math: mathjax
 0. Sit Anywhere
 1. Do Now (fill out questionnaire & card)
 2. Question of the Day
-3. Survival Island
-4. Pasta Bridge Lab 🍝
+3. Lab Notebooks
+4. Ball Bounce Lab
+5. Question
 
 </div>
 
@@ -53,24 +54,26 @@ math: mathjax
 </div>
 
 ---
-<!--- background: black--->
+<!--- _class: paper--->
 # Do **Now** 
 
-1. Fill out index card:
-    1. Name
-    2. Phone number to reach your parents/guardians if you sleep through the Regents
-    3. Favorite Candy
-    4. Favorite Emoji
-    5. Emoji the describes your current mood
-2. Fill out Paper Quesionnaire
+> 1. Fill out index card:
+>    - Name
+>    - Phone number to reach your parents/guardians if you sleep through the Regents
+>    - Favorite Candy
+>    - Favorite Emoji
+>    - Emoji the describes your current mood
+> 2. Fill out Paper Quesionnaire
 
 ---
 
+<!--- _class: paper--->
+
 # Survival Island 🌴
 
-1. Share your *survival skill* that **you wrote down** with your group
-2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
-3. On your whiteboard present your plan (drawing, mind map, set of instructions)
+> 1. Share your *survival skill* that **you wrote down** with your group
+> 2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
+> 3. On your whiteboard present your plan (drawing, mind map, set of instructions)
     - Highlight everyone's skill
 
 ---
@@ -79,11 +82,12 @@ math: mathjax
 
 ---
 
-# Pasta Bridge Lab 🍝
+<!--- _class: paper-->
 
-## Objective: 
+# Ball Bounce Lab
 
-* Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
+> ## Question:
+> Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.by finding the relationship between strength (number of marbles) and strands of pasta
 
 ---
 
@@ -228,12 +232,24 @@ math: mathjax
 ---
 
 
-# Pasta Bridge Lab 🍝
+# Ball Bounce Lab
 
-## Objective: 
+#### Question:
 
-* Determine the strength of a pasta bridge by finding the relationship between strength (number of marbles) and strands of pasta
-* Develop an experiment to compare at least two types of pasta. Create a hypothesis for which will be stronger. 
+Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
+
+---
+
+# Ball Bounce Lab
+
+#### Question:
+
+Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
+
+
+#### Background: 
+
+The coefficient of restitution (symbol: $e$) is a dimensionless quantity that describes how much energy is conserved in a collision, specifically how well an object bounces back after impact. It is used to characterize the elasticity of collisions between two bodies.
 
 ---
 
@@ -266,4 +282,4 @@ math: mathjax
 3. Create a culture of learning from each other
 
 </div>
-</div>
+</div> 
