@@ -89,7 +89,7 @@ math: mathjax
 # Ball Bounce Lab
 
 > ## Question:
-> Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.by finding the relationship between strength (number of marbles) and strands of pasta
+> Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
 
 ---
 
