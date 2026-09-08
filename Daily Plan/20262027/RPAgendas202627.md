@@ -231,25 +231,23 @@ math: mathjax
 
 ---
 
+<!--- _class: paper --->
 
-# Ball Bounce Lab
+## Ball Bounce Lab
 
-#### Question:
+> **Purpose:** To determine the mathematical relationship between drop height and bounce height, express it as an equation built from your own graph, and test that equation by predicting an unmeasured bounce.
 
-Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
+
+> **Essential Question:** How does the height a ball bounces depend on the height from which it is dropped?
 
 ---
 
-# Ball Bounce Lab
 
-#### Question:
+<!--- _class: paper --->
 
-Is the coefficient of restitution constant for your ball? Do this by comparing drop height to bounce height for your assigned ball.
+## Ball Bounce Lab
 
-
-#### Background: 
-
-The coefficient of restitution (symbol: $e$) is a dimensionless quantity that describes how much energy is conserved in a collision, specifically how well an object bounces back after impact. It is used to characterize the elasticity of collisions between two bodies.
+> **Background**: The coefficient of restitution (symbol: $e$) is a dimensionless quantity that describes how much energy is conserved in a collision, specifically how well an object bounces back after impact. It is used to characterize the elasticity of collisions between two bodies.
 
 ---
 

@@ -18,6 +18,35 @@ math: mathjax
 
 ---
 
+# 2026.09.09 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Question of the day
+1. Graphing Notes
+2. Measurement Olympics Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2026.09.08 **Earth Science** 
 

@@ -16,167 +16,7 @@ math: mathjax
 
 ---
 
-# Buggy Lab 🚗 
-
-### Purpose
-
-Collect data on your buggies so that you can represent the motion (all aspescts) of both buggies on the **same** graph. Your final models should be able to predict the **position** of your buggy at specified times. 
-
-### Question
-
-Does your Buggy move **in a consistent manner**? [Define consistent]
-
-### Constraints
-
-You will be given scenario card that describes the setup of your buggies
-
----
-
-# Scenarios
-
-- You can ignore the speed label, just use the colors for reference
-
-![bg fit right](image.png)
-
-
----
-
-# **Do Now:** Register for...
-
-1. _AP Classroom_ ->> AP Exam Prep & Review
-  - Website: [https://apclassroom.collegeboard.org/](https://apclassroom.collegeboard.org/)
-  - Code: **RPPQPA**
-2. _Physics Classroom_ ->> General Physics Practice & Homework
-  - Website: [http://www.physicsclassroom.com/sign-in](http://www.physicsclassroom.com/sign-in)
-  - Code: **003117a**
-  - Register with school email as username
-
----
-
-# 2025.09.09 **AP Physics**
-
-##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes? 🧞
-
-<div class ='columns'>
-
- <div>
-
-#### 📋 Agenda
-
-1. Do Now
-2. Board Meeting
-3. Test out Physics Classroom -> Variables MOP
-4. Buggy Lab
-
-</div>
-
-<div>
-
-### 🎯 Goals
-
-🥅 _Establish Board Meeting Norms_
-
-### 📆 Upcoming
-
-- Safety Contract Post
-
-</div>
-</div>
-
----
-
-# Physics Classroom
-
-- **Interactives** are a large collection of HTML5 interactive physics and chemistry simulations. 
-- **Concept Builders** help discover and solidify learning concepts and discover and correct incorrect ideas.
-- **Minds On** challenge student's understanding in a game where correct answers progress you to the finish line.
-- **Calc Pad** provides students with math-based questions to practice their understanding and usage of equations and formulas.
-- **Science Reasoning** help students to learn and grow their scientific thinking and reasoning skills in the context of various physics related tasks.
-
----
-
-# Buggy Lab 🚗 
-
-## Purpose
-
-Collect data on your buggies so that you can represent the motion (all aspescts) of both buggies on the **same** graph. Your final models should be able to predict the **position** of your buggy at specified times. 
-
-## Constraints
-
-You will be given scenario card that describes the setup of your buggies
-
----
-
-# Scenarios
-
-- You can ignore the speed label, just use the colors for reference
-
-![bg fit right](image.png)
-
-
----
-
-# AP Physics **Do Now**
-
-1. Go to [Data Collection Best Practices Interactive](https://www.mrporterphysics.com/AP%20Resource%20Pages/datacollection.html)
-2. Read and click through the examples
-3. Reflect on your _Coefficient of Restitution_ lab, did you follow these practices? How can you improve upon your design?
-
----
-
-# 2025.09.08 **AP Physics**
-
-##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
-
-<div class ='columns'>
-
- <div>
-
-#### 📋 Agenda
-
-1. Do Now 
-2. Co. of Restitution Lab
-	1. Finish Collecting Data
-	2. Graph
-	3. Whiteboard Results
-3. $e$ Board Meeting 
-4. Finish Lab Notebook 
-
-
-</div>
-
-<div>
-
-### 🎯 Goals
-
-🥅 _Learn quality data collection techniques_
-
-🥅 _Engage in scientific discussion_
-
-🥅 _Use graphs and data to answer questions_
-
-
-</div>
-</div>
-
----
-
-# $e$ Board Meeting
-
-## On your whiteboard
-
-- Hypothesis and results
-  - What did you do and what did you find? How does your data support or refute your hypothesis?
-
-### Things to consider:
-- What does your graph look like? Linear, curve, etc?
-  - What does that mean? What do the graphical features like slope/intercept mean?
-- How confident are you in your data? High or low levels of uncertainty?
-
-
----
-
-# 2025.09.05 **AP Physics** 
+# 2026.09.09 **AP Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
@@ -424,3 +264,170 @@ Is the coefficient of restitution constant for your ball? Do this by comparing d
 #### Background: 
 
 The coefficient of restitution (symbol: $e$) is a dimensionless quantity that describes how much energy is conserved in a collision, specifically how well an object bounces back after impact. It is used to characterize the elasticity of collisions between two bodies.
+
+
+---
+
+
+---
+
+
+
+
+# Buggy Lab 🚗 
+
+### Purpose
+
+Collect data on your buggies so that you can represent the motion (all aspescts) of both buggies on the **same** graph. Your final models should be able to predict the **position** of your buggy at specified times. 
+
+### Question
+
+Does your Buggy move **in a consistent manner**? [Define consistent]
+
+### Constraints
+
+You will be given scenario card that describes the setup of your buggies
+
+---
+
+# Scenarios
+
+- You can ignore the speed label, just use the colors for reference
+
+![bg fit right](image.png)
+
+
+---
+
+# **Do Now:** Register for...
+
+1. _AP Classroom_ ->> AP Exam Prep & Review
+  - Website: [https://apclassroom.collegeboard.org/](https://apclassroom.collegeboard.org/)
+  - Code: **RPPQPA**
+2. _Physics Classroom_ ->> General Physics Practice & Homework
+  - Website: [http://www.physicsclassroom.com/sign-in](http://www.physicsclassroom.com/sign-in)
+  - Code: **003117a**
+  - Register with school email as username
+
+---
+
+# 2025.09.09 **AP Physics**
+
+##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes? 🧞
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Board Meeting
+3. Test out Physics Classroom -> Variables MOP
+4. Buggy Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Establish Board Meeting Norms_
+
+### 📆 Upcoming
+
+- Safety Contract Post
+
+</div>
+</div>
+
+---
+
+# Physics Classroom
+
+- **Interactives** are a large collection of HTML5 interactive physics and chemistry simulations. 
+- **Concept Builders** help discover and solidify learning concepts and discover and correct incorrect ideas.
+- **Minds On** challenge student's understanding in a game where correct answers progress you to the finish line.
+- **Calc Pad** provides students with math-based questions to practice their understanding and usage of equations and formulas.
+- **Science Reasoning** help students to learn and grow their scientific thinking and reasoning skills in the context of various physics related tasks.
+
+---
+
+# Buggy Lab 🚗 
+
+## Purpose
+
+Collect data on your buggies so that you can represent the motion (all aspescts) of both buggies on the **same** graph. Your final models should be able to predict the **position** of your buggy at specified times. 
+
+## Constraints
+
+You will be given scenario card that describes the setup of your buggies
+
+---
+
+# Scenarios
+
+- You can ignore the speed label, just use the colors for reference
+
+![bg fit right](image.png)
+
+
+---
+
+# AP Physics **Do Now**
+
+1. Go to [Data Collection Best Practices Interactive](https://www.mrporterphysics.com/AP%20Resource%20Pages/datacollection.html)
+2. Read and click through the examples
+3. Reflect on your _Coefficient of Restitution_ lab, did you follow these practices? How can you improve upon your design?
+
+---
+
+# 2025.09.08 **AP Physics**
+
+##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Co. of Restitution Lab
+	1. Finish Collecting Data
+	2. Graph
+	3. Whiteboard Results
+3. $e$ Board Meeting 
+4. Finish Lab Notebook 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn quality data collection techniques_
+
+🥅 _Engage in scientific discussion_
+
+🥅 _Use graphs and data to answer questions_
+
+
+</div>
+</div>
+
+---
+
+# $e$ Board Meeting
+
+## On your whiteboard
+
+- Hypothesis and results
+  - What did you do and what did you find? How does your data support or refute your hypothesis?
+
+### Things to consider:
+- What does your graph look like? Linear, curve, etc?
+  - What does that mean? What do the graphical features like slope/intercept mean?
+- How confident are you in your data? High or low levels of uncertainty?
+
