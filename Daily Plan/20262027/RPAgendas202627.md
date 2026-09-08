@@ -6,6 +6,8 @@ paginate: true
 math: mathjax
 ---
 
+<!--- _class: lead --->
+
 # Regents Physics 🔭 
 
 ## **2026-2027** Agendas
