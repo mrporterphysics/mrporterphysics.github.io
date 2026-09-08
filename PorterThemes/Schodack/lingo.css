@@ -151,9 +151,9 @@ h4 { font-size: var(--lg-fs-4); color: var(--lg-ink); }
 h5, h6 {
   font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
   font-weight: 700;
-  font-size: var(--lg-fs-1);
+  font-size: var(--lg-fs-3);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: var(--lg-muted);
 }
 

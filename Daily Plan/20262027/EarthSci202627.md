@@ -20,7 +20,7 @@ math: mathjax
 
 # 2026.09.09 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Can you ask a genie for infinite wishes? 🧞
 
 <div class ='columns'>
 
@@ -29,7 +29,8 @@ math: mathjax
 #### 📋 Agenda
 
 0. Question of the day
-1. Graphing Notes
+1. Share survival plans
+1. [Graphing Notes](../../Presentations/ES%20Presentations/ESGraphing/Slides/esGraphing.html)
 2. Measurement Olympics Lab
 
 </div>
@@ -102,7 +103,7 @@ math: mathjax
 # Lab Grouping Game
 
 - There are 13 of you
-- Based on your cards get into ***LOGICAL*** groups of ***3*** (one group of 4)
+- Based on your cards get into ***LOGICAL*** groups of ***3*** 
 - Check **whole class** answer with Mr. Porter
     - 4 Chances to Check
 - Reorganize if necessary
@@ -120,9 +121,9 @@ math: mathjax
 
 - **States of Matter**: Gas, Liquid, Solid
 - **Energy**: Juice, Spirit, Vigor
-- **Classical Elements**: Air, Fire, Water
+- **Classical Elements**: Air, Fire, Water, 
 - **Things with Rings**: Circus, Saturn, Tree
-- **Desserts**: Pie, Cake, Cobbler
+- **Desserts**: , Cake, Cobbler
 
 ---
 
