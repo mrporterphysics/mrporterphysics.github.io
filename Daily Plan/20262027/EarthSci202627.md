@@ -112,6 +112,10 @@ math: mathjax
 
 ---
 
+# Group Scientific Process
 
-
-
+- Devise Plan
+- Collect Data
+- Compare Results
+    - Similarities and differences _tell a story_
+- Draw Conclusions as a group and **_create a model_**
