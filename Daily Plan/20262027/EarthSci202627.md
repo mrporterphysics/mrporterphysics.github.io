@@ -19,7 +19,7 @@ math: mathjax
 ---
 
 
-# 2026.09.09 **Earth Science** 
+# 2026.09.08 **Earth Science** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
 
