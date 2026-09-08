@@ -98,39 +98,20 @@ math: mathjax
 ---
 
 
-# Marshmallow Challenge <!--fit--->
+# Survival Island 🌴
+
+1. Share your *survival skill* that **you wrote down** with your group
+2. Using ***everyone's skill*** develop a plan to survive or escape the deserted island
+3. On your whiteboard present your plan (drawing, mind map, set of instructions)
+    - Highlight everyone's skill
 
 ---
 
-# Marshmallow Challenge
+# 🗺️ Survival Plan... <!--fit--->
 
-## **Goal:** build the tallest free standing structure with **the entire** marshmallow on top (_the height of the marshmallow will be measured_)
-
-<div class='columns'>
-<div>
-
-### Rules:
-
-
-- 18 minutes
-- Tower must be free standing (not supported by anything other than prodived materials)
-- You may break apart pasta
-- You do not have to use all of the materials
-- Marshmallow cannot be broken apart and must be placed on top of the structure
-
-</div>
- 
-<div>
-
-### Materials
-
-- 1 meter of tape
-- 1 meter of string
-- 20 pieces of pasta
-- 1 marshmallow
-
-</div>
-</div>
 
 ---
+
+
+
 
