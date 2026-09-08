@@ -71,8 +71,8 @@ Fonts:
   /* Type scale — 12/14/16/20/24/32, slide-tuned: 14/16/20/26/32/44/56 */
   --lg-fs-1: 14px;   /* label-caps (JetBrains Mono) */
   --lg-fs-2: 16px;   /* small — tables, code, captions */
-  --lg-fs-3: 20px;   /* body (Nunito) */
-  --lg-fs-4: 26px;   /* h4 */
+  --lg-fs-3: 26px;   /* body (Nunito) */
+  --lg-fs-4: 30px;   /* h4 */
   --lg-fs-5: 32px;   /* h3 */
   --lg-fs-6: 44px;   /* h2 */
   --lg-fs-7: 56px;   /* h1 */
