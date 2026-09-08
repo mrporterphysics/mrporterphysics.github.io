@@ -30,8 +30,9 @@ math: mathjax
 0. Sit Anywhere
 1. Do Now (fill out questionnaire & card)
 2. Question of the Day
-3. Survival Island
-4. Pasta Bridge Lab 🍝
+3. Lab Notebooks
+4. Ball Bounce Lab
+5. Question
 
 </div>
 
