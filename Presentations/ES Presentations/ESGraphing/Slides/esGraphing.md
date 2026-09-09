@@ -125,7 +125,7 @@ img[alt~="center"] {
 
 ---
 
-# Station 4: Lung Capacity 🌬️
+# Station 3: Lung Capacity 🌬️
 
 #### Make a histogram of balloon cirumferences that we can inflate the balloons to with **one breath**
 
