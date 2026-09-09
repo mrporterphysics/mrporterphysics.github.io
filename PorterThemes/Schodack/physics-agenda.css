@@ -571,3 +571,9 @@ img[data-marp-twemoji] {
   vertical-align: -0.12em;
   border: none;
 }
+
+
+img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+  }

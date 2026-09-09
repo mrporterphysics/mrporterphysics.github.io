@@ -17,6 +17,62 @@ math: mathjax
 
 ---
 
+# 2026.09.09 **Regents? Physics**
+
+##### **❓ of the 📅**: Can you ask a genie for infinite wishes? 🧞
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Ball Bounce Lab
+    - collect data
+    - create graph & drawing best fit lines
+      - calculating slope
+    - discuss
+    - answer questions
+2. Creating Mathematical Models
+3. Data Collection Best Practices
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Discuss how to draw and calculate best fit lines_
+
+### 📆 Upcoming
+
+- HW: Safety Contract Signed
+
+</div>
+</div>
+
+---
+
+
+
+# Best Fit Lines
+
+<div class='columns'>
+<div>
+
+![center w:500](image.png)
+
+</div>
+ 
+<div class="equation">
+
+$$slope=\frac{rise}{run}=\frac{y_2-y_1}{x_2-x_1}=\frac{5 \frac{m}{s} - 1 \frac{m}{s}}{2.5 s - 0.5 s} = 2 \frac{m}{s}$$
+
+</div>
+</div>
+
+---
+
 # 2026.09.08 **Regents Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
