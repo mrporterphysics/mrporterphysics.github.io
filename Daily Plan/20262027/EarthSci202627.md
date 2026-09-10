@@ -20,7 +20,7 @@ math: mathjax
 
 # 2026.09.11 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you could snap your fingers and have one thing done for you, which would it be?
 
 <div class ='columns'>
 

@@ -3,7 +3,6 @@ title: AP Physics 2026-2027
 marp: true
 theme: physicalSci
 paginate: true
-footer: 
 math: mathjax
 ---
 
@@ -13,6 +12,39 @@ math: mathjax
 
 ## 👨‍🏫 Mr. Porter
 
+
+---
+
+# 2026.09.11 **AP Physics**
+
+##### **❓ of the 📅**: If you could snap your fingers and have one thing done for you, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now: Review your lab results
+2. Board Meeting & [Uncertainty](../../Presentations/Exp%20Methods/slides/Slides/uncertainty.html)
+3. Make Predictions & Test
+4. Finish Lab Notebook
+5. [Data Collection Best Practices](../../AP%20Resource%20Pages/datacollection.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make predictions from mathematical models_
+
+🥅 _Use uncertainty in predictions_
+
+🥅 _Data collection best practices_
+
+</div>
+</div>
 
 ---
 

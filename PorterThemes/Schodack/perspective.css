@@ -380,7 +380,7 @@ h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
 table {
   border-collapse: separate;
   border-spacing: 0;
-  width: 100%;
+  width: max-content !important;
   margin: var(--per-sp-4) 0;
   background: var(--per-paper);
   color: var(--per-ink);
