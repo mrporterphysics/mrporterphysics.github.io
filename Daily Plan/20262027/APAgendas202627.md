@@ -48,7 +48,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Do Now 
-1. [Drawing best fit lines](../../Presentations/Exp%20Methods/slides/bestfitlines.html)
+1. [Drawing best fit lines](../../Presentations/Exp%20Methods/slides/best-fit-lines.html)
     - [Constructing Best Fit](https://serc.carleton.edu/mathyouneed/graphing/bestfit.html)
 2. Co. of Restitution Lab
 	1. Finish Collecting Data
