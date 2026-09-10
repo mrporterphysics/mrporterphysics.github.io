@@ -18,6 +18,127 @@ math: mathjax
 
 ---
 
+# 2026.09.11 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Graphs
+2. [Claim-Evidence-Reasoning] Intro
+3. 🥣 🥗 🥪 ?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Graph from real life data_
+
+🥅 _Create scientific arguments__
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
+
+# CER (Claim, Evidence, Reasoning)
+
+* ### Claim:
+    * Sentence that answers the question.
+
+* ### Evidence:
+    * Explanation of how the evidence supports the claim.
+        * Should include details!
+        * Refer back to the question, include any data, diagrams, or graphs.
+
+* ### Reasoning:
+    * Science principle, such as an equation, law, or definition.
+        * This is general, do no include specific details.
+
+---
+
+# Game: Soup, Salad, or Sandwich
+
+1. Make a Claim-Evidence-Reasoning statement arguing whether the shown food is a soup, salad, or a sandwich. 
+
+---
+
+
+
+![bg ](https://static01.nyt.com/images/2022/07/27/dining/27Chicagodogrex/05Chicagodogrex-master768.jpg?w=1280&q=75)
+
+---
+
+
+![bg ](https://static01.nyt.com/images/2019/12/04/dining/aw-cherry-tomato-pasta/aw-cherry-tomato-pasta-master768-v2.jpg?w=1280&q=75)
+
+
+---
+
+
+![bg](https://insanelygoodrecipes.com/wp-content/uploads/2022/10/Homemade_Broccoli_and_Cheddar_Soup_in_a_Bread_Bowl.jpg)
+
+
+---
+
+
+# Metric Olympic Presentations
+
+## Claim
+
+What is one thing you can conclude from your graph?
+
+## Evidence
+
+How does you graph support/show what you concluded?
+
+## Reasoning
+
+What is the science or big idea that support your evidence
+
+---
+
+# Claim-Evidence-Reasoning Example
+
+**Claim**: Strong hurricanes start with greatest wind speeds. 
+
+**Evidence**: On the graph the Major Hurricane initial wind speed > Weak hurricane > Tropical storm
+
+**Reasoning**: Hurricanes are in part rated by their windspeed. 
+
+![bg fit right](../20252026/Daily%20Slides/image-1.png)
+
+---
+
+# Metric Olympic Presentations
+
+## Claim
+
+What is one thing you can conclude from your graph?
+
+## Evidence
+
+How does you graph support/show what you concluded?
+
+## Reasoning
+
+What is the science or big idea that support your evidence?
+
+
+
+
+---
+
 # 2026.09.10 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather give up technology or sugar?
