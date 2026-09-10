@@ -16,6 +16,81 @@ math: mathjax
 
 ---
 
+# 2026.09.10 **AP Physics** Do Now
+
+<div class='columns'>
+<div>
+
+1. Grab Handout and complete on your own
+2. Compare answers with your lab table
+3. Brainstorm together on how you would draw the best fit line for the data on the right
+
+</div>
+ 
+<div>
+
+![center w:800](image-1.png)
+
+</div>
+</div>
+
+
+---
+
+# 2025.09.10 **AP Physics**
+
+##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+1. [Drawing best fit lines](../../Presentations/Exp%20Methods/slides/bestfitlines.html)
+    - [Constructing Best Fit](https://serc.carleton.edu/mathyouneed/graphing/bestfit.html)
+2. Co. of Restitution Lab
+	1. Finish Collecting Data
+	2. Graph
+	3. Whiteboard Results
+3. Discuss & finish lab 
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Learn quality data collection techniques_
+
+🥅 _Engage in scientific discussion_
+
+🥅 _Use graphs and data to answer questions_
+
+
+</div>
+</div>
+
+---
+
+# $e$ Board Meeting
+
+## On your whiteboard
+
+- Hypothesis and results
+  - What did you do and what did you find? How does your data support or refute your hypothesis?
+
+### Things to consider:
+- What does your graph look like? Linear, curve, etc?
+  - What does that mean? What do the graphical features like slope/intercept mean?
+- How confident are you in your data? High or low levels of uncertainty?
+
+
+
+---
+
 # 2026.09.09 **AP Physics** 
 
 ##### **❓ of the 📅**: Sweet or savory for breakfast?
@@ -381,53 +456,3 @@ You will be given scenario card that describes the setup of your buggies
 3. Reflect on your _Coefficient of Restitution_ lab, did you follow these practices? How can you improve upon your design?
 
 ---
-
-# 2025.09.08 **AP Physics**
-
-##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
-
-<div class ='columns'>
-
- <div>
-
-#### 📋 Agenda
-
-1. Do Now 
-2. Co. of Restitution Lab
-	1. Finish Collecting Data
-	2. Graph
-	3. Whiteboard Results
-3. $e$ Board Meeting 
-4. Finish Lab Notebook 
-
-
-</div>
-
-<div>
-
-### 🎯 Goals
-
-🥅 _Learn quality data collection techniques_
-
-🥅 _Engage in scientific discussion_
-
-🥅 _Use graphs and data to answer questions_
-
-
-</div>
-</div>
-
----
-
-# $e$ Board Meeting
-
-## On your whiteboard
-
-- Hypothesis and results
-  - What did you do and what did you find? How does your data support or refute your hypothesis?
-
-### Things to consider:
-- What does your graph look like? Linear, curve, etc?
-  - What does that mean? What do the graphical features like slope/intercept mean?
-- How confident are you in your data? High or low levels of uncertainty?
-

@@ -1,7 +1,7 @@
 ---
 marp: true
 title: Experimental Methods
-theme: chalk
+theme: perspective
 paginate: true
 footer: Be brave, not perfect
 math: mathjax
