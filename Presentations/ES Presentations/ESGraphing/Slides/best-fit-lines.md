@@ -211,17 +211,6 @@ Stretch of $15$ cm was never measured. The line still answers it: $F \approx 3.1
 
 ---
 
-# Your turn
-
-With your lab partner, on the graph you were given:
-
-1. Use the **area method** to draw a best-fit line.
-2. Use the **dividing method** on the same data.
-3. Compare the two slopes. How close are they?
-4. Compare with the pair next to you. Whose line is better, and how would you decide?
-
----
-
 <!-- _class: lead -->
 
 # Takeaway
