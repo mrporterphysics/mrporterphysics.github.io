@@ -18,6 +18,39 @@ math: mathjax
 
 ---
 
+# 2026.09.10 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather give up technology or sugar?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. How to use [class spreadsheet](https://docs.google.com/spreadsheets/d/16NkZGe2-XbYLEW2ii5jZedTpaV5tR0FC0O6J8-f3yzg/edit?usp=sharing)
+    - Canvas ➡️ Modules ➡️ Science Skills ➡️ Measurement Olympics
+2. Finish Collecting Data
+3. Graph Data
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Graph measured data_
+
+### 📆 Upcoming
+
+- Did you hand in your safety contract?
+
+</div>
+</div>
+
+---
+
 # 2026.09.09 **Earth Science**
 
 ##### **❓ of the 📅**: Can you ask a genie for infinite wishes? 🧞
