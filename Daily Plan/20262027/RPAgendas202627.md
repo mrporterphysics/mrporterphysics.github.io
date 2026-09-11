@@ -51,7 +51,12 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Do Now 
+1. Do Now - Best Fit Lines
+2. Best Fit Lines Slides (blob vs. split method)
+3. Experimental Uncertainty slides
+4. Finish Lab Notebook
+5. Data Collection Best Practices
+6. Mathematical Modeling
 
 </div>
 
@@ -59,7 +64,9 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Practice with mathematical modeling from experimental data_
+
+🥅 _Write conclusions from mathematical models_
 
 ### 📆 Upcoming
 
