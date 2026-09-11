@@ -17,6 +17,57 @@ math: mathjax
 
 ---
 
+<!-- _class: paper -->
+
+# 2026.09.11 **AP Physics** Do Now
+
+<div class="do-now">
+
+<div>
+
+###### 5 MINUTES — ON YOUR OWN
+
+#### Best Fit Lines
+
+1. Pick up handout on front table
+2. Complete on your own
+2. Compare your answers to your peers
+3. Discuss with Mr. Porter as a group
+
+
+</div>
+
+</div>
+
+---
+
+# 2026.09.11 **AP Physics**
+
+##### **❓ of the 📅**: If you could snap your fingers and have one thing done for you, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.09 **Regents? Physics**
 
 ##### **❓ of the 📅**: Can you ask a genie for infinite wishes? 🧞

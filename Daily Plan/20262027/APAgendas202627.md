@@ -17,13 +17,27 @@ math: mathjax
 
 # 2026.09.11 **AP Physics** Do Now 
 
-1. Get your lab notebook
-2. Review your lab with your group
+<div class='do-now'> 
+ 
+ <div> 
+
+###### 5 MINUTES 
+
+#### Lab Review 
+
+  1. Get your lab notebook
+  2. Review your lab with your group
     - how did you do it?
     - what did you find?
       - what does your slope represent?
       - do you have a vertical intercept? is it negigible? what does it mean?
       - do you have any interesting findings that you think are unique to your experiment?
+  
+ </div> 
+
+ </div>
+
+
 
 ---
 
