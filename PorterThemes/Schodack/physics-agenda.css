@@ -1,4 +1,5 @@
 /* @theme physics-agenda */
+/* @auto-scaling true */
 /* Marp theme matching the Physics Week 3 deck.
    Default slide = dark ink. Add `<!-- _class: paper -->` for the light variant. */
 
@@ -98,7 +99,6 @@ h5 strong {
   white-space: nowrap;
 }
 
-/* ── Two-column agenda body ─────────────────────────────────── */
 /* ── Two-column agenda body ──────────────────────────────────
    Agenda on the left, goals / homework on the right. Blank lines around
    each div are required or Marp will not parse the markdown inside.
@@ -158,7 +158,6 @@ ol, ul { margin: 0; padding: 0; list-style: none; counter-reset: agenda; }
 ol > li, ul > li {
   font-size: var(--type-body);
   line-height: 1.25;
-  padding-left: 46px;
   padding-left: 40px;
   position: relative;
   margin: 0 0 14px;
@@ -168,8 +167,6 @@ ol > li::before {
   content: counter(agenda) ".";
   position: absolute;
   left: 0;
-  font-family: var(--font-mono);
-  font-size: 21px;
   top: 0;
   width: 30px;
   text-align: right;
@@ -182,9 +179,6 @@ ol > li::before {
 ul > li::before {
   content: "";
   position: absolute;
-  left: 4px;
-  top: 0.55em;
-  width: 10px;
   left: 8px;
   top: 0.55em;
   width: 12px;
@@ -197,7 +191,6 @@ li > ul, li > ol { margin-top: 12px; }
 .columns p { margin: 0 0 12px; font-size: var(--type-body); line-height: 1.25; color: var(--text-on-ink); }
 .columns em { font-style: normal; color: var(--text-on-ink); }
 
-/* ── Do Now / prompt card ───────────────────────────────────── */
 /* ── Do Now / prompt card ────────────────────────────────────
    A single full-width prompt. For 2-4 prompts side by side use .do-now.
 
@@ -233,11 +226,6 @@ pre {
 pre code { font-size: 34px; }
 section.paper pre { border-color: #d8d2c4; }
 
-/* Giant countdown or figure: `<!-- _class: figure -->` */
-section.figure { justify-content: center; align-items: center; gap: 20px; }
-section.figure h1 { font-family: var(--font-mono); font-weight: 500; font-size: 200px; color: var(--accent); letter-spacing: -0.02em; }
-
-/* ── Safety / callout block ─────────────────────────────────── */
 /* Giant countdown or figure — the h1 fills the slide:
 
      <!-- _class: figure -->
@@ -583,6 +571,7 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { color: #ffc76b; }
 strong { color: var(--paper); font-weight: 600; }
 img { display: block; }
+img[alt~="center"] { display: block; margin: 0 auto; }
 
 /* Marp turns unicode emoji into <img class="emoji">; keep them on the line */
 img.emoji,
@@ -595,9 +584,3 @@ img[data-marp-twemoji] {
   vertical-align: -0.12em;
   border: none;
 }
-
-
-img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
-  }

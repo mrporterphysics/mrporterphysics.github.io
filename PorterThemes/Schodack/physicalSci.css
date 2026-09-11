@@ -1024,3 +1024,353 @@ section.christmas table tr:nth-child(even) td {
     background-color: rgba(196, 30, 58, 0.08) !important;
     border-collapse: collapse;
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   AGENDA COMPONENTS — ported from the physics-agenda theme so the
+   same slide markup renders in either theme:
+
+     .do-now    1-4 prompt columns
+     .equation  formula box (wrap several in .equations for a grid)
+     .lab       station / step instruction cards
+     .callout   safety or warning panel
+     .meta      footer strip of run-time notes
+
+   Sizes are relative (em) so they follow the default theme's scale,
+   and colours come from the --comp-* tokens set per theme below.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Per-theme component colours ─────────────────────────────── */
+section {
+    --comp-card-bg: rgba(28, 27, 26, 0.04);
+    --comp-card-line: rgba(28, 27, 26, 0.20);
+    --comp-label: var(--light-accent-red);
+    --comp-accent: var(--light-accent-blue);
+    --comp-muted: rgba(28, 27, 26, 0.66);
+}
+
+section.dark {
+    --comp-card-bg: rgba(255, 255, 255, 0.07);
+    --comp-card-line: rgba(242, 240, 229, 0.22);
+    --comp-label: var(--dark-accent-red);
+    --comp-accent: var(--dark-accent-purple);
+    --comp-muted: rgba(242, 240, 229, 0.70);
+}
+
+section.twilight {
+    --comp-card-bg: rgba(255, 255, 255, 0.06);
+    --comp-card-line: rgba(212, 196, 176, 0.25);
+    --comp-label: var(--twilight-accent-red);
+    --comp-accent: var(--twilight-accent-purple);
+    --comp-muted: rgba(212, 196, 176, 0.70);
+}
+
+section.sepia {
+    --comp-card-bg: rgba(93, 78, 55, 0.05);
+    --comp-card-line: rgba(93, 78, 55, 0.25);
+    --comp-label: var(--sepia-accent-blue);
+    --comp-accent: var(--sepia-accent-purple);
+    --comp-muted: rgba(93, 78, 55, 0.70);
+}
+
+section.highcontrast {
+    --comp-card-bg: #FFFFFF;
+    --comp-card-line: #000000;
+    --comp-label: var(--highcontrast-accent-red);
+    --comp-accent: var(--highcontrast-accent-blue);
+    --comp-muted: #000000;
+}
+
+section.bluegray {
+    --comp-card-bg: rgba(255, 255, 255, 0.18);
+    --comp-card-line: rgba(46, 74, 107, 0.40);
+    --comp-label: var(--bluegray-accent-blue);
+    --comp-accent: var(--bluegray-accent-purple);
+    --comp-muted: rgba(248, 248, 255, 0.85);
+}
+
+section.soft {
+    --comp-card-bg: rgba(107, 107, 107, 0.05);
+    --comp-card-line: rgba(107, 107, 107, 0.22);
+    --comp-label: var(--soft-text);
+    --comp-accent: var(--soft-text);
+    --comp-muted: rgba(107, 107, 107, 0.75);
+}
+
+section.sun {
+    --comp-card-bg: rgba(255, 140, 0, 0.08);
+    --comp-card-line: rgba(205, 133, 63, 0.40);
+    --comp-label: var(--sun-accent-blue);
+    --comp-accent: var(--sun-accent-red);
+    --comp-muted: rgba(74, 74, 74, 0.75);
+}
+
+section.green {
+    --comp-card-bg: rgba(56, 142, 60, 0.07);
+    --comp-card-line: rgba(27, 67, 50, 0.25);
+    --comp-label: var(--green-accent-blue);
+    --comp-accent: var(--green-accent-purple);
+    --comp-muted: rgba(27, 67, 50, 0.75);
+}
+
+section.halloween {
+    --comp-card-bg: rgba(255, 140, 0, 0.08);
+    --comp-card-line: rgba(138, 43, 226, 0.45);
+    --comp-label: var(--halloween-accent-orange);
+    --comp-accent: var(--halloween-accent-green);
+    --comp-muted: rgba(248, 241, 231, 0.75);
+}
+
+section.thanksgiving {
+    --comp-card-bg: rgba(139, 69, 19, 0.06);
+    --comp-card-line: rgba(139, 69, 19, 0.30);
+    --comp-label: var(--thanksgiving-accent-brown);
+    --comp-accent: var(--thanksgiving-accent-orange);
+    --comp-muted: rgba(62, 39, 35, 0.75);
+}
+
+section.christmas {
+    --comp-card-bg: rgba(255, 255, 255, 0.55);
+    --comp-card-line: rgba(13, 78, 40, 0.28);
+    --comp-label: var(--christmas-accent-red);
+    --comp-accent: var(--christmas-accent-green);
+    --comp-muted: rgba(27, 59, 27, 0.75);
+}
+
+/* ── Do Now: 1-4 prompt columns ──────────────────────────────
+   One child <div> per column. The column count follows the number of
+   children and the type steps down as columns are added; add
+   cols-1 / cols-2 / cols-3 / cols-4 to force a count. ###### is the
+   label, #### the card title — both optional.
+
+     <div class="do-now">
+
+     <div>
+
+     ###### 5 MINUTES — ON YOUR OWN
+
+     #### Friction on a level bench
+
+     1. Draw the free-body diagram for the block.
+     2. It slides at **7.8 N**. What is the coefficient?
+
+     </div>
+
+     </div>
+*/
+div.do-now {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 1rem;
+    align-items: stretch;
+    margin: 0.4em 0;
+}
+div.do-now.cols-1, div.do-now.cols-2, div.do-now.cols-3, div.do-now.cols-4 { grid-auto-flow: row; }
+div.do-now.cols-1 { grid-template-columns: 1fr; }
+div.do-now.cols-2 { grid-template-columns: repeat(2, 1fr); }
+div.do-now.cols-3 { grid-template-columns: repeat(3, 1fr); }
+div.do-now.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+div.do-now > div {
+    background: var(--comp-card-bg);
+    border: 1px solid var(--comp-card-line);
+    border-radius: 6px;
+    padding: 0.8em 0.9em;
+    font-size: 0.92em;
+    line-height: 1.35;
+}
+
+/* One column has the whole slide, so it keeps full size */
+div.do-now > div:only-child { font-size: 1em; padding: 0.9em 1em; }
+
+/* Type steps down as columns are added (nth-last-child counts siblings) */
+div.do-now > div:first-child:nth-last-child(3),
+div.do-now > div:first-child:nth-last-child(3) ~ div { font-size: 0.82em; }
+div.do-now > div:first-child:nth-last-child(4),
+div.do-now > div:first-child:nth-last-child(4) ~ div { font-size: 0.72em; padding: 0.7em 0.8em; }
+
+/* ── Equation box ────────────────────────────────────────────
+   A heading is the formula, the paragraph after it is the caption. The
+   formula can also be `backticked code` or $math$. Wrap several boxes in
+   .equations for a 2-up grid; cols-1 for one, cols-3 for three across.
+
+     <div class="equations">
+
+     <div class="equation">
+
+     #### f<sub>s</sub> ≤ μ<sub>s</sub> N
+
+     Static. Matches the applied force until it maxes out.
+
+     </div>
+
+     </div>
+*/
+div.equations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-content: start;
+    margin: 0.4em 0;
+}
+div.equations.cols-1 { grid-template-columns: 1fr; }
+div.equations.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+div.equation {
+    background: var(--comp-card-bg);
+    border: 2px solid var(--comp-card-line);
+    border-radius: 6px;
+    padding: 0.8em 1em;
+}
+div.equation h1, div.equation h2, div.equation h3,
+div.equation h4, div.equation h5, div.equation h6 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.3em;
+    line-height: 1.2;
+    color: var(--comp-accent) !important;
+    border: 0 !important;
+    padding: 0;
+    margin: 0 0 0.25em;
+    text-transform: none;
+    letter-spacing: 0;
+}
+div.equation code {
+    font-size: 1.25em;
+    background: none !important;
+    color: var(--comp-accent) !important;
+    padding: 0;
+}
+div.equation mjx-container, div.equation .katex { color: var(--comp-accent); }
+div.equation p { margin: 0; font-size: 0.72em; line-height: 1.35; color: var(--comp-muted); }
+sub, sup { font-size: 0.6em; line-height: 0; }
+
+/* ── Lab instructions: station / step cards ──────────────────
+   One child <div> per station or step: ###### label, #### title, then the
+   instructions. Same column behaviour as .do-now, plus `stack` for
+   full-width rows.
+
+     <div class="lab">
+
+     <div>
+
+     ###### A
+
+     #### Bare lab bench
+
+     Pull the block at steady speed. Record the scale reading.
+
+     </div>
+
+     </div>
+*/
+div.lab {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 0.9rem;
+    align-items: stretch;
+    margin: 0.4em 0;
+}
+div.lab.cols-1, div.lab.cols-2, div.lab.cols-3, div.lab.cols-4 { grid-auto-flow: row; }
+div.lab.cols-1 { grid-template-columns: 1fr; }
+div.lab.cols-2 { grid-template-columns: repeat(2, 1fr); }
+div.lab.cols-3 { grid-template-columns: repeat(3, 1fr); }
+div.lab.cols-4 { grid-template-columns: repeat(4, 1fr); }
+div.lab.stack { grid-auto-flow: row; grid-template-columns: 1fr; gap: 0.6rem; }
+
+div.lab > div {
+    background: var(--comp-card-bg);
+    border: 1px solid var(--comp-card-line);
+    border-top: 4px solid var(--comp-label);
+    border-radius: 6px;
+    padding: 0.7em 0.85em;
+    font-size: 0.85em;
+    line-height: 1.35;
+}
+div.lab > div:first-child:nth-last-child(4),
+div.lab > div:first-child:nth-last-child(4) ~ div { font-size: 0.72em; }
+
+/* ── Safety / callout panel ──────────────────────────────────
+     <div class="callout">
+
+     #### SAFETY
+
+     Goggles on for the whole period.
+
+     </div>
+*/
+div.callout {
+    background: var(--comp-card-bg);
+    border: 1px solid var(--comp-card-line);
+    border-left: 8px solid var(--comp-label);
+    border-radius: 6px;
+    padding: 0.8em 1em;
+    font-size: 0.9em;
+    line-height: 1.35;
+    margin: 0.4em 0;
+}
+
+/* ── Shared card internals ───────────────────────────────────
+   ###### / ##### are the small label, #### and up are the card title.
+   Both reset the theme's heading colours, borders and serif face. */
+div.do-now h5, div.do-now h6,
+div.lab h5, div.lab h6,
+div.callout h5, div.callout h6 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62em;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--comp-label) !important;
+    border: 0 !important;
+    padding: 0;
+    margin: 0 0 0.4em;
+}
+div.do-now h1, div.do-now h2, div.do-now h3, div.do-now h4,
+div.lab h1, div.lab h2, div.lab h3, div.lab h4,
+div.callout h1, div.callout h2, div.callout h3, div.callout h4 {
+    font-family: "BBH Bogle", 'JetBrains Mono', sans-serif;
+    font-size: 1.05em;
+    line-height: 1.2;
+    color: inherit !important;
+    border: 0 !important;
+    padding: 0;
+    margin: 0 0 0.3em;
+}
+
+div.do-now p, div.lab p, div.callout p { margin: 0 0 0.5em; }
+div.do-now > div > *:last-child,
+div.lab > div > *:last-child,
+div.callout > *:last-child { margin-bottom: 0; }
+
+div.do-now ol, div.do-now ul,
+div.lab ol, div.lab ul,
+div.callout ol, div.callout ul {
+    margin: 0;
+    padding-left: 1.3em;
+}
+div.do-now li, div.lab li, div.callout li { margin-bottom: 0.35em; }
+div.do-now li:last-child, div.lab li:last-child, div.callout li:last-child { margin-bottom: 0; }
+div.do-now li::marker, div.lab li::marker, div.callout li::marker { color: var(--comp-accent); }
+
+/* ── Footer strip of run-time notes, usually under a .lab row ──
+     <div class="meta">
+
+     15 min per rotation
+
+     Three trials each
+
+     </div>
+*/
+div.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em 2em;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6em;
+    letter-spacing: 0.08em;
+    color: var(--comp-muted);
+    margin-top: 0.5em;
+}
+div.meta p { margin: 0; }
