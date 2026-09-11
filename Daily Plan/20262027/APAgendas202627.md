@@ -15,6 +15,18 @@ math: mathjax
 
 ---
 
+# 2026.09.11 **AP Physics** Do Now 
+
+1. Get your lab notebook
+2. Review your lab with your group
+    - how did you do it?
+    - what did you find?
+      - what does your slope represent?
+      - do you have a vertical intercept? is it negigible? what does it mean?
+      - do you have any interesting findings that you think are unique to your experiment?
+
+---
+
 # 2026.09.11 **AP Physics**
 
 ##### **❓ of the 📅**: If you could snap your fingers and have one thing done for you, which would it be?
@@ -25,9 +37,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Do Now: Review your lab results
+1. Do Now: Lab Review
 2. Board Meeting & [Uncertainty](../../Presentations/Exp%20Methods/slides/Slides/uncertainty.html)
-3. Make Predictions & Test
+3. Make Predictions & Test 
 4. Finish Lab Notebook
 5. [Data Collection Best Practices](../../AP%20Resource%20Pages/datacollection.html)
 
