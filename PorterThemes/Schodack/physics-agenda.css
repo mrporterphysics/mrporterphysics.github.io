@@ -273,8 +273,28 @@ section.figure h1 { font-family: var(--font-mono); font-weight: 500; font-size: 
 /* ── Do Now: 2-4 prompt columns ──────────────────────────────
    One child <div> per column. The column count follows the number of
    children, and the type steps down as columns are added; add
-   cols-2 / cols-3 / cols-4 to force a count. ###### is the accent label,
-   #### the card title — both optional.
+   cols-1 / cols-2 / cols-3 / cols-4 to force a count. One child is a single
+   full-width prompt card in the larger prompt type. ###### is the accent
+   label, #### the card title — both optional.
+
+   One column:
+
+     <div class="do-now">
+
+     <div>
+
+     ###### 5 MINUTES — ON YOUR OWN
+
+     #### Friction on a level bench
+
+     1. Draw the free-body diagram for the block.
+     2. It slides at **7.8 N**. What is the coefficient?
+
+     </div>
+
+     </div>
+
+   Two columns:
 
      <div class="do-now">
 
@@ -309,7 +329,8 @@ div.do-now {
   flex: 1;
   align-items: stretch;
 }
-div.do-now.cols-2, div.do-now.cols-3, div.do-now.cols-4 { grid-auto-flow: row; }
+div.do-now.cols-1, div.do-now.cols-2, div.do-now.cols-3, div.do-now.cols-4 { grid-auto-flow: row; }
+div.do-now.cols-1 { grid-template-columns: 1fr; }
 div.do-now.cols-2 { grid-template-columns: repeat(2, 1fr); }
 div.do-now.cols-3 { grid-template-columns: repeat(3, 1fr); }
 div.do-now.cols-4 { grid-template-columns: repeat(4, 1fr); }
@@ -324,6 +345,9 @@ div.do-now > div {
   line-height: 1.3;
 }
 section.paper div.do-now > div { background: var(--paper-card); box-shadow: 0 2px 0 #dcd6c8; }
+
+/* A single column has the whole slide, so it gets the larger prompt type */
+div.do-now > div:only-child { font-size: 30px; padding: 32px 36px; gap: 16px; }
 
 /* Type steps down as columns are added (nth-last-child counts the siblings) */
 div.do-now > div:first-child:nth-last-child(3),
