@@ -48,7 +48,7 @@ In each case, a sphere is moving from left to right next to a tape marked in met
 
 # 2026.09.14 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Should fruit be kept in the fridge?
 
 <div class ='columns'>
 
@@ -56,7 +56,7 @@ In each case, a sphere is moving from left to right next to a tape marked in met
 
 #### 📋 Agenda
 
-1. Data Collection Best Practices
+1. [Data Collection Best Practices](../../AP%20Resource%20Pages/datacollection.html)
 2. Buggy Lab - Partners
 
 </div>
