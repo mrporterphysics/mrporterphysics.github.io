@@ -18,6 +18,35 @@ math: mathjax
 
 ---
 
+# 2026.09.14 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be as small as an ant or as big as an elephant? 🐜 🐘
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. CER
+2. 🥣 🥗 🥪 ?
+3. CER from Metric Olympic Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Write scientific arugments with claim, evidence, reasoning framework_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.11 **Earth Science**
 
 ##### **❓ of the 📅**: If you could snap your fingers and have one thing done for you, which would it be?
