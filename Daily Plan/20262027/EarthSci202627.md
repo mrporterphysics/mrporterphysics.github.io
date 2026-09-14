@@ -47,37 +47,6 @@ math: mathjax
 
 ---
 
-# 2026.09.11 **Earth Science**
-
-##### **❓ of the 📅**: If you could snap your fingers and have one thing done for you, which would it be?
-
-<div class ='columns'>
-
- <div>
-
-#### 📋 Agenda
-
-1. Finish Graphs
-2. [Claim-Evidence-Reasoning] Intro
-3. 🥣 🥗 🥪 ?
-
-</div>
-
-<div>
-
-### 🎯 Goals
-
-🥅 _Graph from real life data_
-
-🥅 _Create scientific arguments__
-
-### 📆 Upcoming
-
-</div>
-</div>
-
-
----
 
 
 # CER (Claim, Evidence, Reasoning)
@@ -163,6 +132,37 @@ How does you graph support/show what you concluded?
 
 What is the science or big idea that support your evidence?
 
+
+---
+
+# 2026.09.11 **Earth Science**
+
+##### **❓ of the 📅**: If you could snap your fingers and have one thing done for you, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Graphs
+2. [Claim-Evidence-Reasoning] Intro
+3. 🥣 🥗 🥪 ?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Graph from real life data_
+
+🥅 _Create scientific arguments__
+
+### 📆 Upcoming
+
+</div>
+</div>
 
 
 
