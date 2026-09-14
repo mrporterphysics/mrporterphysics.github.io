@@ -15,6 +15,106 @@ math: mathjax
 
 ---
 
+
+
+# 2026.09.15 **AP Physics** Do Now
+
+<div class='do-now'> 
+ 
+ 
+ <div> 
+
+ ###### 5 MINUTES 
+
+ #### How Far and Where? 
+
+In each case, a sphere is moving from left to right next to a tape marked in meters. A strobe (flash) photograph is taken every second, and the location of the sphere is recorded. The total time intervals shown are not the same for all spheres.
+
+</div>
+
+<div>
+
+![center](image-2.png)
+
+1. Which ball went the **_furthest_** over the first 3 seconds?
+2. **_Where_** is each ball at time $t = 3 \text{ s}$?
+3. What are two ways to define "furthest"? 
+ 
+ </div>
+
+ </div>
+
+---
+
+# 2026.09.15 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+1. Finish Lab ~10 minutes
+1. [Data Collection Best Practices](../../AP%20Resource%20Pages/datacollection.html)
+2. Buggys Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+<!--- _class: paper --->
+
+# Buggy Lab 🚗 
+
+<div class='lab'>
+<div>
+
+## Question
+
+_Does your toy buddy move in a **consistent** manner?_
+
+## Purpose
+
+Collect data on your buggies so that you can represent the motion (all aspescts) of both buggies on the **same** graph. Your final models should be able to predict the **position** of your buggy at specified times. 
+
+
+
+</div>
+ 
+<div>
+
+
+## Constraints
+
+You will be given scenario card that describes the setup of your buggies
+
+![center w:400](../20252026/Daily%20Slides/image.png)
+
+</div>
+
+</div>
+
+
+
+
+
+---
+
 # 2026.09.11 **AP Physics** Do Now 
 
 <div class='do-now'> 
