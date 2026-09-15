@@ -165,6 +165,7 @@ marp-auto-scaling { display: block; width: 100%; }
 p {
   margin: 0 0 var(--bru-sp-4) 0;
   max-width: 64ch;
+  font-size: var(--bru-fs-4);
 }
 
 strong {
@@ -212,12 +213,14 @@ ul, ol {
   padding-left: 0;
   margin: 0 0 var(--bru-sp-4) 0;
   list-style: none;
+  font-size: var(--bru-fs-4);
 }
 
 section ul > li {
   position: relative;
   padding-left: var(--bru-sp-6);
   margin-bottom: var(--bru-sp-3);
+  font-size: var(--bru-fs-4);
 }
 /* Hard filled square — raw, unrounded */
 section ul > li::before {
@@ -236,9 +239,10 @@ section ol { counter-reset: bru-counter; }
 section ol > li {
   counter-increment: bru-counter;
   position: relative;
-  padding-left: var(--bru-sp-7);
-  margin-bottom: var(--bru-sp-3);
+  padding-left: var(--bru-sp-8);
+  margin-bottom: var(--bru-sp-4);
   min-height: 32px;
+  font-size: var(--bru-fs-4);
 }
 section ol > li::marker { content: ""; }
 /* Exposed mono numerals in a hard ink box */
@@ -338,16 +342,19 @@ h1 .MathJax, h2 .MathJax, h3 .MathJax { font-size: 1em !important; }
 /* ---------- Tables (exposed grid) ---------- */
 table {
   border-collapse: collapse;
-  width: 100%;
-  margin: var(--bru-sp-4) 0;
+  width: ;
+  table-layout: fixed;
+  margin: var(--bru-sp-3) 0;
   background: var(--bru-paper);
   border: var(--bru-rule);
-  font-size: var(--bru-fs-2);
+  font-size: var(--bru-fs-1);
 }
 th, td {
   border: var(--bru-rule-hair);
-  padding: var(--bru-sp-2) var(--bru-sp-4);
+  padding: var(--bru-sp-1) var(--bru-sp-2);
   text-align: left;
+  overflow: hidden;
+  word-break: break-word;
 }
 thead th {
   font-family: 'JetBrains Mono', monospace;

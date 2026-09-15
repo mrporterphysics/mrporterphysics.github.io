@@ -17,6 +17,35 @@ math: mathjax
 
 ---
 
+# 2026.09.15 **AP Physics**
+
+##### **❓ of the 📅**: What is the best french fry shape? 🍟
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Finish Buggy Lab
+2. Whiteboard and Compare
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.14 **AP Physics** Do Now
 
 <div class='do-now'> 
