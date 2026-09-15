@@ -48,7 +48,7 @@ In each case, a sphere is moving from left to right next to a tape marked in met
 
 # 2026.09.15 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What is the best french fry shape? 🍟
 
 <div class ='columns'>
 
