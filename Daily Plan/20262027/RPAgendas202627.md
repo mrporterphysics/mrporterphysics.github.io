@@ -37,7 +37,9 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Collect data for buggy lab_
+
+🥅 _Model Motiong graphically_ 
 
 ### 📆 Upcoming
 
