@@ -18,6 +18,81 @@ math: mathjax
 
 ---
 
+# 2026.09.15 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. CER - Metric Olympics
+2. [Earth's Coordinates](../../Presentations/ES%20Presentations/Mapping/Earths_Coordinates_Slides.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make scientific arguments_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+
+# Metric Olympic Presentations
+
+## Claim
+
+What is one thing you can conclude from your graph?
+
+## Evidence
+
+How does you graph support/show what you concluded?
+
+## Reasoning
+
+What is the science or big idea that support your evidence
+
+---
+
+# Claim-Evidence-Reasoning Example
+
+**Claim**: Strong hurricanes start with greatest wind speeds. 
+
+**Evidence**: On the graph the Major Hurricane initial wind speed > Weak hurricane > Tropical storm
+
+**Reasoning**: Hurricanes are in part rated by their windspeed. 
+
+![bg fit right](../20252026/Daily%20Slides/image-1.png)
+
+---
+
+# Metric Olympic Presentations
+
+## Claim
+
+What is one thing you can conclude from your graph?
+
+## Evidence
+
+How does you graph support/show what you concluded?
+
+## Reasoning
+
+What is the science or big idea that support your evidence?
+
+
+
+---
+
 # 2026.09.14 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be as small as an ant or as big as an elephant? 🐜 🐘
@@ -85,52 +160,6 @@ math: mathjax
 
 
 ![bg](https://insanelygoodrecipes.com/wp-content/uploads/2022/10/Homemade_Broccoli_and_Cheddar_Soup_in_a_Bread_Bowl.jpg)
-
-
----
-
-
-# Metric Olympic Presentations
-
-## Claim
-
-What is one thing you can conclude from your graph?
-
-## Evidence
-
-How does you graph support/show what you concluded?
-
-## Reasoning
-
-What is the science or big idea that support your evidence
-
----
-
-# Claim-Evidence-Reasoning Example
-
-**Claim**: Strong hurricanes start with greatest wind speeds. 
-
-**Evidence**: On the graph the Major Hurricane initial wind speed > Weak hurricane > Tropical storm
-
-**Reasoning**: Hurricanes are in part rated by their windspeed. 
-
-![bg fit right](../20252026/Daily%20Slides/image-1.png)
-
----
-
-# Metric Olympic Presentations
-
-## Claim
-
-What is one thing you can conclude from your graph?
-
-## Evidence
-
-How does you graph support/show what you concluded?
-
-## Reasoning
-
-What is the science or big idea that support your evidence?
 
 
 ---
