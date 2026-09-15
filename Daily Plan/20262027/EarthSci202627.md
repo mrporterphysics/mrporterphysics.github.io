@@ -20,7 +20,7 @@ math: mathjax
 
 # 2026.09.15 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What is the best french fry shape? 🍟
 
 <div class ='columns'>
 
