@@ -15,6 +15,39 @@ math: mathjax
 
 ---
 
+# 2026.09.16 **AP Physics**
+
+##### **❓ of the 📅**: If you invited dragons to a taco party, would you give them spicy salsa?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Buggy Lab
+    - collect data and graph with [nPlot]()
+    - whiteboard results
+    - discuss
+    - write conclusions
+2. Motion Notes
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion graphically_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 
 # 2026.09.15 **AP Physics** Do Now
