@@ -29,6 +29,8 @@ math: mathjax
 
 1. Do Now
 2. Finish Buggy Lab
+    - Collect Data
+    - [Graph with nPlot](https://noragulfa.com/nPlot/) and Print 🖨️
 2. Whiteboard and Compare
 
 </div>
