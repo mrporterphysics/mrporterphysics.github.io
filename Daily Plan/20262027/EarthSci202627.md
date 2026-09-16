@@ -18,6 +18,37 @@ math: mathjax
 
 ---
 
+# 2026.09.17 **Earth Science**
+
+##### **❓ of the 📅**: What was your favorite recess game from elementary school?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Mapping Lab
+2. Time Zones Lab
+3. Notes on Fields & Field Maps
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with mapping Earth_
+
+### 📆 HW:
+
+- Finish Incomplete Labs
+
+</div>
+</div>
+
+---
+
 # 2026.09.16 **Earth Science**
 
 ##### **❓ of the 📅**: If you invited dragons 🐉 to a taco 🌮 party, would you give them spicy salsa?
