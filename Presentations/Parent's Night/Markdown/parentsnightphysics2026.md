@@ -80,7 +80,7 @@ On an index card:
 # Contents
 
 1. [Physics](#modeling-instruction)
-2. [Earth Science](#21)
+2. [Earth Science](#18)
 
 
 ---
