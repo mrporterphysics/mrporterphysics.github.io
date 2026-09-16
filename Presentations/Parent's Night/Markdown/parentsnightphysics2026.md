@@ -3,20 +3,9 @@ title: Parents Night 2026
 marp: true
 theme: vector
 paginate: true
-footer: Mr. Porter · Schodack Physics
+footer: Mr. Porter · Physics · Earth Science
 ---
 
-<!-- _class: light -->
-<!-- _paginate: false -->
-
-<div class="eyebrow">Back to School Night 2026</div>
-
-# Contents
-
-1. [Physics](#2)
-2. [Earth Science](#21)
-
----
 
 <!-- _class: title -->
 <!-- _footer: '' -->
@@ -27,8 +16,6 @@ footer: Mr. Porter · Schodack Physics
 ### Back to School Night 2026
 
 # Mr. Porter
-
-## Physics 2026–27
 
 </div>
 <div class="card" style="text-align: left">
@@ -57,9 +44,9 @@ On an index card:
 #### About Me
 
 - 15th year at Schodack
-- Married — a 3.5 year old son and a 10 week old daughter
+- 2 Kids (3.5 & 11 Weeks)
 - Avid cyclist
-    - CBRC Board Member
+    - _Capital Bicycle Racing Club_ Board Member
 
 </div>
 
@@ -69,8 +56,8 @@ On an index card:
 <!-- _footer: '' -->
 
 ![bg](../figures/IMG-0247.jpg)
-![bg](../figures/IMG-5767.JPG)
-![bg](../figures/Robie2.jpeg)
+![bg](FBB7F997-677E-4FD6-BD0C-73211CB1A798_1_105_c.jpeg)
+![bg](9340DE26-FE1D-48DB-A81F-5BCC6B27B433_1_105_c.jpeg)
 
 ---
 
@@ -81,6 +68,20 @@ On an index card:
 
 > # Tell me and I forget. Teach me and I remember. Involve me and I learn.
 > ### Benjamin Franklin
+
+---
+
+
+<!-- _class: light -->
+<!-- _paginate: false -->
+
+<div class="eyebrow">Back to School Night 2026</div>
+
+# Contents
+
+1. [Physics](#modeling-instruction)
+2. [Earth Science](#21)
+
 
 ---
 
@@ -182,7 +183,7 @@ Students apply the model they built to new situations and problems.
 
 # Quiz Grade
 
-![bg fit right](image.png)
+![bg fit right:65%](image.png)
 
 ---
 
@@ -192,7 +193,7 @@ Students apply the model they built to new situations and problems.
 
 # Gradebook
 
-![bg fit right](image-1.png)
+![bg fit right:65%](image-1.png)
 
 ---
 
@@ -268,7 +269,7 @@ Students apply the model they built to new situations and problems.
 </div>
 <div>
 
-## Regents Physics
+<!-- ## Regents Physics
 
 1. Kinematics
 2. Translational Dynamics
@@ -278,7 +279,7 @@ Students apply the model they built to new situations and problems.
 6. DC Circuits
 7. Mechanical Waves
 8. Electromagnetic Waves
-9. Modern Physics
+9. Modern Physics -->
 
 </div>
 </div>
@@ -310,86 +311,24 @@ Encourage them to **sign up for reassessments**.
 
 <!-- _class: contact -->
 
-<div class="columns center">
-<div>
+#### Contact
 
 # What questions do you have?
 
-#### Contact
-
 💻 Encouraged to start with **ParentSquare**
 ✉️ nporter@schodack.k12.ny.us
-🔗 Presentation → scan the code
 
-</div>
-<div style="text-align: center">
-
-![qr width:260](image-2.png)
-
-</div>
-</div>
 
 ---
 
 <!-- _class: title -->
 <!-- _footer: '' -->
 
-### Back to School Night 2025
+### Back to School Night 2026
 
 # Mr. Porter
 
-## Earth Science 🌎 2025–26
-
----
-
-<!-- _footer: '' -->
-
-![bg](../figures/HeatherNate_1305.jpg)
-
-<div class="glass">
-
-#### About Me
-
-- 14th year at Schodack
-- Married — we have a 2.5 year old son
-- Avid cyclist
-    - CBRC Board Member
-- Like to vacation 🏕️ in Maine 🦞
-
-</div>
-
----
-
-<!-- _class: photo -->
-<!-- _footer: '' -->
-
-![bg](../figures/IMG-0247.jpg)
-![bg](../figures/IMG-5767.JPG)
-![bg](../figures/Robie2.jpeg)
-
----
-
-#### Index Cards
-
-# Questions for you
-
-On an index card:
-
-0. Your name, your child's name & class
-1. What is your proudest moment as a parent/guardian in regards to the child I am teaching?
-2. What motivates your child?
-3. What are your expectations for your child this year?
-4. Is there anything else you want me to know about your child?
-
----
-
-<!-- _class: quote -->
-<!-- _footer: '' -->
-
-![bg blur:15px brightness:0.7](../figures/IMG_3213.JPG)
-
-> # Tell me and I forget. Teach me and I remember. Involve me and I learn.
-> ### Benjamin Franklin
+## Earth Science 🌎 2026-27
 
 ---
 
@@ -407,7 +346,7 @@ On an index card:
 
 #### Transition to NYSSLS
 
-# A New Earth Science Exam
+# A _New_(er) Earth Science Exam
 
 The Earth Science test has changed to match the **New York State Science Learning Standards**.
 
@@ -483,21 +422,10 @@ Ask for **extra practice** when a concept is a struggle.
 
 <!-- _class: contact -->
 
-<div class="columns center">
-<div>
-
 # What questions do you have?
 
 #### Contact
 
 💻 Encouraged to start with **ParentSquare**
 ✉️ nporter@schodack.k12.ny.us
-🔗 Presentation → scan the code
 
-</div>
-<div style="text-align: center">
-
-![qr width:260](image-2.png)
-
-</div>
-</div>

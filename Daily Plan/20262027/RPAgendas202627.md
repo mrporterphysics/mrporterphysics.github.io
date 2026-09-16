@@ -14,6 +14,66 @@ math: mathjax
 
 ### 👨‍🏫 Mr. Porter
 
+---
+
+
+
+ # **AP Physics Do Now**  Register for...
+
+<div class='do-now'> 
+ 
+ <div>
+
+ ## Register for **AP Classroom** 
+ 
+ AP Exam Prep & Review
+  - Website: [https://apclassroom.collegeboard.org/](https://apclassroom.collegeboard.org/)
+  - Code: <mark>**RPQP72**</mark>
+ </div> 
+
+
+ <div>
+ 
+##  Register for... **Physics Classroom**
+  General Physics Practice & Homework
+  - Website: [http://www.physicsclassroom.com/sign-in](http://www.physicsclassroom.com/sign-in)
+  - Code: **53a74c8**
+  - Register with school email as username
+ 
+ </div>
+
+ </div>
+
+
+---
+
+# 2026.09.17 **AP Physics**
+
+##### **❓ of the 📅**: What was your favorite recess game from elementary school?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Whiteboard Results and discuss
+2. Finish Lab Notebook
+3. Motion Notes
+3. Distance vs. Displacement Physics Classroom
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
 
 ---
 

@@ -44,9 +44,9 @@ math: mathjax
 
 ---
 
-# 2026.09 **AP Physics**
+# 2026.09.17 **AP Physics**
 
-##### **❓ of the 📅**: QUESSSTIOOOONNN
+##### **❓ of the 📅**: What was your favorite recess game from elementary school?
 
 <div class ='columns'>
 
@@ -55,9 +55,11 @@ math: mathjax
 #### 📋 Agenda
 
 1. Do Now
-2. Notes
+2. Using [nPlot](https://noragulfa.com/nPlot/)
+2. Graph & Whiteboard Results
+3. Board Meeting & Finish Lab Notebook
+3. Motion Notes
 3. PC: Distance vs. Displacement
-4. Average vs. Instantaneous
 
 </div>
 
