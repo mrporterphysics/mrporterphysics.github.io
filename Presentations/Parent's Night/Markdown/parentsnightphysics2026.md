@@ -18,7 +18,7 @@ footer: Mr. Porter · Physics · Earth Science
 # Mr. Porter
 
 </div>
-<div class="card" style="text-align: left">
+<div class="card" style="text-align: left; font-size: 28px" >
 
 #### 🤔 Questions for you
 
