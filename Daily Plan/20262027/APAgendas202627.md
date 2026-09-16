@@ -15,6 +15,67 @@ math: mathjax
 
 ---
 
+
+ # **AP Physics Do Now**  Register for...
+
+<div class='do-now'> 
+ 
+ <div>
+
+ #  Register for... **AP Classroom** 
+ 
+ ->> AP Exam Prep & Review
+  - Website: [https://apclassroom.collegeboard.org/](https://apclassroom.collegeboard.org/)
+  - Code: **RPPQPA**
+ </div> 
+
+
+ <div>
+ 
+#  Register for... **Physics Classroom**
+ ->> General Physics Practice & Homework
+  - Website: [http://www.physicsclassroom.com/sign-in](http://www.physicsclassroom.com/sign-in)
+  - Code: **003117a**
+  - Register with school email as username
+ 
+ </div>
+
+ </div>
+
+---
+
+# 2026.09 **AP Physics**
+
+##### **❓ of the 📅**: QUESSSTIOOOONNN
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Notes
+3. PC: Distance vs. Displacement
+4. Average vs. Instantaneous
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice with Distance vs. Displacement_
+
+🥅 _Define average & instantaneous_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.16 **AP Physics**
 
 ##### **❓ of the 📅**: If you invited dragons 🐉 to a taco 🌮 party, would you give them spicy salsa?

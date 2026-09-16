@@ -18,6 +18,33 @@ math: mathjax
 
 ---
 
+# 2026.09.16 **Earth Science**
+
+##### **❓ of the 📅**: If you invited dragons 🐉 to a taco 🌮 party, would you give them spicy salsa?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mapping Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use Latitude and Longitude to map Earth_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.15 **Earth Science**
 
 ##### **❓ of the 📅**: What is the best french fry shape? 🍟

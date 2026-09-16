@@ -126,7 +126,7 @@ h5 strong {
 */
 .columns {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   gap: 44px;
   flex: 1;
   align-items: start;
@@ -312,16 +312,16 @@ section.figure h1 { font-family: var(--font-mono); font-weight: 500; font-size: 
 div.do-now {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-auto-columns: minmax(0, 1fr);
   gap: 26px;
   flex: 1;
   align-items: stretch;
 }
 div.do-now.cols-1, div.do-now.cols-2, div.do-now.cols-3, div.do-now.cols-4 { grid-auto-flow: row; }
-div.do-now.cols-1 { grid-template-columns: 1fr; }
-div.do-now.cols-2 { grid-template-columns: repeat(2, 1fr); }
-div.do-now.cols-3 { grid-template-columns: repeat(3, 1fr); }
-div.do-now.cols-4 { grid-template-columns: repeat(4, 1fr); }
+div.do-now.cols-1 { grid-template-columns: minmax(0, 1fr); }
+div.do-now.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+div.do-now.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+div.do-now.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 div.do-now > div {
   background: rgba(255, 255, 255, 0.05);
@@ -373,13 +373,13 @@ div.do-now > div:first-child:nth-last-child(4) ~ div li { padding-left: 32px; }
 */
 div.equations {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   flex: 1;
   align-content: start;
 }
-div.equations.cols-1 { grid-template-columns: 1fr; }
-div.equations.cols-3 { grid-template-columns: repeat(3, 1fr); }
+div.equations.cols-1 { grid-template-columns: minmax(0, 1fr); }
+div.equations.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 div.equation {
   border: 2px solid var(--ink-line);
@@ -446,16 +446,16 @@ sub, sup { font-size: 0.6em; line-height: 0; }
 div.lab {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 1fr;
+  grid-auto-columns: minmax(0, 1fr);
   gap: 22px;
   flex: 1;
   align-items: stretch;
 }
 div.lab.cols-2, div.lab.cols-3, div.lab.cols-4 { grid-auto-flow: row; }
-div.lab.cols-2 { grid-template-columns: repeat(2, 1fr); }
-div.lab.cols-3 { grid-template-columns: repeat(3, 1fr); }
-div.lab.cols-4 { grid-template-columns: repeat(4, 1fr); }
-div.lab.stack { grid-auto-flow: row; grid-template-columns: 1fr; gap: 16px; }
+div.lab.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+div.lab.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+div.lab.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+div.lab.stack { grid-auto-flow: row; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 
 div.lab > div {
   background: var(--paper-card);
@@ -473,6 +473,14 @@ section:not(.paper) div.lab > div {
 }
 div.lab > div:first-child:nth-last-child(4),
 div.lab > div:first-child:nth-last-child(4) ~ div { font-size: 21px; padding: 22px 24px; }
+
+/* Grid tracks are minmax(0, 1fr), not 1fr: a plain 1fr column can't shrink
+   below its longest unbreakable word, so a URL widens its column and pushes
+   the next card off the slide. overflow-wrap lets URLs and codes break. */
+div.do-now > div, div.lab > div, div.equation, div.callout {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 
 /* Card label (###### A / STEP 1) and card title (#### Bare lab bench) */
 div.lab h5, div.lab h6, div.do-now h5, div.do-now h6 {
