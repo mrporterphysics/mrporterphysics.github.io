@@ -26,7 +26,7 @@ math: mathjax
  
  ->> AP Exam Prep & Review
   - Website: [https://apclassroom.collegeboard.org/](https://apclassroom.collegeboard.org/)
-  - Code: **RPPQPA**
+  - Code: **RPQP72**
  </div> 
 
 
@@ -35,7 +35,7 @@ math: mathjax
 #  Register for... **Physics Classroom**
  ->> General Physics Practice & Homework
   - Website: [http://www.physicsclassroom.com/sign-in](http://www.physicsclassroom.com/sign-in)
-  - Code: **003117a**
+  - Code: **53a74c8**
   - Register with school email as username
  
  </div>
@@ -87,7 +87,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Buggy Lab
-    - collect data and graph with [nPlot]()
+    - collect data and graph with [nPlot](https://noragulfa.com/nPlot/)
     - whiteboard results
     - discuss
     - write conclusions

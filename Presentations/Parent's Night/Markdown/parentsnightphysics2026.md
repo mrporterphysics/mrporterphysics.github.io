@@ -1,199 +1,232 @@
 ---
-title: Parents Night 2025
+title: Parents Night 2026
 marp: true
-theme: physicalSci
-class: twilight
+theme: vector
 paginate: true
+footer: Mr. Porter · Schodack Physics
 ---
 
-<!--- _class: light --->
+<!-- _class: light -->
+<!-- _paginate: false -->
 
-# CONTENTS:
+<div class="eyebrow">Back to School Night 2026</div>
 
-## 1. [Physics](#physics-2025-26)
-## 2. [Earth Science](#earth-science--2025-26)
+# Contents
+
+1. [Physics](#2)
+2. [Earth Science](#21)
 
 ---
 
-<div class='columns' >
-<div align="center" style="display: flex; flex-direction: column; justify-content: center;border: 2px solid #d7d1d1; padding: 1em; border-radius: 8px;"">
+<!-- _class: title -->
+<!-- _footer: '' -->
 
+<div class="columns center">
+<div>
 
+### Back to School Night 2026
 
-# Back to School Night 2026 <!---fit--->
+# Mr. Porter
 
-# **Mr. Porter**
-
-## Physics 2026-27
+## Physics 2026–27
 
 </div>
- 
-<div border: 2px solid #e3dfdf; padding: 1em; border-radius: 8px;">
+<div class="card" style="text-align: left">
 
-
-## 🤔 Questions for you:
+#### 🤔 Questions for you
 
 On an index card:
 
-0. Your Name & Your Child's Name
-1. What is your proudest moment as parent/guardian in regards to the child I am teaching?
+0. Your name & your child's name
+1. What is your proudest moment as a parent/guardian in regards to the child I am teaching?
 2. What motivates your child?
 3. What are your expectations for your child this year?
 4. Is there anything else you want me to know about your child?
 
-
 </div>
 </div>
 
 ---
 
-# **About Me..**
+<!-- _footer: '' -->
 
-<div class='blur'>
-<div>
+![bg](../figures/HeatherNate_1305.jpg)
 
-- 15th Year at Schodack
-- Married and we have an 3.5 year old son and a 10 week old daughter
-- Avid Cyclist
+<div class="glass">
+
+#### About Me
+
+- 15th year at Schodack
+- Married — a 3.5 year old son and a 10 week old daughter
+- Avid cyclist
     - CBRC Board Member
 
 </div>
 
-![bg](../figures/HeatherNate_1305.jpg)
-
 ---
+
+<!-- _class: photo -->
+<!-- _footer: '' -->
 
 ![bg](../figures/IMG-0247.jpg)
-
 ![bg](../figures/IMG-5767.JPG)
-
 ![bg](../figures/Robie2.jpeg)
 
+---
+
+<!-- _class: quote -->
+<!-- _footer: '' -->
+
+![bg blur:15px brightness:0.7](../figures/IMG_3213.JPG)
+
+> # Tell me and I forget. Teach me and I remember. Involve me and I learn.
+> ### Benjamin Franklin
 
 ---
 
+<!-- _class: section -->
 
-![bg blur:15px](../figures/IMG_3213.JPG)
+#### How I Teach Physics
 
+# Modeling Instruction
 
-
-> # _**Tell me and I forget. Teach me and I remember. Involve me and I learn.**_  
-> ### Ben Franklin
-
----
-
-
-# Teaching Physics <!--fit-->
-
-# **Modeling Instruction** <!--fit--->
-
+## Students build, use, and test models — the way physicists do.
 
 ---
 
-# Paradigm Lab - Model Development  :arrow_down: <!--fit--->
+<!-- _class: cycle -->
 
+#### The Modeling Cycle
 
-# Model Deployment & Problem Solving ⬇️ <!--fit--->
+# Paradigm Lab — Model Development
+# Model Deployment & Problem Solving
+# Breaking the Model
 
+---
 
-# Breaking the Model 🔁 <!--fit--->
-
---- 
-
-<br><br><br><br><br><br><br>
-
-# Model Development
+<!-- _class: photo -->
 
 ![bg](../figures/File_008.jpeg)
 
+<div class="glass">
+
+#### Step 01
+
+# Model Development
+
+</div>
+
 ---
 
+<div class="columns center">
+<div>
+
+#### Step 02
 
 # Model Deployment
 
-<div class="columns">
+Students apply the model they built to new situations and problems.
 
-<div></div>
-
-<div><video controls width="350" >
-  <source src="../figures/IMG_2814.MOV" type="video/webm" />
-
+</div>
+<div style="text-align: center">
+<video controls width="360">
   <source src="../figures/IMG_2814.MOV" type="video/mp4" />
-</video></div>
-
-<div></div>
-
+</video>
+</div>
 </div>
 
 ---
 
+<!-- _class: section -->
 
-# Breaking the Model 🔨 <!--fit--->
+#### Step 03
 
+# Breaking the Model 🔨
+
+## Finding where a model stops working is where the next one begins.
 
 ---
 
-# Standards Based Grading 
+#### Grading
 
+# Standards Based Grading
 
-<div class="columns">
-
+<div class="columns split">
 <div>
 
-- Students graded by learning target 
+- Students graded by learning target
     - _“I can solve projectile motion problems.”_
-- Scored 1-5, Weighted Average (75% Most recent, 25% everything else)
-- Can initial reassessments on any standard 
+- Scored 1–5, weighted average (**75%** most recent, 25% everything else)
+- Can initiate reassessments on any standard
 - Overall score is based on how many standards are mastered out of how many are assessed
 
 </div>
+<div class="card">
 
-<div>
+| Descriptor    | Score |
+| ------------- | ----- |
+| Distinguished | 5     |
+| Proficient    | 4     |
+| Developing    | 3     |
+| Emerging      | 2     |
+| Beginning     | 1     |
 
-| Descriptor | Score | 
-|---|---| 
-| Distinguished | 5|
-| Proficient | 4|
-| Developing | 3|
-| Emerging | 2|
-| Beginning | 1|
-
-
-</div></div>
+</div>
+</div>
 
 ---
+
+<!-- _class: light -->
+
+#### Grading
 
 # Quiz Grade
 
-
-![center width:700](image.png)
-
----
-
-# Gradebook 
-
-![center width:700](image-1.png)
-
-
+![bg fit right](image.png)
 
 ---
 
-# Grades Overall AP/Regents
+<!-- _class: light -->
 
-- 5% Homework
-- 15% Tests
-- 20% Lab Completion (Lab work in Lab Notebook and Pivot Interactives)
-    - Labs must be completed thoughtfully and thoroughly. 
-- 60% Cumulative Standards Score 
-    - Based on # of standards Mastered out of # assessed
+#### Grading
+
+# Gradebook
+
+![bg fit right](image-1.png)
 
 ---
 
-# AP Physics vs. Regents Physics 
+#### Grading
 
-<div class="columns:">
+# Grades Overall — AP
 
+<div class="columns split">
 <div>
+
+| Category                     | Weight |
+| ---------------------------- | ------ |
+| Cumulative Standards Score   | 60%    |
+| Lab Completion               | 20%    |
+| Tests                        | 15%    |
+| Homework                     | 5%     |
+
+</div>
+<div class="card amber">
+
+- **Labs** — Lab Notebook and Pivot Interactives; must be completed thoughtfully and thoroughly.
+- **Standards score** — based on # of standards mastered out of # assessed.
+
+</div>
+</div>
+
+
+<!-- 
+#### Two Courses
+
+# AP Physics vs. Regents Physics
+
+<div class="columns">
+<div class="card">
 
 ## AP Physics
 
@@ -201,165 +234,197 @@ On an index card:
 - Tests how multiple concepts are related and the effect they have on each other
 - Adds in Rotational Mechanics and Dynamics
 
-
 </div>
+<div class="card amber">
 
-
-<div>
-
-## Regents Physics 
+## Regents Physics
 
 - More calculation based
 - Tests one concept at a time and questions are scaffolded more
 
-
 </div>
-
-</div>
+</div> -->
 
 ---
 
+<!-- _class: light -->
 
-<div class='columns'>
+#### Course Units
+
+<div class="columns">
 <div>
 
-#### <u>AP Physics</u>
+## AP Physics
 
-1. Kinematics 
+1. Kinematics
 2. Translational Dynamics
 3. Work, Energy and Power
 4. Conservation of Linear Momentum
 5. Torque and Rotational Dynamics
 6. Energy and Momentum of Rotating Systems
-7. Oscillations 
+7. Oscillations
 8. Fluids
 
 </div>
- 
 <div>
 
-#### <u>Regents</u> 
+## Regents Physics
 
-1. Kinematics 
+1. Kinematics
 2. Translational Dynamics
 3. Work, Energy and Power
 4. Conservation of Linear Momentum
-5. Electrostatics 
-6. DC Circuits 
+5. Electrostatics
+6. DC Circuits
 7. Mechanical Waves
 8. Electromagnetic Waves
 9. Modern Physics
+
 </div>
 </div>
 
 ---
 
-# 💯 How do I help my child succeed? 💯
+#### Partnering at Home
 
-- Complete the homework & practice
-    - Encourage them to stay after school to do this!
-- Encourage them to sign up for reassessments
+# 💯 How do I help my child succeed?
 
----
+<div class="columns">
+<div class="card">
 
-# What questions do you have? <!--fit--->
+### Practice
 
-## Contacts:
+Complete the homework & practice — encourage them to **stay after school** to do this!
 
-💻 Encouraged to start with **ParentSquare**
-✉️ Email: nporter@schodack.k12.ny.us
-🔗 Presentation: 
+</div>
+<div class="card amber">
 
-![center width:200](image-2.png)
+### Reassess
 
----
+Encourage them to **sign up for reassessments**.
 
-
-# Back to School Night 2025 <!---fit--->
-
-# **Mr. Porter**
-
-## Earth Science 🌎 2025-26
+</div>
+</div>
 
 ---
 
-# **About Me..**
+<!-- _class: contact -->
 
-<div class='blur'>
+<div class="columns center">
 <div>
 
-- 14th Year at Schodack
-- Married and we have an 2.5 old son
-- Avid Cyclist
+# What questions do you have?
+
+#### Contact
+
+💻 Encouraged to start with **ParentSquare**
+✉️ nporter@schodack.k12.ny.us
+🔗 Presentation → scan the code
+
+</div>
+<div style="text-align: center">
+
+![qr width:260](image-2.png)
+
+</div>
+</div>
+
+---
+
+<!-- _class: title -->
+<!-- _footer: '' -->
+
+### Back to School Night 2025
+
+# Mr. Porter
+
+## Earth Science 🌎 2025–26
+
+---
+
+<!-- _footer: '' -->
+
+![bg](../figures/HeatherNate_1305.jpg)
+
+<div class="glass">
+
+#### About Me
+
+- 14th year at Schodack
+- Married — we have a 2.5 year old son
+- Avid cyclist
     - CBRC Board Member
 - Like to vacation 🏕️ in Maine 🦞
 
 </div>
 
-
-
-![bg](../figures/HeatherNate_1305.jpg)
-
 ---
 
+<!-- _class: photo -->
+<!-- _footer: '' -->
+
 ![bg](../figures/IMG-0247.jpg)
-
 ![bg](../figures/IMG-5767.JPG)
-
 ![bg](../figures/Robie2.jpeg)
 
 ---
+
+#### Index Cards
 
 # Questions for you
 
 On an index card:
 
-0. Your Name & Your Child's Name & Class
-1. What is your proudest moment as parent/guardian in regards to the child I am teaching?
+0. Your name, your child's name & class
+1. What is your proudest moment as a parent/guardian in regards to the child I am teaching?
 2. What motivates your child?
 3. What are your expectations for your child this year?
 4. Is there anything else you want me to know about your child?
 
 ---
 
-<!--- _backgroundColor: black --->
+<!-- _class: quote -->
+<!-- _footer: '' -->
 
-![bg blur](../figures/IMG_3213.JPG)
+![bg blur:15px brightness:0.7](../figures/IMG_3213.JPG)
 
->  # _**Tell me and I forget. Teach me and I remember. Involve me and I learn.**_  
-> ### Ben Franklin
+> # Tell me and I forget. Teach me and I remember. Involve me and I learn.
+> ### Benjamin Franklin
 
 ---
+
+#### The Course
 
 # What is Earth Science?
 
 1. Space Systems
 2. Earth's History
-2. Earth's Systems
-3. Weather & Climate
-4. Human Sustainability
+3. Earth's Systems
+4. Weather & Climate
+5. Human Sustainability
 
 ---
 
-# Transition to NYSSLS 
+#### Transition to NYSSLS
 
-## Earth Science Test has changed to match the New York State Science Learning Standards
+# A New Earth Science Exam
 
-<div class='columns'>
-<div>
+The Earth Science test has changed to match the **New York State Science Learning Standards**.
 
-### New ESS
+<div class="columns">
+<div class="card">
+
+## New ESS
 
 - Phenomena and systems driven, clusters around real-world contexts
 - Shift towards scientific literacy and application
 
 </div>
- 
-<div>
+<div class="card amber">
 
-### Old
+## Old
 
-- traditional test, MC & FRQ
+- Traditional test, MC & FRQ
 - Classic skills such as profiles, plotting, quantitative and recall items
 
 </div>
@@ -367,43 +432,72 @@ On an index card:
 
 ---
 
-<iframe src="https://www.nysedregents.org/earth_space_sciences/625/ess62025-exam.pdf" 
-        width="100%" 
-        height="600px" 
-        type="application/pdf"
-        style="border: 1px solid #ccc;">
+<!-- _class: light -->
+<!-- _footer: '' -->
+
+<iframe src="https://www.nysedregents.org/earth_space_sciences/625/ess62025-exam.pdf"
+        width="100%"
+        height="600px"
+        style="border: 1px solid #ccc; border-radius: 10px;">
 </iframe>
 
 ---
 
+#### Grading
+
 # Grading Policy
 
-- Tests: 100 points (One test & One Performance Task per unit)
-- Quizzes: 25-50 points (1-2 quizzes per unit)
-- Labs: 25-50 points
-- Homework and Classwork: 5-20 points (depending on length)
+| Category                | Points                     |
+| ----------------------- | -------------------------- |
+| Tests                   | 100 — one test & one performance task per unit |
+| Quizzes                 | 25–50 — 1–2 per unit       |
+| Labs                    | 25–50                      |
+| Homework & Classwork    | 5–20 — depending on length |
 
-**Cumulative points will determine the final grade for the course.**
-
----
-
-
-# 💯 How do I help my child succeed? 💯
-
-- Complete the homework & practice
-- Encourage them to stay after school to do this!
-- Encourage your student to ask for extra practice if they are struggling with a concept
-
+**Cumulative points determine the final grade for the course.**
 
 ---
 
+#### Partnering at Home
 
-# What questions do you have? <!--fit--->
+# 💯 How do I help my child succeed?
 
-## Contacts:
+<div class="columns">
+<div class="card">
+
+### Practice
+
+Complete the homework & practice — **stay after school** to do this!
+
+</div>
+<div class="card amber">
+
+### Ask
+
+Ask for **extra practice** when a concept is a struggle.
+
+</div>
+</div>
+
+---
+
+<!-- _class: contact -->
+
+<div class="columns center">
+<div>
+
+# What questions do you have?
+
+#### Contact
 
 💻 Encouraged to start with **ParentSquare**
-✉️ Email: nporter@schodack.k12.ny.us
-🔗 Presentation: 
+✉️ nporter@schodack.k12.ny.us
+🔗 Presentation → scan the code
 
-![center width:200](image-2.png)
+</div>
+<div style="text-align: center">
+
+![qr width:260](image-2.png)
+
+</div>
+</div>
