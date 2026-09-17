@@ -30,7 +30,7 @@ math: mathjax
 
 1. Finish Mapping Lab
 2. Time Zones Lab
-3. Notes on Fields & Field Maps
+3. [Notes on Fields & Field Maps](../../Presentations/ES%20Presentations/Mapping/fieldlines/topographic-mapping.html)
 
 </div>
 
