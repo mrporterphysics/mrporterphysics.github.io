@@ -28,7 +28,7 @@ math: mathjax
  
  AP Exam Prep & Review
   - Website: [https://apclassroom.collegeboard.org/](https://apclassroom.collegeboard.org/)
-  - Code: <mark>**RPQP72**</mark>
+  - Code: <mark>**YLWWNZ**</mark>
  </div> 
 
 
@@ -37,7 +37,7 @@ math: mathjax
 ##  Register for... **Physics Classroom**
   General Physics Practice & Homework
   - Website: [http://www.physicsclassroom.com/sign-in](http://www.physicsclassroom.com/sign-in)
-  - Code: **53a74c8**
+  - Code: **e56dbba**
   - Register with school email as username
  
  </div>
@@ -59,7 +59,7 @@ math: mathjax
 
 1. Whiteboard Results and discuss
 2. Finish Lab Notebook
-3. Motion Notes
+3. [Motion Notes](../../Presentations/APCVPM/talks/CVPM2026.html)
 3. Distance vs. Displacement Physics Classroom
 
 </div>
