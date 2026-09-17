@@ -58,7 +58,7 @@ math: mathjax
 2. Using [nPlot](https://noragulfa.com/nPlot/)
 2. Graph & Whiteboard Results
 3. Board Meeting & Finish Lab Notebook
-3. Motion Notes
+3. [Motion Notes](../../Presentations/APCVPM/talks/CVPM2026.html)
 3. PC: Distance vs. Displacement
 
 </div>
