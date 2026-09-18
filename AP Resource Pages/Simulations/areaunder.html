@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Under a Velocity–Time Graph = Displacement</title>
+    <style>
+        /* Flexoki Color Scheme */
+        :root {
+            /* Base Colors */
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+
+            /* Accent Colors */
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+
+        /* Light Theme */
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --border-hover: var(--fx-base-300);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+            --shadow-hover: rgba(28, 27, 26, 0.15);
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
+        }
+        
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+        
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .theme-toggle::before {
+            content: '☀️ Light';
+        }
+        
+        [data-theme="dark"] .theme-toggle::before {
+            content: '🌙 Dark';
+        }
+        
+        .question {
+            background-color: var(--bg-tertiary);
+            padding: 25px;
+            border-left: 4px solid var(--accent-primary);
+            margin: 0;
+        }
+        
+        .question h2 {
+            color: var(--accent-primary);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .question p {
+            line-height: 1.8;
+            font-size: 1.05em;
+            color: var(--text-secondary);
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .simulation-container {
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: var(--bg-primary);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        .controls {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .control-group {
+            margin: 15px 0;
+        }
+        
+        label {
+            display: inline-block;
+            min-width: 150px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        input[type="range"] {
+            width: 60%;
+            margin: 0 15px;
+            vertical-align: middle;
+            accent-color: var(--accent-primary);
+        }
+        
+        input[type="number"] {
+            width: 80px;
+            padding: 8px;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1em;
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+        
+        button {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+            font-family: inherit;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        button:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+            transform: translateY(-1px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .value-display {
+            display: inline-block;
+            min-width: 60px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--accent-primary);
+        }
+        
+        .explanation {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--accent-secondary);
+        }
+        
+        .explanation h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .explanation p, .explanation ul {
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        
+        .explanation ul {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        .explanation li {
+            margin: 8px 0;
+        }
+        
+        .info-box {
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--warning);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .info-box strong {
+            color: var(--warning);
+        }
+        
+        footer {
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-color);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            label {
+                min-width: 120px;
+            }
+            
+            input[type="range"] {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .question h2 {
+                font-size: 1.1em;
+            }
+            
+            button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <style>
+  :root{--c-pos:#4385BE;--c-neg:#D14D41;--c-vel:#8B7EC8;--c-x0:#879A39;--c-dist:#DA702C;}
+  .slider-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;margin:12px 0;}
+  .slider-row label{min-width:190px;}
+  .slider-row input[type="range"]{flex:1 1 220px;width:auto;margin:0;}
+  .slider-row .value-display{min-width:70px;}
+  .slider-row input[type="checkbox"]{width:18px;height:18px;accent-color:var(--accent-primary);}
+  select{font-family:inherit;font-size:1em;padding:8px;border-radius:6px;background:var(--bg-tertiary);color:var(--text-primary);border:1px solid var(--border-color);max-width:100%;}
+  .scenario-desc{color:var(--text-secondary);margin-top:8px;font-size:.95em;}
+  .btn-row{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px;}
+  .btn-secondary{background:var(--bg-tertiary);color:var(--text-primary);border-color:var(--border-color);}
+  .btn-secondary:hover{color:var(--bg-primary);}
+  .sim-title{font-weight:700;margin:4px 0 8px;color:var(--text-primary);}
+  .sim-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px 12px;}
+  .sim-head .sim-title{margin:0;}
+  .sim-head .play-btn{padding:6px 14px;font-size:.85em;margin:0;}
+  .sim-head .time-chip{font-size:.85em;color:var(--text-muted);margin-right:6px;}
+  .sim-head .right{display:flex;align-items:center;}
+  .sim-sub{color:var(--text-muted);font-size:.85em;margin:8px 0 10px;}
+  canvas{width:100%;max-width:100%;}
+  #vtCanvas{touch-action:none;border-bottom:none;border-radius:6px 6px 0 0;box-shadow:none;}
+  #mapCanvas{border-top:none;border-radius:0 0 6px 6px;box-shadow:none;}
+  .stack{box-shadow:0 2px 4px var(--shadow);border-radius:6px;}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+  .chip{background:var(--bg-primary);color:var(--text-secondary);border:1px solid var(--border-color);border-left:5px solid var(--cc);padding:4px 10px;margin:0;font-size:.82em;font-weight:500;box-shadow:none;}
+  .chip b{color:var(--cc);}
+  .chip:hover,.chip.on{background:var(--bg-secondary);color:var(--text-primary);border-color:var(--cc);transform:none;box-shadow:0 0 0 2px var(--cc);}
+  .sum-line{margin-top:10px;font-size:.9em;color:var(--text-secondary);line-height:1.8;}
+  .muted{color:var(--text-muted);font-size:.85em;}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:10px 0 0;font-size:.85em;color:var(--text-secondary);}
+  .legend span::before{content:'';display:inline-block;width:18px;height:10px;border-radius:2px;margin-right:6px;vertical-align:middle;background:var(--sw);}
+  .readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:15px 0;}
+  .card{background:var(--bg-primary);border:1px solid var(--border-color);border-left:5px solid var(--cc,var(--border-color));border-radius:6px;padding:12px 14px;}
+  .card .q{font-weight:700;font-size:.95em;}
+  .card .f{color:var(--text-muted);font-size:.8em;margin:2px 0 6px;}
+  .card .v{font-size:1.35em;font-weight:700;color:var(--cc,var(--text-primary));}
+  .card .d{font-size:.8em;color:var(--text-secondary);min-height:1.2em;}
+  .insight{background:var(--bg-primary);border:1px dashed var(--border-hover);border-radius:6px;padding:12px 16px;margin-top:10px;color:var(--text-secondary);}
+  .insight ul{margin-left:20px;}
+  .hidden{display:none;}
+  details{background:var(--bg-primary);border:1px solid var(--border-color);border-radius:6px;padding:10px 14px;margin:10px 0;}
+  summary{cursor:pointer;font-weight:600;color:var(--text-primary);}
+  details p{margin-top:8px;color:var(--text-secondary);}
+  .eq{display:inline-block;background:var(--bg-primary);border:1px solid var(--border-color);border-radius:6px;padding:6px 12px;margin:6px 0;color:var(--text-primary);font-weight:600;}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Area Under a Velocity–Time Graph = Displacement</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+        
+        <div class="question">
+            <h2>Guiding Question</h2>
+            <p>A velocity–time graph never shows where an object is. So how can you tell how far it moved, and in which direction, just by looking at one?</p>
+<p style="margin-top:10px">Pick a motion (or drag the points to build your own v–t graph), then slide the time t or press Play. Watch the shaded area under the velocity curve grow, and compare it to the change in position on the motion diagram and the position–time graph.</p>
+
+        </div>
+        
+        <div class="content">
+            <div class="explanation">
+  <h3>Why area = displacement</h3>
+  <p>For constant velocity, displacement is velocity × time: <span class="eq">Δx = v · Δt</span> On a v–t graph, that product is the area of a rectangle whose height is v and whose width is Δt.</p>
+  <p style="margin-top:8px">Check the units: <span class="eq">(m/s) × (s) = m</span> Area on a v–t graph is measured in meters, the unit of displacement. When the velocity changes, split the time into thin slices; each slice is nearly a rectangle, and adding them up gives the total area. Turn on <strong>Show rectangles</strong> below to see this.</p>
+  <ul>
+    <li><strong style="color:var(--c-pos)">Area above the t-axis</strong> (v &gt; 0) counts as <strong>positive</strong> displacement (+x direction).</li>
+    <li><strong style="color:var(--c-neg)">Area below the t-axis</strong> (v &lt; 0) counts as <strong>negative</strong> displacement (−x direction).</li>
+    <li>The <strong>net (signed) area</strong> is the displacement Δx. Adding the areas <em>without</em> signs gives the <strong style="color:var(--c-dist)">distance</strong> traveled.</li>
+    <li>Area gives the <em>change</em> in position, not the position itself: x(t) = x₀ + Δx.</li>
+  </ul>
+</div>
+
+<div class="controls">
+  <div class="slider-row">
+    <label for="scenario">Motion</label>
+    <select id="scenario"></select>
+  </div>
+  <div class="scenario-desc" id="scenarioDesc"></div>
+  <div class="slider-row">
+    <label for="tInst">Time t</label>
+    <input type="range" id="tInst" min="0" max="10" step="0.01" value="0">
+    <span class="value-display" id="tVal"></span>
+  </div>
+  <div class="slider-row">
+    <label for="x0">Starting position x₀</label>
+    <input type="range" id="x0" min="-10" max="10" step="1" value="0">
+    <span class="value-display" id="x0Val"></span>
+  </div>
+  <div class="slider-row">
+    <label for="rectOn">Show rectangles</label>
+    <input type="checkbox" id="rectOn">
+    <select id="rectW">
+      <option value="2">Δt = 2 s</option>
+      <option value="1" selected>Δt = 1 s</option>
+      <option value="0.5">Δt = 0.5 s</option>
+      <option value="0.25">Δt = 0.25 s</option>
+      <option value="0.1">Δt = 0.1 s</option>
+    </select>
+  </div>
+  <div class="btn-row">
+    <button class="play-btn">▶ Play motion</button>
+    <button id="endBtn" class="btn-secondary">Jump to t = 10 s</button>
+    <button id="resetBtn" class="btn-secondary">Reset</button>
+  </div>
+</div>
+
+<div class="simulation-container">
+  <div class="sim-head"><div class="sim-title">Velocity vs. time → displacement each second</div><div class="right"><span class="time-chip">t = <span class="t-now">0.00</span> s</span><button class="play-btn">▶ Play motion</button></div></div>
+  <div class="sim-sub">Each 1-second slice of area has its own shade. The motion map underneath shows the displacement during each second as its own arrow, laid tip to tail. The highlighted slice funnels down onto its displacement segment. <strong>Hover over or tap</strong> a slice, a row, or a chip to highlight that second; tap again to release. Drag the dots to reshape the graph (each grid box = 1 m).</div>
+  <div class="stack">
+    <canvas id="vtCanvas"></canvas>
+    <canvas id="mapCanvas"></canvas>
+  </div>
+  <div class="legend">
+    <span style="--sw:var(--c-pos)">positive area → +x displacement</span>
+    <span style="--sw:var(--c-neg)">negative area → −x displacement</span>
+    <span style="--sw:var(--c-vel)">velocity v(t)</span>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="sum-line" id="sumLine"></div>
+</div>
+
+<div class="readouts">
+  <div class="card" style="--cc:var(--c-pos)"><div class="q">Area above axis</div><div class="f">v &gt; 0 from 0 to t</div><div class="v" id="rPos"></div><div class="d">moved in +x direction</div></div>
+  <div class="card" style="--cc:var(--c-neg)"><div class="q">Area below axis</div><div class="f">v &lt; 0 from 0 to t</div><div class="v" id="rNeg"></div><div class="d">moved in −x direction</div></div>
+  <div class="card" style="--cc:var(--c-vel)"><div class="q">Net area = displacement</div><div class="f">Δx = (area above) + (area below)</div><div class="v" id="rNet"></div><div class="d" id="rNetDir"></div></div>
+  <div class="card" style="--cc:var(--c-dist)"><div class="q">Total area = distance</div><div class="f">d = |area above| + |area below|</div><div class="v" id="rDist"></div><div class="d">no direction</div></div>
+  <div class="card" style="--cc:var(--c-x0)"><div class="q">Position at t</div><div class="f">x(t) = x₀ + Δx</div><div class="v" id="rX"></div><div class="d" id="rXcalc"></div></div>
+  <div class="card hidden" id="rectCard" style="--cc:var(--text-muted)"><div class="q">Rectangle estimate</div><div class="f">Σ v · Δt (left edges)</div><div class="v" id="rRect"></div><div class="d" id="rRectErr"></div></div>
+</div>
+<div class="insight" id="insight"></div>
+
+<div class="simulation-container">
+  <div class="sim-head"><div class="sim-title">Position vs. time</div><div class="right"><span class="time-chip">t = <span class="t-now">0.00</span> s</span><button class="play-btn">▶ Play motion</button></div></div>
+  <div class="sim-sub">The small arrows show how much the position rises (or falls) during each second, the same amounts as the area slices. The long arrow at time t shows x(t) − x₀, the net area from 0 to t.</div>
+  <canvas id="xtCanvas"></canvas>
+</div>
+
+<div class="explanation">
+  <h3>Check your understanding</h3>
+  <p>Find each answer by counting grid boxes or using rectangle and triangle area formulas, then check with the simulation.</p>
+  <details><summary>1. “Speed up, cruise, slow down”: what is the displacement from 0 to 10 s?</summary>
+    <p>Triangle (0–3 s): ½ × 3 s × 4 m/s = 6 m. Rectangle (3–7 s): 4 s × 4 m/s = 16 m. Triangle (7–10 s): 6 m. Total = <strong>+28 m</strong>.</p></details>
+  <details><summary>2. “Ball rolled up a ramp”: what are the displacement and distance from 0 to 10 s?</summary>
+    <p>Area above = ½ × 5 s × 6 m/s = +15 m; area below = −15 m. Displacement = <strong>0 m</strong> (it returns to its start), but distance = <strong>30 m</strong>.</p></details>
+  <details><summary>3. “Walk out and back”: find the area above, the area below, the displacement, and the distance for 0–10 s.</summary>
+    <p>Above: 0.75 + 2.25 + 9 + 1.5 = +13.5 m. Below: −1 − 4 − 1 = −6 m. Displacement = <strong>+7.5 m</strong>; distance = <strong>19.5 m</strong>.</p></details>
+  <details><summary>4. In question 3, if the walker starts at x₀ = +2 m, where do they end up?</summary>
+    <p>x = x₀ + Δx = 2 m + 7.5 m = <strong>9.5 m</strong>. Set x₀ to 2 m to check. The area didn’t change, because area only tells you the <em>change</em> in position.</p></details>
+  <details><summary>5. Why does area below the t-axis count as negative?</summary>
+    <p>Below the axis the velocity is negative, so each slice v·Δt is negative: the object is moving in the −x direction, reducing its position.</p></details>
+  <details><summary>6. Turn on “Show rectangles” for “Car speeding up from rest.” Why is the estimate too small, and what happens as Δt shrinks?</summary>
+    <p>Each rectangle uses the velocity at its left edge, which is the slowest velocity in that slice, so it misses a small triangle every time. As Δt gets smaller, the missing triangles shrink and the estimate approaches the exact area.</p></details>
+  <details><summary>7. “Ball rolled up a ramp”: find the area of the 0–1 s slice and of the 9–10 s slice. What do they tell you about the motion?</summary>
+    <p>0–1 s: the slice is a trapezoid, ½ × (6 + 4.8) m/s × 1 s = <strong>+5.4 m</strong>. 9–10 s: ½ × (−4.8 + −6) m/s × 1 s = <strong>−5.4 m</strong>. The ball covers the most ground in the seconds when it is fastest, in opposite directions at the start and end. Compare the lengths of those two arrows on the motion map.</p></details>
+  <details><summary>8. Build your own: drag the points to make a graph whose displacement from 0 to 10 s is zero, even though the object moves the whole time.</summary>
+    <p>One answer: set the dots at t = 0–4 s to +2 m/s, the dot at 5 s to 0, and the dots at 6–10 s to −2 m/s. Area above = 8 + 1 = +9 m, area below = −9 m, so Δx = 0 m while the distance is 18 m. Any shape works as long as the area above the axis equals the area below.</p></details>
+</div>
+
+        </div>
+        
+        <footer>
+            Interactive Physics Simulation | Kinematics: Area Under a v–t Graph
+        </footer>
+    </div>
+    
+    
+    
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            try { localStorage.setItem('theme', newTheme); } catch (e) {}
+        }
+        
+        // Load saved theme on page load
+        (function() {
+            let savedTheme = 'light'; try { savedTheme = localStorage.getItem('theme') || 'light'; } catch (e) {}
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <script>
+        // ---------- Piecewise-linear velocity profiles: v (m/s) at t = 0, 1, ..., 10 s ----------
+const T_MAX = 10, V_LIM = 6, V_AXIS = 7;
+const PRESETS = {
+  trapezoid: { label: 'Speed up, cruise, slow down', desc: 'Speeds up to 4 m/s in 3 s, cruises for 4 s, then slows to a stop in 3 s.',
+    vals: [0, 4/3, 8/3, 4, 4, 4, 4, 4, 8/3, 4/3, 0] },
+  constant: { label: 'Constant velocity', desc: 'Moves in the +x direction at a steady 3 m/s for 10 s.',
+    vals: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3] },
+  speedup: { label: 'Car speeding up from rest', desc: 'Starts from rest and speeds up steadily (a = 0.6 m/s²) to 6 m/s.',
+    vals: [0, 0.6, 1.2, 1.8, 2.4, 3, 3.6, 4.2, 4.8, 5.4, 6] },
+  ramp: { label: 'Ball rolled up a ramp', desc: 'Rolled up a ramp at +6 m/s, slows down (a = −1.2 m/s²), stops at t = 5 s, and rolls back down.',
+    vals: [6, 4.8, 3.6, 2.4, 1.2, 0, -1.2, -2.4, -3.6, -4.8, -6] },
+  outback: { label: 'Walk out and back', desc: 'Walks in the +x direction at up to 3 m/s, stops at t = 6 s, then walks back in the −x direction at 2 m/s.',
+    vals: [0, 1.5, 3, 3, 3, 3, 0, -2, -2, -2, 0] },
+  custom: { label: 'Build your own (drag the dots)', desc: 'Drag the dots on the velocity–time graph to create any motion you like.',
+    vals: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] }
+};
+const DEFAULTS = { key: 'trapezoid', t: 0, x0: 0 };
+const state = { key: DEFAULTS.key, vals: PRESETS[DEFAULTS.key].vals.slice(), t: 0, x0: 0,
+  rectOn: false, rectW: 1, anim: null, drag: -1, hover: -1, vtA: null, hoverSec: null, pinSec: null };
+
+const COL = { pos: '#4385BE', neg: '#D14D41', vel: '#8B7EC8', x0: '#879A39', dist: '#DA702C' };
+const $ = id => document.getElementById(id);
+const sel = $('scenario');
+for (const [k, s] of Object.entries(PRESETS)) {
+  const o = document.createElement('option'); o.value = k; o.textContent = s.label; sel.appendChild(o);
+}
+
+// ---------- Physics ----------
+function vAt(t) {
+  const i = Math.min(9, Math.max(0, Math.floor(t))), u = t - i;
+  return state.vals[i] + (state.vals[i + 1] - state.vals[i])*u;
+}
+// Exact signed area of a linear piece from a to b, split at a zero crossing
+function segAreas(a, b) {
+  const va = vAt(a), vb = vAt(b); let pos = 0, neg = 0;
+  const add = A => { if (A > 0) pos += A; else neg += A; };
+  if (va*vb < 0) { const tz = a + (b - a)*va/(va - vb); add(0.5*va*(tz - a)); add(0.5*vb*(b - tz)); }
+  else add(0.5*(va + vb)*(b - a));
+  return [pos, neg];
+}
+function areas(t) {
+  let pos = 0, neg = 0, a = 0;
+  while (a < t - 1e-12) {
+    const b = Math.min(t, Math.floor(a + 1e-9) + 1);
+    const [p, n] = segAreas(a, b); pos += p; neg += n; a = b;
+  }
+  return { pos, neg, net: pos + neg, dist: pos - neg };
+}
+const xAt = t => state.x0 + areas(t).net;
+
+// Breakpoints (integer seconds + zero crossings) up to t, for drawing and area labels
+function breakpoints(t) {
+  const pts = [0];
+  for (let i = 0; i < 10 && i < t; i++) {
+    const va = state.vals[i], vb = state.vals[i + 1];
+    if (va*vb < 0) { const tz = i + va/(va - vb); if (tz < t) pts.push(tz); }
+    if (i + 1 < t) pts.push(i + 1);
+  }
+  if (t > 0) pts.push(t);
+  return pts;
+}
+// ---------- Formatting ----------
+const clean = v => Math.abs(v) < 0.005 ? 0 : v;
+const f2 = v => clean(v).toFixed(2);
+const signed = v => { v = clean(v); return (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(2); };
+const dirWord = v => { v = clean(v); return v > 0 ? 'direction: +x (right →)' : v < 0 ? 'direction: −x (← left)' : 'back where it started'; };
+
+// ---------- Drawing helpers ----------
+function colors() {
+  const cs = getComputedStyle(document.documentElement), g = n => cs.getPropertyValue(n).trim();
+  return { text: g('--text-primary'), muted: g('--text-muted'), grid: g('--border-color'), bg: g('--bg-primary'), faint: g('--border-hover') };
+}
+function setupCanvas(c, h) {
+  const dpr = window.devicePixelRatio || 1, w = c.clientWidth || 600;
+  c.style.height = h + 'px'; c.width = Math.round(w*dpr); c.height = Math.round(h*dpr);
+  const ctx = c.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { ctx, W: w, H: h };
+}
+function arrow(ctx, x1, y1, x2, y2, color, width = 3) {
+  const len = Math.hypot(x2 - x1, y2 - y1);
+  ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = width;
+  if (len < 2) return;
+  const a = Math.atan2(y2 - y1, x2 - x1), hs = Math.min(11, len*0.6);
+  ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2 - hs*0.8*Math.cos(a), y2 - hs*0.8*Math.sin(a)); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x2, y2);
+  ctx.lineTo(x2 - hs*Math.cos(a - 0.45), y2 - hs*Math.sin(a - 0.45));
+  ctx.lineTo(x2 - hs*Math.cos(a + 0.45), y2 - hs*Math.sin(a + 0.45));
+  ctx.closePath(); ctx.fill();
+}
+function dot(ctx, x, y, color, r = 5) { ctx.beginPath(); ctx.arc(x, y, r, 0, 2*Math.PI); ctx.fillStyle = color; ctx.fill(); }
+const FONT = "12px 'Fira Code','SF Mono',Monaco,Inconsolata,'Roboto Mono',monospace";
+const FONT_B = "bold 12px 'Fira Code','SF Mono',Monaco,Inconsolata,'Roboto Mono',monospace";
+const FONT_L = "bold 14px 'Fira Code','SF Mono',Monaco,Inconsolata,'Roboto Mono',monospace";
+
+function axes(ctx, W, H, xr, yr, xstep, ystep, xlabel, ylabel, C) {
+  const L = 56, R = 14, T = 12, B = 42;
+  const px = t => L + (t - xr[0])/(xr[1] - xr[0])*(W - L - R);
+  const py = y => T + (yr[1] - y)/(yr[1] - yr[0])*(H - T - B);
+  ctx.font = FONT; ctx.lineWidth = 1; ctx.strokeStyle = C.grid; ctx.fillStyle = C.muted; ctx.textAlign = 'center';
+  for (let i = Math.ceil(xr[0]/xstep); i*xstep <= xr[1] + 1e-9; i++) {
+    const t = i*xstep; ctx.beginPath(); ctx.moveTo(px(t), T); ctx.lineTo(px(t), H - B); ctx.stroke();
+    ctx.fillText(t, px(t), H - B + 16);
+  }
+  ctx.textAlign = 'right';
+  for (let i = Math.ceil(yr[0]/ystep); i*ystep <= yr[1] + 1e-9; i++) {
+    const y = i*ystep; ctx.beginPath(); ctx.moveTo(L, py(y)); ctx.lineTo(W - R, py(y)); ctx.stroke();
+    ctx.fillText(y, L - 6, py(y) + 4);
+  }
+  ctx.strokeStyle = C.text; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(L, T); ctx.lineTo(L, H - B); ctx.stroke();
+  const y0 = (yr[0] < 0 && yr[1] > 0) ? py(0) : H - B;
+  ctx.beginPath(); ctx.moveTo(L, y0); ctx.lineTo(W - R, y0); ctx.stroke();
+  ctx.fillStyle = C.text; ctx.textAlign = 'center';
+  ctx.fillText(xlabel, (L + W - R)/2, H - 6);
+  ctx.save(); ctx.translate(14, (T + H - B)/2); ctx.rotate(-Math.PI/2); ctx.fillText(ylabel, 0, 0); ctx.restore();
+  return { px, py, L, R, T, B, W, H, xr, yr };
+}
+
+// Position range that fits the whole motion (so axes don't jump during Play)
+function xRange() {
+  let lo = state.x0, hi = state.x0;
+  for (let i = 0; i <= 200; i++) { const x = xAt(T_MAX*i/200); lo = Math.min(lo, x); hi = Math.max(hi, x); }
+  const span = Math.max(hi - lo, 4), step = span > 60 ? 10 : span > 24 ? 5 : 2;
+  return { lo: Math.floor((lo - 1)/step)*step, hi: Math.ceil((hi + 1)/step)*step, step };
+}
+
+// ---------- Per-second slices ----------
+const TONES = { pos: ['#6FA8D8', '#205EA6'], neg: ['#E8837A', '#AF3029'] };
+const tone = (i, sgn) => (sgn >= 0 ? TONES.pos : TONES.neg)[i % 2];
+const secondsStarted = () => Math.ceil(state.t - 1e-9);          // how many 1-s slices have begun
+const secEnd = i => Math.min(i + 1, state.t);
+const secArea = i => { const [p, n] = segAreas(i, secEnd(i)); return p + n; };
+const secLabel = i => `${i}–${+secEnd(i).toFixed(2)} s`;
+function activeSec() {
+  const n = secondsStarted(); if (n === 0) return null;
+  const c = state.hoverSec !== null ? state.hoverSec : state.pinSec;
+  return (c !== null && c < n) ? c : n - 1;
+}
+const VT_L = 56, VT_R = 14; // must match axes() margins so the funnel lines up
+const vtPx = (t, W) => VT_L + t/T_MAX*(W - VT_L - VT_R);
+
+// ---------- v–t graph ----------
+function drawVT() {
+  const { ctx, W, H } = setupCanvas($('vtCanvas'), 380);
+  const C = colors(); ctx.clearRect(0, 0, W, H);
+  const A = axes(ctx, W, H, [0, T_MAX], [-V_AXIS, V_AXIS], 1, 1, 'time t (s)', 'velocity v (m/s)', C);
+  state.vtA = A;
+  const t = state.t, bp = breakpoints(t), n = secondsStarted(), act = activeSec();
+
+  // Highlight band for the active second, running to the bottom edge to meet the funnel below
+  if (act !== null) {
+    ctx.fillStyle = C.muted; ctx.globalAlpha = 0.10;
+    ctx.fillRect(A.px(act), A.T, A.px(secEnd(act)) - A.px(act), H - A.T); ctx.globalAlpha = 1;
+  }
+
+  ctx.save(); ctx.beginPath(); ctx.rect(A.L, A.T, W - A.L - A.R, H - A.T - A.B); ctx.clip();
+  // Each 1-s slice of area gets its own tone (alternating), split by sign with clip regions
+  for (let i = 0; i < n; i++) {
+    const a = i, b = secEnd(i);
+    const pts = [a, ...bp.filter(tt => tt > a && tt < b), b];
+    const alpha = state.rectOn ? 0.12 : (i === act ? 0.7 : 0.3);
+    [[1, A.T, A.py(0) - A.T], [-1, A.py(0), H - A.B - A.py(0)]].forEach(([sg, y, h]) => {
+      ctx.save(); ctx.beginPath(); ctx.rect(A.L, y, W, h); ctx.clip();
+      ctx.beginPath(); ctx.moveTo(A.px(a), A.py(0));
+      pts.forEach(tt => ctx.lineTo(A.px(tt), A.py(vAt(tt))));
+      ctx.lineTo(A.px(b), A.py(0)); ctx.closePath();
+      ctx.fillStyle = tone(i, sg); ctx.globalAlpha = alpha; ctx.fill(); ctx.restore();
+    });
+  }
+  // Rectangle (left-endpoint) approximation
+  if (state.rectOn && t > 0) {
+    const w = state.rectW;
+    for (let s = 0; s < t - 1e-9; s += w) {
+      const e = Math.min(s + w, t), h = vAt(s), c = h >= 0 ? COL.pos : COL.neg;
+      const x = A.px(s), y = A.py(Math.max(h, 0)), rw = A.px(e) - x, rh = Math.abs(A.py(h) - A.py(0));
+      ctx.fillStyle = c; ctx.globalAlpha = 0.28; ctx.fillRect(x, y, rw, rh);
+      ctx.globalAlpha = 1; ctx.strokeStyle = c; ctx.lineWidth = 1.2; ctx.strokeRect(x, y, rw, rh);
+    }
+  }
+  // Velocity graph: faint ahead of t, solid up to t
+  ctx.lineWidth = 2; ctx.strokeStyle = C.faint; ctx.setLineDash([6, 5]);
+  ctx.beginPath(); for (let i = 0; i <= 10; i++) { const X = A.px(i), Y = A.py(state.vals[i]); i ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); } ctx.stroke();
+  ctx.setLineDash([]);
+  if (t > 0) {
+    ctx.lineWidth = 3; ctx.strokeStyle = COL.vel; ctx.beginPath();
+    bp.forEach((tt, k) => { const X = A.px(tt), Y = A.py(vAt(tt)); k ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); }); ctx.stroke();
+  }
+  ctx.strokeStyle = C.muted; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+  ctx.beginPath(); ctx.moveTo(A.px(t), A.T); ctx.lineTo(A.px(t), H - A.B); ctx.stroke(); ctx.setLineDash([]);
+  ctx.restore();
+
+  // Area label in each slice (when there is room)
+  ctx.font = FONT_B; ctx.textAlign = 'center';
+  for (let i = 0; i < n; i++) {
+    const a = i, b = secEnd(i), Ar = secArea(i);
+    if (A.px(b) - A.px(a) < 46 || Math.abs(Ar) < 0.05) continue;
+    const mid = (a + b)/2, ym = vAt(mid)/2, txt = signed(Ar);
+    const tw = ctx.measureText(txt).width;
+    ctx.fillStyle = C.bg; ctx.globalAlpha = i === act ? 0.95 : 0.75;
+    ctx.fillRect(A.px(mid) - tw/2 - 3, A.py(ym) - 12, tw + 6, 17);
+    ctx.globalAlpha = 1; ctx.fillStyle = tone(i, Ar);
+    ctx.fillText(txt, A.px(mid), A.py(ym) + 1);
+  }
+  // Draggable dots
+  for (let i = 0; i <= 10; i++) {
+    const X = A.px(i), Y = A.py(state.vals[i]), on = i === state.drag || i === state.hover;
+    ctx.beginPath(); ctx.arc(X, Y, on ? 8 : 6, 0, 2*Math.PI);
+    ctx.fillStyle = i <= t + 1e-9 ? COL.vel : C.bg; ctx.fill();
+    ctx.strokeStyle = COL.vel; ctx.lineWidth = 2; ctx.stroke();
+  }
+  if (t > 0) dot(ctx, A.px(t), A.py(vAt(t)), COL.vel, 5);
+
+  const ar = areas(t);
+  ctx.font = FONT_B; ctx.textAlign = 'left'; ctx.fillStyle = C.text;
+  ctx.fillText('net area (0 → t) = ' + signed(ar.net) + ' m', A.L + 8, A.T + 16);
+  if (state.rectOn) { ctx.fillStyle = C.muted; ctx.fillText('rectangles ≈ ' + signed(rectSum()) + ' m', A.L + 8, A.T + 32); }
+}
+
+function rectSum() {
+  let s = 0;
+  for (let a = 0; a < state.t - 1e-9; a += state.rectW) s += vAt(a)*(Math.min(a + state.rectW, state.t) - a);
+  return s;
+}
+
+// ---------- Motion map: each second's displacement, tip to tail ----------
+const MAP = { yLine: 84, row0: 128, rowH: 18 };
+function drawMap() {
+  const { ctx, W, H } = setupCanvas($('mapCanvas'), MAP.row0 + 10*MAP.rowH + 44);
+  const C = colors(); ctx.clearRect(0, 0, W, H);
+  const r = xRange(), L = VT_L, R = 24, mpx = x => L + (x - r.lo)/(r.hi - r.lo)*(W - L - R);
+  const { yLine, row0, rowH } = MAP, yNet = row0 + 10*rowH + 18;
+  const n = secondsStarted(), act = activeSec(), x0 = state.x0, xt = xAt(state.t);
+
+  // Funnel: the active time-slice (top edge, lined up with the v–t graph) maps onto its displacement segment
+  if (act !== null) {
+    const a = act, b = secEnd(act), xa = xAt(a), xb = xAt(b), Ar = secArea(act), c = tone(act, Ar);
+    ctx.beginPath(); ctx.moveTo(vtPx(a, W), 0); ctx.lineTo(vtPx(b, W), 0);
+    ctx.lineTo(mpx(Math.max(xa, xb)), yLine); ctx.lineTo(mpx(Math.min(xa, xb)), yLine); ctx.closePath();
+    ctx.fillStyle = c; ctx.globalAlpha = 0.16; ctx.fill(); ctx.globalAlpha = 1;
+    ctx.strokeStyle = c; ctx.lineWidth = 1.2; ctx.setLineDash([4, 3]);
+    ctx.beginPath(); ctx.moveTo(vtPx(a, W), 0); ctx.lineTo(mpx(Math.min(xa, xb)), yLine);
+    ctx.moveTo(vtPx(b, W), 0); ctx.lineTo(mpx(Math.max(xa, xb)), yLine); ctx.stroke(); ctx.setLineDash([]);
+    const txt = `area ${secLabel(act)} = ${signed(Ar)} m  →  Δx = ${signed(xb - xa)} m`;
+    ctx.font = FONT_B; const tw = ctx.measureText(txt).width;
+    const cx = Math.min(Math.max((vtPx(a + 0.5*(b - a), W) + mpx((xa + xb)/2))/2, L + tw/2 + 4), W - tw/2 - 4);
+    ctx.fillStyle = C.bg; ctx.globalAlpha = 0.9; ctx.fillRect(cx - tw/2 - 5, 28, tw + 10, 20); ctx.globalAlpha = 1;
+    ctx.fillStyle = c; ctx.textAlign = 'center'; ctx.fillText(txt, cx, 42);
+  }
+
+  // Number line
+  ctx.strokeStyle = C.text; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(L - 10, yLine); ctx.lineTo(W - R + 10, yLine); ctx.stroke();
+  ctx.lineWidth = 1; ctx.font = FONT; ctx.textAlign = 'center'; ctx.fillStyle = C.muted;
+  const minor = r.step === 10 ? 5 : 1;
+  for (let x = r.lo; x <= r.hi; x += minor) {
+    const big = x % r.step === 0;
+    ctx.strokeStyle = C.text;
+    ctx.beginPath(); ctx.moveTo(mpx(x), yLine - (big ? 6 : 3)); ctx.lineTo(mpx(x), yLine + (big ? 6 : 3)); ctx.stroke();
+    if (big && (mpx(r.lo + r.step) - mpx(r.lo) > 28 || x % (2*r.step) === 0)) ctx.fillText(x, mpx(x), yLine + 20);
+  }
+  ctx.textAlign = 'left'; ctx.fillText('x (m)', 4, yLine + 4);
+
+  // Active segment drawn on the number line itself
+  if (act !== null) {
+    const xa = xAt(act), xb = xAt(secEnd(act));
+    ctx.strokeStyle = tone(act, xb - xa); ctx.lineWidth = 7; ctx.globalAlpha = 0.8;
+    ctx.beginPath(); ctx.moveTo(mpx(xa), yLine); ctx.lineTo(mpx(xb), yLine); ctx.stroke(); ctx.globalAlpha = 1;
+  }
+
+  // Guides from x0 and x(t) down to the net arrow
+  ctx.strokeStyle = C.faint; ctx.lineWidth = 1; ctx.setLineDash([2, 4]);
+  [x0, xt].forEach(x => { ctx.beginPath(); ctx.moveTo(mpx(x), yLine + 26); ctx.lineTo(mpx(x), yNet); ctx.stroke(); });
+  ctx.setLineDash([]);
+
+  if (n === 0) {
+    ctx.fillStyle = C.muted; ctx.font = FONT; ctx.textAlign = 'center';
+    ctx.fillText('Press Play or slide t: each second’s displacement will stack here, tip to tail.', W/2, row0 + 3*rowH);
+  }
+
+  // One row per second: arrow from x(i) to x(i+1)
+  ctx.font = FONT;
+  for (let i = 0; i < n; i++) {
+    const a = i, b = secEnd(i), xa = xAt(a), xb = xAt(b), d = xb - xa, y = row0 + i*rowH;
+    const c = tone(i, d), on = i === act;
+    ctx.globalAlpha = on ? 1 : 0.55;
+    ctx.fillStyle = on ? C.text : C.muted; ctx.textAlign = 'left'; ctx.font = on ? FONT_B : FONT;
+    ctx.fillText(secLabel(i), 4, y + 4);
+    if (Math.abs(d) > 0.03) arrow(ctx, mpx(xa), y, mpx(xb), y, c, on ? 4 : 2.5);
+    else dot(ctx, mpx(xa), y, c, 3.5);
+    ctx.fillStyle = c; ctx.textAlign = d >= 0 ? 'left' : 'right';
+    ctx.fillText(signed(d) + ' m', mpx(xb) + (d >= 0 ? 6 : -6), y + 4);
+    // tip-to-tail connector to the next row
+    if (i < n - 1) {
+      ctx.strokeStyle = C.faint; ctx.lineWidth = 1; ctx.setLineDash([2, 2]);
+      ctx.beginPath(); ctx.moveTo(mpx(xb), y + 3); ctx.lineTo(mpx(xb), y + rowH - 3); ctx.stroke(); ctx.setLineDash([]);
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  // x0 ring and object on the number line
+  ctx.beginPath(); ctx.arc(mpx(x0), yLine, 8, 0, 2*Math.PI); ctx.strokeStyle = COL.x0; ctx.lineWidth = 3; ctx.stroke();
+  ctx.fillStyle = COL.x0; ctx.font = FONT_B; ctx.textAlign = 'center';
+  ctx.fillText('x₀', mpx(x0), yLine - 14);
+  ctx.beginPath(); ctx.arc(mpx(xt), yLine, 8, 0, 2*Math.PI); ctx.fillStyle = COL.vel; ctx.fill();
+  ctx.strokeStyle = C.bg; ctx.lineWidth = 2; ctx.stroke();
+
+  // Net displacement = sum of the rows
+  if (n > 0) {
+    const dx = xt - x0;
+    if (Math.abs(dx) > 0.03) arrow(ctx, mpx(x0), yNet, mpx(xt), yNet, C.text, 4);
+    else dot(ctx, mpx(x0), yNet, C.text, 4);
+    ctx.fillStyle = C.text; ctx.font = FONT_B; ctx.textAlign = 'left';
+    ctx.fillText('net', 4, yNet + 4);
+    ctx.textAlign = dx >= 0 ? 'left' : 'right';
+    ctx.fillText('Δx = ' + signed(dx) + ' m', mpx(xt) + (dx >= 0 ? 8 : -8), yNet + 4);
+  }
+}
+
+// Second-by-second chips and sum (rebuilt only when their text changes, so hovering stays smooth)
+let lastChips = '';
+function updateChips() {
+  const n = secondsStarted(), act = activeSec();
+  let html = '';
+  for (let i = 0; i < n; i++) {
+    const Ar = secArea(i);
+    html += `<button class="chip" data-i="${i}" style="--cc:${tone(i, Ar)}">${secLabel(i)} <b>${signed(Ar)} m</b></button>`;
+  }
+  if (html !== lastChips) { $('chips').innerHTML = html || '<span class="muted">No time has passed yet.</span>'; lastChips = html; }
+  $('chips').querySelectorAll('.chip').forEach(ch => ch.classList.toggle('on', +ch.dataset.i === act));
+  if (n === 0) { $('sumLine').innerHTML = ''; return; }
+  const parts = [];
+  for (let i = 0; i < n; i++) parts.push(`<span style="color:${tone(i, secArea(i))}">(${signed(secArea(i))})</span>`);
+  $('sumLine').innerHTML = `Δx = ${parts.join(' + ')} = <strong>${signed(areas(state.t).net)} m</strong>`;
+}
+
+// ---------- x–t graph ----------
+function drawXT() {
+  const { ctx, W, H } = setupCanvas($('xtCanvas'), 320);
+  const C = colors(); ctx.clearRect(0, 0, W, H);
+  const r = xRange();
+  const A = axes(ctx, W, H, [0, T_MAX], [r.lo, r.hi], 1, r.step, 'time t (s)', 'position x (m)', C);
+  const t = state.t, x0 = state.x0, xt = xAt(t);
+  ctx.save(); ctx.beginPath(); ctx.rect(A.L, A.T, W - A.L - A.R, H - A.T - A.B); ctx.clip();
+  ctx.strokeStyle = COL.x0; ctx.lineWidth = 1.5; ctx.setLineDash([6, 4]);
+  ctx.beginPath(); ctx.moveTo(A.L, A.py(x0)); ctx.lineTo(W - A.R, A.py(x0)); ctx.stroke();
+  const curve = (a, b, c, w, dash) => {
+    ctx.strokeStyle = c; ctx.lineWidth = w; ctx.setLineDash(dash); ctx.beginPath();
+    for (let i = 0; i <= 300; i++) { const tt = a + (b - a)*i/300; const X = A.px(tt), Y = A.py(xAt(tt)); i ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); }
+    ctx.stroke(); ctx.setLineDash([]);
+  };
+  curve(0, T_MAX, C.faint, 2, [6, 5]);
+  if (t > 0) curve(0, t, C.text, 3, []);
+  // Each second's rise on the x–t graph (same tones as the v–t slices)
+  const n = secondsStarted(), act = activeSec();
+  for (let i = 0; i < n; i++) {
+    const a = i, b = secEnd(i), xa = xAt(a), xb = xAt(b), c = tone(i, xb - xa), on = i === act;
+    ctx.globalAlpha = on ? 1 : 0.5;
+    ctx.strokeStyle = C.muted; ctx.lineWidth = 1; ctx.setLineDash([2, 3]);
+    ctx.beginPath(); ctx.moveTo(A.px(a), A.py(xa)); ctx.lineTo(A.px(b), A.py(xa)); ctx.stroke(); ctx.setLineDash([]);
+    if (Math.abs(A.py(xb) - A.py(xa)) > 4) arrow(ctx, A.px(b), A.py(xa), A.px(b), A.py(xb), c, on ? 4 : 2.5);
+    ctx.globalAlpha = 1;
+  }
+  ctx.restore();
+  const dx = xt - x0, dc = dx >= 0 ? COL.pos : COL.neg;
+  if (Math.abs(dx) > 0.05) arrow(ctx, A.px(t) + 10, A.py(x0), A.px(t) + 10, A.py(xt), dc, 3);
+  dot(ctx, A.px(0), A.py(x0), COL.x0, 5);
+  dot(ctx, A.px(t), A.py(xt), COL.vel, 6);
+  ctx.font = FONT_B; ctx.textAlign = 'left';
+  ctx.fillStyle = COL.x0; ctx.fillText('x₀ = ' + signed(x0) + ' m', A.L + 8, A.T + 16);
+  ctx.fillStyle = dc; ctx.fillText('x(t) − x₀ = ' + signed(dx) + ' m', A.L + 8, A.T + 32);
+}
+
+// ---------- Readouts ----------
+function updateReadouts() {
+  const ar = areas(state.t), xt = state.x0 + ar.net;
+  $('tVal').textContent = state.t.toFixed(2) + ' s';
+  $('x0Val').textContent = signed(state.x0) + ' m';
+  document.querySelectorAll('.t-now').forEach(el => el.textContent = state.t.toFixed(2));
+  $('rPos').textContent = signed(ar.pos) + ' m';
+  $('rNeg').textContent = signed(ar.neg) + ' m';
+  $('rNet').textContent = signed(ar.net) + ' m'; $('rNetDir').textContent = dirWord(ar.net);
+  $('rDist').textContent = f2(ar.dist) + ' m';
+  $('rX').textContent = signed(xt) + ' m';
+  $('rXcalc').textContent = `${signed(state.x0)} m + (${signed(ar.net)} m)`;
+  $('rectCard').classList.toggle('hidden', !state.rectOn);
+  if (state.rectOn) {
+    const rs = rectSum();
+    $('rRect').textContent = signed(rs) + ' m';
+    $('rRectErr').textContent = 'exact − estimate = ' + signed(ar.net - rs) + ' m';
+  }
+  const notes = [];
+  if (state.t === 0) notes.push('At t = 0 no time has passed, so there is no area yet and no displacement. Press Play or slide t.');
+  else {
+    notes.push(`Each 1-second slice of area equals the displacement during that second. Stacked tip to tail on the motion map, the ${secondsStarted()} slice displacement${secondsStarted() > 1 ? 's add' : ' gives'} up to the net displacement.`);
+    notes.push(`Net area from 0 to ${state.t.toFixed(2)} s = ${signed(ar.pos)} m + (${signed(ar.neg)} m) = <strong>${signed(ar.net)} m</strong>, which matches the change in position on the x–t graph.`);
+    if (ar.neg < -0.005 && ar.pos > 0.005) notes.push(`Some area is below the axis, so the object moved in both directions. Distance (${f2(ar.dist)} m) is larger than |displacement| (${f2(Math.abs(ar.net))} m).`);
+    if (Math.abs(ar.net) < 0.005 && ar.dist > 0.1) notes.push('The areas above and below cancel: the object is back at its starting position, even though it traveled ' + f2(ar.dist) + ' m.');
+    if (state.x0 !== 0) notes.push(`The starting position x₀ = ${signed(state.x0)} m does not change the area. It only shifts where the object ends up: x = x₀ + Δx.`);
+  }
+  $('insight').innerHTML = '<ul>' + notes.map(n => '<li>' + n + '</li>').join('') + '</ul>';
+}
+
+function render() {
+  $('tInst').value = state.t; $('x0').value = state.x0;
+  updateReadouts(); updateChips(); drawVT(); drawMap(); drawXT();
+}
+
+// ---------- Animation ----------
+function setPlayLabels(txt) { document.querySelectorAll('.play-btn').forEach(b => b.textContent = txt); }
+function stopAnim() { if (state.anim) cancelAnimationFrame(state.anim); state.anim = null; setPlayLabels('▶ Play motion'); }
+function play() {
+  if (state.anim) { stopAnim(); return; }
+  if (state.t >= T_MAX - 0.01) state.t = 0;
+  state.pinSec = null; state.hoverSec = null;
+  setPlayLabels('⏸ Pause');
+  let last = null;
+  const step = now => {
+    if (last !== null) state.t = Math.min(T_MAX, state.t + (now - last)/1000);
+    last = now; render();
+    if (state.t >= T_MAX) { stopAnim(); return; }
+    state.anim = requestAnimationFrame(step);
+  };
+  state.anim = requestAnimationFrame(step);
+}
+
+// ---------- Dragging the v–t points ----------
+const vt = $('vtCanvas');
+function pointerPos(e) { const r = vt.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; }
+function hitPoint(p) {
+  const A = state.vtA; if (!A) return -1;
+  let best = -1, bd = 22;
+  for (let i = 0; i <= 10; i++) { const d = Math.hypot(p.x - A.px(i), p.y - A.py(state.vals[i])); if (d < bd) { bd = d; best = i; } }
+  return best;
+}
+function setFromPointer(i, p) {
+  const A = state.vtA;
+  const v = A.yr[1] - (p.y - A.T)/(A.H - A.T - A.B)*(A.yr[1] - A.yr[0]);
+  state.vals[i] = Math.max(-V_LIM, Math.min(V_LIM, Math.round(v*2)/2));
+  if (state.key !== 'custom') { state.key = 'custom'; sel.value = 'custom'; $('scenarioDesc').textContent = PRESETS.custom.desc; }
+  render();
+}
+function secFromVT(p) {
+  const A = state.vtA; if (!A) return null;
+  if (p.x < A.L || p.x > A.W - A.R || p.y < A.T || p.y > A.H - A.B) return null;
+  return Math.min(9, Math.max(0, Math.floor((p.x - A.L)/(A.W - A.L - A.R)*T_MAX)));
+}
+function setHoverSec(s) { if (s !== state.hoverSec) { state.hoverSec = s; render(); } }
+function togglePin(s) { if (s === null) return; state.pinSec = state.pinSec === s ? null : s; render(); }
+
+vt.addEventListener('pointerdown', e => {
+  const p = pointerPos(e), i = hitPoint(p);
+  if (i < 0) { togglePin(secFromVT(p)); return; }
+  stopAnim(); state.drag = i; vt.setPointerCapture(e.pointerId); setFromPointer(i, p); e.preventDefault();
+});
+vt.addEventListener('pointermove', e => {
+  const p = pointerPos(e);
+  if (state.drag >= 0) { setFromPointer(state.drag, p); return; }
+  const h = hitPoint(p);
+  vt.style.cursor = h >= 0 ? 'ns-resize' : (secFromVT(p) !== null ? 'pointer' : 'default');
+  if (h !== state.hover) { state.hover = h; drawVT(); }
+  if (e.pointerType === 'mouse') setHoverSec(h >= 0 ? state.hoverSec : secFromVT(p));
+});
+const endDrag = () => { if (state.drag >= 0) { state.drag = -1; render(); } };
+vt.addEventListener('pointerup', endDrag);
+vt.addEventListener('pointercancel', endDrag);
+vt.addEventListener('pointerleave', () => { if (state.drag < 0) { state.hover = -1; state.hoverSec = null; render(); } });
+
+// Motion map rows: hover or tap to highlight that second
+const mapC = $('mapCanvas');
+function secFromMap(e) {
+  const r = mapC.getBoundingClientRect(), y = e.clientY - r.top;
+  const i = Math.floor((y - MAP.row0 + MAP.rowH/2)/MAP.rowH);
+  return (i >= 0 && i < secondsStarted()) ? i : null;
+}
+mapC.addEventListener('pointermove', e => { const s = secFromMap(e); mapC.style.cursor = s !== null ? 'pointer' : 'default'; if (e.pointerType === 'mouse') setHoverSec(s); });
+mapC.addEventListener('pointerleave', () => setHoverSec(null));
+mapC.addEventListener('click', e => togglePin(secFromMap(e)));
+
+// Chips
+const chipBox = $('chips');
+chipBox.addEventListener('mouseover', e => { const ch = e.target.closest('.chip'); if (ch) setHoverSec(+ch.dataset.i); });
+chipBox.addEventListener('mouseleave', () => setHoverSec(null));
+chipBox.addEventListener('click', e => { const ch = e.target.closest('.chip'); if (ch) togglePin(+ch.dataset.i); });
+
+// ---------- Controls ----------
+function loadPreset(key) {
+  state.key = key; sel.value = key; state.vals = PRESETS[key].vals.slice();
+  $('scenarioDesc').textContent = PRESETS[key].desc; render();
+}
+sel.addEventListener('change', () => { stopAnim(); loadPreset(sel.value); });
+$('tInst').addEventListener('input', e => { stopAnim(); state.t = parseFloat(e.target.value); render(); });
+$('x0').addEventListener('input', e => { state.x0 = parseFloat(e.target.value); render(); });
+$('rectOn').addEventListener('change', e => { state.rectOn = e.target.checked; render(); });
+$('rectW').addEventListener('change', e => { state.rectW = parseFloat(e.target.value); render(); });
+document.querySelectorAll('.play-btn').forEach(b => b.addEventListener('click', play));
+$('endBtn').addEventListener('click', () => { stopAnim(); state.t = T_MAX; render(); });
+$('resetBtn').addEventListener('click', () => {
+  stopAnim(); state.t = DEFAULTS.t; state.x0 = DEFAULTS.x0; state.pinSec = null; state.rectOn = false; state.rectW = 1;
+  $('rectOn').checked = false; $('rectW').value = '1'; loadPreset(DEFAULTS.key);
+});
+window.addEventListener('resize', render);
+new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+loadPreset(DEFAULTS.key);
+
+    </script>
+</body>
+</html>
