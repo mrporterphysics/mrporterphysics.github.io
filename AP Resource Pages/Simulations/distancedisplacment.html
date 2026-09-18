@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position, Distance &amp; Displacement</title>
+    <style>
+        /* Flexoki Color Scheme */
+        :root {
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --border-hover: var(--fx-base-300);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+            --shadow-hover: rgba(28, 27, 26, 0.15);
+        }
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+        body { font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary); color: var(--text-primary);
+            min-height: 100vh; padding: 20px; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: var(--bg-secondary);
+            border-radius: 8px; border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow); overflow: hidden; }
+        header { background-color: var(--bg-tertiary); border-bottom: 1px solid var(--border-color);
+            padding: 30px; display: flex; justify-content: space-between; align-items: center; }
+        h1 { font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 2em; font-weight: 700; margin-bottom: 0; color: var(--text-primary); }
+        .theme-toggle { background: var(--bg-secondary); border: 1px solid var(--border-color);
+            color: var(--text-primary); padding: 8px 12px; border-radius: 6px; cursor: pointer;
+            font-size: 0.9rem; font-weight: 500; transition: all 0.3s ease; }
+        .theme-toggle:hover { background-color: var(--accent-primary); color: var(--bg-primary); border-color: var(--accent-primary); }
+        .theme-toggle::before { content: '☀️ Light'; }
+        [data-theme="dark"] .theme-toggle::before { content: '🌙 Dark'; }
+        .question { background-color: var(--bg-tertiary); padding: 25px;
+            border-left: 4px solid var(--accent-primary); margin: 0; }
+        .question h2 { color: var(--accent-primary); margin-bottom: 15px; font-size: 1.3em; font-weight: 600; }
+        .question p { line-height: 1.8; font-size: 1.05em; color: var(--text-secondary); }
+        .content { padding: 30px; }
+        .simulation-container { background-color: var(--bg-tertiary); border-radius: 8px;
+            padding: 20px; margin: 25px 0; border: 1px solid var(--border-color); }
+        canvas { display: block; margin: 0 auto; background-color: var(--bg-primary);
+            border-radius: 6px; border: 1px solid var(--border-color); box-shadow: 0 2px 4px var(--shadow); }
+        .controls { margin: 20px 0; padding: 20px; background-color: var(--bg-secondary);
+            border-radius: 8px; border: 1px solid var(--border-color); }
+        .control-group { margin: 15px 0; }
+        label { display: inline-block; min-width: 150px; font-weight: 600; color: var(--text-primary); }
+        input[type="range"] { width: 60%; margin: 0 15px; vertical-align: middle; accent-color: var(--accent-primary); }
+        input[type="number"], input[type="text"], select { padding: 8px; background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color); border-radius: 4px; font-size: 1em;
+            color: var(--text-primary); font-family: inherit; }
+        button { background-color: var(--accent-primary); color: var(--bg-primary);
+            border: 1px solid var(--accent-primary); padding: 12px 24px; border-radius: 6px;
+            font-size: 1em; font-weight: 600; cursor: pointer; transition: all 0.3s ease;
+            margin: 5px; font-family: inherit; box-shadow: 0 2px 4px var(--shadow); }
+        button:hover { background-color: var(--accent-hover); border-color: var(--accent-hover);
+            box-shadow: 0 4px 8px var(--shadow-hover); transform: translateY(-1px); }
+        button:active { transform: translateY(0); }
+        .value-display { display: inline-block; min-width: 60px; text-align: right; font-weight: 600; color: var(--accent-primary); }
+        .explanation { background-color: var(--bg-tertiary); padding: 20px; border-radius: 8px;
+            margin: 25px 0; border-left: 4px solid var(--accent-secondary); }
+        .explanation h3 { color: var(--accent-secondary); margin-bottom: 10px; font-weight: 600; }
+        .explanation p, .explanation ul { line-height: 1.8; color: var(--text-secondary); }
+        .explanation ul { margin-left: 25px; margin-top: 10px; }
+        .explanation li { margin: 8px 0; }
+        .info-box { background-color: var(--bg-tertiary); border: 1px solid var(--warning);
+            border-radius: 6px; padding: 15px; margin: 15px 0; }
+        .info-box strong { color: var(--warning); }
+        footer { background-color: var(--bg-tertiary); border-top: 1px solid var(--border-color);
+            padding: 20px; text-align: center; color: var(--text-muted); font-size: 0.9em; }
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            .content { padding: 20px; }
+            h1 { font-size: 1.75rem; }
+            label { min-width: 120px; }
+            input[type="range"] { width: 50%; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .question h2 { font-size: 1.1em; }
+            button { padding: 10px 20px; font-size: 0.9em; }
+        }
+    </style>
+    <style>
+        /* ---------- Page-specific styles ---------- */
+        canvas { width: 100%; cursor: crosshair; touch-action: manipulation; }
+        #xtCanvas { cursor: default; }
+        h2.part { font-size: 1.25em; margin-bottom: 6px; color: var(--text-primary); }
+        h3.sub { font-size: 1em; margin: 22px 0 8px; color: var(--text-primary); }
+        .part-intro { color: var(--text-secondary); margin-bottom: 16px; }
+        .small-note { font-size: .85em; color: var(--text-muted); margin-top: 6px; }
+
+        .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+        .concept { background: var(--bg-tertiary); border: 1px solid var(--border-color);
+            border-top: 5px solid var(--c); border-radius: 8px; padding: 16px 18px; }
+        .concept h3 { color: var(--c); font-size: 1.15em; margin-bottom: 2px; }
+        .concept .sym { font-size: .82em; color: var(--text-muted); margin-bottom: 8px; }
+        .concept p { color: var(--text-secondary); font-size: .92em; line-height: 1.6; }
+        .concept .q { margin-top: 10px; font-style: italic; color: var(--text-primary); }
+
+        .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: .85em; color: var(--text-secondary); margin-top: 10px; }
+        .legend span::before { content: ''; display: inline-block; width: 20px; height: 4px; background: var(--c);
+            margin-right: 6px; vertical-align: middle; border-radius: 2px; }
+
+        .readouts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 16px 0 8px; }
+        .readout { background: var(--bg-secondary); border: 1px solid var(--border-color);
+            border-left: 5px solid var(--c, var(--border-hover)); border-radius: 6px; padding: 10px 14px; }
+        .readout .name { font-size: .78em; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+        .readout .big { font-size: 1.45em; font-weight: 700; color: var(--c, var(--text-primary)); }
+        .readout .small { font-size: .8em; color: var(--text-secondary); }
+        .compare { padding: 10px 14px; border-radius: 6px; background: var(--bg-secondary);
+            border: 1px dashed var(--border-hover); color: var(--text-secondary); margin: 8px 0 4px; }
+
+        .btn-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0; }
+        .btn-row button { padding: 8px 14px; font-size: .9em; margin: 0; }
+        .btn-row .lbl { font-size: .85em; color: var(--text-muted); margin: 0 4px 0 10px; }
+        button.ghost { background: var(--bg-tertiary); color: var(--text-primary); border-color: var(--border-hover); }
+        button.ghost:hover { color: var(--bg-primary); }
+        .note { min-height: 1.4em; color: var(--warning); font-size: .88em; }
+        .check label { min-width: 0; font-weight: 500; margin-right: 18px; cursor: pointer; }
+
+        .table-wrap { overflow-x: auto; }
+        table.log, table.summary { width: 100%; border-collapse: collapse; font-size: .9em; background: var(--bg-primary); border-radius: 6px; }
+        table.log th, table.log td, table.summary th, table.summary td {
+            border-bottom: 1px solid var(--border-color); padding: 7px 10px; text-align: center; }
+        table.log th, table.summary th { color: var(--text-muted); font-weight: 600; font-size: .9em; }
+        table.log tfoot td { font-weight: 700; border-top: 2px solid var(--border-hover); }
+        table.summary td:first-child, table.summary th:first-child { text-align: left; }
+        .c-pos { color: #879A39; } .c-disp { color: #4385BE; } .c-dist { color: #DA702C; }
+
+        .challenge-text { font-size: 1.05em; background: var(--bg-secondary); padding: 14px 16px;
+            border-radius: 6px; border: 1px solid var(--border-color); line-height: 1.7; }
+        .answers { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 14px 0; }
+        .answers label { display: block; min-width: 0; margin-bottom: 4px; }
+        .answers input { width: 100%; }
+        .fb { font-size: .85em; min-height: 1.3em; margin-top: 4px; }
+        .fb.ok { color: #879A39; } .fb.bad { color: #D14D41; }
+        .solution { display: none; background: var(--bg-secondary); border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-secondary); border-radius: 6px; padding: 12px 16px; margin-top: 10px; color: var(--text-secondary); }
+        .solution.show { display: block; }
+        .solution p { margin: 4px 0; }
+        .score { font-size: .9em; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Position, Distance &amp; Displacement</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+
+        <div class="question">
+            <h2>Big Question</h2>
+            <p>You walk from your desk to the classroom door, 6&nbsp;m away, and then walk straight back to your desk.
+            How far did you walk? Where are you now? How much did your position change?
+            These sound like the same question, but physics gives them three different answers using three different words:
+            <strong>position</strong>, <strong>distance</strong>, and <strong>displacement</strong>. Use the simulations below to figure out how they differ.</p>
+        </div>
+
+        <div class="content">
+
+            <!-- ============ CONCEPT CARDS ============ -->
+            <div class="concept-grid">
+                <div class="concept" style="--c:#879A39">
+                    <h3>Position</h3>
+                    <div class="sym">symbol: x &nbsp;·&nbsp; vector &nbsp;·&nbsp; unit: m</div>
+                    <p>Where an object is, measured from a chosen reference point (the origin). The sign tells you which side of the origin it is on.</p>
+                    <p class="q">“Where are you right now?”</p>
+                </div>
+                <div class="concept" style="--c:#4385BE">
+                    <h3>Displacement</h3>
+                    <div class="sym">symbol: Δx = x<sub>f</sub> − x<sub>i</sub> &nbsp;·&nbsp; vector &nbsp;·&nbsp; unit: m</div>
+                    <p>The straight-line change in position from start to finish, including direction. Only the start and end matter, not the path in between.</p>
+                    <p class="q">“How far, and which way, did you end up from where you started?”</p>
+                </div>
+                <div class="concept" style="--c:#DA702C">
+                    <h3>Distance</h3>
+                    <div class="sym">symbol: d &nbsp;·&nbsp; scalar &nbsp;·&nbsp; unit: m</div>
+                    <p>The total length of the path actually traveled. It has no direction, is never negative, and never goes down while you move.</p>
+                    <p class="q">“How much ground did you cover?”</p>
+                </div>
+            </div>
+
+            <!-- ============ PART 1: 1D ============ -->
+            <div class="simulation-container" id="part1">
+                <h2 class="part">Part 1 · Walking a Straight Path (1D)</h2>
+                <p class="part-intro">A walker moves along an east–west sidewalk past a house, a tree, and a school.
+                East (→) is the + direction. <strong>Click anywhere on the sidewalk</strong> to walk there, or use the controls below.</p>
+
+                <canvas id="lineCanvas" aria-label="Number line showing the walker, the path traveled, displacement and position"></canvas>
+                <div class="legend">
+                    <span style="--c:#DA702C">path actually traveled → distance</span>
+                    <span style="--c:#4385BE">start → finish → displacement</span>
+                    <span style="--c:#879A39">origin → walker → position</span>
+                </div>
+
+                <div class="readouts">
+                    <div class="readout" style="--c:#879A39"><div class="name">Position x</div><div class="big" id="r-pos">0 m</div><div class="small" id="r-pos-s"></div></div>
+                    <div class="readout"><div class="name">Starting position x₀</div><div class="big" id="r-start">0 m</div><div class="small">where the trip began</div></div>
+                    <div class="readout" style="--c:#4385BE"><div class="name">Displacement Δx</div><div class="big" id="r-disp">0 m</div><div class="small" id="r-disp-s"></div></div>
+                    <div class="readout" style="--c:#DA702C"><div class="name">Distance d</div><div class="big" id="r-dist">0 m</div><div class="small" id="r-dist-s"></div></div>
+                </div>
+                <div class="compare" id="r-compare"></div>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="moveSlider">Next move</label>
+                        <input type="range" id="moveSlider" min="-10" max="10" step="1" value="4">
+                        <span class="value-display" id="moveVal">+4 m</span>
+                    </div>
+                    <div class="btn-row">
+                        <button id="walkBtn">Walk ▶</button>
+                        <button class="ghost" data-step="-5">← 5 m</button>
+                        <button class="ghost" data-step="-2">← 2 m</button>
+                        <button class="ghost" data-step="2">2 m →</button>
+                        <button class="ghost" data-step="5">5 m →</button>
+                    </div>
+                    <div class="note" id="lineNote"></div>
+                    <div class="control-group">
+                        <label for="startSlider">Starting point</label>
+                        <input type="range" id="startSlider" min="-10" max="10" step="1" value="0">
+                        <span class="value-display" id="startVal">x₀ = 0 m</span>
+                    </div>
+                    <div class="control-group">
+                        <label for="originSel">Reference point (x = 0)</label>
+                        <select id="originSel">
+                            <option value="0" selected>🌳 at the tree</option>
+                            <option value="-7">🏠 at the house</option>
+                            <option value="7">🏫 at the school</option>
+                        </select>
+                    </div>
+                    <div class="btn-row">
+                        <button class="ghost" id="resetLine">↺ Reset trip</button>
+                        <span class="lbl">Sample trips:</span>
+                        <button class="ghost" data-preset="oneway">One direction</button>
+                        <button class="ghost" data-preset="outback">Out &amp; back</button>
+                        <button class="ghost" data-preset="pacing">Pacing</button>
+                    </div>
+                </div>
+
+                <h3 class="sub">Position vs. time</h3>
+                <canvas id="xtCanvas" aria-label="Position versus time graph"></canvas>
+                <p class="small-note">The walker moves at a steady 3 m/s, and the clock only runs while it is moving. Peaks and valleys show where it turned around.</p>
+
+                <h3 class="sub">Trip log</h3>
+                <div class="table-wrap">
+                    <table class="log">
+                        <thead><tr><th>Leg</th><th>Starts at</th><th>Ends at</th><th class="c-disp">Leg displacement</th><th class="c-dist">Leg distance</th></tr></thead>
+                        <tbody id="logBody"></tbody>
+                        <tfoot id="logFoot"></tfoot>
+                    </table>
+                </div>
+
+                <div class="info-box"><strong>Try this:</strong> Take any trip, then change the reference point. Which numbers change? Which ones stay exactly the same? Why does that make sense?</div>
+            </div>
+
+            <!-- ============ PART 2: 2D ============ -->
+            <div class="simulation-container" id="part2">
+                <h2 class="part">Part 2 · Walking Around a Map (2D)</h2>
+                <p class="part-intro">Now the walker can go in any direction on a grid (1 square = 1 m, +x = east, +y = north).
+                <strong>Click to drop waypoints</strong>; the first click is the starting point. Displacement is always a single straight arrow from start to finish, no matter how twisty the path.</p>
+
+                <canvas id="mapCanvas" aria-label="Grid map showing path, displacement vector and position vectors"></canvas>
+                <div class="legend">
+                    <span style="--c:#DA702C">path traveled → distance</span>
+                    <span style="--c:#4385BE">displacement (start → finish)</span>
+                    <span style="--c:#879A39">position vectors (from origin O)</span>
+                </div>
+
+                <div class="readouts">
+                    <div class="readout" style="--c:#879A39"><div class="name">Final position</div><div class="big" id="m-pos">—</div><div class="small" id="m-start">start: —</div></div>
+                    <div class="readout" style="--c:#4385BE"><div class="name">Displacement</div><div class="big" id="m-disp">—</div><div class="small" id="m-dir"></div></div>
+                    <div class="readout" style="--c:#4385BE"><div class="name">Components</div><div class="big" id="m-comp" style="font-size:1.05em">—</div><div class="small">Δx (east–west), Δy (north–south)</div></div>
+                    <div class="readout" style="--c:#DA702C"><div class="name">Distance d</div><div class="big" id="m-dist">—</div><div class="small" id="m-legs"></div></div>
+                </div>
+                <div class="compare" id="m-compare"></div>
+
+                <div class="controls">
+                    <div class="btn-row">
+                        <button class="ghost" id="mapUndo">⤺ Undo point</button>
+                        <button class="ghost" id="mapClear">✕ Clear</button>
+                        <span class="lbl">Sample trips:</span>
+                        <button class="ghost" data-map="block">Around the corner</button>
+                        <button class="ghost" data-map="loop">Full loop</button>
+                        <button class="ghost" data-map="zigzag">Zig-zag</button>
+                    </div>
+                    <div class="control-group check">
+                        <label><input type="checkbox" id="showPos" checked> Show position vectors</label>
+                        <label><input type="checkbox" id="showComp" checked> Show Δx and Δy components</label>
+                        <label><input type="checkbox" id="showLegLen" checked> Label leg lengths</label>
+                    </div>
+                </div>
+                <div class="info-box"><strong>Try this:</strong> Can you build a path with a distance of 20 m but a displacement of 0 m? What about a displacement of 10 m with the smallest possible distance?</div>
+            </div>
+
+            <!-- ============ PART 3: CHALLENGE ============ -->
+            <div class="simulation-container" id="part3">
+                <h2 class="part">Part 3 · Check Yourself</h2>
+                <p class="part-intro">Read the trip, then find all three quantities. East is the + direction. Use a negative sign for west.</p>
+                <div class="challenge-text" id="chText"></div>
+                <div class="answers">
+                    <div><label for="ansPos" class="c-pos">Final position x (m)</label><input type="text" inputmode="decimal" id="ansPos" autocomplete="off"><div class="fb" id="fbPos"></div></div>
+                    <div><label for="ansDisp" class="c-disp">Displacement Δx (m)</label><input type="text" inputmode="decimal" id="ansDisp" autocomplete="off"><div class="fb" id="fbDisp"></div></div>
+                    <div><label for="ansDist" class="c-dist">Distance d (m)</label><input type="text" inputmode="decimal" id="ansDist" autocomplete="off"><div class="fb" id="fbDist"></div></div>
+                </div>
+                <div class="btn-row">
+                    <button id="chCheck">Check answers</button>
+                    <button class="ghost" id="chSolve">Show solution</button>
+                    <button class="ghost" id="chWatch">Watch it on the sidewalk ↑</button>
+                    <button class="ghost" id="chNew">New trip ⟳</button>
+                    <span class="score" id="chScore"></span>
+                </div>
+                <div class="solution" id="chSolution"></div>
+            </div>
+
+            <!-- ============ SUMMARY ============ -->
+            <div class="explanation">
+                <h3>Putting it together</h3>
+                <div class="table-wrap">
+                    <table class="summary">
+                        <thead><tr><th></th><th class="c-pos">Position</th><th class="c-disp">Displacement</th><th class="c-dist">Distance</th></tr></thead>
+                        <tbody>
+                            <tr><td>Symbol</td><td>x</td><td>Δx = x<sub>f</sub> − x<sub>i</sub></td><td>d</td></tr>
+                            <tr><td>Vector or scalar?</td><td>vector</td><td>vector</td><td>scalar</td></tr>
+                            <tr><td>Can it be negative?</td><td>yes</td><td>yes</td><td>no</td></tr>
+                            <tr><td>Depends on the path taken?</td><td>no (only where you are now)</td><td>no (only start and end)</td><td>yes</td></tr>
+                            <tr><td>Depends on where you put the origin?</td><td>yes</td><td>no</td><td>no</td></tr>
+                            <tr><td>Can it decrease while you move?</td><td>yes</td><td>yes</td><td>never</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul>
+                    <li>Distance is always greater than or equal to the size of the displacement: <strong>d ≥ |Δx|</strong>.</li>
+                    <li>They are equal only when the object moves in one straight line without turning around.</li>
+                    <li>Returning to where you started always gives a displacement of zero, no matter how far you traveled.</li>
+                    <li>To combine legs of a trip: add displacements <em>with their signs</em>; add distances as <em>plain sizes</em>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            Interactive Physics Simulation | Created for High School Physics
+        </footer>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            try { localStorage.setItem('theme', newTheme); } catch (e) {}
+            window.dispatchEvent(new Event('themechange'));
+        }
+        (function() {
+            let savedTheme = null;
+            try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+            document.documentElement.setAttribute('data-theme', savedTheme || 'light');
+        })();
+    </script>
+
+    <script>
+    // =====================================================================
+    //  Shared helpers
+    // =====================================================================
+    const C = { pos: '#879A39', disp: '#4385BE', dist: '#DA702C', origin: '#8B7EC8' };
+    const MONO = "'Fira Code','SF Mono',Monaco,Inconsolata,'Roboto Mono',monospace";
+    const MINUS = '\u2212';
+
+    function cssVar(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+    function clean(x, d = 1) { return Math.abs(x) < 0.5 * Math.pow(10, -d) ? 0 : x; }
+    // Signed number with a real minus sign, e.g. +3.0 or −2.5
+    function sgn(x, d = 1) {
+        x = clean(x, d);
+        const s = Math.abs(x).toFixed(d);
+        return x > 0 ? '+' + s : x < 0 ? MINUS + s : s;
+    }
+    function num(x, d = 1) { x = clean(x, d); return (x < 0 ? MINUS : '') + Math.abs(x).toFixed(d); }
+    function $(id) { return document.getElementById(id); }
+
+    function fitCanvas(cv, h) {
+        const dpr = window.devicePixelRatio || 1;
+        const w = cv.clientWidth;
+        cv.style.height = h + 'px';
+        cv.width = Math.round(w * dpr);
+        cv.height = Math.round(h * dpr);
+        const ctx = cv.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        return { ctx, w, h };
+    }
+
+    function arrow(ctx, x1, y1, x2, y2, col, lw = 3, head = 10, dash = null) {
+        const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy);
+        if (len < 1) return;
+        const ux = dx / len, uy = dy / len;
+        const hl = Math.min(head, len * 0.6);
+        ctx.save();
+        ctx.strokeStyle = col; ctx.fillStyle = col; ctx.lineWidth = lw; ctx.lineCap = 'round';
+        if (dash) ctx.setLineDash(dash);
+        ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2 - ux * hl * 0.8, y2 - uy * hl * 0.8); ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.beginPath();
+        ctx.moveTo(x2, y2);
+        ctx.lineTo(x2 - ux * hl - uy * hl * 0.5, y2 - uy * hl + ux * hl * 0.5);
+        ctx.lineTo(x2 - ux * hl + uy * hl * 0.5, y2 - uy * hl - ux * hl * 0.5);
+        ctx.closePath(); ctx.fill();
+        ctx.restore();
+    }
+
+    // Text with a background pill so it stays readable over lines
+    function tag(ctx, str, x, y, col, opt = {}) {
+        const size = opt.size || 12, bold = opt.bold !== false;
+        ctx.save();
+        ctx.font = `${bold ? '700 ' : ''}${size}px ${MONO}`;
+        const tw = ctx.measureText(str).width;
+        const align = opt.align || 'center';
+        let left = align === 'center' ? x - tw / 2 : align === 'right' ? x - tw : x;
+        if (opt.clampW) left = Math.max(4, Math.min(opt.clampW - tw - 4, left));
+        ctx.fillStyle = cssVar('--bg-primary');
+        ctx.globalAlpha = 0.85;
+        ctx.fillRect(left - 3, y - size / 2 - 3, tw + 6, size + 6);
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = col; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+        ctx.fillText(str, left, y + 1);
+        ctx.restore();
+    }
+
+    // =====================================================================
+    //  PART 1: 1D walker
+    //  Internally everything is in "ground" coordinates u (−10…+10 m, tree at 0).
+    //  Displayed position is x = u − o, where o is the ground location of the origin.
+    // =====================================================================
+    const LINE = {
+        u0: 0, u: 0, o: 0,
+        legs: [], queue: [], anim: null,
+        t: 0, samples: [[0, 0]],
+        speed: 3, running: false, last: 0
+    };
+    const LANDMARKS = [{ u: -7, e: '🏠' }, { u: 0, e: '🌳' }, { u: 7, e: '🏫' }];
+    const lineCv = $('lineCanvas'), xtCv = $('xtCanvas');
+    let lineG, xtG;
+    const LINE_H = 330, XT_H = 230, TRACK_Y = 190;
+
+    function lineToPx(u) { const pad = 36; return pad + (u + 10) / 20 * (lineG.w - 2 * pad); }
+    function lineToU(px) { const pad = 36; return (px - pad) / (lineG.w - 2 * pad) * 20 - 10; }
+
+    function dist1D() {
+        let d = 0;
+        for (const l of LINE.legs) d += Math.abs(l.to - l.from);
+        if (LINE.anim) d += Math.abs(LINE.u - LINE.anim.from);
+        return d;
+    }
+    function lastTarget() {
+        if (LINE.queue.length) return LINE.queue[LINE.queue.length - 1];
+        if (LINE.anim) return LINE.anim.to;
+        return LINE.u;
+    }
+    function note(msg) { $('lineNote').textContent = msg; }
+
+    function walkTo(target) {
+        target = Math.max(-10, Math.min(10, Math.round(target)));
+        if (target === lastTarget()) { note('The walker is already headed there.'); return; }
+        note('');
+        LINE.queue.push(target);
+        startLoop();
+    }
+    function walkBy(delta) {
+        if (delta === 0) { note('A move of 0 m doesn’t go anywhere. Pick a nonzero move.'); return; }
+        const t = lastTarget() + delta;
+        if (t > 10 || t < -10) {
+            note(`That move would go off the sidewalk (it runs from x = ${sgn(-10 - LINE.o, 0)} m to x = ${sgn(10 - LINE.o, 0)} m).`);
+            return;
+        }
+        walkTo(t);
+    }
+    function startLoop() {
+        if (!LINE.running) {
+            LINE.running = true;
+            LINE.last = performance.now();
+            requestAnimationFrame(stepLine);
+        }
+    }
+    function stepLine(ts) {
+        const dt = Math.min((ts - LINE.last) / 1000, 0.05);
+        LINE.last = ts;
+        if (!LINE.anim && LINE.queue.length) LINE.anim = { from: LINE.u, to: LINE.queue.shift() };
+        if (LINE.anim) {
+            const a = LINE.anim, rem = a.to - LINE.u, stepLen = LINE.speed * dt;
+            if (Math.abs(rem) <= stepLen) {
+                LINE.t += Math.abs(rem) / LINE.speed;
+                LINE.u = a.to;
+                LINE.legs.push(a);
+                LINE.anim = null;
+                updateLog();
+            } else {
+                LINE.u += Math.sign(rem) * stepLen;
+                LINE.t += dt;
+            }
+            LINE.samples.push([LINE.t, LINE.u]);
+        }
+        renderLine();
+        if (LINE.anim || LINE.queue.length) requestAnimationFrame(stepLine);
+        else LINE.running = false;
+    }
+    function resetLine() {
+        LINE.legs = []; LINE.queue = []; LINE.anim = null;
+        LINE.u = LINE.u0; LINE.t = 0; LINE.samples = [[0, LINE.u0]];
+        note('');
+        updateLog(); renderLine();
+    }
+
+    function drawLine() {
+        const { ctx, w, h } = lineG;
+        ctx.clearRect(0, 0, w, h);
+        const txt = cssVar('--text-primary'), muted = cssVar('--text-muted'), faint = cssVar('--border-hover');
+        const dispY = TRACK_Y + 58, posY = TRACK_Y + 112;
+        const xStart = lineToPx(LINE.u0), xNow = lineToPx(LINE.u), xOrig = lineToPx(LINE.o);
+
+        // --- Path traveled (stacked legs above the track) ---
+        const segs = LINE.legs.slice();
+        if (LINE.anim) segs.push({ from: LINE.anim.from, to: LINE.u });
+        const top = 16, bottom = TRACK_Y - 44;
+        const n = segs.length;
+        const sp = n > 1 ? Math.min(18, (bottom - top) / (n - 1)) : 0;
+        if (n) {
+            ctx.save(); ctx.strokeStyle = C.dist; ctx.globalAlpha = 0.45; ctx.setLineDash([2, 4]); ctx.lineWidth = 1.5;
+            ctx.beginPath(); ctx.moveTo(xStart, bottom); ctx.lineTo(xStart, TRACK_Y - 4); ctx.stroke(); ctx.restore();
+        }
+        segs.forEach((s, i) => {
+            const y = bottom - i * sp, x1 = lineToPx(s.from), x2 = lineToPx(s.to);
+            if (i > 0) {
+                ctx.save(); ctx.strokeStyle = C.dist; ctx.globalAlpha = 0.55; ctx.setLineDash([2, 3]); ctx.lineWidth = 1.5;
+                ctx.beginPath(); ctx.moveTo(x1, y + sp); ctx.lineTo(x1, y); ctx.stroke(); ctx.restore();
+            }
+            arrow(ctx, x1, y, x2, y, C.dist, 3, Math.max(6, Math.min(10, sp || 10)));
+            if (sp >= 14 || n === 1) {
+                const len = Math.abs(s.to - s.from);
+                if (Math.abs(x2 - x1) > 40) tag(ctx, len.toFixed(1) + ' m', (x1 + x2) / 2, y - 8, C.dist, { size: 10, bold: false, clampW: w });
+            }
+        });
+        if (!n) {
+            ctx.save(); ctx.fillStyle = muted; ctx.font = `12px ${MONO}`; ctx.textAlign = 'center';
+            ctx.fillText('Click the sidewalk (or press Walk) to start moving', w / 2, 40); ctx.restore();
+        }
+
+        // --- Landmarks ---
+        ctx.save(); ctx.font = '24px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+        LANDMARKS.forEach(L => ctx.fillText(L.e, lineToPx(L.u), TRACK_Y - 8));
+        ctx.restore();
+
+        // --- Track + ticks ---
+        ctx.save();
+        ctx.strokeStyle = txt; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(lineToPx(-10), TRACK_Y); ctx.lineTo(lineToPx(10), TRACK_Y); ctx.stroke();
+        const every = w < 560 ? 4 : 2;
+        ctx.font = `11px ${MONO}`; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+        for (let u = -10; u <= 10; u++) {
+            const x = lineToPx(u), xv = u - LINE.o, major = xv % every === 0;
+            ctx.strokeStyle = txt; ctx.lineWidth = major ? 1.5 : 1;
+            ctx.beginPath(); ctx.moveTo(x, TRACK_Y - (major ? 6 : 3)); ctx.lineTo(x, TRACK_Y + (major ? 6 : 3)); ctx.stroke();
+            if (major) {
+                const isZero = xv === 0;
+                ctx.fillStyle = isZero ? C.origin : muted;
+                ctx.font = `${isZero ? '700 13px' : '11px'} ${MONO}`;
+                ctx.fillText(xv > 0 ? '+' + xv : xv < 0 ? MINUS + Math.abs(xv) : '0', x, TRACK_Y + 10);
+            }
+        }
+        ctx.fillStyle = muted; ctx.font = `11px ${MONO}`; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+        ctx.fillText('x', lineToPx(10) + 8, TRACK_Y - 1);
+        ctx.fillText('(m)', lineToPx(10) + 2, TRACK_Y + 14);
+        ctx.restore();
+
+        // --- Origin guide ---
+        ctx.save(); ctx.strokeStyle = C.origin; ctx.setLineDash([4, 4]); ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(xOrig, TRACK_Y + 26); ctx.lineTo(xOrig, posY + 6); ctx.stroke(); ctx.restore();
+        tag(ctx, 'origin', xOrig, posY + 18, C.origin, { size: 10, clampW: w });
+
+        // --- Start guide ---
+        ctx.save(); ctx.strokeStyle = C.disp; ctx.globalAlpha = 0.6; ctx.setLineDash([4, 4]); ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(xStart, TRACK_Y + 8); ctx.lineTo(xStart, dispY + 6); ctx.stroke(); ctx.restore();
+        ctx.save(); ctx.fillStyle = C.disp; ctx.beginPath();
+        ctx.moveTo(xStart, TRACK_Y - 7); ctx.lineTo(xStart + 7, TRACK_Y); ctx.lineTo(xStart, TRACK_Y + 7); ctx.lineTo(xStart - 7, TRACK_Y);
+        ctx.closePath(); ctx.fill(); ctx.restore();
+
+        // --- Walker guide down to arrows ---
+        ctx.save(); ctx.strokeStyle = faint; ctx.setLineDash([2, 3]); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(xNow, TRACK_Y + 10); ctx.lineTo(xNow, posY); ctx.stroke(); ctx.restore();
+
+        // --- Displacement arrow ---
+        const dx = LINE.u - LINE.u0;
+        if (Math.abs(xNow - xStart) >= 2) arrow(ctx, xStart, dispY, xNow, dispY, C.disp, 4, 12);
+        else { ctx.save(); ctx.fillStyle = C.disp; ctx.beginPath(); ctx.arc(xStart, dispY, 5, 0, 2 * Math.PI); ctx.fill(); ctx.restore(); }
+        tag(ctx, `Δx = ${sgn(dx)} m`, (xStart + xNow) / 2, dispY - 15, C.disp, { size: 12, clampW: w });
+
+        // --- Position arrow ---
+        const x = LINE.u - LINE.o;
+        if (Math.abs(xNow - xOrig) >= 2) arrow(ctx, xOrig, posY, xNow, posY, C.pos, 4, 12);
+        else { ctx.save(); ctx.fillStyle = C.pos; ctx.beginPath(); ctx.arc(xOrig, posY, 5, 0, 2 * Math.PI); ctx.fill(); ctx.restore(); }
+        tag(ctx, `x = ${sgn(x)} m`, (xOrig + xNow) / 2, posY - 15, C.pos, { size: 12, clampW: w });
+
+        // --- Walker ---
+        ctx.save();
+        ctx.fillStyle = txt; ctx.strokeStyle = cssVar('--bg-primary'); ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.arc(xNow, TRACK_Y, 9, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+        ctx.restore();
+    }
+
+    function drawXT() {
+        const { ctx, w, h } = xtG;
+        ctx.clearRect(0, 0, w, h);
+        const txt = cssVar('--text-primary'), muted = cssVar('--text-muted'), grid = cssVar('--border-color');
+        const L = 54, R = 16, T = 14, B = 38, pw = w - L - R, ph = h - T - B;
+        const tMax = Math.max(8, Math.ceil(LINE.t + 0.5));
+        const xmin = -10 - LINE.o, xmax = 10 - LINE.o;
+        const X = t => L + t / tMax * pw;
+        const Y = x => T + (xmax - x) / (xmax - xmin) * ph;
+
+        ctx.save();
+        ctx.font = `11px ${MONO}`; ctx.lineWidth = 1;
+        // horizontal grid every 5 m
+        for (let v = Math.ceil(xmin / 5) * 5; v <= xmax; v += 5) {
+            ctx.strokeStyle = v === 0 ? C.origin : grid; ctx.lineWidth = v === 0 ? 1.5 : 1;
+            ctx.beginPath(); ctx.moveTo(L, Y(v)); ctx.lineTo(L + pw, Y(v)); ctx.stroke();
+            ctx.fillStyle = v === 0 ? C.origin : muted; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+            ctx.fillText(v > 0 ? '+' + v : v < 0 ? MINUS + Math.abs(v) : '0', L - 6, Y(v));
+        }
+        const tStep = tMax <= 10 ? 1 : tMax <= 20 ? 2 : 5;
+        ctx.strokeStyle = grid; ctx.lineWidth = 1;
+        for (let t = 0; t <= tMax; t += tStep) {
+            ctx.beginPath(); ctx.moveTo(X(t), T); ctx.lineTo(X(t), T + ph); ctx.stroke();
+            ctx.fillStyle = muted; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+            ctx.fillText(t, X(t), T + ph + 5);
+        }
+        // axes
+        ctx.strokeStyle = txt; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(L, T); ctx.lineTo(L, T + ph); ctx.lineTo(L + pw, T + ph); ctx.stroke();
+        ctx.fillStyle = txt; ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+        ctx.fillText('t (s)', L + pw / 2, h - 2);
+        ctx.save(); ctx.translate(14, T + ph / 2); ctx.rotate(-Math.PI / 2); ctx.textBaseline = 'middle';
+        ctx.fillText('x (m)', 0, 0); ctx.restore();
+
+        // starting position reference
+        const x0 = LINE.u0 - LINE.o;
+        ctx.strokeStyle = C.disp; ctx.setLineDash([5, 4]); ctx.globalAlpha = 0.7;
+        ctx.beginPath(); ctx.moveTo(L, Y(x0)); ctx.lineTo(L + pw, Y(x0)); ctx.stroke();
+        ctx.setLineDash([]); ctx.globalAlpha = 1;
+        ctx.restore();
+        tag(ctx, 'x₀', L + pw - 14, Y(x0) - 10, C.disp, { size: 11 });
+
+        // plot
+        ctx.save();
+        ctx.strokeStyle = C.pos; ctx.lineWidth = 3; ctx.lineJoin = 'round';
+        ctx.beginPath();
+        LINE.samples.forEach(([t, u], i) => { const px = X(t), py = Y(u - LINE.o); i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); });
+        ctx.stroke();
+        const lastS = LINE.samples[LINE.samples.length - 1];
+        ctx.fillStyle = C.pos; ctx.beginPath(); ctx.arc(X(lastS[0]), Y(lastS[1] - LINE.o), 5, 0, 2 * Math.PI); ctx.fill();
+        ctx.restore();
+    }
+
+    function updateReadouts1D() {
+        const x = LINE.u - LINE.o, x0 = LINE.u0 - LINE.o, dx = LINE.u - LINE.u0, d = dist1D();
+        $('r-pos').textContent = sgn(x) + ' m';
+        $('r-pos-s').textContent = clean(x) > 0 ? '+ side of the origin' : clean(x) < 0 ? '− side of the origin' : 'right at the origin';
+        $('r-start').textContent = sgn(x0, 0) + ' m';
+        $('r-disp').textContent = sgn(dx) + ' m';
+        $('r-disp-s').textContent = clean(dx) > 0 ? 'net change: → (+)' : clean(dx) < 0 ? 'net change: ← (−)' : 'no net change';
+        $('r-dist').textContent = d.toFixed(1) + ' m';
+        $('r-dist-s').textContent = 'no direction · never negative';
+
+        let msg;
+        const ad = Math.abs(dx);
+        if (d < 0.05) msg = 'The walker hasn’t moved yet, so distance and displacement are both zero.';
+        else if (ad < 0.05) msg = `Back where it started! Displacement is 0 m, but the walker still covered ${d.toFixed(1)} m of distance.`;
+        else if (Math.abs(d - ad) < 0.05) msg = `Distance = |Δx| = ${ad.toFixed(1)} m. That only happens when the walker never turns around.`;
+        else msg = `Distance (${d.toFixed(1)} m) > |Δx| (${ad.toFixed(1)} m) because the walker turned around. Backtracking adds distance but cancels displacement.`;
+        $('r-compare').textContent = msg;
+    }
+
+    function updateLog() {
+        const body = $('logBody'), foot = $('logFoot'), o = LINE.o;
+        if (!LINE.legs.length) {
+            body.innerHTML = '<tr><td colspan="5" style="color:var(--text-muted)">No completed legs yet — walk somewhere!</td></tr>';
+            foot.innerHTML = '';
+            return;
+        }
+        let sumD = 0, sumDist = 0;
+        body.innerHTML = LINE.legs.map((l, i) => {
+            const dd = l.to - l.from; sumD += dd; sumDist += Math.abs(dd);
+            return `<tr><td>${i + 1}</td><td>${sgn(l.from - o, 0)} m</td><td>${sgn(l.to - o, 0)} m</td>` +
+                   `<td class="c-disp">${sgn(dd, 0)} m</td><td class="c-dist">${Math.abs(dd)} m</td></tr>`;
+        }).join('');
+        foot.innerHTML = `<tr><td colspan="3" style="text-align:right">Whole trip:</td>` +
+            `<td class="c-disp">${sgn(sumD, 0)} m<br><span style="font-weight:400;font-size:.8em">add with signs</span></td>` +
+            `<td class="c-dist">${sumDist} m<br><span style="font-weight:400;font-size:.8em">add the sizes</span></td></tr>`;
+    }
+
+    function updateStartLabel() { $('startVal').textContent = `x₀ = ${sgn(LINE.u0 - LINE.o, 0)} m`; }
+
+    function renderLine() { drawLine(); drawXT(); updateReadouts1D(); }
+
+    // ---- 1D controls ----
+    $('moveSlider').addEventListener('input', e => { $('moveVal').textContent = sgn(+e.target.value, 0) + ' m'; });
+    $('walkBtn').addEventListener('click', () => walkBy(+$('moveSlider').value));
+    document.querySelectorAll('[data-step]').forEach(b => b.addEventListener('click', () => walkBy(+b.dataset.step)));
+    $('startSlider').addEventListener('input', e => { LINE.u0 = +e.target.value; updateStartLabel(); resetLine(); });
+    $('originSel').addEventListener('change', e => {
+        LINE.o = +e.target.value;
+        updateStartLabel(); updateLog(); renderLine();
+        note('Notice: every position value changed… did Δx or d change?');
+    });
+    $('resetLine').addEventListener('click', resetLine);
+    const PRESETS_1D = {
+        oneway: { u0: -6, stops: [4] },
+        outback: { u0: -3, stops: [5, -3] },
+        pacing: { u0: -2, stops: [4, 1, 6, -5] }
+    };
+    function loadTrip1D(u0, stops) {
+        LINE.u0 = u0; $('startSlider').value = u0; updateStartLabel(); resetLine();
+        stops.forEach(s => LINE.queue.push(s));
+        startLoop();
+    }
+    document.querySelectorAll('[data-preset]').forEach(b => b.addEventListener('click', () => {
+        const p = PRESETS_1D[b.dataset.preset]; loadTrip1D(p.u0, p.stops);
+    }));
+    lineCv.addEventListener('click', e => {
+        const r = lineCv.getBoundingClientRect();
+        const u = lineToU(e.clientX - r.left);
+        if (u < -10.5 || u > 10.5) return;
+        walkTo(u);
+    });
+
+    // =====================================================================
+    //  PART 2: 2D map
+    // =====================================================================
+    const MAP = { pts: [], hover: null };
+    const mapCv = $('mapCanvas');
+    let mapG, mapS = 30, mapCx = 0, mapCy = 0;
+    const mapPx = (x, y) => [mapCx + x * mapS, mapCy - y * mapS];
+
+    function sizeMap() {
+        const w = mapCv.clientWidth;
+        const h = Math.max(300, Math.min(Math.round(w * 0.7), 540));
+        mapG = fitCanvas(mapCv, h);
+        mapS = Math.min(w / 22, h / 16);
+        mapCx = w / 2; mapCy = h / 2;
+    }
+    function mapDistance() {
+        let d = 0;
+        for (let i = 1; i < MAP.pts.length; i++) d += Math.hypot(MAP.pts[i][0] - MAP.pts[i - 1][0], MAP.pts[i][1] - MAP.pts[i - 1][1]);
+        return d;
+    }
+    function compass(dx, dy) {
+        const z = v => Math.abs(v) < 1e-9;
+        if (z(dx) && z(dy)) return 'no direction (zero vector)';
+        if (z(dx)) return dy > 0 ? 'due north (+y)' : 'due south (−y)';
+        if (z(dy)) return dx > 0 ? 'due east (+x)' : 'due west (−x)';
+        const a = Math.atan(Math.abs(dy) / Math.abs(dx)) * 180 / Math.PI;
+        return `${a.toFixed(0)}° ${dy > 0 ? 'N' : 'S'} of ${dx > 0 ? 'E' : 'W'}`;
+    }
+
+    function drawMap() {
+        const { ctx, w, h } = mapG;
+        ctx.clearRect(0, 0, w, h);
+        const txt = cssVar('--text-primary'), muted = cssVar('--text-muted'), grid = cssVar('--border-color'), grid2 = cssVar('--border-hover');
+
+        // grid
+        ctx.save(); ctx.lineWidth = 1;
+        for (let x = -10; x <= 10; x++) {
+            ctx.strokeStyle = x % 5 === 0 ? grid2 : grid;
+            const [a, b] = mapPx(x, -7), [, d] = mapPx(x, 7);
+            ctx.beginPath(); ctx.moveTo(a, b); ctx.lineTo(a, d); ctx.stroke();
+        }
+        for (let y = -7; y <= 7; y++) {
+            ctx.strokeStyle = y % 5 === 0 ? grid2 : grid;
+            const [a, b] = mapPx(-10, y), [c] = mapPx(10, y);
+            ctx.beginPath(); ctx.moveTo(a, b); ctx.lineTo(c, b); ctx.stroke();
+        }
+        ctx.restore();
+        // axes
+        const [ox, oy] = mapPx(0, 0);
+        arrow(ctx, mapPx(-10.4, 0)[0], oy, mapPx(10.6, 0)[0], oy, muted, 1.5, 8);
+        arrow(ctx, ox, mapPx(0, -7.4)[1], ox, mapPx(0, 7.6)[1], muted, 1.5, 8);
+        ctx.save(); ctx.fillStyle = muted; ctx.font = `11px ${MONO}`;
+        ctx.textAlign = 'right'; ctx.textBaseline = 'bottom'; ctx.fillText('+x (east)', mapPx(10.6, 0)[0], oy - 6);
+        ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText('+y (north)', ox + 6, mapPx(0, 7.4)[1]);
+        ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+        [-10, -5, 5, 10].forEach(v => ctx.fillText(v > 0 ? '+' + v : MINUS + Math.abs(v), mapPx(v, 0)[0], oy + 5));
+        ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+        [-5, 5].forEach(v => ctx.fillText(v > 0 ? '+' + v : MINUS + Math.abs(v), ox - 5, mapPx(0, v)[1]));
+        ctx.fillStyle = C.origin; ctx.font = `700 13px ${MONO}`; ctx.textAlign = 'right'; ctx.textBaseline = 'top';
+        ctx.fillText('O', ox - 4, oy + 3);
+        ctx.fillStyle = C.origin; ctx.beginPath(); ctx.arc(ox, oy, 4, 0, 2 * Math.PI); ctx.fill();
+        ctx.restore();
+
+        const P = MAP.pts;
+        if (!P.length) {
+            tag(ctx, 'Click anywhere on the grid to set a starting point', w / 2, 22, txt, { size: 13, clampW: w });
+        }
+
+        // hover preview
+        if (MAP.hover && P.length) {
+            const [a, b] = mapPx(...P[P.length - 1]), [c, d] = mapPx(...MAP.hover);
+            ctx.save(); ctx.strokeStyle = C.dist; ctx.globalAlpha = 0.4; ctx.setLineDash([5, 5]); ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.moveTo(a, b); ctx.lineTo(c, d); ctx.stroke(); ctx.restore();
+        }
+        if (MAP.hover) {
+            const [c, d] = mapPx(...MAP.hover);
+            ctx.save(); ctx.strokeStyle = C.dist; ctx.globalAlpha = 0.5; ctx.lineWidth = 2;
+            ctx.beginPath(); ctx.arc(c, d, 6, 0, 2 * Math.PI); ctx.stroke(); ctx.restore();
+        }
+
+        if (P.length) {
+            const s = P[0], e = P[P.length - 1];
+            const [sx, sy] = mapPx(...s), [ex, ey] = mapPx(...e);
+
+            // position vectors
+            if ($('showPos').checked) {
+                arrow(ctx, ox, oy, sx, sy, C.pos, 2, 9, [6, 5]);
+                if (P.length > 1) arrow(ctx, ox, oy, ex, ey, C.pos, 3, 11);
+            }
+            // components
+            if ($('showComp').checked && P.length > 1 && (e[0] !== s[0] || e[1] !== s[1])) {
+                const [cx] = mapPx(e[0], s[1]);
+                ctx.save(); ctx.strokeStyle = C.disp; ctx.globalAlpha = 0.6; ctx.setLineDash([4, 4]); ctx.lineWidth = 2;
+                ctx.beginPath(); ctx.moveTo(sx, sy); ctx.lineTo(cx, sy); ctx.lineTo(ex, ey); ctx.stroke(); ctx.restore();
+                if (e[0] !== s[0]) tag(ctx, `Δx = ${sgn(e[0] - s[0], 0)} m`, (sx + cx) / 2, sy + (e[1] >= s[1] ? 14 : -14), C.disp, { size: 11, clampW: w });
+                if (e[1] !== s[1]) tag(ctx, `Δy = ${sgn(e[1] - s[1], 0)} m`, cx + (e[0] >= s[0] ? 8 : -8), (sy + ey) / 2, C.disp, { size: 11, align: e[0] >= s[0] ? 'left' : 'right', clampW: w });
+            }
+            // path legs
+            for (let i = 1; i < P.length; i++) {
+                const [a, b] = mapPx(...P[i - 1]), [c, d] = mapPx(...P[i]);
+                arrow(ctx, a, b, c, d, C.dist, 3.5, 11);
+                if ($('showLegLen').checked) {
+                    const len = Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]);
+                    const nx = -(d - b), ny = (c - a), nl = Math.hypot(nx, ny) || 1;
+                    tag(ctx, len.toFixed(1) + ' m', (a + c) / 2 + nx / nl * 14, (b + d) / 2 + ny / nl * 14, C.dist, { size: 10, bold: false, clampW: w });
+                }
+            }
+            // waypoints
+            ctx.save(); ctx.fillStyle = C.dist;
+            for (let i = 1; i < P.length - 1; i++) { const [a, b] = mapPx(...P[i]); ctx.beginPath(); ctx.arc(a, b, 4, 0, 2 * Math.PI); ctx.fill(); }
+            ctx.restore();
+            // displacement
+            if (P.length > 1) arrow(ctx, sx, sy, ex, ey, C.disp, 5, 15);
+            // start & end markers
+            ctx.save();
+            ctx.lineWidth = 3; ctx.strokeStyle = C.disp; ctx.fillStyle = cssVar('--bg-primary');
+            ctx.beginPath(); ctx.arc(sx, sy, 7, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+            if (P.length > 1) { ctx.fillStyle = txt; ctx.strokeStyle = cssVar('--bg-primary'); ctx.beginPath(); ctx.arc(ex, ey, 8, 0, 2 * Math.PI); ctx.fill(); ctx.stroke(); }
+            ctx.restore();
+            tag(ctx, 'start', sx, sy + 18, C.disp, { size: 11, clampW: w });
+            if (P.length > 1) tag(ctx, 'end', ex, ey - 18, txt, { size: 11, clampW: w });
+        }
+    }
+
+    function updateReadoutsMap() {
+        const P = MAP.pts;
+        if (!P.length) {
+            ['m-pos', 'm-disp', 'm-comp', 'm-dist'].forEach(id => $(id).textContent = '—');
+            $('m-start').textContent = 'start: —'; $('m-dir').textContent = ''; $('m-legs').textContent = '';
+            $('m-compare').textContent = 'Set a starting point to begin.';
+            return;
+        }
+        const s = P[0], e = P[P.length - 1];
+        const dx = e[0] - s[0], dy = e[1] - s[1], mag = Math.hypot(dx, dy), d = mapDistance();
+        $('m-pos').textContent = `(${sgn(e[0], 0)}, ${sgn(e[1], 0)}) m`;
+        $('m-start').textContent = `start: (${sgn(s[0], 0)}, ${sgn(s[1], 0)}) m`;
+        $('m-disp').textContent = mag.toFixed(1) + ' m';
+        const theta = ((Math.atan2(dy, dx) * 180 / Math.PI) + 360) % 360;
+        $('m-dir').textContent = mag > 0 ? `${compass(dx, dy)} (θ = ${theta.toFixed(0)}° from +x)` : 'no direction (zero vector)';
+        $('m-comp').textContent = `Δx = ${sgn(dx, 0)} m, Δy = ${sgn(dy, 0)} m`;
+        $('m-dist').textContent = d.toFixed(1) + ' m';
+        $('m-legs').textContent = `${P.length - 1} leg${P.length - 1 === 1 ? '' : 's'} · add every leg length`;
+
+        let msg;
+        if (P.length === 1) msg = 'Now click somewhere else to walk there.';
+        else if (mag < 0.05) msg = `Closed loop! You traveled ${d.toFixed(1)} m, but ended exactly where you started, so the displacement is 0 m.`;
+        else if (Math.abs(d - mag) < 0.05) msg = `Distance = |displacement| = ${mag.toFixed(1)} m because you walked one straight line in a single direction.`;
+        else msg = `Distance (${d.toFixed(1)} m) > |displacement| (${mag.toFixed(1)} m). The straight arrow from start to end is the shortest possible path; any other path is longer.`;
+        $('m-compare').textContent = msg;
+    }
+    function renderMap() { drawMap(); updateReadoutsMap(); }
+
+    function mapEventPoint(ev) {
+        const r = mapCv.getBoundingClientRect();
+        const x = Math.round((ev.clientX - r.left - mapCx) / mapS);
+        const y = Math.round((mapCy - (ev.clientY - r.top)) / mapS);
+        if (x < -10 || x > 10 || y < -7 || y > 7) return null;
+        return [x, y];
+    }
+    mapCv.addEventListener('click', ev => {
+        const p = mapEventPoint(ev); if (!p) return;
+        const last = MAP.pts[MAP.pts.length - 1];
+        if (last && last[0] === p[0] && last[1] === p[1]) return;
+        MAP.pts.push(p); renderMap();
+    });
+    mapCv.addEventListener('mousemove', ev => {
+        const p = mapEventPoint(ev);
+        const same = (p && MAP.hover && p[0] === MAP.hover[0] && p[1] === MAP.hover[1]) || (!p && !MAP.hover);
+        if (!same) { MAP.hover = p; drawMap(); }
+    });
+    mapCv.addEventListener('mouseleave', () => { MAP.hover = null; drawMap(); });
+    $('mapUndo').addEventListener('click', () => { MAP.pts.pop(); renderMap(); });
+    $('mapClear').addEventListener('click', () => { MAP.pts = []; renderMap(); });
+    ['showPos', 'showComp', 'showLegLen'].forEach(id => $(id).addEventListener('change', drawMap));
+    const PRESETS_2D = {
+        block: [[-6, -2], [-6, 5], [4, 5]],
+        loop: [[-4, -3], [-4, 3], [4, 3], [4, -3], [-4, -3]],
+        zigzag: [[-8, -2], [-5, 3], [-2, -2], [1, 3], [4, -2], [7, 3]]
+    };
+    document.querySelectorAll('[data-map]').forEach(b => b.addEventListener('click', () => {
+        MAP.pts = PRESETS_2D[b.dataset.map].map(p => p.slice()); renderMap();
+    }));
+
+    // =====================================================================
+    //  PART 3: Challenge generator
+    // =====================================================================
+    const CH = { trip: null, solved: 0, attempted: false };
+    const WHO = ['A runner', 'A student', 'A dog', 'A delivery robot', 'A crossing guard', 'A cyclist'];
+    const VERB = { 'A runner': 'jogs', 'A student': 'walks', 'A dog': 'trots', 'A delivery robot': 'rolls',
+                   'A crossing guard': 'walks', 'A cyclist': 'rides' };
+    const ri = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+
+    function genTrip() {
+        for (let tries = 0; tries < 300; tries++) {
+            const x0 = ri(-5, 5), n = ri(2, 3), legs = [];
+            for (let i = 0; i < n; i++) legs.push((Math.random() < 0.5 ? -1 : 1) * ri(2, 9));
+            const allSame = legs.every(l => Math.sign(l) === Math.sign(legs[0]));
+            if (allSame && Math.random() < 0.85) legs[n - 1] *= -1;
+            let p = x0, ok = true;
+            for (const l of legs) { p += l; if (p < -10 || p > 10) ok = false; }
+            if (ok) return { x0, legs };
+        }
+        return { x0: 2, legs: [6, -9] };
+    }
+    function newChallenge() {
+        const { x0, legs } = genTrip();
+        const who = WHO[ri(0, WHO.length - 1)];
+        const disp = legs.reduce((a, b) => a + b, 0);
+        CH.trip = { x0, legs, who, disp, final: x0 + disp, dist: legs.reduce((a, b) => a + Math.abs(b), 0) };
+        CH.attempted = false;
+        const parts = legs.map(l => `${Math.abs(l)} m ${l > 0 ? 'east' : 'west'}`);
+        let route;
+        if (parts.length === 2) route = `${parts[0]}, then ${parts[1]}`;
+        else route = `${parts[0]}, then ${parts[1]}, and finally ${parts[2]}`;
+        $('chText').innerHTML = `${who} starts at position <strong>x = ${sgn(x0, 0)} m</strong> on a straight east–west path. Then ${who.replace(/^A /, 'the ')} ${VERB[who]} ${route}.`;
+        ['ansPos', 'ansDisp', 'ansDist'].forEach(id => { $(id).value = ''; });
+        ['fbPos', 'fbDisp', 'fbDist'].forEach(id => { $(id).textContent = ''; $(id).className = 'fb'; });
+        $('chSolution').classList.remove('show');
+        buildSolution();
+    }
+    function parseAns(s) {
+        s = s.replace(/\u2212/g, '-').replace(/m/gi, '').replace(/\s+/g, '');
+        if (s === '' || s === '+' || s === '-') return null;
+        const v = Number(s);
+        return Number.isFinite(v) ? v : null;
+    }
+    const near = (a, b) => a !== null && Math.abs(a - b) < 0.05;
+    function setFb(id, ok, msg) { $(id).textContent = msg; $(id).className = 'fb ' + (ok ? 'ok' : 'bad'); }
+
+    function checkChallenge() {
+        const T = CH.trip;
+        const p = parseAns($('ansPos').value), dsp = parseAns($('ansDisp').value), dst = parseAns($('ansDist').value);
+        let right = 0;
+
+        if (p === null) setFb('fbPos', false, 'Enter a number.');
+        else if (near(p, T.final)) { setFb('fbPos', true, '✓ Correct!'); right++; }
+        else if (near(p, T.disp) && T.x0 !== 0) setFb('fbPos', false, '✗ That’s the displacement. Position = where it ends up: x = x₀ + Δx.');
+        else if (near(p, -T.final)) setFb('fbPos', false, '✗ Check your sign. Which side of the origin does it end on?');
+        else setFb('fbPos', false, '✗ Not quite. Start at x₀ and apply each move with its sign.');
+
+        if (dsp === null) setFb('fbDisp', false, 'Enter a number.');
+        else if (near(dsp, T.disp)) { setFb('fbDisp', true, '✓ Correct!'); right++; }
+        else if (near(dsp, T.dist) && T.dist !== Math.abs(T.disp)) setFb('fbDisp', false, '✗ That’s the distance. Displacement lets east and west moves cancel.');
+        else if (near(dsp, -T.disp)) setFb('fbDisp', false, '✗ Right size, wrong direction. Did it end up east (+) or west (−) of the start?');
+        else if (near(dsp, T.final) && T.x0 !== 0) setFb('fbDisp', false, '✗ That’s the final position. Displacement is the change: x_f − x_i.');
+        else setFb('fbDisp', false, '✗ Not quite. Add the moves with their signs (east +, west −).');
+
+        if (dst === null) setFb('fbDist', false, 'Enter a number.');
+        else if (dst < 0) setFb('fbDist', false, '✗ Distance can never be negative. It has no direction.');
+        else if (near(dst, T.dist)) { setFb('fbDist', true, '✓ Correct!'); right++; }
+        else if (near(dst, Math.abs(T.disp))) setFb('fbDist', false, '✗ That’s just the size of the displacement. Distance counts every meter traveled, including backtracking.');
+        else setFb('fbDist', false, '✗ Not quite. Add up the length of every leg, ignoring direction.');
+
+        if (right === 3 && !CH.attempted) { CH.solved++; }
+        if (right === 3) $('chScore').textContent = `Trips solved: ${CH.solved} 🎉`;
+        CH.attempted = CH.attempted || right === 3;
+    }
+    function buildSolution() {
+        const T = CH.trip;
+        const signed = T.legs.map(l => `(${sgn(l, 0)})`).join(' + ');
+        const sizes = T.legs.map(l => Math.abs(l)).join(' + ');
+        $('chSolution').innerHTML =
+            `<p><span class="c-disp"><strong>Displacement:</strong></span> add the moves with signs (east +, west −):<br>Δx = ${signed} = <strong>${sgn(T.disp, 0)} m</strong></p>` +
+            `<p><span class="c-pos"><strong>Final position:</strong></span> x = x₀ + Δx = (${sgn(T.x0, 0)}) + (${sgn(T.disp, 0)}) = <strong>${sgn(T.final, 0)} m</strong></p>` +
+            `<p><span class="c-dist"><strong>Distance:</strong></span> add the sizes of every leg, no signs:<br>d = ${sizes} = <strong>${T.dist} m</strong></p>` +
+            (T.dist === Math.abs(T.disp)
+                ? '<p>Here d = |Δx| because the trip never changed direction.</p>'
+                : `<p>Notice d (${T.dist} m) is bigger than |Δx| (${Math.abs(T.disp)} m) because the trip changed direction.</p>`);
+    }
+    $('chCheck').addEventListener('click', checkChallenge);
+    ['ansPos', 'ansDisp', 'ansDist'].forEach(id => $(id).addEventListener('keydown', e => { if (e.key === 'Enter') checkChallenge(); }));
+    $('chSolve').addEventListener('click', () => { $('chSolution').classList.toggle('show'); CH.attempted = true; });
+    $('chNew').addEventListener('click', newChallenge);
+    $('chWatch').addEventListener('click', () => {
+        const T = CH.trip;
+        LINE.o = 0; $('originSel').value = '0';
+        const stops = []; let p = T.x0;
+        T.legs.forEach(l => { p += l; stops.push(p); });
+        $('part1').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => loadTrip1D(T.x0, stops), 500);
+    });
+
+    // =====================================================================
+    //  Init + resize/theme handling
+    // =====================================================================
+    function sizeAll() {
+        lineG = fitCanvas(lineCv, LINE_H);
+        xtG = fitCanvas(xtCv, XT_H);
+        sizeMap();
+    }
+    function redrawAll() { renderLine(); renderMap(); }
+    let resizeTimer;
+    window.addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { sizeAll(); redrawAll(); }, 120); });
+    window.addEventListener('themechange', redrawAll);
+
+    sizeAll();
+    updateStartLabel();
+    updateLog();
+    MAP.pts = PRESETS_2D.block.map(p => p.slice());
+    newChallenge();
+    redrawAll();
+    </script>
+</body>
+</html>
