@@ -39,6 +39,8 @@ math: mathjax
 
 ### 📆 Upcoming
 
+- Graphing & Mapping Quiz on Friday
+
 </div>
 </div>
 
