@@ -8,7 +8,9 @@ math: mathjax
 
 <!--- _class: lead --->
 
-# Regents Physics 🔭 
+# ~~Regents Physics!~~ 🔭 
+
+# AP Physics 🥼
 
 ## **2026-2027** Agendas
 
