@@ -1,6 +1,7 @@
 # Simulation Resources
 
 - [Distance vs. Displacement](/AP%20Resource%20Pages/Simulations/distancedisplacment.html)
+- [Average and Instantaneous Velocity](/AP%20Resource%20Pages/Simulations/avgvsinst.html)
 - [Asteroid Relative Velocity Ranking Task](/AP Resource Pages/Simulations/asteroidRelVelo.html)
 - [Horizontal Projectiles Ranking Task](/AP Resource Pages/Simulations/horizontalProRanking.html)
 - [Circular Motion Introduction](/AP%20Resource%20Pages/Simulations/circularmotion.html)
