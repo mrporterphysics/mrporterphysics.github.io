@@ -250,7 +250,7 @@ section ol > li::before {
   content: counter(bru-counter, decimal-leading-zero);
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10px;
   min-width: 34px;
   height: 30px;
   padding: 0 var(--bru-sp-2);
