@@ -14,7 +14,35 @@ math: mathjax
 
 ### 📆 2026-27
 
+---
 
+# 2026.09.18 **Earth Science**
+
+##### **❓ of the 📅**: If you could make the world's biggest food fight, what food would you have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Time Zones Lab
+2. Notes on Field Maps
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Labs_
+
+### 📆 HW
+
+- Finish Time Zone Lab
+
+</div>
+</div>
 
 ---
 
