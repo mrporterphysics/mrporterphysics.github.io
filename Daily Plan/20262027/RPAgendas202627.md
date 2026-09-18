@@ -18,7 +18,24 @@ math: mathjax
 
 # 2026.09.18 **AP Physics**
 
-##### **❓ of the 📅**: 
+<div class='do-now'> 
+ 
+ <div> 
+
+ ###### 10 MINUTES 
+
+ ####  Finish Distance vs. Displacement Physics Classroom Assignment
+
+  
+ </div> 
+
+ </div>
+
+---
+
+# 2026.09.18 **AP Physics**
+
+##### **❓ of the 📅**: If you could make the world's biggest food fight, what food would you have?
 
 <div class ='columns'>
 
@@ -27,7 +44,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Do Now - Finish Distance vs. Displ PC
-2. Notes on Speed and Velocity
+2. [Notes on Speed and Velocity](../../Presentations/APCVPM/talks/CVPM2026.html)
 3. Average vs. instantaneous
 4. Using CV Mathematical model
 
