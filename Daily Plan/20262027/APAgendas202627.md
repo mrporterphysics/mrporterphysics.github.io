@@ -15,6 +15,36 @@ math: mathjax
 
 ---
 
+# 2026.09.21 **AP Physics**
+
+##### **❓ of the 📅**: If you could make the world's biggest food fight, what food would you have? 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Motion Notes](../../Presentations/APCVPM/talks/CVPM2026.html)
+3. PC: Distance vs. Displacement
+2. Average vs. Instantaneous
+3. Using Mathematical Models
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Start using a constant velocity model_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
  # **AP Physics Do Now**  Register for...
 

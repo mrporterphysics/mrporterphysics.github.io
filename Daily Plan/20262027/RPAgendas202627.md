@@ -18,6 +18,61 @@ math: mathjax
 
 ---
 
+# 2025.09.21 **Do Now**
+
+<div class='do-now'> 
+ 
+ <div> 
+
+ ###### 5 MINUTES 
+
+ ####  
+
+
+Each graph below shows the position of an object as a function of time.
+
+![center w:900](../20252026/Daily%20Slides/image-6.png)
+
+1. Rank the **displacement** of each object from least to greatest. 
+2. Rank the **distance** of each object from least to greatest. 
+
+
+  
+ </div> 
+
+ </div>
+
+---
+
+# 2026.09.21 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Using Mathematical Models
+2. Red Car vs. Green Car
+3. AP Workbook 1.A - 1.D
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.18 **AP Physics**
 
 <div class='do-now'> 
