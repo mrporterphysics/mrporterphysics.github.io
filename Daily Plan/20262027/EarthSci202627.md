@@ -16,6 +16,34 @@ math: mathjax
 
 ---
 
+# 2026.09.21 **Earth Science**
+
+##### **❓ of the 📅**: What is the proper length of a playlist? 🎵
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Field Maps Notes
+2. Field Maps Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Create Field Maps_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.18 **Earth Science**
 
 ##### **❓ of the 📅**: If you could make the world's biggest food fight, what food would you have?
