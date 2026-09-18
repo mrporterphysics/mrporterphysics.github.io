@@ -16,6 +16,39 @@ math: mathjax
 
 ---
 
+# 2026.09.18 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Finish Distance vs. Displ PC
+2. Notes on Speed and Velocity
+3. Average vs. instantaneous
+4. Using CV Mathematical model
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Work with constant velocity model to solve problems_
+
+### 📆 Upcoming
+
+- Finish Red Car Green Car (due next Friday)
+
+</div>
+</div>
+
+---
+
 
 
  # **AP Physics Do Now**  Register for...
