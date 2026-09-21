@@ -46,7 +46,7 @@ Each graph below shows the position of an object as a function of time.
 
 # 2026.09.21 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you could make the world's biggest food fight, what food would you have? 
 
 <div class ='columns'>
 
@@ -64,7 +64,7 @@ Each graph below shows the position of an object as a function of time.
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Use mathematical models_
 
 ### 📆 Upcoming
 

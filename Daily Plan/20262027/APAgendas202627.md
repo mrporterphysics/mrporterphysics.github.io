@@ -15,6 +15,69 @@ math: mathjax
 
 ---
 
+
+# 2025.09.22 **Do Now**
+
+<div class='do-now'> 
+ 
+ <div> 
+
+ ###### 5 MINUTES 
+
+ ####  
+
+
+Each graph below shows the position of an object as a function of time.
+
+![center w:900](../20252026/Daily%20Slides/image-6.png)
+
+1. Rank the **displacement** of each object from least to greatest. 
+2. Rank the **distance** of each object from least to greatest. 
+
+
+  
+ </div> 
+
+ </div>
+
+
+---
+
+# 2026.09.22 **AP Physics**
+
+##### **❓ of the 📅**: How do you make your marshmallow for s'mores? 🍫
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+1. Go Over worksheet
+2. Defining Average vs. Instantaneous
+3. Mathematical Models
+4. PC Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion with position vs. time graphs_
+
+🥅 _Differentiate between average and instantaneous_
+
+### 📆 Upcoming
+- <input type="checkbox">PC: Speed & Velocity
+- <input type="checkbox">PC: Red Car vs. Green Car 
+
+</div>
+</div>
+
+---
+
 # 2026.09.21 **AP Physics**
 
 ##### **❓ of the 📅**: If you could make the world's biggest food fight, what food would you have? 
