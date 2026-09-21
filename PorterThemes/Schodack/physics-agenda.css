@@ -592,3 +592,148 @@ img[data-marp-twemoji] {
   vertical-align: -0.12em;
   border: none;
 }
+
+/* ── Checklists / checkboxes ─────────────────────────────────
+   Marp's parser does NOT understand GitHub's `- [ ]` task-list syntax —
+   it prints a literal "[ ]" — so there are two ways to get a real
+   checkbox on a slide.
+
+   1. .checklist — an ordinary bullet list with the dash swapped for a
+      box. Strike an item through to tick it:
+
+        <div class="checklist">
+
+        - Finish the density data table
+        - ~~Read p. 112-115~~          <- renders ticked
+
+        </div>
+
+      Add cols-2 or cols-3 to split a long list into columns.
+
+   2. A real <input type="checkbox"> — clickable during class and
+      announced as a checkbox by screen readers, so use this one when
+      the checked state has to be readable, not just visible:
+
+        - <input type="checkbox"> Finish the density data table
+        - <input type="checkbox" checked> Read p. 112-115
+
+      (Needs markdown.marp.html enabled — it already is.)
+
+   Both sit in the list's 40px gutter, so they line up with the dashes
+   and numbers of any neighbouring list, and both work on paper slides
+   and inside .columns, .do-now, .lab and .callout cards.
+*/
+div.checklist ul,
+div.checklist ol,
+ul.checklist { display: block; }
+
+div.checklist.cols-2 ul, div.checklist.cols-2 ol { columns: 2; column-gap: 34px; }
+div.checklist.cols-3 ul, div.checklist.cols-3 ol { columns: 3; column-gap: 26px; }
+div.checklist li, ul.checklist > li { break-inside: avoid; }
+
+/* The box, replacing the accent dash */
+div.checklist li::before,
+ul.checklist > li::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0.18em;
+  width: 0.8em;
+  height: 0.8em;
+  box-sizing: border-box;
+  border: 2px solid var(--accent);
+  border-radius: 2px;
+  background: transparent;
+}
+section.paper div.checklist li::before,
+section.paper ul.checklist > li::before { background: var(--paper-card); }
+
+/* Ticked: ~~struck through~~, or class="done" on an HTML <li>.
+   The tick is a rotated border so it scales with the card's type. */
+div.checklist li:has(s)::before,
+div.checklist li:has(del)::before,
+div.checklist li.done::before,
+ul.checklist > li:has(s)::before,
+ul.checklist > li.done::before {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+div.checklist li:has(s)::after,
+div.checklist li:has(del)::after,
+div.checklist li.done::after,
+ul.checklist > li:has(s)::after,
+ul.checklist > li.done::after {
+  content: "";
+  position: absolute;
+  left: 0.42em;
+  top: 0.3em;
+  width: 0.2em;
+  height: 0.42em;
+  border: solid var(--accent);
+  border-width: 0 0.12em 0.12em 0;
+  transform: rotate(45deg);
+}
+
+/* Done text reads as finished, not as an error */
+div.checklist s, div.checklist del,
+ul.checklist s, ul.checklist del {
+  color: var(--dim-on-ink);
+  text-decoration-color: var(--dim-on-ink);
+}
+section.paper div.checklist s, section.paper div.checklist del,
+section.paper ul.checklist s, section.paper ul.checklist del {
+  color: var(--dim-on-paper);
+  text-decoration-color: var(--dim-on-paper);
+}
+
+/* Real inputs: drop the dash and hang the box in the same gutter, so a
+   list can mix drawn boxes and real ones without doubling up. */
+section li:has(> input[type="checkbox"]:first-child)::before,
+section li.task-list-item::before { content: none; }
+
+/* font: inherit first — this theme has no UA reset, so an em on a form
+   control would otherwise resolve against the browser's 13px default.
+   appearance: none lets a real, focusable, screen-reader-announced
+   checkbox be drawn as the same box as a .checklist item. */
+section input[type="checkbox"] {
+  font: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0;
+  box-sizing: border-box;
+  border: 2px solid var(--accent);
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  vertical-align: -0.05em;
+  position: relative;
+}
+section.paper input[type="checkbox"] { background: var(--paper-card); }
+
+section input[type="checkbox"]:checked {
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+section input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  left: 0.2em;
+  top: 0.03em;
+  width: 0.2em;
+  height: 0.42em;
+  border: solid var(--accent);
+  border-width: 0 0.12em 0.12em 0;
+  transform: rotate(45deg);
+}
+section input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+section li > input[type="checkbox"]:first-child,
+section li.task-list-item input.task-list-item-checkbox {
+  position: absolute;
+  left: 6px;
+  top: 0.18em;
+}
+
+section label { cursor: pointer; user-select: none; }

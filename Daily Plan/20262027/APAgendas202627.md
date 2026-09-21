@@ -41,8 +41,8 @@ math: mathjax
 ### 📆 HW:
 <div class='checklist'>
 
-- PC: Speed & Velocity
-- PC: Red Car vs. Green Car (_if we do mathematical models_)
+- <input type="checkbox">PC: Speed & Velocity
+- <input type="checkbox">PC: Red Car vs. Green Car (_if we do mathematical models_)
 
 </div>
 
