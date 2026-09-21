@@ -577,17 +577,8 @@ section.dark table th[style] {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-section input[type="checkbox"] {
-  width: 1.1em;
-  height: 1.1em;
-  margin-right: 0.4em;
-  accent-color: currentColor; /* improves visibility */
-  vertical-align: -0.2em;
-}
-section label {
-  cursor: pointer; /* indicates interactivity */
-  user-select: none; /* prevents text selection on click */
-}
+/* Checkbox + label styling now lives in the CHECKLISTS block at the
+   end of this file, so it can use the per-theme --comp-* colours. */
 
 section.sun {
     background-color: var(--sun-background) !important;
@@ -1382,3 +1373,145 @@ div.meta {
     margin-top: 0.5em;
 }
 div.meta p { margin: 0; }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   CHECKLISTS / CHECKBOXES
+
+   Marp's parser does NOT understand GitHub's `- [ ]` task-list
+   syntax — it prints a literal "[ ]" — so there are two supported
+   ways to put a real checkbox on a slide:
+
+   1. .checklist — an ordinary markdown bullet list, no HTML per
+      item. Strike an item through to tick it:
+
+        <div class="checklist">
+
+        - Finish the density data table
+        - ~~Read p. 112-115~~          <- renders ticked
+
+        </div>
+
+      Add cols-2 or cols-3 to split a long list into columns:
+      <div class="checklist cols-2">
+
+   2. A real <input type="checkbox"> — clickable during class and
+      announced as a checkbox by screen readers, so use this one
+      when the checked state has to be readable, not just visible:
+
+        - <input type="checkbox"> Finish the density data table
+        - <input type="checkbox" checked> Read p. 112-115
+
+      (Needs markdown.marp.html enabled — it already is.)
+
+   Both follow the slide's theme class via the --comp-* tokens, and
+   both work inside .do-now, .lab and .callout cards.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. .checklist: plain lists drawn as checkboxes ──────────── */
+div.checklist ul,
+div.checklist ol,
+ul.checklist {
+    list-style: none;
+    padding-left: 1.7em;
+    margin: 0.3em 0;
+}
+
+div.checklist.cols-2 ul, div.checklist.cols-2 ol { columns: 2; column-gap: 1.6rem; }
+div.checklist.cols-3 ul, div.checklist.cols-3 ol { columns: 3; column-gap: 1.2rem; }
+
+div.checklist li,
+ul.checklist li {
+    position: relative;
+    margin-bottom: 0.4em;
+    line-height: 1.35;
+    break-inside: avoid;
+}
+div.checklist li:last-child,
+ul.checklist li:last-child { margin-bottom: 0; }
+
+/* The empty box */
+div.checklist li::before,
+ul.checklist li::before {
+    content: "";
+    position: absolute;
+    left: -1.45em;
+    top: 0.24em;
+    width: 0.9em;
+    height: 0.9em;
+    box-sizing: border-box;
+    border: 2px solid var(--comp-accent);
+    border-radius: 3px;
+    background: var(--comp-card-bg);
+}
+
+/* Ticked: ~~struck through~~, or an explicit class on an HTML <li> */
+div.checklist li:has(s)::before,
+div.checklist li:has(del)::before,
+div.checklist li.done::before,
+ul.checklist li:has(s)::before,
+ul.checklist li.done::before {
+    background: color-mix(in srgb, var(--comp-accent) 20%, transparent);
+}
+
+div.checklist li:has(s)::after,
+div.checklist li:has(del)::after,
+div.checklist li.done::after,
+ul.checklist li:has(s)::after,
+ul.checklist li.done::after {
+    content: "\2713";
+    position: absolute;
+    left: -1.38em;
+    top: 0.02em;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95em;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--comp-accent);
+}
+
+/* An item that carries a real <input> keeps the input, not a drawn box,
+   so the two syntaxes can be mixed in one list without doubling up. */
+div.checklist li:has(> input[type="checkbox"])::before,
+div.checklist li:has(> input[type="checkbox"])::after,
+ul.checklist li:has(> input[type="checkbox"])::before,
+ul.checklist li:has(> input[type="checkbox"])::after {
+    content: none;
+}
+
+/* Done text reads as finished, not as an error */
+div.checklist li s, div.checklist li del,
+ul.checklist li s, ul.checklist li del {
+    color: var(--comp-muted);
+    text-decoration-color: var(--comp-muted);
+}
+
+/* ── 2. Real <input type="checkbox"> ─────────────────────────── */
+section input[type="checkbox"] {
+    width: 1.05em;
+    height: 1.05em;
+    margin: 0 0.45em 0 0;
+    vertical-align: -0.15em;
+    accent-color: var(--comp-accent);
+    cursor: pointer;
+}
+
+/* Drop the bullet when a list item leads with a checkbox, and hang
+   the box in the margin so the text still lines up with the list. */
+section li:has(> input[type="checkbox"]:first-child),
+section li.task-list-item {
+    list-style: none;
+    margin-left: -1.6em;
+}
+div.do-now li:has(> input[type="checkbox"]:first-child),
+div.lab li:has(> input[type="checkbox"]:first-child),
+div.callout li:has(> input[type="checkbox"]:first-child),
+div.checklist li:has(> input[type="checkbox"]:first-child) {
+    margin-left: -1.15em;
+}
+section li.task-list-item input.task-list-item-checkbox { margin-right: 0.45em; }
+
+section label {
+    cursor: pointer;    /* indicates interactivity */
+    user-select: none;  /* prevents text selection on click */
+}
