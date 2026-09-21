@@ -39,8 +39,12 @@ math: mathjax
 🥅 _Start using a constant velocity model_
 
 ### 📆 HW:
+<div class='checklist'>
+
 - PC: Speed & Velocity
 - PC: Red Car vs. Green Car (_if we do mathematical models_)
+
+</div>
 
 </div>
 </div>
