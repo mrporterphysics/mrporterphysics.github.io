@@ -347,7 +347,9 @@ table {
   margin: var(--bru-sp-3) 0;
   background: var(--bru-paper);
   border: var(--bru-rule);
-  font-size: var(--bru-fs-1);
+  font-size: var(--bru-fs-3);
+  margin-left: auto;
+  margin-right: auto;
 }
 th, td {
   border: var(--bru-rule-hair);
