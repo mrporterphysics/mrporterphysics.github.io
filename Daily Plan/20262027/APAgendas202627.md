@@ -57,7 +57,7 @@ Each graph below shows the position of an object as a function of time.
 1. Go Over worksheet
 2. Defining Average vs. Instantaneous
 3. Mathematical Models
-4. PC Practice
+4. PC Practice - Red Car vs. Green Car
 
 </div>
 
@@ -69,9 +69,9 @@ Each graph below shows the position of an object as a function of time.
 
 🥅 _Differentiate between average and instantaneous_
 
-### 📆 Upcoming
+### 📆 <mark>**Homework**</mark>
 - <input type="checkbox">PC: Speed & Velocity
-- <input type="checkbox">PC: Red Car vs. Green Car 
+- <input type="checkbox">PC: Position Time-Graphs
 
 </div>
 </div>
