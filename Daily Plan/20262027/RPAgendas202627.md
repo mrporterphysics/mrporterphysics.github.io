@@ -18,6 +18,73 @@ math: mathjax
 
 ---
 
+
+# 2026.09.23 **AP Physics** Do Now
+
+<div class='do-now'> 
+ 
+ <div> 
+
+ ###### 5 Mintes MINUTES 
+
+ <div class='columns'>
+ <div>
+ 
+ The position-time graph shown represents the motion of two children who are moving along a narrow, straight hallway.
+
+1. Do either of the children ever change ***direction***?
+2. Are the two children ever at the same ***position*** along the hallway?
+3. Do the two children ever have the same ***speed***?
+
+ </div>
+  
+ <div>
+
+
+ ![w:500](../20252026/Daily%20Slides/images/Kinematics/Bryonariel.png)
+ 
+ </div>
+ </div>
+
+
+
+
+  
+ </div> 
+
+ </div>
+
+---
+
+# 2026.09.23 **AP Physics**
+
+##### **❓ of the 📅**: How do you make your marshmallow for s'mores? 🍫
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. AP Workbook 1.A -> 1.D
+3. Velocity vs. Time Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2025.09.21 **Do Now**
 
 <div class='do-now'> 
