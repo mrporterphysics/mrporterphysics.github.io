@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2026.09.23 **Earth Science**
+
+##### **❓ of the 📅**: Do you say pronouce your mom's/dad's sister's name as "aunt" or "ant"?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Work on CER Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make scientific arguments from graphical data_
+
+### 📆 Upcoming
+
+- Graphing & Mapping Quiz on Friday
+
+</div>
+</div>
+
+---
+
 # 2026.09.22 **Earth Science**
 
 ##### **❓ of the 📅**: How do you make your marshmallow for s'mores? 🍫   
