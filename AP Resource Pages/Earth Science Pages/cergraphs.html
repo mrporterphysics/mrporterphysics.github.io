@@ -6,133 +6,57 @@
     <title>CER Earth Science Data Explorer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
     <link rel="stylesheet" href="../../css/flexoki-theme.css">
+    <script src="../../js/theme-toggle.js" defer></script>
     <style>
-        /* Flexoki Theme Variables */
-        :root {
-            /* Base Colors */
-            --fx-paper: #FFFCF0;
-            --fx-base-50: #F2F0E5;
-            --fx-base-100: #EFEBD4;
-            --fx-base-150: #E6E2CC;
-            --fx-base-200: #DAD4BA;
-            --fx-base-300: #C8BFA1;
-            --fx-base-400: #B5A988;
-            --fx-base-500: #9C8F70;
-            --fx-base-600: #847759;
-            --fx-base-700: #6F6144;
-            --fx-base-800: #575142;
-            --fx-base-850: #403E39;
-            --fx-base-900: #343331;
-            --fx-base-950: #1C1B1A;
-            --fx-black: #100F0F;
-
-            /* Light Theme Accent Colors */
-            --fx-red-light: #D14D41;
-            --fx-orange-light: #DA702C;
-            --fx-yellow-light: #D0A215;
-            --fx-green-light: #879A39;
-            --fx-cyan-light: #3AA99F;
-            --fx-blue-light: #4385BE;
-            --fx-purple-light: #8B7EC8;
-            --fx-magenta-light: #CE5D97;
-
-            /* Dark Theme Accent Colors */
-            --fx-red-dark: #AF3029;
-            --fx-orange-dark: #BC5215;
-            --fx-yellow-dark: #AD8301;
-            --fx-green-dark: #66800B;
-            --fx-cyan-dark: #24837B;
-            --fx-blue-dark: #205EA6;
-            --fx-purple-dark: #5E409D;
-            --fx-magenta-dark: #A02F6F;
-        }
-
-        /* Light Theme (Default) */
-        :root {
-            --bg-primary: var(--fx-paper);
-            --bg-secondary: var(--fx-base-50);
-            --bg-tertiary: var(--fx-base-100);
-            --text-primary: var(--fx-base-950);
-            --text-secondary: var(--fx-base-700);
-            --text-muted: var(--fx-base-600);
-            --border-color: var(--fx-base-200);
-            --border-hover: var(--fx-base-300);
-            --accent-primary: var(--fx-blue-light);
-            --accent-hover: var(--fx-blue-dark);
-            --accent-secondary: var(--fx-purple-light);
-            --success: var(--fx-green-light);
-            --warning: var(--fx-orange-light);
-            --error: var(--fx-red-light);
-            --shadow: rgba(28, 27, 26, 0.1);
-            --shadow-hover: rgba(28, 27, 26, 0.15);
-        }
-
-        /* Dark Theme */
-        [data-theme="dark"] {
-            --bg-primary: var(--fx-black);
-            --bg-secondary: var(--fx-base-950);
-            --bg-tertiary: var(--fx-base-900);
-            --text-primary: var(--fx-paper);
-            --text-secondary: var(--fx-base-200);
-            --text-muted: var(--fx-base-400);
-            --border-color: var(--fx-base-850);
-            --border-hover: var(--fx-base-700);
-            --accent-primary: var(--fx-blue-dark);
-            --accent-hover: var(--fx-blue-light);
-            --accent-secondary: var(--fx-purple-dark);
-            --success: var(--fx-green-dark);
-            --warning: var(--fx-orange-dark);
-            --error: var(--fx-red-dark);
-            --shadow: rgba(16, 15, 15, 0.3);
-            --shadow-hover: rgba(16, 15, 15, 0.5);
-        }
+        /* Flexoki colour variables come from css/flexoki-theme.css - do not redefine them here. */
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
-        
+
         body {
             font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
             background-color: var(--bg-primary);
+            background-image: none;
             color: var(--text-primary);
             min-height: 100vh;
             padding: 20px;
             line-height: 1.6;
+            font-size: 16px;
         }
-        
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            padding: 10px 16px;
+            border-radius: 0 0 6px 0;
+            z-index: 1100;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            left: 0;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--accent-primary);
+            outline-offset: 2px;
+        }
+
         .theme-toggle {
             position: fixed;
             top: 20px;
             right: 20px;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 8px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
             z-index: 1000;
+            font-family: inherit;
         }
 
-        .theme-toggle:hover {
-            background-color: var(--accent-primary);
-            color: var(--bg-primary);
-            border-color: var(--accent-primary);
-        }
-
-        .theme-toggle::before {
-            content: '☀️ Light';
-        }
-
-        [data-theme="dark"] .theme-toggle::before {
-            content: '🌙 Dark';
-        }
-        
         .container {
             max-width: 1200px;
             margin: 80px auto 0;
@@ -142,28 +66,46 @@
             overflow: visible;
             border: 1px solid var(--border-color);
         }
-        
-        header {
-            background-color: var(--bg-tertiary);
+
+        /* flexoki-theme.css styles the bare <header> element as the site's fixed navigation bar
+           (position: fixed, full width, gradient, blur). This page's header is a card heading
+           inside .container, so pull it back into normal flow and strip the nav-bar chrome. */
+        .container > header {
+            position: static;
+            width: auto;
+            background: var(--bg-tertiary);
             color: var(--text-primary);
             padding: 20px 30px;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
+            box-shadow: none;
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+            z-index: auto;
         }
-        
+
         h1 {
             font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
-            font-size: 2.2em;
+            font-size: 2.2rem;
             margin-bottom: 8px;
             font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: normal;
         }
-        
+
         .subtitle {
-            font-size: 1.1em;
+            font-size: 1.1rem;
             color: var(--text-secondary);
-            margin-bottom: 0;
+            margin-bottom: 12px;
         }
-        
+
+        .worksheet-note {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            max-width: 62ch;
+            margin: 0 auto;
+        }
+
         .dataset-selector {
             display: flex;
             justify-content: center;
@@ -173,9 +115,8 @@
             background-color: var(--bg-tertiary);
             flex-wrap: wrap;
             border-bottom: 1px solid var(--border-color);
-            min-height: 70px;
         }
-        
+
         .dataset-btn {
             padding: 8px 16px;
             border: 1px solid var(--accent-primary);
@@ -185,75 +126,219 @@
             cursor: pointer;
             font-size: 14px;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
             box-shadow: 0 2px 4px var(--shadow);
             font-family: inherit;
             white-space: nowrap;
             flex-shrink: 0;
         }
-        
+
         .dataset-btn:hover {
             background-color: var(--accent-hover);
             border-color: var(--accent-hover);
             box-shadow: 0 4px 8px var(--shadow-hover);
             transform: translateY(-1px);
         }
-        
-        .dataset-btn.active {
+
+        .dataset-btn[aria-selected="true"] {
             background-color: var(--accent-secondary);
             border-color: var(--accent-secondary);
         }
-        
+
         .content {
             padding: 30px;
             background-color: var(--bg-primary);
         }
-        
+
         .dataset-info {
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .dataset-info.active {
             display: block;
+            animation: fadeIn 0.4s ease;
         }
-        
+
+        .dataset-info[hidden] {
+            display: none;
+        }
+
+        .dataset-info:focus {
+            outline: none;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+        }
+
+        .part-heading {
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            letter-spacing: normal;
+        }
+
+        .part-heading .part-label {
+            display: block;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent-primary);
+            margin-bottom: 4px;
+        }
+
         .info-card {
             background-color: var(--bg-secondary);
             padding: 20px;
             border-radius: 8px;
-            margin-bottom: 30px;
+            margin: 20px 0 30px;
             box-shadow: 0 2px 8px var(--shadow);
             border: 1px solid var(--border-color);
         }
-        
+
         .info-card h3 {
             color: var(--accent-primary);
             margin-bottom: 10px;
-            font-size: 1.4em;
+            font-size: 1.2rem;
             font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            letter-spacing: normal;
         }
 
         .info-card p {
             color: var(--text-secondary);
+            margin: 0;
         }
-        
+
+        .question-prompt {
+            background-color: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            box-shadow: 0 2px 8px var(--shadow);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-primary);
+        }
+
+        .chart-figure {
+            margin: 0 0 30px;
+        }
+
         .chart-container {
             position: relative;
             height: 400px;
             background-color: var(--bg-secondary);
             padding: 20px;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 2px 8px var(--shadow);
+            border: 1px solid var(--border-color);
+            border-bottom: none;
+        }
+
+        .chart-figure figcaption {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-top: 1px dashed var(--border-hover);
+            border-radius: 0 0 8px 8px;
+            padding: 14px 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .chart-figure figcaption b {
+            color: var(--text-primary);
+        }
+
+        /* Wide tables scroll sideways on narrow screens rather than being clipped by the
+           rounded corners. tabindex makes the scroll region reachable from the keyboard. */
+        .table-scroll {
+            overflow-x: auto;
             border-radius: 8px;
             box-shadow: 0 2px 8px var(--shadow);
-            margin-bottom: 30px;
             border: 1px solid var(--border-color);
+            margin: 0 0 30px;
         }
-        
+
+        .table-scroll:focus-visible {
+            outline: 3px solid var(--accent-primary);
+            outline-offset: 2px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            background-color: var(--bg-secondary);
+            font-size: 0.95rem;
+        }
+
+        .table-caption {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0 0 10px;
+        }
+
+        .data-table th {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--border-hover);
+        }
+
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .data-table tbody tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+
+        .formula-box {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--warning);
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+        }
+
+        .formula-box h3 {
+            font-size: 1.05rem;
+            color: var(--warning);
+            margin-bottom: 12px;
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            letter-spacing: normal;
+        }
+
+        .formula-box dl {
+            margin: 0;
+        }
+
+        .formula-box dt {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 10px;
+        }
+
+        .formula-box dt:first-child {
+            margin-top: 0;
+        }
+
+        .formula-box dd {
+            margin: 2px 0 0;
+            padding-left: 1.2em;
+            color: var(--text-secondary);
+        }
+
         .cer-template {
             background-color: var(--bg-secondary);
             padding: 25px;
@@ -261,14 +346,21 @@
             box-shadow: 0 2px 8px var(--shadow);
             border: 1px solid var(--border-color);
         }
-        
+
         .cer-template h3 {
             color: var(--warning);
-            margin-bottom: 20px;
-            font-size: 1.5em;
+            margin-bottom: 8px;
+            font-size: 1.3rem;
             font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            letter-spacing: normal;
         }
-        
+
+        .cer-template .write-on-paper {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
         .cer-section {
             margin-bottom: 20px;
             background-color: var(--bg-primary);
@@ -276,451 +368,707 @@
             border-radius: 6px;
             box-shadow: 0 1px 3px var(--shadow);
             border: 1px solid var(--border-color);
+            border-left: 4px solid var(--border-hover);
         }
-        
+
+        .cer-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .cer-claim { border-left-color: var(--error); }
+        .cer-evidence { border-left-color: var(--accent-primary); }
+        .cer-reasoning { border-left-color: var(--success); }
+
         .cer-section h4 {
-            color: var(--accent-primary);
-            margin-bottom: 10px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
             font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 1.05rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
         }
-        
-        .cer-section p {
+
+        .cer-section > p {
             color: var(--text-secondary);
             line-height: 1.6;
         }
-        
-        .question-prompt {
-            background-color: var(--bg-secondary);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-            font-weight: 500;
-            color: var(--text-primary);
-            box-shadow: 0 2px 8px var(--shadow);
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--accent-primary);
-        }
-        
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: var(--bg-secondary);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px var(--shadow);
-            border: 1px solid var(--border-color);
-        }
-        
-        .data-table th {
+
+        .background-note {
+            margin-top: 16px;
             background-color: var(--bg-tertiary);
-            color: var(--text-primary);
-            padding: 12px;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .data-table td {
-            padding: 10px 12px;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--text-secondary);
-        }
-        
-        .data-table tr:hover {
-            background-color: var(--bg-tertiary);
-        }
-        
-        .interactive-controls {
-            background-color: var(--bg-secondary);
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
             border: 1px solid var(--border-color);
-        }
-        
-        .control-group {
-            margin-bottom: 15px;
-        }
-        
-        .control-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        
-        .control-group select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--success);
             border-radius: 6px;
-            font-size: 16px;
-            background-color: var(--bg-primary);
+            padding: 16px 18px;
+        }
+
+        .background-note h5 {
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+
+        .background-note p {
             color: var(--text-primary);
-            font-family: inherit;
+            margin-bottom: 10px;
+            line-height: 1.75;
         }
 
-        .control-group select:focus {
-            outline: none;
-            border-color: var(--accent-primary);
-            box-shadow: 0 0 0 2px rgba(67, 133, 190, 0.2);
+        .background-note p:last-child {
+            margin-bottom: 0;
         }
 
-        /* Responsive Design */
+        .background-note dfn {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .background-note .think {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border-hover);
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        .synthesis-prompt {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-secondary);
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin-bottom: 20px;
+        }
+
+        .synthesis-prompt h3 {
+            font-size: 1.05rem;
+            color: var(--accent-secondary);
+            margin-bottom: 8px;
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            letter-spacing: normal;
+        }
+
+        .synthesis-prompt p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .student-claim {
+            display: block;
+            margin: 12px 0;
+            padding: 12px 16px;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-hover);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-style: italic;
+        }
+
         @media (max-width: 768px) {
-            body {
-                padding: 15px;
-            }
-            
-            .container {
-                margin: 80px 0 0;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .dataset-selector {
-                gap: 6px;
-                padding: 10px 8px;
-                min-height: 80px;
-            }
-            
-            .dataset-btn {
-                padding: 8px 12px;
-                font-size: 13px;
-            }
+            body { padding: 15px; }
+            .container { margin: 80px 0 0; }
+            .content { padding: 20px; }
+            h1 { font-size: 1.9rem; }
+            .part-heading { font-size: 1.5rem; }
+            .dataset-selector { gap: 6px; padding: 10px 8px; }
+            .dataset-btn { padding: 8px 12px; font-size: 13px; }
+            .chart-container { height: 320px; padding: 12px; }
+            .data-table { font-size: 0.85rem; }
+            .data-table th, .data-table td { padding: 8px; }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.75rem;
-            }
-            
+            h1 { font-size: 1.6rem; }
             .dataset-selector {
                 flex-direction: column;
-                align-items: center;
+                align-items: stretch;
                 gap: 8px;
                 padding: 15px;
-                min-height: auto;
             }
-            
-            .dataset-btn {
-                width: 100%;
-                max-width: 280px;
-                padding: 10px 16px;
-                font-size: 14px;
-            }
+            .dataset-btn { width: 100%; padding: 10px 16px; font-size: 14px; white-space: normal; }
+            .chart-container { height: 280px; }
         }
     </style>
 </head>
 <body>
-    <button type="button" class="theme-toggle" onclick="toggleTheme()" title="Toggle between light and dark theme"></button>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <button type="button" class="theme-toggle" aria-label="Toggle theme">Dark</button>
     <div class="container">
         <header>
-            <h1>🌍 Earth Science CER Data Explorer</h1>
+            <h1>Earth Science CER Data Explorer</h1>
             <p class="subtitle">Analyze Real Data to Make Scientific Arguments</p>
+            <p class="worksheet-note">Use this page with your printed <strong>CER Data Analysis</strong> worksheet. Each tab below matches one Part of the worksheet. Read the data here; write your Claim, Evidence, and Reasoning on paper.</p>
+            <!-- js/theme-toggle.js appends a hamburger button to any <header> it finds, even on
+                 pages like this one that have no .site-nav for it to open. Its createMenuToggle()
+                 bails out when a .menu-toggle already exists, so this hidden sentinel keeps a dead
+                 "Toggle navigation menu" button out of the accessibility tree. -->
+            <span class="menu-toggle" hidden></span>
         </header>
-        
-        <div class="dataset-selector">
-            <button type="button" class="dataset-btn active" onclick="showDataset('earthquakes')" title="View earthquake depth and magnitude data">🌋 Earthquakes & Depth</button>
-            <button type="button" class="dataset-btn" onclick="showDataset('climate')" title="View global temperature change data">🌡️ Global Temperature Change</button>
-            <button type="button" class="dataset-btn" onclick="showDataset('sealevel')" title="View sea level rise data">🌊 Sea Level Rise</button>
-            <button type="button" class="dataset-btn" onclick="showDataset('co2')" title="View atmospheric CO₂ concentration data">💨 CO₂ Levels</button>
-            <button type="button" class="dataset-btn" onclick="showDataset('planets')" title="View solar system planetary data">🪐 Solar System Data</button>
-            <button type="button" class="dataset-btn" onclick="showDataset('hurricanes')" title="View hurricane intensity distribution data">🌀 Hurricane Intensity</button>
+
+        <div class="dataset-selector" role="tablist" aria-label="Worksheet parts">
+            <button type="button" class="dataset-btn" role="tab" id="tab-earthquakes" aria-controls="earthquakes" aria-selected="true" tabindex="0">Part A &middot; Earthquakes</button>
+            <button type="button" class="dataset-btn" role="tab" id="tab-climate" aria-controls="climate" aria-selected="false" tabindex="-1">Part B &middot; Global Temperature</button>
+            <button type="button" class="dataset-btn" role="tab" id="tab-sealevel" aria-controls="sealevel" aria-selected="false" tabindex="-1">Part C &middot; Sea Level</button>
+            <button type="button" class="dataset-btn" role="tab" id="tab-co2" aria-controls="co2" aria-selected="false" tabindex="-1">Part D &middot; CO&#8322; Levels</button>
+            <button type="button" class="dataset-btn" role="tab" id="tab-planets" aria-controls="planets" aria-selected="false" tabindex="-1">Part E &middot; Solar System</button>
+            <button type="button" class="dataset-btn" role="tab" id="tab-synthesis" aria-controls="synthesis" aria-selected="false" tabindex="-1">Part F &middot; Synthesis</button>
         </div>
-        
-        <div class="content">
-            <!-- Earthquakes Dataset -->
-            <div id="earthquakes" class="dataset-info active">
+
+        <main class="content" id="main-content">
+
+            <!-- ============ PART A: EARTHQUAKES ============ -->
+            <section id="earthquakes" class="dataset-info" role="tabpanel" aria-labelledby="tab-earthquakes" tabindex="0">
+                <h2 class="part-heading"><span class="part-label">Part A</span>Earthquake Depth and Magnitude</h2>
+
                 <div class="info-card">
-                    <h3>📊 Dataset: Global Earthquake Patterns (2020-2024)</h3>
-                    <p>This dataset shows the relationship between earthquake depth and magnitude for major seismic events worldwide. Data represents significant earthquakes (M>4.0) from tectonic plate boundaries.</p>
+                    <h3>About this dataset</h3>
+                    <p>Twenty-three earthquakes recorded at tectonic plate boundaries, sorted into three depth groups. This is a teaching dataset: the values are representative of real subduction-zone patterns rather than a direct extract from one earthquake catalogue.</p>
                 </div>
-                
+
                 <div class="question-prompt">
-                    🔬 <strong>Question:</strong> Is there a relationship between earthquake depth and magnitude? What patterns do you observe?
+                    <strong>Question:</strong> Is there a relationship between earthquake depth and magnitude?
                 </div>
-                
-                <div class="chart-container">
-                    <canvas id="earthquakeChart"></canvas>
-                </div>
-                
+
+                <figure class="chart-figure">
+                    <div class="chart-container"><canvas id="earthquakeChart" aria-hidden="true"></canvas></div>
+                    <figcaption>
+                        <b>Scatter plot: earthquake magnitude against depth.</b> Depth runs from 0 to 700 kilometres across the bottom; magnitude runs from 4 to 8 up the side. The earthquakes fall into three groups. <b>Shallow quakes</b> (less than 70 km) cluster at the far left and reach the highest magnitudes, spreading from 5.2 up to 7.1. <b>Intermediate quakes</b> (70 to 300 km) sit in the middle and stay lower, from 5.1 to 6.2. <b>Deep quakes</b> (more than 300 km) sit to the right and lowest of all, from 4.8 to 5.8. Reading left to right, the highest magnitude reached in each group gets smaller as depth increases, and the deepest quakes are squeezed into a narrow band near magnitude 5.
+                    </figcaption>
+                </figure>
+
+                <p class="table-caption" id="table-caption-1">Selected earthquakes by location, depth, magnitude, and plate boundary type</p>
+                <div class="table-scroll" role="group" tabindex="0" aria-labelledby="table-caption-1">
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Location</th>
-                            <th>Depth (km)</th>
-                            <th>Magnitude</th>
-                            <th>Plate Boundary Type</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Depth (km)</th>
+                            <th scope="col">Magnitude</th>
+                            <th scope="col">Plate Boundary Type</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Japan Trench</td><td>35</td><td>7.1</td><td>Convergent</td></tr>
-                        <tr><td>Chile Subduction</td><td>125</td><td>6.2</td><td>Convergent</td></tr>
-                        <tr><td>Mid-Atlantic Ridge</td><td>10</td><td>5.8</td><td>Divergent</td></tr>
-                        <tr><td>San Andreas</td><td>15</td><td>6.4</td><td>Transform</td></tr>
-                        <tr><td>Tonga Trench</td><td>580</td><td>5.2</td><td>Convergent</td></tr>
-                        <tr><td>Peru-Chile</td><td>200</td><td>5.9</td><td>Convergent</td></tr>
+                        <tr><th scope="row">Japan Trench</th><td>35</td><td>7.1</td><td>Convergent</td></tr>
+                        <tr><th scope="row">Chile Subduction</th><td>125</td><td>6.2</td><td>Convergent</td></tr>
+                        <tr><th scope="row">Mid-Atlantic Ridge</th><td>10</td><td>5.8</td><td>Divergent</td></tr>
+                        <tr><th scope="row">San Andreas</th><td>15</td><td>6.4</td><td>Transform</td></tr>
+                        <tr><th scope="row">Tonga Trench</th><td>580</td><td>5.2</td><td>Convergent</td></tr>
+                        <tr><th scope="row">Peru-Chile</th><td>200</td><td>5.9</td><td>Convergent</td></tr>
                     </tbody>
                 </table>
-                
+                </div>
+
                 <div class="cer-template">
-                    <h3>📝 Build Your CER Argument</h3>
-                    <div class="cer-section">
-                        <h4>Claim:</h4>
-                        <p><em>State your answer to the question. What pattern do you observe?</em></p>
+                    <h3>Build Your CER Argument</h3>
+                    <p class="write-on-paper">Write your answers in the CLAIM, EVIDENCE, and REASONING boxes on Part A of your worksheet.</p>
+                    <div class="cer-section cer-claim">
+                        <h4>Claim</h4>
+                        <p>State your answer to the question in one clear sentence.</p>
                     </div>
-                    <div class="cer-section">
-                        <h4>Evidence:</h4>
-                        <p><em>Describe specific data points from the graph. Include numbers and comparisons.</em></p>
+                    <div class="cer-section cer-evidence">
+                        <h4>Evidence</h4>
+                        <p>Give at least 3 specific data points from the graph. Include the actual depth and magnitude values.</p>
                     </div>
-                    <div class="cer-section">
-                        <h4>Reasoning:</h4>
-                        <p><em>Explain the Earth science principle. Why does this pattern occur? Consider plate tectonics.</em></p>
+                    <div class="cer-section cer-reasoning">
+                        <h4>Reasoning</h4>
+                        <p>Explain the plate tectonic principles that account for this pattern.</p>
+                        <div class="background-note">
+                            <h5>Background</h5>
+                            <p>Earthquakes happen when rock breaks and slips along a fault. How strong the earthquake is depends on how much rock breaks at one time.</p>
+                            <p>At a subduction zone, one plate slides down underneath another. The deeper that rock goes, the hotter it gets and the harder it is squeezed.</p>
+                            <p>Cold rock near the surface is <dfn>brittle</dfn>. Brittle means it snaps, like a dry stick. Stress builds up for years, then a large block breaks all at once.</p>
+                            <p>Hot rock deep down is <dfn>ductile</dfn>. Ductile means it bends and flows slowly, like warm taffy. Rock that bends does not store as much stress, so when it finally does break, a smaller block moves.</p>
+                            <p class="think">Think about it: if deep rock can only break in smaller pieces, what does that do to the largest magnitude you would expect to find down there?</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Climate Dataset -->
-            <div id="climate" class="dataset-info">
+            </section>
+
+            <!-- ============ PART B: GLOBAL TEMPERATURE ============ -->
+            <section id="climate" class="dataset-info" role="tabpanel" aria-labelledby="tab-climate" tabindex="0" hidden>
+                <h2 class="part-heading"><span class="part-label">Part B</span>Global Temperature Trends</h2>
+
                 <div class="info-card">
-                    <h3>📊 Dataset: Global Temperature Anomaly (1880-2024)</h3>
-                    <p>Temperature deviation from the 1951-1980 average. Data from NASA GISS Surface Temperature Analysis.</p>
+                    <h3>About this dataset</h3>
+                    <p>Global temperature anomaly from 1880 to 2024, based on the NASA GISS Surface Temperature Analysis. An <em>anomaly</em> is how far the temperature sits above or below the 1951&ndash;1980 average, not the temperature itself.</p>
                 </div>
-                
+
                 <div class="question-prompt">
-                    🔬 <strong>Question:</strong> How has Earth's average temperature changed over time? What trend do you observe?
+                    <strong>Question:</strong> How has Earth's average temperature changed over time?
                 </div>
-                
-                <div class="chart-container">
-                    <canvas id="climateChart"></canvas>
-                </div>
-                
-                <div class="cer-template">
-                    <h3>📝 Build Your CER Argument</h3>
-                    <div class="cer-section">
-                        <h4>Claim:</h4>
-                        <p><em>State the temperature trend you observe.</em></p>
-                    </div>
-                    <div class="cer-section">
-                        <h4>Evidence:</h4>
-                        <p><em>Cite specific years and temperature values. Compare different time periods.</em></p>
-                    </div>
-                    <div class="cer-section">
-                        <h4>Reasoning:</h4>
-                        <p><em>Explain the greenhouse effect and climate science principles.</em></p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sea Level Dataset -->
-            <div id="sealevel" class="dataset-info">
-                <div class="info-card">
-                    <h3>📊 Dataset: Global Sea Level Change (1993-2024)</h3>
-                    <p>Satellite measurements of global mean sea level from NASA. Values show change relative to 1993 baseline.</p>
-                </div>
-                
-                <div class="question-prompt">
-                    🔬 <strong>Question:</strong> How has global sea level changed since 1993? What is the rate of change?
-                </div>
-                
-                <div class="chart-container">
-                    <canvas id="sealevelChart"></canvas>
-                </div>
-                
-                <div class="cer-template">
-                    <h3>📝 Build Your CER Argument</h3>
-                    <div class="cer-section">
-                        <h4>Claim:</h4>
-                        <p><em>State what's happening to sea level.</em></p>
-                    </div>
-                    <div class="cer-section">
-                        <h4>Evidence:</h4>
-                        <p><em>Calculate the rate of change. Compare early vs recent years.</em></p>
-                    </div>
-                    <div class="cer-section">
-                        <h4>Reasoning:</h4>
-                        <p><em>Explain thermal expansion and ice melt contributions.</em></p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- CO2 Dataset -->
-            <div id="co2" class="dataset-info">
-                <div class="info-card">
-                    <h3>📊 Dataset: Atmospheric CO₂ Concentration (1960-2024)</h3>
-                    <p>Monthly measurements from Mauna Loa Observatory, Hawaii. Data shows parts per million (ppm) of CO₂.</p>
-                </div>
-                
-                <div class="question-prompt">
-                    🔬 <strong>Question:</strong> How have atmospheric CO₂ levels changed? What patterns do you notice?
-                </div>
-                
-                <div class="chart-container">
-                    <canvas id="co2Chart"></canvas>
-                </div>
-                
-                <div class="cer-template">
-                    <h3>📝 Build Your CER Argument</h3>
-                    <div class="cer-section">
-                        <h4>Claim:</h4>
-                        <p><em>Describe the CO₂ trend and any patterns.</em></p>
-                    </div>
-                    <div class="cer-section">
-                        <h4>Evidence:</h4>
-                        <p><em>Compare values from different decades. Note seasonal patterns.</em></p>
-                    </div>
-                    <div class="cer-section">
-                        <h4>Reasoning:</h4>
-                        <p><em>Explain carbon cycle and human impacts.</em></p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Solar System Dataset -->
-            <div id="planets" class="dataset-info">
-                <div class="info-card">
-                    <h3>📊 Dataset: Solar System Data from NYS Reference Tables</h3>
-                    <p>This dataset from the NYS Earth Science Reference Tables shows relationships between planetary characteristics including distance from the Sun, revolution period, and diameter.</p>
-                </div>
-                
-                <div class="question-prompt">
-                    🔬 <strong>Question:</strong> What is the relationship between a planet's distance from the Sun and its period of revolution?
-                </div>
-                
-                <div class="chart-container">
-                    <canvas id="planetChart"></canvas>
-                </div>
-                
+
+                <figure class="chart-figure">
+                    <div class="chart-container"><canvas id="climateChart" aria-hidden="true"></canvas></div>
+                    <figcaption>
+                        <b>Line graph: temperature anomaly against year, 1880 to 2024.</b> The line starts below zero at &minus;0.20 &deg;C in 1880 and wanders up and down through the early 1900s, dipping to its lowest point of &minus;0.27 &deg;C in 1920 and rising to +0.12 &deg;C by 1940. It falls back to &minus;0.03 &deg;C in 1960, then climbs without interruption for the rest of the record: +0.26 in 1980, +0.42 in 2000, +0.72 in 2010, +1.01 in 2020, and +1.24 &deg;C in 2024. The climb also gets steeper &mdash; the line is much closer to vertical after 2000 than it was before 1960. Exact values are in the table below.
+                    </figcaption>
+                </figure>
+
+                <p class="table-caption" id="table-caption-2">Global temperature anomaly relative to the 1951&ndash;1980 average, with the rate of change since the previous row</p>
+                <div class="table-scroll" role="group" tabindex="0" aria-labelledby="table-caption-2">
                 <table class="data-table">
                     <thead>
                         <tr>
-                            <th>Planet</th>
-                            <th>Distance from Sun (million km)</th>
-                            <th>Period of Revolution</th>
-                            <th>Diameter (km)</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Temperature Anomaly (&deg;C)</th>
+                            <th scope="col">Rate of Change (&deg;C/decade)</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Mercury</td><td>57.9</td><td>88 days</td><td>4,879</td></tr>
-                        <tr><td>Venus</td><td>108.2</td><td>224.7 days</td><td>12,104</td></tr>
-                        <tr><td>Earth</td><td>149.6</td><td>365.26 days</td><td>12,756</td></tr>
-                        <tr><td>Mars</td><td>228.0</td><td>1.9 years</td><td>6,792</td></tr>
-                        <tr><td>Jupiter</td><td>778.5</td><td>11.9 years</td><td>142,984</td></tr>
-                        <tr><td>Saturn</td><td>1432.0</td><td>29.5 years</td><td>120,536</td></tr>
-                        <tr><td>Uranus</td><td>2867.0</td><td>83.7 years</td><td>51,118</td></tr>
-                        <tr><td>Neptune</td><td>4515.0</td><td>163.7 years</td><td>49,528</td></tr>
+                        <tr><th scope="row">1880</th><td>&minus;0.20</td><td>&mdash;</td></tr>
+                        <tr><th scope="row">1900</th><td>&minus;0.15</td><td>+0.025</td></tr>
+                        <tr><th scope="row">1920</th><td>&minus;0.27</td><td>&minus;0.060</td></tr>
+                        <tr><th scope="row">1940</th><td>+0.12</td><td>+0.195</td></tr>
+                        <tr><th scope="row">1960</th><td>&minus;0.03</td><td>&minus;0.075</td></tr>
+                        <tr><th scope="row">1980</th><td>+0.26</td><td>+0.145</td></tr>
+                        <tr><th scope="row">2000</th><td>+0.42</td><td>+0.080</td></tr>
+                        <tr><th scope="row">2010</th><td>+0.72</td><td>+0.300</td></tr>
+                        <tr><th scope="row">2020</th><td>+1.01</td><td>+0.290</td></tr>
+                        <tr><th scope="row">2024</th><td>+1.24</td><td>+0.575</td></tr>
                     </tbody>
                 </table>
-                
+                </div>
+
+                <div class="formula-box">
+                    <h3>Formulas for Part B</h3>
+                    <dl>
+                        <dt>Total Change</dt>
+                        <dd>Total Change = Final Value &minus; Initial Value</dd>
+                        <dt>Rate of Change</dt>
+                        <dd>Rate of Change = (Final Value &minus; Initial Value) &divide; Time Period (in decades)</dd>
+                    </dl>
+                </div>
+
                 <div class="cer-template">
-                    <h3>📝 Build Your CER Argument</h3>
-                    <div class="cer-section">
-                        <h4>Claim:</h4>
-                        <p><em>State the relationship between distance and revolution period.</em></p>
+                    <h3>Build Your CER Argument</h3>
+                    <p class="write-on-paper">Write your answers in the CLAIM, EVIDENCE, and REASONING boxes on Part B of your worksheet.</p>
+                    <div class="cer-section cer-claim">
+                        <h4>Claim</h4>
+                        <p>State the temperature trend you observe in one clear sentence.</p>
                     </div>
-                    <div class="cer-section">
-                        <h4>Evidence:</h4>
-                        <p><em>Compare specific planets. Include actual distances and periods.</em></p>
+                    <div class="cer-section cer-evidence">
+                        <h4>Evidence</h4>
+                        <p>Include specific temperature values and time periods. Calculate at least one rate of change.</p>
                     </div>
-                    <div class="cer-section">
-                        <h4>Reasoning:</h4>
-                        <p><em>Explain using Kepler's Laws and gravitational principles.</em></p>
+                    <div class="cer-section cer-reasoning">
+                        <h4>Reasoning</h4>
+                        <p>Explain the greenhouse effect and how human activities influence global temperature.</p>
+                        <div class="background-note">
+                            <h5>Background</h5>
+                            <p>Energy from the Sun arrives mostly as visible light. That light passes through the atmosphere and warms Earth's surface.</p>
+                            <p>Earth then sends energy back out, but as <dfn>infrared</dfn> &mdash; heat energy you can feel but not see.</p>
+                            <p>Some gases in the air absorb that outgoing heat and send part of it back down. These are called <dfn>greenhouse gases</dfn>. The main ones are carbon dioxide (CO<sub>2</sub>), water vapor, and methane.</p>
+                            <p>This is normal and necessary. Without any greenhouse gases at all, Earth's average temperature would be far below freezing.</p>
+                            <p>What has changed is the amount. Burning coal, oil, and natural gas releases extra CO<sub>2</sub>. More CO<sub>2</sub> means more outgoing heat gets absorbed instead of escaping, so the average temperature goes up.</p>
+                            <p class="think">Think about it: the table shows temperature going up and down before 1940, then climbing steadily after 1960. What changed?</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Hurricanes Dataset -->
-            <div id="hurricanes" class="dataset-info">
+            </section>
+
+            <!-- ============ PART C: SEA LEVEL ============ -->
+            <section id="sealevel" class="dataset-info" role="tabpanel" aria-labelledby="tab-sealevel" tabindex="0" hidden>
+                <h2 class="part-heading"><span class="part-label">Part C</span>Sea Level Rise Analysis</h2>
+
                 <div class="info-card">
-                    <h3>📊 Dataset: Atlantic Hurricane Categories (2000-2024)</h3>
-                    <p>Distribution of Atlantic hurricanes by category. Data from National Hurricane Center.</p>
+                    <h3>About this dataset</h3>
+                    <p>Satellite measurements of global mean sea level from NASA, 1993 to 2024. Every value is the change since the 1993 starting point, measured in millimetres.</p>
                 </div>
-                
+
                 <div class="question-prompt">
-                    🔬 <strong>Question:</strong> How are hurricanes distributed by intensity? What factors might influence this?
+                    <strong>Question:</strong> What is happening to global sea level, and why?
                 </div>
-                
-                <div class="interactive-controls">
-                    <div class="control-group">
-                        <label for="hurricaneYear">Select Time Period:</label>
-                        <select id="hurricaneYear" onchange="updateHurricaneChart()">
-                            <option value="all">All Years (2000-2024)</option>
-                            <option value="early">2000-2012</option>
-                            <option value="recent">2013-2024</option>
-                        </select>
-                    </div>
+
+                <figure class="chart-figure">
+                    <div class="chart-container"><canvas id="sealevelChart" aria-hidden="true"></canvas></div>
+                    <figcaption>
+                        <b>Line graph: sea level change against year, 1993 to 2024.</b> The line starts at 0 mm in 1993 and rises steadily the whole way to 104 mm in 2024 &mdash; it never goes back down. The rise is not quite a straight line: it gets steeper over time. In the first half of the record the line gains roughly 3 mm per year (0 mm in 1993 to 50 mm in 2011, which is 18 years), while in the second half it gains closer to 4 mm per year (50 mm in 2011 to 104 mm in 2024, which is 13 years). Exact values are in the table below.
+                    </figcaption>
+                </figure>
+
+                <p class="table-caption" id="table-caption-3">Global mean sea level change since 1993</p>
+                <div class="table-scroll" role="group" tabindex="0" aria-labelledby="table-caption-3">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Year</th>
+                            <th scope="col">Sea Level Change (mm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">1993</th><td>0</td></tr>
+                        <tr><th scope="row">1996</th><td>12</td></tr>
+                        <tr><th scope="row">1999</th><td>18</td></tr>
+                        <tr><th scope="row">2002</th><td>28</td></tr>
+                        <tr><th scope="row">2005</th><td>35</td></tr>
+                        <tr><th scope="row">2008</th><td>42</td></tr>
+                        <tr><th scope="row">2011</th><td>50</td></tr>
+                        <tr><th scope="row">2014</th><td>61</td></tr>
+                        <tr><th scope="row">2017</th><td>75</td></tr>
+                        <tr><th scope="row">2020</th><td>88</td></tr>
+                        <tr><th scope="row">2024</th><td>104</td></tr>
+                    </tbody>
+                </table>
                 </div>
-                
-                <div class="chart-container">
-                    <canvas id="hurricaneChart"></canvas>
+
+                <div class="formula-box">
+                    <h3>Formulas for Part C</h3>
+                    <dl>
+                        <dt>Average Rate</dt>
+                        <dd>Average Rate = Total Change &divide; Number of Years</dd>
+                        <dt>Future Rise</dt>
+                        <dd>Future Rise = Rate &times; Time Period</dd>
+                    </dl>
                 </div>
-                
+
                 <div class="cer-template">
-                    <h3>📝 Build Your CER Argument</h3>
-                    <div class="cer-section">
-                        <h4>Claim:</h4>
-                        <p><em>State the pattern in hurricane intensity distribution.</em></p>
+                    <h3>Build Your CER Argument</h3>
+                    <p class="write-on-paper">Write your answers in the CLAIM, EVIDENCE, and REASONING boxes on Part C of your worksheet.</p>
+                    <div class="cer-section cer-claim">
+                        <h4>Claim</h4>
+                        <p>State what is happening to global sea level in one clear sentence.</p>
                     </div>
-                    <div class="cer-section">
-                        <h4>Evidence:</h4>
-                        <p><em>Compare different categories. Note any changes between time periods.</em></p>
+                    <div class="cer-section cer-evidence">
+                        <h4>Evidence</h4>
+                        <p>Calculate the rate of change. Compare the early years with the recent years.</p>
                     </div>
-                    <div class="cer-section">
-                        <h4>Reasoning:</h4>
-                        <p><em>Explain hurricane formation and factors affecting intensity.</em></p>
+                    <div class="cer-section cer-reasoning">
+                        <h4>Reasoning</h4>
+                        <p>Explain thermal expansion and ice melt.</p>
+                        <div class="background-note">
+                            <h5>Background</h5>
+                            <p>Two things are raising sea level, and both come from a warmer planet.</p>
+                            <p><dfn>1. Thermal expansion.</dfn> When water warms up, its molecules move faster and spread farther apart. The same amount of water takes up more space. The ocean is very deep, so even a small amount of warming adds up to a real rise.</p>
+                            <p><dfn>2. Melting land ice.</dfn> Glaciers and the ice sheets on Greenland and Antarctica sit on top of land. When they melt, that water runs into the ocean and adds volume that was not there before.</p>
+                            <p>Sea ice is different. Sea ice already floats in the ocean, so it already pushes water aside. When it melts, sea level barely changes &mdash; the same way a glass of ice water does not overflow when the ice cubes melt.</p>
+                            <p class="think">Think about it: why does ice on land raise sea level when floating ice does not?</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <!-- ============ PART D: ATMOSPHERIC CO2 ============ -->
+            <section id="co2" class="dataset-info" role="tabpanel" aria-labelledby="tab-co2" tabindex="0" hidden>
+                <h2 class="part-heading"><span class="part-label">Part D</span>Atmospheric CO&#8322; Concentration</h2>
+
+                <div class="info-card">
+                    <h3>About this dataset</h3>
+                    <p>Carbon dioxide concentration at the Mauna Loa Observatory in Hawaii, measured in parts per million (ppm). These are decade-by-decade values, so each number is an annual average rather than a single monthly reading.</p>
+                </div>
+
+                <div class="question-prompt">
+                    <strong>Question:</strong> How have atmospheric CO&#8322; levels changed since 1960?
+                </div>
+
+                <figure class="chart-figure">
+                    <div class="chart-container"><canvas id="co2Chart" aria-hidden="true"></canvas></div>
+                    <figcaption>
+                        <b>Line graph: CO<sub>2</sub> concentration against year, 1960 to 2024.</b> The line rises from 317 ppm in 1960 to 422 ppm in 2024 and never falls. It also curves upward, meaning each decade adds more than the one before: 317 in 1960, 326 in 1970, 339 in 1980, 354 in 1990, 369 in 2000, 390 in 2010, 414 in 2020, and 422 by 2024. The gap between points on the left of the graph is about 9 ppm per decade; on the right it is about 24 ppm per decade. Exact values are in the table below.
+                    </figcaption>
+                </figure>
+
+                <p class="table-caption" id="table-caption-4">Atmospheric CO&#8322; at Mauna Loa Observatory, by decade</p>
+                <div class="table-scroll" role="group" tabindex="0" aria-labelledby="table-caption-4">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Decade</th>
+                            <th scope="col">Starting CO&#8322; (ppm)</th>
+                            <th scope="col">Ending CO&#8322; (ppm)</th>
+                            <th scope="col">Increase (ppm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">1960s</th><td>317</td><td>326</td><td>9</td></tr>
+                        <tr><th scope="row">1970s</th><td>326</td><td>339</td><td>13</td></tr>
+                        <tr><th scope="row">1980s</th><td>339</td><td>354</td><td>15</td></tr>
+                        <tr><th scope="row">1990s</th><td>354</td><td>369</td><td>15</td></tr>
+                        <tr><th scope="row">2000s</th><td>369</td><td>390</td><td>21</td></tr>
+                        <tr><th scope="row">2010s</th><td>390</td><td>414</td><td>24</td></tr>
+                        <tr><th scope="row">2020&ndash;2024</th><td>414</td><td>422</td><td>8 (over 4 years)</td></tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="formula-box">
+                    <h3>Formula for Part D</h3>
+                    <dl>
+                        <dt>Percentage Increase</dt>
+                        <dd>Percentage Increase = ((Final &minus; Initial) &divide; Initial) &times; 100%</dd>
+                    </dl>
+                </div>
+
+                <div class="cer-template">
+                    <h3>Build Your CER Argument</h3>
+                    <p class="write-on-paper">Write your answers in the CLAIM, EVIDENCE, and REASONING boxes on Part D of your worksheet.</p>
+                    <div class="cer-section cer-claim">
+                        <h4>Claim</h4>
+                        <p>Describe the CO<sub>2</sub> trend in one clear sentence.</p>
+                    </div>
+                    <div class="cer-section cer-evidence">
+                        <h4>Evidence</h4>
+                        <p>Compare values from different decades. Use the Increase column to show how the rate itself is changing.</p>
+                    </div>
+                    <div class="cer-section cer-reasoning">
+                        <h4>Reasoning</h4>
+                        <p>Explain the carbon cycle and human impacts.</p>
+                        <div class="background-note">
+                            <h5>Background</h5>
+                            <p>Carbon moves constantly between the air, the ocean, soil, and living things. This is called the <dfn>carbon cycle</dfn>.</p>
+                            <p>Plants pull CO<sub>2</sub> out of the air during photosynthesis. Animals breathe CO<sub>2</sub> out, and decaying material releases it too. For thousands of years these moved about the same amount of carbon in each direction, so the level in the air stayed fairly steady.</p>
+                            <p>Fossil fuels break that balance. Coal, oil, and natural gas formed from living things that were buried millions of years ago. All of that carbon sat locked underground, out of the cycle.</p>
+                            <p>Burning fossil fuels puts that carbon back into the air in a couple of hundred years &mdash; carbon that took millions of years to store away. The natural processes that remove CO<sub>2</sub> cannot keep up with that speed.</p>
+                            <p class="think">Think about it: the amount added each decade in the table keeps getting bigger. What does that tell you about how fast we are burning fossil fuels?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ PART E: SOLAR SYSTEM ============ -->
+            <section id="planets" class="dataset-info" role="tabpanel" aria-labelledby="tab-planets" tabindex="0" hidden>
+                <h2 class="part-heading"><span class="part-label">Part E</span>Solar System Data from the NYS Reference Tables</h2>
+
+                <div class="info-card">
+                    <h3>About this dataset</h3>
+                    <p>Planetary data taken from the NYS Earth Science Reference Tables (ESRT). Keep your ESRT open next to this page &mdash; you will use the same table on the Regents exam.</p>
+                </div>
+
+                <div class="question-prompt">
+                    <strong>Question:</strong> What is the relationship between a planet's distance from the Sun and its period of revolution?
+                </div>
+
+                <figure class="chart-figure">
+                    <div class="chart-container"><canvas id="planetChart" aria-hidden="true"></canvas></div>
+                    <figcaption>
+                        <b>Scatter plot: period of revolution against distance from the Sun, for all eight planets.</b> Both axes use a logarithmic scale, which means each step along an axis multiplies the value rather than adding to it. On these scales the eight planets fall almost exactly on a straight line running from bottom-left to top-right: the farther a planet is from the Sun, the longer its year. Mercury sits at the bottom-left (57.9 million km, 0.24 years) and Neptune at the top-right (4,515 million km, 163.7 years). A straight line on a log-log plot signals a power relationship &mdash; here, Kepler's Third Law. Note that period grows much faster than distance: Neptune is about 78 times farther out than Mercury but takes about 679 times as long to orbit. Exact values are in the table below.
+                    </figcaption>
+                </figure>
+
+                <p class="table-caption" id="table-caption-5">Solar system data from the NYS Earth Science Reference Tables</p>
+                <div class="table-scroll" role="group" tabindex="0" aria-labelledby="table-caption-5">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Planet</th>
+                            <th scope="col">Distance from Sun (million km)</th>
+                            <th scope="col">Period of Revolution</th>
+                            <th scope="col">Diameter (km)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Mercury</th><td>57.9</td><td>88 days</td><td>4,879</td></tr>
+                        <tr><th scope="row">Venus</th><td>108.2</td><td>224.7 days</td><td>12,104</td></tr>
+                        <tr><th scope="row">Earth</th><td>149.6</td><td>365.26 days</td><td>12,756</td></tr>
+                        <tr><th scope="row">Mars</th><td>228.0</td><td>1.9 years</td><td>6,792</td></tr>
+                        <tr><th scope="row">Jupiter</th><td>778.5</td><td>11.9 years</td><td>142,984</td></tr>
+                        <tr><th scope="row">Saturn</th><td>1432.0</td><td>29.5 years</td><td>120,536</td></tr>
+                        <tr><th scope="row">Uranus</th><td>2867.0</td><td>83.7 years</td><td>51,118</td></tr>
+                        <tr><th scope="row">Neptune</th><td>4515.0</td><td>163.7 years</td><td>49,528</td></tr>
+                    </tbody>
+                </table>
+                </div>
+
+                <div class="formula-box">
+                    <h3>Formulas for Part E</h3>
+                    <dl>
+                        <dt>Distance ratio</dt>
+                        <dd>Ratio = Neptune's Distance &divide; Mercury's Distance</dd>
+                        <dt>Period ratio</dt>
+                        <dd>Ratio = Neptune's Period &divide; Mercury's Period (convert to the same units first)</dd>
+                        <dt>Kepler's Third Law</dt>
+                        <dd>P<sup>2</sup> is proportional to r<sup>3</sup> &mdash; so <em>cube</em> the distance ratio and <em>square</em> the period ratio, and the two answers should come out about the same.</dd>
+                    </dl>
+                </div>
+
+                <div class="cer-template">
+                    <h3>Build Your CER Argument</h3>
+                    <p class="write-on-paper">Write your answers in the CLAIM, EVIDENCE, and REASONING boxes on Part E of your worksheet.</p>
+                    <div class="cer-section cer-claim">
+                        <h4>Claim</h4>
+                        <p>State the relationship between distance and revolution period in one clear sentence.</p>
+                    </div>
+                    <div class="cer-section cer-evidence">
+                        <h4>Evidence</h4>
+                        <p>Compare at least 3 pairs of planets. Include their specific distances and periods.</p>
+                    </div>
+                    <div class="cer-section cer-reasoning">
+                        <h4>Reasoning</h4>
+                        <p>Explain using gravitational force and orbital mechanics.</p>
+                        <div class="background-note">
+                            <h5>Background</h5>
+                            <p>Gravity is what holds a planet in its orbit. The Sun's gravity pulls on every planet, but that pull gets weaker the farther away the planet is.</p>
+                            <p>A planet close to the Sun feels a strong pull, so it has to move fast to stay in orbit. A planet far out feels a weak pull and moves much more slowly.</p>
+                            <p>Distant planets also have much farther to travel to finish one lap. So they lose twice over: a longer path <em>and</em> a slower speed. That is why Neptune takes 163.7 years to go around once while Mercury takes only 88 days.</p>
+                            <p><dfn>Kepler's Third Law</dfn> puts a number on this. The square of a planet's period is proportional to the cube of its distance, written P<sup>2</sup> &prop; r<sup>3</sup>.</p>
+                            <p class="think">Think about it: if you double a planet's distance from the Sun, does its year get twice as long, or more than twice as long?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ PART F: SYNTHESIS ============ -->
+            <section id="synthesis" class="dataset-info" role="tabpanel" aria-labelledby="tab-synthesis" tabindex="0" hidden>
+                <h2 class="part-heading"><span class="part-label">Part F</span>Synthesis and Connections</h2>
+
+                <div class="info-card">
+                    <h3>About this section</h3>
+                    <p>No new data here. Part F asks you to connect the datasets you have already analyzed and to judge somebody else's claim. Switch back to Parts A&ndash;E whenever you need to reread a number.</p>
+                </div>
+
+                <div class="synthesis-prompt">
+                    <h3>1. Connecting Datasets</h3>
+                    <p>Explain how the CO<sub>2</sub> data (Part D) relates to the temperature data (Part B). Use specific values from both datasets.</p>
+                </div>
+
+                <div class="synthesis-prompt">
+                    <h3>2. Connecting Datasets</h3>
+                    <p>How might the temperature changes (Part B) contribute to sea level rise (Part C)? Describe two mechanisms.</p>
+                </div>
+
+                <div class="cer-template">
+                    <h3>3. Critical Thinking: Evaluate a Claim</h3>
+                    <p class="write-on-paper">A student makes this claim:</p>
+                    <blockquote class="student-claim">&ldquo;The strongest earthquakes always occur at the deepest depths because there's more pressure.&rdquo;</blockquote>
+                    <p class="write-on-paper">Using evidence from Part A, write a CER argument that evaluates this claim on your worksheet.</p>
+                    <div class="cer-section cer-claim">
+                        <h4>Claim</h4>
+                        <p>Do you agree or disagree with the student? Say so in one clear sentence.</p>
+                    </div>
+                    <div class="cer-section cer-evidence">
+                        <h4>Evidence</h4>
+                        <p>Pull specific depth and magnitude values from the Part A graph that test the student's claim.</p>
+                    </div>
+                    <div class="cer-section cer-reasoning">
+                        <h4>Reasoning</h4>
+                        <p>Explain why the data does or does not support the student's idea.</p>
+                        <div class="background-note">
+                            <h5>Background</h5>
+                            <p>A claim can sound reasonable and still be wrong. The way to test one is to check it against the data.</p>
+                            <p>This student's reasoning is not crazy. Pressure really does increase with depth. But pressure is not the only thing that increases. Temperature goes up too, and heat is what makes rock <dfn>ductile</dfn> &mdash; able to bend slowly instead of snapping.</p>
+                            <p>A big earthquake needs a large block of <dfn>brittle</dfn> rock to break all at once. Deep rock is too hot to do that.</p>
+                            <p class="think">Think about it: on the Part A graph, are the highest magnitudes at the deepest depths, or somewhere else?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="synthesis-prompt" style="margin-top:20px">
+                    <h3>Reflection</h3>
+                    <p>What was the most surprising pattern you discovered in the data? Why?</p>
+                </div>
+            </section>
+
+        </main>
     </div>
-    
+
     <script>
-        // Store chart instances
-        let charts = {};
-        
-        // Initialize all charts
+        'use strict';
+
+        var charts = {};
+
+        /* ---------- Theme-aware chart colours ---------- */
+
+        // Flexoki ships a brighter and a deeper variant of each accent. Use the deeper
+        // one on the cream light background and the brighter one on the near-black dark
+        // background, so series stay legible in both themes.
+        function palette() {
+            var css = getComputedStyle(document.documentElement);
+            var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            var accent = function (name) {
+                return css.getPropertyValue('--fx-' + name + (isDark ? '-light' : '-dark')).trim();
+            };
+            return {
+                text: css.getPropertyValue('--text-primary').trim() || (isDark ? '#FFFCF0' : '#1C1B1A'),
+                grid: css.getPropertyValue('--border-color').trim() || (isDark ? '#403E39' : '#DAD4BA'),
+                red: accent('red'),
+                blue: accent('blue'),
+                green: accent('green'),
+                orange: accent('orange'),
+                cyan: accent('cyan')
+            };
+        }
+
+        function withAlpha(hex, alphaHex) {
+            return /^#[0-9a-fA-F]{6}$/.test(hex) ? hex + alphaHex : hex;
+        }
+
+        // Re-resolve every series colour from its stored role, then repaint.
+        function applyChartTheme() {
+            var p = palette();
+            Chart.defaults.color = p.text;
+            Chart.defaults.borderColor = p.grid;
+
+            Object.keys(charts).forEach(function (key) {
+                var chart = charts[key];
+                chart.data.datasets.forEach(function (ds) {
+                    var colour = p[ds.colorRole];
+                    if (!colour) { return; }
+                    ds.borderColor = colour;
+                    ds.backgroundColor = ds.filled ? withAlpha(colour, '33') : withAlpha(colour, '99');
+                });
+                chart.options.scales.x.grid.color = p.grid;
+                chart.options.scales.y.grid.color = p.grid;
+                chart.update('none');
+            });
+        }
+
+        /* ---------- Chart construction ---------- */
+
+        function axis(labelText, extra) {
+            var config = {
+                title: { display: true, text: labelText, font: { size: 14 } },
+                grid: { color: palette().grid }
+            };
+            Object.keys(extra || {}).forEach(function (k) { config[k] = extra[k]; });
+            return config;
+        }
+
         function initCharts() {
-            // Earthquake Chart
-            const eqCtx = document.getElementById('earthquakeChart').getContext('2d');
-            charts.earthquake = new Chart(eqCtx, {
+            var p = palette();
+            Chart.defaults.color = p.text;
+            Chart.defaults.borderColor = p.grid;
+            Chart.defaults.font.family = "'Fira Code', 'SF Mono', Monaco, monospace";
+
+            charts.earthquake = new Chart(document.getElementById('earthquakeChart'), {
                 type: 'scatter',
                 data: {
                     datasets: [{
-                        label: 'Shallow (<70km)',
+                        label: 'Shallow (<70 km)',
+                        colorRole: 'red',
                         data: [
-                            {x: 10, y: 5.8}, {x: 15, y: 6.4}, {x: 35, y: 7.1},
-                            {x: 25, y: 5.5}, {x: 45, y: 6.8}, {x: 20, y: 5.2},
-                            {x: 55, y: 6.1}, {x: 30, y: 5.9}, {x: 40, y: 6.6}
+                            { x: 10, y: 5.8 }, { x: 15, y: 6.4 }, { x: 35, y: 7.1 },
+                            { x: 25, y: 5.5 }, { x: 45, y: 6.8 }, { x: 20, y: 5.2 },
+                            { x: 55, y: 6.1 }, { x: 30, y: 5.9 }, { x: 40, y: 6.6 }
                         ],
-                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        pointRadius: 8
+                        backgroundColor: withAlpha(p.red, '99'),
+                        borderColor: p.red,
+                        pointStyle: 'circle',
+                        pointRadius: 7
                     }, {
-                        label: 'Intermediate (70-300km)',
+                        label: 'Intermediate (70-300 km)',
+                        colorRole: 'blue',
                         data: [
-                            {x: 125, y: 6.2}, {x: 200, y: 5.9}, {x: 150, y: 5.5},
-                            {x: 180, y: 5.7}, {x: 250, y: 5.3}, {x: 100, y: 6.0},
-                            {x: 220, y: 5.4}, {x: 280, y: 5.1}
+                            { x: 125, y: 6.2 }, { x: 200, y: 5.9 }, { x: 150, y: 5.5 },
+                            { x: 180, y: 5.7 }, { x: 250, y: 5.3 }, { x: 100, y: 6.0 },
+                            { x: 220, y: 5.4 }, { x: 280, y: 5.1 }
                         ],
-                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        pointRadius: 8
+                        backgroundColor: withAlpha(p.blue, '99'),
+                        borderColor: p.blue,
+                        pointStyle: 'rect',
+                        pointRadius: 7
                     }, {
-                        label: 'Deep (>300km)',
+                        label: 'Deep (>300 km)',
+                        colorRole: 'green',
                         data: [
-                            {x: 580, y: 5.2}, {x: 450, y: 5.6}, {x: 650, y: 4.8},
-                            {x: 520, y: 5.3}, {x: 400, y: 5.8}, {x: 600, y: 5.0}
+                            { x: 580, y: 5.2 }, { x: 450, y: 5.6 }, { x: 650, y: 4.8 },
+                            { x: 520, y: 5.3 }, { x: 400, y: 5.8 }, { x: 600, y: 5.0 }
                         ],
-                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: withAlpha(p.green, '99'),
+                        borderColor: p.green,
+                        pointStyle: 'triangle',
                         pointRadius: 8
                     }]
                 },
@@ -728,363 +1076,201 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        title: {
-                            display: true,
-                            text: 'Earthquake Depth vs Magnitude',
-                            font: { size: 18 }
-                        },
-                        legend: {
-                            display: true,
-                            position: 'top'
-                        }
+                        title: { display: true, text: 'Earthquake Depth vs. Magnitude', font: { size: 17 } },
+                        legend: { display: true, position: 'top', labels: { usePointStyle: true } }
                     },
                     scales: {
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Depth (km)',
-                                font: { size: 14 }
-                            },
-                            min: 0,
-                            max: 700
-                        },
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Magnitude',
-                                font: { size: 14 }
-                            },
-                            min: 4,
-                            max: 8
-                        }
+                        x: axis('Depth (km)', { min: 0, max: 700 }),
+                        y: axis('Magnitude', { min: 4, max: 8 })
                     }
                 }
             });
-            
-            // Climate Chart
-            const climateCtx = document.getElementById('climateChart').getContext('2d');
-            charts.climate = new Chart(climateCtx, {
+
+            charts.climate = new Chart(document.getElementById('climateChart'), {
                 type: 'line',
                 data: {
                     labels: ['1880', '1900', '1920', '1940', '1960', '1980', '2000', '2010', '2020', '2024'],
                     datasets: [{
                         label: 'Temperature Anomaly (°C)',
+                        colorRole: 'red',
+                        filled: true,
                         data: [-0.2, -0.15, -0.27, 0.12, -0.03, 0.26, 0.42, 0.72, 1.01, 1.24],
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        tension: 0.4,
-                        fill: true
+                        borderColor: p.red,
+                        backgroundColor: withAlpha(p.red, '33'),
+                        tension: 0.3,
+                        fill: true,
+                        pointRadius: 4
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        title: {
-                            display: true,
-                            text: 'Global Temperature Anomaly from 1951-1980 Average',
-                            font: { size: 18 }
-                        }
+                        title: { display: true, text: 'Global Temperature Anomaly from the 1951-1980 Average', font: { size: 17 } },
+                        legend: { display: false }
                     },
                     scales: {
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Temperature Anomaly (°C)',
-                                font: { size: 14 }
-                            }
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Year',
-                                font: { size: 14 }
-                            }
-                        }
+                        x: axis('Year'),
+                        y: axis('Temperature Anomaly (°C)')
                     }
                 }
             });
-            
-            // Sea Level Chart
-            const seaCtx = document.getElementById('sealevelChart').getContext('2d');
-            charts.sealevel = new Chart(seaCtx, {
+
+            charts.sealevel = new Chart(document.getElementById('sealevelChart'), {
                 type: 'line',
                 data: {
                     labels: ['1993', '1996', '1999', '2002', '2005', '2008', '2011', '2014', '2017', '2020', '2024'],
                     datasets: [{
                         label: 'Sea Level Change (mm)',
+                        colorRole: 'blue',
+                        filled: true,
                         data: [0, 12, 18, 28, 35, 42, 50, 61, 75, 88, 104],
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: p.blue,
+                        backgroundColor: withAlpha(p.blue, '33'),
                         tension: 0.1,
-                        fill: true
+                        fill: true,
+                        pointRadius: 4
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        title: {
-                            display: true,
-                            text: 'Global Mean Sea Level Change Since 1993',
-                            font: { size: 18 }
-                        }
+                        title: { display: true, text: 'Global Mean Sea Level Change Since 1993', font: { size: 17 } },
+                        legend: { display: false }
                     },
                     scales: {
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Sea Level Change (mm)',
-                                font: { size: 14 }
-                            }
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Year',
-                                font: { size: 14 }
-                            }
-                        }
+                        x: axis('Year'),
+                        y: axis('Sea Level Change (mm)')
                     }
                 }
             });
-            
-            // CO2 Chart
-            const co2Ctx = document.getElementById('co2Chart').getContext('2d');
-            charts.co2 = new Chart(co2Ctx, {
+
+            charts.co2 = new Chart(document.getElementById('co2Chart'), {
                 type: 'line',
                 data: {
                     labels: ['1960', '1970', '1980', '1990', '2000', '2010', '2020', '2024'],
                     datasets: [{
                         label: 'CO₂ Concentration (ppm)',
+                        colorRole: 'green',
+                        filled: true,
                         data: [317, 326, 339, 354, 369, 390, 414, 422],
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        tension: 0.4,
-                        fill: true
+                        borderColor: p.green,
+                        backgroundColor: withAlpha(p.green, '33'),
+                        tension: 0.3,
+                        fill: true,
+                        pointRadius: 4
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        title: {
-                            display: true,
-                            text: 'Atmospheric CO₂ Concentration at Mauna Loa',
-                            font: { size: 18 }
-                        }
+                        title: { display: true, text: 'Atmospheric CO₂ Concentration at Mauna Loa', font: { size: 17 } },
+                        legend: { display: false }
                     },
                     scales: {
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'CO₂ (ppm)',
-                                font: { size: 14 }
-                            },
-                            min: 300
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Year',
-                                font: { size: 14 }
-                            }
-                        }
+                        x: axis('Year'),
+                        y: axis('CO₂ (ppm)', { min: 300 })
                     }
                 }
             });
-            
-            // Solar System Chart
-            const planetCtx = document.getElementById('planetChart').getContext('2d');
-            charts.planet = new Chart(planetCtx, {
+
+            charts.planet = new Chart(document.getElementById('planetChart'), {
                 type: 'scatter',
                 data: {
                     datasets: [{
                         label: 'Inner Planets',
+                        colorRole: 'orange',
                         data: [
-                            {x: 57.9, y: 0.24}, // Mercury (88 days = 0.24 years)
-                            {x: 108.2, y: 0.62}, // Venus (224.7 days = 0.62 years)
-                            {x: 149.6, y: 1.0}, // Earth
-                            {x: 228.0, y: 1.9} // Mars
+                            { x: 57.9, y: 0.24, name: 'Mercury' },
+                            { x: 108.2, y: 0.62, name: 'Venus' },
+                            { x: 149.6, y: 1.0, name: 'Earth' },
+                            { x: 228.0, y: 1.9, name: 'Mars' }
                         ],
-                        backgroundColor: 'rgba(255, 159, 64, 0.6)',
-                        borderColor: 'rgba(255, 159, 64, 1)',
-                        pointRadius: 10
+                        backgroundColor: withAlpha(p.orange, '99'),
+                        borderColor: p.orange,
+                        pointStyle: 'circle',
+                        pointRadius: 8
                     }, {
                         label: 'Outer Planets',
+                        colorRole: 'blue',
                         data: [
-                            {x: 778.5, y: 11.9}, // Jupiter
-                            {x: 1432.0, y: 29.5}, // Saturn
-                            {x: 2867.0, y: 83.7}, // Uranus
-                            {x: 4515.0, y: 163.7} // Neptune
+                            { x: 778.5, y: 11.9, name: 'Jupiter' },
+                            { x: 1432.0, y: 29.5, name: 'Saturn' },
+                            { x: 2867.0, y: 83.7, name: 'Uranus' },
+                            { x: 4515.0, y: 163.7, name: 'Neptune' }
                         ],
-                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        pointRadius: 12
+                        backgroundColor: withAlpha(p.blue, '99'),
+                        borderColor: p.blue,
+                        pointStyle: 'triangle',
+                        pointRadius: 9
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        title: {
-                            display: true,
-                            text: 'Planetary Distance vs. Revolution Period',
-                            font: { size: 18 }
-                        },
+                        title: { display: true, text: 'Planetary Distance vs. Revolution Period', font: { size: 17 } },
+                        legend: { labels: { usePointStyle: true } },
                         tooltip: {
                             callbacks: {
-                                label: function(context) {
-                                    const planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
-                                    const index = context.dataIndex + (context.datasetIndex * 4);
-                                    return planets[index] + ': ' + context.parsed.x + ' million km, ' + context.parsed.y + ' years';
+                                label: function (context) {
+                                    var point = context.raw;
+                                    return point.name + ': ' + point.x + ' million km, ' + point.y + ' years';
                                 }
                             }
                         }
                     },
                     scales: {
-                        x: {
-                            type: 'logarithmic',
-                            title: {
-                                display: true,
-                                text: 'Distance from Sun (million km) - Log Scale',
-                                font: { size: 14 }
-                            },
-                            min: 50,
-                            max: 5000
-                        },
-                        y: {
-                            type: 'logarithmic',
-                            title: {
-                                display: true,
-                                text: 'Period of Revolution (years) - Log Scale',
-                                font: { size: 14 }
-                            },
-                            min: 0.2,
-                            max: 200
-                        }
-                    }
-                }
-            });
-            
-            // Hurricane Chart
-            createHurricaneChart('all');
-        }
-        
-        function createHurricaneChart(period) {
-            const ctx = document.getElementById('hurricaneChart').getContext('2d');
-            
-            let data;
-            if (period === 'early') {
-                data = [12, 18, 28, 15, 8];
-            } else if (period === 'recent') {
-                data = [10, 15, 25, 20, 12];
-            } else {
-                data = [22, 33, 53, 35, 20];
-            }
-            
-            if (charts.hurricane) {
-                charts.hurricane.destroy();
-            }
-            
-            charts.hurricane = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5'],
-                    datasets: [{
-                        label: 'Number of Hurricanes',
-                        data: data,
-                        backgroundColor: [
-                            'rgba(255, 206, 86, 0.6)',
-                            'rgba(255, 159, 64, 0.6)',
-                            'rgba(255, 99, 132, 0.6)',
-                            'rgba(153, 102, 255, 0.6)',
-                            'rgba(75, 0, 130, 0.6)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(255, 159, 64, 1)',
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(75, 0, 130, 1)'
-                        ],
-                        borderWidth: 2
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Atlantic Hurricane Distribution by Category',
-                            font: { size: 18 }
-                        },
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Number of Hurricanes',
-                                font: { size: 14 }
-                            },
-                            beginAtZero: true
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Hurricane Category (Saffir-Simpson Scale)',
-                                font: { size: 14 }
-                            }
-                        }
+                        x: axis('Distance from Sun (million km) - Log Scale', { type: 'logarithmic', min: 50, max: 5000 }),
+                        y: axis('Period of Revolution (years) - Log Scale', { type: 'logarithmic', min: 0.2, max: 200 })
                     }
                 }
             });
         }
-        
-        function updateHurricaneChart() {
-            const period = document.getElementById('hurricaneYear').value;
-            createHurricaneChart(period);
-        }
-        
-        function showDataset(dataset) {
-            // Update button states
-            document.querySelectorAll('.dataset-btn').forEach(btn => {
-                btn.classList.remove('active');
+
+        /* ---------- Accessible tabs ---------- */
+
+        function initTabs() {
+            var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+
+            function selectTab(tab, moveFocus) {
+                tabs.forEach(function (other) {
+                    var isSelected = other === tab;
+                    other.setAttribute('aria-selected', String(isSelected));
+                    other.tabIndex = isSelected ? 0 : -1;
+                    document.getElementById(other.getAttribute('aria-controls')).hidden = !isSelected;
+                });
+                if (moveFocus) { tab.focus(); }
+            }
+
+            tabs.forEach(function (tab, index) {
+                tab.addEventListener('click', function () { selectTab(tab, false); });
+
+                tab.addEventListener('keydown', function (event) {
+                    var next = null;
+                    if (event.key === 'ArrowRight') { next = tabs[(index + 1) % tabs.length]; }
+                    else if (event.key === 'ArrowLeft') { next = tabs[(index - 1 + tabs.length) % tabs.length]; }
+                    else if (event.key === 'Home') { next = tabs[0]; }
+                    else if (event.key === 'End') { next = tabs[tabs.length - 1]; }
+                    if (next) {
+                        event.preventDefault();
+                        selectTab(next, true);
+                    }
+                });
             });
-            event.target.classList.add('active');
-            
-            // Show selected dataset
-            document.querySelectorAll('.dataset-info').forEach(info => {
-                info.classList.remove('active');
-            });
-            document.getElementById(dataset).classList.add('active');
-        }
-        
-        // Theme management
-        function toggleTheme() {
-            const body = document.body;
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
         }
 
-        // Load saved theme
-        function loadTheme() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.body.setAttribute('data-theme', savedTheme);
-        }
+        /* ---------- Boot ---------- */
 
-        // Initialize charts when page loads
-        window.onload = function() {
-            loadTheme();
+        document.addEventListener('DOMContentLoaded', function () {
+            initTabs();
             initCharts();
-        };
+        });
+
+        // js/theme-toggle.js dispatches this whenever the theme changes.
+        window.addEventListener('themeChange', applyChartTheme);
     </script>
 </body>
 </html>

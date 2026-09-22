@@ -16,6 +16,37 @@ math: mathjax
 
 ---
 
+# 2026.09.22 **Earth Science**
+
+##### **❓ of the 📅**: How do you make your marshmallow for s'mores? 🍫   
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Field Maps Lab
+2. [CER with Graphs Practice](/AP%20Resource%20Pages/Earth%20Science%20Pages/cergraphs.html)
+    - work through with your lab table  
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make Scientific Arguments from graphical data_
+
+### 📆 Upcoming
+
+- Graphing & Mapping Quiz on Friday
+
+</div>
+</div>
+
+---
+
 # 2026.09.21 **Earth Science**
 
 ##### **❓ of the 📅**: What is the proper length of a playlist? 🎵
