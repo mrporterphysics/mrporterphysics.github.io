@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="600" height="300" fill="none"/>
+<line x1="85.0" y1="28.0" x2="85.0" y2="240.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="156.7" y1="28.0" x2="156.7" y2="240.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="228.3" y1="28.0" x2="228.3" y2="240.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="300.0" y1="28.0" x2="300.0" y2="240.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="371.7" y1="28.0" x2="371.7" y2="240.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="443.3" y1="28.0" x2="443.3" y2="240.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="515.0" y1="28.0" x2="515.0" y2="240.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="85.0" y1="240.0" x2="515.0" y2="240.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="76.0" y="244.0" font-size="13" fill="#8e8e93" text-anchor="end">0</text>
+<line x1="85.0" y1="204.7" x2="515.0" y2="204.7" stroke="#e5e5ea" stroke-width="1"/>
+<text x="76.0" y="208.7" font-size="13" fill="#8e8e93" text-anchor="end">2</text>
+<line x1="85.0" y1="169.3" x2="515.0" y2="169.3" stroke="#e5e5ea" stroke-width="1"/>
+<text x="76.0" y="173.3" font-size="13" fill="#8e8e93" text-anchor="end">4</text>
+<line x1="85.0" y1="134.0" x2="515.0" y2="134.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="76.0" y="138.0" font-size="13" fill="#8e8e93" text-anchor="end">6</text>
+<line x1="85.0" y1="98.7" x2="515.0" y2="98.7" stroke="#e5e5ea" stroke-width="1"/>
+<text x="76.0" y="102.7" font-size="13" fill="#8e8e93" text-anchor="end">8</text>
+<line x1="85.0" y1="63.3" x2="515.0" y2="63.3" stroke="#e5e5ea" stroke-width="1"/>
+<text x="76.0" y="67.3" font-size="13" fill="#8e8e93" text-anchor="end">10</text>
+<line x1="85.0" y1="28.0" x2="515.0" y2="28.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="76.0" y="32.0" font-size="13" fill="#8e8e93" text-anchor="end">12</text>
+<line x1="85.0" y1="14.0" x2="85.0" y2="248.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<line x1="77.0" y1="240.0" x2="529.0" y2="240.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<text x="156.7" y="259.0" font-size="13" fill="#8e8e93" text-anchor="middle">1</text>
+<text x="228.3" y="259.0" font-size="13" fill="#8e8e93" text-anchor="middle">2</text>
+<text x="300.0" y="259.0" font-size="13" fill="#8e8e93" text-anchor="middle">3</text>
+<text x="371.7" y="259.0" font-size="13" fill="#8e8e93" text-anchor="middle">4</text>
+<text x="443.3" y="259.0" font-size="13" fill="#8e8e93" text-anchor="middle">5</text>
+<text x="515.0" y="259.0" font-size="13" fill="#8e8e93" text-anchor="middle">6</text>
+<text x="300.0" y="274.0" font-size="14" fill="#48484a" text-anchor="middle">time (s)</text>
+<text transform="translate(45.0,134.0) rotate(-90)" font-size="14" fill="#48484a" text-anchor="middle">velocity (m/s)</text><polygon points="85.0,240.0 515.0,28.0 515.0,240.0" fill="#d63031" fill-opacity="0.2" stroke="none"/>
+<polyline points="85.0,240.0 515.0,28.0" fill="none" stroke="#1c1c1e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="386.00000000000006" y="178.16666666666669" font-size="26" fill="#d63031" text-anchor="middle" font-weight="700" >36 m</text>
+</svg>

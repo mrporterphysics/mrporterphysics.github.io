@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 400" width="1140" height="400" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="1140" height="400" fill="none"/>
+<line x1="110.0" y1="60.0" x2="110.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="157.5" y1="60.0" x2="157.5" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="205.0" y1="60.0" x2="205.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="252.5" y1="60.0" x2="252.5" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="300.0" y1="60.0" x2="300.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="347.5" y1="60.0" x2="347.5" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="395.0" y1="60.0" x2="395.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="442.5" y1="60.0" x2="442.5" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="490.0" y1="60.0" x2="490.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="110.0" y1="290.0" x2="490.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="101.0" y="294.0" font-size="12" fill="#8e8e93" text-anchor="end">-16</text>
+<line x1="110.0" y1="232.5" x2="490.0" y2="232.5" stroke="#e5e5ea" stroke-width="1"/>
+<text x="101.0" y="236.5" font-size="12" fill="#8e8e93" text-anchor="end">-8</text>
+<line x1="110.0" y1="175.0" x2="490.0" y2="175.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="101.0" y="179.0" font-size="12" fill="#8e8e93" text-anchor="end">0</text>
+<line x1="110.0" y1="117.5" x2="490.0" y2="117.5" stroke="#e5e5ea" stroke-width="1"/>
+<text x="101.0" y="121.5" font-size="12" fill="#8e8e93" text-anchor="end">8</text>
+<line x1="110.0" y1="60.0" x2="490.0" y2="60.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="101.0" y="64.0" font-size="12" fill="#8e8e93" text-anchor="end">16</text>
+<line x1="110.0" y1="46.0" x2="110.0" y2="298.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<line x1="102.0" y1="175.0" x2="504.0" y2="175.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<text x="157.5" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">1</text>
+<text x="205.0" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">2</text>
+<text x="252.5" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">3</text>
+<text x="300.0" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">4</text>
+<text x="347.5" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">5</text>
+<text x="395.0" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">6</text>
+<text x="442.5" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">7</text>
+<text x="490.0" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">8</text>
+<text x="300.0" y="324.0" font-size="13" fill="#48484a" text-anchor="middle">time (s)</text>
+<text transform="translate(70.0,175.0) rotate(-90)" font-size="13" fill="#48484a" text-anchor="middle">velocity (m/s)</text>
+<polygon points="110.0,175.0 110.0,88.8 490.0,146.2 490.0,175.0" fill="#d63031" fill-opacity="0.2" stroke="none"/>
+<polyline points="110.0,88.8 490.0,146.2" fill="none" stroke="#1c1c1e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="300.0" y="146.25" font-size="21" fill="#d63031" text-anchor="middle" font-weight="700" >+64 m</text>
+<text x="300.0" y="42" font-size="19" fill="#1c1c1e" text-anchor="middle" font-weight="700" >Object A</text>
+<text x="300.0" y="342.0" font-size="15" fill="#48484a" text-anchor="middle" font-weight="400" >all of it above the axis</text>
+<line x1="670.0" y1="60.0" x2="670.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="717.5" y1="60.0" x2="717.5" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="765.0" y1="60.0" x2="765.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="812.5" y1="60.0" x2="812.5" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="860.0" y1="60.0" x2="860.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="907.5" y1="60.0" x2="907.5" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="955.0" y1="60.0" x2="955.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="1002.5" y1="60.0" x2="1002.5" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="1050.0" y1="60.0" x2="1050.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="670.0" y1="290.0" x2="1050.0" y2="290.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="661.0" y="294.0" font-size="12" fill="#8e8e93" text-anchor="end">-16</text>
+<line x1="670.0" y1="232.5" x2="1050.0" y2="232.5" stroke="#e5e5ea" stroke-width="1"/>
+<text x="661.0" y="236.5" font-size="12" fill="#8e8e93" text-anchor="end">-8</text>
+<line x1="670.0" y1="175.0" x2="1050.0" y2="175.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="661.0" y="179.0" font-size="12" fill="#8e8e93" text-anchor="end">0</text>
+<line x1="670.0" y1="117.5" x2="1050.0" y2="117.5" stroke="#e5e5ea" stroke-width="1"/>
+<text x="661.0" y="121.5" font-size="12" fill="#8e8e93" text-anchor="end">8</text>
+<line x1="670.0" y1="60.0" x2="1050.0" y2="60.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="661.0" y="64.0" font-size="12" fill="#8e8e93" text-anchor="end">16</text>
+<line x1="670.0" y1="46.0" x2="670.0" y2="298.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<line x1="662.0" y1="175.0" x2="1064.0" y2="175.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<text x="717.5" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">1</text>
+<text x="765.0" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">2</text>
+<text x="812.5" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">3</text>
+<text x="860.0" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">4</text>
+<text x="907.5" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">5</text>
+<text x="955.0" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">6</text>
+<text x="1002.5" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">7</text>
+<text x="1050.0" y="194.0" font-size="12" fill="#8e8e93" text-anchor="middle">8</text>
+<text x="860.0" y="324.0" font-size="13" fill="#48484a" text-anchor="middle">time (s)</text>
+<polygon points="670.0,175.0 1050.0,290.0 1050.0,175.0" fill="#2980b9" fill-opacity="0.2" stroke="none"/>
+<polyline points="670.0,175.0 1050.0,290.0" fill="none" stroke="#1c1c1e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="860.0" y="218.125" font-size="21" fill="#2980b9" text-anchor="middle" font-weight="700" >−64 m</text>
+<text x="860.0" y="42" font-size="19" fill="#1c1c1e" text-anchor="middle" font-weight="700" >Object B</text>
+<text x="860.0" y="342.0" font-size="15" fill="#48484a" text-anchor="middle" font-weight="400" >all of it below the axis</text>
+</svg>
