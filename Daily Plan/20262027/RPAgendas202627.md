@@ -18,6 +18,36 @@ math: mathjax
 
 ---
 
+# 2026.09.24 **AP Physics**
+
+##### **❓ of the 📅**: What's your favorite sandwich and why? 🥪
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish VT Graphs
+2. Physics Classroom - Position vs. Time Graphs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make calculations from VT Graphs_
+
+### 📆 Upcoming
+
+- Quiz tomorrow
+
+</div>
+</div>
+
+---
+
 
 # 2026.09.23 **AP Physics** Do Now
 
