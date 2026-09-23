@@ -16,6 +16,36 @@ math: mathjax
 
 ---
 
+# 2026.09.24 **Earth Science**
+
+##### **❓ of the 📅**: Are there more wheels or doors on earth?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish CER Graphs (hand in)
+2. Mapping Practice (not collected)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Practice for quiz tomorrow_
+
+### 📆 Upcoming
+
+- Quiz tomorrow
+
+</div>
+</div>
+
+---
+
 # 2026.09.23 **Earth Science**
 
 ##### **❓ of the 📅**: Do you say pronouce your mom's/dad's sister's name as "aunt" or "ant"?

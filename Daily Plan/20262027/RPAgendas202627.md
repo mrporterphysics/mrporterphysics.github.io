@@ -81,6 +81,7 @@ math: mathjax
 ### 📆 Upcoming
 
 - Quiz **Friday**: x vs. t graphs, average vs. instantaneous velo & speed, solving problems with $x = vt + x_0$
+- Physics Classroom assignments due Friday
 
 </div>
 </div>
