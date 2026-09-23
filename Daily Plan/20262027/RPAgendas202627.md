@@ -76,9 +76,11 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model Motion with VT Graphs_
 
 ### 📆 Upcoming
+
+- Quiz **Friday**: x vs. t graphs, average vs. instantaneous velo & speed, solving problems with $x = vt + x_0$
 
 </div>
 </div>
