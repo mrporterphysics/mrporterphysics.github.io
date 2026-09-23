@@ -52,6 +52,37 @@ math: mathjax
 
 ---
 
+# 2026.09.23 **AP Physics**
+
+##### **❓ of the 📅**: What's your favorite sandwich and why? 🥪 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. AP Workbook 1.A - 1.D
+3. Interpreting Velocity vs. Time Graphs  
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make calculations from velocity vs. time graphs_
+
+### 📆 Upcoming
+
+- Quiz **Friday**: x vs. t graphs, average vs. instantaneous velo & speed, solving problems with $x = vt + x_0$
+
+</div>
+</div>
+
+---
+
 
 # 2025.09.22 **Do Now**
 
