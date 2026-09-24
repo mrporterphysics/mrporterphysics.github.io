@@ -15,6 +15,34 @@ math: mathjax
 
 ---
 
+# 2026.09.24 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Velocity Time Graphs and Displacement
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Make calculations from VT Graphs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.23 **AP Physics** Do Now
 
 <div class='do-now'> 
