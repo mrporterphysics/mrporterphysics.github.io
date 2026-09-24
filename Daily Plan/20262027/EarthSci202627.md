@@ -16,6 +16,34 @@ math: mathjax
 
 ---
 
+# 2026.09.25 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Finish CER
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Show what you've learned about graphing and mapping!_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.24 **Earth Science**
 
 ##### **❓ of the 📅**: Are there more wheels or doors on earth?

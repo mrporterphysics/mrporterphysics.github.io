@@ -331,6 +331,12 @@ TIMING: ~25 min.
 
 ---
 
+# Hidden Impacts of Climate Change
+
+<iframe width="1000" height="515" src="https://www.youtube.com/embed/u6GRYrv2e3M?si=LRaUEON4VCd8ms8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 <!-- _class: compact -->
 
 # Telling the Story: What Is Happening to Earth?
@@ -371,6 +377,8 @@ CONFERRING QUESTIONS: "What is happening to planet Earth?" • "Why is this deta
 DIFFERENTIATION: Break it into steps — read with no writing, then reread and annotate on sticky notes.
 TIMING: ~25 min.
 -->
+
+
 
 ---
 
@@ -449,6 +457,12 @@ KEY POINT: There are a tremendous number of planets to investigate, so we need C
 CONNECTION: Stars (L1 How the Sun Works, L2 Star Life Cycles) and planets/orbits (L3) feed the final argument.
 TIMING: ~15 min.
 -->
+
+---
+
+# How Many Planets:
+
+<iframe width="1000" height="515" src="https://www.youtube.com/embed/d9x9RRc0RoU?si=SgzljJFWrj385sxr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
