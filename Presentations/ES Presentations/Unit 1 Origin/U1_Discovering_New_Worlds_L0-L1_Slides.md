@@ -172,6 +172,12 @@ MATERIALS: PTO (Life in the Solar System Timeline, Initial Model, Tell the Story
 
 # Life on Earth
 
+<iframe width="1000" height="515" src="https://www.youtube.com/embed/c8aFcHFu8QM?si=_LyU0aJnbYcyQ1e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Life on Earth
+
 > **Watch:** As you watch the trailer, identify or describe **2–3 species** and the **environment** each one lives in.
 
 <div class="columns">
