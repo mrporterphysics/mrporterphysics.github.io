@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<line x1="162.5" y1="268.0" x2="162.5" y2="276.0" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="245.0" y1="268.0" x2="245.0" y2="276.0" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="327.5" y1="268.0" x2="327.5" y2="276.0" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="410.0" y1="268.0" x2="410.0" y2="276.0" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="76.0" y1="233.8" x2="84.0" y2="233.8" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="76.0" y1="195.6" x2="84.0" y2="195.6" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="76.0" y1="157.5" x2="84.0" y2="157.5" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="76.0" y1="119.3" x2="84.0" y2="119.3" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="76.0" y1="81.1" x2="84.0" y2="81.1" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="80.0" y1="62.0" x2="80.0" y2="280.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<line x1="72.0" y1="272.0" x2="426.0" y2="272.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<text x="245.0" y="298.0" font-size="14" fill="#48484a" text-anchor="middle">time</text>
+<text transform="translate(54.0,167.0) rotate(-90)" font-size="14" fill="#48484a" text-anchor="middle">velocity</text>
+<rect x="80.0" y="233.8" width="82.5" height="38.2" fill="#d63031" fill-opacity="0.22" stroke="#d63031" stroke-width="2"/>
+<rect x="162.5" y="195.6" width="82.5" height="76.4" fill="#d63031" fill-opacity="0.22" stroke="#d63031" stroke-width="2"/>
+<rect x="245.0" y="157.5" width="82.5" height="114.5" fill="#d63031" fill-opacity="0.22" stroke="#d63031" stroke-width="2"/>
+<rect x="327.5" y="119.3" width="82.5" height="152.7" fill="#d63031" fill-opacity="0.22" stroke="#d63031" stroke-width="2"/>
+<line x1="80.0" y1="233.8" x2="410.0" y2="81.1" stroke="#1c1c1e" stroke-width="3.5" stroke-linecap="round"/>
+<text x="245.0" y="42" font-size="15" fill="#1c1c1e" text-anchor="middle" font-weight="700">LOW  — every rectangle under the line</text>
+<line x1="662.5" y1="268.0" x2="662.5" y2="276.0" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="745.0" y1="268.0" x2="745.0" y2="276.0" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="827.5" y1="268.0" x2="827.5" y2="276.0" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="910.0" y1="268.0" x2="910.0" y2="276.0" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="576.0" y1="233.8" x2="584.0" y2="233.8" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="576.0" y1="195.6" x2="584.0" y2="195.6" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="576.0" y1="157.5" x2="584.0" y2="157.5" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="576.0" y1="119.3" x2="584.0" y2="119.3" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="576.0" y1="81.1" x2="584.0" y2="81.1" stroke="#8e8e93" stroke-width="1.5"/>
+<line x1="580.0" y1="62.0" x2="580.0" y2="280.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<line x1="572.0" y1="272.0" x2="926.0" y2="272.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<text x="745.0" y="298.0" font-size="14" fill="#48484a" text-anchor="middle">time</text>
+<rect x="580.0" y="195.6" width="82.5" height="76.4" fill="#2980b9" fill-opacity="0.1" stroke="#2980b9" stroke-width="2" stroke-dasharray="6,4"/>
+<rect x="662.5" y="157.5" width="82.5" height="114.5" fill="#2980b9" fill-opacity="0.1" stroke="#2980b9" stroke-width="2" stroke-dasharray="6,4"/>
+<rect x="745.0" y="119.3" width="82.5" height="152.7" fill="#2980b9" fill-opacity="0.1" stroke="#2980b9" stroke-width="2" stroke-dasharray="6,4"/>
+<rect x="827.5" y="81.1" width="82.5" height="190.9" fill="#2980b9" fill-opacity="0.1" stroke="#2980b9" stroke-width="2" stroke-dasharray="6,4"/>
+<line x1="580.0" y1="233.8" x2="910.0" y2="81.1" stroke="#1c1c1e" stroke-width="3.5" stroke-linecap="round"/>
+<text x="745.0" y="42" font-size="15" fill="#1c1c1e" text-anchor="middle" font-weight="700">HIGH — every rectangle over the line</text>
+<text x="500" y="352" font-size="15" fill="#48484a" text-anchor="middle" font-weight="400">The staircase never crosses the line — that is what makes one a floor and the other a ceiling.</text>
+</svg>
