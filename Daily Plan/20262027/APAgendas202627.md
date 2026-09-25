@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.09.28 **AP Physics**
+
+##### **❓ of the 📅**: Is there intelligent life elsewhere in the universe? Why or why not? 👽
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish VT Graphs
+2. Discuss VT Graph Idea
+3. Fan Cart Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Calculate Displacement from a VT Graph5_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.25 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉
