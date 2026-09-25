@@ -4,59 +4,161 @@ theme: default
 paginate: true
 math: mathjax
 style: |
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
   :root {
-    --color-bg: #FFFCF0;
-    --color-fg: #100F0F;
-    --color-blue: #205EA6;
-    --color-cyan: #24837B;
-    --color-green: #66800B;
-    --color-orange: #BC5215;
-    --color-red: #AF3029;
-    --color-purple: #5E409D;
-    --color-muted: #6F6E69;
+    --deep:    #070A14;
+    --deep-2:  #0E1326;
+    --panel:   rgba(255,255,255,0.045);
+    --panel-2: rgba(255,255,255,0.075);
+    --edge:    rgba(255,255,255,0.14);
+    --fg:      #E9ECF7;
+    --muted:   #A9B3D2;
+    --star:    #6FD3E8;
+    --nebula:  #B794F6;
+    --solar:   #F5C542;
+    --plasma:  #FF9245;
+    --coral:   #FF7A7A;
+    --aurora:  #7FD1A4;
   }
   section {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--deep);
+    background-image:
+      radial-gradient(1300px 760px at 80% -14%, rgba(183,148,246,0.20), transparent 62%),
+      radial-gradient(1000px 640px at 4% 110%, rgba(111,211,232,0.14), transparent 62%),
+      radial-gradient(760px 520px at 50% 50%, rgba(255,146,69,0.05), transparent 70%),
+      radial-gradient(1.3px 1.3px at 24px 36px,   rgba(255,255,255,0.55), transparent 100%),
+      radial-gradient(1px 1px     at 148px 96px,  rgba(255,255,255,0.32), transparent 100%),
+      radial-gradient(1.5px 1.5px at 266px 198px, rgba(255,255,255,0.48), transparent 100%),
+      radial-gradient(1px 1px     at 74px 254px,  rgba(255,255,255,0.28), transparent 100%),
+      radial-gradient(1.2px 1.2px at 338px 62px,  rgba(255,255,255,0.40), transparent 100%),
+      radial-gradient(1px 1px     at 200px 300px, rgba(255,255,255,0.26), transparent 100%);
+    background-size:
+      100% 100%, 100% 100%, 100% 100%,
+      420px 340px, 420px 340px, 420px 340px, 420px 340px, 420px 340px, 420px 340px;
+    background-repeat:
+      no-repeat, no-repeat, no-repeat,
+      repeat, repeat, repeat, repeat, repeat, repeat;
+    color: var(--fg);
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-size: 26px;
     padding: 40px 60px;
   }
-  h1 {
-    color: var(--color-blue);
-    font-size: 1.8em;
-    border-bottom: 3px solid var(--color-blue);
-    padding-bottom: 8px;
+  section::after {
+    color: var(--muted);
+    font-size: 0.55em;
+    letter-spacing: 0.08em;
   }
-  h2 { color: var(--color-cyan); font-size: 1.4em; }
-  h3 { color: var(--color-purple); font-size: 1.15em; }
-  strong { color: var(--color-blue); }
-  em { color: var(--color-muted); }
+  h1 {
+    color: var(--star);
+    font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.75em;
+    letter-spacing: -0.015em;
+    border-bottom: none;
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  h1::after {
+    content: '';
+    position: absolute; left: 0; bottom: 0; height: 3px; width: 100%;
+    background: linear-gradient(90deg, var(--star) 0%, var(--nebula) 42%, var(--solar) 72%, rgba(245,197,66,0) 100%);
+    border-radius: 3px;
+  }
+  h2 {
+    color: var(--solar);
+    font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.35em;
+  }
+  h3 {
+    color: var(--nebula);
+    font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.15em;
+  }
+  strong { color: #FFD971; }
+  em { color: var(--muted); }
+  a { color: var(--star); }
+  mjx-container, .MathJax { color: var(--fg) !important; }
   blockquote {
-    border-left: 4px solid var(--color-orange);
-    background: #F2F0E5;
+    border-left: 4px solid var(--plasma);
+    background: var(--panel);
+    color: var(--fg);
     padding: 12px 20px;
     margin: 12px 0;
     font-size: 0.95em;
+    border-radius: 0 8px 8px 0;
   }
-  blockquote strong { color: var(--color-orange); }
-  table {
-    font-size: 0.85em;
+  blockquote strong { color: var(--plasma); }
+  /* Tables: high-specificity so they beat Marp's default zebra striping. */
+  section table {
+    font-size: 0.86em;
     border-collapse: collapse;
-    width: 100%;
+    display: table;
+    width: auto;
+    max-width: 100%;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: transparent;
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 8px;
+    overflow: hidden;
   }
-  th {
-    background: var(--color-blue);
-    color: white;
-    padding: 8px 12px;
-    text-align: left;
+  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+     These rules use a pseudo-class too, so they outrank it. */
+  section table tr:nth-child(2n),
+  section table tr:nth-child(2n+1),
+  section table thead tr:nth-child(n),
+  section table tbody tr:nth-child(n) { background-color: transparent; }
+  section table th {
+    background-color: #1B2447;
+    background-image: linear-gradient(90deg, rgba(111,211,232,0.26), rgba(183,148,246,0.26));
+    color: #FFFFFF;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    padding: 9px 13px;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    border-bottom: 2px solid rgba(111,211,232,0.60);
   }
-  td {
-    padding: 6px 12px;
-    border-bottom: 1px solid #E6E4D9;
+  section table td {
+    padding: 8px 13px;
+    color: #EFF2FB;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  tr:nth-child(even) { background: #F2F0E5; }
-  th strong { color: white; }
+  /* Column alignment utilities. Short label/number columns stay centred;
+     add lt1..lt4 to a slide's _class to left-align that column (head + cells),
+     or "lefttable" to left-align every column. */
+  section.lefttable table th,
+  section.lefttable table td { text-align: left; }
+  section.lt1 table th:nth-child(1), section.lt1 table td:nth-child(1),
+  section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
+  section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
+  section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
+  /* Opaque row colours so nothing underneath can show through. */
+  section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
+  section table tbody tr:nth-child(even) td { background-color: #19203D; }
+  section table tbody tr:last-child td { border-bottom: none; }
+  section table th strong,
+  section table th em { color: #FFFFFF; }
+  section table td em { color: #B9C2DE; }
+  section iframe {
+    display: block;
+    width: 912px;
+    height: 513px;              /* exact 16:9 */
+    margin: 6px auto 0 auto;
+    border: 1px solid var(--edge);
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 12px 44px rgba(0,0,0,0.55);
+  }
   section.compact { font-size: 22px; }
   .columns { display: flex; gap: 40px; }
   .col { flex: 1; }
@@ -66,71 +168,118 @@ style: |
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image:
+      radial-gradient(1100px 720px at 50% 18%, rgba(183,148,246,0.30), transparent 62%),
+      radial-gradient(900px 620px at 18% 96%, rgba(111,211,232,0.20), transparent 64%),
+      radial-gradient(700px 480px at 88% 88%, rgba(255,146,69,0.16), transparent 66%),
+      radial-gradient(1.3px 1.3px at 24px 36px,   rgba(255,255,255,0.70), transparent 100%),
+      radial-gradient(1px 1px     at 148px 96px,  rgba(255,255,255,0.45), transparent 100%),
+      radial-gradient(1.6px 1.6px at 266px 198px, rgba(255,255,255,0.62), transparent 100%),
+      radial-gradient(1px 1px     at 74px 254px,  rgba(255,255,255,0.38), transparent 100%),
+      radial-gradient(1.2px 1.2px at 338px 62px,  rgba(255,255,255,0.52), transparent 100%),
+      radial-gradient(1px 1px     at 200px 300px, rgba(255,255,255,0.34), transparent 100%);
   }
   section.title-slide h1 {
     border-bottom: none;
-    font-size: 2.2em;
+    font-size: 2.3em;
+    background: linear-gradient(100deg, #FFFFFF 0%, var(--star) 38%, var(--nebula) 74%, var(--solar) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--star);
   }
+  section.title-slide h1::after { display: none; }
   section.title-slide h2 {
-    color: var(--color-muted);
-    font-weight: normal;
+    color: var(--fg);
+    font-weight: 500;
+    opacity: 0.88;
   }
+  section.title-slide h3 { color: var(--muted); font-weight: 500; }
   section.phase-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: var(--color-blue);
-    color: white;
+    background-color: #04060F;
+    background-image:
+      radial-gradient(780px 520px at 20% 14%, rgba(111,211,232,0.30), transparent 66%),
+      radial-gradient(720px 500px at 84% 88%, rgba(183,148,246,0.34), transparent 66%),
+      radial-gradient(520px 380px at 62% 46%, rgba(255,146,69,0.14), transparent 70%),
+      radial-gradient(1.6px 1.6px at 24px 36px,   rgba(255,255,255,0.95), transparent 100%),
+      radial-gradient(1.2px 1.2px at 148px 96px,  rgba(255,255,255,0.70), transparent 100%),
+      radial-gradient(1.8px 1.8px at 266px 198px, rgba(255,255,255,0.88), transparent 100%),
+      radial-gradient(1.1px 1.1px at 74px 254px,  rgba(255,255,255,0.62), transparent 100%),
+      radial-gradient(1.4px 1.4px at 338px 62px,  rgba(255,255,255,0.78), transparent 100%),
+      radial-gradient(1.2px 1.2px at 200px 300px, rgba(255,255,255,0.58), transparent 100%);
+  }
+  section.phase-title, section.title-slide {
+    background-size:
+      100% 100%, 100% 100%, 100% 100%,
+      300px 240px, 300px 240px, 300px 240px, 300px 240px, 300px 240px, 300px 240px;
   }
   section.phase-title h1 {
-    color: white;
-    border-bottom: 3px solid white;
-    font-size: 2.4em;
+    color: #FFFFFF;
+    font-size: 2.5em;
+    letter-spacing: 0.06em;
+    border-bottom: none;
   }
-  section.phase-title h2 {
-    color: rgba(255,255,255,0.85);
-    font-size: 1.3em;
+  section.phase-title h1::after {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #FFFFFF 22%, #FFFFFF 78%, transparent);
   }
-  section.phase-title strong { color: white; }
+  section.phase-title h2 { color: rgba(255,255,255,0.82); font-size: 1.3em; font-weight: 500; }
+  section.phase-title strong { color: #FFFFFF; }
   .key-idea {
-    background: #DAE6CF;
-    border-left: 4px solid var(--color-green);
+    background: rgba(127,209,164,0.12);
+    border-left: 4px solid var(--aurora);
     padding: 12px 20px;
     margin: 12px 0;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 8px 8px 0;
   }
+  .key-idea strong { color: var(--aurora); }
   .warning {
-    background: #FCEBD0;
-    border-left: 4px solid var(--color-orange);
+    background: rgba(255,122,122,0.12);
+    border-left: 4px solid var(--coral);
     padding: 12px 20px;
     margin: 12px 0;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 8px 8px 0;
   }
+  .warning strong { color: var(--coral); }
   .vocab {
-    background: #E8E0F0;
-    border-left: 4px solid var(--color-purple);
+    background: rgba(183,148,246,0.14);
+    border-left: 4px solid var(--nebula);
     padding: 12px 20px;
     margin: 12px 0;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 8px 8px 0;
   }
-  footer {
-    font-size: 0.6em;
-    color: var(--color-muted);
+  .vocab strong { color: var(--nebula); }
+  footer { font-size: 0.6em; color: var(--muted); }
+  .small { font-size: 0.7em; color: var(--muted); }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--edge);
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin: 10px 0;
   }
-  .small { font-size: 0.7em; color: var(--color-muted); }
+  .steps { background: rgba(111,211,232,0.10); border-left: 4px solid var(--star);
+           padding: 12px 20px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+  .steps strong { color: var(--star); }
   /* ---- spectrum bars (400–700 nm; left% = (λ − 400) / 3) ---- */
   .specrow { display: flex; align-items: center; gap: 16px; margin: 6px 0; }
-  .speclabel { width: 170px; text-align: right; font-size: 0.8em; font-weight: bold; }
+  .speclabel { width: 170px; text-align: right; font-size: 0.8em; font-weight: bold; color: var(--fg); }
   .spec {
-    position: relative; flex: 1; height: 44px; border: 1px solid #555;
+    position: relative; flex: 1; height: 44px;
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 3px;
+    box-shadow: 0 0 18px rgba(111,211,232,0.18);
     background: linear-gradient(to right, #7f00ff 0%, #3b3bff 13%, #00b4ff 27%, #00e08a 37%, #7fff00 50%, #ffff00 60%, #ff9900 70%, #ff3300 82%, #b00000 100%);
   }
-  .spec.dark { background: #111; }
+  .spec.dark { background: #04060D; box-shadow: none; }
   .spec .ln { position: absolute; top: 0; bottom: 0; width: 3px; background: #000; transform: translateX(-1px); }
   .spec.dark .ln { width: 4px; }
-  .axis { position: relative; flex: 1; height: 22px; font-size: 0.6em; color: var(--color-muted); }
+  .axis { position: relative; flex: 1; height: 22px; font-size: 0.6em; color: var(--muted); }
   .axis span { position: absolute; transform: translateX(-50%); }
 ---
 
@@ -155,6 +304,33 @@ DECK NOTE: This deck uses inline HTML (spectrum bars, callouts). Enable HTML in 
 
 ---
 
+<!-- _class: lt3 -->
+
+# 🗺️ Unit Roadmap
+
+| | Lesson | What we figure out | PE |
+|---|---|---|---|
+| **L0** | Unit Opening | What makes Earth the only planet here that has sustained life? | — |
+| **L1** | ☀️ How the Sun Works | How has the Sun given Earth the *right* energy for so long? | HS-ESS1-1 |
+| **L2** | ✨ Star Life Cycles | Does the exoplanet have a star like our Sun? | HS-ESS1-1, -3 |
+| **L3** | 🪐 Planets and Orbits | Is the exoplanet the right distance from its star? | HS-ESS1-4 |
+| **L4** | 🏁 Unit Closing | **Which exoplanet is most Earth-like?** | all three |
+
+<div class="key-idea">
+
+Every lesson ends the same way: **revise your model in the PTO.** Those models become the **criteria** you use to choose an exoplanet in L4.
+
+</div>
+
+<!--
+TEACHER MOVE: Show once at the launch and return to it at each lesson transition. Students should be able to say where they are in the storyline at any point.
+WHY THIS SLIDE: Unit coherence is the central design claim of the unit plan — "there should be a clear and explicit unit storyline that guides the sequence of activities" from the students' perspective. This deck covers L0 and L1 only.
+TIMING: Whole unit = 23–29 days. L0 = 2 days, L1 = 6, L2 = 7, L3 = 7–9, L4 = 1–5.
+NOTE: The abstracted science question for the unit is "How do stars affect the planets that orbit them?" — do NOT lead with it. The student-facing anchor question is the one that drives engagement.
+-->
+
+---
+
 <!-- _class: phase-title -->
 
 # UNIT OPENING
@@ -167,12 +343,6 @@ ROUTINE: Domino Discover.
 TIMING: 2 days. Suggested Day 1: Surfacing ideas → timeline → initial model. Day 2: Tell the Story → solutions → performance task → DQB.
 MATERIALS: PTO (Life in the Solar System Timeline, Initial Model, Tell the Story, Introducing the Performance Task), Planet Earth II trailer, The Hidden Impacts of Climate Change video, How Many Planets are in the Milky Way? video, poster paper, sticky notes, chart paper, DQB Cards (scaffold).
 -->
-
----
-
-# Life on Earth
-
-<iframe width="1000" height="515" src="https://www.youtube.com/embed/c8aFcHFu8QM?si=_LyU0aJnbYcyQ1e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
@@ -211,6 +381,16 @@ TRANSITION: Distribute the Life in the Solar System Timeline (PTO p. 2) — pair
 -->
 
 ---
+
+
+# Life on Earth
+
+<iframe width="912" height="513" src="https://www.youtube.com/embed/c8aFcHFu8QM?si=_LyU0aJnbYcyQ1e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
+<!-- _class: lt2 -->
 
 # Life in the Solar System Timeline
 
@@ -273,7 +453,7 @@ TRANSITION SCRIPT: "Out of all the planets in the solar system, Earth has life! 
 
 ---
 
-# Anchor Phenomenon
+# ⚓ Anchor Phenomenon
 
 > **Out of all the planets in the solar system, Earth has life! Earth didn't have life for a long time, and now it does.**
 
@@ -331,9 +511,47 @@ TIMING: ~25 min.
 
 ---
 
+# Earth Under Stress
+
+<div class="columns">
+<div class="col">
+
+Earth has been an ideal place for humans and other living things for about **12,000 years.**
+
+**Now:**
+- Rising global temperatures
+- Sea levels rising; more floods and droughts
+- Groups of people forced to leave their homes
+- A rapid worldwide decline in species
+
+</div>
+<div class="col">
+
+<div class="warning">
+
+Many scientists call the current decline in species the **Sixth Mass Extinction.**
+
+</div>
+
+Earth is becoming less and less welcoming because of human impact — and our population keeps growing.
+
+</div>
+</div>
+
+> **As you watch and read:** What details tell the story of what is *starting* to happen to planet Earth?
+
+<!--
+TRANSITION SCRIPT (from the plan): "While Earth has been habitable for a long time now, scientists are concerned about the stresses Earth has been experiencing in recent decades and what it means in terms of its capacity to sustain life as we know it in the future."
+TEACHER MOVE: Frame the video and the three texts as one task — the class is collaboratively telling the story of what is happening to Earth.
+WATCH FOR: Students jumping to causes or solutions. Redirect to the phenomenon: what is happening, not why or what to do.
+TIMING: ~3 min, then straight into the video.
+-->
+
+---
+
 # Hidden Impacts of Climate Change
 
-<iframe width="1000" height="515" src="https://www.youtube.com/embed/u6GRYrv2e3M?si=LRaUEON4VCd8ms8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="912" height="513" src="https://www.youtube.com/embed/u6GRYrv2e3M?si=LRaUEON4VCd8ms8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
@@ -432,6 +650,43 @@ TIMING: ~15 min.
 
 ---
 
+# Routine: Domino Discover
+
+<div class="columns">
+<div class="col">
+
+<div class="steps">
+
+1. Each group decides which **two ideas** to share
+2. One group shares — the teacher **charts** it
+3. The next group **adds on** without repeating what's already up
+4. Keep going around the room, **domino style**
+5. Anyone may add a question or a connection
+
+</div>
+
+</div>
+<div class="col">
+
+<div class="key-idea">
+
+**Why we do this:** everyone's thinking becomes visible to the whole class — and it tells us as a class whether we're ready to move on.
+
+</div>
+
+*You'll see this routine again in the Sun investigation and at the Driving Question Board.*
+
+</div>
+</div>
+
+<!--
+ROUTINE — Domino Discover: first use in the unit (unless you used it at the Anchor Phenomenon launch). It surfaces students' thinking to the whole class AND to the teacher, lets students learn from each other, and lets you assess readiness to move to the next phase. See the Unit 1 Teacher Guide.
+WHY A SLIDE: Domino Discover is used three times across L0–L1 (Brainstorm Solutions, Explore summary, DQB revisit), but unlike Rumors, Class Consensus Discussion, and Idea Carousel it previously had no student-facing steps. Post it.
+TEACHER MOVE: Chart as they go. Resist summarizing for them.
+-->
+
+---
+
 # Performance Task
 
 <div class="warning">
@@ -462,7 +717,7 @@ TIMING: ~15 min.
 
 # How Many Planets:
 
-<iframe width="1000" height="515" src="https://www.youtube.com/embed/d9x9RRc0RoU?si=SgzljJFWrj385sxr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="912" height="513" src="https://www.youtube.com/embed/d9x9RRc0RoU?si=SgzljJFWrj385sxr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
@@ -484,6 +739,8 @@ TIMING: ~25 min.
 -->
 
 ---
+
+<!-- _class: lt2 -->
 
 # Example DQB Categories
 
@@ -563,6 +820,21 @@ TIMING: ~10 min.
 
 ---
 
+# NASA Footage of the Sun
+
+<iframe width="912" height="513" src="https://www.youtube.com/embed/UJTo1Hc8fAk" title="NASA Footage of the Sun" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div class="small">These images are enhanced by the telescope — the colors are not the Sun's actual color.</div>
+
+<!--
+TEACHER MOVE: Show after students jot their own ideas about the Sun. Tell them the telescope enhances the images so we can see more detail of the Sun's appearance and behavior, and that the enhancement makes it appear colors other than its actual color.
+EXPECTED RESPONSES: looks like lava • flames shooting out • there are explosions in it • some parts are darker • it seems to have gas in it.
+DO NOT CORRECT: "flames" and "explosions" are exactly the ideas the Elaborate phase is designed to test. Record them.
+TIMING: ~5 min.
+-->
+
+---
+
 # Investigative Phenomenon
 
 > **Our Sun releases about 2.4 × 10³⁹ MeV of energy every second** — far more energy than the entire world uses in a whole day!
@@ -619,6 +891,8 @@ TIMING: ~5 min.
 -->
 
 ---
+
+<!-- _class: lt1 lt2 -->
 
 # How Does the Sun Provide So Much Energy?
 
@@ -709,6 +983,46 @@ ROUTINE: Domino Discover (whole-class investigation summary).
 TIMING: ~1.5 class periods.
 MATERIALS: Light from the Sun Investigation, Making Sense (See-Think-Wonder), Investigation Rubric, Three Views Spectrum Demonstrator simulation; optional handheld spectroscopes.
 LAUNCH: "We can't take the Sun apart. First we'll learn about a tool for observing it from far away, then we'll look at data gathered with that tool." Ask what makes this an investigation — revisit at the end.
+-->
+
+---
+
+# What Makes This an Investigation?
+
+<div class="columns">
+<div class="col">
+
+> **We can't take the Sun apart. We have to observe it from far away.**
+
+**The plan:**
+1. First, learn about a **tool** for observing the Sun from far away
+2. Then, look at **data** gathered with that tool
+3. Then, use that data as **evidence** for a claim
+
+</div>
+<div class="col">
+
+<div class="panel">
+
+🔗 **Three Views Spectrum Demonstrator**
+
+`astro.unl.edu/classaction/`
+`animations/light/threeviewsspectra.html`
+
+Groups of **2–3**, one laptop per group.
+
+</div>
+
+</div>
+</div>
+
+> **Hold onto this question:** what makes this process an *investigation*? We'll come back to it at the end.
+
+<!--
+TEACHER MOVE (launch, from the plan): Remind students that at the end of Engage they surfaced that we cannot investigate the Sun by taking it apart. Preview the flow, then ask them to consider what makes this process an investigation — and tell them you will return to it.
+WHY A SLIDE: The plan poses this question at launch and says to discuss it at the end; it needs to be visible both times. See the "Wrapping Up the Investigation" slide at the end of Explore.
+MATERIALS: Investigating Light from the Sun handout (packet Part B), Investigation Rubric.
+ACCESS FOR ALL: If handheld spectroscopes are available, let students look at a bulb first and share out. This evens the playing field before the simulator.
 -->
 
 ---
@@ -816,6 +1130,8 @@ ACCURACY NOTE: These packet spectra show only hydrogen's four lines. Helium evid
 
 ---
 
+<!-- _class: lt3 -->
+
 # Part 3: Spectra of Gases in a Lab
 
 | Gas | Samples 1, 2, 3 | Where are the lines? |
@@ -859,6 +1175,8 @@ NOTE: Hide the Sun-strip annotation until after students answer.
 
 ---
 
+<!-- _class: lefttable -->
+
 # See – Think – Wonder
 
 | SEE — pattern in the data | THINK — what could it mean? | WONDER — questions |
@@ -875,6 +1193,49 @@ ACCESS FOR MULTILINGUAL LEARNERS: Domino Discover provides comprehensible input 
 IF ASKED WHY (beyond assessment boundary): Electrons in atoms can only have certain energies, so an atom absorbs only photons that match a jump between levels. Different elements → different levels → different lines (PS4.B).
 WRAP-UP: Investigation Rubric (self + partner). Revisit "What made this an investigation?"
 NOTE: Reveal table cells progressively after students share.
+-->
+
+---
+
+# Wrapping Up the Investigation
+
+<div class="columns">
+<div class="col">
+
+**Back to our launch question:**
+
+> What made this process an **investigation**?
+
+- We had a **question** we couldn't answer just by looking
+- We used a **tool** to gather data we couldn't get by eye
+- We took **repeated** observations
+- We looked for **patterns** — and cited evidence for them
+- We used those patterns to support a **claim**
+
+</div>
+<div class="col">
+
+**Investigation Rubric**
+
+1. Score **yourself**
+2. Score your **partner**
+3. Compare — where do you disagree, and why?
+
+<div class="key-idea">
+
+A pattern isn't a pattern until you can point to the **numbers** that show it.
+
+</div>
+
+</div>
+</div>
+
+<!--
+TEACHER MOVE: Close the Explore phase by returning to the launch question and completing the Investigation Rubric (self + partner).
+WHY A SLIDE: The plan says to "come back and discuss this at the end of the activity" — previously this lived only in presenter notes.
+FORMATIVE: Disagreements between self- and partner-scores are the useful part. Ask a pair to explain one.
+CCC #1 HS element: empirical evidence is needed to identify patterns — the key-idea box is the student-facing version of that element.
+TRANSITION: "We have a pattern. Now let's use it to make a claim."
 -->
 
 ---
@@ -916,6 +1277,8 @@ CLASSROOM SUPPORT: Keep this as a posted chart.
 
 ---
 
+<!-- _class: lt2 lt3 lt4 -->
+
 # How We Figure Out What the Sun Is Made Of
 
 | Step | White light | Hydrogen (lab) | The Sun |
@@ -937,6 +1300,8 @@ ACCESS FOR ALL: Images and repeated structure support emerging and transitioning
 -->
 
 ---
+
+<!-- _class: lt2 -->
 
 # Claim – Evidence – Reasoning
 
@@ -1046,6 +1411,39 @@ OTHER SUMMARY ITEMS — expected responses:
 DISCUSSION EXTENSION: Is a 4-point difference enough? How many students? Does the pattern tell us WHY? (No — a pattern is not a cause.)
 CCC #1 HS element: empirical evidence is needed to identify patterns.
 FORMATIVE: Collect from every student; use it to decide who needs to circle back before Elaborate.
+-->
+
+---
+
+# Summary Task: How Did We Learn Together?
+
+<div class="columns">
+<div class="col">
+
+Answer these individually. They're about **us**, not about the Sun.
+
+1. One thing that **went well** in our discussion
+2. One thing we can **improve** the next time we have a discussion
+3. One **person who helped me learn** today — and what you learned from them
+4. One idea **I contributed** to my group or my class
+
+</div>
+<div class="col">
+
+<div class="key-idea">
+
+Science is something people build **together.** Figuring out how our class does that is part of the work.
+
+</div>
+
+</div>
+</div>
+
+<!--
+TEACHER MOVE: Second half of the Summary Task (packet Part D). Exit ticket or homework, alongside the patterns items on the previous slide.
+IMPLEMENTATION TIP (from the plan): "This summary is really important!" It checks three things student by student: (1) how they are using the three dimensions to make sense of the Sun's release of energy; (2) how they and their peers are building knowledge together; (3) how they think the Class Consensus Discussion went.
+WHY A SLIDE: These four group-process items were previously missing from the deck entirely.
+COLLECT FROM EVERY STUDENT. Item 3 is also a quick read on who is — and isn't — being heard in group work.
 -->
 
 ---
@@ -1163,6 +1561,8 @@ MATH NOTE: The time ratio (10 billion ÷ 50,000 = 200,000) differs from the ener
 
 ---
 
+<!-- _class: lt1 -->
+
 # The Scale of Time
 
 | Time span | Years |
@@ -1217,6 +1617,8 @@ EXPECT: Some students notice cards that support neither claim.
 
 ---
 
+<!-- _class: lt1 lt3 -->
+
 # Sorting the Evidence
 
 | Evidence | Supports | Why |
@@ -1237,6 +1639,8 @@ KEY POINT (CCC #3): Scale links the evidence (energy of the Sun vs. each reactio
 -->
 
 ---
+
+<!-- _class: lt2 lt3 -->
 
 # Constructing an Evidence-Based Argument
 
@@ -1313,6 +1717,53 @@ IMPLEMENTATION TIP: These two questions create the "need to know" about the Sun'
 
 ---
 
+# From the Core to Earth
+
+<div class="columns">
+<div class="col">
+
+☢️ **Core** — fusion releases energy
+↓
+**Radiative zone** — energy travels as light, absorbed and re-emitted over and over
+↓
+**Convective zone** — hot gas rises, cooler gas sinks
+↓
+**Surface** — light finally escapes into space
+↓
+🌍 **Earth** — arrives about **8 minutes** later
+
+</div>
+<div class="col">
+
+<div class="key-idea">
+
+Energy leaves the Sun as **electromagnetic radiation** — light. It crosses empty space with **no matter in between.**
+
+</div>
+
+<div class="vocab">
+
+**Radiation** — energy transfer by electromagnetic waves; the only way energy can cross the vacuum of space
+
+</div>
+
+**This is the light you analyzed.** The spectrum you matched to hydrogen and helium *is* the Sun's energy arriving at Earth.
+
+</div>
+</div>
+
+<!--
+WHY THIS SLIDE: HS-ESS1-1's clarification statement puts the emphasis on "the energy transfer mechanisms that allow energy from nuclear fusion in the sun's core to reach Earth," and PS3.D(1) reads "Nuclear fusion processes in the center of the Sun release the energy that ultimately reaches Earth as radiation." The unit plan lists as a target student idea: "The energy produced by the Sun reaches Earth in the form of electromagnetic waves which cause Earth to heat up." Students need this before they revise their models — the rubric asks for energy radiating in all directions.
+KEY POINT: Close the loop with Explore. Students spent two days analyzing sunlight without naming it as the energy transfer itself. Say it out loud: the light IS the energy arriving.
+ASSESSMENT BOUNDARY: Don't go into photon random-walk physics or sub-atomic detail. Zones are context, not content to assess.
+SCALE HOOK (CCC #3): Energy takes ~8 minutes to cross from the Sun's surface to Earth — but tens of thousands of years to work its way out from the core. Good contrast if students ask.
+TEACHER MOVE: Have students point to where each step belongs on their poster before they start revising.
+-->
+
+---
+
+<!-- _class: lt2 -->
+
 # Revise Your Model: Idea Carousel
 
 **Your group:** Update your Unit Opening model on new chart paper — show why the Sun has supported a planet where life could exist and evolve.
@@ -1370,6 +1821,33 @@ RUBRIC (Proficient): H & He as particles • fusion in the core • energy radia
 RUBRIC NOTE: Rubric "reflection prompt 1" = PTO prompt 1; rubric "reflection prompt 2" = PTO prompt 4.
 RUBRIC USES: self-assessment; class critique of a fictional composite model; teacher scoring vs. self-scores; partner review — then revise.
 RELEVANCE PROMPTS: Consider a whole-class share and displaying responses.
+-->
+
+---
+
+# Connect to the Performance Task
+
+**In your PTO, answer these before you revise your model:**
+
+1. What is the **evidence for the patterns** you identified?
+2. How will those **patterns** change your model?
+3. How did you use the **scale of energy and time** to figure out how the Sun works?
+4. How do you think considering **scale** might be useful in thinking about **other phenomena**?
+
+<div class="key-idea">
+
+Prompts 1–2 are **Patterns** (CCC #1). Prompts 3–4 are **Scale, Proportion, and Quantity** (CCC #3) — the two lenses this whole 5E was built around.
+
+</div>
+
+<!--
+TEACHER MOVE: These are the PTO reflection prompts for How the Sun Works. Students respond BEFORE revising the drawing, then cite evidence and reasoning for any change they make.
+EXPECTED RESPONSES:
+1. Dark absorption lines in sunlight line up with hydrogen and helium lines; the same pattern repeats across every observation and every lab sample.
+2. The model should now show a MECHANISM instead of an arrow labeled "heat": H nuclei fusing into He in the core, releasing energy that travels outward and reaches Earth as radiation.
+3. The Sun has released energy at a nearly steady rate for ~4.6 billion years with enough hydrogen for billions more. No chemical process could do that for that long. Comparing the scale of the energy to the scale of the time is what rules out burning.
+4. Open response. Look for: a process can look completely different depending on the size or time span you examine it over — plate motion, erosion, climate change, population growth.
+FORMATIVE: Prompt 2 is the one that shows whether a student has moved from description to mechanism.
 -->
 
 ---
@@ -1450,6 +1928,8 @@ TRANSITION SCRIPT: "I'm noticing a lot of questions about how long other stars l
 
 ---
 
+<!-- _class: lefttable compact -->
+
 # Vocabulary Reference (1 of 2)
 
 | Term | Definition |
@@ -1469,6 +1949,8 @@ TEACHER MOVE: Reference slide for study/review. Per the plan's Access for All no
 -->
 
 ---
+
+<!-- _class: lefttable -->
 
 # Vocabulary Reference (2 of 2)
 

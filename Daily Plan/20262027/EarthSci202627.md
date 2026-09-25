@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2026.09.28 **Earth Science**
+
+##### **❓ of the 📅**: Is there intelligent life elsewhere in the universe? Why or why not? 👽 👾 🚀
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+
+0. Finish CER Tasks?
+1. Start Unit 1: [Discovering New Worlds](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_Discovering_New_Worlds_L0-L1_Slides.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Develop a question to research about the universe_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.25 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉

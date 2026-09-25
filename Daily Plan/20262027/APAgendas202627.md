@@ -15,7 +15,7 @@ math: mathjax
 
 ---
 
-# 2026.09.24 **AP Physics**
+# 2026.09.25 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉
 
