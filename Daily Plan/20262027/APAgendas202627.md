@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+# 2026.09.29 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. VT Graphs & Area
+    - Notes and _the rule_
+2. Ticker Tape Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use VT Graphs to calculate displacement_
+
+🥅 _Model changing velocity motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.28 **AP Physics**
 
 ##### **❓ of the 📅**: Is there intelligent life elsewhere in the universe? Why or why not? 👽
