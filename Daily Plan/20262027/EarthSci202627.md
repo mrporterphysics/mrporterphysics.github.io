@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2026.09.29 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Start Unit 1: [Discovering New Worlds](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_Discovering_New_Worlds_L0-L1_Slides.html)
+    - 🤔 _What makes life sustainable on Earth?_
+    - 🤔 _Where would we go if Earth **wasn't** habitable?_
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Develop ad question to research about the universe_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.28 **Earth Science**
 
 ##### **❓ of the 📅**: Is there intelligent life elsewhere in the universe? Why or why not? 👽 👾 🚀

@@ -18,6 +18,37 @@ math: mathjax
 
 ---
 
+# 2026.09.29 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Hand back quiz & discuss
+1. VT Graphs and Area Rule
+2. Ticker Tape Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use VT Graphs to calculate displacement_
+
+🥅 _Model changing velocity motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.25 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be a dragon or own a dragon? 🐉
