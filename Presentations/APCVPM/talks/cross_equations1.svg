@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 500" width="1440" height="500" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="1440" height="500" fill="none"/>
+<line x1="250.0" y1="90.0" x2="250.0" y2="302.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<line x1="120.0" y1="190.0" x2="380.0" y2="190.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<rect x="112.0" y="168.0" width="276.0" height="134.0" rx="14" stroke="#1e8449" stroke-dasharray="9 7" stroke-width="3" fill="none"/>
+<text x="250.0" y="118.0" font-size="30" fill="#c7c7cc" text-anchor="middle" font-weight="600">&#916;x</text>
+<text x="150.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="19">0</tspan></text>
+<text x="250.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">a</text>
+<text x="350.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="18">f</tspan></text>
+<text x="250.0" y="282.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;t</text>
+<text x="250" y="400" font-size="24" fill="#1c1c1e" text-anchor="middle" font-weight="700">v = v<tspan dy="7" font-size="15">0</tspan><tspan dy="-7" font-size="24"> + at</tspan></text>
+<text x="250" y="436" font-size="16" fill="#1e8449" text-anchor="middle">leaves out &#916;x</text>
+<line x1="720.0" y1="90.0" x2="720.0" y2="302.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<line x1="590.0" y1="190.0" x2="850.0" y2="190.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<rect x="582.0" y="90.0" width="186.0" height="212.0" rx="14" stroke="#d63031" stroke-dasharray="9 7" stroke-width="3" fill="none"/>
+<text x="720.0" y="118.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;x</text>
+<text x="620.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="19">0</tspan></text>
+<text x="720.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">a</text>
+<text x="820.0" y="200.0" font-size="30" fill="#c7c7cc" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="18">f</tspan></text>
+<text x="720.0" y="282.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;t</text>
+<text x="720" y="400" font-size="24" fill="#1c1c1e" text-anchor="middle" font-weight="700">&#916;x = v<tspan dy="7" font-size="15">0</tspan><tspan dy="-7" font-size="24">t + &#189;at&#178;</tspan></text>
+<text x="720" y="436" font-size="16" fill="#d63031" text-anchor="middle">leaves out v<tspan dy="6" font-size="14">f</tspan></text>
+<line x1="1190.0" y1="90.0" x2="1190.0" y2="302.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<line x1="1060.0" y1="190.0" x2="1320.0" y2="190.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<rect x="1052.0" y="90.0" width="276.0" height="132.0" rx="14" stroke="#2980b9" stroke-dasharray="9 7" stroke-width="3" fill="none"/>
+<text x="1190.0" y="118.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;x</text>
+<text x="1090.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="19">0</tspan></text>
+<text x="1190.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">a</text>
+<text x="1290.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="18">f</tspan></text>
+<text x="1190.0" y="282.0" font-size="30" fill="#c7c7cc" text-anchor="middle" font-weight="600">&#916;t</text>
+<text x="1190" y="400" font-size="24" fill="#1c1c1e" text-anchor="middle" font-weight="700">v&#178; = v<tspan dy="7" font-size="15">0</tspan><tspan dy="-7" font-size="24">&#178; + 2a&#916;x</tspan></text>
+<text x="1190" y="436" font-size="16" fill="#2980b9" text-anchor="middle">leaves out &#916;t</text>
+<text x="720" y="476" font-size="16" fill="#48484a" text-anchor="middle">Circle the four quantities your problem involves &#8212; that picks the equation.</text>
+</svg>

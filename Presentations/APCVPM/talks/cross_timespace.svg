@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 450" width="1260" height="450" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="1260" height="450" fill="none"/>
+<line x1="660.0" y1="100.0" x2="660.0" y2="312.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<line x1="530.0" y1="200.0" x2="790.0" y2="200.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<text x="660.0" y="128.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;x</text>
+<text x="560.0" y="210.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="19">0</tspan></text>
+<text x="660.0" y="210.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">a</text>
+<text x="760.0" y="210.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="18">f</tspan></text>
+<text x="660.0" y="292.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;t</text>
+<rect x="522" y="98" width="276" height="56" rx="12" stroke="#d63031" stroke-dasharray="8 6" stroke-width="2.5" fill="none"/>
+<rect x="522" y="180" width="276" height="56" rx="12" stroke="#2980b9" stroke-dasharray="8 6" stroke-width="2.5" fill="none"/>
+<rect x="522" y="262" width="276" height="56" rx="12" stroke="#d63031" stroke-dasharray="8 6" stroke-width="2.5" fill="none"/>
+<path d="M 270,178 Q 380,120 500,126" stroke="#d63031" stroke-dasharray="7 6" stroke-width="2.5" fill="none"/>
+<polygon points="514,124 498,116 500,134" fill="#d63031"/>
+<path d="M 270,222 Q 380,300 500,290" stroke="#d63031" stroke-dasharray="7 6" stroke-width="2.5" fill="none"/>
+<polygon points="514,290 498,282 500,300" fill="#d63031"/>
+<text x="150" y="196" font-size="26" fill="#d63031" text-anchor="middle" font-weight="700">time and</text>
+<text x="150" y="228" font-size="26" fill="#d63031" text-anchor="middle" font-weight="700">space</text>
+<path d="M 990,208 Q 900,208 818,208" stroke="#2980b9" stroke-dasharray="7 6" stroke-width="2.5" fill="none"/>
+<polygon points="804,208 820,200 820,216" fill="#2980b9"/>
+<text x="1120" y="196" font-size="23" fill="#2980b9" text-anchor="middle" font-weight="700">changes in</text>
+<text x="1120" y="226" font-size="23" fill="#2980b9" text-anchor="middle" font-weight="700">space over time</text>
+<text x="630" y="424" font-size="16" fill="#48484a" text-anchor="middle">The outer two are <tspan font-weight="700">where</tspan> and <tspan font-weight="700">when</tspan>. The middle row is <tspan font-weight="700">how fast that is changing</tspan>.</text>
+</svg>

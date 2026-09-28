@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 400" width="620" height="400" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="620" height="400" fill="none"/>
+<line x1="310.0" y1="85.0" x2="310.0" y2="297.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<line x1="180.0" y1="185.0" x2="440.0" y2="185.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<text x="310.0" y="113.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;x</text>
+<text x="210.0" y="195.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="19">0</tspan></text>
+<text x="310.0" y="195.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">a</text>
+<text x="410.0" y="195.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="18">f</tspan></text>
+<text x="310.0" y="277.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;t</text>
+<text x="310" y="330" font-size="17" fill="#48484a" text-anchor="middle">Five quantities describe any constant-acceleration motion.</text>
+<text x="310" y="358" font-size="17" fill="#1c1c1e" text-anchor="middle" font-weight="700">Every kinematic equation uses exactly four of them.</text>
+</svg>

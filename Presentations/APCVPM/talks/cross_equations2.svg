@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 500" width="1040" height="500" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="1040" height="500" fill="none"/>
+<line x1="280.0" y1="90.0" x2="280.0" y2="302.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<line x1="150.0" y1="190.0" x2="410.0" y2="190.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<rect x="232.0" y="90.0" width="186.0" height="212.0" rx="14" stroke="#c77700" stroke-dasharray="9 7" stroke-width="3" fill="none"/>
+<text x="280.0" y="118.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;x</text>
+<text x="180.0" y="200.0" font-size="30" fill="#c7c7cc" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="19">0</tspan></text>
+<text x="280.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">a</text>
+<text x="380.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="18">f</tspan></text>
+<text x="280.0" y="282.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;t</text>
+<text x="280" y="400" font-size="24" fill="#1c1c1e" text-anchor="middle" font-weight="700">&#916;x = v<tspan dy="6" font-size="14">f</tspan><tspan dy="-7" font-size="24">t &#8722; &#189;at&#178;</tspan></text>
+<text x="280" y="436" font-size="16" fill="#c77700" text-anchor="middle">leaves out v<tspan dy="6" font-size="12">0</tspan></text>
+<line x1="760.0" y1="90.0" x2="760.0" y2="302.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<line x1="630.0" y1="190.0" x2="890.0" y2="190.0" stroke="#e5e5ea" stroke-width="1.5"/>
+<rect x="622.0" y="90.0" width="276.0" height="212.0" rx="14" stroke="#7d3c98" stroke-dasharray="9 7" stroke-width="3" fill="none"/>
+<rect x="720.0" y="164.0" width="80.0" height="58.0" rx="12" stroke="#7d3c98" stroke-dasharray="9 7" stroke-width="3" fill="none"/>
+<text x="760.0" y="118.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;x</text>
+<text x="660.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="19">0</tspan></text>
+<text x="760.0" y="200.0" font-size="30" fill="#c7c7cc" text-anchor="middle" font-weight="600">a</text>
+<text x="860.0" y="200.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">v<tspan dy="8" font-size="18">f</tspan></text>
+<text x="760.0" y="282.0" font-size="30" fill="#1c1c1e" text-anchor="middle" font-weight="600">&#916;t</text>
+<text x="760" y="400" font-size="24" fill="#1c1c1e" text-anchor="middle" font-weight="700">&#916;x = &#189;(v<tspan dy="7" font-size="15">0</tspan><tspan dy="-7" font-size="24"> + v)&#916;t</tspan></text>
+<text x="760" y="436" font-size="16" fill="#7d3c98" text-anchor="middle">leaves out a</text>
+<text x="520" y="476" font-size="16" fill="#48484a" text-anchor="middle">Not on the reference table &#8212; but the trapezoid one is just the area of a v&#8211;t graph.</text>
+</svg>
