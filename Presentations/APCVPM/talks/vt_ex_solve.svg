@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 545" width="1200" height="545" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="1200" height="545" fill="none"/>
+
+<!-- ===== section 1 : represent mathematically ===== -->
+<text x="50.0" y="40.0" font-size="20" fill="#1c1c1e" text-anchor="start" font-weight="700">Represent Mathematically</text>
+<line x1="620.0" y1="60.0" x2="620.0" y2="310.0" stroke="#e5e5ea" stroke-width="2"/>
+
+<text x="80.0" y="82.0" font-size="15" fill="#8e8e93" text-anchor="start">acceleration &#8212; from the <tspan font-weight="700">slope</tspan></text>
+<text x="660.0" y="82.0" font-size="15" fill="#8e8e93" text-anchor="start">displacement &#8212; from the <tspan font-weight="700">area</tspan></text>
+
+<!-- left, row 1 -->
+<text x="210.0" y="137.0" font-size="22" fill="#1c1c1e" text-anchor="end">a  =  slope  =</text>
+<text x="250.0" y="120.0" font-size="20" fill="#1c1c1e" text-anchor="middle">&#916;v</text>
+<line x1="222.0" y1="130.0" x2="278.0" y2="130.0" stroke="#1c1c1e" stroke-width="2"/>
+<text x="250.0" y="158.0" font-size="20" fill="#1c1c1e" text-anchor="middle">&#916;t</text>
+<text x="305.0" y="137.0" font-size="22" fill="#1c1c1e" text-anchor="middle">=</text>
+<text x="400.0" y="120.0" font-size="20" fill="#1c1c1e" text-anchor="middle">v<tspan dy="6" font-size="14">f</tspan><tspan dy="-6" font-size="20"> &#8722; 0</tspan></text>
+<line x1="340.0" y1="130.0" x2="460.0" y2="130.0" stroke="#1c1c1e" stroke-width="2"/>
+<text x="400.0" y="158.0" font-size="20" fill="#1c1c1e" text-anchor="middle">t<tspan dy="6" font-size="14">f</tspan><tspan dy="-6" font-size="20"> &#8722; 0</tspan></text>
+
+<!-- left, row 2 -->
+<text x="300.0" y="247.0" font-size="22" fill="#1c1c1e" text-anchor="end">a  =</text>
+<text x="352.0" y="230.0" font-size="20" fill="#1c1c1e" text-anchor="middle">v<tspan dy="6" font-size="14">f</tspan></text>
+<line x1="328.0" y1="240.0" x2="378.0" y2="240.0" stroke="#1c1c1e" stroke-width="2"/>
+<text x="352.0" y="268.0" font-size="20" fill="#1c1c1e" text-anchor="middle">t<tspan dy="6" font-size="14">f</tspan></text>
+
+<!-- right -->
+<text x="660.0" y="137.0" font-size="22" fill="#1c1c1e" text-anchor="start">&#916;x  =  area under the v&#8211;t graph</text>
+<text x="726.0" y="192.0" font-size="22" fill="#1c1c1e" text-anchor="start">=  &#189; &#183; base &#183; height</text>
+<text x="660.0" y="247.0" font-size="22" fill="#1c1c1e" text-anchor="start">&#916;x  =  &#189; v<tspan dy="6" font-size="14">f</tspan><tspan dy="-6" font-size="22"> t</tspan><tspan dy="6" font-size="14">f</tspan></text>
+
+<!-- ===== divider ===== -->
+<line x1="40.0" y1="330.0" x2="1160.0" y2="330.0" stroke="#1c1c1e" stroke-width="2.5"/>
+
+<!-- ===== section 2 : solve and evaluate ===== -->
+<text x="50.0" y="374.0" font-size="20" fill="#1c1c1e" text-anchor="start" font-weight="700">Solve and Evaluate</text>
+<line x1="620.0" y1="394.0" x2="620.0" y2="530.0" stroke="#e5e5ea" stroke-width="2"/>
+
+<!-- left -->
+<text x="290.0" y="447.0" font-size="22" fill="#1c1c1e" text-anchor="end">a  =</text>
+<text x="360.0" y="430.0" font-size="20" fill="#1c1c1e" text-anchor="middle">28 m/s</text>
+<line x1="306.0" y1="440.0" x2="414.0" y2="440.0" stroke="#1c1c1e" stroke-width="2"/>
+<text x="360.0" y="468.0" font-size="20" fill="#1c1c1e" text-anchor="middle">20 s</text>
+<text x="230.0" y="518.0" font-size="24" fill="#d63031" text-anchor="start" font-weight="700">a  =  1.4 m/s<tspan dy="-8" font-size="16">2</tspan></text>
+
+<!-- right -->
+<text x="660.0" y="447.0" font-size="22" fill="#1c1c1e" text-anchor="start">&#916;x  =  &#189; (28 m/s)(20 s)</text>
+<text x="660.0" y="518.0" font-size="24" fill="#d63031" text-anchor="start" font-weight="700">&#916;x  =  280 m</text>
+</svg>

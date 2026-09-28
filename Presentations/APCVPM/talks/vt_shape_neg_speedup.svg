@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" width="600" height="460" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<rect width="600" height="460" fill="none"/>
+<text x="300.0" y="30.0" font-size="20" fill="#1c1c1e" text-anchor="middle" font-weight="700">Negative (&#8722;) Velocity, Negative (&#8722;) Acceleration</text>
+<defs><g id="car">
+<circle cx="-7.5" cy="-3.5" r="3" fill="#48484a"/>
+<circle cx="7.5" cy="-3.5" r="3" fill="#48484a"/>
+<rect x="-13" y="-11" width="26" height="7.5" rx="2" fill="#2980b9"/>
+<path d="M -6.5,-11 L -4,-17 L 6,-17 L 8,-11 Z" fill="#2980b9"/>
+</g></defs>
+<line x1="60.0" y1="105.0" x2="565.0" y2="105.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<use href="#car" transform="translate(545.0,105.0) scale(-1,1)"/>
+<use href="#car" transform="translate(516.0,105.0) scale(-1,1)"/>
+<use href="#car" transform="translate(429.0,105.0) scale(-1,1)"/>
+<use href="#car" transform="translate(283.0,105.0) scale(-1,1)"/>
+<use href="#car" transform="translate(80.0,105.0) scale(-1,1)"/>
+<line x1="455.0" y1="135.0" x2="538.0" y2="135.0" stroke="#8e8e93" stroke-width="2"/>
+<polygon points="548.0,135.0 536.0,130.0 536.0,140.0" fill="#8e8e93"/>
+<text x="445.0" y="140.0" font-size="14" fill="#8e8e93" text-anchor="end">+x</text>
+<line x1="100.0" y1="165.0" x2="100.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="155.0" y1="165.0" x2="155.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="210.0" y1="165.0" x2="210.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="265.0" y1="165.0" x2="265.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="320.0" y1="165.0" x2="320.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="375.0" y1="165.0" x2="375.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="430.0" y1="165.0" x2="430.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="485.0" y1="165.0" x2="485.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="540.0" y1="165.0" x2="540.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="100.0" y1="165.0" x2="540.0" y2="165.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="100.0" y1="217.5" x2="540.0" y2="217.5" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="100.0" y1="270.0" x2="540.0" y2="270.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="100.0" y1="322.5" x2="540.0" y2="322.5" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="100.0" y1="375.0" x2="540.0" y2="375.0" stroke="#e5e5ea" stroke-width="1"/>
+<polygon points="100.0,270.0 510.0,355.0 510.0,270.0" fill="#2980b9" fill-opacity="0.15" stroke="none"/>
+<line x1="100.0" y1="151.0" x2="100.0" y2="389.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<line x1="92.0" y1="270.0" x2="554.0" y2="270.0" stroke="#1c1c1e" stroke-width="2.5"/>
+<text x="91.0" y="188.0" font-size="19" fill="#8e8e93" text-anchor="end">+</text>
+<text x="91.0" y="275.0" font-size="15" fill="#8e8e93" text-anchor="end">0</text>
+<text x="91.0" y="362.0" font-size="19" fill="#8e8e93" text-anchor="end">&#8722;</text>
+<text x="562.0" y="276.0" font-size="16" fill="#48484a" text-anchor="start">t</text>
+<text transform="translate(58.0,270.0) rotate(-90)" font-size="14" fill="#48484a" text-anchor="middle">velocity</text>
+<polyline points="100.0,270.0 510.0,355.0" fill="none" stroke="#1c1c1e" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="300.0" y="420.0" font-size="15" fill="#48484a" text-anchor="middle">Below the axis &#8594; moving in the &#8722; direction</text>
+<text x="300.0" y="445.0" font-size="15" fill="#2980b9" text-anchor="middle" font-weight="700">Negative slope &#8594; negative acceleration. Speeding up.</text>
+</svg>

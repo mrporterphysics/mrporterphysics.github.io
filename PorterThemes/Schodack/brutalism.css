@@ -701,3 +701,45 @@ section.invert pre, section.dark pre {
   }
   section { background-image: none; }
 }
+
+iv.equations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  flex: 1;
+  align-content: start;
+}
+div.equations.cols-1 { grid-template-columns: minmax(0, 1fr); }
+div.equations.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+div.equation {
+  border: 2px solid var(--ink-line);
+  padding: 26px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+section.paper div.equation { border-color: var(--paper-line); background: var(--paper-card); }
+
+div.equation h1,
+div.equation h2,
+div.equation h3,
+div.equation h4 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--accent);
+}
+div.equation code { font-size: 42px; }
+div.equation mjx-container, div.equation .katex { font-size: 36px; color: var(--accent); }
+div.equation p { margin: 0; font-size: 22px; line-height: 1.3; color: var(--text-on-ink); }
+section.paper div.equation p { color: var(--dim-on-paper); }
+div.equation li { font-size: 22px; }
+sub, sup { font-size: 0.6em; line-height: 0; }
