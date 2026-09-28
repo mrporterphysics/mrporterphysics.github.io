@@ -26,7 +26,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. VT Graphs & Area
-    - Notes and _the rule_
+    - Notes and _the **area** rule_
 2. Ticker Tape Lab
 
 </div>
