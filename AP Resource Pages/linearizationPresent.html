@@ -36,8 +36,12 @@ body{
   background:var(--bg); color:var(--ink);
   font-family:'Fira Code','SF Mono','Monaco','Inconsolata','Roboto Mono',monospace;
   overflow:hidden;
-  /* Everything scales off this. Bumped by +/- so the room's back row can read it. */
-  font-size:clamp(15px, 1.15vw, 22px);
+  /* Everything on the page scales off this one value.
+     How big text LOOKS from the back of a room depends on what fraction of the
+     screen it covers, not on the pixel count — a 1366x768 projector fills the
+     same wall as a 1080p one. So the scale is driven by viewport HEIGHT, with a
+     width guard so a narrow window does not blow the columns out. */
+  font-size:clamp(15px, min(2.7vh, 2.2vw), 31px);
 }
 .stage{
   height:100vh;
@@ -49,27 +53,27 @@ body{
 /* ---------- top bar ---------- */
 .bar{display:flex; align-items:center; gap:.8rem; flex:0 0 auto}
 .eyebrow{
-  font-size:.85em; letter-spacing:.14em; text-transform:uppercase;
+  font-size:clamp(11px,.62em,15px); letter-spacing:.14em; text-transform:uppercase;
   color:var(--accent2); font-weight:700;
 }
 .bar .spacer{flex:1}
-.bar .meta{font-size:.8em; color:var(--dim)}
+.bar .meta{font-size:clamp(11px,.6em,15px); color:var(--dim)}
 
 h1{
   margin:0; font-family:'Inconsolata','SF Mono',monospace;
-  font-size:clamp(1.8rem, 3.4vw, 3.4rem); line-height:1.08; font-weight:700;
+  font-size:clamp(2rem, min(4.2vw, 7.4vh), 4.6rem); line-height:1.07; font-weight:700;
   letter-spacing:-.01em;
 }
 h2{
   margin:0; font-family:'Inconsolata','SF Mono',monospace;
-  font-size:clamp(1.4rem, 2.5vw, 2.5rem); line-height:1.15; font-weight:700;
+  font-size:clamp(1.6rem, min(3.2vw, 5.6vh), 3.3rem); line-height:1.13; font-weight:700;
 }
-.lede{font-size:clamp(1rem,1.4vw,1.35rem); line-height:1.45; color:var(--dim); max-width:70ch}
+.lede{font-size:clamp(1.1rem,min(1.85vw,3.3vh),1.9rem); line-height:1.45; color:var(--dim); max-width:66ch}
 
 /* ---------- body layout ---------- */
 .body{flex:1 1 auto; display:grid; gap:1.5rem; min-height:0}
 .body.split{
-  grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);
+  grid-template-columns:minmax(0,1.28fr) minmax(0,1fr);
   grid-template-rows:minmax(0,1fr);
 }
 .body.single{
@@ -87,7 +91,7 @@ h2{
    side by side instead of stacking into a tall column that overflows. */
 .prose-wrap{width:100%; max-width:120ch; margin:0 auto}
 .prose-wrap h2{max-width:34ch; margin-bottom:1.1rem}
-.cardgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(25ch,1fr));
+.cardgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(24ch,1fr));
   gap:1rem; align-items:start}
 .prose-foot{margin-top:1.2rem; max-width:72ch}
 .numlist{
@@ -104,40 +108,40 @@ h2{
 canvas{flex:1 1 auto; width:100%; min-height:0; display:block}
 .plotcap{
   flex:0 0 auto; text-align:center; padding-top:.5rem;
-  font-size:1.05em; font-weight:600; color:var(--dim);
+  font-size:1.12em; font-weight:600; color:var(--dim);
 }
 
-.side{display:flex; flex-direction:column; gap:1rem; min-height:0; overflow:auto}
+.side{display:flex; flex-direction:column; gap:.75rem; min-height:0; overflow:auto}
 .card{
   background:var(--panel); border:1px solid var(--rule);
-  border-left:5px solid var(--accent); border-radius:12px; padding:1.1rem 1.3rem;
+  border-left:5px solid var(--accent); border-radius:12px; padding:.85rem 1.1rem;
 }
-.card h3{margin:0 0 .5rem; font-size:1.15em; color:var(--accent); font-weight:700}
-.card p{margin:.4rem 0; line-height:1.55; font-size:1.02em}
+.card h3{margin:0 0 .35rem; font-size:1.22em; color:var(--accent); font-weight:700}
+.card p{margin:.35rem 0; line-height:1.5; font-size:1.08em}
 .card.ok{border-left-color:var(--ok)} .card.ok h3{color:var(--ok)}
 .card.no{border-left-color:var(--no)} .card.no h3{color:var(--no)}
 .card.warn{border-left-color:var(--warn)} .card.warn h3{color:var(--warn)}
 
 .theory{
-  font-size:clamp(1.2rem,2vw,2rem); font-weight:700; color:var(--accent2);
+  font-size:clamp(1.4rem,min(2.6vw,4.6vh),2.7rem); font-weight:700; color:var(--accent2);
   letter-spacing:.02em;
 }
 
 /* ---------- readouts ---------- */
-.readout{display:flex; flex-wrap:wrap; gap:.6rem}
+.readout{display:flex; flex-wrap:wrap; gap:.45rem}
 .chip{
   background:var(--bg); border:1px solid var(--rule); border-radius:8px;
-  padding:.5rem .85rem; font-size:1em; font-weight:600;
+  padding:.45rem .8rem; font-size:1.06em; font-weight:600;
 }
 .chip b{color:var(--accent); font-weight:700}
-.chip.big{font-size:1.3em; border-color:var(--ok); border-width:2px}
+.chip.big{font-size:1.38em; border-color:var(--ok); border-width:2px}
 .chip.big b{color:var(--ok)}
 
 .answer{
-  font-size:clamp(1.5rem,3vw,3rem); font-weight:700; color:var(--ok);
+  font-size:clamp(1.8rem,min(3.6vw,6.3vh),3.8rem); font-weight:700; color:var(--ok);
   line-height:1.2; margin:.3rem 0;
 }
-.mathline{font-size:1.25em; line-height:1.9; color:var(--ink)}
+.mathline{font-size:1.32em; line-height:1.75; color:var(--ink)}
 .mathline .op{color:var(--dim)}
 
 /* ---------- transform picker ---------- */
@@ -145,7 +149,7 @@ canvas{flex:1 1 auto; width:100%; min-height:0; display:block}
 .pick{
   background:var(--panel); color:var(--ink);
   border:2px solid var(--rule); border-radius:10px;
-  padding:.75rem 1.1rem; font:inherit; font-size:1.15em; font-weight:700;
+  padding:.65rem 1rem; font:inherit; font-size:1.22em; font-weight:700;
   cursor:pointer; transition:transform .12s ease, border-color .2s, background .2s;
 }
 .pick:hover{border-color:var(--accent); transform:translateY(-2px)}
@@ -165,7 +169,7 @@ canvas{flex:1 1 auto; width:100%; min-height:0; display:block}
 .dot{height:5px; flex:1 1 0; min-width:6px; background:var(--rule); border-radius:3px; transition:background .25s}
 .dot.done{background:var(--accent)}
 .dot.now{background:var(--accent2)}
-.hint{font-size:.78em; color:var(--dim); white-space:nowrap}
+.hint{font-size:clamp(10px,.58em,14px); color:var(--dim); white-space:nowrap}
 kbd{
   background:var(--panel); border:1px solid var(--rule); border-bottom-width:2px;
   border-radius:4px; padding:.1em .4em; font:inherit; font-size:.92em;
@@ -173,7 +177,7 @@ kbd{
 
 .ctl{
   background:var(--panel); border:1px solid var(--rule); color:var(--ink);
-  border-radius:7px; padding:.4rem .7rem; font:inherit; font-size:.8em;
+  border-radius:7px; padding:.35rem .65rem; font:inherit; font-size:clamp(11px,.6em,15px);
   font-weight:600; cursor:pointer;
 }
 .ctl:hover{border-color:var(--accent); color:var(--accent)}
@@ -203,14 +207,17 @@ kbd{
 }
 /* 768-tall projectors are still common; reclaim vertical space so the side
    panel never has to scroll during a lesson. */
-@media (max-height:820px){
-  .stage{padding:.7rem 2rem .55rem; gap:.55rem}
-  .card{padding:.75rem 1rem}
-  .card h3{margin-bottom:.3rem; font-size:1.05em}
-  .card p{margin:.3rem 0; font-size:.95em; line-height:1.45}
-  .side{gap:.7rem}
-  .chip{padding:.4rem .7rem; font-size:.92em}
-  .readout{gap:.45rem}
+@media (max-height:780px){
+  .stage{padding:.6rem 1.8rem .5rem; gap:.5rem}
+  .card{padding:.7rem .9rem}
+  .card h3{margin-bottom:.25rem}
+  .card p{margin:.25rem 0; line-height:1.42}
+  .side{gap:.6rem}
+  .chip{padding:.35rem .65rem}
+  .readout{gap:.4rem}
+  .lede{line-height:1.35}
+  .card p{line-height:1.38}
+  .mathline{line-height:1.6}
 }
 
 .fade{animation:fade .4s ease}
@@ -482,6 +489,35 @@ function drawPlot(){
 }
 
 /* =====================================================================
+   Fit-to-height
+
+   Type is sized off viewport height, but how many LINES a card wraps to
+   depends on the column's width — so a 1280x800 projector can overflow at a
+   size that fits fine on 1920x1080. Rather than hand-tune breakpoints, shrink
+   the offending panel until it actually fits. Nothing is ever clipped, and the
+   type stays as large as the room allows.
+   ===================================================================== */
+function fitToHeight(el, box, floor){
+  if(!el || !box) return;
+  el.style.fontSize = '';
+  if(box.scrollHeight <= box.clientHeight + 1) return;
+  var scale = 1;
+  for(var i = 0; i < 16 && scale > floor; i++){
+    scale -= 0.035;
+    el.style.fontSize = scale.toFixed(3) + 'em';
+    if(box.scrollHeight <= box.clientHeight + 1) return;
+  }
+}
+
+function fitStep(){
+  var side = document.querySelector('.side');
+  if(side) fitToHeight(side, side, 0.72);
+  var wrap = document.querySelector('.prose-wrap');
+  if(wrap) fitToHeight(wrap, body, 0.72);
+  drawPlot();
+}
+
+/* =====================================================================
    Rendering
    ===================================================================== */
 var head = document.getElementById('head');
@@ -498,9 +534,20 @@ function render(){
   document.getElementById('counter').textContent = (state.i + 1) + ' / ' + STEPS.length;
   renderDots();
 
-  if(st.kind === 'title')    return renderTitle(st);
-  if(st.kind === 'prose')    return renderProse(st);
-  if(st.kind === 'scenario') return renderScenario(st);
+  if(st.kind === 'title')    { renderTitle(st);    return schedFit(); }
+  if(st.kind === 'prose')    { renderProse(st);    return schedFit(); }
+  if(st.kind === 'scenario') { renderScenario(st); return schedFit(); }
+}
+
+var fitRaf;
+function schedFit(){
+  // Run immediately — reading scrollHeight forces layout, so this is accurate
+  // right away and does not depend on requestAnimationFrame firing (which the
+  // browser throttles in background tabs).
+  fitStep();
+  // Then once more after a frame, to catch late reflow (web fonts, scrollbars).
+  cancelAnimationFrame(fitRaf);
+  fitRaf = requestAnimationFrame(fitStep);
 }
 
 function renderDots(){
@@ -586,10 +633,10 @@ function renderSide(st){
     h += '<div class="card"><h3>What theory says</h3>' +
          '<p class="theory">' + esc(s.theory) + '</p></div>';
     h += '<div class="card warn"><h3>The problem</h3>' +
-         '<p>The data is curved. There is no slope to read, so there is no way to get ' +
+         '<p>Curved. No slope to read, so no way to get ' +
          esc(s.constantName) + ' out of this graph.</p></div>';
     h += '<div class="card"><h3>Ask the class</h3>' +
-         '<p>What should we put on the horizontal axis instead of ' + esc(s.xVar) + '?</p></div>';
+         '<p>What goes on the horizontal axis instead of ' + esc(s.xVar) + '?</p></div>';
   }
 
   if(st.phase === 'choose'){
@@ -610,7 +657,7 @@ function renderSide(st){
       var right = ev.correct;
       h += '<div class="card ' + (right ? 'ok' : 'no') + '">' +
            '<h3>' + (right ? (ev.exact ? 'That is it.' : 'That works too.') : 'Not that one.') + '</h3>' +
-           '<p>' + esc(ev.message || (s.headline || 'Straight. Now you can read a slope.')) + '</p>' +
+           '<p>' + esc(ev.message || 'Straight. Now there is a slope to read.') + '</p>' +
            '<p class="readout" style="margin-top:.7rem">' +
              '<span class="chip">R² <b>' + num(ev.fit.r2, 4) + '</b></span>' +
              (!right ? '<span class="chip">still bending <b>' +
@@ -621,7 +668,7 @@ function renderSide(st){
 
   if(st.phase === 'read'){
     h += '<div class="card ok"><h3>Straight — now read it</h3>' +
-         '<p>Slope and intercept both come straight off the graph. Both mean something.</p>' +
+         '<p>Both come straight off the graph.</p>' +
          '<p class="readout" style="margin-top:.8rem">' +
            '<span class="chip">slope <b>' + num(ev.fit.slope, 3) + '</b> ' + esc(ev.slopeUnits) + '</span>' +
            '<span class="chip">intercept <b>' + num(ev.fit.intercept, 3) + '</b> ' + esc(ev.interceptUnits) + '</span>' +
@@ -629,10 +676,11 @@ function renderSide(st){
          '</p></div>';
     h += '<div class="card"><h3>Check the units</h3>' +
          '<p>' + esc(ev.yUnits || '—') + ' ÷ ' + esc(ev.xUnits || '—') +
-         ' = <b>' + esc(ev.slopeUnits) + '</b>. You never choose slope units; the axes force them.</p></div>';
-    h += '<div class="card warn"><h3>About that intercept</h3>' +
-         '<p>It is ' + num(ev.fit.intercept, 3) + ', not exactly zero. Theory says it should be. ' +
-         'Ask the class what small systematic error would do that.</p></div>';
+         ' = <b>' + esc(ev.slopeUnits) + '</b></p>' +
+         '<p>The axes force this. You never pick it.</p></div>';
+    h += '<div class="card warn"><h3>That intercept</h3>' +
+         '<p>It is ' + num(ev.fit.intercept, 3) + ', not zero. Theory says zero.</p>' +
+         '<p>What systematic error would do that?</p></div>';
   }
 
   if(st.phase === 'extract'){
@@ -647,9 +695,9 @@ function renderSide(st){
            '<span class="chip big">off by <b>' + num(ev.percentError, 1) + '%</b></span>' +
          '</p></div>';
     if(s.headline){
-      h += '<div class="card warn"><h3>Notice</h3><p>' + esc(s.headline) +
-           ' The slope was ' + num(ev.fit.slope,2) + ', and ' + esc(s.constantName) +
-           ' is ' + num(ev.constant,2) + '. Reporting the slope would have been wrong.</p></div>';
+      h += '<div class="card warn"><h3>Notice</h3><p>' + esc(s.headline) + '</p>' +
+           '<p>Slope ' + num(ev.fit.slope,2) + '. ' + esc(s.constantName) + ' = ' +
+           num(ev.constant,2) + '. Reporting the slope would be wrong.</p></div>';
     }
   }
 
@@ -680,7 +728,7 @@ function choose(id){
   // Always start from the raw data so each attempt visibly re-bends the plot.
   state.mix = 0;
   renderSide(step());
-  drawPlot();
+  schedFit();
   animateTo(1, 850);
 }
 
@@ -755,7 +803,7 @@ document.querySelectorAll('.overlay').forEach(function(o){
 var rz;
 window.addEventListener('resize', function(){
   clearTimeout(rz);
-  rz = setTimeout(function(){ drawPlot(); }, 80);
+  rz = setTimeout(function(){ fitStep(); }, 80);
 });
 
 resetStep();

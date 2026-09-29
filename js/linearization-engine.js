@@ -403,12 +403,20 @@
     const ctx = g.ctx;
     const big = !!opts.big;
 
-    const fontSize   = big ? 20 : 12;
-    const labelSize  = big ? 26 : 14;
-    const padL = big ? 92 : 56;
-    const padB = big ? 74 : 48;
-    const padT = big ? 26 : 16;
-    const padR = big ? 32 : 20;
+    // In projector mode the plot's type is derived from the page's own base
+    // font size, so bumping the deck's type scales the axes with it instead of
+    // leaving 20px tick labels stranded next to 30px body text.
+    var base = 16;
+    if (big) {
+      try { base = parseFloat(getComputedStyle(document.body).fontSize) || 16; }
+      catch (e) { base = 22; }
+    }
+    const fontSize   = big ? Math.round(base * 0.92) : 12;
+    const labelSize  = big ? Math.round(base * 1.15) : 14;
+    const padL = big ? Math.round(fontSize * 2.6 + labelSize * 1.2) : 56;
+    const padB = big ? Math.round(fontSize * 1.3 + labelSize * 1.5) : 48;
+    const padT = big ? Math.round(labelSize) : 16;
+    const padR = big ? Math.round(labelSize * 1.2) : 20;
 
     const pts = opts.points || [];
     const xs = pts.map(function (p) { return p.x; });
@@ -443,7 +451,7 @@
 
     // axes
     ctx.strokeStyle = c.axis;
-    ctx.lineWidth = big ? 3 : 2;
+    ctx.lineWidth = big ? Math.max(2, Math.round(base * 0.11)) : 2;
     ctx.beginPath();
     ctx.moveTo(padL, padT);
     ctx.lineTo(padL, padT + plotH);
@@ -457,12 +465,12 @@
       ctx.textAlign = 'center';
       ctx.textBaseline = 'top';
       xTicks.forEach(function (t) {
-        ctx.fillText(fmtTick(t), sx(t), padT + plotH + (big ? 12 : 8));
+        ctx.fillText(fmtTick(t), sx(t), padT + plotH + (big ? Math.round(fontSize*0.45) : 8));
       });
       ctx.textAlign = 'right';
       ctx.textBaseline = 'middle';
       yTicks.forEach(function (t) {
-        ctx.fillText(fmtTick(t), padL - (big ? 12 : 8), sy(t));
+        ctx.fillText(fmtTick(t), padL - (big ? Math.round(fontSize*0.45) : 8), sy(t));
       });
     }
 
@@ -471,10 +479,10 @@
     ctx.font = '600 ' + labelSize + 'px "Fira Code", "SF Mono", monospace';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
-    if (opts.xLabel) ctx.fillText(opts.xLabel, padL + plotW / 2, g.h - (big ? 8 : 4));
+    if (opts.xLabel) ctx.fillText(opts.xLabel, padL + plotW / 2, g.h - (big ? Math.round(labelSize*0.25) : 4));
     if (opts.yLabel) {
       ctx.save();
-      ctx.translate(big ? 22 : 14, padT + plotH / 2);
+      ctx.translate(big ? Math.round(labelSize * 0.85) : 14, padT + plotH / 2);
       ctx.rotate(-Math.PI / 2);
       ctx.textBaseline = 'middle';
       ctx.fillText(opts.yLabel, 0, 0);
@@ -484,7 +492,7 @@
     // smooth theory curve
     if (opts.curve) {
       ctx.strokeStyle = opts.lineColor || c.line;
-      ctx.lineWidth = big ? 4 : 2.5;
+      ctx.lineWidth = big ? Math.max(3, base * 0.15) : 2.5;
       ctx.beginPath();
       let started = false;
       for (let i = 0; i <= 160; i++) {
@@ -505,7 +513,7 @@
       ctx.rect(padL, padT, plotW, plotH);
       ctx.clip();
       ctx.strokeStyle = opts.lineColor || c.line;
-      ctx.lineWidth = big ? 4 : 2.5;
+      ctx.lineWidth = big ? Math.max(3, base * 0.15) : 2.5;
       ctx.beginPath();
       ctx.moveTo(sx(xR[0]), sy(m * xR[0] + b));
       ctx.lineTo(sx(xR[1]), sy(m * xR[1] + b));
@@ -514,7 +522,7 @@
     }
 
     // data points
-    const r = big ? 8 : 5;
+    const r = big ? Math.max(6, Math.round(base * 0.30)) : 5;
     pts.forEach(function (p, i) {
       const inside = p.x >= xR[0] && p.x <= xR[1] && p.y >= yR[0] && p.y <= yR[1];
       if (!inside) return;
@@ -522,7 +530,7 @@
       ctx.arc(sx(p.x), sy(p.y), i === opts.highlight ? r * 1.5 : r, 0, 2 * Math.PI);
       ctx.fillStyle = opts.pointColor || c.point;
       ctx.fill();
-      ctx.lineWidth = big ? 2.5 : 1.5;
+      ctx.lineWidth = big ? Math.max(2, base * 0.09) : 1.5;
       ctx.strokeStyle = c.bg;
       ctx.stroke();
     });

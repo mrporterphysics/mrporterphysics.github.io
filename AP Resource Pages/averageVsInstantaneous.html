@@ -162,3 +162,695 @@ footer{background:var(--bg-tertiary);border-top:1px solid var(--border-color);pa
 </div>
 
 <main id="main" class="content">
+
+<section aria-labelledby="h-controls">
+  <h2 id="h-controls">1. Set up the motion</h2>
+  <p class="lede">Every number, graph and table entry on this page is recomputed from these three values. The default cart starts at 0.40 m/s and speeds up at 2.00 m/s&sup2;, sampled every 0.20 s.</p>
+
+  <div class="controls">
+    <fieldset>
+      <legend>Motion and sampling settings</legend>
+
+      <div class="ctl">
+        <label for="v0">Starting velocity v&#8320; (m/s)</label>
+        <input type="range" id="v0" min="0" max="3" step="0.1" value="0.4">
+        <output class="val" id="v0out" for="v0">0.40 m/s</output>
+      </div>
+
+      <div class="ctl">
+        <label for="acc">Acceleration a (m/s&sup2;)</label>
+        <input type="range" id="acc" min="0" max="5" step="0.1" value="2.0">
+        <output class="val" id="accout" for="acc">2.00 m/s&sup2;</output>
+      </div>
+
+      <div class="ctl">
+        <label for="dt">Sampling interval &Delta;t (s)</label>
+        <input type="range" id="dt" min="0.02" max="0.50" step="0.02" value="0.20">
+        <output class="val" id="dtout" for="dt">0.20 s</output>
+      </div>
+
+      <div class="ctl">
+        <label for="tstar">Time you were asked about t* (s)</label>
+        <input type="range" id="tstar" min="0" max="1.4" step="0.02" value="0.40">
+        <output class="val" id="tstarout" for="tstar">0.40 s</output>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Which interval did you use for &Delta;x/&Delta;t?</legend>
+      <div class="radios" role="radiogroup" aria-label="Interval choice">
+        <label><input type="radio" name="method" value="forward" checked> Forward: from t* to t*+&Delta;t</label>
+        <label><input type="radio" name="method" value="backward"> Backward: from t*&minus;&Delta;t to t*</label>
+        <label><input type="radio" name="method" value="central"> Centred: from t*&minus;&Delta;t to t*+&Delta;t</label>
+      </div>
+      <button type="button" class="secondary" id="resetBtn">Reset to defaults</button>
+    </fieldset>
+  </div>
+
+  <div class="readout" aria-live="polite" aria-atomic="true">
+    <h3>Live results</h3>
+    <dl>
+      <dt>True instantaneous velocity at t* (from v = v&#8320; + at)</dt>
+      <dd id="r-true">1.20 m/s</dd>
+      <dt>Your average velocity &Delta;x/&Delta;t over the chosen interval</dt>
+      <dd id="r-avg">1.40 m/s</dd>
+      <dt>Error if you label that answer &ldquo;the velocity at t*&rdquo;</dt>
+      <dd id="r-err" class="bad">+0.20 m/s (16.7% too fast)</dd>
+      <dt>The time your average velocity <em>actually</em> describes (interval midpoint)</dt>
+      <dd id="r-mid" class="good">t = 0.50 s</dd>
+      <dt>True instantaneous velocity at that midpoint time</dt>
+      <dd id="r-midv" class="good">1.40 m/s &mdash; an exact match</dd>
+    </dl>
+  </div>
+</section>
+
+<section aria-labelledby="h-table">
+  <h2 id="h-table">2. The data, and where the velocities land</h2>
+  <p class="lede">Notice the structure of the table: position values sit <em>on</em> the sampling times, but each &Delta;x/&Delta;t value sits <em>between</em> two rows. A run of <em>n</em> positions gives you only <em>n</em> &minus; 1 average velocities, and not one of them belongs to a time in the left-hand column.</p>
+
+  <div class="tablewrap" tabindex="0" role="region" aria-label="Position and time data table, scrollable">
+    <table id="dataTable">
+      <caption id="tableCaption">Position&ndash;time data and the average velocity of each interval. Shaded rows are the intervals; the average velocity of an interval belongs to the midpoint time shown, not to either endpoint.</caption>
+      <thead>
+        <tr>
+          <th scope="col">Time t (s)</th>
+          <th scope="col">Position x (m)</th>
+          <th scope="col">&Delta;x (m)</th>
+          <th scope="col">&Delta;x/&Delta;t (m/s)</th>
+          <th scope="col">Midpoint time (s)</th>
+          <th scope="col">True v at midpoint (m/s)</th>
+        </tr>
+      </thead>
+      <tbody id="dataBody"></tbody>
+    </table>
+  </div>
+
+  <div class="callout bad">
+    <h3>The trap</h3>
+    <p>A student asked for the velocity at t&nbsp;=&nbsp;0.40&nbsp;s looks at the table, finds the row labelled 0.40, grabs the &Delta;x/&Delta;t next to it, and writes it down. But that number was built from <em>two</em> different times. It cannot possibly be a property of one instant.</p>
+  </div>
+</section>
+
+<section aria-labelledby="h-xt">
+  <h2 id="h-xt">3. On the position&ndash;time graph: secant vs. tangent</h2>
+  <p class="lede">Average velocity is the slope of the straight line connecting two points on the curve (the <strong>secant</strong>). Instantaneous velocity is the slope of the line that just grazes the curve at one point (the <strong>tangent</strong>). On a parabola these slopes are never equal at the endpoints.</p>
+
+  <div class="legend" aria-hidden="true">
+    <span><i class="swatch" style="border-top-color:#4385BE"></i> position curve x(t)</span>
+    <span><i class="swatch" style="border-top-color:#AF3029"></i> secant (your &Delta;x/&Delta;t)</span>
+    <span><i class="swatch" style="border-top-color:#DA702C"></i> tangent at t* (the true answer)</span>
+    <span><i class="swatch" style="border-top-color:#66800B;border-top-style:dashed"></i> tangent at the midpoint</span>
+  </div>
+
+  <figure>
+    <canvas id="cvXT" width="900" height="520" aria-hidden="true"></canvas>
+    <figcaption id="capXT">
+      <b>Graph description.</b> Two panels. <b>Left panel &mdash; the whole run:</b> a position versus time graph covering the whole two seconds of recording. Because the acceleration is constant, the position curve is a parabola that bends upward, getting steeper as time goes on. A shaded vertical band marks the interval you selected. <b>Right panel &mdash; zoomed in on that interval:</b> the same curve magnified, with three straight lines drawn across it. A red secant line joins the two data points at the ends of the interval; its slope is the average velocity you calculated. An orange tangent line touches the curve at the time you were asked about, t-star; it is clearly less steep than the secant, and the two lines fan further apart towards the right. A dashed green tangent line touches the curve at the midpoint of the interval, and it runs exactly parallel to the red secant. A dashed red right triangle under the secant shows the rise, delta x, over the run, delta t. <span id="capXTlive"></span>
+    </figcaption>
+  </figure>
+
+  <div class="callout">
+    <h3>Read the picture this way</h3>
+    <p>The red secant and the dashed green tangent are <strong>parallel</strong>. That parallel pair is the whole lesson: your average velocity <em>is</em> a real instantaneous velocity &mdash; just at the wrong time. Slide t* along and the two lines stay parallel; the secant never matches the orange tangent at the endpoint unless you flatten the acceleration to zero.</p>
+  </div>
+</section>
+
+<section aria-labelledby="h-vt">
+  <h2 id="h-vt">4. On the velocity&ndash;time graph: the offset you can measure</h2>
+  <p class="lede">With constant acceleration the true velocity graph is a straight line. Your average velocity is the <em>mean height</em> of that line across the interval &mdash; and the mean height of a straight line occurs at its middle, never at its ends.</p>
+
+  <div class="legend" aria-hidden="true">
+    <span><i class="swatch" style="border-top-color:#4385BE"></i> true velocity v = v&#8320; + at</span>
+    <span><i class="dot" style="background:#DA702C"></i> true v at t*</span>
+    <span><i class="dot" style="background:#AF3029"></i> your answer plotted at t*</span>
+    <span><i class="dot" style="background:#66800B"></i> your answer plotted at the midpoint</span>
+  </div>
+
+  <figure>
+    <canvas id="cvVT" width="900" height="470" aria-hidden="true"></canvas>
+    <figcaption id="capVT">
+      <b>Graph description.</b> A velocity versus time graph. The true velocity is a straight line rising steadily from left to right, because the acceleration is constant. The chosen interval is shaded, and a horizontal line is drawn at the height of your calculated average velocity. That horizontal line crosses the rising true-velocity line at exactly one place: the midpoint of the interval. A red marker shows where your answer would sit if you wrongly attached it to time t-star &mdash; it floats off the true line by a visible vertical gap. A green marker sits exactly on the true line at the midpoint time. The shaded region above and below the average-velocity line forms two equal triangles, showing that the overshoot at the end of the interval exactly cancels the undershoot at the start. <span id="capVTlive"></span>
+    </figcaption>
+  </figure>
+
+  <h3>The algebra behind that offset</h3>
+  <p>Start from the position equation for uniform acceleration and compute the average velocity from <span class="sr-only">time t to time t plus delta t</span><span aria-hidden="true">t to t+&Delta;t</span>:</p>
+
+  <p class="eq" aria-hidden="true">x(t) = x&#8320; + v&#8320;t + &frac12;at&sup2;</p>
+  <p class="sr-only">Equation: position at time t equals initial position, plus initial velocity times t, plus one half a t squared.</p>
+
+  <p class="eq" aria-hidden="true">&Delta;x/&Delta;t = [x(t+&Delta;t) &minus; x(t)] / &Delta;t = v&#8320; + at + <span class="hi">&frac12;a&Delta;t</span></p>
+  <p class="sr-only">Equation: delta x over delta t equals the quantity position at t plus delta t, minus position at t, all divided by delta t. That simplifies to initial velocity, plus a times t, plus one half a times delta t.</p>
+
+  <p>The first two terms are exactly <span aria-hidden="true">v(t)</span><span class="sr-only">the instantaneous velocity at time t</span>. So:</p>
+
+  <p class="eq" aria-hidden="true">&Delta;x/&Delta;t = v(t) + <span class="hi">&frac12;a&Delta;t</span> = <span class="ok">v(t + &Delta;t/2)</span></p>
+  <p class="sr-only">Equation: delta x over delta t equals the instantaneous velocity at time t, plus one half a delta t. And that sum is exactly equal to the instantaneous velocity at time t plus delta t over two &mdash; the midpoint of the interval.</p>
+
+  <div class="callout key">
+    <h3>Two consequences worth memorising</h3>
+    <ul>
+      <li><strong>The error is &frac12;a&Delta;t, and it does not depend on t.</strong> Taking data later in the run does not help. A cart accelerating at 2.00 m/s&sup2; sampled every 0.20 s is off by 0.20 m/s at <em>every single time</em> in the table &mdash; at t = 0.2 s and at t = 12 s alike.</li>
+      <li><strong>The error is one-sided.</strong> It is not random scatter that averages out over many trials. Forward intervals are always too fast; backward intervals are always too slow. It is a <em>systematic</em> error, so more data collected the same way will not fix it.</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="h-err">
+  <h2 id="h-err">5. Why you cannot fix this by being careful</h2>
+  <p class="lede">The only knob that shrinks the error is &Delta;t. Drag the sampling-interval slider in section 1 and watch the marker move along this line.</p>
+
+  <figure>
+    <canvas id="cvERR" width="900" height="360" aria-hidden="true"></canvas>
+    <figcaption id="capERR">
+      <b>Graph description.</b> A graph of the size of the error against the sampling interval delta t. The relationship is a straight line through the origin with slope one half a: the error is directly proportional to how far apart your position readings are. A marker shows the current sampling interval. The line passes through the origin, which means the error only vanishes in the limit as delta t goes to zero &mdash; that limit is the definition of instantaneous velocity, and no finite table of data ever reaches it. <span id="capERRlive"></span>
+    </figcaption>
+  </figure>
+
+  <p>This is the honest reason a position&ndash;time table cannot hand you instantaneous velocities: <strong>instantaneous velocity is a limit</strong>, and your data stops at a finite &Delta;t. Two things follow in the lab:</p>
+  <ul>
+    <li><strong>Shrinking &Delta;t helps the physics but hurts the measurement.</strong> Halving &Delta;t halves the &frac12;a&Delta;t error, but &Delta;x also gets small, so your position uncertainty becomes a bigger fraction of it. Random noise grows as systematic bias shrinks. There is a practical floor.</li>
+    <li><strong>Averaging many intervals does not help at all.</strong> Every forward interval carries the identical +&frac12;a&Delta;t bias, so the mean of them carries it too.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="h-fix">
+  <h2 id="h-fix">6. What to do instead</h2>
+  <p class="lede">You are not stuck. You just have to stop pretending an interval is an instant. Three defensible methods, in order of how much they ask of you:</p>
+
+  <h3>Method A &mdash; Relabel the times (the midpoint rule)</h3>
+  <p>Keep every &Delta;x/&Delta;t you already calculated, but write it next to the <strong>midpoint time</strong> instead of an endpoint. For uniform acceleration this is not an approximation &mdash; it is exact. Your seven velocities are now genuinely instantaneous velocities, just at t = 0.10, 0.30, 0.50&nbsp;s and so on. Plot those against their midpoint times and the slope of the resulting straight line is the acceleration.</p>
+
+  <h3>Method B &mdash; Use a centred interval</h3>
+  <p>To get the velocity at a time that <em>is</em> in your table, use the point before and the point after:</p>
+  <p class="eq" aria-hidden="true">v(t*) &asymp; [x(t*+&Delta;t) &minus; x(t*&minus;&Delta;t)] / (2&Delta;t)</p>
+  <p class="sr-only">Equation: the velocity at t-star is approximately the position at t-star plus delta t, minus the position at t-star minus delta t, all divided by two delta t.</p>
+  <p>The midpoint of that interval <em>is</em> t*, so the &frac12;a&Delta;t errors from the two halves cancel exactly. Select &ldquo;Centred&rdquo; in section 1 and watch the error readout drop to zero. The cost: you lose the first and last points of your data set, because they have no neighbour on one side.</p>
+
+  <h3>Method C &mdash; Fit the whole curve</h3>
+  <p>Fit x vs. t with a parabola and differentiate the fit, or linearise by plotting x against t&sup2; and read the slope. This uses every data point at once, is robust to random scatter, and gives you v&#8320; and a directly rather than one velocity at a time. This is the approach the <a href="linearizationInteractive.html">linearization page</a> walks through.</p>
+
+  <div class="callout key">
+    <h3>The sentence to take away</h3>
+    <p>&Delta;x/&Delta;t is not an approximation to the velocity at either end of the interval. Under uniform acceleration it is the <strong>exact</strong> velocity at the <strong>middle</strong> of the interval. Treating it as an endpoint velocity introduces a systematic error of &frac12;a&Delta;t that no amount of extra data will remove.</p>
+  </div>
+</section>
+
+<section aria-labelledby="h-check">
+  <h2 id="h-check">7. Check yourself</h2>
+  <p class="lede">Work these out before you move the sliders to confirm.</p>
+  <ol>
+    <li>A cart accelerates at 3.0 m/s&sup2;. Positions are sampled every 0.10 s. By how much does a forward-difference &Delta;x/&Delta;t overstate the velocity at the start of each interval? <em>(Answer: &frac12;(3.0)(0.10) = 0.15 m/s, at every time in the table.)</em></li>
+    <li>Your data gives &Delta;x/&Delta;t = 2.40 m/s for the interval from t = 0.60 s to t = 0.90 s. At what time is the cart <em>exactly</em> moving at 2.40 m/s? <em>(Answer: t = 0.75 s.)</em></li>
+    <li>Set the acceleration slider to 0. Why does every method suddenly agree? <em>(Answer: with a = 0 the error &frac12;a&Delta;t is zero &mdash; for constant velocity the average over any interval equals the instantaneous value everywhere.)</em></li>
+    <li>A classmate says &ldquo;I&rsquo;ll just take 50 intervals and average them to kill the error.&rdquo; What is wrong with that plan? <em>(Answer: the bias is identical and one-signed in every interval, so averaging reproduces it exactly instead of cancelling it.)</em></li>
+  </ol>
+</section>
+
+</main>
+<footer>
+  Mr. Porter&rsquo;s Physics &mdash; AP Resource Pages &middot; Interactive kinematics demonstration
+</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- theme ---------- */
+  var btn = document.getElementById('themeBtn');
+  function applyTheme(t){
+    document.documentElement.setAttribute('data-theme', t);
+    btn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+    btn.innerHTML = t === 'dark' ? '☼ Light' : '☾ Dark';
+    try { localStorage.setItem('theme', t); } catch(e){}
+    if (typeof S !== 'undefined' && S) drawAll();   /* skipped on the very first call, before state exists */
+  }
+  var saved = 'light';
+  try { saved = localStorage.getItem('theme') || 'light'; } catch(e){}
+  applyTheme(saved);
+  btn.addEventListener('click', function(){
+    applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  /* ---------- state ---------- */
+  var S = { v0:0.4, a:2.0, dt:0.20, tstar:0.40, method:'forward' };
+  var DEFAULTS = { v0:0.4, a:2.0, dt:0.20, tstar:0.40, method:'forward' };
+  var T_MAX = 2.0;          /* the detector keeps recording past the last time asked about */
+  var X0 = 0;
+
+  function pos(t){ return X0 + S.v0*t + 0.5*S.a*t*t; }
+  function vel(t){ return S.v0 + S.a*t; }
+
+  /* the interval [t1,t2] actually used. Nothing exists before t = 0, so a window
+     that would start early is trimmed: a centred window shrinks (staying centred),
+     a backward window slides forward and stops being a backward window. */
+  function interval(){
+    var t1, t2, centred = (S.method === 'central');
+    if (S.method === 'forward'){
+      t1 = S.tstar; t2 = S.tstar + S.dt;
+    } else if (S.method === 'backward'){
+      t1 = S.tstar - S.dt; t2 = S.tstar;
+      if (t1 < 0){ t1 = 0; t2 = S.dt; }
+    } else {
+      var hw = Math.min(S.dt, S.tstar);
+      if (hw < 1e-9){ t1 = 0; t2 = S.dt; centred = false; }   /* no earlier point exists */
+      else { t1 = S.tstar - hw; t2 = S.tstar + hw; }
+    }
+    return { t1:t1, t2:t2, tm:(t1+t2)/2, centred:centred };
+  }
+
+  function fmt(x, n){ return (Math.abs(x) < 5e-13 ? 0 : x).toFixed(n === undefined ? 2 : n); }
+
+  /* ---------- colours pulled live from the theme ---------- */
+  function C(){
+    var cs = getComputedStyle(document.documentElement);
+    function g(n){ return cs.getPropertyValue(n).trim(); }
+    return {
+      bg:g('--bg-primary'), grid:g('--grid'), axis:g('--axis'),
+      text:g('--text-primary'), muted:g('--text-muted'),
+      blue:g('--accent-primary'), red:g('--error'),
+      orange:g('--warning'), green:g('--success'), purple:g('--accent-secondary')
+    };
+  }
+
+  /* ---------- canvas plumbing (2x backing store for crisp text) ---------- */
+  var CVW = 900;
+  function setup(id, w, h){
+    var cv = document.getElementById(id), ctx = cv.getContext('2d');
+    cv.width = w*2; cv.height = h*2;
+    ctx.setTransform(2,0,0,2,0,0);
+    CVW = w;
+    var c = C();
+    ctx.fillStyle = c.bg; ctx.fillRect(0,0,w,h);
+    return ctx;
+  }
+
+  function niceTicks(lo, hi, want){
+    var span = hi - lo, raw = span/(want||6);
+    var mag = Math.pow(10, Math.floor(Math.log(raw)/Math.LN10)), n = raw/mag;
+    var step = (n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10) * mag;
+    var out = [], v = Math.ceil(lo/step - 1e-9)*step;
+    for (; v <= hi + step*1e-6; v += step) out.push(Math.abs(v) < step*1e-6 ? 0 : v);
+    out.step = step;
+    return out;
+  }
+
+  /* box = {x,y,w,h} region of the canvas; pad = margins inside that box */
+  function makeAxes(ctx, box, pad, xlo, xhi, ylo, yhi, xlab, ylab, c, title){
+    var px = box.x + pad.l, py = box.y + pad.t;
+    var pw = box.w - pad.l - pad.r, ph = box.h - pad.t - pad.b;
+    function X(t){ return px + (t - xlo)/(xhi - xlo)*pw; }
+    function Y(v){ return py + ph - (v - ylo)/(yhi - ylo)*ph; }
+
+    var xt = niceTicks(xlo, xhi, pw < 420 ? 4 : 6), yt = niceTicks(ylo, yhi, 6);
+    function dec(st){ return st >= 1 ? 0 : st >= 0.1 ? 1 : 2; }
+    var xd = dec(xt.step), yd = dec(yt.step);
+
+    ctx.lineWidth = 1; ctx.strokeStyle = c.grid; ctx.setLineDash([]);
+    ctx.beginPath();
+    xt.forEach(function(t){ var x = Math.round(X(t))+0.5; ctx.moveTo(x, py); ctx.lineTo(x, py+ph); });
+    yt.forEach(function(v){ var y = Math.round(Y(v))+0.5; ctx.moveTo(px, y); ctx.lineTo(px+pw, y); });
+    ctx.stroke();
+
+    ctx.strokeStyle = c.axis; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px, py+ph); ctx.lineTo(px+pw, py+ph); ctx.stroke();
+
+    ctx.fillStyle = c.muted; ctx.font = '11px "Fira Code", monospace';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    xt.forEach(function(t){ ctx.fillText(t.toFixed(xd), X(t), py+ph+8); });
+    ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    yt.forEach(function(v){ ctx.fillText(v.toFixed(yd), px-8, Y(v)); });
+
+    ctx.fillStyle = c.text; ctx.font = 'bold 12px "Fira Code", monospace';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+    ctx.fillText(xlab, px + pw/2, box.y + box.h - 6);
+    ctx.save();
+    ctx.translate(box.x + 14, py + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.textBaseline = 'top'; ctx.fillText(ylab, 0, 0);
+    ctx.restore();
+
+    if (title){
+      ctx.fillStyle = c.muted; ctx.font = 'bold 12px "Fira Code", monospace';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+      ctx.fillText(title, px + pw/2, box.y + 10);
+    }
+
+    return {
+      X:X, Y:Y, px:px, py:py, pw:pw, ph:ph,
+      clip: function(){ ctx.save(); ctx.beginPath(); ctx.rect(px, py, pw, ph); ctx.clip(); },
+      unclip: function(){ ctx.restore(); }
+    };
+  }
+
+  function dot(ctx, x, y, r, fill, c){
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI*2);
+    ctx.fillStyle = fill; ctx.fill();
+    ctx.lineWidth = 2; ctx.strokeStyle = c.bg; ctx.stroke();
+  }
+
+  function tag(ctx, x, y, text, colour, align, c){
+    ctx.font = 'bold 11.5px "Fira Code", monospace';
+    ctx.textBaseline = 'middle';
+    var wpx = ctx.measureText(text).width;
+    var ox = align === 'right' ? -wpx : align === 'center' ? -wpx/2 : 0;
+    var left = Math.max(5, Math.min(x + ox, CVW - wpx - 5));
+    ctx.fillStyle = c.bg; ctx.globalAlpha = 0.88;
+    ctx.fillRect(left - 4, y - 9, wpx + 8, 18);
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = colour; ctx.textAlign = 'left'; ctx.fillText(text, left, y);
+  }
+
+  function line(ctx, A, t1, y1, t2, y2, colour, width, dash){
+    ctx.strokeStyle = colour; ctx.lineWidth = width; ctx.setLineDash(dash || []);
+    ctx.beginPath(); ctx.moveTo(A.X(t1), A.Y(y1)); ctx.lineTo(A.X(t2), A.Y(y2)); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  /* ---------- graph 1: position vs time, overview + zoom ---------- */
+  function drawXT(){
+    var c = C(), w = 900, h = 520, ctx = setup('cvXT', w, h);
+    var iv = interval(), wd = iv.t2 - iv.t1;
+    var m = (pos(iv.t2) - pos(iv.t1)) / wd;          /* = average velocity */
+
+    /* ----- panel A: the whole run ----- */
+    var thi = Math.max(T_MAX, iv.t2)*1.03 + 0.02;
+    var A = makeAxes(ctx, {x:0,y:0,w:392,h:h}, {l:60,r:14,t:44,b:54},
+                     0, thi, 0, pos(thi)*1.10 + 0.05,
+                     'time t (s)', 'position x (m)', c, 'the whole run');
+
+    ctx.fillStyle = c.orange; ctx.globalAlpha = 0.16;
+    ctx.fillRect(A.X(iv.t1), A.py, Math.max(2, A.X(iv.t2)-A.X(iv.t1)), A.ph);
+    ctx.globalAlpha = 1;
+
+    A.clip();
+    ctx.strokeStyle = c.blue; ctx.lineWidth = 2.5; ctx.beginPath();
+    for (var i = 0; i <= 300; i++){
+      var t = thi*i/300;
+      if (i === 0) ctx.moveTo(A.X(t), A.Y(pos(t))); else ctx.lineTo(A.X(t), A.Y(pos(t)));
+    }
+    ctx.stroke();
+    var nS = Math.floor(T_MAX/S.dt + 1e-9);
+    if (nS <= 40) for (var k = 0; k <= nS; k++) dot(ctx, A.X(k*S.dt), A.Y(pos(k*S.dt)), 3, c.blue, c);
+    A.unclip();
+
+    tag(ctx, A.X((iv.t1+iv.t2)/2), A.py + 12, 'your interval', c.orange, 'center', c);
+    ctx.fillStyle = c.muted; ctx.font = '11px "Fira Code", monospace';
+    ctx.textAlign = 'right'; ctx.textBaseline = 'bottom';
+    ctx.fillText('constant a → x(t) is a parabola', A.px + A.pw - 6, A.py + A.ph - 8);
+
+    /* divider */
+    ctx.strokeStyle = c.grid; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(396.5, 24); ctx.lineTo(396.5, h-24); ctx.stroke();
+
+    /* ----- panel B: zoomed onto the interval ----- */
+    var zlo = Math.max(0, iv.t1 - 0.55*wd), zhi = iv.t2 + 0.55*wd;
+    var yr = pos(zhi) - pos(zlo);
+    var B = makeAxes(ctx, {x:400,y:0,w:500,h:h}, {l:74,r:22,t:44,b:54},
+                     zlo, zhi, pos(zlo) - 0.22*yr, pos(zhi) + 0.22*yr,
+                     'time t (s)', 'position x (m)', c, 'zoomed in on that interval');
+
+    function sec(t){ return pos(iv.t1) + m*(t - iv.t1); }
+    function tanAt(t0){ var p0 = pos(t0), sl = vel(t0); return function(t){ return p0 + sl*(t - t0); }; }
+    var tanStar = tanAt(S.tstar), tanMid = tanAt(iv.tm);
+
+    B.clip();
+    /* rise-over-run box */
+    ctx.strokeStyle = c.red; ctx.lineWidth = 1.5; ctx.setLineDash([4,4]);
+    ctx.beginPath();
+    ctx.moveTo(B.X(iv.t1), B.Y(pos(iv.t1)));
+    ctx.lineTo(B.X(iv.t2), B.Y(pos(iv.t1)));
+    ctx.lineTo(B.X(iv.t2), B.Y(pos(iv.t2)));
+    ctx.stroke(); ctx.setLineDash([]);
+
+    line(ctx, B, zlo, tanMid(zlo), zhi, tanMid(zhi), c.green, 3.5, [9,6]);
+    line(ctx, B, zlo, sec(zlo),    zhi, sec(zhi),    c.red,   2.5, []);
+    line(ctx, B, zlo, tanStar(zlo),zhi, tanStar(zhi),c.orange,2.5, []);
+
+    /* the curve is drawn last so the straight lines never hide it */
+    ctx.strokeStyle = c.blue; ctx.lineWidth = 3.5; ctx.beginPath();
+    for (var j = 0; j <= 300; j++){
+      var tt = zlo + (zhi-zlo)*j/300;
+      if (j === 0) ctx.moveTo(B.X(tt), B.Y(pos(tt))); else ctx.lineTo(B.X(tt), B.Y(pos(tt)));
+    }
+    ctx.stroke();
+
+    dot(ctx, B.X(iv.t1), B.Y(pos(iv.t1)), 6, c.red, c);
+    dot(ctx, B.X(iv.t2), B.Y(pos(iv.t2)), 6, c.red, c);
+    dot(ctx, B.X(iv.tm), B.Y(pos(iv.tm)), 6, c.green, c);
+    /* t* is a ring so it stays visible where it coincides with an endpoint */
+    ctx.beginPath(); ctx.arc(B.X(S.tstar), B.Y(pos(S.tstar)), 8.5, 0, Math.PI*2);
+    ctx.strokeStyle = c.orange; ctx.lineWidth = 3.5; ctx.stroke();
+    B.unclip();
+
+    /* secant labelled on the right, midpoint tangent on the left, so the two
+       parallel lines never collide */
+    var yTop = B.py + 14, yBot = B.py + B.ph - 14;
+    function clampY(y){ return Math.max(yTop, Math.min(yBot, y)); }
+    tag(ctx, B.X(zhi) - 10, clampY(B.Y(sec(zhi)) - 15),
+        'secant  Δx/Δt = ' + fmt(m), c.red, 'right', c);
+    tag(ctx, B.X(zhi) - 10, clampY(B.Y(tanStar(zhi)) + 17),
+        'tangent at t* = ' + fmt(vel(S.tstar)), c.orange, 'right', c);
+    tag(ctx, B.X(zlo) + 10, clampY(B.Y(tanMid(zlo)) + 17),
+        'tangent at midpoint = ' + fmt(vel(iv.tm)) + '  (parallel)', c.green, 'left', c);
+    tag(ctx, (B.X(iv.t1)+B.X(iv.t2))/2, clampY(B.Y(pos(iv.t1)) + 15),
+        'Δt = ' + fmt(wd), c.red, 'center', c);
+    tag(ctx, B.X(iv.t2) + 8, clampY((B.Y(pos(iv.t1))+B.Y(pos(iv.t2)))/2),
+        'Δx = ' + fmt(pos(iv.t2)-pos(iv.t1)), c.red, 'left', c);
+  }
+
+  /* ---------- graph 2: velocity vs time ---------- */
+  function drawVT(){
+    var c = C(), w = 900, h = 470, ctx = setup('cvVT', w, h);
+    var iv = interval(), wd = iv.t2 - iv.t1;
+    var vavg = (pos(iv.t2) - pos(iv.t1)) / wd;
+
+    /* zoom onto the interval so the half-a-delta-t offset is a visible height */
+    var half = 1.15*wd;
+    var tlo = Math.max(0, iv.tm - half), thi = iv.tm + half;
+    var vr = Math.max(vel(thi) - vel(tlo), 0.4);
+    var A = makeAxes(ctx, {x:0,y:0,w:w,h:h}, {l:82,r:26,t:44,b:60},
+                     tlo, thi, vel(tlo) - 0.30*vr, vel(thi) + 0.30*vr,
+                     'time t (s)', 'velocity v (m/s)', c,
+                     'velocity–time, zoomed onto your interval');
+
+    A.clip();
+    ctx.fillStyle = c.green; ctx.globalAlpha = 0.10;
+    ctx.fillRect(A.X(iv.t1), A.py, A.X(iv.t2)-A.X(iv.t1), A.ph);
+    ctx.globalAlpha = 1;
+
+    /* the two equal triangles: the shortfall before the midpoint is repaid after it */
+    ctx.fillStyle = c.red; ctx.globalAlpha = 0.26;
+    ctx.beginPath();
+    ctx.moveTo(A.X(iv.t1), A.Y(vavg)); ctx.lineTo(A.X(iv.tm), A.Y(vavg));
+    ctx.lineTo(A.X(iv.t1), A.Y(vel(iv.t1))); ctx.closePath(); ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(A.X(iv.tm), A.Y(vavg)); ctx.lineTo(A.X(iv.t2), A.Y(vavg));
+    ctx.lineTo(A.X(iv.t2), A.Y(vel(iv.t2))); ctx.closePath(); ctx.fill();
+    ctx.globalAlpha = 1;
+
+    ctx.strokeStyle = c.muted; ctx.lineWidth = 1; ctx.setLineDash([3,3]);
+    [iv.t1, iv.t2].forEach(function(t){
+      ctx.beginPath(); ctx.moveTo(A.X(t), A.py); ctx.lineTo(A.X(t), A.py+A.ph); ctx.stroke();
+    });
+    ctx.setLineDash([]);
+
+    line(ctx, A, tlo, vavg, thi, vavg, c.green, 2.5, [9,6]);
+    line(ctx, A, tlo, vel(tlo), thi, vel(thi), c.blue, 3.5, []);
+
+    var gap = vavg - vel(S.tstar);
+    if (Math.abs(gap) > 1e-9){
+      line(ctx, A, S.tstar, vel(S.tstar), S.tstar, vavg, c.red, 4, []);
+      dot(ctx, A.X(S.tstar), A.Y(vavg), 7, c.red, c);
+    }
+    dot(ctx, A.X(iv.tm), A.Y(vavg), 7, c.green, c);
+    ctx.beginPath(); ctx.arc(A.X(S.tstar), A.Y(vel(S.tstar)), 8.5, 0, Math.PI*2);
+    ctx.strokeStyle = c.orange; ctx.lineWidth = 3.5; ctx.stroke();
+    A.unclip();
+
+    ctx.fillStyle = c.muted; ctx.font = '11px "Fira Code", monospace';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    ctx.fillText('t₁', A.X(iv.t1), A.py + A.ph + 24);
+    ctx.fillText('t₂', A.X(iv.t2), A.py + A.ph + 24);
+    ctx.fillText('the two shaded triangles are equal areas', A.px + A.pw/2, A.py + 6);
+
+    tag(ctx, A.X(thi) - 8, A.Y(vel(thi)) + 20, 'true v = v₀ + at', c.blue, 'right', c);
+    tag(ctx, A.px + 8, A.Y(vavg) - 16,
+        'your Δx/Δt = ' + fmt(vavg) + ' m/s', c.green, 'left', c);
+    if (Math.abs(gap) > 1e-9){
+      tag(ctx, A.X(iv.tm) + 12, A.Y(vavg) + 46,
+          'which is exactly the true v at t = ' + fmt(iv.tm) + ' s', c.green, 'left', c);
+      tag(ctx, A.X(S.tstar) - 16, A.Y(vel(S.tstar)),
+          'true v(t*) = ' + fmt(vel(S.tstar)), c.orange, 'right', c);
+      tag(ctx, A.X(S.tstar) + 16, (A.Y(vel(S.tstar)) + A.Y(vavg))/2,
+          'error = ' + (gap>0?'+':'−') + fmt(Math.abs(gap)) + ' m/s = ½aΔt', c.red, 'left', c);
+    } else {
+      tag(ctx, A.X(S.tstar) - 16, A.Y(vel(S.tstar)) - 24,
+          'true v(t*) = ' + fmt(vel(S.tstar)), c.orange, 'right', c);
+      tag(ctx, A.X(iv.tm) + 14, A.Y(vavg) + 34,
+          'the midpoint IS t* here — no error', c.green, 'left', c);
+    }
+  }
+
+
+  /* ---------- graph 3: error vs sampling interval ---------- */
+  function drawERR(){
+    var c = C(), w = 900, h = 360, ctx = setup('cvERR', w, h);
+    var central = (S.method === 'central'), dtMax = 0.5;
+    var ehi = Math.max(0.5*S.a*dtMax*1.20, 0.12);
+    var A = makeAxes(ctx, {x:0,y:0,w:w,h:h}, {l:78,r:26,t:30,b:56},
+                     0, dtMax, 0, ehi, 'sampling interval Δt (s)', '|error| (m/s)', c);
+
+    A.clip();
+    line(ctx, A, 0, 0, dtMax, central ? 0 : 0.5*S.a*dtMax, central ? c.green : c.red, 3, []);
+    var ecur = central ? 0 : 0.5*S.a*S.dt;
+    ctx.strokeStyle = c.muted; ctx.lineWidth = 1; ctx.setLineDash([3,3]);
+    ctx.beginPath(); ctx.moveTo(A.X(S.dt), A.py+A.ph); ctx.lineTo(A.X(S.dt), A.Y(ecur)); ctx.stroke();
+    ctx.setLineDash([]);
+    dot(ctx, A.X(S.dt), A.Y(ecur), 7, central ? c.green : c.red, c);
+    A.unclip();
+
+    tag(ctx, A.X(S.dt) + 12, A.Y(ecur) - 6,
+        'Δt = ' + fmt(S.dt) + ' s → error ' + fmt(ecur, 3) + ' m/s',
+        central ? c.green : c.red, 'left', c);
+
+    ctx.fillStyle = c.muted; ctx.font = '11.5px "Fira Code", monospace';
+    ctx.textAlign = 'left'; ctx.textBaseline = 'top';
+    ctx.fillText(central
+      ? 'centred difference: the two half-errors cancel, so this line sits on zero'
+      : 'error = ½aΔt — a straight line through the origin, zero only in the limit Δt → 0',
+      A.px + 8, A.py + 6);
+  }
+
+  function drawAll(){ drawXT(); drawVT(); drawERR(); }
+
+  /* ---------- data table ---------- */
+  var MAX_ROWS = 9;
+  function buildTable(){
+    var nS = Math.floor(T_MAX/S.dt + 1e-9);          /* last sample index */
+    var shown = Math.min(MAX_ROWS, nS + 1);
+    var focus = Math.round(S.tstar/S.dt);
+    var i0 = Math.max(0, Math.min(focus - 2, nS - shown + 1));
+    var iv = interval();
+    var html = '', eps = S.dt/4;
+
+    for (var k = i0; k < i0 + shown; k++){
+      var t = k*S.dt, x = pos(t);
+      var near = Math.abs(t - iv.t1) < eps || Math.abs(t - iv.t2) < eps;
+      html += '<tr' + (near ? ' class="hilite"' : '') + '>' +
+              '<th scope="row">' + fmt(t) + '</th>' +
+              '<td>' + fmt(x, 3) + '</td>' +
+              '<td aria-label="not applicable">&mdash;</td>' +
+              '<td aria-label="not applicable">&mdash;</td>' +
+              '<td aria-label="not applicable">&mdash;</td>' +
+              '<td aria-label="not applicable">&mdash;</td></tr>';
+
+      if (k < i0 + shown - 1){
+        var t2 = (k+1)*S.dt, dx = pos(t2) - x, tm = (t + t2)/2;
+        html += '<tr class="gap">' +
+                '<td class="note">interval ' + fmt(t) + ' → ' + fmt(t2) + '</td>' +
+                '<td aria-label="not applicable">&mdash;</td>' +
+                '<td>' + fmt(dx, 3) + '</td>' +
+                '<td><strong>' + fmt(dx/S.dt) + '</strong></td>' +
+                '<td>' + fmt(tm) + '</td>' +
+                '<td>' + fmt(vel(tm)) + '</td></tr>';
+      }
+    }
+    document.getElementById('dataBody').innerHTML = html;
+
+    var truncated = (nS + 1) > shown;
+    document.getElementById('tableCaption').innerHTML =
+      'Position–time data and the average velocity of each interval. Shaded rows are the positions at the ends of the interval you selected; rows labelled &ldquo;interval&rdquo; hold the average velocity, which belongs to the midpoint time shown, not to either endpoint. ' +
+      'Compare the last two columns: they always agree exactly. ' +
+      (truncated ? 'Showing ' + shown + ' of ' + (nS+1) + ' sampling times, centred on the time you asked about.' : 'All ' + (nS+1) + ' sampling times are shown.');
+  }
+
+  /* ---------- readouts ---------- */
+  function update(){
+    var iv = interval();
+    var vTrue = vel(S.tstar);
+    var vAvg  = (pos(iv.t2) - pos(iv.t1)) / (iv.t2 - iv.t1);
+    var err   = vAvg - vTrue;
+    var exact = Math.abs(err) < 1e-9;
+
+    document.getElementById('v0out').textContent    = fmt(S.v0) + ' m/s';
+    document.getElementById('accout').innerHTML     = fmt(S.a) + ' m/s²';
+    document.getElementById('dtout').textContent    = fmt(S.dt) + ' s';
+    document.getElementById('tstarout').textContent = fmt(S.tstar) + ' s';
+    document.getElementById('q-dt').textContent     = fmt(S.dt);
+
+    document.getElementById('r-true').textContent = fmt(vTrue) + ' m/s';
+    document.getElementById('r-avg').textContent  =
+      fmt(vAvg) + ' m/s  (over ' + fmt(iv.t1) + ' s to ' + fmt(iv.t2) + ' s)';
+
+    var errEl = document.getElementById('r-err');
+    if (exact){
+      errEl.textContent = S.a < 1e-9
+        ? 'none — with a = 0 there is nothing to get wrong; every interval gives the same velocity'
+        : 'none — this interval is centred on t*, so the two half-errors cancel';
+      errEl.className = 'good';
+    } else {
+      var pct = vTrue > 1e-9 ? '  (' + fmt(Math.abs(err/vTrue*100), 1) + '% too ' + (err>0?'fast':'slow') + ')' : '';
+      var note = (S.method === 'central' && !iv.centred)
+        ? '  — no reading exists before t* = 0, so the first interval was used instead'
+        : (S.method === 'backward' && S.tstar - S.dt < -1e-9)
+        ? '  — no reading exists Δt before t* = 0, so the first interval was used instead'
+        : '';
+      errEl.textContent = (err > 0 ? '+' : '−') + fmt(Math.abs(err)) + ' m/s' + pct + note;
+      errEl.className = 'bad';
+    }
+
+    document.getElementById('r-mid').textContent  = 't = ' + fmt(iv.tm) + ' s';
+    document.getElementById('r-midv').textContent = fmt(vel(iv.tm)) + ' m/s — an exact match';
+
+    /* spoken descriptions appended to the figure captions */
+    document.getElementById('capXTlive').textContent =
+      'Right now: the secant runs from ' + fmt(iv.t1) + ' to ' + fmt(iv.t2) + ' seconds and has slope ' +
+      fmt(vAvg) + ' metres per second. The tangent at t-star equals ' + fmt(S.tstar) + ' seconds has slope ' +
+      fmt(vTrue) + ' metres per second. The tangent at the midpoint, ' + fmt(iv.tm) +
+      ' seconds, has slope ' + fmt(vel(iv.tm)) + ' metres per second, which equals the secant slope exactly.';
+
+    document.getElementById('capVTlive').textContent = exact
+      ? 'Right now: the interval is centred on t-star, so the average velocity ' + fmt(vAvg) +
+        ' metres per second sits exactly on the true line and there is no gap.'
+      : 'Right now: the true velocity at t-star is ' + fmt(vTrue) + ' metres per second, your average velocity is ' +
+        fmt(vAvg) + ' metres per second, and the vertical gap between them is ' +
+        (err>0?'plus ':'minus ') + fmt(Math.abs(err)) + ' metres per second, which is one half times ' +
+        fmt(S.a) + ' times ' + fmt(S.dt) + '.';
+
+    document.getElementById('capERRlive').textContent = exact
+      ? 'Right now: with a centred interval the error is zero for every sampling interval.'
+      : 'Right now: with acceleration ' + fmt(S.a) + ' metres per second squared and sampling interval ' +
+        fmt(S.dt) + ' seconds, the error is ' + fmt(Math.abs(err), 3) + ' metres per second.';
+
+    buildTable();
+    drawAll();
+  }
+
+  /* ---------- wiring ---------- */
+  function bind(id, key){
+    var el = document.getElementById(id);
+    el.addEventListener('input', function(){ S[key] = parseFloat(el.value); update(); });
+    return el;
+  }
+  bind('v0','v0'); bind('acc','a'); bind('dt','dt'); bind('tstar','tstar');
+
+  Array.prototype.forEach.call(document.querySelectorAll('input[name=method]'), function(r){
+    r.addEventListener('change', function(){ if (r.checked){ S.method = r.value; update(); } });
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    for (var k in DEFAULTS) S[k] = DEFAULTS[k];
+    document.getElementById('v0').value    = S.v0;
+    document.getElementById('acc').value   = S.a;
+    document.getElementById('dt').value    = S.dt;
+    document.getElementById('tstar').value = S.tstar;
+    document.querySelector('input[name=method][value=forward]').checked = true;
+    update();
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
