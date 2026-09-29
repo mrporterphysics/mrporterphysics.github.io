@@ -506,10 +506,65 @@
             color: var(--bg-primary, var(--fx-paper));
             border-color: var(--accent-primary, var(--fx-blue-light));
         }
+
+        /* ---- demo rebuild: picker, readouts, accessible table ---- */
+        .demo-intro{
+            background-color: var(--bg-primary, var(--fx-paper));
+            border:1px solid var(--border-color, var(--fx-base-200));
+            border-left:4px solid var(--accent-secondary, var(--fx-purple-light));
+            border-radius:8px; padding:1.25rem; margin-bottom:1.5rem;
+        }
+        .demo-intro h4{margin:0 0 .5rem; color:var(--accent-secondary, var(--fx-purple-light)); font-size:1.1rem;}
+        .demo-intro p{margin:.4rem 0; line-height:1.6;}
+        .theory-line{
+            font-size:1.25rem; font-weight:700;
+            color:var(--accent-secondary, var(--fx-purple-light)); margin:.6rem 0;
+        }
+        .picker{display:flex; flex-wrap:wrap; gap:.6rem; margin:.75rem 0;}
+        .pick{
+            background-color:var(--bg-primary, var(--fx-paper));
+            color:var(--text-primary, var(--fx-base-950));
+            border:2px solid var(--border-color, var(--fx-base-200));
+            border-radius:8px; padding:.6rem 1rem;
+            font:inherit; font-size:.95rem; font-weight:700; cursor:pointer;
+            transition:border-color .2s, transform .12s ease, background-color .2s;
+        }
+        .pick:hover{border-color:var(--accent-primary, var(--fx-blue-light)); transform:translateY(-1px);}
+        .pick:focus-visible{outline:3px solid var(--accent-secondary, var(--fx-purple-light)); outline-offset:2px;}
+        .pick.tried{opacity:.6;}
+        .pick.tried.wrong{border-color:var(--fx-red-light);}
+        .pick.tried.right{opacity:1; border-color:var(--fx-green-light);}
+        .verdict{margin:1rem 0; padding:1rem 1.25rem; border-radius:8px;
+            border:1px solid var(--border-color, var(--fx-base-200)); border-left-width:4px;
+            background-color:var(--bg-primary, var(--fx-paper));}
+        .verdict.right{border-left-color:var(--fx-green-light);}
+        .verdict.wrong{border-left-color:var(--fx-red-light);}
+        .verdict h4{margin:0 0 .4rem; font-size:1.05rem;}
+        .verdict.right h4{color:var(--fx-green-light);}
+        .verdict.wrong h4{color:var(--fx-red-light);}
+        .verdict p{margin:.35rem 0; line-height:1.6;}
+        .answer-line{font-size:1.5rem; font-weight:700; color:var(--fx-green-light); margin:.5rem 0;}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+            overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+        .data-table{width:100%; border-collapse:collapse; font-size:.85rem; margin-top:.75rem;}
+        .data-table caption{text-align:left; color:var(--text-secondary,var(--fx-base-700));
+            padding-bottom:.4rem; font-size:.85rem;}
+        .data-table th,.data-table td{
+            border:1px solid var(--border-color,var(--fx-base-200));
+            padding:.3rem .55rem; text-align:right;}
+        .data-table th{background-color:var(--bg-primary,var(--fx-paper));
+            color:var(--accent-primary,var(--fx-blue-light));}
+        details.numbers summary{cursor:pointer; font-weight:600; color:var(--accent-primary,var(--fx-blue-light));}
+        .present-link{
+            display:inline-block; text-decoration:none; margin-top:1rem;
+            background-color:var(--accent-secondary, var(--fx-purple-light));
+            color:var(--fx-paper); padding:.7rem 1.2rem; border-radius:8px; font-weight:700;
+        }
+        .present-link:hover{filter:brightness(1.1);}
     </style>
 </head>
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark</button>
+    <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-pressed="false">🌙 Dark</button>
     
     <div class="container">
         <h1>📈 Linearization in AP Physics: Your Guide to Taming Curves</h1>
@@ -524,83 +579,84 @@
                 <strong>Linearization is the art of transforming curved relationships into straight lines.</strong> Why do we love straight lines so much? Three huge reasons:
                 <ul>
                     <li><strong>Finding constants is easy</strong> - The slope of a straight line directly gives you physical constants (like g, k, or μ)</li>
-                    <li><strong>Checking your model</strong> - A straight line confirms you have the right equation (high R² value = good fit!)</li>
+                    <li><strong>Checking your model</strong> - A straight line is evidence your equation is right. Deviations from the line are easy to spot; deviations from a curve are not.</li>
                     <li><strong>Making predictions</strong> - It's much easier to extrapolate from a straight line than a curve</li>
                 </ul>
             </div>
             <p>Think of linearization as putting on special glasses that let you see the hidden linear relationship in your data. Once you master this technique, you'll be able to extract meaningful physics from any experiment!</p>
+            <p style="margin-top:1.25rem"><strong>Start with the Interactive Demo tab.</strong> You will be given real, curved lab data and asked to decide what to plot. Guessing wrong there is the fastest way to learn this.</p>
         </div>
         
         <!-- Tab Navigation -->
         <div class="tab-container">
-            <div class="tab-buttons">
-                <button class="tab-btn active" onclick="showTab('interactive')">🎮 Interactive Demo</button>
-                <button class="tab-btn" onclick="showTab('quadratic')">📐 Quadratic</button>
-                <button class="tab-btn" onclick="showTab('sqrt')">√ Square Root</button>
-                <button class="tab-btn" onclick="showTab('inverse')">1/x Inverse</button>
-                <button class="tab-btn" onclick="showTab('inverse2')">1/x² Inverse Square</button>
-                <button class="tab-btn" onclick="showTab('checklist')">✅ Checklist & Tips</button>
+            <div class="tab-buttons" role="tablist">
+                <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="interactive">🎮 Interactive Demo</button>
+                <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="quadratic">📐 Quadratic</button>
+                <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="sqrt">√ Square Root</button>
+                <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="inverse">1/x Inverse</button>
+                <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="inverse2">1/x² Inverse Square</button>
+                <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="checklist">✅ Checklist & Tips</button>
             </div>
             
             <!-- Interactive Demo Tab -->
             <div id="interactive" class="tab-content active">
-                <div class="function-selector">
-                    <button class="function-btn active" onclick="selectFunction('quadratic')">
-                        Quadratic: y = ax²
-                    </button>
-                    <button class="function-btn" onclick="selectFunction('sqrt')">
-                        Square Root: y = a√x
-                    </button>
-                    <button class="function-btn" onclick="selectFunction('inverse')">
-                        Inverse: y = a/x
-                    </button>
-                    <button class="function-btn" onclick="selectFunction('inverse2')">
-                        Inverse Square: y = a/x²
-                    </button>
+
+                <div class="demo-intro">
+                    <h4>How to use this</h4>
+                    <p>Pick a real experiment. You get the raw, curved data — the same thing you would
+                       get in the lab. Your job is to decide <em>what to plot instead</em> so the data
+                       comes out straight. Guess wrong and you will see the graph bend the wrong way,
+                       which is exactly the feedback you get on a real lab report.</p>
+                    <p>Every graph below has numbered axes and units, and starts at zero, so you can
+                       read the slope off it by hand. That is the whole skill.</p>
                 </div>
-                
+
+                <div class="function-selector" id="scenarioPicker"></div>
+
+                <div class="function-content">
+                    <h3 id="scenarioTitle"></h3>
+                    <p id="scenarioBlurb"></p>
+                    <p><strong>Theory says:</strong></p>
+                    <p class="theory-line" id="scenarioTheory"></p>
+
+                    <h4>What should go on the horizontal axis?</h4>
+                    <div class="picker" id="transformPicker"></div>
+                    <div id="verdict"></div>
+                </div>
+
                 <div class="viz-container">
                     <div class="viz-card">
-                        <h3>📊 Original Data</h3>
-                        <canvas id="originalCanvas"></canvas>
-                        <div class="axis-label" id="originalAxisLabel">x vs y</div>
-                        <div class="equation-box">
-                            <div class="equation original-eq" id="originalEquation">y = ax²</div>
-                        </div>
-                        <div class="legend">
-                            Non-linear relationship with experimental data points (blue) and best-fit curve (red)
-                        </div>
+                        <h3>As measured</h3>
+                        <canvas id="rawCanvas"></canvas>
+                        <div class="legend" id="rawLegend"></div>
                     </div>
-                    
                     <div class="viz-card">
-                        <h3>✨ Linearized Data</h3>
-                        <canvas id="linearizedCanvas"></canvas>
-                        <div class="axis-label" id="linearizedAxisLabel">x² vs y</div>
-                        <div class="equation-box">
-                            <div class="equation transform-eq" id="transformEquation">Transform: x → x²</div>
-                            <div class="equation linearized-eq" id="linearizedEquation">y = ax² becomes y = aX</div>
-                        </div>
-                        <div class="legend">
-                            Same data after linearization transformation showing linear relationship
-                        </div>
+                        <h3>After your transform</h3>
+                        <canvas id="linCanvas"></canvas>
+                        <div class="legend" id="linLegend"></div>
                     </div>
                 </div>
-                
-                <div class="stats-box" id="statsBox">
-                    <span class="stat-badge">R² (original): <span id="r2Original">0.985</span></span>
-                    <span class="stat-badge">R² (linearized): <span id="r2Linear">0.998</span></span>
-                    <span class="stat-badge">Slope: <span id="slope">2.5</span></span>
-                    <span class="stat-badge">Physics Constant: <span id="constant">2.5</span> <span id="units">m/s²</span></span>
-                </div>
-                
+
+                <div class="stats-box" id="statsBox"></div>
+
                 <div class="controls">
-                    <button class="control-btn" onclick="addNoise()">Add More Noise</button>
-                    <button class="control-btn" onclick="resetNoise()">Reset Noise</button>
-                    <button class="control-btn" onclick="showMorePoints()">More Data Points</button>
-                    <button class="control-btn" onclick="showFewerPoints()">Fewer Data Points</button>
+                    <button class="control-btn" type="button" id="btnNewSample">New sample of this experiment</button>
+                    <button class="control-btn" type="button" id="btnReset">Clear my guesses</button>
+                </div>
+
+                <details class="numbers" style="margin-top:1.5rem">
+                    <summary>Show the actual numbers</summary>
+                    <div id="numberTables"></div>
+                </details>
+
+                <div class="tip-box" style="margin-top:1.5rem">
+                    <strong>Teaching this?</strong> There is a full-screen, keyboard-driven version of
+                    these demos built for projecting to a class.
+                    <br>
+                    <a class="present-link" href="linearizationPresent.html">Open the classroom presenter &rarr;</a>
                 </div>
             </div>
-            
+
             <!-- Quadratic Tab -->
             <div id="quadratic" class="tab-content">
                 <div class="function-content">
@@ -645,7 +701,7 @@
                     <h3>Square Root Relationships: y = a√x</h3>
                     <p><strong>When you'll see this:</strong> Pendulums, wave phenomena, anything with a square root in the theoretical equation.</p>
                     <p><strong>The transformation:</strong> Plot y² vs x (square your dependent variable)</p>
-                    <p><strong>What the slope tells you:</strong> The coefficient 'a' squared (a²)</p>
+                    <p><strong>What the slope tells you:</strong> The coefficient 'a' <em>squared</em> (a²) — so you have to take a square root at the end. This is the most common place to stop one step early and report the slope as your answer.</p>
                     
                     <div class="lab-example">
                         <h4>Real Lab Example: Pendulum Period vs Length</h4>
@@ -763,7 +819,7 @@
                         <li><strong>Decide what to transform</strong> - Which variable needs to be squared, inverted, etc.?</li>
                         <li><strong>Label your axes correctly</strong> - If you're plotting t², your axis label is "t² (s²)" not "t (s)"</li>
                         <li><strong>Include units in your slope</strong> - The slope has units! These tell you if you did it right</li>
-                        <li><strong>Check your R² value</strong> - Should be > 0.95 for good data. If not, you might have the wrong model</li>
+                        <li><strong>Judge the fit honestly</strong> - Ask whether a straight line passes within the uncertainty of your points, and whether the leftover scatter is random or systematically curved. A high R² is reassuring, not proof: curved data can still score above 0.95.</li>
                         <li><strong>Extract the physical meaning</strong> - What constant did you just measure?</li>
                     </ol>
                 </div>
@@ -774,7 +830,7 @@
                         <li><strong>Transforming the wrong variable</strong> - If the curve gets worse, you transformed the wrong one!</li>
                         <li><strong>Forgetting to transform error bars</strong> - If x becomes x², the uncertainty changes too</li>
                         <li><strong>Including the origin when you shouldn't</strong> - Not all relationships pass through (0,0)</li>
-                        <li><strong>Using too narrow a range</strong> - Remember the 8×10 rule: your largest value should be ~10× your smallest</li>
+                        <li><strong>Using too narrow a range</strong> - Over a small enough span, everything looks straight. Spread your measurements wide enough that the curvature is obvious before you transform.</li>
                         <li><strong>Assuming linearity proves your model</strong> - Other relationships might also give straight lines after transformation</li>
                     </ol>
                 </div>
@@ -789,416 +845,251 @@
         </div>
     </div>
     
+    <script src="../js/linearization-engine.js"></script>
     <script>
-        // Theme management
-        function toggleTheme() {
-            const body = document.body;
-            const button = document.querySelector('.theme-toggle');
-            const isDark = body.getAttribute('data-theme') === 'dark';
-            
-            if (isDark) {
-                body.removeAttribute('data-theme');
-                button.textContent = '🌙 Dark';
-            } else {
-                body.setAttribute('data-theme', 'dark');
-                button.textContent = '☀️ Light';
-            }
+    (function(){
+      'use strict';
+      var E = window.LinEngine;
+
+      /* ---------------------------------------------------------- theme
+         Persisted, matching the rest of the site's convention. */
+      function currentTheme(){
+        return document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      }
+      function applyTheme(t){
+        if(t === 'dark') document.body.setAttribute('data-theme','dark');
+        else document.body.removeAttribute('data-theme');
+        var btn = document.querySelector('.theme-toggle');
+        if(btn){
+          btn.textContent = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+          btn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+        }
+        try{ localStorage.setItem('theme', t); }catch(e){}
+        draw();
+      }
+      window.toggleTheme = function(){
+        applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+      };
+      try{ if(localStorage.getItem('theme') === 'dark') applyTheme('dark'); }catch(e){}
+
+      /* ------------------------------------------------------------ tabs
+         No reliance on the deprecated global `event` — that only ever
+         worked in Chrome and broke any programmatic call. */
+      function showTab(name, btn){
+        document.querySelectorAll('.tab-content').forEach(function(t){
+          t.classList.toggle('active', t.id === name);
+        });
+        document.querySelectorAll('.tab-btn').forEach(function(b){
+          var on = b === btn;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        if(name === 'interactive') draw();
+      }
+      document.querySelectorAll('.tab-btn').forEach(function(b){
+        b.addEventListener('click', function(){ showTab(b.dataset.tab, b); });
+      });
+
+      /* ------------------------------------------------------------ state */
+      var state = { scenario: E.SCENARIOS[0], points: null, pick: null, tried: {}, bump: 0 };
+
+      function loadPoints(){
+        state.points = E.generate(state.scenario, (state.scenario.seed || 1) + state.bump * 977);
+      }
+
+      function selectScenario(id){
+        state.scenario = E.scenarioById(id);
+        state.pick = null; state.tried = {}; state.bump = 0;
+        loadPoints();
+        renderAll();
+      }
+
+      /* -------------------------------------------------------- rendering */
+      function esc(t){
+        return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      }
+      function num(v,d){ return Number(v).toFixed(d==null?3:d); }
+
+      function renderScenarioPicker(){
+        var el = document.getElementById('scenarioPicker');
+        el.innerHTML = E.SCENARIOS.map(function(s){
+          return '<button type="button" class="function-btn' +
+                 (s.id === state.scenario.id ? ' active' : '') +
+                 '" data-s="' + s.id + '">' + esc(s.title) + '</button>';
+        }).join('');
+      }
+
+      function renderTransformPicker(){
+        var s = state.scenario;
+        var el = document.getElementById('transformPicker');
+        el.innerHTML = E.TRANSFORM_ORDER.map(function(id){
+          var T = E.TRANSFORMS[id];
+          var tried = state.tried[id];
+          var right = tried && (id === s.correct || (s.alsoWorks||[]).indexOf(id) >= 0);
+          var cls = 'pick' + (tried ? ' tried ' + (right ? 'right' : 'wrong') : '');
+          return '<button type="button" class="' + cls + '" data-t="' + id + '">' +
+                 esc(T.yLabel(s.yVar) + ' vs ' + T.xLabel(s.xVar)) + '</button>';
+        }).join('');
+      }
+
+      function renderVerdict(){
+        var el = document.getElementById('verdict');
+        if(!state.pick){
+          el.innerHTML = '<p style="color:var(--text-secondary,var(--fx-base-700))">' +
+            'Pick one above. Compare the theory line to <em>y = mx + b</em> and ask yourself ' +
+            'what group of symbols is sitting where <em>x</em> sits.</p>';
+          return;
+        }
+        var s = state.scenario;
+        var ev = E.evaluate(s, state.points, state.pick);
+        var h = '<div class="verdict ' + (ev.correct ? 'right' : 'wrong') + '">';
+        h += '<h4>' + (ev.exact ? 'That is it.' : ev.alternate ? 'That works too.' : 'Not that one.') + '</h4>';
+
+        if(ev.correct){
+          h += '<p>The points fall on a straight line, so there is finally a slope worth reading.</p>';
+          if(ev.message) h += '<p>' + esc(ev.message) + '</p>';
+        } else {
+          h += '<p>' + esc(ev.message) + '</p>';
+          h += '<p>The fit still bends <strong>' +
+               (ev.curvature > 0 ? 'upward' : 'downward') +
+               '</strong> away from the line. If a transform makes the curvature worse, or flips it ' +
+               'to the other side, you moved the wrong variable or moved it too far.</p>';
         }
 
-        let currentFunction = 'quadratic';
-        let noiseLevel = 0.1;
-        let numPoints = 10;
-        let data = [];
-        
-        function showTab(tabName) {
-            // Hide all tabs
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // Show selected tab
-            document.getElementById(tabName).classList.add('active');
-            
-            // Add active class to clicked button
-            event.target.classList.add('active');
+        if(ev.exact){
+          h += '<p><strong>Read off the graph:</strong></p>';
+          h += '<p class="mathline">slope = <strong>' + num(ev.fit.slope,3) + ' ' + esc(ev.slopeUnits) +
+               '</strong> &nbsp;&middot;&nbsp; intercept = <strong>' + num(ev.fit.intercept,3) + ' ' +
+               esc(ev.interceptUnits) + '</strong></p>';
+          h += '<p><strong>Units check:</strong> ' + esc(ev.yUnits || '—') + ' &divide; ' +
+               esc(ev.xUnits || '—') + ' = <strong>' + esc(ev.slopeUnits) + '</strong>. ' +
+               'You never pick the slope units; the axes force them.</p>';
+          h += '<p><strong>' + esc(s.slopeMeans) + '</strong>, so <strong>' + esc(s.constantExpr) + '</strong>:</p>';
+          h += '<p class="answer-line">' + esc(s.constantName) + ' = ' + num(ev.constant,2) + ' ' +
+               esc(s.constantUnit) + '</p>';
+          h += '<p>Accepted value ' + s.accepted + ' ' + esc(s.constantUnit) +
+               ' — you are off by ' + num(ev.percentError,1) + '%.</p>';
+          if(s.headline){
+            h += '<p><strong>Look carefully:</strong> ' + esc(s.headline) + ' The slope was ' +
+                 num(ev.fit.slope,2) + ', but ' + esc(s.constantName) + ' is ' + num(ev.constant,2) +
+                 '. Writing down the slope and calling it ' + esc(s.constantName) + ' would have been wrong.</p>';
+          }
         }
-        
-        function generateData() {
-            data = [];
-            const a = 2.5; // Coefficient
-            
-            for (let i = 0; i < numPoints; i++) {
-                let x, y;
-                
-                switch(currentFunction) {
-                    case 'quadratic':
-                        x = 1 + i * 0.8;
-                        y = a * x * x * (1 + (Math.random() - 0.5) * noiseLevel);
-                        break;
-                    case 'sqrt':
-                        x = 1 + i * 2;
-                        y = a * Math.sqrt(x) * (1 + (Math.random() - 0.5) * noiseLevel);
-                        break;
-                    case 'inverse':
-                        x = 1 + i * 0.5;
-                        y = a / x * (1 + (Math.random() - 0.5) * noiseLevel);
-                        break;
-                    case 'inverse2':
-                        x = 1 + i * 0.3;
-                        y = a / (x * x) * (1 + (Math.random() - 0.5) * noiseLevel);
-                        break;
-                }
-                
-                data.push({x: x, y: y});
-            }
-        }
-        
-        function getTransformedData() {
-            return data.map(point => {
-                let newX, newY;
-                
-                switch(currentFunction) {
-                    case 'quadratic':
-                        newX = point.x * point.x;
-                        newY = point.y;
-                        break;
-                    case 'sqrt':
-                        newX = point.x;
-                        newY = point.y * point.y;
-                        break;
-                    case 'inverse':
-                        newX = 1 / point.x;
-                        newY = point.y;
-                        break;
-                    case 'inverse2':
-                        newX = 1 / (point.x * point.x);
-                        newY = point.y;
-                        break;
-                }
-                
-                return {x: newX, y: newY};
-            });
-        }
-        
-        function clearCanvas(canvasId) {
-            const canvas = document.getElementById(canvasId);
-            const ctx = canvas.getContext('2d');
-            canvas.width = canvas.offsetWidth;
-            canvas.height = canvas.offsetHeight;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            return ctx;
-        }
-        
-        function drawAxes(ctx, canvas, xLabel, yLabel) {
-            const isDark = document.body.getAttribute('data-theme') === 'dark';
-            const gridColor = isDark ? '#403E39' : '#E6E2CC';
-            const axisColor = isDark ? '#6F6144' : '#847759';
-            const textColor = isDark ? '#F2F0E5' : '#343331';
-            
-            ctx.strokeStyle = axisColor;
-            ctx.lineWidth = 2;
-            
-            // Draw axes
-            const padding = 50;
-            ctx.beginPath();
-            ctx.moveTo(padding, canvas.height - padding);
-            ctx.lineTo(canvas.width - 20, canvas.height - padding);
-            ctx.moveTo(padding, canvas.height - padding);
-            ctx.lineTo(padding, 20);
-            ctx.stroke();
-            
-            // Add axis labels
-            ctx.fillStyle = textColor;
-            ctx.font = '12px Fira Code';
-            ctx.textAlign = 'center';
-            ctx.fillText(xLabel, canvas.width / 2, canvas.height - 10);
-            
-            ctx.save();
-            ctx.translate(15, canvas.height / 2);
-            ctx.rotate(-Math.PI / 2);
-            ctx.fillText(yLabel, 0, 0);
-            ctx.restore();
-        }
-        
-        function getThemeColors() {
-            const isDark = document.body.getAttribute('data-theme') === 'dark';
-            return {
-                points: isDark ? '#4385BE' : '#205EA6',
-                line: isDark ? '#D14D41' : '#AF3029',
-                curve: isDark ? '#D14D41' : '#AF3029'
-            };
-        }
+        h += '</div>';
+        el.innerHTML = h;
+      }
 
-        function drawPoints(ctx, points, color = null) {
-            if (!color) {
-                const colors = getThemeColors();
-                color = colors.points;
-            }
-            ctx.fillStyle = color;
-            points.forEach(point => {
-                ctx.beginPath();
-                ctx.arc(point.x, point.y, 5, 0, 2 * Math.PI);
-                ctx.fill();
-            });
+      function renderStats(){
+        var s = state.scenario;
+        var el = document.getElementById('statsBox');
+        // Honest comparison: a STRAIGHT line forced through the raw curved data
+        // versus a straight line through the transformed data. The old page
+        // compared the raw data against its own known generating curve, which
+        // always scored ~0.999 and made linearization look pointless.
+        var rawFit = E.fitLine(state.points.map(function(p){ return {x:p.x,y:p.y}; }));
+        var h = '<span class="stat-badge">Straight line through the raw data: R&sup2; ' +
+                num(rawFit.r2,4) + '</span>';
+        if(state.pick){
+          var ev = E.evaluate(s, state.points, state.pick);
+          h += '<span class="stat-badge">Straight line after your transform: R&sup2; ' +
+               num(ev.fit.r2,4) + '</span>';
         }
-        
-        function drawLine(ctx, points, color = null, width = 2) {
-            if (points.length < 2) return;
-            
-            if (!color) {
-                const colors = getThemeColors();
-                color = colors.line;
-            }
-            
-            ctx.strokeStyle = color;
-            ctx.lineWidth = width;
-            ctx.beginPath();
-            ctx.moveTo(points[0].x, points[0].y);
-            
-            for (let i = 1; i < points.length; i++) {
-                ctx.lineTo(points[i].x, points[i].y);
-            }
-            ctx.stroke();
+        el.innerHTML = h;
+      }
+
+      function renderTables(){
+        var s = state.scenario, el = document.getElementById('numberTables');
+        var h = '<div style="overflow:auto">' +
+          E.dataTableHTML(state.points.map(function(p){return {x:p.x,y:p.y};}),
+            s.xVar + ' (' + s.xUnit + ')', s.yVar + ' (' + s.yUnit + ')', 'As measured') + '</div>';
+        if(state.pick){
+          var ev = E.evaluate(s, state.points, state.pick);
+          h += '<div style="overflow:auto;margin-top:1rem">' +
+            E.dataTableHTML(ev.points, ev.xLabel, ev.yLabel, 'After transforming') + '</div>';
         }
-        
-        function drawCurve(ctx, func, xMin, xMax, yMin, yMax, canvasWidth, canvasHeight, color = null) {
-            if (!color) {
-                const colors = getThemeColors();
-                color = colors.curve;
-            }
-            
-            const padding = 50;
-            const points = [];
-            
-            for (let x = xMin; x <= xMax; x += (xMax - xMin) / 100) {
-                const y = func(x);
-                const xPos = padding + ((x - xMin) / (xMax - xMin)) * (canvasWidth - padding - 20);
-                const yPos = canvasHeight - padding - ((y - yMin) / (yMax - yMin)) * (canvasHeight - padding - 20);
-                points.push({x: xPos, y: yPos});
-            }
-            
-            drawLine(ctx, points, color, 3);
+        el.innerHTML = h;
+        el.querySelectorAll('table').forEach(function(t){ t.className = 'data-table'; });
+      }
+
+      function draw(){
+        if(!state.points) return;
+        var s = state.scenario;
+        var c = E.themeColors();
+
+        E.plot(document.getElementById('rawCanvas'), {
+          points: state.points.map(function(p){ return {x:p.x,y:p.y}; }),
+          curve: function(x){ return x > 0 ? s.f(x) : NaN; },
+          xLabel: s.xVar + ' (' + s.xUnit + ')',
+          yLabel: s.yVar + ' (' + s.yUnit + ')'
+        });
+        document.getElementById('rawLegend').textContent =
+          'Measured points with the theoretical curve. There is no slope to read off a curve.';
+
+        var lin = document.getElementById('linCanvas');
+        if(!state.pick){
+          var g = E.prepareCanvas(lin);
+          g.ctx.fillStyle = c.muted;
+          g.ctx.font = '600 15px "Fira Code", monospace';
+          g.ctx.textAlign = 'center';
+          g.ctx.fillText('Choose a transform above', g.w/2, g.h/2);
+          document.getElementById('linLegend').textContent =
+            'Pick what to put on the horizontal axis and this plot will show the result.';
+          return;
         }
-        
-        function calculateR2(actual, predicted) {
-            const mean = actual.reduce((a, b) => a + b, 0) / actual.length;
-            const ssTotal = actual.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0);
-            const ssRes = actual.reduce((sum, val, i) => sum + Math.pow(val - predicted[i], 2), 0);
-            return 1 - (ssRes / ssTotal);
-        }
-        
-        function plotOriginal() {
-            const ctx = clearCanvas('originalCanvas');
-            const canvas = document.getElementById('originalCanvas');
-            
-            let xLabel, yLabel;
-            switch(currentFunction) {
-                case 'quadratic': xLabel = 'x'; yLabel = 'y'; break;
-                case 'sqrt': xLabel = 'x'; yLabel = 'y'; break;
-                case 'inverse': xLabel = 'x'; yLabel = 'y'; break;
-                case 'inverse2': xLabel = 'x'; yLabel = 'y'; break;
-            }
-            
-            drawAxes(ctx, canvas, xLabel, yLabel);
-            
-            if (data.length === 0) return;
-            
-            const padding = 50;
-            const xValues = data.map(d => d.x);
-            const yValues = data.map(d => d.y);
-            const xMin = Math.min(...xValues) * 0.9;
-            const xMax = Math.max(...xValues) * 1.1;
-            const yMin = Math.min(...yValues) * 0.9;
-            const yMax = Math.max(...yValues) * 1.1;
-            
-            // Draw theoretical curve
-            let func;
-            const a = 2.5;
-            switch(currentFunction) {
-                case 'quadratic': func = x => a * x * x; break;
-                case 'sqrt': func = x => a * Math.sqrt(x); break;
-                case 'inverse': func = x => a / x; break;
-                case 'inverse2': func = x => a / (x * x); break;
-            }
-            
-            drawCurve(ctx, func, xMin, xMax, yMin, yMax, canvas.width, canvas.height);
-            
-            // Draw data points
-            const points = data.map(d => ({
-                x: padding + ((d.x - xMin) / (xMax - xMin)) * (canvas.width - padding - 20),
-                y: canvas.height - padding - ((d.y - yMin) / (yMax - yMin)) * (canvas.height - padding - 20)
-            }));
-            
-            drawPoints(ctx, points);
-            
-            // Calculate R²
-            const predicted = xValues.map(func);
-            const r2 = calculateR2(yValues, predicted);
-            document.getElementById('r2Original').textContent = r2.toFixed(3);
-        }
-        
-        function plotLinearized() {
-            const ctx = clearCanvas('linearizedCanvas');
-            const canvas = document.getElementById('linearizedCanvas');
-            
-            let xLabel, yLabel;
-            switch(currentFunction) {
-                case 'quadratic': xLabel = 'x²'; yLabel = 'y'; break;
-                case 'sqrt': xLabel = 'x'; yLabel = 'y²'; break;
-                case 'inverse': xLabel = '1/x'; yLabel = 'y'; break;
-                case 'inverse2': xLabel = '1/x²'; yLabel = 'y'; break;
-            }
-            
-            drawAxes(ctx, canvas, xLabel, yLabel);
-            
-            if (data.length === 0) return;
-            
-            const transformedData = getTransformedData();
-            const padding = 50;
-            const xValues = transformedData.map(d => d.x);
-            const yValues = transformedData.map(d => d.y);
-            const xMin = Math.min(...xValues) * 0.9;
-            const xMax = Math.max(...xValues) * 1.1;
-            const yMin = Math.min(...yValues) * 0.9;
-            const yMax = Math.max(...yValues) * 1.1;
-            
-            // Calculate linear fit
-            const n = xValues.length;
-            const sumX = xValues.reduce((a, b) => a + b, 0);
-            const sumY = yValues.reduce((a, b) => a + b, 0);
-            const sumXY = xValues.reduce((sum, x, i) => sum + x * yValues[i], 0);
-            const sumX2 = xValues.reduce((sum, x) => sum + x * x, 0);
-            
-            const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
-            const intercept = (sumY - slope * sumX) / n;
-            
-            // Draw best-fit line
-            const linePoints = [
-                {
-                    x: padding,
-                    y: canvas.height - padding - ((slope * xMin + intercept - yMin) / (yMax - yMin)) * (canvas.height - padding - 20)
-                },
-                {
-                    x: canvas.width - 20,
-                    y: canvas.height - padding - ((slope * xMax + intercept - yMin) / (yMax - yMin)) * (canvas.height - padding - 20)
-                }
-            ];
-            
-            drawLine(ctx, linePoints, '#e74c3c', 3);
-            
-            // Draw data points
-            const points = transformedData.map(d => ({
-                x: padding + ((d.x - xMin) / (xMax - xMin)) * (canvas.width - padding - 20),
-                y: canvas.height - padding - ((d.y - yMin) / (yMax - yMin)) * (canvas.height - padding - 20)
-            }));
-            
-            drawPoints(ctx, points);
-            
-            // Calculate R² for linear fit
-            const predicted = xValues.map(x => slope * x + intercept);
-            const r2 = calculateR2(yValues, predicted);
-            document.getElementById('r2Linear').textContent = r2.toFixed(3);
-            document.getElementById('slope').textContent = slope.toFixed(3);
-            document.getElementById('constant').textContent = slope.toFixed(3);
-        }
-        
-        function updateEquations() {
-            const equations = {
-                quadratic: {
-                    original: 'y = ax²',
-                    transform: 'Transform: x → x²',
-                    linearized: 'y = a·X where X = x²',
-                    originalAxis: 'x vs y',
-                    linearizedAxis: 'x² vs y',
-                    units: 'm/s²'
-                },
-                sqrt: {
-                    original: 'y = a√x',
-                    transform: 'Transform: y → y²',
-                    linearized: 'Y = a²·x where Y = y²',
-                    originalAxis: 'x vs y',
-                    linearizedAxis: 'x vs y²',
-                    units: 's⁻¹'
-                },
-                inverse: {
-                    original: 'y = a/x',
-                    transform: 'Transform: x → 1/x',
-                    linearized: 'y = a·X where X = 1/x',
-                    originalAxis: 'x vs y',
-                    linearizedAxis: '1/x vs y',
-                    units: 'N·m'
-                },
-                inverse2: {
-                    original: 'y = a/x²',
-                    transform: 'Transform: x → 1/x²',
-                    linearized: 'y = a·X where X = 1/x²',
-                    originalAxis: 'x vs y',
-                    linearizedAxis: '1/x² vs y',
-                    units: 'N·m²'
-                }
-            };
-            
-            const eq = equations[currentFunction];
-            document.getElementById('originalEquation').textContent = eq.original;
-            document.getElementById('transformEquation').textContent = eq.transform;
-            document.getElementById('linearizedEquation').textContent = eq.linearized;
-            document.getElementById('originalAxisLabel').textContent = eq.originalAxis;
-            document.getElementById('linearizedAxisLabel').textContent = eq.linearizedAxis;
-            document.getElementById('units').textContent = eq.units;
-        }
-        
-        function selectFunction(func) {
-            currentFunction = func;
-            
-            // Update active button
-            document.querySelectorAll('.function-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            // Generate new data and update plots
-            generateData();
-            updateEquations();
-            plotOriginal();
-            plotLinearized();
-        }
-        
-        function addNoise() {
-            noiseLevel = Math.min(noiseLevel + 0.1, 0.5);
-            generateData();
-            plotOriginal();
-            plotLinearized();
-        }
-        
-        function resetNoise() {
-            noiseLevel = 0.1;
-            generateData();
-            plotOriginal();
-            plotLinearized();
-        }
-        
-        function showMorePoints() {
-            numPoints = Math.min(numPoints + 5, 25);
-            generateData();
-            plotOriginal();
-            plotLinearized();
-        }
-        
-        function showFewerPoints() {
-            numPoints = Math.max(numPoints - 5, 5);
-            generateData();
-            plotOriginal();
-            plotLinearized();
-        }
-        
-        // Initialize
-        generateData();
-        updateEquations();
-        plotOriginal();
-        plotLinearized();
+        var ev = E.evaluate(s, state.points, state.pick);
+        E.plot(lin, {
+          points: ev.points,
+          line: ev.fit,
+          lineColor: ev.correct ? c.good : c.bad,
+          xLabel: ev.xLabel,
+          yLabel: ev.yLabel
+        });
+        document.getElementById('linLegend').textContent = ev.correct
+          ? 'Straight. The slope of this line carries the physics.'
+          : 'Still curved — this is the wrong thing to put on the axis.';
+      }
+
+      function renderAll(){
+        var s = state.scenario;
+        document.getElementById('scenarioTitle').textContent = s.title;
+        document.getElementById('scenarioBlurb').textContent = s.blurb;
+        document.getElementById('scenarioTheory').textContent = s.theory;
+        renderScenarioPicker();
+        renderTransformPicker();
+        renderVerdict();
+        renderStats();
+        renderTables();
+        draw();
+      }
+
+      /* ------------------------------------------------------- interaction */
+      document.getElementById('scenarioPicker').addEventListener('click', function(e){
+        var b = e.target.closest('[data-s]');
+        if(b) selectScenario(b.dataset.s);
+      });
+      document.getElementById('transformPicker').addEventListener('click', function(e){
+        var b = e.target.closest('[data-t]');
+        if(!b) return;
+        state.pick = b.dataset.t;
+        state.tried[state.pick] = true;
+        renderTransformPicker(); renderVerdict(); renderStats(); renderTables(); draw();
+      });
+      document.getElementById('btnNewSample').addEventListener('click', function(){
+        state.bump++; loadPoints(); renderAll();
+      });
+      document.getElementById('btnReset').addEventListener('click', function(){
+        state.pick = null; state.tried = {}; renderAll();
+      });
+
+      // Canvases are sized in CSS; redraw on resize so they never stretch.
+      var rz;
+      window.addEventListener('resize', function(){
+        clearTimeout(rz); rz = setTimeout(draw, 100);
+      });
+
+      loadPoints();
+      renderAll();
+    })();
     </script>
 </body>
 </html>

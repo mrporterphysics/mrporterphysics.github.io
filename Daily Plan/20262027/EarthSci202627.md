@@ -16,6 +16,34 @@ math: mathjax
 
 ---
 
+# 2026.09.30 **Earth Science** 🌍
+
+##### **❓ of the 📅**: If you could be any Disney princess, which would you choose?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. What is happening to Earth?
+2. Driving Questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Develop Questions to answer about the universe_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.29 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?

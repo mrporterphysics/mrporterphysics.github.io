@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linearization — Classroom Presenter</title>
+<link rel="stylesheet" href="../css/flexoki-theme.css">
+<style>
+:root{
+  --fx-paper:#FFFCF0; --fx-base-50:#F2F0E5; --fx-base-100:#EFEBD4; --fx-base-150:#E6E2CC;
+  --fx-base-200:#DAD4BA; --fx-base-300:#C8BFA1; --fx-base-400:#B5A988; --fx-base-500:#9C8F70;
+  --fx-base-600:#847759; --fx-base-700:#6F6144; --fx-base-800:#575142; --fx-base-850:#403E39;
+  --fx-base-900:#343331; --fx-base-950:#1C1B1A; --fx-black:#100F0F;
+  --fx-red:#AF3029; --fx-orange:#BC5215; --fx-yellow:#AD8301; --fx-green:#66800B;
+  --fx-cyan:#24837B; --fx-blue:#205EA6; --fx-purple:#5E409D; --fx-magenta:#A02F6F;
+
+  --bg:var(--fx-paper); --panel:var(--fx-base-50); --ink:var(--fx-base-950);
+  --dim:var(--fx-base-700); --rule:var(--fx-base-200);
+  --accent:var(--fx-blue); --accent2:var(--fx-purple);
+  --ok:var(--fx-green); --no:var(--fx-red); --warn:var(--fx-yellow);
+}
+html[data-theme="dark"], body[data-theme="dark"]{
+  --bg:var(--fx-black); --panel:var(--fx-base-950); --ink:var(--fx-paper);
+  --dim:var(--fx-base-300); --rule:var(--fx-base-850);
+  --fx-red:#D14D41; --fx-orange:#DA702C; --fx-yellow:#D0A215; --fx-green:#879A39;
+  --fx-cyan:#3AA99F; --fx-blue:#4385BE; --fx-purple:#8B7EC8; --fx-magenta:#CE5D97;
+  --accent:var(--fx-blue); --accent2:var(--fx-purple);
+  --ok:var(--fx-green); --no:var(--fx-red); --warn:var(--fx-yellow);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Fira Code','SF Mono','Monaco','Inconsolata','Roboto Mono',monospace;
+  overflow:hidden;
+  /* Everything scales off this. Bumped by +/- so the room's back row can read it. */
+  font-size:clamp(15px, 1.15vw, 22px);
+}
+.stage{
+  height:100vh; display:flex; flex-direction:column;
+  padding:2.2rem 3rem 1rem; gap:1.2rem;
+}
+
+/* ---------- top bar ---------- */
+.bar{display:flex; align-items:baseline; gap:1rem; flex:0 0 auto}
+.eyebrow{
+  font-size:.85em; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent2); font-weight:700;
+}
+.bar .spacer{flex:1}
+.bar .meta{font-size:.8em; color:var(--dim)}
+
+h1{
+  margin:0; font-family:'Inconsolata','SF Mono',monospace;
+  font-size:clamp(1.8rem, 3.4vw, 3.4rem); line-height:1.08; font-weight:700;
+  letter-spacing:-.01em;
+}
+h2{
+  margin:0; font-family:'Inconsolata','SF Mono',monospace;
+  font-size:clamp(1.4rem, 2.5vw, 2.5rem); line-height:1.15; font-weight:700;
+}
+.lede{font-size:clamp(1rem,1.5vw,1.5rem); line-height:1.5; color:var(--dim); max-width:46ch}
+
+/* ---------- body layout ---------- */
+.body{flex:1 1 auto; display:grid; gap:2rem; min-height:0}
+.body.split{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)}
+.body.single{grid-template-columns:minmax(0,1fr); place-items:center}
+.body.center{grid-template-columns:minmax(0,1fr); align-content:center; justify-items:start}
+
+.plotwrap{
+  background:var(--panel); border:1px solid var(--rule); border-radius:14px;
+  padding:1rem; min-height:0; display:flex; flex-direction:column;
+}
+canvas{flex:1 1 auto; width:100%; min-height:0; display:block}
+.plotcap{
+  flex:0 0 auto; text-align:center; padding-top:.5rem;
+  font-size:1.05em; font-weight:600; color:var(--dim);
+}
+
+.side{display:flex; flex-direction:column; gap:1rem; min-height:0; overflow:auto}
+.card{
+  background:var(--panel); border:1px solid var(--rule);
+  border-left:5px solid var(--accent); border-radius:12px; padding:1.1rem 1.3rem;
+}
+.card h3{margin:0 0 .5rem; font-size:1.15em; color:var(--accent); font-weight:700}
+.card p{margin:.4rem 0; line-height:1.55; font-size:1.02em}
+.card.ok{border-left-color:var(--ok)} .card.ok h3{color:var(--ok)}
+.card.no{border-left-color:var(--no)} .card.no h3{color:var(--no)}
+.card.warn{border-left-color:var(--warn)} .card.warn h3{color:var(--warn)}
+
+.theory{
+  font-size:clamp(1.2rem,2vw,2rem); font-weight:700; color:var(--accent2);
+  letter-spacing:.02em;
+}
+
+/* ---------- readouts ---------- */
+.readout{display:flex; flex-wrap:wrap; gap:.6rem}
+.chip{
+  background:var(--bg); border:1px solid var(--rule); border-radius:8px;
+  padding:.5rem .85rem; font-size:1em; font-weight:600;
+}
+.chip b{color:var(--accent); font-weight:700}
+.chip.big{font-size:1.3em; border-color:var(--ok); border-width:2px}
+.chip.big b{color:var(--ok)}
+
+.answer{
+  font-size:clamp(1.5rem,3vw,3rem); font-weight:700; color:var(--ok);
+  line-height:1.2; margin:.3rem 0;
+}
+.mathline{font-size:1.25em; line-height:1.9; color:var(--ink)}
+.mathline .op{color:var(--dim)}
+
+/* ---------- transform picker ---------- */
+.picker{display:flex; flex-wrap:wrap; gap:.7rem}
+.pick{
+  background:var(--panel); color:var(--ink);
+  border:2px solid var(--rule); border-radius:10px;
+  padding:.75rem 1.1rem; font:inherit; font-size:1.15em; font-weight:700;
+  cursor:pointer; transition:transform .12s ease, border-color .2s, background .2s;
+}
+.pick:hover{border-color:var(--accent); transform:translateY(-2px)}
+.pick:focus-visible{outline:3px solid var(--accent2); outline-offset:3px}
+.pick .k{
+  display:inline-block; min-width:1.5em; margin-right:.5em; padding:.05em .35em;
+  background:var(--rule); color:var(--dim); border-radius:5px;
+  font-size:.78em; text-align:center;
+}
+.pick.tried{opacity:.55}
+.pick.tried.wrong{border-color:var(--no)}
+.pick.tried.right{border-color:var(--ok); opacity:1; background:color-mix(in srgb,var(--ok) 12%, var(--panel))}
+
+/* ---------- progress + help ---------- */
+.rail{flex:0 0 auto; display:flex; align-items:center; gap:.8rem; padding-top:.2rem}
+.dots{display:flex; gap:.3rem; flex:1; flex-wrap:wrap}
+.dot{height:5px; flex:1 1 0; min-width:6px; background:var(--rule); border-radius:3px; transition:background .25s}
+.dot.done{background:var(--accent)}
+.dot.now{background:var(--accent2)}
+.hint{font-size:.78em; color:var(--dim); white-space:nowrap}
+kbd{
+  background:var(--panel); border:1px solid var(--rule); border-bottom-width:2px;
+  border-radius:4px; padding:.1em .4em; font:inherit; font-size:.92em;
+}
+
+.ctl{
+  background:var(--panel); border:1px solid var(--rule); color:var(--ink);
+  border-radius:7px; padding:.4rem .7rem; font:inherit; font-size:.8em;
+  font-weight:600; cursor:pointer;
+}
+.ctl:hover{border-color:var(--accent); color:var(--accent)}
+
+/* ---------- overlays ---------- */
+.overlay{
+  position:fixed; inset:0; background:color-mix(in srgb,var(--bg) 93%, transparent);
+  backdrop-filter:blur(3px); display:none; place-items:center; z-index:50; padding:2rem;
+}
+.overlay.on{display:grid}
+.overlay .sheet{
+  background:var(--panel); border:1px solid var(--rule); border-radius:14px;
+  padding:2rem 2.5rem; max-width:60ch; max-height:80vh; overflow:auto;
+}
+.overlay h3{margin-top:0; color:var(--accent)}
+.overlay table{border-collapse:collapse; width:100%; font-size:.95em}
+.overlay th,.overlay td{border:1px solid var(--rule); padding:.35rem .6rem; text-align:right}
+.overlay th{background:var(--bg); color:var(--accent)}
+.keylist{list-style:none; padding:0; margin:0}
+.keylist li{display:flex; gap:1rem; padding:.35rem 0; border-bottom:1px solid var(--rule)}
+.keylist li span:first-child{flex:0 0 9rem}
+
+/* screen-reader-only live data table: the canvas alone is not accessible */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}
+.fade{animation:fade .4s ease}
+@keyframes fade{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion:reduce){ .fade{animation:none} }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="bar">
+    <span class="eyebrow" id="eyebrow">Linearization</span>
+    <span class="spacer"></span>
+    <button class="ctl" id="themeBtn" type="button">Dark</button>
+    <button class="ctl" id="dataBtn" type="button" title="Show the numbers (D)">Data</button>
+    <button class="ctl" id="helpBtn" type="button" title="Keyboard help (?)">Keys</button>
+    <span class="meta" id="counter">1 / 1</span>
+  </div>
+
+  <div id="head"></div>
+  <div class="body" id="body"></div>
+
+  <div class="rail">
+    <div class="dots" id="dots"></div>
+    <span class="hint"><kbd>←</kbd> <kbd>→</kbd> move · <kbd>R</kbd> reset · <kbd>?</kbd> keys</span>
+  </div>
+</div>
+
+<div class="overlay" id="dataOverlay"><div class="sheet" id="dataSheet"></div></div>
+<div class="overlay" id="helpOverlay"><div class="sheet">
+  <h3>Presenter keys</h3>
+  <ul class="keylist">
+    <li><span><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd></span><span>Next step</span></li>
+    <li><span><kbd>←</kbd> <kbd>PgUp</kbd></span><span>Previous step</span></li>
+    <li><span><kbd>1</kbd>–<kbd>6</kbd></span><span>Pick a transform on a "you choose" step</span></li>
+    <li><span><kbd>R</kbd></span><span>Reset this step (clear the class's guesses)</span></li>
+    <li><span><kbd>N</kbd></span><span>New random sample of the same experiment</span></li>
+    <li><span><kbd>D</kbd></span><span>Show the raw numbers</span></li>
+    <li><span><kbd>T</kbd></span><span>Light / dark</span></li>
+    <li><span><kbd>Home</kbd></span><span>Back to the first step</span></li>
+    <li><span><kbd>Esc</kbd></span><span>Close an overlay</span></li>
+  </ul>
+  <p style="color:var(--dim);font-size:.9em">A presentation remote usually sends PgUp/PgDn, so it drives this directly.</p>
+</div></div>
+
+<div class="sr-only" id="srTable" aria-live="polite"></div>
+
+<script src="../js/linearization-engine.js"></script>
+<script>
+(function(){
+'use strict';
+var E = window.LinEngine;
+
+/* =====================================================================
+   Theme — persisted, and shared with the rest of the site's convention.
+   ===================================================================== */
+function applyTheme(t){
+  if(t === 'dark') document.body.setAttribute('data-theme','dark');
+  else document.body.removeAttribute('data-theme');
+  document.getElementById('themeBtn').textContent = t === 'dark' ? 'Light' : 'Dark';
+  try{ localStorage.setItem('theme', t); }catch(e){}
+  render();
+}
+function currentTheme(){
+  return document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+}
+try{ if(localStorage.getItem('theme') === 'dark') applyTheme('dark'); }catch(e){}
+
+/* =====================================================================
+   Animation: morph points from raw (x,y) to transformed (X,Y) on ONE set
+   of axes. Watching a point travel to its new home is the thing a static
+   slide can never do, and it is the whole reason to run this live.
+   ===================================================================== */
+var anim = null;
+function easeInOut(t){ return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3)/2; }
+
+function animateTo(target, ms, done){
+  if(anim) cancelAnimationFrame(anim.raf);
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){ state.mix = target; render(); if(done) done(); return; }
+  var from = state.mix, t0 = performance.now();
+  function frame(now){
+    var p = Math.min(1, (now - t0) / ms);
+    state.mix = from + (target - from) * easeInOut(p);
+    drawPlot();
+    if(p < 1){ anim.raf = requestAnimationFrame(frame); }
+    else { anim = null; state.mix = target; render(); if(done) done(); }
+  }
+  anim = { raf: requestAnimationFrame(frame) };
+}
+
+function lerp(a,b,t){ return a + (b-a)*t; }
+
+/* =====================================================================
+   Steps. Each step is a small declarative object; `kind` picks the layout.
+   ===================================================================== */
+var S = E.SCENARIOS;
+function sc(id){ return E.scenarioById(id); }
+
+var STEPS = [
+  { kind:'title', eyebrow:'AP Physics · Graphical Analysis',
+    h1:'Taming Curves',
+    lede:'A curve hides its physics. A straight line hands it to you — in the slope.' },
+
+  { kind:'prose', eyebrow:'The problem',
+    h2:'You can read three things off a straight line. Off a curve, none of them.',
+    bullets:[
+      ['The slope','is a physical constant — g, k, μ, the thing you came to measure.'],
+      ['The intercept','tells you about offsets, zero errors, and whether the origin belongs.'],
+      ['The straightness','tells you whether your model was right in the first place.']
+    ],
+    foot:'So: bend the axes until the data is straight, then read the slope.' },
+
+  // ---- Scenario 1: free fall. Student picks the transform. ----
+  { kind:'scenario', scenario:'freefall', phase:'look' },
+  { kind:'scenario', scenario:'freefall', phase:'choose' },
+  { kind:'scenario', scenario:'freefall', phase:'read' },
+  { kind:'scenario', scenario:'freefall', phase:'extract' },
+
+  { kind:'prose', eyebrow:'The move',
+    h2:'Match the graph to the equation.',
+    bullets:[
+      ['Write the theory','d = ½g·t². Compare it to y = m·x + b.'],
+      ['Find your x','Whatever sits where x sits. Here that is t², not t.'],
+      ['Plot that','d on the vertical, t² on the horizontal. Slope is then ½g.']
+    ],
+    foot:'You are not guessing. The equation tells you what to plot.' },
+
+  // ---- Scenario 2: pendulum. The one where slope is NOT the answer. ----
+  { kind:'scenario', scenario:'pendulum', phase:'look' },
+  { kind:'scenario', scenario:'pendulum', phase:'choose' },
+  { kind:'scenario', scenario:'pendulum', phase:'read' },
+  { kind:'scenario', scenario:'pendulum', phase:'extract' },
+
+  { kind:'prose', eyebrow:'The trap', warn:true,
+    h2:'The slope is almost never the answer by itself.',
+    bullets:[
+      ['Free fall','slope = ½g, so g = 2 × slope.'],
+      ['Pendulum','slope = 4π²/g, so g = 4π² ÷ slope.'],
+      ['Intensity','slope = P/4π, so P = 4π × slope.']
+    ],
+    foot:'Always finish the algebra. Reporting the slope as the constant is the single most common way to lose the point.' },
+
+  // ---- Scenarios 3 & 4: faster, to consolidate ----
+  { kind:'scenario', scenario:'boyle', phase:'look' },
+  { kind:'scenario', scenario:'boyle', phase:'choose' },
+  { kind:'scenario', scenario:'boyle', phase:'extract' },
+
+  { kind:'scenario', scenario:'intensity', phase:'look' },
+  { kind:'scenario', scenario:'intensity', phase:'choose' },
+  { kind:'scenario', scenario:'intensity', phase:'extract' },
+
+  { kind:'prose', eyebrow:'Units', warn:true,
+    h2:'The units of the slope are a free error-check.',
+    bullets:[
+      ['Slope units are forced','They are the y-axis units divided by the x-axis units. Nothing else.'],
+      ['Free fall','m ÷ s² = m/s². That is an acceleration. Good sign.'],
+      ['Light','(W/m²) ÷ (1/m²) = W. That is a power. Good sign.']
+    ],
+    foot:'If the slope units are not the units of the thing you are trying to measure, you plotted the wrong thing.' },
+
+  { kind:'prose', eyebrow:'Do this every time',
+    h2:'Four steps.',
+    numbered:[
+      'Write the theoretical equation and line it up with y = mx + b.',
+      'Plot the variable group that sits where x sits — label the axis with it, including units.',
+      'Draw the best-fit line and read slope AND intercept off the graph.',
+      'Do the algebra that turns the slope into the constant, then check the units.'
+    ],
+    foot:'Straightness is evidence your model is right. It is not proof — other relationships can straighten too.' },
+
+  { kind:'title', eyebrow:'Your turn',
+    h1:'Go bend some axes.',
+    lede:'Open the full guide for the worked lab examples, common pitfalls, and practice.' }
+];
+
+/* =====================================================================
+   State
+   ===================================================================== */
+var state = {
+  i: 0,
+  mix: 0,            // 0 = raw data, 1 = fully transformed
+  pick: null,        // transform the class chose on this step
+  tried: {},         // transforms already attempted on this step
+  seedBump: 0,
+  points: null,
+  scenario: null
+};
+
+function step(){ return STEPS[state.i]; }
+
+function loadScenario(id){
+  var s = sc(id);
+  state.scenario = s;
+  state.points = E.generate(s, (s.seed || 1) + state.seedBump * 977);
+}
+
+function resetStep(){
+  var st = step();
+  state.mix = 0; state.pick = null; state.tried = {};
+  if(st.kind === 'scenario'){
+    if(!state.scenario || state.scenario.id !== st.scenario) loadScenario(st.scenario);
+    // Steps after the choice arrive already transformed and already answered.
+    if(st.phase === 'read' || st.phase === 'extract'){
+      state.pick = state.scenario.correct;
+      state.tried[state.pick] = true;
+      state.mix = 1;
+    }
+  }
+  render();
+}
+
+/* =====================================================================
+   Plot drawing — interpolates between raw and transformed views.
+   ===================================================================== */
+function plotModel(){
+  var s = state.scenario;
+  if(!s || !state.points) return null;
+  var pickId = state.pick || 'none';
+  var ev = E.evaluate(s, state.points, pickId);
+  var raw = state.points.map(function(p){ return {x:p.x, y:p.y}; });
+  var to  = ev.points;
+
+  var rawX = E.autoRange(raw.map(function(p){return p.x;}), true);
+  var rawY = E.autoRange(raw.map(function(p){return p.y;}), true);
+  var toX  = E.autoRange(to.map(function(p){return p.x;}), true);
+  var toY  = E.autoRange(to.map(function(p){return p.y;}), true);
+
+  var m = state.mix;
+  var pts = raw.map(function(p,i){
+    return { x: lerp(p.x, to[i].x, m), y: lerp(p.y, to[i].y, m) };
+  });
+
+  return {
+    ev: ev,
+    pts: pts,
+    xRange: [lerp(rawX[0],toX[0],m), lerp(rawX[1],toX[1],m)],
+    yRange: [lerp(rawY[0],toY[0],m), lerp(rawY[1],toY[1],m)],
+    xLabel: m < .5 ? s.xVar + ' (' + s.xUnit + ')' : ev.xLabel,
+    yLabel: m < .5 ? s.yVar + ' (' + s.yUnit + ')' : ev.yLabel,
+    settled: m === 1 || m === 0
+  };
+}
+
+function drawPlot(){
+  var cv = document.getElementById('plot');
+  if(!cv) return;
+  var M = plotModel();
+  if(!M) return;
+  var c = E.themeColors();
+
+  var opts = {
+    points: M.pts, big: true,
+    xLabel: M.xLabel, yLabel: M.yLabel,
+    xRange: M.xRange, yRange: M.yRange,
+    // Ticks jitter while the axes are in flight; hide the numbers mid-morph.
+    showTicks: state.mix === 0 || state.mix === 1
+  };
+
+  if(state.mix === 1 && state.pick){
+    opts.line = M.ev.fit;
+    opts.lineColor = M.ev.correct ? c.good : c.bad;
+  } else if(state.mix === 0){
+    var s = state.scenario;
+    opts.curve = function(x){ return x > 0 ? s.f(x) : NaN; };
+    opts.lineColor = c.line;
+  }
+  E.plot(cv, opts);
+}
+
+/* =====================================================================
+   Rendering
+   ===================================================================== */
+var head = document.getElementById('head');
+var body = document.getElementById('body');
+
+function esc(t){
+  return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function num(v, d){ return Number(v).toFixed(d == null ? 3 : d); }
+
+function render(){
+  var st = step();
+  document.getElementById('eyebrow').textContent = st.eyebrow || 'Linearization';
+  document.getElementById('counter').textContent = (state.i + 1) + ' / ' + STEPS.length;
+  renderDots();
+
+  if(st.kind === 'title')    return renderTitle(st);
+  if(st.kind === 'prose')    return renderProse(st);
+  if(st.kind === 'scenario') return renderScenario(st);
+}
+
+function renderDots(){
+  var d = document.getElementById('dots');
+  if(d.children.length !== STEPS.length){
+    d.innerHTML = STEPS.map(function(){ return '<span class="dot"></span>'; }).join('');
+  }
+  for(var i=0;i<d.children.length;i++){
+    d.children[i].className = 'dot' + (i < state.i ? ' done' : i === state.i ? ' now' : '');
+  }
+}
+
+function renderTitle(st){
+  head.innerHTML = '';
+  body.className = 'body single';
+  body.innerHTML =
+    '<div class="fade" style="text-align:center;max-width:26ch">' +
+      '<h1>' + esc(st.h1) + '</h1>' +
+      '<p class="lede" style="margin:1.5rem auto 0">' + esc(st.lede) + '</p>' +
+      (state.i === STEPS.length - 1
+        ? '<p style="margin-top:2rem"><a class="ctl" style="text-decoration:none;display:inline-block;padding:.7rem 1.2rem;font-size:1em" href="linearizationInteractive.html">Open the full guide →</a></p>'
+        : '') +
+    '</div>';
+  setSR('');
+}
+
+function renderProse(st){
+  head.innerHTML = '';
+  body.className = 'body center';
+  var h = '<div class="fade" style="max-width:34ch">';
+  h += '<h2 style="margin-bottom:1.6rem">' + esc(st.h2) + '</h2>';
+  if(st.bullets){
+    h += '<div style="display:flex;flex-direction:column;gap:.9rem">';
+    st.bullets.forEach(function(b){
+      h += '<div class="card' + (st.warn ? ' warn' : '') + '">' +
+             '<h3>' + esc(b[0]) + '</h3><p>' + esc(b[1]) + '</p></div>';
+    });
+    h += '</div>';
+  }
+  if(st.numbered){
+    h += '<ol class="mathline" style="margin:0;padding-left:1.6em">';
+    st.numbered.forEach(function(n){ h += '<li style="margin:.5rem 0">' + esc(n) + '</li>'; });
+    h += '</ol>';
+  }
+  if(st.foot) h += '<p class="lede" style="margin-top:1.6rem;max-width:40ch">' + esc(st.foot) + '</p>';
+  h += '</div>';
+  body.innerHTML = h;
+  setSR('');
+}
+
+function renderScenario(st){
+  var s = state.scenario;
+  if(!s || s.id !== st.scenario){ loadScenario(st.scenario); s = state.scenario; }
+
+  head.innerHTML =
+    '<h2>' + esc(s.title) + '</h2>' +
+    '<p class="lede" style="margin:.5rem 0 0">' + esc(s.blurb) + '</p>';
+
+  body.className = 'body split';
+  body.innerHTML =
+    '<div class="plotwrap"><canvas id="plot"></canvas>' +
+      '<div class="plotcap" id="plotcap"></div></div>' +
+    '<div class="side" id="side"></div>';
+
+  drawPlot();
+  renderSide(st);
+  window.requestAnimationFrame(drawPlot);   // re-measure once laid out
+}
+
+function renderSide(st){
+  var s = state.scenario;
+  var side = document.getElementById('side');
+  var cap  = document.getElementById('plotcap');
+  var M = plotModel();
+  var ev = M.ev;
+  var h = '';
+
+  cap.textContent = state.mix === 1
+    ? ev.yLabelBare + ' vs ' + ev.xLabelBare
+    : s.yVar + ' vs ' + s.xVar + '  —  raw data';
+
+  if(st.phase === 'look'){
+    h += '<div class="card"><h3>What theory says</h3>' +
+         '<p class="theory">' + esc(s.theory) + '</p></div>';
+    h += '<div class="card warn"><h3>The problem</h3>' +
+         '<p>The data is curved. There is no slope to read, so there is no way to get ' +
+         esc(s.constantName) + ' out of this graph.</p></div>';
+    h += '<div class="card"><h3>Ask the class</h3>' +
+         '<p>What should we put on the horizontal axis instead of ' + esc(s.xVar) + '?</p></div>';
+  }
+
+  if(st.phase === 'choose'){
+    h += '<div class="card"><h3>What theory says</h3><p class="theory">' + esc(s.theory) + '</p></div>';
+    h += '<div class="card"><h3>Pick one — press 1–6</h3><div class="picker" id="picker">';
+    E.TRANSFORM_ORDER.forEach(function(id, idx){
+      var T = E.TRANSFORMS[id];
+      var tried = state.tried[id];
+      var isRight = tried && (id === s.correct || (s.alsoWorks||[]).indexOf(id) >= 0);
+      var cls = 'pick' + (tried ? ' tried ' + (isRight ? 'right' : 'wrong') : '');
+      var label = T.yLabel(s.yVar) + ' vs ' + T.xLabel(s.xVar);
+      h += '<button class="' + cls + '" data-t="' + id + '">' +
+             '<span class="k">' + (idx+1) + '</span>' + esc(label) + '</button>';
+    });
+    h += '</div></div>';
+
+    if(state.pick){
+      var right = ev.correct;
+      h += '<div class="card ' + (right ? 'ok' : 'no') + '">' +
+           '<h3>' + (right ? (ev.exact ? 'That is it.' : 'That works too.') : 'Not that one.') + '</h3>' +
+           '<p>' + esc(ev.message || (s.headline || 'Straight. Now you can read a slope.')) + '</p>' +
+           '<p class="readout" style="margin-top:.7rem">' +
+             '<span class="chip">R² <b>' + num(ev.fit.r2, 4) + '</b></span>' +
+             (!right ? '<span class="chip">still bending <b>' +
+                 (ev.curvature > 0 ? 'upward' : 'downward') + '</b></span>' : '') +
+           '</p></div>';
+    }
+  }
+
+  if(st.phase === 'read'){
+    h += '<div class="card ok"><h3>Straight — now read it</h3>' +
+         '<p>Slope and intercept both come straight off the graph. Both mean something.</p>' +
+         '<p class="readout" style="margin-top:.8rem">' +
+           '<span class="chip">slope <b>' + num(ev.fit.slope, 3) + '</b> ' + esc(ev.slopeUnits) + '</span>' +
+           '<span class="chip">intercept <b>' + num(ev.fit.intercept, 3) + '</b> ' + esc(ev.interceptUnits) + '</span>' +
+           '<span class="chip">R² <b>' + num(ev.fit.r2, 4) + '</b></span>' +
+         '</p></div>';
+    h += '<div class="card"><h3>Check the units</h3>' +
+         '<p>' + esc(ev.yUnits || '—') + ' ÷ ' + esc(ev.xUnits || '—') +
+         ' = <b>' + esc(ev.slopeUnits) + '</b>. You never choose slope units; the axes force them.</p></div>';
+    h += '<div class="card warn"><h3>About that intercept</h3>' +
+         '<p>It is ' + num(ev.fit.intercept, 3) + ', not exactly zero. Theory says it should be. ' +
+         'Ask the class what small systematic error would do that.</p></div>';
+  }
+
+  if(st.phase === 'extract'){
+    h += '<div class="card"><h3>Slope means</h3><p class="theory">' + esc(s.slopeMeans) + '</p>' +
+         '<p class="readout"><span class="chip">slope <b>' + num(ev.fit.slope,3) + '</b> ' +
+         esc(ev.slopeUnits) + '</span></p></div>';
+    h += '<div class="card ok"><h3>So the physics is</h3>' +
+         '<p class="mathline">' + esc(s.constantExpr) + '</p>' +
+         '<p class="answer">' + esc(s.constantName) + ' = ' + num(ev.constant, 2) + ' ' + esc(s.constantUnit) + '</p>' +
+         '<p class="readout">' +
+           '<span class="chip">accepted <b>' + s.accepted + '</b> ' + esc(s.constantUnit) + '</span>' +
+           '<span class="chip big">off by <b>' + num(ev.percentError, 1) + '%</b></span>' +
+         '</p></div>';
+    if(s.headline){
+      h += '<div class="card warn"><h3>Notice</h3><p>' + esc(s.headline) +
+           ' The slope was ' + num(ev.fit.slope,2) + ', and ' + esc(s.constantName) +
+           ' is ' + num(ev.constant,2) + '. Reporting the slope would have been wrong.</p></div>';
+    }
+  }
+
+  side.innerHTML = h;
+
+  var picker = document.getElementById('picker');
+  if(picker){
+    picker.addEventListener('click', function(e){
+      var b = e.target.closest('[data-t]');
+      if(b) choose(b.getAttribute('data-t'));
+    });
+  }
+  setSR(E.dataTableHTML(M.pts,
+    state.mix === 1 ? ev.xLabel : s.xVar + ' (' + s.xUnit + ')',
+    state.mix === 1 ? ev.yLabel : s.yVar + ' (' + s.yUnit + ')',
+    s.title + ' — plotted data'));
+}
+
+function setSR(html){ document.getElementById('srTable').innerHTML = html; }
+
+/* =====================================================================
+   Interaction
+   ===================================================================== */
+function choose(id){
+  if(step().kind !== 'scenario' || step().phase !== 'choose') return;
+  state.tried[id] = true;
+  state.pick = id;
+  // Always start from the raw data so each attempt visibly re-bends the plot.
+  state.mix = 0;
+  renderSide(step());
+  drawPlot();
+  animateTo(1, 850);
+}
+
+function go(delta){
+  var n = Math.min(STEPS.length - 1, Math.max(0, state.i + delta));
+  if(n === state.i) return;
+  state.i = n;
+  resetStep();
+}
+
+document.addEventListener('keydown', function(e){
+  if(e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+
+  if(k === 'Escape'){ closeOverlays(); return; }
+  if(document.querySelector('.overlay.on') && k !== '?'){ closeOverlays(); return; }
+
+  if(k === 'ArrowRight' || k === ' ' || k === 'PageDown' || k === 'Enter'){ e.preventDefault(); go(1); return; }
+  if(k === 'ArrowLeft'  || k === 'PageUp'  || k === 'Backspace'){ e.preventDefault(); go(-1); return; }
+  if(k === 'Home'){ e.preventDefault(); state.i = 0; state.seedBump = 0; resetStep(); return; }
+  if(k === 'End'){ e.preventDefault(); state.i = STEPS.length-1; resetStep(); return; }
+
+  if(k === 'r' || k === 'R'){ resetStep(); return; }
+  if(k === 'n' || k === 'N'){
+    state.seedBump++;
+    if(step().kind === 'scenario'){ loadScenario(step().scenario); resetStep(); }
+    return;
+  }
+  if(k === 'd' || k === 'D'){ toggleData(); return; }
+  if(k === 't' || k === 'T'){ applyTheme(currentTheme() === 'dark' ? 'light' : 'dark'); return; }
+  if(k === '?'){ toggleHelp(); return; }
+
+  if(/^[1-6]$/.test(k)){
+    var id = E.TRANSFORM_ORDER[parseInt(k,10) - 1];
+    if(id) choose(id);
+  }
+});
+
+function closeOverlays(){
+  document.getElementById('dataOverlay').classList.remove('on');
+  document.getElementById('helpOverlay').classList.remove('on');
+}
+function toggleHelp(){
+  var o = document.getElementById('helpOverlay');
+  var on = o.classList.contains('on'); closeOverlays();
+  if(!on) o.classList.add('on');
+}
+function toggleData(){
+  var o = document.getElementById('dataOverlay');
+  var on = o.classList.contains('on'); closeOverlays();
+  if(on || step().kind !== 'scenario') return;
+  var s = state.scenario, M = plotModel();
+  document.getElementById('dataSheet').innerHTML =
+    '<h3>' + esc(s.title) + ' — the numbers</h3>' +
+    E.dataTableHTML(M.pts,
+      state.mix === 1 ? M.ev.xLabel : s.xVar + ' (' + s.xUnit + ')',
+      state.mix === 1 ? M.ev.yLabel : s.yVar + ' (' + s.yUnit + ')',
+      state.mix === 1 ? 'After transforming' : 'As measured');
+  o.classList.add('on');
+}
+
+document.getElementById('helpBtn').addEventListener('click', toggleHelp);
+document.getElementById('dataBtn').addEventListener('click', toggleData);
+document.getElementById('themeBtn').addEventListener('click', function(){
+  applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+});
+document.querySelectorAll('.overlay').forEach(function(o){
+  o.addEventListener('click', function(e){ if(e.target === o) closeOverlays(); });
+});
+
+// Projectors resize the viewport when they sync. Redraw instead of stretching.
+var rz;
+window.addEventListener('resize', function(){
+  clearTimeout(rz);
+  rz = setTimeout(function(){ drawPlot(); }, 80);
+});
+
+resetStep();
+})();
+</script>
+</body>
+</html>
