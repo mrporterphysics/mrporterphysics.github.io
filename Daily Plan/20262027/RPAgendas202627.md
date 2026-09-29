@@ -28,6 +28,7 @@ math: mathjax
 
 #### 📋 Agenda
 
+0. <mark>Do Now</mark> Grab your lab notebook and **1 sticker** to decorate it
 1. Hand back quiz & discuss
 1. VT Graphs and Area Rule
 2. Ticker Tape Lab
