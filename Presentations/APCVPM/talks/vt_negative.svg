@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 372" width="1080" height="372" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+<line x1="96.0" y1="58.0" x2="96.0" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="139.8" y1="58.0" x2="139.8" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="183.5" y1="58.0" x2="183.5" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="227.2" y1="58.0" x2="227.2" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="271.0" y1="58.0" x2="271.0" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="314.8" y1="58.0" x2="314.8" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="358.5" y1="58.0" x2="358.5" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="402.2" y1="58.0" x2="402.2" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="446.0" y1="58.0" x2="446.0" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="96.0" y1="258.0" x2="446.0" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="262.0" font-size="12" fill="#8e8e93" text-anchor="end">-2</text>
+<line x1="96.0" y1="233.0" x2="446.0" y2="233.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="237.0" font-size="12" fill="#8e8e93" text-anchor="end">0</text>
+<line x1="96.0" y1="208.0" x2="446.0" y2="208.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="212.0" font-size="12" fill="#8e8e93" text-anchor="end">2</text>
+<line x1="96.0" y1="183.0" x2="446.0" y2="183.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="187.0" font-size="12" fill="#8e8e93" text-anchor="end">4</text>
+<line x1="96.0" y1="158.0" x2="446.0" y2="158.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="162.0" font-size="12" fill="#8e8e93" text-anchor="end">6</text>
+<line x1="96.0" y1="133.0" x2="446.0" y2="133.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="137.0" font-size="12" fill="#8e8e93" text-anchor="end">8</text>
+<line x1="96.0" y1="108.0" x2="446.0" y2="108.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="112.0" font-size="12" fill="#8e8e93" text-anchor="end">10</text>
+<line x1="96.0" y1="83.0" x2="446.0" y2="83.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="87.0" font-size="12" fill="#8e8e93" text-anchor="end">12</text>
+<line x1="96.0" y1="58.0" x2="446.0" y2="58.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="88.0" y="62.0" font-size="12" fill="#8e8e93" text-anchor="end">14</text>
+<line x1="96.0" y1="46.0" x2="96.0" y2="266.0" stroke="#1c1c1e" stroke-width="2.4"/>
+<line x1="88.0" y1="233.0" x2="460.0" y2="233.0" stroke="#1c1c1e" stroke-width="2.4"/>
+<text x="139.8" y="250.0" font-size="12" fill="#8e8e93" text-anchor="middle">1</text>
+<text x="183.5" y="250.0" font-size="12" fill="#8e8e93" text-anchor="middle">2</text>
+<text x="227.2" y="250.0" font-size="12" fill="#8e8e93" text-anchor="middle">3</text>
+<text x="271.0" y="250.0" font-size="12" fill="#8e8e93" text-anchor="middle">4</text>
+<text x="314.8" y="250.0" font-size="12" fill="#8e8e93" text-anchor="middle">5</text>
+<text x="358.5" y="250.0" font-size="12" fill="#8e8e93" text-anchor="middle">6</text>
+<text x="402.2" y="250.0" font-size="12" fill="#8e8e93" text-anchor="middle">7</text>
+<text x="446.0" y="250.0" font-size="12" fill="#8e8e93" text-anchor="middle">8</text>
+<text x="271.0" y="290.0" font-size="13" fill="#48484a" text-anchor="middle">time (s)</text>
+<text transform="translate(58.0,158.0) rotate(-90)" font-size="13" fill="#48484a" text-anchor="middle">position (m)</text>
+<polyline points="96.0,233.0 227.2,83.0 314.8,233.0 446.0,158.0" fill="none" stroke="#1c1c1e" stroke-width="3.4" stroke-linejoin="round"/>
+<circle cx="314.8" cy="233.0" r="6.5" fill="#2980b9" stroke="#ffffff" stroke-width="2"/>
+<text x="314.75" y="219.0" font-size="13" fill="#2980b9" text-anchor="middle" font-weight="700">back at the start</text>
+<text x="271.0" y="38" font-size="16" fill="#1c1c1e" text-anchor="middle" font-weight="700">position – time</text>
+<line x1="640.0" y1="58.0" x2="640.0" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="683.8" y1="58.0" x2="683.8" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="727.5" y1="58.0" x2="727.5" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="771.2" y1="58.0" x2="771.2" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="815.0" y1="58.0" x2="815.0" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="858.8" y1="58.0" x2="858.8" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="902.5" y1="58.0" x2="902.5" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="946.2" y1="58.0" x2="946.2" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="990.0" y1="58.0" x2="990.0" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<line x1="640.0" y1="258.0" x2="990.0" y2="258.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="632.0" y="262.0" font-size="12" fill="#8e8e93" text-anchor="end">-8</text>
+<line x1="640.0" y1="229.4" x2="990.0" y2="229.4" stroke="#e5e5ea" stroke-width="1"/>
+<text x="632.0" y="233.4" font-size="12" fill="#8e8e93" text-anchor="end">-6</text>
+<line x1="640.0" y1="200.9" x2="990.0" y2="200.9" stroke="#e5e5ea" stroke-width="1"/>
+<text x="632.0" y="204.9" font-size="12" fill="#8e8e93" text-anchor="end">-4</text>
+<line x1="640.0" y1="172.3" x2="990.0" y2="172.3" stroke="#e5e5ea" stroke-width="1"/>
+<text x="632.0" y="176.3" font-size="12" fill="#8e8e93" text-anchor="end">-2</text>
+<line x1="640.0" y1="143.7" x2="990.0" y2="143.7" stroke="#e5e5ea" stroke-width="1"/>
+<text x="632.0" y="147.7" font-size="12" fill="#8e8e93" text-anchor="end">0</text>
+<line x1="640.0" y1="115.1" x2="990.0" y2="115.1" stroke="#e5e5ea" stroke-width="1"/>
+<text x="632.0" y="119.1" font-size="12" fill="#8e8e93" text-anchor="end">2</text>
+<line x1="640.0" y1="86.6" x2="990.0" y2="86.6" stroke="#e5e5ea" stroke-width="1"/>
+<text x="632.0" y="90.6" font-size="12" fill="#8e8e93" text-anchor="end">4</text>
+<line x1="640.0" y1="58.0" x2="990.0" y2="58.0" stroke="#e5e5ea" stroke-width="1"/>
+<text x="632.0" y="62.0" font-size="12" fill="#8e8e93" text-anchor="end">6</text>
+<line x1="640.0" y1="46.0" x2="640.0" y2="266.0" stroke="#1c1c1e" stroke-width="2.4"/>
+<line x1="632.0" y1="143.7" x2="1004.0" y2="143.7" stroke="#1c1c1e" stroke-width="2.4"/>
+<text x="683.8" y="160.7" font-size="12" fill="#8e8e93" text-anchor="middle">1</text>
+<text x="727.5" y="160.7" font-size="12" fill="#8e8e93" text-anchor="middle">2</text>
+<text x="771.2" y="160.7" font-size="12" fill="#8e8e93" text-anchor="middle">3</text>
+<text x="815.0" y="160.7" font-size="12" fill="#8e8e93" text-anchor="middle">4</text>
+<text x="858.8" y="160.7" font-size="12" fill="#8e8e93" text-anchor="middle">5</text>
+<text x="902.5" y="160.7" font-size="12" fill="#8e8e93" text-anchor="middle">6</text>
+<text x="946.2" y="160.7" font-size="12" fill="#8e8e93" text-anchor="middle">7</text>
+<text x="990.0" y="160.7" font-size="12" fill="#8e8e93" text-anchor="middle">8</text>
+<text x="815.0" y="290.0" font-size="13" fill="#48484a" text-anchor="middle">time (s)</text>
+<text transform="translate(602.0,158.0) rotate(-90)" font-size="13" fill="#48484a" text-anchor="middle">None</text>
+<text transform="translate(602.0,158.0) rotate(-90)" font-size="13" fill="#48484a" text-anchor="middle">velocity (m/s)</text>
+<polygon points="640.0,143.7 640.0,86.6 771.2,86.6 771.2,143.7" fill="#d63031" fill-opacity="0.22" stroke="#d63031" stroke-width="1.4"/>
+<text x="705.625" y="121.14285714285714" font-size="17" fill="#d63031" text-anchor="middle" font-weight="700">+12 m</text>
+<polygon points="771.2,143.7 771.2,229.4 858.8,229.4 858.8,143.7" fill="#2980b9" fill-opacity="0.22" stroke="#2980b9" stroke-width="1.4"/>
+<text x="815.0" y="192.57142857142858" font-size="17" fill="#2980b9" text-anchor="middle" font-weight="700">−12 m</text>
+<polygon points="858.8,143.7 858.8,115.1 990.0,115.1 990.0,143.7" fill="#d63031" fill-opacity="0.22" stroke="#d63031" stroke-width="1.4"/>
+<text x="924.375" y="135.42857142857144" font-size="17" fill="#d63031" text-anchor="middle" font-weight="700">+6 m</text>
+<polyline points="640.0,86.6 771.2,86.6 771.2,229.4 858.8,229.4 858.8,115.1 990.0,115.1" fill="none" stroke="#1c1c1e" stroke-width="3.4" stroke-linejoin="round"/>
+<text x="815.0" y="38" font-size="16" fill="#1c1c1e" text-anchor="middle" font-weight="700">velocity – time</text>
+<text x="540.0" y="364" font-size="14" fill="#48484a" text-anchor="middle" font-weight="400">one rectangle below the axis · −12 m cancels the +12 m before it</text>
+</svg>
