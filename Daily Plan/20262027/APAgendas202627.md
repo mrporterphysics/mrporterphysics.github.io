@@ -25,6 +25,7 @@ math: mathjax
 
 #### 📋 Agenda
 
+0. <mark>Do Now</mark> Grab your lab notebook and **1 sticker** to decorate it
 1. VT Graphs & Area
     - Notes and _the **area** rule_
 2. Ticker Tape Lab
