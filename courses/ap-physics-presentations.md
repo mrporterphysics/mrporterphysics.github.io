@@ -16,7 +16,7 @@ description: Complete collection of lecture slides and content presentations org
     <h3 class="card-title">Constant Velocity</h3>
     <p class="card-description">Introduction to motion diagrams, position-time graphs, and velocity</p>
     <div class="card-links">
-      <a href="/Presentations/APCVPM/talks/CVPM2025.html" class="card-link">→ View Slides</a>
+      <a href="/Presentations/APCVPM/talks/CVPM2026.html" class="card-link">→ View Slides</a>
     </div>
   </div>
 
@@ -41,7 +41,7 @@ description: Complete collection of lecture slides and content presentations org
     <h3 class="card-title">Linear Dynamics</h3>
     <p class="card-description">Forces, Newton's Laws, free-body diagrams, and problem-solving strategies</p>
     <div class="card-links">
-      <a href="/Presentations/Forces/talks/Dynamics2024.html" class="card-link">→ View Slides</a>
+      <a href="/Presentations/Forces/talks/Dynamics2025.html" class="card-link">→ View Slides</a>
     </div>
   </div>
 
@@ -77,7 +77,7 @@ description: Complete collection of lecture slides and content presentations org
   <h3 class="card-title">Work & Energy</h3>
   <p class="card-description">Work-energy theorem, conservation of energy, power, and energy bar charts</p>
   <div class="card-links">
-    <a href="/Presentations/APETM/talks/APEnergy2025.html" class="card-link">→ View Slides</a>
+    <a href="/Presentations/APETM/talks/APEnergy2026.html" class="card-link">→ View Slides</a>
   </div>
 </div>
 
@@ -90,7 +90,7 @@ description: Complete collection of lecture slides and content presentations org
   <h3 class="card-title">Momentum & Impulse</h3>
   <p class="card-description">Conservation of momentum, collisions, and impulse-momentum theorem</p>
   <div class="card-links">
-    <a href="/Presentations/Momentum/talks/APmomentum2025.html" class="card-link">→ View Slides</a>
+    <a href="/Presentations/Momentum/talks/APmomentum2026.html" class="card-link">→ View Slides</a>
   </div>
 </div>
 
@@ -116,7 +116,7 @@ description: Complete collection of lecture slides and content presentations org
   <h3 class="card-title">Rotation</h3>
   <p class="card-description">Torque, rotational kinematics, moment of inertia, and angular momentum</p>
   <div class="card-links">
-    <a href="/Presentations/AP Rotation Representation/talks/Rotation2025.html" class="card-link">→ View Slides</a>
+    <a href="/Presentations/AP Rotation Representation/talks/Rotation2026.html" class="card-link">→ View Slides</a>
   </div>
 </div>
 

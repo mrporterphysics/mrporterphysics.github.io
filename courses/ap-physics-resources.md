@@ -65,7 +65,7 @@ description: Comprehensive collection of study materials, practice problems, and
   <div class="content-card">
     <div class="card-icon">⏱️</div>
     <h3 class="card-title">Average vs Instantaneous Velocity</h3>
-    <p class="card-description">Why Δx/Δt from a position–time table gives the velocity at the interval's midpoint, never at the times listed in the table</p>
+    <p class="card-description">Why Δx/Δt from a position–time table gives the velocity at the interval's midpoint, never at the times listed in the table. The class presenter is projector-sized and keyboard-driven — arrow keys move, <code>?</code> lists the keys.</p>
     <div class="card-links">
       <a href="/AP Resource Pages/averageVsInstantaneous.html" class="card-link">→ Explore It</a>
       <a href="/AP Resource Pages/averageVelocityPresent.html" class="card-link">→ Class Presenter</a>
@@ -84,11 +84,21 @@ description: Comprehensive collection of study materials, practice problems, and
 
 ---
 
-## 📖 Complete Resource Warehouse
+## <span aria-hidden="true">🧩</span> AP Physics Models
 
-For a comprehensive collection of all AP Physics materials, including past years' resources:
+The course is organised around a sequence of models. Practice pages are added as each model
+is taught.
 
-**[AP Resource Warehouse →](/apphysics.html)**
+1. [Motion (CVPM and CAPM)](/AP%20Resource%20Pages/apmotionresources.html)
+2. Force Models (BFPM and UBFPM)
+3. Projectile Motion Particle Model
+4. Central Force Particle Model
+5. Momentum Transfer Model
+6. Energy Transfer Model
+7. Oscillating Particle Model
+8. Mechanical Wave Model
+9. Charged Particle Model
+10. Rotating Body Model
 
 ---
 

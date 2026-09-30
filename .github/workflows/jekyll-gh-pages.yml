@@ -35,6 +35,9 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Check links and deck freshness
+        run: |
+          python3 scripts/check-site.py --site ./_site --repo . --strict
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
