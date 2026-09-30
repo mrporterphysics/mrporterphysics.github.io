@@ -63,6 +63,16 @@ description: Comprehensive collection of study materials, practice problems, and
   </div>
 
   <div class="content-card">
+    <div class="card-icon">⏱️</div>
+    <h3 class="card-title">Average vs Instantaneous Velocity</h3>
+    <p class="card-description">Why Δx/Δt from a position–time table gives the velocity at the interval's midpoint, never at the times listed in the table</p>
+    <div class="card-links">
+      <a href="/AP Resource Pages/averageVsInstantaneous.html" class="card-link">→ Explore It</a>
+      <a href="/AP Resource Pages/averageVelocityPresent.html" class="card-link">→ Class Presenter</a>
+    </div>
+  </div>
+
+  <div class="content-card">
     <div class="card-icon">🎮</div>
     <h3 class="card-title">Interactive Simulations</h3>
     <p class="card-description">Physics simulations and ranking tasks for hands-on learning</p>

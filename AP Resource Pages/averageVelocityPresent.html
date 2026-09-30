@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average vs Instantaneous Velocity — Classroom Presenter</title>
+<link rel="stylesheet" href="../css/flexoki-theme.css">
+<style>
+:root{
+  --fx-paper:#FFFCF0; --fx-base-50:#F2F0E5; --fx-base-100:#EFEBD4; --fx-base-150:#E6E2CC;
+  --fx-base-200:#DAD4BA; --fx-base-300:#C8BFA1; --fx-base-400:#B5A988; --fx-base-500:#9C8F70;
+  --fx-base-600:#847759; --fx-base-700:#6F6144; --fx-base-800:#575142; --fx-base-850:#403E39;
+  --fx-base-900:#343331; --fx-base-950:#1C1B1A; --fx-black:#100F0F;
+  --fx-red:#AF3029; --fx-orange:#BC5215; --fx-yellow:#AD8301; --fx-green:#66800B;
+  --fx-cyan:#24837B; --fx-blue:#205EA6; --fx-purple:#5E409D; --fx-magenta:#A02F6F;
+
+  --bg:var(--fx-paper); --panel:var(--fx-base-50); --ink:var(--fx-base-950);
+  --dim:var(--fx-base-700); --rule:var(--fx-base-200);
+  --accent:var(--fx-blue); --accent2:var(--fx-purple);
+  --ok:var(--fx-green); --no:var(--fx-red); --warn:var(--fx-yellow);
+}
+html[data-theme="dark"], body[data-theme="dark"]{
+  --bg:var(--fx-black); --panel:var(--fx-base-950); --ink:var(--fx-paper);
+  --dim:var(--fx-base-300); --rule:var(--fx-base-850);
+  --fx-red:#D14D41; --fx-orange:#DA702C; --fx-yellow:#D0A215; --fx-green:#879A39;
+  --fx-cyan:#3AA99F; --fx-blue:#4385BE; --fx-purple:#8B7EC8; --fx-magenta:#CE5D97;
+  --accent:var(--fx-blue); --accent2:var(--fx-purple);
+  --ok:var(--fx-green); --no:var(--fx-red); --warn:var(--fx-yellow);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  padding:0;              /* override flexoki-theme.css's 120px nav allowance */
+  background:var(--bg); color:var(--ink);
+  font-family:'Fira Code','SF Mono','Monaco','Inconsolata','Roboto Mono',monospace;
+  overflow:hidden;
+  /* One value drives every size on the page. How big text LOOKS from the back
+     of a room depends on the fraction of the screen it covers, not the pixel
+     count, so the scale keys off viewport HEIGHT with a width guard. */
+  font-size:clamp(15px, min(2.7vh, 2.2vw), 31px);
+}
+.stage{
+  height:100vh;
+  height:100dvh;          /* dvh so browser chrome can't clip the bottom rail */
+  display:flex; flex-direction:column;
+  padding:.9rem 2.5rem .7rem; gap:.7rem;
+}
+
+/* ---------- top bar ---------- */
+.bar{display:flex; align-items:center; gap:.8rem; flex:0 0 auto}
+.eyebrow{
+  font-size:clamp(11px,.62em,15px); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent2); font-weight:700;
+}
+.bar .spacer{flex:1}
+.bar .meta{font-size:clamp(11px,.6em,15px); color:var(--dim)}
+
+h1{
+  margin:0; font-family:'Inconsolata','SF Mono',monospace;
+  font-size:clamp(2rem, min(4.2vw, 7.4vh), 4.6rem); line-height:1.07; font-weight:700;
+  letter-spacing:-.01em;
+}
+h2{
+  margin:0; font-family:'Inconsolata','SF Mono',monospace;
+  font-size:clamp(1.6rem, min(3.2vw, 5.6vh), 3.3rem); line-height:1.13; font-weight:700;
+}
+.lede{font-size:clamp(1.1rem,min(1.85vw,3.3vh),1.9rem); line-height:1.45; color:var(--dim); max-width:66ch}
+
+/* ---------- body layout ---------- */
+.body{flex:1 1 auto; display:grid; gap:1.5rem; min-height:0}
+.body.split{
+  grid-template-columns:minmax(0,1.28fr) minmax(0,1fr);
+  grid-template-rows:minmax(0,1fr);
+}
+.body.single{
+  grid-template-columns:minmax(0,1fr);
+  align-content:center; align-content:safe center;
+  justify-items:center; overflow:auto; min-height:0;
+}
+.body.center{
+  grid-template-columns:minmax(0,1fr);
+  align-content:center; align-content:safe center;
+  justify-items:stretch; overflow:auto; min-height:0;
+}
+/* Two plots side by side with a shared control bar underneath. Used by the
+   shrink demo, where the same change has to be watched on both graphs at once. */
+.body.duo{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-rows:minmax(0,1fr) auto;
+  gap:1rem;
+}
+.duobar{
+  grid-column:1 / -1;
+  display:flex; align-items:center; gap:1rem; flex-wrap:wrap;
+  background:var(--panel); border:1px solid var(--rule); border-radius:12px;
+  padding:.7rem 1.1rem;
+}
+.duobar label{font-weight:700; font-size:1.15em; color:var(--accent2); white-space:nowrap}
+.duobar input[type=range]{
+  flex:1 1 11rem; min-width:8rem; accent-color:var(--accent2); height:1.5rem; cursor:pointer;
+}
+.duobar input[type=range]:focus-visible{outline:3px solid var(--accent2); outline-offset:3px}
+.duobar .readout{flex:4 1 26rem; gap:.35rem}
+@media (max-height:780px){ .duobar{padding:.5rem .8rem; gap:.7rem} }
+/* Steps that carry a plot give the header the smallest share they can: every
+   pixel spent on the lede comes straight out of the graph. */
+#head.tight h2{font-size:clamp(1.35rem, min(2.5vw, 4.3vh), 2.5rem)}
+#head.tight .lede{font-size:clamp(.92rem, min(1.35vw, 2.3vh), 1.3rem); margin-top:.2rem; max-width:88ch}
+.body.duo .plotcap{font-size:.92em; padding-top:.3rem}
+.duobar .chip{font-size:.86em; padding:.3rem .55rem}
+
+/* Prose steps use the full projector width: supporting cards sit side by side
+   instead of stacking into a tall column that overflows. */
+.prose-wrap{width:100%; max-width:120ch; margin:0 auto}
+.prose-wrap h2{max-width:34ch; margin-bottom:1.1rem}
+.cardgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(24ch,1fr));
+  gap:1rem; align-items:start}
+.prose-foot{margin-top:1.2rem; max-width:72ch}
+.numlist{
+  max-width:100%; margin:0; padding-left:1.7em;
+  display:grid; grid-template-columns:1fr; gap:.6rem 3.5rem;
+}
+.numlist li{margin:0}
+@media (min-width:1100px){ .numlist{grid-template-columns:1fr 1fr} }
+
+.plotwrap{
+  background:var(--panel); border:1px solid var(--rule); border-radius:14px;
+  padding:1rem; min-height:0; display:flex; flex-direction:column;
+}
+canvas{flex:1 1 auto; width:100%; min-height:0; display:block}
+.plotcap{
+  flex:0 0 auto; text-align:center; padding-top:.5rem;
+  font-size:1.12em; font-weight:600; color:var(--dim);
+}
+
+.side{display:flex; flex-direction:column; gap:.75rem; min-height:0; overflow:auto}
+.card{
+  background:var(--panel); border:1px solid var(--rule);
+  border-left:5px solid var(--accent); border-radius:12px; padding:.85rem 1.1rem;
+}
+.card h3{margin:0 0 .35rem; font-size:1.22em; color:var(--accent); font-weight:700}
+.card p{margin:.35rem 0; line-height:1.5; font-size:1.08em}
+.card.ok{border-left-color:var(--ok)} .card.ok h3{color:var(--ok)}
+.card.no{border-left-color:var(--no)} .card.no h3{color:var(--no)}
+.card.warn{border-left-color:var(--warn)} .card.warn h3{color:var(--warn)}
+
+.theory{
+  font-size:clamp(1.4rem,min(2.6vw,4.6vh),2.7rem); font-weight:700; color:var(--accent2);
+  letter-spacing:.02em;
+}
+
+/* ---------- readouts ---------- */
+.readout{display:flex; flex-wrap:wrap; gap:.45rem}
+.chip{
+  background:var(--bg); border:1px solid var(--rule); border-radius:8px;
+  padding:.45rem .8rem; font-size:1.06em; font-weight:600;
+}
+.chip b{color:var(--accent); font-weight:700}
+.chip.big{font-size:1.38em; border-color:var(--ok); border-width:2px}
+.chip.big b{color:var(--ok)}
+.chip.bad{border-color:var(--no); border-width:2px}
+.chip.bad b{color:var(--no)}
+
+.answer{
+  font-size:clamp(1.8rem,min(3.6vw,6.3vh),3.8rem); font-weight:700; color:var(--ok);
+  line-height:1.2; margin:.3rem 0;
+}
+.answer.no{color:var(--no)}
+.mathline{font-size:1.32em; line-height:1.75; color:var(--ink)}
+.mathline .op{color:var(--dim)}
+.mathline .hi{color:var(--no); font-weight:700}
+.mathline .good{color:var(--ok); font-weight:700}
+
+/* ---------- vote buttons ---------- */
+.picker{display:flex; flex-wrap:wrap; gap:.7rem}
+.pick{
+  background:var(--panel); color:var(--ink);
+  border:2px solid var(--rule); border-radius:10px;
+  padding:.65rem 1rem; font:inherit; font-size:1.22em; font-weight:700;
+  cursor:pointer; transition:transform .12s ease, border-color .2s, background .2s;
+}
+.pick:hover{border-color:var(--accent); transform:translateY(-2px)}
+.pick:focus-visible{outline:3px solid var(--accent2); outline-offset:3px}
+.pick .k{
+  display:inline-block; min-width:1.5em; margin-right:.5em; padding:.05em .35em;
+  background:var(--rule); color:var(--dim); border-radius:5px;
+  font-size:.78em; text-align:center;
+}
+.pick.tried{opacity:.55}
+.pick.tried.wrong{border-color:var(--no)}
+.pick.tried.right{border-color:var(--ok); opacity:1; background:color-mix(in srgb,var(--ok) 12%, var(--panel))}
+
+/* ---------- the on-slide data table ---------- */
+.tablecard{
+  background:var(--panel); border:1px solid var(--rule); border-radius:14px;
+  padding:1rem 1.1rem; min-height:0; overflow:auto;
+}
+table.big{border-collapse:collapse; width:100%; font-size:1.02em; font-variant-numeric:tabular-nums}
+table.big caption{text-align:left; color:var(--dim); font-size:.9em; padding-bottom:.5rem}
+table.big th, table.big td{border:1px solid var(--rule); padding:.28rem .6rem; text-align:right}
+table.big thead th{background:var(--bg); color:var(--accent); text-align:center; font-weight:700}
+table.big tbody th{background:var(--bg); font-weight:700}
+table.big tr.gap td{
+  background:color-mix(in srgb,var(--accent2) 12%, var(--bg));
+  font-weight:700; color:var(--ink);
+}
+table.big tr.gap td.lab{text-align:left; font-weight:400; color:var(--dim)}
+table.big td.muted{color:var(--dim)}
+table.big .show{color:var(--accent2)}
+
+/* ---------- progress + help ---------- */
+.rail{flex:0 0 auto; display:flex; align-items:center; gap:.8rem; padding-top:.2rem}
+.dots{display:flex; gap:.3rem; flex:1; flex-wrap:wrap}
+.dot{height:5px; flex:1 1 0; min-width:6px; background:var(--rule); border-radius:3px; transition:background .25s}
+.dot.done{background:var(--accent)}
+.dot.now{background:var(--accent2)}
+.hint{font-size:clamp(10px,.58em,14px); color:var(--dim); white-space:nowrap}
+kbd{
+  background:var(--panel); border:1px solid var(--rule); border-bottom-width:2px;
+  border-radius:4px; padding:.1em .4em; font:inherit; font-size:.92em;
+}
+
+.ctl{
+  background:var(--panel); border:1px solid var(--rule); color:var(--ink);
+  border-radius:7px; padding:.35rem .65rem; font:inherit; font-size:clamp(11px,.6em,15px);
+  font-weight:600; cursor:pointer;
+}
+.ctl:hover{border-color:var(--accent); color:var(--accent)}
+
+/* ---------- overlays ---------- */
+.overlay{
+  position:fixed; inset:0; background:color-mix(in srgb,var(--bg) 93%, transparent);
+  backdrop-filter:blur(3px); display:none; place-items:center; z-index:50; padding:2rem;
+}
+.overlay.on{display:grid}
+.overlay .sheet{
+  background:var(--panel); border:1px solid var(--rule); border-radius:14px;
+  padding:2rem 2.5rem; max-width:64ch; max-height:80vh; overflow:auto;
+}
+.overlay h3{margin-top:0; color:var(--accent)}
+.overlay table{border-collapse:collapse; width:100%; font-size:.95em}
+.overlay th,.overlay td{border:1px solid var(--rule); padding:.35rem .6rem; text-align:right}
+.overlay th{background:var(--bg); color:var(--accent)}
+.keylist{list-style:none; padding:0; margin:0}
+.keylist li{display:flex; gap:1rem; padding:.35rem 0; border-bottom:1px solid var(--rule)}
+.keylist li span:first-child{flex:0 0 9rem}
+
+/* screen-reader-only live data: the canvas alone is not accessible */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}
+/* 768-tall projectors are still common; reclaim vertical space so the side
+   panel never has to scroll during a lesson. */
+@media (max-height:780px){
+  .stage{padding:.6rem 1.8rem .5rem; gap:.5rem}
+  .card{padding:.7rem .9rem}
+  .card h3{margin-bottom:.25rem}
+  .card p{margin:.25rem 0; line-height:1.42}
+  .side{gap:.6rem}
+  .chip{padding:.35rem .65rem}
+  .readout{gap:.4rem}
+  .lede{line-height:1.35}
+  .mathline{line-height:1.6}
+  table.big th, table.big td{padding:.2rem .45rem}
+}
+
+.fade{animation:fade .4s ease}
+@keyframes fade{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+@media (prefers-reduced-motion:reduce){ .fade{animation:none} }
+</style>
+</head>
+<body>
+
+<div class="stage">
+  <div class="bar">
+    <span class="eyebrow" id="eyebrow">Average vs instantaneous</span>
+    <span class="spacer"></span>
+    <button class="ctl" id="themeBtn" type="button">Dark</button>
+    <button class="ctl" id="dataBtn" type="button" title="Show the numbers (D)">Data</button>
+    <button class="ctl" id="helpBtn" type="button" title="Keyboard help (?)">Keys</button>
+    <span class="meta" id="counter">1 / 1</span>
+  </div>
+
+  <div id="head"></div>
+  <div class="body" id="body"></div>
+
+  <div class="rail">
+    <div class="dots" id="dots"></div>
+    <span class="hint"><kbd>&larr;</kbd> <kbd>&rarr;</kbd> move &middot; <kbd>R</kbd> reset &middot; <kbd>?</kbd> keys</span>
+  </div>
+</div>
+
+<div class="overlay" id="dataOverlay"><div class="sheet" id="dataSheet"></div></div>
+<div class="overlay" id="helpOverlay"><div class="sheet">
+  <h3>Presenter keys</h3>
+  <ul class="keylist">
+    <li><span><kbd>&rarr;</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd></span><span>Next step</span></li>
+    <li><span><kbd>&larr;</kbd> <kbd>PgUp</kbd></span><span>Previous step</span></li>
+    <li><span><kbd>1</kbd>&ndash;<kbd>3</kbd></span><span>Take the class's vote on a "you choose" step</span></li>
+    <li><span><kbd>Space</kbd></span><span>On a demo step, run the animation before moving on</span></li>
+    <li><span><kbd>R</kbd></span><span>Reset this step (clear the class's guesses)</span></li>
+    <li><span><kbd>A</kbd></span><span>Change the acceleration (0.5 &rarr; 2 &rarr; 5 m/s&sup2;)</span></li>
+    <li><span><kbd>D</kbd></span><span>Show the raw numbers</span></li>
+    <li><span><kbd>T</kbd></span><span>Light / dark</span></li>
+    <li><span><kbd>Home</kbd></span><span>Back to the first step</span></li>
+    <li><span><kbd>Esc</kbd></span><span>Close an overlay</span></li>
+  </ul>
+  <p style="color:var(--dim);font-size:.9em">A presentation remote usually sends PgUp/PgDn, so it drives this directly.</p>
+</div></div>
+
+<div class="sr-only" id="srTable" aria-live="polite"></div>
+
+<script src="../js/linearization-engine.js"></script>
+<script>
+(function(){
+'use strict';
+var E = window.LinEngine;
+
+/* =====================================================================
+   Theme — persisted, and shared with the rest of the site's convention.
+   ===================================================================== */
+function applyTheme(t){
+  if(t === 'dark') document.body.setAttribute('data-theme','dark');
+  else document.body.removeAttribute('data-theme');
+  document.getElementById('themeBtn').textContent = t === 'dark' ? 'Light' : 'Dark';
+  try{ localStorage.setItem('theme', t); }catch(e){}
+  render();
+}
+function currentTheme(){
+  return document.body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+}
+try{ if(localStorage.getItem('theme') === 'dark') document.body.setAttribute('data-theme','dark'); }catch(e){}
+
+/* =====================================================================
+   The motion. One cart, uniform acceleration, sampled by a detector.
+   Every number on every slide comes from here, so changing `a` live (key A)
+   re-runs the whole lesson with different numbers.
+   ===================================================================== */
+/* Released from rest on a fairly steep ramp. v0 = 0 and an early t* are what
+   make x(t) look like a parabola over the window slide 6 shows — with a big
+   v0 the linear term dominates and the curve reads as a straight line. */
+var M = { v0:0, a:5.00, dtData:0.20, tstar:0.20, T:1.2 };
+var A_CYCLE = [5.0, 2.0, 8.0];
+
+function pos(t){ return M.v0*t + 0.5*M.a*t*t; }
+function vel(t){ return M.v0 + M.a*t; }
+function avgOver(t1, t2){ return (pos(t2) - pos(t1)) / (t2 - t1); }
+function samples(){
+  var out = [], n = Math.round(M.T / M.dtData);
+  for(var i = 0; i <= n; i++){ var t = i*M.dtData; out.push({t:t, x:pos(t)}); }
+  return out;
+}
+function num(v, d){ return Number(v).toFixed(d == null ? 2 : d); }
+function esc(t){
+  return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* =====================================================================
+   Figure primitives. E.prepareCanvas gives device-resolution backing and
+   E.themeColors gives the shared palette; the axes below are local because
+   these plots need secants, tangents and shaded triangles that the engine's
+   scatter plotter has no vocabulary for.
+   ===================================================================== */
+function figBase(){
+  try{ return parseFloat(getComputedStyle(document.body).fontSize) || 20; }
+  catch(e){ return 20; }
+}
+
+function niceTicks(lo, hi, want){
+  var span = hi - lo; if(!(span > 0)) return [lo];
+  var raw = span/(want||6);
+  var mag = Math.pow(10, Math.floor(Math.log(raw)/Math.LN10)), n = raw/mag;
+  var step = (n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10) * mag;
+  var out = [], v = Math.ceil(lo/step - 1e-9)*step;
+  for(; v <= hi + step*1e-6; v += step) out.push(Math.abs(v) < step*1e-6 ? 0 : v);
+  out.step = step;
+  return out;
+}
+
+function axes(cv, xlo, xhi, ylo, yhi, xlab, ylab){
+  var g = E.prepareCanvas(cv), ctx = g.ctx, c = E.themeColors();
+  /* The canvas is transparent over .plotwrap, so the colour that hides a
+     gridline behind a label is the CARD's background, not the page's. */
+  try{
+    var panel = getComputedStyle(document.body).getPropertyValue('--panel').trim();
+    if(panel){ c = Object.assign({}, c, { bg: panel }); }
+  }catch(e){}
+  var base = figBase();
+  var fs = Math.max(10, Math.round(base*0.80));
+  var ls = Math.max(12, Math.round(base*1.02));
+  var padL = Math.round(fs*3.3 + ls*1.3), padB = Math.round(fs*1.5 + ls*1.4);
+  var padT = Math.round(ls*1.0),         padR = Math.round(ls*1.5);
+  var pw = g.w - padL - padR, ph = g.h - padT - padB;
+  if(pw <= 10 || ph <= 10) return null;
+
+  function X(t){ return padL + (t - xlo)/(xhi - xlo)*pw; }
+  function Y(v){ return padT + ph - (v - ylo)/(yhi - ylo)*ph; }
+
+  var xt = niceTicks(xlo, xhi, pw < 420 ? 4 : 6), yt = niceTicks(ylo, yhi, 5);
+  function dec(st){ return st >= 1 ? 0 : st >= 0.1 ? 1 : 2; }
+  var xd = dec(xt.step), yd = dec(yt.step);
+
+  ctx.strokeStyle = c.grid; ctx.lineWidth = 1; ctx.setLineDash([]);
+  ctx.beginPath();
+  xt.forEach(function(t){ var x = Math.round(X(t))+0.5; ctx.moveTo(x, padT); ctx.lineTo(x, padT+ph); });
+  yt.forEach(function(v){ var y = Math.round(Y(v))+0.5; ctx.moveTo(padL, y); ctx.lineTo(padL+pw, y); });
+  ctx.stroke();
+
+  ctx.strokeStyle = c.axis; ctx.lineWidth = Math.max(2, base*0.10);
+  ctx.beginPath();
+  ctx.moveTo(padL, padT); ctx.lineTo(padL, padT+ph); ctx.lineTo(padL+pw, padT+ph);
+  ctx.stroke();
+
+  ctx.fillStyle = c.muted; ctx.font = fs + 'px "Fira Code", monospace';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+  xt.forEach(function(t){ ctx.fillText(t.toFixed(xd), X(t), padT+ph+Math.round(fs*0.45)); });
+  ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+  yt.forEach(function(v){ ctx.fillText(v.toFixed(yd), padL-Math.round(fs*0.5), Y(v)); });
+
+  ctx.fillStyle = c.text; ctx.font = '600 ' + ls + 'px "Fira Code", monospace';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+  ctx.fillText(xlab, padL + pw/2, g.h - Math.round(ls*0.2));
+  ctx.save();
+  ctx.translate(Math.round(ls*0.9), padT + ph/2); ctx.rotate(-Math.PI/2);
+  ctx.textBaseline = 'top'; ctx.fillText(ylab, 0, 0);
+  ctx.restore();
+
+  var F = {
+    ctx:ctx, c:c, base:base, w:g.w, h:g.h,
+    X:X, Y:Y, px:padL, py:padT, pw:pw, ph:ph,
+    lw: Math.max(2, base*0.13),
+    r:  Math.max(5, base*0.26),
+    clip:  function(){ ctx.save(); ctx.beginPath(); ctx.rect(padL, padT, pw, ph); ctx.clip(); },
+    unclip:function(){ ctx.restore(); }
+  };
+  return F;
+}
+
+function line(F, t1, y1, t2, y2, colour, mul, dash){
+  var ctx = F.ctx;
+  ctx.strokeStyle = colour; ctx.lineWidth = F.lw*(mul||1);
+  ctx.setLineDash(dash ? dash.map(function(d){ return d*F.lw; }) : []);
+  ctx.beginPath(); ctx.moveTo(F.X(t1), F.Y(y1)); ctx.lineTo(F.X(t2), F.Y(y2)); ctx.stroke();
+  ctx.setLineDash([]);
+}
+function dot(F, x, y, colour, mul){
+  var ctx = F.ctx;
+  ctx.beginPath(); ctx.arc(x, y, F.r*(mul||1), 0, Math.PI*2);
+  ctx.fillStyle = colour; ctx.fill();
+  ctx.lineWidth = F.lw*0.6; ctx.strokeStyle = F.c.bg; ctx.stroke();
+}
+function ring(F, x, y, colour, mul){
+  var ctx = F.ctx;
+  ctx.beginPath(); ctx.arc(x, y, F.r*(mul||1.35), 0, Math.PI*2);
+  ctx.strokeStyle = colour; ctx.lineWidth = F.lw*0.8; ctx.stroke();
+}
+function tag(F, x, y, text, colour, align){
+  var ctx = F.ctx, fs = Math.max(11, Math.round(F.base*0.78));
+  ctx.font = '700 ' + fs + 'px "Fira Code", monospace';
+  ctx.textBaseline = 'middle';
+  var tw = ctx.measureText(text).width;
+  var ox = align === 'right' ? -tw : align === 'center' ? -tw/2 : 0;
+  var left = Math.max(F.px + 2, Math.min(x + ox, F.px + F.pw - tw - 2));
+  var top  = Math.max(fs*0.8, Math.min(y, F.h - fs*0.8));
+  ctx.fillStyle = F.c.bg; ctx.globalAlpha = 0.88;
+  ctx.fillRect(left - fs*0.3, top - fs*0.78, tw + fs*0.6, fs*1.56);
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = colour; ctx.textAlign = 'left'; ctx.fillText(text, left, top);
+}
+
+/* Flexoki accents that are not in the engine's palette. */
+function accent(name){
+  var dark = document.body.getAttribute('data-theme') === 'dark';
+  var P = dark
+    ? { orange:'#DA702C', purple:'#8B7EC8', green:'#879A39', red:'#D14D41', blue:'#4385BE' }
+    : { orange:'#BC5215', purple:'#5E409D', green:'#66800B', red:'#AF3029', blue:'#205EA6' };
+  return P[name];
+}
+
+/* =====================================================================
+   The two plots. Both take an explicit time window so a step can hold the
+   viewport still while something inside it changes — without that, shrinking
+   Δt just rescales the axes and nothing appears to converge.
+   ===================================================================== */
+function drawXT(cv, o){
+  var xlo = o.xlo, xhi = o.xhi;
+  var ylo = pos(xlo), yhi = pos(xhi), yr = yhi - ylo;
+  /* The cart is never at a negative position; don't invent axis below zero. */
+  var F = axes(cv, xlo, xhi, Math.max(0, ylo - 0.20*yr), yhi + 0.20*yr,
+               'time t (s)', 'position x (m)');
+  if(!F) return;
+  var c = F.c, t1 = o.t1, t2 = o.t2, tm = (t1+t2)/2;
+  var m = avgOver(t1, t2);
+  function sec(t){ return pos(t1) + m*(t - t1); }
+  function tanAt(t0){ var p0 = pos(t0), s = vel(t0); return function(t){ return p0 + s*(t - t0); }; }
+
+  F.clip();
+  if(o.showBox){
+    F.ctx.strokeStyle = accent('red'); F.ctx.lineWidth = F.lw*0.55;
+    F.ctx.setLineDash([F.lw*1.6, F.lw*1.6]);
+    F.ctx.beginPath();
+    F.ctx.moveTo(F.X(t1), F.Y(pos(t1)));
+    F.ctx.lineTo(F.X(t2), F.Y(pos(t1)));
+    F.ctx.lineTo(F.X(t2), F.Y(pos(t2)));
+    F.ctx.stroke(); F.ctx.setLineDash([]);
+  }
+  if(o.showTanMid) line(F, xlo, tanAt(tm)(xlo), xhi, tanAt(tm)(xhi), accent('green'), 1.15, [3,2]);
+  if(o.showSecant) line(F, xlo, sec(xlo),       xhi, sec(xhi),       accent('red'),   1.0);
+  if(o.showTanStar){
+    var T0 = tanAt(M.tstar);
+    line(F, xlo, T0(xlo), xhi, T0(xhi), accent('orange'), 1.0);
+  }
+
+  /* the curve last, so the straight lines never hide the thing they approximate */
+  F.ctx.strokeStyle = c.point; F.ctx.lineWidth = F.lw*1.25;
+  F.ctx.beginPath();
+  for(var i = 0; i <= 260; i++){
+    var t = xlo + (xhi-xlo)*i/260;
+    if(i === 0) F.ctx.moveTo(F.X(t), F.Y(pos(t))); else F.ctx.lineTo(F.X(t), F.Y(pos(t)));
+  }
+  F.ctx.stroke();
+
+  if(o.showSamples){
+    samples().forEach(function(p){
+      if(p.t >= xlo && p.t <= xhi) dot(F, F.X(p.t), F.Y(p.x), c.point, 0.62);
+    });
+  }
+  dot(F, F.X(t1), F.Y(pos(t1)), accent('red'));
+  dot(F, F.X(t2), F.Y(pos(t2)), accent('red'));
+  if(o.showTanMid) dot(F, F.X(tm), F.Y(pos(tm)), accent('green'));
+  if(o.showTanStar) ring(F, F.X(M.tstar), F.Y(pos(M.tstar)), accent('orange'));
+  F.unclip();
+
+  var yT = F.py + F.base*1.0, yB = F.py + F.ph - F.base*1.0;
+  function cy(y){ return Math.max(yT, Math.min(yB, y)); }
+  if(o.showSecant)
+    tag(F, F.X(xhi) - F.base*0.4, cy(F.Y(sec(xhi)) - F.base*0.95),
+        'secant  ' + num(m) + ' m/s', accent('red'), 'right');
+  if(o.showTanStar)
+    tag(F, F.X(xhi) - F.base*0.4, cy(F.Y(tanAt(M.tstar)(xhi)) + F.base*1.05),
+        'tangent at t*  ' + num(vel(M.tstar)) + ' m/s', accent('orange'), 'right');
+  if(o.showTanMid)
+    tag(F, F.X(xlo) + F.base*0.4, cy(F.Y(tanAt(tm)(xlo)) + F.base*1.05),
+        'tangent at midpoint  ' + num(vel(tm)) + ' m/s', accent('green'), 'left');
+  if(o.showBox){
+    tag(F, (F.X(t1)+F.X(t2))/2, cy(F.Y(pos(t1)) + F.base*0.9), 'Δt = ' + num(t2-t1), accent('red'), 'center');
+    tag(F, F.X(t2) + F.base*0.4, cy((F.Y(pos(t1))+F.Y(pos(t2)))/2), 'Δx = ' + num(pos(t2)-pos(t1)), accent('red'), 'left');
+  }
+}
+
+function drawVT(cv, o){
+  var xlo = o.xlo, xhi = o.xhi;
+  var vlo = vel(xlo), vhi = vel(xhi), vr = Math.max(vhi - vlo, 0.4);
+  var F = axes(cv, xlo, xhi, vlo - 0.28*vr, vhi + 0.28*vr, 'time t (s)', 'velocity v (m/s)');
+  if(!F) return;
+  var c = F.c, t1 = o.t1, t2 = o.t2, tm = (t1+t2)/2;
+  var vavg = avgOver(t1, t2);
+
+  F.clip();
+  /* the interval */
+  F.ctx.fillStyle = accent('green'); F.ctx.globalAlpha = 0.10;
+  F.ctx.fillRect(F.X(t1), F.py, Math.max(1, F.X(t2)-F.X(t1)), F.ph);
+  F.ctx.globalAlpha = 1;
+
+  if(o.showTri){
+    /* two equal triangles: the shortfall before the midpoint is repaid after it */
+    F.ctx.fillStyle = accent('red'); F.ctx.globalAlpha = 0.26;
+    F.ctx.beginPath();
+    F.ctx.moveTo(F.X(t1), F.Y(vavg)); F.ctx.lineTo(F.X(tm), F.Y(vavg));
+    F.ctx.lineTo(F.X(t1), F.Y(vel(t1))); F.ctx.closePath(); F.ctx.fill();
+    F.ctx.beginPath();
+    F.ctx.moveTo(F.X(tm), F.Y(vavg)); F.ctx.lineTo(F.X(t2), F.Y(vavg));
+    F.ctx.lineTo(F.X(t2), F.Y(vel(t2))); F.ctx.closePath(); F.ctx.fill();
+    F.ctx.globalAlpha = 1;
+  }
+
+  F.ctx.strokeStyle = c.muted; F.ctx.lineWidth = 1; F.ctx.setLineDash([3,3]);
+  [t1, t2].forEach(function(t){
+    F.ctx.beginPath(); F.ctx.moveTo(F.X(t), F.py); F.ctx.lineTo(F.X(t), F.py+F.ph); F.ctx.stroke();
+  });
+  F.ctx.setLineDash([]);
+
+  if(o.showAvg) line(F, xlo, vavg, Math.min(xhi, t2 + (xhi-xlo)*0.02), vavg, accent('green'), 0.95, [3,2]);
+  line(F, xlo, vel(xlo), xhi, vel(xhi), c.point, 1.25);
+
+  /* where the class said the answer belongs. While the marker is still
+     travelling it is drawn neutral — the verdict lands when it stops. */
+  var pickT = (o.pickT != null) ? o.pickT
+            : o.pickAt === 't1' ? t1 : o.pickAt === 't2' ? t2 : o.pickAt === 'mid' ? tm : null;
+  var settled = o.pickSettled !== false;
+  if(pickT !== null){
+    var off = vavg - vel(pickT);
+    if(!settled){
+      dot(F, F.X(pickT), F.Y(vavg), accent('purple'), 1.15);
+    } else if(Math.abs(off) > 1e-9){
+      line(F, pickT, vel(pickT), pickT, vavg, accent('red'), 1.3);
+      dot(F, F.X(pickT), F.Y(vavg), accent('red'), 1.15);
+    } else {
+      dot(F, F.X(pickT), F.Y(vavg), accent('green'), 1.25);
+    }
+  }
+  if(o.markMid) dot(F, F.X(tm), F.Y(vavg), accent('green'), 1.15);
+  if(o.showGap){
+    var gap = vavg - vel(M.tstar);
+    if(Math.abs(gap) > 1e-9){
+      line(F, M.tstar, vel(M.tstar), M.tstar, vavg, accent('red'), 1.3);
+      dot(F, F.X(M.tstar), F.Y(vavg), accent('red'), 1.1);
+    }
+  }
+  if(o.markStar) ring(F, F.X(M.tstar), F.Y(vel(M.tstar)), accent('orange'));
+  F.unclip();
+
+  var yT = F.py + F.base*1.0, yB = F.py + F.ph - F.base*1.0;
+  function cy(y){ return Math.max(yT, Math.min(yB, y)); }
+  tag(F, F.X(xhi) - F.base*0.4, cy(F.Y(vel(xhi)) + F.base*1.1), 'true v = v₀ + at', c.point, 'right');
+  if(o.showAvg)
+    tag(F, F.px + F.base*0.4, cy(F.Y(vavg) - F.base*0.95), 'Δx/Δt = ' + num(vavg), accent('green'), 'left');
+  /* Once the interval is small these two annotations land on the same pixels.
+     The chips under the plot still carry the numbers, so drop the labels
+     rather than stack them. */
+  var sepPx = F.X(tm) - F.X(M.tstar);
+  if(o.markMid && sepPx > F.base*3.2)
+    tag(F, F.X(tm) + F.base*0.6, cy(F.Y(vavg) - F.base*1.5),
+        'midpoint t = ' + num(tm) + ' s', accent('green'), 'left');
+  if(o.showGap || (pickT !== null && settled)){
+    var at = o.showGap ? M.tstar : pickT;
+    var g2 = vavg - vel(at);
+    var gapPx = Math.abs(F.Y(vel(at)) - F.Y(vavg));
+    if(Math.abs(g2) > 1e-9 && gapPx > F.base*1.1)
+      tag(F, F.X(at) + F.base*0.7, cy((F.Y(vel(at)) + F.Y(vavg))/2),
+          'off by ' + (g2>0?'+':'−') + num(Math.abs(g2)) + ' m/s', accent('red'), 'left');
+  }
+  if(o.markStar)
+    tag(F, F.X(M.tstar), cy(F.Y(vel(M.tstar)) + F.base*1.7),
+        'true v(t*) = ' + num(vel(M.tstar)), accent('orange'), 'center');
+}
+
+/* =====================================================================
+   Steps. Each is a small declarative object; `kind` picks the layout.
+   ===================================================================== */
+var STEPS = [
+  { kind:'title', eyebrow:'AP Physics · Kinematics',
+    h1:'The Velocity You Never Measured',
+    lede:'A detector records positions. Velocity is something you infer — and the obvious way to infer it is wrong by the same amount every single time.' },
+
+  { kind:'prose', eyebrow:'The ask',
+    h2:'"Use the data to find the velocity at t = {t} s."',
+    bullets:[
+      ['What you have','Positions from a motion detector, one every {dt} s. Nothing else.'],
+      ['What you do','Subtract neighbouring positions and divide by the time between them.'],
+      ['What you get','A number — but a number built out of two different times.']
+    ],
+    foot:'Δx/Δt cannot be a property of one instant, because two instants went into making it. So whose velocity is it?' },
+
+  { kind:'table', eyebrow:'The data' },
+
+  { kind:'vt', eyebrow:'You decide' },
+
+  { kind:'xt', eyebrow:'On the position–time graph' },
+
+  { kind:'shrink', eyebrow:'Shrink the interval' },
+
+  { kind:'prose', eyebrow:'The algebra',
+    h2:'Three lines, and the whole thing falls out.',
+    html:
+      '<p class="mathline">x(t) = x₀ + v₀t + ½at²</p>' +
+      '<p class="mathline"><span class="op">so</span>  Δx/Δt = [ x(t+Δt) − x(t) ] / Δt = v₀ + at + <span class="hi">½aΔt</span></p>' +
+      '<p class="mathline"><span class="op">and since</span> v(t) = v₀ + at :  ' +
+        'Δx/Δt = v(t) + <span class="hi">½aΔt</span> = <span class="good">v(t + Δt/2)</span></p>',
+    foot:'Not "approximately". Under uniform acceleration the average velocity is exactly the instantaneous velocity at the middle of the interval.' },
+
+  { kind:'sweep', eyebrow:'Does it get better later?' },
+
+  { kind:'prose', eyebrow:'The trap', warn:true,
+    h2:'You cannot fix this by collecting more data.',
+    bullets:[
+      ['The error is ½aΔt','No t in it. The mistake is the same size at t = 0.2 s and at t = 12 s.'],
+      ['It is one-signed','Forward intervals always read fast. Backward intervals always read slow. This is bias, not scatter.'],
+      ['So averaging fails','Every interval carries the identical error, so the mean of fifty of them carries it too.']
+    ],
+    foot:'Random error shrinks when you repeat a measurement. Systematic error does not. This one is systematic.' },
+
+  { kind:'prose', eyebrow:'What to do instead',
+    h2:'Three honest options.',
+    numbered:[
+      'Relabel. Keep every Δx/Δt you already computed and write it beside the MIDPOINT time. Exact, and it costs you nothing.',
+      'Centre the interval. For the velocity at a time in your table, use the point before and the point after: v(t) ≈ [x(t+Δt) − x(t−Δt)] / 2Δt. The two half-errors cancel.',
+      'Fit the whole curve. Linearise x against t², or fit a parabola and differentiate it. Uses every point, and hands you v₀ and a directly.'
+    ],
+    foot:'Option 1 is free. Option 2 costs you the first and last data point. Option 3 is what you will do in a formal lab write-up.' },
+
+  { kind:'title', eyebrow:'Your turn',
+    h1:'Label the midpoint.',
+    lede:'Open the full page to change the numbers yourself, try all three methods, and work the practice questions.' }
+];
+
+/* =====================================================================
+   State
+   ===================================================================== */
+var state = {
+  i: 0,
+  pick: null,        // which time the class voted for on the v–t step
+  tried: {},
+  voteProg: 1,       // 0→1 while the chosen marker slides into place
+  dt: 0.20,          // live Δt on the shrink step
+  sweepT: null,      // live t* on the sweep step
+  played: {}         // demo steps that have already been run once
+};
+
+function votes(){
+  var t1 = ivt1(), t2 = ivt2();
+  return [
+    { id:'t1',  label:'the START of the interval, t = ' + num(t1) + ' s' },
+    { id:'t2',  label:'the END of the interval, t = ' + num(t2) + ' s' },
+    { id:'mid', label:'the MIDDLE of the interval, t = ' + num((t1+t2)/2) + ' s' }
+  ];
+}
+
+function step(){ return STEPS[state.i]; }
+
+/* The interval the whole lesson refers to: one sampling gap starting at t*. */
+function ivt1(){ return M.tstar; }
+function ivt2(){ return M.tstar + M.dtData; }
+
+function resetStep(){
+  var st = step();
+  state.pick = null; state.tried = {}; state.voteProg = 1;
+  state.dt = M.dtData;
+  state.sweepT = M.tstar;
+  delete state.played[state.i];
+  stopAnim();
+  render();
+}
+
+/* =====================================================================
+   Animation. Respects prefers-reduced-motion by jumping to the end state —
+   the point of every animation here is the destination, not the travel.
+   ===================================================================== */
+var anim = null;
+function easeInOut(t){ return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3)/2; }
+function reduced(){
+  return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+function stopAnim(){ if(anim){ cancelAnimationFrame(anim.raf); anim = null; } }
+
+function run(ms, onFrame, onDone){
+  stopAnim();
+  if(reduced()){ onFrame(1); if(onDone) onDone(); render(); return; }
+  var t0 = performance.now();
+  function frame(now){
+    var p = Math.min(1, (now - t0)/ms);
+    onFrame(easeInOut(p));
+    if(p < 1){ anim.raf = requestAnimationFrame(frame); }
+    else { anim = null; if(onDone) onDone(); render(); }
+  }
+  anim = { raf: requestAnimationFrame(frame) };
+}
+function lerp(a, b, t){ return a + (b-a)*t; }
+
+/* =====================================================================
+   The error scan: error against t*, which is a flat line. Watching the
+   marker travel along it while the true velocity chip climbs is the point —
+   the cart speeds up by a factor of eight and the mistake never budges.
+   ===================================================================== */
+function drawErrScan(cv){
+  var half = 0.5*M.a*M.dtData;
+  var xhi = M.T - M.dtData;
+  var F = axes(cv, 0, xhi, 0, Math.max(half*2.2, 0.3),
+               'the time you were asked about, t* (s)', '|error| (m/s)');
+  if(!F) return;
+  F.clip();
+  line(F, 0, half, xhi, half, accent('red'), 1.15);
+  var t = state.sweepT == null ? M.tstar : Math.min(state.sweepT, xhi);
+  F.ctx.strokeStyle = F.c.muted; F.ctx.lineWidth = 1; F.ctx.setLineDash([3,3]);
+  F.ctx.beginPath(); F.ctx.moveTo(F.X(t), F.py + F.ph); F.ctx.lineTo(F.X(t), F.Y(half)); F.ctx.stroke();
+  F.ctx.setLineDash([]);
+  dot(F, F.X(t), F.Y(half), accent('red'), 1.25);
+  F.unclip();
+  tag(F, F.px + F.base*0.5, F.Y(half) - F.base*1.0,
+      'error = ½aΔt = ' + num(half) + ' m/s, at every t*', accent('red'), 'left');
+}
+
+/* =====================================================================
+   Rendering
+   ===================================================================== */
+var head = document.getElementById('head');
+var body = document.getElementById('body');
+
+function render(){
+  var st = step();
+  document.getElementById('eyebrow').textContent = st.eyebrow || 'Average vs instantaneous';
+  document.getElementById('counter').textContent = (state.i + 1) + ' / ' + STEPS.length;
+  renderDots();
+
+  if(st.kind === 'title')  renderTitle(st);
+  if(st.kind === 'prose')  renderProse(st);
+  if(st.kind === 'table')  renderTable(st);
+  if(st.kind === 'vt')     renderVote(st);
+  if(st.kind === 'xt')     renderXT(st);
+  if(st.kind === 'shrink') renderShrink(st);
+  if(st.kind === 'sweep')  renderSweep(st);
+  schedFit();
+}
+
+function renderDots(){
+  var d = document.getElementById('dots');
+  if(d.children.length !== STEPS.length){
+    d.innerHTML = STEPS.map(function(){ return '<span class="dot"></span>'; }).join('');
+  }
+  for(var i=0;i<d.children.length;i++){
+    d.children[i].className = 'dot' + (i < state.i ? ' done' : i === state.i ? ' now' : '');
+  }
+}
+
+function renderTitle(st){
+  head.className = '';
+  head.innerHTML = '';
+  body.className = 'body single';
+  body.innerHTML =
+    '<div class="fade" style="text-align:center;max-width:30ch;margin:auto">' +
+      '<h1>' + esc(st.h1) + '</h1>' +
+      '<p class="lede" style="margin:1.5rem auto 0">' + esc(st.lede) + '</p>' +
+      (state.i === STEPS.length - 1
+        ? '<p style="margin-top:2rem"><a class="ctl" style="text-decoration:none;display:inline-block;padding:.7rem 1.2rem;font-size:1em" href="averageVsInstantaneous.html">Open the full page →</a></p>'
+        : '') +
+    '</div>';
+  setSR('');
+}
+
+/* Copy written once, numbers filled in from the live motion. */
+function subst(t){
+  return String(t).replace(/\{t\}/g, num(M.tstar))
+                  .replace(/\{dt\}/g, num(M.dtData))
+                  .replace(/\{a\}/g, num(M.a));
+}
+
+function renderProse(st){
+  head.className = '';
+  head.innerHTML = '';
+  body.className = 'body center';
+  var h = '<div class="fade prose-wrap">';
+  h += '<h2>' + esc(subst(st.h2)) + '</h2>';
+  if(st.bullets){
+    h += '<div class="cardgrid">';
+    st.bullets.forEach(function(b){
+      h += '<div class="card' + (st.warn ? ' warn' : '') + '">' +
+             '<h3>' + esc(b[0]) + '</h3><p>' + esc(subst(b[1])) + '</p></div>';
+    });
+    h += '</div>';
+  }
+  if(st.html) h += '<div class="card" style="border-left-color:var(--accent2)">' + st.html + '</div>';
+  if(st.numbered){
+    h += '<ol class="mathline numlist">';
+    st.numbered.forEach(function(n){ h += '<li>' + esc(n) + '</li>'; });
+    h += '</ol>';
+  }
+  if(st.foot) h += '<p class="lede prose-foot">' + esc(subst(st.foot)) + '</p>';
+  h += '</div>';
+  body.innerHTML = h;
+  setSR('');
+}
+
+function renderTable(st){
+  head.className = 'tight';
+  head.innerHTML =
+    '<h2>Positions every ' + num(M.dtData) + ' s</h2>' +
+    '<p class="lede">The velocities sit between the rows, never on them.</p>';
+
+  body.className = 'body split';
+  var S = samples();
+  var i0 = Math.max(0, Math.round(M.tstar/M.dtData) - 2);
+  var i1 = Math.min(S.length - 1, i0 + 6);
+  var rows = '';
+  for(var k = i0; k <= i1; k++){
+    rows += '<tr><th scope="row">' + num(S[k].t) + '</th><td>' + num(S[k].x, 3) +
+            '</td><td class="muted">—</td><td class="muted">—</td><td class="muted">—</td></tr>';
+    if(k < i1){
+      var dx = S[k+1].x - S[k].x, tm = (S[k].t + S[k+1].t)/2;
+      var hot = Math.abs(S[k].t - ivt1()) < M.dtData/4;
+      rows += '<tr class="gap"><td class="lab">' + num(S[k].t) + ' → ' + num(S[k+1].t) + '</td>' +
+              '<td class="muted">—</td><td>' + num(dx, 3) + '</td>' +
+              '<td class="' + (hot ? 'show' : '') + '">' + num(dx/M.dtData) + '</td>' +
+              '<td class="muted">?</td></tr>';
+    }
+  }
+
+  body.innerHTML =
+    '<div class="tablecard fade"><table class="big">' +
+      '<caption>Shaded rows are intervals, not instants. The last column is the question.</caption>' +
+      '<thead><tr><th scope="col">t (s)</th><th scope="col">x (m)</th>' +
+        '<th scope="col">Δx (m)</th><th scope="col">Δx/Δt (m/s)</th>' +
+        '<th scope="col">belongs to t = ?</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody></table></div>' +
+    '<div class="side fade">' +
+      '<div class="card"><h3>Count them</h3>' +
+        '<p>Seven positions. Six average velocities. The lists are different lengths — so they cannot line up.</p></div>' +
+      '<div class="card warn"><h3>The one you want</h3>' +
+        '<p>Asked for the velocity at t = ' + num(M.tstar) + ' s, a student grabs the ' +
+        num(avgOver(ivt1(), ivt2())) + ' m/s sitting next to that row.</p></div>' +
+      '<div class="card"><h3>Ask the class</h3>' +
+        '<p>That number came from two clock readings. Which single instant, if any, does it describe?</p></div>' +
+    '</div>';
+
+  setSR(E.dataTableHTML(S.map(function(p){ return {x:p.t, y:p.x}; }),
+        'time (s)', 'position (m)', 'Position and time data for the cart'));
+}
+
+function renderVote(st){
+  var t1 = ivt1(), t2 = ivt2(), tm = (t1+t2)/2, vavg = avgOver(t1, t2);
+  var xlo = Math.max(0, M.tstar - 0.35), xhi = M.tstar + 0.55;
+
+  head.className = 'tight';
+  head.innerHTML =
+    '<h2>Which instant does ' + num(vavg) + ' m/s describe?</h2>' +
+    '<p class="lede">Take a vote, then put it on the graph and see whether it lands on the real velocity line.</p>';
+
+  body.className = 'body split';
+  body.innerHTML =
+    '<div class="plotwrap"><canvas id="plot"></canvas>' +
+      '<div class="plotcap">velocity vs time — the dashed green level is your Δx/Δt</div></div>' +
+    '<div class="side" id="side"></div>';
+
+  var target = state.pick === 't1' ? t1 : state.pick === 't2' ? t2 : state.pick === 'mid' ? tm : null;
+  drawVT(document.getElementById('plot'), {
+    xlo:xlo, xhi:xhi, t1:t1, t2:t2,
+    showAvg:true, markStar:true,
+    pickT: target === null ? null : lerp(xlo, target, state.voteProg),
+    pickSettled: state.voteProg >= 1
+  });
+
+  var h = '<div class="card"><h3>Pick one — press 1, 2 or 3</h3><div class="picker" id="picker">';
+  votes().forEach(function(v, i){
+    var tried = state.tried[v.id];
+    var right = v.id === 'mid';
+    var cls = 'pick' + (tried ? ' tried ' + (right ? 'right' : 'wrong') : '');
+    h += '<button class="' + cls + '" data-v="' + v.id + '">' +
+           '<span class="k">' + (i+1) + '</span>' + esc(v.label) + '</button>';
+  });
+  h += '</div></div>';
+
+  if(state.pick && state.voteProg >= 1){
+    var right = state.pick === 'mid';
+    var off = vavg - vel(target);
+    h += '<div class="card ' + (right ? 'ok' : 'no') + '">' +
+         '<h3>' + (right ? 'On the line.' : 'Off the line.') + '</h3>' +
+         '<p>' + (right
+           ? 'The cart really is moving at ' + num(vavg) + ' m/s at t = ' + num(tm) + ' s. Your average velocity was a true instantaneous velocity all along — just not at the time you were asked about.'
+           : 'At t = ' + num(target) + ' s the cart is actually moving at ' + num(vel(target)) +
+             ' m/s. Your answer floats ' + num(Math.abs(off)) + ' m/s ' + (off>0?'above':'below') + ' the truth.') +
+         '</p>' +
+         '<p class="readout" style="margin-top:.6rem">' +
+           '<span class="chip">Δx/Δt <b>' + num(vavg) + '</b> m/s</span>' +
+           '<span class="chip">true v there <b>' + num(vel(target)) + '</b> m/s</span>' +
+           '<span class="chip' + (right ? ' big' : ' bad') + '">off by <b>' + num(Math.abs(off)) + '</b> m/s</span>' +
+         '</p></div>';
+  } else {
+    h += '<div class="card warn"><h3>Before you vote</h3>' +
+         '<p>The blue line is the cart\'s real velocity, which you do not get to see in the lab. The dashed green level is the one number your data gave you.</p></div>';
+  }
+  document.getElementById('side').innerHTML = h;
+
+  var picker = document.getElementById('picker');
+  if(picker) picker.addEventListener('click', function(e){
+    var b = e.target.closest('[data-v]');
+    if(b) vote(b.getAttribute('data-v'));
+  });
+  srVT(t1, t2);
+}
+
+function renderXT(st){
+  var t1 = ivt1(), t2 = ivt2(), tm = (t1+t2)/2;
+  head.className = 'tight';
+  head.innerHTML =
+    '<h2>Average velocity is a secant. Instantaneous is a tangent.</h2>' +
+    '<p class="lede">On a parabola those two slopes are never equal at the ends of the interval.</p>';
+
+  body.className = 'body split';
+  body.innerHTML =
+    '<div class="plotwrap"><canvas id="plot"></canvas>' +
+      '<div class="plotcap">position vs time, zoomed onto the interval</div></div>' +
+    '<div class="side"></div>';
+
+  drawXT(document.getElementById('plot'), {
+    xlo: Math.max(0, M.tstar - 0.22), xhi: M.tstar + 0.42,
+    t1:t1, t2:t2, showSecant:true, showTanStar:true, showTanMid:true,
+    showBox:true, showSamples:true
+  });
+
+  document.querySelector('.side').innerHTML =
+    '<div class="card no"><h3>Red — the secant</h3>' +
+      '<p>Joins the two data points. Its slope is Δx/Δt = ' + num(avgOver(t1,t2)) + ' m/s.</p></div>' +
+    '<div class="card warn"><h3>Orange — the tangent at t*</h3>' +
+      '<p>Grazes the curve at t = ' + num(M.tstar) + ' s. Its slope, ' + num(vel(M.tstar)) +
+      ' m/s, is the answer you were actually asked for. It is visibly flatter.</p></div>' +
+    '<div class="card ok"><h3>Green — the tangent at the midpoint</h3>' +
+      '<p>Parallel to the red secant. Exactly parallel, always. That is the whole lesson in one picture.</p></div>' +
+    '<div class="card"><h3>Ask the class</h3>' +
+      '<p>Slide t* anywhere on the curve. Can the secant ever match the tangent at an endpoint?</p></div>';
+  srVT(t1, t2);
+}
+
+/* ---------------------------------------------------------------------
+   The shrink demo. Δt is live: drag the slider, nudge it with the arrow
+   keys, or press Space to run it all the way down. The viewport is held
+   still on purpose — if the axes rescaled, nothing would appear to move.
+   --------------------------------------------------------------------- */
+var DTMIN = 0.005, DTMAX = 0.40;
+function dtToP(dt){ return Math.log(dt/DTMIN) / Math.log(DTMAX/DTMIN); }
+function pToDt(p){ return DTMIN * Math.pow(DTMAX/DTMIN, p); }
+
+function renderShrink(st){
+  head.className = 'tight';
+  head.innerHTML =
+    '<h2>Shrink the interval. Watch where the answer lives.</h2>' +
+    '<p class="lede">The green dot never leaves the blue line — it just slides toward t* as the interval closes.</p>';
+
+  if(!document.getElementById('dtSlider')){
+    body.className = 'body duo';
+    body.innerHTML =
+      '<div class="plotwrap"><canvas id="plotXT"></canvas>' +
+        '<div class="plotcap">position–time: secant rotates onto the tangent</div></div>' +
+      '<div class="plotwrap"><canvas id="plotVT"></canvas>' +
+        '<div class="plotcap">velocity–time: the midpoint slides to t*</div></div>' +
+      '<div class="duobar">' +
+        '<label for="dtSlider">Δt</label>' +
+        '<input type="range" id="dtSlider" min="0" max="1000" step="1" ' +
+          'aria-label="Sampling interval, seconds" ' +
+          'value="' + Math.round(dtToP(state.dt)*1000) + '">' +
+        '<span class="readout" id="shrinkChips"></span>' +
+      '</div>';
+    document.getElementById('dtSlider').addEventListener('input', function(){
+      stopAnim();
+      state.dt = pToDt(this.value/1000);
+      drawShrink();
+    });
+  }
+  drawShrink();
+}
+
+/* Everything that changes as Δt changes. Kept out of renderShrink so a drag
+   or an animation frame redraws the plots without rebuilding the slider it is
+   being dragged by. */
+function drawShrink(){
+  var t1 = M.tstar, t2 = M.tstar + state.dt, tm = (t1+t2)/2;
+  var vavg = avgOver(t1, t2), vTrue = vel(M.tstar), err = vavg - vTrue;
+  var xlo = Math.max(0, M.tstar - 0.16), xhi = M.tstar + 0.46;
+
+  var sl = document.getElementById('dtSlider');
+  if(!sl) return;
+  if(document.activeElement !== sl) sl.value = Math.round(dtToP(state.dt)*1000);
+  sl.setAttribute('aria-valuetext', num(state.dt, 3) + ' seconds');
+
+  drawXT(document.getElementById('plotXT'), {
+    xlo:xlo, xhi:xhi, t1:t1, t2:t2,
+    showSecant:true, showTanStar:true, showBox:false, showSamples:false
+  });
+  drawVT(document.getElementById('plotVT'), {
+    xlo:xlo, xhi:xhi, t1:t1, t2:t2,
+    showAvg:true, markMid:true, markStar:true, showGap:true
+  });
+
+  /* These two chips are the argument: they hold the same number at every Δt. */
+  document.getElementById('shrinkChips').innerHTML =
+    '<span class="chip">Δt <b>' + num(state.dt, 3) + '</b> s</span>' +
+    '<span class="chip">Δx/Δt <b>' + num(vavg, 3) + '</b></span>' +
+    '<span class="chip">v at midpoint <b>' + num(vel(tm), 3) + '</b></span>' +
+    '<span class="chip' + (Math.abs(err) < 5e-4 ? ' big' : ' bad') + '">off t* by <b>' +
+      num(err, 3) + '</b></span>';
+  srVT(t1, t2);
+}
+
+function renderSweep(st){
+  head.className = 'tight';
+  head.innerHTML =
+    '<h2>Take your data later in the run. Does the error shrink?</h2>' +
+    '<p class="lede">Press <kbd>Space</kbd> to sweep t* across the whole recording.</p>';
+
+  body.className = 'body split';
+  body.innerHTML =
+    '<div class="plotwrap"><canvas id="plot"></canvas>' +
+      '<div class="plotcap">how wrong the forward-difference answer is, against when you took it</div></div>' +
+    '<div class="side" id="side"></div>';
+
+  var half = 0.5*M.a*M.dtData;
+  document.getElementById('side').innerHTML =
+    '<div class="card" id="sweepNow"></div>' +
+    '<div class="card warn"><h3>Watch the two chips</h3>' +
+      '<p>Over this run the cart\'s velocity climbs from ' + num(vel(0)) + ' to ' +
+      num(vel(M.T)) + ' m/s. The error does not move at all.</p></div>' +
+    '<div class="card no"><h3>Because there is no t in it</h3>' +
+      '<p class="theory">error = ½aΔt</p>' +
+      '<p>Only a and Δt. Waiting longer changes neither.</p></div>' +
+    '<div class="card"><h3>Ask the class</h3>' +
+      '<p>The <em>percentage</em> error does fall as the cart speeds up. Is that a real improvement?</p></div>';
+  sweepFrame();
+  setSR('');
+}
+
+/* Redrawn every animation frame while t* sweeps: the plot marker, and the two
+   chips whose contrast is the argument — one climbs, one does not move. */
+function sweepFrame(){
+  drawErrScan(document.getElementById('plot'));
+  var box = document.getElementById('sweepNow');
+  if(!box) return;
+  var t = state.sweepT == null ? M.tstar : state.sweepT;
+  var half = 0.5*M.a*M.dtData;
+  box.innerHTML =
+    '<h3>At t* = ' + num(t) + ' s</h3>' +
+    '<p class="readout">' +
+      '<span class="chip">true v <b>' + num(vel(t)) + '</b> m/s</span>' +
+      '<span class="chip bad">error <b>' + num(half, 3) + '</b> m/s</span>' +
+    '</p>';
+}
+
+function srVT(t1, t2){
+  var tm = (t1+t2)/2;
+  setSR('<p>Average velocity over ' + num(t1) + ' to ' + num(t2) + ' seconds is ' +
+        num(avgOver(t1,t2), 3) + ' metres per second. The true velocity at t-star, ' +
+        num(M.tstar) + ' seconds, is ' + num(vel(M.tstar), 3) +
+        ' metres per second. The true velocity at the interval midpoint, ' + num(tm, 3) +
+        ' seconds, is ' + num(vel(tm), 3) + ' metres per second, which equals the average exactly.</p>');
+}
+function setSR(html){ document.getElementById('srTable').innerHTML = html; }
+
+/* =====================================================================
+   Fit-to-height
+
+   Type is sized off viewport height, but how many LINES a card wraps to
+   depends on the column's width — so a 1280x800 projector can overflow at a
+   size that fits fine on 1920x1080. Rather than hand-tune breakpoints, shrink
+   the offending panel until it actually fits. Nothing is ever clipped, and the
+   type stays as large as the room allows.
+   ===================================================================== */
+function fitToHeight(el, box, floor){
+  if(!el || !box) return;
+  el.style.fontSize = '';
+  if(box.scrollHeight <= box.clientHeight + 1) return;
+  var scale = 1;
+  for(var i = 0; i < 16 && scale > floor; i++){
+    scale -= 0.035;
+    el.style.fontSize = scale.toFixed(3) + 'em';
+    if(box.scrollHeight <= box.clientHeight + 1) return;
+  }
+}
+
+function redraw(){
+  var k = step().kind;
+  if(k === 'shrink'){ drawShrink(); return; }
+  if(k === 'sweep'){ sweepFrame(); return; }
+  var cv = document.getElementById('plot');
+  if(!cv) return;
+  var t1 = ivt1(), t2 = ivt2();
+  if(k === 'xt'){
+    drawXT(cv, { xlo:Math.max(0, M.tstar-0.22), xhi:M.tstar+0.42, t1:t1, t2:t2,
+      showSecant:true, showTanStar:true, showTanMid:true, showBox:true, showSamples:true });
+  } else if(k === 'vt'){
+    var tm = (t1+t2)/2, xlo = Math.max(0, M.tstar-0.35);
+    var target = state.pick === 't1' ? t1 : state.pick === 't2' ? t2 : state.pick === 'mid' ? tm : null;
+    drawVT(cv, { xlo:xlo, xhi:M.tstar+0.55, t1:t1, t2:t2, showAvg:true, markStar:true,
+      pickT: target === null ? null : lerp(xlo, target, state.voteProg),
+      pickSettled: state.voteProg >= 1 });
+  }
+}
+
+function fitStep(){
+  var side = document.querySelector('.side');
+  if(side) fitToHeight(side, side, 0.72);
+  var wrap = document.querySelector('.prose-wrap');
+  if(wrap) fitToHeight(wrap, body, 0.72);
+  var tc = document.querySelector('.tablecard');
+  if(tc) fitToHeight(tc, tc, 0.7);
+  redraw();
+}
+
+var fitRaf;
+function schedFit(){
+  // Run immediately — reading scrollHeight forces layout, so this is accurate
+  // right away and does not depend on requestAnimationFrame firing (which the
+  // browser throttles in background tabs).
+  fitStep();
+  // Then once more after a frame, to catch late reflow (web fonts, scrollbars).
+  cancelAnimationFrame(fitRaf);
+  fitRaf = requestAnimationFrame(fitStep);
+}
+
+/* =====================================================================
+   Interaction
+   ===================================================================== */
+function vote(id){
+  if(step().kind !== 'vt') return;
+  state.tried[id] = true;
+  state.pick = id;
+  state.voteProg = 0;
+  renderVote(step());
+  run(650, function(p){ state.voteProg = p; redraw(); });
+}
+
+/* Space on the shrink step runs Δt all the way down before moving on. */
+function playShrink(){
+  state.played[state.i] = true;
+  var p0 = 1, p1 = dtToP(0.008);
+  run(4200, function(p){
+    state.dt = pToDt(lerp(p0, p1, p));
+    drawShrink();
+  });
+}
+function playSweep(){
+  state.played[state.i] = true;
+  var hi = M.T - M.dtData;
+  run(4200, function(p){
+    state.sweepT = lerp(0, hi, p);
+    sweepFrame();
+  });
+}
+
+function go(delta){
+  var n = Math.min(STEPS.length - 1, Math.max(0, state.i + delta));
+  if(n === state.i) return;
+  state.i = n;
+  resetStep();
+}
+
+function nudgeDt(mul){
+  if(step().kind !== 'shrink') return;
+  stopAnim();
+  state.dt = Math.max(DTMIN, Math.min(DTMAX, state.dt*mul));
+  drawShrink();
+}
+
+document.addEventListener('keydown', function(e){
+  if(e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key, kind = step().kind;
+
+  if(k === 'Escape'){ closeOverlays(); return; }
+  if(document.querySelector('.overlay.on') && k !== '?'){ closeOverlays(); return; }
+
+  // On a demo step, Space runs the demo the first time and advances after.
+  if(k === ' ' && (kind === 'shrink' || kind === 'sweep') && !state.played[state.i]){
+    e.preventDefault();
+    if(kind === 'shrink') playShrink(); else playSweep();
+    return;
+  }
+  if(k === 'ArrowUp'   && kind === 'shrink'){ e.preventDefault(); nudgeDt(1/1.25); return; }
+  if(k === 'ArrowDown' && kind === 'shrink'){ e.preventDefault(); nudgeDt(1.25);   return; }
+
+  if(k === 'ArrowRight' || k === ' ' || k === 'PageDown' || k === 'Enter'){ e.preventDefault(); go(1); return; }
+  if(k === 'ArrowLeft'  || k === 'PageUp' || k === 'Backspace'){ e.preventDefault(); go(-1); return; }
+  if(k === 'Home'){ e.preventDefault(); state.i = 0; resetStep(); return; }
+  if(k === 'End'){ e.preventDefault(); state.i = STEPS.length-1; resetStep(); return; }
+
+  if(k === 'r' || k === 'R'){ resetStep(); return; }
+  if(k === 'a' || k === 'A'){
+    var j = (A_CYCLE.indexOf(M.a) + 1) % A_CYCLE.length;
+    M.a = A_CYCLE[j < 0 ? 0 : j];
+    resetStep();
+    return;
+  }
+  if(k === 'd' || k === 'D'){ toggleData(); return; }
+  if(k === 't' || k === 'T'){ applyTheme(currentTheme() === 'dark' ? 'light' : 'dark'); return; }
+  if(k === '?'){ toggleHelp(); return; }
+
+  if(/^[1-3]$/.test(k) && kind === 'vt'){
+    var v = votes()[parseInt(k,10) - 1];
+    if(v) vote(v.id);
+  }
+});
+
+function closeOverlays(){
+  document.getElementById('dataOverlay').classList.remove('on');
+  document.getElementById('helpOverlay').classList.remove('on');
+}
+function toggleHelp(){
+  var o = document.getElementById('helpOverlay');
+  var on = o.classList.contains('on'); closeOverlays();
+  if(!on) o.classList.add('on');
+}
+function toggleData(){
+  var o = document.getElementById('dataOverlay');
+  var on = o.classList.contains('on'); closeOverlays();
+  if(on) return;
+  var S = samples(), rows = '';
+  for(var k = 0; k < S.length; k++){
+    rows += '<tr><td>' + num(S[k].t) + '</td><td>' + num(S[k].x, 3) + '</td><td>' +
+            (k < S.length-1 ? num((S[k+1].x - S[k].x)/M.dtData) : '—') + '</td><td>' +
+            (k < S.length-1 ? num(S[k].t + M.dtData/2) : '—') + '</td><td>' +
+            (k < S.length-1 ? num(vel(S[k].t + M.dtData/2)) : '—') + '</td></tr>';
+  }
+  document.getElementById('dataSheet').innerHTML =
+    '<h3>The numbers — v₀ = ' + num(M.v0) + ' m/s, a = ' + num(M.a) + ' m/s², Δt = ' + num(M.dtData) + ' s</h3>' +
+    '<table><caption style="text-align:left;padding-bottom:.5rem;color:var(--dim)">' +
+      'The last two columns always agree. That is the whole point.</caption>' +
+    '<thead><tr><th>t (s)</th><th>x (m)</th><th>Δx/Δt</th><th>midpoint t</th><th>true v there</th></tr></thead>' +
+    '<tbody>' + rows + '</tbody></table>';
+  o.classList.add('on');
+}
+
+document.getElementById('helpBtn').addEventListener('click', toggleHelp);
+document.getElementById('dataBtn').addEventListener('click', toggleData);
+document.getElementById('themeBtn').addEventListener('click', function(){
+  applyTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+});
+document.querySelectorAll('.overlay').forEach(function(o){
+  o.addEventListener('click', function(e){ if(e.target === o) closeOverlays(); });
+});
+
+// Projectors resize the viewport when they sync. Redraw instead of stretching.
+var rz;
+window.addEventListener('resize', function(){
+  clearTimeout(rz);
+  rz = setTimeout(function(){ fitStep(); }, 80);
+});
+
+applyTheme(currentTheme());
+resetStep();
+})();
+</script>
+</body>
+</html>

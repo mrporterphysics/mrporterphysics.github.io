@@ -6,6 +6,7 @@
 - [Linearization](/AP%20Resource%20Pages/linearizationInteractive.html)
 - [Kinematic Graphs Animation](/AP%20Resource%20Pages/kinGraphs.html)
 - [Eight Motion Graphs](/AP%20Resource%20Pages/eightmotiongraphs.html)
+- [Average vs Instantaneous Velocity](/AP%20Resource%20Pages/averageVsInstantaneous.html)
 <!-- - [Graph Matching Game](/AP%20Resource%20Pages/Games/index.html) -->
 
 
@@ -14,6 +15,13 @@
   - [Kinematics](/Presentations/APCVPM/talks/CVPM2024.html)
   - [Linear Dynamics](/Presentations/Forces/talks/Dynamics2024.html)
   - [2D Motion](/Presentations/APCAPM/talks/twoDMotion.html)
+
+
+## Classroom Presenters
+
+Projector-sized, keyboard-driven walkthroughs. Arrow keys move, `?` lists the keys.
+
+  - [Average vs Instantaneous Velocity](/AP%20Resource%20Pages/averageVelocityPresent.html)
 
 
 ## Additional Practice Links:

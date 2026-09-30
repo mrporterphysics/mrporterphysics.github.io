@@ -6,6 +6,7 @@ title: Class Presentations
 ## AP Physics Content Slides
 
   - [Kinematics](/Presentations/APCVPM/talks/CVPM2026.html)
+  - [Average vs Instantaneous Velocity](/AP%20Resource%20Pages/averageVelocityPresent.html) — classroom presenter
   <!-- - [Energy](/mrporterphysics.github.io/Presentations/APETM/talks/APEnergy2026.html)
   - [Momentum](/mrporterphysics.github.io/Presentations/Momentum/talks/APmomentum2026.html) -->
   <!-- - [Linear Dynamics](/mrporterphysics.github.io/Presentations/Forces/talks/Dynamics2024.html)

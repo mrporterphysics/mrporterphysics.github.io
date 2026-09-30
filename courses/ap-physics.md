@@ -35,6 +35,8 @@ College-level physics course focusing on mechanics, energy, momentum, rotation, 
 - [Kinematics Presentation](/Presentations/APCVPM/talks/CVPM2025.html)
 - [Kinematic Graphs Animation](/AP Resource Pages/kinGraphs.html)
 - [Eight Motion Graphs](/AP Resource Pages/eightmotiongraphs.html)
+- [Average vs Instantaneous Velocity](/AP Resource Pages/averageVsInstantaneous.html)
+- [Average vs Instantaneous Velocity — Class Presenter](/AP Resource Pages/averageVelocityPresent.html)
 
 ### Unit 2: Dynamics
 - [Linear Dynamics](/Presentations/Forces/talks/Dynamics2024.html)
