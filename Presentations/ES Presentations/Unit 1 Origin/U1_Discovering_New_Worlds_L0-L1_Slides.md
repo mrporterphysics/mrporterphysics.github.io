@@ -1006,8 +1006,8 @@ LAUNCH: "We can't take the Sun apart. First we'll learn about a tool for observi
 
 🔗 **Three Views Spectrum Demonstrator**
 
-`astro.unl.edu/classaction/`
-`animations/light/threeviewsspectra.html`
+[`astro.unl.edu/classaction/
+`animations/light/threeviewsspectra.html`](https://astro.unl.edu/classaction/animations/light/threeviewsspectra.html)
 
 Groups of **2–3**, one laptop per group.
 
@@ -1024,6 +1024,17 @@ WHY A SLIDE: The plan poses this question at launch and says to discuss it at th
 MATERIALS: Investigating Light from the Sun handout (packet Part B), Investigation Rubric.
 ACCESS FOR ALL: If handheld spectroscopes are available, let students look at a bulb first and share out. This evens the playing field before the simulator.
 -->
+
+---
+
+<div style="position: relative; width: 100%; max-width: 920px; aspect-ratio: 920 / 600;">
+  <iframe
+    src="https://astro.unl.edu/classaction/animations/light/threeviewsspectra.html"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #ccc; border-radius: 8px;"
+    title="Three Views Spectrum Demonstrator"
+    allowfullscreen>
+  </iframe>
+</div>
 
 ---
 

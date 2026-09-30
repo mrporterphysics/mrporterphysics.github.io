@@ -16,6 +16,35 @@ math: mathjax
 
 ---
 
+# 2026.10.01 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. The Sun - how does it work?
+2. What is light?
+2. [Spectrum Demonstrator Direct Link](https://astro.unl.edu/classaction/animations/light/threeviewsspectra.html) and [Slide Link](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_Discovering_New_Worlds_L0-L1_Slides.html#31)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Start Exploring how the sun works_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.30 **Earth Science** 🌍
 
 ##### **❓ of the 📅**: If you could be any Disney princess, which would you choose?
