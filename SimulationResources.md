@@ -2,6 +2,7 @@
 
 - [Distance vs. Displacement](/AP%20Resource%20Pages/Simulations/distancedisplacment.html)
 - [Average and Instantaneous Velocity](/AP%20Resource%20Pages/Simulations/avgvsinst.html)
+- [Calc Lab Velocities](/AP%20Resource%20Pages/averageVelocityPresent.html)
 - [Area Under VT Curve](/AP%20Resource%20Pages/Simulations/areaunder.html)
 - [Asteroid Relative Velocity Ranking Task](/AP Resource Pages/Simulations/asteroidRelVelo.html)
 - [Horizontal Projectiles Ranking Task](/AP Resource Pages/Simulations/horizontalProRanking.html)
