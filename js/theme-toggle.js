@@ -117,9 +117,11 @@ class ThemeManager {
       }
     });
 
-    // Keyboard shortcut: Ctrl+Shift+T (or Cmd+Shift+T on Mac)
+    // Keyboard shortcut: Alt+Shift+T.
+    // Do NOT use Ctrl/Cmd+Shift+T -- that is the browser's "reopen closed tab",
+    // and preventDefault() here disables it on every page of the site.
     document.addEventListener('keydown', (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'T') {
+      if (e.altKey && e.shiftKey && (e.key === 'T' || e.key === 't')) {
         e.preventDefault();
         this.toggleTheme();
       }
@@ -168,9 +170,6 @@ if (document.readyState === 'loading') {
 } else {
   window.themeManager = new ThemeManager();
 }
-
-// Also initialize immediately for faster theme application
-window.themeManager = new ThemeManager();
 
 /**
  * Mobile Menu Toggle Functionality
@@ -251,7 +250,7 @@ class MobileMenu {
 
     // Close menu on link click (mobile)
     document.addEventListener('click', (e) => {
-      if (e.target.matches('.site-nav .page-link')) {
+      if (e.target.closest('.site-nav a[href]')) {
         // Small delay to allow navigation to start
         setTimeout(() => this.closeMenu(), 150);
       }

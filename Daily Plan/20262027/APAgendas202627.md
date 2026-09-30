@@ -173,7 +173,7 @@ math: mathjax
 ---
 
 
-# 2025.09.22 **Do Now**
+# 2026.09.22 **Do Now**
 
 <div class='do-now'> 
  
@@ -547,7 +547,7 @@ You will be given scenario card that describes the setup of your buggies
 
 ---
 
-# 2025.09.10 **AP Physics**
+# 2026.09.10 **AP Physics**
 
 ##### **❓ of the 📅**: Do you think it would be easier to give up sugar or technology?
 
@@ -896,7 +896,7 @@ You will be given scenario card that describes the setup of your buggies
 
 ---
 
-# 2025.09.09 **AP Physics**
+# 2026.09.09 **AP Physics**
 
 ##### **❓ of the 📅**: Is it OK to ask the genie for infinite wishes? 🧞
 

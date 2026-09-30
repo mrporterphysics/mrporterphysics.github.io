@@ -32,30 +32,30 @@ College-level physics course focusing on mechanics, energy, momentum, rotation, 
 ## 📚 Content by Unit
 
 ### Unit 1: Kinematics
-- [Kinematics Presentation](/Presentations/APCVPM/talks/CVPM2025.html)
+- [Kinematics Presentation](/Presentations/APCVPM/talks/CVPM2026.html)
 - [Kinematic Graphs Animation](/AP Resource Pages/kinGraphs.html)
 - [Eight Motion Graphs](/AP Resource Pages/eightmotiongraphs.html)
 - [Average vs Instantaneous Velocity](/AP Resource Pages/averageVsInstantaneous.html)
 - [Average vs Instantaneous Velocity — Class Presenter](/AP Resource Pages/averageVelocityPresent.html)
 
 ### Unit 2: Dynamics
-- [Linear Dynamics](/Presentations/Forces/talks/Dynamics2024.html)
+- [Linear Dynamics](/Presentations/Forces/talks/Dynamics2025.html)
 - [2D Motion](/Presentations/APCAPM/talks/twoDMotion.html)
 
 ### Unit 3: Circular Motion & Gravitation
 - [Circular Motion](/Presentations/Circular Motion/talks/CircularMotion2024-25.html)
 
 ### Unit 4: Energy
-- [Energy Presentation](/Presentations/APETM/talks/APEnergy2025.html)
+- [Energy Presentation](/Presentations/APETM/talks/APEnergy2026.html)
 
 ### Unit 5: Momentum
-- [Momentum Presentation](/Presentations/Momentum/talks/APmomentum2025.html)
+- [Momentum Presentation](/Presentations/Momentum/talks/APmomentum2026.html)
 
 ### Unit 6: Simple Harmonic Motion
 - [Oscillations](/Presentations/AP SHM/talks/SHM2025.html)
 
 ### Unit 7: Torque & Rotational Motion
-- [Rotation](/Presentations/AP Rotation Representation/talks/Rotation2025.html)
+- [Rotation](/Presentations/AP Rotation Representation/talks/Rotation2026.html)
 
 ---
 
@@ -99,7 +99,7 @@ College-level physics course focusing on mechanics, energy, momentum, rotation, 
 - **[AP Physics 1 Fact Sheet](/ap-physics-quiz/factsheet-complete.html)** - All equations and constants
 - **[Data Collection Best Practices](/AP Resource Pages/datacollection.html)** - Lab techniques and error analysis
 - **[Linearization Guide](/AP Resource Pages/linearizationInteractive.html)** - Interactive linearization tool
-- **[AP Resource Warehouse](/apphysics.html)** - Complete collection of AP materials
+- **[All AP Resources](/courses/ap-physics-resources.html)** - Practice, tools, models, and study strategies
 
 ---
 

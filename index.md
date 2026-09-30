@@ -226,7 +226,7 @@ title: Home
     <p class="card-description">College-level physics focusing on mechanics, energy, and waves. Access daily agendas, content presentations, and practice tools.</p>
     <div class="card-links">
       <a href="/Daily Plan/20262027/APAgendas202627.html" class="card-link">→ Daily Agenda 2026-27</a>
-      <a href="/apphysics.html" class="card-link">→ AP Resource Warehouse</a>
+      <a href="/courses/ap-physics-resources.html" class="card-link">→ AP Resources</a>
       <a href="/presindex.html#ap-physics-content-slides" class="card-link">→ All AP Presentations</a>
     </div>
   </div>

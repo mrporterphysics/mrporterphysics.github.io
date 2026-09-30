@@ -35,17 +35,17 @@ New York State Regents Physics curriculum covering fundamental concepts in mecha
 - [Kinematics](/Presentations/APCVPM/talks/RPKinematics2025.html)
 - [2D Motion & Projectiles](/Presentations/Projectiles/talks/RP2DMotion2025.html)
 - [Forces & Newton's Laws](/Presentations/Forces/talks/RPForces2025.html)
-- [Energy](/Presentations/APETM/talks/RPEnergy2025.html)
-- [Momentum](/Presentations/Momentum/talks/RPmomentum2025.html)
-- [Rotation](/Presentations/AP Rotation Representation/talks/Rotation2025.html)
+- [Energy](/Presentations/APETM/talks/RPEnergy2026.html)
+- [Momentum](/Presentations/Momentum/talks/RPmomentum2026.html)
+- [Rotation](/Presentations/AP Rotation Representation/talks/Rotation2026.html)
 
 ### Electricity & Magnetism
-- [Static Electricity](/Presentations/RP Static Electricity/staticE2025.html)
+- [Static Electricity](/Presentations/RP Static Electricity/staticE2026.html)
 - [Electric Circuits](/Presentations/RP Electricity/RPCircuits2023.html)
 - [Magnetism](/Presentations/Magnetism/magnetism.html)
 
 ### Waves & Modern Physics
-- [Waves](/Presentations/Waves/talks/RP_Waves_2023.html)
+- [Waves](/Presentations/Waves/talks/RP_Waves_2026.html)
 - [Modern Physics](/Presentations/RP Modern/rpmodern2023.html)
 
 ---

@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Jekyll build output / caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Claude Code worktrees (these were previously committed by accident as
+# gitlinks with no .gitmodules -- see the audit notes)
+**/.claude/worktrees/
+.claude/settings.local.json
+
+# Node
+node_modules/
+
+# Editor / OS cruft
+*.swp
+Thumbs.db

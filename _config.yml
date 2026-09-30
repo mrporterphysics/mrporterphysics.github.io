@@ -7,13 +7,10 @@ breadcrumbs: true
 twitter:
   username: "mrporterphysics"
 email: nporter@schodack.k12.ny.us
-head_include: |
-  <link rel="stylesheet" href="{{ '/css/flexoki-theme.css' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Crimson+Pro:wght@200;300;400;600;700;900&family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="{{ '/js/theme-toggle.js' | relative_url }}"></script>
-
+# NOTE: header_pages is DEAD CONFIG. It is a minima-theme key, but this repo
+# overrides minima's _includes/header.html with its own hard-coded nav, which never
+# reads site.header_pages. Editing this list changes nothing on the site --
+# edit _includes/header.html instead. Kept only as a record of the intended top-level set.
 header_pages:
   - index.md
   - courses/ap-physics.md
@@ -25,3 +22,19 @@ header_pages:
 #   - jekyll-paginate-v2
 #   - jekyll-sitemap
 #   - jekyll-include-cache
+# Marp slide sources (*.md with `marp: true`) carry YAML front matter, so Jekyll
+# would otherwise render them as flat pages -- slide separators become <hr> and
+# students see an unstyled wall of text at the same URL as the real deck.
+# This suppresses the sources only. The exported .html files have no front matter,
+# so Jekyll treats them as static files and they are unaffected.
+# NOTE: do not use `exclude:` here -- that drops static files too and would
+# remove every exported deck from the site.
+defaults:
+  - scope:
+      path: "Presentations"
+    values:
+      published: false
+  - scope:
+      path: "Daily Plan"
+    values:
+      published: false

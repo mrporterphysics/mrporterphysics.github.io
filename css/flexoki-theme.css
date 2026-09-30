@@ -562,6 +562,27 @@ header {
   font-weight: 500;
 }
 
+/* Intermediate path segments: shown for orientation, not links (the directories
+   they name have no index page). See _includes/breadcrumbs.html. */
+.breadcrumb-section {
+  color: var(--text-muted);
+}
+
+/* Screen-reader-only utility. Use for spoken readings of equations and for
+   disambiguating repeated link text. */
+.visually-hidden,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Main Content */
 main {
   max-width: 900px;

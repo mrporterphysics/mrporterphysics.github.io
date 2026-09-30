@@ -2,8 +2,11 @@
 
 ## Files
 
-- `flexoki-theme.css` - New modern Flexoki-based theme with light/dark mode support
-- `styles-old.css` - Original dark theme (backup)
+- `flexoki-theme.css` - the site theme (Flexoki-based, light/dark)
+
+`styles-old.css` was removed: nothing referenced it, and its hardcoded dark-mode values
+predated the CSS custom-property system, so it conflicted with the current theme. Git history
+has it if it is ever needed.
 
 ## Flexoki Theme Features
 
@@ -18,6 +21,7 @@
 The theme automatically loads with light mode as default. Users can toggle between light and dark modes using:
 
 1. The theme toggle button in the header
-2. Keyboard shortcut: `Ctrl+Shift+T` (or `Cmd+Shift+T` on Mac)
+2. Keyboard shortcut: `Alt+Shift+T`
+   (not `Ctrl/Cmd+Shift+T` - that is the browser's "reopen closed tab")
 
 Theme preference is saved in localStorage and persists across sessions.

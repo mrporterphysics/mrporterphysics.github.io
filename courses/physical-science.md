@@ -25,7 +25,11 @@ An introductory science course exploring fundamental concepts in chemistry and p
 
 ## 📅 Current Year (2026-27)
 
+Physical Science runs in the spring semester. The daily agenda goes live in January.
+
+<!-- Restore once physicalScience2027.md has been revised for 2027 dates and exported to HTML:
 - **[Daily Agenda](/Daily Plan/20262027/physicalScience2027.html)** - Today's lesson plan, homework, and activities
+-->
 
 ---
 

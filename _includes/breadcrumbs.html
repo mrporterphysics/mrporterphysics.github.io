@@ -3,28 +3,31 @@
   <a href="/">Home</a>
 
   {% assign crumbs = page.url | split: '/' %}
-  {% assign crumb_path = '' %}
 
   {% for crumb in crumbs offset: 1 %}
     {% if crumb != '' and crumb != 'index.html' %}
-      {% assign crumb_path = crumb_path | append: '/' | append: crumb %}
-
+      <span class="breadcrumb-separator" aria-hidden="true">&rarr;</span>
+      {%- comment -%}
+        Intermediate crumbs are rendered as plain text, never links.
+        page.url is URL-encoded, so a segment arrives as "Daily%20Plan", not "Daily Plan".
+        The old version compared against the decoded name, never matched, and fell through
+        to emitting <a href="/Daily%20Plan"> -- a directory with no index page, i.e. a 404.
+        None of the intermediate directories on this site have an index page, so there is
+        nothing to link to.
+      {%- endcomment -%}
+      {% assign crumb_title = crumb
+           | replace: '%20', ' '
+           | replace: '-', ' '
+           | replace: '20262027', '2026-27'
+           | replace: '20252026', '2025-26'
+           | replace: '20242025', '2024-25'
+           | replace: '.html', ''
+           | replace: '.md', ''
+           | capitalize %}
       {% if forloop.last %}
-        <span class="breadcrumb-separator">→</span>
-        <span class="breadcrumb-current">{{ page.title | default: crumb | replace: '-', ' ' | replace: '.html', '' | replace: '.md', '' | capitalize }}</span>
+        <span class="breadcrumb-current" aria-current="page">{{ page.title | default: crumb_title }}</span>
       {% else %}
-        <span class="breadcrumb-separator">→</span>
-        {% assign crumb_title = crumb | replace: '-', ' ' | replace: '20262027', '2026-27' | replace: '20252026', '2025-26' | replace: '20242025', '2024-25' | capitalize %}
-
-        {% if crumb == "courses" %}
-          <span class="breadcrumb-current">{{ crumb_title }}</span>
-        {% elsif crumb == "Daily Plan" %}
-          <span class="breadcrumb-current">{{ crumb_title }}</span>
-        {% elsif crumb == "Presentations" %}
-          <span class="breadcrumb-current">{{ crumb_title }}</span>
-        {% else %}
-          <a href="{{ crumb_path }}">{{ crumb_title }}</a>
-        {% endif %}
+        <span class="breadcrumb-section">{{ crumb_title }}</span>
       {% endif %}
     {% endif %}
   {% endfor %}
