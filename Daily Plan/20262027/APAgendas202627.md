@@ -15,6 +15,26 @@ math: mathjax
 
 ---
 
+
+# 2026.10.01 **AP Physics**
+
+##### **❓ of the 📅**: If you could be any Disney princess, which would you choose?
+
+
+
+#### 📋 Agenda
+
+1. Finish Graphing x vs t data
+    - print & describe in notebook: support, refute, need more
+2. Collect velocity data from xt graph
+3. Create VT Graphs
+    - print & describe in notebook: support, refute, need more
+4. How is position and time related? Can we confirm quadratic somehow?
+    - Intro to linearization
+
+
+---
+
 # 2026.09.29 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to talk to animals or understand all human languages?
