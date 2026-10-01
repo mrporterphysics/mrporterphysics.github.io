@@ -42,7 +42,8 @@
       "./PorterThemes/Schodack/lingo.css",
       "./PorterThemes/Schodack/agenda.css",
       "./PorterThemes/Schodack/physics-agenda.css",
-      "./PorterThemes/Schodack/vector.css"
+      "./PorterThemes/Schodack/vector.css",
+      "./PorterThemes/Schodack/cosmos.css"
    ],
    "pasteImage.basePath": "${currentFileDir}",
    "pasteImage.path": "${currentFileDir}/images"
