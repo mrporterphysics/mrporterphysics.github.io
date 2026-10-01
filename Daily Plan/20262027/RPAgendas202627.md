@@ -18,6 +18,33 @@ math: mathjax
 
 ---
 
+# 2026.10.01 **AP Physics**
+
+##### **❓ of the 📅**: Which holiday has the best food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.09.30 **AP Physics**
 
 ##### **❓ of the 📅**: If you could be any Disney princess, which would you choose?
