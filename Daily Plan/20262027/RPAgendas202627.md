@@ -28,7 +28,8 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Finish lab
+1. Finish Lab - compare data
+2. 
 
 </div>
 
