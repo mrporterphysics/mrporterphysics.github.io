@@ -14,6 +14,34 @@ math: mathjax
 
 ---
 
+# 2026.10.02 **Earth Science**
+
+##### **❓ of the 📅**: Who would you haunt if you had to be a ghost? 👻
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. The Sun's Unique Spectra
+2. The Composition of the Sun
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explore the Sun's Unique Spectrum_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.10.01 **Earth Science**
 
 ##### **❓ of the 📅**: Which holiday has the best food?
