@@ -15,6 +15,35 @@ math: mathjax
 
 ---
 
+# 2026.10.02 **AP Physics**
+
+##### **❓ of the 📅**: Which holiday has the best food?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Lab Summary Notes
+2. Finish Writing lab conclusion 
+3. Start Card Sort looking at different uniform motion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model uniform motion graphically_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 
 # 2026.10.01 **AP Physics**
 
