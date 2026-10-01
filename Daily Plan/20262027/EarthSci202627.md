@@ -6,8 +6,6 @@ paginate: true
 math: mathjax
 ---
 
-
-
 # Earth Science 🌎 <!--fit--->
 
 ## 🧑‍🏫 Mr. Porter
