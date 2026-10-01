@@ -28,8 +28,8 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Finish Lab - compare data
-2. 
+1. Finish Lab - compare data, notes, write up conclusions
+2. Card sort & fan mini lab activity (not in notebooks)
 
 </div>
 
@@ -37,7 +37,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model & define uniform motion_
 
 ### 📆 Upcoming
 
