@@ -18,6 +18,63 @@ math: mathjax
 
 ---
 
+<div class='do-now'> 
+ 
+ <div> 
+
+ ###### 10 MINUTES 
+
+ ####  Physics Classroom
+
+ Complete: _Mission KG2 Shape and Slope of Position-Time Graphs (MO)_
+
+![center w:600](image-3.png)
+  
+ </div> 
+
+ </div>
+
+---
+
+# 2026.10.05 **AP Physics**
+
+##### **❓ of the 📅**: What was your favorite halloween costume?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Finish Card Sort Data Collection
+   - check with Mr. Porter
+3. Complete Summary Chart as a group of 4 & Discuss with Mr. Porter
+4. Notes on Graphical Representation
+5. Start Physics Classroom Homework
+
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Motion Graphically_
+
+### 📆 Homework
+
+<div class='checklist'>
+
+Physics Classroom:
+  - Set K10: Velocity-Time Graphs 1
+  - Set K11: Velocity-Time Graphs 2
+</div>
+</div>
+</div>
+
+---
+
 # 2026.10.01 **AP Physics**
 
 ##### **❓ of the 📅**: Which holiday has the best food?
