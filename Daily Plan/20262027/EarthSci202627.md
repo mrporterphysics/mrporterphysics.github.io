@@ -14,6 +14,79 @@ math: mathjax
 
 ---
 
+<div class='do-now'> 
+ 
+ <div> 
+
+ ###### Before we start... 
+
+ ####  Solve a Rubik's Cube
+
+ <div class='columns'>
+ <div>
+ 
+While you wait for me to start class during block 1 - work together to learn how to solve a Rubik's cube. 
+
+_If you already know how -- you are now a designated helper -- help your peers learn the solution!_
+
+[Solution Guide](https://rubiks.com/solve-guide)
+- (open this in a new tab...two finger click, open in a new tab)
+- save the website for future use
+
+ </div>
+  
+ <div>
+ 
+Step 1 - The Daisy
+
+![center w:200](https://cdn.prod.website-files.com/6a60d3f468ef7bcb557441c1/6aa01b6fdd2ca052b5e08e4d_DAISY_01.svg)
+
+Step 2 - The White Cross
+
+![center w:400](https://cdn.prod.website-files.com/6a60d3f468ef7bcb557441c1/6aa022bc1f5790b3c418a1d8_the-white-cross-solve-note.svg)
+
+ </div>
+ </div>
+
+  
+ </div> 
+
+ </div>
+
+---
+
+# 2026.10.05 **Earth Science**
+
+##### **❓ of the 📅**: What was your favorite halloween costume?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Card Sort - Spectra
+2. Finish CER - What Makes up the Sun
+3. How does the Sun produce energy?
+   - Car sort, discussion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain what the sun is made up of_
+
+🥅 _Describe the process that produces energy in the sun_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.10.02 **Earth Science**
 
 ##### **❓ of the 📅**: Who would you haunt if you had to be a ghost? 👻
