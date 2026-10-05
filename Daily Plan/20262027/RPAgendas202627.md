@@ -18,21 +18,27 @@ math: mathjax
 
 ---
 
+# 2026.10.05  **AP Physics** Do Now
+
 <div class='do-now'> 
- 
- <div> 
 
- ###### 10 MINUTES 
+<div class='columns'>
+<div> 
 
- ####  Physics Classroom
+###### 10 MINUTES - Physics Classroom
 
- Complete: _Mission KG2 Shape and Slope of Position-Time Graphs (MO)_
+Complete: _Mission KG2 Shape and Slope of Position-Time Graphs (MO)_
+  
+</div> 
+
+<div>
 
 ![center w:600](image-3.png)
-  
- </div> 
 
- </div>
+</div
+
+</div>
+
 
 ---
 
