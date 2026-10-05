@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.10.06 **Earth Science**
+
+##### **❓ of the 📅**: Does your family have a "motto" – spoken or unspoken?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. CER Sort - Share & Discuss
+2. Answer: Fusion or Combustion
+3. How long will the sun live?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _What powers the sun?_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 <div class='do-now'> 
  
  <div> 

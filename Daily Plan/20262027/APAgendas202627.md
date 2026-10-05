@@ -15,6 +15,78 @@ math: mathjax
 
 ---
 
+# 2026.10.06 **Do Now**
+
+<div class='do-now'> 
+ 
+ <div> 
+
+ ###### 10  MINUTES 
+
+ ####  
+
+ <div class='columns'>
+ <div>
+ 
+
+
+For each of these cases, if any, is...at the indicated point?
+
+1. the **position zero** ?
+2. the **position negative**?
+3. the **velocity zero**?
+4. the **velocity negative**?
+5. the **acceleration zero** ?
+6. the **acceleration negative**?
+
+ </div>
+
+
+
+ <div>
+ 
+ ![center](../20252026/Daily%20Slides/images/Kinematics/ninextgraphs.png)
+
+
+ </div>
+ </div>
+
+  
+ </div> 
+
+ </div>
+
+---
+
+# 2026.10.06 **AP Physics**
+
+##### **❓ of the 📅**: Does your family have a "motto" – spoken or unspoken?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now 
+2. Notes - Graphical Representations
+2. Problem-Solving Graphically
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve Problems Graphically_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.10.05  **AP Physics** Do Now
 
 <div class='do-now'> 
