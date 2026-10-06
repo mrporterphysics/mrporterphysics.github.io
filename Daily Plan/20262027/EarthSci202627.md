@@ -14,6 +14,37 @@ math: mathjax
 
 ---
 
+# 2026.10.07 **Earth Science**
+
+##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍 🍕
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Explain CER Fusion vs. Combustion
+2. How long will the Sun "live"
+3. Guided Notes -- Summarizing Sun information
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the sun_
+
+### 📆 Upcoming
+
+- Sun Quiz ***Friday***
+
+</div>
+</div>
+
+---
+
 # 2026.10.06 **Earth Science**
 
 ##### **❓ of the 📅**: Does your family have a "motto" – spoken or unspoken?
