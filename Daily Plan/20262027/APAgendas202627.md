@@ -15,7 +15,7 @@ math: mathjax
 
 ---
 
-# 2026.10.06 **Do Now**
+# 2026.10.07 **Do Now**
 
 <div class='do-now'> 
  
@@ -58,7 +58,7 @@ For each of these cases, if any, is...at the indicated point?
 
 ---
 
-# 2026.10.06 **AP Physics**
+# 2026.10.07 **AP Physics**
 
 ##### **❓ of the 📅**: Does your family have a "motto" – spoken or unspoken?
 
