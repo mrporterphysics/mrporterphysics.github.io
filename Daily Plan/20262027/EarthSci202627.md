@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.10.08 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now - Quiz Review
+2. PTO - Update the model after the sun
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Earth's habitability based on new info from the sun_
+
+### 📆 Upcoming
+
+- Sun Quiz **tomorrow**
+
+</div>
+</div>
+
+---
+
 # 2026.10.07 **Earth Science**
 
 ##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍍 🍕

@@ -15,6 +15,51 @@ math: mathjax
 
 ---
 
+<!--- class: halloween --->
+
+###### 2026.10.07 **AP Physics** Do Now  
+
+Eight possible signs of combinations for the instantaneous position, velocity, and acceleration of an object moving in one dimension are given in the table. Above the table is a coordinate axis that shows the origin, marked 0, and that indicates that the ***positive direction is to the left***. Complete the chart.
+
+![bg fit right:55%](image-4.png)  
+
+---
+
+
+# 2026.10.08 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be the hero or the sidekick?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Problem-solving with VT Graphs
+    - work through entire question 
+    - check answer **when done with entire question**
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Work through problem-solving with VT Graphs_
+
+### 📆 Upcoming
+
+- Quiz tomorrow: X-T Graph, V-T Graph, Stacks of Graphs
+
+</div>
+</div>
+
+---
+
+<!--- class: --->
+
 # 2026.10.07 **Do Now**
 
 <div class='do-now'> 
