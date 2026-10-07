@@ -18,6 +18,52 @@ math: mathjax
 
 ---
 
+###### 2026.10.07 **AP Physics** Do Now  
+Eight possible signs of combinations for the instantaneous position, velocity, and acceleration of an object moving in one dimension are given in the table. Above the table is a coordinate axis that shows the origin, marked 0, and that indicates that the positive direction is to the left. The three columns on the right-hand side of the table are to describe the location of the object (either left or right of the origin), the direction of the motion of the object (either toward or away from the origin), and what is happening to the speed of the object (either speeding up or slowing down at the given instant). The appropriate descriptions for the first case are shown.
+
+![bg fit right:45%](image-4.png)  
+
+---
+
+###### Answer
+
+![bg fit](image-4.png)  
+
+![bg fit](image-5.png)
+
+
+
+---
+
+# 2026.10.07 **AP Physics**
+
+##### **❓ of the 📅**: Does pineapple belong on a pizza? 🍕 🍍
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Working through problem-solving questions as a trio
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use velocity-time graphs to solve problems_
+
+### 📆 Upcoming
+
+- Quiz Friday: X-T Graph, V-T Graph, Stacks of Graphs
+
+</div>
+</div>
+
+---
 
 # 2026.10.06 **Do Now**
 
