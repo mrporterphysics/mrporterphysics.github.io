@@ -26,7 +26,7 @@ math: mathjax
 
 1. Explain CER Fusion vs. Combustion
 2. How long will the Sun "live"
-3. Guided Notes -- Summarizing Sun information
+3. [Guided Notes -- Summarizing Sun information](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L1_Sun_Guided_Notes_Slides.html)
 
 </div>
 
