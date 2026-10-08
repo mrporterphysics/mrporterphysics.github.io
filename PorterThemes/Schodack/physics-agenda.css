@@ -737,3 +737,73 @@ section li.task-list-item input.task-list-item-checkbox {
 }
 
 section label { cursor: pointer; user-select: none; }
+
+/* ═══════════════════════════════════════════════════════════════
+   HALLOWEEN VARIANT — `<!-- _class: halloween -->`
+
+   The same palette as the halloween class in physicalSci.css, so an
+   October slide looks like October in either theme. This theme is
+   token-driven, though, so instead of restating every rule the class
+   just redefines the theme's own tokens on the section: headers,
+   footers, lists, cards, equations, tables, checklists and the
+   pagination all follow automatically.
+
+   Dark only — don't combine it with `paper`. It does combine with
+   `lead` and `figure`.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --halloween-ink: #1a0f1f;          /* deep purple-black */
+  --halloween-paper: #f8f1e7;        /* warm off-white */
+  --halloween-orange: #ff8c00;       /* jack-o'-lantern orange */
+  --halloween-purple: #8a2be2;       /* eerie purple */
+  --halloween-green: #32cd32;        /* slime green */
+  --halloween-yellow: #f5d76e;       /* candle glow */
+  --halloween-line: #4c1b77;         /* purple, opaque, for solid rules */
+  --halloween-dim: #a99bb0;          /* muted lavender for labels */
+  --halloween-text: #f0e6da;         /* body copy inside cards */
+}
+
+section.halloween {
+  --ink: var(--halloween-ink);
+  --paper: var(--halloween-paper);
+  --accent: var(--halloween-orange);
+  --ink-line: var(--halloween-line);
+  --dim-on-ink: var(--halloween-dim);
+  --text-on-ink: var(--halloween-text);
+}
+
+/* Cover slide subtitle (hardcoded blue-grey in the base theme) */
+section.halloween.lead p { color: var(--halloween-dim); }
+
+/* Cards get a warm candlelit tint instead of the neutral white wash */
+section.halloween blockquote,
+section.halloween div.do-now > div,
+section.halloween div.lab > div { background: rgba(255, 140, 0, 0.09); }
+
+/* Bold text glows like a candle, except inside cards, where the base
+   theme deliberately keeps bold the same colour as the card's copy. */
+section.halloween strong { color: var(--halloween-yellow); }
+section.halloween div.lab strong,
+section.halloween div.do-now strong,
+section.halloween div.equation strong { color: inherit; }
+
+/* The base callout is a dark panel for paper slides, so on a dark
+   halloween slide it needs its own tint and edge to read as a panel. */
+section.halloween .callout {
+  background: rgba(138, 43, 226, 0.16);
+  border-left: 8px solid var(--halloween-purple);
+  padding-left: 26px;
+}
+section.halloween .callout h3,
+section.halloween .callout h4 { color: var(--halloween-green); }
+
+/* Tables: purple header band, purple striping. Cream on purple rather
+   than the near-black physicalSci uses, which is too low-contrast. */
+section.halloween th {
+  background: var(--halloween-purple);
+  color: var(--halloween-paper);
+}
+section.halloween tr:nth-child(even) td { background: rgba(138, 43, 226, 0.1); }
+
+section.halloween a:hover { color: var(--halloween-yellow); }

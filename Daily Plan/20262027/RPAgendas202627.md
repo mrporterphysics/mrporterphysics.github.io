@@ -18,6 +18,37 @@ math: mathjax
 
 ---
 
+<!--- class: halloween --->
+
+# 2026.10.13 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<!--- class: --->
+
 ###### 2026.10.07 **AP Physics** Do Now  
 Eight possible signs of combinations for the instantaneous position, velocity, and acceleration of an object moving in one dimension are given in the table. Above the table is a coordinate axis that shows the origin, marked 0, and that indicates that the positive direction is to the left. The three columns on the right-hand side of the table are to describe the location of the object (either left or right of the origin), the direction of the motion of the object (either toward or away from the origin), and what is happening to the speed of the object (either speeding up or slowing down at the given instant). The appropriate descriptions for the first case are shown.
 
