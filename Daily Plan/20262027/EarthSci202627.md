@@ -14,6 +14,34 @@ math: mathjax
 
 ---
 
+# 2026.10.09 **Earth Science**
+
+##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Finish Sun PTO
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the sun_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.10.08 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be the hero or the sidekick?

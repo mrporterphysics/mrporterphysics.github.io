@@ -17,6 +17,36 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.09 **AP Physics 🎃**
+
+##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Review the Bear question
+3. Kinematic Equations and the Cross <mark>➕</mark> Diagram
+4. Solving Problems with the Kinematic equations 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion mathematically_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 ###### 2026.10.07 **AP Physics** Do Now  
 
 Eight possible signs of combinations for the instantaneous position, velocity, and acceleration of an object moving in one dimension are given in the table. Above the table is a coordinate axis that shows the origin, marked 0, and that indicates that the ***positive direction is to the left***. Complete the chart.
@@ -39,7 +69,7 @@ Eight possible signs of combinations for the instantaneous position, velocity, a
 
 <div class ='columns'>
 
- <div>
+<div>
 
 #### 📋 Agenda
 
