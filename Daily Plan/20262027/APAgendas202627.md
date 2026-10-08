@@ -25,6 +25,13 @@ Eight possible signs of combinations for the instantaneous position, velocity, a
 
 ---
 
+# Answer
+
+![center w:1200](image-5.png)
+
+
+---
+
 
 # 2026.10.08 **AP Physics**
 
