@@ -390,6 +390,31 @@ PACKET QUESTION 1: same elements, so a bigger star has MORE of them — more mas
 
 ---
 
+# Spectra from the Omega Centauri Cluster
+
+<div class="pkt">PACKET PART A</div>
+
+<div class="specrow"><div class="speclabel">Cluster star A</div><div class="spec"><div class="ln" style="left:3.33%"></div><div class="ln" style="left:11.33%"></div><div class="ln" style="left:15.67%"></div><div class="ln" style="left:23.67%"></div><div class="ln" style="left:28.67%"></div><div class="ln" style="left:30.67%"></div><div class="ln" style="left:34.00%"></div><div class="ln" style="left:62.67%"></div><div class="ln" style="left:85.33%"></div><div class="ln" style="left:89.33%"></div></div></div>
+<div class="specrow"><div class="speclabel">Cluster star B</div><div class="spec"><div class="ln" style="left:3.33%"></div><div class="ln" style="left:11.33%"></div><div class="ln" style="left:15.67%"></div><div class="ln" style="left:23.67%"></div><div class="ln" style="left:28.67%"></div><div class="ln" style="left:30.67%"></div><div class="ln" style="left:34.00%"></div><div class="ln" style="left:62.67%"></div><div class="ln" style="left:85.33%"></div><div class="ln" style="left:89.33%"></div></div></div>
+<div class="specrow"><div class="speclabel">Cluster star C</div><div class="spec"><div class="ln" style="left:3.33%"></div><div class="ln" style="left:11.33%"></div><div class="ln" style="left:15.67%"></div><div class="ln" style="left:23.67%"></div><div class="ln" style="left:28.67%"></div><div class="ln" style="left:30.67%"></div><div class="ln" style="left:34.00%"></div><div class="ln" style="left:62.67%"></div><div class="ln" style="left:85.33%"></div><div class="ln" style="left:89.33%"></div></div></div>
+<div class="specrow"><div class="speclabel">&#9728;&#65039; our Sun</div><div class="spec"><div class="ln" style="left:3.33%"></div><div class="ln" style="left:11.33%"></div><div class="ln" style="left:15.67%"></div><div class="ln" style="left:23.67%"></div><div class="ln" style="left:28.67%"></div><div class="ln" style="left:30.67%"></div><div class="ln" style="left:34.00%"></div><div class="ln" style="left:62.67%"></div><div class="ln" style="left:85.33%"></div><div class="ln" style="left:89.33%"></div></div></div>
+<div class="specrow"><div class="speclabel"></div><div class="axis"><span style="left:0%">400</span><span style="left:16.7%">450</span><span style="left:33.3%">500</span><span style="left:50%">550</span><span style="left:66.7%">600</span><span style="left:83.3%">650</span><span style="left:100%">700 nm</span></div></div>
+
+<div class="key-idea">
+
+Three stars from the cluster, plus our Sun. They differ in color, size and brightness — but every one shows dark lines at the **same wavelengths**: <span class="fill">hydrogen</span> and <span class="fill">helium</span>.
+
+</div>
+
+<!--
+PACKET: Part A, the Omega Centauri spectra.
+THE POINT STUDENTS MUST LEAVE WITH: stars across the cluster are made of the SAME two elements. Composition is not the variable. Something else must explain why stars differ — and Part B reveals it is MASS.
+LINES SHOWN: hydrogen 410, 434, 486, 656 nm; helium 447, 471, 492, 502, 588, 668 nm. The same set matched against the Sun in Lesson 1.
+ESS1.A(2): spectra AND brightness identify composition, movement and distance.
+-->
+
+---
+
 <!-- _class: phase-title -->
 
 # PART B

@@ -520,6 +520,32 @@ CONNECTION: This is ESS1.A(2) — spectra AND brightness identify composition, m
 
 ---
 
+# Spectra Data from the Omega Centauri Cluster
+
+<div class="specrow"><div class="speclabel">Cluster star A</div><div class="spec"><div class="ln" style="left:3.33%"></div><div class="ln" style="left:11.33%"></div><div class="ln" style="left:15.67%"></div><div class="ln" style="left:23.67%"></div><div class="ln" style="left:28.67%"></div><div class="ln" style="left:30.67%"></div><div class="ln" style="left:34.00%"></div><div class="ln" style="left:62.67%"></div><div class="ln" style="left:85.33%"></div><div class="ln" style="left:89.33%"></div></div></div>
+<div class="specrow"><div class="speclabel">Cluster star B</div><div class="spec"><div class="ln" style="left:3.33%"></div><div class="ln" style="left:11.33%"></div><div class="ln" style="left:15.67%"></div><div class="ln" style="left:23.67%"></div><div class="ln" style="left:28.67%"></div><div class="ln" style="left:30.67%"></div><div class="ln" style="left:34.00%"></div><div class="ln" style="left:62.67%"></div><div class="ln" style="left:85.33%"></div><div class="ln" style="left:89.33%"></div></div></div>
+<div class="specrow"><div class="speclabel">Cluster star C</div><div class="spec"><div class="ln" style="left:3.33%"></div><div class="ln" style="left:11.33%"></div><div class="ln" style="left:15.67%"></div><div class="ln" style="left:23.67%"></div><div class="ln" style="left:28.67%"></div><div class="ln" style="left:30.67%"></div><div class="ln" style="left:34.00%"></div><div class="ln" style="left:62.67%"></div><div class="ln" style="left:85.33%"></div><div class="ln" style="left:89.33%"></div></div></div>
+<div class="specrow"><div class="speclabel">&#9728;&#65039; our Sun</div><div class="spec"><div class="ln" style="left:3.33%"></div><div class="ln" style="left:11.33%"></div><div class="ln" style="left:15.67%"></div><div class="ln" style="left:23.67%"></div><div class="ln" style="left:28.67%"></div><div class="ln" style="left:30.67%"></div><div class="ln" style="left:34.00%"></div><div class="ln" style="left:62.67%"></div><div class="ln" style="left:85.33%"></div><div class="ln" style="left:89.33%"></div></div></div>
+<div class="specrow"><div class="speclabel"></div><div class="axis"><span style="left:0%">400</span><span style="left:16.7%">450</span><span style="left:33.3%">500</span><span style="left:50%">550</span><span style="left:66.7%">600</span><span style="left:83.3%">650</span><span style="left:100%">700 nm</span></div></div>
+
+<div class="key-idea">
+
+Three different stars from the cluster — different colors, different sizes, different brightness. **Their dark lines sit at the same wavelengths.** And so do our Sun's.
+
+</div>
+
+<!--
+TEACHER MOVE: This is the sample spectra data from the Hubble image. Students answer "What do you observe in the star light spectra?" and "What do you think explains the differences observed in the stars, given your observations about the spectra?"
+THE POINT: the stars look DIFFERENT (colour, size, brightness) but are made of the SAME THING. Composition is not what varies across the cluster.
+LOOK & LISTEN FOR: the sample spectra indicate they are made of hydrogen and helium just like our Sun • the difference in colour is caused by temperature • the difference in brightness has to do with distance.
+"IT'S JUST DISTANCE" is a reasonable hypothesis and gets tested in Explore 2 — the H-R diagram plots luminosity, which already accounts for distance. Don't shut it down here.
+SO WHAT DOES VARY? If composition is constant, the differences must come from something else. That question drives the rest of the lesson, and the answer is MASS.
+CONNECTION: ESS1.A(2) — the study of stars' light spectra AND brightness identifies compositional elements of stars, their movements, and their distances from Earth.
+LINES SHOWN: hydrogen 410, 434, 486, 656 nm and helium 447, 471, 492, 502, 588, 668 nm — the same set students matched for the Sun in L1.
+-->
+
+---
+
 # Bigger Star, More Fuel, More Mass
 
 <div class="columns">

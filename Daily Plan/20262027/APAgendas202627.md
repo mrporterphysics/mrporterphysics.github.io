@@ -17,6 +17,38 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.09 **AP Physics**
+
+##### **❓ of the 📅**: If you were to open a store, what would you sell?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review the Bear question
+3. Kinematic Equations and the Cross <mark>➕</mark> Diagram
+4. Solving Problems with the Kinematic equations  
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model motion mathematically_
+
+### 📆 HW:
+- Set K12: Velocity-Time Graph Challenges
+- Kinematics 4: Kinematic Equations
+- Kinematics 5: Kinematic Equations
+
+</div>
+</div>
+
+---
+
 # 2026.10.09 **AP Physics 🎃**
 
 ##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?
