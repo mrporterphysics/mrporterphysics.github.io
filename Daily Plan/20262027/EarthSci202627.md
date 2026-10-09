@@ -14,6 +14,35 @@ math: mathjax
 
 ---
 
+# 2026.10.13 **Earth Science**
+
+##### **❓ of the 📅**: If you were to open a store, what would you sell?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Start [Stellar Life Cycles](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_Discovering_New_Worlds_L2_Slides.html)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Start Modeling Stellar Life_
+
+### 📆 Homework
+
+- Finish Part E in PTO Packet - this will eventually be turned in and graded for **completeness**.
+
+</div>
+</div>
+
+---
+
 # 2026.10.09 **Earth Science**
 
 ##### **❓ of the 📅**: If you could pick any wild animal to keep as a pet, which would it be?

@@ -480,7 +480,14 @@ TRANSITION: Share a few pairs' predictions before revealing the Hubble image.
 
 ---
 
+![bg](https://science.nasa.gov/wp-content/uploads/2023/04/385241main_omega_centauri_full_full_full-jpg.webp)
+
+
+---
+
 # Omega Centauri
+
+![bg blur](https://science.nasa.gov/wp-content/uploads/2023/04/385241main_omega_centauri_full_full_full-jpg.webp)
 
 <div class="columns">
 <div class="col">
