@@ -14,6 +14,34 @@ math: mathjax
 
 ---
 
+# 2026.10.14 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite dinosaur? 🦖 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Star Cluster Spectra
+2. Star in a box    
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Collect data on star life cycle_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.10.13 **Earth Science**
 
 ##### **❓ of the 📅**: If you were to open a store, what would you sell?
