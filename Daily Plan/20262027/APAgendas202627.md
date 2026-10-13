@@ -15,7 +15,43 @@ math: mathjax
 
 ---
 
+
 <!--- class: halloween --->
+
+# 2026.10.14 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite dinosaur? 🦖
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Review the Bear Question
+2. Kinematic Equations & The Cross Diagram
+2. Practice
+3. Two-stage Kinematic questions
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use mathematical models to make predicitons about motion_
+
+### 📆 Upcoming
+
+HW Due Friday:
+- Set K12: VT Graph Challenges
+- Kinematics 4: Kinematic Eqs
+- Kinematics 5: Kinematic Eqs
+
+</div>
+</div>
+
+---
 
 # 2026.10.09 **AP Physics**
 
