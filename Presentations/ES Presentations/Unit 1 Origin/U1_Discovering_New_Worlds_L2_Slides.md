@@ -382,9 +382,11 @@ What do you think caused the changes in the star you just watched?
 </div>
 <div class="col">
 
-**Turn and talk:** What other phenomena do you know that are similar to this?
+**Turn and talk:**
 
-<div class="small">💥 Nuclear explosions &nbsp;·&nbsp; 🌌 The solar system forming from a collapsing cloud of dust and gas</div>
+What other phenomena do you know that are similar to this?
+
+
 
 </div>
 </div>
