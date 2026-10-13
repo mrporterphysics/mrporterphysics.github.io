@@ -22,7 +22,7 @@ math: mathjax
 
 # 2026.10.13 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you were to open a store, what would you sell?
 
 <div class ='columns'>
 
@@ -30,7 +30,11 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. Finish Quiz
+2. The Bear Problem - Problem-Solving Packet (work as a group of 4)
+3. Discuss Bear Solution
+4. Kinematic Equations and the Cross <mark>➕</mark> Diagram
+4. Solving Problems with the Kinematic equations 
 
 </div>
 
@@ -38,9 +42,14 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Use mathematical models to solve problems_
 
 ### 📆 Upcoming
+
+- HW (due Friday):
+  - Set K12: Velocity-Time Graph Challenges
+  - Kinematics 4: Kinematic Equations
+  - Kinematics 5: Kinematic Equations
 
 </div>
 </div>
