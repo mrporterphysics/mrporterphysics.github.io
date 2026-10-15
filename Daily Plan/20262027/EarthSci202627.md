@@ -14,6 +14,41 @@ math: mathjax
 
 ---
 
+# 2026.10.15 **Earth Science**
+
+##### **❓ of the 📅**: If you were to be in the circus, what would your circus act be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Star in a box lab
+2. Fill out See-think-wonder and put on a whiteboard
+3. Annotate whiteboards
+
+
+
+
+</div>
+
+<div>
+
+
+| Symbol | Meaning |
+|---|---|
+| ✔ | An idea that **resonates** |
+| **+** | An idea that should be **added** |
+| **?** | An idea you don't think is **relevant** |
+| **Δ** | A suggestion to **clarify** or represent an idea more clearly |
+
+
+</div>
+</div>
+
+---
+
 # 2026.10.14 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite dinosaur? 🦖 
