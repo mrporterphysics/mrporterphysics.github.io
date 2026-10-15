@@ -14,6 +14,35 @@ math: mathjax
 
 ---
 
+# 2026.10.16 **Earth Science**
+
+##### **❓ of the 📅**: Who is your celebrity crush?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Star in a box results
+2. Compare to diagram
+3. Creating the HR Diagram
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Stellar Lifecycle based on observable properties_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.10.15 **Earth Science**
 
 ##### **❓ of the 📅**: If you were to be in the circus, what would your circus act be?
