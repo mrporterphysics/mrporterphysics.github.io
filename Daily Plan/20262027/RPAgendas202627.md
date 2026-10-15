@@ -21,6 +21,149 @@ math: mathjax
 <!--- class: halloween --->
 
 
+<div class='do-now'> 
+ 
+ <div> 
+
+###### 2026.10.16 **AP Physics** Do Now
+
+A car on a straight track is at position $x_i$ and has initial speed $v_i$ when it begins to slow down with constant acceleration of magnitude $a$. When the car reaches position $x_f$ it has speed $v_f$. Which of the following is a correct expression for $x_f$?
+
+#### A. $\frac{v_f^2 - v_i^2}{2a} + x_i$
+
+#### B. $\frac{v_i^2 - v_f^2}{2a} + x_i$
+
+#### C. $\frac{v_f^2 - v_i^2}{2a} - x_i$
+
+#### D. $\frac{v_i^2 - v_f^2}{2a} - x_i$
+
+
+ </div>
+
+
+---
+
+# 2026.10.16 **AP Physics**
+
+##### **❓ of the 📅**: If you were to be in the circus, what would your circus act be?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now
+2. Photogate Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use mathematical models to make predictions_
+
+### 📆 Upcoming
+HW Due Friday:
+- Set K12: VT Graph Challenges
+- Kinematics 4: Kinematic Eqs
+- Kinematics 5: Kinematic Eqs
+</div>
+</div>
+
+---
+
+# 🛝 Constant Acceleration **Lab Practical**
+
+### Today you get a cart, a ramp, and one number to hit.
+
+Release the cart **from rest**. It rolls **20 cm** and crosses photogate 1.
+
+Put photogate 2 where the cart will take exactly **0.12 s** to reach it.
+
+###### Your reference table is the only equation sheet you get. No procedure is given — that is the point.
+
+---
+
+
+![bg right:50% fit](capm-practical-setup.png)
+
+# 📐 The Setup
+
+* Cart released **from rest**: $v_{x0} = 0$
+* $\Delta x_1 = 20$ cm — already marked on your ramp
+* **Photogate 1** — already clamped for you
+* **Photogate 2** — <mark>you</mark> decide where it goes
+
+### 🎯 Target: $\Delta t = 0.12$ s
+
+**Do not move the ramp or change its angle** once you have measured your acceleration.
+
+---
+
+
+
+# 📋 Your Job
+
+<div class ='columns'>
+
+<div>
+
+**a. Design** 🧪
+Write a procedure to find your cart's acceleration.
+
+**b. Measure** 📏
+Run it. Table, units, resolutions. Report $a$.
+
+**c. Derive** ✏️
+Get $\Delta x_2$ in terms of $\Delta x_1$, $a$, $\Delta t$ — **symbols only**.
+
+**d. Predict & Test** 🎯
+Substitute. Place gate 2. Run it. Percent error in the **time**.
+
+</div>
+
+<div>
+
+**e. Evaluate** 🔍
+Which measurement hurt you most? Which direction?
+
+**f. Reason** 📈
+Steeper ramp — does $\Delta x_2$ go up, down, or stay?
+
+**g. Argue** 💬
+Defend a classmate's claim with **two** reasons.
+
+</div>
+
+</div>
+
+---
+
+
+# 📓 In Your Notebook
+
+#### Everything goes here
+
+1. Title, the task in your words, labeled sketch
+2. Your procedure
+3. Data table — units **and** resolutions
+4. Graph or calculation → $a$
+5. Derivation in symbols
+6. Substitution → $\Delta x_2$
+7. Measured $\Delta t$ + percent error
+8. Parts (e), (f), (g) in sentences
+
+
+
+
+###### 🏁 Close with a conclusion: did it work, what were you most sensitive to, what would you change?
+
+
+---
+
+
 # 2026.10.14 **AP Physics**
 
 ##### **❓ of the 📅**: What is your favorite dinosaur? 🦖
