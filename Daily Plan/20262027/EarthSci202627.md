@@ -14,6 +14,34 @@ math: mathjax
 
 ---
 
+# 2026.10.19 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather live in a teepee or an igloo?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Constructing the HR Diagram (Part E)
+2. HR Extension (Part F)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model & Interpret HR Diagram_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.10.16 **Earth Science**
 
 ##### **❓ of the 📅**: Who is your celebrity crush?
