@@ -20,6 +20,36 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.19 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather live in a teepee or an igloo?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Photogate Lab
+2. Driving and reaction time activity
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use kinematic models to solve problems_
+
+### 📆 Upcoming
+
+
+
+</div>
+</div>
+
+---
+
 
 <div class='do-now'> 
  
