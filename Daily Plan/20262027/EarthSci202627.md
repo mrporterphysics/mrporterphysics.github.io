@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.10.20 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish HR Diagram — Part E
+2. See-Think-Wonder discussion
+3. Part F — fusion vs. gravity
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain how fusion and gravity balance in a star_
+
+### 📆 Upcoming
+
+
+</div>
+</div>
+
+---
+
 # 2026.10.19 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather live in a teepee or an igloo?

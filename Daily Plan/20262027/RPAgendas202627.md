@@ -20,6 +20,38 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.20 **AP Physics**
+
+##### **❓ of the 📅**: If you could go back in time, what year would you travel to?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish the last Stopping Distance question
+2. Stopping Distance takeaways
+3. Start free fall motion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model free fall motion_
+
+### 📆 Upcoming
+
+- HW: _**Free Fall Five**_
+- Quiz Friday
+
+</div>
+</div>
+
+---
+
 # 2026.10.19 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather live in a teepee or an igloo?

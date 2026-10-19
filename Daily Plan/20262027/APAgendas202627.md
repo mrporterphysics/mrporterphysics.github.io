@@ -18,31 +18,9 @@ math: mathjax
 <!--- class: halloween --->
 
 
-
-<div class='do-now'> 
- 
- <div> 
-
-###### 2026.10.16 **AP Physics** Do Now
-
-A car is moving with constant speed vo when a tree falls into the roadway at $t = O$. It takes the driver a time $T$ to react and apply the brakes. The car then slows with a constant acceleration of magnitude $a$. Which of the following equations correctly expresses the distance $D$ traveled by the car from time $t = 0$ to the instant the car comes to rest?
-
-#### A. $D= v_0T + \frac{1}{2}aT^2$
-
-#### B. $D= \frac{1}{2}aT^2 + \frac{v_0^2}{2a}$
-
-#### C. $D= v_0T+ \frac{v_0^2}{2a}$
-
-#### D. $D = v_0T + \frac{1}{2}aT^2 + \frac{v_0^2}{2a}$
-
-
- </div>
-
----
-
 # 2026.10.20 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you could go back in time, what year would you travel to?
 
 <div class ='columns'>
 
@@ -68,6 +46,29 @@ A car is moving with constant speed vo when a tree falls into the roadway at $t 
 
 </div>
 </div>
+
+
+---
+
+
+<div class='do-now'> 
+ 
+ <div> 
+
+###### 2026.10.16 **AP Physics** Do Now
+
+A car is moving with constant speed vo when a tree falls into the roadway at $t = O$. It takes the driver a time $T$ to react and apply the brakes. The car then slows with a constant acceleration of magnitude $a$. Which of the following equations correctly expresses the distance $D$ traveled by the car from time $t = 0$ to the instant the car comes to rest?
+
+#### A. $D= v_0T + \frac{1}{2}aT^2$
+
+#### B. $D= \frac{1}{2}aT^2 + \frac{v_0^2}{2a}$
+
+#### C. $D= v_0T+ \frac{v_0^2}{2a}$
+
+#### D. $D = v_0T + \frac{1}{2}aT^2 + \frac{v_0^2}{2a}$
+
+
+ </div>
 
 ---
 
