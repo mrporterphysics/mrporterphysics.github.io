@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Time and Stopping Distance</title>
+    <style>
+        /* Flexoki Color Scheme */
+        :root {
+            /* Base Colors */
+            --fx-paper: #FFFCF0;
+            --fx-base-50: #F2F0E5;
+            --fx-base-100: #EFEBD4;
+            --fx-base-150: #E6E2CC;
+            --fx-base-200: #DAD4BA;
+            --fx-base-300: #C8BFA1;
+            --fx-base-400: #B5A988;
+            --fx-base-500: #9C8F70;
+            --fx-base-600: #847759;
+            --fx-base-700: #6F6144;
+            --fx-base-800: #575142;
+            --fx-base-850: #403E39;
+            --fx-base-900: #343331;
+            --fx-base-950: #1C1B1A;
+            --fx-black: #100F0F;
+
+            /* Accent Colors */
+            --fx-red: #D14D41;
+            --fx-orange: #DA702C;
+            --fx-yellow: #D0A215;
+            --fx-green: #879A39;
+            --fx-cyan: #3AA99F;
+            --fx-blue: #4385BE;
+            --fx-purple: #8B7EC8;
+            --fx-magenta: #CE5D97;
+        }
+
+        /* Light Theme */
+        :root {
+            --bg-primary: var(--fx-paper);
+            --bg-secondary: var(--fx-base-50);
+            --bg-tertiary: var(--fx-base-100);
+            --text-primary: var(--fx-base-950);
+            --text-secondary: var(--fx-base-700);
+            --text-muted: var(--fx-base-600);
+            --border-color: var(--fx-base-200);
+            --border-hover: var(--fx-base-300);
+            --accent-primary: var(--fx-blue);
+            --accent-hover: #205EA6;
+            --accent-secondary: var(--fx-purple);
+            --success: var(--fx-green);
+            --warning: var(--fx-orange);
+            --error: var(--fx-red);
+            --shadow: rgba(28, 27, 26, 0.1);
+            --shadow-hover: rgba(28, 27, 26, 0.15);
+        }
+
+        /* Dark Theme */
+        [data-theme="dark"] {
+            --bg-primary: var(--fx-black);
+            --bg-secondary: var(--fx-base-950);
+            --bg-tertiary: var(--fx-base-900);
+            --text-primary: var(--fx-paper);
+            --text-secondary: var(--fx-base-200);
+            --text-muted: var(--fx-base-400);
+            --border-color: var(--fx-base-850);
+            --border-hover: var(--fx-base-700);
+            --accent-primary: #205EA6;
+            --accent-hover: var(--fx-blue);
+            --accent-secondary: #5E409D;
+            --success: #66800B;
+            --warning: #BC5215;
+            --error: #AF3029;
+            --shadow: rgba(16, 15, 15, 0.3);
+            --shadow-hover: rgba(16, 15, 15, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow);
+            overflow: hidden;
+        }
+        
+        header {
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-family: 'Inconsolata', 'SF Mono', 'Monaco', 'Fira Code', monospace;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+        
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border-color: var(--accent-primary);
+        }
+        
+        .theme-toggle::before {
+            content: '☀️ Light';
+        }
+        
+        [data-theme="dark"] .theme-toggle::before {
+            content: '🌙 Dark';
+        }
+        
+        .question {
+            background-color: var(--bg-tertiary);
+            padding: 25px;
+            border-left: 4px solid var(--accent-primary);
+            margin: 0;
+        }
+        
+        .question h2 {
+            color: var(--accent-primary);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .question p {
+            line-height: 1.8;
+            font-size: 1.05em;
+            color: var(--text-secondary);
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .simulation-container {
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: var(--bg-primary);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        .controls {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .control-group {
+            margin: 15px 0;
+        }
+        
+        label {
+            display: inline-block;
+            min-width: 150px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        input[type="range"] {
+            width: 60%;
+            margin: 0 15px;
+            vertical-align: middle;
+            accent-color: var(--accent-primary);
+        }
+        
+        input[type="number"] {
+            width: 80px;
+            padding: 8px;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1em;
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+        
+        button {
+            background-color: var(--accent-primary);
+            color: var(--bg-primary);
+            border: 1px solid var(--accent-primary);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+            font-family: inherit;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        button:hover {
+            background-color: var(--accent-hover);
+            border-color: var(--accent-hover);
+            box-shadow: 0 4px 8px var(--shadow-hover);
+            transform: translateY(-1px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .value-display {
+            display: inline-block;
+            min-width: 60px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--accent-primary);
+        }
+        
+        .explanation {
+            background-color: var(--bg-tertiary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--accent-secondary);
+        }
+        
+        .explanation h3 {
+            color: var(--accent-secondary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .explanation p, .explanation ul {
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        
+        .explanation ul {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+        
+        .explanation li {
+            margin: 8px 0;
+        }
+        
+        .info-box {
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--warning);
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .info-box strong {
+            color: var(--warning);
+        }
+        
+        footer {
+            background-color: var(--bg-tertiary);
+            border-top: 1px solid var(--border-color);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            label {
+                min-width: 120px;
+            }
+            
+            input[type="range"] {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .question h2 {
+                font-size: 1.1em;
+            }
+            
+            button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <style>
+    table.readout { width: 100%; border-collapse: collapse; }
+    table.readout th, table.readout td {
+        padding: 10px 14px; border: 1px solid var(--border-color); text-align: left; }
+    table.readout th { background: var(--bg-tertiary); font-weight: 600; width: 22%; }
+    table.readout td { font-variant-numeric: tabular-nums; font-size: 1.15em; }
+    table.readout td.hot { color: var(--fx-orange); font-weight: 700; }
+    .sub { font-weight: 400; opacity: .7; font-size: .85em; }
+    table.cmp { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    table.cmp th, table.cmp td {
+        padding: 8px 10px; border: 1px solid var(--border-color);
+        text-align: center; font-variant-numeric: tabular-nums; }
+    table.cmp thead th { background: var(--bg-tertiary); }
+    table.cmp td:first-child, table.cmp th:first-child { text-align: left; }
+    table.cmp tr.alert td.tot { color: var(--fx-blue); font-weight: 700; }
+    table.cmp tr.text  td.tot { color: var(--fx-red);  font-weight: 700; }
+    .muted { color: var(--text-muted); font-size: .92em; }
+    .verdict-safe { border-left: 4px solid var(--fx-green) !important; }
+    .verdict-hit  { border-left: 4px solid var(--fx-red) !important; }
+    canvas { width: 100%; height: auto; }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reaction Time and Stopping Distance</h1>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"></button>
+        </header>
+        
+        <div class="question">
+            <h2>Problem</h2>
+            <p>When something steps into the road you do not brake instantly. For a short
+<strong>reaction time</strong> t<sub>r</sub> you are still travelling at full speed &mdash;
+your foot has not reached the pedal. Only then do the brakes grip, slowing the car at
+about <strong>a = 7.0 m/s&sup2;</strong> on dry asphalt.</p>
+<p>So every stop is <strong>two motions in a row</strong>: a rectangle of distance while
+you react, then a triangle while you brake. Drive the three roads you know &mdash; the
+<strong>CES school zone</strong> at 25 mph, <strong>Maple Hill Road</strong> at 40 mph and
+<strong>Route&nbsp;9</strong> at 55 mph &mdash; alert (t<sub>r</sub> = 0.75 s) and reading a
+text (t<sub>r</sub> = 2.0 s). How much road does each one need?</p>
+
+        </div>
+        
+        <div class="content">
+            <div class="simulation-container">
+  <canvas id="road" width="880" height="230"></canvas>
+</div>
+
+<div class="controls">
+  <div class="control-group">
+    <label for="speed">Speed</label>
+    <input type="range" id="speed" min="15" max="65" step="1" value="55">
+    <span class="value-display" id="speedOut">55 mph</span>
+  </div>
+  <div class="control-group">
+    <label for="tr">Reaction time</label>
+    <input type="range" id="tr" min="0.25" max="3" step="0.05" value="0.75">
+    <span class="value-display" id="trOut">0.75 s</span>
+  </div>
+  <div class="control-group">
+    <label for="decel">Braking</label>
+    <input type="range" id="decel" min="4" max="10" step="0.5" value="7">
+    <span class="value-display" id="decelOut">7.0 m/s&sup2;</span>
+  </div>
+  <div class="control-group">
+    <label for="gap">Hazard ahead</label>
+    <input type="range" id="gap" min="5" max="120" step="1" value="20">
+    <span class="value-display" id="gapOut">20 m</span>
+  </div>
+  <div class="control-group">
+    <button id="play">Drive</button>
+    <button id="reset">Reset</button>
+    <button id="alert">Alert &mdash; 0.75 s</button>
+    <button id="texting">Texting &mdash; 2.0 s</button>
+  </div>
+  <div class="control-group">
+    <button id="ces">CES zone &mdash; 25</button>
+    <button id="maple">Maple Hill &mdash; 40</button>
+    <button id="rt9">Route 9 &mdash; 55</button>
+  </div>
+</div>
+
+<div class="info-box" id="verdict">Press <strong>Drive</strong> to run it.</div>
+
+<div class="simulation-container">
+  <table class="readout">
+    <tr><th>Speed</th><td id="rv">24.6 m/s</td>
+        <th>Reacting <span class="sub">v&middot;t<sub>r</sub></span></th><td id="rr">18.4 m</td></tr>
+    <tr><th>Braking <span class="sub">v&sup2;/2a</span></th><td id="rb">43.2 m</td>
+        <th>Total</th><td id="rt" class="hot">61.6 m</td></tr>
+  </table>
+</div>
+
+<div class="simulation-container">
+  <canvas id="vt" width="880" height="320"></canvas>
+</div>
+
+<div class="explanation">
+  <h3>Why the two phases behave so differently</h3>
+  <p>The <strong>rectangle</strong> is the distance you cover while still reacting:
+  <code>d&#8321; = v&nbsp;t<sub>r</sub></code>. Its height is your speed and its width is
+  your reaction time, so it grows <em>in step with</em> v.</p>
+  <p>The <strong>triangle</strong> is the braking distance:
+  <code>d&#8322; = v&sup2;/2a</code>. It gets both taller <em>and</em> wider as v rises,
+  so it grows like v&sup2;.</p>
+  <p>Picking up a phone changes only the rectangle. The extra distance is
+  <code>&Delta;d = v&nbsp;&Delta;t<sub>r</sub></code> &mdash; the braking term cancels completely,
+  so your brakes are irrelevant to the cost of the distraction.</p>
+</div>
+
+<h3>All six cases</h3>
+<p class="muted">Computed at the braking rate set above. Alert = 0.75 s, texting = 2.0 s.</p>
+<table class="cmp" id="cmp"></table>
+
+        </div>
+        
+        <footer>
+            AP Physics 1 &middot; Kinematics &middot; companion to the <em>Reaction Time and Stopping Distance</em> worksheet
+        </footer>
+    </div>
+    
+    
+    
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
+    
+    <script>
+        const MPH = 0.44704;
+const $ = id => document.getElementById(id);
+const cv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+const road = $('road'), rx = road.getContext('2d');
+const vt   = $('vt'),   vx = vt.getContext('2d');
+
+let t = 0, running = false, raf = null, last = 0;
+
+function params() {
+  const mph = +$('speed').value, tr = +$('tr').value;
+  const a = +$('decel').value, gap = +$('gap').value;
+  const v = mph * MPH;
+  const dR = v * tr, dB = v * v / (2 * a);
+  return { mph, tr, a, gap, v, dR, dB, dT: dR + dB, tB: v / a, tT: tr + v / a };
+}
+const posAt = (t, p) => t <= p.tr ? p.v * t
+  : (u => p.v * p.tr + p.v * u - 0.5 * p.a * u * u)(Math.min(t - p.tr, p.tB));
+const velAt = (t, p) => t <= p.tr ? p.v : Math.max(0, p.v - p.a * (t - p.tr));
+
+function outcome(p) {
+  if (p.dT <= p.gap) return { safe: true, margin: p.gap - p.dT };
+  if (p.dR >= p.gap) return { safe: false, vi: p.v, noBrake: true };
+  return { safe: false, noBrake: false,
+           vi: Math.sqrt(Math.max(0, p.v * p.v - 2 * p.a * (p.gap - p.dR))) };
+}
+
+function drawCar(c, x, y, s, col) {
+  c.save(); c.translate(x, y); c.scale(s, s);
+  c.fillStyle = cv('--bg-primary'); c.strokeStyle = col; c.lineWidth = 2;
+  c.beginPath();
+  c.moveTo(-26, 0); c.lineTo(-26, -9); c.lineTo(-14, -9); c.lineTo(-7, -19);
+  c.lineTo(9, -19); c.lineTo(15, -9); c.lineTo(26, -9); c.lineTo(26, 0); c.closePath();
+  c.fill(); c.stroke();
+  c.beginPath(); c.arc(-14, 0, 4.5, 0, 7); c.fill(); c.stroke();
+  c.beginPath(); c.arc(14, 0, 4.5, 0, 7); c.fill(); c.stroke();
+  c.restore();
+}
+
+function drawRoad() {
+  const p = params(), o = outcome(p), W = road.width, H = road.height;
+  const L = 52, R = 44, view = Math.max(p.dT, p.gap) * 1.12 || 1;
+  const sc = (W - L - R) / view, X = m => L + m * sc, ry = 170;
+  rx.clearRect(0, 0, W, H);
+  rx.fillStyle = cv('--bg-tertiary'); rx.fillRect(L - 20, ry - 22, W - L - R + 40, 44);
+  rx.strokeStyle = cv('--border-color'); rx.lineWidth = 1;
+  rx.beginPath(); rx.moveTo(L - 20, ry - 22); rx.lineTo(W - R + 20, ry - 22);
+  rx.moveTo(L - 20, ry + 22); rx.lineTo(W - R + 20, ry + 22); rx.stroke();
+  rx.setLineDash([9, 9]); rx.beginPath(); rx.moveTo(L - 20, ry); rx.lineTo(W - R + 20, ry);
+  rx.strokeStyle = cv('--text-muted'); rx.stroke(); rx.setLineDash([]);
+
+  // phase bars
+  const by = 92;
+  rx.fillStyle = cv('--fx-blue');   rx.fillRect(X(0), by, Math.max(1, X(p.dR) - X(0)), 13);
+  rx.fillStyle = cv('--fx-orange'); rx.fillRect(X(p.dR), by, Math.max(1, X(p.dT) - X(p.dR)), 13);
+  rx.font = '13px ui-monospace, monospace'; rx.textAlign = 'center';
+  rx.fillStyle = cv('--fx-blue');
+  rx.fillText('reacting ' + p.dR.toFixed(1) + ' m', (X(0) + X(p.dR)) / 2, by - 7);
+  rx.fillStyle = cv('--fx-orange');
+  rx.fillText('braking ' + p.dB.toFixed(1) + ' m', (X(p.dR) + X(p.dT)) / 2, by - 7);
+
+  // markers
+  [[0, 'see hazard', '--text-muted'], [p.dR, 'brakes grip', '--fx-orange'],
+   [p.dT, 'stopped', '--fx-green']].forEach(([m, lab, col]) => {
+    rx.strokeStyle = cv(col); rx.setLineDash([3, 4]); rx.lineWidth = 1.4;
+    rx.beginPath(); rx.moveTo(X(m), by + 13); rx.lineTo(X(m), ry + 26); rx.stroke();
+    rx.setLineDash([]); rx.fillStyle = cv(col); rx.textAlign = 'center';
+    rx.font = '12px ui-monospace, monospace'; rx.fillText(lab, X(m), ry + 42);
+  });
+
+  // hazard
+  const hx = X(p.gap);
+  rx.strokeStyle = cv('--fx-red'); rx.lineWidth = 2.4; rx.fillStyle = cv('--fx-red');
+  rx.beginPath(); rx.arc(hx, ry - 34, 6, 0, 7); rx.fill();
+  rx.beginPath(); rx.moveTo(hx, ry - 28); rx.lineTo(hx, ry - 10);
+  rx.moveTo(hx, ry - 23); rx.lineTo(hx - 8, ry - 15); rx.moveTo(hx, ry - 23); rx.lineTo(hx + 8, ry - 15);
+  rx.moveTo(hx, ry - 10); rx.lineTo(hx - 7, ry + 2); rx.moveTo(hx, ry - 10); rx.lineTo(hx + 7, ry + 2);
+  rx.stroke();
+  rx.font = '12px ui-monospace, monospace'; rx.textAlign = 'center';
+  rx.fillText(p.gap.toFixed(0) + ' m', hx, ry - 46);
+
+  // car
+  const pos = posAt(t, p);
+  drawCar(rx, X(pos), ry + 14, 1, velAt(t, p) > 0.01 ? cv('--fx-blue') : cv('--fx-green'));
+
+  // verdict
+  const vEl = $('verdict');
+  vEl.classList.remove('verdict-safe', 'verdict-hit');
+  if (o.safe) {
+    vEl.classList.add('verdict-safe');
+    vEl.innerHTML = '<strong>You stop in time.</strong> You need ' + p.dT.toFixed(1) +
+      ' m and you have ' + p.gap.toFixed(0) + ' m &mdash; ' + o.margin.toFixed(1) +
+      ' m (' + (o.margin * 3.281).toFixed(0) + ' ft) to spare.';
+  } else {
+    vEl.classList.add('verdict-hit');
+    vEl.innerHTML = '<strong>You hit the hazard at ' + o.vi.toFixed(1) + ' m/s (' +
+      (o.vi / MPH).toFixed(0) + ' mph).</strong> ' + (o.noBrake
+        ? 'Your reaction distance alone is ' + p.dR.toFixed(1) +
+          ' m &mdash; longer than the gap, so you never touch the brakes.'
+        : 'You need ' + p.dT.toFixed(1) + ' m but only have ' + p.gap.toFixed(0) + ' m.');
+  }
+}
+
+function drawVT() {
+  const p = params(), W = vt.width, H = vt.height;
+  const L = 64, B = 52, T = 26, R = 28;
+  const tMax = Math.max(p.tT, 0.5) * 1.08, vMax = Math.max(p.v, 1) * 1.18;
+  const X = s => L + s / tMax * (W - L - R), Y = u => H - B - u / vMax * (H - B - T);
+  vx.clearRect(0, 0, W, H);
+
+  vx.fillStyle = cv('--fx-blue') + '2e';
+  vx.fillRect(X(0), Y(p.v), X(p.tr) - X(0), Y(0) - Y(p.v));
+  vx.fillStyle = cv('--fx-orange') + '2e';
+  vx.beginPath(); vx.moveTo(X(p.tr), Y(p.v)); vx.lineTo(X(p.tT), Y(0));
+  vx.lineTo(X(p.tr), Y(0)); vx.closePath(); vx.fill();
+
+  vx.strokeStyle = cv('--border-color'); vx.lineWidth = 1;
+  for (let i = 0; i <= 4; i++) {
+    const u = vMax * i / 4;
+    vx.beginPath(); vx.moveTo(L, Y(u)); vx.lineTo(W - R, Y(u)); vx.stroke();
+    vx.fillStyle = cv('--text-muted'); vx.font = '12px ui-monospace, monospace';
+    vx.textAlign = 'right'; vx.fillText(u.toFixed(0), L - 9, Y(u) + 4);
+  }
+  vx.strokeStyle = cv('--text-primary'); vx.lineWidth = 1.6;
+  vx.beginPath(); vx.moveTo(L, T - 6); vx.lineTo(L, Y(0)); vx.lineTo(W - R, Y(0)); vx.stroke();
+
+  const step = tMax > 6 ? 1 : 0.5;
+  for (let s = step; s < tMax; s += step) {
+    vx.strokeStyle = cv('--border-color');
+    vx.beginPath(); vx.moveTo(X(s), Y(0)); vx.lineTo(X(s), Y(0) + 5); vx.stroke();
+    vx.fillStyle = cv('--text-muted'); vx.textAlign = 'center';
+    vx.fillText(s.toFixed(step < 1 ? 1 : 0), X(s), Y(0) + 19);
+  }
+  vx.fillStyle = cv('--text-primary'); vx.font = '13px ui-monospace, monospace';
+  vx.textAlign = 'left'; vx.fillText('v (m/s)', L - 44, T - 10);
+  vx.textAlign = 'right'; vx.fillText('t (s)', W - R, Y(0) + 38);
+
+  vx.strokeStyle = cv('--fx-blue'); vx.lineWidth = 3;
+  vx.beginPath(); vx.moveTo(X(0), Y(p.v)); vx.lineTo(X(p.tr), Y(p.v)); vx.stroke();
+  vx.strokeStyle = cv('--fx-orange');
+  vx.beginPath(); vx.moveTo(X(p.tr), Y(p.v)); vx.lineTo(X(p.tT), Y(0)); vx.stroke();
+
+  vx.font = '13px ui-monospace, monospace'; vx.textAlign = 'center';
+  vx.fillStyle = cv('--fx-blue'); vx.textAlign = 'left';
+  vx.fillText('rectangle: ' + p.dR.toFixed(1) + ' m', X(0) + 8, Y(p.v / 2));
+  vx.textAlign = 'center';
+  vx.fillStyle = cv('--fx-orange');
+  vx.fillText('triangle: ' + p.dB.toFixed(1) + ' m', (X(p.tr) + X(p.tT)) / 2, Y(p.v / 3.4));
+
+  const u = velAt(t, p);
+  vx.fillStyle = cv('--fx-red');
+  vx.beginPath(); vx.arc(X(Math.min(t, p.tT)), Y(u), 6, 0, 7); vx.fill();
+}
+
+function table() {
+  const a = +$('decel').value, rows = [25, 40, 55], names = ['School zone (CES)', 'Maple Hill Rd', 'Route 9'];
+  let h = '<thead><tr><th>Road</th><th>v (m/s)</th><th>Braking (m)</th>' +
+          '<th>Reacting (m)</th><th>Total (m)</th></tr></thead><tbody>';
+  rows.forEach((mph, i) => {
+    const v = mph * MPH, dB = v * v / (2 * a);
+    [[0.75, 'alert', 'alert'], [2.0, 'texting', 'text']].forEach(([tr, lab, cls]) => {
+      const dR = v * tr;
+      h += '<tr class="' + cls + '"><td>' + names[i] + ' &middot; ' + mph + ' mph, ' + lab +
+           '</td><td>' + v.toFixed(1) + '</td><td>' + dB.toFixed(1) + '</td><td>' +
+           dR.toFixed(1) + '</td><td class="tot">' + (dR + dB).toFixed(1) + '</td></tr>';
+    });
+  });
+  $('cmp').innerHTML = h + '</tbody>';
+}
+
+function readouts() {
+  const p = params();
+  $('speedOut').textContent = p.mph + ' mph';
+  $('trOut').textContent = p.tr.toFixed(2) + ' s';
+  $('decelOut').textContent = p.a.toFixed(1) + ' m/s²';
+  $('gapOut').textContent = p.gap + ' m';
+  $('rv').textContent = p.v.toFixed(1) + ' m/s';
+  $('rr').textContent = p.dR.toFixed(1) + ' m';
+  $('rb').textContent = p.dB.toFixed(1) + ' m';
+  $('rt').textContent = p.dT.toFixed(1) + ' m  (' + (p.dT * 3.281).toFixed(0) + ' ft)';
+}
+
+function redraw() { readouts(); drawRoad(); drawVT(); table(); }
+
+function frame(ts) {
+  if (!running) return;
+  const p = params();
+  const dt = Math.min(0.05, (ts - last) / 1000 || 0.016); last = ts;
+  t += dt;
+  const stop = posAt(t, p) >= p.gap || t >= p.tT;
+  if (stop) { t = Math.min(t, p.tT); running = false; $('play').textContent = 'Drive'; }
+  redraw();
+  if (running) raf = requestAnimationFrame(frame);
+}
+
+$('play').onclick = () => {
+  const p = params();
+  if (running) { running = false; $('play').textContent = 'Drive'; return; }
+  if (t >= p.tT || posAt(t, p) >= p.gap) t = 0;
+  running = true; last = performance.now(); $('play').textContent = 'Pause';
+  raf = requestAnimationFrame(frame);
+};
+$('reset').onclick = () => { running = false; t = 0; $('play').textContent = 'Drive'; redraw(); };
+['speed', 'tr', 'decel', 'gap'].forEach(id => $(id).oninput = () => { t = 0; running = false; $('play').textContent = 'Drive'; redraw(); });
+$('alert').onclick   = () => { $('tr').value = 0.75; t = 0; redraw(); };
+$('texting').onclick = () => { $('tr').value = 2.0;  t = 0; redraw(); };
+$('ces').onclick     = () => { $('speed').value = 25; t = 0; redraw(); };
+$('maple').onclick   = () => { $('speed').value = 40; t = 0; redraw(); };
+$('rt9').onclick     = () => { $('speed').value = 55; t = 0; redraw(); };
+new MutationObserver(redraw).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+redraw();
+
+    </script>
+</body>
+</html>
