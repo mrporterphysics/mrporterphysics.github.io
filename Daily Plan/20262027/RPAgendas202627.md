@@ -43,7 +43,7 @@ math: mathjax
 
 ### 📆 Upcoming
 
-
+- Quiz Friday
 
 </div>
 </div>
