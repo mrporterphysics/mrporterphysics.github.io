@@ -40,6 +40,37 @@ A car is moving with constant speed vo when a tree falls into the roadway at $t 
 
 ---
 
+# 2026.10.20 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Driving & Stopping Distance Assignment
+2. Free Fall Five 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Free Fall Motion_
+
+### 📆 Upcoming
+
+- HW: _**Finish Free Fall Five**_
+- Quiz Thursday: graphs and word problems
+
+</div>
+</div>
+
+---
+
 # 2026.10.16 **AP Physics**
 
 ##### **❓ of the 📅**: Who is your celebrity crush?
