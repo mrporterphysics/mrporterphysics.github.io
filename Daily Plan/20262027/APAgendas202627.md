@@ -20,7 +20,7 @@ math: mathjax
 
 # 2026.10.21 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
 
 <div class ='columns'>
 
