@@ -322,7 +322,7 @@ After Sinkovits, *Phys. Teach.* **60**, 744 (2022)
 
 <div class="steps">
 
-**Our toolkit** — $\ \Delta y = v_0 t + \tfrac12 a t^2 \qquad v = v_0 + a t \qquad v^2 = v_0^2 + 2 a \Delta y$
+**Our toolkit:**  $\ \Delta y = v_0 t + \tfrac12 a t^2 \qquad v = v_0 + a t \qquad v^2 = v_0^2 + 2 a \Delta y$
 
 </div>
 

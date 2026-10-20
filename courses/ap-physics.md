@@ -33,6 +33,7 @@ College-level physics course focusing on mechanics, energy, momentum, rotation, 
 
 ### Unit 1: Kinematics
 - [Kinematics Presentation](/Presentations/APCVPM/talks/CVPM2025.html)
+- [2D Motion — Free Fall, Vectors & Projectiles](/Presentations/Projectiles/talks/2dMotionAP2026.html)
 - [Kinematic Graphs Animation](/AP Resource Pages/kinGraphs.html)
 - [Eight Motion Graphs](/AP Resource Pages/eightmotiongraphs.html)
 - [Average vs Instantaneous Velocity](/AP Resource Pages/averageVsInstantaneous.html)
@@ -40,7 +41,6 @@ College-level physics course focusing on mechanics, energy, momentum, rotation, 
 
 ### Unit 2: Dynamics
 - [Linear Dynamics](/Presentations/Forces/talks/Dynamics2024.html)
-- [2D Motion](/Presentations/APCAPM/talks/twoDMotion.html)
 
 ### Unit 3: Circular Motion & Gravitation
 - [Circular Motion](/Presentations/Circular Motion/talks/CircularMotion2024-25.html)

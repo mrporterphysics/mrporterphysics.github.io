@@ -21,6 +21,15 @@ description: Complete collection of lecture slides and content presentations org
   </div>
 
   <div class="content-card">
+    <div class="card-icon">🎯</div>
+    <h3 class="card-title">2D Motion</h3>
+    <p class="card-description">Free fall with the cross diagram, vectors, relative motion, and projectiles</p>
+    <div class="card-links">
+      <a href="/Presentations/Projectiles/talks/2dMotionAP2026.html" class="card-link">→ View Slides</a>
+    </div>
+  </div>
+
+  <div class="content-card">
     <div class="card-icon">📉</div>
     <h3 class="card-title">Kinematic Graphs</h3>
     <p class="card-description">Interactive animations of position, velocity, and acceleration graphs</p>
@@ -42,15 +51,6 @@ description: Complete collection of lecture slides and content presentations org
     <p class="card-description">Forces, Newton's Laws, free-body diagrams, and problem-solving strategies</p>
     <div class="card-links">
       <a href="/Presentations/Forces/talks/Dynamics2024.html" class="card-link">→ View Slides</a>
-    </div>
-  </div>
-
-  <div class="content-card">
-    <div class="card-icon">🎯</div>
-    <h3 class="card-title">2D Motion & Projectiles</h3>
-    <p class="card-description">Vector decomposition, projectile motion, and relative velocity</p>
-    <div class="card-links">
-      <a href="/Presentations/APCAPM/talks/twoDMotion.html" class="card-link">→ View Slides</a>
     </div>
   </div>
 </div>

@@ -14,7 +14,7 @@
 
   - [Kinematics](/Presentations/APCVPM/talks/CVPM2024.html)
   - [Linear Dynamics](/Presentations/Forces/talks/Dynamics2024.html)
-  - [2D Motion](/Presentations/APCAPM/talks/twoDMotion.html)
+  - [2D Motion — Free Fall, Vectors & Projectiles](/Presentations/Projectiles/talks/2dMotionAP2026.html)
 
 
 ## Classroom Presenters
