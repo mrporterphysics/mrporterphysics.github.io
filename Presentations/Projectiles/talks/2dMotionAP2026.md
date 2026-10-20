@@ -1,10 +1,12 @@
 ---
 title: 2D Motion
 marp: true
-theme: astrotheme
+theme: trajectory
 paginate: true
 math: mathjax
 ---
+
+<!--- _class: title-slide --->
 
 # Two Dimensional Motion 
 
@@ -14,34 +16,505 @@ math: mathjax
 
 ---
 
-# Contents:
+<!--- _class: phase-title --->
+
+# Free Fall Motion
+
+---
 
 
+# Free Fall 
 
+## An object in **free fall** experiences *only* the force of gravity.
+
+* This means that it accelerates at $g$, which is referred to as "_acceleration due to gravity_" or "_gravitational field strength_"
+* Units N/kg and m/s/s are the ***same***
+* We ignore air resistance unless a problem tells us not to
+
+---
+
+
+<iframe width="1150" height="715" src="https://www.youtube.com/embed/E43-CfukEgs?si=8DZF93LgcQA3LuZy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# How Big Is $g$?
+
+## Near the surface of the Earth, $g = 9.8 \text{ m/s/s}$
+
+### In AP Physics we will use $\boxed{g = 10 \text{ m/s/s}}$
+
+<div class="key-idea">
+
+**$g$ is a magnitude, so it is always positive.** The *sign* of the acceleration comes from the direction **you** chose as positive — not from $g$ itself.
+
+</div>
+
+---
+
+# Pick a Positive Direction First
 
 <div class='columns'>
-<div>
+<div class='col'>
 
-1. [Vector Quantities](#vector-quantities)
-2. [Vector Component Math](#vector-components-math)
-3. [Vector Components Practice](#practice)
-4. [Adding Vectors](#adding-vectors)
-5. [Adding Perpendicular Vectors Example](#adding-perpendicular-vectors)
-6. [Practice Adding Perpendicular Vectors](#practice-1)
-7. [Adding Angled Vectors](#adding-angled-vectors)
+### If **up** is positive
 
+- $a = -g = -10 \text{ m/s/s}$
+- Rising $\rightarrow v$ is $+$
+- Falling $\rightarrow v$ is $-$
+- Landing below the start $\rightarrow \Delta y$ is $-$
 
 </div>
- 
-<div>
+<div class='col'>
 
-8. [Angled Vectors Addition Practice](#practice-2)
-9. [Free Fall](#free-fall)
-10. [Horizontal Projectiles](#horizontal-projectiles)
+### If **down** is positive
+
+- $a = +g = +10 \text{ m/s/s}$
+- Falling $\rightarrow v$ is $+$
+- Rising $\rightarrow v$ is $-$
+- Landing below the start $\rightarrow \Delta y$ is $+$
 
 </div>
 </div>
 
+<div class="warning">
+
+**Both choices give the same physics.** Pick one, write it on your paper, and keep it for the whole problem. Most free fall mistakes are sign errors from switching halfway through.
+
+</div>
+
+---
+
+# Free Fall Facts
+## If an object is _dropped_, $v_0 = 0$ 
+
+---
+
+# Free Fall Facts
+## If an object is projected upwards it will slow down as it rises. The y-velocity will be zero at its highest point, or peak.
+
+### You can treat $v = 0$ at the peak
+
+---
+
+<!--- _class: compact --->
+
+# Free Fall Facts
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+## Up and down are mirror images
+
+An object projected upward returns to its **initial height** with a velocity **equal in magnitude** and **opposite in direction**.
+
+A ball thrown up at $+30$ m/s passes its launch height again at $-30$ m/s.
+
+<div class="small">
+
+Up is positive &nbsp;•&nbsp; $g = 10$ m/s/s
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 560 390" width="100%" style="max-height:430px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <polygon points="80,54 284,180 80,180" fill="var(--aurora, #66800B)" opacity="0.20"/>
+  <polygon points="284,180 488,306 488,180" fill="var(--coral, #AF3029)" opacity="0.20"/>
+  <line x1="80" y1="54"  x2="520" y2="54"  stroke="var(--ink-3, #B7B5AC)" stroke-opacity="0.55" stroke-width="1"/>
+  <line x1="80" y1="306" x2="520" y2="306" stroke="var(--ink-3, #B7B5AC)" stroke-opacity="0.55" stroke-width="1"/>
+  <line x1="284" y1="44" x2="284" y2="334" stroke="var(--solar, #AD8301)" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <line x1="488" y1="44" x2="488" y2="334" stroke="var(--ink-3, #B7B5AC)" stroke-opacity="0.75" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <line x1="80" y1="40" x2="80" y2="334" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="56" y1="180" x2="528" y2="180" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="80" y1="54" x2="488" y2="306" stroke="var(--star, #205EA6)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="80"  cy="54"  r="6" fill="var(--star, #205EA6)"/>
+  <circle cx="284" cy="180" r="6" fill="var(--solar, #AD8301)"/>
+  <circle cx="488" cy="306" r="6" fill="var(--star, #205EA6)"/>
+  <text x="66" y="60"  text-anchor="end" fill="var(--aurora, #66800B)" font-size="19" font-weight="600">+30</text>
+  <text x="66" y="187" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="19">0</text>
+  <text x="66" y="313" text-anchor="end" fill="var(--coral, #AF3029)" font-size="19" font-weight="600">&#8722;30</text>
+  <text x="284" y="356" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="17">3.0 s</text>
+  <text x="488" y="356" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17">6.0 s</text>
+  <text x="26" y="196" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17" transform="rotate(-90 26 196)">velocity (m/s)</text>
+  <text x="300" y="382" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17">time (s)</text>
+  <text x="142" y="132" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="16">area = +45 m</text>
+  <text x="142" y="152" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="14" opacity="0.8">rising</text>
+  <text x="418" y="228" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="16">area = &#8722;45 m</text>
+  <text x="418" y="248" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="14" opacity="0.8">falling</text>
+  <text x="302" y="98"  fill="var(--star, #205EA6)" font-size="16">slope = <tspan font-style="italic">a</tspan> = &#8722;10 m/s&#178;</text>
+  <text x="302" y="144" fill="var(--solar, #AD8301)" font-size="16"><tspan font-style="italic">v</tspan> = 0 at the peak</text>
+</svg>
+
+</div>
+</div>
+
+---
+
+<!--- _class: compact --->
+
+# Two Graphs, One Throw
+
+<div class='columns'>
+<div class='col'>
+
+<svg viewBox="0 0 420 345" width="100%" style="max-height:290px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <line x1="60" y1="65" x2="380" y2="65" stroke="var(--ink-3, #B7B5AC)" stroke-opacity="0.55" stroke-width="1"/>
+  <line x1="210" y1="50" x2="210" y2="290" stroke="var(--solar, #AD8301)" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <line x1="60" y1="45" x2="60" y2="290" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="40" y1="265" x2="390" y2="265" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <path d="M 60 265 Q 210 -135 360 265" fill="none" stroke="var(--nebula, #5E409D)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="210" cy="65" r="6" fill="var(--solar, #AD8301)"/>
+  <text x="50" y="71"  text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">45</text>
+  <text x="50" y="272" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">0</text>
+  <text x="210" y="288" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="16">3.0</text>
+  <text x="360" y="288" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">6.0</text>
+  <text x="22" y="165" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16" transform="rotate(-90 22 165)">position (m)</text>
+  <text x="215" y="320" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time (s)</text>
+  <text x="215" y="340" text-anchor="middle" fill="var(--nebula, #5E409D)" font-size="17" font-weight="600">position vs. time</text>
+</svg>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 420 345" width="100%" style="max-height:290px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <polygon points="60,65 210,165 60,165" fill="var(--aurora, #66800B)" opacity="0.20"/>
+  <polygon points="210,165 360,265 360,165" fill="var(--coral, #AF3029)" opacity="0.20"/>
+  <line x1="210" y1="50" x2="210" y2="290" stroke="var(--solar, #AD8301)" stroke-opacity="0.45" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <line x1="60" y1="45" x2="60" y2="290" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="40" y1="165" x2="390" y2="165" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="60" y1="65" x2="360" y2="265" stroke="var(--star, #205EA6)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="210" cy="165" r="6" fill="var(--solar, #AD8301)"/>
+  <text x="50" y="71"  text-anchor="end" fill="var(--aurora, #66800B)" font-size="17">+30</text>
+  <text x="50" y="172" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">0</text>
+  <text x="50" y="272" text-anchor="end" fill="var(--coral, #AF3029)" font-size="17">&#8722;30</text>
+  <text x="210" y="288" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="16">3.0</text>
+  <text x="360" y="288" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">6.0</text>
+  <text x="22" y="165" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16" transform="rotate(-90 22 165)">velocity (m/s)</text>
+  <text x="215" y="320" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time (s)</text>
+  <text x="215" y="340" text-anchor="middle" fill="var(--star, #205EA6)" font-size="17" font-weight="600">velocity vs. time</text>
+</svg>
+
+</div>
+</div>
+
+<div class="question">
+
+**Discuss** — The position graph is curved but the velocity graph is straight. What does that tell you about the acceleration? Where on the position graph is the velocity zero?
+
+</div>
+
+---
+<!--- _class: compact --->
+
+# The Cross Diagram
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+Five variables describe one stage of constant-acceleration motion. The cross puts them where you can see how they relate.
+
+- **Top row** is space, **bottom row** is time
+- **Left column** is the start, **right column** is the end
+- **Middle column** is what *changes*
+
+<div class="small">
+
+After Sinkovits, *Phys. Teach.* **60**, 744 (2022)
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 560 330" width="100%" style="max-height:300px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <line x1="280" y1="40" x2="280" y2="300" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="5 6"/>
+  <line x1="60" y1="170" x2="500" y2="170" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="5 6"/>
+  <text x="280" y="78" text-anchor="middle" fill="var(--nebula, #5E409D)" font-size="32" font-weight="600">&#916;y</text>
+  <text x="110" y="182" text-anchor="middle" fill="var(--star, #205EA6)" font-size="32" font-weight="600">v<tspan font-size="21" dy="7">0</tspan></text>
+  <text x="280" y="182" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="32" font-weight="600">a</text>
+  <text x="455" y="182" text-anchor="middle" fill="var(--star, #205EA6)" font-size="32" font-weight="600">v</text>
+  <text x="280" y="288" text-anchor="middle" fill="var(--plasma, #BC5215)" font-size="32" font-weight="600">&#916;t</text>
+  <text x="280" y="34" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">space</text>
+  <text x="280" y="316" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time</text>
+  <text x="110" y="222" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">start</text>
+  <text x="455" y="222" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">end</text>
+  <text x="280" y="222" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">the change</text>
+</svg>
+
+</div>
+</div>
+
+---
+
+<!--- _class: compact --->
+
+# Five Boxes, Five Equations
+
+<svg viewBox="0 0 1180 300" width="100%" style="max-height:330px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="21">
+  <g fill="var(--ink, #100F0F)" text-anchor="middle">
+  <rect x="18" y="26" width="138" height="152" rx="7" fill="none" stroke="var(--star, #205EA6)" stroke-width="3"/>
+  <text x="110" y="62" fill="var(--nebula, #5E409D)">&#916;y</text>
+  <text x="42"  y="112" fill="var(--star, #205EA6)">v<tspan font-size="14" dy="5">0</tspan></text>
+  <text x="110" y="112" fill="var(--coral, #AF3029)">a</text>
+  <text x="180" y="112" fill="var(--ink-3, #B7B5AC)">v</text>
+  <text x="110" y="162" fill="var(--plasma, #BC5215)">&#916;t</text>
+  <text x="110" y="222" font-size="18" fill="var(--muted, #6F6E69)">left</text>
+  <text x="110" y="262" font-size="19">&#916;y = v<tspan font-size="13" dy="4">0</tspan><tspan dy="-4">&#916;t + ½a&#916;t²</tspan></text>
+  <rect x="268" y="26" width="138" height="152" rx="7" fill="none" stroke="var(--star, #205EA6)" stroke-width="3"/>
+  <text x="337" y="62" fill="var(--nebula, #5E409D)">&#916;y</text>
+  <text x="268" y="112" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="14" dy="5">0</tspan></text>
+  <text x="337" y="112" fill="var(--coral, #AF3029)">a</text>
+  <text x="406" y="112" fill="var(--star, #205EA6)">v</text>
+  <text x="337" y="162" fill="var(--plasma, #BC5215)">&#916;t</text>
+  <text x="337" y="222" font-size="18" fill="var(--muted, #6F6E69)">right</text>
+  <text x="337" y="262" font-size="19">&#916;y = v&#916;t &#8722; ½a&#916;t²</text>
+  <rect x="472" y="36" width="178" height="92" rx="7" fill="none" stroke="var(--star, #205EA6)" stroke-width="3"/>
+  <text x="561" y="62" fill="var(--nebula, #5E409D)">&#916;y</text>
+  <text x="492" y="112" fill="var(--star, #205EA6)">v<tspan font-size="14" dy="5">0</tspan></text>
+  <text x="561" y="112" fill="var(--coral, #AF3029)">a</text>
+  <text x="630" y="112" fill="var(--star, #205EA6)">v</text>
+  <text x="561" y="162" fill="var(--ink-3, #B7B5AC)">&#916;t</text>
+  <text x="561" y="222" font-size="18" fill="var(--muted, #6F6E69)">top</text>
+  <text x="561" y="262" font-size="19">v² &#8722; v<tspan font-size="13" dy="4">0</tspan><tspan dy="-4">² = 2a&#916;y</tspan></text>
+  <rect x="696" y="86" width="178" height="92" rx="7" fill="none" stroke="var(--star, #205EA6)" stroke-width="3"/>
+  <text x="785" y="62" fill="var(--ink-3, #B7B5AC)">&#916;y</text>
+  <text x="716" y="112" fill="var(--star, #205EA6)">v<tspan font-size="14" dy="5">0</tspan></text>
+  <text x="785" y="112" fill="var(--coral, #AF3029)">a</text>
+  <text x="854" y="112" fill="var(--star, #205EA6)">v</text>
+  <text x="785" y="162" fill="var(--plasma, #BC5215)">&#916;t</text>
+  <text x="785" y="222" font-size="18" fill="var(--muted, #6F6E69)">bottom</text>
+  <text x="785" y="262" font-size="19">v &#8722; v<tspan font-size="13" dy="4">0</tspan><tspan dy="-4"> = a&#916;t</tspan></text>
+  <rect x="920" y="26" width="222" height="152" rx="70" fill="none" stroke="var(--star, #205EA6)" stroke-width="3"/>
+  <text x="1031" y="62" fill="var(--nebula, #5E409D)">&#916;y</text>
+  <text x="950" y="112" fill="var(--star, #205EA6)">v<tspan font-size="14" dy="5">0</tspan></text>
+  <text x="1031" y="112" fill="var(--ink-3, #B7B5AC)">a</text>
+  <text x="1112" y="112" fill="var(--star, #205EA6)">v</text>
+  <text x="1031" y="162" fill="var(--plasma, #BC5215)">&#916;t</text>
+  <line x1="1012" y1="98" x2="1050" y2="124" stroke="var(--ink-3, #B7B5AC)" stroke-width="2.5"/>
+  <text x="1031" y="222" font-size="18" fill="var(--muted, #6F6E69)">outside (no a)</text>
+  <text x="1031" y="262" font-size="19">&#916;y = ½(v<tspan font-size="13" dy="4">0</tspan><tspan dy="-4"> + v)&#916;t</tspan></text>
+  </g>
+</svg>
+
+<div class="key-idea">
+
+**How to use it.** Underline every known. Star the unknown you want. Then find the box that holds **all your knowns plus exactly one unknown** — that box *is* the equation to use.
+
+</div>
+
+---
+
+# Problem-Solving Process
+
+1) Draw a diagram/picture of physical situation
+2) Sketch Physics motion graphs (XT & VT)
+3) Fill out cross diagram with givens and unknowns 
+    - (choose a positive direction, then set $a = \pm 10 \text{ m/s/s}$ to match)
+4) Identify equation with cross diagram
+5) Substitute and solve
+
+---
+
+# Worked Examples
+## Free Fall with $g = 10 \text{ m/s/s}$
+
+<div class="steps">
+
+**Our toolkit** — $\ \Delta y = v_0 t + \tfrac12 a t^2 \qquad v = v_0 + a t \qquad v^2 = v_0^2 + 2 a \Delta y$
+
+</div>
+
+---
+
+### A ball is dropped from rest from $h = 20.0\ \mathrm{m}$. Up is positive. Find:
+- time to impact
+- impact velocity (with sign)
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<!--
+Reveal:
+- $v_0 = 0$, $a = -10$, $\Delta y = -20$
+- $-20 = \tfrac12(-10)t^2 \Rightarrow t^2 = 4 \Rightarrow t = 2.0\ \mathrm{s}$
+- $v = at = (-10)(2.0) = -20\ \mathrm{m/s}$ (20 m/s downward)
+-->
+
+---
+
+### A rock is thrown straight up at $v_0 = 12.0\ \mathrm{m/s}$ from ground level.
+
+- Time to the top. Hint: $v = 0$ at peak.
+- Height at the top.
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<!--
+Reveal:
+- $t_{\text{top}} = \dfrac{0 - v_0}{-g} = \dfrac{12.0}{10} = 1.2\ \mathrm{s}$
+- $y_{\max} = v_0 t + \tfrac12 a t^2 = 12(1.2) - 5(1.2)^2 = 7.2\ \mathrm{m}$
+- Check with $y_{\max} = \dfrac{v_0^2}{2g} = \dfrac{144}{20} = 7.2\ \mathrm{m}$
+-->
+
+---
+
+### Drop from $\Delta y = 45.0\ \mathrm{m}$. Down is positive. _What is the impact velocity?_
+
+Template:
+- $v^2 = v_0^2 + 2 a \Delta y$
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<!--
+Reveal:
+- $v_0 = 0$, $a = +10$, $\Delta y = +45.0$
+- $v^2 = 2(10)(45.0) = 900 \Rightarrow v = +30\ \mathrm{m/s}$ (downward)
+- Notice: no time needed. This equation skips $t$ entirely.
+-->
+
+---
+
+### Compare: does a head start change the fall?
+
+### Case A (drop): $v_0 = 0$ from $h = 10.0\ \mathrm{m}$
+### Case B (throw down): $v_0 = 5.0\ \mathrm{m/s}$ from $h = 10.0\ \mathrm{m}$
+
+<br><br><br><br><br><br><br><br>
+
+<!--
+Down is positive, $a = +10$, $\Delta y = +10.0$ for both.
+- A: $10 = \tfrac12 (10) t^2 \Rightarrow t^2 = 2 \Rightarrow t \approx 1.41\ \mathrm{s}$
+- B: $10 = 5t + 5t^2 \Rightarrow t^2 + t - 2 = 0 \Rightarrow (t+2)(t-1) = 0 \Rightarrow t = 1.0\ \mathrm{s}$
+
+Prompt: What stayed the same? What changed? (Same $a$, same $\Delta y$ — only $v_0$ differs.)
+-->
+
+---
+
+# Error Analysis — Sign Convention
+
+<div class="warning">
+
+**A student writes:** up is positive, $a = +10$, for a ball thrown upward at $v_0 = 8.0\ \mathrm{m/s}$ — and concludes the ball speeds up on the way up.
+
+</div>
+
+**Diagnose:** with up positive, $a = -g = -10$. Velocity and acceleration point in *opposite* directions, so the ball must slow down as it rises.
+
+**Correct the peak time:**
+- $v = v_0 + a t = 0 \Rightarrow t = \dfrac{-v_0}{a} = \dfrac{-8.0}{-10} = 0.80\ \mathrm{s}$
+
+---
+
+# Two Objects — Staggered Drops
+
+Ball A is dropped at $t = 0$. Ball B is dropped at $t = 0.50\ \mathrm{s}$ from the same height. **When are they $5.0\ \mathrm{m}$ apart?**
+
+<br>
+
+Set up (for $t \ge 0.50\ \mathrm{s}$, taking down as positive):
+- $y_A = \tfrac12 g t^2 \qquad y_B = \tfrac12 g (t - 0.50)^2$
+- $\Delta y = \tfrac12 g\left[t^2 - (t-0.50)^2\right] = 5.0$
+
+Solve:
+- $5\left(t - 0.25\right) = 5.0 \Rightarrow t = 1.25\ \mathrm{s}$
+
+---
+
+# CER — Mass Independence in Free Fall
+
+**Claim:** In a vacuum, the time to fall from a given height does not depend on mass.
+
+**Evidence:** From rest, $\ \Delta y = \tfrac12 g t^2 \Rightarrow t = \sqrt{\dfrac{2h}{g}}$ — no $m$ anywhere in the result.
+
+**Reasoning:** The acceleration $a = g$ is set by the gravitational field, not by the object. Heavier objects feel a larger force *and* have proportionally more inertia, so the acceleration is the same.
+
+<div class="question">
+
+**Push further** — Where does this argument break down in real air? Which object is affected more?
+
+</div>
+
+---
+
+# Quick Checks Before You Commit
+
+- Which equation matches your knowns and unknowns?
+- Are all signs consistent with the positive direction you chose?
+- Does the magnitude make physical sense? Is the unit right?
+- If the object went up and came back, is your time about double the time to the peak?
+
+---
+
+
+# Free Fall Kinematics 
+
+1. A ball is thrown downward with an initial speed of 20 m/s on Earth.
+    1. Calculate the displacement of the ball during the first 4 seconds.
+    2. Calculate the time required to reach 50 m/s.
+    3. Calculate the speed after falling 100 meters.
+
+---
+
+# Free Fall Kinematics 
+
+2. A rock is thrown upward with an initial speed of 15 m/s on Earth.
+    1. Calculate the rock's height after 1 second 
+    2. Calculate the time required for the rock to reach an upward speed of 3 m/s.
+    3. Calculate the time required for the rock to reach a downward speed of 5 m/s
+
+---
+
+# Heads Up: CalcPad Uses $g = 9.8$
+
+<div class="warning">
+
+**Physics Classroom auto-grades with $g = 9.8\ \mathrm{m/s/s}$.** Use **9.8** on the CalcPad sets so your answers are accepted. Use **10** on AP-style problems, quizzes and the exam.
+
+</div>
+
+<div class="small">
+
+This is the one place in the unit where the two numbers matter. Everywhere else, 10 is close enough and much faster without a calculator.
+
+</div>
+
+---
+
+# Free Fall - Calculator Free <!--fit--->
+
+## [🔗 **Free Fall 1** 🔗](https://www.physicsclassroom.com/calcpad/launch/CPK19)
+
+---
+
+# Free Fall Kinematics 
+
+3. NASA operates a drop tower in which they test the response of materials to situations in which the only force which acts upon them is gravity. Objects are dropped from rest and free fall for 5.27 seconds through the drop tower.
+    1. Determine the distance which the objects fall through the tower. 
+
+---
+
+# [🔗 Free Fall - Dropped Objects 🔗](https://www.physicsclassroom.com/calcpad/launch/CPK20 ) <!--fit--->
+
+---
+
+# Free Fall Kinematics 
+
+4. During a parachuting mishap (it could be worse), a parachutist who is falling at 12.2 m/s drops his new camera from an altitude of 78.9 m. What speed will the camera have when it strikes the ground?
+5. A ball is thrown vertically upwards with a speed of 44.5 m/s. 
+    1. How high does it rise above the point of release?
+    2. How much time does it take the ball to reach the peak of its trajectory?
+
+---
+
+## Additional Free Fall Practice 
+
+### [Free Fall 3](https://www.physicsclassroom.com/calcpad/launch/CPK21)
+
+### [Free Fall 4](https://www.physicsclassroom.com/calcpad/launch/CPK22)
+
+### [Rocket Science](https://www.physicsclassroom.com/calcpad/launch/CPK23)
 
 ---
 
@@ -188,7 +661,7 @@ Eric leaves the base camp and hikes 11 km, north and then hikes 11 km east. Dete
 
 ---
 
-# Determinging the Angle
+# Determining the Angle
 
 <div class='columns'>
 <div>
@@ -482,8 +955,18 @@ When a boat heads straight across, the river current carries it downstream. The 
 
 ---
 
-<div class='columns'>
-<div>
+# [Riverboat Problems](https://www.physicsclassroom.com/PhysicsClassroom/media/interactive/RiverBoatSim/index.html)
+
+- River current is 4 m/s North
+- Boat velocity is 4 m/s East
+- What does a drone see?
+- How can we predict this **resultant velocity**?
+
+![bg fit right:40%](image-5.png)
+
+---
+
+# Example Riverboat
 
 A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
 
@@ -491,309 +974,22 @@ A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
 2. If the width of the river is 80 meters wide, then how much time does it take the boat to travel shore to shore?
 3. What distance downstream does the boat reach the opposite shore?
 
-</div>
- 
-<div>
+![bg fit right:40%](image-6.png)
 
-</div>
-</div>
+---
 
-
-
+# [Riverboat Practice](https://www.physicsclassroom.com/calcpad/launch/CPVP10) <!--fit--->
 
 ---
 
 # Pivot: 2D Motion with a Drone
 
 
----
-
-# Free Fall Motion <!--fit--->
 
 ---
+<!--- _class: phase-title --->
 
-# Free Fall 
-
-## An object in **free fall** experiences *only* the force of gravity.
-
-* This means that is accelerates at $g$ which is referred to as "_acceleration due to gravity_" or "_gravitational field strength_
-* Units N/kg and m/s/s are the ***same***
-
----
-
-
-<iframe width="1150" height="715" src="https://www.youtube.com/embed/E43-CfukEgs?si=8DZF93LgcQA3LuZy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
----
-
-# Free Fall Facts
-
-## $a = g = -9.8 \text{ m/s/s}$ &rarr; Always when near the surface of the Earth
-
----
-
-# Free Fall Facts
-## If object is _dropped_ $v_i = 0$ 
-
----
-
-# Free Fall Facts
-## If object is projected upwards it will slow down as it rises. The y-velocity will be zero at its heights point or peak
-
-### You can treat $v_f =0$ at the peak
-    
----
-
-# Free Fall Facts
-
-## If an object is projected upwards the velocity at which it is projected is equal and magnitude and opposite in direction when it returns to its initial height. 
-
-### i.e. a ball projected upwards at $+30 \text{m/s}$ will have a downward velocity of $-30 \text{m/s}$ when it returns to its launch height
-
----
-
-# Problem-Solving Process
-
-1) Draw a diagram/picture of physical situation
-2) Sketch Physics motion graphs (XT & VT)
-3) Fill out cross diagram with givens and unknowns 
-    - (remember $a = g = -9.8 \text{ m/s/s}$ for all free fall questions)
-4) Identify equation with cross diagram
-5) Substitute and solve
-
----
-
-# Regents Physics
-##  Free Fall Worked Examples
-
----
-
-## Norms & Goals
-- Choose a positive direction; be consistent.
-- Use constant-acceleration relations:
-  - $d = v_i t + \tfrac12 a t^2$
-  - $v = v_i + a t$
-  - $v_f^2 = v_i^2 + 2 a d$
-- Gravity magnitude: $g = 9.80\ \mathrm{m/s^2}$ (neglect air resistance unless stated)
-
----
-
-### A ball is dropped from rest from $h = 20.0\ \mathrm{m}$. Up is positive. Find:
-- time to impact
-- impact speed (with sign)
-
-<br><br><br><br><br><br><br><br><br><br>
-
-
-
----
-### A rock is thrown straight up at $v_i = 12.0\ \mathrm{m/s}$ from ground level.
-
-
-- Time to the top. Hint: $v=0$ at peak.
-- Height at the top.
-
-<br><br><br><br><br><br><br><br><br><br>
-
-<!-- You try:
-
-Reveal:
-- $t_{\text{top}} = \dfrac{0 - v_i}{-g} = 1.22\ \mathrm{s}$
-- $y_{\max} = v_i t - \tfrac12 g t^2 \approx 7.32\ \mathrm{m}$
-- Check: $y_{\max} = \dfrac{v_i^2}{2g} \approx 7.35\ \mathrm{m}$ -->
-
----
-
-### Drop from $d = 30.0\ \mathrm{m}$. Down is positive. _What is the final velocity?_
-
-Template:
-- $v_f^2 = v_i^2 + 2 a d$
-
-
-<br><br><br><br><br><br><br><br><br><br>
-
-<!-- 
-
-Reveal:
-- $v_i=0$, $a=+9.80$, $d=30.0$
-- $v_f^2 = 2(9.80)(30.0) = 588 \Rightarrow v_f = 24.3\ \mathrm{m/s}$ down -->
-
----
-
-### Case A (drop): $v_i = 0$, $h = 10.0\ \mathrm{m}$
-### Case B (throw down): $v_i = 5.0\ \mathrm{m/s}$ down from $h = 10.0\ \mathrm{m}$
-
-<br><br><br><br><br><br><br><br><br><br>
-
-<!-- You set up:
-- A: $0 = h + v_i t + \tfrac12 g t^2$
-- B: $0 = h + v_i t + \tfrac12 g t^2$ (same form, different $v_i$)
-
-Reveal times:
-- A: $t \approx 1.43\ \mathrm{s}$
-- B: physical root $t \approx 1.06\ \mathrm{s}$
-
-Prompt: What stayed the same? What changed? -->
-
----
-
-### Error Analysis — Sign Convention
-Up is positive. Student sets $a=+9.80$ for an upward throw $v_i=8.0\ \mathrm{m/s}$ and claims speed increases going up.
-
-Diagnose:
-- With up positive, $a=-g$. Speed must decrease on the way up.
-
-Compute correct $t_{\text{top}}$:
-- $v = v_i + a t = 0 \Rightarrow t = \dfrac{-v_i}{a} = \dfrac{-8.0}{-9.80} = 0.816\ \mathrm{s}$
-
----
-
-## 8) Subgoal-Labeled — Upward from a Ledge
-From $y_0=18\ \mathrm{m}$, throw up $v_i=10\ \mathrm{m/s}$. When does it hit ground?
-
-Subgoal 1:
-- $y(t) = 18 + 10 t - 4.90 t^2$
-
-Subgoal 2:
-- $0 = 18 + 10 t - 4.90 t^2$
-- $t = \dfrac{10 \pm \sqrt{100 + 352.8}}{9.80}$
-- Physical root $t \approx 3.06\ \mathrm{s}$
-
-Subgoal 3:
-- Reject negative time; check vs. $t_{\text{top}}$
-
----
-
-## 9) Self-Explanation — Impact Speed Without Time
-Drop from $h=5.0\ \mathrm{m}$. Use $v_f^2 = v_i^2 + 2 a d$ only.
-
-Compute:
-- $v_f = \sqrt{2 g h} \approx 9.90\ \mathrm{m/s}$ down
-
-Explain:
-- Why does this avoid solving for $t$?
-- Why is speed positive while velocity may be negative?
-
----
-
-## 10) Example–Problem Pair — Peak Time & Height
-Reference:
-- $t_{\text{top}} = \dfrac{v_i}{g}$, $y_{\max} = \dfrac{v_i^2}{2g}$
-
-Practice:
-- $v_i = 9.0\ \mathrm{m/s}$ → $t_{\text{top}} = 0.918\ \mathrm{s}$, $y_{\max} \approx 4.13\ \mathrm{m}$
-
----
-
-## 11) Two-Object Coordination — Staggered Drops
-Ball A dropped at $t=0$. Ball B dropped at $t=0.50\ \mathrm{s}$ from same height. When is their separation $5.0\ \mathrm{m}$?
-
-Setup (for $t \ge 0.50$):
-- $y_A = y_0 - \tfrac12 g t^2$
-- $y_B = y_0 - \tfrac12 g (t-0.50)^2$
-- $\Delta y = \tfrac12 g\,[t^2 - (t-0.50)^2] = 5.0$
-
-Solve:
-- $\tfrac12 g (1.0 t - 0.25) = 5.0 \Rightarrow t \approx 1.27\ \mathrm{s}$
-
----
-
-## 12) CER Prompt — Mass Independence in Free Fall
-Claim:
-- In vacuum, drop time from a given height is independent of mass.
-
-Evidence:
-- From rest: $t = \sqrt{\dfrac{2h}{g}}$
-
-Reasoning:
-- $a=-g$ depends on the field, not mass (ignoring drag). Contrast with air resistance case.
-
----
-
-## Extension — Task Tracker Alignment Examples
-Vertical Leap (K22Q2):
-- Given peak height $d$, $v_i = \sqrt{2gd}$
-
-Round-Trip Catch Time (K22Q6):
-- Caught after total time $T$: $t_{\text{top}} = T/2$
-- $v_i = gT/2,\quad y_{\max} = gT^2/8$
-
-Rocket (K23Q1) piecewise:
-- Powered ascent $(0\to t_1)$: $v_1=a_1 t_1,\ y_1=\tfrac12 a_1 t_1^2$
-- Coast to peak: $t_{\text{peak}}=v_1/g,\ y_{\max}=y_1+\dfrac{v_1^2}{2g}$
-- Later time $t_3$:
-  - If $t_3\le t_1$: powered kinematics
-  - If $t_3>t_1$: $v(t_3)=v_1-g(t_3-t_1)$, $y(t_3)=y_1+v_1(t_3-t_1)-\tfrac12 g(t_3-t_1)^2$
-  - Distance fallen since peak: $\Delta y=\tfrac12 g (t_3-t_{\text{peak}})^2$
-
----
-
-## Quick Checks & Prompts
-- Which equation matches knowns/unknowns?
-- Are signs consistent with your chosen positive direction?
-- Does the magnitude and unit make physical sense?
-
-
----
-
-
-# Free Fall Kinematics 
-
-1. A ball is thrown downward with an initial speed of 20 m/s on Earth.
-    1. Calculate the displacement of the ball during the first 4 seconds.
-    2. Calculate the time required to reach 50 m/s.
-    3. Calculate the time required to reach 50 m/s.
-    4. Calculate the speed after falling 100 meters.
-
----
-
-# Free Fall Kinematics 
-
-2. A rock is thrown upward with an initial speed of 15 m/s on Earth.
-    1. Calculate the rock's height after 1 second 
-    2. Calculate the time required for the rock to reach an upward speed of 3 m/s.
-    3. Calculate the time required for the rock to reach a downward speed of 5 m/s
-
----
-
-# Free Fall - Calculator Free <!--fit--->
-
-## [🔗 **Free Fall 1** 🔗](https://www.physicsclassroom.com/calcpad/launch/CPK19)
-
----
-
-# Free Fall Kinematics 
-
-3. NASA operates a drop tower in which they test the response of materials to situations in which the only force which acts upon them is gravity. Objects are dropped from rest and free fall for 5.27 seconds through the drop tower.
-    1. Determine the distancw which the objects fall through the tower. 
-
----
-
-# [🔗 Free Fall - Dropped Objects 🔗](https://www.physicsclassroom.com/calcpad/launch/CPK20 ) <!--fit--->
-
----
-
-# Free Fall Kinematics 
-
-4. During a parachuting mishap (it could be worse), a parachutist who is falling at 12.2 m/s drops his new camera from an altitude of 78.9 m. What speed will the camera have when it strikes the ground?
-5. A ball is thrown vertically upwards with a speed of 44.5 m/s. 
-    1. How high does the it rise above the point of release?
-    2. How much time does it take the ball to reach the peak of its trajectory?
-
----
-
-## Additional Free Fall Practice 
-
-### [Free Fall 3](https://www.physicsclassroom.com/calcpad/launch/CPK21)
-
-### [Free Fall 4](https://www.physicsclassroom.com/calcpad/launch/CPK22)
-
-### [Rocket Science](https://www.physicsclassroom.com/calcpad/launch/CPK23)
-
----
-
-
-# Horizontal **Projectiles** <!--fit--->
+# Horizontal Projectiles
 
 ---
 
@@ -842,6 +1038,55 @@ Explain your reasoning.
 
 ---
 
+<!--- _class: compact --->
+
+# What the Demo Showed
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+## The two motions are independent
+
+Both balls are released at the same instant. Every dashed line joins them at the **same moment in time**.
+
+They are always at the **same height** — the horizontal velocity does nothing to the fall.
+
+<div class="small">
+
+Positions drawn at equal time steps
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 640 400" width="100%" style="max-height:330px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <line x1="40" y1="368" x2="615" y2="368" stroke="var(--muted, #6F6E69)" stroke-width="2.5"/>
+  <line x1="95" y1="50" x2="95" y2="368" stroke="var(--coral, #AF3029)" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.55"/>
+  <path d="M 95 50 Q 335 50 575 368" fill="none" stroke="var(--star, #205EA6)" stroke-width="2.5" stroke-dasharray="5 5" opacity="0.6"/>
+  <line x1="95" y1="70"  x2="215" y2="70"  stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="95" y1="130" x2="335" y2="130" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="95" y1="229" x2="455" y2="229" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="95" y1="368" x2="575" y2="368" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="95" cy="70"  r="9" fill="var(--coral, #AF3029)"/>
+  <circle cx="95" cy="130" r="9" fill="var(--coral, #AF3029)"/>
+  <circle cx="95" cy="229" r="9" fill="var(--coral, #AF3029)"/>
+  <circle cx="95" cy="368" r="9" fill="var(--coral, #AF3029)"/>
+  <circle cx="215" cy="70"  r="9" fill="var(--star, #205EA6)"/>
+  <circle cx="335" cy="130" r="9" fill="var(--star, #205EA6)"/>
+  <circle cx="455" cy="229" r="9" fill="var(--star, #205EA6)"/>
+  <circle cx="575" cy="368" r="9" fill="var(--star, #205EA6)"/>
+  <circle cx="95" cy="50" r="10" fill="var(--solar, #AD8301)"/>
+  <text x="112" y="44" fill="var(--solar, #AD8301)" font-size="17" font-weight="600">released together</text>
+  <text x="80" y="392" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="17" font-weight="600">dropped</text>
+  <text x="520" y="392" text-anchor="middle" fill="var(--star, #205EA6)" font-size="17" font-weight="600">launched</text>
+</svg>
+
+</div>
+</div>
+
+---
+
 # Horizontal Projectiles 
 
 * A ***projectile*** is an object that *only* experiences a gravitational force
@@ -853,13 +1098,13 @@ Explain your reasoning.
 # Path of a Projectile 
 
 <div class='columns'>
-<div>
+<div class='col'>
 
 ![center w:650](image-17.png)
 
 </div>
  
-<div>
+<div class='col'>
 
 ![center w:650](image-18.png)
 
@@ -871,7 +1116,7 @@ Explain your reasoning.
 # Path of a Projectile
 
 <div class='columns'>
-<div>
+<div class='col'>
 
 <br>
 
@@ -879,7 +1124,7 @@ Explain your reasoning.
 
 </div>
  
-<div>
+<div class='col'>
 
 ![center w:550](image-20.png)
 
@@ -892,8 +1137,8 @@ Explain your reasoning.
 |                                                                                 | Horizontal Motion | Vertical Motion     |
 | ------------------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------- |
 | **Forces**<br>(Present? - Yes or No)<br>(If present, what dir'n?)       | No                                     | Yes<br>The force of gravity acts downward |
-| **Acceleration**<br>(Present? - Yes or No)<br>(If present, what dir'n?) | No                                     | Yes<br>$g$ is downward at 9.8 m/s/s       |
-| **Velocity**<br>(Constant or Changing?)                                     | Constant                               | Changing<br>(by 9.8 m/s each second)      |
+| **Acceleration**<br>(Present? - Yes or No)<br>(If present, what dir'n?) | No                                     | Yes<br>$g$ is downward at 10 m/s/s       |
+| **Velocity**<br>(Constant or Changing?)                                     | Constant                               | Changing<br>(by 10 m/s each second)      |
 
 ---
 
@@ -905,12 +1150,64 @@ Explain your reasoning.
 ---
 
 
-## Horizontal and Vertical displacement 
+## Horizontal and Vertical Displacement 
 
 ![center w:740](image-22.png)
 
+---
 
+<!--- _class: compact --->
 
+# The Two Graphs That Matter
+
+<div class='columns'>
+<div class='col'>
+
+<svg viewBox="0 0 420 330" width="100%" style="max-height:275px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <polygon points="60,100 340,100 340,250 60,250" fill="var(--star, #205EA6)" opacity="0.13"/>
+  <line x1="60" y1="100" x2="380" y2="100" stroke="var(--ink-3, #B7B5AC)" stroke-width="1" stroke-opacity="0.7"/>
+  <line x1="60" y1="45" x2="60" y2="275" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="40" y1="250" x2="380" y2="250" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="60" y1="100" x2="340" y2="100" stroke="var(--star, #205EA6)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="60" cy="100" r="6" fill="var(--star, #205EA6)"/>
+  <circle cx="340" cy="100" r="6" fill="var(--star, #205EA6)"/>
+  <text x="50" y="106" text-anchor="end" fill="var(--star, #205EA6)" font-size="17" font-weight="600">10</text>
+  <text x="50" y="256" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">0</text>
+  <text x="200" y="180" text-anchor="middle" fill="var(--star, #205EA6)" font-size="15">area = horizontal distance</text>
+  <text x="22" y="150" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16" transform="rotate(-90 22 150)">v (m/s)</text>
+  <text x="210" y="276" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time (s)</text>
+  <text x="210" y="302" text-anchor="middle" fill="var(--star, #205EA6)" font-size="18" font-weight="600">horizontal</text>
+  <text x="210" y="322" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="15">slope = 0, so no acceleration</text>
+</svg>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 420 330" width="100%" style="max-height:275px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <polygon points="60,100 340,250 60,250" fill="var(--coral, #AF3029)" opacity="0.13"/>
+  <line x1="60" y1="250" x2="380" y2="250" stroke="var(--ink-3, #B7B5AC)" stroke-width="1" stroke-opacity="0.7"/>
+  <line x1="60" y1="45" x2="60" y2="275" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="40" y1="100" x2="380" y2="100" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="60" y1="100" x2="340" y2="250" stroke="var(--coral, #AF3029)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="60" cy="100" r="6" fill="var(--coral, #AF3029)"/>
+  <circle cx="340" cy="250" r="6" fill="var(--coral, #AF3029)"/>
+  <text x="50" y="106" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">0</text>
+  <text x="50" y="256" text-anchor="end" fill="var(--coral, #AF3029)" font-size="17" font-weight="600">&#8722;30</text>
+  <text x="235" y="200" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="15">area = drop height</text>
+  <text x="22" y="150" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16" transform="rotate(-90 22 150)">v (m/s)</text>
+  <text x="210" y="92" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time (s)</text>
+  <text x="210" y="302" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="18" font-weight="600">vertical</text>
+  <text x="210" y="322" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="15">slope = &#8722;10 m/s&#178;</text>
+</svg>
+
+</div>
+</div>
+
+<div class="key-idea">
+
+**Same clock, two independent stories.** The horizontal graph is flat because nothing pushes sideways. The vertical graph is identical to a dropped object's.
+
+</div>
 
 ---
 
@@ -925,11 +1222,11 @@ Explain your reasoning.
 
 ---
 
-# Horizontal Projectils 
+# Horizontal Projectiles 
 
 <div class='columns'>
 
-<div>
+<div class='col'>
 
 ## X-Plane Motion
 
@@ -939,20 +1236,64 @@ $$d = v_x t$$
 
 </div>
 
-<div>
+<div class='col'>
 
 ## Y-Plane Motion 
 
 - constant acceleration $a_y = g$
 
-$$d = v_{iy}t + \frac{1}{2}gt^2$$
+$$d = v_{0y}t + \frac{1}{2}gt^2$$
 
-$$v_{fy} = v_{iy} + at$$
+$$v_y = v_{0y} + at$$
 
-$$v_{fy}^2 = v_{iy}^2 + 2ad$$
+$$v_y^2 = v_{0y}^2 + 2ad$$
 
 </div></div>
 
+
+---
+
+<!--- _class: compact --->
+
+# The Double Cross Diagram
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+Two motions, **one clock**. Stack a horizontal cross on a vertical cross and let them share $\Delta t$.
+
+- The $x$ cross has $a_x = 0$, so it collapses to $\Delta x = v_x \Delta t$
+- The $y$ cross is ordinary free fall
+- $\Delta t$ is the **only** quantity they share
+
+<div class="warning">
+
+**That shared $\Delta t$ is the whole trick.** Find the time in one cross, then carry it into the other.
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 560 440" width="100%" style="max-height:400px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+  <rect x="24" y="20" width="512" height="180" rx="10" fill="var(--star, #205EA6)" opacity="0.07"/>
+  <rect x="24" y="238" width="512" height="180" rx="10" fill="var(--coral, #AF3029)" opacity="0.07"/>
+  <text x="280" y="62" fill="var(--nebula, #5E409D)" font-size="29" font-weight="600">&#916;x</text>
+  <text x="110" y="140" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">0x</tspan></text>
+  <text x="280" y="140" fill="var(--coral, #AF3029)" font-size="29" font-weight="600">a<tspan font-size="19" dy="6">x</tspan></text>
+  <text x="450" y="140" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">x</tspan></text>
+  <text x="280" y="228" fill="var(--plasma, #BC5215)" font-size="31" font-weight="700">&#916;t</text>
+  <text x="110" y="310" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">0y</tspan></text>
+  <text x="280" y="310" fill="var(--coral, #AF3029)" font-size="29" font-weight="600">a<tspan font-size="19" dy="6">y</tspan></text>
+  <text x="450" y="310" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">y</tspan></text>
+  <text x="280" y="398" fill="var(--nebula, #5E409D)" font-size="29" font-weight="600">&#916;y</text>
+  <text x="474" y="60" fill="var(--star, #205EA6)" font-size="16" text-anchor="end">horizontal</text>
+  <text x="474" y="396" fill="var(--coral, #AF3029)" font-size="16" text-anchor="end">vertical</text>
+  <text x="408" y="233" fill="var(--plasma, #BC5215)" font-size="16" text-anchor="start">shared by both</text>
+</svg>
+
+</div>
+</div>
 
 ---
 
@@ -1015,7 +1356,7 @@ A stone is thrown horizontally to the right at a speed of 17.2 m/s from the top 
 ### A projectile is an object with the following characteristics:
 
 * The only force acting on it is the gravitational force; it is a free-falling object
-* The acceleration is directed downwards and has a magnitude of $9.8 \text{ m/s}^2$
+* The acceleration is directed downwards and has a magnitude of $10 \text{ m/s}^2$ (we use $9.8$ on CalcPad)
 * Once projected, it continues its horizontal motion without any need of a force
 * As it travels through the air, its horizontal velocity remains constant
 * As it rises, its vertical velocity ($v_y$) decreases; as it falls, its $v_y$ increases
@@ -1039,6 +1380,108 @@ Equipment:
 
 ---
 
+<!--- _class: phase-title --->
+
+# Angled Projectiles
+
+---
+
+<!--- _class: compact --->
+
+# Splitting the Launch Velocity
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+A projectile launched at an angle has **one** velocity, but it is easier to work with its two **perpendicular components**.
+
+$$v_{0x} = v_0 \cos \theta$$
+
+$$v_{0y} = v_0 \sin \theta$$
+
+<div class="warning">
+
+**Do this first, always.** Every angled projectile problem starts by splitting $v_0$ into $v_{0x}$ and $v_{0y}$.
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 420 310" width="100%" style="max-height:290px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <defs><marker id="phv0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--nebula, #5E409D)"/></marker><marker id="phvx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--star, #205EA6)"/></marker><marker id="phvy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--plasma, #BC5215)"/></marker></defs>
+  <line x1="55" y1="250" x2="390" y2="250" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5"/>
+  <line x1="55" y1="250" x2="55" y2="40" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5"/>
+  <line x1="300" y1="250" x2="300" y2="95" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="55" y1="250" x2="294" y2="250" stroke="var(--star, #205EA6)" stroke-width="5" marker-end="url(#phvx)"/>
+  <line x1="300" y1="250" x2="300" y2="101" stroke="var(--plasma, #BC5215)" stroke-width="5" marker-end="url(#phvy)"/>
+  <line x1="55" y1="250" x2="296" y2="97" stroke="var(--nebula, #5E409D)" stroke-width="5" marker-end="url(#phv0)"/>
+  <path d="M 110 250 A 55 55 0 0 0 96 215" fill="none" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <text x="122" y="233" fill="var(--muted, #6F6E69)" font-size="20" font-style="italic">&#952;</text>
+  <text x="150" y="150" fill="var(--nebula, #5E409D)" font-size="19" font-weight="600">v</text>
+  <text x="161" y="157" fill="var(--nebula, #5E409D)" font-size="14" font-weight="600">0</text>
+  <text x="175" y="278" text-anchor="middle" fill="var(--star, #205EA6)" font-size="19" font-weight="600">v</text>
+  <text x="186" y="285" fill="var(--star, #205EA6)" font-size="14" font-weight="600">0x</text>
+  <text x="318" y="178" fill="var(--plasma, #BC5215)" font-size="19" font-weight="600">v</text>
+  <text x="329" y="185" fill="var(--plasma, #BC5215)" font-size="14" font-weight="600">0y</text>
+</svg>
+
+</div>
+</div>
+
+---
+
+# Components 
+
+- The X-axis velocity component ($v_x$) is constant and will not accelerate, so it stays the same for the entire flight
+- The initial Y-axis velocity component changes, because it is accelerated by gravity at 10 m/s² down. This is why we write ($v_{0y}$) and not just $v_y$ — it will change throughout the problem.
+
+![bg fit right](../figures/cannon-v-to-viy-and-vx.gif)
+
+---
+
+### Finding x & y components of initial velocity 
+
+$$v_{0x} = v \cos \theta $$
+
+$$v_{0y} = v \sin \theta$$
+
+
+![bg fit right:25%](image-25.png)
+
+---
+
+<!--- _class: compact --->
+
+# Velocity Through the Flight
+
+<svg viewBox="0 0 640 420" width="100%" style="max-height:395px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <defs><marker id="trvx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--star, #205EA6)"/></marker><marker id="trvy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--plasma, #BC5215)"/></marker></defs>
+  <line x1="30" y1="345" x2="615" y2="345" stroke="var(--muted, #6F6E69)" stroke-width="2.5"/>
+  <path d="M 60 330 Q 320 -150 580 330" fill="none" stroke="var(--ink-3, #B7B5AC)" stroke-width="3" stroke-dasharray="7 6"/>
+  <line x1="60" y1="330" x2="116" y2="330" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="190" y1="150" x2="246" y2="150" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="320" y1="90" x2="376" y2="90" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="450" y1="150" x2="506" y2="150" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="580" y1="330" x2="614" y2="330" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="60" y1="330" x2="60" y2="260" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
+  <line x1="190" y1="150" x2="190" y2="116" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
+  <line x1="450" y1="150" x2="450" y2="184" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
+  <line x1="580" y1="330" x2="580" y2="400" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
+  <circle cx="60" cy="330" r="7" fill="var(--ink, #100F0F)"/>
+  <circle cx="190" cy="150" r="7" fill="var(--ink, #100F0F)"/>
+  <circle cx="320" cy="90" r="7" fill="var(--solar, #AD8301)"/>
+  <circle cx="450" cy="150" r="7" fill="var(--ink, #100F0F)"/>
+  <circle cx="580" cy="330" r="7" fill="var(--ink, #100F0F)"/>
+  <text x="320" y="68" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="18" font-weight="600">peak: v<tspan font-size="13" dy="5">y</tspan><tspan dy="-5"> = 0</tspan></text>
+  <text x="120" y="252" fill="var(--plasma, #BC5215)" font-size="16">v<tspan font-size="12" dy="4">y</tspan><tspan dy="-4"> shrinks</tspan></text>
+  <text x="470" y="212" fill="var(--plasma, #BC5215)" font-size="16">v<tspan font-size="12" dy="4">y</tspan><tspan dy="-4"> grows, now downward</tspan></text>
+  <text x="300" y="118" fill="var(--star, #205EA6)" font-size="16">v<tspan font-size="12" dy="4">x</tspan><tspan dy="-4"> never changes</tspan></text>
+  <text x="320" y="412" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">positions drawn at equal time steps</text>
+</svg>
+
+---
+
 Cannonballs of different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the horizontal component of that velocity, which is the same.
 
 ![center w:500](image-26.png)
@@ -1055,57 +1498,16 @@ Cannonballs with different masses are shot from cannons at various angles above 
 
 ---
 
-<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="700px" width="1000px" allowfullscreen></iframe>
-
----
-
-# Components 
-
-- The X-axis velocity component ($v_x$) is constant and will not accelerated so it will stay the same the entire flight
-- The initial Y-axis velocity component will change as it accelerated by gravity 9.8 m/s² down. This is why we say ($v_{iy}$) and not just $v_y$ because it will change throughout the problem.
-
-![bg fit right](../figures/cannon-v-to-viy-and-vx.gif)
-
----
-
-### Finding x & y components of initial velocity 
-
-$$v_{ix} = v \cos \theta $$
-
-$$v_{iy} = v \sin \theta$$
-
-
-![bg fit right:25%](image-25.png)
-
-
-
----
-
-
-# Problem-solving Process
-
-1) Read & sketch problem
-1) _**Calculate x & y components of initial velocity**_
-2) Identify given information & fill out double cross diagram
-3) Identify the quantity you are solving for
-4) Using either horizontal or vertical information, find the flight time of the projectile
-5) With the time find the quantity you are solving for. 
-
-
-![bg fit right:30%](image-24.png)
-
----
-
 # Projectile Fact Reminders
 
 <div class='columns'>
-<div>
+<div class='col'>
 
 ![center](../figures/Highest-Point.gif)
 
 </div>
  
-<div>
+<div class='col'>
 
 ![center](../figures/Lands-at-Same-Height.gif)
 
@@ -1114,14 +1516,36 @@ $$v_{iy} = v \sin \theta$$
 
 ---
 
-# Some Reminders from Free Fall 
+# Carried Over From Free Fall 
 
-- $a_y = g = -9.8 \text{ m/s/s}$ &rarr; Always when near the surface of the Earth
-- If object is _dropped_ $v_{iy} = 0$ 
-- If object is projected upwards it will slow down as it rises. The y-velocity will be zero at its heights point or peak
-    - You can treat $v_{fy} =0$ at the peak
-- If an object is projected upwards the velocity at which it is projected is equal and magnitude and opposite in direction when it returns to its initial height. 
-    - i.e. a ball projected upwards at $+30 \text{m/s}$ will have a downward velocity of $-30 \text{m/s}$ when it returns to its launch height
+- Up positive $\Rightarrow a_y = -g = -10 \text{ m/s/s}$ &nbsp;•&nbsp; down positive $\Rightarrow a_y = +10 \text{ m/s/s}$
+- At the peak, $v_y = 0$ — but $a_y$ is still $10 \text{ m/s/s}$ downward
+- Launch and landing speeds match at the same height: up at $+30 \text{ m/s}$ means down at $-30 \text{ m/s}$
+
+<div class="key-idea">
+
+**Nothing new vertically.** An angled projectile's $y$-motion *is* the free fall you already solved — the only addition is a constant $v_x$ running alongside it.
+
+</div>
+
+---
+
+
+# Problem-solving Process
+
+1) Read & sketch problem
+2) _**Calculate x & y components of initial velocity**_
+3) Identify given information & fill out double cross diagram
+4) Identify the quantity you are solving for
+5) Using either horizontal or vertical information, find the flight time of the projectile
+6) With the time find the quantity you are solving for. 
+
+
+![bg fit right:30%](image-24.png)
+
+---
+
+<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="700px" width="1000px" allowfullscreen></iframe>
 
 ---
 
@@ -1129,33 +1553,3 @@ $$v_{iy} = v \sin \theta$$
 # Where should 🎯 go?
 
 <iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="650px" width="1000px" allowfullscreen></iframe>
-
----
-
-# [Riverboat Problems](https://www.physicsclassroom.com/PhysicsClassroom/media/interactive/RiverBoatSim/index.html)
-
-- River current is 4 m/s North
-- Boat Velocity 4 4 m/s
-- What does a drone see?
-- How can we predict this **resultant velocity**?
-
-![bg fit right:40%](image-5.png)
-
----
-
-
-
-
-# Example Riverboat
-
-A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
-
-1. What is the resultant velocity of the motorboat?
-2. If the width of the river is 80 meters wide, then how much time does it take the boat to travel shore to shore?
-3. What distance downstream does the boat reach the opposite shore?
-
-![bg fit right:40%](image-6.png)
-
----
-
-# [Riverboat Practice](https://www.physicsclassroom.com/calcpad/launch/CPVP10) <!--fit--->

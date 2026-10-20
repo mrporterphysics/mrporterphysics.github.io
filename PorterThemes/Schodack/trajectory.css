@@ -1,0 +1,516 @@
+/*
+@theme trajectory
+*/
+
+/*
+  TRAJECTORY — graph paper + marker, on Flexoki Light
+
+  Built for the 2D Motion / Projectiles decks: engineering-pad background,
+  hand-drawn boxes, highlighter bold, and a dashed parabola riding the
+  corner of every slide. Whimsical in the furniture, serious in the type.
+
+  The palette is Flexoki (Steph Ango) in its LIGHT mode, which is the same
+  ink set as schodack.sty — so slides and printed handouts match.
+
+  USAGE
+  -----
+  ---
+  marp: true
+  theme: trajectory
+  paginate: true
+  math: mathjax
+  ---
+
+  Enable HTML so the callouts/columns work:
+    VS Code  -> "markdown.marp.enableHtml": true
+    Marp CLI -> marp --html --theme-set PorterThemes/Schodack deck.md
+
+  SLIDE CLASSES          <!-- _class: title-slide -->
+    title-slide          marker wordmark over a full launch arc
+    phase-title          full-bleed section divider
+    compact              26px -> 22px body
+    tiny                 26px -> 19px body (very dense slides)
+    plain                hides the graph grid (for full-bleed images/iframes)
+    lefttable            left-align every table column
+    lt1 lt2 lt3 lt4      left-align only that column (combinable: "lt2 lt3")
+
+  BLOCK CLASSES          <div class="key-idea"> ... </div>
+    key-idea   green     the takeaway
+    warning    red       misconception / caution
+    vocab      purple    term + definition
+    steps      blue      procedure
+    question   yellow    discussion prompt
+    panel      neutral   plain bordered box
+    small                0.7em muted text
+    marker               hand-drawn display type, for callout labels
+
+  LAYOUT
+    .columns + .col                equal columns
+    .columns.cols-2-1 / .cols-1-2  lopsided columns
+    .cards + .card                 auto-fitting card grid
+    .center                        center a block's text
+
+  INLINE SVG
+    Figures should paint with the semantic variables below
+    (--star, --nebula, --solar, --aurora, --coral, --muted, --fg) so the
+    same drawing works on this theme and on the dark cosmos theme.
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Shantell+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* ============================================================
+   PALETTE — Flexoki Light
+   Retune the whole deck by overriding these in a deck's
+   `style:` block -- everything else follows.
+   ============================================================ */
+:root {
+  /* paper + ink */
+  --paper:      #FFFCF0;   /* slide background          */
+  --paper-2:    #F2F0E5;   /* raised surfaces           */
+  --grid-minor: #E6E4D9;   /* 24px rule                 */
+  --grid-major: #DAD8CE;   /* 120px rule                */
+  --edge:       #CECDC3;   /* box frames                */
+  --ink:        #100F0F;   /* body text                 */
+  --ink-2:      #6F6E69;   /* captions, footers         */
+  --ink-3:      #B7B5AC;   /* hairlines, disabled       */
+
+  /* Flexoki accents, 600 series — legible as text on paper */
+  --red:     #AF3029;
+  --orange:  #BC5215;
+  --yellow:  #AD8301;
+  --green:   #66800B;
+  --cyan:    #24837B;
+  --blue:    #205EA6;
+  --purple:  #5E409D;
+  --magenta: #A02F6F;
+
+  /* Flexoki accents, 400 series — fills, strokes, highlights */
+  --red-l:     #D14D41;
+  --orange-l:  #DA702C;
+  --yellow-l:  #D0A215;
+  --green-l:   #879A39;
+  --cyan-l:    #3AA99F;
+  --blue-l:    #4385BE;
+  --purple-l:  #8B7EC8;
+  --magenta-l: #CE5D97;
+
+  /* semantic aliases — shared with the cosmos theme so inline SVG
+     figures and callouts port between the two without edits */
+  --fg:     var(--ink);
+  --muted:  var(--ink-2);
+  --star:   var(--blue);     /* h1, links, steps      */
+  --nebula: var(--purple);   /* h3, vocab             */
+  --solar:  var(--yellow);   /* h2, question, peaks   */
+  --plasma: var(--orange);   /* blockquote            */
+  --coral:  var(--red);      /* warning, downward     */
+  --aurora: var(--green);    /* key idea, upward      */
+  --hl:     var(--yellow-l); /* highlighter ink       */
+
+  --panel:   rgba(16,15,15,0.025);
+  --panel-2: rgba(16,15,15,0.05);
+  --row-odd:  #FFFCF0;
+  --row-even: #F2F0E5;
+  --th-bg:    #E6E4D9;
+
+  /* the hand-drawn box corner */
+  --sketch: 255px 14px 225px 14px / 14px 225px 14px 255px;
+}
+
+/* ============================================================
+   SLIDE SURFACE
+   Engineering pad: 24px minor rule, 120px major rule, and a
+   dashed launch arc parked in the lower right.
+   ============================================================ */
+/* Body slides are plain graph paper. The launch arc is reserved for the
+   title slide and the phase dividers, so it never competes with a figure. */
+section {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid-major) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--grid-major) 1.5px, transparent 1.5px),
+    linear-gradient(var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+  background-size:
+    120px 120px, 120px 120px,
+    24px 24px,  24px 24px;
+  background-position:
+    -1.5px -1.5px, -1.5px -1.5px,
+    -1px -1px,     -1px -1px;
+  background-repeat: repeat, repeat, repeat, repeat;
+  color: var(--fg);
+  color-scheme: light;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 26px;
+  padding: 44px 62px;
+}
+
+/* full-bleed slides (iframes, edge-to-edge images) want a clean sheet */
+section.plain {
+  background-image: none;
+  background-color: var(--paper);
+}
+
+section.compact { font-size: 22px; }
+section.tiny    { font-size: 19px; }
+
+/* page number — pencilled in the margin */
+section::after {
+  color: var(--ink-3);
+  font-family: 'Shantell Sans', 'Comic Sans MS', cursive;
+  font-size: 0.62em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+header, footer {
+  color: var(--ink-2);
+  font-family: 'Shantell Sans', 'Comic Sans MS', cursive;
+  font-size: 0.6em;
+}
+
+/* ============================================================
+   TYPE
+   Marker for the display line, Inter for everything you read.
+   ============================================================ */
+h1 {
+  color: var(--blue);
+  font-family: 'Shantell Sans', 'Comic Sans MS', cursive;
+  font-weight: 700;
+  font-size: 1.72em;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+  border-bottom: none;
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  position: relative;
+}
+
+/* wobbly marker rule under every h1 */
+h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(100%, 460px);
+  height: 11px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'><path d='M3 7.5 C 58 2.5, 104 10.5, 156 6 S 248 2, 297 8' fill='none' stroke='%23D0A215' stroke-width='5.5' stroke-linecap='round'/></svg>") no-repeat;
+  background-size: 100% 100%;
+}
+
+h2 {
+  color: var(--orange);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.22em;
+  line-height: 1.3;
+  margin: 0.3em 0 0.45em;
+}
+
+h3 {
+  color: var(--purple);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.04em;
+  line-height: 1.35;
+  margin: 0.3em 0 0.4em;
+}
+
+h4, h5, h6 {
+  color: var(--ink-2);
+  font-family: 'Shantell Sans', 'Comic Sans MS', cursive;
+  font-weight: 600;
+  margin: 0.3em 0 0.3em;
+}
+
+p, li { line-height: 1.45; }
+
+/* highlighter bold */
+strong {
+  color: var(--ink);
+  font-weight: 700;
+  background: linear-gradient(
+    transparent 56%,
+    rgba(208, 162, 21, 0.40) 56%,
+    rgba(208, 162, 21, 0.40) 93%,
+    transparent 93%);
+  padding: 0 2px;
+}
+
+em { color: var(--ink-2); font-style: italic; }
+u  { text-decoration-color: var(--yellow-l); text-decoration-thickness: 3px; }
+
+a {
+  color: var(--cyan);
+  text-decoration-color: var(--cyan-l);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.small  { font-size: 0.7em; color: var(--ink-2); }
+.center { text-align: center; }
+
+/* hand-drawn display type on demand */
+.marker {
+  font-family: 'Shantell Sans', 'Comic Sans MS', cursive;
+  font-weight: 600;
+}
+
+/* ============================================================
+   LISTS
+   Markers inherit the accent; nested levels step down in weight.
+   ============================================================ */
+ul, ol { padding-left: 1.15em; }
+ul li::marker { color: var(--orange-l); }
+ol li::marker { color: var(--blue); font-weight: 600; }
+ul ul li::marker { color: var(--ink-3); }
+li { margin: 0.18em 0; }
+
+/* ============================================================
+   MATH
+   ============================================================ */
+mjx-container, .MathJax { color: var(--ink) !important; }
+mjx-container[display='true'] { margin: 0.5em 0 !important; }
+
+/* ============================================================
+   CODE
+   ============================================================ */
+code {
+  background: var(--paper-2);
+  border: 1px solid var(--edge);
+  border-radius: 5px;
+  color: var(--magenta);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.84em;
+  padding: 1px 6px;
+}
+
+pre {
+  background: var(--paper-2);
+  border: 2px solid var(--edge);
+  border-radius: var(--sketch);
+  padding: 14px 18px;
+}
+pre code { background: none; border: none; color: var(--ink); }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.columns { display: flex; gap: 38px; align-items: flex-start; }
+.col     { flex: 1; min-width: 0; }
+.columns.cols-2-1 > .col:first-child { flex: 2; }
+.columns.cols-1-2 > .col:last-child  { flex: 2; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 14px 0;
+}
+
+.card {
+  background: var(--paper-2);
+  border: 2.5px solid var(--edge);
+  border-radius: var(--sketch);
+  padding: 13px 18px;
+}
+/* a little life in the stack */
+.cards .card:nth-child(odd)  { transform: rotate(-0.5deg); }
+.cards .card:nth-child(even) { transform: rotate(0.45deg); }
+
+.panel {
+  background: var(--paper-2);
+  border: 2.5px solid var(--edge);
+  border-radius: var(--sketch);
+  padding: 14px 20px;
+  margin: 12px 0;
+}
+
+/* ============================================================
+   CALLOUTS
+   One hand-drawn geometry, five inks. Colour carries the meaning.
+   ============================================================ */
+.key-idea, .warning, .vocab, .steps, .question {
+  border: 2.5px solid;
+  border-radius: var(--sketch);
+  margin: 14px 0;
+  padding: 13px 22px;
+}
+
+.key-idea { background: rgba(102, 128,  11, 0.09); border-color: var(--green-l);  }
+.warning  { background: rgba(175,  48,  41, 0.08); border-color: var(--red-l);    }
+.vocab    { background: rgba( 94,  64, 157, 0.08); border-color: var(--purple-l); }
+.steps    { background: rgba( 32,  94, 166, 0.08); border-color: var(--blue-l);   }
+.question { background: rgba(173, 131,   1, 0.11); border-color: var(--yellow-l); }
+
+/* each callout's lead-in reads as a marker label, not highlighted text */
+.key-idea > p:first-child > strong:first-child,
+.warning  > p:first-child > strong:first-child,
+.vocab    > p:first-child > strong:first-child,
+.steps    > p:first-child > strong:first-child,
+.question > p:first-child > strong:first-child {
+  background: none;
+  font-family: 'Shantell Sans', 'Comic Sans MS', cursive;
+  font-weight: 700;
+  padding: 0;
+}
+
+.key-idea > p:first-child > strong:first-child { color: var(--green);  }
+.warning  > p:first-child > strong:first-child { color: var(--red);    }
+.vocab    > p:first-child > strong:first-child { color: var(--purple); }
+.steps    > p:first-child > strong:first-child { color: var(--blue);   }
+.question > p:first-child > strong:first-child { color: var(--yellow); }
+
+/* mirror the sketch corners so stacked callouts don't look stamped */
+.warning  { border-radius: 14px 235px 14px 225px / 225px 14px 245px 14px; }
+.question { border-radius: 235px 14px 215px 16px / 16px 215px 14px 235px; }
+
+blockquote {
+  border: none;
+  border-left: 5px solid var(--orange-l);
+  color: var(--ink-2);
+  font-style: italic;
+  margin: 14px 0;
+  padding: 4px 0 4px 20px;
+}
+
+.badge {
+  background: var(--paper-2);
+  border: 2px solid var(--edge);
+  border-radius: 999px;
+  color: var(--ink-2);
+  display: inline-block;
+  font-family: 'Shantell Sans', 'Comic Sans MS', cursive;
+  font-size: 0.66em;
+  letter-spacing: 0.06em;
+  padding: 2px 13px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+table {
+  border-collapse: collapse;
+  font-size: 0.86em;
+  margin: 12px 0;
+  width: 100%;
+}
+th {
+  background: var(--th-bg);
+  border-bottom: 2.5px solid var(--ink);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 9px 13px;
+  text-align: center;
+}
+td {
+  border-bottom: 1px solid var(--edge);
+  padding: 8px 13px;
+  text-align: center;
+  vertical-align: top;
+}
+tbody tr:nth-child(odd)  { background: var(--row-odd);  }
+tbody tr:nth-child(even) { background: var(--row-even); }
+
+section.lefttable td, section.lefttable th { text-align: left; }
+section.lt1 td:nth-child(1), section.lt1 th:nth-child(1),
+section.lt2 td:nth-child(2), section.lt2 th:nth-child(2),
+section.lt3 td:nth-child(3), section.lt3 th:nth-child(3),
+section.lt4 td:nth-child(4), section.lt4 th:nth-child(4) { text-align: left; }
+
+/* ============================================================
+   IMAGES, IFRAMES, FIGURES
+   ============================================================ */
+img[alt~="center"] { display: block; margin: 0 auto; }
+
+img, iframe {
+  border-radius: 6px;
+}
+
+/* inline SVG figures sit on the pad, not in a box */
+svg { display: block; margin: 0 auto; max-width: 100%; }
+
+/* ...but MathJax renders to inline <svg>, so hand those back */
+mjx-container > svg {
+  display: inline-block !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+
+/* ============================================================
+   TITLE SLIDE
+   Marker wordmark riding a full launch arc.
+   ============================================================ */
+section.title-slide {
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 420'><path d='M 60 390 Q 640 -250 1220 390' fill='none' stroke='%23205EA6' stroke-width='9' stroke-linecap='round' stroke-dasharray='1 34' opacity='0.42'/><circle cx='1220' cy='390' r='17' fill='%23BC5215' opacity='0.5'/><circle cx='60' cy='390' r='10' fill='%23205EA6' opacity='0.45'/><path d='M 640 68 l 0 36' stroke='%23AD8301' stroke-width='5' stroke-linecap='round' opacity='0.55'/></svg>"),
+    linear-gradient(var(--grid-major) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--grid-major) 1.5px, transparent 1.5px),
+    linear-gradient(var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+  background-size:
+    100% 62%,
+    120px 120px, 120px 120px,
+    24px 24px,  24px 24px;
+  background-position:
+    center bottom,
+    -1.5px -1.5px, -1.5px -1.5px,
+    -1px -1px,     -1px -1px;
+  background-repeat: no-repeat, repeat, repeat, repeat, repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+section.title-slide h1 {
+  color: var(--ink);
+  font-size: 2.8em;
+  margin-bottom: 8px;
+  padding-bottom: 20px;
+}
+section.title-slide h1::after {
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(78%, 620px);
+  height: 14px;
+}
+section.title-slide h2 { color: var(--orange); font-size: 1.35em; margin: 6px 0; }
+section.title-slide h3 { color: var(--ink-2);  font-weight: 500;  margin: 2px 0; }
+
+/* ============================================================
+   PHASE DIVIDER
+   ============================================================ */
+section.phase-title {
+  background-color: var(--paper-2);
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><path d='M -40 660 Q 640 -180 1320 660' fill='none' stroke='%23205EA6' stroke-width='10' stroke-linecap='round' stroke-dasharray='1 38' opacity='0.3'/></svg>"),
+    linear-gradient(var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+  background-size: 100% 100%, 24px 24px, 24px 24px;
+  background-position: center, -1px -1px, -1px -1px;
+  background-repeat: no-repeat, repeat, repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+section.phase-title h1 {
+  color: var(--ink);
+  font-size: 2.5em;
+  padding-bottom: 22px;
+}
+section.phase-title h1::after {
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(70%, 540px);
+  height: 14px;
+}
+section.phase-title h2 {
+  color: var(--ink-2);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.8em;
+  font-weight: 400;
+}
