@@ -18,6 +18,7 @@ math: mathjax
 <!--- class: halloween --->
 
 
+
 # 2026.10.20 **AP Physics**
 
 ##### **❓ of the 📅**: If you could go back in time, what year would you travel to?

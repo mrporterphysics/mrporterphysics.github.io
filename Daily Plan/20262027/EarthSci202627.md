@@ -11,6 +11,7 @@ math: mathjax
 ## 🧑‍🏫 Mr. Porter
 
 ### 📆 2026-27
+##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
 
 ---
 
