@@ -518,9 +518,11 @@ This is the one place in the unit where the two numbers matter. Everywhere else,
 
 ---
 
-# **Review:** Vectors  <!--fit--->
+<!--- _class: phase-title --->
 
-# :arrow_upper_left: ↗️ ↘️ ⬆️ ⬇️ <!--fit--->
+# Vectors  <!--fit--->
+
+### :arrow_upper_left: ↗️ ↘️ ⬆️ ⬇️ <!--fit--->
 
 
 

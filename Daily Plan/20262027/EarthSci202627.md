@@ -11,7 +11,37 @@ math: mathjax
 ## 🧑‍🏫 Mr. Porter
 
 ### 📆 2026-27
+
+---
+
+# 2026.10.21 **Earth Science**
+
 ##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Do Now — finish Part F
+1. Part G — forces within a star
+2. Equilibrium: fusion vs. gravity
+3. Whiteboard your model, then present
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Fusion vs. Gravity equilibrium situations_
+
+### 📆 Upcoming
+
+
+</div>
+</div>
 
 ---
 

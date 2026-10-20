@@ -18,6 +18,40 @@ math: mathjax
 <!--- class: halloween --->
 
 
+# 2026.10.21 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Stopping Distance debrief
+2. Free Fall Five — velocity vs. time graphs
+3. Free Fall Five results — what is the acceleration in free fall?
+4. Free Fall Notes & worked example packet
+5. PC problem-solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Start solving free fall questions_
+
+### 📆 Upcoming
+
+- HW: _**Physics Classroom — Kinematics 6**_
+- Quiz Thursday: graphs, word problems, free fall
+
+</div>
+</div>
+
+
+---
 
 # 2026.10.20 **AP Physics**
 
