@@ -16,7 +16,7 @@ math: mathjax
 
 # 2026.10.20 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you could go back in time, what year would you travel to?
 
 <div class ='columns'>
 
