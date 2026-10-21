@@ -426,37 +426,6 @@ Prompt: What stayed the same? What changed? (Same $a$, same $\Delta y$ — only 
 
 ---
 
-# Two Objects — Staggered Drops
-
-Ball A is dropped at $t = 0$. Ball B is dropped at $t = 0.50\ \mathrm{s}$ from the same height. **When are they $5.0\ \mathrm{m}$ apart?**
-
-<br>
-
-Set up (for $t \ge 0.50\ \mathrm{s}$, taking down as positive):
-- $y_A = \tfrac12 g t^2 \qquad y_B = \tfrac12 g (t - 0.50)^2$
-- $\Delta y = \tfrac12 g\left[t^2 - (t-0.50)^2\right] = 5.0$
-
-Solve:
-- $5\left(t - 0.25\right) = 5.0 \Rightarrow t = 1.25\ \mathrm{s}$
-
----
-
-# CER — Mass Independence in Free Fall
-
-**Claim:** In a vacuum, the time to fall from a given height does not depend on mass.
-
-**Evidence:** From rest, $\ \Delta y = \tfrac12 g t^2 \Rightarrow t = \sqrt{\dfrac{2h}{g}}$ — no $m$ anywhere in the result.
-
-**Reasoning:** The acceleration $a = g$ is set by the gravitational field, not by the object. Heavier objects feel a larger force *and* have proportionally more inertia, so the acceleration is the same.
-
-<div class="question">
-
-**Push further** — Where does this argument break down in real air? Which object is affected more?
-
-</div>
-
----
-
 # Quick Checks Before You Commit
 
 - Which equation matches your knowns and unknowns?
