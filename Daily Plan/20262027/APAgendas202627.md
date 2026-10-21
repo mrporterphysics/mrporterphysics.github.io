@@ -31,7 +31,7 @@ math: mathjax
 1. Stopping Distance debrief
 2. Free Fall Five — velocity vs. time graphs
 3. Free Fall Five results — what is the acceleration in free fall?
-4. Free Fall Notes & worked example packet
+4. [Free Fall Notes](/Presentations/Projectiles/talks/2dMotionAP2026.html) & worked example packet
 5. PC problem-solving
 
 </div>
