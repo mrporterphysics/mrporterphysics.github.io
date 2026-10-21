@@ -369,6 +369,15 @@ Reveal:
 
 ---
 
+### A ball is thrown _downward_ at $5 \text{ m/s}$ from a height of $10 \text{ m}$.
+
+- How long does it take to reach the ground?
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+---
+
 ### Drop from $\Delta y = 45.0\ \mathrm{m}$. Down is positive. _What is the impact velocity?_
 
 Template:
