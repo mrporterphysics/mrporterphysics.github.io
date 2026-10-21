@@ -45,7 +45,7 @@ math: mathjax
 ### 📆 Upcoming
 
 - HW: _**Physics Classroom — Kinematics 6**_
-- Quiz Thursday: graphs, word problems, free fall
+- Quiz Thursday: graphs, word problems
 
 </div>
 </div>
