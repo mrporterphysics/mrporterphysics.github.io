@@ -436,23 +436,6 @@ Prompt: What stayed the same? What changed? (Same $a$, same $\Delta y$ — only 
 ---
 
 
-# Free Fall Kinematics 
-
-1. A ball is thrown downward with an initial speed of 20 m/s on Earth.
-    1. Calculate the displacement of the ball during the first 4 seconds.
-    2. Calculate the time required to reach 50 m/s.
-    3. Calculate the speed after falling 100 meters.
-
----
-
-# Free Fall Kinematics 
-
-2. A rock is thrown upward with an initial speed of 15 m/s on Earth.
-    1. Calculate the rock's height after 1 second 
-    2. Calculate the time required for the rock to reach an upward speed of 3 m/s.
-    3. Calculate the time required for the rock to reach a downward speed of 5 m/s
-
----
 
 # Heads Up: CalcPad Uses $g = 9.8$
 
@@ -469,40 +452,6 @@ This is the one place in the unit where the two numbers matter. Everywhere else,
 </div>
 
 ---
-
-# Free Fall - Calculator Free <!--fit--->
-
-## [🔗 **Free Fall 1** 🔗](https://www.physicsclassroom.com/calcpad/launch/CPK19)
-
----
-
-# Free Fall Kinematics 
-
-3. NASA operates a drop tower in which they test the response of materials to situations in which the only force which acts upon them is gravity. Objects are dropped from rest and free fall for 5.27 seconds through the drop tower.
-    1. Determine the distance which the objects fall through the tower. 
-
----
-
-# [🔗 Free Fall - Dropped Objects 🔗](https://www.physicsclassroom.com/calcpad/launch/CPK20 ) <!--fit--->
-
----
-
-# Free Fall Kinematics 
-
-4. During a parachuting mishap (it could be worse), a parachutist who is falling at 12.2 m/s drops his new camera from an altitude of 78.9 m. What speed will the camera have when it strikes the ground?
-5. A ball is thrown vertically upwards with a speed of 44.5 m/s. 
-    1. How high does it rise above the point of release?
-    2. How much time does it take the ball to reach the peak of its trajectory?
-
----
-
-## Additional Free Fall Practice 
-
-### [Free Fall 3](https://www.physicsclassroom.com/calcpad/launch/CPK21)
-
-### [Free Fall 4](https://www.physicsclassroom.com/calcpad/launch/CPK22)
-
-### [Rocket Science](https://www.physicsclassroom.com/calcpad/launch/CPK23)
 
 ---
 
