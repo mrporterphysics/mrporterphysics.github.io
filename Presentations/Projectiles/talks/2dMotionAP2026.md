@@ -44,6 +44,16 @@ math: mathjax
 
 ### In AP Physics we will use $\boxed{g = 10 \text{ m/s/s}}$
 
+
+---
+
+
+# How Big Is $g$?
+
+## Near the surface of the Earth, $g = 9.8 \text{ m/s/s}$
+
+### In AP Physics we will use $\boxed{g = 10 \text{ m/s/s}}$
+
 <div class="key-idea">
 
 **$g$ is a magnitude, so it is always positive.** The *sign* of the acceleration comes from the direction **you** chose as positive — not from $g$ itself.
@@ -59,20 +69,20 @@ math: mathjax
 
 ### If **up** is positive
 
-- $a = -g = -10 \text{ m/s/s}$
-- Rising $\rightarrow v$ is $+$
-- Falling $\rightarrow v$ is $-$
-- Landing below the start $\rightarrow \Delta y$ is $-$
+* $a = -g = -10 \text{ m/s/s}$
+* Rising $\rightarrow v$ is $+$
+* Falling $\rightarrow v$ is $-$
+* Landing below the start $\rightarrow \Delta y$ is $-$
 
 </div>
 <div class='col'>
 
 ### If **down** is positive
 
-- $a = +g = +10 \text{ m/s/s}$
-- Falling $\rightarrow v$ is $+$
-- Rising $\rightarrow v$ is $-$
-- Landing below the start $\rightarrow \Delta y$ is $+$
+* Falling $\rightarrow v$ is $+$
+* $a = +g = +10 \text{ m/s/s}$
+* Rising $\rightarrow v$ is $-$
+* Landing below the start $\rightarrow \Delta y$ is $+$
 
 </div>
 </div>
