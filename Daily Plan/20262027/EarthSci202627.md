@@ -14,6 +14,40 @@ math: mathjax
 
 ---
 
+# 2026.10.22 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?
+
+<div class ='columns'>
+
+<div>
+
+#### 📋 Agenda
+
+1. Part G — forces within a star
+2. Fusion vs. gravity — think-pair-share, then the reading
+3. Model your stage, then share out
+4. Dense stars, the trend line, and Betelgeuse
+5. Mass as the driver — summary task
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model the lifecycle of a star with equilibrium_
+
+### 📆 Upcoming
+
+- Star Quiz: _**Fri 10/30**_ — stellar evolution
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.21 **Earth Science**
 
 ##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?

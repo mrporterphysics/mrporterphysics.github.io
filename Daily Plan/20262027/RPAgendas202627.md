@@ -20,6 +20,42 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.22 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Stopping Distance debrief
+2. Free Fall Five — velocity vs. time graphs
+3. Free Fall Five results — what is the acceleration in free fall?
+4. [Free Fall Notes](/Presentations/Projectiles/talks/2dMotionAP2026.html) & worked example packet
+5. PC problem-solving
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Start solving free fall questions_
+
+### 📆 Upcoming
+
+- HW: _**PC Kinematics 6 — due Wed 10/28**_
+- HW: _**PC Kinematics 7 + two-stage motion — due Fri 10/30**_
+- Quiz Friday: kinematics — graphs and word problems
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.20 **AP Physics**
 
 ##### **❓ of the 📅**: If you could go back in time, what year would you travel to?

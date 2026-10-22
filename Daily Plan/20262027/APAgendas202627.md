@@ -18,6 +18,39 @@ math: mathjax
 <!--- class: halloween --->
 
 
+# 2026.10.22 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ✅ **Kin Quiz 3**
+2. AP Workbook 1.J — Rocket Motion *(if time)*
+3. AP Workbook 1.K — graphical methods to find $g$ *(if time)*
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use the kinematic models to solve free fall questions_
+
+### 📆 Upcoming
+
+- HW: _**PC Kinematics 6 — due Wed 10/28**_
+- HW: _**PC Kinematics 7 + two-stage motion — due Fri 10/30**_
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.21 **AP Physics**
 
 ##### **❓ of the 📅**: If gravity suddenly decreased by half for 24 hours, what would you do first?

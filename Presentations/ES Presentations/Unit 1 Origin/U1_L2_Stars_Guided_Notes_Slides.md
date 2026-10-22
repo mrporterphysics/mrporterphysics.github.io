@@ -317,30 +317,6 @@ TIMING: about one class period at pace, two if you work the questions.
 
 ---
 
-# How to Use This
-
-<div class="columns">
-<div class="col">
-
-**You have:** the packet *Guided Notes: Star Life Cycles*
-
-**On screen:** the same content, Part for Part
-
-Anything shown like <span class="fill">this</span> goes in a blank on your sheet.
-
-</div>
-<div class="col">
-
-<div class="key-idea">
-
-Three diagrams in this deck are from your **Reference Tables**. You will have them on the exam — learn where things sit on them.
-
-</div>
-
-</div>
-</div>
-
----
 
 <!-- _class: phase-title -->
 
