@@ -606,7 +606,10 @@ This is the one place in the unit where the two numbers matter. Everywhere else,
 
 # Vector Direction Conventions
 
-<svg viewBox="0 0 960 400" width="100%" style="max-height:430px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<div class='columns cols-2-1'>
+<div class='col'>
+
+<svg viewBox="0 0 960 400" width="100%" style="max-height:300px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
   <g stroke="var(--ink-3, #B7B5AC)" stroke-width="1.6" opacity="0.9">
     <line x1="114" y1="210" x2="366" y2="210"/>
     <line x1="240" y1="84" x2="240" y2="336"/>
@@ -631,13 +634,132 @@ This is the one place in the unit where the two numbers matter. Everywhere else,
   <line x1="480" y1="60" x2="480" y2="360" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="6 6"/>
 </svg>
 
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 400 352" width="100%" style="max-height:320px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <g stroke="var(--ink-3, #B7B5AC)" stroke-width="1.8">
+    <line x1="55" y1="200" x2="345" y2="200"/>
+    <line x1="200" y1="60" x2="200" y2="325"/>
+  </g>
+  <text x="200" y="36" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="22" font-weight="600">Direction =</text>
+  <g opacity="1">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="1;0" keyTimes="0;0.076923"/>
+  <line x1="200" y1="200" x2="293.9" y2="200" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="310,200 291,208.7 291,191.3" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">0&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.076923;0.153846"/>
+  <path d="M 240 200 A 40 40 0 0 0 234.6 180" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="281.3" y2="153.1" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="295.3,145 283.2,162.1 274.4,146.9" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">30&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.153846;0.230769"/>
+  <path d="M 240 200 A 40 40 0 0 0 220 165.4" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="246.9" y2="118.7" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="255,104.7 253.1,125.6 237.9,116.8" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">60&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.230769;0.307692"/>
+  <path d="M 240 200 A 40 40 0 0 0 200 160" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="200" y2="106.2" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="200,90 208.7,109 191.3,109" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">90&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.307692;0.384615"/>
+  <path d="M 240 200 A 40 40 0 0 0 180 165.4" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="153.1" y2="118.7" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="145,104.7 162.1,116.8 146.9,125.6" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">120&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.384615;0.461538"/>
+  <path d="M 240 200 A 40 40 0 0 0 165.4 180" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="118.7" y2="153.1" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="104.7,145 125.6,146.9 116.8,162.1" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">150&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.461538;0.538462"/>
+  <path d="M 240 200 A 40 40 0 0 0 160 200" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="106.2" y2="200" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="90,200 109,191.3 109,208.7" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">180&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.538462;0.615385"/>
+  <path d="M 240 200 A 40 40 0 1 0 165.4 220" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="118.7" y2="246.9" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="104.7,255 116.8,237.9 125.6,253.1" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">210&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.615385;0.692308"/>
+  <path d="M 240 200 A 40 40 0 1 0 180 234.6" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="153.1" y2="281.3" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="145,295.3 146.9,274.4 162.1,283.2" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">240&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.692308;0.769231"/>
+  <path d="M 240 200 A 40 40 0 1 0 200 240" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="200" y2="293.9" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="200,310 191.3,291 208.7,291" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">270&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.769231;0.846154"/>
+  <path d="M 240 200 A 40 40 0 1 0 220 234.6" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="246.9" y2="281.3" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="255,295.3 237.9,283.2 253.1,274.4" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">300&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.846154;0.923077"/>
+  <path d="M 240 200 A 40 40 0 1 0 234.6 220" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="281.3" y2="246.9" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="295.3,255 274.4,253.1 283.2,237.9" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">330&#176;</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+             calcMode="discrete" values="0;1;0" keyTimes="0;0.923077;1.000000"/>
+  <path d="M 240 200 A 40 40 0 1 0 240 200" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <line x1="200" y1="200" x2="293.9" y2="200" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="310,200 291,208.7 291,191.3" fill="var(--star, #205EA6)"/>
+  <text x="200" y="70" text-anchor="middle" fill="var(--star, #205EA6)" font-size="30" font-weight="600">360&#176;</text>
+  </g>
+  <circle cx="200" cy="200" r="5" fill="var(--muted, #6F6E69)"/>
+  <text x="200" y="342" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17">counterclockwise from east</text>
+</svg>
+
+</div>
+</div>
+
 ---
 
 # The Magnitude of a Vector
 
-<svg viewBox="0 0 960 400" width="100%" style="max-height:360px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-  <rect x="341.6" y="21.1" width="276.7" height="33.6" rx="16.8" fill="var(--muted, #6F6E69)" opacity="0.12"/>
-  <text x="480" y="46" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="21" font-weight="600">SCALE:  1 cm = 5 miles</text>
+<svg viewBox="0 118 960 282" width="100%" style="max-height:360px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <rect x="43.8" y="139.9" width="264.4" height="32.6" rx="16.3" fill="var(--muted, #6F6E69)" opacity="0.12"/>
+  <text x="176" y="164" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="20" font-weight="600">SCALE:  1 cm = 5 miles</text>
   <g stroke="var(--ink-3, #B7B5AC)" stroke-width="1.6" opacity="0.9">
     <line x1="126" y1="320" x2="214" y2="320"/>
     <line x1="170" y1="276" x2="170" y2="364"/>
@@ -665,7 +787,7 @@ This is the one place in the unit where the two numbers matter. Everywhere else,
   <line x1="790" y1="320" x2="849" y2="217.9" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
   <polygon points="856.6,204.6 854.8,224.4 840.4,216.1" fill="var(--star, #205EA6)"/>
   <text x="736" y="294" text-anchor="end" fill="var(--star, #205EA6)" font-size="21" font-weight="600">d = 18 mi</text>
-  <text x="480" y="384" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="18">same direction &#8212; the arrow's length carries the magnitude</text>
+  <text x="480" y="388" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="18">same direction &#8212; the arrow's length carries the magnitude</text>
 </svg>
 
 - Magnitude of a vector is scaled in the vector diagram by the **length** of the arrow
@@ -828,7 +950,7 @@ $$\vec{C} = \vec{a} + \vec{b}$$
 
 Eric leaves the base camp and hikes 11 km, north and then hikes 11 km east. Determine Eric's resulting displacement.
 
-<svg viewBox="0 0 820 370" width="100%" style="max-height:290px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<svg viewBox="0 0 820 370" width="100%" style="max-height:360px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
   <line x1="80" y1="300" x2="80" y2="211" stroke="var(--star, #205EA6)" stroke-width="5.5" stroke-linecap="round"/>
   <polygon points="80,196.6 87.8,213.6 72.2,213.6" fill="var(--star, #205EA6)"/>
   <text x="64" y="250" text-anchor="end" fill="var(--star, #205EA6)" font-size="20" font-weight="600">11 km, N</text>
@@ -880,20 +1002,20 @@ $$\sin\theta = \tfrac{b}{c} \quad \cos\theta = \tfrac{a}{c} \quad \tan\theta = \
 <div class='col'>
 
 <svg viewBox="0 0 420 330" width="100%" style="max-height:270px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-  <path d="M 120 282 L 120 176.4 L 225.6 176.4 Z" fill="var(--coral, #AF3029)" opacity="0.06"/>
-  <line x1="120" y1="282" x2="120" y2="190" stroke="var(--star, #205EA6)" stroke-width="5" stroke-linecap="round"/>
-  <polygon points="120,176.4 127.4,192.4 112.6,192.4" fill="var(--star, #205EA6)"/>
-  <text x="106" y="228" text-anchor="end" fill="var(--star, #205EA6)" font-size="19" font-weight="600">11 km, N</text>
-  <line x1="120" y1="176.4" x2="212" y2="176.4" stroke="var(--aurora, #66800B)" stroke-width="5" stroke-linecap="round"/>
-  <polygon points="225.6,176.4 209.6,183.8 209.6,169" fill="var(--aurora, #66800B)"/>
-  <text x="172" y="162.4" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="19" font-weight="600">11 km, E</text>
-  <line x1="120" y1="282" x2="214.8" y2="187.2" stroke="var(--coral, #AF3029)" stroke-width="5.5" stroke-linecap="round"/>
-  <polygon points="225.6,176.4 218.7,195 207,183.3" fill="var(--coral, #AF3029)"/>
-  <text x="248" y="238" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="19" font-weight="600">R = 15.6 km</text>
-  <path d="M 120 226 A 56 56 0 0 1 159.6 242.4" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
-  <text x="170" y="258" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="23" font-weight="600">&#952;</text>
-  <circle cx="120" cy="282" r="6" fill="var(--ink, #100F0F)"/>
-  <text x="210" y="320" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17">&#952; is measured from the north leg</text>
+  <path d="M 150 288 L 150 145 L 293 145 Z" fill="var(--coral, #AF3029)" opacity="0.06"/>
+  <line x1="150" y1="288" x2="150" y2="159.4" stroke="var(--star, #205EA6)" stroke-width="5.5" stroke-linecap="round"/>
+  <polygon points="150,145 157.8,162 142.2,162" fill="var(--star, #205EA6)"/>
+  <text x="134" y="218" text-anchor="end" fill="var(--star, #205EA6)" font-size="19" font-weight="600">11 km, N</text>
+  <line x1="150" y1="145" x2="278.6" y2="145" stroke="var(--aurora, #66800B)" stroke-width="5.5" stroke-linecap="round"/>
+  <polygon points="293,145 276,152.8 276,137.2" fill="var(--aurora, #66800B)"/>
+  <text x="216" y="129" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="19" font-weight="600">11 km, E</text>
+  <line x1="150" y1="288" x2="282.2" y2="155.8" stroke="var(--coral, #AF3029)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="293,145 286.1,163.6 274.4,151.9" fill="var(--coral, #AF3029)"/>
+  <text x="292" y="230" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="19" font-weight="600">R = 15.6 km</text>
+  <path d="M 150 224 A 64 64 0 0 1 195.3 242.7" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <text x="206" y="256" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="24" font-weight="600">&#952;</text>
+  <circle cx="150" cy="288" r="6" fill="var(--ink, #100F0F)"/>
+  <text x="210" y="322" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17">&#952; is measured from the north leg</text>
 </svg>
 
 $$\sin\theta = \tfrac{11}{15.6} = 0.7051$$
@@ -929,11 +1051,11 @@ $$\theta = \sin^{-1}(0.7051) = 45^\circ$$
   </g>
   <path d="M 764 256 A 64 64 0 0 0 636 256" fill="none" stroke="var(--ink-3, #B7B5AC)" stroke-width="2"/>
   <text x="690" y="176" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="18" font-weight="600">180&#176;</text>
-  <path d="M 662 256 A 38 38 0 0 0 666 273" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
-  <text x="616" y="314" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="17" font-weight="600">26.6&#176;</text>
+  <path d="M 660 256 A 40 40 0 0 0 664.2 273.9" fill="none" stroke="var(--solar, #AD8301)" stroke-width="2.4"/>
+  <text x="682" y="308" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="17" font-weight="600">26.6&#176;</text>
   <line x1="700" y1="256" x2="593.9" y2="309.1" stroke="var(--coral, #AF3029)" stroke-width="5.5" stroke-linecap="round"/>
   <polygon points="580.2,316 592.6,300.5 600,315.3" fill="var(--coral, #AF3029)"/>
-  <text x="614" y="348" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="23" font-weight="600" font-style="italic">R</text>
+  <text x="550" y="326" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="23" font-weight="600" font-style="italic">R</text>
   <text x="700" y="404" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="19" font-weight="600">direction of R = 180&#176; + 26.6&#176; = 206.6&#176;</text>
   <text x="250" y="404" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="18">26.6&#176; is measured off the west leg</text>
 </svg>
@@ -1733,15 +1855,56 @@ _A graphical representation of the given problem will help visualize what is hap
 # 1D Relative Motion: Vector Sums
 
 <div class='columns'>
-<div>
+<div class='col'>
 
-![center w:400](https://www.physicsclassroom.com/Class/vectors/u3l1f2.gif) 
+<svg viewBox="0 0 700 390" width="100%" style="max-height:320px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <text x="120" y="40" text-anchor="middle" fill="var(--star, #205EA6)" font-size="20" font-weight="600">plane velocity</text>
+  <text x="330" y="40" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="20" font-weight="600">wind velocity</text>
+  <text x="565" y="40" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="20" font-weight="600">resultant</text>
+  <g fill="var(--star, #205EA6)">
+    <ellipse cx="120" cy="88" rx="9.8" ry="20.1"/>
+    <rect x="82.5" y="84.1" width="75" height="7.9" rx="3.5"/>
+    <rect x="104.2" y="101.1" width="31.5" height="6.1" rx="2.6"/>
+  </g>
+  <line x1="120" y1="112" x2="120" y2="250.8" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="120,267 111.3,248 128.7,248" fill="var(--star, #205EA6)"/>
+  <text x="120" y="297" text-anchor="middle" fill="var(--star, #205EA6)" font-size="20" font-weight="600">100 km/hr</text>
+  <text x="228" y="206" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="32" font-weight="600">+</text>
+  <text x="455" y="206" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="32" font-weight="600">=</text>
+  <line x1="330" y1="170" x2="330" y2="192.6" stroke="var(--aurora, #66800B)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="330,208.8 321.3,189.8 338.7,189.8" fill="var(--aurora, #66800B)"/>
+  <text x="330" y="236.8" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="20" font-weight="600">25 km/hr</text>
+  <line x1="565" y1="112" x2="565" y2="289.6" stroke="var(--coral, #AF3029)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="565,305.8 556.3,286.8 573.7,286.8" fill="var(--coral, #AF3029)"/>
+  <text x="565" y="335.8" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="20" font-weight="600">125 km/hr</text>
+  <text x="350" y="376" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17">tailwind &#8212; the two add</text>
+</svg>
 
 </div>
- 
-<div>
+<div class='col'>
 
-![center w:500](https://www.physicsclassroom.com/Class/vectors/u3l1f3.gif)
+<svg viewBox="0 0 700 390" width="100%" style="max-height:320px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <text x="120" y="40" text-anchor="middle" fill="var(--star, #205EA6)" font-size="20" font-weight="600">plane velocity</text>
+  <text x="330" y="40" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="20" font-weight="600">wind velocity</text>
+  <text x="565" y="40" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="20" font-weight="600">resultant</text>
+  <g fill="var(--star, #205EA6)">
+    <ellipse cx="120" cy="88" rx="9.8" ry="20.1"/>
+    <rect x="82.5" y="84.1" width="75" height="7.9" rx="3.5"/>
+    <rect x="104.2" y="101.1" width="31.5" height="6.1" rx="2.6"/>
+  </g>
+  <line x1="120" y1="112" x2="120" y2="250.8" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="120,267 111.3,248 128.7,248" fill="var(--star, #205EA6)"/>
+  <text x="120" y="297" text-anchor="middle" fill="var(--star, #205EA6)" font-size="20" font-weight="600">100 km/hr</text>
+  <text x="228" y="206" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="32" font-weight="600">+</text>
+  <text x="455" y="206" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="32" font-weight="600">=</text>
+  <line x1="330" y1="212" x2="330" y2="189.4" stroke="var(--aurora, #66800B)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="330,173.2 338.7,192.2 321.3,192.2" fill="var(--aurora, #66800B)"/>
+  <text x="330" y="240" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="20" font-weight="600">25 km/hr</text>
+  <line x1="565" y1="112" x2="565" y2="212.1" stroke="var(--coral, #AF3029)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="565,228.2 556.3,209.2 573.7,209.2" fill="var(--coral, #AF3029)"/>
+  <text x="565" y="258.2" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="20" font-weight="600">75 km/hr</text>
+  <text x="350" y="376" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17">headwind &#8212; they subtract</text>
+</svg>
 
 </div>
 </div>
@@ -1766,7 +1929,34 @@ When a boat heads straight across, the river current carries it downstream. The 
 
 ---
 
-![center w:600](https://www.physicsclassroom.com/Class/vectors/u3l1f4.gif)
+<svg viewBox="0 0 700 390" width="100%" style="max-height:420px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <text x="120" y="40" text-anchor="middle" fill="var(--star, #205EA6)" font-size="20" font-weight="600">plane velocity</text>
+  <text x="330" y="40" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="20" font-weight="600">wind velocity</text>
+  <text x="565" y="40" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="20" font-weight="600">resultant</text>
+  <g fill="var(--star, #205EA6)">
+    <ellipse cx="120" cy="88" rx="9.8" ry="20.1"/>
+    <rect x="82.5" y="84.1" width="75" height="7.9" rx="3.5"/>
+    <rect x="104.2" y="101.1" width="31.5" height="6.1" rx="2.6"/>
+  </g>
+  <line x1="120" y1="112" x2="120" y2="250.8" stroke="var(--star, #205EA6)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="120,267 111.3,248 128.7,248" fill="var(--star, #205EA6)"/>
+  <text x="120" y="297" text-anchor="middle" fill="var(--star, #205EA6)" font-size="20" font-weight="600">100 km/hr</text>
+  <text x="228" y="206" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="32" font-weight="600">+</text>
+  <text x="455" y="206" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="32" font-weight="600">=</text>
+  <line x1="349.4" y1="190" x2="326.8" y2="190" stroke="var(--aurora, #66800B)" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="310.6,190 329.6,181.3 329.6,198.7" fill="var(--aurora, #66800B)"/>
+  <text x="330" y="226" text-anchor="middle" fill="var(--aurora, #66800B)" font-size="20" font-weight="600">25 km/hr</text>
+  <path d="M 600 112 L 600 267 L 561.2 267 Z" fill="var(--coral, #AF3029)" opacity="0.07"/>
+  <line x1="600" y1="112" x2="600" y2="255.1" stroke="var(--star, #205EA6)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="7 6" opacity="0.55"/>
+  <polygon points="600,267 593.6,253 606.4,253" fill="var(--star, #205EA6)" opacity="0.55"/>
+  <line x1="600" y1="267" x2="573.1" y2="267" stroke="var(--aurora, #66800B)" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="7 6" opacity="0.65"/>
+  <polygon points="561.2,267 575.2,260.6 575.2,273.4" fill="var(--aurora, #66800B)" opacity="0.65"/>
+  <line x1="600" y1="112" x2="565.4" y2="250.5" stroke="var(--coral, #AF3029)" stroke-width="6.5" stroke-linecap="round"/>
+  <polygon points="561.2,267 557.2,245.4 575,249.8" fill="var(--coral, #AF3029)"/>
+  <text x="556" y="197.5" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="26" font-weight="600" font-style="italic">R</text>
+  <text x="578" y="297" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="20" font-weight="600">R = 103.1 km/hr</text>
+  <text x="350" y="376" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="17">crosswind &#8212; perpendicular, so use Pythagoras</text>
+</svg>
 
 ---
 
