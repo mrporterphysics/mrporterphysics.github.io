@@ -20,6 +20,38 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.23 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather be able to run at 100 miles per hour or fly at 10 miles per hour?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ✅ **Kinematics Quiz 3**
+2. AP Workbook 1.J — Rocket Motion
+3. AP Workbook 1.K — Free Fall Motion
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use the kinematic models to solve free fall and rocket motion problems_
+
+### 📆 Upcoming
+
+- Quiz: _**Kin Quiz 4 — Fri 10/30**_
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.22 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?

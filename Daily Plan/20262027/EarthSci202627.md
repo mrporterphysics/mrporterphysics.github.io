@@ -14,6 +14,38 @@ math: mathjax
 
 ---
 
+# 2026.10.23 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather be able to run at 100 miles per hour or fly at 10 miles per hour?
+
+<div class ='columns'>
+
+<div>
+
+#### 📋 Agenda
+
+1. Why do massive stars die faster? — look at the data in the packet
+2. How can we investigate this?
+3. Iron [26] game & mini experiment
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model rates of fusion based on mass_
+
+### 📆 Upcoming
+
+- Star Quiz: _**Fri 10/30**_ — stellar evolution
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.22 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?
