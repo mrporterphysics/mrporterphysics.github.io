@@ -20,6 +20,39 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.26 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Free Fall Motion Notes — signs, apex, symmetry *(carried from Thu 10/22)*
+2. Worked example packet, split by where they got to on Thursday: 
+3. PC free-fall problem-solving: 
+4. AP Workbook 1.J / 1.K if Friday's quiz left them undone
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve free fall problems with the kinematic models_
+
+### 📆 Upcoming
+
+- Quiz: _**Kin Quiz 4 — Fri 10/30**_
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.23 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to run at 100 miles per hour or fly at 10 miles per hour?

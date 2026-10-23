@@ -18,6 +18,41 @@ math: mathjax
 <!--- class: halloween --->
 
 
+# 2026.10.26 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Workbooks 1.J & 1.K (25 Minutes)
+2. Vector Slides (25 Minutes)
+3. Vector Practice (30 Minutes)
+4. Any time left over Physics Classroom
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+- HW: _**PC Kinematics 6 — due Wed 10/28**_
+- HW: _**PC Kinematics 7 + two-stage motion — due Fri 10/30**_
+- Quiz: _**Kin Quiz 4 — Fri 10/30**_
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.22 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather be able to see infrared or ultraviolet light?

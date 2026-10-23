@@ -14,6 +14,38 @@ math: mathjax
 
 ---
 
+# 2026.10.26 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
+
+<div class ='columns'>
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish the Iron [26] game & discussion
+2. Nucleosynthesis — why each stage runs faster than the last
+3. Guided Notes on Stars — our written record for Friday
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain a star's size, color and life span from its mass_
+
+### 📆 Upcoming
+
+- Star Quiz: _**Fri 10/30**_ — stellar evolution
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.23 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather be able to run at 100 miles per hour or fly at 10 miles per hour?
