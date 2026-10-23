@@ -662,7 +662,7 @@ PACKET QUESTION 4: two planets, same period, one star nine times heavier — the
 
 <div class="pkt">PACKET PART E — 1 blank</div>
 
-![h:310](l3-major-axis.svg)
+![h:325](l3-major-axis.svg)
 
 <div class="key-idea">
 
@@ -682,7 +682,7 @@ ECCENTRICITY IS EXAGGERATED in this drawing. A real planetary orbit is far round
 
 <div class="pkt">PACKET PART E — 2 blanks</div>
 
-![h:310](l3-foci.svg)
+![h:325](l3-foci.svg)
 
 <div class="key-idea">
 

@@ -4,8 +4,8 @@
   <circle cx="175" cy="175" r="73" fill="none" stroke="#6FD3E8" stroke-width="3"/>
   <circle cx="175" cy="175" r="56" fill="none" stroke="#FF7A7A" stroke-width="2.5" stroke-dasharray="7 6"/>
   <circle cx="175" cy="175" r="9" fill="#F5C542"/>
-  <text x="301" y="69" fill="#FF7A7A" font-size="18" font-family="Inter,sans-serif" text-anchor="middle">Zb</text>
-  <text x="260" y="104" fill="#FF7A7A" font-size="18" font-family="Inter,sans-serif" text-anchor="middle">Zd</text>
-  <text x="242" y="118" fill="#6FD3E8" font-size="18" font-family="Inter,sans-serif" text-anchor="middle">Za</text>
-  <text x="229" y="129" fill="#FF7A7A" font-size="18" font-family="Inter,sans-serif" text-anchor="middle">Zc</text>
+  <text x="311" y="276" fill="#FF7A7A" font-size="18" font-family="Inter,sans-serif" text-anchor="middle">Zb</text>
+  <text x="111" y="89" fill="#FF7A7A" font-size="18" font-family="Inter,sans-serif" text-anchor="middle">Zd</text>
+  <text x="238" y="118" fill="#6FD3E8" font-size="18" font-family="Inter,sans-serif" text-anchor="middle">Za</text>
+  <text x="116" y="222" fill="#FF7A7A" font-size="18" font-family="Inter,sans-serif" text-anchor="middle">Zc</text>
 </svg>

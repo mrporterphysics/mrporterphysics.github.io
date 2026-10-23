@@ -503,7 +503,7 @@ IF THEY HAVE NEVER GRAPHED IN SHEETS, stop and teach it. They must create and an
 
 # The Pattern in the Graph
 
-![h:460](l3-period-vs-distance.svg)
+![h:360](l3-period-vs-distance.svg)
 
 <div class="key-idea">
 
@@ -701,7 +701,7 @@ GROUPING: pairs.
 
 # The Transit Method
 
-![h:330](l3-transit-method.svg)
+![h:360](l3-transit-method.svg)
 
 <div class="key-idea">
 
@@ -920,7 +920,7 @@ Same star → same $M$ → distance depends on **period alone**.
 </div>
 <div class="col">
 
-![h:330](l3-star-z.svg)
+![h:360](l3-star-z.svg)
 
 </div>
 </div>
@@ -1098,7 +1098,7 @@ GROUPING: pairs, then groups of three. ROUTINE: Think-Talk-Open Exchange. LITERA
 
 # Term 1: The Major Axis
 
-![h:330](l3-major-axis.svg)
+![h:380](l3-major-axis.svg)
 
 <div class="key-idea">
 
@@ -1116,7 +1116,7 @@ DIFFERENTIATION: these two pages of student material are dense and introduce sev
 
 # Term 2: The Distance Between the Foci
 
-![h:310](l3-foci.svg)
+![h:380](l3-foci.svg)
 
 <div class="key-idea">
 
