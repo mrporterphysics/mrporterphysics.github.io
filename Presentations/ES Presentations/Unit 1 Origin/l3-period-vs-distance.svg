@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 350">
+  <rect x="70" y="20" width="700" height="280" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)"/>
+  <g stroke="rgba(255,255,255,0.10)">
+    <line x1="70" y1="244.0" x2="770" y2="244.0"/>
+    <line x1="70" y1="188.0" x2="770" y2="188.0"/>
+    <line x1="70" y1="132.0" x2="770" y2="132.0"/>
+    <line x1="70" y1="76.0" x2="770" y2="76.0"/>
+    <line x1="245.0" y1="20" x2="245.0" y2="300"/>
+    <line x1="420.0" y1="20" x2="420.0" y2="300"/>
+    <line x1="595.0" y1="20" x2="595.0" y2="300"/>
+  </g>
+  <path d="M70.0,300.0 L87.5,298.9 L105.0,296.8 L122.5,294.2 L140.0,291.0 L157.5,287.5 L175.0,283.5 L192.5,279.3 L210.0,274.7 L227.5,269.8 L245.0,264.6 L262.5,259.1 L280.0,253.4 L297.5,247.5 L315.0,241.3 L332.5,234.9 L350.0,228.3 L367.5,221.5 L385.0,214.5 L402.5,207.2 L420.0,199.8 L437.5,192.2 L455.0,184.4 L472.5,176.5 L490.0,168.3 L507.5,160.0 L525.0,151.5 L542.5,142.9 L560.0,134.1 L577.5,125.1 L595.0,116.0 L612.5,106.7 L630.0,97.3 L647.5,87.7 L665.0,78.0 L682.5,68.1 L700.0,58.1 L717.5,47.9 L735.0,37.6 L752.5,27.2 L770.0,16.7" fill="none" stroke="#6FD3E8" stroke-width="3"/>
+  <g fill="#FFD971">
+  <circle cx="76.8" cy="299.7" r="5"/>
+  <circle cx="82.7" cy="299.3" r="5"/>
+  <circle cx="87.5" cy="298.9" r="5"/>
+  <circle cx="96.7" cy="297.9" r="5"/>
+  <circle cx="132.8" cy="292.4" r="5"/>
+  <circle cx="161.1" cy="286.7" r="5"/>
+  <circle cx="236.9" cy="267.0" r="5"/>
+  <circle cx="405.7" cy="205.9" r="5"/>
+  <circle cx="596.1" cy="115.4" r="5"/>
+  <circle cx="760.9" cy="22.2" r="5"/>
+  </g>
+    <text x="248.9" y="257.0" fill="#A9B3D2" font-size="15" font-family="Inter,sans-serif">Mimas</text>
+  <text x="417.7" y="195.9" fill="#A9B3D2" font-size="15" font-family="Inter,sans-serif">Uranus</text>
+  <text x="608.1" y="105.4" fill="#A9B3D2" font-size="15" font-family="Inter,sans-serif">Neptune</text>
+  <text x="772.9" y="12.2" fill="#A9B3D2" font-size="15" font-family="Inter,sans-serif">Pluto</text>
+  <circle cx="132.8" cy="292.4" r="9" fill="none" stroke="#FF7A7A" stroke-width="3"/>
+  <text x="148.8" y="278.4" fill="#FF7A7A" font-size="15" font-family="Inter,sans-serif">Comet Borrelly</text>
+  <line x1="70" y1="300" x2="770" y2="300" stroke="#A9B3D2" stroke-width="2"/>
+  <line x1="70" y1="20" x2="70" y2="300" stroke="#A9B3D2" stroke-width="2"/>
+  <g font-family="Inter,sans-serif">
+  <text x="70.0" y="320" fill="#A9B3D2" font-size="13" text-anchor="middle">0</text>
+  <text x="245.0" y="320" fill="#A9B3D2" font-size="13" text-anchor="middle">10</text>
+  <text x="420.0" y="320" fill="#A9B3D2" font-size="13" text-anchor="middle">20</text>
+  <text x="595.0" y="320" fill="#A9B3D2" font-size="13" text-anchor="middle">30</text>
+  <text x="770.0" y="320" fill="#A9B3D2" font-size="13" text-anchor="middle">40</text>
+  <text x="60" y="305.0" fill="#A9B3D2" font-size="13" text-anchor="end">0</text>
+  <text x="60" y="249.0" fill="#A9B3D2" font-size="13" text-anchor="end">50</text>
+  <text x="60" y="193.0" fill="#A9B3D2" font-size="13" text-anchor="end">100</text>
+  <text x="60" y="137.0" fill="#A9B3D2" font-size="13" text-anchor="end">150</text>
+  <text x="60" y="81.0" fill="#A9B3D2" font-size="13" text-anchor="end">200</text>
+  <text x="60" y="25.0" fill="#A9B3D2" font-size="13" text-anchor="end">250</text>
+  </g>
+  <text x="420.0" y="340" fill="#E9ECF7" font-size="17" text-anchor="middle" font-family="Inter,sans-serif">Average distance from the Sun (AU)</text>
+  <text x="22" y="160" fill="#E9ECF7" font-size="17" text-anchor="middle" font-family="Inter,sans-serif" transform="rotate(-90 22 160)">Period of revolution (years)</text>
+</svg>

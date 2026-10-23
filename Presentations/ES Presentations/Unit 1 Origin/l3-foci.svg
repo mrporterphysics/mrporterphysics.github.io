@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 370">
+  <ellipse cx="310" cy="180" rx="230" ry="160" fill="none" stroke="#E9ECF7" stroke-width="3"/>
+  <line x1="80" y1="180" x2="540" y2="180" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-dasharray="7 6"/>
+  <line x1="145" y1="138" x2="475" y2="138" stroke="#FF9245" stroke-width="2.5"/>
+  <line x1="145" y1="128" x2="145" y2="148" stroke="#FF9245" stroke-width="2.5"/>
+  <line x1="475" y1="128" x2="475" y2="148" stroke="#FF9245" stroke-width="2.5"/>
+  <text x="310" y="126" fill="#FF9245" font-size="20" text-anchor="middle" font-family="Inter,sans-serif">f</text>
+  <circle cx="145" cy="180" r="13" fill="#F5C542"/>
+  <circle cx="475" cy="180" r="7" fill="#E9ECF7"/>
+  <circle cx="310" cy="180" r="4" fill="rgba(255,255,255,0.45)"/>
+  <text x="145" y="214" fill="#F5C542" font-size="16" text-anchor="middle" font-family="Inter,sans-serif">star (focus 1)</text>
+  <text x="475" y="214" fill="#E9ECF7" font-size="16" text-anchor="middle" font-family="Inter,sans-serif">focus 2</text>
+  <text x="310" y="368" fill="#A9B3D2" font-size="15" text-anchor="middle" font-family="Inter,sans-serif">centre of the ellipse</text>
+</svg>

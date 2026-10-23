@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 330">
+  <rect x="70" y="20" width="700" height="210" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)"/>
+  <g stroke="rgba(255,255,255,0.09)">
+    <line x1="245" y1="20" x2="245" y2="230"/>
+    <line x1="420" y1="20" x2="420" y2="230"/>
+    <line x1="595" y1="20" x2="595" y2="230"/>
+  </g>
+  <path d="M70,60 L120,60 L128,195 L148,195 L156,60 L295,60 L303,195 L323,195 L331,60 L470,60 L478,195 L498,195 L506,60 L645,60 L653,195 L673,195 L681,60 L770,60"
+        fill="none" stroke="#6FD3E8" stroke-width="3"/>
+  <line x1="70" y1="230" x2="770" y2="230" stroke="#A9B3D2" stroke-width="2"/>
+  <line x1="70" y1="20"  x2="70"  y2="230" stroke="#A9B3D2" stroke-width="2"/>
+  <g fill="#A9B3D2" font-size="14" font-family="Inter,sans-serif" text-anchor="middle">
+    <text x="70" y="252">0</text><text x="245" y="252">3.5</text>
+    <text x="420" y="252">7.0</text><text x="595" y="252">10.5</text><text x="762" y="252">14</text>
+  </g>
+  <text x="22" y="125" fill="#E9ECF7" font-size="16" text-anchor="middle" font-family="Inter,sans-serif" transform="rotate(-90 22 125)">brightness</text>
+  <line x1="138" y1="284" x2="313" y2="284" stroke="#FF9245" stroke-width="2.5"/>
+  <line x1="138" y1="276" x2="138" y2="292" stroke="#FF9245" stroke-width="2.5"/>
+  <line x1="313" y1="276" x2="313" y2="292" stroke="#FF9245" stroke-width="2.5"/>
+  <text x="225" y="272" fill="#FF9245" font-size="15" text-anchor="middle" font-family="Inter,sans-serif">3.5 days = one orbit</text>
+  <text x="560" y="290" fill="#E9ECF7" font-size="17" text-anchor="middle" font-family="Inter,sans-serif">time (days)</text>
+</svg>

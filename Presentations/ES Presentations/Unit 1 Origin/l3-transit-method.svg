@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+
+  <circle cx="130" cy="150" r="72" fill="#F5C542" opacity="0.95"/>
+  <circle cx="130" cy="150" r="92" fill="#F5C542" opacity="0.18"/>
+  <text x="130" y="262" fill="#A9B3D2" font-size="17" text-anchor="middle" font-family="Inter,sans-serif">star</text>
+  <ellipse cx="130" cy="150" rx="150" ry="40" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="130" cy="110" r="13" fill="#0E1326" stroke="#B794F6" stroke-width="2.5"/>
+  <text x="156" y="104" fill="#B794F6" font-size="15" font-family="Inter,sans-serif">planet</text>
+  <!-- light curve -->
+  <line x1="330" y1="80" x2="780" y2="80" stroke="#A9B3D2" stroke-width="1.5"/>
+  <line x1="330" y1="80" x2="330" y2="230" stroke="#A9B3D2" stroke-width="1.5"/>
+  <path d="M340,110 L400,110 L408,150 L432,150 L440,110 L540,110 L548,150 L572,150 L580,110 L680,110 L688,150 L712,150 L720,110 L775,110"
+        fill="none" stroke="#6FD3E8" stroke-width="3"/>
+  <text x="556" y="252" fill="#E9ECF7" font-size="16" text-anchor="middle" font-family="Inter,sans-serif">time →</text>
+  <text x="318" y="100" fill="#E9ECF7" font-size="15" text-anchor="end" font-family="Inter,sans-serif">bright</text>
+  <text x="318" y="155" fill="#E9ECF7" font-size="15" text-anchor="end" font-family="Inter,sans-serif">dimmer</text>
+  <line x1="424" y1="186" x2="564" y2="186" stroke="#FF9245" stroke-width="2"/>
+  <line x1="424" y1="178" x2="424" y2="194" stroke="#FF9245" stroke-width="2"/>
+  <line x1="564" y1="178" x2="564" y2="194" stroke="#FF9245" stroke-width="2"/>
+  <text x="494" y="208" fill="#FF9245" font-size="16" text-anchor="middle" font-family="Inter,sans-serif">one orbit</text>
+</svg>

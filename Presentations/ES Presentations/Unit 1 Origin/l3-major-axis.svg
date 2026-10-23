@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 290">
+
+  <ellipse cx="380" cy="145" rx="300" ry="118" fill="none" stroke="#E9ECF7" stroke-width="3"/>
+  <line x1="80" y1="145" x2="680" y2="145" stroke="#E9ECF7" stroke-width="3"/>
+  <line x1="80" y1="133" x2="80" y2="157" stroke="#E9ECF7" stroke-width="3"/>
+  <line x1="680" y1="133" x2="680" y2="157" stroke="#E9ECF7" stroke-width="3"/>
+  <text x="380" y="132" fill="#FFD971" font-size="19" text-anchor="middle" font-family="Inter,sans-serif">major axis, d</text>
+  <line x1="380" y1="190" x2="680" y2="190" stroke="#6FD3E8" stroke-width="2.5"/>
+  <line x1="380" y1="180" x2="380" y2="200" stroke="#6FD3E8" stroke-width="2.5"/>
+  <line x1="680" y1="180" x2="680" y2="200" stroke="#6FD3E8" stroke-width="2.5"/>
+  <text x="530" y="216" fill="#6FD3E8" font-size="18" text-anchor="middle" font-family="Inter,sans-serif">semi-major axis, a</text>
+  <circle cx="232" cy="145" r="13" fill="#F5C542"/>
+  <text x="232" y="112" fill="#F5C542" font-size="17" text-anchor="middle" font-family="Inter,sans-serif">star</text>
+  <circle cx="680" cy="145" r="8" fill="#B794F6"/>
+  <text x="690" y="120" fill="#B794F6" font-size="16" font-family="Inter,sans-serif">planet</text>
+</svg>
