@@ -29,7 +29,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Workbooks 1.J & 1.K (25 Minutes)
-2. Vector Slides (25 Minutes)
+2. [Vector Slides](/Presentations/Projectiles/talks/2dMotionAP2026.html) (25 Minutes)
 3. Vector Practice (30 Minutes)
 4. Any time left over Physics Classroom
 
