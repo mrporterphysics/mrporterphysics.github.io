@@ -26,7 +26,7 @@ math: mathjax
 
 1. Finish the Iron [26] game & discussion
 2. Nucleosynthesis — why each stage runs faster than the last
-3. Guided Notes on Stars — our written record for Friday
+3. [Guided Notes on Stars](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L2_Stars_Guided_Notes_Slides.html) — our written record for Friday
 
 </div>
 
