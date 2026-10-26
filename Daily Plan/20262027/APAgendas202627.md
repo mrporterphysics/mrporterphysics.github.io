@@ -18,6 +18,42 @@ math: mathjax
 <!--- class: halloween --->
 
 
+# 2026.10.27 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Vector Practice - Identifying and vector addition graphically (Parts A & B)
+2. Notes on Vector Components & Addition 
+3. Vector Practice (Parts C)
+4. Physics Classroom Vector Addition
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Add Vectors_
+
+### 📆 Upcoming
+
+- HW: _**PC Kinematics 6 (10/28)**_
+- HW: _**PC Kinematics 7 (10/30)**_
+  HW: **_PC Vectors 1 (& 2?) (10/30)_**
+- Quiz Friday: Free Fall & Vectors 
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.26 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?

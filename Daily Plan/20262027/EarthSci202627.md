@@ -14,6 +14,38 @@ math: mathjax
 
 ---
 
+# 2026.10.27 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
+
+<div class ='columns'>
+
+<div>
+
+#### 📋 Agenda
+
+1. PTO - Parts F & G
+	1. Stellar Lifecycle
+	2. Which Stars?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look for habitable stars_
+
+### 📆 Upcoming
+
+- Quiz Friday on Stars (we will practice Thursday)
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.26 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?
