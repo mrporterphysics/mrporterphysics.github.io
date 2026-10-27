@@ -20,6 +20,38 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.28 **AP Physics**
+
+##### **❓ of the 📅**: Is falling forever the same as floating?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Vector Notes
+2. Vector Practice - Graphical
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Represent and interpret vectors graphically_
+
+### 📆 Upcoming
+
+- Physics Classroom Kinematics 6 & 7
+- Quiz Friday
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.26 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather travel 100 years forward or back in time?

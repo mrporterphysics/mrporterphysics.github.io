@@ -14,6 +14,38 @@ math: mathjax
 
 ---
 
+# 2026.10.28 **Earth Science**
+
+##### **❓ of the 📅**: Is falling forever the same as floating?
+
+<div class ='columns'>
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Part G
+2. Guided Notes on Stellar Evolution
+3. Start Star Quiz Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _CER Habitable Stars_
+
+### 📆 Upcoming
+
+- Quiz Friday
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.27 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?

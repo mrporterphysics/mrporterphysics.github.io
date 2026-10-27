@@ -18,6 +18,40 @@ math: mathjax
 <!--- class: halloween --->
 
 
+# 2026.10.28 **AP Physics**
+
+##### **❓ of the 📅**: Is falling forever the same as floating?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Vector Components
+2. Adding Angled Vectors Analytically
+3. Intro to horizontal projectiles
+4. Start Horizontal Projectile Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Add angled vectors using component analysis_
+
+### 📆 Upcoming
+
+- PC Kinematics 7 Due Friday
+- Quiz Friday: Freefall and vectors
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.27 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather live in the ocean or on the moon?
