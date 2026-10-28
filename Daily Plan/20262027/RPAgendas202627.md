@@ -20,6 +20,38 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.29 **AP Physics**
+
+##### **❓ of the 📅**: Is it ever right to break a rule you think is wrong?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Vector Practice (Parts A & B)
+2. Vector Components Notes
+3. Vector Components Practice (Part C)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Find and use vector components for vector addition_
+
+### 📆 Upcoming
+
+- Quiz Tomorrow - Free fall & vectors 
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.28 **AP Physics**
 
 ##### **❓ of the 📅**: Is falling forever the same as floating?

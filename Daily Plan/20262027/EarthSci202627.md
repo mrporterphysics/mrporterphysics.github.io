@@ -14,6 +14,37 @@ math: mathjax
 
 ---
 
+# 2026.10.29 **Earth Science**
+
+##### **❓ of the 📅**: Is it ever right to break a rule you think is wrong?
+
+<div class ='columns'>
+
+<div>
+
+#### 📋 Agenda
+
+1. Finish Notes
+2. Star Quiz practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prepare for star quiz_
+
+### 📆 Upcoming
+
+- Star Quiz tomorrow
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.28 **Earth Science**
 
 ##### **❓ of the 📅**: Is falling forever the same as floating?
