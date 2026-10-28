@@ -25,7 +25,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Finish Part G
-2. Guided Notes on Stellar Evolution
+2. [Guided Notes on Stellar Evolution](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L2_Stars_Guided_Notes_Slides.html)
 3. Start Star Quiz Practice
 
 </div>
