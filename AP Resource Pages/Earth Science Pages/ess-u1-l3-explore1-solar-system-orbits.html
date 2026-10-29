@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Are Orbits Like in Our Solar System?</title>
+<style>
+:root{
+--fx-paper:#FFFCF0;--fx-base-50:#F2F0E5;--fx-base-100:#EFEBD4;--fx-base-150:#E6E2CC;
+--fx-base-200:#DAD4BA;--fx-base-300:#C8BFA1;--fx-base-400:#B5A988;--fx-base-500:#9C8F70;
+--fx-base-600:#847759;--fx-base-700:#6F6144;--fx-base-800:#575142;--fx-base-850:#403E39;
+--fx-base-900:#343331;--fx-base-950:#1C1B1A;--fx-black:#100F0F;
+--fx-red:#D14D41;--fx-orange:#DA702C;--fx-yellow:#D0A215;--fx-green:#879A39;
+--fx-cyan:#3AA99F;--fx-blue:#4385BE;--fx-purple:#8B7EC8;--fx-magenta:#CE5D97;
+}
+:root{
+--bg-primary:var(--fx-paper);--bg-secondary:var(--fx-base-50);--bg-tertiary:var(--fx-base-100);
+--text-primary:var(--fx-base-950);--text-secondary:var(--fx-base-700);--text-muted:var(--fx-base-600);
+--border-color:var(--fx-base-200);--border-hover:var(--fx-base-300);
+--accent-primary:var(--fx-blue);--accent-hover:#205EA6;--accent-secondary:var(--fx-purple);
+--success:var(--fx-green);--warning:var(--fx-orange);--error:var(--fx-red);
+--shadow:rgba(28,27,26,0.1);--shadow-hover:rgba(28,27,26,0.15);
+--grid:rgba(132,119,89,0.22);
+}
+[data-theme="dark"]{
+--bg-primary:var(--fx-black);--bg-secondary:var(--fx-base-950);--bg-tertiary:var(--fx-base-900);
+--text-primary:var(--fx-paper);--text-secondary:var(--fx-base-200);--text-muted:var(--fx-base-400);
+--border-color:var(--fx-base-850);--border-hover:var(--fx-base-700);
+--accent-primary:#205EA6;--accent-hover:var(--fx-blue);--accent-secondary:#5E409D;
+--success:#66800B;--warning:#BC5215;--error:#AF3029;
+--shadow:rgba(16,15,15,0.3);--shadow-hover:rgba(16,15,15,0.5);
+--grid:rgba(181,169,136,0.22);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:'Fira Code','SF Mono','Monaco','Inconsolata','Roboto Mono',monospace;
+background-color:var(--bg-primary);color:var(--text-primary);min-height:100vh;padding:20px;line-height:1.6;
+}
+.container{max-width:1200px;margin:0 auto;background-color:var(--bg-secondary);border-radius:8px;
+border:1px solid var(--border-color);box-shadow:0 2px 8px var(--shadow);overflow:hidden;}
+header{background-color:var(--bg-tertiary);border-bottom:1px solid var(--border-color);padding:30px;
+display:flex;justify-content:space-between;align-items:center;gap:15px;}
+.titleblock .eyebrow{font-size:.78em;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);}
+h1{font-family:'Inconsolata','SF Mono','Monaco','Fira Code',monospace;font-size:1.9em;font-weight:700;color:var(--text-primary);}
+.theme-toggle{background:var(--bg-secondary);border:1px solid var(--border-color);color:var(--text-primary);
+padding:8px 12px;border-radius:6px;cursor:pointer;font-size:.9rem;font-weight:500;font-family:inherit;white-space:nowrap;}
+.theme-toggle:hover{background-color:var(--accent-primary);color:var(--bg-primary);border-color:var(--accent-primary);}
+.theme-toggle::before{content:'Light';}
+[data-theme="dark"] .theme-toggle::before{content:'Dark';}
+.question{background-color:var(--bg-tertiary);padding:25px;border-left:4px solid var(--accent-primary);}
+.question h2{color:var(--accent-primary);margin-bottom:12px;font-size:1.3em;font-weight:600;}
+.question p{line-height:1.8;font-size:1.03em;color:var(--text-secondary);margin-bottom:10px;}
+.question p:last-child{margin-bottom:0;}
+.content{padding:30px;}
+h2.sec{font-family:'Inconsolata','SF Mono',monospace;font-size:1.4em;margin:40px 0 6px;padding-bottom:8px;
+border-bottom:2px solid var(--border-color);}
+h2.sec:first-of-type{margin-top:0;}
+.sec-sub{color:var(--text-muted);font-size:.92em;margin-bottom:18px;}
+.simulation-container{background-color:var(--bg-tertiary);border-radius:8px;padding:20px;margin:20px 0;
+border:1px solid var(--border-color);}
+canvas{display:block;margin:0 auto;max-width:100%;height:auto;background-color:var(--bg-primary);
+border-radius:6px;border:1px solid var(--border-color);box-shadow:0 2px 4px var(--shadow);}
+.controls{margin:18px 0;padding:18px;background-color:var(--bg-secondary);border-radius:8px;border:1px solid var(--border-color);}
+.control-group{margin:12px 0;display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+label{display:inline-block;min-width:150px;font-weight:600;color:var(--text-primary);}
+select,input[type="number"]{padding:8px;background-color:var(--bg-tertiary);border:1px solid var(--border-color);
+border-radius:4px;font-size:.95em;color:var(--text-primary);font-family:inherit;}
+input[type="range"]{flex:1 1 220px;min-width:160px;accent-color:var(--accent-primary);}
+button{background-color:var(--accent-primary);color:var(--bg-primary);border:1px solid var(--accent-primary);
+padding:10px 20px;border-radius:6px;font-size:.95em;font-weight:600;cursor:pointer;font-family:inherit;
+box-shadow:0 2px 4px var(--shadow);}
+button:hover{background-color:var(--accent-hover);border-color:var(--accent-hover);box-shadow:0 4px 8px var(--shadow-hover);}
+button.ghost{background:transparent;color:var(--text-primary);border-color:var(--border-hover);box-shadow:none;}
+button.ghost:hover{background:var(--bg-tertiary);color:var(--text-primary);border-color:var(--accent-primary);}
+.value-display{display:inline-block;min-width:70px;text-align:right;font-weight:600;color:var(--accent-primary);}
+.explanation{background-color:var(--bg-tertiary);padding:20px;border-radius:8px;margin:22px 0;
+border-left:4px solid var(--accent-secondary);}
+.explanation h3{color:var(--accent-secondary);margin-bottom:10px;font-weight:600;font-size:1.05em;}
+.explanation p,.explanation ul{line-height:1.8;color:var(--text-secondary);}
+.explanation ul{margin-left:24px;margin-top:8px;}
+.explanation li{margin:7px 0;}
+.info-box{background-color:var(--bg-tertiary);border:1px solid var(--warning);border-radius:6px;padding:14px;margin:15px 0;
+color:var(--text-secondary);font-size:.93em;}
+.info-box strong{color:var(--warning);}
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--border-color);border-radius:8px;}
+table{border-collapse:collapse;width:100%;font-size:.88em;background:var(--bg-primary);}
+th,td{padding:9px 11px;text-align:center;border-bottom:1px solid var(--border-color);white-space:nowrap;}
+th{background:var(--bg-tertiary);font-weight:700;cursor:pointer;user-select:none;position:relative;}
+th:hover{color:var(--accent-primary);}
+th .arrow{font-size:.8em;color:var(--accent-primary);}
+tbody tr:hover{background:var(--bg-tertiary);}
+td.obj{text-align:left;font-weight:600;white-space:normal;min-width:150px;}
+td.obj small{display:block;font-weight:400;color:var(--text-muted);font-size:.85em;}
+.chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.82em;font-weight:700;
+border:1px solid currentColor;}
+.chip.vapor{color:var(--fx-orange);}
+.chip.liquid{color:var(--fx-blue);}
+.chip.ice{color:var(--fx-cyan);}
+.chip.changes{color:var(--fx-magenta);}
+.legend{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:12px 0 0;font-size:.86em;color:var(--text-secondary);}
+.legend span{display:flex;align-items:center;gap:6px;}
+.swatch{width:13px;height:13px;border-radius:3px;display:inline-block;}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:16px 0 0;}
+.readout .cell{background:var(--bg-primary);border:1px solid var(--border-color);border-radius:6px;padding:11px;text-align:center;}
+.readout .k{font-size:.74em;letter-spacing:.05em;text-transform:uppercase;color:var(--text-muted);}
+.readout .v{font-size:1.25em;font-weight:700;color:var(--accent-primary);font-variant-numeric:tabular-nums;}
+.checkrow{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:6px;}
+.checkrow label{min-width:0;font-weight:400;font-size:.9em;display:flex;align-items:center;gap:6px;cursor:pointer;}
+.stw{overflow-x:auto;}
+.stw table{font-size:.9em;}
+.stw th{cursor:default;}
+.stw td{padding:0;white-space:normal;vertical-align:top;}
+.stw textarea{width:100%;min-width:190px;min-height:72px;border:none;background:transparent;padding:9px;
+font-family:inherit;font-size:.95em;color:var(--text-primary);resize:vertical;line-height:1.5;}
+.stw textarea:focus{outline:2px solid var(--accent-primary);outline-offset:-2px;background:var(--bg-tertiary);}
+.stw td.rowlab{font-weight:600;text-align:left;padding:9px 11px;background:var(--bg-tertiary);font-size:.86em;min-width:170px;}
+.savenote{font-size:.85em;color:var(--text-muted);margin-top:10px;}
+footer{background-color:var(--bg-tertiary);border-top:1px solid var(--border-color);padding:20px;text-align:center;
+color:var(--text-muted);font-size:.88em;}
+@media (max-width:768px){
+body{padding:12px;}
+header{flex-direction:column;text-align:center;}
+.content{padding:18px;}
+h1{font-size:1.5em;}
+label{min-width:120px;}
+}
+@media print{
+body{padding:0;background:#fff;}
+.container{border:none;box-shadow:none;}
+.theme-toggle,.controls,button{display:none !important;}
+.stw textarea{border:1px solid #999;}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="titleblock">
+    <div class="eyebrow">Earth &amp; Space Science &middot; Unit 1 &middot; Lesson 3 &middot; Explore 1</div>
+    <h1>What are orbits like in our solar system?</h1>
+  </div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light and dark theme"></button>
+</header>
+
+<div class="question">
+  <h2>The phenomenon</h2>
+  <p>Comet Borrelly has water that is frozen most of the time, but every several years it shoots out
+  a jet of vaporized water and dust.</p>
+  <p><strong>Your job:</strong> examine and graph the <em>Solar System Orbital Data</em> below,
+  <strong>looking for evidence of patterns</strong> that might help you form a claim about why water
+  exists in different phases on different objects in the solar system &mdash; and why the water on
+  Comet Borrelly keeps changing phase.</p>
+</div>
+
+<div class="content">
+
+<h2 class="sec">1 &middot; Solar System Orbital Data</h2>
+<p class="sec-sub">Click any column heading to sort. Sorting is itself a way to hunt for patterns.
+One AU is Earth's average distance from the Sun.</p>
+
+<div class="tablewrap">
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th data-key="name">Celestial Object <span class="arrow"></span></th>
+        <th data-key="avg">Average Distance<br>from Sun (AU) <span class="arrow"></span></th>
+        <th data-key="period">Period of Revolution<br>(Earth years) <span class="arrow"></span></th>
+        <th data-key="min">Minimum Distance<br>from Sun (AU) <span class="arrow"></span></th>
+        <th data-key="max">Maximum Distance<br>from Sun (AU) <span class="arrow"></span></th>
+        <th data-key="range">Max &minus; Min<br>(AU) <span class="arrow"></span></th>
+        <th data-key="phase">Phase of majority<br>of water <span class="arrow"></span></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+<div class="info-box">
+  <strong>Note on the table:</strong> the <em>Max &minus; Min</em> column is not on your paper handout.
+  It is included here because it is one of the things worth calculating when you go looking for patterns:
+  it tells you how much an object's distance from the Sun <em>changes</em> over one trip around.
+</div>
+
+<h2 class="sec">2 &middot; Build a graph</h2>
+<p class="sec-sub">Pick what goes on each axis, the same choice you would make in Sheets or Excel.
+Try several combinations. You are looking for relationships that hold for every object &mdash;
+and for objects that break the pattern.</p>
+
+<div class="simulation-container">
+  <div class="controls">
+    <div class="control-group">
+      <label for="xSel">Horizontal axis</label>
+      <select id="xSel"></select>
+    </div>
+    <div class="control-group">
+      <label for="ySel">Vertical axis</label>
+      <select id="ySel"></select>
+    </div>
+    <div class="control-group">
+      <label>Options</label>
+      <div class="checkrow">
+        <label><input type="checkbox" id="optLabels" checked> Name each point</label>
+        <label><input type="checkbox" id="optColor" checked> Color by phase of water</label>
+        <label><input type="checkbox" id="optLog"> Stretch both axes (log scale)</label>
+      </div>
+    </div>
+  </div>
+  <canvas id="scatter" width="860" height="560"></canvas>
+  <div class="legend">
+    <span><i class="swatch" style="background:#DA702C"></i> vapor</span>
+    <span><i class="swatch" style="background:#4385BE"></i> liquid</span>
+    <span><i class="swatch" style="background:#3AA99F"></i> ice</span>
+    <span><i class="swatch" style="background:#CE5D97"></i> changes during the orbit</span>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>Why the log option is there:</strong> some of these numbers are tiny (Mercury, 0.39 AU) and some
+  are huge (Pluto, 39 AU), so the inner planets pile up in one corner. Stretching the axes spreads them out.
+  It does not change the data &mdash; only how much of the pattern you can see at once.
+</div>
+
+<h2 class="sec">3 &middot; How far does each object actually get?</h2>
+<p class="sec-sub">The average distance is only one number. Each bar below runs from an object's
+<em>minimum</em> distance to its <em>maximum</em> distance from the Sun, with a tick at the average.
+The shaded bands mark the only distances where this data set actually reports each phase of water.</p>
+
+<div class="simulation-container">
+  <canvas id="rangeChart" width="860" height="560"></canvas>
+  <div class="controls">
+    <div class="control-group">
+      <label for="rangeZoom">Show out to</label>
+      <input type="range" id="rangeZoom" min="2" max="50" step="0.5" value="50">
+      <span class="value-display" id="rangeZoomVal">50 AU</span>
+    </div>
+  </div>
+</div>
+
+<div class="explanation">
+  <h3>Read this chart carefully</h3>
+  <ul>
+    <li>For most planets the bar is so short it is almost a dot &mdash; their distance from the Sun barely changes.</li>
+    <li>Two bars are long. Find them, and check what the table says about the water on each one.</li>
+    <li>The bands come straight from your data, not from a textbook: vapor is only reported inward of
+    Venus's farthest point, liquid only at Earth's orbit, ice only from Mars's closest point outward.
+    The gaps between bands are distances where this data set simply does not tell you.</li>
+  </ul>
+</div>
+
+<h2 class="sec">4 &middot; Watch the orbits</h2>
+<p class="sec-sub">Press play. Every orbit is drawn to the same scale from the minimum and maximum
+distances in the table, and each object moves at its own real speed relative to the others.
+Keep your eye on Comet Borrelly.</p>
+
+<div class="simulation-container">
+  <canvas id="orbitCanvas" width="860" height="600"></canvas>
+  <div class="controls">
+    <div class="control-group">
+      <button id="playBtn">Play</button>
+      <button id="resetBtn" class="ghost">Reset</button>
+    </div>
+    <div class="control-group">
+      <label for="speed">Speed</label>
+      <input type="range" id="speed" min="0.1" max="6" step="0.1" value="1.2">
+      <span class="value-display" id="speedVal">1.2 yr/s</span>
+    </div>
+    <div class="control-group">
+      <label for="zoom">View width</label>
+      <input type="range" id="zoom" min="1.5" max="50" step="0.5" value="7">
+      <span class="value-display" id="zoomVal">7 AU</span>
+    </div>
+    <div class="control-group">
+      <label>Show</label>
+      <div class="checkrow" id="orbitChecks"></div>
+    </div>
+  </div>
+  <div class="readout">
+    <div class="cell"><div class="k">Elapsed</div><div class="v" id="roTime">0.00 yr</div></div>
+    <div class="cell"><div class="k">Borrelly distance</div><div class="v" id="roDist">&mdash;</div></div>
+    <div class="cell"><div class="k">Borrelly orbits done</div><div class="v" id="roOrbits">0</div></div>
+    <div class="cell"><div class="k">Earth distance</div><div class="v" id="roEarth">&mdash;</div></div>
+  </div>
+  <canvas id="distTrace" width="860" height="220" style="margin-top:18px"></canvas>
+</div>
+
+<div class="info-box">
+  <strong>One honesty note:</strong> the data table does not say which <em>direction</em> each orbit's
+  long axis points, so the orbits here are turned to arbitrary angles to keep them readable. The sizes,
+  shapes, and speeds are all from the data.
+</div>
+
+<h2 class="sec">5 &middot; See &mdash; Think &mdash; Wonder</h2>
+<p class="sec-sub">Fill this in on your own after you have graphed the data and talked with your group.
+What you type is saved in this browser, and the Print button gives you a clean copy to hand in.</p>
+
+<div class="simulation-container">
+  <div class="stw">
+    <table id="stwTable">
+      <thead><tr><th></th><th>See</th><th>Think</th><th>Wonder</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="controls">
+    <div class="control-group">
+      <button onclick="window.print()">Print / Save as PDF</button>
+      <button class="ghost" id="copyBtn">Copy my answers</button>
+      <button class="ghost" id="clearBtn">Clear</button>
+      <span class="savenote" id="saveNote"></span>
+    </div>
+  </div>
+</div>
+
+<div class="explanation">
+  <h3>Before you move on</h3>
+  <ul>
+    <li>What pattern do you see between an object's average distance from the Sun and the phase of its water?</li>
+    <li>What pattern do you see between average distance from the Sun and period of revolution?
+    Does <em>every</em> object fit it?</li>
+    <li>What is different about the minimum and maximum distances for Comet Borrelly and for Pluto?</li>
+    <li>Which of these patterns helps explain why Comet Borrelly's water vaporizes every several years?</li>
+  </ul>
+</div>
+
+</div><!-- /content -->
+
+<footer>
+  ESS Unit 1 &middot; Discovering New Worlds &middot; L3 Planets and Orbits 5E &middot; Explore 1<br>
+  Data from the <em>Solar System Orbital Data</em> table in the student handout.
+</footer>
+
+</div><!-- /container -->
+
+<script>
+function toggleTheme(){
+  const html=document.documentElement;
+  const next=html.getAttribute('data-theme')==='dark'?'light':'dark';
+  html.setAttribute('data-theme',next);
+  try{localStorage.setItem('theme',next);}catch(e){}
+  redrawAll();
+}
+(function(){
+  let saved='light';
+  try{saved=localStorage.getItem('theme')||'light';}catch(e){}
+  document.documentElement.setAttribute('data-theme',saved);
+})();
+</script>
+
+<script>
+/* ---------- Data: exactly the Solar System Orbital Data table ---------- */
+const OBJECTS=[
+ {name:'Mercury',avg:0.387,period:0.241,min:0.307,max:0.467,phase:'vapor',
+  phaseText:'vapor',note:'Very small traces of water vapor in a very thin atmosphere.'},
+ {name:'Venus',avg:0.723,period:0.615,min:0.718,max:0.728,phase:'vapor',
+  phaseText:'vapor',note:'Very small traces of water vapor in the atmosphere.'},
+ {name:'Earth',avg:1.00,period:1.00,min:0.983,max:1.017,phase:'liquid',
+  phaseText:'liquid',note:'71% of the surface is water; 96.5% of it salt water in the oceans.'},
+ {name:'Mars',avg:1.523,period:1.88,min:1.381,max:1.666,phase:'ice',
+  phaseText:'ice',note:'Almost exclusively ice, a little vapor, some transient liquid at the surface.'},
+ {name:'Comet Borrelly',avg:3.590,period:6.80,min:1.350,max:5.830,phase:'changes',
+  phaseText:'ice, but a great deal vaporizes every several years',
+  note:'Ice most of the time, but every several years it shoots out a jet of vaporized water and dust.'},
+ {name:'Europa',sub:"Jupiter's moon",avg:5.203,period:11.87,min:4.950,max:5.459,phase:'ice',
+  phaseText:'ice at the surface, with a liquid water ocean underneath',
+  note:'Water-ice crust at the surface; there might be a salty liquid ocean below.'},
+ {name:'Mimas',sub:"Saturn's moon",avg:9.539,period:29.46,min:9.041,max:10.124,phase:'ice',
+  phaseText:'ice',note:'A big ball of frozen water.'},
+ {name:'Uranus',avg:19.185,period:84.03,min:18.324,max:20.078,phase:'ice',
+  phaseText:'ice',note:'Possible water in the atmosphere and on the surface.'},
+ {name:'Neptune',avg:30.061,period:164.82,min:29.709,max:30.386,phase:'ice',
+  phaseText:'ice',note:'Large quantities of ice mixed in its atmosphere.'},
+ {name:'Pluto',avg:39.479,period:248.06,min:29.658,max:49.304,phase:'ice',
+  phaseText:'ice',note:'Several small regions of ice.'}
+];
+OBJECTS.forEach(o=>{
+  o.range=+(o.max-o.min).toFixed(3);
+  o.e=(o.max-o.min)/(o.max+o.min);     /* shape, used only for drawing the orbits */
+  o.a=o.avg;
+});
+
+const PHASE_COLOR={vapor:'#DA702C',liquid:'#4385BE',ice:'#3AA99F',changes:'#CE5D97'};
+
+const FIELDS=[
+ {key:'avg',    label:'Average distance from the Sun (AU)'},
+ {key:'period', label:'Period of revolution (Earth years)'},
+ {key:'min',    label:'Minimum distance from the Sun (AU)'},
+ {key:'max',    label:'Maximum distance from the Sun (AU)'},
+ {key:'range',  label:'Max − Min distance (AU)'}
+];
+
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+
+/* ---------- Section 1: sortable data table ---------- */
+let sortKey='avg',sortDir=1;
+function renderTable(){
+  const rows=[...OBJECTS].sort((p,q)=>{
+    if(sortKey==='name')return p.name.localeCompare(q.name)*sortDir;
+    if(sortKey==='phase')return p.phase.localeCompare(q.phase)*sortDir;
+    return (p[sortKey]-q[sortKey])*sortDir;
+  });
+  const tb=document.querySelector('#dataTable tbody');
+  tb.innerHTML=rows.map(o=>
+    '<td class="obj">'+o.name+(o.sub?'<small>'+o.sub+'</small>':'')+'</td>'+
+    '<td>'+o.avg.toFixed(3)+'</td>'+
+    '<td>'+o.period.toFixed(o.period<10?3:2)+'</td>'+
+    '<td>'+o.min.toFixed(3)+'</td>'+
+    '<td>'+o.max.toFixed(3)+'</td>'+
+    '<td>'+o.range.toFixed(3)+'</td>'+
+    '<td><span class="chip '+o.phase+'" title="'+o.note+'">'+o.phase+'</span></td>'
+  ).map(r=>'<tr>'+r+'</tr>').join('');
+  document.querySelectorAll('#dataTable th').forEach(th=>{
+    th.querySelector('.arrow').textContent = th.dataset.key===sortKey?(sortDir>0?'▲':'▼'):'';
+  });
+}
+document.querySelectorAll('#dataTable th').forEach(th=>{
+  th.addEventListener('click',()=>{
+    const k=th.dataset.key;
+    if(k===sortKey)sortDir*=-1; else {sortKey=k;sortDir=1;}
+    renderTable();
+  });
+});
+
+/* ---------- Section 2: scatter plot ---------- */
+const xSel=document.getElementById('xSel'),ySel=document.getElementById('ySel');
+FIELDS.forEach(f=>{
+  xSel.add(new Option(f.label,f.key));
+  ySel.add(new Option(f.label,f.key));
+});
+xSel.value='avg'; ySel.value='period';
+
+function niceTicks(lo,hi,n){
+  const span=hi-lo; if(span<=0)return [lo];
+  const raw=span/n, mag=Math.pow(10,Math.floor(Math.log10(raw))), norm=raw/mag;
+  const step=(norm<1.5?1:norm<3?2:norm<7?5:10)*mag;
+  const out=[]; for(let v=Math.ceil(lo/step)*step; v<=hi+step*1e-9; v+=step) out.push(+v.toFixed(10));
+  return out;
+}
+function logTicks(lo,hi){
+  const out=[];
+  for(let e=Math.floor(Math.log10(lo));e<=Math.ceil(Math.log10(hi));e++){
+    [1,2,5].forEach(m=>{const v=m*Math.pow(10,e); if(v>=lo*0.999&&v<=hi*1.001)out.push(v);});
+  }
+  return out;
+}
+function fmt(v){
+  if(v===0)return '0';
+  const a=Math.abs(v);
+  if(a>=100)return v.toFixed(0);
+  if(a>=10)return v.toFixed(a%1?1:0);
+  if(a>=1)return v.toFixed(a%1?2:0);
+  return v.toFixed(a<0.1?3:2);
+}
+function drawScatter(){
+  const c=document.getElementById('scatter'),g=c.getContext('2d');
+  const W=c.width,H=c.height,L=86,R=34,T=34,B=72;
+  const xk=xSel.value,yk=ySel.value;
+  const useLog=document.getElementById('optLog').checked;
+  const showLab=document.getElementById('optLabels').checked;
+  const useCol=document.getElementById('optColor').checked;
+  const txt=css('--text-primary'),mut=css('--text-muted'),gl=css('--grid'),bd=css('--border-color');
+
+  g.clearRect(0,0,W,H);
+
+  const xs=OBJECTS.map(o=>o[xk]),ys=OBJECTS.map(o=>o[yk]);
+  let x0,x1,y0,y1;
+  if(useLog){
+    x0=Math.min(...xs)/1.6; x1=Math.max(...xs)*1.6;
+    y0=Math.min(...ys)/1.6; y1=Math.max(...ys)*1.6;
+  }else{
+    const xp=(Math.max(...xs)-Math.min(...xs))*0.08||1;
+    const yp=(Math.max(...ys)-Math.min(...ys))*0.08||1;
+    x0=Math.max(0,Math.min(...xs)-xp); x1=Math.max(...xs)+xp;
+    y0=Math.max(0,Math.min(...ys)-yp); y1=Math.max(...ys)+yp;
+  }
+  const tx=v=>useLog
+    ? L+(Math.log10(v)-Math.log10(x0))/(Math.log10(x1)-Math.log10(x0))*(W-L-R)
+    : L+(v-x0)/(x1-x0)*(W-L-R);
+  const ty=v=>useLog
+    ? H-B-(Math.log10(v)-Math.log10(y0))/(Math.log10(y1)-Math.log10(y0))*(H-T-B)
+    : H-B-(v-y0)/(y1-y0)*(H-T-B);
+
+  /* grid + ticks */
+  g.font='12px "Fira Code",monospace';
+  const xt=useLog?logTicks(x0,x1):niceTicks(x0,x1,8);
+  const yt=useLog?logTicks(y0,y1):niceTicks(y0,y1,7);
+  g.strokeStyle=gl; g.lineWidth=1;
+  xt.forEach(v=>{const X=tx(v);g.beginPath();g.moveTo(X,T);g.lineTo(X,H-B);g.stroke();
+    g.fillStyle=mut;g.textAlign='center';g.textBaseline='top';g.fillText(fmt(v),X,H-B+9);});
+  yt.forEach(v=>{const Y=ty(v);g.beginPath();g.moveTo(L,Y);g.lineTo(W-R,Y);g.stroke();
+    g.fillStyle=mut;g.textAlign='right';g.textBaseline='middle';g.fillText(fmt(v),L-10,Y);});
+
+  /* axes */
+  g.strokeStyle=bd;g.lineWidth=1.5;
+  g.beginPath();g.moveTo(L,T);g.lineTo(L,H-B);g.lineTo(W-R,H-B);g.stroke();
+
+  /* axis titles */
+  g.fillStyle=txt;g.font='600 13px "Fira Code",monospace';
+  g.textAlign='center';g.textBaseline='bottom';
+  g.fillText(FIELDS.find(f=>f.key===xk).label+(useLog?'  (log)':''),L+(W-L-R)/2,H-18);
+  g.save();g.translate(22,T+(H-T-B)/2);g.rotate(-Math.PI/2);g.textBaseline='top';
+  g.fillText(FIELDS.find(f=>f.key===yk).label+(useLog?'  (log)':''),0,0);g.restore();
+
+  /* points */
+  OBJECTS.forEach(o=>{
+    const X=tx(o[xk]),Y=ty(o[yk]);
+    const col=useCol?PHASE_COLOR[o.phase]:css('--accent-primary');
+    g.beginPath();g.arc(X,Y,6.5,0,Math.PI*2);
+    g.fillStyle=col;g.fill();
+    g.lineWidth=1.5;g.strokeStyle=css('--bg-primary');g.stroke();
+    if(showLab){
+      g.font='11px "Fira Code",monospace';g.fillStyle=txt;g.textBaseline='middle';
+      const right=X<W-R-130;
+      g.textAlign=right?'left':'right';
+      g.fillText(o.name,X+(right?11:-11),Y-(o.name==='Europa'?10:0));
+    }
+  });
+}
+
+/* ---------- Section 3: min/max range chart ---------- */
+/* Bands are the only distances this data set reports for each phase. */
+const BANDS=[
+  {label:'vapor reported',   from:0,     to:0.728,  color:'#DA702C'},
+  {label:'liquid reported',  from:0.983, to:1.017,  color:'#4385BE'},
+  {label:'ice reported',     from:1.381, to:60,     color:'#3AA99F'}
+];
+function drawRange(){
+  const c=document.getElementById('rangeChart'),g=c.getContext('2d');
+  const W=c.width,H=c.height,L=150,R=40,T=66,B=94;
+  const maxAU=+document.getElementById('rangeZoom').value;
+  const txt=css('--text-primary'),mut=css('--text-muted'),gl=css('--grid'),bd=css('--border-color');
+  g.clearRect(0,0,W,H);
+  const tx=v=>L+Math.min(v,maxAU)/maxAU*(W-L-R);
+  const n=OBJECTS.length, rowH=(H-T-B)/n;
+
+  /* band legend across the top, so narrow bands are still named */
+  g.font='11px "Fira Code",monospace';g.textBaseline='middle';g.textAlign='left';
+  let lx=L;
+  BANDS.forEach(b=>{
+    g.fillStyle=b.color+'55';g.fillRect(lx,20,12,12);
+    g.strokeStyle=b.color;g.lineWidth=1;g.strokeRect(lx+0.5,20.5,11,11);
+    g.fillStyle=mut;g.fillText(b.label,lx+18,26);
+    lx+=g.measureText(b.label).width+44;
+  });
+  g.fillStyle=mut;g.textAlign='left';
+  g.fillText('bar = minimum to maximum distance',L,46);
+  g.fillText('white tick = average distance',L+300,46);
+
+  /* phase bands */
+  BANDS.forEach(b=>{
+    const X0=tx(b.from);
+    let X1=tx(Math.min(b.to,maxAU));
+    if(X1-X0<3)X1=X0+3;                /* keep Earth's narrow liquid band visible */
+    if(b.from>maxAU)return;
+    g.fillStyle=b.color+'22';
+    g.fillRect(X0,T,X1-X0,H-T-B);
+    g.strokeStyle=b.color+'66';g.lineWidth=1;
+    g.beginPath();g.moveTo(X0+0.5,T);g.lineTo(X0+0.5,H-B);
+    g.moveTo(X1-0.5,T);g.lineTo(X1-0.5,H-B);g.stroke();
+  });
+
+  /* vertical AU gridlines */
+  const xt=niceTicks(0,maxAU,9);
+  g.strokeStyle=gl;g.lineWidth=1;g.font='12px "Fira Code",monospace';
+  xt.forEach(v=>{const X=tx(v);g.beginPath();g.moveTo(X,T);g.lineTo(X,H-B);g.stroke();
+    g.fillStyle=mut;g.textAlign='center';g.textBaseline='top';g.fillText(fmt(v),X,H-B+10);});
+
+  /* bars */
+  OBJECTS.forEach((o,i)=>{
+    const Y=T+rowH*(i+0.5);
+    const col=PHASE_COLOR[o.phase];
+    const X0=tx(o.min),X1=tx(o.max),XA=tx(o.avg);
+    const clipped=o.min>maxAU;
+    g.strokeStyle=bd;g.lineWidth=1;
+    g.beginPath();g.moveTo(L,Y);g.lineTo(W-R,Y);g.stroke();
+    if(!clipped){
+      g.strokeStyle=col;g.lineWidth=Math.min(13,rowH*0.46);g.lineCap='round';
+      g.beginPath();g.moveTo(X0,Y);g.lineTo(Math.max(X1,X0+2.5),Y);g.stroke();
+      g.lineCap='butt';
+      g.strokeStyle=css('--bg-primary');g.lineWidth=2;
+      g.beginPath();g.moveTo(XA,Y-7);g.lineTo(XA,Y+7);g.stroke();
+      if(o.range>1){
+        g.fillStyle=col;g.font='600 11px "Fira Code",monospace';
+        g.textAlign='left';g.textBaseline='bottom';
+        g.fillText(o.min.toFixed(2)+' \u2192 '+o.max.toFixed(2)+' AU',X0+2,Y-9);
+      }
+    }else{
+      g.fillStyle=mut;g.font='italic 11px "Fira Code",monospace';
+      g.textAlign='right';g.textBaseline='middle';
+      g.fillText('beyond this view \u2192',W-R-4,Y);
+    }
+    g.fillStyle=txt;g.font='600 12px "Fira Code",monospace';
+    g.textAlign='right';g.textBaseline='middle';
+    g.fillText(o.name,L-12,Y);
+  });
+
+  g.fillStyle=txt;g.font='600 13px "Fira Code",monospace';
+  g.textAlign='center';g.textBaseline='bottom';
+  g.fillText('Distance from the Sun (AU)',L+(W-L-R)/2,H-16);
+}
+
+/* ---------- Section 4: orbit animation ---------- */
+const ORBIT_SET=['Mercury','Venus','Earth','Mars','Comet Borrelly','Europa','Mimas','Uranus','Neptune','Pluto'];
+const DEFAULT_ON=['Mercury','Venus','Earth','Mars','Comet Borrelly','Europa'];
+const shown=new Set(DEFAULT_ON);
+/* arbitrary orientation per orbit: the data table gives no direction for the long axis */
+const PERI_ANGLE={Mercury:0.4,Venus:2.1,Earth:3.5,Mars:5.0,'Comet Borrelly':Math.PI*0.86,
+                  Europa:1.2,Mimas:4.3,Uranus:0.9,Neptune:2.6,Pluto:3.9};
+
+const checks=document.getElementById('orbitChecks');
+ORBIT_SET.forEach(nm=>{
+  const id='chk_'+nm.replace(/\W/g,'');
+  const lab=document.createElement('label');
+  lab.innerHTML='<input type="checkbox" id="'+id+'"'+(shown.has(nm)?' checked':'')+'> '+nm;
+  checks.appendChild(lab);
+  lab.querySelector('input').addEventListener('change',e=>{
+    e.target.checked?shown.add(nm):shown.delete(nm);
+    drawOrbits();
+  });
+});
+
+const state={t:0,running:false,last:0};
+const trace=[];                 /* [{t, rB, rE}] for the distance strip */
+const bodies=OBJECTS.map(o=>({
+  ref:o,
+  theta:0,
+  h:2*Math.PI*Math.sqrt(o.a*(1-o.e*o.e))   /* AU^2 per year, with GM = 4pi^2 */
+}));
+function resetSim(){
+  state.t=0;trace.length=0;
+  bodies.forEach(b=>b.theta=0);
+  updateReadout();drawOrbits();drawTrace();
+}
+function radiusOf(b,theta){
+  const o=b.ref;
+  return o.a*(1-o.e*o.e)/(1+o.e*Math.cos(theta));
+}
+function stepSim(dtYears){
+  const sub=24;
+  const dt=dtYears/sub;
+  for(let k=0;k<sub;k++){
+    bodies.forEach(b=>{
+      const r=radiusOf(b,b.theta);
+      b.theta+=b.h/(r*r)*dt;               /* dtheta/dt = h / r^2 */
+    });
+    state.t+=dt;
+  }
+  const B=bodies.find(b=>b.ref.name==='Comet Borrelly');
+  const E=bodies.find(b=>b.ref.name==='Earth');
+  trace.push({t:state.t,rB:radiusOf(B,B.theta),rE:radiusOf(E,E.theta)});
+  if(trace.length>4000)trace.splice(0,trace.length-4000);
+}
+function posOf(b){
+  const r=radiusOf(b,b.theta);
+  const w=PERI_ANGLE[b.ref.name]||0;
+  return {r:r,x:r*Math.cos(b.theta+w),y:r*Math.sin(b.theta+w)};
+}
+function chipText(g,text,X,Y,color,font){
+  g.save();
+  g.font=font;g.textAlign='center';g.textBaseline='middle';
+  const w=g.measureText(text).width;
+  g.globalAlpha=0.72;
+  g.fillStyle=css('--bg-primary');
+  g.fillRect(X-w/2-3,Y-8,w+6,16);
+  g.globalAlpha=1;
+  g.fillStyle=color;
+  g.fillText(text,X,Y);
+  g.restore();
+}
+function drawOrbits(){
+  const c=document.getElementById('orbitCanvas'),g=c.getContext('2d');
+  const W=c.width,H=c.height;
+  const halfAU=+document.getElementById('zoom').value;
+  const txt=css('--text-primary'),mut=css('--text-muted'),bd=css('--border-color');
+  g.clearRect(0,0,W,H);
+  const cx=W/2,cy=H/2,s=Math.min(W,H)/2*0.88/halfAU;
+
+  /* phase bands as faint rings, straight from the data */
+  BANDS.forEach(b=>{
+    const r0=b.from*s,r1=Math.min(b.to,halfAU*1.5)*s;
+    g.beginPath();
+    g.arc(cx,cy,r1,0,Math.PI*2);
+    if(r0>0)g.arc(cx,cy,r0,0,Math.PI*2,true);
+    g.fillStyle=b.color+'1c';g.fill();
+  });
+
+  /* AU scale rings, labelled on the upper-left diagonal to stay clear of the planets */
+  g.strokeStyle=bd;g.setLineDash([3,5]);g.lineWidth=1;
+  const diag=-Math.SQRT1_2;
+  niceTicks(0,halfAU,4).forEach(v=>{
+    if(v<=0||v>halfAU)return;
+    g.beginPath();g.arc(cx,cy,v*s,0,Math.PI*2);g.stroke();
+    chipText(g,fmt(v)+' AU',cx+v*s*diag,cy+v*s*diag,mut,'10px "Fira Code",monospace');
+  });
+  g.setLineDash([]);
+
+  /* Sun */
+  const sunGlow=g.createRadialGradient(cx,cy,0,cx,cy,16);
+  sunGlow.addColorStop(0,'#D0A215');sunGlow.addColorStop(1,'rgba(208,162,21,0)');
+  g.fillStyle=sunGlow;g.beginPath();g.arc(cx,cy,16,0,Math.PI*2);g.fill();
+  g.fillStyle='#D0A215';g.beginPath();g.arc(cx,cy,5.5,0,Math.PI*2);g.fill();
+
+  bodies.forEach(b=>{
+    const o=b.ref;
+    if(!shown.has(o.name))return;
+    const col=PHASE_COLOR[o.phase];
+    const w=PERI_ANGLE[o.name]||0;
+    /* orbit path */
+    g.beginPath();
+    for(let i=0;i<=240;i++){
+      const th=i/240*Math.PI*2;
+      const r=o.a*(1-o.e*o.e)/(1+o.e*Math.cos(th));
+      const X=cx+r*Math.cos(th+w)*s, Y=cy+r*Math.sin(th+w)*s;
+      i?g.lineTo(X,Y):g.moveTo(X,Y);
+    }
+    g.closePath();
+    g.strokeStyle=col;g.lineWidth=o.phase==='changes'?2:1.2;
+    g.globalAlpha=o.phase==='changes'?0.95:0.6;g.stroke();g.globalAlpha=1;
+    /* body */
+    const p=posOf(b);
+    const X=cx+p.x*s,Y=cy+p.y*s;
+    g.beginPath();g.arc(X,Y,o.phase==='changes'?6:5,0,Math.PI*2);
+    g.fillStyle=col;g.fill();
+    g.lineWidth=1.4;g.strokeStyle=css('--bg-primary');g.stroke();
+    chipText(g,o.name,X+9+g.measureText(o.name).width/2,Y-9,txt,'11px "Fira Code",monospace');
+  });
+
+  g.fillStyle=mut;g.font='11px "Fira Code",monospace';
+  g.textAlign='left';g.textBaseline='top';
+  g.fillText('Shaded rings: distances where this data set reports vapor / liquid / ice.',12,12);
+}
+function drawTrace(){
+  const c=document.getElementById('distTrace'),g=c.getContext('2d');
+  const W=c.width,H=c.height,L=86,R=34,T=26,B=46;
+  const txt=css('--text-primary'),mut=css('--text-muted'),gl=css('--grid'),bd=css('--border-color');
+  g.clearRect(0,0,W,H);
+  const span=Math.max(14,state.t);
+  const yMax=6.2;
+  const tx=t=>L+t/span*(W-L-R);
+  const ty=r=>H-B-Math.min(r,yMax)/yMax*(H-T-B);
+
+  BANDS.forEach(b=>{
+    const Y1=ty(Math.min(b.to,yMax)),Y0=ty(b.from);
+    g.fillStyle=b.color+'22';g.fillRect(L,Y1,W-L-R,Y0-Y1);
+  });
+  g.strokeStyle=gl;g.lineWidth=1;g.font='11px "Fira Code",monospace';
+  niceTicks(0,yMax,5).forEach(v=>{const Y=ty(v);g.beginPath();g.moveTo(L,Y);g.lineTo(W-R,Y);g.stroke();
+    g.fillStyle=mut;g.textAlign='right';g.textBaseline='middle';g.fillText(fmt(v),L-9,Y);});
+  niceTicks(0,span,8).forEach(v=>{const X=tx(v);
+    g.fillStyle=mut;g.textAlign='center';g.textBaseline='top';g.fillText(fmt(v),X,H-B+8);});
+  g.strokeStyle=bd;g.lineWidth=1.5;
+  g.beginPath();g.moveTo(L,T);g.lineTo(L,H-B);g.lineTo(W-R,H-B);g.stroke();
+
+  [['rE','#4385BE',1.4],['rB','#CE5D97',2.2]].forEach(([k,col,lw])=>{
+    g.beginPath();let started=false;
+    trace.forEach(p=>{
+      const X=tx(p.t),Y=ty(p[k]);
+      started?g.lineTo(X,Y):(g.moveTo(X,Y),started=true);
+    });
+    g.strokeStyle=col;g.lineWidth=lw;g.stroke();
+  });
+
+  g.fillStyle=txt;g.font='600 12px "Fira Code",monospace';
+  g.textAlign='center';g.textBaseline='bottom';
+  g.fillText('Time (Earth years)',L+(W-L-R)/2,H-10);
+  g.save();g.translate(20,T+(H-T-B)/2);g.rotate(-Math.PI/2);g.textBaseline='top';
+  g.fillText('Distance (AU)',0,0);g.restore();
+  g.font='11px "Fira Code",monospace';g.textAlign='left';g.textBaseline='top';
+  g.fillStyle='#CE5D97';g.fillText('▬ Comet Borrelly',L+8,T+2);
+  g.fillStyle='#4385BE';g.fillText('▬ Earth',L+150,T+2);
+}
+function updateReadout(){
+  const B=bodies.find(b=>b.ref.name==='Comet Borrelly');
+  const E=bodies.find(b=>b.ref.name==='Earth');
+  document.getElementById('roTime').textContent=state.t.toFixed(2)+' yr';
+  document.getElementById('roDist').textContent=radiusOf(B,B.theta).toFixed(2)+' AU';
+  document.getElementById('roEarth').textContent=radiusOf(E,E.theta).toFixed(3)+' AU';
+  document.getElementById('roOrbits').textContent=Math.floor(B.theta/(2*Math.PI));
+}
+function frame(ts){
+  if(state.running){
+    if(!state.last)state.last=ts;
+    const wall=Math.min((ts-state.last)/1000,0.05);
+    state.last=ts;
+    stepSim(wall*(+document.getElementById('speed').value));
+    updateReadout();drawOrbits();drawTrace();
+  }
+  requestAnimationFrame(frame);
+}
+document.getElementById('playBtn').addEventListener('click',e=>{
+  state.running=!state.running;state.last=0;
+  e.target.textContent=state.running?'Pause':'Play';
+});
+document.getElementById('resetBtn').addEventListener('click',()=>{
+  state.running=false;state.last=0;
+  document.getElementById('playBtn').textContent='Play';
+  resetSim();
+});
+
+/* ---------- Section 5: See-Think-Wonder ---------- */
+const STW_ROWS=[
+ 'A pattern I noticed:','A pattern I noticed:','A pattern I noticed:',
+ 'A pattern someone in my group noticed:','A pattern someone in another group noticed:'
+];
+const STW_KEY='ess-u1-l3-explore1-stw';
+function buildSTW(){
+  const tb=document.querySelector('#stwTable tbody');
+  tb.innerHTML=STW_ROWS.map((lab,i)=>
+    '<tr><td class="rowlab">'+lab+'</td>'+
+    ['see','think','wonder'].map(c=>
+      '<td><textarea id="stw_'+c+'_'+i+'" aria-label="'+lab+' '+c+'"></textarea></td>').join('')+
+    '</tr>').join('');
+  let saved={};
+  try{saved=JSON.parse(localStorage.getItem(STW_KEY)||'{}');}catch(e){}
+  document.querySelectorAll('.stw textarea').forEach(t=>{
+    if(saved[t.id])t.value=saved[t.id];
+    t.addEventListener('input',saveSTW);
+  });
+}
+let saveTimer=null;
+function saveSTW(){
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(()=>{
+    const out={};
+    document.querySelectorAll('.stw textarea').forEach(t=>{if(t.value.trim())out[t.id]=t.value;});
+    try{
+      localStorage.setItem(STW_KEY,JSON.stringify(out));
+      const n=document.getElementById('saveNote');
+      n.textContent='Saved in this browser at '+new Date().toLocaleTimeString();
+    }catch(e){
+      document.getElementById('saveNote').textContent='Could not save in this browser — print or copy your answers.';
+    }
+  },400);
+}
+document.getElementById('copyBtn').addEventListener('click',()=>{
+  let out='See-Think-Wonder — What are orbits like in our solar system?\n\n';
+  STW_ROWS.forEach((lab,i)=>{
+    out+=lab+'\n';
+    ['see','think','wonder'].forEach(c=>{
+      const v=(document.getElementById('stw_'+c+'_'+i).value||'').trim();
+      out+='  '+c.toUpperCase()+': '+(v||'—')+'\n';
+    });
+    out+='\n';
+  });
+  navigator.clipboard?.writeText(out).then(
+    ()=>document.getElementById('saveNote').textContent='Copied to the clipboard.',
+    ()=>document.getElementById('saveNote').textContent='Copy failed — select the text by hand.'
+  );
+});
+document.getElementById('clearBtn').addEventListener('click',()=>{
+  if(!confirm('Clear everything you have typed in the See-Think-Wonder table?'))return;
+  document.querySelectorAll('.stw textarea').forEach(t=>t.value='');
+  try{localStorage.removeItem(STW_KEY);}catch(e){}
+  document.getElementById('saveNote').textContent='Cleared.';
+});
+
+/* ---------- wiring ---------- */
+function redrawAll(){drawScatter();drawRange();drawOrbits();drawTrace();}
+['xSel','ySel','optLabels','optColor','optLog'].forEach(id=>
+  document.getElementById(id).addEventListener('change',drawScatter));
+document.getElementById('rangeZoom').addEventListener('input',e=>{
+  document.getElementById('rangeZoomVal').textContent=(+e.target.value)+' AU';
+  drawRange();
+});
+document.getElementById('zoom').addEventListener('input',e=>{
+  document.getElementById('zoomVal').textContent=(+e.target.value)+' AU';
+  drawOrbits();
+});
+document.getElementById('speed').addEventListener('input',e=>{
+  document.getElementById('speedVal').textContent=(+e.target.value).toFixed(1)+' yr/s';
+});
+
+renderTable();
+buildSTW();
+resetSim();
+redrawAll();
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>
