@@ -18,6 +18,35 @@ math: mathjax
 <!--- class: halloween --->
 
 
+# 2026.10.30 **AP Physics**
+
+##### **❓ of the 📅**: Is space exploration worth the environmental cost of rocket launches?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Notes on Horizontal Projectiles
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Take Quiz & start solving horizontal projectile motion problems_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.28 **AP Physics**
 
 ##### **❓ of the 📅**: Is falling forever the same as floating?

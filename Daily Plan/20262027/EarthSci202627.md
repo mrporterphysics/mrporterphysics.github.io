@@ -14,6 +14,35 @@ math: mathjax
 
 ---
 
+# 2026.10.30 **Earth Science**
+
+##### **❓ of the 📅**: Is space exploration worth the environmental cost of rocket launches?
+
+<div class ='columns'>
+
+<div>
+
+#### 📋 Agenda
+
+1. Quiz - Stars
+2. Introduction to Orbits and finding the habitable zone
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Show what you know about the stars_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.29 **Earth Science**
 
 ##### **❓ of the 📅**: Is it ever right to break a rule you think is wrong?

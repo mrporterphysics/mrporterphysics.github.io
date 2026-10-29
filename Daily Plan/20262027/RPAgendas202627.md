@@ -20,6 +20,36 @@ math: mathjax
 
 <!--- class: halloween --->
 
+# 2026.10.30 **AP Physics**
+
+##### **❓ of the 📅**: Is space exploration worth the environmental cost of rocket launches?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Horizontal Projectiles Interactive Demo
+3. Notes on Horizontal Projectiles
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Take Quiz & Observe horizontal projectile motion_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+
+---
+
 # 2026.10.29 **AP Physics**
 
 ##### **❓ of the 📅**: Is it ever right to break a rule you think is wrong?
