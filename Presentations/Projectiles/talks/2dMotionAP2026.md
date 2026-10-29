@@ -318,12 +318,15 @@ After Sinkovits, *Phys. Teach.* **60**, 744 (2022)
 
 # Problem-Solving Process
 
-1) Draw a diagram/picture of physical situation
-2) Sketch Physics motion graphs (XT & VT)
-3) Fill out cross diagram with givens and unknowns 
-    - (choose a positive direction, then set $a = \pm 10 \text{ m/s/s}$ to match)
-4) Identify equation with cross diagram
-5) Substitute and solve
+**MOVE 1 — Picture & Direction.** Sketch it. Choose which way is positive and write it down — then set $a = \pm 10 \text{ m/s/s}$ to match.
+
+**MOVE 2 — Graphs.** Sketch the shape of the $y$–$t$ and $v$–$t$ graphs.
+
+**MOVE 3 — Organize.** Fill in the cross. Underline every known — *with its sign*. Star the one you are solving for.
+
+**MOVE 4 — Plan & Solve.** Draw the box that holds all your knowns plus *exactly one* unknown. That box is your equation. Substitute, then solve.
+
+**MOVE 5 — Check.** Sign, size, units.
 
 ---
 
@@ -332,7 +335,7 @@ After Sinkovits, *Phys. Teach.* **60**, 744 (2022)
 
 <div class="steps">
 
-**Our toolkit:**  $\ \Delta y = v_0 t + \tfrac12 a t^2 \qquad v = v_0 + a t \qquad v^2 = v_0^2 + 2 a \Delta y$
+**Our toolkit:**  $\ \Delta y = v_0 \Delta t + \tfrac12 a \Delta t^2 \qquad v = v_0 + a \Delta t \qquad v^2 = v_0^2 + 2 a \Delta y$
 
 </div>
 
@@ -1833,6 +1836,1115 @@ _A graphical representation of the given problem will help visualize what is hap
 </div>
 
 ---
+<!--- _class: phase-title --->
+
+# Horizontal Projectiles
+
+---
+
+Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
+
+![center](../figures/horzprojec1.png)
+
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
+
+Explain your reasoning.
+
+
+---
+
+
+Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
+
+![center w:500](../figures/horizprojec2.png)
+
+**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
+
+Explain your reasoning.
+
+---
+
+
+# **Launcher** Demo <!--fit--->
+
+---
+
+# What are the three possible outcomes?
+
+1) Right ball ($v_x > 0$) hits first 
+2) Left ball ($v_x =0$) hits first 
+3) Balls hit at the same time 
+
+---
+
+# What does each result imply about the **horizontal velocity's** effect on **flight time**?
+
+
+1. Right ball ($v_x > 0$) hits first 
+2. Left ball ($v_x =0$) hits first 
+3. Balls hit at the same time 
+
+
+---
+
+<!--- _class: compact --->
+
+# What the Demo Showed
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+## The two motions are independent
+
+Both balls are released at the same instant. Every dashed line joins them at the **same moment in time**.
+
+They are always at the **same height** — the horizontal velocity does nothing to the fall.
+
+<div class="small">
+
+Positions drawn at equal time steps
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 640 400" width="100%" style="max-height:415px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <line x1="40" y1="368" x2="615" y2="368" stroke="var(--muted, #6F6E69)" stroke-width="2.5"/>
+  <line x1="95" y1="50" x2="95" y2="368" stroke="var(--coral, #AF3029)" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.55"/>
+  <path d="M 95 50 Q 335 50 575 368" fill="none" stroke="var(--star, #205EA6)" stroke-width="2.5" stroke-dasharray="5 5" opacity="0.6"/>
+  <line x1="95" y1="70"  x2="215" y2="70"  stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="95" y1="130" x2="335" y2="130" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="95" y1="229" x2="455" y2="229" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="95" y1="368" x2="575" y2="368" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="95" cy="70"  r="9" fill="var(--coral, #AF3029)"/>
+  <circle cx="95" cy="130" r="9" fill="var(--coral, #AF3029)"/>
+  <circle cx="95" cy="229" r="9" fill="var(--coral, #AF3029)"/>
+  <circle cx="95" cy="368" r="9" fill="var(--coral, #AF3029)"/>
+  <circle cx="215" cy="70"  r="9" fill="var(--star, #205EA6)"/>
+  <circle cx="335" cy="130" r="9" fill="var(--star, #205EA6)"/>
+  <circle cx="455" cy="229" r="9" fill="var(--star, #205EA6)"/>
+  <circle cx="575" cy="368" r="9" fill="var(--star, #205EA6)"/>
+  <circle cx="95" cy="50" r="10" fill="var(--solar, #AD8301)"/>
+  <text x="112" y="44" fill="var(--solar, #AD8301)" font-size="17" font-weight="600">released together</text>
+  <text x="80" y="392" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="17" font-weight="600">dropped</text>
+  <text x="520" y="392" text-anchor="middle" fill="var(--star, #205EA6)" font-size="17" font-weight="600">launched</text>
+</svg>
+
+</div>
+</div>
+
+---
+
+# Horizontal Projectiles 
+
+* A ***projectile*** is an object that *only* experiences a gravitational force
+* For _**horizontal projectiles**_ the $v_{0y} = 0$
+* We can separate motion in the $x$ and $y$ planes and solve separately
+
+---
+
+# Path of a Projectile 
+
+<div class='columns'>
+<div class='col'>
+
+![center w:650](image-17.png)
+
+</div>
+ 
+<div class='col'>
+
+![center w:650](image-18.png)
+
+</div>
+</div>
+
+---
+
+# Path of a Projectile
+
+<div class='columns'>
+<div class='col'>
+
+<br>
+
+![center w:650](image-19.png)
+
+</div>
+ 
+<div class='col'>
+
+![center w:550](image-20.png)
+
+</div>
+</div>
+
+---
+
+
+|                                                                                 | Horizontal Motion | Vertical Motion     |
+| ------------------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------- |
+| **Forces**<br>(Present? - Yes or No)<br>(If present, what dir'n?)       | No                                     | Yes<br>The force of gravity acts downward |
+| **Acceleration**<br>(Present? - Yes or No)<br>(If present, what dir'n?) | No                                     | Yes<br>$g$ is downward at 10 m/s/s       |
+| **Velocity**<br>(Constant or Changing?)                                     | Constant                               | Changing<br>(by 10 m/s each second)      |
+
+---
+
+## Horizontal and Vertical Velocity 
+
+![center w:750](image-21.png)
+
+
+---
+
+
+## Horizontal and Vertical Displacement 
+
+![center w:740](image-22.png)
+
+---
+
+<!--- _class: compact --->
+
+# The Two Graphs That Matter
+
+<div class='columns'>
+<div class='col'>
+
+<svg viewBox="0 0 420 330" width="100%" style="max-height:300px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <polygon points="60,100 340,100 340,250 60,250" fill="var(--star, #205EA6)" opacity="0.13"/>
+  <line x1="60" y1="100" x2="380" y2="100" stroke="var(--ink-3, #B7B5AC)" stroke-width="1" stroke-opacity="0.7"/>
+  <line x1="60" y1="45" x2="60" y2="275" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="40" y1="250" x2="380" y2="250" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="60" y1="100" x2="340" y2="100" stroke="var(--star, #205EA6)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="60" cy="100" r="6" fill="var(--star, #205EA6)"/>
+  <circle cx="340" cy="100" r="6" fill="var(--star, #205EA6)"/>
+  <text x="50" y="106" text-anchor="end" fill="var(--star, #205EA6)" font-size="17" font-weight="600">20</text>
+  <text x="50" y="256" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">0</text>
+  <text x="200" y="180" text-anchor="middle" fill="var(--star, #205EA6)" font-size="15">area = &#916;x = 60 m</text>
+  <text x="22" y="150" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16" transform="rotate(-90 22 150)">v (m/s)</text>
+  <text x="210" y="276" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time (s)</text>
+  <text x="210" y="302" text-anchor="middle" fill="var(--star, #205EA6)" font-size="18" font-weight="600">horizontal</text>
+  <text x="210" y="322" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="15">slope = 0, so no acceleration</text>
+</svg>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 420 330" width="100%" style="max-height:300px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <polygon points="60,250 340,250 340,100" fill="var(--coral, #AF3029)" opacity="0.13"/>
+  <line x1="60" y1="100" x2="380" y2="100" stroke="var(--ink-3, #B7B5AC)" stroke-width="1" stroke-opacity="0.7"/>
+  <line x1="60" y1="45" x2="60" y2="275" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="40" y1="250" x2="380" y2="250" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <line x1="60" y1="250" x2="340" y2="100" stroke="var(--coral, #AF3029)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="60" cy="250" r="6" fill="var(--coral, #AF3029)"/>
+  <circle cx="340" cy="100" r="6" fill="var(--coral, #AF3029)"/>
+  <text x="50" y="106" text-anchor="end" fill="var(--coral, #AF3029)" font-size="17" font-weight="600">30</text>
+  <text x="50" y="256" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">0</text>
+  <text x="252" y="214" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="15">area = &#916;y = 45 m</text>
+  <text x="22" y="150" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16" transform="rotate(-90 22 150)">v (m/s)</text>
+  <text x="210" y="276" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time (s)</text>
+  <text x="210" y="302" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="18" font-weight="600">vertical</text>
+  <text x="210" y="322" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="15">slope = +10 m/s&#178;</text>
+</svg>
+
+</div>
+</div>
+
+<div class="key-idea">
+
+**Same clock, two independent stories.** The horizontal graph is flat because nothing pushes sideways. The vertical graph is identical to a dropped object's.
+
+**Down is $+y$ here**, so $v_y$ climbs from zero and every number stays positive. The area under each graph is the displacement in that direction.
+
+</div>
+
+---
+
+
+# Horizontally Launched Projectiles
+
+
+* Projectile launched with an initial horizontal velocity from an elevated position. 
+* Predictable unknowns include the initial speed of the projectile, the initial height of the projectile, the time of flight, and the horizontal distance of the projectile.
+
+![bg fit right:30%](image-23.png)
+
+---
+
+# Horizontal Projectiles 
+
+<div class='columns'>
+
+<div class='col'>
+
+## X-Plane Motion
+
+- $a_x = 0$, so $v_x$ is ***constant***
+
+$$\Delta x = v_x \Delta t$$
+
+</div>
+
+<div class='col'>
+
+## Y-Plane Motion 
+
+- constant acceleration $a_y = g = 10 \text{ m/s}^2$
+
+$$\Delta y = v_{0y}\Delta t + \tfrac{1}{2}a_y \Delta t^2$$
+
+$$v_y = v_{0y} + a_y \Delta t$$
+
+$$v_y^2 = v_{0y}^2 + 2a_y \Delta y$$
+
+</div></div>
+
+
+---
+
+<!--- _class: compact --->
+
+# The Double Cross Diagram
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+Two motions, **one clock**. Stack a horizontal cross on a vertical cross and let them share $\Delta t$.
+
+- The $x$ cross has $a_x = 0$, so it collapses to $\Delta x = v_x \Delta t$
+- The $y$ cross is ordinary free fall
+- $\Delta t$ is the **only** quantity they share
+
+<div class="warning">
+
+**That shared $\Delta t$ is the whole trick.** Find the time in one cross, then carry it into the other.
+
+</div>
+
+<div class="small">
+
+The launcher demo is *why* that row is shared — the clock belongs to the fall, not to the launch.
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 560 440" width="100%" style="max-height:400px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+  <rect x="24" y="20" width="512" height="180" rx="10" fill="var(--star, #205EA6)" opacity="0.07"/>
+  <rect x="24" y="238" width="512" height="180" rx="10" fill="var(--coral, #AF3029)" opacity="0.07"/>
+  <text x="280" y="62" fill="var(--nebula, #5E409D)" font-size="29" font-weight="600">&#916;x</text>
+  <text x="110" y="140" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">0x</tspan></text>
+  <text x="280" y="140" fill="var(--coral, #AF3029)" font-size="29" font-weight="600">a<tspan font-size="19" dy="6">x</tspan></text>
+  <text x="450" y="140" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">x</tspan></text>
+  <rect x="236" y="200" width="88" height="40" rx="9" fill="var(--plasma, #BC5215)" opacity="0.16"/>
+  <text x="280" y="228" fill="var(--plasma, #BC5215)" font-size="31" font-weight="700">&#916;t</text>
+  <text x="110" y="310" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">0y</tspan></text>
+  <text x="280" y="310" fill="var(--coral, #AF3029)" font-size="29" font-weight="600">a<tspan font-size="19" dy="6">y</tspan></text>
+  <text x="450" y="310" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">y</tspan></text>
+  <text x="280" y="398" fill="var(--nebula, #5E409D)" font-size="29" font-weight="600">&#916;y</text>
+  <text x="474" y="60" fill="var(--star, #205EA6)" font-size="16" text-anchor="end">horizontal</text>
+  <text x="474" y="396" fill="var(--coral, #AF3029)" font-size="16" text-anchor="end">vertical</text>
+  <text x="408" y="233" fill="var(--plasma, #BC5215)" font-size="16" text-anchor="start">shared by both</text>
+</svg>
+
+</div>
+</div>
+
+---
+
+<!--- _class: compact --->
+
+# Three Boxes, Three Equations
+
+Same rule as free fall: **find the box that holds all your knowns plus exactly one unknown.** With $a_x = 0$ the horizontal cross collapses to a single box, so there are only three left.
+
+<svg viewBox="0 0 1200 430" width="100%" style="max-height:390px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+  <g font-size="26" font-weight="600">
+  <!-- cross 1: horizontal box -->
+  <rect x="32" y="30" width="212" height="180" rx="8" fill="none" stroke="var(--ink, #100F0F)" stroke-width="3"/>
+  <rect x="164" y="167" width="72" height="34" rx="8" fill="var(--plasma, #BC5215)" opacity="0.16"/>
+  <text x="200" y="56"  fill="var(--nebula, #5E409D)">&#916;x</text>
+  <text x="80"  y="126" fill="var(--star, #205EA6)">v<tspan font-size="17" dy="6">0x</tspan></text>
+  <text x="200" y="126" fill="var(--coral, #AF3029)">a<tspan font-size="17" dy="6">x</tspan></text>
+  <text x="320" y="126" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="17" dy="6">x</tspan></text>
+  <text x="200" y="192" fill="var(--plasma, #BC5215)" font-weight="700">&#916;t</text>
+  <text x="80"  y="258" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="17" dy="6">0y</tspan></text>
+  <text x="200" y="258" fill="var(--ink-3, #B7B5AC)">a<tspan font-size="17" dy="6">y</tspan></text>
+  <text x="320" y="258" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="17" dy="6">y</tspan></text>
+  <text x="200" y="324" fill="var(--ink-3, #B7B5AC)">&#916;y</text>
+  <text x="200" y="378" font-size="18" font-weight="400" fill="var(--muted, #6F6E69)">horizontal box</text>
+  <text x="200" y="408" font-size="21" fill="var(--star, #205EA6)">&#916;x = v<tspan font-size="14" dy="4">x</tspan><tspan dy="-4">&#916;t</tspan></text>
+  <!-- cross 2: vertical left box -->
+  <rect x="432" y="158" width="212" height="194" rx="8" fill="none" stroke="var(--ink, #100F0F)" stroke-width="3"/>
+  <rect x="564" y="167" width="72" height="34" rx="8" fill="var(--plasma, #BC5215)" opacity="0.16"/>
+  <text x="600" y="56"  fill="var(--ink-3, #B7B5AC)">&#916;x</text>
+  <text x="480" y="126" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="17" dy="6">0x</tspan></text>
+  <text x="600" y="126" fill="var(--ink-3, #B7B5AC)">a<tspan font-size="17" dy="6">x</tspan></text>
+  <text x="720" y="126" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="17" dy="6">x</tspan></text>
+  <text x="600" y="192" fill="var(--plasma, #BC5215)" font-weight="700">&#916;t</text>
+  <text x="480" y="258" fill="var(--star, #205EA6)">v<tspan font-size="17" dy="6">0y</tspan></text>
+  <text x="600" y="258" fill="var(--coral, #AF3029)">a<tspan font-size="17" dy="6">y</tspan></text>
+  <text x="720" y="258" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="17" dy="6">y</tspan></text>
+  <text x="600" y="324" fill="var(--nebula, #5E409D)">&#916;y</text>
+  <text x="600" y="378" font-size="18" font-weight="400" fill="var(--muted, #6F6E69)">vertical box</text>
+  <text x="600" y="408" font-size="21" fill="var(--coral, #AF3029)">&#916;y = v<tspan font-size="14" dy="4">0y</tspan><tspan dy="-4">&#916;t + &#189;a</tspan><tspan font-size="14" dy="4">y</tspan><tspan dy="-4">&#916;t&#178;</tspan></text>
+  <!-- cross 3: vertical, no Delta y -->
+  <rect x="832" y="158" width="336" height="126" rx="8" fill="none" stroke="var(--ink, #100F0F)" stroke-width="3"/>
+  <rect x="964" y="167" width="72" height="34" rx="8" fill="var(--plasma, #BC5215)" opacity="0.16"/>
+  <text x="1000" y="56"  fill="var(--ink-3, #B7B5AC)">&#916;x</text>
+  <text x="880"  y="126" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="17" dy="6">0x</tspan></text>
+  <text x="1000" y="126" fill="var(--ink-3, #B7B5AC)">a<tspan font-size="17" dy="6">x</tspan></text>
+  <text x="1120" y="126" fill="var(--ink-3, #B7B5AC)">v<tspan font-size="17" dy="6">x</tspan></text>
+  <text x="1000" y="192" fill="var(--plasma, #BC5215)" font-weight="700">&#916;t</text>
+  <text x="880"  y="258" fill="var(--star, #205EA6)">v<tspan font-size="17" dy="6">0y</tspan></text>
+  <text x="1000" y="258" fill="var(--coral, #AF3029)">a<tspan font-size="17" dy="6">y</tspan></text>
+  <text x="1120" y="258" fill="var(--star, #205EA6)">v<tspan font-size="17" dy="6">y</tspan></text>
+  <text x="1000" y="324" fill="var(--ink-3, #B7B5AC)">&#916;y</text>
+  <text x="1000" y="378" font-size="18" font-weight="400" fill="var(--muted, #6F6E69)">vertical, without &#916;y</text>
+  <text x="1000" y="408" font-size="21" fill="var(--coral, #AF3029)">v<tspan font-size="14" dy="4">y</tspan><tspan dy="-4"> = v</tspan><tspan font-size="14" dy="4">0y</tspan><tspan dy="-4"> + a</tspan><tspan font-size="14" dy="4">y</tspan><tspan dy="-4">&#916;t</tspan></text>
+  </g>
+</svg>
+
+---
+
+<!--- _class: compact --->
+
+# Problem-solving Process
+
+<div class='columns cols-2-1'>
+<div class='col'>
+
+**MOVE 1 — Picture & Direction.** Sketch it. Choose positive directions for $x$ and $y$ and write them down.
+
+**MOVE 2 — Graphs.** Sketch $v_x$–$t$ and $v_y$–$t$. One is flat; one is a slope.
+
+**MOVE 3 — Organize.** Fill in the double cross. Underline every known. Star what you want.
+
+**MOVE 4 — Plan & Solve.** Two beats: **find $\Delta t$** in whichever cross has enough knowns, then **cross over** and use it in the other.
+
+**MOVE 5 — Check.** Sign, size, units.
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 560 440" width="100%" style="max-height:380px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+  <rect x="24" y="20" width="512" height="180" rx="10" fill="var(--star, #205EA6)" opacity="0.07"/>
+  <rect x="24" y="238" width="512" height="180" rx="10" fill="var(--coral, #AF3029)" opacity="0.07"/>
+  <text x="280" y="62" fill="var(--nebula, #5E409D)" font-size="29" font-weight="600">&#916;x</text>
+  <text x="110" y="140" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">0x</tspan></text>
+  <text x="280" y="140" fill="var(--coral, #AF3029)" font-size="29" font-weight="600">a<tspan font-size="19" dy="6">x</tspan></text>
+  <text x="450" y="140" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">x</tspan></text>
+  <rect x="236" y="200" width="88" height="40" rx="9" fill="var(--plasma, #BC5215)" opacity="0.16"/>
+  <text x="280" y="228" fill="var(--plasma, #BC5215)" font-size="31" font-weight="700">&#916;t</text>
+  <text x="110" y="310" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">0y</tspan></text>
+  <text x="280" y="310" fill="var(--coral, #AF3029)" font-size="29" font-weight="600">a<tspan font-size="19" dy="6">y</tspan></text>
+  <text x="450" y="310" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">y</tspan></text>
+  <text x="280" y="398" fill="var(--nebula, #5E409D)" font-size="29" font-weight="600">&#916;y</text>
+  <text x="474" y="60" fill="var(--star, #205EA6)" font-size="16" text-anchor="end">horizontal</text>
+  <text x="474" y="396" fill="var(--coral, #AF3029)" font-size="16" text-anchor="end">vertical</text>
+</svg>
+
+</div>
+</div>
+
+
+---
+# Example 
+
+<div class='columns'>
+<div class='col'>
+
+<div style="font-size:1.25em; line-height:1.45;">
+
+A ball rolls off a table **1.25 m** high at **3.0 m/s**.
+
+How long is it in the air, and how far from the table's edge does it land?
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 560 450" width="100%" style="max-height:410px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+  <g fill="var(--ink-3, #100F0F)" font-size="27" font-weight="600">
+  <text x="280" y="62">&#916;x</text>
+  <text x="110" y="140">v<tspan font-size="18" dy="6">0x</tspan></text>
+  <text x="280" y="140">a<tspan font-size="18" dy="6">x</tspan></text>
+  <text x="450" y="140">v<tspan font-size="18" dy="6">x</tspan></text>
+  <text x="110" y="310">v<tspan font-size="18" dy="6">0y</tspan></text>
+  <text x="280" y="310">a<tspan font-size="18" dy="6">y</tspan></text>
+  <text x="450" y="310">v<tspan font-size="18" dy="6">y</tspan></text>
+  <text x="280" y="398">&#916;y</text>
+  </g>
+  <rect x="236" y="200" width="88" height="40" rx="9" fill="var(--plasma, #BC5215)" opacity="0.12"/>
+  <text x="280" y="228" fill="var(--ink-3, #B7B5AC)" font-size="27" font-weight="600">&#916;t</text>
+  <g stroke="var(--ink-3, #B7B5AC)" stroke-width="1.6" opacity="0.75">
+  <line x1="218" y1="80"  x2="342" y2="80"/>
+  <line x1="48"  y1="158" x2="172" y2="158"/>
+  <line x1="218" y1="158" x2="342" y2="158"/>
+  <line x1="388" y1="158" x2="512" y2="158"/>
+  <line x1="218" y1="248" x2="342" y2="248"/>
+  <line x1="48"  y1="328" x2="172" y2="328"/>
+  <line x1="218" y1="328" x2="342" y2="328"/>
+  <line x1="388" y1="328" x2="512" y2="328"/>
+  <line x1="218" y1="416" x2="342" y2="416"/>
+  </g>
+</svg>
+
+</div>
+</div>
+
+---
+
+<!--- _class: compact --->
+
+# Example — Two Beats
+
+<div class='columns'>
+<div class='col'>
+
+<svg viewBox="-30 0 440 480" width="100%" style="max-height:375px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+  <rect x="22" y="158" width="212" height="194" rx="8" fill="none" stroke="var(--ink, #100F0F)" stroke-width="3"/>
+  <rect x="140" y="163" width="92" height="42" rx="10" fill="var(--plasma, #BC5215)" opacity="0.16"/>
+  <g font-size="36" font-weight="600">
+  <text x="190" y="56" fill="var(--ink-3, #B7B5AC)">&#916;x = ?</text>
+  <text x="68" y="126" fill="var(--ink-3, #B7B5AC)">3.0</text>
+  <text x="190" y="126" fill="var(--ink-3, #B7B5AC)">0</text>
+  <text x="312" y="126" fill="var(--ink-3, #B7B5AC)">3.0</text>
+  <text x="68" y="258" fill="var(--star, #205EA6)">0</text>
+  <text x="190" y="258" fill="var(--coral, #AF3029)">+10</text>
+  <text x="312" y="258" fill="var(--ink-3, #B7B5AC)">&#8212;</text>
+  <text x="190" y="324" fill="var(--nebula, #5E409D)">+1.25</text>
+  <text x="190" y="194" fill="var(--plasma, #BC5215)" font-weight="700">&#9733;&#916;t</text>
+  </g>
+  <text x="190" y="386" font-size="25" font-weight="600" fill="var(--muted, #6F6E69)">beat one &#8212; find &#916;t</text>
+  <text x="190" y="428" font-size="34" fill="var(--coral, #AF3029)">1.25 = &#189;(10)&#916;t&#178;</text>
+  <text x="190" y="468" font-size="34" font-weight="700" fill="var(--coral, #AF3029)">&#916;t = &#8730;0.25 = 0.50 s</text>
+</svg>
+
+</div>
+<div class='col'>
+
+<svg viewBox="-30 0 440 480" width="100%" style="max-height:375px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+  <rect x="22" y="30" width="212" height="180" rx="8" fill="none" stroke="var(--ink, #100F0F)" stroke-width="3"/>
+  <rect x="140" y="163" width="92" height="42" rx="10" fill="var(--plasma, #BC5215)" opacity="0.16"/>
+  <g font-size="36" font-weight="600">
+  <text x="190" y="56" fill="var(--nebula, #5E409D)">&#9733;&#916;x</text>
+  <text x="68" y="126" fill="var(--star, #205EA6)">3.0</text>
+  <text x="190" y="126" fill="var(--coral, #AF3029)">0</text>
+  <text x="312" y="126" fill="var(--star, #205EA6)">3.0</text>
+  <text x="68" y="258" fill="var(--ink-3, #B7B5AC)">0</text>
+  <text x="190" y="258" fill="var(--ink-3, #B7B5AC)">+10</text>
+  <text x="312" y="258" fill="var(--ink-3, #B7B5AC)">&#8212;</text>
+  <text x="190" y="324" fill="var(--ink-3, #B7B5AC)">+1.25</text>
+  <text x="190" y="194" fill="var(--plasma, #BC5215)" font-weight="700">0.50</text>
+  </g>
+  <text x="190" y="386" font-size="25" font-weight="600" fill="var(--muted, #6F6E69)">beat two &#8212; cross over</text>
+  <text x="190" y="428" font-size="34" fill="var(--star, #205EA6)">&#916;x = v<tspan font-size="23" dy="5">x</tspan><tspan dy="-5">&#916;t = (3.0)(0.50)</tspan></text>
+  <text x="190" y="468" font-size="34" font-weight="700" fill="var(--star, #205EA6)">&#916;x = 1.5 m</text>
+</svg>
+
+</div>
+</div>
+
+<div class="key-idea">
+
+**The shared $\Delta t$ did the work.** The 3.0 m/s never entered beat one — the ball falls exactly as if it had been dropped.
+
+</div>
+
+---
+
+# Practice 1 — off the edge
+
+A ball rolls off a counter **0.80 m** high at **2.5 m/s**.
+
+Find the time in the air and the horizontal distance it lands from the counter.
+
+
+---
+
+<!--- _class: compact --->
+
+# Practice 1 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**Beat one — vertical box**
+
+$$0.80 = \tfrac12(10)\Delta t^2$$
+
+$$\Delta t^2 = 0.16$$
+
+$$\boxed{\Delta t = 0.40\ \text{s}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**Beat two — cross over**
+
+$$\Delta x = v_x \Delta t = (2.5)(0.40)$$
+
+$$\boxed{\Delta x = 1.0\ \text{m}}$$
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+The 2.5 m/s never touched beat one — the ball fell exactly as if dropped.
+
+</div>
+
+---
+
+# Practice 2 — back to the launch speed
+
+A marble rolls off a **20 m** cliff and lands **24 m** from the base.
+
+Find its launch speed.
+
+
+---
+
+<!--- _class: compact --->
+
+# Practice 2 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**Beat one — vertical box**
+
+$$20 = \tfrac12(10)\Delta t^2$$
+
+$$\Delta t^2 = 4.0$$
+
+$$\boxed{\Delta t = 2.0\ \text{s}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**Beat two — cross over**
+
+$$v_x = \frac{\Delta x}{\Delta t} = \frac{24}{2.0}$$
+
+$$\boxed{v_x = 12\ \text{m/s}}$$
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+Both lengths were given, so the vertical cross still had enough on its own to give $\Delta t$.
+
+</div>
+
+---
+
+# Practice 3 — starting in the other cross
+
+A rock is thrown horizontally at **6.0 m/s** and hits the water **18 m** from the base of the cliff.
+
+How high is the cliff?
+
+<div class="small">
+
+Which cross has enough knowns to give you $\Delta t$ this time?
+
+</div>
+
+
+---
+
+<!--- _class: compact --->
+
+# Practice 3 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**Beat one — <u>horizontal</u> box**
+
+$$\Delta t = \frac{\Delta x}{v_x} = \frac{18}{6.0}$$
+
+$$\boxed{\Delta t = 3.0\ \text{s}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**Beat two — cross over**
+
+$$\Delta y = \tfrac12(10)(3.0)^2$$
+
+$$\boxed{\Delta y = 45\ \text{m}}$$
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+This one started in the **other** cross — the horizontal one was the complete one. Count what you were given in each cross before you write anything.
+
+</div>
+
+---
+
+<!--- _class: compact --->
+
+# Putting the Components Back Together
+
+<div class='columns'>
+<div class='col'>
+
+You just found $v_x$ and $v_y$ at impact. They are **perpendicular**, so you already know how to combine them — this is the vector work from the start of the unit.
+
+$$v = \sqrt{v_x^2 + v_y^2}$$
+
+$$\theta = \tan^{-1}\!\left(\frac{v_y}{v_x}\right)$$
+
+<div class="warning">
+
+**Not by adding the numbers.** $20 + 30 \neq 36$.
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 520 400" width="100%" style="max-height:420px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="ahB" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="var(--star, #205EA6)"/>
+    </marker>
+    <marker id="ahR" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="var(--coral, #AF3029)"/>
+    </marker>
+    <marker id="ahN" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="var(--nebula, #5E409D)"/>
+    </marker>
+  </defs>
+  <line x1="60" y1="50" x2="212" y2="50" stroke="var(--star, #205EA6)" stroke-width="3.5" marker-end="url(#ahB)"/>
+  <text x="138" y="36" text-anchor="middle" fill="var(--star, #205EA6)" font-size="19" font-weight="600">v<tspan font-size="13" dy="5">x</tspan><tspan dy="-5"> = 20 m/s</tspan></text>
+  <line x1="220" y1="50" x2="220" y2="282" stroke="var(--coral, #AF3029)" stroke-width="3.5" marker-end="url(#ahR)"/>
+  <text x="236" y="176" fill="var(--coral, #AF3029)" font-size="19" font-weight="600">v<tspan font-size="13" dy="5">y</tspan><tspan dy="-5"> = 30 m/s</tspan></text>
+  <line x1="60" y1="50" x2="214" y2="281" stroke="var(--nebula, #5E409D)" stroke-width="4" marker-end="url(#ahN)"/>
+  <text x="138" y="196" text-anchor="end" fill="var(--nebula, #5E409D)" font-size="19" font-weight="600">v = 36 m/s</text>
+  <path d="M 115 50 A 55 55 0 0 1 90.5 95.8" fill="none" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <text x="116" y="94" fill="var(--muted, #6F6E69)" font-size="18">&#952; = 56&#176;</text>
+  <text x="60" y="345" fill="var(--muted, #6F6E69)" font-size="17">&#8730;(20&#178; + 30&#178;) = &#8730;1300 = 36 m/s,</text>
+  <text x="60" y="372" fill="var(--muted, #6F6E69)" font-size="17">56&#176; below the horizontal</text>
+</svg>
+
+</div>
+</div>
+
+<div class="key-idea">
+
+**Note what did *not* change.** $v_x$ is still the 20 m/s it was launched with — gravity never touched it. *All* of the extra speed at impact came from $v_y$, built up over the fall.
+
+</div>
+
+---
+
+# Practice 4 — the whole thing
+
+A rock is kicked horizontally off a **45 m** cliff and lands **60 m** from the base.
+
+1. Find the launch speed.
+2. Find the velocity — **speed *and* direction** — with which it hits the ground.
+
+
+---
+
+<!--- _class: compact --->
+
+# Practice 4 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**Beat one — vertical box**
+
+$$45 = \tfrac12(10)\Delta t^2 \Rightarrow \boxed{\Delta t = 3.0\ \text{s}}$$
+
+**Beat two — the two components**
+
+$$v_x = \frac{60}{3.0} = \boxed{20\ \text{m/s}}$$
+
+$$v_y = 0 + 10(3.0) = \boxed{30\ \text{m/s}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**Put them back together**
+
+$$v = \sqrt{20^2 + 30^2} = \sqrt{1300}$$
+
+$$\boxed{v = 36\ \text{m/s}}$$
+
+$$\theta = \tan^{-1}\!\left(\frac{30}{20}\right) = \boxed{56^\circ}$$
+
+below the horizontal
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+$v_x$ is still the 20 m/s it launched with — gravity never touched it.
+
+</div>
+
+---
+
+# Practice 5 — find the error
+
+**The problem.** A ball rolls off a **1.25 m** table at **3.0 m/s**. How far from the edge does it land?
+
+<div class="warning">
+
+**A student's work.** "The ball starts at 3.0 m/s, so $v_{0y} = 3.0$ m/s. Also $a_y = 10$ and $\Delta y = 1.25$."
+
+$$1.25 = 3.0\,\Delta t + \tfrac12 (10)\Delta t^2 \quad\Longrightarrow\quad \Delta t = 0.28\ \text{s} \quad\Longrightarrow\quad \Delta x = 0.85\ \text{m}$$
+
+</div>
+
+The student made **one** mistake. Name it, and say which cell of the double cross it lands in.
+
+---
+
+<!--- _class: compact --->
+
+# Practice 5 — answer
+
+<div class="warning">
+
+**The mistake.** They put the launch speed into $v_{0y}$. The launch is *horizontal*, so $v_{0y} = 0$ — the 3.0 m/s belongs in the **top cross** as $v_x$, and nowhere in the bottom one.
+
+</div>
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**Done correctly**
+
+$$1.25 = \tfrac12(10)\Delta t^2 \Rightarrow \boxed{\Delta t = 0.50\ \text{s}}$$
+
+$$\Delta x = (3.0)(0.50) = \boxed{1.5\ \text{m}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**Why their time came out too short.** They gave the ball a downward head start it never had. Starting the fall at 3.0 m/s instead of 0 covers the 1.25 m sooner — so the time is too small, and the range with it.
+
+</div>
+
+</div>
+</div>
+
+---
+
+### 🔑 **Key Ideas**:
+
+### A projectile is an object with the following characteristics:
+
+* The only force acting on it is the gravitational force; it is a free-falling object
+* The acceleration is directed downwards and has a magnitude of $10 \text{ m/s}^2$ (we use $9.8$ on CalcPad)
+* Once projected, it continues its horizontal motion without any need of a force
+* As it travels through the air, its horizontal velocity remains constant
+* As it rises, its vertical velocity ($v_y$) decreases; as it falls, its $v_y$ increases
+
+
+---
+
+<!--- _class: phase-title --->
+
+# Marble Launch Lab
+
+## If you change only the launch height, how does the range depend on it?
+
+---
+
+<!--- _class: compact --->
+
+# Marble Launch Lab — the job
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+**Purpose.** Derive how range depends on launch height, test it on a hand-drawn linearized graph, and use the slope to **measure $g$**.
+
+<div class="steps">
+
+**Derive first:** eliminate $\Delta t$ between the two crosses.
+
+$$R = v_0\sqrt{\frac{2h}{g}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+**The data**
+
+- **8×10 rule** — at least **8** launch heights, the largest at least **10×** the smallest (~10 cm to 1.0 m)
+- $h$ measured floor → **launch point**; every $R$ from the plumb mark directly below it
+- $v_0$ from the photogate: $v_0 = d/\Delta t$, marble diameter by calipers, repeated
+
+**The analysis**
+
+- Plot $\bar{R}$ against $\sqrt{h}$ **by hand** — slope off the *line*, not off two data points
+- $g = \dfrac{2v_0^2}{m^2}$, then $\%g = 2\%v_0 + 2\%m$
+
+</div>
+</div>
+
+---
+
+# Three things that will wreck your data
+
+<div class="warning">
+
+**1. The ramp travels with the platform.** Same release point, same tilt, every trial. Change the angle and $v_0$ changes — and the whole derivation assumes it did not.
+
+</div>
+
+<div class="warning">
+
+**2. Measure $h$ to the launch point, not to the table.**
+
+</div>
+
+<div class="warning">
+
+**3. Set the gate beam across the marble's widest part.** Clip it high or low and the beam cuts a short chord, so $\Delta t$ is short and $v_0$ reads **low**.
+
+</div>
+
+<div class="small">
+
+Safety: stray marbles are a slip hazard — collect them. Weight the ring stand base. Step stool, never a chair.
+
+---
+
+<!--- _class: phase-title --->
+
+# Angled Projectiles
+
+---
+
+<!--- _class: compact --->
+
+# Splitting the Launch Velocity
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+A projectile launched at an angle has **one** velocity, but it is easier to work with its two **perpendicular components**.
+
+$$v_{0x} = v_0 \cos \theta$$
+
+$$v_{0y} = v_0 \sin \theta$$
+
+<div class="warning">
+
+**Do this first, always.** Every angled projectile problem starts by splitting $v_0$ into $v_{0x}$ and $v_{0y}$.
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 420 310" width="100%" style="max-height:290px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <defs><marker id="phv0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--nebula, #5E409D)"/></marker><marker id="phvx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--star, #205EA6)"/></marker><marker id="phvy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--plasma, #BC5215)"/></marker></defs>
+  <line x1="55" y1="250" x2="390" y2="250" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5"/>
+  <line x1="55" y1="250" x2="55" y2="40" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5"/>
+  <line x1="300" y1="250" x2="300" y2="95" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="55" y1="250" x2="294" y2="250" stroke="var(--star, #205EA6)" stroke-width="5" marker-end="url(#phvx)"/>
+  <line x1="300" y1="250" x2="300" y2="101" stroke="var(--plasma, #BC5215)" stroke-width="5" marker-end="url(#phvy)"/>
+  <line x1="55" y1="250" x2="296" y2="97" stroke="var(--nebula, #5E409D)" stroke-width="5" marker-end="url(#phv0)"/>
+  <path d="M 110 250 A 55 55 0 0 0 96 215" fill="none" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
+  <text x="122" y="233" fill="var(--muted, #6F6E69)" font-size="20" font-style="italic">&#952;</text>
+  <text x="150" y="150" fill="var(--nebula, #5E409D)" font-size="19" font-weight="600">v</text>
+  <text x="161" y="157" fill="var(--nebula, #5E409D)" font-size="14" font-weight="600">0</text>
+  <text x="175" y="278" text-anchor="middle" fill="var(--star, #205EA6)" font-size="19" font-weight="600">v</text>
+  <text x="186" y="285" fill="var(--star, #205EA6)" font-size="14" font-weight="600">0x</text>
+  <text x="318" y="178" fill="var(--plasma, #BC5215)" font-size="19" font-weight="600">v</text>
+  <text x="329" y="185" fill="var(--plasma, #BC5215)" font-size="14" font-weight="600">0y</text>
+</svg>
+
+</div>
+</div>
+
+---
+
+# Components 
+
+- The X-axis velocity component ($v_x$) is constant and will not accelerate, so it stays the same for the entire flight
+- The initial Y-axis velocity component changes, because it is accelerated by gravity at 10 m/s² down. This is why we write ($v_{0y}$) and not just $v_y$ — it will change throughout the problem.
+
+![bg fit right](../figures/cannon-v-to-viy-and-vx.gif)
+
+---
+
+### Finding x & y components of initial velocity 
+
+$$v_{0x} = v \cos \theta $$
+
+$$v_{0y} = v \sin \theta$$
+
+
+![bg fit right:25%](image-25.png)
+
+---
+
+<!--- _class: compact --->
+
+# Velocity Through the Flight
+
+<svg viewBox="0 0 640 420" width="100%" style="max-height:395px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <defs><marker id="trvx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--star, #205EA6)"/></marker><marker id="trvy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--plasma, #BC5215)"/></marker></defs>
+  <line x1="30" y1="345" x2="615" y2="345" stroke="var(--muted, #6F6E69)" stroke-width="2.5"/>
+  <path d="M 60 330 Q 320 -150 580 330" fill="none" stroke="var(--ink-3, #B7B5AC)" stroke-width="3" stroke-dasharray="7 6"/>
+  <line x1="60" y1="330" x2="116" y2="330" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="190" y1="150" x2="246" y2="150" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="320" y1="90" x2="376" y2="90" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="450" y1="150" x2="506" y2="150" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="580" y1="330" x2="614" y2="330" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
+  <line x1="60" y1="330" x2="60" y2="260" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
+  <line x1="190" y1="150" x2="190" y2="116" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
+  <line x1="450" y1="150" x2="450" y2="184" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
+  <line x1="580" y1="330" x2="580" y2="400" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
+  <circle cx="60" cy="330" r="7" fill="var(--ink, #100F0F)"/>
+  <circle cx="190" cy="150" r="7" fill="var(--ink, #100F0F)"/>
+  <circle cx="320" cy="90" r="7" fill="var(--solar, #AD8301)"/>
+  <circle cx="450" cy="150" r="7" fill="var(--ink, #100F0F)"/>
+  <circle cx="580" cy="330" r="7" fill="var(--ink, #100F0F)"/>
+  <text x="320" y="68" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="18" font-weight="600">peak: v<tspan font-size="13" dy="5">y</tspan><tspan dy="-5"> = 0</tspan></text>
+  <text x="120" y="252" fill="var(--plasma, #BC5215)" font-size="16">v<tspan font-size="12" dy="4">y</tspan><tspan dy="-4"> shrinks</tspan></text>
+  <text x="470" y="212" fill="var(--plasma, #BC5215)" font-size="16">v<tspan font-size="12" dy="4">y</tspan><tspan dy="-4"> grows, now downward</tspan></text>
+  <text x="300" y="118" fill="var(--star, #205EA6)" font-size="16">v<tspan font-size="12" dy="4">x</tspan><tspan dy="-4"> never changes</tspan></text>
+  <text x="320" y="412" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">positions drawn at equal time steps</text>
+</svg>
+
+---
+
+Cannonballs of different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the horizontal component of that velocity, which is the same.
+
+![center w:500](image-26.png)
+
+**Rank the horizontal distance traveled by the cannonballs.**
+
+---
+
+Cannonballs with different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the same vertical component of that velocity.
+
+![center w:500](image-27.png)
+
+**Rank the time the cannonballs are in the air.**
+
+---
+
+# Projectile Fact Reminders
+
+<div class='columns'>
+<div class='col'>
+
+![center](../figures/Highest-Point.gif)
+
+</div>
+ 
+<div class='col'>
+
+![center](../figures/Lands-at-Same-Height.gif)
+
+</div>
+</div>
+
+---
+
+# Carried Over From Free Fall 
+
+- Up positive $\Rightarrow a_y = -g = -10 \text{ m/s/s}$ &nbsp;•&nbsp; down positive $\Rightarrow a_y = +10 \text{ m/s/s}$
+- At the peak, $v_y = 0$ — but $a_y$ is still $10 \text{ m/s/s}$ downward
+- Launch and landing speeds match at the same height: up at $+30 \text{ m/s}$ means down at $-30 \text{ m/s}$
+
+<div class="key-idea">
+
+**Nothing new vertically.** An angled projectile's $y$-motion *is* the free fall you already solved — the only addition is a constant $v_x$ running alongside it.
+
+</div>
+
+---
+
+
+# Problem-solving Process
+
+1) Read & sketch problem
+2) _**Calculate x & y components of initial velocity**_
+3) Identify given information & fill out double cross diagram
+4) Identify the quantity you are solving for
+5) Using either horizontal or vertical information, find the flight time of the projectile
+6) With the time find the quantity you are solving for. 
+
+
+![bg fit right:30%](image-24.png)
+
+---
+
+<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="700px" width="1000px" allowfullscreen></iframe>
+
+---
+
+
+# Where should 🎯 go?
+
+<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="650px" width="1000px" allowfullscreen></iframe>
+
+---
 
 # Relative Motion <!--fit--->
 
@@ -2070,570 +3182,5 @@ A motorboat traveling 4 m/s, East encounters a current traveling 3.0 m/s, North.
 
 
 
----
-<!--- _class: phase-title --->
 
-# Horizontal Projectiles
 
----
-
-Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
-
-![center](../figures/horzprojec1.png)
-
-**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
-
-Explain your reasoning.
-
-
----
-
-
-Two toy trucks roll off the ends of identical tables. The speeds and masses of the trucks are given.
-
-![center w:500](../figures/horizprojec2.png)
-
-**Will Truck A be in the air for (i) _a longer time_, (ii) a _shorter time_, or (iii) the _same time_ as Truck B before it reaches the floor?**
-
-Explain your reasoning.
-
----
-
-
-# **Launcher** Demo <!--fit--->
-
----
-
-# What are the three possible outcomes?
-
-1) Right ball ($v_x > 0$) hits first 
-2) Left ball ($v_x =0$) hits first 
-3) Balls hit at the same time 
-
----
-
-# What does each result imply about the **horizontal velocity's** effect on **flight time**?
-
-
-1. Right ball ($v_x > 0$) hits first 
-2. Left ball ($v_x =0$) hits first 
-3. Balls hit at the same time 
-
-
----
-
-<!--- _class: compact --->
-
-# What the Demo Showed
-
-<div class='columns cols-1-2'>
-<div class='col'>
-
-## The two motions are independent
-
-Both balls are released at the same instant. Every dashed line joins them at the **same moment in time**.
-
-They are always at the **same height** — the horizontal velocity does nothing to the fall.
-
-<div class="small">
-
-Positions drawn at equal time steps
-
-</div>
-
-</div>
-<div class='col'>
-
-<svg viewBox="0 0 640 400" width="100%" style="max-height:330px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-  <line x1="40" y1="368" x2="615" y2="368" stroke="var(--muted, #6F6E69)" stroke-width="2.5"/>
-  <line x1="95" y1="50" x2="95" y2="368" stroke="var(--coral, #AF3029)" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.55"/>
-  <path d="M 95 50 Q 335 50 575 368" fill="none" stroke="var(--star, #205EA6)" stroke-width="2.5" stroke-dasharray="5 5" opacity="0.6"/>
-  <line x1="95" y1="70"  x2="215" y2="70"  stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <line x1="95" y1="130" x2="335" y2="130" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <line x1="95" y1="229" x2="455" y2="229" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <line x1="95" y1="368" x2="575" y2="368" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="4 4"/>
-  <circle cx="95" cy="70"  r="9" fill="var(--coral, #AF3029)"/>
-  <circle cx="95" cy="130" r="9" fill="var(--coral, #AF3029)"/>
-  <circle cx="95" cy="229" r="9" fill="var(--coral, #AF3029)"/>
-  <circle cx="95" cy="368" r="9" fill="var(--coral, #AF3029)"/>
-  <circle cx="215" cy="70"  r="9" fill="var(--star, #205EA6)"/>
-  <circle cx="335" cy="130" r="9" fill="var(--star, #205EA6)"/>
-  <circle cx="455" cy="229" r="9" fill="var(--star, #205EA6)"/>
-  <circle cx="575" cy="368" r="9" fill="var(--star, #205EA6)"/>
-  <circle cx="95" cy="50" r="10" fill="var(--solar, #AD8301)"/>
-  <text x="112" y="44" fill="var(--solar, #AD8301)" font-size="17" font-weight="600">released together</text>
-  <text x="80" y="392" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="17" font-weight="600">dropped</text>
-  <text x="520" y="392" text-anchor="middle" fill="var(--star, #205EA6)" font-size="17" font-weight="600">launched</text>
-</svg>
-
-</div>
-</div>
-
----
-
-# Horizontal Projectiles 
-
-* A ***projectile*** is an object that *only* experiences a gravitational force
-* For _**horizontal projectiles**_ the $v_{0y} = 0$
-* We can separate motion in the $x$ and $y$ planes and solve separately
-
----
-
-# Path of a Projectile 
-
-<div class='columns'>
-<div class='col'>
-
-![center w:650](image-17.png)
-
-</div>
- 
-<div class='col'>
-
-![center w:650](image-18.png)
-
-</div>
-</div>
-
----
-
-# Path of a Projectile
-
-<div class='columns'>
-<div class='col'>
-
-<br>
-
-![center w:650](image-19.png)
-
-</div>
- 
-<div class='col'>
-
-![center w:550](image-20.png)
-
-</div>
-</div>
-
----
-
-
-|                                                                                 | Horizontal Motion | Vertical Motion     |
-| ------------------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------- |
-| **Forces**<br>(Present? - Yes or No)<br>(If present, what dir'n?)       | No                                     | Yes<br>The force of gravity acts downward |
-| **Acceleration**<br>(Present? - Yes or No)<br>(If present, what dir'n?) | No                                     | Yes<br>$g$ is downward at 10 m/s/s       |
-| **Velocity**<br>(Constant or Changing?)                                     | Constant                               | Changing<br>(by 10 m/s each second)      |
-
----
-
-## Horizontal and Vertical Velocity 
-
-![center w:750](image-21.png)
-
-
----
-
-
-## Horizontal and Vertical Displacement 
-
-![center w:740](image-22.png)
-
----
-
-<!--- _class: compact --->
-
-# The Two Graphs That Matter
-
-<div class='columns'>
-<div class='col'>
-
-<svg viewBox="0 0 420 330" width="100%" style="max-height:275px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-  <polygon points="60,100 340,100 340,250 60,250" fill="var(--star, #205EA6)" opacity="0.13"/>
-  <line x1="60" y1="100" x2="380" y2="100" stroke="var(--ink-3, #B7B5AC)" stroke-width="1" stroke-opacity="0.7"/>
-  <line x1="60" y1="45" x2="60" y2="275" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
-  <line x1="40" y1="250" x2="380" y2="250" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
-  <line x1="60" y1="100" x2="340" y2="100" stroke="var(--star, #205EA6)" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="60" cy="100" r="6" fill="var(--star, #205EA6)"/>
-  <circle cx="340" cy="100" r="6" fill="var(--star, #205EA6)"/>
-  <text x="50" y="106" text-anchor="end" fill="var(--star, #205EA6)" font-size="17" font-weight="600">10</text>
-  <text x="50" y="256" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">0</text>
-  <text x="200" y="180" text-anchor="middle" fill="var(--star, #205EA6)" font-size="15">area = horizontal distance</text>
-  <text x="22" y="150" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16" transform="rotate(-90 22 150)">v (m/s)</text>
-  <text x="210" y="276" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time (s)</text>
-  <text x="210" y="302" text-anchor="middle" fill="var(--star, #205EA6)" font-size="18" font-weight="600">horizontal</text>
-  <text x="210" y="322" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="15">slope = 0, so no acceleration</text>
-</svg>
-
-</div>
-<div class='col'>
-
-<svg viewBox="0 0 420 330" width="100%" style="max-height:275px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-  <polygon points="60,100 340,250 60,250" fill="var(--coral, #AF3029)" opacity="0.13"/>
-  <line x1="60" y1="250" x2="380" y2="250" stroke="var(--ink-3, #B7B5AC)" stroke-width="1" stroke-opacity="0.7"/>
-  <line x1="60" y1="45" x2="60" y2="275" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
-  <line x1="40" y1="100" x2="380" y2="100" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
-  <line x1="60" y1="100" x2="340" y2="250" stroke="var(--coral, #AF3029)" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="60" cy="100" r="6" fill="var(--coral, #AF3029)"/>
-  <circle cx="340" cy="250" r="6" fill="var(--coral, #AF3029)"/>
-  <text x="50" y="106" text-anchor="end" fill="var(--muted, #6F6E69)" font-size="17">0</text>
-  <text x="50" y="256" text-anchor="end" fill="var(--coral, #AF3029)" font-size="17" font-weight="600">&#8722;30</text>
-  <text x="235" y="200" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="15">area = drop height</text>
-  <text x="22" y="150" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16" transform="rotate(-90 22 150)">v (m/s)</text>
-  <text x="210" y="92" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">time (s)</text>
-  <text x="210" y="302" text-anchor="middle" fill="var(--coral, #AF3029)" font-size="18" font-weight="600">vertical</text>
-  <text x="210" y="322" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="15">slope = &#8722;10 m/s&#178;</text>
-</svg>
-
-</div>
-</div>
-
-<div class="key-idea">
-
-**Same clock, two independent stories.** The horizontal graph is flat because nothing pushes sideways. The vertical graph is identical to a dropped object's.
-
-</div>
-
----
-
-
-# Horizontally Launched Projectiles
-
-
-* Projectile launched with an initial horizontal velocity from an elevated position. 
-* Predictable unknowns include the initial speed of the projectile, the initial height of the projectile, the time of flight, and the horizontal distance of the projectile.
-
-![bg fit right:30%](image-23.png)
-
----
-
-# Horizontal Projectiles 
-
-<div class='columns'>
-
-<div class='col'>
-
-## X-Plane Motion
-
-- $v_x$ is ***constant***
-
-$$d = v_x t$$
-
-</div>
-
-<div class='col'>
-
-## Y-Plane Motion 
-
-- constant acceleration $a_y = g$
-
-$$d = v_{0y}t + \frac{1}{2}gt^2$$
-
-$$v_y = v_{0y} + at$$
-
-$$v_y^2 = v_{0y}^2 + 2ad$$
-
-</div></div>
-
-
----
-
-<!--- _class: compact --->
-
-# The Double Cross Diagram
-
-<div class='columns cols-1-2'>
-<div class='col'>
-
-Two motions, **one clock**. Stack a horizontal cross on a vertical cross and let them share $\Delta t$.
-
-- The $x$ cross has $a_x = 0$, so it collapses to $\Delta x = v_x \Delta t$
-- The $y$ cross is ordinary free fall
-- $\Delta t$ is the **only** quantity they share
-
-<div class="warning">
-
-**That shared $\Delta t$ is the whole trick.** Find the time in one cross, then carry it into the other.
-
-</div>
-
-</div>
-<div class='col'>
-
-<svg viewBox="0 0 560 440" width="100%" style="max-height:400px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
-  <rect x="24" y="20" width="512" height="180" rx="10" fill="var(--star, #205EA6)" opacity="0.07"/>
-  <rect x="24" y="238" width="512" height="180" rx="10" fill="var(--coral, #AF3029)" opacity="0.07"/>
-  <text x="280" y="62" fill="var(--nebula, #5E409D)" font-size="29" font-weight="600">&#916;x</text>
-  <text x="110" y="140" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">0x</tspan></text>
-  <text x="280" y="140" fill="var(--coral, #AF3029)" font-size="29" font-weight="600">a<tspan font-size="19" dy="6">x</tspan></text>
-  <text x="450" y="140" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">x</tspan></text>
-  <text x="280" y="228" fill="var(--plasma, #BC5215)" font-size="31" font-weight="700">&#916;t</text>
-  <text x="110" y="310" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">0y</tspan></text>
-  <text x="280" y="310" fill="var(--coral, #AF3029)" font-size="29" font-weight="600">a<tspan font-size="19" dy="6">y</tspan></text>
-  <text x="450" y="310" fill="var(--star, #205EA6)" font-size="29" font-weight="600">v<tspan font-size="19" dy="6">y</tspan></text>
-  <text x="280" y="398" fill="var(--nebula, #5E409D)" font-size="29" font-weight="600">&#916;y</text>
-  <text x="474" y="60" fill="var(--star, #205EA6)" font-size="16" text-anchor="end">horizontal</text>
-  <text x="474" y="396" fill="var(--coral, #AF3029)" font-size="16" text-anchor="end">vertical</text>
-  <text x="408" y="233" fill="var(--plasma, #BC5215)" font-size="16" text-anchor="start">shared by both</text>
-</svg>
-
-</div>
-</div>
-
----
-
-# Problem-solving Process
-
-1) Read & sketch problem
-2) Identify given information & fill out double cross diagram 
-3) Identify the quantity you are solving for
-4) **Using either horizontal or vertical information, find the flight time of the projectile**
-5) With the time find the quantity you are solving for. 
-
-
-![bg fit right:40%](image-24.png)
-
-
----
-
-
-# Example 
-
-A pool ball leaves a 0.60-meter high table with an initial horizontal velocity of 2.4 m/s. Predict the time required for the pool ball to fall to the ground and the horizontal distance between the table's edge and the ball's landing location.
-
-![bg fit right:40%](image-24.png)
-
----
-
-# Practice 
-
-A soccer ball is kicked horizontally off a 22.0-meter high hill and lands a distance of 35.0 meters from the edge of the hill. Determine the initial horizontal velocity of the soccer ball.
-
-
----
-
-
-# Practice 
-
-In many locations, old abandoned stone quarries have become filled with water once excavating has been completed. While standing on a quarry wall, a boy tosses a piece of granite into the water below. If he throws the rock horizontally with a velocity of 3.0 m/s, and it strikes the water 4.5 meters away, how high above the water is the wall?
-
----
-
-# Practice w/ Table 
-
-Suppose that an airplane flying 60 m/s, at a height of 300 meters, dropped a sack of flour. How far from the point of release would the sack have traveled when it struck the ground? Where will the plane be in relation to the sack when it hits the ground?
-
----
-
-# Practice 
-
-A stone is thrown horizontally to the right at a speed of 17.2 m/s from the top of a cliff that is 91.4 m high. Consider up and to the right positive directions.
-
-1. How long does it take the stone to reach the bottom of the cliff?
-2. How far from the base of the cliff does the stone hit the ground?
-3. What is the horizontal component of the stone's velocity just before it hits the ground?
-4. What is the vertical component of the stone's velocity just before it hits the ground?
-
----
-
-### 🔑 **Key Ideas**:
-
-### A projectile is an object with the following characteristics:
-
-* The only force acting on it is the gravitational force; it is a free-falling object
-* The acceleration is directed downwards and has a magnitude of $10 \text{ m/s}^2$ (we use $9.8$ on CalcPad)
-* Once projected, it continues its horizontal motion without any need of a force
-* As it travels through the air, its horizontal velocity remains constant
-* As it rises, its vertical velocity ($v_y$) decreases; as it falls, its $v_y$ increases
-
-
----
-
-# <!--fit---> Marble Mini-Experiment
-
-1. Determine the launch velocity of your marble.
-
-Equipment:
-
-- Ruler track
-- Marble
-- Carbon paper
-- Meterstick
-
-2. Use to predict landing spot from new height (like off top of cabinets)
-
-
----
-
-<!--- _class: phase-title --->
-
-# Angled Projectiles
-
----
-
-<!--- _class: compact --->
-
-# Splitting the Launch Velocity
-
-<div class='columns cols-1-2'>
-<div class='col'>
-
-A projectile launched at an angle has **one** velocity, but it is easier to work with its two **perpendicular components**.
-
-$$v_{0x} = v_0 \cos \theta$$
-
-$$v_{0y} = v_0 \sin \theta$$
-
-<div class="warning">
-
-**Do this first, always.** Every angled projectile problem starts by splitting $v_0$ into $v_{0x}$ and $v_{0y}$.
-
-</div>
-
-</div>
-<div class='col'>
-
-<svg viewBox="0 0 420 310" width="100%" style="max-height:290px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-  <defs><marker id="phv0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--nebula, #5E409D)"/></marker><marker id="phvx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--star, #205EA6)"/></marker><marker id="phvy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--plasma, #BC5215)"/></marker></defs>
-  <line x1="55" y1="250" x2="390" y2="250" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5"/>
-  <line x1="55" y1="250" x2="55" y2="40" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5"/>
-  <line x1="300" y1="250" x2="300" y2="95" stroke="var(--ink-3, #B7B5AC)" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <line x1="55" y1="250" x2="294" y2="250" stroke="var(--star, #205EA6)" stroke-width="5" marker-end="url(#phvx)"/>
-  <line x1="300" y1="250" x2="300" y2="101" stroke="var(--plasma, #BC5215)" stroke-width="5" marker-end="url(#phvy)"/>
-  <line x1="55" y1="250" x2="296" y2="97" stroke="var(--nebula, #5E409D)" stroke-width="5" marker-end="url(#phv0)"/>
-  <path d="M 110 250 A 55 55 0 0 0 96 215" fill="none" stroke="var(--muted, #6F6E69)" stroke-width="2"/>
-  <text x="122" y="233" fill="var(--muted, #6F6E69)" font-size="20" font-style="italic">&#952;</text>
-  <text x="150" y="150" fill="var(--nebula, #5E409D)" font-size="19" font-weight="600">v</text>
-  <text x="161" y="157" fill="var(--nebula, #5E409D)" font-size="14" font-weight="600">0</text>
-  <text x="175" y="278" text-anchor="middle" fill="var(--star, #205EA6)" font-size="19" font-weight="600">v</text>
-  <text x="186" y="285" fill="var(--star, #205EA6)" font-size="14" font-weight="600">0x</text>
-  <text x="318" y="178" fill="var(--plasma, #BC5215)" font-size="19" font-weight="600">v</text>
-  <text x="329" y="185" fill="var(--plasma, #BC5215)" font-size="14" font-weight="600">0y</text>
-</svg>
-
-</div>
-</div>
-
----
-
-# Components 
-
-- The X-axis velocity component ($v_x$) is constant and will not accelerate, so it stays the same for the entire flight
-- The initial Y-axis velocity component changes, because it is accelerated by gravity at 10 m/s² down. This is why we write ($v_{0y}$) and not just $v_y$ — it will change throughout the problem.
-
-![bg fit right](../figures/cannon-v-to-viy-and-vx.gif)
-
----
-
-### Finding x & y components of initial velocity 
-
-$$v_{0x} = v \cos \theta $$
-
-$$v_{0y} = v \sin \theta$$
-
-
-![bg fit right:25%](image-25.png)
-
----
-
-<!--- _class: compact --->
-
-# Velocity Through the Flight
-
-<svg viewBox="0 0 640 420" width="100%" style="max-height:395px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
-  <defs><marker id="trvx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--star, #205EA6)"/></marker><marker id="trvy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--plasma, #BC5215)"/></marker></defs>
-  <line x1="30" y1="345" x2="615" y2="345" stroke="var(--muted, #6F6E69)" stroke-width="2.5"/>
-  <path d="M 60 330 Q 320 -150 580 330" fill="none" stroke="var(--ink-3, #B7B5AC)" stroke-width="3" stroke-dasharray="7 6"/>
-  <line x1="60" y1="330" x2="116" y2="330" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
-  <line x1="190" y1="150" x2="246" y2="150" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
-  <line x1="320" y1="90" x2="376" y2="90" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
-  <line x1="450" y1="150" x2="506" y2="150" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
-  <line x1="580" y1="330" x2="614" y2="330" stroke="var(--star, #205EA6)" stroke-width="4" marker-end="url(#trvx)"/>
-  <line x1="60" y1="330" x2="60" y2="260" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
-  <line x1="190" y1="150" x2="190" y2="116" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
-  <line x1="450" y1="150" x2="450" y2="184" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
-  <line x1="580" y1="330" x2="580" y2="400" stroke="var(--plasma, #BC5215)" stroke-width="4" marker-end="url(#trvy)"/>
-  <circle cx="60" cy="330" r="7" fill="var(--ink, #100F0F)"/>
-  <circle cx="190" cy="150" r="7" fill="var(--ink, #100F0F)"/>
-  <circle cx="320" cy="90" r="7" fill="var(--solar, #AD8301)"/>
-  <circle cx="450" cy="150" r="7" fill="var(--ink, #100F0F)"/>
-  <circle cx="580" cy="330" r="7" fill="var(--ink, #100F0F)"/>
-  <text x="320" y="68" text-anchor="middle" fill="var(--solar, #AD8301)" font-size="18" font-weight="600">peak: v<tspan font-size="13" dy="5">y</tspan><tspan dy="-5"> = 0</tspan></text>
-  <text x="120" y="252" fill="var(--plasma, #BC5215)" font-size="16">v<tspan font-size="12" dy="4">y</tspan><tspan dy="-4"> shrinks</tspan></text>
-  <text x="470" y="212" fill="var(--plasma, #BC5215)" font-size="16">v<tspan font-size="12" dy="4">y</tspan><tspan dy="-4"> grows, now downward</tspan></text>
-  <text x="300" y="118" fill="var(--star, #205EA6)" font-size="16">v<tspan font-size="12" dy="4">x</tspan><tspan dy="-4"> never changes</tspan></text>
-  <text x="320" y="412" text-anchor="middle" fill="var(--muted, #6F6E69)" font-size="16">positions drawn at equal time steps</text>
-</svg>
-
----
-
-Cannonballs of different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the horizontal component of that velocity, which is the same.
-
-![center w:500](image-26.png)
-
-**Rank the horizontal distance traveled by the cannonballs.**
-
----
-
-Cannonballs with different masses are shot from cannons at various angles above the horizontal. The velocity of each cannonball as it leaves the cannon is given, along with the same vertical component of that velocity.
-
-![center w:500](image-27.png)
-
-**Rank the time the cannonballs are in the air.**
-
----
-
-# Projectile Fact Reminders
-
-<div class='columns'>
-<div class='col'>
-
-![center](../figures/Highest-Point.gif)
-
-</div>
- 
-<div class='col'>
-
-![center](../figures/Lands-at-Same-Height.gif)
-
-</div>
-</div>
-
----
-
-# Carried Over From Free Fall 
-
-- Up positive $\Rightarrow a_y = -g = -10 \text{ m/s/s}$ &nbsp;•&nbsp; down positive $\Rightarrow a_y = +10 \text{ m/s/s}$
-- At the peak, $v_y = 0$ — but $a_y$ is still $10 \text{ m/s/s}$ downward
-- Launch and landing speeds match at the same height: up at $+30 \text{ m/s}$ means down at $-30 \text{ m/s}$
-
-<div class="key-idea">
-
-**Nothing new vertically.** An angled projectile's $y$-motion *is* the free fall you already solved — the only addition is a constant $v_x$ running alongside it.
-
-</div>
-
----
-
-
-# Problem-solving Process
-
-1) Read & sketch problem
-2) _**Calculate x & y components of initial velocity**_
-3) Identify given information & fill out double cross diagram
-4) Identify the quantity you are solving for
-5) Using either horizontal or vertical information, find the flight time of the projectile
-6) With the time find the quantity you are solving for. 
-
-
-![bg fit right:30%](image-24.png)
-
----
-
-<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="700px" width="1000px" allowfullscreen></iframe>
-
----
-
-
-# Where should 🎯 go?
-
-<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="650px" width="1000px" allowfullscreen></iframe>
