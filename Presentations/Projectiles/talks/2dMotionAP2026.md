@@ -2736,8 +2736,8 @@ $$R = v_0\sqrt{\frac{2h}{g}}$$
 
 **The analysis**
 
-- Plot $\bar{R}$ against $\sqrt{h}$ **by hand** — slope off the *line*, not off two data points
-- $g = \dfrac{2v_0^2}{m^2}$, then $\%g = 2\%v_0 + 2\%m$
+- Create a linearized plot **by hand** — and find slope off the *line*, not off two data points
+- Use slope to find $g$ - compare to accepted value near surface of the earth
 
 </div>
 </div>
