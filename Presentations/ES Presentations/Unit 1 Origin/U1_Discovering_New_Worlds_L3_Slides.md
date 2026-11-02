@@ -327,7 +327,7 @@ THE ARC IN ONE LINE: distance explains phase → but average distance hides the 
 <!-- _class: phase-title -->
 
 # ENGAGE
-## Why does water on Comet Borrelly change from ice to vapour every 6 years?
+## Why does water on [Comet Borrelly](https://www.jpl.nasa.gov/videos/comet-borrelly-flyby/) change from ice to vapour every 6 years?
 
 <!--
 LAUNCH: remind students that the Driving Question Board surfaced "Does the planet have the right temperature to sustain life? Does the planet have liquid water?"
