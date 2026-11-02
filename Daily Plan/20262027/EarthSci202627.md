@@ -14,6 +14,35 @@ math: mathjax
 
 ---
 
+# 2026.11.03 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather have a perfect memory or be able to forget anything you choose?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Orbits - Explore 1](https://www.mrporterphysics.com/AP%20Resource%20Pages/Earth%20Science%20Pages/ess-u1-l3-explore1-solar-system-orbits.html) - what are orbits like in our solar system
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use orbital data to model why Borrelly's water changes phase_
+
+### 📆 Upcoming
+
+- Tomorrow: intro & start the Kepler's Laws PhET lab
+
+</div>
+</div>
+
+---
+
 # 2026.11.02 **Earth Science**
 
 ##### **❓ of the 📅**: Is math invented or discovered?

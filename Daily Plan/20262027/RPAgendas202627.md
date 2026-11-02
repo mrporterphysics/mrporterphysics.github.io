@@ -22,7 +22,7 @@ math: mathjax
 
 # 2026.11.03 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Would you rather have a perfect memory or be able to forget anything you choose?
 
 <div class ='columns'>
 
@@ -30,7 +30,11 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. 
+1. Intro to Horizontal Projectiles
+2. Demo
+3. Notes
+4. Practice
+5. Start Lab
 
 </div>
 
@@ -38,9 +42,13 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model & Solve Horizontal Projectile problems_
 
 ### 📆 Upcoming
+
+- HW: _**PC: Vectors + Horizontal Projectiles**_ due thurs
+- HW: _**AP Workbook 1.E**_ (relative motion) — moved to next week
+- ✅ **Kin Quiz 5** thurs — vectors, components, horizontal projectiles
 
 </div>
 </div>

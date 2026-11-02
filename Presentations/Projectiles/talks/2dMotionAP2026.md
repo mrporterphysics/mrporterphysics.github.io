@@ -2768,6 +2768,8 @@ $$R = v_0\sqrt{\frac{2h}{g}}$$
 
 Safety: stray marbles are a slip hazard — collect them. Weight the ring stand base. Step stool, never a chair.
 
+</div>
+
 ---
 
 <!--- _class: phase-title --->

@@ -18,6 +18,40 @@ math: mathjax
 <!--- class: thanksgiving --->
 
 
+# 2026.11.03 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather have a perfect memory or be able to forget anything you choose?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Projectile Lab
+2. While waiting for other groups work on Physics Classroom homework
+3. Angled Projectiles
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model Horizontal Projectile Motion_
+
+### 📆 Upcoming
+
+- HW: _**PC: Vectors + Horizontal Projectiles**_ due thurs
+- HW: _**AP Workbook 1.E**_ (relative motion) — moved to next week
+- Next: PC CalcPad **VP15, VP16** (angle launched)
+- ✅ **Kin Quiz 5** thurs — vectors, components, horizontal projectiles
+
+</div>
+</div>
+
+---
+
 # 2026.11.02 **AP Physics**
 
 ##### **❓ of the 📅**: Is math invented or discovered?
