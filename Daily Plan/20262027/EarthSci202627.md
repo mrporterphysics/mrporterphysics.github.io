@@ -24,7 +24,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Comet Borrelly flyby
+1. [Comet Borrelly flyby](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_Discovering_New_Worlds_L3_Slides.html)
 2. Water in Our Solar System — annotate 3–5 details
 3. Initial model of the phenomenon
 4. Sticky notes + Rumors: what is going on with Borrelly?
