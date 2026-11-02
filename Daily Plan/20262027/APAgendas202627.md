@@ -28,7 +28,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Horizontal Projectile Notes
+1. [Horizontal Projectile Notes](/Presentations/Projectiles/talks/2dMotionAP2026.html#60)
 2. HP Worked Examples
 3. HP Lab
 

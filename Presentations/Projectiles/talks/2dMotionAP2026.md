@@ -2923,13 +2923,21 @@ Cannonballs with different masses are shot from cannons at various angles above 
 
 # Problem-solving Process
 
-1) Read & sketch problem
-2) _**Calculate x & y components of initial velocity**_
-3) Identify given information & fill out double cross diagram
-4) Identify the quantity you are solving for
-5) Using either horizontal or vertical information, find the flight time of the projectile
-6) With the time find the quantity you are solving for. 
+**MOVE 1 — Picture & Direction.** Sketch it. Choose positive directions. **Resolve $v_0$ into components here** — nothing enters the cross until you do.
 
+**MOVE 2 — Graphs.** $v_x$–$t$ is flat; $v_y$–$t$ is a slope that **crosses zero**.
+
+**MOVE 3 — Organize.** Choose your **interval**, then fill the double cross for *that* interval.
+
+**MOVE 4 — Plan & Solve.** Find $\Delta t$ in whichever cross has enough knowns, then **cross over**.
+
+**MOVE 5 — Check.** Sign, size, units.
+
+<div class="key-idea">
+
+Same five moves as the horizontal case. The only addition is the resolving in MOVE 1.
+
+</div>
 
 ![bg fit right:30%](image-24.png)
 
@@ -2943,6 +2951,463 @@ Cannonballs with different masses are shot from cannons at various angles above 
 # Where should 🎯 go?
 
 <iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="650px" width="1000px" allowfullscreen></iframe>
+
+---
+
+<!--- _class: compact --->
+
+# Both Crosses Are Live Now
+
+The diagram has not changed. What changed is that $v_{0y}$ is no longer zero, so the **bottom cross supports three different boxes** — and picking between them is a new decision.
+
+| Box | Equation | Use it when |
+|---|---|---|
+| left | $\Delta y = v_{0y}\Delta t + \tfrac12 a_y\Delta t^2$ | *no $v_y$ needed* |
+| no clock | $v_y^2 = v_{0y}^2 + 2a_y\Delta y$ | *no $\Delta t$ needed* |
+| no height | $v_y = v_{0y} + a_y\Delta t$ | *no $\Delta y$ needed* |
+
+<div class="key-idea">
+
+**A cross describes one interval.** Say which two instants you are connecting — launch to peak? launch to landing? — *before* you write a single number. Almost every wrong answer in this unit is a right calculation over the wrong interval.
+
+</div>
+
+---
+
+# Example — the full flight
+
+<div class='columns'>
+<div class='col'>
+
+<div style="font-size:1.2em; line-height:1.45;">
+
+A soccer ball is kicked from level ground at **25 m/s**, **37°** above the horizontal.
+
+Find the time to the peak, the maximum height, the total time in the air, and the range.
+
+</div>
+
+</div>
+<div class='col'>
+
+<svg viewBox="0 0 600 400" width="100%" style="max-height:380px" xmlns="http://www.w3.org/2000/svg" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+  <line x1="70" y1="330" x2="430" y2="330" stroke="var(--star, #205EA6)" stroke-width="5"/>
+  <line x1="430" y1="330" x2="430" y2="60" stroke="var(--coral, #AF3029)" stroke-width="5"/>
+  <line x1="70" y1="330" x2="430" y2="60" stroke="var(--ink, #100F0F)" stroke-width="6"/>
+  <path d="M 130 330 A 60 60 0 0 0 118 294" fill="none" stroke="var(--muted, #6F6E69)" stroke-width="3"/>
+  <text x="152" y="316" fill="var(--muted, #6F6E69)" font-size="28">37&#176;</text>
+  <text x="222" y="172" fill="var(--ink, #100F0F)" font-size="32" font-weight="700">v<tspan font-size="21" dy="7">0</tspan><tspan dy="-7"> = 25</tspan></text>
+  <text x="250" y="372" fill="var(--star, #205EA6)" font-size="28" font-weight="600">v<tspan font-size="19" dy="6">0x</tspan><tspan dy="-6"> = 25cos37&#176; = 20</tspan></text>
+  <text x="444" y="205" fill="var(--coral, #AF3029)" font-size="28" font-weight="600" text-anchor="start">v<tspan font-size="19" dy="6">0y</tspan><tspan dy="-6"> = 15</tspan></text>
+</svg>
+
+</div>
+</div>
+
+<div class="small">
+
+The 25 m/s is now **retired**. From here the problem contains only $v_{0x} = 20$ and $v_{0y} = 15$ — the hypotenuse has no cell on the cross.
+
+</div>
+
+---
+
+<!--- _class: compact --->
+
+# Example — two intervals
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**launch → peak** &nbsp; *($v_y = 0$ is the known)*
+
+$$0 = 15 + (-10)\Delta t \;\Rightarrow\; \boxed{\Delta t = 1.5\ \text{s}}$$
+
+$$0 = 15^2 + 2(-10)\Delta y$$
+
+$$\boxed{\Delta y = 11.25\ \text{m}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**launch → landing** &nbsp; *($\Delta y = 0$ is the known)*
+
+$$0 = 15\Delta t - 5\Delta t^2 = \Delta t\,(15 - 5\Delta t)$$
+
+$$\boxed{\Delta t = 3.0\ \text{s}}$$
+
+$$\Delta x = (20)(3.0) = \boxed{60\ \text{m}}$$
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+Two questions, **two different crosses**. Note $3.0 = 2 \times 1.5$ — the trip down matched the trip up *because* $\Delta y = 0$. Practice 3 is where that stops being true.
+
+</div>
+
+---
+
+# Practice 1 — the full flight
+
+A ball is thrown from level ground at **20 m/s**, **53°** above the horizontal.
+
+Find the time to the peak, the maximum height, the total time in the air, and the range.
+
+---
+
+<!--- _class: compact --->
+
+# Practice 1 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**Resolve:** $v_{0x} = 12$, $v_{0y} = 16$
+
+$$0 = 16 - 10\Delta t \;\Rightarrow\; \boxed{\Delta t = 1.6\ \text{s}}$$
+
+$$0 = 16^2 + 2(-10)\Delta y \;\Rightarrow\; \boxed{\Delta y = 12.8\ \text{m}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**Whole flight,** $\Delta y = 0$
+
+$$\boxed{\Delta t = 3.2\ \text{s}}$$
+
+$$\Delta x = (12)(3.2) = \boxed{38.4\ \text{m}}$$
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+Steeper than the Example, so it goes **higher** and stays up **longer** — but lands **shorter**, because $v_x$ is smaller.
+
+</div>
+
+---
+
+# Practice 2 — working backwards from the peak
+
+A volleyball is served from ground level at **53°** above the horizontal and reaches a maximum height of **7.2 m**.
+
+Find its launch speed and how far away it lands.
+
+---
+
+<!--- _class: compact --->
+
+# Practice 2 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**No clock given, none wanted** — so the no-clock box, launch → peak:
+
+$$0 = v_{0y}^2 + 2(-10)(7.2)$$
+
+$$v_{0y}^2 = 144 \;\Rightarrow\; v_{0y} = 12$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**Back up the triangle**
+
+$$v_0 = \frac{12}{\sin 53^\circ} = \boxed{15\ \text{m/s}}$$
+
+$$v_{0x} = 9.0,\quad \Delta t = 2.4\ \text{s}$$
+
+$$\Delta x = \boxed{21.6\ \text{m}}$$
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+Pick the box from the variable the question **leaves out**. That is faster than trying each in turn.
+
+</div>
+
+---
+
+# Practice 3 — non-level ground
+
+A ball is thrown from the roof of a **45 m** building at **20 m/s**, **53°** above the horizontal.
+
+Find the time in the air, how far from the base it lands, and its impact speed.
+
+<div class="small">
+
+Careful: what is $\Delta y$?
+
+</div>
+
+---
+
+<!--- _class: compact --->
+
+# Practice 3 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+$v_{0x} = 12$, $v_{0y} = 16$, and
+
+$$\Delta y = 0 - 45 = \boxed{-45\ \text{m}}$$
+
+$$-45 = 16\Delta t - 5\Delta t^2$$
+
+$$5\Delta t^2 - 16\Delta t - 45 = 0$$
+
+$$\boxed{\Delta t = 5.0\ \text{s}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+$$\Delta x = (12)(5.0) = \boxed{60\ \text{m}}$$
+
+$$v_y = 16 - 10(5.0) = -34$$
+
+$$v = \sqrt{12^2 + 34^2} = \boxed{36\ \text{m/s}}$$
+
+</div>
+
+</div>
+</div>
+
+<div class="warning">
+
+**The symmetry is dead.** Up took 1.6 s; down took 3.4 s. Doubling the time to the peak is legal **only** when $\Delta y = 0$ for the whole flight.
+
+</div>
+
+---
+
+# Practice 4 — clear the fence
+
+A ball is kicked from level ground at **20 m/s**, **53°** above the horizontal, toward a fence **24 m** away that is **10 m** high.
+
+Does the ball clear the fence? Support your answer with a number.
+
+---
+
+<!--- _class: compact --->
+
+# Practice 4 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+The question fixes a **horizontal** distance, so start in the **top** cross:
+
+$$\Delta t = \frac{24}{12} = 2.0\ \text{s}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+Cross over:
+
+$$\Delta y = (16)(2.0) + \tfrac12(-10)(2.0)^2$$
+
+$$\Delta y = 32 - 20 = 12\ \text{m}$$
+
+$$12 > 10 \;\Rightarrow\; \boxed{\text{clears by 2.0 m}}$$
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+"Does it clear?" is a **height-at-a-given-$\Delta x$** problem. Turning it into that is the move; the comparison is the easy half.
+
+</div>
+
+---
+
+# Practice 5 — find the error
+
+A rock is thrown from the edge of a **20 m** cliff at **25 m/s**, **37°** above the horizontal. How far from the base does it land?
+
+<div class="warning">
+
+**A student's work:** "$v_{0x} = 20$, $v_{0y} = 15$, $a_y = -10$. Time up: $0 = 15 - 10\Delta t$, so $\Delta t = 1.5$ s. Coming down takes the same, so the flight is $2(1.5) = 3.0$ s. Then $\Delta x = (20)(3.0) = 60$ m."
+
+</div>
+
+**One** mistake, and it is a decision — not arithmetic. Find it.
+
+---
+
+<!--- _class: compact --->
+
+# Practice 5 — answer
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**The mistake:** doubling the time to the peak. That assumes $\Delta y = 0$; here $\Delta y = -20$ m. The $\Delta y$ cell was never filled in.
+
+$$-20 = 15\Delta t - 5\Delta t^2$$
+
+$$(\Delta t - 4)(\Delta t + 1) = 0$$
+
+$$\boxed{\Delta t = 4.0\ \text{s},\quad \Delta x = 80\ \text{m}}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**Where is the rock at 3.0 s?**
+
+Back level with the cliff top — 60 m out and still **20 m above the beach**, falling at 15 m/s.
+
+The student's answer is right. It answers a different question.
+
+</div>
+
+</div>
+</div>
+
+<div class="small">
+
+The one question to ask before doubling anything: **does this flight end at the height it started?**
+
+</div>
+
+---
+
+<!--- _class: phase-title --->
+
+# Through the Ring
+
+## Can you predict where the ball will be *before* you fire it?
+
+---
+
+<!--- _class: compact --->
+
+# Through the Ring — the job
+
+<div class='columns cols-1-2'>
+<div class='col'>
+
+**Purpose.** Measure the launcher's muzzle speed, derive $y(x)$, and use it to place **four rings** on the real trajectory — from calculation only.
+
+<div class="steps">
+
+**Derive:** eliminate $\Delta t$ between the two crosses.
+
+$$y(x) = y_0 + x\tan\theta - \frac{gx^2}{2v_0^2\cos^2\theta}$$
+
+</div>
+
+</div>
+<div class='col'>
+
+**The four tasks**
+
+1. **Measure $v_0$** — 10 trials at fixed pressure. Report the **spread**, not just the mean. The spread is the whole point.
+2. **Derive $y(x)$** — eliminate time, then **check it**: limiting case, units, sign.
+3. **Predict** — solve $y(x) = 0$ for the range, discard the non-physical root, then compute the height at four stations.
+4. **Place, fire, record** — rings placed from your numbers. One shot. Record the direction of every miss.
+
+<div class="warning">
+
+Goggles on. Never in front of the muzzle. Announce every shot.
+
+</div>
+
+</div>
+</div>
+
+---
+
+<!--- _class: compact --->
+
+# Through the Ring — say the symbols out loud
+
+<div class='columns'>
+<div class='col'>
+
+| Symbol | Means |
+|---|---|
+| $v_0$ | muzzle speed, from the photogate |
+| $\theta$ | launch angle off the horizontal |
+| $y_0$ | height of the **muzzle** above the floor |
+| $x$ | horizontal distance from the muzzle |
+| $y$ | height at that $x$ |
+| $R$ | the $x$ where $y = 0$ |
+
+<div class="warning">
+
+**There is no $h$ in this lab.** If you write one, you do not know which height you mean — and that is exactly what went wrong last year.
+
+</div>
+
+</div>
+<div class='col'>
+
+**Your percent uncertainty is a tolerance**
+
+$v_0$ is squared in the denominator, so a percent error in $v_0$ becomes **twice** that percent in $R$.
+
+<div class="key-idea">
+
+At station 4, is that distance **bigger or smaller than the ring's radius**?
+
+If it is bigger, a miss tells you nothing you did not already know. If it is smaller, the ring is a real test of your model.
+
+</div>
+
+</div>
+</div>
+
 
 ---
 
