@@ -185,6 +185,9 @@ One AU is Earth's average distance from the Sun.</p>
 <p class="sec-sub">Pick what goes on each axis, the same choice you would make in Sheets or Excel.
 Try several combinations. You are looking for relationships that hold for every object &mdash;
 and for objects that break the pattern.</p>
+<p class="sec-sub">A curved graph is hard to turn into an equation, but a <strong>straight</strong> one is easy.
+So the axis menus also offer the <em>squares</em> and <em>cubes</em> of distance and period.
+One pairing out of all of them turns the curve into a straight line. Hunt for it.</p>
 
 <div class="simulation-container">
   <div class="controls">
@@ -202,6 +205,7 @@ and for objects that break the pattern.</p>
         <label><input type="checkbox" id="optLabels" checked> Name each point</label>
         <label><input type="checkbox" id="optColor" checked> Color by phase of water</label>
         <label><input type="checkbox" id="optLog"> Stretch both axes (log scale)</label>
+        <label><input type="checkbox" id="optFit"> Draw a straight line of best fit</label>
       </div>
     </div>
   </div>
@@ -214,10 +218,25 @@ and for objects that break the pattern.</p>
   </div>
 </div>
 
+<div class="explanation">
+  <h3>How to hunt for a straight line</h3>
+  <ul>
+    <li>Start with <em>a</em> on the bottom and <em>T</em> on the side. The points make a curve, not a line.</li>
+    <li>Now try raising one or both to a power. Keep <em>a</em> on the bottom and put <em>T</em>&#178; on the side,
+    then try <em>a</em>&#179; on the bottom instead. Only one pairing lines the points up.</li>
+    <li>Turn on <strong>line of best fit</strong> to judge it honestly. R&#178; tells you how close the points
+    are to that line: R&#178; = 1.0000 means they sit on it exactly. That is the same trendline tool you would
+    use in Sheets or Excel.</li>
+    <li>When you find the straight line, write down its equation. You have just built a mathematical
+    model of the solar system from nothing but a table of numbers.</li>
+  </ul>
+</div>
+
 <div class="info-box">
   <strong>Why the log option is there:</strong> some of these numbers are tiny (Mercury, 0.39 AU) and some
   are huge (Pluto, 39 AU), so the inner planets pile up in one corner. Stretching the axes spreads them out.
-  It does not change the data &mdash; only how much of the pattern you can see at once.
+  It does not change the data &mdash; only how much of the pattern you can see at once. With both axes
+  stretched, the fit reports the <em>power</em> that links the two variables instead of a slope.
 </div>
 
 <h2 class="sec">3 &middot; How far does each object actually get?</h2>
@@ -316,6 +335,7 @@ What you type is saved in this browser, and the Print button gives you a clean c
     <li>What pattern do you see between an object's average distance from the Sun and the phase of its water?</li>
     <li>What pattern do you see between average distance from the Sun and period of revolution?
     Does <em>every</em> object fit it?</li>
+    <li>Which pair of quantities had to be graphed to get a straight line? What is its equation?</li>
     <li>What is different about the minimum and maximum distances for Comet Borrelly and for Pluto?</li>
     <li>Which of these patterns helps explain why Comet Borrelly's water vaporizes every several years?</li>
   </ul>
@@ -373,19 +393,42 @@ const OBJECTS=[
 ];
 OBJECTS.forEach(o=>{
   o.range=+(o.max-o.min).toFixed(3);
+  o.avg2=o.avg*o.avg;
+  o.avg3=o.avg*o.avg*o.avg;
+  o.per2=o.period*o.period;
+  o.per3=o.period*o.period*o.period;
   o.e=(o.max-o.min)/(o.max+o.min);     /* shape, used only for drawing the orbits */
   o.a=o.avg;
 });
 
 const PHASE_COLOR={vapor:'#DA702C',liquid:'#4385BE',ice:'#3AA99F',changes:'#CE5D97'};
 
+const S2='\u00B2',S3='\u00B3';
 const FIELDS=[
- {key:'avg',    label:'Average distance from the Sun (AU)'},
- {key:'period', label:'Period of revolution (Earth years)'},
- {key:'min',    label:'Minimum distance from the Sun (AU)'},
- {key:'max',    label:'Maximum distance from the Sun (AU)'},
- {key:'range',  label:'Max − Min distance (AU)'}
+ {key:'avg',    short:'a',    label:'Average distance from the Sun, a  (AU)'},
+ {key:'period', short:'T',    label:'Period of revolution, T  (Earth years)'},
+ {key:'avg2',   short:'a'+S2, label:'Average distance SQUARED, a'+S2+'  (AU'+S2+')'},
+ {key:'avg3',   short:'a'+S3, label:'Average distance CUBED, a'+S3+'  (AU'+S3+')'},
+ {key:'per2',   short:'T'+S2, label:'Period SQUARED, T'+S2+'  (years'+S2+')'},
+ {key:'per3',   short:'T'+S3, label:'Period CUBED, T'+S3+'  (years'+S3+')'},
+ {key:'min',    short:'min',  label:'Minimum distance from the Sun (AU)'},
+ {key:'max',    short:'max',  label:'Maximum distance from the Sun (AU)'},
+ {key:'range',  short:'max\u2212min', label:'Max \u2212 Min distance (AU)'}
 ];
+function fieldOf(k){return FIELDS.find(f=>f.key===k);}
+
+/* least-squares fit of y on x; returns slope, intercept and R-squared */
+function linFit(xs,ys){
+  const n=xs.length;
+  let sx=0,sy=0,sxy=0,sxx=0;
+  for(let i=0;i<n;i++){sx+=xs[i];sy+=ys[i];sxy+=xs[i]*ys[i];sxx+=xs[i]*xs[i];}
+  const m=(n*sxy-sx*sy)/(n*sxx-sx*sx);
+  const b=(sy-m*sx)/n;
+  const ym=sy/n;
+  let ssr=0,sst=0;
+  for(let i=0;i<n;i++){const f=m*xs[i]+b;ssr+=Math.pow(ys[i]-f,2);sst+=Math.pow(ys[i]-ym,2);}
+  return {m:m,b:b,r2:sst===0?1:1-ssr/sst};
+}
 
 function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
 
@@ -498,6 +541,42 @@ function drawScatter(){
   g.fillText(FIELDS.find(f=>f.key===xk).label+(useLog?'  (log)':''),L+(W-L-R)/2,H-18);
   g.save();g.translate(22,T+(H-T-B)/2);g.rotate(-Math.PI/2);g.textBaseline='top';
   g.fillText(FIELDS.find(f=>f.key===yk).label+(useLog?'  (log)':''),0,0);g.restore();
+
+  /* straight line of best fit, in whichever space is on screen */
+  if(document.getElementById('optFit').checked){
+    const fx=OBJECTS.map(o=>useLog?Math.log10(o[xk]):o[xk]);
+    const fy=OBJECTS.map(o=>useLog?Math.log10(o[yk]):o[yk]);
+    const fit=linFit(fx,fy);
+    g.save();
+    g.beginPath();g.rect(L,T,W-L-R,H-T-B);g.clip();
+    g.beginPath();
+    let started=false;
+    for(let i=0;i<=80;i++){
+      const xv=x0+(x1-x0)*i/80;
+      if(useLog&&xv<=0)continue;
+      const yv=useLog?Math.pow(10,fit.m*Math.log10(xv)+fit.b):fit.m*xv+fit.b;
+      const X=tx(xv),Y=ty(yv);
+      started?g.lineTo(X,Y):(g.moveTo(X,Y),started=true);
+    }
+    g.strokeStyle=css('--accent-secondary');g.lineWidth=2;g.setLineDash([7,5]);g.stroke();
+    g.setLineDash([]);g.restore();
+
+    const xn=fieldOf(xk).short,yn=fieldOf(yk).short;
+    /* an intercept far smaller than the spread of the data is just rounding: say so plainly */
+    const yspread=Math.max(...OBJECTS.map(o=>o[yk]))-Math.min(...OBJECTS.map(o=>o[yk]));
+    const tinyB=Math.abs(fit.b)<yspread*0.002;
+    const eq=useLog
+      ? yn+' \u221D ('+xn+')^'+fit.m.toFixed(3)
+      : tinyB
+        ? yn+' = '+fit.m.toPrecision(4)+' \u00D7 '+xn+'   (intercept \u2248 0)'
+        : yn+' = '+fit.m.toPrecision(4)+' \u00D7 '+xn+(fit.b<0?' \u2212 ':' + ')+Math.abs(fit.b).toPrecision(3);
+    const straight=fit.r2>0.9995;
+    g.font='600 12px "Fira Code",monospace';g.textAlign='left';g.textBaseline='top';
+    g.fillStyle=css('--accent-secondary');
+    g.fillText(eq,L+10,T+8);
+    g.fillStyle=straight?css('--success'):css('--text-muted');
+    g.fillText('R'+S2+' = '+fit.r2.toFixed(4)+(straight?'   \u2190 these points lie on a straight line':''),L+10,T+26);
+  }
 
   /* points */
   OBJECTS.forEach(o=>{
@@ -854,7 +933,7 @@ document.getElementById('clearBtn').addEventListener('click',()=>{
 
 /* ---------- wiring ---------- */
 function redrawAll(){drawScatter();drawRange();drawOrbits();drawTrace();}
-['xSel','ySel','optLabels','optColor','optLog'].forEach(id=>
+['xSel','ySel','optLabels','optColor','optLog','optFit'].forEach(id=>
   document.getElementById(id).addEventListener('change',drawScatter));
 document.getElementById('rangeZoom').addEventListener('input',e=>{
   document.getElementById('rangeZoomVal').textContent=(+e.target.value)+' AU';

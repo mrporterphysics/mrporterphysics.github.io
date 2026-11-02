@@ -18,6 +18,35 @@ math: mathjax
 
 ---
 
+<!--- class: thanksgiving --->
+
+# 2026.11.03 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <!--- class: halloween --->
 
 # 2026.10.30 **AP Physics**

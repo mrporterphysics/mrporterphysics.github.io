@@ -15,8 +15,42 @@ math: mathjax
 
 ---
 
-<!--- class: halloween --->
+<!--- class: thanksgiving --->
 
+
+# 2026.11.02 **AP Physics**
+
+##### **❓ of the 📅**: Is math invented or discovered?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Horizontal Projectile Notes
+2. HP Worked Examples
+3. HP Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model & Solve Horizontal Projectile problems_
+
+### 📆 Upcoming
+
+- PC: Vectors due thurs
+- PC: Horizontal Projectiles due thurs
+
+</div>
+</div>
+
+---
+
+<!--- class: halloween --->
 
 # 2026.10.30 **AP Physics**
 

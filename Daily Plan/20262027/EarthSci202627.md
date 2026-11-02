@@ -14,6 +14,38 @@ math: mathjax
 
 ---
 
+# 2026.11.02 **Earth Science**
+
+##### **❓ of the 📅**: Is math invented or discovered?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Comet Borrelly flyby
+2. Water in Our Solar System — annotate 3–5 details
+3. Initial model of the phenomenon
+4. Sticky notes + Rumors: what is going on with Borrelly?
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model why Earth holds liquid water and Comet Borrelly does not_
+
+### 📆 Upcoming
+
+- Tomorrow: the orbital data — does distance actually decide the phase?
+
+</div>
+</div>
+
+---
+
 # 2026.10.30 **Earth Science**
 
 ##### **❓ of the 📅**: Is space exploration worth the environmental cost of rocket launches?
