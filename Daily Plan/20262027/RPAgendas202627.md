@@ -47,7 +47,6 @@ math: mathjax
 ### 📆 Upcoming
 
 - HW: _**PC: Vectors + Horizontal Projectiles**_ due thurs
-- HW: _**AP Workbook 1.E**_ (relative motion) — moved to next week
 - ✅ **Kin Quiz 5** thurs — vectors, components, horizontal projectiles
 
 </div>
