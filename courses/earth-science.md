@@ -34,6 +34,7 @@ Comprehensive study of Earth's systems including geology, meteorology, astronomy
 ### Astronomy
 - [Exploring the Sun](/Presentations/ES Presentations/Unit 1 Origin/thesun.html)
 - [Solar System Structure](/Presentations/ES Presentations/Unit 1 Origin/solarsystemstructure.html)
+- [Transit Method Explorer](/AP%20Resource%20Pages/Earth%20Science%20Pages/transit-method-explorer.html) — interactive: find exoplanets by the dip in a star's light
 
 ### Geology
 - [Rocks & Rock Cycle](/Presentations/ES Presentations/Rocks/Rocks2025.html)
