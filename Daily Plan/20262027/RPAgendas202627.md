@@ -20,6 +20,38 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2026.11.04 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather know how the universe began or how it ends?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Lab
+2. Discuss Lab
+3. Angled Projectiles and Worked examples
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model horizontal projectile motion_
+
+### 📆 Upcoming
+
+- Physics Classroom
+- Quiz 5 tomorrow
+
+</div>
+</div>
+
+---
+
 # 2026.11.03 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather have a perfect memory or be able to forget anything you choose?

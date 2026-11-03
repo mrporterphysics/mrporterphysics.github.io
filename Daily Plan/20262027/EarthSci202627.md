@@ -14,6 +14,35 @@ math: mathjax
 
 ---
 
+# 2026.11.04 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather know how the universe began or how it ends?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Kepler's Laws Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Mathematically Model Orbits_
+
+### 📆 Upcoming
+
+- 
+
+</div>
+</div>
+
+---
+
 # 2026.11.03 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather have a perfect memory or be able to forget anything you choose?
