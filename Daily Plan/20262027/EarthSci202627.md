@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.11.09 **Earth Science**
+
+##### **❓ of the 📅**: Two archers hit the same bullseye from the same spot at the same speed. How?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Kepler's Law Lab
+2. Present Findings (What are the three laws)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model celestial orbits_
+
+### 📆 Upcoming
+
+- 
+
+</div>
+</div>
+
+---
+
 # 2026.11.05 **Earth Science**
 
 ##### **❓ of the 📅**: You can keep one memory from this year and forget the rest. Which one earns it?

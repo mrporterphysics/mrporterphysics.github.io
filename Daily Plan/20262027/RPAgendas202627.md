@@ -20,6 +20,40 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2026.11.09 **AP Physics**
+
+##### **❓ of the 📅**: Two archers hit the same bullseye from the same spot at the same speed. How?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Angled projectiles — where we actually are (10 min)
+2. Problem cards at the board, together (50 min)
+3. Derive the range equation (15 min)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Solve angled projectile problems with confidence_ — **SP 2.B**
+
+### 📆 Upcoming
+
+- **Tomorrow**: relative motion — the last new content of the unit
+- ✅ **Kin Quiz 6** Thu 11/12 — unit synthesis, one projectile FRQ, **plus relative motion**
+- **AP Classroom Progress Check** — due by the quiz
+- 🔴 **MP1 ends Fri 11/13**
+
+</div>
+</div>
+
+---
+
 # 2026.11.05 **AP Physics**
 
 ##### **❓ of the 📅**: You can keep one memory from this year and forget the rest. Which one earns it?
