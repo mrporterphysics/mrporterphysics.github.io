@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330">
+  <g fill="rgba(111,211,232,0.14)" stroke="#6FD3E8" stroke-width="3">
+    <rect x="70" y="40" width="200" height="200"/>
+    <rect x="430" y="140" width="100" height="100"/>
+  </g>
+  <g stroke="#6FD3E8" stroke-width="1.5" opacity="0.55">
+    <line x1="170" y1="40" x2="170" y2="240"/>
+    <line x1="70" y1="140" x2="270" y2="140"/>
+  </g>
+  <g fill="#A9B3D2" font-size="19" font-family="Inter,sans-serif" text-anchor="middle">
+    <text x="170" y="272">width 2 &#8212; area 4</text>
+    <text x="480" y="272">width 1 &#8212; area 1</text>
+  </g>
+  <text x="350" y="152" fill="#E9ECF7" font-size="26" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">vs.</text>
+  <text x="690" y="120" fill="#7FD1A4" font-size="22" font-family="Inter,sans-serif" font-weight="700">Half the width</text>
+  <text x="690" y="152" fill="#7FD1A4" font-size="22" font-family="Inter,sans-serif" font-weight="700">is a QUARTER</text>
+  <text x="690" y="184" fill="#7FD1A4" font-size="22" font-family="Inter,sans-serif" font-weight="700">of the area.</text>
+  <text x="690" y="224" fill="#A9B3D2" font-size="17" font-family="Inter,sans-serif">Circles do the same.</text>
+  <circle cx="170" cy="306" r="18" fill="none" stroke="#FF9245" stroke-width="2.5"/>
+  <circle cx="480" cy="306" r="9" fill="none" stroke="#FF9245" stroke-width="2.5"/>
+  <text x="350" y="313" fill="#E9ECF7" font-size="20" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">vs.</text>
+</svg>

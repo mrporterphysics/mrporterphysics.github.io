@@ -14,6 +14,35 @@ math: mathjax
 
 ---
 
+# 2026.11.05 **Earth Science**
+
+##### **❓ of the 📅**: You can keep one memory from this year and forget the rest. Which one earns it?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Kepler's Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model celestial orbits_
+
+### 📆 Upcoming
+
+- 
+
+</div>
+</div>
+
+---
+
 # 2026.11.04 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather know how the universe began or how it ends?

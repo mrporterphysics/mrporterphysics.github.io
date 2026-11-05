@@ -189,6 +189,15 @@ button.act {
 }
 button.act:hover { border-color: var(--accent); color: var(--accent); }
 button.act.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* The view toggle names where it GOES, so the view you are IN needs saying
+   somewhere. This is that somewhere. */
+.viewnow {
+  font-family: var(--f-display); font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.04em; color: var(--ink-soft);
+  align-self: center; white-space: nowrap;
+}
+.viewnow strong { color: var(--ink); font-weight: 600; }
 :root[data-theme="dark"] button.act.primary { color: #17120A; }
 
 /* ---- readouts ---- */
@@ -292,7 +301,8 @@ footer {
       <div class="panel-hd">
         <h2>Photometer &mdash; brightness over time</h2>
         <div class="btnrow">
-          <button class="act" id="zoom" aria-pressed="true">Single transit</button>
+          <span class="viewnow">Now showing: <strong id="viewnow">single transit</strong></span>
+          <button class="act" id="zoom">Switch to 30-day survey &rarr;</button>
           <button class="act" id="pin">Pin this curve</button>
           <button class="act" id="unpin" hidden>Clear pinned</button>
         </div>
@@ -797,7 +807,7 @@ footer {
     } else if (!S.reveal) {
       hint.innerHTML = "<strong>Measure from the graph first.</strong> Depth is how far the curve drops below the " +
         "flat baseline. Duration is how long it stays down. Period is the time from one dip to the next — " +
-        "switch to the 30-day survey to see more than one. Then tick <em>Reveal the values</em> to check.";
+        "press <em>Switch to 30-day survey</em> to see more than one. Then tick <em>Reveal the values</em> to check.";
     } else {
       hint.innerHTML = "<strong>Values revealed.</strong> Depth is <code>(Rₚ/R★)²</code> = " +
         fmt(m.k, 4) + "² = " + fmt(m.depth * 100, 3) + "%. Change the star's radius and watch both the depth " +
@@ -865,10 +875,20 @@ footer {
   el("guides").addEventListener("change", function () { S.guides = this.checked; render(false); });
   el("reveal").addEventListener("change", function () { S.reveal = this.checked; render(false); });
 
+  // The button says where it GOES; the readout beside it says where you ARE.
+  // It used to be labelled with the current view and nothing named the other
+  // one, so "Single transit" read as an instruction to a student who was
+  // already looking at a single transit. (Nathan's review, 2026-11-04.)
+  function syncViewToggle() {
+    el("zoom").textContent = S.zoomed
+      ? "Switch to 30-day survey \u2192"
+      : "\u2190 Switch to single transit";
+    el("viewnow").textContent = S.zoomed ? "single transit" : "30-day survey";
+  }
+
   el("zoom").addEventListener("click", function () {
     S.zoomed = !S.zoomed;
-    this.textContent = S.zoomed ? "Single transit" : "30-day survey";
-    this.setAttribute("aria-pressed", String(S.zoomed));
+    syncViewToggle();
     S.pinned = null; el("unpin").hidden = true;
     render(true);
   });
@@ -897,6 +917,10 @@ footer {
   el("reset").addEventListener("click", function () {
     S.rp = DEFAULTS.rp; S.a = DEFAULTS.a; S.rs = DEFAULTS.rs; S.ms = DEFAULTS.ms; S.noise = DEFAULTS.noise;
     S.pinned = null; S.preset = null; S.guides = false; S.reveal = false;
+    // The view is part of "everyone starts from the same system": Part B of the
+    // lab says to press Reset and then read the single-transit view, and a
+    // reset that left a student in the 30-day survey broke that instruction.
+    S.zoomed = true; syncViewToggle();
     el("guides").checked = false; el("reveal").checked = false;
     el("unpin").hidden = true;
     document.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
@@ -930,6 +954,7 @@ footer {
     }
     S.phase = 0.97;
     syncSliders();
+    syncViewToggle();
     render(true);
     requestAnimationFrame(frame);
   }

@@ -20,6 +20,37 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+# 2026.11.05 **AP Physics**
+
+##### **❓ of the 📅**: You can keep one memory from this year and forget the rest. Which one earns it?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Finish Lab Write up
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model horizontal projectile motion_
+
+### 📆 Upcoming
+
+- Test next Friday
+	- **AP Classrooom** Progress check is open to start - due by the test
+
+</div>
+</div>
+
+---
+
 # 2026.11.04 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather know how the universe began or how it ends?

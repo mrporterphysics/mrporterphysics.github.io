@@ -18,6 +18,38 @@ math: mathjax
 <!--- class: thanksgiving --->
 
 
+# 2026.11.05 **AP Physics**
+
+##### **❓ of the 📅**: You can keep one memory from this year and forget the rest. Which one earns it?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. ✅ **Kin Quiz 5**
+2. **Finish the Horizontal Projectile Marble Lab** — conclusions + $v_0$ at the ramp 
+3. **Angled projectile notes** 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model horizontal projectile motion and get $g$ from a slope_ — **SP 1.B, 2.A, 3.C**
+
+### 📆 Upcoming
+
+- **AP Classroom Progress Check** open now — due by the test
+
+
+</div>
+</div>
+
+---
+
 # 2026.11.03 **AP Physics**
 
 ##### **❓ of the 📅**: Would you rather have a perfect memory or be able to forget anything you choose?
