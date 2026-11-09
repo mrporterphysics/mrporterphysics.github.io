@@ -30,9 +30,8 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Angled projectiles — resolving $v_0$ into components (30 min)
-2. Worked examples, together at the board (35 min)
-3. Simulation — which angle wins, and which angles tie (15 min)
+1. Angled projectiles 
+2. Worked examples
 
 </div>
 
@@ -47,7 +46,6 @@ math: mathjax
 - **Tomorrow** — Whiteboard problem cards, angled projectiles
 - ✅ **Kinematics Test — Thu 11/12** · ⚠️ no school Wed 11/11
 - **AP Classroom Progress Check** — due by the test
-- 🔴 **MP1 ends Fri 11/13**
 
 </div>
 </div>
