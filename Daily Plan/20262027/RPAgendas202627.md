@@ -30,9 +30,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Angled projectiles — where we actually are (10 min)
-2. Problem cards at the board, together (50 min)
-3. Derive the range equation (15 min)
+1. Angled projectiles — resolving $v_0$ into components (30 min)
+2. Worked examples, together at the board (35 min)
+3. Simulation — which angle wins, and which angles tie (15 min)
 
 </div>
 
@@ -40,13 +40,13 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 _Solve angled projectile problems with confidence_ — **SP 2.B**
+🥅 _Resolve a launch velocity and solve an angled projectile problem_ — **SP 2.B**
 
 ### 📆 Upcoming
 
-- **Tomorrow**: relative motion — the last new content of the unit
-- ✅ **Kin Quiz 6** Thu 11/12 — unit synthesis, one projectile FRQ, **plus relative motion**
-- **AP Classroom Progress Check** — due by the quiz
+- **Tomorrow** — Whiteboard problem cards, angled projectiles
+- ✅ **Kinematics Test — Thu 11/12** · ⚠️ no school Wed 11/11
+- **AP Classroom Progress Check** — due by the test
 - 🔴 **MP1 ends Fri 11/13**
 
 </div>

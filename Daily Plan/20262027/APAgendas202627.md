@@ -28,8 +28,9 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Whiteboard Speed Dating — angled projectiles, new partners (60 min)
-2. Derive the range equation together — card 5 at the board (15 min)
+1. Angled projectiles — resolving $v_0$ into components (25 min)
+2. Worked examples — resolve, two 1-D problems, recombine (40 min)
+3. Simulation — which angle wins, and which angles tie (15 min)
 
 </div>
 
@@ -37,13 +38,13 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 _Solve angled projectile problems with confidence_ — **SP 2.B**
+🥅 _Resolve a launch velocity and solve an angled projectile problem_ — **SP 2.B**
 
 ### 📆 Upcoming
 
-- **AP Classroom Progress Check** — open now, due by the test
-- Kin Quiz 6: APS Thu 11/12 · APB Fri 11/13 — unit synthesis, one projectile FRQ, **plus relative motion (1.4)**
-- 🔴 **MP1 ends Fri 11/13**
+- **Thu 11/12** — Whiteboard Speed Dating, angled projectiles
+- ✅ **Kinematics Test — Fri 11/13** · 🔴 **MP1 ends that day**
+- **AP Classroom Progress Check** — due by the test
 
 </div>
 </div>

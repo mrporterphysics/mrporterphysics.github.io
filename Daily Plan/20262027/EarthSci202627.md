@@ -37,7 +37,7 @@ math: mathjax
 
 ### 📆 Upcoming
 
-- 
+- Orbits Quiz Friday
 
 </div>
 </div>
