@@ -28,9 +28,8 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Angled projectiles — resolving $v_0$ into components (25 min)
-2. Worked examples — resolve, two 1-D problems, recombine (40 min)
-3. Simulation — which angle wins, and which angles tie (15 min)
+1. Angled projectiles — Notes
+2. Worked examplesw
 
 </div>
 
@@ -38,11 +37,10 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 _Resolve a launch velocity and solve an angled projectile problem_ — **SP 2.B**
+🥅 _Solve an angled projectile problem_ 
 
 ### 📆 Upcoming
 
-- **Thu 11/12** — Whiteboard Speed Dating, angled projectiles
 - ✅ **Kinematics Test — Fri 11/13** · 🔴 **MP1 ends that day**
 - **AP Classroom Progress Check** — due by the test
 
