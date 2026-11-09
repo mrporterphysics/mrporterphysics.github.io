@@ -29,7 +29,8 @@ math: mathjax
 #### 📋 Agenda
 
 1. Angled projectiles — Notes
-2. Worked examplesw
+2. Worked examples
+3. PC Practice (not homework)
 
 </div>
 
