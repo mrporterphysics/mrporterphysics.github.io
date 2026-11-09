@@ -14,6 +14,37 @@ math: mathjax
 
 ---
 
+# 2026.11.10 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Put Kepler's Laws (that you found from your lab) on a whiteboard
+2. Present and Discuss
+3. [Transit Method](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L3_Exoplanet_Transit_Lab_Slides.html) Introduction
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Look at Transit data_
+
+### 📆 Upcoming
+
+- **Orbits Quiz Monday 11/16** (we will practice Friday)
+
+</div>
+</div>
+
+---
+
 # 2026.11.09 **Earth Science**
 
 ##### **❓ of the 📅**: Two archers hit the same bullseye from the same spot at the same speed. How?

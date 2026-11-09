@@ -332,7 +332,7 @@ style: |
 WHAT THIS DECK IS: the deck that RUNS the two-day transit lab. Launch, instructions for every part, the worked examples on screen, and the discussion slides. It is not a content deck to be read through on its own — it alternates with students working in the simulator and on the paper.
 BUILT 2026-11-05 against Nathan's review of the lab (verdict: rebuild). He asked for "slides to go with this lesson — introductions, instructions, and information that goes with the lesson, i.e. a slide for the question 11 discussion." The question 11 discussion is slides 12 and 13.
 THE SIMULATOR: Transit Method Explorer, mrporterphysics.github.io/AP Resource Pages/Earth Science Pages/transit-method-explorer.html. One self-contained page, no login.
-PACING: Day 1 is Parts A–C (slides 1–18, ending after question 21). Day 2 is Parts D–G (slides 19–36). Both are 80-minute B/D blocks. On a 40-minute A/C day this needs a third meeting.
+PACING: Day 1 is Parts A–C (slides 1–18, ending after question 21). Day 2 is Parts D–G (slides 19–37). Both are 80-minute B/D blocks. On a 40-minute A/C day this needs a third meeting.
 MATH LEVEL: these students are at Algebra I. Every worked example on these slides is also printed in the packet — project it and WORK IT WITH THEM rather than letting them read it. That is the single change this rebuild is built around.
 STANDARDS: HS-ESS1-4 (mathematical representations to predict orbital motion) · SEP4 Analyzing and Interpreting Data, the spine · SEP5 Mathematics and Computational Thinking · CCC2 Cause and Effect, carried by the three controlled tests in Part B.
 -->
@@ -877,6 +877,29 @@ Say the tolerance out loud before they start. A student who thinks their 3.3 day
 Question 24: the first four all orbit at about 0.05 AU — one eighth of Mercury's distance — and whip round in three to five DAYS. Kepler-452b is at 1.05 AU and takes 385 days.
 Question 25 is the one worth discussing as a class: why were the hot Jupiters found first? Because confirming a planet needs several repeat dips. A 3-day period gives you a fresh one every three days; Kepler-452b transits once every 385 days, so confirming it took YEARS. They were not more common — just quicker to prove.
 Question 26: model says 0.668% for Kepler-5b, measurement says 0.725%. Not a broken model — real stars are dimmer at the edge and real transits cut off-centre. A 0.06% disagreement is EVIDENCE THE MODEL IS GOOD. Say that explicitly; it is the honest-science moment of Day 2.
+The NEXT slide is where the messy-data conversation goes. Use it with question 26, not before.
+-->
+
+---
+
+# What the Telescope Actually Sends Back
+
+![h:400](l3lab-realdata.svg)
+
+<div class="key-idea">
+
+**Three evenly spaced dips confirm a planet.** One dip could be a sunspot, a glitch, or another star passing behind. A planet comes back **on a schedule** — count the dips above.
+
+</div>
+
+<!--
+NEW on this deck. A colleague's worksheet does its whole activity on raw scatter plots like this one, and ours were all clean curves — this slide closes that gap without changing what students hand in.
+THE FIGURE IS OURS, generated from the same transit model as every other diagram in this lesson. Their figures were not reused; provenance was unknown and the lab's attribution block has to stay honest. It is also plotted on OUR axis — brightness in per cent, baseline 100 — because their sheet mixes a "relative flux, baseline 0" plot with a "relative brightness, baseline 1.000" plot and never warns the student that depth is read differently on each. Do not introduce that confusion here.
+HOW TO USE IT, two minutes, alongside question 26:
+(1) "What is different about this graph?" — every dot is a separate measurement, and the star's brightness is never exactly the same twice. Real telescopes wobble.
+(2) "Can you still find the planet?" Yes. Count the dips: nine, evenly spaced, about 3.5 days apart. That is Kepler-5b, the planet whose depth they just compared against the model.
+(3) Then the three-dip rule in the green box — this is the new infobox in Part D, just before question 25. The rule is why Kepler had to stare at the same patch of sky for four years.
+THE POINT TO LAND: the noise does not hide the planet, it just means you need MORE dips to be sure. That is exactly why the close-in giants were confirmed first.
 -->
 
 ---
