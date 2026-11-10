@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.11.12 **Earth Science**
+
+##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Transit Method](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L3_Exoplanet_Transit_Lab_Slides.html) introduction
+2. Transit method lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use computational models of the transit method_
+
+### 📆 Upcoming
+
+- Quiz monday
+
+</div>
+</div>
+
+---
+
 # 2026.11.10 **Earth Science**
 
 ##### **❓ of the 📅**: How can you prove something is there if you can never see it? 🔭

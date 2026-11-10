@@ -20,6 +20,40 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+---
+
+# 2026.11.12 **AP Physics**
+
+##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Kinematics Test (80 min)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Show what you know about motion in one and two dimensions_
+
+### 📆 Upcoming
+
+- 🟢 **APB sits this same test Fri 11/13**
+- 🔴 **MP1 ends Fri 11/13** — this is your last MP1 grade
+- Next: **Unit 2, Force and Translational Dynamics**
+
+</div>
+</div>
+
+---
+
+
 <div class='do-now'> 
  
  <div> 
@@ -53,6 +87,7 @@ math: mathjax
  </div> 
 
  </div>
+
 
 ---
 

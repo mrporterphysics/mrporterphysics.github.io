@@ -55,7 +55,7 @@ Car $A$ is traveling to the right at a constant velocity $v_A$. At time $t = 0$,
 
 # 2026.11.12 **AP Physics**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?
 
 <div class ='columns'>
 
@@ -63,7 +63,8 @@ Car $A$ is traveling to the right at a constant velocity $v_A$. At time $t = 0$,
 
 #### 📋 Agenda
 
-1. 
+1. Whiteboard Speed Dating — angled projectiles, new partners (50 min)
+2. Card 5 — derive the range equation (15 min)
 
 </div>
 
@@ -71,9 +72,14 @@ Car $A$ is traveling to the right at a constant velocity $v_A$. At time $t = 0$,
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Solve angled projectile problems with confidence_ — **SP 2.B**
 
 ### 📆 Upcoming
+
+- ✅ **Kinematics Test — TOMORROW, Fri 11/13**
+- 🔴 **MP1 ends tomorrow**
+- **AP Classroom Progress Check** — due by the test
+- 📓 Lab notebooks stamped: Free Fall Five, Marble
 
 </div>
 </div>
