@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="Nunito, system-ui, sans-serif">
+  <!-- axes -->
+  <line x1="80" y1="330" x2="600" y2="330" stroke="#3C3C3C" stroke-width="3"/>
+  <line x1="80" y1="330" x2="80" y2="40" stroke="#3C3C3C" stroke-width="3"/>
+  <!-- gridlines + ticks -->
+  <g stroke="#E5E5E5" stroke-width="1.5">
+    <line x1="205" y1="330" x2="205" y2="40"/><line x1="330" y1="330" x2="330" y2="40"/>
+    <line x1="455" y1="330" x2="455" y2="40"/><line x1="580" y1="330" x2="580" y2="40"/>
+    <line x1="80" y1="257.5" x2="600" y2="257.5"/><line x1="80" y1="185" x2="600" y2="185"/>
+    <line x1="80" y1="112.5" x2="600" y2="112.5"/><line x1="80" y1="40" x2="600" y2="40"/>
+  </g>
+  <g fill="#777777" font-size="16" text-anchor="middle">
+    <text x="205" y="354">1</text><text x="330" y="354">2</text>
+    <text x="455" y="354">3</text><text x="580" y="354">4</text>
+  </g>
+  <g fill="#777777" font-size="16" text-anchor="end">
+    <text x="70" y="263">1</text><text x="70" y="190">2</text>
+    <text x="70" y="118">3</text><text x="70" y="45">4</text>
+  </g>
+  <!-- best-fit line -->
+  <line x1="80" y1="330" x2="580" y2="40" stroke="#1CB0F6" stroke-width="4"/>
+  <!-- planets -->
+  <g fill="#8B2FC9">
+    <circle cx="87" cy="326" r="8"/><circle cx="127" cy="303" r="8"/>
+    <circle cx="205" cy="258" r="8"/><circle cx="523" cy="73" r="8"/>
+  </g>
+  <g fill="#3C3C3C" font-size="17" font-weight="700">
+    <text x="95" y="352">Mercury</text>
+    <text x="148" y="292">Venus</text>
+    <text x="222" y="250">Earth</text>
+    <text x="470" y="66" text-anchor="end">Mars</text>
+  </g>
+  <!-- axis titles -->
+  <text x="340" y="386" fill="#3C3C3C" font-size="20" font-weight="700" text-anchor="middle">a&#179; &#8212; mean distance cubed (AU&#179;)</text>
+  <text x="26" y="185" fill="#3C3C3C" font-size="20" font-weight="700" text-anchor="middle" transform="rotate(-90 26 185)">T&#178; &#8212; period squared (yr&#178;)</text>
+</svg>

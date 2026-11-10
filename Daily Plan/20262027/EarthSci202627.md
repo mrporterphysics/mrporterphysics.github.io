@@ -45,6 +45,82 @@ math: mathjax
 
 ---
 
+# 🪐 Kepler's **First** Law — the Law of **Ellipses**
+
+<div class ='columns'>
+
+<div>
+
+![center w:470](kepler-1-ellipse.svg)
+
+</div>
+
+<div>
+
+#### Every planet orbits in an **ellipse**, with the Sun at **one focus** — never at the center.
+
+- The second focus sits **empty**
+- **Eccentricity** says how stretched the orbit is _(ESRT, page 1)_
+
+$$e=\frac{d}{L}=\frac{\text{distance between the foci}}{\text{length of the major axis}}$$
+
+- $e=0$ → a perfect circle · bigger $e$ → more stretched
+- Earth: $e=0.017$, so our orbit is **nearly** a circle
+
+</div>
+</div>
+
+---
+
+# 🌀 Kepler's **Second** Law — **Equal Areas**
+
+<div class ='columns'>
+
+<div>
+
+![center w:470](kepler-2-equal-areas.svg)
+
+</div>
+
+<div>
+
+#### The line from the Sun to the planet sweeps **equal areas in equal times**.
+
+- Close to the Sun → the planet must travel a **long** arc → it moves **fast**
+- Far from the Sun → it only needs a **short** arc → it moves **slow**
+- So orbital speed is **not** constant: fastest at **perihelion**, slowest at **aphelion**
+- The more eccentric the orbit, the bigger the speed difference
+
+</div>
+</div>
+
+---
+
+# ⏱️ Kepler's **Third** Law — the Law of **Periods**
+
+<div class ='columns'>
+
+<div>
+
+![center w:470](kepler-3-period.svg)
+
+</div>
+
+<div>
+
+#### A planet's **period** is set by its **distance** — farther out means a longer year.
+
+$$\frac{T^2}{a^3}=\text{the same number for every planet orbiting the Sun}$$
+
+- In astronomer's units ($a$ in **AU**, $T$ in **years**): $T^2=a^3$
+- Plot $T^2$ against $a^3$ and the planets fall on a **straight line**
+- Mars: $a=1.52$ AU → $T^2=3.5$ → $T=1.9$ years
+
+</div>
+</div>
+
+---
+
 # 2026.11.09 **Earth Science**
 
 ##### **❓ of the 📅**: Two archers hit the same bullseye from the same spot at the same speed. How?

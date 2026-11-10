@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 430" font-family="Nunito, system-ui, sans-serif">
+  <!-- swept areas -->
+  <path d="M164,210 L103.5,112.5 A250,195 0 0 0 103.5,307.5 Z" fill="#58CC02" fill-opacity="0.28" stroke="#2B7A0A" stroke-width="2.5"/>
+  <path d="M164,210 L568,185 A250,195 0 0 1 568,235 Z" fill="#58CC02" fill-opacity="0.28" stroke="#2B7A0A" stroke-width="2.5"/>
+  <!-- orbit -->
+  <ellipse cx="320" cy="210" rx="250" ry="195" fill="none" stroke="#1CB0F6" stroke-width="4"/>
+  <!-- sun -->
+  <circle cx="164" cy="210" r="16" fill="#FFC800" stroke="#E6A100" stroke-width="3"/>
+  <text x="164" y="252" fill="#3C3C3C" font-size="18" font-weight="700" text-anchor="middle">Sun</text>
+  <!-- planet positions -->
+  <circle cx="82" cy="190" r="10" fill="#2B7A0A"/>
+  <circle cx="569" cy="196" r="10" fill="#2B7A0A"/>
+  <!-- speed labels -->
+  <text x="150" y="80" fill="#C42B2B" font-size="20" font-weight="800" text-anchor="middle">moves FAST</text>
+  <text x="150" y="104" fill="#777777" font-size="16" text-anchor="middle">long arc, close in</text>
+  <text x="470" y="330" fill="#0A7AB5" font-size="20" font-weight="800" text-anchor="middle">moves SLOW</text>
+  <text x="470" y="354" fill="#777777" font-size="16" text-anchor="middle">short arc, far out</text>
+  <text x="126" y="200" fill="#2B7A0A" font-size="16" font-weight="700" text-anchor="middle">same</text>
+  <text x="126" y="220" fill="#2B7A0A" font-size="16" font-weight="700" text-anchor="middle">area</text>
+  <text x="520" y="150" fill="#2B7A0A" font-size="17" font-weight="700" text-anchor="middle">same area</text>
+  <line x1="520" y1="160" x2="545" y2="196" stroke="#2B7A0A" stroke-width="2"/>
+  <text x="320" y="424" fill="#777777" font-size="17" text-anchor="middle">both shaded slices are swept in the same number of days</text>
+</svg>
