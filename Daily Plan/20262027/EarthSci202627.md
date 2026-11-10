@@ -16,7 +16,7 @@ math: mathjax
 
 # 2026.11.10 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: How can you prove something is there if you can never see it? 🔭
 
 <div class ='columns'>
 
