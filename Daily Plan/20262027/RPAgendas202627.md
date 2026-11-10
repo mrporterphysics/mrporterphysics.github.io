@@ -20,6 +20,42 @@ math: mathjax
 
 <!--- class: thanksgiving --->
 
+<div class='do-now'> 
+ 
+ <div> 
+
+
+ ### **2026.11.10** AP Physics **Do Now**
+
+ <div class='columns'>
+ <div>
+ 
+**Car $A$ is traveling to the right at a constant velocity $v_A$. At time $t = 0$, it passes Car $B$, which is at rest. At the same time ($t = 0$), Car $B$ begins to accelerate with a constant acceleration of magnitude $a_B$, as shown in Figure 1. Car $B$ has a velocity of $v_p$ when it reaches the same position as Car $A$ at time $t = t_f$, as shown in Figure 2. Which of the following, if any, is an expression for the time it takes for Car $B$ to catch up to Car $A$?**
+
+ </div>
+  
+ <div>
+ 
+![center w:500](image-6.png)
+
+**A. $\frac{v_A}{a_B}$**
+
+**B.$\frac{2v_A}{a_B}$**
+
+**C.$\frac{2v_A^2}{a_B}$**
+
+**D.It cannot be determined without knowing the distance traveled by the cars.**
+
+ </div>
+ </div>
+
+
+ </div> 
+
+ </div>
+
+---
+
 # 2026.11.10 **AP Physics**
 
 ##### **❓ of the 📅**: 
