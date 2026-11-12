@@ -46,7 +46,16 @@
       "./PorterThemes/Schodack/cosmos.css",
       "./PorterThemes/Schodack/trajectory.css"
    ],
+   "markdown.editor.filePaste.copyIntoWorkspace": "mediaFiles",
+   "markdown.copyFiles.destination": {
+      "/**/*.md": "${documentWorkspaceFolder}/assets/screenshots/${documentBaseName}-${fileName}"
+   },
+   "pasteImage.path": "${projectRoot}/assets/screenshots",
    "pasteImage.basePath": "${currentFileDir}",
-   "pasteImage.path": "${currentFileDir}/images"
+   "pasteImage.namePrefix": "${currentFileNameWithoutExt}-",
+   "pasteImage.forceUnixStyleSeparator": true,
+   "pasteImage.encodePath": "urlEncodeSpace",
+   "MarkdownPaste.path": "${workspaceFolder}/assets/screenshots",
+   "MarkdownPaste.basePath": "${fileDirname}",
+   "MarkdownPaste.namePrefix": "${fileBasenameNoExtension}-"
 }
-
