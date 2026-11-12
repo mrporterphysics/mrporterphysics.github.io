@@ -369,13 +369,13 @@ Practice: Find the x & y components of the following velocities...
 <div class='columns'>
 <div>
 
-![center](../figures/Highest-Point.gif)
+![center](../../../assets/img/Highest-Point.gif)
 
 </div>
  
 <div>
 
-![center](../figures/Lands-at-Same-Height.gif)
+![center](../../../assets/img/Lands-at-Same-Height.gif)
 
 </div>
 </div>

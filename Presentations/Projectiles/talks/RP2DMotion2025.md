@@ -1101,13 +1101,13 @@ $$v_{iy} = v \sin \theta$$
 <div class='columns'>
 <div>
 
-![center](../figures/Highest-Point.gif)
+![center](../../../assets/img/Highest-Point.gif)
 
 </div>
  
 <div>
 
-![center](../figures/Lands-at-Same-Height.gif)
+![center](../../../assets/img/Lands-at-Same-Height.gif)
 
 </div>
 </div>

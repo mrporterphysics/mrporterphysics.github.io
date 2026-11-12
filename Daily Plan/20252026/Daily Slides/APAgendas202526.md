@@ -1734,7 +1734,7 @@ In the figures below, identical boxes of mass 10 kg are moving at the same initi
  
 <div>
 
-<video height = "550 px" controls src="IMG-0136.MOV" title="Title"></video>
+<video height = "550 px" controls src="../../../assets/video/IMG-0136.MOV" title="Title"></video>
 
 </div>
 </div>

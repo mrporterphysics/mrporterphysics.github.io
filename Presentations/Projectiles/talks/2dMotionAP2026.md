@@ -2895,13 +2895,13 @@ Cannonballs with different masses are shot from cannons at various angles above 
 <div class='columns'>
 <div class='col'>
 
-![center](../figures/Highest-Point.gif)
+![center](../../../assets/img/Highest-Point.gif)
 
 </div>
  
 <div class='col'>
 
-![center](../figures/Lands-at-Same-Height.gif)
+![center](../../../assets/img/Lands-at-Same-Height.gif)
 
 </div>
 </div>

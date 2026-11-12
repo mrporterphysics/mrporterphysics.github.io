@@ -117,7 +117,7 @@ The same as linear, but with their rotational twin!
 
 ---
 
-<img style="width:100%"  src="../figures/anggraphs.png">
+<img style="width:100%"  src="../../../assets/img/anggraphs.png">
 
 
 ---

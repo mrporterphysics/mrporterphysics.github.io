@@ -4402,11 +4402,11 @@ Practice Day:
 3. What patterns do we notice?
 4. Organize findings in packet - **Explore 2**
 
-![bg fit blur](image-7.png)
+![bg fit blur](../../../assets/img/image-7.png)
 
 ---
 
-![bg fit](image-8.png)
+![bg fit](../../../assets/img/image-7.png)
 
 
 ---

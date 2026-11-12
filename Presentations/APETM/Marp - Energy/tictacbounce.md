@@ -37,7 +37,7 @@ class: invert
 # Slow Motion
 <center>
 <video width="320" height="540" controls>
-  <source src="IMG-0136.MOV" type="video/mp4">
+  <source src="../../../assets/video/IMG-0136.MOV" type="video/mp4">
 </video> </center>
 
 ---
