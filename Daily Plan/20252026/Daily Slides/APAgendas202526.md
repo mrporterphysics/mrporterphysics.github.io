@@ -4759,7 +4759,7 @@ Each graph below shows the position of an object as a function of time.
 
 ### Who went further? Dorothy or Toto?
 
-![bg fit right](../../../Daily%20Plan/20232024/images/Kinematics/dortoto.png)
+![bg fit right](../../../assets/kinematics/dortoto.png)
 
 
 

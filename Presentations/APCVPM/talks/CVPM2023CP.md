@@ -61,7 +61,7 @@ $$x = (25 \textrm{ cm/s})t + 250 \textrm{ cm}$$
 
 ### Who went further? Dorothy or Toto?
 
-![width:400 center](../../../Daily%20Plan/20232024/images/Kinematics/dortoto.png)
+![width:400 center](../../../assets/kinematics/dortoto.png)
 
 
 ---
@@ -101,7 +101,7 @@ Each description should include:
 
 ### Describe the motion of each graph
 
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt1.png)
+![center](../../../assets/kinematics/xt1.png)
 
 ---
 
@@ -109,7 +109,7 @@ Each description should include:
 
 ### Describe the motion of each graph
 
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt2.png)
+![center](../../../assets/kinematics/xt2.png)
 
 ---
 
@@ -117,7 +117,7 @@ Each description should include:
 
 ### Describe the motion of each graph
 
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt3.png)
+![center](../../../assets/kinematics/xt3.png)
 
 ---
 
@@ -125,7 +125,7 @@ Each description should include:
 
 ### Describe the motion of each graph
 
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt4.png)
+![center](../../../assets/kinematics/xt4.png)
 
 
 ---
@@ -134,7 +134,7 @@ Each description should include:
 
 ### Describe the motion of each graph
 
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt5.png)
+![center](../../../assets/kinematics/xt5.png)
 
 ---
 
@@ -142,7 +142,7 @@ Each description should include:
 
 ### Describe the motion of each graph
 
-![center](../../../Daily%20Plan/20232024/images/Kinematics/xt6.png)
+![center](../../../assets/kinematics/xt6.png)
 
 ---
 
@@ -284,7 +284,7 @@ $$ v = \frac{\Delta x}{\Delta t}$$
 
 <br>
 
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/motionmapCPexample.png)
+![center width:1200](../../../assets/kinematics/motionmapCPexample.png)
 
 
 ---
@@ -301,7 +301,7 @@ $$ v = \frac{\Delta x}{\Delta t}$$
 # Motion Map Practice 
 
 
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice1.png)
+![center width:1200](../../../assets/kinematics/mmpractice1.png)
 
 ---
 
@@ -309,17 +309,7 @@ $$ v = \frac{\Delta x}{\Delta t}$$
 # Motion Map Practice 
 
 
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice2.png)
-
-
----
-
-
-# Motion Map Practice 
-
-
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice3.png)
-
+![center width:1200](../../../assets/kinematics/mmpractice2.png)
 
 
 ---
@@ -328,7 +318,9 @@ $$ v = \frac{\Delta x}{\Delta t}$$
 # Motion Map Practice 
 
 
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice4.png)
+![center width:1200](../../../assets/kinematics/mmpractice3.png)
+
+
 
 ---
 
@@ -336,7 +328,15 @@ $$ v = \frac{\Delta x}{\Delta t}$$
 # Motion Map Practice 
 
 
-![center width:1200](../../../Daily%20Plan/20232024/images/Kinematics/mmpractice5.png)
+![center width:1200](../../../assets/kinematics/mmpractice4.png)
+
+---
+
+
+# Motion Map Practice 
+
+
+![center width:1200](../../../assets/kinematics/mmpractice5.png)
 
 ---
 
