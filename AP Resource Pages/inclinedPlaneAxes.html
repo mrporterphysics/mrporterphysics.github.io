@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turning the Axes — Inclined Planes | AP Physics</title>
+<link rel="stylesheet" href="../css/flexoki-theme.css">
+<style>
+:root{
+  --fx-paper:#FFFCF0; --fx-base-50:#F2F0E5; --fx-base-100:#EFEBD4; --fx-base-150:#E6E2CC;
+  --fx-base-200:#DAD4BA; --fx-base-300:#C8BFA1; --fx-base-500:#9C8F70; --fx-base-600:#847759;
+  --fx-base-700:#6F6144; --fx-base-950:#1C1B1A; --fx-black:#100F0F;
+  --fx-red-light:#D14D41; --fx-orange-light:#DA702C; --fx-yellow-light:#D0A215;
+  --fx-green-light:#879A39; --fx-cyan-light:#3AA99F; --fx-blue-light:#4385BE;
+  --fx-purple-light:#8B7EC8; --fx-magenta-light:#CE5D97;
+  --ink:var(--text-primary,var(--fx-base-950));
+  --panel:var(--bg-secondary,var(--fx-base-50));
+  --edge:var(--border-color,var(--fx-base-200));
+}
+body[data-theme="dark"]{
+  --fx-red-light:#D14D41; --fx-green-light:#A0AF54; --fx-blue-light:#66A0C8;
+  --fx-purple-light:#A699D0; --fx-orange-light:#EC8B49; --fx-cyan-light:#5ABDAC;
+}
+*{box-sizing:border-box}
+body{
+  font-family:'Fira Code','SF Mono','Monaco','Inconsolata','Roboto Mono',monospace;
+  background:var(--bg-primary,var(--fx-paper)); color:var(--ink);
+  margin:0; padding:18px; line-height:1.55; min-height:100vh;
+}
+.theme-toggle{
+  position:fixed; top:16px; right:16px; background:var(--bg-tertiary,var(--fx-base-100));
+  border:1px solid var(--edge); color:var(--ink); padding:8px 12px; border-radius:6px;
+  cursor:pointer; font-size:.9rem; font-family:inherit; z-index:100;
+}
+.theme-toggle:hover{background:var(--fx-blue-light); color:var(--fx-paper); border-color:var(--fx-blue-light)}
+.container{max-width:1500px; margin:0 auto; background:var(--panel); border:1px solid var(--edge);
+  border-radius:10px; padding:22px 26px 28px}
+h1{font-size:1.65rem; margin:.1em 0 .1em}
+.subtitle{color:var(--fx-base-600); margin-bottom:1.1em; font-size:.95rem}
+h2{font-size:1.12rem; margin:1.3em 0 .45em; border-bottom:1px solid var(--edge); padding-bottom:.25em}
+.stage{display:grid; grid-template-columns:minmax(0,1.55fr) minmax(290px,.85fr); gap:20px; align-items:start}
+@media(max-width:1050px){.stage{grid-template-columns:1fr}}
+svg{width:100%; height:auto; display:block; background:var(--bg-primary,var(--fx-paper));
+  border:1px solid var(--edge); border-radius:8px}
+.controls{display:flex; flex-direction:column; gap:14px}
+.ctl{background:var(--bg-primary,var(--fx-paper)); border:1px solid var(--edge); border-radius:8px; padding:12px 14px}
+.ctl label{display:block; font-weight:600; font-size:.88rem; margin-bottom:6px}
+.ctl .val{float:right; color:var(--fx-blue-light); font-weight:700}
+input[type=range]{width:100%; accent-color:var(--fx-blue-light)}
+.row{display:flex; gap:8px; flex-wrap:wrap; margin-top:8px}
+button.snap, button.tog{
+  font-family:inherit; font-size:.82rem; padding:6px 10px; border-radius:6px; cursor:pointer;
+  border:1px solid var(--edge); background:var(--bg-tertiary,var(--fx-base-100)); color:var(--ink);
+}
+button.snap:hover,button.tog:hover{border-color:var(--fx-blue-light)}
+button.tog[aria-pressed="true"]{background:var(--fx-blue-light); color:var(--fx-paper); border-color:var(--fx-blue-light)}
+table.read{width:100%; border-collapse:collapse; font-size:.88rem}
+table.read td{padding:4px 2px; border-bottom:1px solid var(--edge)}
+table.read td:last-child{text-align:right; font-weight:700}
+.k-par{color:var(--fx-red-light)} .k-perp{color:var(--fx-purple-light)}
+.k-n{color:var(--fx-green-light)} .k-g{color:var(--fx-blue-light)} .k-f{color:var(--fx-orange-light)}
+.note{background:var(--bg-primary,var(--fx-paper)); border:1px solid var(--edge);
+  border-left:4px solid var(--fx-blue-light); border-radius:6px; padding:12px 14px; margin:14px 0; font-size:.92rem}
+.note.warn{border-left-color:var(--fx-orange-light)}
+.note.key{border-left-color:var(--fx-green-light)}
+.cols{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+@media(max-width:800px){.cols{grid-template-columns:1fr}}
+code{background:var(--bg-tertiary,var(--fx-base-100)); padding:1px 5px; border-radius:4px; font-size:.92em}
+.big{font-size:1.05rem}
+footer{margin-top:1.6em; padding-top:.9em; border-top:1px solid var(--edge); color:var(--fx-base-600); font-size:.82rem}
+</style>
+</head>
+<body>
+<button class="theme-toggle" type="button" onclick="toggleTheme()" aria-pressed="false">🌙 Dark</button>
+
+<div class="container">
+<h1>Turning the Axes</h1>
+<div class="subtitle">Why we rotate the coordinate system on an inclined plane — and where sin&thinsp;&theta; and cos&thinsp;&theta; actually come from. <strong>AP Physics 1 · Unit 2</strong></div>
+
+<div class="stage">
+  <div>
+    <svg id="fig" viewBox="60 20 620 600" role="img" aria-labelledby="figtitle">
+      <title id="figtitle">A block on an inclined plane with force vectors and two choices of coordinate axes</title>
+      <defs>
+        <marker id="hG" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,1 L10,5.5 L0,10 z" fill="var(--fx-blue-light)"/></marker>
+        <marker id="hN" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,1 L10,5.5 L0,10 z" fill="var(--fx-green-light)"/></marker>
+        <marker id="hP" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,1 L10,5.5 L0,10 z" fill="var(--fx-red-light)"/></marker>
+        <marker id="hQ" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,1 L10,5.5 L0,10 z" fill="var(--fx-purple-light)"/></marker>
+        <marker id="hF" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0,1 L10,5.5 L0,10 z" fill="var(--fx-orange-light)"/></marker>
+        <marker id="hA" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto"><path d="M0,1 L9,5 L0,9 z" fill="var(--fx-base-500)"/></marker>
+      </defs>
+
+      <g id="world">
+        <path id="incline" fill="var(--fx-base-150)" stroke="var(--fx-base-500)" stroke-width="2"/>
+        <path id="arcBase" fill="none" stroke="var(--fx-cyan-light)" stroke-width="3"/>
+        <text id="arcBaseLbl" font-size="19" font-weight="700" fill="var(--fx-cyan-light)">θ</text>
+        <g id="axesRot">
+          <line id="axPar" stroke="var(--fx-base-500)" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#hA)"/>
+          <line id="axPerp" stroke="var(--fx-base-500)" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#hA)"/>
+          <text id="axParLbl" font-size="15" font-weight="700" fill="var(--fx-base-600)">x′</text>
+          <text id="axPerpLbl" font-size="15" font-weight="700" fill="var(--fx-base-600)">y′</text>
+        </g>
+        <rect id="block" width="86" height="54" rx="5" fill="var(--fx-base-300)" stroke="var(--fx-black)" stroke-width="2.5"/>
+        <line id="vecN" stroke="var(--fx-green-light)" stroke-width="4" marker-end="url(#hN)"/>
+        <text id="lblN" font-size="16" font-weight="700" fill="var(--fx-green-light)">F<tspan font-size="11" dy="4">N</tspan></text>
+        <line id="vecPar" stroke="var(--fx-red-light)" stroke-width="4" marker-end="url(#hP)"/>
+        <text id="lblPar" font-size="15" font-weight="700" fill="var(--fx-red-light)">mg sin θ</text>
+        <line id="vecPerp" stroke="var(--fx-purple-light)" stroke-width="4" marker-end="url(#hQ)"/>
+        <text id="lblPerp" font-size="15" font-weight="700" fill="var(--fx-purple-light)">mg cos θ</text>
+        <line id="vecFric" stroke="var(--fx-orange-light)" stroke-width="4" marker-end="url(#hF)"/>
+        <text id="lblFric" font-size="15" font-weight="700" fill="var(--fx-orange-light)">f</text>
+        <path id="dashPar" fill="none" stroke="var(--fx-base-400,#B5A988)" stroke-width="1.3" stroke-dasharray="4 4"/>
+        <path id="dashPerp" fill="none" stroke="var(--fx-base-400,#B5A988)" stroke-width="1.3" stroke-dasharray="4 4"/>
+        <g id="axesStd">
+          <line id="axX" stroke="var(--fx-base-500)" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#hA)"/>
+          <line id="axY" stroke="var(--fx-base-500)" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#hA)"/>
+          <text id="axXLbl" font-size="15" font-weight="700" fill="var(--fx-base-600)">x</text>
+          <text id="axYLbl" font-size="15" font-weight="700" fill="var(--fx-base-600)">y</text>
+        </g>
+        <line id="vecG" stroke="var(--fx-blue-light)" stroke-width="4.5" marker-end="url(#hG)"/>
+        <text id="lblG" font-size="17" font-weight="700" fill="var(--fx-blue-light)">F<tspan font-size="11" dy="4">g</tspan><tspan dy="-4"> = mg</tspan></text>
+        <path id="arcForce" fill="none" stroke="var(--fx-cyan-light)" stroke-width="3"/>
+        <text id="arcForceLbl" font-size="19" font-weight="700" fill="var(--fx-cyan-light)">θ</text>
+      </g>
+
+      <text id="tilt" x="668" y="44" font-size="13" text-anchor="end" fill="var(--fx-base-500)"></text>
+    </svg>
+  </div>
+
+  <div class="controls">
+    <div class="ctl">
+      <label for="sTheta">Incline angle θ <span class="val" id="vTheta">30°</span></label>
+      <input type="range" id="sTheta" min="0" max="80" step="1" value="30">
+      <div class="row">
+        <button class="snap" type="button" data-t="0">θ = 0°</button>
+        <button class="snap" type="button" data-t="30">30°</button>
+        <button class="snap" type="button" data-t="45">45°</button>
+        <button class="snap" type="button" data-t="80">80°</button>
+      </div>
+    </div>
+
+    <div class="ctl" style="border-color:var(--fx-blue-light)">
+      <label for="sRot">🔄 Turn the board <span class="val" id="vRot">0%</span></label>
+      <input type="range" id="sRot" min="0" max="100" step="1" value="0">
+      <div style="font-size:.82rem; color:var(--fx-base-600); margin-top:6px">
+        Drag until the slope lies flat. <strong>Watch gravity tilt.</strong> It ends up on neither axis — which is exactly why it is the one force you break up.
+      </div>
+    </div>
+
+    <div class="ctl">
+      <label>Show</label>
+      <div class="row">
+        <button class="tog" type="button" id="tComp" aria-pressed="true">Components</button>
+        <button class="tog" type="button" id="tAngle" aria-pressed="true">The equal angles</button>
+        <button class="tog" type="button" id="tFric" aria-pressed="false">Friction</button>
+      </div>
+    </div>
+
+    <div class="ctl">
+      <label for="sMass">Mass <span class="val" id="vMass">2.0 kg</span></label>
+      <input type="range" id="sMass" min="1" max="3" step="0.1" value="2">
+      <table class="read" aria-label="Live values">
+        <tr><td class="k-g">F<sub>g</sub> = mg</td><td class="k-g" id="rG">20.0 N</td></tr>
+        <tr><td class="k-par">F<sub>g∥</sub> = mg sin θ</td><td class="k-par" id="rPar">10.0 N</td></tr>
+        <tr><td class="k-perp">F<sub>g⊥</sub> = mg cos θ</td><td class="k-perp" id="rPerp">17.3 N</td></tr>
+        <tr><td class="k-n">F<sub>N</sub> = mg cos θ</td><td class="k-n" id="rN">17.3 N</td></tr>
+        <tr><td>a = g sin θ</td><td id="rA">5.0 m/s²</td></tr>
+      </table>
+      <div style="font-size:.78rem; color:var(--fx-base-600); margin-top:6px">g = 10 N/kg · frictionless unless Friction is on</div>
+    </div>
+
+    <div class="note key" style="margin:0" id="limit"></div>
+  </div>
+</div>
+
+<h2>What you are looking at</h2>
+<div class="cols">
+  <div>
+    <div class="note warn">
+      <strong>With the ordinary axes</strong> (x across, y up), <em>three</em> of the forces point along awkward directions, and so does the acceleration. You would have to break up <span class="k-n">F<sub>N</sub></span>, the friction, <em>and</em> the acceleration into components. That is three jobs.
+    </div>
+    <div class="note">
+      <strong>With the turned axes</strong> (x′ along the slope, y′ perpendicular to it), <span class="k-n">F<sub>N</sub></span> lies entirely on y′, friction lies entirely on x′, and the acceleration lies entirely on x′ — <strong>because the block can only slide along the ramp.</strong> Only gravity is left to break up. That is one job.
+    </div>
+    <p class="big"><strong>That is the whole reason we rotate.</strong> We choose the axes that make the <em>acceleration</em> point along one of them. The CED says so outright — <em>“a coordinate system with one axis parallel to the direction of acceleration simplifies the translation from free-body diagram to algebraic representation”</em> (2.2.B.4).</p>
+  </div>
+  <div>
+    <div class="note key">
+      <strong>Where the sine and cosine come from.</strong> Turn on <em>The equal angles</em>. The angle at the base of the ramp and the angle between <span class="k-g">F<sub>g</sub></span> and the <span class="k-perp">perpendicular</span> are <strong>the same angle</strong> — their arms are mutually perpendicular.
+      <br><br>
+      Once you see that, the triangle reads straight off: gravity is the hypotenuse, so the side <em>next to</em> θ (into the slope) is <strong>mg cos θ</strong> and the side <em>opposite</em> θ (down the slope) is <strong>mg sin θ</strong>.
+    </div>
+    <div class="note warn">
+      <strong>Don't memorize which one is which — check it.</strong> Slide θ to <strong>0°</strong>: the ramp is flat, nothing pulls you along it, and the floor holds your whole weight. So the along-the-slope piece must vanish and the perpendicular piece must be the full mg. Only <strong>sin 0 = 0</strong> and <strong>cos 0 = 1</strong> do that.
+      <br><br>
+      Now slide to <strong>80°</strong>, nearly a cliff: almost all of gravity pulls you down the slope and the surface barely presses back at all.
+    </div>
+  </div>
+</div>
+
+<h2>Try these before you leave</h2>
+<div class="note">
+  <ol style="margin:.2em 0 0; padding-left:1.3em">
+    <li>Set θ = 45°. What do you notice about F<sub>g∥</sub> and F<sub>g⊥</sub>, and why must that be true at exactly 45°?</li>
+    <li>Turn the board all the way. Which forces now lie exactly along an axis, and which one does not? What does that tell you about which force needs breaking up?</li>
+    <li>Turn friction on and raise θ slowly. Find the angle where the block would just begin to slip, and say what that tells you about μ<sub>s</sub>.</li>
+    <li>Without touching the sliders: if the mass doubled, which of the five numbers would change, and which would not?</li>
+  </ol>
+</div>
+
+<footer>Mr.&nbsp;Porter · AP Physics 1 · Unit 2: Force &amp; Translational Dynamics · built for the Day 13 incline pivot</footer>
+</div>
+
+<script>
+(function(){
+'use strict';
+var G = 10;
+var S = { th:30, rot:0, m:2, comp:true, ang:true, fric:false, mu:0.35 };
+
+var $ = function(id){ return document.getElementById(id); };
+var D2R = Math.PI/180;
+
+/* ---------- theme, matching the site convention ---------- */
+function applyTheme(t){
+  if(t==='dark') document.body.setAttribute('data-theme','dark');
+  else document.body.removeAttribute('data-theme');
+  var b=document.querySelector('.theme-toggle');
+  if(b){ b.textContent = t==='dark' ? '☀️ Light' : '🌙 Dark';
+         b.setAttribute('aria-pressed', t==='dark'?'true':'false'); }
+  try{ localStorage.setItem('theme',t); }catch(e){}
+}
+window.toggleTheme=function(){
+  applyTheme(document.body.getAttribute('data-theme')==='dark'?'light':'dark');
+};
+try{ if(localStorage.getItem('theme')==='dark') applyTheme('dark'); }catch(e){}
+
+/* ---------- geometry ---------- */
+var OX=210, OY=440, H=400, BW=86, BH=54;
+
+function setLine(el,x1,y1,x2,y2){
+  el.setAttribute('x1',x1); el.setAttribute('y1',y1);
+  el.setAttribute('x2',x2); el.setAttribute('y2',y2);
+}
+function put(el,x,y){ el.setAttribute('x',x); el.setAttribute('y',y); }
+function vis(el,on){ el.setAttribute('visibility', on?'visible':'hidden'); }
+/* arc from angle a1 to a2 (degrees, screen convention) about (cx,cy) radius r */
+function arc(el,cx,cy,r,a1,a2){
+  var p1x=cx+r*Math.cos(a1*D2R), p1y=cy+r*Math.sin(a1*D2R);
+  var p2x=cx+r*Math.cos(a2*D2R), p2y=cy+r*Math.sin(a2*D2R);
+  var large = Math.abs(a2-a1)>180 ? 1:0, sweep = (a2>a1)?1:0;
+  el.setAttribute('d','M'+p1x+','+p1y+' A'+r+','+r+' 0 '+large+' '+sweep+' '+p2x+','+p2y);
+}
+
+function draw(){
+  var th=S.th, t=th*D2R, A=th*(S.rot/100);
+  var ux=Math.cos(t), uy=-Math.sin(t);      // up the slope
+  var nx=-Math.sin(t), ny=-Math.cos(t);     // out of the slope
+
+  var apx=OX+H*ux, apy=OY+H*uy;             // apex of the ramp
+  $('incline').setAttribute('d','M'+OX+','+OY+' L'+apx+','+OY+' L'+apx+','+apy+' Z');
+
+  var f=0.55;
+  var sx=OX+f*H*ux, sy=OY+f*H*uy;           // point on the slope under the block
+  var bx=sx+nx*BH/2, by=sy+ny*BH/2;         // block centre
+
+  var blk=$('block');
+  blk.setAttribute('x',bx-BW/2); blk.setAttribute('y',by-BH/2);
+  blk.setAttribute('transform','rotate('+(-th)+','+bx+','+by+')');
+
+  $('world').setAttribute('transform','rotate('+A+','+bx+','+by+')');
+
+  var mg=S.m*G, k=6.5;                       // px per newton (mass capped at 3 kg so Fg fits)
+  var Lg=mg*k, Lpar=mg*Math.sin(t)*k, Lperp=mg*Math.cos(t)*k, Lfric=S.fric?S.mu*mg*Math.cos(t)*k:0;
+
+  /* gravity sits INSIDE the rotating group with everything else. Turning the view is a
+     rigid rotation: it cannot change the angle between gravity and the slope normal. */
+  setLine($('vecG'),bx,by,bx,by+Lg);
+  put($('lblG'),bx-66,by+Lg-2);
+
+  /* normal force, along +n */
+  setLine($('vecN'),bx,by,bx+nx*Lperp,by+ny*Lperp);
+  put($('lblN'),bx+nx*Lperp-34,by+ny*Lperp-12);
+
+  /* components of gravity */
+  setLine($('vecPar'),bx,by,bx-ux*Lpar,by-uy*Lpar);
+  put($('lblPar'),bx-ux*Lpar-78,by-uy*Lpar+26);
+  setLine($('vecPerp'),bx,by,bx-nx*Lperp,by-ny*Lperp);
+  put($('lblPerp'),bx-nx*Lperp+16,by-ny*Lperp+26);
+  /* the dashed box closing the component rectangle onto Fg */
+  $('dashPar').setAttribute('d','M'+(bx-ux*Lpar)+','+(by-uy*Lpar)+' L'+bx+','+(by+Lg));
+  $('dashPerp').setAttribute('d','M'+(bx-nx*Lperp)+','+(by-ny*Lperp)+' L'+bx+','+(by+Lg));
+  [['vecPar',1],['lblPar',1],['vecPerp',1],['lblPerp',1],['dashPar',1],['dashPerp',1]]
+    .forEach(function(p){ vis($(p[0]), S.comp && th>0.5); });
+
+  /* friction, up the slope */
+  setLine($('vecFric'),bx,by,bx+ux*Lfric,by+uy*Lfric);
+  put($('lblFric'),bx+ux*Lfric+6,by+uy*Lfric-8);
+  vis($('vecFric'),S.fric && th>0.5); vis($('lblFric'),S.fric && th>0.5);
+
+  /* rotated axes at the block */
+  setLine($('axPar'),bx-ux*150,by-uy*150,bx+ux*150,by+uy*150);
+  setLine($('axPerp'),bx-nx*110,by-ny*110,bx+nx*110,by+ny*110);
+  put($('axParLbl'),bx+ux*158-4,by+uy*158+5);
+  put($('axPerpLbl'),bx+nx*118-5,by+ny*118+4);
+
+  /* the ordinary horizontal/vertical axes -- they turn with the view too */
+  setLine($('axX'),bx-150,by,bx+150,by);
+  setLine($('axY'),bx,by+110,bx,by-110);
+  put($('axXLbl'),bx+158,by+5); put($('axYLbl'),bx-5,by-118);
+
+  /* the two equal angles */
+  arc($('arcBase'),OX,OY,74,-th,0);
+  put($('arcBaseLbl'),OX+84*Math.cos(th*D2R/2)-6,OY-84*Math.sin(th*D2R/2)+7);
+  var aG=90, aPerp=Math.atan2(-ny,-nx)/D2R;
+  arc($('arcForce'),bx,by,58,aPerp,aG);
+  var mid=(aPerp+aG)/2;
+  put($('arcForceLbl'),bx+70*Math.cos(mid*D2R)-7,by+70*Math.sin(mid*D2R)+7);
+  vis($('arcBase'),S.ang && th>2); vis($('arcBaseLbl'),S.ang && th>2);
+  vis($('arcForce'),S.ang && th>2 && S.rot<4); vis($('arcForceLbl'),S.ang && th>2 && S.rot<4);
+
+  $('tilt').textContent = S.rot>2 ? ('turned '+A.toFixed(0)+'° — the slope is flat, and gravity is now the tilted one') : '';
+
+  /* readouts */
+  $('vTheta').textContent=th+'°';
+  $('vRot').textContent=S.rot+'%';
+  $('vMass').textContent=S.m.toFixed(1)+' kg';
+  $('rG').textContent=mg.toFixed(1)+' N';
+  $('rPar').textContent=(mg*Math.sin(t)).toFixed(1)+' N';
+  $('rPerp').textContent=(mg*Math.cos(t)).toFixed(1)+' N';
+  $('rN').textContent=(mg*Math.cos(t)).toFixed(1)+' N';
+  var a=G*Math.sin(t)-(S.fric?S.mu*G*Math.cos(t):0);
+  $('rA').textContent=(a>0?a:0).toFixed(1)+' m/s²'+(S.fric?' (with friction)':'');
+
+  var L=$('limit');
+  if(th<=1){ L.innerHTML='<strong>θ = 0° — flat ground.</strong> The along-the-slope piece is <em>gone</em> (sin 0 = 0) and the surface carries the whole weight (cos 0 = 1). This is the check that tells you which function is which.'; }
+  else if(th>=78){ L.innerHTML='<strong>θ → 90° — nearly a cliff.</strong> Almost all of gravity is along the slope and F<sub>N</sub> has nearly vanished. At exactly 90° it is free fall.'; }
+  else if(Math.abs(th-45)<1){ L.innerHTML='<strong>θ = 45°.</strong> sin 45° = cos 45°, so the two components are <em>equal</em> — the only angle where that happens.'; }
+  else { L.innerHTML='Slide θ to <strong>0°</strong> and to <strong>80°</strong>. Those two checks are how you work out which component takes the sine, instead of memorizing it.'; }
+}
+
+/* ---------- wiring ---------- */
+$('sTheta').addEventListener('input',function(){ S.th=+this.value; draw(); });
+$('sRot').addEventListener('input',function(){ S.rot=+this.value; draw(); });
+$('sMass').addEventListener('input',function(){ S.m=+this.value; draw(); });
+document.querySelectorAll('button.snap').forEach(function(b){
+  b.addEventListener('click',function(){ S.th=+b.dataset.t; $('sTheta').value=S.th; draw(); });
+});
+function tog(id,key){
+  $(id).addEventListener('click',function(){
+    S[key]=!S[key]; this.setAttribute('aria-pressed',S[key]?'true':'false'); draw();
+  });
+}
+tog('tComp','comp'); tog('tAngle','ang'); tog('tFric','fric');
+
+draw();
+})();
+</script>
+</body>
+</html>
