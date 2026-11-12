@@ -16,7 +16,7 @@ math: mathjax
 
 # 2026.11.12 **Earth Science**
 
-##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?
+##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose? 
 
 <div class ='columns'>
 
