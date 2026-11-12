@@ -25,7 +25,7 @@ math: mathjax
  ### **2026.11.12** AP Physics **Do Now**
 
  <div class='columns'>
- <div style="font-size: 27px">
+ <div style="font-size: 26px">
  
 Car $A$ is traveling to the right at a constant velocity $v_A$. At time $t = 0$, it passes Car $B$, which is at rest. At the same time ($t = 0$), Car $B$ begins to accelerate with a constant acceleration of magnitude $a_B$, as shown in Figure 1. Car $B$ has a velocity of $v_p$ when it reaches the same position as Car $A$ at time $t = t_f$, as shown in Figure 2. Which of the following, if any, is an expression for the time it takes for Car $B$ to catch up to Car $A$?
 
