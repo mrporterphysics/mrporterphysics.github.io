@@ -14,6 +14,39 @@ math: mathjax
 
 ---
 
+# 2026.11.13 **Earth Science**
+
+##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. [Guided Notes on Orbits](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L3_Orbits_Guided_Notes_Slides.html) — Kepler's three laws
+2. Practice: Orbits and the Transit Method — start it here, finish it this weekend
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Use Kepler's Laws to predict the motion of an orbiting object_
+
+### 📆 Upcoming
+
+- ✅ **Orbits and the Transit Method quiz — Monday 11/16**
+- HW: _**finish the practice sheet**_, then check it against the key
+- 🔴 **MP1 ends today**
+
+</div>
+</div>
+
+
+---
+
 # 2026.11.12 **Earth Science**
 
 ##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose? 

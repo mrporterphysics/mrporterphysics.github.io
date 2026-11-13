@@ -53,6 +53,39 @@ Car $A$ is traveling to the right at a constant velocity $v_A$. At time $t = 0$,
 
 ---
 
+# 2026.11.13 **AP Physics**
+
+##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Kinematics Test (80 min)
+2. Flex — AP Workbook 1.M – 1.O
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Show what you know about motion in one and two dimensions_
+
+### 📆 Upcoming
+
+- 🔴 **MP1 ends today.** Grades are due in Report Card Entry by **7:00 AM Thu 11/19**
+- Next: **Unit 2, Force and Translational Dynamics**
+- 📓 Lab notebooks stamped: Free Fall Five, Marble
+
+</div>
+</div>
+
+
+---
+
 # 2026.11.12 **AP Physics**
 
 ##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?
