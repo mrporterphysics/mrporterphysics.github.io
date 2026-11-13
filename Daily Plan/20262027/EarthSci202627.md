@@ -39,7 +39,6 @@ math: mathjax
 
 - ✅ **Orbits and the Transit Method quiz — Monday 11/16**
 - HW: _**finish the practice sheet**_, then check it against the key
-- 🔴 **MP1 ends today**
 
 </div>
 </div>
