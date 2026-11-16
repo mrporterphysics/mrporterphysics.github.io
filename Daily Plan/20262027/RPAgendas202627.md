@@ -16,15 +16,12 @@ math: mathjax
 
 ### 👨‍🏫 Mr. Porter
 
----
-
-<!--- class: thanksgiving --->
 
 ---
 
 # 2026.11.16 **AP Physics**
 
-##### **❓ of the 📅**: Should we get rid of Mondays?
+##### **❓ of the 📅**: What is your favorite side dish at Thanksgiving?
 
 <div class ='columns'>
 
@@ -32,27 +29,117 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Test corrections — how they work
-2. Your booklet back — redo what you missed
-3. Answers back — name the gap
-
+1. Test corrections - What and How
+2. Work on Test corrections
 </div>
 
 <div>
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Work on test correctios_
 
 ### 📆 Upcoming
 
 - 📝 Corrections due **Fri 11/20** — in school only, points to **MP2**
-- 🥼 Mallet Ball Lab — **Tue 11/17**
-- ✅ Quiz 7 — **Mon 11/23**
 
 </div>
 </div>
 
+---
+
+<!-- _footer: "¹ Mason & Singh, *Am. J. Phys.* **78**, 760 (2010) · ² Brown, Mason & Singh, *Phys. Rev. Phys. Educ. Res.* **12**, 010121 (2016)" -->
+
+# 📝 Test Corrections — **Purpose & Policy**
+
+<div class ='columns'>
+
+<div>
+
+#### 📚 Why we do corrections
+
+- Without structured corrections, physics students tend to **repeat the same mistakes** on later exams.¹
+- Students who **corrected their mistakes** for half credit **significantly outperformed** classmates who did not.²
+
+</div>
+
+<div>
+
+#### 🎁 Points back
+
+- **Half** of every point you correct well — as in the study²
+- Then the curve:
+
+$$\sqrt{\frac{\text{earned} + \frac{1}{2}\,\text{back}}{\text{total}}}$$
+
+- 📅 Due **Fri 11/20**, in school
+
+</div>
+</div>
+
+---
+
+# 🔁 Test Corrections — **How: The Order**
+
+<div class ='columns'>
+
+<div>
+
+1. **Booklet back** — answers stay with me
+2. **Redo it** from scratch
+3. **Check** the answer key
+4. **Answers back** — compare
+5. **Diagnose** it
+6. **Final reflection** when every item is done
+
+</div>
+
+<div>
+
+#### 📄 Which sheet?
+
+- **MC** → half sheet
+- **FRQ** → full sheet, one per part
+
+#### 🧠 Redo = our workflow
+
+- **Decode** → **Do** → **Explain**
+
+</div>
+</div>
+
+---
+
+# 🔍 Test Corrections — **How: The Diagnosis**
+
+<div class ='columns'>
+
+<div>
+
+#### Three lines, every time
+
+- *I thought…*
+- *The right idea is…*
+- *What should have told me was…*
+
+Then pick one of the **4 C's**.
+⚠️ **Careless** only if you can prove it.
+
+</div>
+
+<div>
+
+#### ✅ Earns points back
+
+- Redone from scratch
+- Physics fact named
+- Labeled diagram
+- Checked against the key
+- All three lines
+- Error type + standard
+
+</div>
+</div>
 ---
 
 

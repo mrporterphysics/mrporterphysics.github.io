@@ -16,7 +16,7 @@ math: mathjax
 
 # 2026.11.16 **Earth Science**
 
-##### **❓ of the 📅**: Should we get rid of Mondays?
+##### **❓ of the 📅**: What is your favorite side dish at Thanksgiving?
 
 <div class ='columns'>
 
