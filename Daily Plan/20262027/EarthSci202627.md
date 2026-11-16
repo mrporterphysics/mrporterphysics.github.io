@@ -16,7 +16,7 @@ math: mathjax
 
 # 2026.11.16 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: Should we get rid of Mondays?
 
 <div class ='columns'>
 
