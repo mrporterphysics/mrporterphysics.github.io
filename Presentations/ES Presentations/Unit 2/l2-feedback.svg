@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 470" font-family="Inter,Helvetica,Arial,sans-serif">
+<defs><marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><polygon points="0,0 9,4.5 0,9" fill="#A9B3D2"/></marker></defs>
+<line x1="528.9" y1="83.0" x2="551.4" y2="127.0" stroke="#A9B3D2" stroke-width="2.2" marker-end="url(#ah)"/>
+<line x1="615.5" y1="186.0" x2="615.5" y2="274.0" stroke="#A9B3D2" stroke-width="2.2" marker-end="url(#ah)"/>
+<line x1="556.6" y1="335.0" x2="534.1" y2="379.0" stroke="#A9B3D2" stroke-width="2.2" marker-end="url(#ah)"/>
+<line x1="411.1" y1="381.0" x2="388.6" y2="337.0" stroke="#A9B3D2" stroke-width="2.2" marker-end="url(#ah)"/>
+<line x1="324.5" y1="278.0" x2="324.5" y2="190.0" stroke="#A9B3D2" stroke-width="2.2" marker-end="url(#ah)"/>
+<line x1="383.4" y1="129.0" x2="405.9" y2="85.0" stroke="#A9B3D2" stroke-width="2.2" marker-end="url(#ah)"/>
+<rect x="378.0" y="22.0" width="184" height="74" rx="10" fill="rgba(255,255,255,0.05)" stroke="#7FD1A4" stroke-width="1.8"/>
+<text x="470.0" y="58.0" fill="#7FD1A4" font-size="17" font-weight="600" text-anchor="middle">Photosynthetic</text>
+<text x="470.0" y="80.0" fill="#7FD1A4" font-size="17" font-weight="600" text-anchor="middle">life evolves</text>
+<rect x="523.5" y="106.0" width="184" height="74" rx="10" fill="rgba(255,255,255,0.05)" stroke="#6FD3E8" stroke-width="1.8"/>
+<text x="615.5" y="142.0" fill="#6FD3E8" font-size="17" font-weight="600" text-anchor="middle">Oxygen into</text>
+<text x="615.5" y="164.0" fill="#6FD3E8" font-size="17" font-weight="600" text-anchor="middle">the oceans</text>
+<rect x="523.5" y="274.0" width="184" height="74" rx="10" fill="rgba(255,255,255,0.05)" stroke="#F5C542" stroke-width="1.8"/>
+<text x="615.5" y="310.0" fill="#F5C542" font-size="17" font-weight="600" text-anchor="middle">Banded iron</text>
+<text x="615.5" y="332.0" fill="#F5C542" font-size="17" font-weight="600" text-anchor="middle">formations</text>
+<rect x="378.0" y="358.0" width="184" height="74" rx="10" fill="rgba(255,255,255,0.05)" stroke="#6FD3E8" stroke-width="1.8"/>
+<text x="470.0" y="394.0" fill="#6FD3E8" font-size="17" font-weight="600" text-anchor="middle">Oxygen into</text>
+<text x="470.0" y="416.0" fill="#6FD3E8" font-size="17" font-weight="600" text-anchor="middle">the atmosphere</text>
+<rect x="232.5" y="274.0" width="184" height="74" rx="10" fill="rgba(255,255,255,0.05)" stroke="#B794F6" stroke-width="1.8"/>
+<text x="324.5" y="310.0" fill="#B794F6" font-size="17" font-weight="600" text-anchor="middle">Ozone layer +</text>
+<text x="324.5" y="332.0" fill="#B794F6" font-size="17" font-weight="600" text-anchor="middle">aerobic respiration</text>
+<rect x="232.5" y="106.0" width="184" height="74" rx="10" fill="rgba(255,255,255,0.05)" stroke="#FF7A7A" stroke-width="1.8"/>
+<text x="324.5" y="142.0" fill="#FF7A7A" font-size="17" font-weight="600" text-anchor="middle">Complex life,</text>
+<text x="324.5" y="164.0" fill="#FF7A7A" font-size="17" font-weight="600" text-anchor="middle">then land plants</text>
+<text x="470" y="228" fill="#E9ECF7" font-size="21" font-weight="700" text-anchor="middle">life changes Earth</text>
+<text x="470" y="256" fill="#E9ECF7" font-size="21" font-weight="700" text-anchor="middle">Earth changes life</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" font-family="Helvetica, Arial, sans-serif" font-size="15">
+<line x1="62" x2="440" y1="268.0" y2="268.0" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="54" y="273.0" text-anchor="end" fill="#e8ecf5">0</text>
+<line x1="62" x2="440" y1="206.0" y2="206.0" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="54" y="211.0" text-anchor="end" fill="#e8ecf5">25</text>
+<line x1="62" x2="440" y1="144.0" y2="144.0" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="54" y="149.0" text-anchor="end" fill="#e8ecf5">50</text>
+<line x1="62" x2="440" y1="82.0" y2="82.0" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="54" y="87.0" text-anchor="end" fill="#e8ecf5">75</text>
+<line x1="62" x2="440" y1="20.0" y2="20.0" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="54" y="25.0" text-anchor="end" fill="#e8ecf5">100</text>
+<line y1="20" y2="268" x1="62.0" x2="62.0" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="62.0" y="288" text-anchor="middle" fill="#e8ecf5">0</text>
+<line y1="20" y2="268" x1="156.5" x2="156.5" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="156.5" y="288" text-anchor="middle" fill="#e8ecf5">1</text>
+<line y1="20" y2="268" x1="251.0" x2="251.0" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="251.0" y="288" text-anchor="middle" fill="#e8ecf5">2</text>
+<line y1="20" y2="268" x1="345.5" x2="345.5" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="345.5" y="288" text-anchor="middle" fill="#e8ecf5">3</text>
+<line y1="20" y2="268" x1="440.0" x2="440.0" stroke="#ffffff" stroke-opacity="0.18"/>
+<text x="440.0" y="288" text-anchor="middle" fill="#e8ecf5">4</text>
+<polyline points="62.0,20.0 66.7,28.4 71.5,36.6 76.2,44.5 80.9,52.1 85.6,59.5 90.3,66.6 95.1,73.4 99.8,80.1 104.5,86.5 109.2,92.6 114.0,98.6 118.7,104.4 123.4,110.0 128.1,115.3 132.9,120.5 137.6,125.6 142.3,130.4 147.1,135.1 151.8,139.6 156.5,144.0 161.2,148.2 165.9,152.3 170.7,156.2 175.4,160.1 180.1,163.7 184.9,167.3 189.6,170.7 194.3,174.0 199.0,177.2 203.8,180.3 208.5,183.3 213.2,186.2 217.9,189.0 222.7,191.7 227.4,194.3 232.1,196.8 236.8,199.2 241.5,201.6 246.3,203.8 251.0,206.0 255.7,208.1 260.5,210.2 265.2,212.1 269.9,214.0 274.6,215.9 279.4,217.6 284.1,219.4 288.8,221.0 293.5,222.6 298.2,224.2 303.0,225.7 307.7,227.1 312.4,228.5 317.1,229.8 321.9,231.1 326.6,232.4 331.3,233.6 336.1,234.8 340.8,235.9 345.5,237.0 350.2,238.1 354.9,239.1 359.7,240.1 364.4,241.0 369.1,241.9 373.8,242.8 378.6,243.7 383.3,244.5 388.0,245.3 392.8,246.1 397.5,246.8 402.2,247.5 406.9,248.2 411.7,248.9 416.4,249.6 421.1,250.2 425.8,250.8 430.6,251.4 435.3,252.0 440.0,252.5" fill="none" stroke="#7fd4ff" stroke-width="3"/>
+<circle cx="62.0" cy="20.0" r="6" fill="#f5c542"/>
+<text x="72.0" y="12.0" fill="#f5c542" font-weight="bold">100%</text>
+<circle cx="156.5" cy="144.0" r="6" fill="#f5c542"/>
+<text x="166.5" y="136.0" fill="#f5c542" font-weight="bold">50%</text>
+<circle cx="251.0" cy="206.0" r="6" fill="#f5c542"/>
+<text x="261.0" y="198.0" fill="#f5c542" font-weight="bold">25%</text>
+<circle cx="345.5" cy="237.0" r="6" fill="#f5c542"/>
+<text x="355.5" y="229.0" fill="#f5c542" font-weight="bold">12.5%</text>
+<text x="251.0" y="312" text-anchor="middle" fill="#e8ecf5">Half-lives elapsed</text>
+<text transform="translate(16,144.0) rotate(-90)" text-anchor="middle" fill="#e8ecf5">% parent left</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Inter,Helvetica,Arial,sans-serif">
+<line x1="92" y1="354.0" x2="870" y2="354.0" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<line x1="92" y1="299.3" x2="870" y2="299.3" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<line x1="92" y1="244.7" x2="870" y2="244.7" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<line x1="92" y1="190.0" x2="870" y2="190.0" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<line x1="92" y1="135.3" x2="870" y2="135.3" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<line x1="92" y1="80.7" x2="870" y2="80.7" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<line x1="92" y1="26.0" x2="870" y2="26.0" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<line x1="870.0" y1="26" x2="870.0" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="870.0" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">0</text>
+<line x1="772.8" y1="26" x2="772.8" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="772.8" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">0.5</text>
+<line x1="675.5" y1="26" x2="675.5" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="675.5" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">1</text>
+<line x1="578.2" y1="26" x2="578.2" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="578.2" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">1.5</text>
+<line x1="481.0" y1="26" x2="481.0" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="481.0" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">2</text>
+<line x1="383.8" y1="26" x2="383.8" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="383.8" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">2.5</text>
+<line x1="286.5" y1="26" x2="286.5" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="286.5" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">3</text>
+<line x1="189.2" y1="26" x2="189.2" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="189.2" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">3.5</text>
+<line x1="92.0" y1="26" x2="92.0" y2="354" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="92.0" y="378" fill="#A9B3D2" font-size="16" text-anchor="middle">4</text>
+<text x="82" y="360.0" fill="#A9B3D2" font-size="15" text-anchor="end">0.0001</text>
+<text x="82" y="305.3" fill="#A9B3D2" font-size="15" text-anchor="end">0.001</text>
+<text x="82" y="250.7" fill="#A9B3D2" font-size="15" text-anchor="end">0.01</text>
+<text x="82" y="196.0" fill="#A9B3D2" font-size="15" text-anchor="end">0.1</text>
+<text x="82" y="141.3" fill="#A9B3D2" font-size="15" text-anchor="end">1</text>
+<text x="82" y="86.7" fill="#A9B3D2" font-size="15" text-anchor="end">10</text>
+<text x="82" y="32.0" fill="#A9B3D2" font-size="15" text-anchor="end">100</text>
+<polyline points="92.0,299.3 393.5,299.3 403.2,147.5 442.1,118.9 481.0,116.6 510.2,118.9 704.7,118.9 730.0,97.1 753.3,80.7 765.0,71.0 788.3,66.7 811.7,54.6 821.4,59.9 840.8,64.2 870.0,63.1" fill="none" stroke="#6FD3E8" stroke-width="3.2" stroke-linejoin="round"/>
+<line x1="399.3" y1="26" x2="399.3" y2="354" stroke="#F5C542" stroke-width="1.8" stroke-dasharray="7 5"/>
+<text x="389.3" y="48" fill="#F5C542" font-size="17" font-weight="700" text-anchor="end">Great Oxidation Event</text>
+<text x="481" y="406" fill="#E9ECF7" font-size="18" text-anchor="middle">Billions of years ago</text>
+<text transform="translate(26,190) rotate(-90)" fill="#E9ECF7" font-size="17" text-anchor="middle">% of atmosphere  (log)</text>
+</svg>

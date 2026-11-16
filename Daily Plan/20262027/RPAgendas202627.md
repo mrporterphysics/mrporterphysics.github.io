@@ -22,6 +22,40 @@ math: mathjax
 
 ---
 
+# 2026.11.16 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Test corrections — how they work
+2. Your booklet back — redo what you missed
+3. Answers back — name the gap
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+- 📝 Corrections due **Fri 11/20** — in school only, points to **MP2**
+- 🥼 Mallet Ball Lab — **Tue 11/17**
+- ✅ Quiz 7 — **Mon 11/23**
+
+</div>
+</div>
+
+---
+
+
 # 2026.11.12 **AP Physics**
 
 ##### **❓ of the 📅**: If you could instantly know the answer to one scientific mystery, which would you choose?

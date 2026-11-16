@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 250" font-family="Helvetica, Arial, sans-serif" font-size="18">
+  <rect x="10" y="190" width="600" height="50" fill="#6d5a45"/>
+  <rect x="10" y="140" width="600" height="50" fill="#9a8468"/>
+  <rect x="10" y="90" width="600" height="50" fill="#c4ae8c"/>
+  <polygon points="250,240 300,240 380,88 330,88" fill="#b5483a"/>
+  <path d="M10 90 q15 -8 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 L610 30 L10 30 Z" fill="#e3d6bd"/>
+  <path d="M10 90 q15 -8 30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0 t30 0" fill="none" stroke="#1b1b2f" stroke-width="3"/>
+  <rect x="10" y="30" width="600" height="210" fill="none" stroke="#f2e9d8" stroke-width="2"/>
+  <g fill="#1b1b2f" font-weight="bold">
+    <text x="40" y="222" fill="#f2e9d8">Layer 1</text><text x="40" y="172">Layer 2</text><text x="40" y="122">Layer 3</text><text x="40" y="66">Layer 4</text>
+    <text x="305" y="172" fill="#fff">X</text>
+  </g>
+  <text x="420" y="84" font-size="15" fill="#1b1b2f">unconformity</text>
+</svg>

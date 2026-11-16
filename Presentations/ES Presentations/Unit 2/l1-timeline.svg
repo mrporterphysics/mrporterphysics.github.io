@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 300" font-family="Inter,Helvetica,Arial,sans-serif">
+<rect x="450.0" y="132" width="98.7" height="60" fill="#FF7A7A" opacity="0.28"/>
+<rect x="450.0" y="132" width="98.7" height="60" fill="none" stroke="#FF7A7A" stroke-width="1.5"/>
+<text x="499.3" y="90" fill="#FF7A7A" font-size="20" font-weight="700" text-anchor="middle">LATE HEAVY BOMBARDMENT</text>
+<text x="499.3" y="114" fill="#FF7A7A" font-size="16" text-anchor="middle" font-style="italic">no crater on Earth survives from before this</text>
+<line x1="80" y1="162" x2="860" y2="162" stroke="#A9B3D2" stroke-width="3"/>
+<polygon points="860,162 846,155 846,169" fill="#A9B3D2"/>
+<text x="854" y="144" fill="#A9B3D2" font-size="17" text-anchor="middle">today</text>
+<circle cx="154.0" cy="162" r="9" fill="#F5C542" stroke="#070A14" stroke-width="2"/>
+<line x1="154.0" y1="174" x2="154.0" y2="202" stroke="#F5C542" stroke-width="1.6"/>
+<text x="154.0" y="244" fill="#F5C542" font-size="20" font-weight="600" text-anchor="middle">Solar system forms</text>
+<circle cx="746.0" cy="162" r="9" fill="#7FD1A4" stroke="#070A14" stroke-width="2"/>
+<line x1="746.0" y1="174" x2="746.0" y2="202" stroke="#7FD1A4" stroke-width="1.6"/>
+<text x="746.0" y="244" fill="#7FD1A4" font-size="20" font-weight="600" text-anchor="middle">Oldest evidence of life</text>
+<line x1="450.0" y1="194" x2="450.0" y2="202" stroke="#A9B3D2" stroke-width="1.4"/>
+<text x="450.0" y="220" fill="#A9B3D2" font-size="15" text-anchor="middle">4.0</text>
+<line x1="548.7" y1="194" x2="548.7" y2="202" stroke="#A9B3D2" stroke-width="1.4"/>
+<text x="548.7" y="220" fill="#A9B3D2" font-size="15" text-anchor="middle">3.8</text>
+<text x="154.0" y="220" fill="#A9B3D2" font-size="15" text-anchor="middle">4.6</text>
+<text x="746.0" y="220" fill="#A9B3D2" font-size="15" text-anchor="middle">3.4</text>
+<text x="450" y="276" fill="#A9B3D2" font-size="16" text-anchor="middle">billions of years ago</text>
+</svg>

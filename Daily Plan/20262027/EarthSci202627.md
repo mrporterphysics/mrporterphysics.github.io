@@ -14,6 +14,37 @@ math: mathjax
 
 ---
 
+# 2026.11.16 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Practice Quiz
+2. Transit Lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Prepare for Quiz_
+
+### 📆 Upcoming
+
+- Quiz tomorrow
+
+</div>
+</div>
+
+---
+
+
 # 2026.11.13 **Earth Science**
 
 ##### **❓ of the 📅**: Would you rather understand the complete history of Earth or the complete future of humanity?

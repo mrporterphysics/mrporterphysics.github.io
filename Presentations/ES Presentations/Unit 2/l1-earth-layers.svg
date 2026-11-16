@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 300" font-family="Helvetica, Arial, sans-serif" font-size="17">
+  <circle cx="150" cy="150" r="130" fill="#8a6f4d" stroke="#f2e9d8" stroke-width="2"/>
+  <circle cx="150" cy="150" r="118" fill="#c2622d" stroke="#f2e9d8" stroke-width="1.5"/>
+  <circle cx="150" cy="150" r="72" fill="#e8a33d" stroke="#f2e9d8" stroke-width="1.5"/>
+  <circle cx="150" cy="150" r="32" fill="#f7e08a" stroke="#f2e9d8" stroke-width="1.5"/>
+  <g stroke="#f2e9d8" stroke-width="1.5" fill="none">
+    <path d="M245 62 L330 50"/><path d="M225 100 L330 115"/><path d="M195 170 L330 185"/><path d="M160 160 L330 250"/>
+  </g>
+  <g fill="#f5c542" font-weight="bold">
+    <text x="338" y="56">crust (least dense)</text><text x="338" y="121">mantle</text>
+    <text x="338" y="191">outer core</text><text x="338" y="256">inner core (most dense)</text>
+  </g>
+</svg>

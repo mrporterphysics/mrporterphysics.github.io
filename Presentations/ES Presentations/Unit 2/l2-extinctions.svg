@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 300" font-family="Inter,Helvetica,Arial,sans-serif">
+<line x1="60" y1="150" x2="880" y2="150" stroke="#A9B3D2" stroke-width="3"/>
+<line x1="207.0" y1="78" x2="207.0" y2="222" stroke="#FF7A7A" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="207.0" cy="150" r="8" fill="#FF7A7A" stroke="#070A14" stroke-width="2"/>
+<text x="207.0" y="68" fill="#FF7A7A" font-size="18" font-weight="700" text-anchor="middle">Ordovician</text>
+<text x="207.0" y="244" fill="#FF7A7A" font-size="20" font-weight="700" text-anchor="middle">85%</text>
+<text x="207.0" y="264" fill="#A9B3D2" font-size="14" text-anchor="middle">444 mya</text>
+<line x1="334.3" y1="78" x2="334.3" y2="222" stroke="#F5C542" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="334.3" cy="150" r="8" fill="#F5C542" stroke="#070A14" stroke-width="2"/>
+<text x="334.3" y="68" fill="#F5C542" font-size="18" font-weight="700" text-anchor="middle">Devonian</text>
+<text x="334.3" y="244" fill="#F5C542" font-size="20" font-weight="700" text-anchor="middle">75%</text>
+<text x="334.3" y="264" fill="#A9B3D2" font-size="14" text-anchor="middle">360 mya</text>
+<line x1="498.0" y1="78" x2="498.0" y2="222" stroke="#FF7A7A" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="498.0" cy="150" r="8" fill="#FF7A7A" stroke="#070A14" stroke-width="2"/>
+<text x="498.0" y="68" fill="#FF7A7A" font-size="18" font-weight="700" text-anchor="middle">Permian</text>
+<text x="498.0" y="244" fill="#FF7A7A" font-size="20" font-weight="700" text-anchor="middle">90%</text>
+<text x="498.0" y="264" fill="#A9B3D2" font-size="14" text-anchor="middle">252 mya</text>
+<line x1="575.3" y1="78" x2="575.3" y2="222" stroke="#F5C542" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="575.3" cy="150" r="8" fill="#F5C542" stroke="#070A14" stroke-width="2"/>
+<text x="575.3" y="68" fill="#F5C542" font-size="18" font-weight="700" text-anchor="middle">Triassic</text>
+<text x="575.3" y="244" fill="#F5C542" font-size="20" font-weight="700" text-anchor="middle">76%</text>
+<text x="575.3" y="264" fill="#A9B3D2" font-size="14" text-anchor="middle">201 mya</text>
+<line x1="780.0" y1="78" x2="780.0" y2="222" stroke="#F5C542" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="780.0" cy="150" r="8" fill="#F5C542" stroke="#070A14" stroke-width="2"/>
+<text x="780.0" y="68" fill="#F5C542" font-size="18" font-weight="700" text-anchor="middle">K–Pg</text>
+<text x="780.0" y="244" fill="#F5C542" font-size="20" font-weight="700" text-anchor="middle">75%</text>
+<text x="780.0" y="264" fill="#A9B3D2" font-size="14" text-anchor="middle">66 mya</text>
+<text x="60" y="50" fill="#A9B3D2" font-size="14">541 mya</text>
+<text x="880" y="50" fill="#A9B3D2" font-size="14" text-anchor="end">today</text>
+<text x="470" y="288" fill="#A9B3D2" font-size="15" text-anchor="middle">share of ALL SPECIES lost</text>
+</svg>
