@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="50 0 600 570">
+  <ellipse cx="350" cy="215" rx="260" ry="200" fill="none" stroke="#E9ECF7" stroke-width="3.5"/>
+  <line x1="90" y1="215" x2="610" y2="215" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-dasharray="7 6"/>
+  <line x1="90.0" y1="221" x2="90.0" y2="470" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+  <line x1="183.9" y1="221" x2="183.9" y2="470" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+  <line x1="183.9" y1="221" x2="183.9" y2="520" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+  <line x1="610.0" y1="221" x2="610.0" y2="520" stroke="rgba(255,255,255,0.16)" stroke-width="1.5"/>
+  <line x1="90" y1="470" x2="183.9" y2="470" stroke="#6FD3E8" stroke-width="3"/>
+  <line x1="90.0" y1="458" x2="90.0" y2="482" stroke="#6FD3E8" stroke-width="3"/>
+  <line x1="183.9" y1="458" x2="183.9" y2="482" stroke="#6FD3E8" stroke-width="3"/>
+  <text x="136.9" y="452" fill="#6FD3E8" font-size="26" text-anchor="middle" font-family="Inter,sans-serif">perihelion</text>
+  <line x1="183.9" y1="520" x2="610" y2="520" stroke="#FF9245" stroke-width="3"/>
+  <line x1="183.9" y1="508" x2="183.9" y2="532" stroke="#FF9245" stroke-width="3"/>
+  <line x1="610.0" y1="508" x2="610.0" y2="532" stroke="#FF9245" stroke-width="3"/>
+  <text x="396.9" y="506" fill="#FF9245" font-size="26" text-anchor="middle" font-family="Inter,sans-serif">aphelion</text>
+  <circle cx="183.9" cy="215" r="15" fill="#F5C542"/>
+  <text x="183.9" y="187" fill="#F5C542" font-size="25" text-anchor="middle" font-family="Inter,sans-serif">Sun</text>
+  <circle cx="516.1" cy="215" r="8" fill="#E9ECF7"/>
+  <text x="516.1" y="189" fill="#A9B3D2" font-size="22" text-anchor="middle" font-family="Inter,sans-serif">focus 2</text>
+  <circle cx="90" cy="215" r="8" fill="#6FD3E8"/>
+  <text x="76" y="224" fill="#6FD3E8" font-size="26" text-anchor="end" font-family="Inter,sans-serif">P</text>
+  <circle cx="610" cy="215" r="8" fill="#FF9245"/>
+  <text x="624" y="224" fill="#FF9245" font-size="26" font-family="Inter,sans-serif">A</text>
+  <text x="350" y="566" fill="#A9B3D2" font-size="20" text-anchor="middle" font-family="Inter,sans-serif">eccentricity exaggerated</text>
+</svg>
