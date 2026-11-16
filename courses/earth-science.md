@@ -36,6 +36,16 @@ Comprehensive study of Earth's systems including geology, meteorology, astronomy
 - [Solar System Structure](/Presentations/ES Presentations/Unit 1 Origin/solarsystemstructure.html)
 - [Transit Method Explorer](/AP%20Resource%20Pages/Earth%20Science%20Pages/transit-method-explorer.html) — interactive: find exoplanets by the dip in a star's light
 
+### Guided Notes — Review Decks
+
+Content-only decks that follow the guided-notes packets part for part. Every blank is answered on the slide.
+
+- [How the Sun Works](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L1_Sun_Guided_Notes_Slides.html) — Unit 1, Lesson 1
+- [Star Life Cycles](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L2_Stars_Guided_Notes_Slides.html) — Unit 1, Lesson 2
+- [Planets and Orbits](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L3_Orbits_Guided_Notes_Slides.html) — Unit 1, Lesson 3
+- [Ellipses and Eccentricity](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L3_Ellipses_Guided_Notes_Slides.html) — Unit 1, Lesson 3 continued
+- [Stability of the Solar System](/Presentations/ES%20Presentations/Unit%202/U2_L1_Stability_Notes_Slides.html) — Unit 2, Notes 1–4
+
 ### Geology
 - [Rocks & Rock Cycle](/Presentations/ES Presentations/Rocks/Rocks2025.html)
 
