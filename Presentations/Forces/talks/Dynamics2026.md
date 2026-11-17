@@ -78,8 +78,39 @@ img[alt~="center"] {
 
 <!-- _footer: Falling ball · Ball thrown downward · MichaelMaggs · Wikimedia Commons, CC BY-SA 3.0 -->
 
-![bg fit](../figures/falling-ball-strobe.jpg)
-![bg fit](../figures/ball-thrown-downward-strobe.jpg)
+# Two more — same camera, same flash rate
+
+<div class='columns'>
+<div class='col center'>
+
+![h:460](../figures/falling-ball-strobe.jpg)
+
+**Dropped from rest**
+
+</div>
+<div class='col center'>
+
+![h:460](../figures/ball-thrown-downward-strobe.jpg)
+
+**Thrown downward**
+
+</div>
+<div class='col'>
+
+<div class="question">
+
+Both speed up on the way down. Does starting faster change **how quickly** the gaps grow?
+
+</div>
+
+<div class="key-idea">
+
+Read the left-hand labels out loud: **0, 1, 4, 9, 16 … 100**. You met that pattern in Unit 1.
+
+</div>
+
+</div>
+</div>
 
 ---
 
