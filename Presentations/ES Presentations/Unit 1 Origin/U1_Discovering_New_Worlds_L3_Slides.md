@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),
@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centered;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -327,7 +327,7 @@ THE ARC IN ONE LINE: distance explains phase → but average distance hides the 
 <!-- _class: phase-title -->
 
 # ENGAGE
-## Why does water on [Comet Borrelly](https://www.jpl.nasa.gov/videos/comet-borrelly-flyby/) change from ice to vapour every 6 years?
+## Why does water on [Comet Borrelly](https://www.jpl.nasa.gov/videos/comet-borrelly-flyby/) change from ice to vapor every 6 years?
 
 <!--
 LAUNCH: remind students that the Driving Question Board surfaced "Does the planet have the right temperature to sustain life? Does the planet have liquid water?"
@@ -344,18 +344,18 @@ GROUPING: independent, then small group. ROUTINE: Rumors. LITERACY: text annotat
 
 | Object | Water | Avg. distance (10⁶ km) |
 |---|---|---|
-| Mercury | traces of vapour in a very thin atmosphere | 57.9 |
-| Venus | traces of vapour in the atmosphere | 108.2 |
+| Mercury | traces of vapor in a very thin atmosphere | 57.9 |
+| Venus | traces of vapor in the atmosphere | 108.2 |
 | **Earth** | **71% of the surface is water; mostly liquid** | **149.6** |
-| Mars | almost all ice; a little vapour; some transient liquid | 227.9 |
-| Comet Borrelly | ice most of the time — then a jet of vapour | 240 |
+| Mars | almost all ice; a little vapor; some transient liquid | 227.9 |
+| Comet Borrelly | ice most of the time — then a jet of vapor | 240 |
 | Europa | water-ice crust; possibly a salty ocean below | 778.4 |
 | Mimas | a big ball of frozen water | 1,426 |
 | Uranus / Neptune / Pluto | ice | 2,871 / 4,498 / 5,910 |
 
 <!--
 TEXT ANNOTATION: students read independently and mark 3–5 details that matter for telling the story.
-SUPPORT QUESTIONS: Why is most of Earth's water liquid while almost everything else is ice or vapour? What could explain Comet Borrelly?
+SUPPORT QUESTIONS: Why is most of Earth's water liquid while almost everything else is ice or vapor? What could explain Comet Borrelly?
 DIFFERENTIATION: the full table overwhelms some students. Start them on four rows — Mercury, Earth, Jupiter's moon Europa, Comet Borrelly. Guide with: which are closest and furthest? what does "average distance" mean? what forms of water are named?
 IMPLEMENTATION TIP — DO NOT GIVE THIS AWAY: make sure students know what "average distance" means, without revealing the point of the lesson, which is that a comet has a low average distance because it spends part of its orbit very far out and part very close in.
 -->
@@ -381,7 +381,7 @@ Nothing else in the table does this.
 **The puzzle**
 
 Earth's water is mostly **liquid**.
-Everything closer to the Sun has only **vapour**.
+Everything closer to the Sun has only **vapor**.
 Everything further out has only **ice**.
 
 And Borrelly does **both**.
@@ -399,7 +399,7 @@ And Borrelly does **both**.
 
 <!--
 VIDEO: Comet Borrelly flyby — https://www.jpl.nasa.gov/videos/comet-borrelly-flyby/
-THE STORY STUDENTS SHOULD TELL: most of Earth's water is liquid, but on almost every other object it is ice or vapour; and Borrelly's is frozen most of the time, then vaporises every several years.
+THE STORY STUDENTS SHOULD TELL: most of Earth's water is liquid, but on almost every other object it is ice or vapor; and Borrelly's is frozen most of the time, then vaporises every several years.
 TURN AND TALK: what other phenomena do you know where water in different places is in different phases? (Ice melting in a drink, puddles steaming off hot pavement, snow on a mountain while it rains in the valley.) This connects to energy ideas they already hold.
 -->
 
@@ -420,7 +420,7 @@ TURN AND TALK: what other phenomena do you know where water in different places 
 
 <div class="key-idea">
 
-Then write on a sticky note: **what might explain the fact that Comet Borrelly's water is frozen most of the time, but every several years shoots out a jet of vapour and dust?**
+Then write on a sticky note: **what might explain the fact that Comet Borrelly's water is frozen most of the time, but every several years shoots out a jet of vapor and dust?**
 
 </div>
 
@@ -448,7 +448,7 @@ Questions that will take us where we need to go:
 - At what distance does Borrelly orbit the Sun at **different points** in its orbit?
 - What is Borrelly's orbit **like** — what shape is it?
 - How is Borrelly's orbit **different** from other objects' orbits?
-- What patterns show up in the orbits of objects with **ice**? **vapour**? **liquid**?
+- What patterns show up in the orbits of objects with **ice**? **vapor**? **liquid**?
 
 <!--
 Students generate 3 questions independently, pair up, share, then choose two to bring to the class.
@@ -477,8 +477,8 @@ MATERIALS: the handout, computers with Sheets or Excel.
 
 | Object | Avg. dist. (AU) | Period (yr) | Min. (AU) | Max. (AU) | Most of its water |
 |---|---|---|---|---|---|
-| Mercury | 0.387 | 0.241 | 0.307 | 0.467 | vapour |
-| Venus | 0.723 | 0.615 | 0.718 | 0.728 | vapour |
+| Mercury | 0.387 | 0.241 | 0.307 | 0.467 | vapor |
+| Venus | 0.723 | 0.615 | 0.718 | 0.728 | vapor |
 | **Earth** | **1.000** | **1.00** | **0.983** | **1.017** | **liquid** |
 | Mars | 1.523 | 1.88 | 1.381 | 1.666 | ice |
 | **Comet Borrelly** | **3.590** | **6.80** | **1.350** | **5.830** | **ice — much vaporises every few years** |
@@ -496,7 +496,7 @@ CONFERRING PROMPTS while they graph:
   • What data is most relevant to explaining why water is in different phases on different objects?
   • What patterns could help explain Borrelly?
 CCC 1 — PATTERNS, middle-school element: graphs and charts are useful for identifying patterns in data. Foreground this at the end of the phase; Explore 2 builds the high-school element on top of it.
-IF THEY HAVE NEVER GRAPHED IN SHEETS, stop and teach it. They must create and analyse graphs themselves — that is how the modelling practice develops.
+IF THEY HAVE NEVER GRAPHED IN SHEETS, stop and teach it. They must create and analyze graphs themselves — that is how the modeling practice develops.
 -->
 
 ---
@@ -571,8 +571,8 @@ DIFFERENTIATION: some students need sentence starters in the "See" column.
 
 | See | Think | Wonder |
 |---|---|---|
-| Objects whose water is **ice** orbit further from the Sun than Earth | The further out, the colder — so water is frozen | Do the ice and vapour worlds have *any* liquid water? Did they ever? |
-| Objects whose water is **vapour** orbit closer than Earth | The closer in, the hotter — so water boils off | Does Borrelly ever have liquid water? |
+| Objects whose water is **ice** orbit further from the Sun than Earth | The further out, the colder — so water is frozen | Do the ice and vapor worlds have *any* liquid water? Did they ever? |
+| Objects whose water is **vapor** orbit closer than Earth | The closer in, the hotter — so water boils off | Does Borrelly ever have liquid water? |
 | **Borrelly and Pluto** change distance a lot across one orbit | This is probably why Borrelly's water vaporises every few years | Do our exoplanets orbit where water could be liquid? |
 | As average distance goes **up**, so does the **period** | A further orbit is a longer way round | …and do they **stay** there? |
 
@@ -602,7 +602,7 @@ GROUPING: 2–3 students. Then a CLASS CONSENSUS DISCUSSION.
 
 **Look for these four things in a strong revision:**
 
-1. Objects whose water is mostly **vapour** orbit **closer** to the Sun than Earth
+1. Objects whose water is mostly **vapor** orbit **closer** to the Sun than Earth
 2. Objects whose water is mostly **ice** orbit **further** than Earth
 3. **Borrelly and Pluto** have far more **elliptical** orbits — min and max distances nothing alike
 4. **Annotations** that say *how* the orbit explains the phase, not just labels
@@ -654,7 +654,7 @@ THEN: Domino Discover to decide 1–3 things that belong in the class consensus 
 <div class="columns">
 <div class="col">
 
-Too close → the water is **vapour**
+Too close → the water is **vapor**
 Too far → the water is **ice**
 In between → **liquid**
 
@@ -1120,13 +1120,13 @@ DIFFERENTIATION: these two pages of student material are dense and introduce sev
 
 <div class="key-idea">
 
-The Sun holds **99.9%** of the solar system's mass, so the solar system's **centre of mass** sits almost exactly at the Sun. Those two points — the centre of mass and the Sun — are the **foci** of the orbit. The further apart they are, the more **stretched** the orbit.
+The Sun holds **99.9%** of the solar system's mass, so the solar system's **center of mass** sits almost exactly at the Sun. Those two points — the center of mass and the Sun — are the **foci** of the orbit. The further apart they are, the more **stretched** the orbit.
 
 </div>
 
 <!--
-THE SUN IS NOT QUITE AT THE CENTRE. The planets revolve around the Sun, but the Sun revolves around the solar system's centre of mass. Because the Sun is so massive, the two are almost the same point — close enough that it LOOKS like the Sun is at the centre.
-NOTE FOR THE CONSTRUCTION ACTIVITY: the habitable zone is always measured from the focus that represents the STAR, not from the centre of the ellipse. Say this before they start measuring or half the class will measure from the middle.
+THE SUN IS NOT QUITE AT THE CENTER. The planets revolve around the Sun, but the Sun revolves around the solar system's center of mass. Because the Sun is so massive, the two are almost the same point — close enough that it LOOKS like the Sun is at the center.
+NOTE FOR THE CONSTRUCTION ACTIVITY: the habitable zone is always measured from the focus that represents the STAR, not from the center of the ellipse. Say this before they start measuring or half the class will measure from the middle.
 -->
 
 ---
@@ -1269,7 +1269,7 @@ Measured from the star, it runs from about **6.3 cm** to **18.7 cm**. The zone i
 <!--
 TAKE TIME FOR THESE KEY POINTS:
   • We algebraically manipulated Kepler's First Law to isolate f, then plugged in e and d.
-  • The two tacks ARE f, the distance between the two centres of mass.
+  • The two tacks ARE f, the distance between the two centers of mass.
   • The longest distance across the orbit IS d.
   • How circular or stretched the drawn orbit looks IS e.
   • Kepler-186 f, Kepler-442 b, Trappist-1 f and Trappist-1 g stay in the zone throughout an entire orbit. TOI-2257 b orbits within the zone for part of its orbit but does not stay there.
@@ -1351,7 +1351,7 @@ ACCESS FOR MULTILINGUAL LEARNERS: Idea Carousel is ideal for emerging language l
 
 | Change to the model | Evidence | Scientific reasoning |
 |---|---|---|
-| We added an orbit at the right distance for liquid water **and** relatively circular (low eccentricity) | Objects closer than Earth hold only vapour; objects beyond Mars only ice. Borrelly and Pluto have very elliptical orbits and swing through dramatic temperature changes | Life needs liquid water and a fairly stable temperature, so Earth's orbit being at the right distance **and** staying near it is a large part of why Earth can sustain life |
+| We added an orbit at the right distance for liquid water **and** relatively circular (low eccentricity) | Objects closer than Earth hold only vapor; objects beyond Mars only ice. Borrelly and Pluto have very elliptical orbits and swing through dramatic temperature changes | Life needs liquid water and a fairly stable temperature, so Earth's orbit being at the right distance **and** staying near it is a large part of why Earth can sustain life |
 
 <!--
 THE REFLECTION PROMPT first: how was creating mathematical representations from data — graphs and equations — useful in revising your model? Expected: the graph let us see THAT the variables are related; the equation described the relationship accurately because it included exponents and a star-mass coefficient, and that let us generate data we could not measure.
@@ -1385,7 +1385,7 @@ ACCESS FOR ALL LEARNERS: the prompts at the end of the rubric ask students why t
 </div>
 
 <!--
-Let students know they will now use all the ideas in their models as a lens to analyse exoplanet data and finalise their performance task argument.
+Let students know they will now use all the ideas in their models as a lens to analyze exoplanet data and finalise their performance task argument.
 MOVE ANSWERED QUESTIONS on the Driving Question Board and add the new ones that this 5E raised. The board should visibly change after every lesson or it stops being a live document.
 -->
 

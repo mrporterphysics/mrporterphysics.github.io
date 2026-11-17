@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),

@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),
@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centered;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -414,7 +414,7 @@ The **visible spectrum** runs from about <span class="fill">400</span> nm to abo
 PACKET: Part A, first four blanks.
 THE DIAGRAM: one wave whose wavelength shrinks left to right. Crest-to-crest is ONE wavelength — the gold arrows mark three of them so students can see the distance getting smaller while the wave itself never stops being a wave.
 COLOR IS NOT PAINTED ON. The stroke runs red to violet because that IS what changing wavelength does to visible light. Long (~700 nm) reads red; short (~400 nm) reads violet.
-COMMON SLIP: students write "colour" for the first blank but then say wavelength IS colour. Wavelength DETERMINES colour; they are not the same thing.
+COMMON SLIP: students write "color" for the first blank but then say wavelength IS color. Wavelength DETERMINES color; they are not the same thing.
 ASK: "Between which two points do I measure one wavelength?" Accept crest-to-crest or trough-to-trough — any two matching points one cycle apart.
 WATCH FOR: students reading the shrinking wave as the wave "slowing down" or "losing energy." In a vacuum every wavelength of light travels at the same speed; shorter wavelength means HIGHER frequency and higher energy per photon. (Beyond the assessment boundary here — offer only if asked.)
 -->

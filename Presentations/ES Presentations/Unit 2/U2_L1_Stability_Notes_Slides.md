@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),
@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centered;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -333,7 +333,7 @@ STANDARDS: HS-ESS1-6 (HE-3) evidence from ancient Earth materials, meteorites an
 
 About <span class="fill">4.6</span> billion years ago, a cloud of gas and dust (a **nebula**) collapsed under its own <span class="fill">gravity</span>.
 
-1. Most material fell to the centre and became the <span class="fill">Sun</span>.
+1. Most material fell to the center and became the <span class="fill">Sun</span>.
 2. The rest flattened into a spinning <span class="fill">disk</span>.
 3. Dust grains collided and stuck together into larger bodies: <span class="fill">accretion</span>.
 4. Inner planets are small and <span class="fill">rocky</span>; outer planets are mostly <span class="fill">gas</span>.

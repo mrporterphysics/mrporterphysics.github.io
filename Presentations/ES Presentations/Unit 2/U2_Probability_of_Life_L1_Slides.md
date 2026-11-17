@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),
@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centered;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -405,7 +405,7 @@ impact craters
 
 <div class="warning">
 
-These three worlds are neighbours. They sit in the same part of the solar system. **So why is Earth's number so much smaller?**
+These three worlds are neighbors. They sit in the same part of the solar system. **So why is Earth's number so much smaller?**
 
 </div>
 
@@ -414,7 +414,7 @@ Write the three numbers on the board and leave them there for the whole investig
 
 Ask for first reactions before any exploring. You will hear "Earth gets hit less" and "our atmosphere burns them up." WRITE BOTH ON THE BOARD, in the students' own words, attributed. Those two sentences are what Explore 1 and Explore 2 exist to test.
 
-The atmosphere claim is partly true and completely insufficient — it stops small meteoroids, not anything that leaves a kilometre-wide crater. Do not say that yet. Ask it in Explain 1: "does that explain Barringer Crater, which did land?"
+The atmosphere claim is partly true and completely insufficient — it stops small meteoroids, not anything that leaves a kilometer-wide crater. Do not say that yet. Ask it in Explain 1: "does that explain Barringer Crater, which did land?"
 
 LOOK AND LISTEN FOR: students who notice Earth is mostly water and heavily vegetated. That is the beginning of the right answer and it is worth naming as a noticing without confirming it.
 -->
@@ -520,7 +520,7 @@ The rate **never changes.** Not with heat, not with pressure, not with chemistry
 </div>
 
 <!--
-PACKET q1-3. Red dots = undecayed parent. Blue dots = daughter. CONFIRM THE PALETTE ON THE PROJECTOR BEFORE CLASS — PhET has shipped more than one colour scheme for this tab.
+PACKET q1-3. Red dots = undecayed parent. Blue dots = daughter. CONFIRM THE PALETTE ON THE PROJECTOR BEFORE CLASS — PhET has shipped more than one color scheme for this tab.
 
 The "rate never changes" line is the single most important sentence in the Explore. It is why a rock can be dated at all, and it is the Stability and Change crosscutting concept in one sentence: the decay rate is the stable thing, which is how we measure everything that isn't.
 
@@ -715,7 +715,7 @@ CONFERRING PROMPT: "if asteroids had been hitting the Moon steadily the whole ti
 
 THE LHB READING (Part F) gives the mechanism: Jupiter and Saturn fell into a 2:1 orbital resonance, which destabilised Neptune and Uranus, which scattered the Kuiper Belt. Students do not need the orbital mechanics. They need to know there is a physical cause and that it is a COMPUTER MODEL, not a direct observation — that is a limitation they must write in PTO Part D.
 
-NOW THE REVERSAL (Part E q13-15). If the Moon was being hit, so was Earth — same neighbourhood, same time, and Earth is bigger with more gravity. Say the sentence out loud and put it on the board:
+NOW THE REVERSAL (Part E q13-15). If the Moon was being hit, so was Earth — same neighborhood, same time, and Earth is bigger with more gravity. Say the sentence out loud and put it on the board:
 
   "Earth was hit just as much and does not show it."
 
@@ -859,8 +859,8 @@ ROUTINE: Class Consensus Discussion before they write. Building the evidence lis
 | | Water |
 |:--|:--|
 | **🌍 Earth** | **71% of the surface.** Oceans, lakes, glaciers, ice caps — and it **cycles** |
-| **☿ Mercury** | Traces of vapour in the atmosphere |
-| **🔴 Mars** | Ice at the poles. A little vapour. Some transient liquid |
+| **☿ Mercury** | Traces of vapor in the atmosphere |
+| **🔴 Mars** | Ice at the poles. A little vapor. Some transient liquid |
 | **🌕 Moon** | Limited ice |
 
 <div class="warning">

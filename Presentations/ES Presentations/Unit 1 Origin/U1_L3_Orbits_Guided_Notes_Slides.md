@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),
@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centered;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -338,7 +338,7 @@ Water is the **same substance** everywhere in the solar system. What changes is 
 
 | Where it orbits | Phase | Example |
 |---|---|---|
-| Closer than Earth | vapour | Mercury, Venus |
+| Closer than Earth | vapor | Mercury, Venus |
 | About Earth's distance | **liquid** | Earth |
 | Further than Mars | ice | Europa, Neptune, Pluto |
 
@@ -349,7 +349,7 @@ Water is the **same substance** everywhere in the solar system. What changes is 
 
 **Habitable zone** — the band of distances from a star where a planet can hold **liquid water** on its surface.
 
-Closer in, water is vapour. Further out, it is ice.
+Closer in, water is vapor. Further out, it is ice.
 
 </div>
 
@@ -686,14 +686,14 @@ ECCENTRICITY IS EXAGGERATED in this drawing. A real planetary orbit is far round
 
 <div class="key-idea">
 
-An ellipse is defined by two points called **foci**. The star sits at <span class="fill">one</span> of them; the other is the system's **centre of mass**. Because the Sun holds <span class="fill">99.9%</span> of the solar system's mass, that centre of mass sits almost exactly at the Sun.
+An ellipse is defined by two points called **foci**. The star sits at <span class="fill">one</span> of them; the other is the system's **center of mass**. Because the Sun holds <span class="fill">99.9%</span> of the solar system's mass, that center of mass sits almost exactly at the Sun.
 
 </div>
 
 <!--
 PACKET: Part E, Term 2, two blanks.
-THE SUN IS NOT QUITE AT THE CENTRE — it is at a FOCUS. The two are the same point only for a perfect circle. This is a classic exam distinction.
-FOR THE CONSTRUCTION: habitable zone distances are always measured from the focus holding the STAR, never from the centre of the ellipse.
+THE SUN IS NOT QUITE AT THE CENTER — it is at a FOCUS. The two are the same point only for a perfect circle. This is a classic exam distinction.
+FOR THE CONSTRUCTION: habitable zone distances are always measured from the focus holding the STAR, never from the center of the ellipse.
 -->
 
 ---

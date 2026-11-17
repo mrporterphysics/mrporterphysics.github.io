@@ -416,7 +416,7 @@ Exchange with as many people as possible
 
 # **Engage**: _How did the universe begin?_
 
-# **Explore**: _Are galaxies moving towards/away/or not at all from Earth?_
+# **Explore**: _Are galaxies moving toward/away/or not at all from Earth?_
 
 ## Explore Models:
   - What happens to Waves (sound and light) when the source is moving
@@ -566,7 +566,7 @@ The wave crests moving to the left are stretched out because the moving source m
 
 **Goal of this activity**: The perceived change in frequency of sound waves you heard as the sirens came toward and away from you is called the doppler effect. In this investigation you will use a computer simulation to investigate the change in frequency and wavelength of light. 
 
-The doppler effect influences all waves, like sound or light. In the case of light, instead of perceiving changes in pitch (like sound), we perceive changes in color. If something of a particular color is moving at a very high speed away or towards us, you will see a wave associated with a different color. This is the case with objects in the universe, they move at a really high speed. Let’s work on this simulator to understand this better. 
+The doppler effect influences all waves, like sound or light. In the case of light, instead of perceiving changes in pitch (like sound), we perceive changes in color. If something of a particular color is moving at a very high speed away or toward us, you will see a wave associated with a different color. This is the case with objects in the universe, they move at a really high speed. Let’s work on this simulator to understand this better. 
 
 
 ---

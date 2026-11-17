@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),
@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centered;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -497,7 +497,7 @@ THE REVEAL. Go one at a time and let the gap between guess and answer land.
 
  1. BANDED IRON FORMATION, 2.5 By — the rock that cannot form without free oxygen. Looks like polished decorative stone.
  2. EARLY EUKARYOTIC CELLS, 2.1 By — the first complex cells. Looks like smudges.
- 3. PHOTOSYNTHETIC STROMATOLITES, 2.7 By — the evidence that photosynthesis had begun. Looks like grey rock.
+ 3. PHOTOSYNTHETIC STROMATOLITES, 2.7 By — the evidence that photosynthesis had begun. Looks like gray rock.
  4. OLDEST LAND ANIMAL, 425 My — looks like a scratch.
  5. EARLIEST SOFT ANIMALS, 560 My — the concentric disc. Could easily be a sedimentary structure, and for decades people argued about exactly that.
  6. PRESERVED SOIL DEPOSIT, 407 My — looks like a rock face, because it is one.
@@ -704,7 +704,7 @@ SCAFFOLD: the "Scaffolded Explain Cards" classroom resource supplies the evidenc
 <div class="col">
 
 ### The early atmosphere
-CO₂, methane, ammonia, nitrogen, water vapour.
+CO₂, methane, ammonia, nitrogen, water vapor.
 
 **Essentially no free oxygen.**
 

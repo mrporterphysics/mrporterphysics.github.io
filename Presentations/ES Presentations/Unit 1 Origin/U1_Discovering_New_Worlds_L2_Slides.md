@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),
@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centered;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -538,8 +538,8 @@ Three different stars from the cluster — different colors, different sizes, di
 
 <!--
 TEACHER MOVE: This is the sample spectra data from the Hubble image. Students answer "What do you observe in the star light spectra?" and "What do you think explains the differences observed in the stars, given your observations about the spectra?"
-THE POINT: the stars look DIFFERENT (colour, size, brightness) but are made of the SAME THING. Composition is not what varies across the cluster.
-LOOK & LISTEN FOR: the sample spectra indicate they are made of hydrogen and helium just like our Sun • the difference in colour is caused by temperature • the difference in brightness has to do with distance.
+THE POINT: the stars look DIFFERENT (color, size, brightness) but are made of the SAME THING. Composition is not what varies across the cluster.
+LOOK & LISTEN FOR: the sample spectra indicate they are made of hydrogen and helium just like our Sun • the difference in color is caused by temperature • the difference in brightness has to do with distance.
 "IT'S JUST DISTANCE" is a reasonable hypothesis and gets tested in Explore 2 — the H-R diagram plots luminosity, which already accounts for distance. Don't shut it down here.
 SO WHAT DOES VARY? If composition is constant, the differences must come from something else. That question drives the rest of the lesson, and the answer is MASS.
 CONNECTION: ESS1.A(2) — the study of stars' light spectra AND brightness identifies compositional elements of stars, their movements, and their distances from Earth.
@@ -912,7 +912,7 @@ NOTE: Both axes are logarithmic, and temperature runs backwards. Luminosity span
 </div>
 
 <!--
-WHY THIS SLIDE: The ESRT diagram distinguishes star types by how each circle is SHADED (see its Key), not by labelled zones. Students reading it for the first time often miss that the types occupy distinct REGIONS. This slide makes the regions visible once; then go back to the clean version.
+WHY THIS SLIDE: The ESRT diagram distinguishes star types by how each circle is SHADED (see its Key), not by labeled zones. Students reading it for the first time often miss that the types occupy distinct REGIONS. This slide makes the regions visible once; then go back to the clean version.
 TEACHER MOVE: Show the clean diagram first, let students try to describe where each type sits, THEN reveal this.
 KEY POINT: Position on the diagram is not decoration — it tells you the star's stage. Off the main sequence means no longer in equilibrium.
 WATCH FOR: Students treating the white dwarf region as "cool" because it is low. It is LOW IN LUMINOSITY, not low in temperature — Sirius B is hotter than the Sun. Low and left = hot and dim = small.
@@ -1485,12 +1485,12 @@ WORTH SAYING: Every carbon and oxygen atom in a student's body was assembled ins
 <div class="small" style="text-align:center">NYS Earth &amp; Space Sciences Reference Tables, 2026 Rev. Edition</div>
 
 <!--
-TEACHER MOVE: Show after the Fe-26 game. This is what students were modelling, drawn properly — and it is in their reference tables.
-READING IT: A massive star fuses in SHELLS, heaviest at the centre. Hydrogen fusing to helium in the outer shell, down through He→C, C→O, O→Si, and Si→Fe, with an iron core that cannot fuse further.
+TEACHER MOVE: Show after the Fe-26 game. This is what students were modeling, drawn properly — and it is in their reference tables.
+READING IT: A massive star fuses in SHELLS, heaviest at the center. Hydrogen fusing to helium in the outer shell, down through He→C, C→O, O→Si, and Si→Fe, with an iron core that cannot fuse further.
 THE DURATION COLUMN IS THE POINT: 7×10⁶ years for H→He, 7×10⁵ for He→C, 600 years for C→O, 6 MONTHS for O→Si, ONE DAY for Si→Fe, and a QUARTER SECOND for core collapse. Each stage is dramatically shorter than the one before.
 ASK: "What is happening to the time as you read down the column?" Then: "What do you think happens right after that quarter second?" — the supernova.
 WHY IT ACCELERATES: Fusing heavier elements releases less energy per reaction, so the star must burn through them faster and faster to hold itself up against gravity. (Beyond the assessment boundary — offer only if asked.)
-CONNECTION: Fe at the centre is the iron ceiling. The next slide is where everything heavier comes from.
+CONNECTION: Fe at the center is the iron ceiling. The next slide is where everything heavier comes from.
 -->
 
 ---

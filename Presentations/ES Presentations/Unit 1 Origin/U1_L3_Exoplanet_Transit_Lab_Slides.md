@@ -107,7 +107,7 @@ style: |
     border-radius: 8px;
     overflow: hidden;
   }
-  /* Marp's default theme sets tr:nth-child(2n) to a light grey (specificity 0,1,2).
+  /* Marp's default theme sets tr:nth-child(2n) to a light gray (specificity 0,1,2).
      These rules use a pseudo-class too, so they outrank it. */
   section table tr:nth-child(2n),
   section table tr:nth-child(2n+1),
@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centered;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -372,7 +372,7 @@ STANDARDS: HS-ESS1-4 (mathematical representations to predict orbital motion) ·
 
 <!--
 Put this up while packets are handed out. It is the only slide that shows the whole shape; after this students only ever see the part they are in.
-Say the rule out loud and say WHY: the state exam gives them a graph and asks them to read it. A readout that prints the answer removes the only skill being practised. The simulator hides depth, duration and period behind "Reveal the values" on purpose.
+Say the rule out loud and say WHY: the state exam gives them a graph and asks them to read it. A readout that prints the answer removes the only skill being practiced. The simulator hides depth, duration and period behind "Reveal the values" on purpose.
 Do not preview question 11 here. It lands harder if they walk into it.
 -->
 
@@ -462,7 +462,7 @@ Five minutes, together, before anyone touches a slider.
 TWO THINGS TO POINT AT, and only two.
 (1) The two tick boxes are OFF. "Show measurement guides" marks WHERE to measure without giving values — that is the middle rung for a student who cannot find the baseline. "Reveal the values" prints the numbers and is for CHECKING, after they have measured.
 (2) The view control, above the graph. "Now showing" names the view you are in; the button beside it names the view it takes you to. Students get sent between the two views four times in this lab. This was rebuilt after the first run — the button used to carry the name of the CURRENT view, which read as an instruction to a student already looking at it.
-Also worth naming now: "Pin this curve" keeps the previous run on the graph as a dashed grey line. They will need it in ten minutes and will not find it under pressure.
+Also worth naming now: "Pin this curve" keeps the previous run on the graph as a dashed gray line. They will need it in ten minutes and will not find it under pressure.
 -->
 
 ---
@@ -521,7 +521,7 @@ Circulate with one question: "Which of the three is that number?"
 
 <div class="key-idea">
 
-Before each run, press **Pin this curve**. The previous curve stays on the graph as a dashed grey line, on the same axes, so a longer transit really does look longer.
+Before each run, press **Pin this curve**. The previous curve stays on the graph as a dashed gray line, on the same axes, so a longer transit really does look longer.
 
 </div>
 
@@ -873,10 +873,10 @@ Periods read off a graph will vary between students by a tenth of a day. **That 
 
 <!--
 25 minutes. Question 22 first (our own solar system, M_s = 1), then question 23 (the exoplanets).
-Say the tolerance out loud before they start. A student who thinks their 3.3 days is wrong because their neighbour got 3.2 will stop working.
+Say the tolerance out loud before they start. A student who thinks their 3.3 days is wrong because their neighbor got 3.2 will stop working.
 Question 24: the first four all orbit at about 0.05 AU — one eighth of Mercury's distance — and whip round in three to five DAYS. Kepler-452b is at 1.05 AU and takes 385 days.
 Question 25 is the one worth discussing as a class: why were the hot Jupiters found first? Because confirming a planet needs several repeat dips. A 3-day period gives you a fresh one every three days; Kepler-452b transits once every 385 days, so confirming it took YEARS. They were not more common — just quicker to prove.
-Question 26: model says 0.668% for Kepler-5b, measurement says 0.725%. Not a broken model — real stars are dimmer at the edge and real transits cut off-centre. A 0.06% disagreement is EVIDENCE THE MODEL IS GOOD. Say that explicitly; it is the honest-science moment of Day 2.
+Question 26: model says 0.668% for Kepler-5b, measurement says 0.725%. Not a broken model — real stars are dimmer at the edge and real transits cut off-center. A 0.06% disagreement is EVIDENCE THE MODEL IS GOOD. Say that explicitly; it is the honest-science moment of Day 2.
 The NEXT slide is where the messy-data conversation goes. Use it with question 26, not before.
 -->
 
@@ -1018,7 +1018,7 @@ Worth naming: that is the pattern of the whole lab. Every single measurement mea
 
 <!--
 15 minutes. Can be done individually as a check for understanding, or collected as an exit ticket.
-The strategy table is new in this rebuild. Transfer items fail for reading reasons, not physics reasons — a student who recognises question 31 as question 2 in disguise answers it in ten seconds.
+The strategy table is new in this rebuild. Transfer items fail for reading reasons, not physics reasons — a student who recognizes question 31 as question 2 in disguise answers it in ten seconds.
 Question 31 is the geometry (answer 1 — her own orbit must be outside its orbit). Question 32 is the period comparison; the packet now gives a working line, 400 / 8 and 400 / 40, because the arithmetic is not what is being tested, the comparison is.
 Question 34 needs the H-R Diagram from the reference tables and now carries a plotting step first: put a finger on 2600 K along the bottom, slide up to a luminosity of 0.00055, mark the spot. THEN look for a name. DX Cancri is the closest match; accept Wolf 359 or Proxima Centauri.
 -->
