@@ -38,7 +38,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Model motion and explain the cause for different motions_
 
 ### 📆 Upcoming
 
