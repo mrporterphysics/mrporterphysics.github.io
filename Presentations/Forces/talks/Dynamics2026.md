@@ -70,17 +70,45 @@ img[alt~="center"] {
 
 ---
 
-<!-- _class: plain -->
-<!-- _footer: Bouncing ball strobe photograph · Wikimedia Commons, CC BY-SA -->
+<!-- _footer: Bouncing ball, strobe photograph · MichaelMaggs, edit by Richard Bartz · Wikimedia Commons, CC BY-SA 3.0 -->
 
-![bg](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Bouncing_ball_strobe_edit.jpg/1024px-Bouncing_ball_strobe_edit.jpg)
+![bg fit](../figures/bouncing-ball-strobe.jpg)
 
 ---
 
-<!-- _class: plain -->
-<!-- _footer: Strobe photograph · Flickr -->
+<!-- _footer: Falling ball · Ball thrown downward · MichaelMaggs · Wikimedia Commons, CC BY-SA 3.0 -->
 
-![bg](https://live.staticflickr.com/3601/3443461883_a680026cb7_c.jpg)
+![bg fit](../figures/falling-ball-strobe.jpg)
+![bg fit](../figures/ball-thrown-downward-strobe.jpg)
+
+---
+
+# What did you notice?
+
+<div class='columns'>
+<div class='col'>
+
+<div class="question">
+
+**The bouncing ball** — the spacing side to side stayed even, but the spacing up and down kept changing.
+
+</div>
+</div>
+<div class='col'>
+
+<div class="question">
+
+**The dropped balls** — the gaps grew every flash, whichever speed they started with.
+
+</div>
+</div>
+</div>
+
+<div class="key-idea">
+
+**Even spacing means constant speed.** Changing spacing means something is changing the motion — and that is what we are going to chase for the rest of this unit.
+
+</div>
 
 ---
 
