@@ -29,6 +29,7 @@ math: mathjax
 
 #### 📋 Agenda
 
+0. Review Mallet Ball Lab
 1. Do Now — tug-of-war PhET T/F
 2. Interaction Stations & Identifying Forces
 3. Common Forces → interatomic
@@ -40,13 +41,12 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Define Newton's First Law_
 
 ### 📆 Upcoming
 
-- HW: _**PC ThinkSheet newtl5 Recognizing Forces + newtl16 Newton's Third Law**_
 - 📝 Kinematics Test corrections due **Fri 11/20** — in school only
-- ✅ Quiz 7 — **Mon 11/23**
+
 
 </div>
 </div>
