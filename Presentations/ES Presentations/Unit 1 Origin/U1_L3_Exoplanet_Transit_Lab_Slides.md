@@ -963,7 +963,7 @@ Then question 27 checks the rule on our own solar system first: zone runs 0.95 t
 
 <!--
 DO NOT MARK THIS AS A CLEAN "INSIDE" OR "OUTSIDE". This is deliberate and it is in the key.
-Full credit for recognising the planet is ON THE BOUNDARY. Full credit too for a student who picks a side but says the margin is too small to be sure. This is a real unresolved question about a real planet, not a trick, and it is a better science lesson than a clean answer would be.
+Full credit for recognizing the planet is ON THE BOUNDARY. Full credit too for a student who picks a side but says the margin is too small to be sure. This is a real unresolved question about a real planet, not a trick, and it is a better science lesson than a clean answer would be.
 If a student is frustrated by that, that frustration IS the lesson — real measurements come with real uncertainty, and a scientist's job includes saying "the data cannot settle this".
 The CER in Part G is deliberately unambiguous by contrast, so they get one of each.
 -->
@@ -1149,7 +1149,7 @@ outer = **0.137 AU**
 
 <!--
 DEBRIEF SLIDE. Do not show it until they have worked the frame in the packet, or you have given them the answers.
-If time is short: do the data organiser together in class and set the three steps plus the claim and reasoning as homework. The organiser is the part that needs you in the room.
+If time is short: do the data organizer together in class and set the three steps plus the claim and reasoning as homework. The organizer is the part that needs you in the room.
 WHAT SEPARATES PROFICIENT WORK, and it is not the arithmetic: whether the student brings the STAR into every single step — its radius to size the planet, its mass to place the orbit, its luminosity to judge the temperature. A student who reports "0.077 AU, very close, so too hot" has done every calculation correctly and still missed the lesson of the whole lab.
 Unlike question 28, this one has a clean answer on purpose. The planet sits about a third of the way across the zone, comfortably inside, no boundary ambiguity.
 FOR AN EARLY FINISHER: what single measurement would settle whether this planet actually has water? None of these — you would need a spectrum of its atmosphere taken during transit, which is what JWST now does.
