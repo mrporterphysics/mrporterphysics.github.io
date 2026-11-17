@@ -133,7 +133,7 @@ style: |
     border: none;
     border-bottom: 1px solid rgba(255,255,255,0.10);
   }
-  /* Column alignment utilities. Short label/number columns stay centred;
+  /* Column alignment utilities. Short label/number columns stay centerd;
      add lt1..lt4 to a slide's _class to left-align that column (head + cells),
      or "lefttable" to left-align every column. */
   section.lefttable table th,
@@ -142,7 +142,7 @@ style: |
   section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
   section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
   section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4) { text-align: left; }
-  /* Opaque row colours so nothing underneath can show through. */
+  /* Opaque row colors so nothing underneath can show through. */
   section table tbody tr:nth-child(odd)  td { background-color: #10162C; }
   section table tbody tr:nth-child(even) td { background-color: #19203D; }
   section table tbody tr:last-child td { border-bottom: none; }
@@ -423,7 +423,7 @@ QUESTION 3 (the string shorter than the pin gap) is worth asking aloud: the penc
 <div class="columns">
 <div class="col">
 
-A planet's distance from the Sun changes as it goes round, because the Sun sits at a <span class="fill">focus</span> — not at the centre.
+A planet's distance from the Sun changes as it goes round, because the Sun sits at a <span class="fill">focus</span> — not at the center.
 
 | Name | Where | Measured from |
 |---|---|---|
@@ -443,7 +443,7 @@ Both sit at the **ends of the major axis**.
 <!--
 PACKET: Part B, the table and the diagram.
 PERI = NEAR, AP = AWAY. Worth saying once; the Greek does the memorising for them.
-BOTH DISTANCES ARE MEASURED FROM THE SUN, never from the centre. That is packet question 6 and it is the one students get wrong under time pressure.
+BOTH DISTANCES ARE MEASURED FROM THE SUN, never from the center. That is packet question 6 and it is the one students get wrong under time pressure.
 -->
 
 ---
@@ -471,7 +471,7 @@ $$\text{aphelion} - \text{perihelion} = f$$
 <!--
 PACKET: Part B, the two identities and the "Why this matters on Thursday" box.
 THIS IS THE MOST IMPORTANT SLIDE IN THE DECK. Step 14d of the investigation is exactly this subtraction, and it is where marks are lost.
-WHY THE SUBTRACTION WORKS: the Sun is off centre by half of f on each side, so the long piece exceeds the short piece by exactly f. Draw it on the board if they look unsure.
+WHY THE SUBTRACTION WORKS: the Sun is off center by half of f on each side, so the long piece exceeds the short piece by exactly f. Draw it on the board if they look unsure.
 -->
 
 ---
@@ -566,7 +566,7 @@ MAKE THEM FIND IT IN THE ESRT NOW, not Thursday. Students who have never located
 
 **1. Eccentricity has no units.**
 
-Centimetres divided by centimetres — the units <span class="fill">cancel</span>. "0.094 cm" is wrong even when the number is right.
+Centimeters divided by centimeters — the units <span class="fill">cancel</span>. "0.094 cm" is wrong even when the number is right.
 
 **2. A scale drawing gives the true eccentricity.**
 
@@ -579,7 +579,7 @@ $f$ and $d$ are both shrunk by the <span class="fill">same</span> factor, and a 
 
 **Precision rules for Thursday**
 
-Measure every length to the nearest <span class="fill">tenth</span> of a centimetre.
+Measure every length to the nearest <span class="fill">tenth</span> of a centimeter.
 
 Report eccentricity to the nearest <span class="fill">thousandth</span> — three decimal places.
 
@@ -642,7 +642,7 @@ NOT NEEDED FOR THE MARS LAB. This is the natural cut if the block is running sho
 
 **Mars**, $e = 0.093$
 
-Sun well off centre → perihelion and aphelion differ by a lot → **big** change in speed across the year.
+Sun well off center → perihelion and aphelion differ by a lot → **big** change in speed across the year.
 
 </div>
 <div class="col">
