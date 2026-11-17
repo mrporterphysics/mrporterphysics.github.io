@@ -19,6 +19,40 @@ math: mathjax
 
 ---
 
+# 2026.11.18 **AP Physics**
+
+##### **❓ of the 📅**: What is the most overrated Thanksgiving side?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now — tug-of-war PhET T/F
+2. Interaction Stations & Identifying Forces
+3. Common Forces → interatomic
+4. Newton's Third Law Lesson
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+- HW: _**PC ThinkSheet newtl5 Recognizing Forces + newtl16 Newton's Third Law**_
+- 📝 Kinematics Test corrections due **Fri 11/20** — in school only
+- ✅ Quiz 7 — **Mon 11/23**
+
+</div>
+</div>
+
+---
+
 # 2026.11.17 **AP Physics**
 
 ##### **❓ of the 📅**: White turkey meat, dark turkey meat, or no turkey meat?

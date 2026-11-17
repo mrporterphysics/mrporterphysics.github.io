@@ -15,6 +15,103 @@ math: mathjax
 
 ---
 
+<div class='do-now'> 
+ 
+ <div> 
+
+ ######   **Do Now:** New Lab Groups 🧩
+
+
+Take a card and form four groups: one of **4**, three of **3**.
+
+<style scoped>
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin-top: 0.8rem; }
+.tile { background: #E3DFD1; border: 2px solid #1C1B1A; border-radius: 10px;
+        padding: 1.1rem 0.3rem; text-align: center; font-weight: 700; font-size: 1.15rem; }
+</style>
+
+<div class='tiles'>
+<div class='tile'>TENSION</div>
+<div class='tile'>AIR</div>
+<div class='tile'>SLOPE</div>
+<div class='tile'>FREQUENCY</div>
+<div class='tile'>BRUTE</div>
+<div class='tile'>DRAG</div>
+<div class='tile'>SPEED</div>
+<div class='tile'>INTERCEPT</div>
+<div class='tile'>TASK</div>
+<div class='tile'>AREA</div>
+<div class='tile'>JERK</div>
+<div class='tile'>NORMAL</div>
+<div class='tile'>POWER</div>
+</div>
+
+  
+ </div> 
+
+ </div>
+
+####
+
+
+---
+
+<style scoped>
+.ans { display: flex; flex-direction: column; gap: 0.55rem; margin-top: 0.6rem; }
+.row { border-radius: 10px; padding: 0.7rem 1.1rem; color: #F2F0E5; }
+.row .cat { font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.row .ws { font-weight: 700; font-size: 1.35rem; }
+.g1 { background: var(--light-accent-red); }
+.g2 { background: var(--light-accent-green); }
+.g3 { background: var(--light-accent-blue); }
+.g4 { background: var(--light-accent-purple); }
+.note { margin-top: 0.9rem; font-size: 0.95rem; }
+</style>
+
+<div class='ans'>
+<div class='row g1'><div class='cat'>Forces you label on a free-body diagram</div><div class='ws'>NORMAL · TENSION · DRAG</div></div>
+<div class='row g2'><div class='cat'>What you pull off a motion graph</div><div class='ws'>SLOPE · AREA · INTERCEPT</div></div>
+<div class='row g3'><div class='cat'>Defined as something per unit time</div><div class='ws'>SPEED · JERK · POWER · FREQUENCY</div></div>
+<div class='row g4'><div class='cat'>______ force</div><div class='ws'>AIR · TASK · BRUTE</div></div>
+</div>
+
+<div class='note'>
+
+
+</div>
+
+---
+
+# 2026.11.18 **AP Physics**
+
+##### **❓ of the 📅**: What is the most overrated Thanksgiving side?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now — new lab groups
+2. Pass the Water & Mallet Ball Lab — constant velocity or not?
+3. Newton's First Law — board meeting
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Start explaining constant velocity and constant acceleration motion_
+
+### 📆 Upcoming
+
+- 📝 Kinematics Test corrections due **Fri 11/20** — in school only
+
+</div>
+</div>
+
+---
 
 # 2026.11.16 **AP Physics**
 

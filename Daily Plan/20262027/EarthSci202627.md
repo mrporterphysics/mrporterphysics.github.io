@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.11.18 **Earth Science**
+
+##### **❓ of the 📅**: What is the most overrated Thanksgiving side?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish Quiz?
+2. Hand in transit lab (complete through part B)
+3. Ellipse Notes
+4. Ellipse Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.11.17 **Earth Science**
 
 ##### **❓ of the 📅**: White turkey meat, dark turkey meat, or no turkey meat?
