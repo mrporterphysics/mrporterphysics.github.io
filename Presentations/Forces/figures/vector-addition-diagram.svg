@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>From a free-body diagram to a vector addition diagram</title>
+  <desc>The same four forces are drawn from a common point as a free-body diagram, then laid tip to tail as a vector addition diagram. The arrow from the first tail to the last tip is the net force.</desc>
+
+  <defs>
+    <marker id="vGrav" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#5E409D"/></marker>
+    <marker id="vNorm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#66800B"/></marker>
+    <marker id="vTens" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#205EA6"/></marker>
+    <marker id="vFric" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#AF3029"/></marker>
+    <marker id="vNet"  viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#A02F6F"/></marker>
+    <marker id="vLead" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#B7B5AC"/></marker>
+  </defs>
+
+  <rect width="1100" height="600" fill="#FFFCF0"/>
+
+  <!-- ===== LEFT: FBD, all from one point ===== -->
+  <text x="130" y="56" text-anchor="middle" font-size="24" font-weight="700" fill="#100F0F">Free-body diagram</text>
+  <text x="130" y="84" text-anchor="middle" font-size="19" fill="#6F6E69">all tails at the dot</text>
+
+  <circle cx="200" cy="300" r="9" fill="#100F0F"/>
+  <line x1="200" y1="300" x2="200" y2="180" stroke="#66800B" stroke-width="7" stroke-linecap="round" marker-end="url(#vNorm)"/>
+  <text x="212" y="176" font-size="21" font-weight="700" fill="#66800B">F<tspan font-size="15" dy="6">N</tspan></text>
+  <line x1="200" y1="300" x2="200" y2="420" stroke="#5E409D" stroke-width="7" stroke-linecap="round" marker-end="url(#vGrav)"/>
+  <text x="212" y="440" font-size="21" font-weight="700" fill="#5E409D">F<tspan font-size="15" dy="6">g</tspan></text>
+  <line x1="200" y1="300" x2="340" y2="300" stroke="#205EA6" stroke-width="7" stroke-linecap="round" marker-end="url(#vTens)"/>
+  <text x="290" y="284" font-size="21" font-weight="700" fill="#205EA6">F<tspan font-size="15" dy="6">T</tspan></text>
+  <line x1="200" y1="300" x2="130" y2="300" stroke="#AF3029" stroke-width="7" stroke-linecap="round" marker-end="url(#vFric)"/>
+  <text x="112" y="284" font-size="21" font-weight="700" fill="#AF3029">F<tspan font-size="15" dy="6">f</tspan></text>
+
+  <!-- arrow across -->
+  <line x1="420" y1="300" x2="520" y2="300" stroke="#B7B5AC" stroke-width="4" marker-end="url(#vLead)"/>
+  <text x="470" y="282" text-anchor="middle" font-size="18" fill="#6F6E69">re-draw</text>
+
+  <!-- ===== RIGHT: VAD, tip to tail ===== -->
+  <text x="800" y="56" text-anchor="middle" font-size="24" font-weight="700" fill="#100F0F">Vector addition diagram</text>
+  <text x="800" y="84" text-anchor="middle" font-size="19" fill="#6F6E69">tip to tail, in any order</text>
+
+  <!-- chained in an order that makes the polygon visible:
+       up, right, down, left — the leftover is the net force -->
+  <circle cx="620" cy="330" r="7" fill="#100F0F"/>
+  <text x="586" y="362" font-size="17" fill="#6F6E69">start</text>
+
+  <!-- 1. F_N up 120 -->
+  <line x1="620" y1="330" x2="620" y2="210" stroke="#66800B" stroke-width="7" stroke-linecap="round" marker-end="url(#vNorm)"/>
+  <text x="578" y="268" font-size="20" font-weight="700" fill="#66800B">F<tspan font-size="14" dy="6">N</tspan></text>
+
+  <!-- 2. F_T right 140 -->
+  <line x1="620" y1="210" x2="760" y2="210" stroke="#205EA6" stroke-width="7" stroke-linecap="round" marker-end="url(#vTens)"/>
+  <text x="682" y="196" font-size="20" font-weight="700" fill="#205EA6">F<tspan font-size="14" dy="6">T</tspan></text>
+
+  <!-- 3. F_g down 120 -->
+  <line x1="760" y1="210" x2="760" y2="330" stroke="#5E409D" stroke-width="7" stroke-linecap="round" marker-end="url(#vGrav)"/>
+  <text x="776" y="268" font-size="20" font-weight="700" fill="#5E409D">F<tspan font-size="14" dy="6">g</tspan></text>
+
+  <!-- 4. F_f left 70 -->
+  <line x1="760" y1="330" x2="690" y2="330" stroke="#AF3029" stroke-width="7" stroke-linecap="round" marker-end="url(#vFric)"/>
+  <text x="716" y="318" font-size="20" font-weight="700" fill="#AF3029">F<tspan font-size="14" dy="6">f</tspan></text>
+
+  <!-- the resultant: first tail to last tip, dropped to its own row -->
+  <line x1="620" y1="330" x2="620" y2="398" stroke="#B7B5AC" stroke-width="2" stroke-dasharray="5 5"/>
+  <line x1="690" y1="330" x2="690" y2="398" stroke="#B7B5AC" stroke-width="2" stroke-dasharray="5 5"/>
+  <line x1="620" y1="398" x2="690" y2="398" stroke="#A02F6F" stroke-width="9" stroke-linecap="round" marker-end="url(#vNet)"/>
+  <text x="704" y="406" font-size="21" font-weight="700" fill="#A02F6F">ΣF</text>
+
+  <!-- the point -->
+  <rect x="60" y="480" width="980" height="98" rx="5" fill="#A02F6F" opacity="0.07"/>
+  <rect x="60" y="480" width="9" height="98" fill="#A02F6F"/>
+  <text x="92" y="518" font-size="23" font-weight="700" fill="#A02F6F">The net force is the arrow from the very first tail to the very last tip.</text>
+  <text x="92" y="554" font-size="20" fill="#100F0F">Here the vertical pair closes back on itself, so ΣF is horizontal — and the crate accelerates that way.</text>
+</svg>

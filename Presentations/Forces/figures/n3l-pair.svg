@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>A Newton's third law pair acts on two different objects</title>
+  <desc>A hand pushes a box. Pulling the two apart shows one force of the pair on the box and the other on the hand. They are equal in size and opposite in direction but they live on different free-body diagrams, so they never cancel.</desc>
+
+  <defs>
+    <marker id="nA" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#BC5215"/></marker>
+    <marker id="nB" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#205EA6"/></marker>
+  </defs>
+
+  <rect width="1200" height="660" fill="#FFFCF0"/>
+
+  <!-- ===== TOP: the real situation ===== -->
+  <text x="60" y="54" font-size="23" font-weight="700" fill="#6F6E69">The situation</text>
+  <g transform="translate(0,-6)">
+    <rect x="300" y="92" width="96" height="116" rx="22" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+    <text x="348" y="232" text-anchor="middle" font-size="19" font-weight="600" fill="#6F6E69">hand</text>
+    <rect x="396" y="86" width="130" height="128" rx="5" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+    <text x="461" y="238" text-anchor="middle" font-size="19" font-weight="600" fill="#6F6E69">box</text>
+    <circle cx="396" cy="150" r="7" fill="#100F0F"/>
+    <text x="560" y="140" font-size="20" fill="#6F6E69">They touch at one point.</text>
+    <text x="560" y="170" font-size="20" fill="#6F6E69">That contact is <tspan font-weight="700" fill="#100F0F">one interaction</tspan>.</text>
+  </g>
+
+  <!-- separator -->
+  <line x1="60" y1="272" x2="1140" y2="272" stroke="#CECDC3" stroke-width="2.5"/>
+
+  <!-- ===== BOTTOM: pulled apart, one force each ===== -->
+  <text x="60" y="314" font-size="23" font-weight="700" fill="#100F0F">Pull them apart — one force goes to each</text>
+
+  <!-- the hand, with the force the BOX exerts on it -->
+  <g>
+    <rect x="150" y="372" width="96" height="116" rx="22" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+    <circle cx="246" cy="430" r="7" fill="#100F0F"/>
+    <line x1="246" y1="430" x2="126" y2="430" stroke="#205EA6" stroke-width="8" stroke-linecap="round" marker-end="url(#nB)"/>
+    <text x="198" y="512" text-anchor="middle" font-size="19" font-weight="600" fill="#6F6E69">hand</text>
+    <text x="198" y="552" text-anchor="middle" font-size="20" font-weight="700" fill="#205EA6">F<tspan font-size="14" dy="5">box on hand</tspan></text>
+  </g>
+
+  <!-- the gap -->
+  <text x="430" y="438" text-anchor="middle" font-size="40" font-weight="700" fill="#B7B5AC">↔</text>
+
+  <!-- the box, with the force the HAND exerts on it -->
+  <g>
+    <rect x="614" y="366" width="130" height="128" rx="5" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+    <circle cx="614" cy="430" r="7" fill="#100F0F"/>
+    <line x1="614" y1="430" x2="734" y2="430" stroke="#BC5215" stroke-width="8" stroke-linecap="round" marker-end="url(#nA)"/>
+    <text x="679" y="518" text-anchor="middle" font-size="19" font-weight="600" fill="#6F6E69">box</text>
+    <text x="679" y="552" text-anchor="middle" font-size="20" font-weight="700" fill="#BC5215">F<tspan font-size="14" dy="5">hand on box</tspan></text>
+  </g>
+
+  <!-- equal magnitudes, stated between them -->
+  <text x="866" y="424" font-size="21" font-weight="700" fill="#100F0F">Equal in size.</text>
+  <text x="866" y="454" font-size="21" font-weight="700" fill="#100F0F">Opposite in direction.</text>
+  <text x="866" y="490" font-size="20" fill="#6F6E69">Different objects.</text>
+
+  <!-- the misconception, named -->
+  <rect x="60" y="578" width="1080" height="70" rx="5" fill="#AF3029" opacity="0.07"/>
+  <rect x="60" y="578" width="9" height="70" fill="#AF3029"/>
+  <text x="92" y="608" font-size="22" font-weight="700" fill="#AF3029">They never cancel.</text>
+  <text x="92" y="638" font-size="20" fill="#100F0F">Forces cancel only when they act on the <tspan font-weight="700">same</tspan> object — and a third-law pair never does.</text>
+</svg>

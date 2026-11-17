@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" width="980" height="660" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Turning the axes on an inclined plane</title>
+  <desc>A block at rest on a 30 degree ramp. The coordinate axes rotate from horizontal-and-vertical to slope-aligned. Once rotated, the normal force and friction lie along the axes and only the gravitational force has to be broken into components.</desc>
+
+  <defs>
+    <marker id="pGrav" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#5E409D"/>
+    </marker>
+    <marker id="pNorm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#66800B"/>
+    </marker>
+    <marker id="pFric" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#AF3029"/>
+    </marker>
+    <marker id="pAxis" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#6F6E69"/>
+    </marker>
+  </defs>
+
+  <rect width="980" height="660" fill="#FFFCF0"/>
+
+  <!-- ground + ramp -->
+  <path d="M 110 510 L 800 510 L 800 112 Z" fill="#F2F0E5" stroke="#CECDC3" stroke-width="3"/>
+  <path d="M 110 510 L 800 112" stroke="#100F0F" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 110 510 L 800 510" stroke="#B7B5AC" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- theta at the base -->
+  <path d="M 230 510 A 120 120 0 0 0 213.9 440" fill="none" stroke="#6F6E69" stroke-width="3"/>
+  <text x="240" y="493" font-size="26" font-style="italic" fill="#6F6E69">θ</text>
+
+  <!-- rotating coordinate frame, centered on the block -->
+  <g>
+    <line x1="230" y1="323" x2="580" y2="323" stroke="#6F6E69" stroke-width="2.5" stroke-dasharray="9 7" opacity="0.9" marker-end="url(#pAxis)"/>
+    <line x1="390" y1="490" x2="390" y2="150" stroke="#6F6E69" stroke-width="2.5" stroke-dasharray="9 7" opacity="0.9" marker-end="url(#pAxis)"/>
+    <text x="590" y="331" font-size="23" font-style="italic" font-weight="600" fill="#6F6E69">x</text>
+    <text x="398" y="146" font-size="23" font-style="italic" font-weight="600" fill="#6F6E69">y</text>
+    <animateTransform attributeName="transform" type="rotate"
+      values="0 390 323; 0 390 323; -30 390 323; -30 390 323; 0 390 323"
+      keyTimes="0; 0.14; 0.42; 0.88; 1" dur="7s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- the block -->
+  <g transform="rotate(-30 390 323)">
+    <rect x="340" y="295" width="100" height="56" rx="5" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  </g>
+  <circle cx="390" cy="323" r="6.5" fill="#100F0F"/>
+
+  <!-- gravitational force: never on an axis once rotated -->
+  <line x1="390" y1="323" x2="390" y2="513" stroke="#5E409D" stroke-width="7" stroke-linecap="round" marker-end="url(#pGrav)"/>
+  <text x="404" y="545" font-size="25" font-weight="700" fill="#5E409D">F<tspan font-size="17" dy="7">g</tspan></text>
+
+  <!-- normal force: lands on the rotated y axis -->
+  <line x1="390" y1="323" x2="305" y2="176" stroke="#66800B" stroke-width="7" stroke-linecap="round" marker-end="url(#pNorm)"/>
+  <text x="240" y="162" font-size="25" font-weight="700" fill="#66800B">F<tspan font-size="17" dy="7">N</tspan></text>
+
+  <!-- friction: lands on the rotated x axis -->
+  <line x1="390" y1="323" x2="510" y2="254" stroke="#AF3029" stroke-width="7" stroke-linecap="round" marker-end="url(#pFric)"/>
+  <text x="522" y="246" font-size="25" font-weight="700" fill="#AF3029">F<tspan font-size="17" dy="7">f</tspan></text>
+
+  <!-- components of gravity: only meaningful once the axes have turned -->
+  <g opacity="0">
+    <line x1="390" y1="323" x2="305" y2="372" stroke="#5E409D" stroke-width="5" stroke-dasharray="10 7" stroke-linecap="round" marker-end="url(#pGrav)"/>
+    <line x1="390" y1="323" x2="475" y2="470" stroke="#5E409D" stroke-width="5" stroke-dasharray="10 7" stroke-linecap="round" marker-end="url(#pGrav)"/>
+    <path d="M 305 372 L 390 513 M 475 470 L 390 513" stroke="#B7B5AC" stroke-width="2" stroke-dasharray="5 6" fill="none"/>
+    <text x="150" y="356" font-size="21" font-weight="700" fill="#5E409D">F<tspan font-size="15" dy="6">g||</tspan></text>
+    <text x="490" y="486" font-size="21" font-weight="700" fill="#5E409D">F<tspan font-size="15" dy="6">g⊥</tspan></text>
+    <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.42; 0.52; 0.86; 0.92" dur="7s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- caption, swapped with the rotation -->
+  <g text-anchor="middle">
+    <g opacity="1">
+      <text x="490" y="601" font-size="25" fill="#AF3029" font-weight="700">Axes horizontal and vertical</text>
+      <text x="490" y="634" font-size="22" fill="#6F6E69">Two forces sit off-axis — you would have to break up both.</text>
+      <animate attributeName="opacity" values="1; 1; 0; 0; 1" keyTimes="0; 0.28; 0.42; 0.88; 0.97" dur="7s" repeatCount="indefinite"/>
+    </g>
+    <g opacity="0">
+      <text x="490" y="601" font-size="25" fill="#66800B" font-weight="700">Axes turned with the slope</text>
+      <text x="490" y="634" font-size="22" fill="#6F6E69">Now only gravity is left off-axis — so it is the only one you break up.</text>
+      <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.42; 0.52; 0.86; 0.92" dur="7s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>

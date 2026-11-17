@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 620" width="1020" height="620" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Free-body diagram with an applied force at an angle</title>
+  <desc>A block on a rough horizontal surface pulled by a force at angle theta above the horizontal. The applied force is resolved into components, and the upward component reduces the normal force, so the normal force is no longer equal to mg.</desc>
+
+  <defs>
+    <marker id="qGrav" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#5E409D"/></marker>
+    <marker id="qNorm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#66800B"/></marker>
+    <marker id="qApp"  viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#BC5215"/></marker>
+    <marker id="qFric" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#AF3029"/></marker>
+  </defs>
+
+  <rect width="1020" height="620" fill="#FFFCF0"/>
+
+  <!-- axes hint -->
+  <line x1="150" y1="300" x2="700" y2="300" stroke="#CECDC3" stroke-width="2" stroke-dasharray="8 7"/>
+  <line x1="430" y1="110" x2="430" y2="480" stroke="#CECDC3" stroke-width="2" stroke-dasharray="8 7"/>
+
+  <!-- block -->
+  <rect x="386" y="256" width="88" height="88" rx="4" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  <circle cx="430" cy="300" r="8" fill="#100F0F"/>
+
+  <!-- normal force (shortened on purpose: less than mg) -->
+  <line x1="430" y1="300" x2="430" y2="178" stroke="#66800B" stroke-width="7" stroke-linecap="round" marker-end="url(#qNorm)"/>
+  <text x="444" y="172" font-size="23" font-weight="700" fill="#66800B">F<tspan font-size="16" dy="6">N</tspan></text>
+
+  <!-- gravity (longer than N) -->
+  <line x1="430" y1="300" x2="430" y2="468" stroke="#5E409D" stroke-width="7" stroke-linecap="round" marker-end="url(#qGrav)"/>
+  <text x="444" y="490" font-size="23" font-weight="700" fill="#5E409D">F<tspan font-size="16" dy="6">g</tspan></text>
+
+  <!-- applied force at 30 degrees above horizontal, length 230 -->
+  <line x1="430" y1="300" x2="629" y2="185" stroke="#BC5215" stroke-width="7" stroke-linecap="round" marker-end="url(#qApp)"/>
+  <text x="642" y="178" font-size="23" font-weight="700" fill="#BC5215">F<tspan font-size="16" dy="6">app</tspan></text>
+
+  <!-- components of the applied force -->
+  <line x1="430" y1="300" x2="629" y2="300" stroke="#BC5215" stroke-width="4.5" stroke-dasharray="10 7" stroke-linecap="round" marker-end="url(#qApp)"/>
+  <line x1="629" y1="300" x2="629" y2="185" stroke="#BC5215" stroke-width="4.5" stroke-dasharray="10 7" stroke-linecap="round" marker-end="url(#qApp)"/>
+  <text x="498" y="330" font-size="20" font-weight="700" fill="#BC5215">F<tspan font-size="14" dy="5">app</tspan><tspan font-size="20" dy="-5">cosθ</tspan></text>
+  <text x="644" y="256" font-size="20" font-weight="700" fill="#BC5215">F<tspan font-size="14" dy="5">app</tspan><tspan font-size="20" dy="-5">sinθ</tspan></text>
+
+  <!-- theta -->
+  <path d="M 510 300 A 80 80 0 0 0 499 254" fill="none" stroke="#100F0F" stroke-width="3"/>
+  <text x="516" y="286" font-size="24" font-style="italic" font-weight="700" fill="#100F0F">θ</text>
+
+  <!-- friction -->
+  <line x1="386" y1="300" x2="248" y2="300" stroke="#AF3029" stroke-width="7" stroke-linecap="round" marker-end="url(#qFric)"/>
+  <text x="244" y="282" font-size="23" font-weight="700" fill="#AF3029">F<tspan font-size="16" dy="6">f</tspan></text>
+
+  <!-- the consequence -->
+  <rect x="60" y="516" width="900" height="92" rx="5" fill="#AD8301" opacity="0.12"/>
+  <rect x="60" y="516" width="9" height="92" fill="#AD8301"/>
+  <text x="92" y="552" font-size="23" font-weight="700" fill="#AD8301">The upward pull lightens the block.</text>
+  <text x="92" y="588" font-size="21" fill="#100F0F">ΣF<tspan font-size="15" dy="5">y</tspan><tspan font-size="21" dy="-5"> = 0 gives F</tspan><tspan font-size="15" dy="5">N</tspan><tspan font-size="21" dy="-5"> = mg − F</tspan><tspan font-size="15" dy="5">app</tspan><tspan font-size="21" dy="-5">sinθ, so friction drops too. F</tspan><tspan font-size="15" dy="5">N</tspan><tspan font-size="21" dy="-5"> ≠ mg here.</tspan></text>
+</svg>

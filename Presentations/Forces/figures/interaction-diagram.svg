@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 700" width="1040" height="700" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Interaction diagram for a block being pulled across a table</title>
+  <desc>Every object in the situation is a bubble. A line between two bubbles is one interaction, which means one Newton's third law pair. The dashed boundary marks the chosen system, and every line that crosses it is an external force that will appear on the free-body diagram.</desc>
+
+  <rect width="1040" height="700" fill="#FFFCF0"/>
+
+  <text x="520" y="46" text-anchor="middle" font-size="25" font-weight="700" fill="#100F0F">A block pulled across a table by a rope</text>
+
+  <!-- the system boundary -->
+  <circle cx="330" cy="310" r="108" fill="#205EA6" opacity="0.06"/>
+  <circle cx="330" cy="310" r="108" fill="none" stroke="#205EA6" stroke-width="3.5" stroke-dasharray="12 9"/>
+  <text x="330" y="186" text-anchor="middle" font-size="21" font-weight="700" fill="#205EA6">SYSTEM</text>
+
+  <!-- interaction lines, drawn first so bubbles sit on top -->
+  <g stroke-width="4" stroke-linecap="round">
+    <line x1="330" y1="310" x2="610" y2="190" stroke="#BC5215"/>
+    <line x1="330" y1="310" x2="610" y2="420" stroke="#AF3029"/>
+    <line x1="330" y1="310" x2="330" y2="520" stroke="#5E409D"/>
+  </g>
+
+  <!-- bubbles -->
+  <g>
+    <circle cx="330" cy="310" r="62" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+    <text x="330" y="318" text-anchor="middle" font-size="22" font-weight="700" fill="#100F0F">block</text>
+
+    <circle cx="672" cy="190" r="62" fill="#FFFCF0" stroke="#100F0F" stroke-width="3.5"/>
+    <text x="672" y="198" text-anchor="middle" font-size="22" font-weight="700" fill="#100F0F">rope</text>
+
+    <circle cx="672" cy="420" r="62" fill="#FFFCF0" stroke="#100F0F" stroke-width="3.5"/>
+    <text x="672" y="428" text-anchor="middle" font-size="22" font-weight="700" fill="#100F0F">table</text>
+
+    <circle cx="330" cy="520" r="52" fill="#FFFCF0" stroke="#100F0F" stroke-width="3.5"/>
+    <text x="330" y="528" text-anchor="middle" font-size="22" font-weight="700" fill="#100F0F">Earth</text>
+  </g>
+
+  <!-- what each line is -->
+  <text x="470" y="222" font-size="19" font-weight="700" fill="#BC5215" transform="rotate(-23 470 222)">tension</text>
+  <text x="452" y="372" font-size="19" font-weight="700" fill="#AF3029" transform="rotate(21 452 372)">normal + friction</text>
+  <text x="348" y="474" font-size="19" font-weight="700" fill="#5E409D">gravitational</text>
+
+  <!-- the rule -->
+  <rect x="60" y="548" width="860" height="0" fill="none"/>
+  <text x="520" y="648" text-anchor="middle" font-size="22" font-weight="700" fill="#100F0F">One line = one interaction = one third-law pair.</text>
+  <text x="520" y="678" text-anchor="middle" font-size="20" fill="#6F6E69">Every line crossing the dashed boundary becomes an arrow on the block's free-body diagram.</text>
+</svg>

@@ -50,7 +50,15 @@ description: Complete collection of lecture slides and content presentations org
     <h3 class="card-title">Linear Dynamics</h3>
     <p class="card-description">Forces, Newton's Laws, free-body diagrams, and problem-solving strategies</p>
     <div class="card-links">
-      <a href="/Presentations/Forces/talks/Dynamics2024.html" class="card-link">→ View Slides</a>
+      <a href="/Presentations/Forces/talks/Dynamics2026.html" class="card-link">→ View Slides</a>
+    </div>
+  </div>
+  <div class="content-card">
+    <div class="card-icon">🔗</div>
+    <h3 class="card-title">Accelerating Systems</h3>
+    <p class="card-description">Multi-body systems, tension, and the modified Atwood machine — taught in January</p>
+    <div class="card-links">
+      <a href="/Presentations/Forces/talks/AcceleratingSystems.html" class="card-link">→ View Slides</a>
     </div>
   </div>
 </div>

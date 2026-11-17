@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 580" width="1020" height="580" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Acceleration of a system's center of mass</title>
+  <desc>Two carts joined by a spring are pushed by one external force. The internal spring forces are a third-law pair and cancel inside the system, so the center of mass accelerates as though the external force acted on the total mass.</desc>
+
+  <defs>
+    <marker id="mExt" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#BC5215"/></marker>
+    <marker id="mInt" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#6F6E69"/></marker>
+    <marker id="mCom" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#A02F6F"/></marker>
+  </defs>
+
+  <rect width="1020" height="580" fill="#FFFCF0"/>
+
+  <text x="510" y="50" text-anchor="middle" font-size="25" font-weight="700" fill="#100F0F">One push, two carts, one center of mass</text>
+
+  <!-- system boundary -->
+  <rect x="190" y="110" width="560" height="190" rx="8" fill="#205EA6" opacity="0.05"/>
+  <rect x="190" y="110" width="560" height="190" rx="8" fill="none" stroke="#205EA6" stroke-width="3" stroke-dasharray="12 9"/>
+  <text x="200" y="138" font-size="19" font-weight="700" fill="#205EA6">SYSTEM</text>
+
+  <!-- track -->
+  <line x1="150" y1="282" x2="820" y2="282" stroke="#B7B5AC" stroke-width="4"/>
+
+  <!-- cart 1 -->
+  <rect x="236" y="196" width="120" height="76" rx="5" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  <text x="296" y="242" text-anchor="middle" font-size="22" font-weight="700" fill="#100F0F">2m</text>
+  <circle cx="264" cy="282" r="11" fill="#FFFCF0" stroke="#100F0F" stroke-width="3"/>
+  <circle cx="330" cy="282" r="11" fill="#FFFCF0" stroke="#100F0F" stroke-width="3"/>
+
+  <!-- spring between -->
+  <path d="M 356 234 l 16 -16 l 20 32 l 20 -32 l 20 32 l 20 -32 l 16 16" fill="none" stroke="#24837B" stroke-width="4"/>
+
+  <!-- cart 2 -->
+  <rect x="484" y="206" width="100" height="66" rx="5" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  <text x="534" y="246" text-anchor="middle" font-size="22" font-weight="700" fill="#100F0F">m</text>
+  <circle cx="508" cy="282" r="11" fill="#FFFCF0" stroke="#100F0F" stroke-width="3"/>
+  <circle cx="562" cy="282" r="11" fill="#FFFCF0" stroke="#100F0F" stroke-width="3"/>
+
+  <!-- external force -->
+  <line x1="150" y1="234" x2="232" y2="234" stroke="#BC5215" stroke-width="8" stroke-linecap="round" marker-end="url(#mExt)"/>
+  <text x="116" y="212" font-size="22" font-weight="700" fill="#BC5215">F<tspan font-size="15" dy="6">ext</tspan></text>
+
+  <!-- internal pair -->
+  <line x1="400" y1="170" x2="348" y2="170" stroke="#6F6E69" stroke-width="5" stroke-linecap="round" marker-end="url(#mInt)"/>
+  <line x1="420" y1="170" x2="472" y2="170" stroke="#6F6E69" stroke-width="5" stroke-linecap="round" marker-end="url(#mInt)"/>
+  <text x="410" y="158" text-anchor="middle" font-size="18" font-weight="600" fill="#6F6E69">internal pair</text>
+
+  <!-- center of mass marker: at 2m*x1 + m*x2 over 3m -->
+  <g>
+    <circle cx="375" cy="330" r="15" fill="#FFFCF0" stroke="#A02F6F" stroke-width="3.5"/>
+    <path d="M 375 315 A 15 15 0 0 1 375 345 Z" fill="#A02F6F"/>
+    <path d="M 375 345 A 15 15 0 0 1 375 315 Z" fill="#FFFCF0"/>
+    <circle cx="375" cy="330" r="15" fill="none" stroke="#A02F6F" stroke-width="3.5"/>
+  </g>
+  <text x="340" y="376" font-size="20" font-weight="700" fill="#A02F6F">center of mass</text>
+  <line x1="420" y1="330" x2="520" y2="330" stroke="#A02F6F" stroke-width="7" stroke-linecap="round" marker-end="url(#mCom)"/>
+  <text x="532" y="338" font-size="21" font-weight="700" fill="#A02F6F">a<tspan font-size="15" dy="6">cm</tspan></text>
+
+  <!-- the rule -->
+  <rect x="60" y="414" width="900" height="134" rx="5" fill="#A02F6F" opacity="0.07"/>
+  <rect x="60" y="414" width="9" height="134" fill="#A02F6F"/>
+  <text x="92" y="452" font-size="23" font-weight="700" fill="#A02F6F">Internal forces cancel. Only the external one moves the center of mass.</text>
+  <text x="92" y="492" font-size="24" font-weight="700" fill="#100F0F">a<tspan font-size="16" dy="6">cm</tspan><tspan font-size="24" dy="-6"> = ΣF</tspan><tspan font-size="16" dy="6">ext</tspan><tspan font-size="24" dy="-6"> / m</tspan><tspan font-size="16" dy="6">total</tspan><tspan font-size="24" dy="-6">  =  F</tspan><tspan font-size="16" dy="6">ext</tspan><tspan font-size="24" dy="-6"> / 3m</tspan></text>
+  <text x="92" y="528" font-size="20" fill="#6F6E69">The carts may wobble against the spring — the center of mass does not care.</text>
+</svg>

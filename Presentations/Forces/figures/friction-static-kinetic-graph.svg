@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620" width="980" height="620" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Friction force versus applied force</title>
+  <desc>Graph of friction force against applied force. While the block stays still, friction grows to match the applied force along the line y equals x, up to a maximum of mu-s times N. Once it slips, friction drops to the constant value mu-k times N.</desc>
+
+  <defs>
+    <marker id="ax" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#100F0F"/>
+    </marker>
+  </defs>
+
+  <rect width="980" height="620" fill="#FFFCF0"/>
+
+  <!-- axes -->
+  <line x1="120" y1="500" x2="900" y2="500" stroke="#100F0F" stroke-width="3.5" marker-end="url(#ax)"/>
+  <line x1="120" y1="500" x2="120" y2="90" stroke="#100F0F" stroke-width="3.5" marker-end="url(#ax)"/>
+  <text x="640" y="548" font-size="24" font-weight="600" fill="#100F0F">applied force, F<tspan font-size="16" dy="6">app</tspan></text>
+  <text x="34" y="82" font-size="24" font-weight="600" fill="#AF3029">friction, F<tspan font-size="16" dy="6">f</tspan></text>
+
+  <!-- static region shading -->
+  <path d="M 120 500 L 470 190 L 470 500 Z" fill="#AF3029" opacity="0.07"/>
+  <!-- kinetic region shading -->
+  <rect x="470" y="248" width="400" height="252" fill="#BC5215" opacity="0.06"/>
+
+  <!-- the static branch: friction matches whatever is applied -->
+  <line x1="120" y1="500" x2="470" y2="190" stroke="#AF3029" stroke-width="6" stroke-linecap="round"/>
+  <!-- the break -->
+  <circle cx="470" cy="190" r="9" fill="#AF3029"/>
+  <!-- the drop at slipping -->
+  <line x1="470" y1="190" x2="470" y2="248" stroke="#AF3029" stroke-width="3.5" stroke-dasharray="8 7"/>
+  <!-- the kinetic branch: constant -->
+  <line x1="470" y1="248" x2="870" y2="248" stroke="#BC5215" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="470" cy="248" r="8" fill="#FFFCF0" stroke="#BC5215" stroke-width="4"/>
+
+  <!-- guide lines to the two coefficients -->
+  <line x1="120" y1="190" x2="470" y2="190" stroke="#B7B5AC" stroke-width="2" stroke-dasharray="6 6"/>
+  <line x1="120" y1="248" x2="470" y2="248" stroke="#B7B5AC" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="18" y="182" font-size="22" font-weight="700" fill="#AF3029">μ<tspan font-size="15" dy="5">s</tspan><tspan font-size="22" dy="-5">N</tspan></text>
+  <text x="18" y="282" font-size="22" font-weight="700" fill="#BC5215">μ<tspan font-size="15" dy="5">k</tspan><tspan font-size="22" dy="-5">N</tspan></text>
+
+  <!-- region labels -->
+  <text x="190" y="430" font-size="23" font-weight="700" fill="#AF3029">STATIC</text>
+  <text x="190" y="460" font-size="20" fill="#6F6E69">block does not move</text>
+  <text x="620" y="320" font-size="23" font-weight="700" fill="#BC5215">KINETIC</text>
+  <text x="620" y="350" font-size="20" fill="#6F6E69">block is sliding</text>
+
+  <!-- the two equations, placed on their own branches -->
+  <text x="150" y="300" font-size="22" font-weight="700" fill="#AF3029" transform="rotate(-41 150 300)">F<tspan font-size="15" dy="6">f</tspan><tspan font-size="22" dy="-6"> = F</tspan><tspan font-size="15" dy="6">app</tspan></text>
+  <text x="620" y="232" font-size="22" font-weight="700" fill="#BC5215">F<tspan font-size="15" dy="6">f</tspan><tspan font-size="22" dy="-6"> = μ</tspan><tspan font-size="15" dy="6">k</tspan><tspan font-size="22" dy="-6">N</tspan></text>
+
+  <!-- the point of the whole figure -->
+  <text x="490" y="588" text-anchor="middle" font-size="25" font-weight="700" fill="#100F0F">Static friction is whatever it needs to be — up to a limit.</text>
+  <text x="490" y="616" text-anchor="middle" font-size="22" fill="#6F6E69">That is why it is F<tspan font-size="15" dy="5">f</tspan><tspan font-size="22" dy="-5"> ≤ μ</tspan><tspan font-size="15" dy="5">s</tspan><tspan font-size="22" dy="-5">N and not F</tspan><tspan font-size="15" dy="5">f</tspan><tspan font-size="22" dy="-5"> = μ</tspan><tspan font-size="15" dy="5">s</tspan><tspan font-size="22" dy="-5">N.</tspan></text>
+</svg>

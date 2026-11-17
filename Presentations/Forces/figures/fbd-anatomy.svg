@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 730" width="1100" height="730" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Anatomy of a free-body diagram</title>
+  <desc>A crate dragged across a rough floor, redrawn as a free-body diagram. The object becomes a dot, every arrow starts at the dot and points away from it, arrow length shows relative size, and only forces acting on the crate are drawn.</desc>
+
+  <defs>
+    <marker id="aGrav" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#5E409D"/></marker>
+    <marker id="aNorm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#66800B"/></marker>
+    <marker id="aTens" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#205EA6"/></marker>
+    <marker id="aFric" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#AF3029"/></marker>
+    <marker id="aLead" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 z" fill="#B7B5AC"/></marker>
+  </defs>
+
+  <rect width="1100" height="730" fill="#FFFCF0"/>
+
+  <!-- ===== LEFT: the situation ===== -->
+  <text x="60" y="54" font-size="24" font-weight="700" fill="#6F6E69">The situation</text>
+  <rect x="80" y="250" width="170" height="110" rx="5" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  <rect x="50" y="360" width="300" height="34" fill="#E6E4D9" stroke="#100F0F" stroke-width="3"/>
+  <line x1="250" y1="276" x2="350" y2="240" stroke="#205EA6" stroke-width="4"/>
+  <text x="120" y="318" font-size="21" font-weight="600" fill="#6F6E69">crate</text>
+  <text x="60" y="440" font-size="20" fill="#6F6E69">Dragged by a rope across a rough floor.</text>
+
+  <!-- arrow across -->
+  <line x1="400" y1="300" x2="500" y2="300" stroke="#B7B5AC" stroke-width="4" marker-end="url(#aLead)"/>
+
+  <!-- ===== RIGHT: the FBD ===== -->
+  <text x="560" y="54" font-size="24" font-weight="700" fill="#100F0F">The free-body diagram</text>
+
+  <!-- optional light box around the dot -->
+  <rect x="740" y="256" width="88" height="88" rx="4" fill="none" stroke="#CECDC3" stroke-width="2.5" stroke-dasharray="7 6"/>
+  <circle cx="784" cy="300" r="9" fill="#100F0F"/>
+
+  <!-- the four forces -->
+  <line x1="784" y1="300" x2="784" y2="150" stroke="#66800B" stroke-width="7" stroke-linecap="round" marker-end="url(#aNorm)"/>
+  <text x="796" y="146" font-size="23" font-weight="700" fill="#66800B">F<tspan font-size="16" dy="6">N</tspan></text>
+
+  <line x1="784" y1="300" x2="784" y2="450" stroke="#5E409D" stroke-width="7" stroke-linecap="round" marker-end="url(#aGrav)"/>
+  <text x="796" y="470" font-size="23" font-weight="700" fill="#5E409D">F<tspan font-size="16" dy="6">g</tspan></text>
+
+  <line x1="784" y1="300" x2="960" y2="300" stroke="#205EA6" stroke-width="7" stroke-linecap="round" marker-end="url(#aTens)"/>
+  <text x="900" y="282" font-size="23" font-weight="700" fill="#205EA6">F<tspan font-size="16" dy="6">T</tspan></text>
+
+  <line x1="784" y1="300" x2="670" y2="300" stroke="#AF3029" stroke-width="7" stroke-linecap="round" marker-end="url(#aFric)"/>
+  <text x="664" y="282" font-size="23" font-weight="700" fill="#AF3029">F<tspan font-size="16" dy="6">f</tspan></text>
+
+  <!-- the rules, in the left column so they clear the diagram -->
+  <g font-size="19" fill="#6F6E69">
+    <text x="60" y="492">① The object becomes a <tspan font-weight="700" fill="#100F0F">dot</tspan>.</text>
+    <text x="60" y="522">② Every arrow <tspan font-weight="700" fill="#100F0F">starts at the dot</tspan>, pointing away.</text>
+    <text x="60" y="552">③ Longer arrow = <tspan font-weight="700" fill="#100F0F">bigger force</tspan>.</text>
+    <text x="60" y="582">④ Only forces acting <tspan font-weight="700" fill="#100F0F">on</tspan> the crate.</text>
+  </g>
+
+  <!-- what never goes on it -->
+  <rect x="60" y="616" width="980" height="96" rx="5" fill="#AF3029" opacity="0.07"/>
+  <rect x="60" y="616" width="9" height="96" fill="#AF3029"/>
+  <text x="92" y="654" font-size="23" font-weight="700" fill="#AF3029">What never appears on a free-body diagram</text>
+  <text x="92" y="688" font-size="20" fill="#100F0F">Forces the crate exerts on something else · "the force of motion" · velocity or acceleration arrows</text>
+</svg>

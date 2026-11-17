@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620" width="980" height="620" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Where the normal force comes from</title>
+  <desc>Zooming in on two surfaces in contact shows atoms whose electron clouds repel each other. That electrical repulsion is the normal force, and it points perpendicular to the surface because that is the direction the surfaces are squeezed.</desc>
+
+  <defs>
+    <marker id="iNorm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#66800B"/>
+    </marker>
+    <radialGradient id="cloud">
+      <stop offset="0%" stop-color="#4385BE" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#4385BE" stop-opacity="0.07"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="980" height="620" fill="#FFFCF0"/>
+
+  <!-- LEFT: the everyday picture -->
+  <text x="40" y="58" font-size="25" font-weight="700" fill="#6F6E69">What you see</text>
+  <rect x="60" y="250" width="240" height="90" rx="5" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  <rect x="40" y="340" width="280" height="56" fill="#E6E4D9" stroke="#100F0F" stroke-width="3.5"/>
+  <line x1="180" y1="250" x2="180" y2="150" stroke="#66800B" stroke-width="7" stroke-linecap="round" marker-end="url(#iNorm)"/>
+  <text x="196" y="160" font-size="24" font-weight="700" fill="#66800B">F<tspan font-size="16" dy="6">N</tspan></text>
+  <text x="60" y="440" font-size="21" fill="#6F6E69">A block resting on a table.</text>
+
+  <!-- the zoom lens -->
+  <circle cx="180" cy="342" r="42" fill="none" stroke="#BC5215" stroke-width="3.5"/>
+  <line x1="214" y1="318" x2="470" y2="190" stroke="#BC5215" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <line x1="214" y1="368" x2="470" y2="470" stroke="#BC5215" stroke-width="2.5" stroke-dasharray="8 6"/>
+
+  <!-- RIGHT: the zoomed picture -->
+  <text x="470" y="58" font-size="25" font-weight="700" fill="#BC5215">What is actually happening</text>
+  <rect x="470" y="150" width="470" height="330" rx="6" fill="#FFFCF0" stroke="#BC5215" stroke-width="3.5"/>
+
+  <!-- upper surface atoms (the block) -->
+  <g>
+    <circle cx="530" cy="236" r="34" fill="url(#cloud)"/><circle cx="530" cy="236" r="11" fill="#205EA6"/>
+    <circle cx="604" cy="236" r="34" fill="url(#cloud)"/><circle cx="604" cy="236" r="11" fill="#205EA6"/>
+    <circle cx="678" cy="236" r="34" fill="url(#cloud)"/><circle cx="678" cy="236" r="11" fill="#205EA6"/>
+    <circle cx="752" cy="236" r="34" fill="url(#cloud)"/><circle cx="752" cy="236" r="11" fill="#205EA6"/>
+    <circle cx="826" cy="236" r="34" fill="url(#cloud)"/><circle cx="826" cy="236" r="11" fill="#205EA6"/>
+  </g>
+  <text x="484" y="196" font-size="19" font-weight="600" fill="#6F6E69">block</text>
+
+  <!-- lower surface atoms (the table) -->
+  <g>
+    <circle cx="530" cy="396" r="34" fill="url(#cloud)"/><circle cx="530" cy="396" r="11" fill="#205EA6"/>
+    <circle cx="604" cy="396" r="34" fill="url(#cloud)"/><circle cx="604" cy="396" r="11" fill="#205EA6"/>
+    <circle cx="678" cy="396" r="34" fill="url(#cloud)"/><circle cx="678" cy="396" r="11" fill="#205EA6"/>
+    <circle cx="752" cy="396" r="34" fill="url(#cloud)"/><circle cx="752" cy="396" r="11" fill="#205EA6"/>
+    <circle cx="826" cy="396" r="34" fill="url(#cloud)"/><circle cx="826" cy="396" r="11" fill="#205EA6"/>
+  </g>
+  <text x="484" y="448" font-size="19" font-weight="600" fill="#6F6E69">table</text>
+
+  <!-- the repulsion, perpendicular to the surface -->
+  <g stroke="#66800B" stroke-width="5" stroke-linecap="round">
+    <line x1="530" y1="316" x2="530" y2="282" marker-end="url(#iNorm)"/>
+    <line x1="604" y1="316" x2="604" y2="282" marker-end="url(#iNorm)"/>
+    <line x1="678" y1="316" x2="678" y2="282" marker-end="url(#iNorm)"/>
+    <line x1="752" y1="316" x2="752" y2="282" marker-end="url(#iNorm)"/>
+    <line x1="826" y1="316" x2="826" y2="282" marker-end="url(#iNorm)"/>
+    <line x1="530" y1="316" x2="530" y2="350" marker-end="url(#iNorm)"/>
+    <line x1="604" y1="316" x2="604" y2="350" marker-end="url(#iNorm)"/>
+    <line x1="678" y1="316" x2="678" y2="350" marker-end="url(#iNorm)"/>
+    <line x1="752" y1="316" x2="752" y2="350" marker-end="url(#iNorm)"/>
+    <line x1="826" y1="316" x2="826" y2="350" marker-end="url(#iNorm)"/>
+  </g>
+
+  <text x="705" y="520" text-anchor="middle" font-size="21" font-weight="600" fill="#66800B">electron clouds repel — electrically</text>
+
+  <!-- the payoff -->
+  <text x="490" y="580" text-anchor="middle" font-size="25" font-weight="700" fill="#100F0F">The normal force is an electric force in disguise.</text>
+  <text x="490" y="608" text-anchor="middle" font-size="22" fill="#6F6E69">It points perpendicular to the surface because that is the direction the surfaces squeeze.</text>
+</svg>

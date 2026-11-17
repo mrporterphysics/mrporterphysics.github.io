@@ -44,7 +44,8 @@
       "./PorterThemes/Schodack/physics-agenda.css",
       "./PorterThemes/Schodack/vector.css",
       "./PorterThemes/Schodack/cosmos.css",
-      "./PorterThemes/Schodack/trajectory.css"
+      "./PorterThemes/Schodack/trajectory.css",
+      "./PorterThemes/Schodack/forces.css"
    ],
    "markdown.editor.filePaste.copyIntoWorkspace": "mediaFiles",
    "markdown.copyFiles.destination": {

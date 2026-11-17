@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 560" width="1240" height="560" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>The three fan cart graphs</title>
+  <desc>Acceleration against net force is a straight line through the origin with slope one over mass. Acceleration against mass is a curve, so it is not yet a model. Acceleration against one over mass is a straight line whose slope is the net force.</desc>
+
+  <defs>
+    <marker id="gax" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#100F0F"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="560" fill="#FFFCF0"/>
+
+  <!-- ============ PANEL 1: a vs net F ============ -->
+  <g transform="translate(0,0)">
+    <line x1="80" y1="370" x2="360" y2="370" stroke="#100F0F" stroke-width="3" marker-end="url(#gax)"/>
+    <line x1="80" y1="370" x2="80" y2="110" stroke="#100F0F" stroke-width="3" marker-end="url(#gax)"/>
+    <text x="250" y="406" font-size="21" font-weight="600" fill="#100F0F">ΣF</text>
+    <text x="30" y="100" font-size="21" font-weight="600" fill="#100F0F">a</text>
+
+    <line x1="80" y1="370" x2="330" y2="140" stroke="#205EA6" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#205EA6">
+      <circle cx="128" cy="326" r="6"/><circle cx="176" cy="282" r="6"/>
+      <circle cx="226" cy="236" r="6"/><circle cx="276" cy="190" r="6"/><circle cx="322" cy="147" r="6"/>
+    </g>
+    <text x="220" y="120" font-size="21" font-weight="700" fill="#205EA6">slope = 1/m</text>
+    <text x="220" y="440" text-anchor="middle" font-size="24" font-weight="700" fill="#100F0F">a vs ΣF</text>
+    <text x="220" y="470" text-anchor="middle" font-size="20" fill="#66800B">straight — a ∝ ΣF ✓</text>
+  </g>
+
+  <!-- ============ PANEL 2: a vs m ============ -->
+  <g transform="translate(410,0)">
+    <line x1="80" y1="370" x2="360" y2="370" stroke="#100F0F" stroke-width="3" marker-end="url(#gax)"/>
+    <line x1="80" y1="370" x2="80" y2="110" stroke="#100F0F" stroke-width="3" marker-end="url(#gax)"/>
+    <text x="250" y="406" font-size="21" font-weight="600" fill="#100F0F">m</text>
+    <text x="30" y="100" font-size="21" font-weight="600" fill="#100F0F">a</text>
+
+    <path d="M 112 136 Q 170 290 330 338" fill="none" stroke="#AF3029" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#AF3029">
+      <circle cx="112" cy="136" r="6"/><circle cx="150" cy="222" r="6"/>
+      <circle cx="198" cy="276" r="6"/><circle cx="262" cy="316" r="6"/><circle cx="328" cy="338" r="6"/>
+    </g>
+    <text x="196" y="156" font-size="21" font-weight="700" fill="#AF3029">not a line</text>
+    <text x="220" y="440" text-anchor="middle" font-size="24" font-weight="700" fill="#100F0F">a vs m</text>
+    <text x="220" y="470" text-anchor="middle" font-size="20" fill="#AF3029">curved — no equation yet</text>
+  </g>
+
+  <!-- ============ PANEL 3: a vs 1/m ============ -->
+  <g transform="translate(820,0)">
+    <line x1="80" y1="370" x2="360" y2="370" stroke="#100F0F" stroke-width="3" marker-end="url(#gax)"/>
+    <line x1="80" y1="370" x2="80" y2="110" stroke="#100F0F" stroke-width="3" marker-end="url(#gax)"/>
+    <text x="240" y="406" font-size="21" font-weight="600" fill="#100F0F">1/m</text>
+    <text x="30" y="100" font-size="21" font-weight="600" fill="#100F0F">a</text>
+
+    <line x1="80" y1="370" x2="330" y2="140" stroke="#66800B" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#66800B">
+      <circle cx="124" cy="330" r="6"/><circle cx="170" cy="288" r="6"/>
+      <circle cx="224" cy="238" r="6"/><circle cx="280" cy="186" r="6"/><circle cx="324" cy="146" r="6"/>
+    </g>
+    <text x="196" y="120" font-size="21" font-weight="700" fill="#66800B">slope = ΣF</text>
+    <text x="220" y="440" text-anchor="middle" font-size="24" font-weight="700" fill="#100F0F">a vs 1/m</text>
+    <text x="220" y="470" text-anchor="middle" font-size="20" fill="#66800B">linearized — straight ✓</text>
+  </g>
+
+  <!-- the landing -->
+  <text x="620" y="524" text-anchor="middle" font-size="26" font-weight="700" fill="#100F0F">Write the equation of each line. Put them together:</text>
+  <text x="620" y="552" text-anchor="middle" font-size="26" font-weight="700" fill="#A02F6F">a = ΣF / m</text>
+</svg>

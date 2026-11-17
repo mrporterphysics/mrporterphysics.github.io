@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" width="980" height="660" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>Components of the gravitational force on an incline</title>
+  <desc>A block on a 30 degree ramp. The angle between the gravitational force and the perpendicular to the slope is the same as the ramp angle, which is why the parallel component is mg sine theta and the perpendicular component is mg cosine theta.</desc>
+
+  <defs>
+    <marker id="cGrav" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#5E409D"/>
+    </marker>
+    <marker id="cNorm" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#66800B"/>
+    </marker>
+  </defs>
+
+  <rect width="980" height="660" fill="#FFFCF0"/>
+
+  <!-- ramp -->
+  <path d="M 110 510 L 800 510 L 800 112 Z" fill="#F2F0E5" stroke="#CECDC3" stroke-width="3"/>
+  <path d="M 110 510 L 800 112" stroke="#100F0F" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 110 510 L 800 510" stroke="#B7B5AC" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- theta at the base of the ramp -->
+  <path d="M 230 510 A 120 120 0 0 0 213.9 440" fill="none" stroke="#BC5215" stroke-width="3.5"/>
+  <text x="240" y="493" font-size="28" font-style="italic" font-weight="700" fill="#BC5215">θ</text>
+
+  <!-- block, sitting on the slope -->
+  <g transform="rotate(-30 390 323)">
+    <rect x="340" y="295" width="100" height="56" rx="5" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  </g>
+
+  <!-- perpendicular reference line, extended past the component -->
+  <line x1="390" y1="323" x2="497" y2="508" stroke="#B7B5AC" stroke-width="2.5" stroke-dasharray="7 7"/>
+
+  <!-- the SAME theta, between F_g and the perpendicular to the slope -->
+  <path d="M 390 428 A 105 105 0 0 0 442 414" fill="none" stroke="#BC5215" stroke-width="3.5"/>
+  <text x="396" y="455" font-size="26" font-style="italic" font-weight="700" fill="#BC5215">θ</text>
+
+  <circle cx="390" cy="323" r="6.5" fill="#100F0F"/>
+
+  <!-- normal force -->
+  <line x1="390" y1="323" x2="305" y2="176" stroke="#66800B" stroke-width="7" stroke-linecap="round" marker-end="url(#cNorm)"/>
+  <text x="238" y="162" font-size="25" font-weight="700" fill="#66800B">F<tspan font-size="17" dy="7">N</tspan></text>
+
+  <!-- full gravitational force -->
+  <line x1="390" y1="323" x2="390" y2="513" stroke="#5E409D" stroke-width="7" stroke-linecap="round" marker-end="url(#cGrav)"/>
+  <text x="312" y="548" font-size="25" font-weight="700" fill="#5E409D">F<tspan font-size="17" dy="7">g</tspan><tspan font-size="25" dy="-7"> = mg</tspan></text>
+
+  <!-- components -->
+  <line x1="390" y1="323" x2="305" y2="372" stroke="#5E409D" stroke-width="5.5" stroke-dasharray="11 7" stroke-linecap="round" marker-end="url(#cGrav)"/>
+  <line x1="390" y1="323" x2="475" y2="470" stroke="#5E409D" stroke-width="5.5" stroke-dasharray="11 7" stroke-linecap="round" marker-end="url(#cGrav)"/>
+
+  <!-- parallelogram closing the components back onto F_g -->
+  <path d="M 305 372 L 390 513 M 475 470 L 390 513" stroke="#B7B5AC" stroke-width="2" stroke-dasharray="5 6" fill="none"/>
+
+  <text x="92" y="352" font-size="23" font-weight="700" fill="#5E409D">F<tspan font-size="16" dy="7">g||</tspan><tspan font-size="23" dy="-7"> = mg sinθ</tspan></text>
+  <text x="496" y="482" font-size="23" font-weight="700" fill="#5E409D">F<tspan font-size="16" dy="7">g⊥</tspan><tspan font-size="23" dy="-7"> = mg cosθ</tspan></text>
+
+  <!-- the reasoning, stated -->
+  <text x="490" y="601" text-anchor="middle" font-size="25" font-weight="700" fill="#100F0F">Both marked angles are the same θ.</text>
+  <text x="490" y="634" text-anchor="middle" font-size="22" fill="#6F6E69">Tilt the ramp by θ and the perpendicular tilts by θ too — so sinθ takes the parallel piece.</text>
+</svg>
