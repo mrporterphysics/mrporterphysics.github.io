@@ -14,6 +14,34 @@ math: mathjax
 
 ---
 
+# 2026.11.17 **Earth Science**
+
+##### **❓ of the 📅**: White turkey meat, dark turkey meat, or no turkey meat?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Quiz
+2. Transit Lab (start working on when you finish the quiz)
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Quiz_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 # 2026.11.16 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite side dish at Thanksgiving?

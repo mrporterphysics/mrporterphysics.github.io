@@ -19,6 +19,37 @@ math: mathjax
 
 ---
 
+# 2026.11.17 **AP Physics**
+
+##### **❓ of the 📅**: White turkey meat, dark turkey meat, or no turkey meat?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mallet Ball Lab — constant velocity or not?
+2. Newton's First Law — board meeting
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+- 📝 Kinematics Test corrections due **Fri 11/20** — in school only
+- ✅ Quiz 7 — **Mon 11/23**
+
+</div>
+</div>
+
+---
+
 # 2026.11.16 **AP Physics**
 
 ##### **❓ of the 📅**: What is your favorite side dish at Thanksgiving?
