@@ -25,9 +25,7 @@ math: mathjax
 #### 📋 Agenda
 
 1. Finish Quiz?
-2. Hand in transit lab (complete through part B)
-3. Ellipse Notes
-4. Ellipse Practice
+2. Finish Transit Lab
 
 </div>
 
@@ -35,7 +33,7 @@ math: mathjax
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Finish Transit Lab_
 
 ### 📆 Upcoming
 
