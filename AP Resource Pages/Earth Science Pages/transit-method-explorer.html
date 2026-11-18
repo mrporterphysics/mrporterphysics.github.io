@@ -1268,7 +1268,11 @@ footer {
   }
 
   var ro = new ResizeObserver(function () {
-    if (el("panel-kepler").hidden) { render(false); } else { drawAllKepler(); }
+    if (el("panel-kepler").hidden) { render(false); return; }
+    // A stale hover point is measured against the OLD axis, so after a resize
+    // the readout would quietly report the wrong day. Drop it.
+    var kc = el("kcurve"); if (kc) { kc._hover = null; }
+    drawAllKepler();
   });
   ro.observe(el("sky")); ro.observe(el("curve"));
   document.querySelectorAll(".kcurve").forEach(function (cv) { ro.observe(cv); });
