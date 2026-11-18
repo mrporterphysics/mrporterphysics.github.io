@@ -440,23 +440,6 @@ Keep this one open — we come back to it tomorrow.
 
 ---
 
-# Newton's First Law
-
-<div class="law">
-
-**Balanced** — when the forces acting on a system are balanced, the system keeps its **constant velocity**.
-
-**Unbalanced** — when the forces acting on a system are unbalanced, the system **accelerates**.
-
-</div>
-
-<div class="vocab">
-
-**Inertia** — the tendency of an object to keep doing what it is already doing. More mass, more inertia. Inertia is why "no force" does **not** mean "no motion."
-
-</div>
-
----
 
 # Back to the water
 
@@ -515,6 +498,26 @@ On the next slide there is a list of statements. Decide whether each statement i
 # How do forces affect the motion of an object?
 
 You can do this in ***2 sentences***.
+
+---
+
+
+# Newton's First Law
+
+<div class="law">
+
+**Balanced** — when the forces acting on a system are balanced, the system keeps its **constant velocity**.
+
+*Unbalanced* — when the forces acting on a system are unbalanced, the system **accelerates**.
+
+</div>
+
+<div class="vocab">
+
+**Inertia** — the tendency of an object to keep doing what it is already doing. More mass, more inertia. Inertia is why "no force" does **not** mean "no motion."
+
+</div>
+
 
 ---
 
