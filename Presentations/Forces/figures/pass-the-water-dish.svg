@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>A brimful dish of water being carried: at rest, speeding up, steady, slowing to a stop</title>
+  <desc>Animated side view. The camera travels with the dish. While the dish speeds up, the water piles against the back wall and goes over the back rim. While the dish moves at a steady speed in a straight line, the surface is level and nothing spills. While the dish slows to a stop, the water piles against the front wall and goes over the front rim.</desc>
+
+  <defs>
+    <clipPath id="bowl">
+      <polygon points="394,250 404,336 596,336 606,250"/>
+    </clipPath>
+    <marker id="vTip" viewBox="0 0 12 12" refX="9" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1 L11 6 L1 11 z" fill="#100F0F"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="560" fill="#FFFCF0"/>
+
+  <!-- ===== phase label (one visible at a time) ===== -->
+  <g font-size="33" font-weight="700" text-anchor="middle">
+    <text x="500" y="74" fill="#6F6E69">At rest
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        keyTimes="0;0.12;0.13;0.295;0.305;0.62;0.63;0.795;0.805;1"
+        values="1;1;0;0;0;0;0;0;1;1"/>
+    </text>
+    <text x="500" y="74" fill="#BC5215">Speeding up
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        keyTimes="0;0.12;0.13;0.295;0.305;0.62;0.63;0.795;0.805;1"
+        values="0;0;1;1;0;0;0;0;0;0"/>
+    </text>
+    <text x="500" y="74" fill="#66800B">Steady speed, straight line
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        keyTimes="0;0.12;0.13;0.295;0.305;0.62;0.63;0.795;0.805;1"
+        values="0;0;0;0;1;1;0;0;0;0"/>
+    </text>
+    <text x="500" y="74" fill="#AF3029">Slowing to a stop
+      <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+        keyTimes="0;0.12;0.13;0.295;0.305;0.62;0.63;0.795;0.805;1"
+        values="0;0;0;0;0;0;1;1;0;0"/>
+    </text>
+  </g>
+
+  <!-- ===== velocity arrow ===== -->
+  <g>
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.12;0.135;0.79;0.805;1" values="0;0;1;1;0;0"/>
+    <text x="500" y="160" font-size="20" font-weight="600" fill="#100F0F">velocity</text>
+    <line x1="500" y1="186" x2="610" y2="186" stroke="#100F0F" stroke-width="5" marker-end="url(#vTip)">
+      <animate attributeName="x2" dur="8s" repeatCount="indefinite"
+        keyTimes="0;0.125;0.3;0.625;0.8;1" values="500;500;610;610;500;500"/>
+    </line>
+  </g>
+
+  <!-- ===== the floor, sliding past (the camera travels with the dish) ===== -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.125;0.16875;0.2125;0.25625;0.3;0.625;0.66875;0.7125;0.75625;0.8;1"
+      values="0,0; 0,0; -8,0; -32,0; -71,0; -126,0; -594,0; -649,0; -688,0; -712,0; -720,0; -720,0"/>
+    <g stroke="#DAD8CE" stroke-width="4">
+    <line x1="-240" y1="430" x2="-240" y2="447"/>
+    <line x1="-180" y1="430" x2="-180" y2="447"/>
+    <line x1="-120" y1="430" x2="-120" y2="447"/>
+    <line x1="-60" y1="430" x2="-60" y2="447"/>
+    <line x1="0" y1="430" x2="0" y2="447"/>
+    <line x1="60" y1="430" x2="60" y2="447"/>
+    <line x1="120" y1="430" x2="120" y2="447"/>
+    <line x1="180" y1="430" x2="180" y2="447"/>
+    <line x1="240" y1="430" x2="240" y2="447"/>
+    <line x1="300" y1="430" x2="300" y2="447"/>
+    <line x1="360" y1="430" x2="360" y2="447"/>
+    <line x1="420" y1="430" x2="420" y2="447"/>
+    <line x1="480" y1="430" x2="480" y2="447"/>
+    <line x1="540" y1="430" x2="540" y2="447"/>
+    <line x1="600" y1="430" x2="600" y2="447"/>
+    <line x1="660" y1="430" x2="660" y2="447"/>
+    <line x1="720" y1="430" x2="720" y2="447"/>
+    <line x1="780" y1="430" x2="780" y2="447"/>
+    <line x1="840" y1="430" x2="840" y2="447"/>
+    <line x1="900" y1="430" x2="900" y2="447"/>
+    <line x1="960" y1="430" x2="960" y2="447"/>
+    <line x1="1020" y1="430" x2="1020" y2="447"/>
+    <line x1="1080" y1="430" x2="1080" y2="447"/>
+    <line x1="1140" y1="430" x2="1140" y2="447"/>
+    <line x1="1200" y1="430" x2="1200" y2="447"/>
+    <line x1="1260" y1="430" x2="1260" y2="447"/>
+    <line x1="1320" y1="430" x2="1320" y2="447"/>
+    <line x1="1380" y1="430" x2="1380" y2="447"/>
+    </g>
+  </g>
+  <line x1="0" y1="430" x2="1000" y2="430" stroke="#B7B5AC" stroke-width="4"/>
+
+  <g transform="translate(500,320) scale(1.38) translate(-500,-320)">
+  <!-- ===== the forearm carrying it ===== -->
+  <rect x="438" y="342" width="124" height="28" rx="14" fill="#F2F0E5" stroke="#B7B5AC" stroke-width="3"/>
+
+  <!-- ===== the water, clipped to the inside of the dish ===== -->
+  <g clip-path="url(#bowl)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" dur="8s" repeatCount="indefinite"
+        keyTimes="0;0.125;0.1625;0.3;0.33;0.3625;0.625;0.6625;0.8;0.83;0.8625;1"
+        values="0 500 262; 0 500 262; 13 500 262; 13 500 262; 3 500 262; 0 500 262; 0 500 262; -13 500 262; -13 500 262; -3 500 262; 0 500 262; 0 500 262"/>
+      <rect x="270" y="262" width="460" height="170" fill="#205EA6" opacity="0.46"/>
+      <line x1="270" y1="262" x2="730" y2="262" stroke="#205EA6" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- ===== the dish itself, open at the top ===== -->
+  <path d="M 388 250 L 402 338 L 598 338 L 612 250" fill="none" stroke="#100F0F" stroke-width="7" stroke-linejoin="round"/>
+
+  <!-- ===== water going over the BACK rim while speeding up ===== -->
+  <g fill="#205EA6" opacity="0">
+    <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.14375;0.1875;0.2375;0.28125;0.31875;1"
+      values="0,0; 0,0; -16,-12; -40,2; -66,44; -92,112; -92,112"/>
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.1375;0.155;0.27;0.31875;1" values="0;0;1;1;0;0"/>
+    <circle cx="398" cy="248" r="7"/>
+    <circle cx="378" cy="262" r="5"/>
+    <circle cx="386" cy="234" r="4"/>
+  </g>
+
+  <!-- ===== water going over the FRONT rim while stopping ===== -->
+  <g fill="#205EA6" opacity="0">
+    <animateTransform attributeName="transform" type="translate" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.64375;0.6875;0.7375;0.78125;0.81875;1"
+      values="0,0; 0,0; 16,-12; 40,2; 66,44; 92,112; 92,112"/>
+    <animate attributeName="opacity" dur="8s" repeatCount="indefinite"
+      keyTimes="0;0.6375;0.655;0.77;0.81875;1" values="0;0;1;1;0;0"/>
+    <circle cx="602" cy="248" r="7"/>
+    <circle cx="622" cy="262" r="5"/>
+    <circle cx="614" cy="234" r="4"/>
+  </g>
+
+  </g>
+
+  <!-- ===== caption ===== -->
+  <text x="500" y="500" font-size="21" fill="#6F6E69" text-anchor="middle">Same dish, same water, same fill line. The only thing changing is <tspan font-weight="700" fill="#100F0F">what the dish is doing</tspan>.</text>
+  <text x="500" y="532" font-size="21" font-weight="700" fill="#AD8301" text-anchor="middle">Watch the rim.</text>
+</svg>

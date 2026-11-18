@@ -30,7 +30,7 @@ img[alt~="center"] {
 <div class='col'>
 
 **Phase 1 — Balanced forces**
-1. [Mallet Ball & the First Law](#mallet-ball)
+1. [Pass the Water & Mallet Ball](#pass-the-water)
 2. [Interactions & the Third Law](#a-force-is-an-interaction)
 3. [Common Forces](#common-forces)
 4. [Force Diagrams](#force-diagrams)
@@ -61,6 +61,223 @@ img[alt~="center"] {
 # Phase 1 — Balanced Forces
 
 ## Days 1–5 · CED 2.1, 2.2, 2.3, 2.4, 2.6
+
+---
+
+# Today's Question
+
+### What does it take to **change** an object's motion — and what happens to something with **no force on it at all**?
+
+<div class="steps">
+
+**Two phenomena, one rule.** In Part 1 you watch water that nobody is pushing. In Part 2 you do the pushing yourself. You leave with one statement that explains both.
+
+</div>
+
+<div class="question">
+
+**In your notebook, right now** — how many mallet taps does it take to keep a bowling ball rolling at a steady speed? Commit to a number. We come back to it at the end of the period.
+
+</div>
+
+---
+
+# Pass the Water
+
+# 💧 🥣 💧 🥣
+
+---
+
+<!-- _class: compact -->
+
+# Part 1 — Pass the Water
+
+<div class="protocol">
+
+**The relay** — carry a **brimful** dish of water one lap each around the oval, hand off at the line, and run the whole relay **twice**: lap 1 careful, lap 2 fast.
+
+</div>
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**Scoring**
+
+$$\text{score} = t + 4\,V_{\text{spilled}}$$
+
+$t$ in seconds, $V$ in mL. **Lowest score wins** — so spilling 50 mL costs you exactly what 200 extra seconds would.
+
+</div>
+</div>
+<div class='col'>
+
+<div class="warning">
+
+**Three things will sink this lab**
+
+1. **Fill to the rim, every leg.** A part-filled dish hides the effect and your volume stops meaning anything.
+2. **Somebody is always watching the dish.**
+3. Mark your sketch **at the track**, not from memory afterwards.
+
+</div>
+</div>
+</div>
+
+---
+
+<!-- _class: compact -->
+
+# The track — and what you are watching
+
+![center w:1000](../figures/pass-the-water-track.svg)
+
+---
+
+# Before anyone picks up a dish
+
+<div class="steps">
+
+**Write the observation plan in your notebook**
+
+1. Who watches which leg? Nobody runs un-watched.
+2. What exactly are you watching for, and how will you record it?
+3. Sketch the track, and agree where on it your marks will go.
+
+</div>
+
+<div class="key-idea">
+
+**Observation matters more than speed.** A fast lap with nobody watching gives you a number with no evidence behind it — and the evidence is the part that gets graded.
+
+</div>
+
+---
+
+# Lab Safety — Part 1 is wet
+
+<div class="warning">
+
+**Walk briskly. Never sprint.** A wet hard floor is the most serious hazard in this lab.
+
+</div>
+
+1. Carry the dish **low and stable** — never raise it overhead.
+2. Report any spill outside the dish at once; the spill responder goes in with towels.
+3. No crowding at the refill station — that is where runners and observers collide.
+4. Closed-toe shoes.
+5. **The floor must be dry before the bowling ball comes out.** That one is not negotiable.
+
+---
+
+# Two laps, on purpose
+
+<div class='columns'>
+<div class='col'>
+
+<div class="panel">
+
+**Lap 1 — careful**
+
+Slow, smooth, gentle on the turns. Spill as little as you can.
+
+</div>
+</div>
+<div class='col'>
+
+<div class="panel">
+
+**Lap 2 — fast**
+
+Push the pace. Same dish, same fill line, same track.
+
+</div>
+</div>
+</div>
+
+<div class="question">
+
+One number tells you nothing. **A pair of numbers tells you what changed when the only thing you changed was the pace.**
+
+</div>
+
+---
+
+<!-- _class: compact -->
+
+# Measure and score
+
+<div class='columns'>
+<div class='col'>
+
+<div class="steps">
+
+**For each lap**
+
+1. Pour whatever is left in the dish back into the 1000 mL cylinder. Read it at eye level.
+2. $V_{\text{spilled}} = 1000\ \text{mL} - V_{\text{left}}$
+3. $\text{score} = t + 4\,V_{\text{spilled}}$
+
+</div>
+</div>
+<div class='col'>
+
+<div class="warning">
+
+**Estimate your uncertainty in $V_{\text{spilled}}$**
+
+It is **not** the markings on the cylinder. It is the water still clinging to the dish when you stop pouring. You need that number before you can say whether your two laps genuinely differ.
+
+</div>
+</div>
+</div>
+
+<div class="key-idea">
+
+**Post both of your points on the board** — $(t,\ V_{\text{spilled}})$ for each lap. Everybody's pairs together are the class data set, and that graph is on the analysis sheet.
+
+</div>
+
+---
+
+<!-- _class: compact -->
+
+# Nobody pushed the water
+
+<div class='columns cols-2-1'>
+<div class='col'>
+
+![w:700](../figures/pass-the-water-dish.svg)
+
+</div>
+<div class='col'>
+
+<div class="question">
+
+Where did yours go over the rim — and what was the dish doing at that moment?
+
+</div>
+
+<div class="question">
+
+Where did it **not** spill, even when you were moving quickly? What did those moments have in common, in **speed** and in **direction**?
+
+</div>
+</div>
+</div>
+
+---
+
+# Towels down
+
+### The bowling ball does not come out until the floor is dry.
+
+<div class="key-idea">
+
+**Hold on to the water.** Part 2 looks like a completely different lab. By the end of the period we are coming back to that dish with one rule that covers both.
+
+</div>
 
 ---
 
@@ -241,42 +458,17 @@ Keep this one open — we come back to it tomorrow.
 
 ---
 
-# Two ways to measure mass
+# Back to the water
 
-<div class='columns'>
-<div class='col'>
+<div class="question">
 
-<div class="panel">
+Nobody tapped the water. So why did it climb the back wall when you started, and the front wall when you stopped?
 
-**Inertial mass**
-
-How hard is it to *change* this object's motion?
-
-Push it and measure the acceleration.
-
-$m_{\text{inertial}} = \dfrac{\Sigma F}{a}$
-
-</div>
-</div>
-<div class='col'>
-
-<div class="panel">
-
-**Gravitational mass**
-
-How hard does the Earth *pull* on this object?
-
-Put it on a balance.
-
-$m_{\text{grav}} = \dfrac{F_g}{g}$
-
-</div>
-</div>
 </div>
 
 <div class="key-idea">
 
-**They always come out the same.** Nothing in Newton's laws says they must — it is an experimental fact, and Einstein built general relativity on it.
+**The water was obeying the first law the whole time.** Left alone it keeps the velocity it already had — it is the **dish** that changes velocity. The rim is the only thing touching the water, so the rim is the only thing that can push it. Wherever the rim could not push hard enough, the water went over it.
 
 </div>
 
@@ -918,6 +1110,47 @@ $$\vec{a} = \frac{\Sigma \vec{F}}{m}$$
 <div class="key-idea">
 
 Notice what this says about Mallet Ball: no net force, no acceleration. Newton's first law is just this law with $\Sigma \vec F = 0$.
+
+</div>
+
+---
+
+# Two ways to measure mass
+
+<div class='columns'>
+<div class='col'>
+
+<div class="panel">
+
+**Inertial mass**
+
+How hard is it to *change* this object's motion?
+
+Push it and measure the acceleration.
+
+$m_{\text{inertial}} = \dfrac{\Sigma F}{a}$
+
+</div>
+</div>
+<div class='col'>
+
+<div class="panel">
+
+**Gravitational mass**
+
+How hard does the Earth *pull* on this object?
+
+Put it on a balance.
+
+$m_{\text{grav}} = \dfrac{F_g}{g}$
+
+</div>
+</div>
+</div>
+
+<div class="key-idea">
+
+**They always come out the same.** Nothing in Newton's laws says they must — it is an experimental fact, and Einstein built general relativity on it.
 
 </div>
 

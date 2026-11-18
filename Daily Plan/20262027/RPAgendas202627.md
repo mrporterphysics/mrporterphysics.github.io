@@ -30,7 +30,7 @@ math: mathjax
 #### 📋 Agenda
 
 0. Review Mallet Ball Lab
-1. Do Now — tug-of-war PhET T/F
+1. [Tug-of-war PhET T/F](/Presentations/Forces/talks/Dynamics2026.html)
 2. Interaction Stations & Identifying Forces
 3. Common Forces → interatomic
 4. Newton's Third Law Lesson

@@ -790,7 +790,7 @@ END OF DAY 1 HERE, after question 21.
 Five minutes. Read back the sentence a student gave you yesterday — the one you wrote on the board at question 11. From a student, not from you.
 Then the three bullets, as a check: ask the room which measurement answers which question before you reveal them.
 KEPLER, worth sixty seconds: between 2009 and 2018 it stared at one patch of sky and measured the brightness of 150,000 stars at once, looking for exactly the dips they spent yesterday making. It found more than 2,600 planets. The data in Part D is that telescope's actual data.
-Send them to the simulator's SECOND TAB, "Kepler light curves", or project it. That tab is new as of 18 November 2026 -- Part D used to need a printed NASA/JPL page that was never actually on disk, which is what prompted the change. The four curves are drawn from each system's published parameters with the same model the Explorer tab runs, so a period read off the tab is the period the key expects.
+TWO ROUTES, pick by what the cart allows: the simulator's SECOND TAB ("Kepler light curves"), or the printed KEPLER LIGHT CURVES sheet. Same four graphs, same 12 days, same answers -- so Part D is a no-device part again. Background: Part D used to point at a NASA/JPL page that was never actually on disk; the tab fixed that on 18 Nov and the printable sheet followed on 19 Nov so a class with no computers loses nothing. The curves are drawn from each system's published parameters with the same model the Explorer tab runs, so a period read off either route is the period the key expects.
 -->
 
 ---
@@ -869,7 +869,7 @@ Two conversions they need all page: 1 year = 365 days, 1 AU = 149.6 million km.
 
 <div class="doit">
 
-**The curves are in the simulator** — the **Kepler light curves** tab, a button per planet. **Point at the graph** and it prints the day: hover one dip, hover the next, subtract.
+**On the sheet, or in the simulator** — the **Kepler light curves** tab, a button per planet. On screen, **point at the graph** and it prints the day. Either way: one dip, the next, subtract.
 
 Your period will differ from your neighbour's by a tenth of a day. **That is fine** — the distance barely moves.
 

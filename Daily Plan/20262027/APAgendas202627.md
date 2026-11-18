@@ -93,7 +93,7 @@ Take a card and form four groups: one of **4**, three of **3**.
 #### 📋 Agenda
 
 1. Do Now — new lab groups
-2. Pass the Water & Mallet Ball Lab — constant velocity or not?
+2. [Pass the Water & Mallet Ball Lab](/Presentations/Forces/talks/Dynamics2026.html) — constant velocity or not?
 3. Newton's First Law — board meeting
 
 </div>
