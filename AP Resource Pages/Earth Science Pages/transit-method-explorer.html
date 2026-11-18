@@ -250,6 +250,37 @@ footer {
   font-size: 12.5px; color: var(--ink-soft);
 }
 
+/* ---- tabs ---- */
+.tabs {
+  display: flex; gap: 4px; margin: 18px 0 0;
+  border-bottom: 1px solid var(--rule);
+}
+.tab {
+  font-family: var(--f-display); font-size: 13px; font-weight: 600;
+  padding: 9px 16px; cursor: pointer;
+  border: 1px solid transparent; border-bottom: none;
+  border-radius: 4px 4px 0 0; background: none; color: var(--ink-soft);
+  margin-bottom: -1px;
+}
+.tab:hover { color: var(--accent); }
+.tab[aria-selected="true"] {
+  background: var(--surface); color: var(--ink);
+  border-color: var(--rule); border-bottom: 1px solid var(--surface);
+}
+
+/* ---- the Kepler light-curve sheet ---- */
+.kintro { margin: 18px 0 0; }
+.kgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+@media (max-width: 860px) { .kgrid { grid-template-columns: 1fr; } }
+.kcard { border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); padding: 0 0 10px; }
+.kcard h3 {
+  font-family: var(--f-display); font-size: 13.5px; font-weight: 600; margin: 0;
+  padding: 9px 13px; border-bottom: 1px solid var(--rule); color: var(--ink);
+}
+.kcard h3 span { font-weight: 400; color: var(--ink-soft); font-size: 12px; }
+.kcard canvas { height: 210px; }
+.kcard .kcap { font-size: 11.5px; color: var(--ink-soft); padding: 6px 13px 0; margin: 0; }
+
 :focus-visible { outline: 2px solid var(--measure); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; } }
 </style>
@@ -267,6 +298,13 @@ footer {
       and the orbit, then read the dip. Everything astronomers know about these worlds starts here.</p>
   </div>
 </header>
+
+<div class="tabs" role="tablist">
+  <button class="tab" id="tab-explorer" role="tab" aria-selected="true" aria-controls="panel-explorer">Explorer</button>
+  <button class="tab" id="tab-kepler" role="tab" aria-selected="false" aria-controls="panel-kepler">Kepler light curves</button>
+</div>
+
+<div id="panel-explorer" role="tabpanel" aria-labelledby="tab-explorer">
 
 <div class="presets">
   <span class="plabel">Load a system</span>
@@ -425,6 +463,36 @@ footer {
     </div>
   </details>
 </div>
+
+</div><!-- /panel-explorer -->
+
+<div id="panel-kepler" role="tabpanel" aria-labelledby="tab-kepler" hidden>
+
+  <div class="kintro">
+    <p class="cap" style="padding-left:0">These are the four planets in <strong>Part D</strong> of your
+      lab. Each graph is a real observing run: about <strong>20 days</strong> of one star's brightness,
+      measured over and over.</p>
+    <p class="cap" style="padding-left:0"><strong>Read the period off the graph</strong> &mdash; the time
+      from the middle of one dip to the middle of the next. The faint vertical lines are
+      <strong>one day</strong> apart. Then take that period back to your table.</p>
+  </div>
+
+  <div class="kgrid">
+    <div class="kcard"><h3>Kepler-5b</h3><canvas class="kcurve" data-k="0"></canvas>
+      <p class="kcap">Period is given in your table &mdash; use this one to check your method.</p></div>
+    <div class="kcard"><h3>Kepler-6b</h3><canvas class="kcurve" data-k="1"></canvas>
+      <p class="kcap">Read the period, then calculate the distance.</p></div>
+    <div class="kcard"><h3>Kepler-7b</h3><canvas class="kcurve" data-k="2"></canvas>
+      <p class="kcap">Read the period, then calculate the distance.</p></div>
+    <div class="kcard"><h3>Kepler-8b</h3><canvas class="kcurve" data-k="3"></canvas>
+      <p class="kcap">Read the period, then calculate the distance.</p></div>
+  </div>
+
+  <p class="cap" style="padding-left:0; margin-top:14px"><strong>Why the dips are different depths.</strong>
+    Each planet sits in front of a different star. A dip is the fraction of <em>that</em> star covered up,
+    so you cannot compare depths across these four graphs &mdash; which is the whole point of question 11.</p>
+
+</div><!-- /panel-kepler -->
 
 <footer>
   Built for Schodack CSD Earth &amp; Space Science, Unit 1 &middot; Lesson 3. System parameters from the
@@ -946,6 +1014,114 @@ footer {
     requestAnimationFrame(frame);
   }
 
+  // ---- the Kepler light-curve sheet ----------------------------------
+  // The lab used to say "your teacher will give you the page of real Kepler
+  // light curves", meaning page 2 of NASA/JPL's "Exploring Exoplanets with
+  // Kepler" worksheet -- an external download that was never on disk. These
+  // four curves replace that dependency. They are NOT copies of JPL's
+  // figures: each is drawn from the system's own NASA Exoplanet Archive
+  // parameters with the same transit model the Explorer tab runs, so the
+  // period a student reads here is the period the answer key expects.
+  //
+  // Durations are computed, not chosen: t = P/pi * asin((R*+Rp)/a), the
+  // central-transit chord. Periods are deliberately NOT printed anywhere --
+  // reading them off the graph is the task.
+  var KEPLER = [
+    { name: "Kepler-5b", P: 3.548, depth: 0.725, dur: 4.86, seed: 5051 },
+    { name: "Kepler-6b", P: 3.235, depth: 1.081, dur: 3.86, seed: 6062 },
+    { name: "Kepler-7b", P: 4.885, depth: 0.757, dur: 5.96, seed: 7073 },
+    { name: "Kepler-8b", P: 3.522, depth: 0.915, dur: 4.24, seed: 8084 }
+  ];
+  var KSPAN = 20;        // days on screen
+  var KT0   = 1.15;      // first mid-transit, so no dip is clipped at t = 0
+
+  function kFlux(t, d) {
+    var half = d.dur / 24 / 2;
+    var k = Math.sqrt(d.depth / 100);
+    var ramp = (d.dur / 24) * k / (1 + k) / 2;
+    var ph = (t - KT0) % d.P;
+    if (ph > d.P / 2) ph -= d.P;
+    if (ph < -d.P / 2) ph += d.P;
+    var a = Math.abs(ph);
+    if (a >= half) return 100;
+    if (a <= half - ramp) return 100 - d.depth;
+    return 100 - d.depth * (half - a) / ramp;
+  }
+
+  function drawKepler(cv) {
+    var d = KEPLER[parseInt(cv.dataset.k, 10)];
+    var c = fit(cv), g = c.g, w = c.w, h = c.h;
+    var L = 48, R = 10, T = 10, B = 28;
+    var lo = 100 - d.depth * 1.55, hi = 100 + d.depth * 0.45;
+    function X(t) { return L + t / KSPAN * (w - L - R); }
+    function Y(b) { return T + (hi - b) / (hi - lo) * (h - T - B); }
+
+    g.fillStyle = css("--surface"); g.fillRect(0, 0, w, h);
+
+    // one gridline per day -- this is the ruler the period is measured with
+    g.strokeStyle = css("--rule"); g.lineWidth = 1;
+    g.globalAlpha = 0.75;
+    for (var day = 1; day < KSPAN; day++) {
+      g.beginPath(); g.moveTo(Math.round(X(day)) + 0.5, T);
+      g.lineTo(Math.round(X(day)) + 0.5, h - B); g.stroke();
+    }
+    g.globalAlpha = 1;
+
+    // the measurements
+    var rnd = mulberry(d.seed), N = 2200, sigma = d.depth / 16;
+    g.fillStyle = css("--accent");
+    g.globalAlpha = 0.8;
+    for (var i = 0; i < N; i++) {
+      var t = KSPAN * i / (N - 1);
+      var u1 = Math.max(rnd(), 1e-9), u2 = rnd();
+      var gs = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+      var b = kFlux(t, d) + gs * sigma;
+      g.beginPath(); g.arc(X(t), Y(b), 1.05, 0, 6.2832); g.fill();
+    }
+    g.globalAlpha = 1;
+
+    // axes
+    g.strokeStyle = css("--ink-soft"); g.lineWidth = 1.2;
+    g.beginPath();
+    g.moveTo(L, T); g.lineTo(L, h - B); g.lineTo(w - R, h - B);
+    g.stroke();
+
+    g.fillStyle = css("--ink-soft");
+    g.font = "11px " + css("--f-body");
+    g.textAlign = "center"; g.textBaseline = "top";
+    for (var dd = 0; dd <= KSPAN; dd += 4) { g.fillText(String(dd), X(dd), h - B + 6); }
+    g.fillText("time (days)", (L + w - R) / 2, h - 12);
+
+    g.save();
+    g.translate(13, (T + h - B) / 2); g.rotate(-Math.PI / 2);
+    g.textAlign = "center"; g.textBaseline = "middle";
+    g.fillText("brightness (%)", 0, 0);
+    g.restore();
+
+    g.textAlign = "right"; g.textBaseline = "middle";
+    g.font = "10.5px " + css("--f-data");
+    g.fillText("100.0", L - 5, Y(100));
+    g.fillText(fmt(100 - d.depth, 1), L - 5, Y(100 - d.depth));
+  }
+
+  function drawAllKepler() {
+    document.querySelectorAll(".kcurve").forEach(drawKepler);
+  }
+
+  // ---- tabs ----------------------------------------------------------
+  function selectTab(which) {
+    var onKepler = which === "kepler";
+    el("tab-explorer").setAttribute("aria-selected", String(!onKepler));
+    el("tab-kepler").setAttribute("aria-selected", String(onKepler));
+    el("panel-explorer").hidden = onKepler;
+    el("panel-kepler").hidden = !onKepler;
+    // The Kepler canvases have no size while their panel is hidden, so they
+    // can only be drawn once it is shown.
+    if (onKepler) { drawAllKepler(); } else { render(false); }
+  }
+  el("tab-explorer").addEventListener("click", function () { selectTab("explorer"); });
+  el("tab-kepler").addEventListener("click", function () { selectTab("kepler"); });
+
   // ---- boot ----------------------------------------------------------
   function start(saved) {
     if (saved && typeof saved === "object" && saved.rp) {
@@ -959,9 +1135,15 @@ footer {
     requestAnimationFrame(frame);
   }
 
-  var ro = new ResizeObserver(function () { render(false); });
+  var ro = new ResizeObserver(function () {
+    if (el("panel-kepler").hidden) { render(false); } else { drawAllKepler(); }
+  });
   ro.observe(el("sky")); ro.observe(el("curve"));
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { render(false); });
+  document.querySelectorAll(".kcurve").forEach(function (cv) { ro.observe(cv); });
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+    render(false);
+    if (!el("panel-kepler").hidden) { drawAllKepler(); }
+  });
 
   if (window.claude && window.claude.hot) {
     window.claude.hot.snapshot(function () {
