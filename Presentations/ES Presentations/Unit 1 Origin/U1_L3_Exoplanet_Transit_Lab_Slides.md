@@ -869,7 +869,7 @@ Two conversions they need all page: 1 year = 365 days, 1 AU = 149.6 million km.
 
 <div class="doit">
 
-**The curves are in the simulator** — the **Kepler light curves** tab, next to Explorer. The grid runs at a **half day**; measure middle-of-dip to middle-of-dip.
+**The curves are in the simulator** — the **Kepler light curves** tab, a button per planet. **Point at the graph** and it prints the day: hover one dip, hover the next, subtract.
 
 Your period will differ from your neighbour's by a tenth of a day. **That is fine** — the distance barely moves.
 
@@ -877,7 +877,7 @@ Your period will differ from your neighbour's by a tenth of a day. **That is fin
 
 <!--
 25 minutes. Question 22 first (our own solar system, M_s = 1), then question 23 (the exoplanets).
-TELL THEM TO COUNT GRIDLINES, one per day. A student who eyeballs "about 3 days" off a 20-day axis gets a distance that is wrong in the second digit; a student who counts gets it right. Kepler-5b's period is given in the table on purpose, so they can check their method on a known answer before doing the other three.
+DEMONSTRATE THE CURSOR READOUT ONCE, on Kepler-5b, whose period is already in their table: hover the middle of one dip, hover the middle of the next, subtract, and it lands on 3.55. That turns the whole table from estimation into measurement. A student who eyeballs "about 3 days" off a 20-day axis gets a distance that is wrong in the second digit; a student who counts gets it right. Kepler-5b's period is given in the table on purpose, so they can check their method on a known answer before doing the other three.
 Say the tolerance out loud before they start. A student who thinks their 3.3 days is wrong because their neighbor got 3.2 will stop working.
 Question 24: the first four all orbit at about 0.05 AU — one eighth of Mercury's distance — and whip round in three to five DAYS. Kepler-452b is at 1.05 AU and takes 385 days.
 Question 25 is the one worth discussing as a class: why were the hot Jupiters found first? Because confirming a planet needs several repeat dips. A 3-day period gives you a fresh one every three days; Kepler-452b transits once every 385 days, so confirming it took YEARS. They were not more common — just quicker to prove.
