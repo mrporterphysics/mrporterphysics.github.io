@@ -790,7 +790,7 @@ END OF DAY 1 HERE, after question 21.
 Five minutes. Read back the sentence a student gave you yesterday — the one you wrote on the board at question 11. From a student, not from you.
 Then the three bullets, as a check: ask the room which measurement answers which question before you reveal them.
 KEPLER, worth sixty seconds: between 2009 and 2018 it stared at one patch of sky and measured the brightness of 150,000 stars at once, looking for exactly the dips they spent yesterday making. It found more than 2,600 planets. The data in Part D is that telescope's actual data.
-Hand out the NASA/JPL light-curve page now. Part D needs it; it does not need a device.
+Send them to the simulator's SECOND TAB, "Kepler light curves", or project it. That tab is new as of 18 November 2026 -- Part D used to need a printed NASA/JPL page that was never actually on disk, which is what prompted the change. The four curves are drawn from each system's published parameters with the same model the Explorer tab runs, so a period read off the tab is the period the key expects.
 -->
 
 ---
@@ -853,6 +853,8 @@ Two conversions they need all page: 1 year = 365 days, 1 AU = 149.6 million km.
 
 ---
 
+<!-- _class: dense -->
+
 # The Kepler Planets
 
 <span class="q">QUESTIONS 22 TO 26</span>
@@ -860,19 +862,22 @@ Two conversions they need all page: 1 year = 365 days, 1 AU = 149.6 million km.
 | Planet | Star mass | Period (days) | Distance (AU) |
 |---|---|---|---|
 | Kepler-5b | 1.37 | 3.55 | 0.0506 *(done for you)* |
-| Kepler-6b | 1.21 | read it off | ? |
-| Kepler-7b | 1.36 | read it off | ? |
-| Kepler-8b | 1.21 | read it off | ? |
+| Kepler-6b | 1.21 | read it off the tab | ? |
+| Kepler-7b | 1.36 | read it off the tab | ? |
+| Kepler-8b | 1.21 | read it off the tab | ? |
 | Kepler-452b | 1.04 | 384.84 | ? |
 
-<div class="key-idea">
+<div class="doit">
 
-Periods read off a graph will vary between students by a tenth of a day. **That is fine** — the distance barely moves. Science is not spoiled by a reading error that small.
+**The curves are in the simulator** — the **Kepler light curves** tab, next to Explorer. Gridlines are **one day** apart; measure middle-of-dip to middle-of-dip.
+
+Your period will differ from your neighbour's by a tenth of a day. **That is fine** — the distance barely moves.
 
 </div>
 
 <!--
 25 minutes. Question 22 first (our own solar system, M_s = 1), then question 23 (the exoplanets).
+TELL THEM TO COUNT GRIDLINES, one per day. A student who eyeballs "about 3 days" off a 20-day axis gets a distance that is wrong in the second digit; a student who counts gets it right. Kepler-5b's period is given in the table on purpose, so they can check their method on a known answer before doing the other three.
 Say the tolerance out loud before they start. A student who thinks their 3.3 days is wrong because their neighbor got 3.2 will stop working.
 Question 24: the first four all orbit at about 0.05 AU — one eighth of Mercury's distance — and whip round in three to five DAYS. Kepler-452b is at 1.05 AU and takes 385 days.
 Question 25 is the one worth discussing as a class: why were the hot Jupiters found first? Because confirming a planet needs several repeat dips. A 3-day period gives you a fresh one every three days; Kepler-452b transits once every 385 days, so confirming it took YEARS. They were not more common — just quicker to prove.
