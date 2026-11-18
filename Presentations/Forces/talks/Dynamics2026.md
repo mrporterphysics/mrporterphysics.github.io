@@ -535,72 +535,6 @@ You can do this in ***2 sentences***.
 
 ---
 
-# Can an object exert a force on itself?
-
-<div class='columns'>
-<div class='col'>
-
-### Try to argue for it
-
-- Can you lift yourself by your own belt?
-- Can a car's engine push the car?
-- Can you push yourself across the floor?
-
-</div>
-<div class='col'>
-
-<div class="key-idea">
-
-**No.** A force needs *two* objects. Whenever it looks like self-propulsion, a second object is doing the pushing — the floor, the ground, the road.
-
-</div>
-
-</div>
-</div>
-
----
-
-# Newton's Third Law
-
-<div class="law">
-
-A **force** is an interaction between two objects. The two objects mutually apply this force on each other, and the force is **always equal in magnitude and opposite in direction**.
-
-</div>
-
-<div class="warning">
-
-**The two forces act on *different objects*.** That is the whole law. It is also the reason they never cancel.
-
-</div>
-
----
-
-<!-- _class: plain -->
-
-![center w:1000](../figures/n3l-pair.svg)
-
----
-
-# Force Pairs
-
-* Newton's Third Law describes force **pairs**.
-  * You can identify these pairs with an **interaction diagram**.
-  * The line that connects each bubble or object is the force pair.
-
-<div class="question">
-
-Back to yesterday: **does the bowling ball tap the mallet?**
-
-</div>
-
----
-
-<!-- _class: plain -->
-
-![center h:560](../figures/interaction-diagram.svg)
-
----
 
 ### Contact Interactions
 
@@ -743,6 +677,76 @@ A fluid pushing up on something immersed in it. We meet it properly in **Unit 8,
 **Not on our list:** "the force of motion." A moving object does not carry a forward force with it — that was the whole point of Mallet Ball.
 
 </div>
+
+---
+
+
+# Can an object exert a force on itself?
+
+<div class='columns'>
+<div class='col'>
+
+### Try to argue for it
+
+- Can you lift yourself by your own belt?
+- Can a car's engine push the car?
+- Can you push yourself across the floor?
+
+</div>
+<div class='col'>
+
+<div class="key-idea">
+
+**No.** A force needs *two* objects. Whenever it looks like self-propulsion, a second object is doing the pushing — the floor, the ground, the road.
+
+</div>
+
+</div>
+</div>
+
+---
+
+# Newton's Third Law
+
+<div class="law">
+
+A **force** is an interaction between two objects. The two objects mutually apply this force on each other, and the force is **always equal in magnitude and opposite in direction**.
+
+</div>
+
+<div class="warning">
+
+**The two forces act on *different objects*.** That is the whole law. It is also the reason they never cancel.
+
+</div>
+
+---
+
+<!-- _class: plain -->
+
+![center w:1000](../figures/n3l-pair.svg)
+
+---
+
+# Force Pairs
+
+* Newton's Third Law describes force **pairs**.
+  * You can identify these pairs with an **interaction diagram**.
+  * The line that connects each bubble or object is the force pair.
+
+<div class="question">
+
+Back to yesterday: **does the bowling ball tap the mallet?**
+
+</div>
+
+---
+
+<!-- _class: plain -->
+
+![center h:560](../figures/interaction-diagram.svg)
+
+---
 
 ---
 
