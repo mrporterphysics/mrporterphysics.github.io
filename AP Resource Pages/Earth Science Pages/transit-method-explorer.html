@@ -112,15 +112,18 @@ h1 {
   font-family: var(--f-display); font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--ink-soft); align-self: center; margin-right: 4px;
 }
-.chip {
+.chip, .kchip {
   font-family: var(--f-display); font-size: 12.5px; font-weight: 600;
   padding: 5px 11px; border-radius: 999px; cursor: pointer;
   border: 1px solid var(--rule); background: var(--surface); color: var(--ink);
 }
-.chip:hover { border-color: var(--accent); color: var(--accent); }
-.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.chip:hover, .kchip:hover { border-color: var(--accent); color: var(--accent); }
+.chip[aria-pressed="true"], .kchip[aria-pressed="true"] {
+  background: var(--accent); border-color: var(--accent); color: #fff;
+}
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .chip[aria-pressed="true"] { color: #17120A; }
+  :root:not([data-theme="light"]) .chip[aria-pressed="true"],
+  :root:not([data-theme="light"]) .kchip[aria-pressed="true"] { color: #17120A; }
 }
 :root[data-theme="dark"] .chip[aria-pressed="true"] { color: #17120A; }
 
@@ -488,10 +491,10 @@ footer {
 
   <div class="kpick">
     <span class="plabel">Choose a planet</span>
-    <button class="chip kchip" data-k="0" aria-pressed="true">Kepler-5b</button>
-    <button class="chip kchip" data-k="1" aria-pressed="false">Kepler-6b</button>
-    <button class="chip kchip" data-k="2" aria-pressed="false">Kepler-7b</button>
-    <button class="chip kchip" data-k="3" aria-pressed="false">Kepler-8b</button>
+    <button class="kchip" data-k="0" aria-pressed="true">Kepler-5b</button>
+    <button class="kchip" data-k="1" aria-pressed="false">Kepler-6b</button>
+    <button class="kchip" data-k="2" aria-pressed="false">Kepler-7b</button>
+    <button class="kchip" data-k="3" aria-pressed="false">Kepler-8b</button>
   </div>
 
   <div class="kcard">
