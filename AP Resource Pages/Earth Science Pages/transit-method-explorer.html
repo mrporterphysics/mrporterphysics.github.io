@@ -270,15 +270,19 @@ footer {
 
 /* ---- the Kepler light-curve sheet ---- */
 .kintro { margin: 18px 0 0; }
-.kgrid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
+.kpick { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 16px 0 12px; }
+.kpick .plabel {
+  font-family: var(--f-display); font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-soft); margin-right: 4px;
+}
 .kcard { border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); padding: 0 0 10px; }
 .kcard h3 {
   font-family: var(--f-display); font-size: 13.5px; font-weight: 600; margin: 0;
   padding: 9px 13px; border-bottom: 1px solid var(--rule); color: var(--ink);
 }
 .kcard h3 span { font-weight: 400; color: var(--ink-soft); font-size: 12px; }
-.kcard canvas { height: 320px; cursor: crosshair; touch-action: none; }
-@media (max-width: 700px) { .kcard canvas { height: 240px; } }
+.kcard canvas { height: 420px; cursor: crosshair; touch-action: none; }
+@media (max-width: 700px) { .kcard canvas { height: 300px; } }
 .kcard .kcap { font-size: 11.5px; color: var(--ink-soft); padding: 6px 13px 0; margin: 0; }
 
 :focus-visible { outline: 2px solid var(--measure); outline-offset: 2px; }
@@ -482,20 +486,25 @@ footer {
       plot. Hover the middle of one dip, hover the middle of the next, and subtract.</p>
   </div>
 
-  <div class="kgrid">
-    <div class="kcard"><h3>Kepler-5b</h3><canvas class="kcurve" data-k="0"></canvas>
-      <p class="kcap">Period is given in your table &mdash; use this one to check your method.</p></div>
-    <div class="kcard"><h3>Kepler-6b</h3><canvas class="kcurve" data-k="1"></canvas>
-      <p class="kcap">Read the period, then calculate the distance.</p></div>
-    <div class="kcard"><h3>Kepler-7b</h3><canvas class="kcurve" data-k="2"></canvas>
-      <p class="kcap">Read the period, then calculate the distance.</p></div>
-    <div class="kcard"><h3>Kepler-8b</h3><canvas class="kcurve" data-k="3"></canvas>
-      <p class="kcap">Read the period, then calculate the distance.</p></div>
+  <div class="kpick">
+    <span class="plabel">Choose a planet</span>
+    <button class="chip kchip" data-k="0" aria-pressed="true">Kepler-5b</button>
+    <button class="chip kchip" data-k="1" aria-pressed="false">Kepler-6b</button>
+    <button class="chip kchip" data-k="2" aria-pressed="false">Kepler-7b</button>
+    <button class="chip kchip" data-k="3" aria-pressed="false">Kepler-8b</button>
   </div>
 
-  <p class="cap" style="padding-left:0; margin-top:14px"><strong>Why the dips are different depths.</strong>
-    Each planet sits in front of a different star. A dip is the fraction of <em>that</em> star covered up,
-    so you cannot compare depths across these four graphs &mdash; which is the whole point of question 11.</p>
+  <div class="kcard">
+    <h3 id="ktitle">Kepler-5b</h3>
+    <canvas class="kcurve" id="kcurve"></canvas>
+    <p class="kcap" id="kcap">Its period is already in your table &mdash; use this one to check your
+      method before you read the other three.</p>
+  </div>
+
+  <p class="cap" style="padding-left:0; margin-top:14px"><strong>Why the dips change depth when you
+    switch planets.</strong> Each one sits in front of a different star, and a dip is the fraction of
+    <em>that</em> star covered up. So you cannot compare depths between these four &mdash; which is
+    exactly the point of question 11.</p>
 
 </div><!-- /panel-kepler -->
 
@@ -1056,8 +1065,10 @@ footer {
   // The plot is rendered ONCE into an offscreen canvas and then blitted, so
   // moving the cursor costs a drawImage and two lines rather than replotting
   // 2200 points on every mousemove.
+  var KSEL = 0;        // which planet the single graph is showing
+
   function keplerGeom(cv, w, h) {
-    var d = KEPLER[parseInt(cv.dataset.k, 10)];
+    var d = KEPLER[KSEL];
     var L = 56, R = 16, T = 14, B = 34;
     var lo = 100 - d.depth * 1.55, hi = 100 + d.depth * 0.45;
     return {
@@ -1189,8 +1200,30 @@ footer {
   }
 
   function drawAllKepler() {
-    document.querySelectorAll(".kcurve").forEach(drawKepler);
+    drawKepler(el("kcurve"));
   }
+
+  var KCAP = [
+    "Its period is already in your table \u2014 use this one to check your method before you read the other three.",
+    "Read the period off the graph, then calculate the distance.",
+    "Read the period off the graph, then calculate the distance. This one is the slowest of the four.",
+    "Read the period off the graph, then calculate the distance."
+  ];
+
+  function selectKepler(i) {
+    KSEL = i;
+    document.querySelectorAll(".kchip").forEach(function (c) {
+      c.setAttribute("aria-pressed", String(parseInt(c.dataset.k, 10) === i));
+    });
+    el("ktitle").textContent = KEPLER[i].name;
+    el("kcap").textContent = KCAP[i];
+    var cv = el("kcurve");
+    cv._hover = null;                 // a readout from the previous planet would lie
+    drawKepler(cv);
+  }
+  document.querySelectorAll(".kchip").forEach(function (c) {
+    c.addEventListener("click", function () { selectKepler(parseInt(c.dataset.k, 10)); });
+  });
 
   // Hover wiring. Pointer events cover mouse and touch-drag alike.
   document.querySelectorAll(".kcurve").forEach(function (cv) {
