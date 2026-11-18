@@ -270,15 +270,15 @@ footer {
 
 /* ---- the Kepler light-curve sheet ---- */
 .kintro { margin: 18px 0 0; }
-.kgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
-@media (max-width: 860px) { .kgrid { grid-template-columns: 1fr; } }
+.kgrid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
 .kcard { border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); padding: 0 0 10px; }
 .kcard h3 {
   font-family: var(--f-display); font-size: 13.5px; font-weight: 600; margin: 0;
   padding: 9px 13px; border-bottom: 1px solid var(--rule); color: var(--ink);
 }
 .kcard h3 span { font-weight: 400; color: var(--ink-soft); font-size: 12px; }
-.kcard canvas { height: 210px; }
+.kcard canvas { height: 320px; cursor: crosshair; touch-action: none; }
+@media (max-width: 700px) { .kcard canvas { height: 240px; } }
 .kcard .kcap { font-size: 11.5px; color: var(--ink-soft); padding: 6px 13px 0; margin: 0; }
 
 :focus-visible { outline: 2px solid var(--measure); outline-offset: 2px; }
@@ -477,6 +477,9 @@ footer {
       a line every <strong>whole day</strong>, with a fainter one at every
       <strong>half day</strong> between them. Count them rather than guessing, then
       take that period back to your table.</p>
+    <p class="cap" style="padding-left:0"><strong>Point at the graph</strong> and it will
+      tell you exactly where you are &mdash; the day and the brightness, at the top of the
+      plot. Hover the middle of one dip, hover the middle of the next, and subtract.</p>
   </div>
 
   <div class="kgrid">
@@ -1050,18 +1053,42 @@ footer {
     return 100 - d.depth * (half - a) / ramp;
   }
 
-  function drawKepler(cv) {
+  // The plot is rendered ONCE into an offscreen canvas and then blitted, so
+  // moving the cursor costs a drawImage and two lines rather than replotting
+  // 2200 points on every mousemove.
+  function keplerGeom(cv, w, h) {
     var d = KEPLER[parseInt(cv.dataset.k, 10)];
-    var c = fit(cv), g = c.g, w = c.w, h = c.h;
-    var L = 48, R = 10, T = 10, B = 28;
+    var L = 56, R = 16, T = 14, B = 34;
     var lo = 100 - d.depth * 1.55, hi = 100 + d.depth * 0.45;
-    function X(t) { return L + t / KSPAN * (w - L - R); }
-    function Y(b) { return T + (hi - b) / (hi - lo) * (h - T - B); }
+    return {
+      d: d, L: L, R: R, T: T, B: B, w: w, h: h, lo: lo, hi: hi,
+      X: function (t) { return L + t / KSPAN * (w - L - R); },
+      Y: function (b) { return T + (hi - b) / (hi - lo) * (h - T - B); },
+      tOf: function (x) { return (x - L) / (w - L - R) * KSPAN; },
+      bOf: function (y) { return hi - (y - T) / (h - T - B) * (hi - lo); }
+    };
+  }
+
+  function drawKepler(cv) {
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var r = cv.getBoundingClientRect();
+    var w = Math.max(1, Math.round(r.width)), h = Math.max(1, Math.round(r.height));
+    if (cv.width !== w * dpr || cv.height !== h * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
+
+    var q = keplerGeom(cv, w, h);
+    cv._geo = q;
+    var d = q.d, L = q.L, R = q.R, T = q.T, B = q.B, X = q.X, Y = q.Y;
+
+    var off = cv._base || (cv._base = document.createElement("canvas"));
+    off.width = cv.width; off.height = cv.height;
+    var g = off.getContext("2d");
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
 
     g.fillStyle = css("--surface"); g.fillRect(0, 0, w, h);
 
     // The ruler the period is measured with: a faint line every half day,
     // a stronger one every whole day, a brighter one on every labelled tick.
+    var step = (w - L - R) / KSPAN >= 40 ? 1 : 2;       // label every day when there is room
     g.strokeStyle = css("--rule"); g.lineWidth = 1;
     for (var hx = 1; hx < KSPAN * 2; hx++) {
       var tx = hx / 2;
@@ -1071,7 +1098,7 @@ footer {
       g.lineTo(Math.round(X(tx)) + 0.5, h - B); g.stroke();
     }
     for (var day = 1; day < KSPAN; day++) {
-      g.globalAlpha = (day % 2 === 0) ? 0.95 : 0.6;
+      g.globalAlpha = (day % step === 0) ? 0.95 : 0.6;
       g.beginPath(); g.moveTo(Math.round(X(day)) + 0.5, T);
       g.lineTo(Math.round(X(day)) + 0.5, h - B); g.stroke();
     }
@@ -1086,7 +1113,7 @@ footer {
       var u1 = Math.max(rnd(), 1e-9), u2 = rnd();
       var gs = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
       var b = kFlux(t, d) + gs * sigma;
-      g.beginPath(); g.arc(X(t), Y(b), 1.05, 0, 6.2832); g.fill();
+      g.beginPath(); g.arc(X(t), Y(b), 1.15, 0, 6.2832); g.fill();
     }
     g.globalAlpha = 1;
 
@@ -1097,26 +1124,85 @@ footer {
     g.stroke();
 
     g.fillStyle = css("--ink-soft");
-    g.font = "11px " + css("--f-body");
+    g.font = "12px " + css("--f-body");
     g.textAlign = "center"; g.textBaseline = "top";
-    for (var dd = 0; dd <= KSPAN; dd += 2) { g.fillText(String(dd), X(dd), h - B + 6); }
-    g.fillText("time (days)", (L + w - R) / 2, h - 12);
+    for (var dd = 0; dd <= KSPAN; dd += step) { g.fillText(String(dd), X(dd), h - B + 7); }
+    g.fillText("time (days)", (L + w - R) / 2, h - 14);
 
     g.save();
-    g.translate(13, (T + h - B) / 2); g.rotate(-Math.PI / 2);
+    g.translate(15, (T + h - B) / 2); g.rotate(-Math.PI / 2);
     g.textAlign = "center"; g.textBaseline = "middle";
     g.fillText("brightness (%)", 0, 0);
     g.restore();
 
     g.textAlign = "right"; g.textBaseline = "middle";
-    g.font = "10.5px " + css("--f-data");
-    g.fillText("100.0", L - 5, Y(100));
-    g.fillText(fmt(100 - d.depth, 1), L - 5, Y(100 - d.depth));
+    g.font = "11.5px " + css("--f-data");
+    g.fillText("100.0", L - 6, Y(100));
+    g.fillText(fmt(100 - d.depth, 1), L - 6, Y(100 - d.depth));
+
+    paintKepler(cv);
+  }
+
+  // Blit the cached plot, then the crosshair and its readout. The readout is
+  // the whole point: a student reading a period hovers one dip, hovers the
+  // next, and subtracts, instead of estimating against the gridlines.
+  function paintKepler(cv) {
+    var q = cv._geo;
+    if (!q || !cv._base) { return; }
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var g = cv.getContext("2d");
+    g.setTransform(1, 0, 0, 1, 0, 0);
+    g.clearRect(0, 0, cv.width, cv.height);
+    g.drawImage(cv._base, 0, 0);
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    var p = cv._hover;
+    if (!p) { return; }
+    var t = Math.max(0, Math.min(KSPAN, q.tOf(p.x)));
+    var b = Math.max(q.lo, Math.min(q.hi, q.bOf(p.y)));
+    var x = q.X(t), y = q.Y(b);
+
+    g.save();
+    g.strokeStyle = css("--measure"); g.lineWidth = 1;
+    g.setLineDash([4, 3]);
+    g.beginPath(); g.moveTo(x, q.T); g.lineTo(x, q.h - q.B); g.stroke();
+    g.beginPath(); g.moveTo(q.L, y); g.lineTo(q.w - q.R, y); g.stroke();
+    g.setLineDash([]);
+    g.fillStyle = css("--measure");
+    g.beginPath(); g.arc(x, y, 3, 0, 6.2832); g.fill();
+
+    var label = "day " + fmt(t, 2) + "   " + fmt(b, 2) + "%";
+    g.font = "600 12.5px " + css("--f-data");
+    var tw = g.measureText(label).width, bw = tw + 14, bh = 21;
+    var bx = Math.min(Math.max(x - bw / 2, q.L + 2), q.w - q.R - bw - 2);
+    var by = q.T + 4;
+    g.fillStyle = css("--surface");
+    g.globalAlpha = 0.94;
+    g.fillRect(bx, by, bw, bh);
+    g.globalAlpha = 1;
+    g.strokeStyle = css("--measure"); g.lineWidth = 1;
+    g.strokeRect(bx + 0.5, by + 0.5, bw - 1, bh - 1);
+    g.fillStyle = css("--ink");
+    g.textAlign = "left"; g.textBaseline = "middle";
+    g.fillText(label, bx + 7, by + bh / 2 + 0.5);
+    g.restore();
   }
 
   function drawAllKepler() {
     document.querySelectorAll(".kcurve").forEach(drawKepler);
   }
+
+  // Hover wiring. Pointer events cover mouse and touch-drag alike.
+  document.querySelectorAll(".kcurve").forEach(function (cv) {
+    cv.addEventListener("pointermove", function (e) {
+      var r = cv.getBoundingClientRect();
+      cv._hover = { x: e.clientX - r.left, y: e.clientY - r.top };
+      paintKepler(cv);
+    });
+    cv.addEventListener("pointerleave", function () {
+      cv._hover = null; paintKepler(cv);
+    });
+  });
 
   // ---- tabs ----------------------------------------------------------
   function selectTab(which) {
