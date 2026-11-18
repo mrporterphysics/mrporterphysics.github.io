@@ -473,8 +473,10 @@ footer {
       lab. Each graph is a real observing run: about <strong>20 days</strong> of one star's brightness,
       measured over and over.</p>
     <p class="cap" style="padding-left:0"><strong>Read the period off the graph</strong> &mdash; the time
-      from the middle of one dip to the middle of the next. The faint vertical lines are
-      <strong>one day</strong> apart. Then take that period back to your table.</p>
+      from the middle of one dip to the middle of the next. The grid is your ruler:
+      a line every <strong>whole day</strong>, with a fainter one at every
+      <strong>half day</strong> between them. Count them rather than guessing, then
+      take that period back to your table.</p>
   </div>
 
   <div class="kgrid">
@@ -1058,10 +1060,18 @@ footer {
 
     g.fillStyle = css("--surface"); g.fillRect(0, 0, w, h);
 
-    // one gridline per day -- this is the ruler the period is measured with
+    // The ruler the period is measured with: a faint line every half day,
+    // a stronger one every whole day, a brighter one on every labelled tick.
     g.strokeStyle = css("--rule"); g.lineWidth = 1;
-    g.globalAlpha = 0.75;
+    for (var hx = 1; hx < KSPAN * 2; hx++) {
+      var tx = hx / 2;
+      if (tx === Math.round(tx)) { continue; }          // whole days drawn below
+      g.globalAlpha = 0.33;
+      g.beginPath(); g.moveTo(Math.round(X(tx)) + 0.5, T);
+      g.lineTo(Math.round(X(tx)) + 0.5, h - B); g.stroke();
+    }
     for (var day = 1; day < KSPAN; day++) {
+      g.globalAlpha = (day % 2 === 0) ? 0.95 : 0.6;
       g.beginPath(); g.moveTo(Math.round(X(day)) + 0.5, T);
       g.lineTo(Math.round(X(day)) + 0.5, h - B); g.stroke();
     }
@@ -1089,7 +1099,7 @@ footer {
     g.fillStyle = css("--ink-soft");
     g.font = "11px " + css("--f-body");
     g.textAlign = "center"; g.textBaseline = "top";
-    for (var dd = 0; dd <= KSPAN; dd += 4) { g.fillText(String(dd), X(dd), h - B + 6); }
+    for (var dd = 0; dd <= KSPAN; dd += 2) { g.fillText(String(dd), X(dd), h - B + 6); }
     g.fillText("time (days)", (L + w - R) / 2, h - 12);
 
     g.save();
