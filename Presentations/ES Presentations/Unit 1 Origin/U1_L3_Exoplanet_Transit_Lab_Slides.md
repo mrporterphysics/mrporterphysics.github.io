@@ -869,7 +869,7 @@ Two conversions they need all page: 1 year = 365 days, 1 AU = 149.6 million km.
 
 <div class="doit">
 
-**The curves are in the simulator** — the **Kepler light curves** tab, next to Explorer. Gridlines are **one day** apart; measure middle-of-dip to middle-of-dip.
+**The curves are in the simulator** — the **Kepler light curves** tab, next to Explorer. The grid runs at a **half day**; measure middle-of-dip to middle-of-dip.
 
 Your period will differ from your neighbour's by a tenth of a day. **That is fine** — the distance barely moves.
 
