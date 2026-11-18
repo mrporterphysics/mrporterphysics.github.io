@@ -477,7 +477,7 @@ footer {
 
   <div class="kintro">
     <p class="cap" style="padding-left:0">These are the four planets in <strong>Part D</strong> of your
-      lab. Each graph is a real observing run: about <strong>20 days</strong> of one star's brightness,
+      lab. Each graph is a real observing run: about <strong>12 days</strong> of one star's brightness,
       measured over and over.</p>
     <p class="cap" style="padding-left:0"><strong>Read the period off the graph</strong> &mdash; the time
       from the middle of one dip to the middle of the next. The grid is your ruler:
@@ -1049,7 +1049,7 @@ footer {
     { name: "Kepler-7b", P: 4.885, depth: 0.757, dur: 5.96, seed: 7073 },
     { name: "Kepler-8b", P: 3.522, depth: 0.915, dur: 4.24, seed: 8084 }
   ];
-  var KSPAN = 20;        // days on screen
+  var KSPAN = 12;        // days on screen -- matches kepler-light-curves.pdf
   var KT0   = 1.15;      // first mid-transit, so no dip is clipped at t = 0
 
   function kFlux(t, d) {
