@@ -31,9 +31,9 @@ math: mathjax
 
 0. Review Mallet Ball Lab
 1. [Tug-of-war PhET T/F](/Presentations/Forces/talks/Dynamics2026.html)
+    - [Link to Simulation](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html)
 2. Interaction Stations & Identifying Forces
 3. Common Forces → interatomic
-4. Newton's Third Law Lesson
 
 </div>
 
