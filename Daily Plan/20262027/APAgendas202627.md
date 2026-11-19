@@ -24,16 +24,12 @@ math: mathjax
 
  Water skiers are pulled at a constant speed by a towrope attached to a speedboat. Because the weight of the skiers and the type of skis they are using varies, they experience different resistive forces from the water. Values for this resistive force (RF) and for the speed of the skiers are given.
 
-</div>
-
-<div> 
-
 
 ![alt text](../../assets/screenshots/APAgendas202627-image.png)
  
 _**Rank the magnitude of the net force on each water skier.**_
   
- </div> 
+
 
  </div>
 
@@ -52,7 +48,12 @@ _**Rank the magnitude of the net force on each water skier.**_
 
 #### 📋 Agenda
 
-1. 
+1. Do Now
+2. A force is an interaction
+3. Interaction Stations — find the evidence
+4. Common Forces → interatomic
+5. Physics Classroom - Identifying Forces
+6. Practice — Recognizing Forces
 
 </div>
 
@@ -60,9 +61,11 @@ _**Rank the magnitude of the net force on each water skier.**_
 
 ### 🎯 Goals
 
-🥅 __
+🥅 _Describe a force as an interaction between two objects, and name the type of each force_
 
 ### 📆 Upcoming
+
+- 📝 Kinematics Test corrections due **today** — in school only
 
 </div>
 </div>

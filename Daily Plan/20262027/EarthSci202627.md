@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.11.20 **Earth Science**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Ellipse Notes
+2. Ellipse Practice
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Model orbits as ellipses and calculate eccentricity_
+
+### 📆 Upcoming
+
+- 🔴 **Unearthing Mars** investigation starts **Mon 11/23**
+
+</div>
+</div>
+
+---
+
 # 2026.11.19 **Earth Science**
 
 ##### **❓ of the 📅**: What is your favorite Thanksgiving dessert?

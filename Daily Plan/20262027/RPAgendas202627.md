@@ -19,6 +19,64 @@ math: mathjax
 
 ---
 
+
+<div class='do-now'> 
+
+<div class='columns'>
+<div>
+
+ ###### 5 MINUTES 
+
+ Water skiers are pulled at a constant speed by a towrope attached to a speedboat. Because the weight of the skiers and the type of skis they are using varies, they experience different resistive forces from the water. Values for this resistive force (RF) and for the speed of the skiers are given.
+
+
+
+
+![center w:900](../../assets/screenshots/APAgendas202627-image.png)
+ 
+_**Rank the magnitude of the net force on each water skier.**_
+  
+ 
+
+ </div>
+
+
+---
+
+# 2026.11.20 **AP Physics**
+
+##### **❓ of the 📅**: Every force needs two names — what were they at each station?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Do Now — Water skiers: net force?
+2. Stations debrief — who pushed on whom?
+3. Naming forces — compression, stretch, shear
+4. Common Forces → interatomic
+5. Practice — Recognizing Forces
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe a force as an interaction between two objects, and name the type of each force_
+
+### 📆 Upcoming
+
+- 📝 Kinematics Test corrections due **today** — in school only
+- ✅ Quiz 7 **Thu 12/3** — N1L, identifying forces, FBDs, N3L pairs
+
+</div>
+</div>
+
+---
+
 # 2026.11.18 **AP Physics**
 
 ##### **❓ of the 📅**: What is the most overrated Thanksgiving side?
