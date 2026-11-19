@@ -82,6 +82,39 @@ Take a card and form four groups: one of **4**, three of **3**.
 
 ---
 
+# 2026.11.19 **AP Physics**
+
+##### **❓ of the 📅**: What is your favorite Thanksgiving dessert?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+0. Finish Mallet Ball
+1. [Tug-of-war PhET — true or false?](https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html)
+2. Common Forces → interatomic
+3. Interaction Stations — find the evidence
+4. Newton's Third Law
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Describe a force as an interaction between two objects, and identify N3L pairs_
+
+### 📆 Upcoming
+
+- 📝 Kinematics Test corrections due **Fri 11/20** — in school only
+
+</div>
+</div>
+
+---
+
 # 2026.11.18 **AP Physics**
 
 ##### **❓ of the 📅**: What is the most overrated Thanksgiving side?

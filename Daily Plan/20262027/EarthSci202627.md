@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.11.19 **Earth Science**
+
+##### **❓ of the 📅**: What is your favorite Thanksgiving dessert?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Finish the Transit Lab — Part C
+2. Hand in the lab
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish the Transit Lab_
+
+### 📆 Upcoming
+
+- Ellipse notes & practice **Fri 11/20**
+
+</div>
+</div>
+
+---
+
 # 2026.11.18 **Earth Science**
 
 ##### **❓ of the 📅**: What is the most overrated Thanksgiving side?
