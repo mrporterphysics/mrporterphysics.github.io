@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>A strong rubber band linked to a weak one, stretched between two fingers</title>
+  <desc>A thick, strong rubber band is linked to a thin, weak one and stretched between two fingers. Nothing moves. The weak band is stretched much longer than the strong one.</desc>
+  <rect width="1200" height="380" fill="#FFFCF0"/>
+<text x="600" y="56" text-anchor="middle" font-size="24" font-weight="700" fill="#100F0F">Linked, stretched, and held still</text>
+  <circle cx="180" cy="230" r="34" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  <circle cx="1020" cy="230" r="34" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+<path d="M170 230 Q170 214 295.0 214 Q420 214 420 230 Q420 246 295.0 246 Q170 246 170 230 Z" fill="none" stroke="#205EA6" stroke-width="11"/>
+<path d="M400 230 Q400 221 715.0 221 Q1030 221 1030 230 Q1030 239 715.0 239 Q400 239 400 230 Z" fill="none" stroke="#BC5215" stroke-width="4"/>
+<text x="290" y="300" text-anchor="middle" font-size="22" font-weight="600" fill="#205EA6">strong band</text>
+<text x="720" y="300" text-anchor="middle" font-size="22" font-weight="600" fill="#BC5215">weak band</text>
+<text x="180" y="340" text-anchor="middle" font-size="20" font-weight="600" fill="#6F6E69">finger</text>
+<text x="1020" y="340" text-anchor="middle" font-size="20" font-weight="600" fill="#6F6E69">finger</text>
+</svg>

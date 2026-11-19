@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>A stiff spring and a soft spring pushed into each other</title>
+  <desc>Two hands push a stiff spring and a soft spring together, with a board between them. Dashed bars show each spring's rest length. The stiff spring is compressed a little; the soft spring is compressed a lot. Nothing moves.</desc>
+  <rect width="1200" height="500" fill="#FFFCF0"/>
+<text x="600" y="56" text-anchor="middle" font-size="24" font-weight="700" fill="#100F0F">Pushed together — and nothing moves</text>
+<text x="150" y="146" text-anchor="start" font-size="20" font-weight="600" fill="#205EA6">stiff, at rest</text>
+  <line x1="290" y1="140" x2="590" y2="140" stroke="#205EA6" stroke-width="3" stroke-dasharray="8 7"/>
+  <line x1="290" y1="130" x2="290" y2="150" stroke="#205EA6" stroke-width="3"/><line x1="590" y1="130" x2="590" y2="150" stroke="#205EA6" stroke-width="3"/>
+<text x="1000" y="196" text-anchor="start" font-size="20" font-weight="600" fill="#BC5215">soft, at rest</text>
+  <line x1="568" y1="190" x2="988" y2="190" stroke="#BC5215" stroke-width="3" stroke-dasharray="8 7"/>
+  <line x1="568" y1="180" x2="568" y2="200" stroke="#BC5215" stroke-width="3"/><line x1="988" y1="180" x2="988" y2="200" stroke="#BC5215" stroke-width="3"/>
+<rect x="200" y="265" width="90" height="110" rx="22" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  <polyline points="290.0,320.0 308.6,320.0 327.1,360.0 345.7,280.0 364.3,360.0 382.9,280.0 401.4,360.0 420.0,280.0 438.6,360.0 457.1,280.0 475.7,360.0 494.3,280.0 512.9,360.0 531.4,280.0 531.4,320.0 550.0,320.0" fill="none" stroke="#205EA6" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="550" y="240" width="18" height="160" rx="3" fill="#DAB27C" stroke="#100F0F" stroke-width="3.5"/>
+  <polyline points="568.0,320.0 577.0,320.0 586.0,360.0 595.0,280.0 604.0,360.0 613.0,280.0 622.0,360.0 631.0,280.0 640.0,360.0 649.0,280.0 658.0,360.0 667.0,280.0 676.0,360.0 685.0,280.0 694.0,360.0 703.0,280.0 712.0,360.0 721.0,280.0 730.0,360.0 739.0,280.0 739.0,320.0 748.0,320.0" fill="none" stroke="#BC5215" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="748" y="265" width="90" height="110" rx="22" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+<text x="420" y="430" text-anchor="middle" font-size="21" font-weight="600" fill="#205EA6">stiff spring: squashed a little</text>
+<text x="720" y="470" text-anchor="middle" font-size="21" font-weight="600" fill="#BC5215">soft spring: squashed a lot</text>
+</svg>

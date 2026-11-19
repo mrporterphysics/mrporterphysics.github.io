@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" width="1200" height="470" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>A hand pushes a thin board against a spring</title>
+  <desc>A hand presses a thin board against a coil spring fixed to a wall. The board stays still. No forces are drawn.</desc>
+  <rect width="1200" height="470" fill="#FFFCF0"/>
+<line x1="1040" y1="110" x2="1040" y2="400" stroke="#100F0F" stroke-width="5"/><line x1="1040" y1="128" x2="1062" y2="110" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="150" x2="1062" y2="132" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="172" x2="1062" y2="154" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="194" x2="1062" y2="176" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="216" x2="1062" y2="198" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="238" x2="1062" y2="220" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="260" x2="1062" y2="242" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="282" x2="1062" y2="264" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="304" x2="1062" y2="286" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="326" x2="1062" y2="308" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="348" x2="1062" y2="330" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="370" x2="1062" y2="352" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="392" x2="1062" y2="374" stroke="#6F6E69" stroke-width="2.5"/><line x1="1040" y1="414" x2="1062" y2="396" stroke="#6F6E69" stroke-width="2.5"/>
+  <polyline points="560.0,250.0 586.7,250.0 613.3,296.0 640.0,204.0 666.7,296.0 693.3,204.0 720.0,296.0 746.7,204.0 773.3,296.0 800.0,204.0 826.7,296.0 853.3,204.0 880.0,296.0 906.7,204.0 933.3,296.0 960.0,204.0 986.7,296.0 1013.3,204.0 1013.3,250.0 1040.0,250.0" fill="none" stroke="#100F0F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="540" y="130" width="20" height="240" rx="3" fill="#DAB27C" stroke="#100F0F" stroke-width="3.5"/>
+<rect x="450" y="195" width="90" height="110" rx="22" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+  <rect x="300" y="222" width="150" height="56" rx="20" fill="#F2F0E5" stroke="#100F0F" stroke-width="3.5"/>
+<text x="470" y="345" text-anchor="middle" font-size="22" font-weight="600" fill="#6F6E69">hand</text>
+<text x="550" y="410" text-anchor="middle" font-size="22" font-weight="600" fill="#6F6E69">thin board</text>
+<text x="800" y="345" text-anchor="middle" font-size="22" font-weight="600" fill="#6F6E69">spring</text>
+<text x="1040" y="440" text-anchor="middle" font-size="22" font-weight="600" fill="#6F6E69">wall</text>
+<text x="600" y="70" text-anchor="middle" font-size="24" font-weight="700" fill="#100F0F">The board does not move.</text>
+</svg>

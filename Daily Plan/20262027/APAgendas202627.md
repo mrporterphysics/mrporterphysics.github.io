@@ -16,6 +16,60 @@ math: mathjax
 ---
 
 <div class='do-now'> 
+
+<div class='columns'>
+<div>
+
+ ###### 5 MINUTES 
+
+ Water skiers are pulled at a constant speed by a towrope attached to a speedboat. Because the weight of the skiers and the type of skis they are using varies, they experience different resistive forces from the water. Values for this resistive force (RF) and for the speed of the skiers are given.
+
+</div>
+
+<div> 
+
+
+![alt text](../../assets/screenshots/APAgendas202627-image.png)
+ 
+_**Rank the magnitude of the net force on each water skier.**_
+  
+ </div> 
+
+ </div>
+
+ </div>
+
+
+---
+
+# 2026.11.20 **AP Physics**
+
+##### **❓ of the 📅**: 
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. 
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 __
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
+<div class='do-now'> 
  
  <div> 
 

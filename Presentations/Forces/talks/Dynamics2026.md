@@ -31,25 +31,26 @@ img[alt~="center"] {
 
 **Phase 1 — Balanced forces**
 1. [Pass the Water & Mallet Ball](#pass-the-water)
-2. [Interactions & the Third Law](#a-force-is-an-interaction)
+2. [Interactions](#a-force-is-an-interaction)
 3. [Common Forces](#common-forces)
-4. [Force Diagrams](#force-diagrams)
-5. [Equilibrium](#equilibrium-f--0)
-6. [Mass vs. Weight](#mass-vs-weight)
+4. [The Third Law](#the-third-law)
+5. [Force Diagrams](#force-diagrams)
+6. [Equilibrium](#equilibrium-f--0)
+7. [Mass vs. Weight](#mass-vs-weight)
 
 </div>
 <div class='col'>
 
 **Phase 2 — The Second Law**
 
-7. [Fan Cart Lab](#fan-cart-lab)
-8. [Newton's Second Law](#newtons-second-law)
-9. [The N2L Protocol](#the-n2l-protocol)
+8. [Fan Cart Lab](#fan-cart-lab)
+9. [Newton's Second Law](#newtons-second-law)
+10. [The N2L Protocol](#the-n2l-protocol)
 
 **Phase 3–4 — Deploying the model**
 
-10. [Friction](#friction)
-11. [Inclined Planes](#inclined-planes)
+11. [Friction](#friction)
+12. [Inclined Planes](#inclined-planes)
 
 </div>
 </div>
@@ -552,30 +553,7 @@ All three are *deformation*. So what is actually pushing back?
 
 # Did it deform?
 
-### Same two questions every time: **did it deform?** and **how do you know?**
-
-<div class='columns'>
-<div class='col'>
-
-1. Foam block — squeeze
-2. Rubber band — pull
-3. Two toothbrushes — push sideways
-
-</div>
-<div class='col'>
-
-4. Plastic ruler across two books — press
-5. Meter stick flat on the bench — press
-6. The lab table — press
-
-</div>
-</div>
-
-<div class="question">
-
-What changed between 4 and 6? Did the deformation **stop**, or did it get **too small to see**?
-
-</div>
+## Same two questions every time: **did it deform?** and **how do you know?**
 
 ---
 
@@ -643,6 +621,8 @@ Pencil, not pen. You will draw on the figures.
 
 # Make a Table
 
+<style scoped>table { font-size: 32px; } td, th { padding: 14px 18px; }</style>
+
 | Type of Force | Symbol | When is this force present? | In which direction is this force? | Field or Contact? |
 | :--- | :--- | :--- | :--- | :--- |
 | | | | | |
@@ -655,7 +635,9 @@ Pencil, not pen. You will draw on the figures.
 
 ---
 
-<!-- _class: compact lefttable -->
+<!-- _class: lefttable -->
+
+<style scoped>table { font-size: 32px; } td, th { padding: 14px 18px; } .vocab { font-size: 26px; }</style>
 
 | Type of Force | Symbol | When is this force present? | In which direction is this force? | Field or Contact? |
 | :--- | :--- | :--- | :--- | :--- |
@@ -663,7 +645,9 @@ Pencil, not pen. You will draw on the figures.
 
 ---
 
-<!-- _class: compact lefttable -->
+<!-- _class: lefttable -->
+
+<style scoped>table { font-size: 32px; } td, th { padding: 14px 18px; } .vocab { font-size: 26px; }</style>
 
 | Type of Force | Symbol | When is this force present? | In which direction is this force? | Field or Contact? |
 | :--- | :--- | :--- | :--- | :--- |
@@ -671,7 +655,9 @@ Pencil, not pen. You will draw on the figures.
 
 ---
 
-<!-- _class: compact lefttable -->
+<!-- _class: lefttable -->
+
+<style scoped>table { font-size: 32px; } td, th { padding: 14px 18px; } .vocab { font-size: 26px; }</style>
 
 | Type of Force | Symbol | When is this force present? | In which direction is this force? | Field or Contact? |
 | :--- | :--- | :--- | :--- | :--- |
@@ -679,7 +665,9 @@ Pencil, not pen. You will draw on the figures.
 
 ---
 
-<!-- _class: compact lefttable -->
+<!-- _class: lefttable -->
+
+<style scoped>table { font-size: 32px; } td, th { padding: 14px 18px; } .vocab { font-size: 26px; }</style>
 
 | Type of Force | Symbol | When is this force present? | In which direction is this force? | Field or Contact? |
 | :--- | :--- | :--- | :--- | :--- |
@@ -687,7 +675,9 @@ Pencil, not pen. You will draw on the figures.
 
 ---
 
-<!-- _class: compact lefttable -->
+<!-- _class: lefttable -->
+
+<style scoped>table { font-size: 32px; } td, th { padding: 14px 18px; } .vocab { font-size: 26px; }</style>
 
 | Type of Force | Symbol | When is this force present? | In which direction is this force? | Field or Contact? |
 | :--- | :--- | :--- | :--- | :--- |
@@ -760,6 +750,203 @@ A fluid pushing up on something immersed in it. We meet it properly in **Unit 8,
 
 ---
 
+<!-- _class: phase-title -->
+
+# The Third Law
+
+## Who pushes harder?
+
+---
+
+<!-- _class: compact -->
+
+# Vote: the car and the hydrant
+
+![center w:880](../figures/n3l-car-hydrant.svg)
+
+<div class='columns'>
+<div class='col'>
+
+**A.** $F_{\text{car on hydrant}} > F_{\text{hydrant on car}}$
+**B.** $F_{\text{car on hydrant}} < F_{\text{hydrant on car}}$
+**C.** $F_{\text{car on hydrant}} = F_{\text{hydrant on car}}$
+
+</div>
+<div class='col'>
+
+<div class="steps">
+
+**Whiteboard:** your letter, plus **one sentence** on why.
+
+</div>
+
+</div>
+</div>
+
+---
+
+# A hand, a board, a spring
+
+![center w:900](../figures/n3l-hand-board-spring.svg)
+
+<div class="question">
+
+Compare the force of the **hand** on the board with the force of the **spring** on the board. What would happen to the board if one were bigger?
+
+</div>
+
+---
+
+# Vote: take the board away
+
+### Now the hand pushes straight on the spring. Nothing moves.
+
+**A.** $F_{\text{hand on spring}} > F_{\text{spring on hand}}$
+**B.** $F_{\text{hand on spring}} < F_{\text{spring on hand}}$
+**C.** $F_{\text{hand on spring}} = F_{\text{spring on hand}}$
+
+<div class="steps">
+
+**Whiteboard:** your letter, plus **one sentence** on why.
+
+</div>
+
+---
+
+# A stiff spring meets a soft spring
+
+![center w:900](../figures/n3l-two-springs.svg)
+
+<div class="question">
+
+The soft spring is squashed far more. Which spring pushes harder on the board? **How can that be?**
+
+</div>
+
+---
+
+# An automatic force equalizer
+
+<div class="vocab">
+
+**A spring adjusts itself.** It keeps squashing (or stretching) until its push matches whatever is pushing on it. A soft spring just has to squash further to get there.
+
+</div>
+
+<div class="key-idea">
+
+**Everything is a spring.** Friday's slide: every contact force comes from the bonds between atoms. A fire hydrant is a *very* stiff spring.
+
+</div>
+
+---
+
+# Vote: a rubber hydrant
+
+### The car now presses on a hydrant made of very strong rubber. Nothing moves.
+
+**A.** $F_{\text{car on hydrant}} > F_{\text{hydrant on car}}$
+**B.** $F_{\text{car on hydrant}} < F_{\text{hydrant on car}}$
+**C.** $F_{\text{car on hydrant}} = F_{\text{hydrant on car}}$
+
+<div class="question">
+
+How is this like the steel hydrant? If the car is stiffer than the hydrant, should the car push harder?
+
+</div>
+
+---
+
+<!-- _class: compact -->
+
+# Feel it: two rubber bands
+
+<div class="steps">
+
+**Vote first.** A strong band is linked to a weak band and stretched between your partner's two fingers. Which finger feels the bigger pull?
+
+**A.** strong > weak  **B.** strong < weak  **C.** strong = weak
+
+</div>
+
+1. One partner **closes their eyes** and holds two fingers out.
+2. The other hooks the linked bands between them, stretched. **Nothing moves.**
+3. Which finger feels more? Swap and try again.
+
+---
+
+# How can that be?
+
+![center w:900](../figures/n3l-rubber-bands.svg)
+
+<div class="question">
+
+How can a **strong** band and a **weak** band pull on each other equally?
+
+</div>
+
+---
+
+# Friction comes in pairs too
+
+<div class='columns'>
+<div class='col'>
+
+### Station 3, again
+
+You pulled **one** toothbrush, and **both** sets of bristles bent.
+
+</div>
+<div class='col'>
+
+### Book on the forearm
+
+Drag a book along a bare forearm. Feel your arm being dragged *with* it.
+
+</div>
+</div>
+
+<div class="question">
+
+A book and an arm are very different objects. How could the forces they exert on each other possibly be **equal**?
+
+</div>
+
+---
+
+# Tension: which pulls on which?
+
+<div class="steps">
+
+1. Hook two spring scales together and pull them apart. Read **both**.
+2. Hook one scale to the wall and pull the other. Read both again.
+
+</div>
+
+<div class="question">
+
+Which object pulls on which? What does each scale actually measure?
+
+</div>
+
+---
+
+# Write the rule
+
+<div class="steps">
+
+**Whiteboard:** write **one rule** that covers every case on the board — the hydrant, the springs, the bands, the brushes, the scales.
+
+</div>
+
+<div class="warning">
+
+Your rule has to name **two objects**. "The force" is not enough.
+
+</div>
+
+---
+
 # Newton's Third Law
 
 <div class="law">
@@ -779,6 +966,92 @@ A **force** is an interaction between two objects. The two objects mutually appl
 <!-- _class: plain -->
 
 ![center w:1000](../figures/n3l-pair.svg)
+
+---
+
+# Pair, or just balanced?
+
+### A book sits at rest on a table.
+
+<div class="question">
+
+Gravity pulls the book down. The table pushes the book up. They are equal and opposite. **Are they a third-law pair?**
+
+</div>
+
+---
+
+# Same object or different objects?
+
+<div class='columns'>
+<div class='col'>
+
+<div class="panel">
+
+**Balanced** — gravity and the normal force both act on **the book**. They happen to cancel. That is N1L.
+
+</div>
+
+</div>
+<div class='col'>
+
+<div class="panel">
+
+**Third-law pairs** — the table pushes the book ⇄ the book pushes the table. Earth pulls the book ⇄ the book pulls Earth.
+
+</div>
+
+</div>
+</div>
+
+<div class="warning">
+
+**A third-law pair never acts on the same object.** If both forces are on one free-body diagram, they are not a pair.
+
+</div>
+
+---
+
+<!-- _class: compact -->
+
+# Vote again: the car and the hydrant
+
+![center w:880](../figures/n3l-car-hydrant.svg)
+
+**A.** $F_{\text{car on hydrant}} > F_{\text{hydrant on car}}$
+**B.** $F_{\text{car on hydrant}} < F_{\text{hydrant on car}}$
+**C.** $F_{\text{car on hydrant}} = F_{\text{hydrant on car}}$
+
+<div class="question">
+
+Did your vote change? What changed it?
+
+</div>
+
+---
+
+# Does it hold when things move?
+
+<div class="steps">
+
+Two people in rolling chairs, each holding a **force plate**. They push off each other.
+
+</div>
+
+<div class="question">
+
+**Predict on your whiteboard first:** if one person is much bigger, who gets pushed harder? Sketch both force–time graphs.
+
+</div>
+
+---
+
+# Exit: Earth and the apple
+
+### An apple falls from a tree.
+
+1. Compare the force of **Earth on the apple** with the force of **the apple on Earth**. Explain how you know.
+2. If those forces are equal, why doesn't Earth fall up to meet the apple?
 
 ---
 
