@@ -550,6 +550,60 @@ All three are *deformation*. So what is actually pushing back?
 
 ---
 
+# Did it deform?
+
+### Same two questions every time: **did it deform?** and **how do you know?**
+
+<div class='columns'>
+<div class='col'>
+
+1. Foam block — squeeze
+2. Rubber band — pull
+3. Two toothbrushes — push sideways
+
+</div>
+<div class='col'>
+
+4. Plastic ruler across two books — press
+5. Meter stick flat on the bench — press
+6. The lab table — press
+
+</div>
+</div>
+
+<div class="question">
+
+What changed between 4 and 6? Did the deformation **stop**, or did it get **too small to see**?
+
+</div>
+
+---
+
+<!-- _class: compact -->
+
+# Interaction Stations
+
+<div class="steps">
+
+**One interaction per station.** Six stations, **4 minutes each**. Finish early? Go *back* to a station you have done and find a second one.
+
+</div>
+
+For each interaction, fill in the four fields on the mat:
+
+1. **Who pushes or pulls on whom?** Two named objects. *Earth*, not "gravity."
+2. **Where?** Circle the contact point on the figure.
+3. **Evidence:** what deformed, and how?
+4. **So the force is called:** ___ — **leave this blank for now.** We name them after the stations.
+
+<div class="warning">
+
+Pencil, not pen. You will draw on the figures.
+
+</div>
+
+---
+
 <!-- _class: plain -->
 
 ![center w:1020](../figures/interatomic-contact.svg)
@@ -736,7 +790,7 @@ A **force** is an interaction between two objects. The two objects mutually appl
 
 <div class="question">
 
-Back to yesterday: **does the bowling ball tap the mallet?**
+Back to Mallet Ball: **does the bowling ball tap the mallet?**
 
 </div>
 
