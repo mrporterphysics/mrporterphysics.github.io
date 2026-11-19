@@ -16,7 +16,7 @@ math: mathjax
 
 # 2026.11.20 **Earth Science**
 
-##### **❓ of the 📅**: 
+##### **❓ of the 📅**: What is the most overrated Thanksgiving dessert?
 
 <div class ='columns'>
 
