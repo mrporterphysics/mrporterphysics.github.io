@@ -1,0 +1,623 @@
+/*
+@theme strata
+*/
+
+/*
+  STRATA — a sedimentary Marp theme for Earth's History
+  Sibling of `cosmos` (ES Presentations / Unit 1 Origin).
+
+  WHY IT EXISTS
+  -------------
+  Unit 2 stopped being about space. `cosmos` is a deep-space look — star
+  fields and nebula washes — and it was right for "Discovering New Worlds".
+  The Earth's History unit is rock, layers and deep time, so this is the
+  same machine with a sedimentary surface: horizontal banding instead of
+  stars, and a palette taken from the rocks the unit is actually about —
+  iron oxide, sandstone, shale, limestone, basalt.
+
+  SWAPPING IS SAFE. Every class name, every CSS variable and every layout
+  helper in `cosmos` exists here with the same name and the same meaning.
+  A deck changes one line — `theme: cosmos` -> `theme: strata` — and
+  nothing else. The role variables (--star, --nebula, --solar, --plasma,
+  --coral, --aurora) are kept as aliases onto the rock palette so a deck
+  that overrides them in its own `style:` block still behaves.
+
+  USAGE
+  -----
+  ---
+  marp: true
+  theme: strata
+  paginate: true
+  math: mathjax
+  ---
+
+  Enable HTML so the callouts/columns work:
+    VS Code  -> "markdown.marp.enableHtml": true
+    Marp CLI -> marp --html --theme-set PorterThemes/Schodack deck.md
+
+  SLIDE CLASSES          <!-- _class: title-slide -->
+    title-slide          gradient wordmark title, centered
+    phase-title          full-bleed section divider, centered
+    compact              26px -> 22px body
+    tiny                 26px -> 19px body (very dense slides)
+    lefttable            left-align every table column
+    lt1 lt2 lt3 lt4      left-align only that column (combinable: "lt2 lt3")
+
+  BLOCK CLASSES          <div class="key-idea"> ... </div>
+    key-idea   green     the takeaway
+    warning    red       misconception / caution
+    vocab      slate     term + definition
+    steps      rust      procedure
+    question   ochre     discussion prompt
+    panel      neutral   plain bordered box
+    small                0.7em muted text
+
+  LAYOUT
+    .columns + .col              equal columns
+    .columns.cols-2-1 / .cols-1-2  lopsided columns
+    .cards + .card               auto-fitting card grid
+    .center                      center a block's text
+
+  UNIT-SPECIFIC HELPERS (not in cosmos)
+    .strat + .bed                a stacked stratigraphic column. Give each
+                                 .bed a rock class — sandstone, shale,
+                                 limestone, conglomerate, igneous, basalt —
+                                 and an optional data-age label.
+    .timebar + .era              a proportional deep-time bar. Widths are
+                                 set inline (style="width:88%") so the
+                                 Precambrian can be drawn to scale, which
+                                 is the whole point of it.
+    .unconf                      a wavy rule between two .bed elements,
+                                 for an unconformity.
+*/
+
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* ============================================================
+   PALETTE
+   Retune the whole deck by overriding these in a deck's
+   `style:` block -- everything else follows.
+   ============================================================ */
+:root {
+  --deep:    #141210;   /* slide background  - dark soil/basalt */
+  --deep-2:  #1E1A16;   /* raised surfaces                      */
+  --panel:   rgba(255,255,255,0.040);
+  --panel-2: rgba(255,255,255,0.070);
+  --edge:    rgba(232,221,203,0.15);
+  --fg:      #EDE6DA;   /* body text - limestone/bone           */
+  --muted:   #A89880;   /* captions, footers, em - weathered    */
+
+  /* the rock palette */
+  --iron:    #CC6B3D;   /* iron oxide  - h1, links, steps       */
+  --ochre:   #E0A43A;   /* sandstone   - h2, question           */
+  --slate:   #7E9BB0;   /* blue-grey   - h3, vocab              */
+  --copper:  #C98A4B;   /* blockquote                           */
+  --ember:   #B5403A;   /* deep red    - warning                */
+  --shale:   #85A98C;   /* green-grey  - key idea               */
+  --hl:      #F2C878;   /* bold text                            */
+
+  /* cosmos role aliases -- keep a swapped deck working */
+  --star:    var(--iron);
+  --nebula:  var(--slate);
+  --solar:   var(--ochre);
+  --plasma:  var(--copper);
+  --coral:   var(--ember);
+  --aurora:  var(--shale);
+
+  --row-odd:  #1A1613;  /* table zebra */
+  --row-even: #221D18;
+  --th-bg:    #2A231C;
+
+  /* rock fills, used by .bed and available to hand-drawn figures */
+  --rock-sand:   #C9A678;
+  --rock-shale:  #6E7B72;
+  --rock-lime:   #BFC4B8;
+  --rock-congl:  #A98F6F;
+  --rock-ign:    #8C4A3A;
+  --rock-basalt: #3E4650;
+}
+
+/* ============================================================
+   SLIDE SURFACE
+   Two warm washes + three horizontal banding layers at different
+   periods, so the strata do not read as mechanical stripes.
+   ============================================================ */
+section {
+  background-color: var(--deep);
+  background-image:
+    radial-gradient(1200px 700px at 82% -12%, rgba(204,107,61,0.16), transparent 62%),
+    radial-gradient(1000px 640px at 4% 112%, rgba(224,164,58,0.10), transparent 62%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(237,230,218,0.030) 0px,
+      rgba(237,230,218,0.030) 2px,
+      transparent 2px,
+      transparent 37px),
+    repeating-linear-gradient(
+      180deg,
+      rgba(237,230,218,0.018) 0px,
+      rgba(237,230,218,0.018) 1px,
+      transparent 1px,
+      transparent 13px),
+    repeating-linear-gradient(
+      179.4deg,
+      rgba(204,107,61,0.045) 0px,
+      rgba(204,107,61,0.045) 6px,
+      transparent 6px,
+      transparent 109px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  color: var(--fg);
+  /* The default theme drives syntax highlighting, <kbd> and other inherited
+     surfaces through light-dark() variables. This flips the whole set to
+     their dark values -- without it, code comments and <kbd> text come out
+     near-black on a near-black slide. */
+  color-scheme: dark;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 26px;
+  padding: 40px 60px;
+}
+
+/* page number */
+section::after {
+  color: var(--muted);
+  font-size: 0.55em;
+  letter-spacing: 0.08em;
+}
+
+section.compact { font-size: 22px; }
+section.tiny    { font-size: 19px; }
+
+/* ============================================================
+   TYPE
+   Bitter (slab) for headings -- a field-guide voice, and clearly
+   not cosmos's Space Grotesk at a glance.
+   ============================================================ */
+h1 {
+  color: var(--iron);
+  font-family: 'Bitter', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.72em;
+  letter-spacing: -0.012em;
+  border-bottom: none;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+  position: relative;
+}
+/* the signature underrule, read as a stratigraphic column:
+   iron oxide -> sandstone -> limestone, oldest colour at the left */
+h1::after {
+  content: '';
+  position: absolute; left: 0; bottom: 0; height: 3px; width: 100%;
+  background: linear-gradient(90deg, var(--iron) 0%, var(--ochre) 44%, var(--fg) 74%, rgba(237,230,218,0) 100%);
+  border-radius: 3px;
+}
+h2 {
+  color: var(--ochre);
+  font-family: 'Bitter', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.35em;
+}
+h3 {
+  color: var(--slate);
+  font-family: 'Bitter', Georgia, serif;
+  font-weight: 600;
+  font-size: 1.15em;
+}
+h4, h5, h6 {
+  color: var(--fg);
+  font-family: 'Bitter', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+strong { color: var(--hl); }
+em     { color: var(--muted); }
+a      { color: var(--iron); }
+
+/* Marp's default list spacing is left alone on purpose -- changing it
+   reflows every list slide in decks built against this look. */
+li::marker { color: var(--iron); }
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--edge) 15%, var(--edge) 85%, transparent);
+  margin: 18px 0;
+}
+
+mjx-container, .MathJax { color: var(--fg) !important; }
+
+header { color: var(--muted); font-size: 0.6em; letter-spacing: 0.06em; }
+footer { font-size: 0.6em; color: var(--muted); }
+
+.small  { font-size: 0.7em; color: var(--muted); }
+.center { text-align: center; }
+
+/* ============================================================
+   CODE
+   ============================================================ */
+code {
+  background: var(--panel-2);
+  border: 1px solid var(--edge);
+  border-radius: 5px;
+  color: var(--ochre);
+  font-size: 0.85em;
+  padding: 1px 6px;
+}
+pre {
+  background: #0E0C0A;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+pre code {
+  background: none;
+  border: none;
+  color: var(--fg);
+  padding: 0;
+}
+
+blockquote {
+  border-left: 4px solid var(--copper);
+  color: var(--fg);
+  margin: 12px 0;
+  padding: 6px 0 6px 18px;
+}
+blockquote strong { color: var(--copper); }
+
+/* ============================================================
+   TABLES
+   The selectors are deliberately specific enough to beat the default
+   theme's zebra striping (which is specificity 0,1,2).
+   ============================================================ */
+section table {
+  border-collapse: collapse;
+  font-size: 0.86em;
+  margin: 10px 0;
+  width: 100%;
+}
+section table tr:nth-child(2n),
+section table tr:nth-child(2n+1),
+section table thead tr:nth-child(n),
+section table tbody tr:nth-child(n) { background-color: transparent; }
+
+section table th {
+  background-color: var(--th-bg);
+  border: 1px solid var(--edge);
+  color: var(--fg);
+  font-family: 'Bitter', Georgia, serif;
+  font-weight: 600;
+  padding: 7px 12px;
+  text-align: center;
+}
+section table td {
+  border: 1px solid var(--edge);
+  padding: 6px 12px;
+  text-align: center;
+}
+
+/* add lefttable to a slide's _class to left-align every column, or
+   add lt1..lt6 to left-align that column (head + cells) */
+section.lefttable table th,
+section.lefttable table td { text-align: left; }
+section.lt1 table th:nth-child(1), section.lt1 table td:nth-child(1),
+section.lt2 table th:nth-child(2), section.lt2 table td:nth-child(2),
+section.lt3 table th:nth-child(3), section.lt3 table td:nth-child(3),
+section.lt4 table th:nth-child(4), section.lt4 table td:nth-child(4),
+section.lt5 table th:nth-child(5), section.lt5 table td:nth-child(5),
+section.lt6 table th:nth-child(6), section.lt6 table td:nth-child(6) { text-align: left; }
+
+section table tbody tr:nth-child(odd)  td { background-color: var(--row-odd); }
+section table tbody tr:nth-child(even) td { background-color: var(--row-even); }
+section table th em { color: #FFFFFF; }
+section table td em { color: #CFC6B6; }
+
+/* ============================================================
+   EMBEDS & IMAGES
+   ============================================================ */
+section iframe {
+  display: block;
+  width: 912px;
+  height: 513px;              /* exact 16:9 */
+  max-width: 100%;
+  margin: 6px auto 0 auto;
+  border: 1px solid var(--edge);
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 0 12px 44px rgba(0,0,0,0.55);
+}
+section video {
+  display: block;
+  max-width: 100%;
+  margin: 6px auto 0 auto;
+  border: 1px solid var(--edge);
+  border-radius: 10px;
+  box-shadow: 0 12px 44px rgba(0,0,0,0.55);
+}
+img.framed {
+  border: 1px solid var(--edge);
+  border-radius: 10px;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.50);
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.columns { display: flex; gap: 40px; }
+.col     { flex: 1; }
+.columns.cols-2-1 > .col:first-child { flex: 2; }
+.columns.cols-1-2 > .col:last-child  { flex: 2; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 12px 0;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin: 10px 0;
+}
+
+/* ============================================================
+   CALLOUTS
+   Same geometry, different accent -- colour carries the meaning.
+   ============================================================ */
+.key-idea, .warning, .vocab, .steps, .question {
+  padding: 12px 20px;
+  margin: 12px 0;
+  border-radius: 0 8px 8px 0;
+  border-left: 4px solid;
+}
+.key-idea { background: rgba(133,169,140,0.12); border-left-color: var(--shale); }
+.warning  { background: rgba(181,64,58,0.14);   border-left-color: var(--ember); }
+.vocab    { background: rgba(126,155,176,0.14); border-left-color: var(--slate); }
+.steps    { background: rgba(204,107,61,0.10);  border-left-color: var(--iron);  }
+.question { background: rgba(224,164,58,0.12);  border-left-color: var(--ochre); }
+
+.key-idea strong { color: var(--shale); }
+.warning  strong { color: #E07870;      }
+.vocab    strong { color: var(--slate); }
+.steps    strong { color: var(--iron);  }
+.question strong { color: var(--ochre); }
+
+/* ============================================================
+   GUIDED NOTES
+   This unit is notes-heavy, so the blank-line and packet-reference
+   styles live in the theme rather than in each deck's style block.
+   Carried over from U2_L1_Stability_Notes_Slides.md when that deck
+   was moved onto this theme.
+   ============================================================ */
+.fill {
+  color: var(--hl);
+  font-weight: 700;
+  border-bottom: 2px solid rgba(242,200,120,0.55);
+  padding: 0 3px;
+}
+.pkt {
+  display: inline-block;
+  font-size: 0.62em;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  border: 1px solid var(--edge);
+  border-radius: 20px;
+  padding: 2px 12px;
+  margin-bottom: 6px;
+}
+/* Marp strips an inline style attribute from <img>, so diagram size is
+   set with Marp's own ![h:NNN] syntax and the centring is done here. */
+section p > img:only-child { display: block; margin: 10px auto; }
+
+.badge {
+  display: inline-block;
+  background: var(--panel-2);
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: 'Bitter', Georgia, serif;
+  font-size: 0.65em;
+  letter-spacing: 0.08em;
+  padding: 2px 12px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* ============================================================
+   STRATIGRAPHIC COLUMN   <div class="strat">
+                            <div class="bed sandstone">Sandstone</div>
+                            <div class="unconf"></div>
+                            <div class="bed shale">Shale</div>
+                          </div>
+   Youngest at the top, like a real column and like the ESSRT.
+   ============================================================ */
+.strat {
+  border: 1px solid var(--edge);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 12px 0;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.45);
+}
+.strat .bed {
+  color: #15120F;
+  font-family: 'Bitter', Georgia, serif;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 10px 14px;
+  position: relative;
+}
+.strat .bed[data-age]::after {
+  content: attr(data-age);
+  position: absolute; right: 14px; top: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  opacity: 0.75;
+}
+.bed.sandstone    { background: var(--rock-sand);
+  background-image: radial-gradient(1.5px 1.5px at 10px 8px, rgba(0,0,0,0.30), transparent 100%),
+                    radial-gradient(1.5px 1.5px at 26px 20px, rgba(0,0,0,0.26), transparent 100%);
+  background-size: 34px 28px; }
+.bed.shale        { background: var(--rock-shale); color: #ECEFEA;
+  background-image: repeating-linear-gradient(180deg, rgba(0,0,0,0.20) 0 1px, transparent 1px 6px); }
+.bed.limestone    { background: var(--rock-lime);
+  background-image: repeating-linear-gradient(90deg, rgba(0,0,0,0.16) 0 1px, transparent 1px 42px),
+                    repeating-linear-gradient(180deg, rgba(0,0,0,0.16) 0 1px, transparent 1px 16px); }
+.bed.conglomerate { background: var(--rock-congl);
+  background-image: radial-gradient(5px 4px at 14px 12px, rgba(0,0,0,0.26), transparent 100%),
+                    radial-gradient(7px 5px at 44px 22px, rgba(0,0,0,0.22), transparent 100%);
+  background-size: 62px 36px; }
+.bed.igneous      { background: var(--rock-ign); color: #F6E9E4;
+  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.10) 0 2px, transparent 2px 9px); }
+.bed.basalt       { background: var(--rock-basalt); color: #E7ECF1; }
+
+/* An unconformity: a wavy erosion surface between two beds.
+   Drawn as an inline SVG wave rather than stacked radial-gradients --
+   the gradient version rendered as a flat bar in Chrome. */
+.unconf {
+  height: 12px;
+  background-color: var(--deep);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='12' viewBox='0 0 44 12' preserveAspectRatio='none'%3E%3Cpath d='M0 9 Q 5.5 2 11 9 T 22 9 T 33 9 T 44 9 L44 12 L0 12 Z' fill='%23141210'/%3E%3Cpath d='M0 9 Q 5.5 2 11 9 T 22 9 T 33 9 T 44 9' fill='none' stroke='%23EDE6DA' stroke-opacity='0.45' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-size: 44px 12px;
+  background-repeat: repeat-x;
+}
+
+/* ============================================================
+   DEEP-TIME BAR   <div class="timebar">
+                     <div class="era precambrian" style="width:88%">Precambrian</div>
+                     <div class="era phanerozoic" style="width:12%">Phanerozoic</div>
+                   </div>
+   Widths are inline and deliberately so: the point of this element is
+   that Precambrian is ~88% of Earth's history, and a student should be
+   able to see the proportion rather than be told it.
+   ============================================================ */
+.timebar {
+  display: flex;
+  border: 1px solid var(--edge);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 14px 0;
+  font-family: 'Bitter', Georgia, serif;
+  font-size: 0.62em;
+  letter-spacing: 0.04em;
+}
+.timebar .era {
+  padding: 9px 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #15120F;
+}
+/* A thin era cannot hold a label -- add `nolabel` and name it in the
+   caption instead of letting it clip to an ellipsis. */
+.timebar .era.nolabel { font-size: 0; }
+.era.precambrian { background: var(--rock-ign);    color: #F6E9E4; }
+.era.paleozoic   { background: var(--rock-sand);   }
+.era.mesozoic    { background: var(--rock-lime);   }
+.era.cenozoic    { background: var(--shale);       }
+
+/* ============================================================
+   TITLE SLIDE  --  <!-- _class: title-slide -->
+   ============================================================ */
+section.title-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image:
+    radial-gradient(1100px 720px at 50% 16%, rgba(204,107,61,0.26), transparent 62%),
+    radial-gradient(900px 620px at 16% 98%, rgba(224,164,58,0.18), transparent 64%),
+    radial-gradient(700px 480px at 88% 88%, rgba(126,155,176,0.14), transparent 66%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(237,230,218,0.042) 0px,
+      rgba(237,230,218,0.042) 2px,
+      transparent 2px,
+      transparent 31px),
+    repeating-linear-gradient(
+      179.4deg,
+      rgba(204,107,61,0.060) 0px,
+      rgba(204,107,61,0.060) 7px,
+      transparent 7px,
+      transparent 96px);
+}
+section.title-slide h1 {
+  border-bottom: none;
+  font-size: 2.3em;
+  background: linear-gradient(100deg, #FFFFFF 0%, var(--ochre) 36%, var(--iron) 72%, var(--ember) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--iron);
+}
+section.title-slide h1::after { display: none; }
+section.title-slide h2 { color: var(--fg); font-weight: 500; opacity: 0.88; }
+section.title-slide h3 { color: var(--muted); font-weight: 500; }
+
+/* ============================================================
+   PHASE DIVIDER  --  <!-- _class: phase-title -->
+   Carries the one piece of wit in the theme: a banded core-sample
+   stripe down the left edge (the first background layer), so a section
+   break looks like a drill core pulled out of the page.
+   ============================================================ */
+section.phase-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-color: #0E0C0A;
+  /* The first layer is the CORE SAMPLE: a banded drill core down the left
+     edge, so a section break looks like a core pulled out of the page.
+     It is a background layer rather than a ::before -- the pseudo-element
+     did not paint inside Marp's section, and a layer cannot be clipped
+     away by anything the deck does. */
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--rock-sand)   0%,   var(--rock-sand)   14%,
+      var(--rock-shale)  14%,  var(--rock-shale)  26%,
+      var(--rock-lime)   26%,  var(--rock-lime)   38%,
+      var(--rock-congl)  38%,  var(--rock-congl)  47%,
+      var(--rock-shale)  47%,  var(--rock-shale)  62%,
+      var(--rock-ign)    62%,  var(--rock-ign)    69%,
+      var(--rock-sand)   69%,  var(--rock-sand)   82%,
+      var(--rock-basalt) 82%,  var(--rock-basalt) 100%),
+    radial-gradient(780px 520px at 22% 14%, rgba(204,107,61,0.30), transparent 66%),
+    radial-gradient(720px 500px at 84% 88%, rgba(224,164,58,0.22), transparent 66%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(237,230,218,0.050) 0px,
+      rgba(237,230,218,0.050) 2px,
+      transparent 2px,
+      transparent 27px);
+  background-size: 26px 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-position: left top, center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+}
+section.phase-title h1 {
+  color: var(--fg);
+  font-size: 2.5em;
+  letter-spacing: 0.04em;
+  border-bottom: none;
+}
+section.phase-title h1::after {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--ochre) 22%, var(--iron) 78%, transparent);
+}
+section.phase-title h2 { color: rgba(237,230,218,0.82); font-size: 1.3em; font-weight: 500; }
+section.phase-title strong { color: var(--hl); }

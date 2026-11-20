@@ -7,6 +7,35 @@ author: Mr. Porter
 class: twilight
 ---
 
+<!--
+  ============================================================
+  SUPERSEDED 2026-11-20 -- kept, not deleted.
+
+  This deck was split in two for the traditional Earth's History unit:
+
+    U2_Absolute_Dating.md   half-life, C-14, the isotope table, how the
+                            Earth formed and why its own rocks are younger
+                            than it is
+    U2_Relative_Dating.md   the five principles, index fossils,
+                            correlation, geologic time, the NY record
+
+  WHY. The two halves no longer run back to back -- the Reading an
+  Outcrop lab sits between them, and in that lab students INVENT the
+  relative-dating principles before any of them is named. This deck
+  teaches those principles as a numbered list up front, which takes the
+  whole lab with it if it is projected first.
+
+  Three content errors were also fixed in the split and are still
+  present below, so do not teach from this file:
+    * "Page 15 on reference table" -- the table is p.12 in the 2026 ed.
+    * C-14 "effective range ~50,000 years", twice -- the ESSRT says
+      100 - 70,000.
+    * The worked example uses a 5,700 yr half-life and gets 11,400;
+      the quiz slide in the same deck uses 5,730. The ESSRT says 5730.
+  ============================================================
+-->
+
+
 # Geologic Dating
 ### Regents Earth Science
 

@@ -1,11 +1,22 @@
 ---
 marp: true
-title: RP Forces 2025-26
-theme: forces-dark
+title: The Origin of the Universe
+theme: strata
 paginate: true
 transition: reveal
 math: mathjax
 ---
+
+<!--
+  Retitled and re-themed 2026-11-20. The title read "RP Forces 2025-26",
+  a leftover from the physics deck this was copied from, and the theme
+  was `forces-dark`.
+
+  NOTE ON PLACEMENT: this is SS-2 (HS-ESS1-2, the Big Bang). In the
+  traditional Earth's History unit it is NOT part of the unit -- it runs
+  in the week after, alongside the gravitation block. It lives in the
+  Unit 2 folder for historical reasons.
+-->
 
 <!-- ========== LESSON 1 — ENGAGE ========== -->
 

@@ -14,7 +14,6 @@
       "./PorterThemes/Schodack/brightTheme.css",
       "./PorterThemes/Schodack/physicalSci.css",
       "./PorterThemes/Schodack/astrotheme.css",
-      "./PorterThemes/Schodack/brightTheme.css",
       "./PorterThemes/Schodack/ClaudeForces.css",
       "./PorterThemes/Schodack/earthSci.css",
       "./PorterThemes/Schodack/fluidsTheme.css",
@@ -44,6 +43,7 @@
       "./PorterThemes/Schodack/physics-agenda.css",
       "./PorterThemes/Schodack/vector.css",
       "./PorterThemes/Schodack/cosmos.css",
+      "./PorterThemes/Schodack/strata.css",
       "./PorterThemes/Schodack/trajectory.css",
       "./PorterThemes/Schodack/forces.css"
    ],
