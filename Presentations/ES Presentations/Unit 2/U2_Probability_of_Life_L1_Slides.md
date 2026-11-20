@@ -310,11 +310,11 @@ style: |
 WHAT THIS DECK IS: the 5E teaching deck for Investigation 1 of Unit 2. It runs across FIVE meetings and the phase-title slides mark where each one starts. Student packet: "Stability of the Solar System" (ess-u2-l1-stability.pdf). Organizer: "Performance Task Organizer" (ess-u2-pto.pdf), Part D.
 
 THE FIVE MEETINGS
-  M1 Mon 11/23 (A, 40 min) — ENGAGE
-  M2 Tue 11/24 (B, 80 min) — EXPLORE 1, the dating lab
-  M3 Mon 11/30 (C, 40 min) — EXPLAIN 1, the Late Heavy Bombardment
-  M4 Tue 12/01 (D, 80 min) — EXPLORE 2, the water lab
-  M5 Wed 12/02 (A, 40 min) — EXPLAIN 2 + EVALUATE. Elaborate (rock cycle) goes home.
+  M1 (40 min) — ENGAGE
+  M2 (80 min) — EXPLORE 1, the dating lab
+  M3 (40 min) — EXPLAIN 1, the Late Heavy Bombardment
+  M4 (80 min) — EXPLORE 2, the water lab
+  M5 (40 min) — EXPLAIN 2 + EVALUATE. Elaborate (rock cycle) goes home.
 
 STANDARDS: HS-ESS1-6 (evidence from ancient Earth materials, meteorites and other planetary surfaces for Earth's formation and early history) · HS-ESS2-5 (properties of water and its effects on Earth materials and surface processes). SEP: Analyzing and Interpreting Data; Planning and Carrying Out Investigations. CCC: Stability and Change; Patterns.
 
@@ -368,7 +368,7 @@ Do not preview the answer. The reversal in Explain 1 only lands if they walk in 
 
 # ENGAGE
 ## Craters in the Solar System
-### Meeting 1 · Monday 11/23 · 40 minutes
+### Meeting 1 · 40 minutes
 
 <!--
 PACKET PART A. See-Think-Wonder.
@@ -466,13 +466,13 @@ The last two open Explore 1. If nobody asks them, ask them yourself and credit t
 
 # EXPLORE 1
 ## Dating the Early Solar System
-### Meeting 2 · Tuesday 11/24 · 80 minutes · **lab**
+### Meeting 2 · 80 minutes · **lab**
 
 <!--
 PACKET PART B AND C. PhET "Radioactive Dating Game".
 
 TIMING for the 80-minute block:
-  0:00  Do Now — yesterday's crater numbers, one sentence: why the difference?
+  0:00  Do Now — last meeting's crater numbers, one sentence: why the difference?
   0:10  Decay Rates tab, Part 1a (packet q1-7) — whole class on the projector for q1-3, then pairs
   0:30  Dating Game tab, Part 1b — pairs
   0:45  Part 2: Tables 1 and 2, then Tables 3 and 4 off the decay curve
@@ -617,7 +617,7 @@ This is a real scientific-practice idea, not a fact to memorise: instruments hav
 
 # EXPLAIN 1
 ## The Late Heavy Bombardment
-### Meeting 3 · Monday 11/30 · 40 minutes
+### Meeting 3 · 40 minutes
 
 <!--
 PACKET PARTS E, F, G.
@@ -728,7 +728,7 @@ That sentence is the whole investigation. Explore 2 explains the second half.
 
 # EXPLORE 2
 ## The Role of Water
-### Meeting 4 · Tuesday 12/01 · 80 minutes · **lab**
+### Meeting 4 · 80 minutes · **lab**
 
 <!--
 PACKET PARTS H AND I. Two experiments.
@@ -837,7 +837,7 @@ ACCESS FOR ALL LEARNERS: a group that stalls on design gets the slope comparison
 
 # EXPLAIN 2 & EVALUATE
 ## Why Earth has 128 craters
-### Meeting 5 · Wednesday 12/02 · 40 minutes
+### Meeting 5 · 40 minutes
 
 <!--
 PACKET PARTS J, K AND M. Part L (the rock cycle Elaborate) GOES HOME — it is a diagram-analysis task that works as homework, and the rock cycle is revisited in Unit 3.

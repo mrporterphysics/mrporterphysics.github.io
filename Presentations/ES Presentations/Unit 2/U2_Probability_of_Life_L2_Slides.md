@@ -310,10 +310,10 @@ style: |
 WHAT THIS DECK IS: the 5E teaching deck for Investigation 2 of Unit 2. Four meetings. Student packet: "Coevolution of Earth and Life" (ess-u2-l2-coevolution.pdf). Organizer: PTO Part E.
 
 THE FOUR MEETINGS
-  M1 Thu 12/03 (B, 80 min) — ENGAGE + EXPLORE part 1 (the timeline card sort)
-  M2 Fri 12/04 (C, 40 min) — EXPLORE parts 2-3 (isotopes, oxygen)
-  M3 Mon 12/07 (D, 80 min) — EXPLAIN (coevolution argument) + the evidence-quality reading
-  M4 Tue 12/08 (A, 40 min) — ELABORATE (mass extinctions) + PTO Part E. Part L goes home.
+  M1 (80 min) — ENGAGE + EXPLORE part 1 (the timeline card sort)
+  M2 (40 min) — EXPLORE parts 2-3 (isotopes, oxygen)
+  M3 (80 min) — EXPLAIN (coevolution argument) + the evidence-quality reading
+  M4 (40 min) — ELABORATE (mass extinctions) + PTO Part E. Part L goes home.
 
 STANDARD: HS-ESS2-7 (SBG code ES-5) — construct an argument based on evidence about the coevolution of Earth's systems and life on Earth. SEP-7 argue from evidence. CCC: Stability and Change; Cause and Effect.
 
@@ -367,7 +367,7 @@ The honest framing: Investigation 1 answered "why so late a start?" This one ans
 
 # ENGAGE
 ## The Pace of Evolution
-### Meeting 1 · Thursday 12/03 · first 25 minutes
+### Meeting 1 · first 25 minutes
 
 <!--
 PACKET PART A. Figure 1 plus the brainstorm table.
@@ -678,7 +678,7 @@ ACCEPT EITHER ANSWER TO q18 with reasoning. Both are correct.
 
 # EXPLAIN
 ## Arguing for Coevolution
-### Meeting 3 · Monday 12/07 · 80 minutes
+### Meeting 3 · 80 minutes
 
 <!--
 PACKET PARTS E, F, G, H, I.
@@ -818,7 +818,7 @@ PACKET PART H (the "Signals in the Sands of Time" reading) q25-26, and PART I q2
 
 WATCH FOR "the data is unreliable so we can't know anything." That is giving up, not evaluating. Ask: "so is it wrong that oxygen rose? How confident are you, and what makes you that confident?"
 
-WHERE IT STAYS CORRELATIONAL: the claim that a particular mass extinction was caused by a particular oxygen drop. The dates roughly coincide, the causes are still argued over, and the dating uncertainty is comparable to the gap. The extinction table in Part J says so itself — point at that sentence tomorrow.
+WHERE IT STAYS CORRELATIONAL: the claim that a particular mass extinction was caused by a particular oxygen drop. The dates roughly coincide, the causes are still argued over, and the dating uncertainty is comparable to the gap. The extinction table in Part J says so itself — point at that sentence in the next meeting.
 
 TELL STUDENTS THIS IS GRADED ON THE PERFORMANCE TASK, not an optional flourish. PTO Part D already required it.
 -->
@@ -829,7 +829,7 @@ TELL STUDENTS THIS IS GRADED ON THE PERFORMANCE TASK, not an optional flourish. 
 
 # ELABORATE & EVALUATE
 ## Mass Extinctions
-### Meeting 4 · Tuesday 12/08 · 40 minutes
+### Meeting 4 · 40 minutes
 
 <!--
 PACKET PARTS J, K, M. Part L (Arguing from Evidence) GOES HOME.
@@ -865,7 +865,7 @@ WE ARE HERE BECAUSE OF THE K–Pg EXTINCTION, not in spite of it. Mammals were s
 
 THE PERMIAN AT 90% is the one to dwell on. Massive volcanism, rapid warming, ocean acidification. Nine species in ten.
 
-OXYGEN: each extinction coincided with a DECREASE in atmospheric oxygen, and levels rose again afterwards. NOTE THE PHRASING — "coincided with", not "was caused by". The exact causes are still being worked out and the dating uncertainty is real. This is yesterday's correlation-vs-cause lesson, live.
+OXYGEN: each extinction coincided with a DECREASE in atmospheric oxygen, and levels rose again afterwards. NOTE THE PHRASING — "coincided with", not "was caused by". The exact causes are still being worked out and the dating uncertainty is real. This is the correlation-vs-cause lesson from the previous meeting, live.
 -->
 
 ---

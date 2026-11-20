@@ -431,7 +431,7 @@ Each time we use the mallet, let it bounce. (Don't use the mallet like a bulldoz
 
 <div class="question">
 
-Keep this one open — we come back to it tomorrow.
+Keep this one open — we come back to it next class.
 
 </div>
 
@@ -835,7 +835,7 @@ The soft spring is squashed far more. Which spring pushes harder on the board? *
 
 <div class="key-idea">
 
-**Everything is a spring.** Friday's slide: every contact force comes from the bonds between atoms. A fire hydrant is a *very* stiff spring.
+**Everything is a spring.** Back on *Every contact force is electric*: every contact force comes from the bonds between atoms. A fire hydrant is a *very* stiff spring.
 
 </div>
 

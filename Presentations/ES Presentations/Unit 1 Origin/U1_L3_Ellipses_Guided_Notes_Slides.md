@@ -412,7 +412,7 @@ QUESTION 3 (the string shorter than the pin gap) is worth asking aloud: the penc
 
 # PART B
 
-## Perihelion, Aphelion, and the Trick You Need Thursday
+## Perihelion, Aphelion, and the Trick You Need in the State Lab
 
 ---
 
@@ -464,12 +464,12 @@ $$\text{aphelion} - \text{perihelion} = f$$
 
 <div class="warning">
 
-**On Thursday you never measure focus-to-focus.** The second focus is empty space — there is nothing to put a ruler against. You measure both distances from the Sun and <span class="fill">subtract</span>.
+**In the state lab you never measure focus-to-focus.** The second focus is empty space — there is nothing to put a ruler against. You measure both distances from the Sun and <span class="fill">subtract</span>.
 
 </div>
 
 <!--
-PACKET: Part B, the two identities and the "Why this matters on Thursday" box.
+PACKET: Part B, the two identities and the "Why this matters in the state lab" box.
 THIS IS THE MOST IMPORTANT SLIDE IN THE DECK. Step 14d of the investigation is exactly this subtraction, and it is where marks are lost.
 WHY THE SUBTRACTION WORKS: the Sun is off center by half of f on each side, so the long piece exceeds the short piece by exactly f. Draw it on the board if they look unsure.
 -->
@@ -514,11 +514,11 @@ The three measurements disagree by **1.2 cm**, so at least one is wrong. **Remea
 
 </div>
 
-Aphelion $+$ perihelion **must** equal the major axis. That is a free check on your own work — and it is free on Thursday too.
+Aphelion $+$ perihelion **must** equal the major axis. That is a free check on your own work — and it is free in the state lab too.
 
 <!--
 PACKET: question 5.
-TEACH THIS AS A HABIT, not a question. Every student who runs this check Thursday catches their own ruler error before it becomes a 40% deviation.
+TEACH THIS AS A HABIT, not a question. Every student who runs this check in the lab catches their own ruler error before it becomes a 40% deviation.
 COMMON CAUSES of the disagreement: the ruler did not pass through the Sun, or it stopped short of the curve.
 -->
 
@@ -548,11 +548,11 @@ $$e = \frac{f}{d}
 
 </div>
 
-On the Regents, and on Thursday, it will be the **words**. In your notes it is the letters. Know both.
+On the Regents, and in the state lab, it will be the **words**. In your notes it is the letters. Know both.
 
 <!--
 PACKET: Part C, the formula box.
-MAKE THEM FIND IT IN THE ESRT NOW, not Thursday. Students who have never located the equation on the page lose two minutes hunting for it under lab conditions.
+MAKE THEM FIND IT IN THE ESRT NOW, not on lab day. Students who have never located the equation on the page lose two minutes hunting for it under lab conditions.
 -->
 
 ---
@@ -577,7 +577,7 @@ $f$ and $d$ are both shrunk by the <span class="fill">same</span> factor, and a 
 
 <div class="warning">
 
-**Precision rules for Thursday**
+**Precision rules for the state lab**
 
 Measure every length to the nearest <span class="fill">tenth</span> of a centimeter.
 
@@ -760,13 +760,13 @@ When a procedure names the accepted value, that is what you are scored against.
 Recalculating the worked example against 0.093 gives **4.3%** instead of 7.4% — about one percentage point apart, and both say the same thing: **the model was good**.
 
 <!--
-PUT THIS IN FRONT OF THEM NOW. A student who spots the clash mid-lab on Thursday stops working and asks; a student who has seen this slide shrugs and carries on.
+PUT THIS IN FRONT OF THEM NOW. A student who spots the clash mid-lab stops working and asks; a student who has seen this slide shrugs and carries on.
 NEITHER SOURCE IS WRONG. Mars' eccentricity is about 0.0934 and the two tables round it differently. That is worth one honest sentence about significant figures.
 -->
 
 ---
 
-# Thursday, in Four Steps
+# The State Lab, in Four Steps
 
 <div class="pkt">THE INVESTIGATION</div>
 
@@ -784,11 +784,11 @@ You will plot Mars' orbit from **Tycho Brahe's own observations**, then:
 
 </div>
 
-Nothing on that list is new to you after today. The only new thing Thursday is **where the plotted points come from**.
+Nothing on that list is new to you after today. The only new thing in the state lab is **where the plotted points come from**.
 
 <!--
 THE CLOSER. Say the last line out loud — it is the one that lowers the temperature before a state investigation.
-WHAT IS GENUINELY NEW THURSDAY: triangulating Mars' position from paired observations. The measuring and the arithmetic are already theirs.
+WHAT IS GENUINELY NEW IN THE STATE LAB: triangulating Mars' position from paired observations. The measuring and the arithmetic are already theirs.
 -->
 
 ---
@@ -815,5 +815,5 @@ WHAT IS GENUINELY NEW THURSDAY: triangulating Mars' position from paired observa
 
 <!--
 PACKET: the closing terms.
-THE THREE RELATIONS ON THE BOTTOM LINE ARE THE WHOLE SHEET. A student who can write those three from memory can do Thursday's investigation.
+THE THREE RELATIONS ON THE BOTTOM LINE ARE THE WHOLE SHEET. A student who can write those three from memory can do the state lab.
 -->
