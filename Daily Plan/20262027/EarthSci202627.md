@@ -24,7 +24,7 @@ math: mathjax
 
 #### 📋 Agenda
 
-1. Ellipse Notes
+1. Ellipse [Notes](/Presentations/ES%20Presentations/Unit%201%20Origin/U1_L3_Ellipses_Guided_Notes_Slides.html)
 2. Ellipse Practice
 
 </div>
