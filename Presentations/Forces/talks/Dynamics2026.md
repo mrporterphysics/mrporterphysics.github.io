@@ -494,7 +494,7 @@ On the next slide there is a list of statements. Decide whether each statement i
 
 ---
 
-# ✏️ Write a Summary
+# ✏️ Write a Summary!
 
 # How do forces affect the motion of an object?
 
@@ -535,6 +535,7 @@ You can do this in ***2 sentences***.
 </div>
 
 ---
+
 
 
 ### Contact Interactions
