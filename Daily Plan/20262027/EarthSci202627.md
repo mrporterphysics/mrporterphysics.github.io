@@ -14,6 +14,37 @@ math: mathjax
 
 ---
 
+# 2026.11.23 **Earth Science**
+
+##### **❓ of the 📅**: Does turkey actually make you sleepy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Mar's Lab introduction
+2. Practice for Mars Lab
+3. Start Part 1 with partner
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Start state lab_
+
+### 📆 Upcoming
+
+- 🔴 **Unearthing Mars** day 2 **Tue 11/24** — then Thanksgiving break
+
+</div>
+</div>
+
+---
+
 # 2026.11.20 **Earth Science**
 
 ##### **❓ of the 📅**: What is the most overrated Thanksgiving dessert?

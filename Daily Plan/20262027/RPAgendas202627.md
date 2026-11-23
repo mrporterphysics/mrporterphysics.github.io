@@ -20,6 +20,40 @@ math: mathjax
 ---
 
 
+# 2026.11.23 **AP Physics**
+
+##### **❓ of the 📅**: Does turkey actually make you sleepy?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Vote: the car and the hydrant
+2. Springs, boards and hands
+3. Rubber bands, eyes closed
+4. Friction and tension pairs
+5. Newton's Third Law
+6. Force plates
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain why the forces two objects exert on each other are always equal and opposite, and identify N3L pairs_
+
+### 📆 Upcoming
+
+- ✅ Quiz 7 **Thu 12/3** — N1L, identifying forces, FBDs, N3L pairs
+
+</div>
+</div>
+
+---
+
 <div class='do-now'> 
 
 <div class='columns'>
@@ -42,6 +76,7 @@ _**Rank the magnitude of the net force on each water skier.**_
 
 
 ---
+
 
 # 2026.11.20 **AP Physics**
 
