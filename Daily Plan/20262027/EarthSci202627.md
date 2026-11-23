@@ -14,6 +14,36 @@ math: mathjax
 
 ---
 
+# 2026.11.24 **Earth Science**
+
+##### **❓ of the 📅**: What Thanksgiving traditions does your family have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Work on Mars Lab
+    1. Note I have the handout for part 2
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Finish Mars Lab_
+
+### 📆 Upcoming
+
+- 🦃
+
+</div>
+</div>
+
+---
+
 # 2026.11.23 **Earth Science**
 
 ##### **❓ of the 📅**: Does turkey actually make you sleepy?

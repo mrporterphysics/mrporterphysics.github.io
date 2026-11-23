@@ -20,6 +20,38 @@ math: mathjax
 ---
 
 
+# 2026.11.24 **AP Physics**
+
+##### **❓ of the 📅**: What Thanksgiving traditions does your family have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Check over monkey packet - ask any questions
+2. Complete card sort
+3. Work on physics classroom concept builders on FBDs
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Decide whether a force diagram is right, and fix it when it is not_
+
+### 📆 Upcoming
+
+- HW: _**Concept Builders — Match That FBD + Which One Doesn't Belong**_
+- ✅ Quiz 7 **Thu 12/3** — N1L, identifying forces, FBDs, N3L pairs
+
+</div>
+</div>
+
+---
+
 # 2026.11.23 **AP Physics**
 
 ##### **❓ of the 📅**: Does turkey actually make you sleepy?

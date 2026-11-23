@@ -15,6 +15,37 @@ math: mathjax
 
 ---
 
+
+# 2026.11.24 **AP Physics**
+
+##### **❓ of the 📅**: What Thanksgiving traditions does your family have?
+
+<div class ='columns'>
+
+ <div>
+
+#### 📋 Agenda
+
+1. Vote: the car and the hydrant
+2. Interaction Pairs
+3. Newton's Third Law
+4. Force Diagrams
+
+</div>
+
+<div>
+
+### 🎯 Goals
+
+🥅 _Explain why the forces two objects exert on each other are always equal and opposite, and identify N3L pairs_
+
+### 📆 Upcoming
+
+</div>
+</div>
+
+---
+
 <div class='do-now'> 
 
 <div class='columns'>
